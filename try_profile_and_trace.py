@@ -31,27 +31,39 @@ def tracer(frame, event, arg):
     return tracer
 
 def profiler(frame, event, arg):
+    if event not in {'call', 'c_call'}:
+        return
     # frame.f_trace_opcodes = True
-    print("profiler", event, arg, inspect.getframeinfo(frame))
+    code = frame.f_code
+    print(arg)
+    print("consts", code.co_consts)
+    print("names", code.co_names)
+    print("varnames", code.co_varnames)
+    # print("profiler", event, arg, inspect.getframeinfo(frame))
 
     # if event == 'call' or event == 'c_call':
     #     print(inspect.getframeinfo(frame))
     #     print("\n\n")
     # print(event, arg, inspect.getframeinfo(frame))
-    bytecode = dis.Bytecode(frame.f_code)
+    bytecode = dis.Bytecode(code)
     # print(frame, frame.f_lasti)
-    # print(bytecode.info())
+    print(bytecode.info())
     print(bytecode.dis())
-    print("\n\n")
-    return profiler
+    # print("\n\n")
 
 
 def fn():
-    x = np.arange(1000000)
-    x.reshape((100000, 10))
-    y = x[0:2] + x[2:4]
-    z = np.power(y, 10)
-    z * 10000
+    x = np.arange(10)
+    # np.arange(10)
+    z = 10
+    # np.arange(z)
+    x.reshape((2, 5))
+    x.reshape((5, 2))
+    x.reshape((10, 1))
+    # y = x[0:2] + x[2:4]
+    # z = np.power(y, 10)
+    # z = np.power(x, y)
+    # z * 10000
     # print(z)
     # print("SCIIKIT")
     # detected = detector.detect_multi_scale(
@@ -60,12 +72,12 @@ def fn():
     # print("DONE")
 
 
-import cProfile
+# import cProfile
 
 # cProfile.run('fn()')
 
-sys.settrace(tracer)
+# sys.settrace(tracer)
 sys.setprofile(profiler)
 fn()
-sys.settrace(None)
+# sys.settrace(None)
 sys.setprofile(None)
