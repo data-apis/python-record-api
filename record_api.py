@@ -1,18 +1,15 @@
-import dis
-import functools
+import importlib
 import inspect
 import io
-import sys
-import types
 import json
-from typing import *
+import opcode
 import os
 import runpy
-import importlib
-import weakref
-from get_stack import OpStack
-import opcode
+import sys
+import types
+from typing import *
 
+from get_stack import OpStack
 
 FILE_NAME = os.environ["PYTHON_API_OUTPUT_FILE"]
 TRACE_MODULE = os.environ["PYTHON_API_TRACE_MODULE"]
@@ -98,9 +95,10 @@ def log_call(fn: types.FunctionType, module_name: str, *args, **kwargs):
 # below this frame
 RECORDED_CALL_FRAMES = set()
 
+
 def tracer(frame, event, arg):
     frame.f_trace_opcodes = True
-    if event == 'call':
+    if event == "call":
         try:
             RECORDED_CALL_FRAMES.remove(frame.f_back)
         except KeyError:
