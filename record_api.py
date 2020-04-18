@@ -9,6 +9,9 @@ from typing import *
 import os
 import runpy
 import importlib
+import weakref
+from get_stack import OpStack
+import opcode
 
 
 FILE_NAME = os.environ["PYTHON_API_OUTPUT_FILE"]
@@ -17,8 +20,10 @@ RUN_MODULE = os.environ["PYTHON_API_RUN_MODULE"]
 IMPORT_MODULES = os.environ.get("PYTHON_API_IMPORT_MODULES", "")
 
 
-def get_name(value) -> str:
-    return f"{value.__module__}.{value.__name__}"
+def type_name(value: object) -> str:
+    tp = type(value)
+    module = inspect.getmodule(tp)
+    return f"{module.__name__}.{tp.__qualname__}"
 
 
 def save_log(
@@ -42,10 +47,10 @@ def save_log(
     writer.write((json.dumps(data) + "\n").encode())
 
 
-def log_call(fn: types.FunctionType, args: Sequence, kwargs: Sequence):
-    fn_name = get_name(fn)
-    arg_types = list(map(get_name, map(type, args)))
-    kwarg_types = {key: get_name(type(value)) for key, value in kwargs.items()}
+def log_call(fn: types.FunctionType, module_name: str, *args, **kwargs):
+    fn_name = f"{module_name}.{fn.__qualname__}"
+    arg_types = list(map(type_name, args))
+    kwarg_types = {key: type_name(value) for key, value in kwargs.items()}
 
     try:
         sig = inspect.signature(fn)
@@ -86,32 +91,34 @@ def log_call(fn: types.FunctionType, args: Sequence, kwargs: Sequence):
     )
 
 
+# Keep a set of frames that we have recorded a call
+# from. We should add to this when we record a bytecode
+# trace from a function call
+# we should pop one off this to check if we should keep tracing
+# below this frame
+RECORDED_CALL_FRAMES = set()
+
 def tracer(frame, event, arg):
-    if event != "call":
+    frame.f_trace_opcodes = True
+    if event == 'call':
+        try:
+            RECORDED_CALL_FRAMES.remove(frame.f_back)
+        except KeyError:
+            # we didnt record the call frame, so keep tracing
+            return tracer
+        # we did record this call frame, so dont trace below here
+        return None
+    if event != "opcode":
         return
-    module = inspect.getmodule(frame)
-    if not module or not module.__name__.startswith(TRACE_MODULE):
-        return tracer
+    stack = OpStack(frame)
+    opname = opcode.opname[frame.f_code.co_code[frame.f_lasti]]
+    if opname == "UNARY_POSITIVE":
+        arg = stack[-1]
+        tp = type(arg)
+        module_name = inspect.getmodule(tp).__name__
 
-    fn_var = frame.f_code.co_name
-    if fn_var.startswith("<"):
-        return tracer
-    try:
-        fn = frame.f_globals[fn_var]
-    except KeyError:
-        print(f"Could not get {fn_var}")
-        return tracer
-
-    arg_vars, varargs_var, varkw_var, frame_locals = inspect.getargvalues(frame)
-
-    # list of args passed in
-    args = [frame_locals[arg] for arg in arg_vars]
-    # variable args (*...) passed in
-    varargs = list(frame_locals[varargs_var]) if varargs_var else []
-    # variable kwargs (**...) passed in
-    varkw = frame_locals[varkw_var] if varkw_var else {}
-
-    log_call(fn, args + varargs, varkw)
+        if module.startswith(TRACE_MODULE):
+            log_call(tp.__pos__, module_name, arg)
 
 
 rand_file = io.FileIO(FILE_NAME, "w")
