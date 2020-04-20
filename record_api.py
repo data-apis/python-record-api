@@ -12,10 +12,8 @@ from typing import *
 
 import get_stack
 
-FILE_NAME = os.environ["PYTHON_API_OUTPUT_FILE"]
+__all__ = ["tracer"]
 TRACE_MODULE = os.environ["PYTHON_API_TRACE_MODULE"]
-RUN_MODULE = os.environ["PYTHON_API_RUN_MODULE"]
-IMPORT_MODULES = os.environ.get("PYTHON_API_IMPORT_MODULES", "")
 
 
 def type_name(value: object) -> str:
@@ -321,7 +319,7 @@ def tracer(frame, event, arg):
         record_method("__delattr__", stack.TOS, oparg)
 
     if opname in ("BUILD_TUPLE_UNPACK", "BUILD_LIST_UNPACK", "BUILD_SET_UNPACK"):
-        for value in stack[:oparg]:
+        for value in stack.pop_n(oparg):
             record_method("__iter__", value)
 
     if opname == "BUILD_TUPLE_UNPACK_WITH_CALL":
@@ -394,20 +392,25 @@ def tracer(frame, event, arg):
             RECORDED_CALL_FRAMES.add(frame)
 
 
-rand_file = io.FileIO(FILE_NAME, "w")
-writer = io.BufferedWriter(rand_file)
+if __name__ == "__main__":
+    FILE_NAME = os.environ["PYTHON_API_OUTPUT_FILE"]
+    IMPORT_MODULES = os.environ.get("PYTHON_API_IMPORT_MODULES", "")
+    RUN_MODULE = os.environ["PYTHON_API_RUN_MODULE"]
 
-if IMPORT_MODULES:
-    for module in IMPORT_MODULES.split(","):
-        importlib.import_module(module)
-try:
-    sys.settrace(tracer)
-    runpy.run_module(RUN_MODULE, run_name="__main__", alter_sys=True)
-except Exception:
-    sys.settrace(None)
-    raise Exception(f"Error running {RUN_MODULE}")
-else:
-    sys.settrace(None)
-finally:
-    writer.flush()
-    rand_file.close()
+    rand_file = io.FileIO(FILE_NAME, "w")
+    writer = io.BufferedWriter(rand_file)
+
+    if IMPORT_MODULES:
+        for module in IMPORT_MODULES.split(","):
+            importlib.import_module(module)
+    try:
+        sys.settrace(tracer)
+        runpy.run_module(RUN_MODULE, run_name="__main__", alter_sys=True)
+    except Exception:
+        sys.settrace(None)
+        raise Exception(f"Error running {RUN_MODULE}")
+    else:
+        sys.settrace(None)
+    finally:
+        writer.flush()
+        rand_file.close()
