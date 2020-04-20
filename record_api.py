@@ -7,9 +7,10 @@ import runpy
 import sys
 import types
 import dis
+
 from typing import *
 
-from get_stack import OpStack
+import get_stack
 
 FILE_NAME = os.environ["PYTHON_API_OUTPUT_FILE"]
 TRACE_MODULE = os.environ["PYTHON_API_TRACE_MODULE"]
@@ -96,25 +97,25 @@ def log_call(fn: types.FunctionType, module_name: str, *args, **kwargs):
 RECORDED_CALL_FRAMES = set()
 
 
-def record_function(fn: types.FunctionType, *args: object) -> bool:
+def record_function(fn: types.FunctionType, *args: object, **kwargs) -> bool:
     module = inspect.getmodule(fn)
     if not module:
         return False
     module_name = module.__name__
     if module_name.startswith(TRACE_MODULE):
-        log_call(fn, module_name, *args)
+        log_call(fn, module_name, *args, **kwargs)
         return True
     return False
 
 
-def record_method(method_name: str, self_, *args: object,) -> Optional[Callable]:
+def record_method(
+    method_name: str, self_, *args: object, **kwargs
+) -> Optional[Callable]:
     cls = type(self_)
     module_name = inspect.getmodule(cls).__name__
     if module_name.startswith(TRACE_MODULE) and hasattr(cls, method_name):
-        log_call(
-            getattr(cls, method_name), module_name, self_, *args,
-        )
-        return lambda: getattr(self_, method_name)(*args)
+        log_call(getattr(cls, method_name), module_name, self_, *args, **kwargs)
+        return lambda: getattr(self_, method_name)(*args, **kwargs)
     return None
 
 
@@ -122,22 +123,66 @@ def record_binary_method(stack, name):
     """
     Tries recording regular method, and if you cant, record reflected
     """
-    if not record_method(f"__{name}__", stack[-2], stack[-1]):
-        record_method(f"__r{name}__", stack[-1], stack[-2])
+    if not record_method(f"__{name}__", stack.TOS1, stack.TOS):
+        record_method(f"__r{name}__", stack.TOS, stack.TOS1)
 
 
 def record_binary_inplace_method(stack, name):
     """
     Tries inplace method, and if cannot be found, uses regular method
     """
-    if not record_method(f"__i{name}__", stack[-2], stack[-1]):
+    if not record_method(f"__i{name}__", stack.TOS1, stack.TOS):
         record_binary_method(stack, name)
 
 
 def record_comparison(stack, name, inverse):
-    m = record_method(name, stack[-1], stack[-2])
-    if not m or m() == NotImplemented:
-        record_method(inverse, stack[-2], stack[-1])
+    m = record_method(name, stack.TOS, stack.TOS1)
+    if (not m) or (m() is NotImplemented):
+        record_method(inverse, stack.TOS1, stack.TOS)
+
+
+def get_instruction(frame):
+    for instruction in dis.get_instructions(frame.f_code):
+        if instruction.offset == frame.f_lasti:
+            return instruction
+    raise ValueError("Couldn't find instruction by offset")
+
+
+class Stack:
+    NULL = object()
+
+    def __init__(self, frame):
+        self.op_stack = get_stack.OpStack(frame)
+        self.current_i = 0
+
+    @property
+    def TOS(self):
+        return self.op_stack[-1]
+
+    @property
+    def TOS1(self):
+        return self.op_stack[-2]
+
+    @property
+    def TOS2(self):
+        return self.op_stack[-3]
+
+    def pop(self):
+        """
+        return the top item on the stack and removes it from the stack
+        """
+        self.current_i += 1
+        try:
+            return self.op_stack[-self.current_i]
+        except ValueError:
+            # raised when "PyObject is NULL"
+            return self.NULL
+
+    def pop_n(self, n: int):
+        """
+        removes the top N items from the stack and returns them so the top item is on the left.
+        """
+        return [self.pop() for _ in range(n)]
 
 
 def tracer(frame, event, arg):
@@ -152,33 +197,34 @@ def tracer(frame, event, arg):
         return None
     if event != "opcode":
         return
-    stack = OpStack(frame)
-    instruction = list(dis.get_instructions(frame.f_code))[frame.f_lasti]
+
+    instruction = get_instruction(frame)
     oparg = instruction.argval
     opname = instruction.opname
+    stack = Stack(frame)
 
     # handle all opcodes from https://docs.python.org/3/library/dis.html
     # that we care about
 
     # Unary
     if opname == "UNARY_POSITIVE":
-        record_method("__pos__", stack[-1])
+        record_method("__pos__", stack.TOS)
     if opname == "UNARY_NEGATIVE":
-        record_method("__neg__", stack[-1])
+        record_method("__neg__", stack.TOS)
     if opname == "UNARY_NOT":
         # try bool first and if that isn't method record length
-        if not record_method("__bool__", stack[-1]):
-            record_method("__len__", stack[-1])
+        if not record_method("__bool__", stack.TOS):
+            record_method("__len__", stack.TOS)
     if opname == "UNARY_INVERT":
-        record_method("__invert__", stack[-1])
+        record_method("__invert__", stack.TOS)
     if opname == "GET_ITER":
-        record_method("__iter__", stack[-1])
+        record_method("__iter__", stack.TOS)
     if opname == "GET_YIELD_FROM_ITER":
-        record_method("__iter__", stack[-1])
+        record_method("__iter__", stack.TOS)
 
     # binary
     if opname == "BINARY_SUBSCR":
-        record_method("__getitem__", stack[-1], stack[-2])
+        record_method("__getitem__", stack.TOS, stack.TOS1)
 
     if opname == "BINARY_POWER":
         record_binary_method(stack, "pow")
@@ -257,106 +303,93 @@ def tracer(frame, event, arg):
         record_binary_inplace_method(stack, "xor")
 
     if opname == "STORE_SUBSCR":
-        record_method("__setitem__", stack[-2], stack[-1], stack[-3])
+        record_method("__setitem__", stack.TOS1, stack.TOS, stack.TOS2)
 
     if opname == "DELETE_SUBSCR":
-        record_method("__delitem__", stack[-2], stack[-1])
+        record_method("__delitem__", stack.TOS1, stack.TOS)
 
     # misc
     if opname == "UNPACK_SEQUENCE":
-        record_method("__iter__", stack[-1])
+        record_method("__iter__", stack.TOS)
     if opname == "UNPACK_EX":
-        record_method("__iter__", stack[-1])
+        record_method("__iter__", stack.TOS)
 
     if opname == "STORE_ATTR":
-        record_method("__setattr__", stack[-1], oparg, stack[-2])
+        record_method("__setattr__", stack.TOS, oparg, stack.TOS1)
 
     if opname == "DELETE_ATTR":
-        record_method("__delattr__", stack[-1], oparg)
+        record_method("__delattr__", stack.TOS, oparg)
 
     if opname in ("BUILD_TUPLE_UNPACK", "BUILD_LIST_UNPACK", "BUILD_SET_UNPACK"):
-        for i in range(1, oparg + 1):
-            record_method("__iter__", stack[-i])
+        for value in stack[:oparg]:
+            record_method("__iter__", value)
 
     if opname == "BUILD_TUPLE_UNPACK_WITH_CALL":
         args = []
-        for i in range(1, oparg + 1):
-            arg = stack[-i]
+        for _ in range(oparg):
+            arg = stack.pop()
             args.extend(list(arg))
             record_method("__iter__", arg)
-        fn = stack[-(oparg + 1)]
+        fn = stack.pop()
         if record_function(fn, *args):
             RECORDED_CALL_FRAMES.add(frame)
     # TODO: BUILD_MAP_UNPACK, BUILD_MAP_UNPACK_WITH_CALL
     if opname == "LOAD_ATTR":
-        record_method("__getattr__", stack[-1], oparg)
+        record_method("__getattr__", stack.TOS, oparg)
     if opname == "COMPARE_OP":
         if oparg == "<":
-            record_comparison("__lt__", "__gt__")
+            record_comparison(stack, "__lt__", "__gt__")
         if oparg == "<=":
-            record_comparison("__le__", "__ge__")
+            record_comparison(stack, "__le__", "__ge__")
         if oparg == "==":
-            record_comparison("__eq__", "__ne__")
+            record_comparison(stack, "__eq__", "__ne__")
         if oparg == "!=":
-            record_comparison("__ne__", "__eq__")
+            record_comparison(stack, "__ne__", "__eq__")
         if oparg == ">":
-            record_comparison("__gt__", "__lt__")
+            record_comparison(stack, "__gt__", "__lt__")
         if oparg == ">=":
-            record_comparison("__ge__", "__le__")
+            record_comparison(stack, "__ge__", "__le__")
         if oparg in ("in", "not in"):
             # https://docs.python.org/3/reference/expressions.html#membership-test-operations
-            if not record_method("__contains__", stack[-2], stack[-1]):
-                if not record_method("__iter__", stack[-2]):
-                    record_method("__getitem__", stack[-2], 0)
+            if not record_method("__contains__", stack.TOS1, stack.TOS):
+                if not record_method("__iter__", stack.TOS1):
+                    record_method("__getitem__", stack.TOS1, 0)
 
     if opname == "FOR_ITER":
-        record_method("__next__", stack[-1])
+        record_method("__next__", stack.TOS)
     if opname == "CALL_FUNCTION":
-        args = []
-        print(oparg, len(stack))
-        for i in range(oparg):
-            args.append(stack[-(i + 1)])
-            print(args)
-        try:
-            fn = stack[-(oparg + 1)]
-        except IndexError:
-            print("failed", args)
-            return
+        args = stack.pop_n(oparg)
+        fn = stack.pop()
         if record_function(fn, *args):
             RECORDED_CALL_FRAMES.add(frame)
     if opname == "CALL_FUNCTION_KW":
-        kwargs_names = stack[-1]
-        kwargs = {}
-        for i, name in enumerate(kwargs_names):
-            kwargs[name] = stack[-(i + 2)]
-        args = []
-        for i in range(oparg):
-            args.append(stack[-(i + 1 + len(kwargs_names))])
-        fn = stack[-(len(oparg) + 1 + len(kwargs_names))]
+        kwargs_names = stack.pop()
+        kwargs = {name: stack.pop() for name in kwargs_names}
+        args = stack.pop_n(oparg - len(kwargs_names))
+        fn = stack.pop()
         if record_function(fn, *args, **kwargs):
             RECORDED_CALL_FRAMES.add(frame)
     if opname == "CALL_FUNCTION_EX":
         has_kwarg = oparg & int("01", 2)
         if has_kwarg:
-            kwargs = stack[-1]
-            args = stack[-2]
-            fn = stack[-3]
+            kwargs = stack.pop()
+            args = stack.pop()
+            fn = stack.pop()
         else:
             kwargs = {}
-            args = [-1]
-            fn = [-2]
+            args = stack.pop()
+            fn = stack.pop()
         if record_function(fn, *args, **kwargs):
             RECORDED_CALL_FRAMES.add(frame)
     if opname == "CALL_METHOD":
-        args = []
-        for i in range(oparg):
-            args.append(stack[-(i + 1)])
-        self_ = stack[-(oparg + 1)]
-        method = stack[-(oparg + 2)]
-        if self_:
-            res = record_function(method, self_, *args)
-        else:
+        args = stack.pop_n(oparg)
+        self_ = stack.pop()
+        method = stack.pop()
+
+        if self_ is stack.NULL:
             res = record_function(method, *args)
+        else:
+            res = record_function(method, self_, *args)
         if res:
             RECORDED_CALL_FRAMES.add(frame)
 
