@@ -192,7 +192,7 @@ class Tracer:
                 return True
         return False
 
-    def __call__(self, frame, event, arg) -> None:
+    def __call__(self, frame, event, arg) -> Optional[Tracer]:
         frame.f_trace_opcodes = True
         if event == "call":
             try:
@@ -204,7 +204,7 @@ class Tracer:
             # we did record this call frame, so dont trace below here
             return None
         if event != "opcode":
-            return
+            return None
 
         instruction = get_instruction(frame)
         oparg = instruction.argval
@@ -245,19 +245,19 @@ class Tracer:
             "BINARY_AND": op.and_,
             "BINARY_XOR": op.xor,
             "BINARY_OR": op.or_,
-            "INPLACE_POWER": op.pow,
-            "INPLACE_MULTIPLY": op.mul,
-            "INPLACE_MATRIX_MULTIPLY": op.matmul,
-            "INPLACE_FLOOR_DIVIDE": op.floordiv,
-            "INPLACE_TRUE_DIVIDE": op.truediv,
-            "INPLACE_MODULO": op.mod,
-            "INPLACE_ADD": op.add,
-            "INPLACE_SUBTRACT": op.sub,
-            "INPLACE_LSHIFT": op.lshift,
-            "INPLACE_RSHIFT": op.rshift,
-            "INPLACE_AND": op.and_,
-            "INPLACE_OR": op.or_,
-            "INPLACE_XOR": op.xor,
+            "INPLACE_POWER": op.ipow,
+            "INPLACE_MULTIPLY": op.imul,
+            "INPLACE_MATRIX_MULTIPLY": op.imatmul,
+            "INPLACE_FLOOR_DIVIDE": op.ifloordiv,
+            "INPLACE_TRUE_DIVIDE": op.itruediv,
+            "INPLACE_MODULO": op.imod,
+            "INPLACE_ADD": op.iadd,
+            "INPLACE_SUBTRACT": op.isub,
+            "INPLACE_LSHIFT": op.ilshift,
+            "INPLACE_RSHIFT": op.irshift,
+            "INPLACE_AND": op.iand,
+            "INPLACE_OR": op.ior,
+            "INPLACE_XOR": op.ixor,
         }
         if opname in BINARY_OPS:
             process((stack.TOS, stack.TOS1), BINARY_OPS[opname], stack.TOS1, stack.TOS)
@@ -349,6 +349,7 @@ class Tracer:
                 process((method,), method, *args)
             else:
                 process((method,), method, self_, *args)
+        return None
 
 
 if __name__ == "__main__":
