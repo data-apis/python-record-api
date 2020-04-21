@@ -122,6 +122,19 @@ class TestMockNumPyMethod(unittest.TestCase):
             call(np.ndarray.sort, self.a, axis=0),
         ]
 
+    def test_eye(self):
+        with self.tracer:
+            np.eye(10, order="F")
+        assert self.mock.mock_calls == [
+            call(getattr, np, "eye"),
+            call(np.eye, 10, order="F"),
+        ]
+
+    def test_linspace(self):
+        with self.tracer:
+            np.linspace(3, 4, endpoint=False)
+        self.mock.assert_called_once_with(np.linspace, 3, 4, endpoint=True)
+
 
 if __name__ == "__main__":
     unittest.main()
