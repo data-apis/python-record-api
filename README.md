@@ -21,7 +21,7 @@ git clone git@github.com:scikit-image/scikit-image.git
 conda create -c conda-forge -n scikit-image "numpy!=1.18.0" scipy "matplotlib!=3.0.0" networkx pillow=6 imageio tifffile PyWavelets pooch Cython wheel pytest
 conda activate scikit-image
 pip install -e ./scikit-image pytest-localserver
-env PYTHON_API_OUTPUT_FILE=sckimage.jsonl \
+env PYTHON_API_OUTPUT_FILE=skimage.jsonl \
     PYTHON_API_RUN_MODULE=pytest \
     PYTHON_API_TRACE_MODULE=numpy \
     PYTHON_API_IMPORT_MODULES=pytest,networkx,matplotlib,Cython,pooch,scipy \
