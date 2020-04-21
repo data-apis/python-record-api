@@ -22,9 +22,17 @@ DEBUG = os.environ.get("PYTHON_API_DEBUG", False)
 
 MAX_LENGTH = 50
 
+
+def type_repr(tp: Type) -> str:
+    module = inspect.getmodule(tp)
+    assert module
+    return f"{module.__name__}.{tp.__qualname__}"
+
+
 ENCODERS: Dict[Type, Callable[[Any], object]] = {
     types.ModuleType: lambda o: o.__name__,
     slice: lambda s: [s.start, s.stop, s.step],
+    type: type_repr,
 }
 
 try:
@@ -42,14 +50,11 @@ class JSONEncoder(json.JSONEncoder):
         """
 
         tp = type(o)
-        module = inspect.getmodule(tp)
-        assert module
-        tp_name = f"{module.__name__}.{tp.__qualname__}"
 
         if tp in ENCODERS:
-            return {"__tp": tp_name, "__v": self.process(ENCODERS[tp](o))}
+            return {"__tp": type_repr(tp), "__v": self.process(ENCODERS[tp](o))}
         else:
-            return {"__tp": tp_name}
+            return {"__tp": type_repr(tp)}
 
     def process(self, o):
         """
@@ -430,8 +435,9 @@ if __name__ == "__main__":
     writer = io.BufferedWriter(rand_file)
 
     if IMPORT_MODULES:
-        for module in IMPORT_MODULES.split(","):
-            importlib.import_module(module)
+        for name in IMPORT_MODULES.split(","):
+            importlib.import_module(name)
+
     try:
         with Tracer(TRACE_MODULE):
             runpy.run_module(RUN_MODULE, run_name="__main__", alter_sys=True)
