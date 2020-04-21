@@ -90,7 +90,8 @@ def log_call(fn: Callable, *args, **kwargs) -> None:
         warnings.warn(f"Cannot get module for {fn}")
         return
     # ufuncs dont have qualname
-    fn_name = f"{module.__name__}.{getattr(fn, '__qualname__', fn.__name__)}"
+    name = getattr(fn, "__qualname__", getattr(fn, "__name__", fn))
+    fn_name = f"{module.__name__}.{name}"
 
     try:
         sig = inspect.signature(fn)
