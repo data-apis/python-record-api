@@ -247,6 +247,8 @@ class Tracer:
         return False
 
     def __call__(self, frame, event, arg) -> Optional[Tracer]:
+        if (event != "opcode") and (event != "call"):
+            return None
         outer_frame = frame
         while outer_frame and outer_frame is not self.top_level_frame:
             if id(outer_frame.f_code) in self.ignored_code_ids:
@@ -266,8 +268,6 @@ class Tracer:
             # we did record this call frame, so dont trace below here
             return None
 
-        if event != "opcode":
-            return None
         stack = Stack(self, frame)
         opname = stack.opname
         process = stack.process
