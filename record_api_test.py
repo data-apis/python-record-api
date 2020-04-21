@@ -150,6 +150,14 @@ class TestMockNumPyMethod(unittest.TestCase):
             self.a.T
         self.assertCalls(call(getattr, self.a, "T"))
 
+    def test_concatenate(self):
+        with self.tracer:
+            np.concatenate((self.a, self.a), axis=0)
+        self.assertCalls(
+            call(getattr, np, "concatenate"),
+            call(np.concatenate, (self.a, self.a), axis=0),
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
