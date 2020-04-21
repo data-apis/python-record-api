@@ -380,13 +380,12 @@ class Tracer:
 
         if opname == "CALL_METHOD":
             args = stack.pop_n(oparg)
-            method = stack.pop()
-            self_ = stack.pop()
-
-            if self_ is stack.NULL:
-                process((method,), method, *args)
+            function_or_self = stack.pop()
+            null_or_method = stack.pop()
+            if null_or_method is stack.NULL:
+                process((function_or_self,), function_or_self, *args)
             else:
-                process((method,), method, self_, *args)
+                process((function_or_self,), null_or_method, function_or_self, *args)
         return None
 
 

@@ -16,6 +16,11 @@ class TestMockNumPyMethod(unittest.TestCase):
         self.addCleanup(patcher.stop)
         self.tracer = Tracer("numpy")
 
+    def assertCalls(self, *calls):
+        self.assertListEqual(
+            self.mock.mock_calls, [*calls],
+        )
+
     def test_pos(self):
         with self.tracer:
             +self.a
@@ -135,9 +140,11 @@ class TestMockNumPyMethod(unittest.TestCase):
             call(getattr, np, "linspace"), call(np.linspace, 3, 4, endpoint=False)
         )
 
-    def assertCalls(self, *calls):
-        self.assertListEqual(
-            self.mock.mock_calls, [*calls],
+    def test_reshape(self):
+        with self.tracer:
+            self.a.reshape((5, 2))
+        self.assertCalls(
+            call(np.ndarray.reshape, self.a, (5, 2)),
         )
 
 
