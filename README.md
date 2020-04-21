@@ -4,6 +4,8 @@ This module is mean to help you understand how a Python module is being used by 
 
 Currently there is a `record_api.py` script that logs all function calls to the module of your choice.
 
+This is supported on Python version 3.8.
+
 ## Example
 
 To test out a local small usage of NumPy:
