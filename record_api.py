@@ -352,8 +352,8 @@ class Tracer:
 
         if opname == "CALL_METHOD":
             args = stack.pop_n(oparg)
-            self_ = stack.pop()
             method = stack.pop()
+            self_ = stack.pop()
 
             if self_ is stack.NULL:
                 process((method,), method, *args)
