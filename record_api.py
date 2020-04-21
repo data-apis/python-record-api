@@ -152,7 +152,9 @@ class Stack:
         if self.tracer.should_trace(*keyed_args):
             # If this is a method implemented in C, expand it
             # to classes function and add self as an arg
-            if isinstance(fn, types.BuiltinMethodType) and not isinstance(fn.__self__, types.ModuleType):
+            if isinstance(fn, types.BuiltinMethodType) and not isinstance(
+                fn.__self__, types.ModuleType
+            ):
                 self_ = fn.__self__
                 args = (self_, *args)
                 fn = getattr(type(self_), fn.__name__)
@@ -174,12 +176,20 @@ class Tracer:
     # Tuple of code id and index of instruction
     recorded_calls: Set[Tuple[int, int]] = dataclasses.field(default_factory=set)
 
+    # A set of all the IDs of code objects which we have ignored. Their parent
+    # frame calls are in `record_calls`. We need to save this so that if we
+    # end up in a frame of a child call where we shouldnt be tracing we
+    # can exit early. It's unclear why we need this, because we shouldn't
+    # hit these frames anyway. But if we dont, we go into them unintentionally.
+    # See this Python bug: https://bugs.python.org/issue11992
+    ignored_code_ids: Set[int] = dataclasses.field(default_factory=set)
+
     def __enter__(self):
         # also set tracing on parent frames
         frame = inspect.currentframe()
         if frame:
-            frame.f_trace = self  # type: ignore
-            frame.f_trace_opcodes = True
+            # frame.f_trace = self  # type: ignore
+            # frame.f_trace_opcodes = True
             parent_frame = frame.f_back
             if parent_frame:
                 parent_frame.f_trace = self  # type: ignore
@@ -207,16 +217,25 @@ class Tracer:
         return False
 
     def __call__(self, frame, event, arg) -> Optional[Tracer]:
-        frame.f_trace_opcodes = True
+        outer_frame = frame
+        while outer_frame:
+            if id(outer_frame.f_code) in self.ignored_code_ids:
+                return None
+            outer_frame = outer_frame.f_back
+
         if event == "call":
             try:
                 self.recorded_calls.remove(self._frame_to_key(frame.f_back))
             except KeyError:
                 # we didnt record the call frame, so keep tracing
+                frame.f_trace_opcodes = True
                 return self
+            self.ignored_code_ids.add(id(frame.f_code))
+            frame.f_trace = None
             frame.f_trace_opcodes = False
             # we did record this call frame, so dont trace below here
             return None
+
         if event != "opcode":
             return None
 

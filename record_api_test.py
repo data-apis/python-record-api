@@ -76,7 +76,7 @@ class TestMockNumPyMethod(unittest.TestCase):
         with self.tracer:
             (*self.a, 10, *self.a)
         iter_ = call(iter, self.a)
-        assert self.mock.mock_calls == [iter_, iter_]
+        self.assertCalls(iter_, iter_)
 
     def test_tuple_unpack_with_call(self):
         def f(*args):
@@ -85,7 +85,7 @@ class TestMockNumPyMethod(unittest.TestCase):
         with self.tracer:
             f(*self.a, 10, *self.a)
         iter_ = call(iter, self.a)
-        assert self.mock.mock_calls == [iter_, iter_]
+        self.assertCalls(iter_, iter_)
 
     def test_load_attr(self):
         o = lambda: None
@@ -117,23 +117,28 @@ class TestMockNumPyMethod(unittest.TestCase):
     def test_sort(self):
         with self.tracer:
             self.a.sort(axis=0)
-        assert self.mock.mock_calls == [
-            call(getattr, self.a, "sort"),
-            call(np.ndarray.sort, self.a, axis=0),
-        ]
+        self.assertCalls(
+            call(getattr, self.a, "sort"), call(np.ndarray.sort, self.a, axis=0),
+        )
 
     def test_eye(self):
         with self.tracer:
             np.eye(10, order="F")
-        assert self.mock.mock_calls == [
-            call(getattr, np, "eye"),
-            call(np.eye, 10, order="F"),
-        ]
+        self.assertCalls(
+            call(getattr, np, "eye"), call(np.eye, 10, order="F"),
+        )
 
     def test_linspace(self):
         with self.tracer:
             np.linspace(3, 4, endpoint=False)
-        self.mock.assert_called_once_with(np.linspace, 3, 4, endpoint=True)
+        self.assertCalls(
+            call(getattr, np, "linspace"), call(np.linspace, 3, 4, endpoint=False)
+        )
+
+    def assertCalls(self, *calls):
+        self.assertListEqual(
+            self.mock.mock_calls, [*calls],
+        )
 
 
 if __name__ == "__main__":
