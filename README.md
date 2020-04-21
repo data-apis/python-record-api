@@ -24,8 +24,8 @@ pip install -e ./scikit-image pytest-localserver
 env PYTHON_API_OUTPUT_FILE=sckimage.jsonl \
     PYTHON_API_RUN_MODULE=pytest \
     PYTHON_API_TRACE_MODULE=numpy \
-    PYTHON_API_IMPORT_MODULES=pytest,skimage,networkx,matplotlib,Cython,pooch \
-    python record_api.py ./scikit-image/
+    PYTHON_API_IMPORT_MODULES=pytest,networkx,matplotlib,Cython,pooch,scipy \
+    python record_api.py ../scikit-image/
 ```
 
 ## How?
