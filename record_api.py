@@ -104,7 +104,6 @@ def log_call(fn: Callable, *args, **kwargs) -> None:
     save_log(fn_name, params)
 
 
-
 @dataclasses.dataclass
 class Stack:
     tracer: Tracer
@@ -379,7 +378,10 @@ class Tracer:
             }
             if stack.opvalcompare in COMPARISONS:
                 process(
-                    (stack.TOS, stack.TOS1), COMPARISONS[stack.opvalcompare], stack.TOS1, stack.TOS
+                    (stack.TOS, stack.TOS1),
+                    COMPARISONS[stack.opvalcompare],
+                    stack.TOS1,
+                    stack.TOS,
                 )
 
         if opname == "CALL_FUNCTION":
