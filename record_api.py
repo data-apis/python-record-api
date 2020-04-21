@@ -104,19 +104,6 @@ def log_call(fn: Callable, *args, **kwargs) -> None:
     save_log(fn_name, params)
 
 
-def get_instruction(frame) -> Tuple[int, int]:
-    """
-    returns the op code and op arg for this instruction.
-
-    We could use `dis.get_instructions` but it's really slow!
-    We move some of the logic as in `_get_instructions_bytes`
-    to later, so we can only process instructions we care about.
-    """
-    for offset, op, arg in dis._unpack_opargs(frame.f_code.co_code):  # type: ignore
-        if offset == frame.f_lasti:
-            return op, arg
-    raise ValueError("Couldn't find instruction by offset")
-
 
 @dataclasses.dataclass
 class Stack:
@@ -125,11 +112,16 @@ class Stack:
     NULL: ClassVar[object] = object()
     current_i: int = dataclasses.field(init=False, default=0)
     opcode: int = dataclasses.field(init=False)
-    oparg: int = dataclasses.field(init=False)
 
     def __post_init__(self):
         self.op_stack = get_stack.OpStack(self.frame)
-        self.opcode, self.oparg = get_instruction(self.frame)
+        self.opcode = self.frame.f_code.co_code[self.frame.f_lasti]
+
+    @property
+    def oparg(self):
+        # sort of replicates logic in dis._unpack_opargs but doesn't account for extended
+        # args, oh well!
+        return self.frame.f_code.co_code[self.frame.f_lasti + 1]
 
     @property
     def opname(self):
@@ -138,8 +130,9 @@ class Stack:
     @property
     def opvalname(self):
         """
-
-        We also remove the switches we dont use
+        We could use `dis.get_instructions` but it's really slow!
+        We move some of the logic as in `_get_instructions_bytes`
+        to later, so we can only process instructions we care about.
         """
         return self.frame.f_code.co_names[self.oparg]
 
