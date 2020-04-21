@@ -22,12 +22,18 @@ DEBUG = os.environ.get("PYTHON_API_DEBUG", False)
 
 MAX_LENGTH = 50
 
-
 ENCODERS: Dict[Type, Callable[[object], object]] = {
     tuple: lambda o: o,
     types.ModuleType: lambda o: o.__name__,
-    slice: lambda s: (s.start, s.stop, s.step)
+    slice: lambda s: (s.start, s.stop, s.step),
 }
+
+try:
+    import numpy
+except ImportError:
+    pass
+else:
+    ENCODERS[numpy.ndarray] = lambda a: {"shape": a.shape, "dtype": a.dtype}
 
 
 class JSONEncoder(json.JSONEncoder):
