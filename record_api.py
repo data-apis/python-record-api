@@ -11,7 +11,7 @@ import dis
 import operator as op
 import dataclasses
 import warnings
-
+import opcode
 from typing import *
 
 import get_stack
@@ -72,7 +72,6 @@ class JSONEncoder(json.JSONEncoder):
         return super().iterencode(self.process(o), _one_shot)
 
 
-
 def save_log(fn: str, params: Dict[str, object],) -> None:
     data = {
         "function": fn,
@@ -105,23 +104,52 @@ def log_call(fn: Callable, *args, **kwargs) -> None:
     save_log(fn_name, params)
 
 
-def get_instruction(frame):
-    for instruction in dis.get_instructions(frame.f_code):
-        if instruction.offset == frame.f_lasti:
-            return instruction
+def get_instruction(frame) -> Tuple[int, int]:
+    """
+    returns the op code and op arg for this instruction.
+
+    We could use `dis.get_instructions` but it's really slow!
+    We move some of the logic as in `_get_instructions_bytes`
+    to later, so we can only process instructions we care about.
+    """
+    for offset, op, arg in dis._unpack_opargs(frame.f_code.co_code):  # type: ignore
+        if offset == frame.f_lasti:
+            return op, arg
     raise ValueError("Couldn't find instruction by offset")
 
 
 @dataclasses.dataclass
 class Stack:
-    NULL: ClassVar[object] = object()
     tracer: Tracer
-    frame: object
-    op_stack: get_stack.OpStack = dataclasses.field(init=False)
+    frame: Any
+    NULL: ClassVar[object] = object()
     current_i: int = dataclasses.field(init=False, default=0)
+    opcode: int = dataclasses.field(init=False)
+    oparg: int = dataclasses.field(init=False)
 
     def __post_init__(self):
         self.op_stack = get_stack.OpStack(self.frame)
+        self.opcode, self.oparg = get_instruction(self.frame)
+
+    @property
+    def opname(self):
+        return opcode.opname[self.opcode]
+
+    @property
+    def opvalname(self):
+        """
+
+        We also remove the switches we dont use
+        """
+        return self.frame.f_code.co_names[self.oparg]
+
+    @property
+    def opvalcompare(self):
+        """
+
+        We also remove the switches we dont use
+        """
+        return dis.cmp_op[self.oparg]
 
     @property
     def TOS(self):
@@ -191,6 +219,8 @@ class Tracer:
     # See this Python bug: https://bugs.python.org/issue11992
     ignored_code_ids: Set[int] = dataclasses.field(default_factory=set)
 
+    top_level_frame: object = dataclasses.field(default=None)
+
     def __enter__(self):
         # also set tracing on parent frames
         frame = inspect.currentframe()
@@ -201,6 +231,7 @@ class Tracer:
             if parent_frame:
                 parent_frame.f_trace = self  # type: ignore
                 parent_frame.f_trace_opcodes = True
+                self.top_level_frame = parent_frame
         sys.settrace(self)
 
     def __exit__(self, exc_type, exc_val, exc_tb):
@@ -225,7 +256,7 @@ class Tracer:
 
     def __call__(self, frame, event, arg) -> Optional[Tracer]:
         outer_frame = frame
-        while outer_frame:
+        while outer_frame and outer_frame is not self.top_level_frame:
             if id(outer_frame.f_code) in self.ignored_code_ids:
                 return None
             outer_frame = outer_frame.f_back
@@ -245,11 +276,8 @@ class Tracer:
 
         if event != "opcode":
             return None
-
-        instruction = get_instruction(frame)
-        oparg = instruction.argval
-        opname = instruction.opname
         stack = Stack(self, frame)
+        opname = stack.opname
         process = stack.process
         # handle all opcodes from https://docs.python.org/3/library/dis.html
         # that we care about
@@ -318,21 +346,21 @@ class Tracer:
             process((stack.TOS1,), op.delitem, stack.TOS1, stack.TOS)
 
         if opname == "LOAD_ATTR":
-            process((stack.TOS,), getattr, stack.TOS, oparg)
+            process((stack.TOS,), getattr, stack.TOS, stack.opvalname)
 
         if opname == "STORE_ATTR":
-            process((stack.TOS,), setattr, stack.TOS, oparg, stack.TOS1)
+            process((stack.TOS,), setattr, stack.TOS, stack.opvalname, stack.TOS1)
 
         if opname == "DELETE_ATTR":
-            process((stack.TOS,), delattr, stack.TOS, oparg)
+            process((stack.TOS,), delattr, stack.TOS, stack.opvalname)
 
         if opname in ("BUILD_TUPLE_UNPACK", "BUILD_LIST_UNPACK", "BUILD_SET_UNPACK"):
-            for value in stack.pop_n(oparg):
+            for value in stack.pop_n(stack.oparg):
                 process((value,), iter, value)
 
         if opname == "BUILD_TUPLE_UNPACK_WITH_CALL":
             args = []
-            for _ in range(oparg):
+            for _ in range(stack.oparg):
                 arg = stack.pop()
                 args.extend(list(arg))
                 process((arg,), iter, arg)
@@ -356,25 +384,25 @@ class Tracer:
                 "is": op.is_,
                 "is not": op.is_not,
             }
-            if oparg in COMPARISONS:
+            if stack.opvalcompare in COMPARISONS:
                 process(
-                    (stack.TOS, stack.TOS1), COMPARISONS[oparg], stack.TOS1, stack.TOS
+                    (stack.TOS, stack.TOS1), COMPARISONS[stack.opvalcompare], stack.TOS1, stack.TOS
                 )
 
         if opname == "CALL_FUNCTION":
-            args = stack.pop_n(oparg)
+            args = stack.pop_n(stack.oparg)
             fn = stack.pop()
             process((fn,), fn, *args)
 
         if opname == "CALL_FUNCTION_KW":
             kwargs_names = stack.pop()
             kwargs = {name: stack.pop() for name in kwargs_names}
-            args = stack.pop_n(oparg - len(kwargs_names))
+            args = stack.pop_n(stack.oparg - len(kwargs_names))
             fn = stack.pop()
             process((fn,), fn, *args, **kwargs)
 
         if opname == "CALL_FUNCTION_EX":
-            has_kwarg = oparg & int("01", 2)
+            has_kwarg = stack.oparg & int("01", 2)
             if has_kwarg:
                 kwargs = stack.pop()
                 args = stack.pop()
@@ -386,7 +414,7 @@ class Tracer:
             process((fn,), fn, *args, **kwargs)
 
         if opname == "CALL_METHOD":
-            args = stack.pop_n(oparg)
+            args = stack.pop_n(stack.oparg)
             function_or_self = stack.pop()
             null_or_method = stack.pop()
             if null_or_method is stack.NULL:
