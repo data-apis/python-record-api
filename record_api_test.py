@@ -143,9 +143,12 @@ class TestMockNumPyMethod(unittest.TestCase):
     def test_reshape(self):
         with self.tracer:
             self.a.reshape((5, 2))
-        self.assertCalls(
-            call(np.ndarray.reshape, self.a, (5, 2)),
-        )
+        self.assertCalls(call(np.ndarray.reshape, self.a, (5, 2)),)
+
+    def test_transpose(self):
+        with self.tracer:
+            self.a.T
+        self.assertCalls(call(getattr, self.a, "T"))
 
 
 if __name__ == "__main__":
