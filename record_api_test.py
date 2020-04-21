@@ -96,6 +96,29 @@ class TestMockNumPyMethod(unittest.TestCase):
             o.shape
         self.mock.assert_called_once_with(getattr, self.a, "shape")
 
+    def test_arange(self):
+        with self.tracer:
+            np.arange(10)
+        self.mock.assert_called_once_with(np.arange, 10)
+
+    def test_arange_in_fn(self):
+        def fn():
+            np.arange(10)
+
+        with self.tracer:
+            fn()
+        self.mock.assert_called_once_with(np.arange, 10)
+
+    def test_power(self):
+        with self.tracer:
+            np.power(100, 10)
+        self.mock.assert_called_once_with(np.power, 100, 10)
+
+    def test_sort(self):
+        with self.tracer:
+            self.a.sort(axis=0)
+        self.mock.assert_called_once_with(np.ndarray.sort, self.a, axis=0)
+
 
 if __name__ == "__main__":
     unittest.main()
