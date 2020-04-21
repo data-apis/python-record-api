@@ -39,3 +39,8 @@ It records all usage of the modules you specify, both all functions called that 
 The goal is to give us a sense of how different APIs are used in Python data science libraries, in order to have some data to back up decisions about creating future APIs.
 
 This let's us understand not only what exact functions are called, but the ways in which they are called, includig the type and values of their arguments.
+
+
+## Tests
+
+There are some tests in the `record_api_test.py` which you can run with `python -m unittest record_api_test`. Unfortunately, we can't run coverage on our module, because it also uses `sys.settrace`. 
