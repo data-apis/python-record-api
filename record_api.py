@@ -20,23 +20,47 @@ __all__ = ["Tracer"]
 
 DEBUG = os.environ.get("PYTHON_API_DEBUG", False)
 
+MAX_LENGTH = 50
 
-def type_name(value: object) -> str:
-    tp = type(value)
-    module = inspect.getmodule(tp)
-    if not module:
-        raise ValueError(f"Cannot get module for {tp}")
-    return f"{module.__name__}.{tp.__qualname__}"
+
+ENCODERS: Dict[Type, Callable[[object], object]] = {
+    tuple: lambda o: o,
+    types.ModuleType: lambda o: o.__name__,
+    slice: lambda s: (s.start, s.stop, s.step)
+}
+
+
+class JSONEncoder(json.JSONEncoder):
+    def default(self, o: object) -> object:
+        """
+        JSON encoder that special cases some types 
+        """
+
+        if isinstance(o, (str, list)):
+            o = o[:MAX_LENGTH]
+        elif isinstance(o, (dict, int, float, bool, type(None))):
+            pass
+        else:
+            tp = type(o)
+            module = inspect.getmodule(tp)
+            assert module
+            tp_name = f"{module.__name__}.{tp.__qualname__}"
+
+            if tp in ENCODERS:
+                o = {"__tp": tp_name, "__v": ENCODERS[tp](o)}
+            else:
+                o = {"__tp": tp_name}
+        return o
 
 
 def save_log(
     fn: str,
-    caller_args: List[str],
-    caller_kwargs: Dict[str, str],
+    caller_args: Iterable[object],
+    caller_kwargs: Dict[str, object],
     signature_available: bool,
-    fn_arguments: Optional[Dict[str, str]],
-    fn_varargs: Optional[List[str]],
-    fn_varkw: Optional[Dict[str, str]],
+    fn_arguments: Optional[Dict[str, object]],
+    fn_varargs: Optional[Iterable[object]],
+    fn_varkw: Optional[Dict[str, object]],
 ) -> None:
     data = {
         "function": fn,
@@ -47,24 +71,27 @@ def save_log(
         "function_var_positional": fn_varargs,
         "function_var_keyword": fn_varkw,
     }
-    writer.write((json.dumps(data) + "\n").encode())
+    writer.write((json.dumps(data, cls=JSONEncoder) + "\n").encode())
 
 
 def log_call(fn: Callable, *args, **kwargs) -> None:
-    module = inspect.getmodule(fn)
+    if isinstance(fn, types.MethodDescriptorType):
+        module = inspect.getmodule(fn.__objclass__)
+    else:
+        # for ufuuncs get module of type of ufunc
+        module = inspect.getmodule(fn) or inspect.getmodule(type(fn))
     if not module:
-        warnings.warn("Cannot get module for {fn}")
+        warnings.warn(f"Cannot get module for {fn}")
         return
-    fn_name = f"{module.__name__}.{fn.__qualname__}"
-    arg_types = list(map(type_name, args))
-    kwarg_types = {key: type_name(value) for key, value in kwargs.items()}
+    # ufuncs dont have qualname
+    fn_name = f"{module.__name__}.{getattr(fn, '__qualname__', fn.__name__)}"
 
     try:
         sig = inspect.signature(fn)
     except ValueError:
         bound_arguments = None
-        vararg_types = None
-        varkw_types = None
+        varargs = None
+        varkws = None
         signature_available = False
     else:
         # pop off var args and var kwargs from bound arguments
@@ -77,24 +104,16 @@ def log_call(fn: Callable, *args, **kwargs) -> None:
             elif param.kind == inspect.Parameter.VAR_KEYWORD:
                 varkw_param = param.name
 
-        bound_arguments = sig.bind(*arg_types, **kwarg_types).arguments
+        bound_arguments = sig.bind(*args, **kwargs).arguments
 
-        vararg_types = (
+        varargs = (
             bound_arguments.pop(vararg_param, []) if vararg_param is not None else []
         )
-        varkw_types = (
-            bound_arguments.pop(varkw_param, {}) if varkw_param is not None else {}
-        )
+        varkws = bound_arguments.pop(varkw_param, {}) if varkw_param is not None else {}
         signature_available = True
 
     save_log(
-        fn_name,
-        arg_types,
-        kwarg_types,
-        signature_available,
-        bound_arguments,
-        vararg_types,
-        varkw_types,
+        fn_name, args, kwargs, signature_available, bound_arguments, varargs, varkws,
     )
 
 
