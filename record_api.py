@@ -22,10 +22,9 @@ DEBUG = os.environ.get("PYTHON_API_DEBUG", False)
 
 MAX_LENGTH = 50
 
-ENCODERS: Dict[Type, Callable[[object], object]] = {
-    tuple: lambda o: o,
+ENCODERS: Dict[Type, Callable[[Any], object]] = {
     types.ModuleType: lambda o: o.__name__,
-    slice: lambda s: (s.start, s.stop, s.step),
+    slice: lambda s: [s.start, s.stop, s.step],
 }
 
 try:
@@ -33,7 +32,7 @@ try:
 except ImportError:
     pass
 else:
-    ENCODERS[numpy.ndarray] = lambda a: {"shape": a.shape, "dtype": a.dtype}
+    ENCODERS[numpy.ndarray] = lambda a: {"shape": list(a.shape), "dtype": a.dtype}
 
 
 class JSONEncoder(json.JSONEncoder):
@@ -42,21 +41,36 @@ class JSONEncoder(json.JSONEncoder):
         JSON encoder that special cases some types 
         """
 
-        if isinstance(o, (str, list)):
-            o = o[:MAX_LENGTH]
-        elif isinstance(o, (dict, int, float, bool, type(None))):
-            pass
-        else:
-            tp = type(o)
-            module = inspect.getmodule(tp)
-            assert module
-            tp_name = f"{module.__name__}.{tp.__qualname__}"
+        tp = type(o)
+        module = inspect.getmodule(tp)
+        assert module
+        tp_name = f"{module.__name__}.{tp.__qualname__}"
 
-            if tp in ENCODERS:
-                o = {"__tp": tp_name, "__v": ENCODERS[tp](o)}
-            else:
-                o = {"__tp": tp_name}
+        if tp in ENCODERS:
+            return {"__tp": tp_name, "__v": self.process(ENCODERS[tp](o))}
+        else:
+            return {"__tp": tp_name}
+
+    def process(self, o):
+        """
+        Turns tuples into dicts and remove long values
+        """
+        if isinstance(o, str):
+            return o[:MAX_LENGTH]
+        elif isinstance(o, list):
+            return [self.process(v) for v in o[:MAX_LENGTH]]
+        elif isinstance(o, dict):
+            return {
+                self.process(k): self.process(v)
+                for k, v in list(o.items())[:MAX_LENGTH]
+            }
+        elif isinstance(o, tuple):
+            return {"__tp": "tuple", "value": self.process(list(o))}
         return o
+
+    def iterencode(self, o, _one_shot=False):
+        return super().iterencode(self.process(o), _one_shot)
+
 
 
 def save_log(fn: str, params: Dict[str, object],) -> None:
