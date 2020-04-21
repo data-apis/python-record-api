@@ -1,3 +1,4 @@
+from __future__ import annotations
 import importlib
 import inspect
 import io
@@ -7,25 +8,29 @@ import runpy
 import sys
 import types
 import dis
+import operator as op
+import dataclasses
+import warnings
 
 from typing import *
 
 import get_stack
 
-__all__ = ["tracer"]
-TRACE_MODULE = os.environ["PYTHON_API_TRACE_MODULE"]
+__all__ = ["Tracer"]
 
 
 def type_name(value: object) -> str:
     tp = type(value)
     module = inspect.getmodule(tp)
+    if not module:
+        raise ValueError(f"Cannot get module for {tp}")
     return f"{module.__name__}.{tp.__qualname__}"
 
 
 def save_log(
     fn: str,
     caller_args: List[str],
-    caller_kwargs: List[str],
+    caller_kwargs: Dict[str, str],
     signature_available: bool,
     fn_arguments: Optional[Dict[str, str]],
     fn_varargs: Optional[List[str]],
@@ -43,8 +48,12 @@ def save_log(
     writer.write((json.dumps(data) + "\n").encode())
 
 
-def log_call(fn: types.FunctionType, module_name: str, *args, **kwargs):
-    fn_name = f"{module_name}.{fn.__qualname__}"
+def log_call(fn: Callable, *args, **kwargs) -> None:
+    module = inspect.getmodule(fn)
+    if not module:
+        warnings.warn("Cannot get module for {fn}")
+        return
+    fn_name = f"{module.__name__}.{fn.__qualname__}"
     arg_types = list(map(type_name, args))
     kwarg_types = {key: type_name(value) for key, value in kwargs.items()}
 
@@ -87,58 +96,6 @@ def log_call(fn: types.FunctionType, module_name: str, *args, **kwargs):
     )
 
 
-# Keep a set of frames that we have recorded a call
-# from. We should add to this when we record a bytecode
-# trace from a function call
-# we should pop one off this to check if we should keep tracing
-# below this frame
-RECORDED_CALL_FRAMES = set()
-
-
-def record_function(fn: types.FunctionType, *args: object, **kwargs) -> bool:
-    module = inspect.getmodule(fn)
-    if not module:
-        return False
-    module_name = module.__name__
-    if module_name.startswith(TRACE_MODULE):
-        log_call(fn, module_name, *args, **kwargs)
-        return True
-    return False
-
-
-def record_method(
-    method_name: str, self_, *args: object, **kwargs
-) -> Optional[Callable]:
-    cls = type(self_)
-    module_name = inspect.getmodule(cls).__name__
-    if module_name.startswith(TRACE_MODULE) and hasattr(cls, method_name):
-        log_call(getattr(cls, method_name), module_name, self_, *args, **kwargs)
-        return lambda: getattr(self_, method_name)(*args, **kwargs)
-    return None
-
-
-def record_binary_method(stack, name):
-    """
-    Tries recording regular method, and if you cant, record reflected
-    """
-    if not record_method(f"__{name}__", stack.TOS1, stack.TOS):
-        record_method(f"__r{name}__", stack.TOS, stack.TOS1)
-
-
-def record_binary_inplace_method(stack, name):
-    """
-    Tries inplace method, and if cannot be found, uses regular method
-    """
-    if not record_method(f"__i{name}__", stack.TOS1, stack.TOS):
-        record_binary_method(stack, name)
-
-
-def record_comparison(stack, name, inverse):
-    m = record_method(name, stack.TOS, stack.TOS1)
-    if (not m) or (m() is NotImplemented):
-        record_method(inverse, stack.TOS1, stack.TOS)
-
-
 def get_instruction(frame):
     for instruction in dis.get_instructions(frame.f_code):
         if instruction.offset == frame.f_lasti:
@@ -146,12 +103,16 @@ def get_instruction(frame):
     raise ValueError("Couldn't find instruction by offset")
 
 
+@dataclasses.dataclass
 class Stack:
-    NULL = object()
+    NULL: ClassVar[object] = object()
+    tracer: Tracer
+    frame: object
+    op_stack: get_stack.OpStack = dataclasses.field(init=False)
+    current_i: int = dataclasses.field(init=False, default=0)
 
-    def __init__(self, frame):
-        self.op_stack = get_stack.OpStack(frame)
-        self.current_i = 0
+    def __post_init__(self):
+        self.op_stack = get_stack.OpStack(self.frame)
 
     @property
     def TOS(self):
@@ -176,226 +137,225 @@ class Stack:
             # raised when "PyObject is NULL"
             return self.NULL
 
-    def pop_n(self, n: int):
+    def pop_n(self, n: int) -> List:
         """
         removes the top N items from the stack and returns them so the top item is on the left.
         """
         return [self.pop() for _ in range(n)]
 
+    def process(self, keyed_args: Tuple, fn: Callable, *args, **kwargs) -> None:
+        if self.tracer.should_trace(*keyed_args):
+            log_call(fn, *args, **kwargs)
+            self.tracer.recorded_calls.add(self.tracer._frame_to_key(self.frame))
 
-def tracer(frame, event, arg):
-    frame.f_trace_opcodes = True
-    if event == "call":
-        try:
-            RECORDED_CALL_FRAMES.remove(frame.f_back)
-        except KeyError:
-            # we didnt record the call frame, so keep tracing
-            return tracer
-        # we did record this call frame, so dont trace below here
-        return None
-    if event != "opcode":
-        return
 
-    instruction = get_instruction(frame)
-    oparg = instruction.argval
-    opname = instruction.opname
-    stack = Stack(frame)
+@dataclasses.dataclass
+class Tracer:
+    # the module we should trace
+    module: str
 
-    # handle all opcodes from https://docs.python.org/3/library/dis.html
-    # that we care about
+    # Keep a set of frames that we have recorded a call
+    # from. We should add to this when we record a bytecode
+    # trace from a function call
+    # we should pop one off this to check if we should keep tracing
+    # below this frame
 
-    # Unary
-    if opname == "UNARY_POSITIVE":
-        record_method("__pos__", stack.TOS)
-    if opname == "UNARY_NEGATIVE":
-        record_method("__neg__", stack.TOS)
-    if opname == "UNARY_NOT":
-        # try bool first and if that isn't method record length
-        if not record_method("__bool__", stack.TOS):
-            record_method("__len__", stack.TOS)
-    if opname == "UNARY_INVERT":
-        record_method("__invert__", stack.TOS)
-    if opname == "GET_ITER":
-        record_method("__iter__", stack.TOS)
-    if opname == "GET_YIELD_FROM_ITER":
-        record_method("__iter__", stack.TOS)
+    # Tuple of code id and index of instruction
+    recorded_calls: Set[Tuple[int, int]] = dataclasses.field(default_factory=set)
 
-    # binary
-    if opname == "BINARY_SUBSCR":
-        record_method("__getitem__", stack.TOS, stack.TOS1)
+    def __enter__(self):
+        # also set tracing on parent frames
+        frame = inspect.currentframe()
+        if frame:
+            frame.f_trace = self  # type: ignore
+            frame.f_trace_opcodes = True
+            parent_frame = frame.f_back
+            if parent_frame:
+                parent_frame.f_trace = self  # type: ignore
+                parent_frame.f_trace_opcodes = True
+        sys.settrace(self)
 
-    if opname == "BINARY_POWER":
-        record_binary_method(stack, "pow")
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        sys.settrace(None)
 
-    if opname == "BINARY_MULTIPLY":
-        record_binary_method(stack, "mul")
+    @staticmethod
+    def _frame_to_key(frame):
+        return (id(frame.f_code), frame.f_lasti)
 
-    if opname == "BINARY_MATRIX_MULTIPLY":
-        record_binary_method(stack, "matmul")
+    def should_trace(self, *values) -> bool:
+        for value in values:
+            module = inspect.getmodule(value) or inspect.getmodule(type(value))
+            if not module:
+                warnings.warn(f"Cannot get module of {value}")
+                continue
+            if module.__name__.startswith(self.module):
+                return True
+        return False
 
-    if opname == "BINARY_FLOOR_DIVIDE":
-        record_binary_method(stack, "floordiv")
+    def __call__(self, frame, event, arg) -> None:
+        frame.f_trace_opcodes = True
+        if event == "call":
+            try:
+                self.recorded_calls.remove(self._frame_to_key(frame.f_back))
+            except KeyError:
+                # we didnt record the call frame, so keep tracing
+                return self
+            frame.f_trace_opcodes = False
+            # we did record this call frame, so dont trace below here
+            return None
+        if event != "opcode":
+            return
 
-    if opname == "BINARY_TRUE_DIVIDE":
-        record_binary_method(stack, "truediv")
+        instruction = get_instruction(frame)
+        oparg = instruction.argval
+        opname = instruction.opname
+        stack = Stack(self, frame)
+        process = stack.process
+        # handle all opcodes from https://docs.python.org/3/library/dis.html
+        # that we care about
 
-    if opname == "BINARY_MODULO":
-        record_binary_method(stack, "mod")
+        # Unary
+        UNARY_OPS = {
+            "UNARY_POSITIVE": op.pos,
+            "UNARY_NEGATIVE": op.neg,
+            "UNARY_NOT": op.not_,
+            "UNARY_INVERT": op.invert,
+            "GET_ITER": iter,
+            "GET_YIELD_FROM_ITER": iter,
+            "UNPACK_SEQUENCE": iter,
+            "UNPACK_EX": iter,
+            "FOR_ITER": iter,
+        }
+        if opname in UNARY_OPS:
+            process((stack.TOS,), UNARY_OPS[opname], stack.TOS)
 
-    if opname == "BINARY_ADD":
-        record_binary_method(stack, "add")
+        # binary
 
-    if opname == "BINARY_SUBTRACT":
-        record_binary_method(stack, "sub")
+        BINARY_OPS = {
+            "BINARY_POWER": op.pow,
+            "BINARY_MULTIPLY": op.mul,
+            "BINARY_MATRIX_MULTIPLY": op.matmul,
+            "BINARY_FLOOR_DIVIDE": op.floordiv,
+            "BINARY_TRUE_DIVIDE": op.truediv,
+            "BINARY_MODULO": op.mod,
+            "BINARY_ADD": op.add,
+            "BINARY_SUBTRACT": op.sub,
+            "BINARY_LSHIFT": op.lshift,
+            "BINARY_RSHIFT": op.rshift,
+            "BINARY_AND": op.and_,
+            "BINARY_XOR": op.xor,
+            "BINARY_OR": op.or_,
+            "INPLACE_POWER": op.pow,
+            "INPLACE_MULTIPLY": op.mul,
+            "INPLACE_MATRIX_MULTIPLY": op.matmul,
+            "INPLACE_FLOOR_DIVIDE": op.floordiv,
+            "INPLACE_TRUE_DIVIDE": op.truediv,
+            "INPLACE_MODULO": op.mod,
+            "INPLACE_ADD": op.add,
+            "INPLACE_SUBTRACT": op.sub,
+            "INPLACE_LSHIFT": op.lshift,
+            "INPLACE_RSHIFT": op.rshift,
+            "INPLACE_AND": op.and_,
+            "INPLACE_OR": op.or_,
+            "INPLACE_XOR": op.xor,
+        }
+        if opname in BINARY_OPS:
+            process((stack.TOS, stack.TOS1), BINARY_OPS[opname], stack.TOS1, stack.TOS)
 
-    if opname == "BINARY_LSHIFT":
-        record_binary_method(stack, "lshift")
+        # special case subscr b/c we only check first arg, not both
+        if opname == "BINARY_SUBSCR":
+            process((stack.TOS,), op.getitem, stack.TOS, stack.TOS1)
 
-    if opname == "BINARY_RSHIFT":
-        record_binary_method(stack, "rshift")
+        if opname == "STORE_SUBSCR":
+            process((stack.TOS1,), op.setitem, stack.TOS1, stack.TOS, stack.TOS2)
 
-    if opname == "BINARY_AND":
-        record_binary_method(stack, "and")
+        if opname == "DELETE_SUBSCR":
+            process((stack.TOS1,), op.delitem, stack.TOS1, stack.TOS)
 
-    if opname == "BINARY_XOR":
-        record_binary_method(stack, "xor")
+        if opname == "LOAD_ATTR":
+            process((stack.TOS,), getattr, stack.TOS, oparg)
 
-    if opname == "BINARY_OR":
-        record_binary_method(stack, "or")
+        if opname == "STORE_ATTR":
+            process((stack.TOS,), setattr, stack.TOS, oparg, stack.TOS1)
 
-    # inplace
-    if opname == "INPLACE_POWER":
-        record_binary_inplace_method(stack, "pow")
+        if opname == "DELETE_ATTR":
+            process((stack.TOS,), delattr, stack.TOS, oparg)
 
-    if opname == "INPLACE_MULTIPLY":
-        record_binary_inplace_method(stack, "mul")
+        if opname in ("BUILD_TUPLE_UNPACK", "BUILD_LIST_UNPACK", "BUILD_SET_UNPACK"):
+            for value in stack.pop_n(oparg):
+                process((value,), iter, value)
 
-    if opname == "INPLACE_MATRIX_MULTIPLY":
-        record_binary_inplace_method(stack, "matmul")
-
-    if opname == "INPLACE_FLOOR_DIVIDE":
-        record_binary_inplace_method(stack, "div")
-
-    if opname == "INPLACE_TRUE_DIVIDE":
-        record_binary_inplace_method(stack, "truediv")
-
-    if opname == "INPLACE_MODULO":
-        record_binary_inplace_method(stack, "mod")
-
-    if opname == "INPLACE_ADD":
-        record_binary_inplace_method(stack, "add")
-
-    if opname == "INPLACE_SUBTRACT":
-        record_binary_inplace_method(stack, "sub")
-
-    if opname == "INPLACE_LSHIFT":
-        record_binary_inplace_method(stack, "lshift")
-
-    if opname == "INPLACE_RSHIFT":
-        record_binary_inplace_method(stack, "rshift")
-
-    if opname == "INPLACE_AND":
-        record_binary_inplace_method(stack, "and")
-
-    if opname == "INPLACE_XOR":
-        record_binary_inplace_method(stack, "xor")
-
-    if opname == "STORE_SUBSCR":
-        record_method("__setitem__", stack.TOS1, stack.TOS, stack.TOS2)
-
-    if opname == "DELETE_SUBSCR":
-        record_method("__delitem__", stack.TOS1, stack.TOS)
-
-    # misc
-    if opname == "UNPACK_SEQUENCE":
-        record_method("__iter__", stack.TOS)
-    if opname == "UNPACK_EX":
-        record_method("__iter__", stack.TOS)
-
-    if opname == "STORE_ATTR":
-        record_method("__setattr__", stack.TOS, oparg, stack.TOS1)
-
-    if opname == "DELETE_ATTR":
-        record_method("__delattr__", stack.TOS, oparg)
-
-    if opname in ("BUILD_TUPLE_UNPACK", "BUILD_LIST_UNPACK", "BUILD_SET_UNPACK"):
-        for value in stack.pop_n(oparg):
-            record_method("__iter__", value)
-
-    if opname == "BUILD_TUPLE_UNPACK_WITH_CALL":
-        args = []
-        for _ in range(oparg):
-            arg = stack.pop()
-            args.extend(list(arg))
-            record_method("__iter__", arg)
-        fn = stack.pop()
-        if record_function(fn, *args):
-            RECORDED_CALL_FRAMES.add(frame)
-    # TODO: BUILD_MAP_UNPACK, BUILD_MAP_UNPACK_WITH_CALL
-    if opname == "LOAD_ATTR":
-        record_method("__getattr__", stack.TOS, oparg)
-    if opname == "COMPARE_OP":
-        if oparg == "<":
-            record_comparison(stack, "__lt__", "__gt__")
-        if oparg == "<=":
-            record_comparison(stack, "__le__", "__ge__")
-        if oparg == "==":
-            record_comparison(stack, "__eq__", "__ne__")
-        if oparg == "!=":
-            record_comparison(stack, "__ne__", "__eq__")
-        if oparg == ">":
-            record_comparison(stack, "__gt__", "__lt__")
-        if oparg == ">=":
-            record_comparison(stack, "__ge__", "__le__")
-        if oparg in ("in", "not in"):
-            # https://docs.python.org/3/reference/expressions.html#membership-test-operations
-            if not record_method("__contains__", stack.TOS1, stack.TOS):
-                if not record_method("__iter__", stack.TOS1):
-                    record_method("__getitem__", stack.TOS1, 0)
-
-    if opname == "FOR_ITER":
-        record_method("__next__", stack.TOS)
-    if opname == "CALL_FUNCTION":
-        args = stack.pop_n(oparg)
-        fn = stack.pop()
-        if record_function(fn, *args):
-            RECORDED_CALL_FRAMES.add(frame)
-    if opname == "CALL_FUNCTION_KW":
-        kwargs_names = stack.pop()
-        kwargs = {name: stack.pop() for name in kwargs_names}
-        args = stack.pop_n(oparg - len(kwargs_names))
-        fn = stack.pop()
-        if record_function(fn, *args, **kwargs):
-            RECORDED_CALL_FRAMES.add(frame)
-    if opname == "CALL_FUNCTION_EX":
-        has_kwarg = oparg & int("01", 2)
-        if has_kwarg:
-            kwargs = stack.pop()
-            args = stack.pop()
+        if opname == "BUILD_TUPLE_UNPACK_WITH_CALL":
+            args = []
+            for _ in range(oparg):
+                arg = stack.pop()
+                args.extend(list(arg))
+                process((arg,), iter, arg)
             fn = stack.pop()
-        else:
-            kwargs = {}
-            args = stack.pop()
-            fn = stack.pop()
-        if record_function(fn, *args, **kwargs):
-            RECORDED_CALL_FRAMES.add(frame)
-    if opname == "CALL_METHOD":
-        args = stack.pop_n(oparg)
-        self_ = stack.pop()
-        method = stack.pop()
+            process((fn,), fn, *args)
 
-        if self_ is stack.NULL:
-            res = record_function(method, *args)
-        else:
-            res = record_function(method, self_, *args)
-        if res:
-            RECORDED_CALL_FRAMES.add(frame)
+        # TODO: BUILD_MAP_UNPACK, BUILD_MAP_UNPACK_WITH_CALL
+
+        if opname == "COMPARE_OP":
+            # list from
+            # https://github.com/python/cpython/blob/81de3c225774179cdc82a1733a64e4a876ff02b5/Lib/opcode.py#L24-L25
+            COMPARISONS = {
+                "<": op.lt,
+                "<": op.le,
+                "==": op.eq,
+                "!=": op.ne,
+                ">": op.gt,
+                ">=": op.ge,
+                "in": op.contains,
+                "not in": op.contains,
+                "is": op.is_,
+                "is not": op.is_not,
+            }
+            if oparg in COMPARISONS:
+                process(
+                    (stack.TOS, stack.TOS1), COMPARISONS[oparg], stack.TOS1, stack.TOS
+                )
+
+        if opname == "CALL_FUNCTION":
+            args = stack.pop_n(oparg)
+            fn = stack.pop()
+            process((fn,), fn, *args)
+
+        if opname == "CALL_FUNCTION_KW":
+            kwargs_names = stack.pop()
+            kwargs = {name: stack.pop() for name in kwargs_names}
+            args = stack.pop_n(oparg - len(kwargs_names))
+            fn = stack.pop()
+            process((fn,), fn, *args, **kwargs)
+
+        if opname == "CALL_FUNCTION_EX":
+            has_kwarg = oparg & int("01", 2)
+            if has_kwarg:
+                kwargs = stack.pop()
+                args = stack.pop()
+                fn = stack.pop()
+            else:
+                kwargs = {}
+                args = stack.pop()
+                fn = stack.pop()
+            process((fn,), fn, *args, **kwargs)
+
+        if opname == "CALL_METHOD":
+            args = stack.pop_n(oparg)
+            self_ = stack.pop()
+            method = stack.pop()
+
+            if self_ is stack.NULL:
+                process((method,), method, *args)
+            else:
+                process((method,), method, self_, *args)
 
 
 if __name__ == "__main__":
     FILE_NAME = os.environ["PYTHON_API_OUTPUT_FILE"]
     IMPORT_MODULES = os.environ.get("PYTHON_API_IMPORT_MODULES", "")
     RUN_MODULE = os.environ["PYTHON_API_RUN_MODULE"]
+    TRACE_MODULE = os.environ["PYTHON_API_TRACE_MODULE"]
 
     rand_file = io.FileIO(FILE_NAME, "w")
     writer = io.BufferedWriter(rand_file)
@@ -404,13 +364,10 @@ if __name__ == "__main__":
         for module in IMPORT_MODULES.split(","):
             importlib.import_module(module)
     try:
-        sys.settrace(tracer)
-        runpy.run_module(RUN_MODULE, run_name="__main__", alter_sys=True)
+        with Tracer(TRACE_MODULE):
+            runpy.run_module(RUN_MODULE, run_name="__main__", alter_sys=True)
     except Exception:
-        sys.settrace(None)
         raise Exception(f"Error running {RUN_MODULE}")
-    else:
-        sys.settrace(None)
     finally:
         writer.flush()
         rand_file.close()
