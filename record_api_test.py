@@ -48,11 +48,19 @@ class TestMockNumPyMethod(unittest.TestCase):
             self.a += 10
         self.mock.assert_called_once_with(op.iadd, self.a, 10)
 
+    def test_getitem(self):
+        l = [self.a]
+        with self.tracer:
+            self.a[0]
+            # verify is value in np array doesn't count
+            l[0]
+        self.mock.assert_called_once_with(op.getitem, self.a, 0)
+
     def test_setitem(self):
+        l = [0]
         with self.tracer:
             self.a[0] = 1
             # verify is value in np array doesn't count
-            l = [0]
             l[0] = self.a
         self.mock.assert_called_once_with(op.setitem, self.a, 0, 1)
 

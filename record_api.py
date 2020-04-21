@@ -264,7 +264,7 @@ class Tracer:
 
         # special case subscr b/c we only check first arg, not both
         if opname == "BINARY_SUBSCR":
-            process((stack.TOS,), op.getitem, stack.TOS, stack.TOS1)
+            process((stack.TOS1,), op.getitem, stack.TOS1, stack.TOS)
 
         if opname == "STORE_SUBSCR":
             process((stack.TOS1,), op.setitem, stack.TOS1, stack.TOS, stack.TOS2)
