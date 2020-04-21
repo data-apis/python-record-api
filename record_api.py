@@ -18,6 +18,8 @@ import get_stack
 
 __all__ = ["Tracer"]
 
+DEBUG = os.environ.get("PYTHON_API_DEBUG", False)
+
 
 def type_name(value: object) -> str:
     tp = type(value)
@@ -214,6 +216,11 @@ class Tracer:
         # handle all opcodes from https://docs.python.org/3/library/dis.html
         # that we care about
 
+        if DEBUG:
+            bytecode = dis.Bytecode(frame.f_code, current_offset=frame.f_lasti)
+            print(bytecode.dis())
+
+        # print(opname)
         # Unary
         UNARY_OPS = {
             "UNARY_POSITIVE": op.pos,
