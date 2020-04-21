@@ -106,6 +106,7 @@ def fn():
     x[x > 10]
     x[0]
     x[1:2]
+    np.arange(10).reshape(5, 2)[((1, 2, 3), (0, 1, 1))]
 
     # manipulation
     x.T
