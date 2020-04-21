@@ -150,6 +150,12 @@ class Stack:
 
     def process(self, keyed_args: Tuple, fn: Callable, *args, **kwargs) -> None:
         if self.tracer.should_trace(*keyed_args):
+            # If this is a method implemented in C, expand it
+            # to classes function and add self as an arg
+            if isinstance(fn, types.BuiltinMethodType) and not isinstance(fn.__self__, types.ModuleType):
+                self_ = fn.__self__
+                args = (self_, *args)
+                fn = getattr(type(self_), fn.__name__)
             log_call(fn, *args, **kwargs)
             self.tracer.recorded_calls.add(self.tracer._frame_to_key(self.frame))
 
@@ -189,6 +195,9 @@ class Tracer:
 
     def should_trace(self, *values) -> bool:
         for value in values:
+            if isinstance(value, types.BuiltinMethodType):
+                # if this was a method defined in C, use the instance as the value
+                value = value.__self__
             module = inspect.getmodule(value) or inspect.getmodule(type(value))
             if not module:
                 warnings.warn(f"Cannot get module of {value}")

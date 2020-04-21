@@ -69,7 +69,7 @@ class TestMockNumPyMethod(unittest.TestCase):
             self.a.shape = (10, 1)
             # verify attr doesnt match
             o = lambda: None
-            o.something = self.a
+            o.something = self.a  # type: ignore
         self.mock.assert_called_once_with(setattr, self.a, "shape", (10, 1))
 
     def test_tuple_unpack(self):
@@ -89,11 +89,11 @@ class TestMockNumPyMethod(unittest.TestCase):
 
     def test_load_attr(self):
         o = lambda: None
-        o.shape = (1,)
+        o.shape = (1,)  # type: ignore
         with self.tracer:
             self.a.shape
             # verify normal object doesn't trigger
-            o.shape
+            o.shape  # type: ignore
         self.mock.assert_called_once_with(getattr, self.a, "shape")
 
     def test_arange(self):
@@ -117,7 +117,10 @@ class TestMockNumPyMethod(unittest.TestCase):
     def test_sort(self):
         with self.tracer:
             self.a.sort(axis=0)
-        self.mock.assert_called_once_with(np.ndarray.sort, self.a, axis=0)
+        assert self.mock.mock_calls == [
+            call(getattr, self.a, "sort"),
+            call(np.ndarray.sort, self.a, axis=0),
+        ]
 
 
 if __name__ == "__main__":
