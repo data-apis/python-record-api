@@ -143,7 +143,10 @@ class Stack:
         """
         removes the top N items from the stack and returns them so the top item is on the left.
         """
-        return [self.pop() for _ in range(n)]
+        l = [self.pop() for _ in range(n)]
+        # so that top of the stack is on the right
+        l.reverse()
+        return l
 
     def process(self, keyed_args: Tuple, fn: Callable, *args, **kwargs) -> None:
         if self.tracer.should_trace(*keyed_args):
