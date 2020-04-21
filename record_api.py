@@ -59,23 +59,10 @@ class JSONEncoder(json.JSONEncoder):
         return o
 
 
-def save_log(
-    fn: str,
-    caller_args: Iterable[object],
-    caller_kwargs: Dict[str, object],
-    signature_available: bool,
-    fn_arguments: Optional[Dict[str, object]],
-    fn_varargs: Optional[Iterable[object]],
-    fn_varkw: Optional[Dict[str, object]],
-) -> None:
+def save_log(fn: str, params: Dict[str, object],) -> None:
     data = {
         "function": fn,
-        "caller_args": caller_args,
-        "caller_kwargs": caller_kwargs,
-        "signature_available": signature_available,
-        "function_arguments": fn_arguments,
-        "function_var_positional": fn_varargs,
-        "function_var_keyword": fn_varkw,
+        "params": params,
     }
     writer.write((json.dumps(data, cls=JSONEncoder) + "\n").encode())
 
@@ -95,32 +82,13 @@ def log_call(fn: Callable, *args, **kwargs) -> None:
     try:
         sig = inspect.signature(fn)
     except ValueError:
-        bound_arguments = None
-        varargs = None
-        varkws = None
-        signature_available = False
+        params = kwargs
+        for i, value in enumerate(args):
+            params[str(i)] = value
     else:
-        # pop off var args and var kwargs from bound arguments
-        # so we can save log them seperately
-        vararg_param = None
-        varkw_param = None
-        for param in sig.parameters.values():
-            if param.kind == inspect.Parameter.VAR_POSITIONAL:
-                vararg_param = param.name
-            elif param.kind == inspect.Parameter.VAR_KEYWORD:
-                varkw_param = param.name
+        params = sig.bind(*args, **kwargs).arguments
 
-        bound_arguments = sig.bind(*args, **kwargs).arguments
-
-        varargs = (
-            bound_arguments.pop(vararg_param, []) if vararg_param is not None else []
-        )
-        varkws = bound_arguments.pop(varkw_param, {}) if varkw_param is not None else {}
-        signature_available = True
-
-    save_log(
-        fn_name, args, kwargs, signature_available, bound_arguments, varargs, varkws,
-    )
+    save_log(fn_name, params)
 
 
 def get_instruction(frame):
