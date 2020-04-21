@@ -7,3 +7,5 @@ tmp*
 Untitled*.ipynb
 *.code-workspace
 .mypy_cache
+.coverage
+htmlcov
