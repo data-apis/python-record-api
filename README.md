@@ -4,9 +4,7 @@ This module is mean to help you understand how a Python module is being used by 
 
 Currently there is a `record_api.py` script that logs all function calls to the module of your choice.
 
-
 ## Example
-
 
 To test out a local small usage of NumPy:
 
@@ -15,7 +13,6 @@ env PYTHON_API_OUTPUT_FILE=use_numpy_api.jsonl PYTHON_API_RUN_MODULE=use_numpy_a
 ```
 
 Here is how I can use it to see all the functions the scikit image tests call in NumPy:
-
 
 ```bash
 git clone git@github.com:scikit-image/scikit-image.git
@@ -29,5 +26,16 @@ env PYTHON_API_OUTPUT_FILE=sckimage.jsonl \
     python record_api.py ./scikit-image/
 ```
 
-## Documentation
+## How?
 
+This uses the `sys.settrace` function to trace all the bytecode operations. It also uses
+[@crusaderky's helpful gist](https://gist.github.com/crusaderky/cf0575cfeeee8faa1bb1b3480bc4a87a)
+to get access to the top of the stack in the settrace function.
+
+It records all usage of the modules you specify, both all functions called that were defined in those modules, and all core operations that use objects defined in those libraries.
+
+## Why?
+
+The goal is to give us a sense of how different APIs are used in Python data science libraries, in order to have some data to back up decisions about creating future APIs.
+
+This let's us understand not only what exact functions are called, but the ways in which they are called, includig the type and values of their arguments.
