@@ -40,7 +40,28 @@ try:
 except ImportError:
     pass
 else:
-    ENCODERS[numpy.ndarray] = lambda a: {"shape": list(a.shape), "dtype": a.dtype}
+    ENCODERS[numpy.ndarray] = lambda a: [list(a.shape), a.dtype]
+    ENCODERS[numpy.dtype] = lambda d: d.name
+
+
+def preprocess(o):
+    """
+    Turns tuples into dicts, removes long values, and turns dicts into lists (so that keys can be any type)
+    """
+    if isinstance(o, str):
+        return o[:MAX_LENGTH]
+    elif isinstance(o, list):
+        return [preprocess(v) for v in o[:MAX_LENGTH]]
+    elif isinstance(o, dict):
+        return {
+            "t": "dict",
+            "v": [
+                [preprocess(k), preprocess(v)] for k, v in list(o.items())[:MAX_LENGTH]
+            ],
+        }
+    elif isinstance(o, tuple):
+        return {"t": "tuple", "v": preprocess(list(o))}
+    return o
 
 
 class JSONEncoder(json.JSONEncoder):
@@ -52,35 +73,15 @@ class JSONEncoder(json.JSONEncoder):
         tp = type(o)
 
         if tp in ENCODERS:
-            return {"__tp": type_repr(tp), "__v": self.process(ENCODERS[tp](o))}
+            return {"t": type_repr(tp), "v": preprocess(ENCODERS[tp](o))}
         else:
-            return {"__tp": type_repr(tp)}
-
-    def process(self, o):
-        """
-        Turns tuples into dicts and remove long values
-        """
-        if isinstance(o, str):
-            return o[:MAX_LENGTH]
-        elif isinstance(o, list):
-            return [self.process(v) for v in o[:MAX_LENGTH]]
-        elif isinstance(o, dict):
-            return {
-                self.process(k): self.process(v)
-                for k, v in list(o.items())[:MAX_LENGTH]
-            }
-        elif isinstance(o, tuple):
-            return {"__tp": "tuple", "value": self.process(list(o))}
-        return o
-
-    def iterencode(self, o, _one_shot=False):
-        return super().iterencode(self.process(o), _one_shot)
+            return {"t": type_repr(tp)}
 
 
 def save_log(fn: str, params: Dict[str, object],) -> None:
     data = {
         "function": fn,
-        "params": params,
+        "params": {k: preprocess(v) for k, v in params.items()},
     }
     writer.write((json.dumps(data, cls=JSONEncoder) + "\n").encode())
 
