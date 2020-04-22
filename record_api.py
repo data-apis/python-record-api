@@ -33,6 +33,7 @@ ENCODERS: Dict[Type, Callable[[Any], object]] = {
     types.ModuleType: lambda o: o.__name__,
     slice: lambda s: [s.start, s.stop, s.step],
     type: type_repr,
+    types.MethodType: lambda m: [m.__self__, m.__name__],
 }
 
 try:
@@ -71,11 +72,10 @@ class JSONEncoder(json.JSONEncoder):
         """
 
         tp = type(o)
-
-        if tp in ENCODERS:
-            return {"t": type_repr(tp), "v": preprocess(ENCODERS[tp](o))}
-        else:
-            return {"t": type_repr(tp)}
+        for encoder_tp, encoder in ENCODERS.items():
+            if issubclass(tp, encoder_tp):
+                return {"t": type_repr(tp), "v": preprocess(encoder(o))}
+        return {"t": type_repr(tp)}
 
 
 def save_log(fn: str, params: Dict[str, object],) -> None:
