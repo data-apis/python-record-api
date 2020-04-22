@@ -40,7 +40,7 @@ try:
 except ImportError:
     pass
 else:
-    ENCODERS[numpy.ndarray] = lambda a: [list(a.shape), a.dtype]
+    ENCODERS[numpy.ndarray] = lambda a: [list(a.shape), a.dtype.name]
     ENCODERS[numpy.dtype] = lambda d: d.name
 
 
