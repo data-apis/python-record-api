@@ -85,6 +85,15 @@ def save_log(fn: str, params: Dict[str, object],) -> None:
     }
     writer.write((json.dumps(data, cls=JSONEncoder) + "\n").encode())
 
+def get_arguments(fn, args, kwargs):
+    try:
+        sig = inspect.signature(fn)
+    except ValueError:
+        return None
+    try:
+        return sig.bind(*args, **kwargs).arguments
+    except TypeError:
+        return None
 
 def log_call(fn: Callable, *args, **kwargs) -> None:
     if isinstance(fn, types.MethodDescriptorType):
@@ -99,15 +108,11 @@ def log_call(fn: Callable, *args, **kwargs) -> None:
     name = getattr(fn, "__qualname__", getattr(fn, "__name__", fn))
     fn_name = f"{module.__name__}.{name}"
 
-    try:
-        sig = inspect.signature(fn)
-    except ValueError:
+    params = get_arguments(fn, args, kwargs)
+    if params is None:
         params = kwargs
         for i, value in enumerate(args):
             params[str(i)] = value
-    else:
-        params = sig.bind(*args, **kwargs).arguments
-
     save_log(fn_name, params)
 
 
