@@ -85,6 +85,7 @@ def save_log(fn: str, params: Dict[str, object],) -> None:
     }
     writer.write((json.dumps(data, cls=JSONEncoder) + "\n").encode())
 
+
 def get_arguments(fn, args, kwargs):
     try:
         sig = inspect.signature(fn)
@@ -94,6 +95,7 @@ def get_arguments(fn, args, kwargs):
         return sig.bind(*args, **kwargs).arguments
     except TypeError:
         return None
+
 
 def log_call(fn: Callable, *args, **kwargs) -> None:
     if isinstance(fn, types.MethodDescriptorType):
@@ -385,8 +387,9 @@ class Tracer:
                 ">=": op.ge,
                 "in": op.contains,
                 "not in": op.contains,
-                "is": op.is_,
-                "is not": op.is_not,
+                # Ignore these for now since there are so many of them!
+                # "is": op.is_,
+                # "is not": op.is_not,
             }
             if stack.opvalcompare in COMPARISONS:
                 process(
