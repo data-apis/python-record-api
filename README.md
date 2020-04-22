@@ -11,7 +11,7 @@ This is supported on Python version 3.8.
 To test out a local small usage of NumPy:
 
 ```bash
-env PYTHON_API_OUTPUT_FILE=use_numpy_api.jsonl PYTHON_API_RUN_MODULE=use_numpy_api PYTHON_API_TRACE_MODULE=numpy PYTHON_API_IMPORT_MODULES=numpy python -m cProfile -o out.prof record_api.py
+env PYTHON_API_OUTPUT_FILE=use_numpy_api.jsonl PYTHON_API_RUN_MODULE=use_numpy_api PYTHON_API_TRACE_MODULE=numpy PYTHON_API_IMPORT_MODULES=numpy python record_api.py
 ```
 
 Here is how I can use it to see all the functions the scikit image tests call in NumPy:
