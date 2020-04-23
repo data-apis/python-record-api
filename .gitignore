@@ -9,3 +9,6 @@ Untitled*.ipynb
 .mypy_cache
 .coverage
 htmlcov
+result_images
+src/*
+dask-worker-space/

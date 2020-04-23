@@ -22,11 +22,17 @@ DEBUG = os.environ.get("PYTHON_API_DEBUG", False)
 
 MAX_LENGTH = 50
 
+def getmodulename(v):
+    if isinstance(v, types.ModuleType):
+        # Use static getattr b/c dynamic one fails with apipkg fake dynamic module
+        # (ends up in infinite recursion)
+        return inspect.getattr_static(v, "__name__", None)
+    return getattr(v, '__module__', None)
 
 def type_repr(tp: Type) -> str:
-    module = inspect.getmodule(tp)
+    module = getmodulename(tp)
     assert module
-    return f"{module.__name__}.{tp.__qualname__}"
+    return f"{module}.{tp.__qualname__}"
 
 
 ENCODERS: Dict[Type, Callable[[Any], object]] = {
@@ -99,16 +105,16 @@ def get_arguments(fn, args, kwargs):
 
 def log_call(fn: Callable, *args, **kwargs) -> None:
     if isinstance(fn, types.MethodDescriptorType):
-        module = inspect.getmodule(fn.__objclass__)
+        module = getmodulename(fn.__objclass__)
     else:
         # for ufuuncs get module of type of ufunc
-        module = inspect.getmodule(fn) or inspect.getmodule(type(fn))
+        module = getmodulename(fn) or getmodulename(type(fn))
     if not module:
         warnings.warn(f"Cannot get module for {fn}")
         return
     # ufuncs dont have qualname
     name = getattr(fn, "__qualname__", getattr(fn, "__name__", fn))
-    fn_name = f"{module.__name__}.{name}"
+    fn_name = f"{module}.{name}"
 
     params = get_arguments(fn, args, kwargs)
     if params is None:
@@ -252,11 +258,11 @@ class Tracer:
             if isinstance(value, types.BuiltinMethodType):
                 # if this was a method defined in C, use the instance as the value
                 value = value.__self__
-            module = inspect.getmodule(value) or inspect.getmodule(type(value))
+            module = getmodulename(value) or getmodulename(type(value))
             if not module:
                 warnings.warn(f"Cannot get module of {value}")
                 continue
-            if module.__name__.startswith(self.module):
+            if module.startswith(self.module):
                 return True
         return False
 

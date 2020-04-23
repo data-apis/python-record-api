@@ -18,14 +18,73 @@ Here is how I can use it to see all the functions the scikit image tests call in
 
 ```bash
 git clone git@github.com:scikit-image/scikit-image.git
-conda create -c conda-forge -n scikit-image "numpy!=1.18.0" scipy "matplotlib!=3.0.0" networkx pillow=6 imageio tifffile PyWavelets pooch Cython wheel pytest
-conda activate scikit-image
-pip install -e ./scikit-image pytest-localserver
-env PYTHON_API_OUTPUT_FILE=skimage.jsonl \
+conda create -n python-record-api -c conda-forge \
+    jupyterlab \
+    scikit-image \
+    dask \
+    scipy \
+    scikit-learn \
+    xarray \
+    altair \
+    pandas \
+    swifter \
+    cython \
+    pytest \
+    hypothesis \
+    python=3.8
+
+conda activate python-record-api
+pip install altair_data_server
+
+# install matplotlib from source so we have tests
+pip install matplotlib --no-binary :all:
+conda uninstall -c conda-forge matplotlib
+
+# https://matplotlib.org/3.2.1/devel/contributing.html#other-ways-to-contribute
+
+env MPLSETUPCFG=$PWD/matplotlib.setup.cfg pip install matplotlib --no-binary :all:
+
+# scikit-image
+env PYTHON_API_OUTPUT_FILE=data/raw/skimage.jsonl \
     PYTHON_API_RUN_MODULE=pytest \
     PYTHON_API_TRACE_MODULE=numpy \
-    PYTHON_API_IMPORT_MODULES=pytest,networkx,matplotlib,Cython,pooch,scipy \
-    python record_api.py ../scikit-image/
+    PYTHON_API_IMPORT_MODULES=pytest,networkx,matplotlib,Cython,pooch,scipy,numpy,skimage,dask \
+    python record_api.py --pyargs skimage
+
+# dask array
+env PYTHON_API_OUTPUT_FILE=data/raw/dask.jsonl \
+    PYTHON_API_RUN_MODULE=pytest \
+    PYTHON_API_TRACE_MODULE=numpy \
+    PYTHON_API_IMPORT_MODULES=pytest,numpy,scipy \
+    python record_api.py --pyargs dask.array
+    
+# scikit-learn
+env PYTHON_API_OUTPUT_FILE=data/raw/sklearn.jsonl \
+    PYTHON_API_RUN_MODULE=pytest \
+    PYTHON_API_TRACE_MODULE=numpy \
+    PYTHON_API_IMPORT_MODULES=pytest,numpy,scipy,dask \
+    python record_api.py --pyargs sklearn
+
+# matplotlib
+env PYTHON_API_OUTPUT_FILE=data/raw/matplotlib.jsonl \
+    PYTHON_API_RUN_MODULE=pytest \
+    PYTHON_API_TRACE_MODULE=numpy \
+    PYTHON_API_IMPORT_MODULES=pytest,numpy \
+    python record_api.py --pyargs matplotlib
+
+# xarray
+env PYTHON_API_OUTPUT_FILE=data/raw/matplotlib.jsonl \
+    PYTHON_API_RUN_MODULE=pytest \
+    PYTHON_API_TRACE_MODULE=numpy \
+    PYTHON_API_IMPORT_MODULES=pytest,numpy,scipy,dask,matplotlib \
+    python record_api.py --pyargs matplotlib
+
+# pandas
+env PYTHON_API_OUTPUT_FILE=data/raw/matplotlib.jsonl \
+    PYTHON_API_RUN_MODULE=pytest \
+    PYTHON_API_TRACE_MODULE=numpy \
+    PYTHON_API_IMPORT_MODULES=pytest,numpy,scipy,dask \
+    python record_api.py --pyargs pandas 
 ```
 
 ## How?
