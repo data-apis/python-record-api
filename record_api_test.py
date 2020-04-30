@@ -158,6 +158,27 @@ class TestMockNumPyMethod(unittest.TestCase):
             call(np.concatenate, (self.a, self.a), axis=0),
         )
 
+    def test_ravel_list(self):
+        """
+        from numeric function to test array dispatch
+        """
+        with self.tracer:
+            np.ravel([1, 2, 3])
+        self.assertCalls(call(np.ravel, [1, 2, 3]))
+
+    def test_ravel_array(self):
+        """
+        from numeric function to test array dispatch
+        """
+        with self.tracer:
+            np.ravel(self.a)
+        self.assertCalls(call(np.ravel, self.a))
+
+    def test_std(self):
+        with self.tracer:
+            np.std(self.a)
+        self.assertCalls(call(np.std, self.a))
+
 
 if __name__ == "__main__":
     unittest.main()
