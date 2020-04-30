@@ -24,10 +24,9 @@ MAX_LENGTH = 50
 
 def getmodulename(v):
     if isinstance(v, types.ModuleType):
-        # Use static getattr b/c dynamic one fails with apipkg fake dynamic module
-        # (ends up in infinite recursion)
-        return v.__dict__['__name__']
-    return getattr(v, '__module__', None)
+        return v.__name__
+    return getattr(v, "__module__", None)
+
 
 def type_repr(tp: Type) -> str:
     module = getmodulename(tp)
