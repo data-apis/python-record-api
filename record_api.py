@@ -451,7 +451,9 @@ if __name__ == "__main__":
 
     if IMPORT_MODULES:
         for name in IMPORT_MODULES.split(","):
-            importlib.import_module(name)
+            # access dict of module so that apipkg virtual modules will be fully imported
+            # (need this or else get weird errors in pytest)
+            importlib.import_module(name).__dict__
 
     try:
         with Tracer(TRACE_MODULE):
