@@ -37,18 +37,15 @@ conda activate python-record-api
 pip install altair_data_server
 
 # install matplotlib from source so we have tests
-pip install matplotlib --no-binary :all:
 conda uninstall -c conda-forge matplotlib
-
 # https://matplotlib.org/3.2.1/devel/contributing.html#other-ways-to-contribute
-
 env MPLSETUPCFG=$PWD/matplotlib.setup.cfg pip install matplotlib --no-binary :all:
 
 # scikit-image
 env PYTHON_API_OUTPUT_FILE=data/raw/skimage.jsonl \
     PYTHON_API_RUN_MODULE=pytest \
     PYTHON_API_TRACE_MODULE=numpy \
-    PYTHON_API_IMPORT_MODULES=pytest,networkx,matplotlib,Cython,pooch,scipy,numpy,skimage,dask \
+    PYTHON_API_IMPORT_MODULES=pytest,networkx,matplotlib,Cython,scipy,numpy,skimage,dask \
     python record_api.py --pyargs skimage
 
 # dask array
