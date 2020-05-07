@@ -11,7 +11,7 @@ from . import Tracer
 class TestMockNumPyMethod(unittest.TestCase):
     def setUp(self):
         self.a = np.arange(10)
-        patcher = patch("record_api.log_call")
+        patcher = patch("record_api.core.log_call")
         self.mock = patcher.start()
         self.addCleanup(patcher.stop)
         self.tracer = Tracer("numpy")
