@@ -11,7 +11,7 @@ This is supported on Python version 3.8.
 To test out a local small usage of NumPy:
 
 ```bash
-env PYTHON_API_OUTPUT_FILE=use_numpy_api.jsonl PYTHON_API_RUN_MODULE=use_numpy_api PYTHON_API_TRACE_MODULE=numpy PYTHON_API_IMPORT_MODULES=numpy python record_api.py
+env PYTHON_API_OUTPUT_FILE=data/raw/use_numpy_api.jsonl PYTHON_API_RUN_MODULE=use_numpy_api PYTHON_API_TRACE_MODULE=numpy PYTHON_API_IMPORT_MODULES=numpy python -m record_api
 ```
 
 Here is how I can use it to see all the functions the scikit image tests call in NumPy:
@@ -36,10 +36,15 @@ conda create -n python-record-api -c conda-forge \
 conda activate python-record-api
 pip install altair_data_server
 
+conda uninstall -c conda-forge --force matplotlib scikit-image
+
 # install matplotlib from source so we have tests
-conda uninstall -c conda-forge matplotlib
 # https://matplotlib.org/3.2.1/devel/contributing.html#other-ways-to-contribute
 env MPLSETUPCFG=$PWD/matplotlib.setup.cfg pip install matplotlib --no-binary :all:
+
+# Install scikit-image from source so we have tests as well
+pip install scikit-image --no-binary :all:
+
 
 # scikit-image
 env PYTHON_API_OUTPUT_FILE=data/raw/skimage.jsonl \

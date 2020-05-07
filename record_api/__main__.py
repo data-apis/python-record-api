@@ -14,13 +14,14 @@ import warnings
 import opcode
 from typing import *
 
-import get_stack
+from . import get_stack
 
 __all__ = ["Tracer"]
 
 DEBUG = os.environ.get("PYTHON_API_DEBUG", False)
 
 MAX_LENGTH = 50
+
 
 def getmodulename(v):
     if isinstance(v, types.ModuleType):
@@ -83,8 +84,13 @@ class JSONEncoder(json.JSONEncoder):
         return {"t": type_repr(tp)}
 
 
-def save_log(fn: str, params: Dict[str, object],) -> None:
+def save_log(filename: str, line: int, fn: str, params: Dict[str, object],) -> None:
+    if fn == "numpy.core.fromnumeric._std_dispatcher":
+        import pudb
+
+        pudb.set_trace()
     data = {
+        "location": f"{filename}:{line}",
         "function": fn,
         "params": {k: preprocess(v) for k, v in params.items()},
     }
@@ -102,7 +108,7 @@ def get_arguments(fn, args, kwargs):
         return None
 
 
-def log_call(fn: Callable, *args, **kwargs) -> None:
+def log_call(filename: str, line: int, fn: Callable, *args, **kwargs) -> None:
     if isinstance(fn, types.MethodDescriptorType):
         module = getmodulename(fn.__objclass__)
     else:
@@ -120,7 +126,7 @@ def log_call(fn: Callable, *args, **kwargs) -> None:
         params = kwargs
         for i, value in enumerate(args):
             params[str(i)] = value
-    save_log(fn_name, params)
+    save_log(filename, line, fn_name, params)
 
 
 @dataclasses.dataclass
@@ -204,7 +210,10 @@ class Stack:
                 self_ = fn.__self__
                 args = (self_, *args)
                 fn = getattr(type(self_), fn.__name__)
-            log_call(fn, *args, **kwargs)
+            filename = inspect.getsourcefile(self.frame)
+            assert filename
+            line = self.frame.f_lineno
+            log_call(filename, line, fn, *args, **kwargs)
             self.tracer.recorded_calls.add(self.tracer._frame_to_key(self.frame))
 
 
@@ -261,6 +270,11 @@ class Tracer:
             if not module:
                 warnings.warn(f"Cannot get module of {value}")
                 continue
+            if not isinstance(module, str):
+                print("BAD MODULE")
+                print(getmodulename(value), value)
+                print(getmodulename(type(value)), type(value))
+
             if module.startswith(self.module):
                 return True
         return False
@@ -437,6 +451,8 @@ class Tracer:
             else:
                 process((function_or_self,), null_or_method, function_or_self, *args)
         return None
+
+
 
 
 if __name__ == "__main__":

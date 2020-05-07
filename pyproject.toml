@@ -1,0 +1,14 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "record_api"
+author = "Saul Shanabrook"
+author-email = "s.shanabrook@gmail.com"
+home-page = "https://github.com/quansight-labs/python_record_api"
+classifiers = ["License :: OSI Approved :: MIT License"]
+
+
+[tool.flit.entrypoints.pytest11]
+record_api = "record_api.pytest_plugin"
