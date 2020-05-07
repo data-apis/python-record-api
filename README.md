@@ -8,6 +8,12 @@ This is supported on Python version 3.8.
 
 ## Example
 
+First install the local package:
+
+```bash
+pip install -e .
+```
+
 To test out a local small usage of NumPy:
 
 ```bash
@@ -53,38 +59,28 @@ env PYTHON_API_OUTPUT_FILE=data/raw/skimage.jsonl \
 
 # dask array
 env PYTHON_API_OUTPUT_FILE=data/raw/dask.jsonl \
-    PYTHON_API_RUN_MODULE=pytest \
     PYTHON_API_TRACE_MODULE=numpy \
-    PYTHON_API_IMPORT_MODULES=pytest,numpy,scipy \
-    python record_api.py --pyargs dask.array
+    pytest --pyargs dask.array
     
 # scikit-learn
 env PYTHON_API_OUTPUT_FILE=data/raw/sklearn.jsonl \
-    PYTHON_API_RUN_MODULE=pytest \
     PYTHON_API_TRACE_MODULE=numpy \
-    PYTHON_API_IMPORT_MODULES=pytest,numpy,scipy,dask \
-    python record_api.py --pyargs sklearn
+    pytest --pyargs sklearn
 
 # matplotlib
 env PYTHON_API_OUTPUT_FILE=data/raw/matplotlib.jsonl \
-    PYTHON_API_RUN_MODULE=pytest \
     PYTHON_API_TRACE_MODULE=numpy \
-    PYTHON_API_IMPORT_MODULES=pytest,numpy \
-    python record_api.py --pyargs matplotlib
+    pytest --pyargs matplotlib
 
 # xarray
 env PYTHON_API_OUTPUT_FILE=data/raw/matplotlib.jsonl \
-    PYTHON_API_RUN_MODULE=pytest \
     PYTHON_API_TRACE_MODULE=numpy \
-    PYTHON_API_IMPORT_MODULES=pytest,numpy,scipy,dask,matplotlib \
-    python record_api.py --pyargs matplotlib
+    pytest --pyargs matplotlib
 
 # pandas
 env PYTHON_API_OUTPUT_FILE=data/raw/matplotlib.jsonl \
-    PYTHON_API_RUN_MODULE=pytest \
     PYTHON_API_TRACE_MODULE=numpy \
-    PYTHON_API_IMPORT_MODULES=pytest,numpy,scipy,dask \
-    python record_api.py --pyargs pandas 
+    pytest --pyargs pandas 
 ```
 
 ## How?
