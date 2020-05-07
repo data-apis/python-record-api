@@ -114,5 +114,4 @@ def fn():
     np.column_stack([x, x])
     np.concatenate((x, x), axis=0)
 
-
 fn()

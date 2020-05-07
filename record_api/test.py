@@ -181,6 +181,12 @@ class TestMockNumPyMethod(unittest.TestCase):
             np.std(self.a)
         self.assertCalls(call(ANY, ANY, np.std, self.a))
 
+    def test_builtin_types_no_call(self):
+        with self.tracer:
+            10 + 10
+            10.2332 + 213
+            12323.234 - 2342.40
+        self.mock.assert_not_called()
 
 if __name__ == "__main__":
     unittest.main()

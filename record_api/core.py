@@ -49,10 +49,18 @@ else:
     ENCODERS[numpy.dtype] = lambda d: d.name
 
 
+PRIMITIVE_TYPES = (str, int, float)
+
+
 def preprocess(o):
     """
-    Turns tuples into dicts, removes long values, and turns dicts into lists (so that keys can be any type)
+    Turns tuples into dicts, removes long values, and turns dicts into lists (so that keys can be any type).
+
+    Also wraps types that are subtypes of primitives, but not primitives themselves, to provide types.
     """
+    tp = type(o)
+    if isinstance(o, PRIMITIVE_TYPES) and tp not in PRIMITIVE_TYPES:
+        return {"t": type_repr(tp), "v": o}
     if isinstance(o, str):
         return o[:MAX_LENGTH]
     elif isinstance(o, list):
@@ -209,8 +217,7 @@ class Stack:
                 self_ = fn.__self__
                 args = (self_, *args)
                 fn = getattr(type(self_), fn.__name__)
-            filename = inspect.getsourcefile(self.frame)
-            assert filename
+            filename = self.frame.f_code.co_filename
             line = self.frame.f_lineno
             log_call(filename, line, fn, *args, **kwargs)
             self.tracer.recorded_calls.add(self.tracer._frame_to_key(self.frame))
@@ -468,4 +475,3 @@ def finalize():
     assert rand_file
     writer.flush()
     rand_file.close()
-

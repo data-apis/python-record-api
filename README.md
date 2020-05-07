@@ -48,10 +48,8 @@ pip install scikit-image --no-binary :all:
 
 # scikit-image
 env PYTHON_API_OUTPUT_FILE=data/raw/skimage.jsonl \
-    PYTHON_API_RUN_MODULE=pytest \
     PYTHON_API_TRACE_MODULE=numpy \
-    PYTHON_API_IMPORT_MODULES=pytest,networkx,matplotlib,Cython,scipy,numpy,skimage,dask \
-    python record_api.py --pyargs skimage
+    pytest --pyargs skimage
 
 # dask array
 env PYTHON_API_OUTPUT_FILE=data/raw/dask.jsonl \
