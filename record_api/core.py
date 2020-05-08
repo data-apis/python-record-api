@@ -10,6 +10,7 @@ import operator as op
 import dataclasses
 import warnings
 import opcode
+import functools
 from typing import *
 
 from . import get_stack
@@ -112,9 +113,15 @@ def save_log(filename: str, line: int, fn: str, params: Dict[str, object],) -> N
     writer.write((json.dumps(data, cls=JSONEncoder) + "\n").encode())
 
 
+# cache this b/c its expesnive
+@functools.lru_cache(None, False)
+def signature(fn):
+    return inspect.signature(fn)
+
+
 def get_arguments(fn, args, kwargs):
     try:
-        sig = inspect.signature(fn)
+        sig = signature(fn)
     except ValueError:
         return None
     try:
@@ -279,8 +286,8 @@ class Tracer:
             return None
         else:
             if not (
-                frame_module_name == "__main__" or
-                frame_module_name == self.calls_from_module
+                frame_module_name == "__main__"
+                or frame_module_name == self.calls_from_module
                 or frame_module_name.startswith(self.calls_from_module + ".")
             ):
                 return None
