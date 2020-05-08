@@ -19,7 +19,7 @@ env PYTEST_DISABLE_PLUGIN_AUTOLOAD=true pytest record_api/test.py
 To test out a local small usage of NumPy:
 
 ```bash
-env PYTHON_RECORD_API_OUTPUT_FILE=data/raw/use_numpy_api.jsonl \
+env PYTHON_RECORD_API_OUTPUT_FILE=data/raw/sample_usage.jsonl \
     PYTHON_RECORD_API_TO_MODULE=numpy \
     PYTHON_RECORD_API_FROM_MODULE=record_api.sample_usage \
     PYTHON_RECORD_API_IMPORT_MODULES=numpy \
