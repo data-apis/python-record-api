@@ -18,6 +18,5 @@ def pytest_sessionstart(*args):
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_sessionfinish(*args):
-    finalize()
     yield
-
+    finalize()
