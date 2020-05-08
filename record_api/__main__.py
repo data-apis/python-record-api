@@ -5,10 +5,7 @@ import os
 from .core import *
 
 if __name__ == "__main__":
-    setup()
-    IMPORT_MODULES = os.environ.get("PYTHON_API_IMPORT_MODULES", "")
-    RUN_MODULE = os.environ["PYTHON_API_RUN_MODULE"]
-    TRACE_MODULE = os.environ["PYTHON_API_TRACE_MODULE"]
+    IMPORT_MODULES = os.environ.get("PYTHON_RECORD_API_IMPORT_MODULES", "")
 
     if IMPORT_MODULES:
         for name in IMPORT_MODULES.split(","):
@@ -16,10 +13,14 @@ if __name__ == "__main__":
             # (need this or else get weird errors in pytest)
             importlib.import_module(name).__dict__
 
+    setup()
+    tracer = get_tracer()
     try:
-        with Tracer(TRACE_MODULE):
-            runpy.run_module(RUN_MODULE, run_name="__main__", alter_sys=True)
+        with tracer:
+            runpy.run_module(
+                tracer.calls_from_module, run_name="__main__", alter_sys=True
+            )
     except Exception:
-        raise Exception(f"Error running {RUN_MODULE}")
+        raise Exception(f"Error running {tracer.calls_from_module}")
     finally:
         finalize()

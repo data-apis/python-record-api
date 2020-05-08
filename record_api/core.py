@@ -14,11 +14,23 @@ from typing import *
 
 from . import get_stack
 
-__all__ = ["Tracer", "setup", "finalize"]
+__all__ = ["Tracer", "setup", "finalize", "get_tracer"]
 
-DEBUG = os.environ.get("PYTHON_API_DEBUG", False)
+DEBUG = os.environ.get("PYTHON_RECORD_API_DEBUG", False)
 
 MAX_LENGTH = 50
+
+# global cache for tracer based on env variables
+TRACER = None
+
+
+def get_tracer() -> Tracer:
+    global TRACER
+    if not TRACER:
+        FROM_MODULE = os.environ["PYTHON_RECORD_API_TO_MODULE"]
+        TO_MODULE = os.environ["PYTHON_RECORD_API_FROM_MODULE"]
+        TRACER = Tracer(FROM_MODULE, TO_MODULE)
+    return TRACER
 
 
 def getmodulename(v):
@@ -92,10 +104,6 @@ class JSONEncoder(json.JSONEncoder):
 
 def save_log(filename: str, line: int, fn: str, params: Dict[str, object],) -> None:
     assert writer
-    if fn == "numpy.core.fromnumeric._std_dispatcher":
-        import pudb
-
-        pudb.set_trace()
     data = {
         "location": f"{filename}:{line}",
         "function": fn,
@@ -220,32 +228,14 @@ class Stack:
             filename = self.frame.f_code.co_filename
             line = self.frame.f_lineno
             log_call(filename, line, fn, *args, **kwargs)
-            self.tracer.recorded_calls.add(self.tracer._frame_to_key(self.frame))
 
 
 @dataclasses.dataclass
 class Tracer:
-    # the module we should trace
-    module: str
-
-    # Keep a set of frames that we have recorded a call
-    # from. We should add to this when we record a bytecode
-    # trace from a function call
-    # we should pop one off this to check if we should keep tracing
-    # below this frame
-
-    # Tuple of code id and index of instruction
-    recorded_calls: Set[Tuple[int, int]] = dataclasses.field(default_factory=set)
-
-    # A set of all the IDs of code objects which we have ignored. Their parent
-    # frame calls are in `record_calls`. We need to save this so that if we
-    # end up in a frame of a child call where we shouldnt be tracing we
-    # can exit early. It's unclear why we need this, because we shouldn't
-    # hit these frames anyway. But if we dont, we go into them unintentionally.
-    # See this Python bug: https://bugs.python.org/issue11992
-    ignored_code_ids: Set[int] = dataclasses.field(default_factory=set)
-
-    top_level_frame: object = dataclasses.field(default=None)
+    # the module we should trace calls to
+    calls_to_module: str
+    # the module we should trace calls from
+    calls_from_module: str
 
     def __enter__(self):
         # also set tracing on parent frames
@@ -257,15 +247,10 @@ class Tracer:
             if parent_frame:
                 parent_frame.f_trace = self  # type: ignore
                 parent_frame.f_trace_opcodes = True
-                self.top_level_frame = parent_frame
         sys.settrace(self)
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         sys.settrace(None)
-
-    @staticmethod
-    def _frame_to_key(frame):
-        return (id(frame.f_code), frame.f_lasti)
 
     def should_trace(self, *values) -> bool:
         for value in values:
@@ -276,36 +261,29 @@ class Tracer:
             if not module:
                 warnings.warn(f"Cannot get module of {value}")
                 continue
-            if not isinstance(module, str):
-                print("BAD MODULE")
-                print(getmodulename(value), value)
-                print(getmodulename(type(value)), type(value))
-
-            if module.startswith(self.module):
+            if module.startswith(self.calls_to_module):
                 return True
         return False
 
     def __call__(self, frame, event, arg) -> Optional[Tracer]:
-        if (event != "opcode") and (event != "call"):
-            return None
-        outer_frame = frame
-        while outer_frame and outer_frame is not self.top_level_frame:
-            if id(outer_frame.f_code) in self.ignored_code_ids:
-                return None
-            outer_frame = outer_frame.f_back
-
         if event == "call":
-            try:
-                self.recorded_calls.remove(self._frame_to_key(frame.f_back))
-            except KeyError:
-                # we didnt record the call frame, so keep tracing
-                frame.f_trace_opcodes = True
-                return self
-            self.ignored_code_ids.add(id(frame.f_code))
-            frame.f_trace = None
-            frame.f_trace_opcodes = False
-            # we did record this call frame, so dont trace below here
+            frame.f_trace_opcodes = True
+            return self
+        elif event != "opcode":
             return None
+
+        # Ignore frames which are not from the `calls_from_module`
+        try:
+            frame_module_name = frame.f_globals["__name__"]
+        except KeyError:
+            return None
+        else:
+            if not (
+                frame_module_name == "__main__" or
+                frame_module_name == self.calls_from_module
+                or frame_module_name.startswith(self.calls_from_module + ".")
+            ):
+                return None
 
         stack = Stack(self, frame)
         opname = stack.opname
@@ -317,7 +295,6 @@ class Tracer:
             bytecode = dis.Bytecode(frame.f_code, current_offset=frame.f_lasti)
             print(bytecode.dis())
 
-        # print(opname)
         # Unary
         UNARY_OPS = {
             "UNARY_POSITIVE": op.pos,
@@ -465,7 +442,7 @@ rand_file = None
 
 def setup():
     global writer, rand_file
-    FILE_NAME = os.environ["PYTHON_API_OUTPUT_FILE"]
+    FILE_NAME = os.environ["PYTHON_RECORD_API_OUTPUT_FILE"]
     rand_file = io.FileIO(FILE_NAME, "w")
     writer = io.BufferedWriter(rand_file)
 

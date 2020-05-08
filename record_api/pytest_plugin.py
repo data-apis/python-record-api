@@ -6,8 +6,7 @@ from .core import *
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_pyfunc_call(pyfuncitem):
-    TRACE_MODULE = os.environ["PYTHON_API_TRACE_MODULE"]
-    with Tracer(TRACE_MODULE):
+    with get_tracer():
         yield
 
 

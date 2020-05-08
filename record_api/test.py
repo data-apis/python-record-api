@@ -14,7 +14,7 @@ class TestMockNumPyMethod(unittest.TestCase):
         patcher = patch("record_api.core.log_call")
         self.mock = patcher.start()
         self.addCleanup(patcher.stop)
-        self.tracer = Tracer("numpy")
+        self.tracer = Tracer("numpy", "record_api.test")
 
     def assertCalls(self, *calls):
         self.assertListEqual(

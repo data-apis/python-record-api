@@ -12,3 +12,6 @@ htmlcov
 result_images
 src/*
 dask-worker-space/
+data/raw/*
+# Keep sample data in there for show
+!data/raw/sample_usage.jsonl

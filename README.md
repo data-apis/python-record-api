@@ -12,12 +12,18 @@ First install the local package:
 
 ```bash
 pip install -e .
+# run tests
+env PYTEST_DISABLE_PLUGIN_AUTOLOAD=true pytest record_api/test.py
 ```
 
 To test out a local small usage of NumPy:
 
 ```bash
-env PYTHON_API_OUTPUT_FILE=data/raw/use_numpy_api.jsonl PYTHON_API_RUN_MODULE=use_numpy_api PYTHON_API_TRACE_MODULE=numpy PYTHON_API_IMPORT_MODULES=numpy python -m record_api
+env PYTHON_RECORD_API_OUTPUT_FILE=data/raw/use_numpy_api.jsonl \
+    PYTHON_RECORD_API_TO_MODULE=numpy \
+    PYTHON_RECORD_API_FROM_MODULE=record_api.sample_usage \
+    PYTHON_RECORD_API_IMPORT_MODULES=numpy \
+    python -m record_api
 ```
 
 Here is how I can use it to see all the functions the scikit image tests call in NumPy:
@@ -52,35 +58,16 @@ env MPLSETUPCFG=$PWD/matplotlib.setup.cfg pip install matplotlib --no-binary :al
 pip install scikit-image --no-binary :all:
 
 
-# scikit-image
-env PYTHON_API_OUTPUT_FILE=data/raw/skimage.jsonl \
-    PYTHON_API_TRACE_MODULE=numpy \
-    pytest --pyargs skimage
-
-# dask array
-env PYTHON_API_OUTPUT_FILE=data/raw/dask.jsonl \
-    PYTHON_API_TRACE_MODULE=numpy \
-    pytest --pyargs dask.array
-    
-# scikit-learn
-env PYTHON_API_OUTPUT_FILE=data/raw/sklearn.jsonl \
-    PYTHON_API_TRACE_MODULE=numpy \
-    pytest --pyargs sklearn
-
-# matplotlib
-env PYTHON_API_OUTPUT_FILE=data/raw/matplotlib.jsonl \
-    PYTHON_API_TRACE_MODULE=numpy \
-    pytest --pyargs matplotlib
-
-# xarray
-env PYTHON_API_OUTPUT_FILE=data/raw/matplotlib.jsonl \
-    PYTHON_API_TRACE_MODULE=numpy \
-    pytest --pyargs matplotlib
-
-# pandas
-env PYTHON_API_OUTPUT_FILE=data/raw/matplotlib.jsonl \
-    PYTHON_API_TRACE_MODULE=numpy \
-    pytest --pyargs pandas 
+echo "skimage
+dask.array
+sklearn
+matplotlib
+xarray
+pandas" | xargs -I % \
+env PYTHON_RECORD_API_OUTPUT_FILE=data/raw/%.jsonl \
+    PYTHON_RECORD_API_TO_MODULE=numpy \
+    PYTHON_RECORD_API_FROM_MODULE=% \
+    pytest --pyargs %
 ```
 
 ## How?
