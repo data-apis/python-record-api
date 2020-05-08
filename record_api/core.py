@@ -58,8 +58,15 @@ try:
 except ImportError:
     pass
 else:
-    ENCODERS[numpy.ndarray] = lambda a: [list(a.shape), a.dtype.name]
-    ENCODERS[numpy.dtype] = lambda d: d.name
+
+    def encode_array(a: numpy.ndarray):
+        return [list(a.shape), a.dtype.name]
+
+    def encode_dtype(d: numpy.dtype):
+        return d.name
+
+    ENCODERS[numpy.ndarray] = encode_array
+    ENCODERS[numpy.dtype] = encode_dtype
 
 
 PRIMITIVE_TYPES = (str, int, float)
@@ -246,6 +253,13 @@ class Tracer:
 
     def __enter__(self):
         # also set tracing on parent frames
+        self.set_parent_trace()
+        sys.settrace(self)
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        sys.settrace(None)
+
+    def set_parent_trace(self):
         frame = inspect.currentframe()
         if frame:
             # frame.f_trace = self  # type: ignore
@@ -254,10 +268,6 @@ class Tracer:
             if parent_frame:
                 parent_frame.f_trace = self  # type: ignore
                 parent_frame.f_trace_opcodes = True
-        sys.settrace(self)
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        sys.settrace(None)
 
     def should_trace(self, *values) -> bool:
         for value in values:
@@ -284,14 +294,15 @@ class Tracer:
             frame_module_name = frame.f_globals["__name__"]
         except KeyError:
             return None
-        else:
-            if not (
-                frame_module_name == "__main__"
-                or frame_module_name == self.calls_from_module
-                or frame_module_name.startswith(self.calls_from_module + ".")
-            ):
-                return None
+        if (
+            frame_module_name == "__main__"
+            or frame_module_name == self.calls_from_module
+            or frame_module_name.startswith(self.calls_from_module + ".")
+        ):
+            self.trace_frame(frame)
+        return None
 
+    def trace_frame(self, frame) -> None:
         stack = Stack(self, frame)
         opname = stack.opname
         process = stack.process
@@ -302,51 +313,9 @@ class Tracer:
             bytecode = dis.Bytecode(frame.f_code, current_offset=frame.f_lasti)
             print(bytecode.dis())
 
-        # Unary
-        UNARY_OPS = {
-            "UNARY_POSITIVE": op.pos,
-            "UNARY_NEGATIVE": op.neg,
-            "UNARY_NOT": op.not_,
-            "UNARY_INVERT": op.invert,
-            "GET_ITER": iter,
-            "GET_YIELD_FROM_ITER": iter,
-            "UNPACK_SEQUENCE": iter,
-            "UNPACK_EX": iter,
-            "FOR_ITER": iter,
-        }
         if opname in UNARY_OPS:
             process((stack.TOS,), UNARY_OPS[opname], stack.TOS)
 
-        # binary
-
-        BINARY_OPS = {
-            "BINARY_POWER": op.pow,
-            "BINARY_MULTIPLY": op.mul,
-            "BINARY_MATRIX_MULTIPLY": op.matmul,
-            "BINARY_FLOOR_DIVIDE": op.floordiv,
-            "BINARY_TRUE_DIVIDE": op.truediv,
-            "BINARY_MODULO": op.mod,
-            "BINARY_ADD": op.add,
-            "BINARY_SUBTRACT": op.sub,
-            "BINARY_LSHIFT": op.lshift,
-            "BINARY_RSHIFT": op.rshift,
-            "BINARY_AND": op.and_,
-            "BINARY_XOR": op.xor,
-            "BINARY_OR": op.or_,
-            "INPLACE_POWER": op.ipow,
-            "INPLACE_MULTIPLY": op.imul,
-            "INPLACE_MATRIX_MULTIPLY": op.imatmul,
-            "INPLACE_FLOOR_DIVIDE": op.ifloordiv,
-            "INPLACE_TRUE_DIVIDE": op.itruediv,
-            "INPLACE_MODULO": op.imod,
-            "INPLACE_ADD": op.iadd,
-            "INPLACE_SUBTRACT": op.isub,
-            "INPLACE_LSHIFT": op.ilshift,
-            "INPLACE_RSHIFT": op.irshift,
-            "INPLACE_AND": op.iand,
-            "INPLACE_OR": op.ior,
-            "INPLACE_XOR": op.ixor,
-        }
         if opname in BINARY_OPS:
             process((stack.TOS, stack.TOS1), BINARY_OPS[opname], stack.TOS1, stack.TOS)
 
@@ -443,6 +412,47 @@ class Tracer:
         return None
 
 
+UNARY_OPS = {
+    "UNARY_POSITIVE": op.pos,
+    "UNARY_NEGATIVE": op.neg,
+    "UNARY_NOT": op.not_,
+    "UNARY_INVERT": op.invert,
+    "GET_ITER": iter,
+    "GET_YIELD_FROM_ITER": iter,
+    "UNPACK_SEQUENCE": iter,
+    "UNPACK_EX": iter,
+    "FOR_ITER": iter,
+}
+
+
+BINARY_OPS = {
+    "BINARY_POWER": op.pow,
+    "BINARY_MULTIPLY": op.mul,
+    "BINARY_MATRIX_MULTIPLY": op.matmul,
+    "BINARY_FLOOR_DIVIDE": op.floordiv,
+    "BINARY_TRUE_DIVIDE": op.truediv,
+    "BINARY_MODULO": op.mod,
+    "BINARY_ADD": op.add,
+    "BINARY_SUBTRACT": op.sub,
+    "BINARY_LSHIFT": op.lshift,
+    "BINARY_RSHIFT": op.rshift,
+    "BINARY_AND": op.and_,
+    "BINARY_XOR": op.xor,
+    "BINARY_OR": op.or_,
+    "INPLACE_POWER": op.ipow,
+    "INPLACE_MULTIPLY": op.imul,
+    "INPLACE_MATRIX_MULTIPLY": op.imatmul,
+    "INPLACE_FLOOR_DIVIDE": op.ifloordiv,
+    "INPLACE_TRUE_DIVIDE": op.itruediv,
+    "INPLACE_MODULO": op.imod,
+    "INPLACE_ADD": op.iadd,
+    "INPLACE_SUBTRACT": op.isub,
+    "INPLACE_LSHIFT": op.ilshift,
+    "INPLACE_RSHIFT": op.irshift,
+    "INPLACE_AND": op.iand,
+    "INPLACE_OR": op.ior,
+    "INPLACE_XOR": op.ixor,
+}
 writer = None
 rand_file = None
 
