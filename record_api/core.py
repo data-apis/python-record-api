@@ -233,6 +233,7 @@ class Stack:
     def process(
         self, keyed_args: Tuple, fn: Callable, args: Iterable, kwargs: Mapping = {}
     ) -> None:
+        # Note: This take args as an iterable, instead of as a varargs, so that if we don't trace we don't have to expand the iterable
         if self.tracer.should_trace(*keyed_args):
             # If this is a method implemented in C, expand it
             # to classes function and add self as an arg
@@ -298,6 +299,8 @@ class Stack:
         iterables = []
         for _ in range(self.oparg):
             arg = self.pop()
+            if inspect.isgenerator(arg):
+                return
             iterables.append(arg)
             self.process((arg,), iter, (arg,))
         fn = self.pop()
@@ -350,6 +353,8 @@ class Stack:
             kwargs = {}
             args = self.pop()
             fn = self.pop()
+        if inspect.isgenerator(args):
+            return
         self.process((fn,), fn, args, kwargs)
 
     def op_CALL_METHOD(self):

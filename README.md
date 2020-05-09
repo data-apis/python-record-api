@@ -57,7 +57,7 @@ env MPLSETUPCFG=$PWD/matplotlib.setup.cfg pip install matplotlib --no-binary :al
 # Install scikit-image from source so we have tests as well
 pip install scikit-image --no-binary :all:
 
-
+# TODO: trace all of dask
 echo "skimage
 dask.array
 sklearn
