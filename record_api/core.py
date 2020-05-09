@@ -295,13 +295,13 @@ class Stack:
         self.op_BUILD_TUPLE_UNPACK()
 
     def op_BUILD_TUPLE_UNPACK_WITH_CALL(self):
-        args = []
+        iterables = []
         for _ in range(self.oparg):
             arg = self.pop()
-            args.extend(list(arg))
+            iterables.append(arg)
             self.process((arg,), iter, (arg,))
         fn = self.pop()
-        self.process((fn,), fn, args)
+        self.process((fn,), fn, itertools.chain.from_iterable(iterables))
 
     # TODO: BUILD_MAP_UNPACK, BUILD_MAP_UNPACK_WITH_CALL
 
