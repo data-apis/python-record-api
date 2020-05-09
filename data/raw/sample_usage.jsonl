@@ -1,0 +1,74 @@
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:11", "function": "numpy.arange", "params": {"0": 10}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:13", "function": "_operator.pos", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:14", "function": "_operator.neg", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:15", "function": "_operator.invert", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:19", "function": "_operator.not_", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:23", "function": "builtins.iter", "params": {"0": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:27", "function": "_operator.getitem", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 0}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:30", "function": "_operator.pow", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:31", "function": "_operator.pow", "params": {"a": 2, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:32", "function": "_operator.mul", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:33", "function": "_operator.mul", "params": {"a": 2, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:34", "function": "_operator.matmul", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:35", "function": "_operator.floordiv", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:36", "function": "_operator.floordiv", "params": {"a": 2, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:37", "function": "_operator.mod", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:38", "function": "_operator.mod", "params": {"a": 2, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:39", "function": "_operator.add", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:40", "function": "_operator.add", "params": {"a": 2, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:41", "function": "_operator.sub", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:42", "function": "_operator.sub", "params": {"a": 2, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:43", "function": "_operator.lshift", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:44", "function": "_operator.lshift", "params": {"a": 2, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:45", "function": "_operator.rshift", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:46", "function": "_operator.rshift", "params": {"a": 2, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:47", "function": "_operator.and_", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:48", "function": "_operator.and_", "params": {"a": 2, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:49", "function": "_operator.or_", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:50", "function": "_operator.or_", "params": {"a": 2, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:53", "function": "_operator.ipow", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:55", "function": "_operator.ipow", "params": {"a": 2, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:57", "function": "_operator.imul", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:59", "function": "_operator.imul", "params": {"a": 2, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:61", "function": "_operator.ifloordiv", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:62", "function": "_operator.imod", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:63", "function": "_operator.iadd", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:64", "function": "_operator.isub", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:65", "function": "_operator.ilshift", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:66", "function": "_operator.irshift", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:67", "function": "_operator.iand", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:68", "function": "_operator.ior", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:69", "function": "_operator.setitem", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 0, "c": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:72", "function": "builtins.iter", "params": {"0": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:76", "function": "numpy.arange", "params": {"0": 10}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:77", "function": "numpy.array", "params": {"0": [1, 2, 3]}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:78", "function": "numpy.zeros", "params": {"0": {"t": "tuple", "v": [4, 5]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:79", "function": "numpy.ones", "params": {"shape": {"t": "tuple", "v": [5, 4]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:80", "function": "numpy.linspace", "params": {"start": 0, "stop": 2, "num": 100}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:81", "function": "numpy.eye", "params": {"N": 10}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:84", "function": "numpy.arange", "params": {"0": 10}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:85", "function": "builtins.getattr", "params": {"0": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "1": "shape"}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:86", "function": "builtins.getattr", "params": {"0": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "1": "ndim"}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:87", "function": "builtins.getattr", "params": {"0": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "1": "dtype"}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:88", "function": "builtins.getattr", "params": {"0": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "1": "size"}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:92", "function": "_operator.add", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:93", "function": "numpy.add", "params": {"0": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "1": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:94", "function": "numpy.exp", "params": {"0": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:95", "function": "numpy.log", "params": {"0": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:98", "function": "_operator.eq", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:99", "function": "_operator.le", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:102", "function": "numpy.ndarray.sort", "params": {"0": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:103", "function": "builtins.getattr", "params": {"0": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "1": "sort"}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:103", "function": "numpy.ndarray.sort", "params": {"axis": 0, "0": {"t": "numpy.ndarray", "v": [[10], "int64"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:106", "function": "_operator.gt", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 10}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:106", "function": "_operator.getitem", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": {"t": "numpy.ndarray", "v": [[10], "bool"]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:107", "function": "_operator.getitem", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": 0}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:108", "function": "_operator.getitem", "params": {"a": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "b": {"t": "builtins.slice", "v": [1, 2, null]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:109", "function": "numpy.arange", "params": {"0": 10}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:109", "function": "numpy.ndarray.reshape", "params": {"0": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "1": 5, "2": 2}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:109", "function": "_operator.getitem", "params": {"a": {"t": "numpy.ndarray", "v": [[5, 2], "int64"]}, "b": {"t": "tuple", "v": [{"t": "tuple", "v": [1, 2, 3]}, {"t": "tuple", "v": [0, 1, 1]}]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:112", "function": "builtins.getattr", "params": {"0": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "1": "T"}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:113", "function": "numpy.ndarray.reshape", "params": {"0": {"t": "numpy.ndarray", "v": [[10], "int64"]}, "1": {"t": "tuple", "v": [5, 2]}}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:114", "function": "numpy.column_stack", "params": {"tup": [{"t": "numpy.ndarray", "v": [[10], "int64"]}, {"t": "numpy.ndarray", "v": [[10], "int64"]}]}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:115", "function": "builtins.getattr", "params": {"0": {"t": "builtins.module", "v": "numpy"}, "1": "concatenate"}}
+{"location": "/Users/saul/p/python-record-api/record_api/sample_usage.py:115", "function": "numpy.concatenate", "params": {"axis": 0, "0": {"t": "tuple", "v": [{"t": "numpy.ndarray", "v": [[10], "int64"]}, {"t": "numpy.ndarray", "v": [[10], "int64"]}]}}}

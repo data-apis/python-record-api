@@ -39,9 +39,9 @@ class OpStack(Sequence[Any]):
 
     def __init__(self, frame):
         self._frame = Frame.from_address(id(frame))
-        stack_start_addr = c_ssize_t.from_address(id(frame) + F_VALUESTACK_OFFSET).value
-        stack_top_addr = c_ssize_t.from_address(id(frame) + F_STACKTOP_OFFSET).value
-        self._len = (stack_top_addr - stack_start_addr) // PTR_SIZE
+        # stack_start_addr = c_ssize_t.from_address(id(frame) + F_VALUESTACK_OFFSET).value
+        # stack_top_addr = c_ssize_t.from_address(id(frame) + F_STACKTOP_OFFSET).value
+        # self._len = (stack_top_addr - stack_start_addr) // PTR_SIZE
 
     def __repr__(self) -> str:
         if not self:
@@ -63,22 +63,22 @@ class OpStack(Sequence[Any]):
         return idx
 
     def __getitem__(self, item: Union[int, slice]) -> Any:
-        if isinstance(item, int):
-            if item < -self._len or item >= self._len:
-                raise IndexError(item)
-            if item < 0:
-                return self._frame.f_stacktop[item]
-            return self._frame.f_valuestack[item]
+        # if isinstance(item, int):
+            # if item < -self._len or item >= self._len:
+            #     raise IndexError(item)
+            # if item < 0:
+        return self._frame.f_stacktop[item]
+            # return self._frame.f_valuestack[item]
 
-        if isinstance(item, slice):
-            item = slice(
-                self._preproc_slice(item.start, 0),
-                self._preproc_slice(item.stop, self._len),
-                item.step,
-            )
-            return self._frame.f_valuestack[item]
+        # if isinstance(item, slice):
+        #     item = slice(
+        #         self._preproc_slice(item.start, 0),
+        #         self._preproc_slice(item.stop, self._len),
+        #         item.step,
+        #     )
+        #     return self._frame.f_valuestack[item]
 
-        raise TypeError(item)
+        # raise TypeError(item)
 
     def __iter__(self) -> Iterator[Any]:
         for i in range(self._len):

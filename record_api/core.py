@@ -252,22 +252,11 @@ class Tracer:
     calls_from_module: str
 
     def __enter__(self):
-        # also set tracing on parent frames
-        self.set_parent_trace()
         sys.settrace(self)
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         sys.settrace(None)
 
-    def set_parent_trace(self):
-        frame = inspect.currentframe()
-        if frame:
-            # frame.f_trace = self  # type: ignore
-            # frame.f_trace_opcodes = True
-            parent_frame = frame.f_back
-            if parent_frame:
-                parent_frame.f_trace = self  # type: ignore
-                parent_frame.f_trace_opcodes = True
 
     def should_trace(self, *values) -> bool:
         for value in values:
@@ -289,18 +278,21 @@ class Tracer:
         elif event != "opcode":
             return None
 
+        if self.should_trace_frame(frame):
+            self.trace_frame(frame)
+        return None
+
+    def should_trace_frame(self, frame) -> bool:
         # Ignore frames which are not from the `calls_from_module`
         try:
             frame_module_name = frame.f_globals["__name__"]
         except KeyError:
-            return None
-        if (
+            return False
+        return (
             frame_module_name == "__main__"
             or frame_module_name == self.calls_from_module
             or frame_module_name.startswith(self.calls_from_module + ".")
-        ):
-            self.trace_frame(frame)
-        return None
+        )
 
     def trace_frame(self, frame) -> None:
         stack = Stack(self, frame)
