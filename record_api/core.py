@@ -12,6 +12,7 @@ import warnings
 import opcode
 import functools
 from typing import *
+import itertools
 
 from . import get_stack
 
@@ -229,12 +230,14 @@ class Stack:
         l.reverse()
         return l
 
-    def process(self, keyed_args: Tuple, fn: Callable, *args, **kwargs) -> None:
+    def process(
+        self, keyed_args: Tuple, fn: Callable, args: Iterable, kwargs: Mapping = {}
+    ) -> None:
         if self.tracer.should_trace(*keyed_args):
             # If this is a method implemented in C, expand it
             # to classes function and add self as an arg
             if isinstance(fn, types.BuiltinMethodType) and not isinstance(
-                fn.__self__, types.ModuleType
+                fn.__self__, (types.ModuleType, type)
             ):
                 self_ = fn.__self__
                 args = (self_, *args)
@@ -243,7 +246,6 @@ class Stack:
             line = self.frame.f_lineno
             log_call(filename, line, fn, *args, **kwargs)
 
-
     def __call__(self) -> None:
         """
         handle all opcodes from https://docs.python.org/3/library/dis.html
@@ -251,10 +253,12 @@ class Stack:
         """
         opname = self.opname
         if opname in UNARY_OPS:
-            return self.process((self.TOS,), UNARY_OPS[opname], self.TOS)
+            return self.process((self.TOS,), UNARY_OPS[opname], (self.TOS,))
 
         if opname in BINARY_OPS:
-            return self.process((self.TOS, self.TOS1), BINARY_OPS[opname], self.TOS1, self.TOS)
+            return self.process(
+                (self.TOS, self.TOS1), BINARY_OPS[opname], (self.TOS1, self.TOS)
+            )
 
         method_name = f"op_{opname}"
         if hasattr(self, method_name):
@@ -263,26 +267,26 @@ class Stack:
 
     # special case subscr b/c we only check first arg, not both
     def op_BINARY_SUBSCR(self):
-        self.process((self.TOS1,), op.getitem, self.TOS1, self.TOS)
+        self.process((self.TOS1,), op.getitem, (self.TOS1, self.TOS))
 
     def op_STORE_SUBSCR(self):
-        self.process((self.TOS1,), op.setitem, self.TOS1, self.TOS, self.TOS2)
+        self.process((self.TOS1,), op.setitem, (self.TOS1, self.TOS, self.TOS2))
 
     def op_DELETE_SUBSCR(self):
-        self.process((self.TOS1,), op.delitem, self.TOS1, self.TOS)
+        self.process((self.TOS1,), op.delitem, (self.TOS1, self.TOS))
 
     def op_LOAD_ATTR(self):
-        self.process((self.TOS,), getattr, self.TOS, self.opvalname)
+        self.process((self.TOS,), getattr, (self.TOS, self.opvalname))
 
     def op_STORE_ATTR(self):
-        self.process((self.TOS,), setattr, self.TOS, self.opvalname, self.TOS1)
+        self.process((self.TOS,), setattr, (self.TOS, self.opvalname, self.TOS1))
 
     def op_DELETE_ATTR(self):
-        self.process((self.TOS,), delattr, self.TOS, self.opvalname)
+        self.process((self.TOS,), delattr, (self.TOS, self.opvalname))
 
     def op_BUILD_TUPLE_UNPACK(self):
         for value in self.pop_n(self.oparg):
-            self.process((value,), iter, value)
+            self.process((value,), iter, (value,))
 
     def op_BUILD_LIST_UNPACK(self):
         self.op_BUILD_TUPLE_UNPACK()
@@ -295,9 +299,9 @@ class Stack:
         for _ in range(self.oparg):
             arg = self.pop()
             args.extend(list(arg))
-            self.process((arg,), iter, arg)
+            self.process((arg,), iter, (arg,))
         fn = self.pop()
-        self.process((fn,), fn, *args)
+        self.process((fn,), fn, args)
 
     # TODO: BUILD_MAP_UNPACK, BUILD_MAP_UNPACK_WITH_CALL
 
@@ -321,21 +325,20 @@ class Stack:
             self.process(
                 (self.TOS, self.TOS1),
                 COMPARISONS[self.opvalcompare],
-                self.TOS1,
-                self.TOS,
+                (self.TOS1, self.TOS,),
             )
 
     def op_CALL_FUNCTION(self):
         args = self.pop_n(self.oparg)
         fn = self.pop()
-        self.process((fn,), fn, *args)
+        self.process((fn,), fn, args)
 
     def op_CALL_FUNCTION_KW(self):
         kwargs_names = self.pop()
         kwargs = {name: self.pop() for name in kwargs_names}
         args = self.pop_n(self.oparg - len(kwargs_names))
         fn = self.pop()
-        self.process((fn,), fn, *args, **kwargs)
+        self.process((fn,), fn, args, kwargs)
 
     def op_CALL_FUNCTION_EX(self):
         has_kwarg = self.oparg & int("01", 2)
@@ -347,17 +350,20 @@ class Stack:
             kwargs = {}
             args = self.pop()
             fn = self.pop()
-        self.process((fn,), fn, *args, **kwargs)
+        self.process((fn,), fn, args, kwargs)
 
     def op_CALL_METHOD(self):
         args = self.pop_n(self.oparg)
         function_or_self = self.pop()
         null_or_method = self.pop()
         if null_or_method is self.NULL:
-            self.process((function_or_self,), function_or_self, *args)
+            self.process((function_or_self,), function_or_self, args)
         else:
-            self.process((function_or_self,), null_or_method, function_or_self, *args)
-
+            self.process(
+                (function_or_self,),
+                null_or_method,
+                itertools.chain((function_or_self,), args),
+            )
 
 
 UNARY_OPS = {
@@ -451,6 +457,7 @@ class Tracer:
             or frame_module_name == self.calls_from_module
             or frame_module_name.startswith(self.calls_from_module + ".")
         )
+
 
 writer = None
 rand_file = None
