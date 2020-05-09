@@ -185,7 +185,7 @@ class Stack:
         """
         We could use `dis.get_instructions` but it's really slow!
         We move some of the logic as in `_get_instructions_bytes`
-        to later, so we can only process instructions we care about.
+        to later, so we can only self.process instructions we care about.
         """
         return self.frame.f_code.co_names[self.oparg]
 
@@ -244,164 +244,120 @@ class Stack:
             log_call(filename, line, fn, *args, **kwargs)
 
 
-@dataclasses.dataclass
-class Tracer:
-    # the module we should trace calls to
-    calls_to_module: str
-    # the module we should trace calls from
-    calls_from_module: str
-
-    def __enter__(self):
-        sys.settrace(self)
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        sys.settrace(None)
-
-
-    def should_trace(self, *values) -> bool:
-        for value in values:
-            if isinstance(value, types.BuiltinMethodType):
-                # if this was a method defined in C, use the instance as the value
-                value = value.__self__
-            module = getmodulename(value) or getmodulename(type(value))
-            if not module:
-                warnings.warn(f"Cannot get module of {value}")
-                continue
-            if module.startswith(self.calls_to_module):
-                return True
-        return False
-
-    def __call__(self, frame, event, arg) -> Optional[Tracer]:
-        if event == "call":
-            frame.f_trace_opcodes = True
-            return self
-        elif event != "opcode":
-            return None
-
-        if self.should_trace_frame(frame):
-            self.trace_frame(frame)
-        return None
-
-    def should_trace_frame(self, frame) -> bool:
-        # Ignore frames which are not from the `calls_from_module`
-        try:
-            frame_module_name = frame.f_globals["__name__"]
-        except KeyError:
-            return False
-        return (
-            frame_module_name == "__main__"
-            or frame_module_name == self.calls_from_module
-            or frame_module_name.startswith(self.calls_from_module + ".")
-        )
-
-    def trace_frame(self, frame) -> None:
-        stack = Stack(self, frame)
-        opname = stack.opname
-        process = stack.process
-        # handle all opcodes from https://docs.python.org/3/library/dis.html
-        # that we care about
-
-        if DEBUG:
-            bytecode = dis.Bytecode(frame.f_code, current_offset=frame.f_lasti)
-            print(bytecode.dis())
-
+    def __call__(self) -> None:
+        """
+        handle all opcodes from https://docs.python.org/3/library/dis.html
+        that we care about
+        """
+        opname = self.opname
         if opname in UNARY_OPS:
-            process((stack.TOS,), UNARY_OPS[opname], stack.TOS)
+            return self.process((self.TOS,), UNARY_OPS[opname], self.TOS)
 
         if opname in BINARY_OPS:
-            process((stack.TOS, stack.TOS1), BINARY_OPS[opname], stack.TOS1, stack.TOS)
+            return self.process((self.TOS, self.TOS1), BINARY_OPS[opname], self.TOS1, self.TOS)
 
-        # special case subscr b/c we only check first arg, not both
-        if opname == "BINARY_SUBSCR":
-            process((stack.TOS1,), op.getitem, stack.TOS1, stack.TOS)
-
-        if opname == "STORE_SUBSCR":
-            process((stack.TOS1,), op.setitem, stack.TOS1, stack.TOS, stack.TOS2)
-
-        if opname == "DELETE_SUBSCR":
-            process((stack.TOS1,), op.delitem, stack.TOS1, stack.TOS)
-
-        if opname == "LOAD_ATTR":
-            process((stack.TOS,), getattr, stack.TOS, stack.opvalname)
-
-        if opname == "STORE_ATTR":
-            process((stack.TOS,), setattr, stack.TOS, stack.opvalname, stack.TOS1)
-
-        if opname == "DELETE_ATTR":
-            process((stack.TOS,), delattr, stack.TOS, stack.opvalname)
-
-        if opname in ("BUILD_TUPLE_UNPACK", "BUILD_LIST_UNPACK", "BUILD_SET_UNPACK"):
-            for value in stack.pop_n(stack.oparg):
-                process((value,), iter, value)
-
-        if opname == "BUILD_TUPLE_UNPACK_WITH_CALL":
-            args = []
-            for _ in range(stack.oparg):
-                arg = stack.pop()
-                args.extend(list(arg))
-                process((arg,), iter, arg)
-            fn = stack.pop()
-            process((fn,), fn, *args)
-
-        # TODO: BUILD_MAP_UNPACK, BUILD_MAP_UNPACK_WITH_CALL
-
-        if opname == "COMPARE_OP":
-            # list from
-            # https://github.com/python/cpython/blob/81de3c225774179cdc82a1733a64e4a876ff02b5/Lib/opcode.py#L24-L25
-            COMPARISONS = {
-                "<": op.lt,
-                "<": op.le,
-                "==": op.eq,
-                "!=": op.ne,
-                ">": op.gt,
-                ">=": op.ge,
-                "in": op.contains,
-                "not in": op.contains,
-                # Ignore these for now since there are so many of them!
-                # "is": op.is_,
-                # "is not": op.is_not,
-            }
-            if stack.opvalcompare in COMPARISONS:
-                process(
-                    (stack.TOS, stack.TOS1),
-                    COMPARISONS[stack.opvalcompare],
-                    stack.TOS1,
-                    stack.TOS,
-                )
-
-        if opname == "CALL_FUNCTION":
-            args = stack.pop_n(stack.oparg)
-            fn = stack.pop()
-            process((fn,), fn, *args)
-
-        if opname == "CALL_FUNCTION_KW":
-            kwargs_names = stack.pop()
-            kwargs = {name: stack.pop() for name in kwargs_names}
-            args = stack.pop_n(stack.oparg - len(kwargs_names))
-            fn = stack.pop()
-            process((fn,), fn, *args, **kwargs)
-
-        if opname == "CALL_FUNCTION_EX":
-            has_kwarg = stack.oparg & int("01", 2)
-            if has_kwarg:
-                kwargs = stack.pop()
-                args = stack.pop()
-                fn = stack.pop()
-            else:
-                kwargs = {}
-                args = stack.pop()
-                fn = stack.pop()
-            process((fn,), fn, *args, **kwargs)
-
-        if opname == "CALL_METHOD":
-            args = stack.pop_n(stack.oparg)
-            function_or_self = stack.pop()
-            null_or_method = stack.pop()
-            if null_or_method is stack.NULL:
-                process((function_or_self,), function_or_self, *args)
-            else:
-                process((function_or_self,), null_or_method, function_or_self, *args)
+        method_name = f"op_{opname}"
+        if hasattr(self, method_name):
+            getattr(self, method_name)()
         return None
+
+    # special case subscr b/c we only check first arg, not both
+    def op_BINARY_SUBSCR(self):
+        self.process((self.TOS1,), op.getitem, self.TOS1, self.TOS)
+
+    def op_STORE_SUBSCR(self):
+        self.process((self.TOS1,), op.setitem, self.TOS1, self.TOS, self.TOS2)
+
+    def op_DELETE_SUBSCR(self):
+        self.process((self.TOS1,), op.delitem, self.TOS1, self.TOS)
+
+    def op_LOAD_ATTR(self):
+        self.process((self.TOS,), getattr, self.TOS, self.opvalname)
+
+    def op_STORE_ATTR(self):
+        self.process((self.TOS,), setattr, self.TOS, self.opvalname, self.TOS1)
+
+    def op_DELETE_ATTR(self):
+        self.process((self.TOS,), delattr, self.TOS, self.opvalname)
+
+    def op_BUILD_TUPLE_UNPACK(self):
+        for value in self.pop_n(self.oparg):
+            self.process((value,), iter, value)
+
+    def op_BUILD_LIST_UNPACK(self):
+        self.op_BUILD_TUPLE_UNPACK()
+
+    def op_BUILD_SET_UNPACK(self):
+        self.op_BUILD_TUPLE_UNPACK()
+
+    def op_BUILD_TUPLE_UNPACK_WITH_CALL(self):
+        args = []
+        for _ in range(self.oparg):
+            arg = self.pop()
+            args.extend(list(arg))
+            self.process((arg,), iter, arg)
+        fn = self.pop()
+        self.process((fn,), fn, *args)
+
+    # TODO: BUILD_MAP_UNPACK, BUILD_MAP_UNPACK_WITH_CALL
+
+    def op_COMPARE_OP(self):
+        # list from
+        # https://github.com/python/cpython/blob/81de3c225774179cdc82a1733a64e4a876ff02b5/Lib/opcode.py#L24-L25
+        COMPARISONS = {
+            "<": op.lt,
+            "<": op.le,
+            "==": op.eq,
+            "!=": op.ne,
+            ">": op.gt,
+            ">=": op.ge,
+            "in": op.contains,
+            "not in": op.contains,
+            # Ignore these for now since there are so many of them!
+            # "is": op.is_,
+            # "is not": op.is_not,
+        }
+        if self.opvalcompare in COMPARISONS:
+            self.process(
+                (self.TOS, self.TOS1),
+                COMPARISONS[self.opvalcompare],
+                self.TOS1,
+                self.TOS,
+            )
+
+    def op_CALL_FUNCTION(self):
+        args = self.pop_n(self.oparg)
+        fn = self.pop()
+        self.process((fn,), fn, *args)
+
+    def op_CALL_FUNCTION_KW(self):
+        kwargs_names = self.pop()
+        kwargs = {name: self.pop() for name in kwargs_names}
+        args = self.pop_n(self.oparg - len(kwargs_names))
+        fn = self.pop()
+        self.process((fn,), fn, *args, **kwargs)
+
+    def op_CALL_FUNCTION_EX(self):
+        has_kwarg = self.oparg & int("01", 2)
+        if has_kwarg:
+            kwargs = self.pop()
+            args = self.pop()
+            fn = self.pop()
+        else:
+            kwargs = {}
+            args = self.pop()
+            fn = self.pop()
+        self.process((fn,), fn, *args, **kwargs)
+
+    def op_CALL_METHOD(self):
+        args = self.pop_n(self.oparg)
+        function_or_self = self.pop()
+        null_or_method = self.pop()
+        if null_or_method is self.NULL:
+            self.process((function_or_self,), function_or_self, *args)
+        else:
+            self.process((function_or_self,), null_or_method, function_or_self, *args)
+
 
 
 UNARY_OPS = {
@@ -445,6 +401,57 @@ BINARY_OPS = {
     "INPLACE_OR": op.ior,
     "INPLACE_XOR": op.ixor,
 }
+
+
+@dataclasses.dataclass
+class Tracer:
+    # the module we should trace calls to
+    calls_to_module: str
+    # the module we should trace calls from
+    calls_from_module: str
+
+    def __enter__(self):
+        sys.settrace(self)
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        sys.settrace(None)
+
+    def should_trace(self, *values) -> bool:
+        for value in values:
+            if isinstance(value, types.BuiltinMethodType):
+                # if this was a method defined in C, use the instance as the value
+                value = value.__self__
+            module = getmodulename(value) or getmodulename(type(value))
+            if not module:
+                warnings.warn(f"Cannot get module of {value}")
+                continue
+            if module.startswith(self.calls_to_module):
+                return True
+        return False
+
+    def __call__(self, frame, event, arg) -> Optional[Tracer]:
+        if event == "call":
+            frame.f_trace_opcodes = True
+            return self
+        elif event != "opcode":
+            return None
+
+        if self.should_trace_frame(frame):
+            Stack(self, frame)()
+        return None
+
+    def should_trace_frame(self, frame) -> bool:
+        # Ignore frames which are not from the `calls_from_module`
+        try:
+            frame_module_name = frame.f_globals["__name__"]
+        except KeyError:
+            return False
+        return (
+            frame_module_name == "__main__"
+            or frame_module_name == self.calls_from_module
+            or frame_module_name.startswith(self.calls_from_module + ".")
+        )
+
 writer = None
 rand_file = None
 
