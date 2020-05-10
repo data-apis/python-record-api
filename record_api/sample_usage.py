@@ -1,12 +1,6 @@
 import numpy as np
 
 
-def inner():
-    print("in inner")
-    np.arange(11)[10]
-    print("return inner")
-
-
 def fn():
     x = np.arange(10)
     # unary method
@@ -113,5 +107,6 @@ def fn():
     x.reshape((5, 2))
     np.column_stack([x, x])
     np.concatenate((x, x), axis=0)
+
 
 fn()

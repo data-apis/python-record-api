@@ -8,7 +8,9 @@ author = "Saul Shanabrook"
 author-email = "s.shanabrook@gmail.com"
 home-page = "https://github.com/quansight-labs/python_record_api"
 classifiers = ["License :: OSI Approved :: MIT License"]
-
+requires = [
+    "tqdm"
+]
 
 [tool.flit.entrypoints.pytest11]
 record_api = "record_api.pytest_plugin"

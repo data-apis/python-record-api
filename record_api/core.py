@@ -16,6 +16,10 @@ import itertools
 
 from . import get_stack
 
+# TODO: Switch places of contains
+# fix functions strings which aren't function
+#  i.e. 'numpy.ma.core.<numpy.ma.core._convert2ma object at 0x7ff9e03f5fd0>(args=tuple[tuple[int, int]])',
+
 __all__ = ["Tracer", "setup", "finalize", "get_tracer"]
 
 DEBUG = os.environ.get("PYTHON_RECORD_API_DEBUG", False)
