@@ -152,7 +152,7 @@ class UnionType:
     args: typing.Tuple[typing.Union[str, GenericType], ...]
 
     def __str__(self):
-        return f"Union[{', '.join(map(str, self.args))}]"
+        return f"Union[{', '.join(sorted(map(str, self.args)))}]"
 
     def __repr__(self):
         return str(self)
@@ -181,7 +181,7 @@ def unify(types):
 
     if len(regular_types) == 1:
         return regular_types[0]
-    return UnionType(tuple(sorted(regular_types)))
+    return UnionType(tuple(regular_types))
 
 
 def t(v):
@@ -196,6 +196,8 @@ def t(v):
             return v["v"]
         if tp == "builtins.type":
             return GenericType("Type", (v["v"],))
+        if tp == 'builtins.slice':
+            return GenericType("slice", tuple(map(t, v["v"])))
         return tp
     if isinstance(v, list) and v:
         return GenericType("list", (unify(map(t, v)),))

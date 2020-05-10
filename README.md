@@ -59,10 +59,12 @@ conda uninstall -c conda-forge --force matplotlib scikit-image
 # https://matplotlib.org/3.2.1/devel/contributing.html#other-ways-to-contribute
 env MPLSETUPCFG=$PWD/matplotlib.setup.cfg pip install matplotlib --no-binary :all:
 
+# TODO: Fix install of pandas and skimage
 # Install scikit-image from source so we have tests as well
 pip install scikit-image --no-binary :all:
 
 # TODO: trace all of dask
+# TODO: add special pandas command
 echo "skimage
 dask.array
 sklearn
@@ -73,6 +75,11 @@ env PYTHON_RECORD_API_OUTPUT_FILE=data/raw/%.jsonl \
     PYTHON_RECORD_API_TO_MODULE=numpy \
     PYTHON_RECORD_API_FROM_MODULE=% \
     pytest --pyargs %
+
+env PYTHON_RECORD_API_INPUT=data/raw/dask.array.jsonl \
+    PYTHON_RECORD_API_OUTPUT_TYPED=data/counts_typed/dask.array.csv \
+    PYTHON_RECORD_API_OUTPUT_UNTYPED=data/counts_untyped/dask.array.csv \
+    python -m record_api.line_counts
 ```
 
 ## How?
