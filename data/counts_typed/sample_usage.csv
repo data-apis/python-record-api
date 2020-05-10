@@ -1,0 +1,34 @@
+function,count
+numpy.arange(int),4
+-numpy.ndarray,1
+not numpy.ndarray,1
+numpy.ndarray[int],2
+int ** numpy.ndarray,1
+int * numpy.ndarray,1
+numpy.ndarray // int,1
+numpy.ndarray % int,1
+numpy.ndarray + int,1
+numpy.ndarray - int,1
+numpy.ndarray << int,1
+numpy.ndarray >> int,1
+numpy.ndarray & int,1
+numpy.ndarray | int,1
+numpy.ndarray **= int,1
+numpy.ndarray *= int,1
+numpy.ndarray //= int,1
+numpy.ndarray += int,1
+numpy.ndarray <<= int,1
+numpy.ndarray &= int,1
+numpy.ndarray[int] = int,1
+"numpy.zeros(tuple[int, int])",1
+"numpy.linspace(num=int, start=int, stop=int)",1
+numpy.ndarray.ndim,1
+numpy.ndarray.size,1
+"numpy.add(numpy.ndarray, numpy.ndarray)",1
+numpy.log(numpy.ndarray),1
+numpy.ndarray <= int,1
+numpy.ndarray.sort,1
+numpy.ndarray > int,1
+"numpy.ndarray[tuple[tuple[int, int, int], tuple[int, int, int]]]",1
+"numpy.ndarray.reshape(numpy.ndarray, tuple[int, int])",1
+numpy.concatenate,1

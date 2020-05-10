@@ -1,0 +1,2867 @@
+function,count
+numpy.ndarray,53
+numpy.isnan(int),19
+numpy.dtype(str),8
+numpy.isscalar(element=NoneType),3
+"numpy.ndarray(dtype=tuple, shape=numpy.dtype)",1
+numpy.ndarray.ndim,72
+numpy.ndarray[tuple],4
+numpy.isscalar(element=numpy.float64),7
+numpy.ndarray.dtype,106
+numpy.ndarray.shape,112
+"numpy.float64[tuple[builtins.ellipsis, NoneType, NoneType]]",1
+"numpy.ndarray[tuple[slice[int, int, NoneType], slice[int, int, NoneType]]]",5
+numpy.int64 >= int,1
+numpy.errstate(kwargs=dict),4
+numpy.isscalar(element=numpy.ndarray),11
+numpy.dtype != numpy.dtype,5
+"numpy.isnan(tuple[int, int])",6
+"numpy.amax(a=tuple[int, int])",1
+numpy.ndarray.any(numpy.ndarray),11
+numpy.isscalar(element=dask.array.core.Array),2
+numpy.isscalar(element=int),7
+numpy.prod(a=list[int]),6
+numpy.errstate,7
+numpy.vectorize,2
+numpy.empty,22
+"numpy.empty(dtype=tuple[int, int], shape=numpy.dtype)",1
+"numpy.ndarray[tuple[slinumpy.ndarraye[int, int, NoneType], slinumpy.ndarraye[int, int, NoneType]]] = numpy.ndarray",2
+Type[numpy.ndarray] == Type[numpy.ndarray],5
+numpy.allclose,10
+int * numpy.ndarray,22
+numpy.dtype,6
+"numpy.empty(tuple[int, int], dtype=numpy.dtype)",6
+numpy.ndarray + int,43
+numpy.concatenate,6
+numpy.dtype == numpy.dtype,25
+numpy.dtype != str,4
+"numpy.allclose(a=numpy.ndarray, b=numpy.ndarray, equal_nan=builtins.bool)",2
+"numpy.ndarray[tuple[sliinte[int, int, NoneType]]] = int",1
+numpy.array(list[int]),56
+numpy.arange(int),114
+"numpy.ones(shape=tuple[int, int])",27
+numpy.ndarray in dict,3
+numpy.asarray(a=numpy.ndarray),7
+numpy.dot,15
+numpy.ndarray.T,13
+numpy.float64.ndim,6
+numpy.array(numpy.float64),7
+"numpy.ndarray(dtype=tuple, shape=str)",1
+numpy.array(dask.array.core.Array),6
+"Type[numpy.ndarray] in tuple[Type[builtins.tuple], Type[builtins.str]]",1
+numpy.eye(N=int),4
+numpy.frombuffer,1
+"numpy.frombuffer(builtins.bytes, dtype=Type[numpy.uint32])",1
+numpy.dtype.hasobject,2
+"numpy.ndarray.ravel(numpy.ndarray, order=str)",1
+numpy.ndarray.strides,1
+numpy.ndarray.ravel,2
+"numpy.ndarray.view(numpy.ndarray, str)",3
+numpy.random,145
+numpy.random.mtrand.RandomState(numpy.ndarray),1
+"numpy.ndarray[tuple[slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType]]]",2
+numpy.linalg,23
+numpy.inv(numpy.ndarray),2
+numpy.linalg._umath_linalg,2
+"numpy.inv(dask.array.core.Array, output_dtypes=Type[builtins.float])",1
+numpy.matmul,2
+numpy.ufunc.signature,2
+numpy.ufunc.__name__,3
+"numpy.ndarray.reshape(numpy.ndarray, tuple[int])",9
+dictuiltins.function in dict,3
+"numpy.empty(dtype=tuple[int, int, int], shape=numpy.dtype)",1
+"numpy.ndarray[tuple[slinumpy.ndarraye[int, int, NoneType], slinumpy.ndarraye[int, int, NoneType], slinumpy.ndarraye[int, int, NoneType]]] = numpy.ndarray",1
+numpy.float64,12
+numpy.dtype(Type[numpy.float64]),1
+"numpy.random.mtrand.RandomState.bytes(numpy.random.mtrand.RandomState, int)",1
+numpy.uint32,1
+"numpy.ndarray.reshape(numpy.ndarray, tuple[int, int])",39
+numpy.random.RandomState,1
+"numpy.random.mtrand.RandomState.normal(numpy.random.mtrand.RandomState, float, float, size=tuple[int, int, int])",1
+numpy.linalg._umath_linalg.eig,1
+"numpy.isscalar(element=tuple[numpy.ndarray, numpy.ndarray])",3
+numpy.transpose,7
+builtins.function.__name__,9
+"numpy.transpose(a=numpy.ndarray, axes=tuple[int, int])",2
+numpy.stack,4
+"numpy.stack(arrays=list[numpy.ndarray], axis=int)",5
+numpy.dtype(numpy.dtype),3
+numpy.ScalarType,1
+numpy.ndarray.__class__,1
+numpy.concatenate(list[numpy.ndarray]),5
+"numpy.concatenate(list[numpy.ndarray], axis=int)",6
+"numpy.ndarray[tuple[slice[int, int, NoneType]]]",7
+numpy.ceil(float),3
+numpy.int64.ndim,7
+numpy.array(numpy.int64),6
+numpy.mean(a=numpy.ndarray),10
+numpy.sum,13
+numpy.float64.shape,10
+numpy.zeros,24
+"numpy.zeros(int, dtype=numpy.dtype)",1
+numpy.int64.shape,5
+numpy.isscalar(element=numpy.int64),7
+Type[numpy.dtype].__module__,1
+"Type[numpy.dtype] in tuple[Type[builtins.tuple], Type[builtins.list], Type[builtins.set]]",1
+numpy.dtype.shape,4
+numpy.ndarray.astype,2
+numpy.dtype in dict,3
+Type[numpy.dtype] in builtins.set,1
+numpy.ndarray.tolist(numpy.ndarray),14
+numpy.ndarray.mean(numpy.ndarray),5
+numpy.ndarray.sum(numpy.ndarray),10
+"numpy.arange(int, dtype=str)",5
+Type[numpy.ndarray].__module__,7
+"Type[numpy.dtype] in tuple[Type[builtins.list], Type[builtins.tuple], Type[builtins.set]]",1
+numpy.can_cast,2
+"numpy.can_cast(numpy.dtype, numpy.dtype, casting=str)",1
+"numpy.ndarray.astype(numpy.ndarray, numpy.dtype)",8
+*numpy.ndindex,5
+"numpy.ndarray[tuple[int]] = tuple[str, int]",1
+numpy.ndarray.flat,4
+numpy.ndarray[tuple[int]],4
+numpy.ndarray.size,10
+numpy.dtype.itemsize,11
+"numpy.empty(list[int], dtype=str)",2
+numpy.ndindex(shape=tuple[tuple[int]]),4
+"numpy.flatiter[int] = tuple[str, int]",2
+numpy.flatiter[int],1
+Type[numpy.ndarray] in builtins.set,1
+"numpy.random.mtrand.RandomState.random_sample(numpy.random.mtrand.RandomState, size=tuple[int])",1
+numpy.dtype == str,5
+"numpy.zeros(int, dtype=str)",1
+numpy.asarray(a=pandas.core.arrays.numpy_.PandasArray),1
+numpy.dtype.kind,4
+numpy.array,28
+"Type[numpy.ndarray] in tuple[Type[builtins.tuple], Type[builtins.list], Type[builtins.set]]",1
+numpy.nan,49
+Type[numpy.dtype] in dict,1
+numpy.int64(int),3
+"numpy.array(list[numpy.int64], dtype=numpy.dtype)",1
+"numpy.ndarray[slice[NoneType, int, NoneType]]",18
+"numpy.int64[tuple[builtins.ellipsis, NoneType, NoneType]]",1
+numpy.isnan,9
+numpy.isnan(float),20
+"numpy.ndindex(shape=tuple[tuple[int, int]])",3
+"numpy.ndarray[tuple[int, int]]",7
+"numpy.ndarray[tuple[int, int]] = tuple[str, int, int]",1
+"numpy.random.mtrand.RandomState.random_sample(numpy.random.mtrand.RandomState, size=tuple[int, int])",1
+"numpy.flatiter[int] = tuple[str, int, int]",1
+numpy.array(list[str]),2
+"numpy.zeros(int, dtype=Type[builtins.float])",1
+"numpy.zeros(int, dtype=Type[builtins.int])",1
+numpy.prod(a=list),4
+float / numpy.float64,5
+int <= numpy.float64,2
+"numpy.float64[tuple[builtins.ellipsis, NoneType]]",1
+"numpy.int64[tuple[builtins.ellipsis, NoneType]]",1
+numpy.zeros(int),2
+numpy.float64 ** float,2
+builtins.builtin_function_or_method.__name__,1
+numpy.block(arrays=list[numpy.ndarray]),3
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, int, NoneType]]]",2
+numpy.block(arrays=list[list[numpy.ndarray]]),3
+"numpy.ndarray[tuple[builtins.ellipsis, NoneType]]",4
+numpy.block(arrays=list[list[dask.array.core.Array]]),1
+numpy.array(list[list[int]]),15
+numpy.array(int),11
+"numpy.zeros(tuple[int, int])",2
+numpy.ndarray.item(numpy.ndarray),1
+numpy.ndarray * int,19
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], slice[NoneType, int, NoneType]]]",4
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+numpy.asanyarray(a=int),1
+numpy.block(arrays=int),1
+numpy.block(arrays=numpy.ndarray),1
+"numpy.isnan(tuple[float, int])",1
+"numpy.allclose(a=tuple[int, float], b=tuple[numpy.int64, float], equal_nan=builtins.bool)",2
+"numpy.isnan(tuple[int, float])",1
+"numpy.isnan(tuple[int, int, int])",5
+"numpy.amax(a=tuple[int, int, int])",1
+numpy.arange,10
+"numpy.arange(int, dtype=Type[numpy.int64])",3
+numpy.float64 >= int,1
+numpy.int64.dtype,5
+numpy.int64 ** int,1
+"numpy.allclose(a=numpy.int64, b=numpy.int64, equal_nan=builtins.bool)",1
+numpy.int32,4
+"numpy.ndarray.astype(numpy.ndarray, numpy.dtype, copy=builtins.bool)",2
+numpy.int64,9
+numpy.ndarray.sum,25
+numpy.int64 * numpy.ndarray,1
+numpy.dtype != Type[builtins.object],3
+"numpy.can_cast(numpy.ndarray, numpy.dtype, casting=str)",1
+"numpy.ndarray.reshape(numpy.ndarray, int, int)",8
+numpy.ufunc.nout,1
+"numpy.add(numpy.ndarray, numpy.ndarray)",4
+"numpy.empty(tuple[int], dtype=numpy.dtype)",9
+numpy.ndarray + numpy.ndarray,35
+dask.array.core.Array + numpy.ndarray,2
+not numpy.bool_,8
+numpy.float32,10
+numpy.int16,3
+numpy.isscalar(element=float),4
+numpy.float64.dtype,3
+"numpy.ones(dtype=Type[numpy.float32], shape=int)",3
+"numpy.result_type(numpy.dtype, numpy.dtype)",2
+"Type[numpy.ufunc] in tuple[Type[builtins.list], Type[builtins.tuple], Type[builtins.set]]",1
+"Type[numpy.ufunc] in tuple[Type[builtins.tuple], Type[builtins.list], Type[builtins.set]]",1
+"numpy.maximum(numpy.ndarray, numpy.ndarray)",7
+numpy.result_type,2
+Type[numpy.signedinteger] in dict,1
+Type[numpy.numdicter] in dict,1
+"Type[numpy.int64] in tuple[Type[builtins.list], Type[builtins.tuple], Type[builtins.set]]",1
+numpy.ndarray.nbytes,1
+"numpy.result_type(numpy.dtype, numpy.ndarray)",1
+"numpy.maximum(numpy.ndarray, int)",4
+"numpy.result_type(numpy.dtype, int)",1
+"numpy.maximum(numpy.ndarray, float)",4
+"numpy.result_type(numpy.dtype, float)",1
+"numpy.maximum(numpy.ndarray, numpy.int64)",2
+"numpy.result_type(numpy.dtype, numpy.int64)",1
+"Type[numpy.ndarray] in tuple[Type[builtins.list], Type[builtins.tuple], Type[builtins.set]]",1
+"numpy.maximum(int, numpy.ndarray)",4
+"numpy.result_type(int, numpy.dtype)",1
+"numpy.result_type(int, int)",1
+"numpy.maximum(int, float)",1
+"numpy.result_type(int, float)",1
+"numpy.maximum(int, numpy.int64)",1
+"numpy.maximum(float, numpy.ndarray)",4
+"numpy.result_type(float, numpy.dtype)",1
+"numpy.maximum(float, int)",1
+"numpy.result_type(float, float)",1
+"numpy.maximum(float, float)",1
+"numpy.result_type(float, numpy.int64)",1
+"numpy.result_type(float, numpy.ndarray)",1
+"numpy.result_type(float, int)",1
+"numpy.maximum(float, numpy.int64)",1
+"numpy.maximum(numpy.int64, numpy.ndarray)",2
+"numpy.result_type(numpy.int64, numpy.dtype)",1
+"numpy.maximum(numpy.int64, int)",1
+"numpy.result_type(numpy.int64, float)",1
+"numpy.maximum(numpy.int64, float)",1
+"numpy.result_type(numpy.int64, numpy.int64)",1
+"numpy.result_type(numpy.int64, numpy.ndarray)",1
+"numpy.result_type(numpy.ndarray, numpy.dtype)",1
+"numpy.result_type(numpy.ndarray, int)",1
+"numpy.result_type(numpy.ndarray, float)",1
+"numpy.result_type(numpy.ndarray, numpy.int64)",1
+int / numpy.ndarray,2
+numpy.ndarray ** int,6
+numpy.exp(numpy.ndarray),5
++numpy.ndarray,1
+numpy.ndarray + float,8
+"numpy.array(list[tuple[int, float]], dtype=list[tuple[str, str]])",1
+numpy.dtype[str],1
+numpy.dtype.fields,2
+numpy.dtype(dict),1
+numpy.ndarray == numpy.ndarray,23
+numpy.ndarray.all(numpy.ndarray),36
+"numpy.ones(dtype=list[tuple[str, tuple[str, Union[int, tuple[int, int]]]]], shape=tuple[int, int])",1
+numpy.dtype.base,1
+"numpy.ndarray[tuple[slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType]]]",2
+numpy.ndarray[str],9
+"numpy.empty(dtype=tuple[int, int, int, int], shape=numpy.dtype)",1
+"numpy.ndarray[tuple[slinumpy.ndarraye[int, int, NoneType], slinumpy.ndarraye[int, int, NoneType], slinumpy.ndarraye[int, int, NoneType], slinumpy.ndarraye[int, int, NoneType]]] = numpy.ndarray",1
+"numpy.matmul(numpy.ndarray, numpy.ndarray)",2
+numpy.ndarray.__array_priority__,1
+numpy.int64 == int,10
+"numpy.tensordot(a=numpy.ndarray, axes=tuple[tuple[int], tuple[int]], b=numpy.ndarray)",1
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], NoneType, slice[NoneType, NoneType, NoneType]]]",2
+numpy.ndarray.min(numpy.ndarray),5
+numpy.asanyarray(a=list[int]),4
+numpy.newaxis,8
+"numpy.ndindex(shape=tuple[tuple[int, int, int]])",1
+"numpy.ndarray[tuple[int, int, int]]",3
+"numpy.ndarray[tuple[int, int, int]] = tuple[str, int, int, int]",1
+"numpy.random.mtrand.RandomState.random(numpy.random.mtrand.RandomState, tuple[int, int])",25
+"numpy.ndarray.dot(numpy.ndarray, numpy.ndarray)",5
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, size=tuple[int, int, int])",4
+numpy.broadcast_to,2
+"tuple[builtins.function, builtins.function, builtins.function, builtins.builtin_function_or_method]uiltins.function in tuple[builtins.function, builtins.function, builtins.function, builtins.builtin_function_or_method]",4
+"numpy.broadcast_to(array=numpy.ndarray, shape=tuple[int, int, int, int])",1
+"numpy.int64[tuple[builtins.ellipsis, NoneType, NoneType, NoneType, NoneType]]",1
+"numpy.broadcast_to(array=numpy.ndarray, shape=tuple[int, int, int, int, int])",1
+"numpy.int64[tuple[builtins.ellipsis, NoneType, NoneType, NoneType, NoneType, NoneType]]",1
+"numpy.ndarray[tuple[slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType]]]",2
+numpy.random.randint,35
+"numpy.broadcast_to(array=numpy.ndarray, shape=tuple[int, int, int])",2
+"numpy.int64[tuple[builtins.ellipsis, NoneType, NoneType, NoneType]]",1
+numpy.asarray(a=int),2
+"numpy.broadcast_to(array=int, shape=tuple[int])",1
+"numpy.broadcast_to(array=int, shape=tuple[int, int])",1
+"numpy.broadcast_to(array=int, shape=tuple[int, int, int, int])",1
+numpy.broadcast_arrays,2
+"numpy.broadcast_arrays(args=tuple[numpy.ndarray, numpy.ndarray])",3
+numpy.int64 != int,1
+int == numpy.int64,6
+"numpy.broadcast_arrays(args=tuple[dask.array.core.Array, dask.array.core.Array])",2
+"numpy.array(list[dask.array.core.Array], dtype=str)",1
+numpy.isscalar(element=numpy.bool_),6
+numpy.bool_.dtype,1
+numpy.array(numpy.bool_),4
+numpy.bool_.ndim,3
+"numpy.random.mtrand.RandomState.random(numpy.random.mtrand.RandomState, tuple)",9
+numpy.ndarray * numpy.ndarray,16
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, size=tuple[int])",3
+"numpy.ndarray[tuple[builtins.ellipsis, NoneType, NoneType]]",1
+"numpy.ndarray.reshape(numpy.ndarray, tuple[int, int, int])",20
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, size=tuple[int, int])",17
+"numpy.ndarray.reshape(numpy.ndarray, tuple[int, int, int, int])",11
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, size=tuple[int, int, int, int])",1
+"numpy.ndarray.reshape(numpy.ndarray, tuple)",1
+"numpy.ndindex(shape=tuple[tuple[int, int, int, int]])",1
+"numpy.ndarray[tuple[int, int, int, int]]",4
+"numpy.ndarray.reshape(numpy.ndarray, tuple[int, int, int, int, int])",5
+"numpy.empty(dtype=tuple[int, int, int, int, int], shape=numpy.dtype)",1
+"numpy.ndarray[tuple[slinumpy.ndarraye[int, int, NoneType], slinumpy.ndarraye[int, int, NoneType], slinumpy.ndarraye[int, int, NoneType], slinumpy.ndarraye[int, int, NoneType], slinumpy.ndarraye[int, int, NoneType]]] = numpy.ndarray",1
+"numpy.full(fill_value=int, shape=tuple[int, int])",2
+numpy.ones,28
+"numpy.ones(dtype=numpy.dtype, shape=tuple[int, int])",4
+numpy.ndarray - int,9
+"numpy.ndarray[tuple[slice[NoneType, NoneType, int], slice[NoneType, NoneType, int]]]",2
+numpy.ones_like(a=numpy.ndarray),3
+"numpy.ndarray(dtype=tuple, shape=Type[numpy.object_])",1
+"numpy.empty(tuple, dtype=Type[numpy.object_])",1
+"numpy.empty(tuple[int], dtype=Type[numpy.object_])",1
+"numpy.array(list[int], dtype=str)",2
+numpy.object_,2
+numpy.dtype != Type[numpy.object_],1
+"numpy.arange(int, int, int, numpy.dtype)",1
+"numpy.empty(tuple[int, int], dtype=Type[numpy.object_])",1
+numpy.ndarray.keys,1
+"numpy.ones(dtype=str, shape=tuple[int, int])",2
+str == numpy.dtype,2
+"numpy.array(list[list[int]], dtype=str)",1
+numpy.isscalar(element=numpy.uint32),1
+"numpy.uint32[tuple[builtins.ellipsis, NoneType]]",1
+"numpy.sum(a=numpy.ndarray, axis=str, dtype=int)",1
+numpy.float_,2
+int - numpy.ndarray,1
+"numpy.amax(a=numpy.ndarray, axis=int, keepdims=builtins.bool)",1
+"numpy.ones(dtype=numpy.dtype, shape=tuple[int])",2
+"numpy.ndarray.astype(numpy.ndarray, str)",22
+numpy.ndarray[NoneType],2
+numpy.float32.ndim,4
+numpy.array(numpy.float32),4
+numpy.dtype != Type[numpy.float32],2
+Type[numpy.float32] in dict,2
+"numpy.arange(int, int, dtype=Type[numpy.float32])",1
+"numpy.full(fill_value=tuple[int], shape=int)",1
+numpy.int8,1
+"numpy.ndarray.astype(numpy.ndarray, Type[numpy.int8])",1
+"numpy.ndarray(dtype=tuple, shape=Type[numpy.int8])",1
+numpy.isscalar(element=numpy.int8),1
+"numpy.int8[tuple[builtins.ellipsis, NoneType]]",1
+Type[numpy.ndarray].__name__,5
+numpy.ndarray >= int,7
+numpy.ndarray <= int,13
+numpy.asanyarray(a=numpy.ndarray),6
+numpy.dtype == Type[builtins.bool],8
+numpy.integer,3
+"numpy.where(numpy.ndarray, numpy.ndarray, numpy.ndarray)",8
+numpy.searchsorted,1
+numpy.diff(a=numpy.ndarray),3
+numpy.ndarray[int],21
+"numpy.ndarray[slice[numpy.int64, numpy.int64, NoneType]]",2
+numpy.ndarray[numpy.int64],4
+numpy.int64 - int,6
+numpy.int64 == numpy.int64,7
+"numpy.ones(dtype=Type[builtins.bool], shape=int)",1
+numpy.nonzero(a=numpy.ndarray),2
+"numpy.issubdtype(arg1=numpy.dtype, arg2=Type[numpy.integer])",2
+"numpy.searchsorted(a=tuple[int, int], side=str, v=numpy.ndarray)",1
+numpy.where(numpy.ndarray),3
+"numpy.concatenate(list[Union[list[int], numpy.ndarray]])",1
+numpy.int64 > int,4
+numpy.ndarray[list[int]],3
+numpy.array(list[builtins.bool]),6
+Type[numpy.int64] == Type[numpy.int64],2
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], int]]",6
+numpy.int8(int),1
+"numpy.zeros(shape=tuple[int, int])",8
+*numpy.ndarray,2
+numpy.ndarray.all,33
+numpy.ndarray == int,24
+numpy.dtype(Type[builtins.float]),3
+"numpy.zeros(shape=tuple[int, int, int])",6
+"numpy.ndarray[tuple[slice[NoneType, NoneType, int], slice[NoneType, NoneType, NoneType], list[int]]]",2
+numpy.ndarray in dask.highlevelgraph.HighLevelGraph,1
+numpy.sum(a=list[numpy.int64]),1
+int * numpy.int64,2
+"numpy.array(list, dtype=numpy.dtype)",2
+numpy.vstack(tup=list[numpy.ndarray]),2
+"numpy.ones(dtype=tuple[int], shape=numpy.dtype)",3
+numpy.ndarray.std(numpy.ndarray),2
+"numpy.amin(a=numpy.ndarray, axis=tuple[int, int], keepdims=builtins.bool)",2
+"numpy.amin(numpy.ndarray, axis=tuple[int, int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+numpy.isscalar(element=numpy.float32),5
+"numpy.float32[tuple[builtins.ellipsis, NoneType, NoneType]]",1
+numpy.var(a=numpy.ndarray),11
+"numpy.ndarray.sum(numpy.ndarray, axis=tuple[int, int], dtype=numpy.dtype, keepdims=builtins.bool)",6
+numpy.sqrt(numpy.ndarray),6
+numpy.argmin(a=list[int]),1
+"numpy.array(list[tuple[str, int]], dtype=list[tuple[str, str]])",1
+numpy.ndarray[list[str]],2
+"numpy.ndarray.astype(numpy.ndarray, str, copy=builtins.bool)",1
+numpy.ndarray / numpy.ndarray,2
+numpy.ndarray ** numpy.ndarray,1
+numpy.ndarray > numpy.ndarray,1
+numpy.ndarray >= numpy.ndarray,1
+numpy.ndarray != numpy.ndarray,1
+numpy.isscalar(element=builtins.bool),2
+numpy.ndarray & builtins.bool,1
+numpy.ndarray ^ builtins.bool,1
+numpy.ndarray > int,7
+numpy.ndarray != int,1
+numpy.ndarrayuiltins.numpy.ndarrayool | numpy.ndarray,1
+int // numpy.ndarray,1
+int % numpy.ndarray,1
+int <= numpy.ndarray,1
+int == numpy.ndarray,1
+-numpy.ndarray,4
+"numpy.logaddexp(numpy.ndarray, numpy.ndarray)",3
+"numpy.logaddexp2(numpy.ndarray, numpy.ndarray)",5
+numpy.log(numpy.ndarray),8
+numpy.log10(numpy.ndarray),4
+numpy.log1p(numpy.ndarray),6
+numpy.expm1(numpy.ndarray),4
+numpy.square(numpy.ndarray),6
+numpy.sin(numpy.ndarray),7
+numpy.cos(numpy.ndarray),4
+numpy.tan(numpy.ndarray),4
+numpy.ndarray / int,6
+"numpy.arctan2(numpy.ndarray, numpy.ndarray)",6
+"numpy.hypot(numpy.ndarray, numpy.ndarray)",3
+numpy.sinh(numpy.ndarray),4
+numpy.cosh(numpy.ndarray),6
+numpy.tanh(numpy.ndarray),6
+numpy.deg2rad(numpy.ndarray),4
+numpy.rad2deg(numpy.ndarray),6
+"numpy.logical_and(numpy.ndarray, numpy.ndarray)",3
+"numpy.logical_or(numpy.ndarray, numpy.ndarray)",6
+"numpy.logical_xor(numpy.ndarray, numpy.ndarray)",3
+numpy.logical_not(numpy.ndarray),6
+"numpy.maximum(dask.array.core.Array, dask.array.core.Array)",2
+"numpy.minimum(numpy.ndarray, numpy.ndarray)",3
+"numpy.fmax(dask.array.core.Array, dask.array.core.Array)",2
+"numpy.fmin(numpy.ndarray, numpy.ndarray)",3
+numpy.isreal(x=numpy.ndarray),4
+numpy.ndarrayuiltins.complex * numpy.ndarray,5
+numpy.iscomplex(x=numpy.ndarray),4
+numpy.isfinite(numpy.ndarray),3
+numpy.isinf(numpy.ndarray),5
+numpy.isnan(numpy.ndarray),10
+numpy.signbit(numpy.ndarray),4
+"numpy.ldexp(numpy.ndarray, numpy.ndarray)",6
+"numpy.fmod(numpy.ndarray, numpy.ndarray)",6
+numpy.ndarray * float,2
+numpy.ceil(numpy.ndarray),4
+numpy.degrees(numpy.ndarray),6
+numpy.radians(numpy.ndarray),4
+numpy.fix(x=numpy.ndarray),1
+numpy.ndarray - float,1
+numpy.isscalar(element=builtins.complex),1
+numpy.angle,2
+numpy.isscalar(element=builtins.function),1
+"numpy.angle(deg=numpy.ndarray, z=builtins.bool)",1
+"numpy.ndarray.__array_wrap__(numpy.ndarray, numpy.ndarray)",1
+"numpy.angle(deg=builtins.bool, z=numpy.ndarray)",3
+numpy.ndarray + builtins.complex,4
+numpy.real(val=numpy.ndarray),5
+numpy.imag(val=numpy.ndarray),4
+numpy.conjugate(numpy.ndarray),7
+"numpy.clip(a=numpy.ndarray, a_max=int, a_min=int)",3
+numpy.fabs(numpy.ndarray),5
+numpy.sign(numpy.ndarray),6
+numpy.absolute(numpy.ndarray),8
+"numpy.empty_like(numpy.ndarray, dtype=numpy.dtype, shape=tuple[int])",1
+numpy.frexp(numpy.ndarray),4
+numpy.modf(numpy.ndarray),4
+numpy.isscalar(element=dask.array.tests.test_array_core.test_slicing_with_non_ndarrays.<locals>.ARangeSlice),2
+"numpy.arange(int, dtype=numpy.dtype)",1
+numpy.asarray(a=dask.array.tests.test_array_core.test_slicing_with_non_ndarrays.<locals>.ARangeSlice),1
+numpy.matrix(data=list[list[int]]),1
+numpy.asarray(a=numpy.matrix),1
+numpy.matrix,1
+numpy.matrix[int],1
+numpy.asarray(a=list[int]),4
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, NoneType, NoneType]]]",11
+numpy.dtype(Type[builtins.int]),3
+"numpy.array(tuple[int, int])",3
+Type[Type[numpy.datetime64]uiltins.int] == Type[numpy.datetime64],1
+Type[Type[numpy.datetime64]uiltins.float] == Type[numpy.datetime64],1
+numpy.array(float),4
+Type[Type[numpy.datetime64]uiltins.complex] == Type[numpy.datetime64],1
+numpy.array(builtins.complex),2
+numpy.isscalar(element=numpy.complex128),4
+Type[Type[numpy.datetime64]uiltins.Type[numpy.datetime64]ool] == Type[numpy.datetime64],1
+numpy.array(builtins.bool),3
+Type[Type[numpy.datetime64]uiltins.Type[numpy.datetime64]ytes] == Type[numpy.datetime64],1
+numpy.array(builtins.bytes),2
+numpy.isscalar(element=numpy.bytes_),1
+numpy.datetime64,2
+numpy.str_.ndim,1
+numpy.array(numpy.str_),3
+Type[numpy.int8] == Type[numpy.datetime64],1
+numpy.int8.ndim,1
+numpy.array(numpy.int8),1
+numpy.uint8(int),1
+numpy.array(numpy.uint8),3
+numpy.isscalar(element=numpy.uint8),1
+Type[numpy.float16] == Type[numpy.datetime64],1
+numpy.float16.ndim,1
+numpy.array(numpy.float16),1
+numpy.timedelta64(int),1
+numpy.array(numpy.timedelta64),3
+numpy.isscalar(element=numpy.timedelta64),3
+Type[numpy.oType[numpy.datetime64]ject_] == Type[numpy.datetime64],1
+numpy.int16(int),1
+numpy.array(numpy.int16),2
+numpy.isscalar(element=numpy.int16),1
+Type[numpy.uint16] == Type[numpy.datetime64],1
+numpy.uint16.ndim,1
+numpy.array(numpy.uint16),1
+numpy.float32(int),1
+Type[numpy.complex64] == Type[numpy.datetime64],1
+numpy.complex64.ndim,2
+numpy.array(numpy.complex64),1
+numpy.bytes_(int),1
+numpy.array(numpy.bytes_),2
+numpy.int32(int),1
+numpy.array(numpy.int32),4
+numpy.isscalar(element=numpy.int32),3
+Type[numpy.uint32] == Type[numpy.datetime64],1
+numpy.uint32.ndim,2
+numpy.array(numpy.uint32),1
+numpy.float64(x=int),3
+Type[numpy.complex128] == Type[numpy.datetime64],1
+numpy.complex128.ndim,5
+numpy.array(numpy.complex128),1
+numpy.str_(int),1
+numpy.isscalar(element=numpy.str_),1
+Type[numpy.uint64] == Type[numpy.datetime64],1
+numpy.uint64.ndim,1
+numpy.array(numpy.uint64),1
+numpy.float128(int),1
+numpy.array(numpy.float128),2
+numpy.isscalar(element=numpy.float128),1
+Type[numpy.complex256] == Type[numpy.datetime64],1
+numpy.complex256.ndim,1
+numpy.array(numpy.complex256),1
+numpy.bool_(int),1
+Type[numpy.void] == Type[numpy.datetime64],1
+numpy.void.ndim,2
+numpy.array(numpy.void),1
+Type[numpy.longlong] == Type[numpy.datetime64],1
+numpy.longlong.ndim,1
+numpy.array(numpy.longlong),1
+numpy.ulonglong(int),1
+numpy.array(numpy.ulonglong),2
+numpy.isscalar(element=numpy.ulonglong),1
+Type[numpy.datetime64] == Type[numpy.datetime64],1
+numpy.datetime64.ndim,1
+numpy.array(numpy.datetime64),1
+numpy.matrix(data=numpy.ndarray),1
+numpy.matrix.shape,3
+Type[numpy.matrix].__name__,1
+numpy.matrix.dtype,3
+Type[numpy.matrix].__module__,2
+numpy.matrix.ndim,4
+"numpy.matrix[tuple[slice[int, int, NoneType], slice[int, int, NoneType]]]",1
+numpy.isscalar(element=numpy.matrix),3
+"Type[numpy.matrix] in tuple[Type[builtins.tuple], Type[builtins.str]]",1
+numpy.matrix in dict,2
+"numpy.ndarray.reshape(numpy.matrix, tuple[int])",1
+numpy.matrix.view,1
+"numpy.ndarray.view(numpy.matrix, type=Type[numpy.ndarray])",1
+numpy.matrix.__class__,1
+numpy.ndarray.copy(numpy.ndarray),4
+numpy.nan_to_num(x=pandas.core.indexes.base.Index),1
+numpy.float64 / int,11
+numpy.isscalar(element=str),3
+"numpy.random.mtrand.RandomState.randn(numpy.random.mtrand.RandomState, int, int, int)",2
+float / numpy.int64,3
+numpy.median(a=tuple[int]),1
+numpy.float64 / numpy.float64,4
+numpy.float64 > int,1
+numpy.float64 * int,3
+numpy.float64 in builtins.frozenset,1
+numpy.isnan(numpy.float64),2
+numpy.uint8,4
+numpy.dtype(Type[numpy.uint8]),1
+numpy.prod(a=list[numpy.float64]),2
+numpy.float64 != int,1
+numpy.float64 * numpy.float64,2
+numpy.float64 // int,1
+numpy.float64 != numpy.float64,2
+builtins.float.is_integer(self=numpy.float64),1
+numpy.dtype(Type[numpy.float32]),1
+"numpy.ndarray[slice[int, int, NoneType]]",5
+"numpy.array(list[int], copy=builtins.bool)",1
+numpy.ndarray | numpy.ndarray,1
+numpy.ndarray %= int,1
+numpy.ndarray.ravel(numpy.ndarray),9
+"numpy.empty(tuple[int, int])",2
+Type[numpy.int64] in builtins.set,1
+"numpy.ndarray[tuple[list[int], list[int]]]",3
+"numpy.ndarray.transpose(numpy.ndarray, list[int])",3
+numpy.ndarray[tuple[list[int]]] = numpy.ndarray,1
+"numpy.searchsorted(a=list[int], side=str, v=int)",1
+"numpy.ndarray[tuple[list[int], slice[NoneType, NoneType, NoneType], list[int], list[int]]]",2
+"numpy.empty(tuple[int, int, int, int])",1
+"numpy.ndarray[tuple[list[int], slinumpy.ndarraye[NoneType, NoneType, NoneType]]] = numpy.ndarray",1
+"numpy.ndarray[tuple[list[int], slice[NoneType, NoneType, NoneType], list[int], slice[NoneType, NoneType, NoneType]]]",2
+"numpy.empty(tuple[int, int, int], dtype=numpy.dtype)",2
+"numpy.ndarray[tuple[list[int], slinumpy.ndarraye[NoneType, NoneType, NoneType], slinumpy.ndarraye[NoneType, NoneType, NoneType]]] = numpy.ndarray",1
+"numpy.ndarray[tuple[list[int], list[int], slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType]]]",2
+"numpy.ndarray[tuple[list[int], list[int], list[int], list[int]]]",2
+"numpy.array(list, copy=builtins.bool)",1
+"numpy.ndarray[tuple[list[int], list[int], list[int], slice[NoneType, NoneType, NoneType]]]",1
+"numpy.array(numpy.ndarray, copy=builtins.bool)",1
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], list[int], list[int]]]",2
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], list[int], slice[NoneType, NoneType, NoneType], list[int]]]",2
+"numpy.asanyarray(a=list[Union[float, int]])",1
+numpy.floating,1
+numpy.intp,20
+"numpy.allclose(a=numpy.ndarray, b=numpy.ndarray)",7
+numpy.flatnonzero(a=numpy.ndarray),2
+numpy.ndarray[numpy.ndarray],18
+numpy.int64 <= int,3
+"numpy.ndarray[tuple[list[int], slice[NoneType, NoneType, NoneType]]]",2
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, NoneType, int]]]",1
+"numpy.array(list[list[int]], copy=builtins.bool)",1
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], NoneType]]",9
+numpy.ndarray[tuple[list[int]]],2
+"numpy.arange(int, int, int)",2
+numpy.memmap,1
+"numpy.memmap(dtype=tuple[int], filename=str, mode=str, shape=numpy.dtype)",1
+numpy.memmap in dict,1
+"numpy.save(arr=numpy.memmap, file=str)",1
+"numpy.load(file=str, mmap_mode=str)",1
+numpy.memmap._mmap,1
+"numpy.flatiter[int] = tuple[str, int, int, int]",1
+numpy.save,1
+numpy.load,2
+Type[numpy.memmap].__module__,1
+numpy.memmap.shape,1
+"numpy.ndarray[tuple[slinumpy.memmape[int, int, NoneType], slinumpy.memmape[int, int, NoneType], slinumpy.memmape[int, int, NoneType]]] = numpy.memmap",1
+numpy.ndarray.view(numpy.ndarray),1
+numpy.ascontiguousarray(a=numpy.ndarray),2
+"numpy.ndarray.view(numpy.ndarray, numpy.dtype)",2
+numpy.asfortranarray(a=numpy.ndarray),1
+"numpy.ndarray.sum(numpy.ndarray, axis=int)",12
+"numpy.ndarray[tuple[NoneType, slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], NoneType]]",2
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], NoneType, NoneType]]",2
+"numpy.allclose(a=tuple[float, float, float], b=tuple[float, float, float], equal_nan=builtins.bool)",1
+"numpy.array(list[int], dtype=numpy.dtype)",3
+numpy.ones(shape=int),16
+"numpy.timedelta64(int, str)",2
+Type[numpy.timedelta64].__module__,1
+Type[numpy.integer] in dict,1
+Type[numpy.generic] in dict,1
+numpy.timedelta64.shape,1
+numpy.timedelta64.ndim,1
+numpy.timedelta64 in dict,1
+numpy.ndarray / numpy.timedelta64,1
+"numpy.array(list[list[dask.delayed.Delayed]], dtype=Type[builtins.object])",1
+"numpy.array(dask.delayed.Delayed, dtype=Type[builtins.object])",1
+"numpy.cumsum(a=numpy.ndarray, axis=int)",3
+numpy.full,1
+numpy.ndarray.cumsum(numpy.ndarray),1
+numpy.ma,50
+numpy.ma.masked_array,18
+numpy.cumprod,1
+numpy.cumprod(a=numpy.ndarray),1
+"numpy.cumprod(a=numpy.ndarray, axis=int)",4
+numpy.nancumsum(a=numpy.ndarray),2
+"numpy.nancumsum(a=numpy.ndarray, axis=int)",7
+numpy.nancumprod(a=numpy.ndarray),2
+"numpy.nancumprod(a=numpy.ndarray, axis=int)",7
+"numpy.random.mtrand.RandomState.random(numpy.random.mtrand.RandomState, int)",4
+numpy.random.mtrand.RandomState(int),7
+numpy.random.mtrand.RandomState.rand,3
+"numpy.random.mtrand.RandomState.rand(numpy.random.mtrand.RandomState, int)",1
+numpy.ndarray[numpy.ndarray] = float,4
+"numpy.ndarray.cumsum(numpy.ndarray, axis=int)",2
+numpy.cumsum,1
+numpy.cumsum(a=numpy.ndarray),6
+numpy.ndarray.cumsum,1
+numpy.ndarray.cumprod,1
+"numpy.ndarray.cumprod(numpy.ndarray, axis=int)",2
+"numpy.random.mtrand.RandomState.rand(numpy.random.mtrand.RandomState, int, int)",14
+"numpy.random.mtrand.RandomState.random(numpy.random.mtrand.RandomState, tuple[int, int, int])",22
+"numpy.float64[tuple[builtins.ellipsis, NoneType, NoneType, NoneType]]",1
+"numpy.random.mtrand.RandomState.rand(numpy.random.mtrand.RandomState, int, int, int)",3
+numpy.AxisError(axis=str),2
+numpy.where,1
+"numpy.where(numpy.ndarray, int, numpy.ndarray)",3
+numpy.ndarray % int,3
+numpy.ndarray[numpy.ndarray] = int,3
+"numpy.ndarray.astype(numpy.ndarray, Type[numpy.int32])",1
+"numpy.ndarray.astype(numpy.ndarray, Type[numpy.int16])",1
+numpy.dtype(Type[numpy.int16]),1
+"numpy.ones(shape=tuple[int, int, int])",4
+"numpy.ndarray.sum(numpy.ndarray, axis=tuple[int, int])",3
+"numpy.random.mtrand.RandomState.random_sample(numpy.random.mtrand.RandomState, size=tuple[int, int, int])",1
+"numpy.ndarray.dot(numpy.ndarray, dask.array.core.Array)",1
+str % numpy.float64,2
+numpy.ndarray.__name__,1
+numpy.ufunc in dict,2
+"numpy.full_like(a=numpy.ndarray, dtype=Type[numpy.float64], fill_value=numpy.int64, shape=tuple[int])",1
+"numpy.ndarray.astype(numpy.ndarray, Type[numpy.int64])",7
+"numpy.ndarray.sum(numpy.ndarray, axis=tuple[int], dtype=numpy.dtype, keepdims=builtins.bool)",6
+"numpy.ndarray[tuple[builtins.ellipsis, int]]",2
+numpy.float64 + numpy.float64,6
+numpy.float64 <= int,4
+"numpy.generic.astype(numpy.float64, numpy.dtype)",2
+"numpy.isnan(tuple[float, float])",9
+numpy.full_like,1
+"numpy.sum(a=numpy.ndarray, axis=tuple[int], dtype=numpy.dtype, keepdims=builtins.bool)",7
+numpy.ndarray - numpy.ndarray,8
+"numpy.true_divide(numpy.ndarray, numpy.ndarray, NoneType)",1
+numpy.float64 - int,4
+"numpy.true_divide(numpy.float64, numpy.float64, NoneType)",1
+numpy.sqrt(numpy.float64),3
+"numpy.allclose(a=numpy.float64, b=numpy.float64, equal_nan=builtins.bool)",1
+"numpy.ndarray.std(numpy.ndarray, keepdims=builtins.bool)",1
+"numpy.ndarray.sum(numpy.ndarray, axis=builtins.bool, keepdims=int)",2
+"numpy.promote_types(numpy.dtype, numpy.dtype)",1
+numpy.__version__,1
+numpy.isnan(tuple[float]),5
+numpy.ndarray.tolist,1
+numpy.asanyarray(a=list),2
+"numpy.issubdtype(arg1=numpy.dtype, arg2=Type[numpy.floating])",1
+numpy.ones(shape=tuple[int]),1
+numpy.asanyarray(a=list[tuple[int]]),1
+numpy.ndarray * list[int],1
+"numpy.ndarray * tuple[int, int, int]",1
+"numpy.asarray(a=tuple[int, int, int])",1
+"numpy.array(list[tuple[str, int]], dtype=Type[builtins.object])",1
+"numpy.array(tuple[int, int, int, int, int])",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType]]]",3
+numpy.ndarray[tuple[numpy.ndarray]],4
+"numpy.ndarray[tuple[slice[int, int, NoneType], slice[NoneType, NoneType, NoneType]]]",1
+"numpy.array(tuple[int, int, int, int])",2
+"numpy.ndarray[tuple[slice[int, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.array(list[list[tuple[str, int, int]]], dtype=Type[builtins.object])",1
+"numpy.array(list[list[list[tuple[str, int, int, int]]]], dtype=Type[builtins.object])",1
+"numpy.ndarray[slice[NoneType, NoneType, NoneType]]",1
+numpy.isscalar(element=scipy.sparse.csr.csr_matrix),3
+numpy.ndarray.flatten(numpy.ndarray),1
+numpy.matrix.all,2
+numpy.ndarray + numpy.float64,9
+numpy.ndarray.max(numpy.ndarray),7
+numpy.array(list[numpy.int64]),3
+"numpy.mean(a=numpy.ndarray, axis=int)",11
+"numpy.empty(dtype=tuple[int], shape=numpy.dtype)",2
+"numpy.linspace(num=int, start=int, stop=int)",5
+numpy.isnan(tuple[int]),5
+numpy.linspace,9
+"numpy.ndarray[tuple[NoneType, NoneType, slice[NoneType, NoneType, NoneType]]]",3
+"numpy.ndarray[tuple[NoneType, NoneType, NoneType, slice[NoneType, NoneType, NoneType]]]",1
+numpy.isnan(numpy.int64),5
+"numpy.median(a=tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64])",1
+numpy.float64 *= numpy.int64,1
+numpy.int64 + int,1
+numpy.int64 - numpy.int64,2
+int - numpy.int64,3
+numpy.asarray,4
+"numpy.asarray(a=tuple[int], dtype=Type[builtins.int])",1
+numpy.dtype != Type[builtins.int],2
+numpy.int64 / numpy.int64,1
+numpy.float64 + float,1
+int / numpy.float64,2
+"numpy.cumsum(a=tuple[int, numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64])",1
+numpy.ndarray * numpy.float64,1
+numpy.ndarray / numpy.int64,1
+numpy.float64 + int,10
+"numpy.ndarray[tuple[numpy.ndarray, slice[NoneType, NoneType, NoneType]]]",4
+"numpy.asarray(a=tuple[int, int], dtype=Type[builtins.int])",1
+"numpy.isnan(tuple[float, float, float, float, float])",1
+"numpy.isnan(tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64])",1
+int != numpy.int64,3
+numpy.int64 // int,2
+int >= numpy.int64,1
+int -= numpy.int64,1
+numpy.int64 % int,1
+numpy.int64 <= numpy.int64,1
+numpy.int64 -= numpy.int64,1
+float * numpy.int64,1
+"numpy.median(a=tuple[int, int, int, int, int, int, int, int, int, int])",1
+builtins.function.__module__,3
+"numpy.cov(m=dask.array.core.Array, y=dask.array.core.Array)",2
+"numpy.full_like(a=numpy.ndarray, dtype=numpy.dtype, fill_value=numpy.int64, shape=tuple[int, int])",1
+"numpy.dot(dask.array.core.Array, dask.array.core.Array)",1
+numpy.dstack(tup=numpy.ndarray),1
+"numpy.flip(axis=int, m=numpy.ndarray)",2
+"numpy.flip(axis=int, m=dask.array.core.Array)",2
+numpy.hstack(tup=dask.array.core.Array),1
+"numpy.matmul(dask.array.core.Array, dask.array.core.Array)",1
+numpy.mean(a=dask.array.core.Array),1
+"numpy.sum(a=numpy.ndarray, axis=tuple[int, int], dtype=numpy.dtype, keepdims=builtins.bool)",7
+numpy.stack(arrays=list[numpy.ndarray]),1
+numpy.block(arrays=list[dask.array.core.Array]),1
+numpy.sum(a=dask.array.core.Array),3
+numpy.vstack(tup=numpy.ndarray),1
+"numpy.promote_types(numpy.dtype, Type[builtins.float])",1
+numpy.amin(a=dask.array.core.Array),1
+numpy.amin(a=numpy.ndarray),8
+numpy.round_(a=dask.array.core.Array),2
+numpy.round,1
+"numpy.round_(a=numpy.ndarray, decimals=int)",2
+numpy.fft.fft(a=numpy.ndarray),3
+"numpy.fft.fft(numpy.ndarray, axes=tuple[int])",1
+"numpy.complex128[tuple[builtins.ellipsis, NoneType, NoneType]]",1
+numpy.fft.fft2(a=numpy.ndarray),3
+"numpy.fft.fft2(a=numpy.ndarray, axes=tuple[int, int])",4
+"numpy.fft.fft2(a=numpy.ndarray, axes=tuple[int, int], s=NoneType)",1
+numpy.min_scalar_type(numpy.ndarray),1
+numpy.linalg.det(a=dask.array.core.Array),1
+numpy.linalg.eigvals(a=numpy.ndarray),1
+numpy.lib.mixins,1
+numpy.isscalar(element=dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray),4
+"numpy.asarray(a=numpy.ndarray, dtype=numpy.dtype)",1
+"numpy.ndarray.__array_function__(numpy.ndarray, builtins.function, tuple[Type[numpy.ndarray]], tuple[numpy.ndarray, numpy.ndarray], dict)",1
+numpy.concatenate(list[dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray]),1
+numpy.concatenate(list[dask.array.core.Array]),1
+"numpy.concatenate(list[dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray], axis=int)",2
+numpy.lib,1
+numpy.lib.mixins.NDArrayOperatorsMixin,1
+Type[numpy.lidict.mixins.NDArrayOperatorsMixin] in dict,1
+"numpy.ndarray[tuple[slidask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArraye[int, int, NoneType], slidask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArraye[int, int, NoneType]]] = dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray",1
+"numpy.asarray(a=numpy.dtype, dtype=numpy.ndarray)",1
+"numpy.allclose(a=dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray, b=numpy.ndarray, equal_nan=builtins.bool)",1
+"numpy.ndarray.__array_function__(numpy.ndarray, builtins.function, tuple, tuple[numpy.ndarray, numpy.ndarray], dict)",1
+"numpy.ndarray.__array_function__(numpy.ndarray, builtins.function, tuple, tuple[list[dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray]], dict)",1
+"numpy.ndarray.__array_function__(numpy.ndarray, builtins.function, tuple, tuple[numpy.ndarray], dict)",1
+"numpy.tensordot(a=dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray, axes=tuple[tuple[int], tuple[int]], b=dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray)",1
+"numpy.ndarray.__array_function__(numpy.ndarray, builtins.function, tuple, tuple[numpy.ndarray, numpy.int64], dict)",1
+"numpy.sum(a=dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray, axis=tuple[int], dtype=numpy.dtype, keepdims=builtins.bool)",2
+"numpy.full_like(a=dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray, dtype=numpy.dtype, fill_value=numpy.int64, shape=tuple[int, int])",1
+"numpy.transpose(a=dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray, axes=tuple[int, int])",1
+"numpy.true_divide(dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray, dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray, NoneType)",1
+"numpy.dot(dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray, dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray)",1
+numpy.dstack(tup=dask.array.core.Array),1
+"numpy.ndarray[tuple[slidask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArraye[int, int, NoneType], slidask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArraye[int, int, NoneType], slidask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArraye[int, int, NoneType]]] = dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray",1
+"numpy.flip(axis=int, m=dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray)",1
+numpy.hstack(tup=dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray),1
+numpy.mean(a=dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray),1
+"numpy.sum(a=dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray, axis=tuple[int, int], dtype=numpy.dtype, keepdims=builtins.bool)",1
+numpy.stack(arrays=list[dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray]),1
+"numpy.stack(arrays=list[dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray], axis=int)",1
+numpy.var(a=dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray),1
+numpy.vstack(tup=dask.array.core.Array),1
+numpy.linalg.norm(x=dask.array.tests.test_array_function.test_unregistered_func.<locals>.EncapsulateNDArray),1
+numpy.linalg.norm(x=dask.array.core.Array),1
+numpy.sort,2
+numpy.sort(a=numpy.ndarray),4
+numpy.isscalar(element=numpy.dtype),2
+numpy.isscalar(element=Type[numpy.ndarray]),1
+numpy.float,1
+"numpy.ndarray(dtype=tuple, shape=Type[builtins.float])",1
+numpy.int32.ndim,3
+"numpy.array(list[str], dtype=Type[builtins.object])",3
+numpy.ndarray + str,3
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis]]",2
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], int, int]]",2
+numpy.dtype != Type[numpy.int32],1
+"numpy.array(list[list[int]], Type[numpy.int32])",1
+Type[numpy.int32] in dict,2
+"numpy.arange(int, int, int, Type[numpy.int32])",1
+"numpy.ones(dtype=Type[numpy.float32], shape=tuple[int, int])",3
+"numpy.ndarray(dtype=tuple, shape=Type[builtins.int])",1
+numpy.linalg.qr(a=numpy.ndarray),3
+numpy.vstack,2
+numpy.linalg.qr,2
+numpy.linalg.svd(a=numpy.ndarray),3
+"numpy.ndarray.reshape(numpy.ndarray, int, int, int, int)",2
+"numpy.ndarray.sum(numpy.ndarray, axis=NoneType)",3
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], NoneType, slice[NoneType, NoneType, NoneType]]]",2
+numpy.array(list[list[list[int]]]),2
+numpy.array(list[list[list[list[int]]]]),1
+numpy.sum(a=numpy.ndarray),10
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, int, tuple[int, int])",21
+numpy.empty_like(numpy.ndarray),4
+"numpy.int32[tuple[builtins.ellipsis, NoneType, NoneType]]",1
+numpy.asarray(a=dask.array.core.Array),2
+numpy.zeros_like(a=numpy.ndarray),4
+"numpy.full(dtype=numpy.dtype, fill_value=int, shape=tuple[int, int])",1
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, int, list[int])",1
+"numpy.ones(dtype=numpy.dtype, shape=list[int])",1
+"numpy.full(dtype=numpy.dtype, fill_value=int, shape=list[int])",1
+"numpy.asarray(a=tuple[int, int])",2
+"numpy.zeros(tuple[int, int], dtype=numpy.dtype)",1
+"numpy.full_like(a=numpy.ndarray, fill_value=int)",1
+"numpy.empty(list[int], dtype=numpy.dtype)",1
+"numpy.zeros(list[int], dtype=numpy.dtype)",1
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, int, numpy.ndarray)",1
+"numpy.empty(numpy.ndarray, dtype=numpy.dtype)",1
+"numpy.ones(dtype=numpy.dtype, shape=numpy.ndarray)",1
+"numpy.zeros(numpy.ndarray, dtype=numpy.dtype)",1
+"numpy.full(dtype=numpy.dtype, fill_value=int, shape=numpy.ndarray)",1
+"numpy.linspace(endpoint=builtins.bool, retstep=builtins.bool, start=int, stop=int)",1
+"numpy.allclose(a=float, b=numpy.float64)",1
+numpy.dtype != Type[builtins.float],2
+"numpy.linspace(endpoint=builtins.bool, start=int, stop=int)",1
+"numpy.linspace(endpoint=int, num=builtins.bool, start=float, stop=float)",1
+"numpy.linspace(dtype=builtins.bool, endpoint=Type[builtins.float], start=int, stop=int)",1
+"numpy.linspace(dtype=int, endpoint=builtins.bool, num=Type[builtins.int], start=float, stop=float)",1
+"numpy.arange(int, int)",4
+"numpy.arange(int, dtype=Type[builtins.float])",1
+"numpy.arange(int, int, int, Type[builtins.float])",1
+"numpy.arange(int, int, int, Type[builtins.int])",1
+"numpy.arange(float, float, float, numpy.dtype)",1
+"numpy.arange(int, int, float)",4
+"numpy.arange(int, int, int, dtype=NoneType)",1
+"numpy.arange(int, float, int, dtype=NoneType)",1
+"numpy.arange(int, float, int)",1
+"numpy.arange(numpy.float32, numpy.float32, numpy.float32, dtype=NoneType)",1
+numpy.float32 / numpy.float32,1
+numpy.float32 * int,1
+Type[numpy.floating] in dict,1
+int * numpy.float32,2
+numpy.float64 in dict,2
+numpy.float32 in dict,1
+"numpy.arange(numpy.int32, numpy.int32, numpy.int32, dtype=NoneType)",1
+numpy.int32 / numpy.int32,1
+numpy.int32 * int,1
+int * numpy.int32,2
+numpy.int64 in dict,2
+numpy.int32 in dict,2
+"numpy.arange(numpy.uint32, numpy.uint32, numpy.uint32, dtype=NoneType)",1
+numpy.uint32 / numpy.uint32,1
+numpy.uint32 * int,1
+Type[numpy.unsignedinteger] in dict,1
+int * numpy.uint32,2
+numpy.uint32 in dict,2
+"numpy.arange(numpy.uint64, numpy.uint64, numpy.uint64, dtype=NoneType)",1
+numpy.uint64 / numpy.uint64,1
+numpy.uint64 * int,1
+int * numpy.uint64,2
+numpy.uint64 in dict,1
+"numpy.arange(numpy.uint32, numpy.uint32, numpy.uint32, dtype=Type[numpy.uint32])",1
+numpy.uint32 + numpy.int64,2
+numpy.dtype != Type[numpy.uint32],1
+Type[numpy.uint32] in dict,1
+"numpy.arange(numpy.int64, numpy.int64, numpy.uint32, Type[numpy.uint32])",1
+numpy.uint64 - numpy.uint64,1
+numpy.ceil(numpy.float64),1
+numpy.dtype(Type[numpy.uint64]),1
+"numpy.ndarray(dtype=tuple, shape=Type[numpy.uint64])",1
+numpy.isscalar(element=numpy.uint64),1
+"numpy.uint64[tuple[builtins.ellipsis, NoneType]]",1
+Type[numpy.uint64] in dict,2
+"numpy.arange(float, float, float, dtype=str)",1
+"numpy.arange(float, float, float, str)",1
+"numpy.arange(float, float, float)",2
+numpy.prod(a=tuple),1
+numpy.indices(dimensions=tuple),1
+numpy.prod(a=tuple[int]),1
+"numpy.indices(dimensions=tuple[int], dtype=Type[builtins.float])",1
+"numpy.meshgrid(kwargs=dict, xi=tuple[numpy.ndarray])",1
+numpy.meshgrid,2
+"numpy.random.mtrand.RandomState.random(numpy.random.mtrand.RandomState, tuple[int])",18
+"numpy.meshgrid(kwargs=dict, xi=tuple[numpy.ndarray, numpy.ndarray])",1
+"numpy.meshgrid(kwargs=dict, xi=tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray])",1
+"numpy.ndarray[tuple[builtins.ellipsis, NoneType, NoneType, NoneType]]",1
+"numpy.isnan(tuple[int, int, int, int])",3
+"numpy.amax(a=tuple[int, int, int, int])",1
+"numpy.float64[tuple[builtins.ellipsis, NoneType, NoneType, NoneType, NoneType]]",1
+"numpy.meshgrid(kwargs=dict, xi=tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray])",1
+numpy.triu,3
+numpy.triu(m=numpy.ndarray),3
+numpy.tril,3
+numpy.tril(m=numpy.ndarray),6
+"numpy.triu(k=int, m=numpy.ndarray)",1
+"numpy.tril(k=int, m=numpy.ndarray)",1
+"numpy.zeros_like(a=numpy.ndarray, shape=tuple[int, int])",1
+numpy.zeros_like,1
+numpy.eye,3
+"tuple[builtins.function, builtins.function, builtins.function, builtins.builtin_function_or_method]uiltins.tuple[builtins.function, builtins.function, builtins.function, builtins.builtin_function_or_method]uiltin_function_or_method in tuple[builtins.function, builtins.function, builtins.function, builtins.builtin_function_or_method]",1
+"numpy.eye(M=int, N=int)",13
+"numpy.eye(N=int, k=int)",1
+"numpy.eye(M=int, N=int, k=int)",4
+"numpy.eye(N=int, dtype=Type[builtins.int])",2
+numpy.diag,3
+numpy.diag(v=dask.array.core.Array),2
+numpy.diag(v=numpy.ndarray),3
+numpy.diagonal,10
+numpy.diagonal(a=dask.array.core.Array),1
+"numpy.diagonal(a=dask.array.core.Array, offset=int)",3
+"numpy.diagonal(a=dask.array.core.Array, axis1=int)",1
+"numpy.diagonal(a=dask.array.core.Array, axis1=int, offset=int)",2
+"numpy.diagonal(a=dask.array.core.Array, axis1=int, axis2=int, offset=int)",3
+"numpy.diagonal(a=numpy.ndarray, axis1=int, axis2=int, offset=int)",2
+"numpy.fromfunction(function=builtins.function, kwargs=dict, shape=tuple[int, int])",2
+numpy.fromfunction,2
+numpy.ndarray.repeat,1
+"numpy.ndarray.repeat(numpy.ndarray, int, axis=int)",1
+"numpy.ndarray.round(numpy.ndarray, int)",1
+int != numpy.float64,1
+numpy.repeat,1
+"numpy.repeat(a=numpy.ndarray, axis=int, repeats=int)",2
+"numpy.ndarray.repeat(numpy.ndarray, int)",1
+"numpy.tile(A=numpy.ndarray, reps=int)",3
+"numpy.tile(A=list[list[int]], reps=int)",1
+numpy.asarray(a=list[list[int]]),1
+"numpy.tile(A=list[list[int]], reps=tuple[int, int])",1
+"numpy.tile(A=list[list[int]], reps=tuple[int, int, int, int])",1
+"numpy.tile(A=numpy.ndarray, reps=tuple[int])",3
+"numpy.tile(A=numpy.ndarray, reps=tuple[int, int])",2
+"numpy.tile(A=numpy.ndarray, reps=tuple[int, int, int, int])",1
+"numpy.empty(tuple[int, int, int])",1
+"numpy.random.mtrand.RandomState.random(numpy.random.mtrand.RandomState, tuple[int, int, int, int])",10
+"numpy.tile(A=numpy.ndarray, reps=tuple[int, int, int])",1
+numpy.pad,3
+"numpy.ndarray[tuple[int, int]] = dask.array.core.Array",2
+"numpy.pad(array=numpy.ndarray, mode=str, pad_width=int)",2
+"numpy.empty(tuple[int, int], dtype=Type[builtins.object])",1
+"numpy.pad(array=numpy.ndarray, kwargs=dict, mode=str, pad_width=tuple[int, int])",1
+"numpy.pad(array=numpy.ndarray, kwargs=dict, mode=str, pad_width=tuple[tuple[int, int], tuple[int, int]])",1
+"numpy.linspace(dtype=numpy.dtype, num=int, start=numpy.float64, stop=int)",1
+"numpy.ndarray[slice[NoneType, NoneType, int]]",5
+"numpy.pad(array=numpy.ndarray, kwargs=dict, mode=str, pad_width=int)",1
+"numpy.ndarray[slice[int, NoneType, NoneType]]",6
+"numpy.ndarray[tuple[slinumpy.ndarraye[NoneType, NoneType, NoneType], int]] = numpy.ndarray",3
+"numpy.ndarray[tuple[int, slinumpy.ndarraye[NoneType, NoneType, NoneType]]] = numpy.ndarray",2
+"numpy.pad(array=numpy.ndarray, mode=str, pad_width=tuple[tuple[int, int], tuple[int, int]])",1
+"numpy.amax(a=numpy.ndarray, axis=tuple[int], keepdims=builtins.bool)",2
+"numpy.amax(numpy.ndarray, axis=tuple[int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+numpy.ndarray[tuple[int]] = dask.array.core.Array,1
+"numpy.empty(tuple[int], dtype=Type[builtins.object])",1
+"numpy.amin(a=numpy.ndarray, axis=tuple[int], keepdims=builtins.bool)",2
+"numpy.amin(numpy.ndarray, axis=tuple[int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.pad(array=numpy.ndarray, kwargs=dict, mode=builtins.function, pad_width=tuple[tuple[int, int], tuple[int, int]])",1
+"numpy.ndarray[sliinte[int, NoneType, NoneType]] = int",1
+"numpy.ndarray[sliinte[NoneType, int, NoneType]] = int",1
+"numpy.ndarray[tuple[int, slice[NoneType, NoneType, NoneType]]]",2
+"numpy.fft.ifft(numpy.ndarray, axes=tuple[int])",1
+"numpy.fft.rfft(numpy.ndarray, axes=tuple[int])",1
+"numpy.fft.irfft(numpy.ndarray, axes=tuple[int])",1
+"numpy.fft.hfft(numpy.ndarray, axes=tuple[int])",1
+"numpy.fft.ihfft(numpy.ndarray, axes=tuple[int])",1
+"numpy.fft.fft(a=numpy.ndarray, axis=int, n=NoneType)",1
+numpy.fft.ifft(a=numpy.ndarray),3
+"numpy.fft.ifft(a=numpy.ndarray, axis=int, n=NoneType)",1
+numpy.fft.rfft(a=numpy.ndarray),2
+"numpy.fft.rfft(a=numpy.ndarray, axis=int, n=NoneType)",1
+numpy.fft.irfft(a=numpy.ndarray),3
+"numpy.fft.irfft(a=numpy.ndarray, axis=int, n=NoneType)",1
+numpy.fft.hfft(a=numpy.ndarray),2
+"numpy.fft.hfft(a=numpy.ndarray, axis=int, n=NoneType)",1
+numpy.fft.ihfft(a=numpy.ndarray),2
+"numpy.fft.ihfft(a=numpy.ndarray, axis=int, n=NoneType)",1
+"numpy.fft.fft2(a=numpy.ndarray, s=tuple[int, int])",1
+"numpy.fft.fft2(a=numpy.ndarray, axes=tuple[int, int], s=tuple[int, int])",3
+numpy.fft,8
+"numpy.fft.ifft2(a=numpy.ndarray, axes=tuple[int, int])",1
+"numpy.fft.ifft2(a=numpy.ndarray, axes=tuple[int, int], s=NoneType)",1
+"numpy.fft.ifft2(a=numpy.ndarray, axes=tuple[int, int], s=tuple[int, int])",2
+numpy.fft.fftn(a=numpy.ndarray),2
+"numpy.fft.fftn(a=numpy.ndarray, s=tuple[int, int])",1
+"numpy.fft.fftn(a=numpy.ndarray, axes=tuple[int, int], s=tuple[int, int])",3
+"numpy.fft.ifftn(a=numpy.ndarray, axes=tuple[int, int])",1
+"numpy.fft.ifftn(a=numpy.ndarray, axes=tuple[int, int], s=NoneType)",1
+"numpy.fft.ifftn(a=numpy.ndarray, axes=tuple[int, int], s=tuple[int, int])",2
+numpy.fft.rfft2(a=numpy.ndarray),2
+"numpy.fft.rfft2(a=numpy.ndarray, s=tuple[int, int])",1
+"numpy.fft.rfft2(a=numpy.ndarray, axes=tuple[int, int], s=tuple[int, int])",3
+"numpy.fft.irfft2(a=numpy.ndarray, axes=tuple[int, int])",3
+"numpy.fft.irfft2(a=numpy.ndarray, axes=tuple[int, int], s=NoneType)",1
+"numpy.fft.irfft2(a=numpy.ndarray, axes=tuple[int, int], s=tuple[int, int])",1
+numpy.fft.rfftn(a=numpy.ndarray),2
+"numpy.fft.rfftn(a=numpy.ndarray, s=tuple[int, int])",1
+"numpy.fft.rfftn(a=numpy.ndarray, axes=tuple[int, int], s=tuple[int, int])",3
+"numpy.fft.irfftn(a=numpy.ndarray, axes=tuple[int, int])",3
+"numpy.fft.irfftn(a=numpy.ndarray, axes=tuple[int, int], s=NoneType)",1
+"numpy.fft.irfftn(a=numpy.ndarray, axes=tuple[int, int], s=tuple[int, int])",1
+"numpy.fft.fft(a=numpy.ndarray, axis=int, n=int)",4
+"numpy.fft.fft(a=numpy.ndarray, n=int)",3
+"numpy.fft.ifft(a=numpy.ndarray, n=int)",1
+"numpy.fft.ifft(a=numpy.ndarray, axis=int, n=int)",2
+"numpy.fft.ifft(a=numpy.ndarray, axis=int)",4
+"numpy.fft.rfft(a=numpy.ndarray, axis=int, n=int)",4
+"numpy.fft.rfft(a=numpy.ndarray, n=int)",3
+"numpy.fft.irfft(a=numpy.ndarray, n=int)",1
+"numpy.fft.irfft(a=numpy.ndarray, axis=int, n=int)",2
+"numpy.fft.irfft(a=numpy.ndarray, axis=int)",3
+"numpy.fft.hfft(a=numpy.ndarray, axis=int, n=int)",4
+"numpy.fft.hfft(a=numpy.ndarray, n=int)",3
+"numpy.fft.ihfft(a=numpy.ndarray, n=int)",3
+"numpy.fft.ihfft(a=numpy.ndarray, axis=int, n=int)",3
+"numpy.fft.ihfft(a=numpy.ndarray, axis=int)",1
+"numpy.arange(numpy.int64, dtype=str)",1
+"numpy.ones(dtype=numpy.dtype, shape=tuple[int, int, int])",2
+"numpy.complex128[tuple[builtins.ellipsis, NoneType, NoneType, NoneType]]",1
+"numpy.fft.fft2(a=numpy.ndarray, axes=tuple[int])",1
+"numpy.prod(a=tuple[int, int, int])",5
+"numpy.fft.ifft2(a=numpy.ndarray, axes=tuple[int])",1
+"numpy.fft.ifft2(a=numpy.ndarray, axes=tuple[int], s=NoneType)",1
+"numpy.fft.fftn(a=numpy.ndarray, axes=tuple[int])",1
+"numpy.fft.fftn(a=numpy.ndarray, axes=tuple[int, int])",4
+"numpy.fft.ifftn(a=numpy.ndarray, axes=tuple[int])",1
+"numpy.fft.ifftn(a=numpy.ndarray, axes=tuple[int], s=NoneType)",1
+"numpy.fft.rfft2(a=numpy.ndarray, axes=tuple[int])",1
+"numpy.fft.rfft2(a=numpy.ndarray, axes=tuple[int, int])",4
+"numpy.fft.irfft2(a=numpy.ndarray, axes=tuple[int])",1
+"numpy.fft.irfft2(a=numpy.ndarray, axes=tuple[int], s=NoneType)",1
+"numpy.fft.rfftn(a=numpy.ndarray, axes=tuple[int])",1
+"numpy.fft.rfftn(a=numpy.ndarray, axes=tuple[int, int])",4
+"numpy.fft.irfftn(a=numpy.ndarray, axes=tuple[int])",1
+"numpy.fft.irfftn(a=numpy.ndarray, axes=tuple[int], s=NoneType)",1
+numpy.fft.__name__,1
+builtins.function.__doc__,2
+numpy.isscalar(element=numpy.complex64),1
+"numpy.complex64[tuple[builtins.ellipsis, NoneType, NoneType]]",1
+numpy.fft.ifft2(a=numpy.ndarray),2
+"numpy.fft.fftn(a=numpy.ndarray, axes=tuple[int, int], s=NoneType)",1
+numpy.fft.ifftn(a=numpy.ndarray),2
+"numpy.fft.rfft2(a=numpy.ndarray, axes=tuple[int, int], s=NoneType)",1
+numpy.fft.irfft2(a=numpy.ndarray),1
+"numpy.fft.rfftn(a=numpy.ndarray, axes=tuple[int, int], s=NoneType)",1
+numpy.fft.irfftn(a=numpy.ndarray),1
+"numpy.fft.fftfreq(d=float, n=int)",1
+numpy.ndarray[numpy.ndarray] = numpy.ndarray,1
+numpy.ndarray -= int,1
+numpy.ndarray /= float,1
+"numpy.fft.rfftfreq(d=float, n=int)",1
+numpy.arange(numpy.int64),4
+"numpy.fft.fftshift(axes=int, x=numpy.ndarray)",1
+"numpy.fft.ifftshift(axes=tuple[int, int], x=numpy.ndarray)",1
+"numpy.fft.fftshift(axes=tuple[int, int], x=numpy.ndarray)",1
+"numpy.fft.ifftshift(axes=int, x=numpy.ndarray)",1
+"numpy.fft.ifftshift(axes=NoneType, x=numpy.ndarray)",1
+"numpy.fft.ifftshift(axes=tuple[int, int, int], x=numpy.ndarray)",1
+"numpy.testing._private.utils.assert_equal(actual=tuple[list[tuple[str]], tuple], desired=tuple[list[tuple[str]], tuple])",2
+"numpy.testing._private.utils.assert_equal(actual=tuple[list[tuple[str]], list[Union[tuple, tuple[str]]]], desired=tuple[list[tuple[str]], list[Union[tuple, tuple[str]]]])",1
+numpy.mean,11
+"numpy.std(a=numpy.ndarray, axis=int)",8
+numpy.std,6
+"numpy.vectorize(otypes=str, pyfunc=builtins.function, signature=list[str])",1
+Type[numpy.vectorize].__module__,1
+numpy.<numpy.vectorize object at 0x7fe2b8085c70>(args=tuple[numpy.ndarray]),1
+numpy.vectorize.pyfunc,1
+numpy.<numpy.vectorize object at 0x7fe2b8088130>(args=tuple[numpy.ndarray]),1
+numpy.dtype.type,4
+Type[numpy.float64] == Type[numpy.float32],1
+"numpy.random.mtrand.RandomState.normal(numpy.random.mtrand.RandomState, float, float, size=tuple[int, int])",1
+"numpy.transpose(a=numpy.ndarray, axes=tuple[int, int, int, int])",2
+"numpy.transpose(a=numpy.ndarray, axes=tuple[int])",2
+"numpy.array(list[int], dtype=Type[builtins.int])",1
+numpy.isscalar(element=tuple[numpy.ndarray]),1
+"numpy.isscalar(element=tuple[int, int])",1
+"numpy.transpose(a=numpy.ndarray, axes=tuple)",1
+"numpy.isscalar(element=tuple[int, numpy.ndarray])",1
+"numpy.ndarray.astype(numpy.ndarray, Type[builtins.int])",2
+"numpy.random.mtrand.RandomState.randn(numpy.random.mtrand.RandomState, int)",1
+"numpy.ones(dtype=Type[builtins.int], shape=tuple[int, int])",1
+numpy.<numpy.vectorize object at 0x7fe2cbb0bf70>(args=tuple[numpy.ndarray]),1
+"numpy.vectorize(otypes=str, pyfunc=builtins.function, signature=list[Type[builtins.float]])",1
+"numpy.isscalar(element=tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray])",1
+"numpy.transpose(a=numpy.ndarray, axes=tuple[int, int, int])",2
+"numpy.random.mtrand.RandomState.normal(numpy.random.mtrand.RandomState, float, float, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.randn(numpy.random.mtrand.RandomState, int, int)",4
+"numpy.median(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",3
+numpy.median,3
+"numpy.median(a=numpy.ndarray, axis=int)",2
+numpy.fft.fft,3
+"numpy.fft.fft(a=numpy.ndarray, axis=int)",2
+"numpy.ndarray[sliinte[int, int, NoneType]] = int",1
+numpy.fft.ifft,1
+numpy.diff,2
+"numpy.diff(a=numpy.ndarray, axis=int)",1
+"numpy.einsum(operands=tuple[str, numpy.ndarray, numpy.ndarray])",4
+"numpy.vectorize(pyfunc=builtins.function, signature=str)",1
+"numpy.<numpy.vectorize object at 0x7fe3082f4eb0>(args=tuple[numpy.ndarray, numpy.ndarray])",1
+"numpy.g(dask.array.core.Array, dask.array.core.Array, axis=int)",1
+"numpy.g(numpy.ndarray, numpy.ndarray)",1
+numpy.uint8.ndim,2
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, int, size=tuple[int, int, int])",1
+"numpy.int8[tuple[builtins.ellipsis, NoneType, NoneType, NoneType, NoneType]]",1
+"numpy.ones(dtype=str, shape=tuple[int, int, int, int])",1
+"numpy.ndarray[sliinte[NoneType, NoneType, NoneType]] = int",1
+"numpy.uint8[tuple[builtins.ellipsis, NoneType, NoneType, NoneType]]",1
+"numpy.array(tuple[int, int], dtype=str)",1
+"numpy.array(tuple[int], dtype=str)",1
+"numpy.ones(dtype=tuple[int, int], shape=numpy.dtype)",4
+numpy.linalg.svd,1
+"numpy.ndarray[tuple[slice[int, int, NoneType], int]]",1
+"numpy.ndarray[tuple[slinumpy.ndarraye[int, int, NoneType], int]] = numpy.ndarray",1
+numpy.ndarray > float,6
+"numpy.dot(numpy.ndarray, numpy.ndarray)",7
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], numpy.ndarray]]",5
+numpy.ndarray += int,2
+"numpy.random.mtrand.RandomState.standard_normal(numpy.random.mtrand.RandomState, size=tuple[int, int])",1
+numpy.linalg.norm(x=numpy.ndarray),1
+"numpy.allclose(a=numpy.float64, atol=float, b=numpy.float64, equal_nan=builtins.bool, rtol=float)",1
+numpy.bool_.shape,5
+"numpy.all(a=numpy.ndarray, axis=tuple[int], keepdims=builtins.bool)",2
+"numpy.all(numpy.ndarray, axis=tuple[int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.all(a=numpy.ndarray, axis=tuple[int, int], keepdims=builtins.bool)",2
+"numpy.all(numpy.ndarray, axis=tuple[int, int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.allclose(a=dask.array.core.Array, b=numpy.ndarray)",1
+numpy.isclose,3
+"numpy.random.mtrand.RandomState.seed(numpy.random.mtrand.RandomState, int)",15
+numpy.int64 / int,1
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, int, tuple[int, int, int])",7
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, int, int)",6
+"numpy.ndarray.astype(numpy.ndarray, Type[builtins.float])",12
+"numpy.array(list[list[int]], dtype=numpy.dtype)",3
+"numpy.eye(N=int, dtype=Type[builtins.float])",1
+numpy.linalg.lstsq,3
+numpy.int64 == numpy.int32,2
+numpy.ndarray.sort(numpy.ndarray),1
+numpy.double,1
+numpy.finfo.eps,1
+"numpy.linalg.lstsq(a=numpy.ndarray, b=numpy.ndarray, rcond=numpy.float64)",1
+numpy.finfo(dtype=Type[numpy.float64]),1
+numpy.int32 == int,1
+numpy.linalg.matrix_rank,1
+numpy.sqrt,1
+numpy.linalg.eigvals,1
+"numpy.linalg.lstsq(a=numpy.ndarray, b=numpy.ndarray, rcond=int)",1
+"numpy.linalg.svd(a=numpy.ndarray, full_matrices=int)",1
+"numpy.linalg.norm(axis=NoneType, keepdims=NoneType, ord=builtins.bool, x=numpy.ndarray)",1
+"numpy.linalg.norm(axis=int, keepdims=NoneType, ord=builtins.bool, x=numpy.ndarray)",2
+"numpy.linalg.norm(axis=tuple[int], keepdims=NoneType, ord=builtins.bool, x=numpy.ndarray)",1
+"numpy.linalg.norm(axis=NoneType, keepdims=int, ord=builtins.bool, x=numpy.ndarray)",3
+numpy.inf,4
+"numpy.linalg.norm(axis=int, keepdims=int, ord=builtins.bool, x=numpy.ndarray)",3
+"numpy.linalg.norm(axis=tuple[int], keepdims=int, ord=builtins.bool, x=numpy.ndarray)",2
+"numpy.linalg.norm(axis=NoneType, keepdims=float, ord=builtins.bool, x=numpy.ndarray)",2
+numpy.linalg.norm,4
+"numpy.linalg.norm(axis=tuple[int], keepdims=float, ord=builtins.bool, x=numpy.ndarray)",2
+"numpy.linalg.norm(axis=int, keepdims=float, ord=builtins.bool, x=numpy.ndarray)",3
+"numpy.linalg.norm(axis=tuple[int, int], keepdims=NoneType, ord=builtins.bool, x=numpy.ndarray)",1
+"numpy.empty(tuple[int, int, int, int], dtype=numpy.dtype)",1
+"numpy.empty(tuple[int, int, int, int, int], dtype=numpy.dtype)",1
+"numpy.linalg.norm(axis=tuple[int, int], keepdims=int, ord=builtins.bool, x=numpy.ndarray)",2
+"numpy.float64[tuple[builtins.ellipsis, NoneType, NoneType, NoneType, NoneType, NoneType]]",1
+"numpy.linalg.norm(axis=tuple[int, int], keepdims=float, ord=builtins.bool, x=numpy.ndarray)",1
+"numpy.random.mtrand.RandomState.random(numpy.random.mtrand.RandomState, tuple[int, int, int, int, int])",2
+"numpy.linalg.norm(axis=tuple[int, int], keepdims=str, ord=builtins.bool, x=numpy.ndarray)",1
+"numpy.linalg.norm(axis=NoneType, keepdims=str, ord=builtins.bool, x=numpy.ndarray)",1
+"numpy.amax(a=numpy.ndarray, axis=tuple[int, int], keepdims=builtins.bool)",2
+"numpy.amax(numpy.ndarray, axis=tuple[int, int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.random.mtrand.RandomState.random(numpy.random.mtrand.RandomState, size=tuple[int, int])",4
+numpy.random.random,10
+scipy.sparse.linalg.interface.MatrixLinearOperator * numpy.ndarray,1
+"numpy.ma.core.MaskedArray(data=list[int], fill_value=list[builtins.bool], mask=int)",1
+"numpy.ma.core.MaskedArray(data=list[int], fill_value=builtins.bool, mask=int)",1
+numpy.ma.core.MaskedArray.data,1
+numpy.ma.core.MaskedArray.mask,2
+numpy.ma.core.MaskedArray.fill_value,2
+numpy.ma.core.MaskedArray.dtype,7
+numpy.ma.core.MaskedArray.shape,15
+numpy.ma.core.MaskedArray.__class__,1
+numpy.isscalar(element=numpy.ma.core.MaskedArray),8
+numpy.ma.core.MaskedArray.ndim,20
+"numpy.ma.core.MaskedArray[tuple[slice[int, int, NoneType]]]",2
+numpy.ma.core.MaskedArray in dict,2
+"numpy.ma.core.concatenate(arrays=list[numpy.ma.core.MaskedArray], axis=int)",1
+Type[numpy.ma.core.MaskedArray] == Type[numpy.ma.core.MaskedArray],4
+"numpy.allclose(a=numpy.ma.core.MaskedArray, b=numpy.ma.core.MaskedArray, equal_nan=builtins.bool)",1
+Type[numpy.ma.core.MaskedArray].__module__,1
+numpy.ma.core._arraymethod.<locals>.wrapped_method(),1
+numpy.ma.masked_where,1
+"numpy.ma.core.masked_where(a=numpy.ndarray, condition=numpy.ndarray)",1
+"Type[numpy.ma.core.MaskedArray] in tuple[Type[builtins.tuple], Type[builtins.str]]",1
+numpy.ma.masked_equal,1
+"numpy.ma.core.masked_equal(value=int, x=numpy.ndarray)",2
+"numpy.ma.core.MaskedArray[tuple[slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType]]]",1
+numpy.ma.filled,1
+"numpy.ma.core.filled(a=numpy.ma.core.MaskedArray, fill_value=int)",3
+numpy.expm1(numpy.ma.core.MaskedArray),1
+"numpy.ma.core.MaskedArray.reshape(s=tuple[tuple[int, int]], self=numpy.ma.core.MaskedArray)",3
+"numpy.ma.core.MaskedArray[tuple[slice[int, int, NoneType], slice[int, int, NoneType]]]",2
+numpy.ma.concatenate,1
+numpy.unique(ar=list[numpy.float64]),1
+numpy.ma.core.MaskedArray.fill_value = numpy.float64,1
+"numpy.ma.core.filled(a=numpy.ndarray, fill_value=int)",2
+"numpy.ma.core.MaskedArray[tuple[builtins.ellipsis, NoneType]]",1
+"numpy.ma.core.MaskedArray[tuple[slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType]]]",2
+"numpy.ones(dtype=numpy.dtype, shape=tuple[int, int, int, int])",1
+"numpy.transpose(a=numpy.ma.core.MaskedArray, axes=tuple[int, int, int])",2
+"numpy.ma.core._arraymethod.<locals>.wrapped_method(args=tuple[list[int]], self=numpy.ma.core.MaskedArray)",2
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], NoneType]]",2
+numpy.ma.core.MaskedArray.__array_priority__,1
+"numpy.ma.core.MaskedArray.reshape(s=tuple[list[int]], self=numpy.ma.core.MaskedArray)",1
+"numpy.ma.core.MaskedArray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], NoneType]]",1
+"numpy.ma.core.dot(a=numpy.ma.core.MaskedArray, b=numpy.ndarray)",1
+"numpy.ma.core.MaskedArray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], NoneType, slice[NoneType, NoneType, NoneType]]]",1
+"numpy.tensordot(a=numpy.ndarray, axes=tuple[tuple[int, int], tuple[int, int]], b=numpy.ndarray)",2
+"numpy.ma.core.MaskedArray[tuple[NoneType, NoneType, slice[NoneType, NoneType, NoneType]]]",1
+"numpy.ndarray.astype(numpy.ma.core.MaskedArray, numpy.dtype)",3
+"numpy.amax(a=numpy.ma.core.MaskedArray, axis=tuple[int], keepdims=builtins.bool)",2
+"numpy.amax(numpy.ma.core.MaskedArray, axis=tuple[int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+numpy.complex128,1
+numpy.dtype(Type[numpy.complex128]),1
+numpy.ma.core.MaskedArray.astype,1
+numpy.ma.core.MaskedArray * int,1
+"numpy.round_(a=numpy.ma.core.MaskedArray, decimals=int)",2
+"numpy.ma.core.MaskedArray.reshape(s=tuple[tuple[int, int]])",1
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], NoneType, slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType]]]",1
+"numpy.ma.core.dot(a=numpy.ma.core.MaskedArray, b=numpy.ma.core.MaskedArray)",1
+"numpy.ma.core.MaskedArray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], NoneType, slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], NoneType, slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType]]]",1
+"numpy.ma.core.MaskedArray[tuple[slice[NoneType, NoneType, NoneType], NoneType, slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], NoneType, NoneType, slice[NoneType, NoneType, NoneType]]]",1
+"numpy.ma.core.MaskedArray[tuple[slice[NoneType, NoneType, NoneType], NoneType, NoneType, slice[NoneType, NoneType, NoneType]]]",1
+"numpy.concatenate(list[Union[numpy.ma.core.MaskedArray, numpy.ndarray]], axis=int)",1
+"numpy.ma.core.concatenate(arrays=list[Union[numpy.ma.core.MaskedArray, numpy.ndarray]], axis=int)",1
+"numpy.allclose(a=numpy.ndarray, b=numpy.ma.core.MaskedArray, equal_nan=builtins.bool)",1
+numpy.unique(ar=list[numpy.bool_]),1
+numpy.ma.core.MaskedArray.fill_value = numpy.bool_,1
+numpy.unique(ar=list[numpy.complex128]),1
+numpy.ma.core.MaskedArray.fill_value = numpy.complex128,1
+"numpy.ma.core.masked_greater(value=dask.array.core.Array, x=dask.array.core.Array)",1
+"numpy.ma.core.masked_greater(value=numpy.ndarray, x=numpy.ndarray)",1
+numpy.unique(ar=list[numpy.int64]),1
+numpy.ma.core.MaskedArray.fill_value = numpy.int64,1
+"numpy.ma.core.masked_greater(value=dask.array.core.Array, x=numpy.ndarray)",1
+"numpy.ma.core.masked_greater(value=int, x=dask.array.core.Array)",3
+"numpy.ma.core.masked_greater_equal(value=numpy.ndarray, x=numpy.ndarray)",1
+"numpy.ma.core.masked_greater_equal(value=int, x=numpy.ndarray)",1
+"numpy.ma.core.masked_less(value=int, x=dask.array.core.Array)",1
+"numpy.ma.core.masked_less_equal(value=numpy.ndarray, x=numpy.ndarray)",1
+"numpy.ma.core.masked_less_equal(value=int, x=numpy.ndarray)",1
+"numpy.ma.core.masked_not_equal(value=numpy.ndarray, x=numpy.ndarray)",1
+"numpy.ma.core.masked_not_equal(value=int, x=numpy.ndarray)",1
+numpy.asanyarray(a=builtins.bool),1
+"numpy.ma.core.masked_where(a=numpy.ndarray, condition=builtins.bool)",1
+numpy.ma.masked_inside,1
+"numpy.ma.core.masked_inside(v1=int, v2=int, x=numpy.ndarray)",2
+numpy.ma.masked_outside,1
+"numpy.ma.core.masked_outside(v1=int, v2=int, x=numpy.ndarray)",2
+numpy.ma.masked_values,1
+"numpy.ma.core.masked_values(atol=float, rtol=float, shrink=builtins.bool, value=int, x=numpy.ndarray)",2
+"numpy.ma.core.masked_values(value=int, x=numpy.ndarray)",1
+"numpy.ndarray[tuple[int, int]] = float",1
+numpy.ma.core.masked_invalid(a=numpy.ndarray),1
+"numpy.ma.core.fix_invalid(a=numpy.ndarray, fill_value=int)",1
+"numpy.ma.core.fix_invalid(a=numpy.ma.core.MaskedArray, fill_value=int)",2
+"numpy.ma.core.filled(a=numpy.ndarray, fill_value=NoneType)",2
+"numpy.ma.core.filled(a=numpy.ma.core.MaskedArray, fill_value=NoneType)",2
+"numpy.ma.core.masked_greater(value=int, x=numpy.ndarray)",2
+numpy.sum(a=numpy.ma.core.MaskedArray),1
+"numpy.sum(a=numpy.ma.core.MaskedArray, axis=int)",3
+"numpy.testing._private.utils.assert_equal(actual=numpy.bool_, desired=numpy.ndarray)",1
+numpy.ma.core.filled(a=numpy.ma.core.MaskedArray),1
+"numpy.sum(a=numpy.ma.core.MaskedArray, keepdims=builtins.bool)",1
+numpy.testing,9
+"numpy.sum(a=numpy.ma.core.MaskedArray, axis=builtins.bool, keepdims=int)",2
+numpy.ndarray.prod(numpy.ndarray),1
+numpy.prod(a=numpy.ma.core.MaskedArray),1
+"numpy.prod(a=numpy.ma.core.MaskedArray, axis=int)",3
+"numpy.prod(a=numpy.ma.core.MaskedArray, keepdims=builtins.bool)",1
+"numpy.prod(a=numpy.ma.core.MaskedArray, axis=builtins.bool, keepdims=int)",2
+numpy.ma.core.MaskedArray.sum,9
+"numpy.sum(a=numpy.ma.core.MaskedArray, axis=tuple[int, int], dtype=numpy.dtype, keepdims=builtins.bool)",6
+numpy.ones_like(a=numpy.ma.core.MaskedArray),1
+"numpy.ma.core.MaskedArray.sum(axis=tuple[int, int], keepdims=builtins.bool)",2
+"numpy.sum(a=numpy.ma.core.MaskedArray, axis=tuple[int], dtype=numpy.dtype, keepdims=builtins.bool)",6
+"numpy.mean(a=numpy.ma.core.MaskedArray, axis=int)",2
+"numpy.ma.core.divide(a=numpy.ma.core.MaskedArray, b=numpy.ma.core.MaskedArray, kwargs=dict)",1
+"numpy.ma.core.MaskedArray.sum(axis=tuple[int], dtype=numpy.dtype, keepdims=builtins.bool)",5
+"numpy.ma.core.MaskedArray.sum(axis=tuple[int, int], dtype=numpy.dtype, keepdims=builtins.bool)",5
+"numpy.ma.core.MaskedArray.sum(axis=tuple[int], keepdims=builtins.bool)",2
+"numpy.mean(a=numpy.ma.core.MaskedArray, axis=builtins.bool, keepdims=int)",2
+numpy.mean(a=numpy.ma.core.MaskedArray),1
+Type[numpy.float64] == Type[numpy.float64],1
+"numpy.mean(a=numpy.ma.core.MaskedArray, keepdims=builtins.bool)",1
+"numpy.testing._private.utils.assert_equal(actual=numpy.ndarray, desired=numpy.ndarray)",2
+"numpy.ma.core.MaskedArray.sum(axis=tuple[int, int], dtype=str, keepdims=builtins.bool)",3
+"numpy.sum(a=numpy.ma.core.MaskedArray, axis=tuple[int, int], keepdims=builtins.bool)",1
+"numpy.ndarray.astype(numpy.ma.core.MaskedArray, Type[numpy.int64])",1
+numpy.ma.core.MaskedArray / numpy.ma.core.MaskedArray,1
+numpy.ma.core.MaskedArray ** int,2
+numpy.ma.core.MaskedArray - numpy.ma.core.MaskedArray,3
+"numpy.stack(arrays=list[numpy.ma.core.MaskedArray], axis=int)",2
+"numpy.ma.core.MaskedArray[tuple[builtins.ellipsis, int]]",1
+numpy.ma.core.MaskedArray * numpy.ma.core.MaskedArray,1
+numpy.ma.core.MaskedArray + numpy.ma.core.MaskedArray,1
+"numpy.sum(a=numpy.ma.core.MaskedArray, axis=tuple[int, int], dtype=str, keepdims=builtins.bool)",1
+"numpy.ma.core.MaskedArray.reshape(s=tuple[tuple[int]], self=numpy.ma.core.MaskedArray)",1
+"numpy.sum(a=numpy.ma.core.MaskedArray, axis=tuple[int], keepdims=builtins.bool)",1
+numpy.ma.floatore.MaskedArray[numpy.ma.floatore.MaskedArray] = float,1
+numpy.ma.core.MaskedArray - int,1
+numpy.ma.core.MaskedArray <= int,1
+"numpy.var(a=numpy.ma.core.MaskedArray, keepdims=builtins.bool)",1
+"numpy.testing._private.utils.assert_equal(actual=numpy.ndarray, desired=numpy.bool_)",1
+"numpy.sum(a=numpy.ma.core.MaskedArray, axis=tuple[int], dtype=str, keepdims=builtins.bool)",1
+"numpy.ma.core.MaskedArray.sum(axis=tuple[int], dtype=str, keepdims=builtins.bool)",3
+"numpy.var(a=numpy.ma.core.MaskedArray, axis=builtins.bool, keepdims=int)",2
+numpy.ma.core.MaskedArray.sum(self=numpy.ma.core.MaskedArray),1
+numpy.var(a=numpy.ma.core.MaskedArray),1
+"numpy.testing._private.utils.assert_equal(actual=numpy.bool_, desired=numpy.bool_)",1
+numpy.std(a=numpy.ma.core.MaskedArray),1
+"numpy.std(a=numpy.ma.core.MaskedArray, axis=int)",3
+numpy.sqrt(numpy.ma.core.MaskedArray),1
+numpy.amin(a=numpy.ma.core.MaskedArray),1
+"numpy.amin(a=numpy.ma.core.MaskedArray, axis=tuple[int, int], keepdims=builtins.bool)",2
+"numpy.amin(a=numpy.ma.core.MaskedArray, axis=tuple[int], keepdims=builtins.bool)",2
+"numpy.amin(numpy.ma.core.MaskedArray, axis=tuple[int, int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.amin(numpy.ma.core.MaskedArray, axis=tuple[int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.amin(a=numpy.ma.core.MaskedArray, axis=int)",3
+"numpy.amin(a=numpy.ma.core.MaskedArray, keepdims=builtins.bool)",1
+"numpy.amin(a=numpy.ma.core.MaskedArray, axis=builtins.bool, keepdims=int)",3
+numpy.amax(a=numpy.ma.core.MaskedArray),1
+"numpy.amax(a=numpy.ma.core.MaskedArray, axis=tuple[int, int], keepdims=builtins.bool)",2
+"numpy.amax(numpy.ma.core.MaskedArray, axis=tuple[int, int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.amax(a=numpy.ma.core.MaskedArray, axis=int)",3
+"numpy.amax(a=numpy.ma.core.MaskedArray, keepdims=builtins.bool)",1
+"numpy.amax(a=numpy.ma.core.MaskedArray, axis=builtins.bool, keepdims=int)",3
+"numpy.any(a=numpy.ma.core.MaskedArray, axis=tuple[int, int], keepdims=builtins.bool)",2
+"numpy.any(numpy.ma.core.MaskedArray, axis=tuple[int, int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+Type[numpy.Type[numpy.bool_]ool_] == Type[numpy.bool_],1
+"numpy.allclose(a=numpy.bool_, b=numpy.bool_, equal_nan=builtins.bool)",1
+"numpy.ndarray.astype(numpy.ma.core.MaskedArray, str)",1
+"numpy.any(a=numpy.ma.core.MaskedArray, axis=tuple[int], keepdims=builtins.bool)",2
+"numpy.any(numpy.ma.core.MaskedArray, axis=tuple[int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.any(a=numpy.ma.core.MaskedArray, axis=int)",3
+"numpy.any(a=numpy.ma.core.MaskedArray, axis=builtins.bool, keepdims=int)",2
+numpy.any(a=numpy.ma.core.MaskedArray),1
+"numpy.any(a=numpy.ma.core.MaskedArray, keepdims=builtins.bool)",1
+"numpy.all(a=numpy.ma.core.MaskedArray, axis=tuple[int, int], keepdims=builtins.bool)",2
+"numpy.all(numpy.ma.core.MaskedArray, axis=tuple[int, int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.all(a=numpy.ma.core.MaskedArray, axis=tuple[int], keepdims=builtins.bool)",2
+"numpy.all(numpy.ma.core.MaskedArray, axis=tuple[int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.all(a=numpy.ma.core.MaskedArray, axis=int)",3
+"numpy.all(a=numpy.ma.core.MaskedArray, axis=builtins.bool, keepdims=int)",2
+numpy.all(a=numpy.ma.core.MaskedArray),1
+"numpy.all(a=numpy.ma.core.MaskedArray, keepdims=builtins.bool)",1
+"numpy.ma.core.masked_greater(value=float, x=numpy.ndarray)",1
+numpy.asanyarray(a=float),1
+numpy.argmin(a=numpy.ma.core.MaskedArray),2
+"numpy.argmin(numpy.ma.core.MaskedArray, axis=builtins.bool, keepdims=NoneType)",1
+"numpy.argmin(a=numpy.ma.core.MaskedArray, axis=NoneType)",1
+int + numpy.int64,3
+"numpy.ndarray[slinumpy.int64e[NoneType, NoneType, NoneType]] = numpy.int64",1
+"numpy.empty(dtype=tuple[int, int, int], shape=list[tuple[str, numpy.dtype]])",2
+numpy.ndarray[str] = numpy.ndarray,6
+"numpy.amin(a=numpy.ma.core.MaskedArray, axis=builtins.bool, keepdims=NoneType)",1
+"numpy.int64[tuple[NoneType, NoneType, NoneType]]",1
+"numpy.unravel_index(numpy.int64, tuple[int, int, int])",1
+"numpy.ravel_multi_index(tuple[numpy.int64, numpy.int64, numpy.int64], tuple[int, int, int])",1
+numpy.ma.core.minimum_fill_value(obj=numpy.ma.core.MaskedArray),1
+"numpy.ma.core.filled(a=numpy.ma.core.MaskedArray, fill_value=float)",1
+"numpy.argmin(numpy.ndarray, axis=builtins.bool, keepdims=NoneType)",2
+"numpy.argmin(a=numpy.ndarray, axis=NoneType)",1
+numpy.argmin(a=numpy.ndarray),4
+"numpy.argmin(a=numpy.ma.core.MaskedArray, axis=int)",4
+"numpy.argmin(numpy.ma.core.MaskedArray, axis=builtins.bool, keepdims=int)",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType]]]",1
+numpy.ogrid,1
+"numpy.lituple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]].index_tricks.OGridClass[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]]",2
+"numpy.argmin(a=numpy.ndarray, axis=int)",7
+numpy.argmax(a=numpy.ma.core.MaskedArray),2
+"numpy.argmax(numpy.ma.core.MaskedArray, axis=builtins.bool, keepdims=NoneType)",1
+"numpy.argmax(a=numpy.ma.core.MaskedArray, axis=NoneType)",1
+"numpy.amax(a=numpy.ma.core.MaskedArray, axis=builtins.bool, keepdims=NoneType)",1
+numpy.ma.core.maximum_fill_value(obj=numpy.ma.core.MaskedArray),1
+"numpy.argmax(numpy.ndarray, axis=builtins.bool, keepdims=NoneType)",2
+"numpy.argmax(a=numpy.ndarray, axis=NoneType)",1
+numpy.argmax(a=numpy.ndarray),3
+"numpy.argmax(a=numpy.ma.core.MaskedArray, axis=int)",4
+"numpy.argmax(numpy.ma.core.MaskedArray, axis=builtins.bool, keepdims=int)",1
+"numpy.argmax(a=numpy.ndarray, axis=int)",8
+"numpy.ma.core.masked_greater(value=float, x=dask.array.core.Array)",2
+numpy.ma.core.MaskedArray.cumsum,1
+"numpy.cumsum(a=numpy.ma.core.MaskedArray, axis=int)",1
+numpy.ma.core.getdata(a=numpy.ndarray),3
+numpy.ma.core.getdata(a=numpy.ma.core.MaskedArray),4
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, mask=numpy.ndarray)",2
+numpy.ma.core.getmaskarray(arr=numpy.ma.core.MaskedArray),3
+"numpy.cumprod(a=numpy.ma.core.MaskedArray, axis=int)",1
+numpy.ma.core.MaskedArray.cumprod(axis=int),1
+numpy.ma.core.getmaskarray(arr=numpy.ndarray),1
+numpy.ma.getdata,1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, dtype=NoneType, fill_value=NoneType, mask=numpy.bool_)",1
+numpy.ma.nomask,1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, dtype=NoneType, fill_value=NoneType, mask=numpy.ndarray)",1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, fill_value=numpy.ndarray, mask=NoneType)",2
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, dtype=NoneType, fill_value=str)",1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, fill_value=float)",1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, dtype=NoneType, fill_value=float, mask=numpy.ndarray)",1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, fill_value=numpy.ndarray, mask=float)",1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, dtype=str, fill_value=float, mask=numpy.bool_)",1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, dtype=NoneType, fill_value=int, mask=numpy.bool_)",1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, dtype=NoneType, fill_value=int, mask=numpy.ndarray)",1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, fill_value=numpy.ndarray, mask=dask.array.core.Array)",2
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, dtype=dask.array.core.Array, fill_value=str)",1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, fill_value=NoneType)",1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, dtype=str, fill_value=NoneType, mask=numpy.bool_)",1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, dtype=NoneType, fill_value=float, mask=numpy.bool_)",1
+numpy.unique(ar=list[numpy.float32]),1
+numpy.ma.core.MaskedArray.fill_value = numpy.float32,1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, dtype=float, fill_value=str)",1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, fill_value=dask.array.core.Array)",1
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, dtype=str, fill_value=int, mask=numpy.bool_)",1
+numpy.ma.core.MaskError(str),1
+numpy.ma.core,1
+"numpy.ma.core._check_fill_value(fill_value=int, ndtype=numpy.dtype)",1
+"numpy.ma.core.set_fill_value(a=numpy.ma.core.MaskedArray, fill_value=numpy.ndarray)",1
+"numpy.ma.core.set_fill_value(a=numpy.ma.core.MaskedArray, fill_value=int)",1
+numpy.ma.core._arraymethod.<locals>.wrapped_method(self=numpy.ma.core.MaskedArray),1
+numpy.ma.set_fill_value,1
+numpy.array(list[list[builtins.bool]]),2
+numpy.ma.array,2
+"numpy.ma.core.MaskedArray(data=numpy.ndarray, dtype=NoneType, fill_value=NoneType, mask=numpy.ndarray, options=dict)",1
+"numpy.ma.extras.average(a=numpy.ma.core.MaskedArray, axis=numpy.ndarray, weights=int)",1
+numpy.bool_,1
+numpy.swapaxes,1
+"numpy.swapaxes(a=numpy.ndarray, axis1=int, axis2=int)",3
+numpy.ma.getmaskarray,1
+dask.array.core.Array + numpy.ma.core.MaskedArray,1
+"numpy.ones(dtype=list[tuple[str, str]], shape=tuple[int, int])",1
+"numpy.dtype(list[tuple[str, str]])",1
+numpy.isscalar(element=numpy.void),1
+"numpy.void[tuple[builtins.ellipsis, NoneType, NoneType]]",1
+numpy.min,3
+numpy.max,3
+numpy.ndarray + dask.array.core.Array,1
+-numpy.int64,2
+numpy.int64 * int,2
+not numpy.int64,1
+"numpy.ndarray[tuple[slice[numpy.int64, numpy.int64, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, int, NoneType]]]",1
+"numpy.testing._private.utils.assert_array_equal(x=dask.array.core.Array, y=numpy.ndarray)",2
+"numpy.ndarray[tuple[slice[int, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+numpy.all,10
+numpy.all(a=dask.array.core.Array),1
+numpy.dtype.name,1
+"numpy.issubdtype(arg1=numpy.dtype, arg2=Type[numpy.number])",2
+"numpy.percentile(a=numpy.ndarray, interpolation=str, q=numpy.ndarray)",1
+"numpy.issubdtype(arg1=numpy.dtype, arg2=Type[numpy.datetime64])",1
+numpy.number,1
+numpy.percentile,1
+numpy.diff(a=list[numpy.int64]),1
+numpy.ndarray[int] = numpy.int64,2
+numpy.empty(int),1
+"numpy.ndarray[slinumpy.ndarraye[int, NoneType, NoneType]] = numpy.ndarray",1
+numpy.ndarray *= int,1
+"numpy.array(tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64])",1
+"numpy.array(tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64])",1
+"numpy.interp(fp=numpy.ndarray, x=numpy.ndarray, xp=numpy.ndarray)",1
+numpy.ndarray / float,3
+"numpy.str_[tuple[builtins.ellipsis, NoneType]]",1
+"numpy.array(list[str], dtype=numpy.dtype)",1
+"numpy.array(tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64])",1
+"numpy.searchsorted(a=numpy.ndarray, side=str, v=numpy.ndarray)",2
+"numpy.minimum(numpy.ndarray, int, numpy.ndarray)",1
+"numpy.array(tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64])",1
+numpy.array(list[float]),2
+numpy.diff(a=list[numpy.float64]),1
+numpy.ndarray[int] = numpy.float64,1
+numpy.array(list[numpy.float64]),1
+numpy.ndarray <= float,1
+float <= numpy.float64,3
+numpy.float64 <= numpy.float64,1
+"numpy.random.mtrand.RandomState.normal(numpy.random.mtrand.RandomState, int, int, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.exponential(numpy.random.mtrand.RandomState, int, size=tuple[int, int])",1
+"numpy.random.mtrand.RandomState.binomial(numpy.random.mtrand.RandomState, int, float, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.exponential(numpy.random.mtrand.RandomState, int, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.gamma(numpy.random.mtrand.RandomState, int, int, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.gumbel(numpy.random.mtrand.RandomState, int, float, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.laplace(numpy.random.mtrand.RandomState, float, float, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.lognormal(numpy.random.mtrand.RandomState, float, float, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.multinomial(numpy.random.mtrand.RandomState, int, list[float], size=tuple[int])",1
+"numpy.random.mtrand.RandomState.negative_binomial(numpy.random.mtrand.RandomState, int, float, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.noncentral_f(numpy.random.mtrand.RandomState, int, int, int, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.pareto(numpy.random.mtrand.RandomState, int, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.power(numpy.random.mtrand.RandomState, int, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.uniform(numpy.random.mtrand.RandomState, float, float, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.wald(numpy.random.mtrand.RandomState, int, int, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.zipf(numpy.random.mtrand.RandomState, int, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.standard_exponential(numpy.random.mtrand.RandomState, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.standard_normal(numpy.random.mtrand.RandomState, size=tuple[int])",1
+"numpy.broadcast_to(array=numpy.ndarray, shape=tuple[int, int])",1
+"numpy.broadcast_to(array=numpy.ndarray, shape=tuple[numpy.int64, numpy.int64, numpy.int64])",1
+"numpy.broadcast_to(array=numpy.ndarray, shape=tuple[int])",2
+"numpy.random.mtrand.RandomState.normal(numpy.random.mtrand.RandomState, numpy.float64, float, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.normal(numpy.random.mtrand.RandomState, int, float, size=tuple)",1
+"numpy.sum(a=numpy.ndarray, axis=tuple, dtype=numpy.dtype, keepdims=builtins.bool)",6
+"numpy.generic.astype(numpy.int64, numpy.dtype)",1
+numpy.random.multinomial,1
+"numpy.random.mtrand.RandomState.multinomial(numpy.random.mtrand.RandomState, int, list[float], size=tuple[int, int])",1
+numpy.random.choice,2
+numpy.unique(ar=numpy.ndarray),5
+numpy.unique,4
+"numpy.array(list[Union[float, int]])",7
+"numpy.random.mtrand.RandomState.choice(numpy.random.mtrand.RandomState, int, p=tuple, size=numpy.ndarray)",1
+"numpy.random.mtrand.RandomState.choice(numpy.random.mtrand.RandomState, int, p=tuple, size=NoneType)",1
+"numpy.isclose(a=numpy.float64, atol=float, b=int, rtol=int)",1
+numpy.asarray(a=list[float]),1
+"numpy.cumsum(a=tuple[int, int, int, int])",2
+numpy.ndarray[int] = int,3
+"numpy.ndarray.take(numpy.ndarray, numpy.ndarray)",1
+numpy.int64 + numpy.ndarray,1
+"numpy.ndarray[tuple[slinumpy.ndarraye[int, int, NoneType]]] = numpy.ndarray",2
+"numpy.searchsorted(a=tuple[int, int, int, int], side=str, v=numpy.ndarray)",1
+"numpy.random.mtrand.RandomState.shuffle(numpy.random.mtrand.RandomState, numpy.ndarray)",2
+"numpy.roll(a=numpy.ndarray, shift=int)",2
+numpy.argsort(a=numpy.ndarray),4
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, int, dtype=str, size=tuple[int])",1
+builtins.builtin_function_or_method.__doc__,1
+"numpy.random.mtrand.RandomState.standard_normal(numpy.random.mtrand.RandomState, dtype=str, size=tuple[int])",1
+"numpy.random.mtrand.RandomState.uniform(numpy.random.mtrand.RandomState, int, int, int)",4
+"numpy.ndarray[tuple[int, int, int, int]] = tuple[str, int, int, int, int]",1
+"numpy.flatiter[int] = tuple[str, int, int, int, int]",1
+numpy.all(a=numpy.ndarray),10
+"numpy.random.mtrand.RandomState.normal(numpy.random.mtrand.RandomState, int, float, size=tuple[int, int])",1
+numpy.log(float),1
+"numpy.array(list[numpy.float64], dtype=numpy.dtype)",1
+"numpy.isnan(tuple[float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float])",1
+numpy.float64 / numpy.int64,1
+"numpy.median(a=tuple[int, int])",1
+"numpy.median(a=tuple[int, int, int])",1
+int * numpy.float64,3
+"numpy.isnan(tuple[int, int, int, int, int, int, int, int, int, int])",1
+"numpy.isnan(tuple[int, int, int, int, int, int, int])",2
+"numpy.median(a=tuple[int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int])",1
+numpy.float64 *= int,1
+"numpy.full_like(a=numpy.ndarray, dtype=str, fill_value=numpy.int64, shape=tuple[int, int, int])",1
+"numpy.sum(a=numpy.ndarray, axis=str, dtype=tuple[int], keepdims=builtins.bool)",1
+"numpy.random.mtrand.RandomState.shuffle(numpy.random.mtrand.RandomState, list)",1
+"numpy.prod(a=tuple[int, int, int], dtype=str)",1
+"numpy.full_like(a=numpy.ndarray, dtype=str, fill_value=numpy.float32, shape=tuple[int, int, int])",1
+"numpy.sum(a=numpy.ndarray, axis=str, dtype=NoneType, keepdims=builtins.bool)",1
+"numpy.random.mtrand.RandomState.shuffle(numpy.random.mtrand.RandomState, list[int])",1
+numpy.prod,5
+"numpy.full_like(a=numpy.ndarray, dtype=str, fill_value=numpy.int32, shape=tuple[int, int, int])",1
+"numpy.full_like(a=numpy.ndarray, dtype=str, fill_value=numpy.int64, shape=tuple[int, int])",1
+numpy.float32.shape,5
+"numpy.allclose(a=numpy.float32, b=numpy.float32, equal_nan=builtins.bool)",1
+numpy.int32.shape,4
+"numpy.allclose(a=numpy.int32, b=numpy.int32, equal_nan=builtins.bool)",1
+"numpy.sum(a=numpy.ndarray, axis=tuple)",3
+"numpy.prod(a=numpy.ndarray, keepdims=builtins.bool)",4
+"numpy.prod(a=numpy.ndarray, dtype=str)",4
+numpy.prod(a=numpy.ndarray),7
+"numpy.full_like(a=numpy.ndarray, dtype=numpy.dtype, fill_value=numpy.int64, shape=tuple[int])",1
+Type[numpy.float32].__module__,1
+Type[numpy.inexact] in dict,1
+"numpy.generic.astype(numpy.float32, numpy.dtype)",1
+"numpy.true_divide(numpy.float32, numpy.float32, NoneType)",1
+"numpy.mean(a=numpy.ndarray, axis=tuple)",3
+"numpy.ndarray.sum(numpy.ndarray, axis=tuple, dtype=numpy.dtype, keepdims=builtins.bool)",5
+"numpy.mean(a=numpy.ndarray, dtype=str)",4
+"numpy.sum(a=numpy.ndarray, axis=tuple[int], dtype=str, keepdims=builtins.bool)",7
+"numpy.ndarray.sum(numpy.ndarray, axis=tuple[int], dtype=str, keepdims=builtins.bool)",7
+"numpy.generic.astype(numpy.float64, str)",1
+"numpy.true_divide(numpy.int64, numpy.int64, NoneType)",1
+"numpy.ndarray.sum(numpy.ndarray, axis=tuple[int], keepdims=builtins.bool)",2
+numpy.float32 - int,1
+"numpy.true_divide(numpy.float32, numpy.float64, NoneType)",1
+"numpy.var(a=numpy.ndarray, keepdims=builtins.bool)",3
+"numpy.var(a=numpy.ndarray, axis=tuple)",3
+"numpy.var(a=numpy.ndarray, dtype=str)",2
+numpy.int64 + numpy.int64,1
+numpy.float32 + numpy.float32,1
+numpy.float32.dtype,1
+numpy.std(a=numpy.ndarray),6
+numpy.sqrt(numpy.float32),1
+"numpy.std(a=numpy.ndarray, keepdims=builtins.bool)",4
+"numpy.full_like(a=numpy.ndarray, dtype=Type[numpy.float64], fill_value=numpy.float64, shape=tuple[int])",1
+str != numpy.dtype,2
+"numpy.std(a=numpy.ndarray, dtype=str)",2
+numpy.sqrt(numpy.int64),1
+numpy.float64.astype,1
+"numpy.float32[tuple[builtins.ellipsis, NoneType]]",1
+"numpy.amin(a=numpy.ndarray, keepdims=builtins.bool)",4
+"numpy.amin(a=numpy.ndarray, axis=tuple, keepdims=builtins.bool)",2
+"numpy.amin(numpy.ndarray, axis=tuple, computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.amax(a=numpy.ndarray, keepdims=builtins.bool)",4
+"numpy.amax(a=numpy.ndarray, axis=tuple, keepdims=builtins.bool)",2
+"numpy.amax(numpy.ndarray, axis=tuple, computing_meta=builtins.bool, keepdims=builtins.bool)",1
+numpy.amax(a=numpy.ndarray),8
+numpy.any,2
+numpy.any(a=numpy.ndarray),8
+"numpy.any(a=numpy.ndarray, axis=tuple[int], keepdims=builtins.bool)",2
+"numpy.any(numpy.ndarray, axis=tuple[int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.any(a=numpy.ndarray, keepdims=builtins.bool)",4
+"numpy.any(a=numpy.ndarray, axis=tuple, keepdims=builtins.bool)",2
+"numpy.all(a=numpy.ndarray, keepdims=builtins.bool)",4
+"numpy.all(a=numpy.ndarray, axis=tuple, keepdims=builtins.bool)",2
+numpy.nansum,4
+numpy.nansum(a=numpy.ndarray),9
+"numpy.nansum(a=numpy.ndarray, axis=tuple)",3
+"numpy.nanprod(a=numpy.ndarray, keepdims=builtins.bool)",4
+"numpy.nanprod(a=numpy.ndarray, dtype=str)",3
+numpy.nanprod(a=numpy.ndarray),4
+~numpy.ndarray,1
+"numpy.nansum(a=numpy.ndarray, axis=tuple[int], dtype=numpy.dtype, keepdims=builtins.bool)",4
+"numpy.mean(a=numpy.ndarray, keepdims=builtins.bool)",4
+"numpy.nansum(a=numpy.ndarray, axis=tuple, dtype=numpy.dtype, keepdims=builtins.bool)",4
+"numpy.nansum(a=numpy.ndarray, axis=tuple[int], dtype=str, keepdims=builtins.bool)",4
+"numpy.sum(a=numpy.ndarray, axis=tuple[int], keepdims=builtins.bool)",1
+"numpy.sum(a=numpy.ndarray, axis=tuple, keepdims=builtins.bool)",1
+numpy.nanmin,4
+"numpy.nanmin(a=numpy.ndarray, axis=tuple[int], keepdims=builtins.bool)",2
+"numpy.nanmin(numpy.ndarray, axis=tuple[int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.nanmin(a=numpy.ndarray, keepdims=builtins.bool)",3
+"numpy.nanmin(a=numpy.ndarray, axis=tuple, keepdims=builtins.bool)",2
+"numpy.nanmin(numpy.ndarray, axis=tuple, computing_meta=builtins.bool, keepdims=builtins.bool)",1
+numpy.nanmin(a=numpy.ndarray),2
+numpy.nanmax,3
+"numpy.nanmax(a=numpy.ndarray, axis=tuple[int], keepdims=builtins.bool)",2
+"numpy.nanmax(numpy.ndarray, axis=tuple[int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.nanmax(a=numpy.ndarray, keepdims=builtins.bool)",4
+"numpy.nanmax(a=numpy.ndarray, axis=tuple, keepdims=builtins.bool)",2
+"numpy.nanmax(numpy.ndarray, axis=tuple, computing_meta=builtins.bool, keepdims=builtins.bool)",1
+numpy.nanmax(a=numpy.ndarray),6
+"numpy.sum(a=numpy.ndarray, dtype=str)",3
+"numpy.prod(a=numpy.ndarray, axis=tuple)",3
+"numpy.full_like(a=numpy.ndarray, dtype=numpy.dtype, fill_value=numpy.float64, shape=tuple[int])",1
+"numpy.full_like(a=numpy.ndarray, dtype=str, fill_value=numpy.int64, shape=tuple[int])",1
+numpy.var,2
+"numpy.int32[tuple[builtins.ellipsis, NoneType]]",1
+"numpy.amin(a=numpy.ndarray, axis=tuple)",3
+"numpy.amax(a=numpy.ndarray, axis=tuple)",4
+"numpy.any(numpy.ndarray, axis=tuple, computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.any(a=numpy.ndarray, axis=tuple)",3
+"numpy.all(numpy.ndarray, axis=tuple, computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.all(a=numpy.ndarray, axis=tuple)",3
+"numpy.nansum(a=numpy.ndarray, keepdims=builtins.bool)",3
+numpy.nanprod,1
+"numpy.std(a=numpy.ndarray, axis=tuple)",3
+"numpy.sum(a=numpy.ndarray, axis=int)",6
+"numpy.sum(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",3
+"numpy.sum(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",1
+"numpy.sum(a=numpy.ndarray, axis=tuple[int, int])",2
+"numpy.prod(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",2
+"numpy.prod(a=numpy.ndarray, axis=int)",3
+"numpy.ndarray.sum(numpy.ndarray, axis=tuple[int, int], keepdims=builtins.bool)",2
+"numpy.mean(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",3
+"numpy.mean(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",2
+"numpy.sum(a=numpy.ndarray, axis=tuple[int, int], dtype=str, keepdims=builtins.bool)",4
+"numpy.ndarray.sum(numpy.ndarray, axis=tuple[int, int], dtype=str, keepdims=builtins.bool)",4
+"numpy.full_like(a=numpy.ndarray, dtype=Type[numpy.float64], fill_value=numpy.int64, shape=tuple[int, int])",1
+"numpy.var(a=numpy.ndarray, axis=int)",5
+"numpy.var(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",2
+"numpy.full_like(a=numpy.ndarray, dtype=Type[numpy.float64], fill_value=numpy.float64, shape=tuple[int, int])",1
+"numpy.var(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",2
+"numpy.std(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",3
+"numpy.std(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",1
+"numpy.amin(a=numpy.ndarray, axis=int)",7
+"numpy.amin(a=numpy.ndarray, axis=tuple[int, int])",1
+"numpy.amin(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",2
+"numpy.amin(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",4
+"numpy.amax(a=numpy.ndarray, axis=int)",7
+"numpy.amax(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",4
+"numpy.amax(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",2
+"numpy.any(a=numpy.ndarray, axis=tuple[int, int], keepdims=builtins.bool)",2
+"numpy.any(a=numpy.ndarray, axis=int)",6
+"numpy.any(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",3
+"numpy.any(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",2
+"numpy.any(a=numpy.ndarray, axis=tuple[int, int])",1
+"numpy.any(numpy.ndarray, axis=tuple[int, int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.all(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",2
+"numpy.all(a=numpy.ndarray, axis=int)",6
+"numpy.nansum(a=numpy.ndarray, axis=int)",8
+"numpy.nansum(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",3
+"numpy.nansum(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",2
+"numpy.nansum(a=numpy.ndarray, axis=tuple[int, int])",1
+"numpy.nansum(a=numpy.ndarray, dtype=str)",2
+"numpy.nanprod(a=numpy.ndarray, axis=tuple)",2
+"numpy.nanprod(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",2
+"numpy.nanprod(a=numpy.ndarray, axis=int)",4
+"numpy.nansum(a=numpy.ndarray, axis=tuple[int, int], dtype=numpy.dtype, keepdims=builtins.bool)",4
+numpy.nanvar(a=numpy.ndarray),2
+"numpy.nansum(a=numpy.ndarray, axis=tuple[int, int], dtype=str, keepdims=builtins.bool)",2
+"numpy.sum(a=numpy.ndarray, axis=tuple[int, int], keepdims=builtins.bool)",1
+"numpy.nanvar(a=numpy.ndarray, keepdims=builtins.bool)",2
+"numpy.nanvar(a=numpy.ndarray, axis=tuple)",1
+"numpy.nanvar(a=numpy.ndarray, axis=int)",6
+"numpy.nanvar(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",2
+"numpy.nanvar(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",3
+numpy.nanstd,3
+"numpy.nanstd(a=numpy.ndarray, axis=tuple)",2
+"numpy.nanstd(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",2
+"numpy.nanstd(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",2
+numpy.nanstd(a=numpy.ndarray),2
+"numpy.nanmin(a=numpy.ndarray, axis=tuple[int, int], keepdims=builtins.bool)",2
+"numpy.nanmin(numpy.ndarray, axis=tuple[int, int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.nanmin(a=numpy.ndarray, axis=tuple)",2
+"numpy.nanmin(a=numpy.ndarray, axis=int)",5
+"numpy.nanmin(a=numpy.ndarray, axis=tuple[int, int])",1
+"numpy.nanmin(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",1
+"numpy.nanmin(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",3
+"numpy.nanmax(a=numpy.ndarray, axis=tuple[int, int], keepdims=builtins.bool)",2
+"numpy.nanmax(numpy.ndarray, axis=tuple[int, int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.nanmax(a=numpy.ndarray, axis=int)",5
+"numpy.nanmax(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",3
+"numpy.nanmax(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",1
+"numpy.nanmax(a=numpy.ndarray, axis=tuple)",2
+"numpy.sum(a=numpy.ndarray, keepdims=builtins.bool)",2
+"numpy.prod(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",1
+"numpy.prod(a=numpy.ndarray, axis=tuple[int, int])",1
+"numpy.full_like(a=numpy.ndarray, dtype=numpy.dtype, fill_value=numpy.float64, shape=tuple[int, int])",1
+"numpy.var(a=numpy.ndarray, axis=tuple[int, int])",1
+"numpy.amax(a=numpy.ndarray, axis=tuple[int, int])",1
+"numpy.all(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",3
+"numpy.all(a=numpy.ndarray, axis=tuple[int, int])",1
+"numpy.nanprod(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",2
+"numpy.mean(a=numpy.ndarray, axis=tuple[int, int])",1
+"numpy.nanstd(a=numpy.ndarray, keepdims=builtins.bool)",1
+"numpy.nanstd(a=numpy.ndarray, axis=int)",5
+"numpy.nanstd(a=numpy.ndarray, axis=tuple[int, int])",1
+"numpy.amin(a=numpy.ndarray, axis=builtins.bool, keepdims=NoneType)",1
+"numpy.argmin(numpy.ndarray, axis=builtins.bool, keepdims=int)",1
+"numpy.expand_dims(a=numpy.ndarray, axis=int)",2
+numpy.int64[tuple[NoneType]],1
+"numpy.unravel_index(numpy.int64, tuple[int])",1
+"numpy.ravel_multi_index(tuple[numpy.int64], tuple[int])",1
+"numpy.empty(dtype=tuple[int], shape=list[tuple[str, numpy.dtype]])",2
+"numpy.amax(a=numpy.ndarray, axis=builtins.bool, keepdims=NoneType)",1
+"numpy.argmax(numpy.ndarray, axis=builtins.bool, keepdims=int)",1
+"numpy.nanargmin(numpy.ndarray, NoneType, keepdims=builtins.bool)",2
+"numpy.nanargmin(a=numpy.ndarray, axis=NoneType)",1
+"numpy.nanmin(a=numpy.ndarray, axis=builtins.bool, keepdims=NoneType)",1
+numpy.nanargmin(a=numpy.ndarray),4
+numpy.any(a=numpy.bool_),1
+"numpy.nanargmin(a=numpy.ndarray, axis=int)",8
+"numpy.nanargmin(numpy.ndarray, int, keepdims=builtins.bool)",2
+numpy.nanargmax(a=numpy.ndarray),4
+"numpy.nanmax(a=numpy.ndarray, axis=builtins.bool, keepdims=NoneType)",1
+"numpy.nanargmax(numpy.ndarray, NoneType, keepdims=builtins.bool)",2
+"numpy.nanargmax(a=numpy.ndarray, axis=NoneType)",1
+"numpy.nanargmax(numpy.ndarray, int, keepdims=builtins.bool)",2
+"numpy.nanargmax(a=numpy.ndarray, axis=int)",8
+numpy.ndarray[int] = float,2
+"numpy.ndarray[slifloate[NoneType, NoneType, NoneType]] = float",1
+"numpy.ndarray[tuple[int, int]] = int",2
+"numpy.std(a=numpy.ndarray, axis=tuple[int, int])",1
+numpy.nanmean(a=numpy.ndarray),1
+"numpy.nanmean(a=numpy.ndarray, keepdims=builtins.bool)",1
+"numpy.nanmean(a=numpy.ndarray, axis=builtins.bool, keepdims=tuple)",1
+numpy.nanvar,1
+"numpy.nanvar(a=numpy.ndarray, axis=tuple[int, int])",1
+"numpy.int64[tuple[NoneType, NoneType]]",1
+"numpy.unravel_index(numpy.int64, tuple[int, int])",1
+"numpy.ravel_multi_index(tuple[numpy.int64, numpy.int64], tuple[int, int])",1
+"numpy.empty(dtype=tuple[int, int], shape=list[tuple[str, numpy.dtype]])",1
+"numpy.where(numpy.ndarray, float, numpy.ndarray)",2
+"numpy.ndarray[tuple[numpy.ndarray, numpy.ndarray]]",2
+"numpy.lituple[slice[NoneType, int, NoneType]].index_tricks.OGridClass[tuple[slice[NoneType, int, NoneType]]]",1
+numpy.argmin,2
+numpy.nanargmin,3
+"numpy.ndarray.mean(numpy.ndarray, axis=builtins.bool, keepdims=NoneType)",1
+numpy.ndarray.mean,5
+numpy.float64 += numpy.float64,1
+float * numpy.float64,4
+numpy.ndarray += numpy.ndarray,7
+float * numpy.ndarray,1
+"numpy.ndarray.mean(numpy.ndarray, axis=builtins.bool, keepdims=tuple[int, int])",1
+numpy.ndarray.argmin,1
+"numpy.ndarray.argmin(numpy.ndarray, axis=int)",1
+"numpy.nanmean(a=numpy.ndarray, axis=int)",1
+"numpy.ndarray.astype(numpy.ndarray, Type[builtins.object])",5
+"numpy.ndarray(dtype=tuple, shape=Type[builtins.object])",1
+"numpy.empty(tuple, dtype=Type[builtins.object])",1
+"numpy.array(float, dtype=str)",2
+"numpy.array(list[list[Union[float, int]]])",1
+"numpy.empty(tuple, dtype=numpy.dtype)",1
+"numpy.ndarray.sum(numpy.ndarray, axis=tuple[int, int, int], keepdims=builtins.bool)",1
+"numpy.full_like(a=numpy.ndarray, dtype=numpy.dtype, fill_value=numpy.int64, shape=tuple[int, int, int])",1
+"numpy.sum(a=numpy.ndarray, axis=tuple[int, int, int], dtype=numpy.dtype, keepdims=builtins.bool)",2
+"numpy.ndarray.mean(numpy.ndarray, axis=tuple)",1
+"numpy.full_like(a=numpy.ndarray, dtype=numpy.dtype, fill_value=numpy.float64, shape=tuple[int, int, int])",1
+"numpy.ndarray.mean(numpy.ndarray, axis=int)",1
+"numpy.ndarray.sum(numpy.ndarray, axis=tuple[int, int, int], dtype=numpy.dtype, keepdims=builtins.bool)",1
+"numpy.sum(a=dask.array.core.Array, axis=dask.array.core.Array, out=int)",1
+"numpy.argmax(a=dask.array.core.Array, axis=dask.array.core.Array, out=int)",1
+"numpy.cumsum(a=numpy.ndarray, axis=NoneType)",1
+"numpy.cumprod(a=numpy.ndarray, axis=NoneType)",1
+"numpy.nancumsum(a=numpy.ndarray, axis=NoneType)",1
+"numpy.cumsum(a=dask.array.core.Array, axis=dask.array.core.Array, out=int)",1
+"numpy.sort(a=numpy.ndarray, axis=int)",3
+"numpy.ndarray[tuple[slice[NoneType, NoneType, int]]]",2
+"numpy.partition(a=numpy.ndarray, axis=int, kth=int)",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType]]]",2
+numpy.partition,1
+"numpy.ndarray[tuple[slice[NoneType, NoneType, int], slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType]]]",3
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType]]]",2
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], slice[int, NoneType, NoneType], slice[NoneType, NoneType, NoneType]]]",3
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, int], slice[NoneType, NoneType, NoneType]]]",3
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, int]]]",3
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], slice[int, NoneType, NoneType]]]",2
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType]]]",3
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, int, NoneType], slice[NoneType, NoneType, NoneType]]]",3
+numpy.dtype != Type[numpy.int64],2
+"numpy.ndarray(dtype=tuple, shape=Type[numpy.int64])",1
+Type[numpy.int64] in dict,2
+"numpy.argpartition(a=numpy.ndarray, axis=int, kth=int)",1
+"numpy.take_along_axis(arr=numpy.ndarray, axis=int, indices=numpy.ndarray)",2
+"numpy.concatenate(list[numpy.ndarray], int)",2
+numpy.argpartition,1
+"numpy.arange(int, int, int, Type[numpy.int64])",1
+numpy.argsort,1
+"numpy.argsort(a=numpy.ndarray, axis=int)",6
+numpy.dtype(Type[numpy.int64]),4
+numpy.ndarray.trace(numpy.ndarray),1
+numpy.ndarray.trace,1
+"numpy.ndarray.trace(numpy.ndarray, int)",1
+"numpy.ndarray.trace(numpy.ndarray, int, int, int)",1
+"numpy.ndarray.trace(numpy.ndarray, int, int, int, Type[builtins.int])",1
+"numpy.ndarray.trace(numpy.ndarray, int, int, int, Type[builtins.float])",1
+"numpy.median(a=tuple[int, int, int, int, int])",1
+"numpy.median(a=numpy.ndarray, axis=list[int], keepdims=builtins.bool)",2
+"numpy.nanmedian(a=numpy.ndarray, axis=list[int], keepdims=builtins.bool)",3
+"numpy.nanmedian(a=numpy.ndarray, axis=builtins.bool, keepdims=int)",1
+"numpy.median(a=numpy.ndarray, axis=builtins.bool, keepdims=list[int])",1
+"numpy.nanmedian(a=numpy.ndarray, axis=builtins.bool, keepdims=list[int])",1
+numpy.int64 *= int,1
+numpy.nanmedian,1
+"numpy.array(numpy.ndarray, dtype=int, ndmin=str)",1
+Type[numpy.oType[numpy.int64]ject_] == Type[numpy.int64],1
+numpy.atleast_1d(),1
+numpy.atleast_3d(),1
+numpy.atleast_2d(arys=tuple[numpy.ndarray]),1
+numpy.atleast_3d(arys=tuple[numpy.ndarray]),1
+numpy.atleast_1d(arys=tuple[numpy.ndarray]),2
+"numpy.atleast_2d(arys=tuple[numpy.ndarray, numpy.ndarray])",1
+"numpy.atleast_1d(arys=tuple[numpy.ndarray, numpy.ndarray])",1
+"numpy.atleast_3d(arys=tuple[numpy.ndarray, numpy.ndarray])",1
+"numpy.ones(shape=tuple[int, int, int, int])",1
+numpy.random.normal,3
+"numpy.ndarray.swapaxes(numpy.ndarray, int, int)",3
+numpy.core.numeric,3
+numpy.core,3
+"numpy.core.numeric.normalize_axis_tuple(argname=str, axis=int, ndim=int)",2
+"numpy.moveaxis(a=numpy.ndarray, destination=int, source=int)",3
+"numpy.core._multiarray_umath.normalize_axis_index(int, int)",1
+"numpy.rollaxis(a=numpy.ndarray, axis=int, start=int)",2
+numpy.fliplr(m=numpy.ndarray),1
+"numpy.matmul(numpy.float64, numpy.float64)",1
+Type[numpy.float64].__module__,2
+"numpy.matmul(numpy.float64, numpy.ndarray)",1
+"numpy.matmul(numpy.ndarray, numpy.float64)",1
+"numpy.tensordot(a=numpy.ndarray, axes=int, b=numpy.ndarray)",5
+numpy.tensordot,4
+"numpy.tensordot(a=numpy.ndarray, axes=tuple[int, int], b=numpy.ndarray)",2
+numpy.array(list),3
+"numpy.tensordot(a=numpy.ndarray, axes=tuple[tuple, tuple], b=numpy.ndarray)",1
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType]]]",2
+"numpy.ndarray[tuple[NoneType, slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, NoneType, NoneType], NoneType, slice[NoneType, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, NoneType]]",1
+numpy.arange(float),2
+"numpy.ndarray.reshape(numpy.ndarray, int, int, int)",2
+"numpy.broadcast_to(array=int, shape=list[int])",1
+"numpy.ndarray[tuple[slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType]]]",1
+"numpy.tensordot(a=numpy.ndarray, axes=tuple[tuple[int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int], tuple[int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int]], b=numpy.ndarray)",1
+"numpy.ndarray[tuple[NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType]]",1
+"numpy.vdot(numpy.ndarray, numpy.ndarray)",1
+numpy.complex128.shape,5
+numpy.ndarray[tuple[NoneType]],1
+"numpy.allclose(a=numpy.complex128, b=numpy.complex128, equal_nan=builtins.bool)",1
+numpy.conjugate(numpy.complex128),1
+"numpy.outer(a=numpy.ndarray, b=numpy.ndarray)",2
+numpy.float64(),1
+"numpy.outer(a=numpy.float64, b=numpy.float64)",1
+numpy.outer,1
+"numpy.apply_along_axis(arr=numpy.ndarray, axis=int, func1d=builtins.function)",2
+numpy.apply_along_axis,1
+numpy.array(numpy.ndarray),2
+numpy.array(list[list[numpy.int64]]),1
+"numpy.ndarray[tuple[int, int, slice[NoneType, NoneType, NoneType]]]",1
+"numpy.apply_along_axis(args=tuple[numpy.ndarray], arr=int, axis=builtins.function, func1d=int)",1
+"numpy.apply_along_axis(args=tuple[int], arr=numpy.ndarray, axis=int, func1d=builtins.function)",1
+numpy.ndarray.min,2
+numpy.ndarray.max,1
+"numpy.ndarray.min(numpy.ndarray, axis=builtins.bool, keepdims=int)",1
+"numpy.ndarray.max(numpy.ndarray, axis=builtins.bool, keepdims=int)",1
+"numpy.apply_over_axes(a=numpy.ndarray, axes=tuple[int], func=builtins.function)",1
+"numpy.apply_over_axes(a=numpy.ndarray, axes=tuple[int, int], func=builtins.function)",1
+"numpy.apply_over_axes(a=numpy.ndarray, axes=tuple[int, int, int], func=builtins.function)",1
+"numpy.amax(a=numpy.ndarray, axis=tuple[int, int, int], keepdims=builtins.bool)",2
+"numpy.amax(numpy.ndarray, axis=tuple[int, int, int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.amin(a=numpy.ndarray, axis=tuple[int, int, int], keepdims=builtins.bool)",2
+"numpy.amin(numpy.ndarray, axis=tuple[int, int, int], computing_meta=builtins.bool, keepdims=builtins.bool)",1
+"numpy.ptp(a=numpy.ndarray, axis=NoneType)",1
+"numpy.ptp(a=numpy.ndarray, axis=int)",1
+"numpy.diff(a=numpy.ndarray, axis=int, n=int)",1
+"numpy.ediff1d(ary=numpy.ndarray, to_begin=int, to_end=int)",1
+"numpy.ediff1d(ary=numpy.ndarray, to_begin=list[int], to_end=list[int])",1
+numpy.gradient,2
+"numpy.gradient(f=numpy.ndarray, kwargs=dict)",1
+numpy.amin(a=int),1
+"numpy.empty(tuple[int, int, int], dtype=Type[numpy.object_])",1
+"numpy.gradient(f=numpy.ndarray, kwargs=dict, varargs=tuple[int])",1
+"numpy.ndarray[tuple[slice[int, int, NoneType], slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], slice[int, int, NoneType]]]",1
+"numpy.gradient(f=int, varargs=tuple[numpy.ndarray])",1
+numpy.bool8,1
+numpy.square,1
+"numpy.gradient(f=numpy.ndarray, kwargs=dict, varargs=tuple[float, float, float])",1
+"numpy.gradient(f=numpy.ndarray, kwargs=dict, varargs=tuple[float])",1
+numpy.gradient(f=numpy.ndarray),1
+"numpy.gradient(f=numpy.ndarray, kwargs=dict, varargs=tuple[numpy.ndarray, numpy.ndarray])",1
+numpy.int64 -= int,1
+"numpy.gradient(f=numpy.ndarray, kwargs=dict, varargs=tuple[numpy.ndarray])",1
+"numpy.gradient(f=float, varargs=tuple[numpy.ndarray, numpy.ndarray])",1
+"numpy.gradient(f=numpy.ndarray, varargs=tuple[numpy.ndarray])",1
+numpy.bincount,4
+numpy.bincount(list),1
+"numpy.zeros_like(a=numpy.ndarray, dtype=numpy.dtype, shape=int)",1
+"numpy.ndarray[slinumpy.ndarraye[NoneType, int, NoneType]] = numpy.ndarray",1
+"numpy.bincount(list[int], weights=list[int])",1
+numpy.digitize,4
+"numpy.digitize(bins=numpy.ndarray, right=builtins.bool, x=list[int])",1
+"numpy.digitize(bins=numpy.ndarray, right=builtins.bool, x=numpy.ndarray)",4
+"numpy.random.mtrand.RandomState.random(numpy.random.mtrand.RandomState, size=int)",5
+numpy.iterable(y=numpy.ndarray),2
+"numpy.histogram(a=dask.array.core.Array, bins=numpy.ndarray)",2
+"numpy.histogram(a=numpy.ndarray, bins=numpy.ndarray, range=NoneType, weights=NoneType)",1
+numpy.histogram,4
+numpy.iterable(y=int),2
+numpy.histogram(a=list),1
+"numpy.linspace(endpoint=builtins.bool, num=int, start=int, stop=int)",1
+"numpy.histogram(a=numpy.ndarray, bins=numpy.ndarray, range=NoneType, weights=tuple[int, int])",1
+"numpy.histogram(a=dask.array.core.Array, bins=tuple[int, int], range=int)",1
+"numpy.arange(int, float, float)",1
+"numpy.histogram(a=dask.array.core.Array, bins=builtins.bool, density=numpy.ndarray)",1
+"numpy.histogram(a=dask.array.core.Array, bins=dask.array.core.Array, weights=numpy.ndarray)",1
+"numpy.histogram(a=numpy.ndarray, bins=numpy.ndarray, range=numpy.ndarray, weights=NoneType)",1
+numpy.iterable(y=NoneType),1
+"numpy.result_type(dask.array.core.Array, Type[numpy.float64])",1
+numpy.isscalar(element=Type[numpy.float64]),1
+"numpy.result_type(numpy.dtype, Type[numpy.float64])",1
+"numpy.cov(m=numpy.ndarray, rowvar=int)",1
+numpy.cov,1
+"numpy.cov(bias=int, m=numpy.ndarray)",1
+"numpy.cov(m=numpy.ndarray, y=numpy.ndarray)",1
+"numpy.result_type(dask.array.core.Array, dask.array.core.Array, Type[numpy.float64])",1
+"numpy.result_type(numpy.dtype, numpy.dtype, Type[numpy.float64])",1
+numpy.corrcoef(x=numpy.ndarray),1
+numpy.corrcoef,1
+"numpy.corrcoef(x=numpy.ndarray, y=numpy.ndarray)",3
+"numpy.unique(ar=numpy.ndarray, return_counts=builtins.bool, return_index=builtins.bool, return_inverse=builtins.bool)",2
+"numpy.dtype != list[tuple[str, numpy.dtype]]",2
+"numpy.empty(tuple[int], dtype=list[tuple[str, numpy.dtype]])",1
+"numpy.dtype != list[tuple[str, Union[Type[numpy.int64], numpy.dtype]]]",2
+"numpy.ndarray(dtype=tuple, shape=list[tuple[str, Union[Type[numpy.int64], numpy.dtype]]])",1
+"numpy.void[tuple[builtins.ellipsis, NoneType]]",1
+numpy.ndarray == numpy.int64,1
+"numpy.empty(tuple[int], dtype=list[tuple[str, Union[Type[numpy.int64], numpy.dtype]]])",1
+"numpy.ndarray.min(numpy.ndarray, keepdims=numpy.ndarray, out=builtins.bool)",1
+"numpy.ndarray.sum(numpy.ndarray, keepdims=numpy.ndarray, out=builtins.bool)",1
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, int, size=tuple[int])",3
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, int, size=tuple[int, int])",11
+numpy.random.mtrand.RandomState.randint,2
+"numpy.isin(element=numpy.ndarray, invert=builtins.bool, test_elements=numpy.ndarray)",1
+numpy.in1d,1
+"numpy.in1d(ar1=numpy.ndarray, ar2=numpy.ndarray, assume_unique=builtins.bool)",1
+numpy.isin,2
+"numpy.isin(element=dask.array.core.Array, invert=builtins.bool, test_elements=dask.array.core.Array)",1
+numpy.dtype != Type[builtins.bool],1
+"numpy.isin(assume_unique=builtins.bool, element=dask.array.core.Array, test_elements=numpy.ndarray)",1
+"numpy.roll(a=numpy.ndarray, axis=NoneType, shift=int)",1
+"numpy.roll(a=numpy.ndarray, axis=int, shift=int)",1
+"numpy.roll(a=numpy.ndarray, axis=tuple[int, int], shift=tuple[int, int])",1
+numpy.shape(a=dask.array.core.Array),1
+"numpy.ndarray(dtype=tuple, shape=list[tuple[str, numpy.dtype]])",1
+"numpy.union1d(ar1=numpy.ndarray, ar2=numpy.ndarray)",1
+"numpy.union1d(ar1=dask.array.core.Array, ar2=dask.array.core.Array)",1
+"numpy.generic.reshape(numpy.int64, tuple[int])",1
+numpy.ravel(a=numpy.ndarray),1
+numpy.squeeze,1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, NoneType, NoneType], NoneType, NoneType]]",1
+"numpy.ndarray.squeeze(numpy.ndarray, axis=NoneType)",1
+"numpy.ndarray.squeeze(numpy.ndarray, axis=int)",1
+"numpy.ndarray.squeeze(numpy.ndarray, axis=tuple[int, int])",1
+"numpy.vstack(tup=tuple[numpy.ndarray, numpy.ndarray])",1
+"numpy.dstack(tup=tuple[numpy.ndarray, numpy.ndarray])",3
+numpy.take,1
+"numpy.take(a=numpy.ndarray, axis=int, indices=list[int])",1
+"numpy.take(a=numpy.ndarray, axis=int, indices=numpy.ndarray)",1
+"numpy.ndarray.astype(numpy.ndarray, Type[builtins.bool])",2
+"numpy.compress(a=numpy.ndarray, axis=NoneType, condition=numpy.ndarray)",1
+numpy.count_nonzero(a=numpy.ndarray),3
+"numpy.searchsorted(a=tuple[int, int, int], side=str, v=numpy.ndarray)",1
+numpy.compress,1
+"numpy.compress(a=numpy.ndarray, axis=int, condition=numpy.ndarray)",1
+numpy.count_nonzero,1
+numpy.ndarray.any,1
+"numpy.searchsorted(a=tuple[int], side=str, v=numpy.ndarray)",1
+numpy.asarray(a=list[builtins.bool]),1
+"numpy.compress(a=numpy.ndarray, axis=int, condition=list[builtins.bool])",1
+numpy.dtype(Type[builtins.bool]),1
+numpy.generic.all(numpy.bool_),1
+numpy.bool_.all,1
+"numpy.isnan(tuple[float, float, float, float])",1
+"numpy.compress(a=numpy.ndarray, axis=NoneType, condition=list[builtins.bool])",1
+"numpy.extract(arr=numpy.ndarray, condition=numpy.ndarray)",1
+"numpy.choose(a=numpy.ndarray, choices=tuple[int, numpy.ndarray])",1
+"numpy.choose(a=numpy.ndarray, choices=list[Union[int, numpy.ndarray]])",1
+"numpy.choose(a=numpy.ndarray, choices=tuple[numpy.ndarray, numpy.ndarray])",1
+"numpy.choose(a=numpy.ndarray, choices=list[numpy.ndarray])",1
+"numpy.ndarray.choose(numpy.ndarray, list[Union[int, numpy.ndarray]])",1
+"numpy.ndarray.choose(numpy.ndarray, list[numpy.ndarray])",1
+numpy.piecewise,3
+"numpy.piecewise(args=tuple[list[Union[builtins.function, int]]], condlist=numpy.ndarray, funclist=list[numpy.ndarray], x=int)",1
+"numpy.piecewise(args=tuple[int], condlist=list[numpy.ndarray], funclist=list[Union[builtins.function, int]], kw=dict, x=numpy.ndarray)",1
+"numpy.piecewise(args=tuple[int], condlist=list[numpy.ndarray], funclist=list[builtins.function], kw=dict, x=numpy.ndarray)",2
+"numpy.piecewise(args=tuple[list[builtins.function]], condlist=numpy.ndarray, funclist=list[numpy.ndarray], x=int)",1
+numpy.argwhere(a=numpy.ndarray),2
+"numpy.prod(a=tuple[int, int])",1
+"numpy.zeros(tuple, dtype=numpy.dtype)",1
+"Type[numpy.vectorize] in tuple[Type[builtins.tuple], Type[builtins.list], Type[builtins.set]]",1
+numpy.count_nonzero(a=str),1
+numpy.True_,1
+numpy.False_,2
+"numpy.where(numpy.ndarray, numpy.ndarray, int)",4
+"numpy.where(int, numpy.ndarray, int)",1
+"numpy.where(builtins.bool, numpy.ndarray, int)",1
+"numpy.where(builtins.bool, numpy.ndarray, numpy.ndarray)",2
+"numpy.uint8[tuple[builtins.ellipsis, NoneType, NoneType]]",1
+"numpy.where(numpy.bool_, numpy.ndarray, numpy.ndarray)",2
+"numpy.array(list[int], dtype=Type[numpy.int16])",1
+"numpy.where(numpy.ndarray, numpy.int32, numpy.ndarray)",1
+"Type[numpy.int32] in tuple[Type[builtins.list], Type[builtins.tuple], Type[builtins.set]]",1
+"numpy.result_type(numpy.int32, numpy.dtype)",1
+"numpy.where(int, numpy.ndarray, numpy.ndarray)",1
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, size=int)",2
+"numpy.count_nonzero(a=numpy.ndarray, axis=NoneType)",1
+"numpy.count_nonzero(a=numpy.ndarray, axis=int)",1
+"numpy.count_nonzero(a=numpy.ndarray, axis=tuple[int])",1
+"numpy.count_nonzero(a=numpy.ndarray, axis=tuple[int, int])",1
+numpy.ndarray.nonzero(numpy.ndarray),1
+"numpy.array(int, dtype=Type[builtins.int])",1
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, numpy.int64, size=int)",1
+numpy.broadcast_arrays(args=tuple[numpy.ndarray]),1
+numpy.empty(tuple[int]),1
+"numpy.prod(a=tuple[int], dtype=Type[builtins.int])",1
+"numpy.unravel_index(numpy.ndarray, tuple[int], str)",1
+"numpy.unravel_index(numpy.ndarray, order=str, shape=tuple[int])",1
+numpy.unravel_index,1
+numpy.stack(arrays=tuple[numpy.ndarray]),1
+"numpy.array(dask.array.core.Array, copy=builtins.bool)",1
+"numpy.stack(arrays=tuple[numpy.ndarray, numpy.ndarray])",1
+"numpy.unravel_index(numpy.ndarray, order=str, shape=tuple[int, int])",1
+"numpy.mean(a=numpy.ndarray, axis=tuple[int, int], dtype=str)",1
+"numpy.amin(a=numpy.ndarray, axis=tuple[int])",1
+"numpy.sum(a=numpy.ndarray, axis=tuple[int])",1
+"numpy.insert(arr=numpy.ndarray, axis=int, obj=int, values=int)",2
+numpy.insert,4
+numpy.bincount(numpy.ndarray),1
+"numpy.insert(arr=numpy.ndarray, axis=int, obj=list[int], values=int)",3
+"numpy.insert(arr=numpy.ndarray, axis=int, obj=slice[int, int, NoneType], values=int)",1
+"numpy.insert(arr=numpy.ndarray, axis=int, obj=list[int], values=numpy.ndarray)",1
+"numpy.insert(arr=numpy.ndarray, axis=int, obj=int, values=numpy.ndarray)",1
+"numpy.ones(dtype=Type[numpy.int16], shape=int)",1
+"numpy.ones(dtype=Type[numpy.int64], shape=int)",1
+numpy.dtype == Type[numpy.int64],1
+"numpy.result_type(numpy.dtype, numpy.dtype, numpy.dtype)",2
+numpy.dtype == Type[numpy.float64],1
+numpy.isscalar(element=Type[numpy.float32]),1
+"numpy.result_type(numpy.dtype, Type[numpy.float32])",1
+numpy.dtype == Type[numpy.float32],3
+"numpy.ones(dtype=Type[numpy.int64], shape=tuple)",1
+numpy.dtype == Type[numpy.int16],1
+numpy.einsum,6
+"numpy.einsum(operands=tuple[numpy.ndarray, numpy.ndarray, str])",2
+"numpy.einsum(kwargs=dict, operands=tuple[str, numpy.ndarray, numpy.ndarray])",1
+"numpy.random.mtrand.RandomState.random(numpy.random.mtrand.RandomState, tuple[int, int, int, int, int, int])",1
+"numpy.ndarray.reshape(numpy.ndarray, tuple[int, int, int, int, int, int, int])",1
+"numpy.ndarray[tuple[slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType]]]",2
+"numpy.einsum(operands=tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray, str])",6
+"numpy.result_type(numpy.dtype, numpy.dtype, numpy.dtype, numpy.dtype, numpy.dtype)",1
+"numpy.ndarray[tuple[slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType]]]",2
+"numpy.einsum(kwargs=dict, operands=tuple[str, numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray])",5
+"numpy.ndarray.reshape(numpy.ndarray, tuple[int, int, int, int, int, int, int, int])",1
+"numpy.einsum(operands=tuple[numpy.ndarray, str])",3
+numpy.result_type(numpy.dtype),1
+"numpy.einsum(kwargs=dict, operands=tuple[str, numpy.ndarray])",1
+"numpy.generic.reshape(numpy.float64, tuple[int])",1
+"numpy.einsum(operands=tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, str])",2
+"numpy.einsum(kwargs=dict, operands=tuple[str, numpy.ndarray, numpy.ndarray, numpy.ndarray])",1
+"numpy.generic.reshape(numpy.float64, tuple[int, int])",1
+"numpy.ndarray.reshape(numpy.ndarray, tuple[int, int, int, int, int, int])",1
+"numpy.einsum(operands=tuple[str, numpy.ndarray])",2
+"numpy.einsum(operands=tuple[str, numpy.ndarray, numpy.ndarray, numpy.ndarray])",2
+"numpy.einsum(operands=tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray, str])",2
+"numpy.einsum(kwargs=dict, operands=tuple[str, numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray])",1
+"numpy.einsum(operands=tuple[str, numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray])",3
+"numpy.result_type(numpy.dtype, numpy.dtype, numpy.dtype, numpy.dtype)",1
+"numpy.broadcast_to(array=numpy.float64, shape=tuple[int, int])",1
+"numpy.broadcast_to(array=numpy.float64, shape=tuple[int, int, int, int])",1
+"numpy.einsum_path(operands=tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray, str])",1
+numpy.einsum_path,1
+"numpy.einsum_path(kwargs=dict, operands=tuple[str, numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray])",1
+dask.array.core.Array * numpy.ndarray,2
+"numpy.random.mtrand.RandomState.rand(numpy.random.mtrand.RandomState, int, int, int, int)",1
+"numpy.average(a=numpy.ndarray, returned=builtins.bool)",1
+"numpy.array(tuple[numpy.float64, numpy.float64], dtype=str)",1
+"numpy.array(tuple[dask.array.core.Array, numpy.float64], dtype=str)",1
+"numpy.equal(numpy.ndarray, numpy.ndarray)",4
+numpy.average,2
+numpy.float64(x=float),1
+"numpy.result_type(numpy.dtype, numpy.dtype, str)",1
+"numpy.multiply(numpy.ndarray, numpy.ndarray)",3
+numpy.iscomplexobj(x=dask.array.core.Array),1
+numpy.complexfloating,1
+numpy.iscomplexobj,1
+"numpy.testing._private.utils.assert_equal(actual=list[tuple[tuple[str, int, int], tuple[builtins.builtin_function_or_method, tuple[str, numpy.int64, int], tuple[numpy.ndarray, slice[NoneType, NoneType, NoneType]]]]], desired=list[tuple[tuple[str, int, int], tuple[builtins.builtin_function_or_method, tuple[str, int, int], tuple[numpy.ndarray, slice[NoneType, NoneType, NoneType]]]]])",1
+"numpy.testing._private.utils.assert_equal(actual=dict, desired=dict)",3
+"numpy.zeros(tuple[int, int, int])",1
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], list[int]]]",1
+numpy.asarray(a=builtins.range),1
+numpy.asanyarray(a=list[builtins.bool]),2
+"numpy.ones(dtype=str, shape=tuple[int, int, int])",1
+"numpy.ndarray[tuple[list, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], list]]",1
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], dask.array.core.Array]]",1
+"numpy.ndarray[tuple[dask.array.core.Array, slice[NoneType, NoneType, NoneType]]]",1
+numpy.ndarray & numpy.ndarray,2
+numpy.sum(a=tuple[int]),1
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], numpy.ndarray, slice[NoneType, NoneType, NoneType]]]",2
+numpy.ndarray + numpy.int64,2
+numpy.cumsum(a=tuple[int]),1
+int += numpy.int64,1
+"numpy.ndarray[tuple[numpy.ndarray, slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType]]]",2
+"numpy.cumsum(a=tuple[int, int])",3
+numpy.int64 += numpy.int64,1
+"numpy.sum(a=tuple[int, int])",1
+"numpy.sum(a=tuple[int, int, int])",1
+"numpy.cumsum(a=tuple[int, int, int])",2
+"numpy.searchsorted(a=tuple[int, int, int, int, int], side=str, v=numpy.ndarray)",1
+"numpy.isnan(tuple[int, int, int, int, int])",2
+"numpy.cumsum(a=tuple[int, int, int, int, int])",1
+"numpy.sum(a=tuple[int, int, int, int, int])",1
+"numpy.asarray(a=list[builtins.bool], dtype=Type[builtins.bool])",1
+"numpy.ndarray[tuple[slice[int, int, int], numpy.ndarray]]",1
+"numpy.ndarray[tuple[slice[int, int, int], numpy.ndarray, slice[NoneType, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, NoneType, NoneType], slice[NoneType, NoneType, NoneType], numpy.ndarray]]",1
+numpy.ndarray[tuple[builtins.ellipsis]],1
+"numpy.prod(a=tuple[int, int, int, int, int])",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[NoneType, int, NoneType], int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[NoneType, int, NoneType], int, int]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[NoneType, int, NoneType], int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[NoneType, int, NoneType], int, NoneType]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[NoneType, int, NoneType], NoneType, int]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[NoneType, int, NoneType], NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, int, NoneType]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, NoneType, int]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, int, int]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, int, NoneType, NoneType]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[int, NoneType, NoneType], int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[int, NoneType, NoneType], int, int]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[int, NoneType, NoneType], int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[int, NoneType, NoneType], int, NoneType]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[int, NoneType, NoneType], NoneType, int]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, slice[int, NoneType, NoneType], NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, NoneType, slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, NoneType, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, NoneType, int, int]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, NoneType, int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, NoneType, int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, NoneType, int, NoneType]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, NoneType, slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, NoneType, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[builtins.ellipsis, NoneType, NoneType, int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], builtins.ellipsis, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], builtins.ellipsis, slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], builtins.ellipsis, int, int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], builtins.ellipsis, int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], builtins.ellipsis, int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], builtins.ellipsis, int, NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], builtins.ellipsis, slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], builtins.ellipsis, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], builtins.ellipsis, NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], builtins.ellipsis, NoneType, int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], builtins.ellipsis, NoneType, NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], builtins.ellipsis, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], builtins.ellipsis, NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], int, int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], int, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], int, NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], NoneType, int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], NoneType, NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, builtins.ellipsis, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, builtins.ellipsis, int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, builtins.ellipsis, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, builtins.ellipsis, NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, int, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, int, int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, int, NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, slice[int, NoneType, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, NoneType, NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, slice[NoneType, int, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, NoneType, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, NoneType, int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], int, NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], builtins.ellipsis, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], builtins.ellipsis, NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], int, int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], int, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], int, NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], NoneType, int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], NoneType, NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, builtins.ellipsis, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, builtins.ellipsis, int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, builtins.ellipsis, NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, slice[NoneType, int, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, int, NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, NoneType, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, NoneType, int]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[NoneType, int, NoneType], NoneType, NoneType, NoneType]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, int, NoneType]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, NoneType, int]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], builtins.ellipsis, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], builtins.ellipsis, int]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], builtins.ellipsis, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], builtins.ellipsis, NoneType]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], int, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], int, int]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], int, NoneType]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], NoneType, NoneType]]",1
+"numpy.ndarray[tuple[int, int, builtins.ellipsis, int]]",1
+"numpy.ndarray[tuple[int, int, builtins.ellipsis, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, int, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, int, slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[int, int, int, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, int, int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, int, int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, int, int, NoneType]]",1
+"numpy.ndarray[tuple[int, int, slice[int, NoneType, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, int, slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[int, int, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, int, NoneType, int]]",1
+"numpy.ndarray[tuple[int, int, builtins.ellipsis, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, int, builtins.ellipsis, NoneType]]",1
+"numpy.ndarray[tuple[int, int, slice[NoneType, int, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, int, slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[int, int, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, int, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, int, slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[int, int, NoneType, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, int, NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, int, NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, int, NoneType, NoneType]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], builtins.ellipsis, int]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], int, NoneType]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], int, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], int, int]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], NoneType, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], NoneType, int]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, NoneType, builtins.ellipsis, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, NoneType, builtins.ellipsis, NoneType]]",1
+"numpy.ndarray[tuple[int, NoneType, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, NoneType, slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[int, NoneType, int, int]]",1
+"numpy.ndarray[tuple[int, NoneType, int, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, NoneType, int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, NoneType, int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, NoneType, int, NoneType]]",1
+"numpy.ndarray[tuple[int, NoneType, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, NoneType, slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[int, NoneType, NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, NoneType, NoneType, int]]",1
+"numpy.ndarray[tuple[int, NoneType, NoneType, NoneType]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, int, int]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, builtins.ellipsis, NoneType, NoneType]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], NoneType, builtins.ellipsis]]",2
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], NoneType, int]]",1
+"numpy.ndarray[tuple[int, slice[NoneType, int, NoneType], NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], builtins.ellipsis, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], builtins.ellipsis, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], builtins.ellipsis, NoneType]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[int, slice[int, NoneType, NoneType], NoneType, NoneType]]",1
+"numpy.ndarray[tuple[int, NoneType, builtins.ellipsis, int]]",1
+"numpy.ndarray[tuple[int, NoneType, builtins.ellipsis, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, NoneType, slice[NoneType, int, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, NoneType, slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[int, NoneType, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, NoneType, slice[int, NoneType, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, NoneType, slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[int, NoneType, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[int, NoneType, NoneType, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[int, NoneType, NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], builtins.ellipsis, slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], builtins.ellipsis, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], builtins.ellipsis, int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], builtins.ellipsis, int, int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], builtins.ellipsis, int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], builtins.ellipsis, int, NoneType]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], builtins.ellipsis, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], builtins.ellipsis, slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], builtins.ellipsis, NoneType, int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], builtins.ellipsis, NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], builtins.ellipsis, int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], builtins.ellipsis, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], int, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], int, int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], int, NoneType]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], NoneType, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], NoneType, int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, builtins.ellipsis, int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, slice[NoneType, int, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, int, NoneType]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, int, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, int, int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, NoneType, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, NoneType, int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, builtins.ellipsis, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, builtins.ellipsis, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, builtins.ellipsis, NoneType]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, slice[int, NoneType, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], int, NoneType, NoneType]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], builtins.ellipsis, int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], builtins.ellipsis, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], int, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], int, int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], int, NoneType]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], NoneType, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], NoneType, int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], NoneType, builtins.ellipsis, int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], NoneType, builtins.ellipsis, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], NoneType, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], NoneType, slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], NoneType, slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], NoneType, int, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], NoneType, int, int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], NoneType, int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], NoneType, slice[int, NoneType, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], NoneType, slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], NoneType, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, NoneType, NoneType], NoneType, NoneType, int]]",1
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis, slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis, slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis, int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis, int, NoneType]]",1
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis, int, int]]",1
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis, int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis, slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis, slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis, NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis, NoneType, int]]",1
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis, NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, builtins.ellipsis, NoneType, NoneType]]",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, int, NoneType], builtins.ellipsis, int]]",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, int, NoneType], builtins.ellipsis, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, int, NoneType], int, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, int, NoneType], int, int]]",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, int, NoneType], int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, slice[NoneType, int, NoneType], NoneType, int]]",1
+"numpy.ndarray[tuple[NoneType, int, builtins.ellipsis, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, int, builtins.ellipsis, NoneType]]",1
+"numpy.ndarray[tuple[NoneType, int, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, int, slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[NoneType, int, int, int]]",1
+"numpy.ndarray[tuple[NoneType, int, int, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[NoneType, int, int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, int, int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, int, int, NoneType]]",1
+"numpy.ndarray[tuple[NoneType, int, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, int, slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[NoneType, int, NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, int, NoneType, int]]",1
+"numpy.ndarray[tuple[NoneType, int, NoneType, NoneType]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], builtins.ellipsis, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], builtins.ellipsis, int]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], builtins.ellipsis, NoneType]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], int, NoneType]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], slice[int, NoneType, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], NoneType, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], NoneType, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], NoneType, int]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, slice[int, NoneType, NoneType], NoneType, NoneType]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, builtins.ellipsis, int]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, slice[NoneType, int, NoneType], builtins.ellipsis]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, slice[NoneType, int, NoneType], slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, slice[NoneType, int, NoneType], int]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, slice[NoneType, int, NoneType], slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, slice[NoneType, int, NoneType], NoneType]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, int, slice[NoneType, int, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, int, int]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, int, NoneType]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, int, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, int, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, slice[int, NoneType, NoneType], int]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, NoneType, builtins.ellipsis]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, NoneType, int]]",1
+"numpy.ndarray[tuple[NoneType, NoneType, NoneType, slice[int, NoneType, NoneType]]]",1
+"numpy.ndarray[tuple[slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType], slice[int, int, NoneType]]]",1
+numpy.ndarray == list[int],1
+"numpy.testing._private.utils.assert_array_equal(x=numpy.ndarray, y=numpy.ndarray)",2
+"numpy.random.mtrand.RandomState.randint(numpy.random.mtrand.RandomState, int, int, dtype=str, size=tuple[int, int])",1
+numpy.random.seed,1
+"numpy.random.mtrand.RandomState.random(numpy.random.mtrand.RandomState, size=tuple[int])",1
+"numpy.where(numpy.ndarray, numpy.ndarray, float)",3
+numpy.seterr,2
+"numpy.allclose(a=numpy.float64, b=numpy.ndarray, equal_nan=builtins.bool)",1
+numpy.seterr(all=str),1
+"numpy.random.mtrand.RandomState.seed(numpy.random.mtrand.RandomState, seed=int)",1
+"numpy.seterr(divide=str, invalid=str, over=str, under=str)",1
+"numpy.allclose(a=tuple[numpy.float64, numpy.float64], b=tuple[numpy.float64, numpy.float64], equal_nan=builtins.bool)",1
+numpy.absolute(dask.array.core.Array),4
+numpy.sqrt(float),1
+int - numpy.float64,1
+dask.array.core.Array * numpy.float64,1
+"Type[numpy.float64] in tuple[Type[builtins.list], Type[builtins.tuple], Type[builtins.set]]",1
+numpy.float64 / dask.array.core.Array,1
+"numpy.power(numpy.ndarray, float)",1
+"numpy.where(numpy.ndarray, numpy.float64, numpy.ndarray)",1
+"numpy.subtract(numpy.float64, numpy.ndarray)",1
+"numpy.subtract(numpy.ndarray, numpy.ndarray)",6
+"numpy.where(dask.array.core.Array, int, dask.array.core.Array)",1
+"numpy.true_divide(numpy.ndarray, numpy.ndarray)",7
+"numpy.allclose(a=tuple[numpy.ndarray, numpy.ndarray], b=tuple[numpy.ndarray, numpy.ndarray], equal_nan=builtins.bool)",1
+"numpy.xlogy(numpy.ndarray, numpy.ndarray)",2
+"numpy.full_like(a=numpy.ndarray, fill_value=numpy.float64)",2
+numpy.ndarray += numpy.float64,2
+int + numpy.float64,1
+numpy.float64 - numpy.float64,2
+float + numpy.float64,1
+"numpy.float64[tuple[builtins.ellipsis, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType]]",1
+"numpy.isnan(tuple[int, int, int, int, int, int])",1
+"numpy.float64[tuple[builtins.ellipsis, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType, NoneType]]",1
+numpy.isnan(tuple),1
+numpy.int64 > float,4
+numpy.int64 / float,1
+"numpy.cumsum(a=tuple[int, int, int, int, int, int, int, int, int, int, int])",1
+numpy.ufunc.__doc__,1
+numpy.log,2
+numpy.arccos(numpy.ndarray),3
+numpy.ufunc,2
+numpy.arccosh(numpy.ndarray),5
+numpy.arccosh(dask.array.core.Array),2
+numpy.arcsin(numpy.ndarray),3
+numpy.arcsinh(numpy.ndarray),5
+numpy.arcsinh(dask.array.core.Array),2
+numpy.arctan(numpy.ndarray),3
+numpy.arctanh(numpy.ndarray),5
+numpy.arctanh(dask.array.core.Array),2
+numpy.invert(numpy.ndarray),6
+numpy.cbrt(numpy.ndarray),5
+numpy.cbrt(dask.array.core.Array),2
+numpy.conjugate(dask.array.core.Array),2
+numpy.cosh(dask.array.core.Array),2
+numpy.degrees(dask.array.core.Array),2
+numpy.exp2(numpy.ndarray),5
+numpy.exp2(dask.array.core.Array),2
+numpy.fabs(dask.array.core.Array),2
+numpy.floor(numpy.ndarray),3
+numpy.invert(dask.array.core.Array),2
+numpy.isinf(dask.array.core.Array),2
+numpy.log(dask.array.core.Array),2
+numpy.log1p(dask.array.core.Array),2
+numpy.log2(numpy.ndarray),3
+numpy.logical_not(dask.array.core.Array),2
+numpy.negative(numpy.ndarray),3
+numpy.rad2deg(dask.array.core.Array),2
+numpy.reciprocal(numpy.ndarray),5
+numpy.reciprocal(dask.array.core.Array),2
+numpy.rint(numpy.ndarray),3
+numpy.sign(dask.array.core.Array),2
+numpy.sin(dask.array.core.Array),4
+numpy.spacing(numpy.ndarray),5
+numpy.spacing(dask.array.core.Array),2
+numpy.square(dask.array.core.Array),2
+numpy.tanh(dask.array.core.Array),2
+numpy.trunc(numpy.ndarray),3
+"numpy.add(dask.array.core.Array, dask.array.core.Array)",2
+"numpy.add(numpy.ndarray, int)",2
+"numpy.add(int, numpy.ndarray)",3
+"numpy.arctan2(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.arctan2(numpy.ndarray, int)",3
+"numpy.arctan2(int, numpy.ndarray)",2
+"numpy.copysign(numpy.ndarray, numpy.ndarray)",3
+"numpy.copysign(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.copysign(numpy.ndarray, int)",2
+"numpy.copysign(int, numpy.ndarray)",3
+"numpy.true_divide(dask.array.core.Array, dask.array.core.Array)",2
+"numpy.true_divide(numpy.ndarray, int)",5
+"numpy.true_divide(int, numpy.ndarray)",5
+"numpy.equal(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.equal(numpy.ndarray, int)",2
+"numpy.equal(int, numpy.ndarray)",3
+"numpy.bitwise_and(numpy.ndarray, numpy.ndarray)",5
+"numpy.bitwise_and(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.bitwise_and(numpy.ndarray, int)",3
+"numpy.bitwise_and(int, numpy.ndarray)",2
+"numpy.bitwise_or(numpy.ndarray, numpy.ndarray)",3
+"numpy.bitwise_or(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.bitwise_or(numpy.ndarray, int)",2
+"numpy.bitwise_or(int, numpy.ndarray)",3
+"numpy.bitwise_xor(numpy.ndarray, numpy.ndarray)",5
+"numpy.bitwise_xor(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.bitwise_xor(numpy.ndarray, int)",3
+"numpy.bitwise_xor(int, numpy.ndarray)",2
+"numpy.floor_divide(numpy.ndarray, numpy.ndarray)",3
+"numpy.floor_divide(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.floor_divide(numpy.ndarray, int)",2
+"numpy.floor_divide(int, numpy.ndarray)",3
+"numpy.fmax(numpy.ndarray, numpy.ndarray)",5
+"numpy.fmax(numpy.ndarray, int)",3
+"numpy.fmax(int, numpy.ndarray)",2
+"numpy.fmin(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.fmin(numpy.ndarray, int)",2
+"numpy.fmin(int, numpy.ndarray)",3
+"numpy.fmod(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.fmod(numpy.ndarray, int)",3
+"numpy.fmod(int, numpy.ndarray)",2
+"numpy.greater(numpy.ndarray, numpy.ndarray)",3
+"numpy.greater(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.greater(numpy.ndarray, int)",2
+"numpy.greater(int, numpy.ndarray)",3
+"numpy.greater_equal(numpy.ndarray, numpy.ndarray)",5
+"numpy.greater_equal(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.greater_equal(numpy.ndarray, int)",3
+"numpy.greater_equal(int, numpy.ndarray)",2
+"numpy.hypot(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.hypot(numpy.ndarray, int)",2
+"numpy.hypot(int, numpy.ndarray)",3
+"numpy.ldexp(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.ldexp(numpy.ndarray, int)",3
+"numpy.ldexp(int, numpy.ndarray)",2
+"numpy.less(numpy.ndarray, numpy.ndarray)",3
+"numpy.less(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.less(numpy.ndarray, int)",2
+"numpy.less(int, numpy.ndarray)",3
+"numpy.less_equal(numpy.ndarray, numpy.ndarray)",5
+"numpy.less_equal(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.less_equal(numpy.ndarray, int)",3
+"numpy.less_equal(int, numpy.ndarray)",2
+"numpy.logaddexp(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.logaddexp(numpy.ndarray, int)",2
+"numpy.logaddexp(int, numpy.ndarray)",3
+"numpy.logaddexp2(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.logaddexp2(numpy.ndarray, int)",3
+"numpy.logaddexp2(int, numpy.ndarray)",2
+"numpy.logical_and(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.logical_and(numpy.ndarray, int)",2
+"numpy.logical_and(int, numpy.ndarray)",3
+"numpy.logical_or(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.logical_or(numpy.ndarray, int)",3
+"numpy.logical_or(int, numpy.ndarray)",2
+"numpy.logical_xor(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.logical_xor(numpy.ndarray, int)",2
+"numpy.logical_xor(int, numpy.ndarray)",3
+"numpy.minimum(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.minimum(numpy.ndarray, int)",2
+"numpy.minimum(int, numpy.ndarray)",3
+"numpy.remainder(numpy.ndarray, numpy.ndarray)",6
+"numpy.remainder(dask.array.core.Array, dask.array.core.Array)",2
+"numpy.remainder(numpy.ndarray, int)",5
+"numpy.remainder(int, numpy.ndarray)",5
+"numpy.multiply(dask.array.core.Array, dask.array.core.Array)",2
+"numpy.multiply(numpy.ndarray, int)",2
+"numpy.multiply(int, numpy.ndarray)",3
+"numpy.nextafter(numpy.ndarray, numpy.ndarray)",5
+"numpy.nextafter(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.nextafter(numpy.ndarray, int)",3
+"numpy.nextafter(int, numpy.ndarray)",2
+"numpy.not_equal(numpy.ndarray, numpy.ndarray)",3
+"numpy.not_equal(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.not_equal(numpy.ndarray, int)",2
+"numpy.not_equal(int, numpy.ndarray)",3
+"numpy.power(numpy.ndarray, numpy.ndarray)",5
+"numpy.power(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.power(numpy.ndarray, int)",3
+"numpy.power(int, numpy.ndarray)",2
+"numpy.subtract(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.subtract(numpy.ndarray, int)",3
+"numpy.subtract(int, numpy.ndarray)",2
+"numpy.float_power(numpy.ndarray, numpy.ndarray)",5
+"numpy.float_power(dask.array.core.Array, dask.array.core.Array)",1
+"numpy.float_power(numpy.ndarray, int)",3
+"numpy.float_power(int, numpy.ndarray)",2
+"numpy.ufunc.outer(numpy.ufunc, numpy.ndarray, numpy.ndarray)",6
+numpy.ufunc.outer,4
+numpy.add,3
+"numpy.ufunc.outer(numpy.ufunc, int, numpy.ndarray)",1
+"numpy.ufunc.outer(numpy.ufunc, float, numpy.ndarray)",1
+"numpy.ufunc.outer(numpy.ufunc, list[int], numpy.ndarray)",1
+"numpy.ufunc.outer(numpy.ufunc, numpy.int64, numpy.ndarray)",1
+"numpy.ones(dtype=numpy.dtype, shape=tuple)",1
+numpy.ndarray.real,1
+numpy.ndarray.imag,1
+numpy.ndarray.conj(numpy.ndarray),1
+numpy.isreal(x=dask.array.core.Array),1
+numpy.iscomplex(x=dask.array.core.Array),1
+numpy.real(val=dask.array.core.Array),1
+numpy.imag(val=dask.array.core.Array),1
+numpy.frexp,1
+numpy.empty_like,1
+numpy.frexp(dask.array.core.Array),1
+"numpy.empty_like(numpy.ndarray, dtype=numpy.dtype, shape=tuple[int, int])",1
+numpy.modf,1
+numpy.modf(dask.array.core.Array),1
+"numpy.ndarray.clip(numpy.ndarray, int)",1
+"numpy.clip(a=numpy.ndarray, a_max=NoneType, a_min=int)",2
+numpy.ndarray.clip,4
+"numpy.clip(a=numpy.ndarray, a_max=int, a_min=NoneType)",1
+numpy.ndarray * builtins.complex,1
+numpy.angle(z=numpy.ndarray),1
+numpy.isposinf(x=numpy.ndarray),1
+"numpy.equal(float, numpy.ndarray)",2
+numpy.i0(x=numpy.ndarray),1
+numpy.sinc(x=numpy.ndarray),2
+numpy.nan_to_num(x=numpy.ndarray),1
+"numpy.frompyfunc(builtins.builtin_function_or_method, int, int)",2
+"numpy.random.mtrand.RandomState.normal(numpy.random.mtrand.RandomState, int, int, size=tuple[int, int])",1
+"numpy.? (vectorized)(numpy.ndarray, numpy.ndarray)",2
+"numpy.? (vectorized)(numpy.ndarray, int)",2
+numpy.sin,1
+numpy.negative,1
+"numpy.ufunc.outer(numpy.ufunc, dask.array.core.Array, dask.array.core.Array)",2
+"numpy.sin(dask.array.core.Array, out=dask.array.core.Array)",1
+"numpy.add(dask.array.core.Array, int, out=dask.array.core.Array)",1
+"numpy.ufunc.reduce(numpy.ufunc, dask.array.core.Array)",1
+"numpy.empty(int, dtype=numpy.dtype)",1
+"numpy.add(dask.array.core.Array, int, out=numpy.ndarray)",1
+"numpy.log(dask.array.core.Array, out=dask.array.core.Array)",1
+"numpy.divmod(numpy.ndarray, float)",1
+"numpy.divmod(numpy.ndarray, numpy.ndarray)",1
+"numpy.int16[tuple[builtins.ellipsis, NoneType, NoneType]]",1
+numpy.isscalar(element=xarray.core.dataarray.DataArray),3

@@ -12,7 +12,8 @@ htmlcov
 result_images
 src/*
 dask-worker-space/
-data/*/*
+data/raw/*
 # Keep sample data in there for show
 !data/*/sample_usage*
+!data/counts_untyped/*
 .hypothesis

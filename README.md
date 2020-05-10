@@ -76,10 +76,15 @@ env PYTHON_RECORD_API_OUTPUT_FILE=data/raw/%.jsonl \
     PYTHON_RECORD_API_FROM_MODULE=% \
     pytest --pyargs %
 
-env PYTHON_RECORD_API_INPUT=data/raw/dask.array.jsonl \
-    PYTHON_RECORD_API_OUTPUT_TYPED=data/counts_typed/dask.array.csv \
-    PYTHON_RECORD_API_OUTPUT_UNTYPED=data/counts_untyped/dask.array.csv \
+echo "skimage
+sklearn
+matplotlib
+xarray" | xargs -I % \
+env PYTHON_RECORD_API_INPUT=data/raw/%.jsonl \
+    PYTHON_RECORD_API_OUTPUT_TYPED=data/counts_typed/%.csv \
+    PYTHON_RECORD_API_OUTPUT_UNTYPED=data/counts_untyped/%.csv \
     python -m record_api.line_counts
+
 ```
 
 ## How?

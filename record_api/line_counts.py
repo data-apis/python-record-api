@@ -47,7 +47,6 @@ def __main__():
             writer.writerow([name, len(lines)])
 
 
-
 def pretty_print_untyped(row):
     f = row["function"]
     p = row["params"]
@@ -196,11 +195,12 @@ def t(v):
             return v["v"]
         if tp == "builtins.type":
             return GenericType("Type", (v["v"],))
-        if tp == 'builtins.slice':
+        if tp == "builtins.slice":
             return GenericType("slice", tuple(map(t, v["v"])))
         return tp
     if isinstance(v, list) and v:
         return GenericType("list", (unify(map(t, v)),))
     return type(v).__name__
+
 
 __main__()

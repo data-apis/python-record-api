@@ -1,0 +1,393 @@
+function,count
+numpy.isfinite,27
+numpy.array,267
+numpy.ndarray.reshape,64
+numpy.ndarray.shape,193
+numpy.inf,31
+numpy.ndarray.copy,18
+numpy.ma,103
+numpy.can_cast,2
+numpy.ndarray.astype,49
+numpy.ma.masked,6
+numpy.ndarray.dtype,24
+numpy.ndarray.ndim,60
+builtins.iter,302
+numpy.ndarray.any,21
+numpy.ma.MaskedArray,15
+numpy.ma.core.filled,12
+numpy.asarray,126
+numpy.flagsobj.writeable =,2
+numpy.dot,22
+numpy.cos,60
+numpy.ndarray.all,17
+numpy.empty,23
+numpy.unravel_index,1
+numpy.ndarray.flat,17
+numpy.column_stack,25
+numpy.cumsum,12
+numpy.ndarray.min,33
+numpy.ndarray.max,43
+numpy.any,12
+numpy.iterable,60
+numpy.diff,22
+numpy.hstack,17
+numpy.ndarray,15
+numpy.finfo,1
+numpy.finfo.tiny,1
+numpy.ndarray.ravel,36
+numpy.ndarray.T,65
+numpy.broadcast_arrays,4
+numpy.deg2rad,35
+numpy.sin,85
+numpy.ndarray.size,44
+numpy.zeros,97
+numpy.isclose,7
+numpy.amax,26
+numpy.sqrt,30
+numpy.all,21
+numpy.vstack,65
+numpy.nonzero,4
+numpy.ndarray.sum,13
+numpy.ceil,26
+numpy.absolute,67
+numpy.round,1
+numpy.arange,233
+numpy.asanyarray,18
+numpy.ptp,9
+numpy.round_,7
+numpy.errstate,17
+numpy.amin,30
+numpy.ndarray.searchsorted,4
+numpy.log,21
+numpy.log10,26
+numpy.ma.core.power,3
+numpy.ma.core.MaskedArray.reshape,8
+Type[numpy.float64].__mro__,1
+numpy.ndarray.index,1
+Type[numpy.ndarray].__mro__,1
+Type[numpy.int64].__mro__,1
+numpy.newaxis,28
+numpy.ma.core.getdata,2
+numpy.ma.core.MaskedArray.ndim,29
+numpy.atleast_1d,17
+numpy.ndarray.tolist,14
+numpy.e,9
+numpy.log2,7
+numpy.floor,19
+numpy.concatenate,53
+numpy.isinf,6
+numpy.ma.core.is_masked,11
+numpy.random,120
+numpy.ravel_multi_index,1
+numpy.ndarray.item,3
+numpy.ndarray.flags,2
+numpy.frombuffer,4
+numpy.empty_like,10
+numpy.apply_along_axis,3
+numpy.convolve,2
+numpy.r_,6
+numpy.hanning,3
+numpy.roll,4
+numpy.dtype.kind,9
+numpy.uint8,18
+numpy.pad,1
+numpy.mgrid,8
+numpy.meshgrid,44
+numpy.dtype.isnative,2
+numpy.ma.masked_invalid,9
+numpy.ma.core.MaskedArray.shrink_mask,1
+numpy.ma.core.MaskedArray.ravel,6
+numpy.ma.core.MaskedArray.size,13
+numpy.max,5
+numpy.integer,4
+numpy.float32,11
+numpy.ma.array,16
+numpy.min_scalar_type,1
+numpy.issubdtype,5
+numpy.promote_types,4
+numpy.ma.core.getmask,6
+numpy.ma.core.array,17
+numpy.searchsorted,2
+numpy.clip,21
+numpy.ndarray.take,1
+numpy.nextafter,3
+numpy.linspace,111
+numpy.random.mtrand.RandomState.rand,23
+numpy.hypot,28
+numpy.append,4
+numpy.arctan2,9
+numpy.array_equal,2
+numpy.linalg.inv,2
+numpy.pi,101
+numpy.atleast_3d,2
+numpy.ndarray.transpose,2
+numpy.ndarray.flatten,25
+numpy.ones,37
+numpy.full,8
+numpy.floating,1
+numpy.ma.core.MaskedArray.mask,23
+numpy.ma.core.MaskedArray.min,10
+numpy.ma.core.MaskedArray.max,12
+numpy.ma.core.masked_invalid,24
+numpy.ma.core.MaskedArray.dtype,14
+numpy.ma.core.MaskedArray.shape,48
+numpy.minimum,3
+numpy.float64,51
+numpy.generic.astype,9
+numpy.ones_like,6
+numpy.isnan,9
+numpy.dtype.type,1
+numpy.ma.core.asarray,12
+numpy.sort,4
+numpy.min,5
+numpy.float,2
+numpy.tan,4
+numpy.rad2deg,14
+numpy.ma.core.MaskedArray.data,12
+numpy.transpose,6
+numpy.nan,43
+numpy.sign,6
+numpy.where,6
+numpy.interp,13
+numpy.ndarray.squeeze,6
+numpy.isscalar,5
+numpy.nanmin,1
+numpy.histogram,2
+numpy.size,9
+numpy.ndim,6
+numpy.nanmax,1
+numpy.random.mtrand.RandomState.normal,21
+numpy.shape,15
+numpy.atleast_2d,3
+numpy.cov,2
+numpy.linalg.det,1
+numpy.exp,18
+numpy.sum,25
+numpy.mean,9
+numpy.logical_and,1
+numpy.ndarray.nonzero,1
+numpy.ufunc.reduce,2
+numpy.ravel,20
+numpy.resize,8
+numpy.reshape,2
+numpy.percentile,4
+numpy.power,7
+numpy.linalg,5
+numpy.median,2
+numpy.logical_or,3
+numpy.ma.getmask,2
+numpy.broadcast_to,10
+numpy.ndarray.cumsum,3
+numpy.correlate,1
+numpy.tile,22
+numpy.full_like,4
+numpy.random.mtrand.RandomState.seed,42
+numpy.random.mtrand.RandomState.shuffle,1
+numpy.maximum,4
+numpy.generic.item,3
+numpy.bool_.shape,1
+numpy.ma.core.MaskedArray,9
+numpy.bool_,1
+numpy.float16,1
+numpy.testing._private.utils.assert_allclose,118
+numpy.split,1
+numpy.datetime64,8
+numpy.<numpy.vectorize object at 0x7fbfc8517370>,1
+numpy.ndarray.name,1
+numpy.arccos,1
+numpy.ufunc.at,2
+numpy.repeat,24
+numpy.add,2
+numpy.random.mtrand.RandomState.standard_normal,11
+numpy.expand_dims,12
+numpy.ma.masked_less_equal,3
+numpy.ma.core.masked_less_equal,2
+numpy.ma.core.MaskedArray.T,2
+numpy.copyto,5
+numpy.ma.core.min,1
+numpy.ma.core.max,1
+numpy.ndarray.fill,1
+numpy.ndarray.argsort,4
+numpy.ma.core.getmaskarray,4
+numpy.stack,8
+numpy.ma.core.MaskedArray.compressed,4
+numpy.ma.core._arraymethod.<locals>.wrapped_method,2
+numpy.ma.core,2
+numpy.ndarray.repeat,2
+numpy.NaN,3
+numpy.ndarray.argmin,4
+numpy.unique,8
+numpy.random.mtrand.RandomState.randn,10
+numpy.histogram_bin_edges,1
+numpy.testing,34
+numpy.ma.nomask,5
+numpy.ma.core.MaskedArray.filled,12
+numpy.ma.asarray,2
+numpy.histogram2d,1
+numpy.random.mtrand.RandomState.random,14
+numpy.ma.extras.column_stack,1
+numpy.ma.core.ravel,4
+numpy.zeros_like,15
+numpy.random.mtrand.RandomState.lognormal,1
+numpy.isreal,2
+numpy.random.lognormal,1
+numpy.int16,5
+numpy.ndarray.mean,14
+numpy.random.mtrand.RandomState.randint,2
+numpy.random.randint,2
+numpy.random.normal,19
+numpy.testing._private.utils.assert_array_equal,111
+numpy.arcsin,2
+numpy.ndarray.sort,3
+numpy.ma.core.masked_equal,6
+numpy.ndarray.strides,4
+numpy.lib.stride_tricks,2
+numpy.lib.stride_tricks.as_strided,2
+numpy.fft,4
+numpy.fft.fft,5
+numpy.ndarray.real,4
+numpy.lib,2
+numpy.fft.fftfreq,1
+numpy.conjugate,4
+numpy.flipud,1
+numpy.iscomplexobj,1
+numpy.angle,4
+numpy.unwrap,3
+numpy.testing._private.utils.assert_array_almost_equal,41
+numpy.ma.core.reshape,1
+numpy.random.mtrand.RandomState.random_sample,1
+numpy.ma.core.arctan2,1
+numpy.ma.mask_or,1
+numpy.allclose,9
+numpy.testing.assert_allclose,4
+numpy.int8,4
+numpy.ma.core.masked_greater,1
+numpy.bincount,9
+Type[numpy.datetime64].__mro__,1
+numpy.datetime64.tzinfo,1
+numpy.int64,2
+numpy.ndarray.ctypes,1
+numpy.core._internal._ctypes.data,1
+numpy.vectorize,1
+numpy.<numpy.vectorize object at 0x7fc008c09970>,1
+numpy.<numpy.vectorize object at 0x7fbf9005ca60>,1
+numpy.<numpy.vectorize object at 0x7fbfa1428760>,1
+numpy.<numpy.vectorize object at 0x7fbfa1428e50>,1
+numpy.<numpy.vectorize object at 0x7fbfa1428ca0>,1
+numpy.<numpy.vectorize object at 0x7fbff83f1580>,1
+Type[numpy.str_].__mro__,1
+numpy.<numpy.vectorize object at 0x7fbff8a38790>,1
+numpy.<numpy.vectorize object at 0x7fbff85871f0>,1
+numpy.<numpy.vectorize object at 0x7fbfd926d1f0>,1
+numpy.<numpy.vectorize object at 0x7fbff85359d0>,1
+numpy.<numpy.vectorize object at 0x7fbfe8ceab80>,1
+numpy.<numpy.vectorize object at 0x7fc008bc1220>,1
+numpy.<numpy.vectorize object at 0x7fbfa1710520>,1
+numpy.<numpy.vectorize object at 0x7fc0088b4310>,1
+numpy.<numpy.vectorize object at 0x7fbfb8071580>,1
+Type[numpy.bytes_].__mro__,1
+numpy.<numpy.vectorize object at 0x7fbfa147ec70>,1
+builtins.bytes.decode,1
+numpy.bytes_.decode,1
+numpy.<numpy.vectorize object at 0x7fbfa14a3ee0>,1
+numpy.<numpy.vectorize object at 0x7fc0088eaa90>,1
+numpy.<numpy.vectorize object at 0x7fbfa8292d30>,1
+numpy.<numpy.vectorize object at 0x7fbfa82c4e80>,1
+numpy.<numpy.vectorize object at 0x7fbf883641c0>,1
+numpy.<numpy.vectorize object at 0x7fbff8908910>,1
+numpy.<numpy.vectorize object at 0x7fbfa14960a0>,1
+numpy.<numpy.vectorize object at 0x7fc0191005e0>,1
+numpy.<numpy.vectorize object at 0x7fbfb8095370>,1
+numpy.<numpy.vectorize object at 0x7fc008a132e0>,1
+numpy.<numpy.vectorize object at 0x7fbfe8c17c70>,1
+numpy.<numpy.vectorize object at 0x7fc018d82940>,1
+numpy.<numpy.vectorize object at 0x7fbfd9102400>,1
+numpy.<numpy.vectorize object at 0x7fc018bc9700>,1
+numpy.<numpy.vectorize object at 0x7fbff85874c0>,1
+numpy.<numpy.vectorize object at 0x7fbff85877f0>,1
+numpy.<numpy.vectorize object at 0x7fbfd882a250>,1
+numpy.<numpy.vectorize object at 0x7fbfd882a940>,1
+numpy.<numpy.vectorize object at 0x7fbfc8f40b20>,1
+numpy.<numpy.vectorize object at 0x7fbfc8f402e0>,1
+numpy.<numpy.vectorize object at 0x7fbfc8f40190>,1
+numpy.<numpy.vectorize object at 0x7fc0289cc4c0>,1
+numpy.<numpy.vectorize object at 0x7fc0289cc760>,1
+numpy.<numpy.vectorize object at 0x7fbfd9100490>,1
+numpy.testing._private.utils.assert_approx_equal,1
+numpy.ndarray.data,1
+numpy.fliplr,1
+numpy.ma.core.mask_or,1
+numpy.ndenumerate,1
+numpy.generic.ravel,1
+numpy.testing._private.utils.assert_almost_equal,27
+numpy.random.mtrand.RandomState.uniform,1
+numpy.testing._private.utils.assert_equal,5
+numpy.logspace,3
+numpy.ogrid,3
+numpy.ndarray.byteswap,2
+numpy.ndarray.newbyteorder,3
+numpy.ma.masked_array,3
+numpy.Inf,1
+numpy.longdouble,2
+numpy.finfo.resolution,1
+numpy.ndarray.ptp,2
+numpy.ma.extras.masked_all,1
+numpy.ndarray.view,1
+numpy.radians,7
+numpy.putmask,4
+numpy.gradient,1
+numpy.square,1
+numpy.ndarray.dot,1
+numpy.moveaxis,1
+numpy.dstack,4
+numpy.linalg.norm,4
+numpy.tensordot,1
+numpy.take,1
+numpy.argmin,6
+numpy.float64.ndim,1
+numpy.argsort,1
+builtins.str.lower,2
+numpy.<numpy.vectorize object at 0x7fbfc85173a0>,1
+numpy.<numpy.vectorize object at 0x7fbfc8517400>,1
+numpy.uint16,3
+numpy.ma.core.concatenate,1
+numpy.identity,2
+numpy.copy,2
+numpy.ma.core.MaskedArray.all,4
+numpy.int32,31
+numpy.ndarray.tobytes,1
+numpy.prod,2
+numpy.ndarray.base,2
+numpy.lib.stride_tricks.DummyArray.base,2
+numpy.core.records.fromrecords,1
+numpy.recarray.dtype,1
+numpy.rec,1
+numpy.complex128.real,2
+numpy.ndarray.argmax,2
+numpy.testing._private.utils.assert_array_almost_equal_nulp,1
+numpy.testing.assert_array_almost_equal,2
+numpy.linalg.LinAlgError,2
+numpy.inner,1
+numpy.c_,1
+numpy.ndarray.__getitem__,1
+builtins.ndarray.__setitem__,1
+numpy.ndarray.imag,2
+numpy.random.uniform,2
+numpy.blackman,1
+numpy.ma.core.sqrt,1
+numpy.ma.extras.hstack,1
+numpy.float64.shape,1
+numpy.abs,1
+numpy.delete,1
+numpy.ix_,5
+numpy.ma.testutils.assert_array_almost_equal,3
+numpy.testing._private.utils.assert_array_less,3
+numpy.outer,1
+numpy.insert,2
+numpy.logical_not,1
+numpy.around,1
+numpy.in1d,1
+numpy.lexsort,1
+numpy.isfortran,2
+numpy.arctan,1
+numpy.eye,1

@@ -1,0 +1,11 @@
+function,count
+numpy.arange,4
+numpy.zeros,1
+numpy.linspace,1
+numpy.ndarray.ndim,1
+numpy.ndarray.size,1
+numpy.add,1
+numpy.log,1
+numpy.ndarray.sort,1
+numpy.ndarray.reshape,1
+numpy.concatenate,1
