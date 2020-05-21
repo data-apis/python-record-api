@@ -160,5 +160,9 @@ class TestMockNumPyMethod(unittest.TestCase):
         self.trace("10 + 10\n12323.234 - 2342.40")
         self.mock.assert_not_called()
 
+
+    def test_numpy_array_constructor(self):
+        self.trace("np.ndarray(dtype='int64', shape=tuple())")
+        self.assertCalls(call(ANY, ANY, getattr, np, 'ndarray'), call(ANY, ANY, np.ndarray, dtype='int64', shape=tuple()))
 if __name__ == "__main__":
     unittest.main()

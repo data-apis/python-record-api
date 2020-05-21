@@ -341,10 +341,14 @@ class Stack:
         self.process((fn,), fn, args)
 
     def op_CALL_FUNCTION_KW(self):
-        kwargs_names = self.pop()
-        kwargs = {name: self.pop() for name in kwargs_names}
-        args = self.pop_n(self.oparg - len(kwargs_names))
+        kwargs_keys = self.pop()
+        n_kwargs = len(kwargs_keys)
+        kwarg_values = self.pop_n(n_kwargs)
+        kwargs =  {k: v for k, v in zip(kwargs_keys, kwarg_values)}
+        args = self.pop_n(self.oparg - n_kwargs)
         fn = self.pop()
+        print(kwargs)
+
         self.process((fn,), fn, args, kwargs)
 
     def op_CALL_FUNCTION_EX(self):
