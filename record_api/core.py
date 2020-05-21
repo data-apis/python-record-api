@@ -347,7 +347,6 @@ class Stack:
         kwargs =  {k: v for k, v in zip(kwargs_keys, kwarg_values)}
         args = self.pop_n(self.oparg - n_kwargs)
         fn = self.pop()
-        print(kwargs)
 
         self.process((fn,), fn, args, kwargs)
 
