@@ -170,6 +170,17 @@ class Bound:
     kw_only: Dict[str, object] = dataclasses.field(default_factory=dict)
     var_kw: Optional[Tuple[str, Dict[str, object]]] = None
 
+    def as_dict(self):
+        """
+        Turn into dict, ignoring empty values
+        """
+        d = {}
+        for f in ["pos_only", "pos_or_kw", "var_pos", "kw_only", "var_kw"]:
+            v = getattr(self, f)
+            if v:
+                d[f] = v
+        return d
+
     @classmethod
     def create(cls, fn, args, kwargs) -> Optional[Bound]:
         try:
@@ -198,12 +209,15 @@ def log_call(location: str, fn: Callable, *args, **kwargs) -> None:
     bound = Bound.create(fn, args, kwargs)
     extra_kwargs: Dict = {}
     if bound is None:
-        extra_kwargs["params"] = {
-            "args": [preprocess(a) for a in args],
-            "kwargs": {k: preprocess(v) for k, v in kwargs.items()},
-        }
+        extra_kwargs["params"] = {}
+        if args:
+            extra_kwargs["params"]["args"] = [preprocess(a) for a in args]
+        if kwargs:
+            extra_kwargs["params"]["kwargs"] = (
+                {k: preprocess(v) for k, v in kwargs.items()},
+            )
     else:
-        extra_kwargs["bound_params"] = bound
+        extra_kwargs["bound_params"] = bound.as_dict()
     write_line(location=location, function=preprocess(fn), **extra_kwargs)
 
 
