@@ -66,7 +66,9 @@ def fn():
     _, *_s = x
 
     # create arrays
+    np.dtype(np.int16)
 
+    np.random.mtrand.RandomState(0).random()
     np.arange(10)
     np.array([1, 2, 3])
     np.zeros((4, 5))
@@ -87,6 +89,7 @@ def fn():
     np.add(x, x)
     np.exp(x)
     np.log(x)
+    x.mean()
 
     # comparison
     x == x
@@ -107,6 +110,8 @@ def fn():
     x.reshape((5, 2))
     np.column_stack([x, x])
     np.concatenate((x, x), axis=0)
+    x.astype(int)
 
+    np.ndarray((0, 1, 2))
 
 fn()
