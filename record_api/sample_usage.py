@@ -91,6 +91,9 @@ def fn():
     np.log(x)
     x.mean()
 
+    # as classmethod
+    np.ndarray.sum(x)
+
     # comparison
     x == x
     x < 2
@@ -112,6 +115,13 @@ def fn():
     np.concatenate((x, x), axis=0)
     x.astype(int)
 
+    # contains
+    1 in x
+
+    # reduction
+    np.add.reduce(x)
+    
     np.ndarray((0, 1, 2))
+
 
 fn()

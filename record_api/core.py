@@ -1,18 +1,20 @@
 from __future__ import annotations
+
+import dataclasses
+import dis
+import functools
 import inspect
 import io
-import json
+import itertools
+import operator as op
 import os
 import sys
 import types
-import dis
-import operator as op
-import dataclasses
 import warnings
-import opcode
-import functools
 from typing import *
-import itertools
+
+import opcode
+import orjson
 
 from . import get_stack
 
@@ -29,6 +31,9 @@ MAX_LENGTH = 50
 # global cache for tracer based on env variables
 TRACER = None
 
+writer: Optional[io.BufferedWriter] = None
+rand_file: Optional[io.FileIO] = None
+
 
 def get_tracer() -> Tracer:
     global TRACER
@@ -42,20 +47,44 @@ def get_tracer() -> Tracer:
 def getmodulename(v):
     if isinstance(v, types.ModuleType):
         return v.__name__
+    if isinstance(v, types.MethodDescriptorType):
+        return getmodulename(v.__objclass__)
     return getattr(v, "__module__", None)
 
 
-def type_repr(tp: Type) -> str:
-    module = getmodulename(tp)
-    assert module
-    return f"{module}.{tp.__qualname__}"
+def encode_module_value(v):
+    """
+    For all things not in builtins, return the module name, otherwise just return the name
+    """
+    mod = v.__module__
+    v = getattr(v, "__qualname__", v.__name__)
+    if mod == "builtins":
+        return v
+    return {"module": mod, "name": v}
+
+
+def encode_built_function_or_method(m: types.MethodType):
+    self = m.__self__
+    # If the self is a module, then this is a function and we can just emit the module
+    # as a string
+    if isinstance(self, types.ModuleType):
+        return encode_module_value(m)
+    # otherwise it's a method, so actually emit the self
+    return {"name": m.__name__, "self": preprocess(self)}
 
 
 ENCODERS: Dict[Type, Callable[[Any], object]] = {
     types.ModuleType: lambda o: o.__name__,
-    slice: lambda s: [s.start, s.stop, s.step],
-    type: type_repr,
-    types.MethodType: lambda m: [m.__self__, m.__name__],
+    slice: lambda s: {
+        "start": preprocess(s.start),
+        "stop": preprocess(s.stop),
+        "step": preprocess(s.step),
+    },
+    type: encode_module_value,
+    types.FunctionType: encode_module_value,
+    types.MethodType: lambda m: {"self": preprocess(m.__self__), "name": m.__name__},
+    types.BuiltinMethodType: encode_built_function_or_method,
+    types.MethodDescriptorType: lambda m: {"name": m.__name__, "class": m.__objclass__},
 }
 
 try:
@@ -65,16 +94,20 @@ except ImportError:
 else:
 
     def encode_array(a: numpy.ndarray):
-        return [list(a.shape), a.dtype.name]
+        return {"shape": a.shape, "dtype": a.dtype.name}
 
     def encode_dtype(d: numpy.dtype):
         return d.name
 
+    def encode_ufunc(u: numpy.ufunc):
+        return u.__name__
+
     ENCODERS[numpy.ndarray] = encode_array
     ENCODERS[numpy.dtype] = encode_dtype
+    ENCODERS[numpy.ufunc] = encode_ufunc
 
 
-PRIMITIVE_TYPES = (str, int, float)
+PRIMITIVE_TYPES = (str, int, float, bool)
 
 
 def preprocess(o):
@@ -85,7 +118,7 @@ def preprocess(o):
     """
     tp = type(o)
     if isinstance(o, PRIMITIVE_TYPES) and tp not in PRIMITIVE_TYPES:
-        return {"t": type_repr(tp), "v": o}
+        return {"t": encode_module_value(tp), "v": o}
     if isinstance(o, str):
         return o[:MAX_LENGTH]
     elif isinstance(o, list):
@@ -102,27 +135,21 @@ def preprocess(o):
     return o
 
 
-class JSONEncoder(json.JSONEncoder):
-    def default(self, o: object) -> object:
-        """
-        JSON encoder that special cases some types 
-        """
+def default(o: object) -> object:
+    """
+    JSON encoder that special cases some types 
+    """
 
-        tp = type(o)
-        for encoder_tp, encoder in ENCODERS.items():
-            if issubclass(tp, encoder_tp):
-                return {"t": type_repr(tp), "v": preprocess(encoder(o))}
-        return {"t": type_repr(tp)}
+    tp = type(o)
+    for encoder_tp, encoder in ENCODERS.items():
+        if issubclass(tp, encoder_tp):
+            return {"t": encode_module_value(tp), "v": encoder(o)}
+    return {"t": encode_module_value(tp)}
 
 
-def save_log(filename: str, line: int, fn: str, params: Dict[str, object],) -> None:
+def write_line(**kwargs):
     assert writer
-    data = {
-        "location": f"{filename}:{line}",
-        "function": fn,
-        "params": {k: preprocess(v) for k, v in params.items()},
-    }
-    writer.write((json.dumps(data, cls=JSONEncoder) + "\n").encode())
+    writer.write((orjson.dumps(kwargs, default) + b"\n"))
 
 
 # cache this b/c its expesnive
@@ -131,36 +158,53 @@ def signature(fn):
     return inspect.signature(fn)
 
 
-def get_arguments(fn, args, kwargs):
-    try:
-        sig = signature(fn)
-    except ValueError:
-        return None
-    try:
-        return sig.bind(*args, **kwargs).arguments
-    except TypeError:
-        return None
+@dataclasses.dataclass
+class Bound:
+    """
+    Bound args returns 
+    """
+
+    pos_only: List[Tuple[str, object]] = dataclasses.field(default_factory=list)
+    pos_or_kw: List[Tuple[str, object]] = dataclasses.field(default_factory=list)
+    var_pos: Optional[Tuple[str, List[object]]] = None
+    kw_only: Dict[str, object] = dataclasses.field(default_factory=dict)
+    var_kw: Optional[Tuple[str, Dict[str, object]]] = None
+
+    @classmethod
+    def create(cls, fn, args, kwargs) -> Optional[Bound]:
+        try:
+            sig = signature(fn)
+        except ValueError:
+            return None
+        try:
+            bound = sig.bind(*args, **kwargs)
+        except TypeError:
+            return None
+        b = cls()
+        for k, v in bound.arguments.items():
+            kind = sig.parameters[k].kind
+            if kind == inspect.Parameter.POSITIONAL_ONLY:
+                b.pos_only.append((k, preprocess(v)))
+            elif kind == inspect.Parameter.POSITIONAL_OR_KEYWORD:
+                b.pos_or_kw.append((k, preprocess(v)))
+            elif kind == inspect.Parameter.VAR_POSITIONAL:
+                b.var_pos = k, preprocess(v)
+            elif kind == inspect.Parameter.KEYWORD_ONLY:
+                b.kw_only[k] = preprocess(v)
+        return b
 
 
-def log_call(filename: str, line: int, fn: Callable, *args, **kwargs) -> None:
-    if isinstance(fn, types.MethodDescriptorType):
-        module = getmodulename(fn.__objclass__)
+def log_call(location: str, fn: Callable, *args, **kwargs) -> None:
+    bound = Bound.create(fn, args, kwargs)
+    extra_kwargs: Dict = {}
+    if bound is None:
+        extra_kwargs["params"] = {
+            "args": [preprocess(a) for a in args],
+            "kwargs": {k: preprocess(v) for k, v in kwargs.items()},
+        }
     else:
-        # for ufuuncs get module of type of ufunc
-        module = getmodulename(fn) or getmodulename(type(fn))
-    if not module:
-        warnings.warn(f"Cannot get module for {fn}")
-        return
-    # ufuncs dont have qualname
-    name = getattr(fn, "__qualname__", getattr(fn, "__name__", fn))
-    fn_name = f"{module}.{name}"
-
-    params = get_arguments(fn, args, kwargs)
-    if params is None:
-        params = kwargs
-        for i, value in enumerate(args):
-            params[str(i)] = value
-    save_log(filename, line, fn_name, params)
+        extra_kwargs["bound_params"] = bound
+    write_line(location=location, function=preprocess(fn), **extra_kwargs)
 
 
 @dataclasses.dataclass
@@ -239,17 +283,9 @@ class Stack:
     ) -> None:
         # Note: This take args as an iterable, instead of as a varargs, so that if we don't trace we don't have to expand the iterable
         if self.tracer.should_trace(*keyed_args):
-            # If this is a method implemented in C, expand it
-            # to classes function and add self as an arg
-            if isinstance(fn, types.BuiltinMethodType) and not isinstance(
-                fn.__self__, (types.ModuleType, type)
-            ):
-                self_ = fn.__self__
-                args = (self_, *args)
-                fn = getattr(type(self_), fn.__name__)
             filename = self.frame.f_code.co_filename
             line = self.frame.f_lineno
-            log_call(filename, line, fn, *args, **kwargs)
+            log_call(f"{filename}:{line}", fn, *args, **kwargs)
 
     def __call__(self) -> None:
         """
@@ -315,6 +351,7 @@ class Stack:
     def op_COMPARE_OP(self):
         # list from
         # https://github.com/python/cpython/blob/81de3c225774179cdc82a1733a64e4a876ff02b5/Lib/opcode.py#L24-L25
+        val = self.opvalcompare
         COMPARISONS = {
             "<": op.lt,
             "<": op.le,
@@ -328,11 +365,12 @@ class Stack:
             # "is": op.is_,
             # "is not": op.is_not,
         }
-        if self.opvalcompare in COMPARISONS:
+        if val in COMPARISONS:
             self.process(
                 (self.TOS, self.TOS1),
-                COMPARISONS[self.opvalcompare],
-                (self.TOS1, self.TOS,),
+                COMPARISONS[val],
+                # "in" and "not in" are reversed
+                (self.TOS1, self.TOS,) if "in" not in val else (self.TOS, self.TOS1,),
             )
 
     def op_CALL_FUNCTION(self):
@@ -441,6 +479,7 @@ class Tracer:
                 # if this was a method defined in C, use the instance as the value
                 value = value.__self__
             module = getmodulename(value) or getmodulename(type(value))
+
             if not module:
                 warnings.warn(f"Cannot get module of {value}")
                 continue
@@ -470,10 +509,6 @@ class Tracer:
             or frame_module_name == self.calls_from_module
             or frame_module_name.startswith(self.calls_from_module + ".")
         )
-
-
-writer = None
-rand_file = None
 
 
 def setup():
