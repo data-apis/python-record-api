@@ -29,6 +29,10 @@ env PYTHON_RECORD_API_INPUT=data/raw/sample_usage.jsonl \
     PYTHON_RECORD_API_OUTPUT_TYPED=data/counts_typed/sample_usage.csv \
     PYTHON_RECORD_API_OUTPUT_UNTYPED=data/counts_untyped/sample_usage.csv \
     python -m record_api.line_counts
+
+env PYTHON_RECORD_API_INPUT=data/raw/sample_usage.jsonl \
+    PYTHON_RECORD_API_OUTPUT=data/api/sample_usage.json \
+    python -m record_api.infer_apis
 ```
 
 Here is how I can use it to see all the functions the scikit image tests call in NumPy:
