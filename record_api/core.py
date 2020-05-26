@@ -344,7 +344,7 @@ class Stack:
         kwargs_keys = self.pop()
         n_kwargs = len(kwargs_keys)
         kwarg_values = self.pop_n(n_kwargs)
-        kwargs =  {k: v for k, v in zip(kwargs_keys, kwarg_values)}
+        kwargs = {k: v for k, v in zip(kwargs_keys, kwarg_values)}
         args = self.pop_n(self.oparg - n_kwargs)
         fn = self.pop()
 
@@ -369,12 +369,13 @@ class Stack:
         function_or_self = self.pop()
         null_or_method = self.pop()
         if null_or_method is self.NULL:
-            self.process((function_or_self,), function_or_self, args)
+            function = function_or_self
+            self.process((function,), function, args)
         else:
+            self_ = function_or_self
+            method = null_or_method
             self.process(
-                (function_or_self,),
-                null_or_method,
-                itertools.chain((function_or_self,), args),
+                (self_,), method, itertools.chain((self_,), args),
             )
 
 
