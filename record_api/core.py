@@ -94,7 +94,7 @@ except ImportError:
 else:
 
     def encode_array(a: numpy.ndarray):
-        return {"shape": a.shape, "dtype": a.dtype.name}
+        return {"dtype": a.dtype.name}
 
     def encode_dtype(d: numpy.dtype):
         return d.name
@@ -107,31 +107,37 @@ else:
     ENCODERS[numpy.ufunc] = encode_ufunc
 
 
-PRIMITIVE_TYPES = (str, int, float, bool)
+MAX_SEQUENCE = 5
+MAX_STRING = 50
 
 
 def preprocess(o):
     """
-    Turns tuples into dicts, removes long values, and turns dicts into lists (so that keys can be any type).
+    Preserves lists and strings. Tuples and dicts are recursed.
+    
+    All others are replaced with their types
 
-    Also wraps types that are subtypes of primitives, but not primitives themselves, to provide types.
     """
     tp = type(o)
-    if isinstance(o, PRIMITIVE_TYPES) and tp not in PRIMITIVE_TYPES:
-        return {"t": encode_module_value(tp), "v": o}
-    if isinstance(o, str):
-        return o[:MAX_LENGTH]
-    elif isinstance(o, list):
-        return [preprocess(v) for v in o[:MAX_LENGTH]]
-    elif isinstance(o, dict):
+    if tp == str:
+        return o[:MAX_STRING]
+    if tp == list:
+        return [preprocess(v) for v in o[:MAX_SEQUENCE]]
+    if isinstance(o, dict):
         return {
-            "t": "dict",
+            "t": encode_module_value(tp),
             "v": [
                 [preprocess(k), preprocess(v)] for k, v in list(o.items())[:MAX_LENGTH]
             ],
         }
-    elif isinstance(o, tuple):
-        return {"t": "tuple", "v": preprocess(list(o))}
+    if isinstance(o, tuple):
+        return {
+            "t": encode_module_value(tp),
+            "v": [preprocess(v) for v in o[:MAX_SEQUENCE]],
+        }
+    if isinstance(o, (int, float, bool, list, str)):
+        # Don't send literals of these
+        return {"t": encode_module_value(tp)}
     return o
 
 
