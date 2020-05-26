@@ -13,14 +13,11 @@ import types
 import warnings
 from typing import *
 
+
 import opcode
 import orjson
 
 from . import get_stack
-
-# TODO: Switch places of contains
-# fix functions strings which aren't function
-#  i.e. 'numpy.ma.core.<numpy.ma.core._convert2ma object at 0x7ff9e03f5fd0>(args=tuple[tuple[int, int]])',
 
 __all__ = ["Tracer", "setup", "finalize", "get_tracer"]
 
@@ -52,6 +49,31 @@ def getmodulename(v):
     return getattr(v, "__module__", None)
 
 
+@functools.singledispatch
+def encode(o: object) -> object:
+    """
+    Encodes an object for serialization. Type is always serialized as well
+    If falsy is returned, the value is not included.
+    """
+    return None
+
+
+@encode.register
+def _encode_module(o: types.ModuleType):
+    return o.__name__
+
+
+@encode.register
+def _encode_slice(s: slice):
+    return {
+        "start": preprocess(s.start),
+        "stop": preprocess(s.stop),
+        "step": preprocess(s.step),
+    }
+
+
+@encode.register(types.FunctionType)
+@encode.register(type)
 def encode_module_value(v):
     """
     For all things not in builtins, return the module name, otherwise just return the name
@@ -63,7 +85,8 @@ def encode_module_value(v):
     return {"module": mod, "name": v}
 
 
-def encode_built_function_or_method(m: types.MethodType):
+@encode.register
+def _encode_builtin_function_method(m: types.BuiltinMethodType):
     self = m.__self__
     # If the self is a module, then this is a function and we can just emit the module
     # as a string
@@ -73,19 +96,15 @@ def encode_built_function_or_method(m: types.MethodType):
     return {"name": m.__name__, "self": preprocess(self)}
 
 
-ENCODERS: Dict[Type, Callable[[Any], object]] = {
-    types.ModuleType: lambda o: o.__name__,
-    slice: lambda s: {
-        "start": preprocess(s.start),
-        "stop": preprocess(s.stop),
-        "step": preprocess(s.step),
-    },
-    type: encode_module_value,
-    types.FunctionType: encode_module_value,
-    types.MethodType: lambda m: {"self": preprocess(m.__self__), "name": m.__name__},
-    types.BuiltinMethodType: encode_built_function_or_method,
-    types.MethodDescriptorType: lambda m: {"name": m.__name__, "class": m.__objclass__},
-}
+@encode.register
+def _encode_method(m: types.MethodType):
+    return {"self": preprocess(m.__self__), "name": m.__name__}
+
+
+@encode.register
+def _encode_method_descriptor(m: types.MethodDescriptorType):
+    return {"name": m.__name__, "class": m.__objclass__}
+
 
 try:
     import numpy
@@ -93,18 +112,21 @@ except ImportError:
     pass
 else:
 
+    @encode.register
     def encode_array(a: numpy.ndarray):
         return {"dtype": a.dtype.name}
 
+    @encode.register
     def encode_dtype(d: numpy.dtype):
         return d.name
 
+    @encode.register
     def encode_ufunc(u: numpy.ufunc):
         return u.__name__
 
-    ENCODERS[numpy.ndarray] = encode_array
-    ENCODERS[numpy.dtype] = encode_dtype
-    ENCODERS[numpy.ufunc] = encode_ufunc
+    @encode.register
+    def encode_convert_to_ma(u: numpy.ma.core._convert2ma):
+        return u._func.__name__
 
 
 MAX_SEQUENCE = 5
@@ -146,11 +168,11 @@ def default(o: object) -> object:
     JSON encoder that special cases some types 
     """
 
-    tp = type(o)
-    for encoder_tp, encoder in ENCODERS.items():
-        if issubclass(tp, encoder_tp):
-            return {"t": encode_module_value(tp), "v": encoder(o)}
-    return {"t": encode_module_value(tp)}
+    t = encode_module_value(type(o))
+    v = encode(o)
+    if v:
+        return {"t": t, "v": v}
+    return {"t": t}
 
 
 def write_line(**kwargs):
