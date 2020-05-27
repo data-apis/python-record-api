@@ -4,7 +4,6 @@ import dataclasses
 import dis
 import functools
 import inspect
-import io
 import itertools
 import operator as op
 import os
@@ -13,9 +12,9 @@ import types
 import warnings
 from typing import *
 
+from . import jsonl
 
 import opcode
-import orjson
 
 from . import get_stack
 
@@ -28,8 +27,8 @@ MAX_LENGTH = 50
 # global cache for tracer based on env variables
 TRACER = None
 
-writer: Optional[io.BufferedWriter] = None
-rand_file: Optional[io.FileIO] = None
+context_manager: Optional[ContextManager] = None
+write_line: Optional[Callable[[dict], None]] = None
 
 
 def get_tracer() -> Tracer:
@@ -175,9 +174,6 @@ def default(o: object) -> object:
     return {"t": t}
 
 
-def write_line(**kwargs):
-    assert writer
-    writer.write((orjson.dumps(kwargs, default) + b"\n"))
 
 
 # cache this b/c its expesnive
@@ -235,18 +231,22 @@ class Bound:
 
 def log_call(location: str, fn: Callable, *args, **kwargs) -> None:
     bound = Bound.create(fn, args, kwargs)
-    extra_kwargs: Dict = {}
+    line: Dict = {
+        "location": location,
+        "function": preprocess(fn)
+    }
     if bound is None:
-        extra_kwargs["params"] = {}
+        line["params"] = {}
         if args:
-            extra_kwargs["params"]["args"] = [preprocess(a) for a in args]
+            line["params"]["args"] = [preprocess(a) for a in args]
         if kwargs:
-            extra_kwargs["params"]["kwargs"] = (
+            line["params"]["kwargs"] = (
                 {k: preprocess(v) for k, v in kwargs.items()},
             )
     else:
-        extra_kwargs["bound_params"] = bound.as_dict()
-    write_line(location=location, function=preprocess(fn), **extra_kwargs)
+        line["bound_params"] = bound.as_dict()
+    assert write_line
+    write_line(line)
 
 
 @dataclasses.dataclass
@@ -554,14 +554,12 @@ class Tracer:
 
 
 def setup():
-    global writer, rand_file
+    global write_line, context_manager
     FILE_NAME = os.environ["PYTHON_RECORD_API_OUTPUT_FILE"]
-    rand_file = io.FileIO(FILE_NAME, "w")
-    writer = io.BufferedWriter(rand_file)
+    context_manager = jsonl.write(FILE_NAME, default=default)
+    write_line = context_manager.__enter__()
 
 
 def finalize():
-    assert writer
-    assert rand_file
-    writer.flush()
-    rand_file.close()
+    assert context_manager
+    context_manager.__exit__(*sys.exc_info())
