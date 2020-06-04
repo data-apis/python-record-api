@@ -280,7 +280,11 @@ class DictInput(InputTypeBase):
     v: typing.List[typing.Tuple[InputType, InputType]]
 
     def to_output(self) -> DictOutput:
-        key, value = map(unify_inputs, zip(*self.v))
+        if self.v:
+            key, value = map(unify_inputs, zip(*self.v))
+        else:
+            key = BottomOutput()
+            value = BottomOutput()
         return DictOutput(key=key, value=value)
 
 
