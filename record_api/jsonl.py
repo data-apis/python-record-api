@@ -20,14 +20,14 @@ def read(path: str) -> typing.Iterator[typing.Iterable[dict]]:
     file = io.FileIO(path, "r")
     buffer = io.BufferedReader(file)
     stream = io.TextIOWrapper(buffer)  # type: ignore
-    yield read_lines(n, stream)
+    yield read_lines(path, n, stream)
     stream.close()
     buffer.close()
     file.close()
 
 
-def read_lines(n: int, stream: io.TextIOWrapper) -> typing.Iterable[dict]:
-    for _ in tqdm.trange(n, desc="reading"):
+def read_lines(path, n: int, stream: io.TextIOWrapper) -> typing.Iterable[dict]:
+    for _ in tqdm.trange(n, desc=f"reading {path}"):
         yield orjson.loads(stream.readline())
 
 
