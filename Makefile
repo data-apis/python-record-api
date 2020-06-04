@@ -1,13 +1,25 @@
-.PHONY: groupby_location clean_groupby_location clean all
+.PHONY: groupby_location clean_groupby_location clean_api clean_raw clean all
 
 LIBRARIES := sample_usage skimage
 
-all: groupby_location
+all: data/api/sample_usage.json
 
-clean: clean_groupby_location
+clean: clean_groupby_location clean_api clean_raw
+
+
+clean_api:
+	rm -f data/api/*
+
+
+data/api/%.json: data/groupby_location/%.jsonl
+	env PYTHON_RECORD_API_OUTPUT=$@ \
+		PYTHON_RECORD_API_INPUT=$< \
+		PYTHON_RECORD_API_LABEL=$(*F) \
+		python -m record_api.infer_apis
+
 
 clean_groupby_location:
-	rm data/groupby_location/*
+	rm -f data/groupby_location/*
 
 
 groupby_location: $(addprefix data/groupby_location/,$(addsuffix .jsonl,$(LIBRARIES)))
@@ -18,6 +30,9 @@ data/groupby_location/%.jsonl: data/raw/%.jsonl
 		PYTHON_RECORD_API_INPUT=$< \
 		python -m record_api.line_counts
 
+
+clean_raw:
+	rm -f data/raw/*
 
 
 data/raw/skimage.jsonl:

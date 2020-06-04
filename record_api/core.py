@@ -134,31 +134,33 @@ MAX_STRING = 50
 
 def preprocess(o):
     """
-    Preserves lists and strings. Tuples and dicts are recursed.
+    Preserves lists, strings, and None. Tuples and dicts are recursed.
     
-    All others are replaced with their types
+    All others primitive subclasses are replaced with their types.
 
+    All non primitives subclasses are passed through to be handled by `default`.
     """
     tp = type(o)
     if tp == str:
         return o[:MAX_STRING]
     if tp == list:
         return [preprocess(v) for v in o[:MAX_SEQUENCE]]
-    if isinstance(o, dict):
+    if tp == dict:
         return {
-            "t": encode_module_value(tp),
+            "t": "dict",
             "v": [
                 [preprocess(k), preprocess(v)] for k, v in list(o.items())[:MAX_LENGTH]
             ],
         }
-    if isinstance(o, tuple):
+    if tp == tuple:
         return {
-            "t": encode_module_value(tp),
+            "t": "tuple",
             "v": [preprocess(v) for v in o[:MAX_SEQUENCE]],
         }
-    if isinstance(o, (int, float, bool, list, str)):
+    if isinstance(o, (int, float, bool, list, str, dict, tuple)):
         # Don't send literals of these
         return {"t": encode_module_value(tp)}
+    # Other types will be encoded by the `default` function.
     return o
 
 
@@ -172,7 +174,6 @@ def default(o: object) -> object:
     if v:
         return {"t": t, "v": v}
     return {"t": t}
-
 
 
 
@@ -231,18 +232,13 @@ class Bound:
 
 def log_call(location: str, fn: Callable, *args, **kwargs) -> None:
     bound = Bound.create(fn, args, kwargs)
-    line: Dict = {
-        "location": location,
-        "function": preprocess(fn)
-    }
+    line: Dict = {"location": location, "function": preprocess(fn)}
     if bound is None:
         line["params"] = {}
         if args:
             line["params"]["args"] = [preprocess(a) for a in args]
         if kwargs:
-            line["params"]["kwargs"] = (
-                {k: preprocess(v) for k, v in kwargs.items()},
-            )
+            line["params"]["kwargs"] = {k: preprocess(v) for k, v in kwargs.items()}
     else:
         line["bound_params"] = bound.as_dict()
     assert write_line

@@ -79,6 +79,7 @@ def fn():
     # attribtues
     x = np.arange(10)
     x.shape
+    x.shape = (10, 1)
     x.ndim
     x.dtype
     x.size

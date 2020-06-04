@@ -1,150 +1,662 @@
 """
-Functions and tools to unify types
+Functions and tools to unify types.
+
+__str__ of output types should be representation as type signature in function paramater
 """
 from __future__ import annotations
 
 import typing
 import collections
-import dataclasses
+import pydantic
+import abc
 
-__all__ = ["from_params", "create_type", "Type", "unify"]
-
-
-def from_params(
-    params: typing.Dict[str, object]
-) -> typing.Tuple[typing.List[Type], typing.Dict[str, Type]]:
-    args: typing.Dict[int, Type] = {}
-    kwargs: typing.Dict[str, Type] = {}
-    for key, value in params.items():
-        try:
-            idx = int(key)
-        except ValueError:
-            kwargs[key] = create_type(value)
-        else:
-            args[idx] = create_type(value)
-    return list(args[i] for i in range(len(args))), kwargs
-
-
-def create_type(v: object) -> Type:
-    """
-    Create a structured type from the output
-    """
-    if isinstance(v, dict):
-        tp = v["t"]
-        if tp == "tuple" and v["v"]:
-            return Generic("tuple", tuple(map(create_type, v["v"])))
-        if tp == "builtins.module":
-            return Module(v["v"])
-        if tp == "builtins.type":
-            return Generic("Type", (v["v"],))
-        if tp == "builtins.slice":
-            return Generic("slice", tuple(map(create_type, v["v"])))
-        return tp
-    if isinstance(v, list) and v:
-        return Generic("list", (unify(map(create_type, v)),))
-    if isinstance(v, str):
-        return LiteralString(v)
-    return type(v).__name__
-
+__all__ = [
+    "create_type",
+    "OutputType",
+    "unify",
+    "NoneOutput",
+    "StringOutput",
+    "ListOutput",
+    "TupleOutput",
+    "DictOutput",
+    "ObjectOutput",
+    "OtherOutput",
+    "ModuleOutput",
+    "SliceOutput",
+    "TypeOutput",
+    "FunctionOutput",
+    "MethodOutput",
+    "ClassMethodOutput",
+    "UnionOutput",
+    "BottomOutput",
+]
 
 # If thera are more than this amount in a union, just use any
 MAX_UNION_ITEMS = 5
+# More than this and it will be tuple of arbitrary length
+MAX_TUPLE_ITEMS = 2
 
 
-def unify(types: typing.Iterable[Type]) -> Type:
+def create_type(o: object) -> OutputType:
+    try:
+        tp = pydantic.parse_obj_as(InputType, o)  # type: ignore
+    except pydantic.error_wrappers.ValidationError:
+        raise ValueError(o)
+    return to_output(tp)
+
+
+def unify_inputs(types: typing.Iterable[InputType]) -> OutputType:
+    return unify(map(to_output, types))
+
+
+def unify(types: typing.Iterable[OutputType]) -> OutputType:
     types = set(types)
-    if len(types) == 1:
-        return types.pop()
-    if not types:
-        return "object"
-    # mapping of generic type name and n args to args
-    generic_types: typing.Dict[
-        typing.Tuple[str, int], typing.Set[typing.Tuple[Type, ...]]
+    tp_tps_to_tps: typing.DefaultDict[
+        typing.Type[OutputType], typing.Set[OutputType]
     ] = collections.defaultdict(set)
-    regular_types: typing.List[Type] = []
-    while types:
-        t = types.pop()
-        if isinstance(t, Generic):
-            generic_types[(t.name, len(t.args))].add(t.args)
-        elif isinstance(t, Union):
-            types.update(t.args)
-        elif t is None:
-            # Don't add never type
-            pass
+    for tp in types:
+        tp_tps_to_tps[type(tp)].add(tp)
+
+    unified_types: typing.Set[OutputType] = set()
+
+    if ObjectOutput in tp_tps_to_tps:
+        return ObjectOutput()
+
+    for tp_tp, tps in tp_tps_to_tps.items():
+        res: OutputType = _unify_output_tp(tp_tp, tps)
+        if isinstance(res, UnionOutput):
+            unified_types |= set(res.options)
         else:
-            regular_types.append(t)
+            unified_types.add(res)
 
-    # Unify each generic type and add to regular_types
-    for keys, args in generic_types.items():
-        regular_types.append(Generic(keys[0], tuple(map(unify, zip(*args)))))
+    if not unified_types:
+        return BottomOutput()
+    if len(unified_types) > MAX_UNION_ITEMS:
+        return ObjectOutput()
+    if len(unified_types) == 1:
+        return unified_types.pop()
+    return UnionOutput(options=unified_types)
 
-    # If we have all Bottom types emit the bottom
-    if not regular_types:
-        return None
-    if len(regular_types) == 1:
-        return regular_types[0]
 
-    # If we have an any in the regular types, just emit that
-    if "object" in regular_types:
-        return "object"
+OUTPUT_TYPE = typing.TypeVar("OUTPUT_TYPE", bound="OutputTypeBase")
 
-    # If we have a `str` type, remove all string literals
-    if "str" in regular_types:
-        regular_types = list(
-            filter(lambda t: not isinstance(t, LiteralString), regular_types)
+
+# Define this function for typing purposes
+def _unify_output_tp(
+    cls: typing.Type[OUTPUT_TYPE], tps: typing.Iterable[OUTPUT_TYPE]
+) -> OutputType:
+    return cls.unify(tps)
+
+
+class BaseModel(pydantic.BaseModel):
+
+    class Config:
+        extra = "forbid"
+
+    # https://github.com/samuelcolvin/pydantic/issues/1303#issuecomment-599712964
+    def __hash__(self):
+        return hash((type(self),) + tuple(self.__dict__.values()))
+
+
+class OutputTypeBase(BaseModel, abc.ABC):
+    @classmethod
+    @abc.abstractmethod
+    def unify(
+        cls: typing.Type[OUTPUT_TYPE], tps: typing.Iterable[OUTPUT_TYPE]
+    ) -> OutputType:
+        ...
+
+
+class InputTypeBase(BaseModel, abc.ABC):
+    @abc.abstractmethod
+    def to_output(self) -> OutputType:
+        ...
+
+def to_output(tp: InputType) -> OutputType:
+    if tp is None:
+        return NoneOutput()
+    return tp.to_output()
+
+def is_unknown(tp: object) -> bool:
+    return isinstance(tp, (ObjectOutput, BottomOutput))
+
+class NoneOutput(OutputTypeBase):
+    type: typing.Literal["None"] = "None"
+
+    @classmethod
+    def unify(cls, tps: typing.Iterable[NoneOutput]) -> NoneOutput:
+        return NoneOutput()
+
+    def __str__(self):
+        return "None"
+
+
+class StringInput(InputTypeBase):
+    __root__: str
+
+    def to_output(self) -> StringOutput:
+        return StringOutput(options=[self.__root__])
+
+
+class StringOutput(OutputTypeBase):
+    """
+    >>> str(StringOutput())
+    str
+    >>> str(StringOutput(options=["hi", "there"]))
+    Literal["hi", "there"]
+    """
+
+    type: typing.Literal["str"] = "str"
+    options: typing.Union[typing.FrozenSet[str], None] = None
+
+    def __str__(self):
+        if self.options:
+            return f'Literal[{", ".join(map(str, self.options))}]'
+        return "str"
+
+    @classmethod
+    def unify(cls, tps: typing.Iterable[StringOutput]) -> StringOutput:
+        options: typing.Set[str] = set()
+        for tp in tps:
+            if tp.options is None:
+                return StringOutput()
+            options.update(tp.options)
+        return StringOutput(options=options)
+
+
+class ListInput(InputTypeBase):
+    __root__: typing.List[InputType]
+
+    def to_output(self) -> ListOutput:
+        return ListOutput(item=unify(map(to_output, self.__root__)))
+
+
+class ListOutput(OutputTypeBase):
+    type: typing.Literal["list"] = "list"
+    item: OutputType
+
+    def __str__(self):
+        if is_unkown(self.item):
+            return "list"
+        return f"list[{str(self.item)}]"
+
+    @classmethod
+    def unify(cls, tps: typing.Iterable[ListOutput]) -> ListOutput:
+        return ListOutput(item=unify(tp.item for tp in tps))
+
+
+class TupleInput(InputTypeBase):
+    t: typing.Literal["tuple"]
+    v: typing.List[InputType]
+
+    def to_output(self) -> TupleOutput:
+        return TupleOutput(items=list(map(to_output, self.v)))
+
+
+class TupleOutput(OutputTypeBase):
+    type: typing.Literal["tuple"] = "tuple"
+    # If just one item then tuple of arbitrary length of all the same type
+    items: typing.Union[OutputType, typing.Tuple[OutputType, ...]]
+
+    def __str__(self):
+        if is_unknown(self.items):
+            return "tuple"
+        if isinstance(self.items, list):
+            return f'tuple[{", ".join(map(str, self.items))}]'
+        return f"tuple[{str(self.items)}, ...]"
+
+    @classmethod
+    def unify(cls, tps: typing.Iterable[TupleOutput]) -> TupleOutput:
+        lengths = {len(tp.items) if isinstance(tp.items, tuple) else None for tp in tps}
+        # only should be None if we have a fixed length tuple
+        length = None if None in lengths or len(lengths) != 1 else lengths.pop()
+        if length is not None and length > MAX_UNION_ITEMS:
+            length = None
+        # Is list if we have a fixed length typle
+        all_items: typing.Union[
+            typing.Set[OutputType], typing.List[typing.Set[OutputType]]
+        ] = [set() for _ in range(length)] if length is not None else set()
+        for tp in tps:
+            items = tp.items
+            if isinstance(all_items, set):
+                if isinstance(items, tuple):
+                    all_items |= set(items)
+                else:
+                    all_items.add(items)
+            else:
+                assert isinstance(items, tuple)
+                for i, item in enumerate(items):
+                    all_items[i].add(item)
+
+        return TupleOutput(
+            items=unify(all_items)
+            if isinstance(all_items, set)
+            else tuple(map(unify, all_items))
         )
-    if len(regular_types) > MAX_UNION_ITEMS:
+
+
+class DictInput(InputTypeBase):
+    t: typing.Literal["dict"]
+    v: typing.List[typing.Tuple[InputType, InputType]]
+
+    def to_output(self) -> DictOutput:
+        key, value = map(unify_inputs, zip(*self.v))
+        return DictOutput(key=key, value=value)
+
+
+class DictOutput(OutputTypeBase):
+    type: typing.Literal["dict"] = "dict"
+    key: OutputType
+    value: OutputType
+
+    def __str__(self):
+        if is_unknown(self.key) and is_unknown(self.value):
+            return "dict"
+        return f"dict[{str(self.key)}, {str(self.value)}]"
+
+    @classmethod
+    def unify(cls, tps: typing.Iterable[DictOutput]) -> DictOutput:
+        return DictOutput(
+            key=unify(tp.key for tp in tps), value=unify(tp.value for tp in tps)
+        )
+
+
+class ObjectOutput(OutputTypeBase):
+    type: typing.Literal["object"] = "object"
+
+    def __str__(self):
         return "object"
-    return Union(tuple(regular_types))
+
+    @classmethod
+    def unify(cls, tps: typing.Iterable[ObjectOutput]) -> ObjectOutput:
+        return ObjectOutput()
 
 
-# "object" is top and None is bottom
-# None is used to represent type params that don't exist. We dont need it but adding
-# it makes unfication of variadic args easier since they always have a type, sometimes
-# it's just None
-Type = typing.Union[str, None, "Generic", "Union", "LiteralString", "Module"]
+class BuiltinNamedInput(BaseModel):
+    __root__: str
 
 
-@dataclasses.dataclass(frozen=True)
-class Module:
+class ModuleNamedInput(BaseModel):
+    module: str
+    name: str
+
+
+NamedInput = typing.Union[BuiltinNamedInput, ModuleNamedInput]
+
+
+class OtherInputType(InputTypeBase):
+    t: NamedInput
+
+    def to_output(self) -> OtherOutput:
+        return OtherOutput(type=NamedOutput.from_input(self.t))
+
+
+class NamedOutput(BaseModel):
+    # None if builtin
+    module: typing.Optional[str] = None
+    name: str
+
+    @classmethod
+    def from_input(cls, input: NamedInput) -> NamedOutput:
+        if isinstance(input, BuiltinNamedInput):
+            return cls(name=input.__root__)
+        return cls(name=input.name, module=input.module)
+
+    def __str__(self):
+        if self.module is None:
+            return self.name
+        return f"{self.module}.{self.name}"
+
+
+class OtherOutput(OutputTypeBase):
+    type: NamedOutput
+
+    def __str__(self):
+        return str(self.type)
+
+    @classmethod
+    def unify(cls, tps: typing.Iterable[OtherOutput]) -> typing.Union[OtherOutput, UnionOutput]:
+        tps = set(tps)
+        if len(tps) == 1:
+            return tps.pop()
+        return UnionOutput(options=tps)
+
+
+class ModuleInput(InputTypeBase):
+    t: typing.Literal["module"]
+    v: str
+
+    def to_output(self) -> ModuleOutput:
+        return ModuleOutput(name=self.v)
+
+
+class ModuleOutput(OutputTypeBase):
+    type: typing.Literal["module"] = "module"
+    name: typing.Optional[str] = None
+
+    def __str__(self):
+        return "types.ModuleType"
+
+    @classmethod
+    def unify(cls, tps: typing.Iterable[ModuleOutput]) -> ModuleOutput:
+        names = set(tp.name for tp in tps)
+        if len(names) == 1:
+            return ModuleOutput(name=names.pop())
+        return ModuleOutput()
+
+
+class SliceInput(InputTypeBase):
+    t: typing.Literal["slice"]
+    v: SliceInputValue
+
+    def to_output(self) -> SliceOutput:
+        v = self.v
+        return SliceOutput(
+            start=to_output(v.start), stop=to_output(v.stop), step=to_output(v.step),
+        )
+
+
+class SliceInputValue(BaseModel):
+    start: InputType
+    stop: InputType
+    step: InputType
+
+
+class SliceOutput(OutputTypeBase):
+
+    type: typing.Literal["slice"] = "slice"
+    start: OutputType
+    stop: OutputType
+    step: OutputType
+
+    def __str___(self):
+        """
+        Doesn't exist yet as generic type, but should
+
+        https://github.com/python/typing/issues/159
+        """
+        if (
+            is_unknown(self.start)
+            and is_unknown(self.stop)
+            and is_unknown(self.step)
+        ):
+            return "slice"
+        return f"slice[{str(self.start)}, {str(self.stop)}, {str(self.step)}]"
+
+    @classmethod
+    def unify(cls, tps: typing.Iterable[SliceOutput]) -> SliceOutput:
+        start: typing.Set[OutputType] = set()
+        stop: typing.Set[OutputType] = set()
+        step: typing.Set[OutputType] = set()
+        for tp in tps:
+            start.add(tp.start)
+            stop.add(tp.stop)
+            step.add(tp.step)
+        return SliceOutput(start=unify(start), step=unify(step), stop=unify(stop))
+
+
+class TypeInput(InputTypeBase):
+    t: typing.Literal["type"]
+    v: NamedInput
+
+    def to_output(self) -> TypeOutput:
+        return TypeOutput(name=NamedOutput.from_input(self.v))
+
+
+class TypeOutput(OutputTypeBase):
+    type: typing.Literal["type"] = "type"
+    # If none, then any type
+    name: typing.Optional[NamedOutput] = None
+
+    def __str__(self):
+        if self.name is None:
+            return "type"
+        return f"type[{str(self.name)}]"
+
+    @classmethod
+    def unify(cls, tps: typing.Iterable[TypeOutput]) -> TypeOutput:
+        names = set(tp.name for tp in tps)
+        if len(names) == 1:
+            return TypeOutput(name=names.pop())
+        return TypeOutput()
+
+
+class FunctionInput(InputTypeBase):
+    t: typing.Literal["function"]
+    v: NamedInput
+
+    def to_output(self) -> FunctionOutput:
+        return FunctionOutput(name=NamedOutput.from_input(self.v))
+
+
+class FunctionOutput(OutputTypeBase):
+    type: typing.Literal["function"] = "function"
+    # If none, then any function
+    name: typing.Optional[NamedOutput] = None
+
+    def __str__(self):
+        return "typing.Callable"
+
+    @classmethod
+    def unify(cls, tps: typing.Iterable[FunctionOutput]) -> FunctionOutput:
+        names = set(tp.name for tp in tps)
+        if len(names) == 1:
+            return FunctionOutput(name=names.pop())
+        return FunctionOutput()
+
+
+class BuiltinFunctionInput(InputTypeBase):
+    t: typing.Literal["builtin_function_or_method"] = "builtin_function_or_method"
+    v: NamedInput
+
+    def to_output(self) -> FunctionOutput:
+        return FunctionOutput(name=NamedOutput.from_input(self.v))
+
+
+class BuiltinMethodInput(InputTypeBase):
+    t: typing.Literal["builtin_function_or_method"] = "builtin_function_or_method"
+    v: MethodInputValue
+
+    def to_output(self) -> MethodOutput:
+        return MethodOutput(name=self.v.name, self=to_output(self.v.self))
+
+
+class MethodInputValue(BaseModel):  # type: ignore
+    name: str
+    self: InputType
+
+
+class MethodOutput(OutputTypeBase):  # type: ignore
+    type: typing.Literal["method"] = "method"
+    name: str
+    self: OutputType
+
+    def __str__(self):
+        return "typing.Callable"
+
+    @classmethod
+    def unify(
+        cls, tps: typing.Iterable[MethodOutput]
+    ) -> typing.Union[MethodOutput, FunctionOutput]:
+        tps = set(tps)
+        if len(tps) == 1:
+            return tps.pop()
+        return FunctionOutput()
+
+
+class MethodInput(InputTypeBase):
+    t: typing.Literal["method"] = "method"
+    v: MethodInputValue
+
+    def to_output(self) -> MethodOutput:
+        return MethodOutput(name=self.v.name, self=to_output(self.v.self))
+
+
+class MethodDescriptorInput(InputTypeBase):
+    t: typing.Literal["method_descriptor"] = "method_descriptor"
+    v: MethodDescriptorInputValue
+
+    def to_output(self) -> ClassMethodOutput:
+        return ClassMethodOutput(
+            name=self.v.name, class_=self.v.class_.to_output().name
+        )
+
+
+class MethodDescriptorInputValue(BaseModel):
+    name: str
+    class_: TypeInput = pydantic.Field(alias="class")
+
+
+class ClassMethodOutput(OutputTypeBase):  # type: ignore
+    type: typing.Literal["classmethod"] = "classmethod"
+    class_: NamedOutput
     name: str
 
     def __str__(self):
-        return str(self.name)
+        return "typing.Callable"
 
-    def __repr__(self):
-        return str(self)
+    @classmethod
+    def unify(
+        cls, tps: typing.Iterable[ClassMethodOutput]
+    ) -> typing.Union[ClassMethodOutput, FunctionOutput]:
+        tps = set(tps)
+        if len(tps) == 1:
+            return tps.pop()
+        return FunctionOutput()
 
 
-@dataclasses.dataclass(frozen=True)
-class LiteralString:
-    value: str
+class NumpyUfuncInput(InputTypeBase):
+    t: NumpyUfuncInputType
+    v: str
+
+    def to_output(self) -> FunctionOutput:
+        return FunctionOutput(name=NamedOutput(module="numpy", name=self.v))
+
+
+class NumpyUfuncInputType(BaseModel):
+    module: typing.Literal["numpy"]
+    name: typing.Literal["ufunc"]
+
+
+class NumpyConvert2MAInput(InputTypeBase):
+    t: NumpyConvert2MAInputType
+    v: str
+
+    def to_output(self) -> FunctionOutput:
+        return FunctionOutput(name=NamedOutput(module="numpy.ma", name=self.v))
+
+
+class NumpyConvert2MAInputType(BaseModel):
+    module: typing.Literal["numpy.ma.core"]
+    name: typing.Literal["_convert2ma"]
+
+
+class NumpyNDArrayInput(InputTypeBase):
+    t: NumpyNDArrayInputType
+    v: NumpyNDArrayValue
+
+    def to_output(self) -> OtherOutput:
+        return OtherOutput(type=NamedOutput(module="numpy", name="ndarray"))
+
+
+class NumpyNDArrayInputType(BaseModel):
+    module: typing.Literal["numpy"]
+    name: typing.Literal["ndarray"]
+
+
+class NumpyNDArrayValue(BaseModel):
+    dtype: str
+
+
+class NumpyDTypeInput(InputTypeBase):
+    t: NumpyDTypeInputType
+    v: str
+
+    def to_output(self) -> OtherOutput:
+        return OtherOutput(type=NamedOutput(module="numpy", name="dtype"))
+
+
+class NumpyDTypeInputType(BaseModel):
+    module: typing.Literal["numpy"]
+    name: typing.Literal["ndarray"]
+
+
+class UnionOutput(OutputTypeBase):
+    type: typing.Literal["union"] = "union"
+    options: typing.Tuple[OutputType, ...]
 
     def __str__(self):
-        return repr(self.value)
+        return f'Union[{", ".join(map(str, self.options))}]'
 
-    def __repr__(self):
-        return str(self)
-
-
-@dataclasses.dataclass(frozen=True)
-class Generic:
-    name: str
-    args: typing.Tuple[Type, ...]
-
-    def __str__(self):
-        return f"{self.name}[{', '.join(map(str, self.args))}]"
-
-    def __repr__(self):
-        return str(self)
+    @classmethod
+    def unify(cls, tps: typing.Iterable[UnionOutput]) -> OutputType:
+        options: typing.Set[OutputType] = set()
+        for tp in tps:
+            options |= set(tp.options)
+        if len(options) == 1:
+            return options.pop()
+        return UnionOutput(options=options)
 
 
-@dataclasses.dataclass(frozen=True)
-class Union:
-    args: typing.Tuple[Type, ...]
+class BottomOutput(OutputTypeBase):
+    """
+    Like any but represents an unkown type, so a union with it is always the other
+    """
+    type: typing.Literal['bottom'] = 'bottom'
 
-    def __str__(self):
-        return f"Union[{', '.join(sorted(map(str, self.args)))}]"
+    @classmethod
+    def unify(cls, tps: typing.Iterable[BottomOutput]) -> UnionOutput:
+        # So that when unified will give back no more options
+        return UnionOutput(options=[])
 
-    def __repr__(self):
-        return str(self)
+
+# Make them unions not subclasses so they are closed
+# and pydantic will iterate through to find right one
+InputType = typing.Union[
+    None,
+    StringInput,
+    ListInput,
+    TupleInput,
+    DictInput,
+    OtherInputType,
+    ModuleInput,
+    SliceInput,
+    TypeInput,
+    FunctionInput,
+    BuiltinFunctionInput,
+    BuiltinMethodInput,
+    MethodInput,
+    MethodDescriptorInput,
+    NumpyUfuncInput,
+    NumpyConvert2MAInput,
+    NumpyNDArrayInput,
+    NumpyDTypeInput,
+]
+OutputType = typing.Union[
+    NoneOutput,
+    StringOutput,
+    ListOutput,
+    TupleOutput,
+    DictOutput,
+    ObjectOutput,
+    OtherOutput,
+    ModuleOutput,
+    SliceOutput,
+    TypeOutput,
+    FunctionOutput,
+    MethodOutput,
+    ClassMethodOutput,
+    UnionOutput,
+    BottomOutput
+]
+
+for cls in (
+    (InputType.__args__ + OutputType.__args__) # type: ignore
+    + ( 
+        SliceInputValue,
+        MethodInputValue,
+    )
+):
+    if cls is type(None):
+        continue
+    cls.update_forward_refs()
