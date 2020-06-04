@@ -121,6 +121,10 @@ def _setattr(
             }
         )
     if isinstance(instance, ModuleOutput):
+        if attr == '__warningregistry__':
+            # Skip this check on modules
+            # https://docs.python.org/3/library/warnings.html#warnings.warn_explicit
+            return None
         assert instance.name
         return API(modules={instance.name: Module(properties={attr: value_type})})
     if isinstance(instance, TypeOutput):

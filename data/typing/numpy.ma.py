@@ -1,0 +1,6 @@
+
+
+def zeros(*args: Literal[('t', 'v')]):
+    'usage.skimage: 5'
+array = ...
+masked = ...

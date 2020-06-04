@@ -1,20 +1,22 @@
-.PHONY: groupby_location clean_groupby_location clean_api clean_raw clean all
+.PHONY: groupby_location clean_groupby_location clean_api clean_raw clean_typing clean all
 
 LIBRARIES := sample_usage skimage
 
 all: data/typing/numpy.py
 
-clean: clean_groupby_location clean_api clean_raw
+clean: clean_groupby_location clean_api clean_typing clean_raw
 
+clean_typing:
+	rm -f data/typing/*
 
-clean_api:
-	rm -f data/api/*
 
 data/typing/numpy.py: data/api.json
 	env PYTHON_RECORD_API_OUTPUT=data/typing \
 		PYTHON_RECORD_API_INPUT="$^"\
 		python -m record_api.write_api
 
+clean_api:
+	rm -f data/api.json data/api/*
 
 
 data/api.json: $(addprefix data/api/,$(addsuffix .json,$(LIBRARIES)))
