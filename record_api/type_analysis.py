@@ -600,16 +600,11 @@ class NumpyConvert2MAInputType(BaseModel):
 
 
 class NumpyNDArrayInput(InputTypeBase):
-    t: NumpyNDArrayInputType
+    t: ModuleNamedInput
     v: NumpyNDArrayValue
 
     def to_output(self) -> OtherOutput:
-        return OtherOutput(type=NamedOutput(module="numpy", name="ndarray"))
-
-
-class NumpyNDArrayInputType(BaseModel):
-    module: typing.Literal["numpy"]
-    name: typing.Literal["ndarray"]
+        return OtherOutput(type=NamedOutput.from_input(self.t))
 
 
 class NumpyNDArrayValue(BaseModel):
@@ -617,16 +612,11 @@ class NumpyNDArrayValue(BaseModel):
 
 
 class NumpyDTypeInput(InputTypeBase):
-    t: NumpyDTypeInputType
+    t: ModuleNamedInput
     v: str
 
     def to_output(self) -> OtherOutput:
-        return OtherOutput(type=NamedOutput(module="numpy", name="dtype"))
-
-
-class NumpyDTypeInputType(BaseModel):
-    module: typing.Literal["numpy"]
-    name: typing.Literal["dtype"]
+        return OtherOutput(type=NamedOutput.from_input(self.t))
 
 
 class UnionOutput(OutputTypeBase):
