@@ -70,7 +70,9 @@ def _type(f: TypeOutput, s: Signature) -> typing.Optional[API]:
 
 @process_function.register
 def _function(f: FunctionOutput, s: Signature) -> typing.Optional[API]:
-    assert f.name
+    if not f.name:
+        warnings.warn(f"cannot deal with function with no name {f} {s}")
+        return None
     module = f.name.module
     name = f.name.name
     try:
@@ -78,6 +80,7 @@ def _function(f: FunctionOutput, s: Signature) -> typing.Optional[API]:
     except KeyError:
         if module is None:
             warnings.warn(f"could not handle builtin {name}")
+            return None
     else:
         return callback(*s.initial_args)
     if module == "_operator":
