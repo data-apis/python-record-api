@@ -12,27 +12,14 @@ First install the local package:
 
 ```bash
 pip install -e .
-# run tests
+# run the tests
 env PYTEST_DISABLE_PLUGIN_AUTOLOAD=true pytest record_api/test.py
 ```
 
-To test out a local small usage of NumPy:
+Now build the traces
 
 ```bash
-env PYTHON_RECORD_API_OUTPUT_FILE=data/raw/sample_usage.jsonl \
-    PYTHON_RECORD_API_TO_MODULE=numpy \
-    PYTHON_RECORD_API_FROM_MODULE=record_api.sample_usage \
-    PYTHON_RECORD_API_IMPORT_MODULES=numpy \
-    python -m record_api
-
-env PYTHON_RECORD_API_INPUT=data/raw/sample_usage.jsonl \
-    PYTHON_RECORD_API_OUTPUT_TYPED=data/counts_typed/sample_usage.csv \
-    PYTHON_RECORD_API_OUTPUT_UNTYPED=data/counts_untyped/sample_usage.csv \
-    python -m record_api.line_counts
-
-env PYTHON_RECORD_API_INPUT=data/raw/sample_usage.jsonl \
-    PYTHON_RECORD_API_OUTPUT=data/api/sample_usage.json \
-    python -m record_api.infer_apis
+make
 ```
 
 Here is how I can use it to see all the functions the scikit image tests call in NumPy:

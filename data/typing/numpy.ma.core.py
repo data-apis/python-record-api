@@ -1,12 +1,12 @@
 
 
-def isMaskedArray(x: Union[(numpy.ndarray, numpy.ma.core.MaskedArray)]):
+def isMaskedArray(x: Union[(numpy.ma.core.MaskedArray, numpy.ndarray)]):
     'usage.skimage: 18'
 
-def array(data: numpy.ndarray, mask: Union[(numpy.ndarray, bool, list[list[int]])], fill_value: Union[(numpy.float64, float)]=...):
+def array(data: numpy.ndarray, mask: Union[(list[list[int]], bool, numpy.ndarray)], fill_value: Union[(float, numpy.float64)]=...):
     'usage.skimage: 7'
 
-def getdata(a: Union[(numpy.ndarray, numpy.ma.core.MaskedArray)]):
+def getdata(a: Union[(numpy.ma.core.MaskedArray, numpy.ndarray)]):
     'usage.skimage: 3'
 
 def getmaskarray(arr: numpy.ma.core.MaskedArray):

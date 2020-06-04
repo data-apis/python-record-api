@@ -56,6 +56,21 @@ data/raw/skimage.jsonl:
 		pytest --pyargs skimage
 
 
+
+data/raw/sklearn.jsonl:
+	env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
+		PYTHON_RECORD_API_TO_MODULE=numpy \
+		PYTHON_RECORD_API_FROM_MODULE=sklearn \
+		pytest --pyargs sklearn
+
+
+data/raw/xarray.jsonl:
+	env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
+		PYTHON_RECORD_API_TO_MODULE=numpy \
+		PYTHON_RECORD_API_FROM_MODULE=xarray \
+		pytest --pyargs xarray
+
+
 data/raw/sample_usage.jsonl:
 	env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
 		PYTHON_RECORD_API_TO_MODULE=numpy \

@@ -170,6 +170,25 @@ class Signature(pydantic.BaseModel):
 
     metadata: typing.Dict[str, int] = pydantic.Field(default_factory=dict)
 
+    def validate_keys_unique(self) -> None:
+        all_keys = [
+            *self.pos_only_required.keys(),
+            *self.pos_only_optional.keys(),
+            *self.pos_or_kw_required.keys(),
+            *self.pos_or_kw_optional.keys(),
+            *self.kw_only_required.keys(),
+            *self.kw_only_optional.keys(),
+        ]
+        if self.var_pos:
+            all_keys.append(self.var_pos[0])
+        if self.var_kw:
+            all_keys.append(self.var_kw[0])
+
+        if len(all_keys) != len(set(all_keys)):
+            import pudb
+
+            pudb.set_trace()
+
     def function_def(self, name: str, is_classmethod=False) -> ast.FunctionDef:
         return ast.FunctionDef(
             name,
@@ -273,12 +292,17 @@ class Signature(pydantic.BaseModel):
         )
 
     def __ior__(self, other: Signature) -> Signature:
+        self.validate_keys_unique()
+        other.validate_keys_unique()
 
         self._copy_pos_only(other)
         self._copy_pos_or_kw(other)
         self._copy_var_pos(other)
         self._copy_kw_only(other)
         self._copy_var_kw(other)
+
+        self.validate_keys_unique()
+
         # Merge metata, throwing away duplicate keys
         update(self.metadata, other.metadata, lambda l, r: l + r)
         return self
@@ -294,12 +318,21 @@ class Signature(pydantic.BaseModel):
 
         # any leftover, are optional positional only args
         # These should be combined with the existing optional position only
-        self.pos_only_optional = interleave_dicts(
-            slice_dict(self.pos_only_required, n_pos_only_required),
-            slice_dict(other.pos_only_required, n_pos_only_required),
-            self.pos_only_optional,
-            other.pos_only_optional,
+        pos_only_optional = interleave_dicts(
+            {
+                **slice_dict(self.pos_only_required, n_pos_only_required),
+                **self.pos_only_optional,
+            },
+            {
+                **slice_dict(other.pos_only_required, n_pos_only_required),
+                **other.pos_only_optional,
+            },
         )
+
+        # sanity check, verify no duplicate keys
+        assert not set(pos_only_required.keys()) & (pos_only_optional.keys())
+
+        self.pos_only_optional = pos_only_optional
         self.pos_only_required = pos_only_required
 
     def _copy_pos_or_kw(self, other: Signature) -> None:
@@ -427,7 +460,7 @@ def slice_dict(d: typing.Dict[K, V], n: int) -> typing.Dict[K, V]:
     """
     Slices n off the front of the dict
     """
-    return dict(kv for i, kv in enumerate(d.items()) if i < n)
+    return dict(kv for i, kv in enumerate(d.items()) if i >= n)
 
 
 def remove_keys(d: typing.Dict[K, V], ks: typing.Iterable[K]) -> None:

@@ -42,52 +42,52 @@ s_ = ...
 bool8 = ...
 ubyte = ...
 
-def arange(_0: Union[(numpy.int64, dask.array.core.Array, float, int, numpy.float64)], _0: Union[(numpy.int64, dask.array.core.Array, float, int, numpy.float64)]=..., /, *, dtype: Union[(list, list[int], list[numpy.int64], numpy.dtype)]=...):
+def arange(_0: Union[(int, numpy.int64, float, dask.array.core.Array, numpy.float64)], _1: Union[(int, float, numpy.int64, numpy.float64)]=..., _2: Union[(int, float, None, numpy.float64)]=..., _3: list[numpy.uint8]=..., /, *, dtype: Union[(list, list[int], numpy.dtype, list[numpy.int64])]=...):
     'usage.sample_usage: 4\nusage.skimage: 223'
 
-def array(_0, _0=..., /, *, dtype=..., ndmin: int=..., copy: bool=..., order: Literal[('C', 'K', 'F')]=...):
+def array(_0, _1: list=..., /, *, dtype=..., ndmin: int=..., copy: bool=..., order: Literal[('F', 'C', 'K')]=...):
     'usage.sample_usage: 1\nusage.skimage: 1076'
 
-def zeros(_0, _0=..., /, *, dtype=..., order: Literal[('C', 'F')]=...):
+def zeros(_0, _1=..., /, *, dtype=..., order: Literal[('F', 'C')]=...):
     'usage.sample_usage: 1\nusage.skimage: 787'
 
 def ones(shape, dtype=..., order: Literal[('F',)]=...):
     'usage.sample_usage: 1\nusage.skimage: 269'
 
-def linspace(start: Union[(numpy.int64, float, numpy.float64, int)], stop: Union[(numpy.int64, float, numpy.float32, int, numpy.float64)], num: int, dtype: list=..., endpoint: bool=...):
+def linspace(start: Union[(int, numpy.int64, float, numpy.float64)], stop: Union[(int, numpy.int64, float, numpy.float32, numpy.float64)], num: int, dtype: list=..., endpoint: bool=...):
     'usage.sample_usage: 1\nusage.skimage: 70'
 
 def eye(N: int, M: int=..., dtype: list=...):
     'usage.sample_usage: 1\nusage.skimage: 39'
 
-def add(_0: numpy.ndarray, _1: Union[(int, tuple[(int, int)], numpy.ndarray, tuple[(int, int, int)], float)], _0: numpy.ndarray=..., _1: Union[(int, tuple[(int, int)], numpy.ndarray, tuple[(int, int, int)], float)]=..., /, *, dtype: list=...):
+def add(_0: numpy.ndarray, _1: Union[(int, numpy.ndarray, tuple[(int, int)], float, tuple[(int, int, int)])], /, *, dtype: list=...):
     'usage.sample_usage: 1\nusage.skimage: 11'
 
-def exp(_0: Union[(float, numpy.ndarray, int)], _0: Union[(float, numpy.ndarray, int)]=..., /, *, dtype: numpy.dtype=...):
+def exp(_0: Union[(int, numpy.ndarray, float)], /, *, dtype: numpy.dtype=...):
     'usage.sample_usage: 1\nusage.skimage: 26'
 
-def log(_0: Union[(dask.array.core.Array, float, int, numpy.ndarray, numpy.float64)], _0: Union[(dask.array.core.Array, float, int, numpy.ndarray, numpy.float64)]=..., /):
+def log(_0: Union[(int, numpy.ndarray, float, dask.array.core.Array, numpy.float64)], /):
     'usage.sample_usage: 1\nusage.skimage: 19'
 
 def column_stack(tup: Union[(list[numpy.ndarray], tuple[(numpy.ndarray, numpy.ndarray)])]):
     'usage.sample_usage: 1\nusage.skimage: 9'
 
-def concatenate(_0, _0=..., /, *, axis: int=...):
+def concatenate(_0, /, *, axis: int=...):
     'usage.sample_usage: 1\nusage.skimage: 48'
 
-def absolute(_0, _0=..., /):
+def absolute(_0, /):
     'usage.skimage: 113'
 
 def asarray(a, dtype=..., order: Literal[('C',)]=...):
     'usage.skimage: 247'
 
-def sum(a: Union[(numpy.ndarray, list[numpy.ndarray], tuple[(int, int, int)], tuple[(int, int)])], axis: Union[(tuple[(int, int)], int)]=...):
+def sum(a: Union[(tuple[(int, int)], tuple[(int, int, int)], numpy.ndarray, list[numpy.ndarray])], axis: Union[(tuple[(int, int)], int)]=...):
     'usage.skimage: 125'
 
-def vstack(tup: Union[(tuple[(numpy.ndarray, numpy.ndarray, numpy.ndarray)], tuple[(numpy.ndarray, numpy.ndarray)], list[numpy.ndarray], tuple[(Union[(numpy.ndarray, list[Union[(float, int)]], list[numpy.int64])], Union[(numpy.ndarray, list[Union[(float, int)]], list[numpy.int64])])])]):
+def vstack(tup: Union[(tuple[(Union[(list[numpy.int64], numpy.ndarray, list[Union[(int, float)]])], Union[(list[numpy.int64], numpy.ndarray, list[Union[(int, float)]])])], tuple[(numpy.ndarray, numpy.ndarray)], list[numpy.ndarray], tuple[(numpy.ndarray, numpy.ndarray, numpy.ndarray)])]):
     'usage.skimage: 33'
 
-def all(a: Union[(numpy.ndarray, numpy.ma.core.MaskedArray)], axis: int=...):
+def all(a: Union[(numpy.ma.core.MaskedArray, numpy.ndarray)], axis: int=...):
     'usage.skimage: 113'
 
 def round_(a, decimals: int=...):
@@ -102,13 +102,13 @@ def obj2sctype(rep):
 def issubdtype(arg1, arg2: list):
     'usage.skimage: 162'
 
-def multiply(_0: numpy.ndarray, _1: Union[(numpy.ndarray, float, int)], _0: numpy.ndarray=..., _1: Union[(numpy.ndarray, float, int)]=..., /, *, out: numpy.ndarray=..., dtype: Union[(list, list[numpy.float64], list[numpy.float32], numpy.dtype)]=...):
+def multiply(_0: numpy.ndarray, _1: Union[(int, numpy.ndarray, float)], /, *, out: numpy.ndarray=..., dtype: Union[(list[numpy.float64], list, list[numpy.float32], numpy.dtype)]=...):
     'usage.skimage: 25'
 
 def reshape(a: Union[(numpy.ndarray, list[int])], newshape, order: Literal[('F',)]=...):
     'usage.skimage: 43'
 
-def sqrt(_0, _0=..., /, *, out: numpy.ndarray=...):
+def sqrt(_0, _1: numpy.ndarray=..., /, *, out: numpy.ndarray=...):
     'usage.skimage: 112'
 
 def moveaxis(a: numpy.ndarray, source: int, destination: int):
@@ -117,10 +117,10 @@ def moveaxis(a: numpy.ndarray, source: int, destination: int):
 def rollaxis(a: numpy.ndarray, axis: int, start: int=...):
     'usage.skimage: 14'
 
-def any(a: Union[(numpy.ndarray, list[bool], numpy.bool_)]):
+def any(a: Union[(list[bool], numpy.ndarray, numpy.bool_)]):
     'usage.skimage: 39'
 
-def empty_like(_0: Union[(numpy.ndarray, numpy.ma.core.MaskedArray)], _0: Union[(numpy.ndarray, numpy.ma.core.MaskedArray)]=..., /, *, dtype: list=..., subok: bool=..., order: Literal[('C',)]=...):
+def empty_like(_0: Union[(numpy.ma.core.MaskedArray, numpy.ndarray)], _1: list[numpy.float64]=..., /, *, dtype: list=..., subok: bool=..., order: Literal[('C',)]=...):
     'usage.skimage: 48'
 
 def triu(m: numpy.ndarray):
@@ -129,10 +129,10 @@ def triu(m: numpy.ndarray):
 def seterr(invalid: Literal[('ignore', 'warn')], divide: Literal[('warn',)]=..., over: Literal[('warn',)]=..., under: Literal[('ignore',)]=...):
     'usage.skimage: 2'
 
-def isnan(_0: Union[(numpy.ndarray, list[float], float)], _0: Union[(numpy.ndarray, list[float], float)]=..., /):
+def isnan(_0: Union[(numpy.ndarray, list[float], float)], /):
     'usage.skimage: 14'
 
-def floor(_0: Union[(numpy.ndarray, numpy.float64, float)], _0: Union[(numpy.ndarray, numpy.float64, float)]=..., /):
+def floor(_0: Union[(float, numpy.ndarray, numpy.float64)], /):
     'usage.skimage: 13'
 
 def stack(arrays, axis: int=...):
@@ -141,22 +141,22 @@ def stack(arrays, axis: int=...):
 def choose(a: numpy.ndarray, choices: list[numpy.ndarray]):
     'usage.skimage: 2'
 
-def amin(a: Union[(numpy.ndarray, list[int], list[numpy.int64], tuple[(int, int)])], axis: Union[(tuple[(int, int)], int)]=...):
+def amin(a: Union[(tuple[(int, int)], numpy.ndarray, list[int], list[numpy.int64])], axis: Union[(tuple[(int, int)], int)]=...):
     'usage.skimage: 60'
 
-def amax(a, axis: Union[(tuple[(int, int, int)], tuple[(int, int)], int)]=..., keepdims: bool=...):
+def amax(a, axis: Union[(tuple[(int, int)], tuple[(int, int, int)], int)]=..., keepdims: bool=...):
     'usage.skimage: 105'
 
-def rint(_0: numpy.ndarray, _0: numpy.ndarray=..., /, *, out: numpy.ndarray=None):
+def rint(_0: numpy.ndarray, /, *, out: numpy.ndarray=None):
     'usage.skimage: 2'
 
-def clip(a: Union[(numpy.ndarray, numpy.float64, int)], a_min, a_max, out: numpy.ndarray=...):
+def clip(a: Union[(int, numpy.ndarray, numpy.float64)], a_min, a_max, out: numpy.ndarray=...):
     'usage.skimage: 61'
 
-def power(_0: Union[(numpy.ndarray, int)], _1: Union[(numpy.ndarray, float, int)], _0: Union[(numpy.ndarray, int)]=..., _1: Union[(numpy.ndarray, float, int)]=..., /):
+def power(_0: Union[(int, numpy.ndarray)], _1: Union[(int, numpy.ndarray, float)], /):
     'usage.skimage: 11'
 
-def log10(_0: Union[(numpy.ndarray, numpy.float64)], _0: Union[(numpy.ndarray, numpy.float64)]=..., /):
+def log10(_0: Union[(numpy.ndarray, numpy.float64)], /):
     'usage.skimage: 4'
 
 def load(file: Literal[('/Users/saul/Downloads/scikit-image-0.17.0/skimage/',)]):
@@ -171,25 +171,25 @@ def dstack(tup: Union[(tuple[(numpy.ndarray, ...)], list[skimage.feature._hessia
 def nonzero(a: numpy.ndarray):
     'usage.skimage: 22'
 
-def cbrt(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+def cbrt(_0: numpy.ndarray, /):
     'usage.skimage: 4'
 
-def hypot(_0: Union[(numpy.ndarray, numpy.float64, int)], _1: Union[(numpy.ndarray, numpy.float64, int)], _0: Union[(numpy.ndarray, numpy.float64, int)]=..., _1: Union[(numpy.ndarray, numpy.float64, int)]=..., /):
+def hypot(_0: Union[(int, numpy.ndarray, numpy.float64)], _1: Union[(int, numpy.ndarray, numpy.float64)], /):
     'usage.skimage: 13'
 
-def arctan2(_0: Union[(numpy.ndarray, numpy.float64, numpy.int64)], _1: Union[(numpy.ndarray, numpy.float64, numpy.int64)], _0: Union[(numpy.ndarray, numpy.float64, numpy.int64)]=..., _1: Union[(numpy.ndarray, numpy.float64, numpy.int64)]=..., /):
+def arctan2(_0: Union[(numpy.int64, numpy.ndarray, numpy.float64)], _1: Union[(numpy.int64, numpy.ndarray, numpy.float64)], /):
     'usage.skimage: 8'
 
-def where(_0: Union[(numpy.ndarray, dask.array.core.Array, numpy.bool_)], _0: Union[(numpy.ndarray, dask.array.core.Array, numpy.bool_)]=..., _1: Union[(numpy.ndarray, numpy.float64, float)]=..., _2: Union[(numpy.ndarray, numpy.float64, int)]=..., /):
+def where(_0: Union[(dask.array.core.Array, numpy.ndarray, numpy.bool_)], _1: Union[(numpy.ndarray, int, numpy.float64, float)]=..., _2: Union[(int, numpy.ndarray, numpy.float64)]=..., /):
     'usage.skimage: 26'
 
-def cos(_0: Union[(numpy.ndarray, numpy.float64, float, int)], _0: Union[(numpy.ndarray, numpy.float64, float, int)]=..., /):
+def cos(_0: Union[(float, numpy.ndarray, int, numpy.float64)], /):
     'usage.skimage: 48'
 
-def sin(_0: Union[(numpy.ndarray, numpy.float64, float, int)], _0: Union[(numpy.ndarray, numpy.float64, float, int)]=..., /):
+def sin(_0: Union[(numpy.ndarray, float, int, numpy.float64)], /):
     'usage.skimage: 47'
 
-def ascontiguousarray(a: Union[(numpy.ndarray, list[float], list[Union[(float, int)]], list[int])], dtype: Union[(list[bool], list, numpy.dtype)]=...):
+def ascontiguousarray(a: Union[(numpy.ndarray, list[int], list[float], list[Union[(int, float)]])], dtype: Union[(list, numpy.dtype, list[bool])]=...):
     'usage.skimage: 67'
 
 def swapaxes(a: numpy.ndarray, axis1: int, axis2: int):
@@ -204,52 +204,52 @@ def squeeze(a: numpy.ndarray, axis: int=...):
 def ones_like(a: numpy.ndarray, dtype: list=...):
     'usage.skimage: 26'
 
-def can_cast(_0: Union[(numpy.ndarray, float, int, numpy.dtype)], _1: Union[(list[bool], numpy.dtype)], _0: Union[(numpy.ndarray, float, int, numpy.dtype)]=..., _1: Union[(list[bool], numpy.dtype)]=..., /, *, casting: Literal[('safe',)]=...):
+def can_cast(_0: Union[(int, numpy.ndarray, numpy.dtype, float)], _1: Union[(numpy.dtype, list[bool])], /, *, casting: Literal[('safe',)]=...):
     'usage.skimage: 9'
 
-def empty(_0, _0=..., /, *, dtype=..., order: Literal[('C', 'F')]=...):
+def empty(_0, _1=..., /, *, dtype=..., order: Literal[('F', 'C')]=...):
     'usage.skimage: 129'
 
-def min_scalar_type(_0: Union[(numpy.float64, numpy.int64, int)], _0: Union[(numpy.float64, numpy.int64, int)]=..., /):
+def min_scalar_type(_0: Union[(numpy.int64, int, numpy.float64)], /):
     'usage.skimage: 5'
 
 def unique(ar: numpy.ndarray, return_inverse: bool=..., return_counts: bool=..., return_index: bool=...):
     'usage.skimage: 68'
 
-def zeros_like(a: Union[(numpy.ndarray, tuple[(int, int, int)], tuple[(int, int)])], dtype: list=..., order: Literal[('C',)]=...):
+def zeros_like(a: Union[(tuple[(int, int)], tuple[(int, int, int)], numpy.ndarray)], dtype: list=..., order: Literal[('C',)]=...):
     'usage.skimage: 70'
 
-def full(shape: Union[(numpy.ndarray, int, tuple[(int, ...)], tuple[(int,)], tuple[(int, int)])], fill_value, dtype=...):
+def full(shape: Union[(tuple[(int, int)], numpy.ndarray, int, tuple[(int, ...)], tuple[(int,)])], fill_value, dtype=...):
     'usage.skimage: 36'
 
-def loadtxt(fname: Literal[('/Users/saul/Downloads/scikit-image-0.17.0/skimage/',)], dtype: list[tuple[(Literal[('pair', 'b1', '1', 'a1', 'L1')], list)]]):
+def loadtxt(fname: Literal[('/Users/saul/Downloads/scikit-image-0.17.0/skimage/',)], dtype: list[tuple[(Literal[('b1', 'a1', 'pair', '1', 'L1')], list)]]):
     'usage.skimage: 1'
 
-def logical_and(_0: Union[(numpy.ndarray, numpy.bool_)], _1: Union[(numpy.ndarray, numpy.bool_)], _0: Union[(numpy.ndarray, numpy.bool_)]=..., _1: Union[(numpy.ndarray, numpy.bool_)]=..., /):
+def logical_and(_0: Union[(numpy.ndarray, numpy.bool_)], _1: Union[(numpy.ndarray, numpy.bool_)], /):
     'usage.skimage: 13'
 
-def deg2rad(_0: Union[(numpy.ndarray, int, list[int])], _0: Union[(numpy.ndarray, int, list[int])]=..., /):
+def deg2rad(_0: Union[(int, numpy.ndarray, list[int])], /):
     'usage.skimage: 18'
 
-def rad2deg(_0: Union[(numpy.ndarray, numpy.float64)], _0: Union[(numpy.ndarray, numpy.float64)]=..., /):
+def rad2deg(_0: Union[(numpy.ndarray, numpy.float64)], /):
     'usage.skimage: 6'
 
-def maximum(_0: Union[(numpy.ndarray, int, tuple[(int, int, int)], tuple[(int, int)], numpy.float64)], _1: Union[(numpy.ndarray, tuple[(int, int, int)], tuple[(int, int)], int)], _0: Union[(numpy.ndarray, int, tuple[(int, int, int)], tuple[(int, int)], numpy.float64)]=..., _1: Union[(numpy.ndarray, tuple[(int, int, int)], tuple[(int, int)], int)]=..., /, *, out: numpy.ndarray=..., casting: Literal[('unsafe',)]=..., dtype: numpy.dtype=...):
+def maximum(_0: Union[(tuple[(int, int)], tuple[(int, int, int)], int, numpy.ndarray, numpy.float64)], _1: Union[(tuple[(int, int)], tuple[(int, int, int)], int, numpy.ndarray)], /, *, out: numpy.ndarray=..., dtype: numpy.dtype=..., casting: Literal[('unsafe',)]=...):
     'usage.skimage: 16'
 
-def percentile(a: numpy.ndarray, q: Union[(int, float, list[int])]):
+def percentile(a: numpy.ndarray, q: Union[(int, list[int], float)]):
     'usage.skimage: 11'
 
-def logical_not(_0: numpy.ndarray, _0: numpy.ndarray=..., /, *, out: numpy.ndarray=...):
+def logical_not(_0: numpy.ndarray, /, *, out: numpy.ndarray=...):
     'usage.skimage: 14'
 
 def isscalar(element):
     'usage.skimage: 67'
 
-def ceil(_0: Union[(numpy.ndarray, int, float, numpy.float64, numpy.int64)], _0: Union[(numpy.ndarray, int, float, numpy.float64, numpy.int64)]=..., /):
+def ceil(_0: Union[(numpy.int64, numpy.ndarray, int, float, numpy.float64)], /):
     'usage.skimage: 31'
 
-def minimum(_0: Union[(numpy.ndarray, tuple[(int, int, int)], tuple[(int, int)])], _1: Union[(numpy.ndarray, float, tuple[(int, int, int)], tuple[(int, int)])], _0: Union[(numpy.ndarray, tuple[(int, int, int)], tuple[(int, int)])]=..., _1: Union[(numpy.ndarray, float, tuple[(int, int, int)], tuple[(int, int)])]=..., /):
+def minimum(_0: Union[(tuple[(int, int)], tuple[(int, int, int)], numpy.ndarray)], _1: Union[(tuple[(int, int)], tuple[(int, int, int)], numpy.ndarray, float)], /):
     'usage.skimage: 9'
 
 def dot(_0: numpy.ndarray, _1: numpy.ndarray, /):
@@ -267,7 +267,7 @@ def ellipkinc(_0: numpy.float64, _1: float, /):
 def ellipeinc(_0: numpy.float64, _1: float, /):
     'usage.skimage: 1'
 
-def transpose(a, axes: Union[(tuple[(int, int, int, int)], tuple[(int, int, int)], numpy.ndarray, list[int])]=...):
+def transpose(a, axes: Union[(tuple[(int, int, int)], numpy.ndarray, list[int], tuple[(int, int, int, int)])]=...):
     'usage.skimage: 21'
 
 def shape(a: numpy.ndarray):
@@ -276,10 +276,10 @@ def shape(a: numpy.ndarray):
 def promote_types(_0: numpy.dtype, _1: numpy.dtype, /):
     'usage.skimage: 1'
 
-def bincount(_0: Union[(numpy.ndarray, dask.array.core.Array)], _0: Union[(numpy.ndarray, dask.array.core.Array)]=..., /, *, minlength: int=...):
+def bincount(_0: Union[(dask.array.core.Array, numpy.ndarray)], /, *, minlength: int=...):
     'usage.skimage: 12'
 
-def histogram(a: numpy.ndarray, bins: Union[(tuple[(numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64)], list[Union[(float, int)]], numpy.int64, int)], density: bool=..., range: Union[(tuple[(int, int)], None)]=...):
+def histogram(a: numpy.ndarray, bins: Union[(numpy.int64, int, tuple[(numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64)], list[Union[(int, float)]])], density: bool=..., range: Union[(tuple[(int, int)], None)]=...):
     'usage.skimage: 7'
 
 def interp(x: Union[(numpy.ndarray, numpy.flatiter)], xp: numpy.ndarray, fp: numpy.ndarray):
@@ -288,7 +288,7 @@ def interp(x: Union[(numpy.ndarray, numpy.flatiter)], xp: numpy.ndarray, fp: num
 def polyfit(x: numpy.ndarray, y: numpy.ndarray, deg: int):
     'usage.skimage: 1'
 
-def pad(array: Union[(numpy.ndarray, list[int], list[list[int]])], pad_width, mode: Union[(Literal[('constant',)], Callable, Literal[('mean',)], Literal[('maximum', 'linear_ramp', 'minimum', 'reflect', 'symmetric', 'wrap', 'edge', 'constant', 'median', 'mean')], Literal[('edge',)])]=...):
+def pad(array: Union[(list[list[int]], numpy.ndarray, list[int])], pad_width, mode: Union[(Literal[('reflect', 'mean', 'constant', 'median', 'edge', 'maximum', 'symmetric', 'wrap', 'linear_ramp', 'minimum')], Literal[('constant',)], Callable, Literal[('mean',)], Literal[('edge',)])]=...):
     'usage.skimage: 126'
 
 def product(*args: Literal[('v', 't')]):
@@ -300,22 +300,22 @@ def apply_along_axis(func1d: Callable, axis: int, arr: numpy.ndarray):
 def count_nonzero(a: numpy.ndarray):
     'usage.skimage: 9'
 
-def cumsum(a: Union[(numpy.ndarray, dask.array.core.Array)], axis: int=..., out: numpy.ndarray=...):
+def cumsum(a: Union[(dask.array.core.Array, numpy.ndarray)], axis: int=..., out: numpy.ndarray=...):
     'usage.skimage: 29'
 
 def take_along_axis(arr: numpy.ndarray, indices: numpy.ndarray, axis: int):
     'usage.skimage: 1'
 
-def square(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+def square(_0: numpy.ndarray, /):
     'usage.skimage: 7'
 
-def mean(a: Union[(numpy.ndarray, dask.array.core.Array, list[numpy.float64])], axis: Union[(tuple[(int, int)], int)]=..., dtype: list=...):
+def mean(a: Union[(dask.array.core.Array, numpy.ndarray, list[numpy.float64])], axis: Union[(tuple[(int, int)], int)]=..., dtype: list=...):
     'usage.skimage: 61'
 
-def log2(_0: Union[(numpy.ndarray, int)], _0: Union[(numpy.ndarray, int)]=..., /):
+def log2(_0: Union[(int, numpy.ndarray)], /):
     'usage.skimage: 5'
 
-def allclose(a: Union[(numpy.ndarray, list[numpy.float64], list[int], numpy.float64)], b, rtol: Union[(float, int)]=..., atol: float=...):
+def allclose(a: Union[(numpy.ndarray, list[int], list[numpy.float64], numpy.float64)], b, rtol: Union[(int, float)]=..., atol: float=...):
     'usage.skimage: 33'
 
 def argsort(a: Union[(numpy.ndarray, numpy.flatiter)]):
@@ -324,10 +324,10 @@ def argsort(a: Union[(numpy.ndarray, numpy.flatiter)]):
 def hstack(tup):
     'usage.skimage: 27'
 
-def argmax(a: Union[(numpy.ndarray, dask.array.core.Array)], axis: int=...):
+def argmax(a: Union[(dask.array.core.Array, numpy.ndarray)], axis: int=...):
     'usage.skimage: 18'
 
-def logspace(start: Union[(numpy.float64, float)], stop: Union[(numpy.float64, float)], num: int):
+def logspace(start: Union[(float, numpy.float64)], stop: Union[(float, numpy.float64)], num: int):
     'usage.skimage: 2'
 
 def logical_or(_0: numpy.ndarray, _1: numpy.ndarray, /):
@@ -345,7 +345,7 @@ def split(ary: numpy.ndarray, indices_or_sections: int):
 def atleast_1d(*arys: Literal[('v', 't')]):
     'usage.skimage: 11'
 
-def isclose(a: Union[(numpy.ndarray, numpy.float64, float)], b: Union[(float, int)], atol: float=...):
+def isclose(a: Union[(numpy.ndarray, numpy.float64, float)], b: Union[(int, float)], atol: float=...):
     'usage.skimage: 3'
 
 def gradient(f: numpy.ndarray):
@@ -354,7 +354,7 @@ def gradient(f: numpy.ndarray):
 def argmin(a: Union[(numpy.ndarray, list[numpy.float64])], axis: int=...):
     'usage.skimage: 10'
 
-def arctan(_0: Union[(numpy.ndarray, numpy.float64)], _0: Union[(numpy.ndarray, numpy.float64)]=..., /):
+def arctan(_0: Union[(numpy.ndarray, numpy.float64)], /):
     'usage.skimage: 3'
 
 def sort(a: numpy.ndarray, axis: int=...):
@@ -363,7 +363,7 @@ def sort(a: numpy.ndarray, axis: int=...):
 def spacing(_0: int, /):
     'usage.skimage: 1'
 
-def isfinite(_0: Union[(numpy.ndarray, list[Union[(numpy.float64, numpy.int64)]], tuple[(numpy.ndarray, numpy.ndarray)])], _0: Union[(numpy.ndarray, list[Union[(numpy.float64, numpy.int64)]], tuple[(numpy.ndarray, numpy.ndarray)])]=..., /):
+def isfinite(_0: Union[(list[Union[(numpy.int64, numpy.float64)]], tuple[(numpy.ndarray, numpy.ndarray)], numpy.ndarray)], /):
     'usage.skimage: 7'
 
 def diff(a: numpy.ndarray, n: int=..., axis: int=...):
@@ -381,7 +381,7 @@ def atleast_2d(*arys: Literal[('v', 't')]):
 def rot90(m: numpy.ndarray, k: int=...):
     'usage.skimage: 7'
 
-def roll(a: Union[(numpy.ndarray, list[Union[(float, int)]])], shift: Union[(tuple[(int, int)], int)], axis: Union[(tuple[(int, int)], int)]=...):
+def roll(a: Union[(numpy.ndarray, list[Union[(int, float)]])], shift: Union[(tuple[(int, int)], int)], axis: Union[(tuple[(int, int)], int)]=...):
     'usage.skimage: 14'
 
 def indices(dimensions: tuple[(Union[(numpy.int64, int)], ...)], dtype: list[numpy.float64]=...):
@@ -390,22 +390,22 @@ def indices(dimensions: tuple[(Union[(numpy.int64, int)], ...)], dtype: list[num
 def tri(N: int, M: int=..., k: int=..., dtype: list[numpy.int32]=...):
     'usage.skimage: 9'
 
-def less(_0: tuple[(int, ...)], _1: tuple[(int, ...)], _0: tuple[(int, ...)]=..., _1: tuple[(int, ...)]=..., /):
+def less(_0: tuple[(int, ...)], _1: tuple[(int, ...)], /):
     'usage.skimage: 3'
 
-def prod(a: Union[(numpy.ndarray, tuple[(int, ...)], list[int])]):
+def prod(a: Union[(tuple[(int, ...)], numpy.ndarray, list[int])]):
     'usage.skimage: 9'
 
-def true_divide(_0: numpy.ndarray, _1: Union[(numpy.ndarray, numpy.int64)], _0: numpy.ndarray=..., _1: Union[(numpy.ndarray, numpy.int64)]=..., /, *, out: numpy.ndarray=...):
+def true_divide(_0: numpy.ndarray, _1: Union[(numpy.ndarray, numpy.int64)], /, *, out: numpy.ndarray=...):
     'usage.skimage: 2'
 
-def unravel_index(_0: Union[(numpy.ndarray, numpy.int64, int)], _1: tuple[(int, ...)], _0: Union[(numpy.ndarray, numpy.int64, int)]=..., _1: tuple[(int, ...)]=..., /):
+def unravel_index(_0: Union[(numpy.ndarray, numpy.int64, int)], _1: tuple[(int, ...)], /):
     'usage.skimage: 18'
 
 def apply_over_axes(func: Callable, a: numpy.ndarray, axes: tuple[(int, int)]):
     'usage.skimage: 10'
 
-def tile(A: Union[(numpy.ndarray, tuple[(int, int)], list[int])], reps: Union[(tuple[(int, int, int, int)], tuple[(int, int)], tuple[(int, ...)], list[int])]):
+def tile(A: Union[(tuple[(int, int)], numpy.ndarray, list[int])], reps: Union[(tuple[(int, int)], tuple[(int, int, int, int)], tuple[(int, ...)], list[int])]):
     'usage.skimage: 15'
 
 def real(val: Union[(numpy.ndarray, float)]):
@@ -414,10 +414,10 @@ def real(val: Union[(numpy.ndarray, float)]):
 def imag(val: numpy.ndarray):
     'usage.skimage: 1'
 
-def sign(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+def sign(_0: numpy.ndarray, /):
     'usage.skimage: 4'
 
-def subtract(_0: int, _1: numpy.ndarray, _0: int=..., _1: numpy.ndarray=..., /, *, dtype: numpy.dtype=None):
+def subtract(_0: int, _1: numpy.ndarray, /, *, dtype: numpy.dtype=None):
     'usage.skimage: 11'
 
 def ix_(*args: Literal[('v', 't')]):
@@ -426,10 +426,10 @@ def ix_(*args: Literal[('v', 't')]):
 def convolve(a: numpy.ndarray, v: list[float], mode: Literal[('valid',)]):
     'usage.skimage: 1'
 
-def invert(_0: Union[(numpy.ndarray, list[bool])], _0: Union[(numpy.ndarray, list[bool])]=..., /):
+def invert(_0: Union[(list[bool], numpy.ndarray)], /):
     'usage.skimage: 7'
 
-def array_equal(a1: Union[(numpy.ndarray, tuple[(float, float, float)], list[int])], a2: Union[(numpy.ndarray, tuple[(int, int, int)])]):
+def array_equal(a1: Union[(tuple[(float, float, float)], numpy.ndarray, list[int])], a2: Union[(tuple[(int, int, int)], numpy.ndarray)]):
     'usage.skimage: 5'
 
 def reciprocal(_0: numpy.ndarray, /, *, out: numpy.ndarray=None):
@@ -444,7 +444,7 @@ def full_like(a: numpy.ndarray, fill_value: int):
 def sctype2char(sctype: numpy.dtype):
     'usage.skimage: 2'
 
-def floor_divide(_0: numpy.ndarray, _1: int, _0: numpy.ndarray=..., _1: int=..., /, *, out: numpy.ndarray=None, dtype: numpy.dtype=None, casting: Literal[('unsafe',)]=None):
+def floor_divide(_0: numpy.ndarray, _1: int, /, *, out: numpy.ndarray=None, dtype: numpy.dtype=None, casting: Literal[('unsafe',)]=None):
     'usage.skimage: 4'
 
 def fromfile(_0: _io.TextIOWrapper, /, *, sep: Literal[(' ',)]=None):
@@ -483,7 +483,7 @@ def flipud(m: numpy.ndarray):
 def set_printoptions(precision: int):
     'usage.skimage: 1'
 
-def result_type(_0: numpy.dtype, _1: numpy.dtype, _2: list[numpy.float32], _0: numpy.dtype=..., _1: numpy.dtype=..., _2: list[numpy.float32]=..., /):
+def result_type(_0: numpy.dtype, _1: numpy.dtype, _2: list[numpy.float32], /):
     'usage.skimage: 7'
 
 def ptp(a: numpy.ndarray):
@@ -492,13 +492,13 @@ def ptp(a: numpy.ndarray):
 def cumprod(a: tuple[(int, ...)]):
     'usage.skimage: 5'
 
-def ravel_multi_index(_0, _1: tuple[(int, ...)], _0=..., _1: tuple[(int, ...)]=..., /, *, order: Literal[('C', 'F')]=...):
+def ravel_multi_index(_0, _1: tuple[(int, ...)], /, *, order: Literal[('F', 'C')]=...):
     'usage.skimage: 18'
 
 def logical_xor(_0: numpy.ndarray, _1: numpy.ndarray, /, *, out: numpy.ndarray=None):
     'usage.skimage: 1'
 
-def in1d(ar1: Union[(numpy.ndarray, numpy.flatiter)], ar2: Union[(numpy.ndarray, tuple[(int, int)])]):
+def in1d(ar1: Union[(numpy.ndarray, numpy.flatiter)], ar2: Union[(tuple[(int, int)], numpy.ndarray)]):
     'usage.skimage: 2'
 
 def take(a: numpy.ndarray, indices: numpy.ndarray):
@@ -507,7 +507,7 @@ def take(a: numpy.ndarray, indices: numpy.ndarray):
 def lexsort(_0: tuple[(numpy.ndarray, numpy.ndarray, numpy.ndarray)], /):
     'usage.skimage: 1'
 
-def fmax(_0: numpy.ndarray, _1: Union[(numpy.float64, float)], _0: numpy.ndarray=..., _1: Union[(numpy.float64, float)]=..., /):
+def fmax(_0: numpy.ndarray, _1: Union[(float, numpy.float64)], /):
     'usage.skimage: 3'
 
 def fix(x: Union[(numpy.float64, float)]):
@@ -537,7 +537,7 @@ def tanh(_0: numpy.ndarray, /):
 def ndim(a: numpy.ndarray):
     'usage.skimage: 4'
 
-def searchsorted(a: numpy.ndarray, v: Union[(numpy.float64, int)]):
+def searchsorted(a: numpy.ndarray, v: Union[(int, numpy.float64)]):
     'usage.skimage: 3'
 
 def fill_diagonal(a: numpy.ndarray, val: float):
@@ -567,11 +567,11 @@ def may_share_memory(_0: numpy.ndarray, _1: numpy.ndarray, /):
 class ndarray():
 
     @classmethod
-    def mean(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+    def mean(_0: numpy.ndarray, _1: int=..., /):
         'usage.sample_usage: 1\nusage.skimage: 23'
 
     @classmethod
-    def sum(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+    def sum(_0: numpy.ndarray, _1: int=..., /):
         'usage.sample_usage: 1\nusage.skimage: 86'
 
     @classmethod
@@ -579,47 +579,47 @@ class ndarray():
         'usage.sample_usage: 1'
 
     @classmethod
-    def reshape(_0: numpy.ndarray, _1, _0: numpy.ndarray=..., _1=..., /):
+    def reshape(_0: numpy.ndarray, _1, _2: int=..., _3: int=..., _4: int=..., /):
         'usage.sample_usage: 2\nusage.skimage: 168'
 
     @classmethod
-    def astype(_0: numpy.ndarray, _1, _0: numpy.ndarray=..., _1=..., /):
+    def astype(_0: numpy.ndarray, _1, /):
         'usage.sample_usage: 1\nusage.skimage: 555'
 
     @classmethod
-    def copy(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+    def copy(_0: numpy.ndarray, /):
         'usage.skimage: 135'
 
     @classmethod
-    def max(_0: numpy.ndarray, _0: numpy.ndarray=..., _1: int=..., /):
+    def max(_0: numpy.ndarray, _1: int=..., /):
         'usage.skimage: 108'
 
     @classmethod
-    def ptp(_0: numpy.ndarray, _0: numpy.ndarray=..., _1: int=..., /):
+    def ptp(_0: numpy.ndarray, _1: int=..., /):
         'usage.skimage: 5'
 
     @classmethod
-    def min(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+    def min(_0: numpy.ndarray, _1: int=..., /):
         'usage.skimage: 80'
 
     @classmethod
-    def any(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+    def any(_0: numpy.ndarray, /):
         'usage.skimage: 11'
 
     @classmethod
-    def nonzero(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+    def nonzero(_0: numpy.ndarray, /):
         'usage.skimage: 4'
 
     @classmethod
-    def fill(_0: numpy.ndarray, _1: Union[(bool, int)], _0: numpy.ndarray=..., _1: Union[(bool, int)]=..., /):
+    def fill(_0: numpy.ndarray, _1: Union[(bool, int)], /):
         'usage.skimage: 5'
 
     @classmethod
-    def flatten(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+    def flatten(_0: numpy.ndarray, /):
         'usage.skimage: 16'
 
     @classmethod
-    def ravel(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+    def ravel(_0: numpy.ndarray, _1: Literal[('F', 'C')]=..., /):
         'usage.skimage: 207'
 
     @classmethod
@@ -627,15 +627,15 @@ class ndarray():
         'usage.skimage: 1'
 
     @classmethod
-    def transpose(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+    def transpose(_0: numpy.ndarray, _1: int=..., _2: int=..., _3: int=..., /):
         'usage.skimage: 5'
 
     @classmethod
-    def argmin(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+    def argmin(_0: numpy.ndarray, _1: int=..., /):
         'usage.skimage: 2'
 
     @classmethod
-    def view(_0: numpy.ndarray, _0: numpy.ndarray=..., _1: Union[(list[bool], list[numpy.uint8], Literal[('|S16',)])]=..., /):
+    def view(_0: numpy.ndarray, _1=..., /):
         'usage.skimage: 22'
 
     @classmethod
@@ -643,15 +643,15 @@ class ndarray():
         'usage.skimage: 2'
 
     @classmethod
-    def argsort(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+    def argsort(_0: numpy.ndarray, _1: int=..., /):
         'usage.skimage: 5'
 
     @classmethod
-    def argmax(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+    def argmax(_0: numpy.ndarray, _1: int=..., /):
         'usage.skimage: 6'
 
     @classmethod
-    def std(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+    def std(_0: numpy.ndarray, /):
         'usage.skimage: 63'
 
     @classmethod
@@ -659,7 +659,7 @@ class ndarray():
         'usage.skimage: 1'
 
     @classmethod
-    def tobytes(_0: numpy.ndarray, _0: numpy.ndarray=..., /):
+    def tobytes(_0: numpy.ndarray, /):
         'usage.skimage: 2'
 
     @classmethod
@@ -673,7 +673,7 @@ class ndarray():
     @classmethod
     def conj(_0: numpy.ndarray, /):
         'usage.skimage: 4'
-    shape: Union[(tuple[(int, int)], tuple[(int, ...)], numpy.ndarray, tuple[(int,)])] = ...
+    shape: Union[(tuple[(int, int)], numpy.ndarray, tuple[(int, ...)], tuple[(int,)])] = ...
     ndim = ...
     dtype = ...
     size = ...
@@ -713,7 +713,7 @@ class ndarray():
     def argmax(self, /, *, axis: int=None):
         'usage.skimage: 1'
 
-    def astype(self, _0: Union[(list[numpy.uint8], list, list[numpy.int16], numpy.dtype)], _0: Union[(list[numpy.uint8], list, list[numpy.int16], numpy.dtype)]=..., /, *, copy: bool=...):
+    def astype(self, _0: Union[(list[numpy.int16], list[numpy.uint8], list, numpy.dtype)], /, *, copy: bool=...):
         'usage.skimage: 34'
 
     def tolist(self, /):
@@ -739,7 +739,7 @@ class ndarray():
 
 class dtype():
 
-    def __init__(_0, _0=..., /):
+    def __init__(_0, /):
         'usage.sample_usage: 1\nusage.skimage: 19'
     type = ...
     kind = ...
@@ -750,12 +750,12 @@ class dtype():
 class ufunc():
 
     @classmethod
-    def reduce(_0: Callable, _1: Union[(numpy.ndarray, list[numpy.ndarray], tuple[(int,)])], _0: Callable=..., _1: Union[(numpy.ndarray, list[numpy.ndarray], tuple[(int,)])]=..., /):
+    def reduce(_0: Callable, _1: Union[(list[numpy.ndarray], numpy.ndarray, tuple[(int,)])], /):
         'usage.sample_usage: 1\nusage.skimage: 6'
 
 class float64():
 
-    def __init__(x: Union[(numpy.ndarray, float, int, numpy.int64)], x: Union[(numpy.ndarray, float, int, numpy.int64)]=..., /):
+    def __init__(x: Union[(int, numpy.int64, numpy.ndarray, float)], /):
         'usage.skimage: 8'
     ndim = ...
     shape = ...
@@ -763,7 +763,7 @@ class float64():
 class generic():
 
     @classmethod
-    def astype(_0, _1: list[numpy.int64], _0=..., _1: list[numpy.int64]=..., /):
+    def astype(_0, _1: list[numpy.int64], /):
         'usage.skimage: 12'
 
     @classmethod
@@ -806,18 +806,18 @@ class ndindex():
 
 class uint8():
 
-    def __init__(_0: Union[(numpy.ndarray, numpy.float64, numpy.int64, int)], _0: Union[(numpy.ndarray, numpy.float64, numpy.int64, int)]=..., /):
+    def __init__(_0: Union[(int, numpy.int64, numpy.ndarray, numpy.float64)], /):
         'usage.skimage: 6'
 
 class int64():
 
-    def __init__(_0: Union[(numpy.float64, numpy.int64)], _0: Union[(numpy.float64, numpy.int64)]=..., /):
+    def __init__(_0: Union[(numpy.int64, numpy.float64)], /):
         'usage.skimage: 2'
     ndim = ...
 
 class float32():
 
-    def __init__(_0: Union[(numpy.ndarray, int)], _0: Union[(numpy.ndarray, int)]=..., /):
+    def __init__(_0: Union[(int, numpy.ndarray)], /):
         'usage.skimage: 4'
 
 class matrix():
@@ -840,12 +840,12 @@ class int32():
 
 class int8():
 
-    def __init__(_0: Union[(numpy.ndarray, numpy.int64)], _0: Union[(numpy.ndarray, numpy.int64)]=..., /):
+    def __init__(_0: Union[(numpy.ndarray, numpy.int64)], /):
         'usage.skimage: 5'
 
 class int16():
 
-    def __init__(_0: Union[(numpy.int64, int)], _0: Union[(numpy.int64, int)]=..., /):
+    def __init__(_0: Union[(int, numpy.int64)], /):
         'usage.skimage: 2'
 
 class longlong():
@@ -855,7 +855,7 @@ class longlong():
 
 class uint16():
 
-    def __init__(_0: Union[(numpy.int64, int)], _0: Union[(numpy.int64, int)]=..., /):
+    def __init__(_0: Union[(int, numpy.int64)], /):
         'usage.skimage: 2'
 
 class uint32():

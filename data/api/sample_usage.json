@@ -458,39 +458,11 @@
                 }
               },
               "pos_only_optional": {
-                "_0": {
+                "_2": {
                   "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
+                    "module": null,
+                    "name": "int"
                   }
-                },
-                "_1": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": "tuple",
-                      "items": [
-                        {
-                          "type": {
-                            "module": null,
-                            "name": "int"
-                          }
-                        },
-                        {
-                          "type": {
-                            "module": null,
-                            "name": "int"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
                 }
               },
               "pos_or_kw_required": {},
