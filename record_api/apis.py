@@ -15,6 +15,7 @@ import warnings
 import ast
 import networkx
 import astunparse
+import functools
 
 import tqdm.std
 import orjson
@@ -41,7 +42,7 @@ class API(pydantic.BaseModel):
         json_dumps = orjson_dumps
 
     def __ior__(self, other: API) -> API:
-        update(self.modules, other.modules, operator.ior)
+        update_ior(self.modules, other.modules)
         return self
 
 
@@ -65,11 +66,11 @@ class Module(pydantic.BaseModel):
             yield class_.class_def(name)
 
     def __ior__(self, other: Module) -> Module:
-        update(self.classes, other.classes, operator.ior)
-        update(self.functions, other.functions, operator.ior)
+        update_ior(self.classes, other.classes)
+        update_ior(self.functions, other.functions)
 
         # properties are union of properties, minus any things that are already classes/functins
-        update(self.properties, other.properties, lambda l, r: unify((l, r)))
+        update_unify(self.properties, other.properties)
         remove_keys(self.properties, self.classes.keys())
         remove_keys(self.properties, self.functions.keys())
         return self
@@ -110,14 +111,14 @@ class Class(pydantic.BaseModel):
             self.constructor |= other.constructor
         else:
             self.constructor = other.constructor
-        update(self.methods, other.methods, operator.ior)
-        update(self.classmethods, other.classmethods, operator.ior)
+        update_ior(self.methods, other.methods)
+        update_ior(self.classmethods, other.classmethods)
 
-        update(self.classproperties, other.classproperties, lambda l, r: unify((l, r)))
+        update_unify(self.classproperties, other.classproperties)
         remove_keys(self.classproperties, self.methods.keys())
         remove_keys(self.classproperties, self.classmethods.keys())
 
-        update(self.properties, other.properties, lambda l, r: unify((l, r)))
+        update_unify(self.properties, other.properties)
         remove_keys(self.properties, self.methods.keys())
         remove_keys(self.properties, self.classmethods.keys())
         # Anything that is both a class property and a property should be only a class property
@@ -148,17 +149,26 @@ def assign_properties(
             )
 
 
+PartialKeyOrdering = typing.List[typing.Tuple[str, str]]
+
+
 class Signature(pydantic.BaseModel):
     # See for a helpful spec https://www.python.org/dev/peps/pep-0570/#syntax-and-semantics
     # Also keyword only PEP https://www.python.org/dev/peps/pep-3102/
 
     pos_only_required: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
     pos_only_optional: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
-
     # If there are any pos_only_optional, then there cannot be any required pos_or_kw
+    pos_only_optional_ordering: PartialKeyOrdering = pydantic.Field(
+        default_factory=list
+    )
+
     pos_or_kw_required: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
     pos_or_kw_optional: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
-
+    # Partial ordering of args, (pred, suc) pairs
+    pos_or_kw_optional_ordering: PartialKeyOrdering = pydantic.Field(
+        default_factory=list
+    )
     # Variable args are allowed if it this is not none
     var_pos: typing.Optional[typing.Tuple[str, Type]] = None
 
@@ -211,13 +221,19 @@ class Signature(pydantic.BaseModel):
             posonlyargs=[
                 ast.arg(k, annotation(v))
                 for k, v in itertools.chain(
-                    self.pos_only_required.items(), self.pos_only_optional.items()
+                    self.pos_only_required.items(),
+                    possibly_order_dict(
+                        self.pos_only_optional, self.pos_only_optional_ordering
+                    ).items(),
                 )
             ],
             args=[
                 ast.arg(k, annotation(v))
                 for k, v in itertools.chain(
-                    self.pos_or_kw_required.items(), self.pos_or_kw_optional.items()
+                    self.pos_or_kw_required.items(),
+                    possibly_order_dict(
+                        self.pos_or_kw_optional, self.pos_or_kw_optional_ordering
+                    ).items(),
                 )
             ],
             defaults=[
@@ -304,7 +320,7 @@ class Signature(pydantic.BaseModel):
         self.validate_keys_unique()
 
         # Merge metata, throwing away duplicate keys
-        update(self.metadata, other.metadata, lambda l, r: l + r)
+        update(self.metadata, other.metadata, f=operator.add)
         return self
 
     def _copy_pos_only(self, other: Signature) -> None:
@@ -315,25 +331,46 @@ class Signature(pydantic.BaseModel):
             )
         )
         n_pos_only_required = len(pos_only_required)
+        self_new_pos_only_optional = slice_dict(
+            self.pos_only_required, n_pos_only_required
+        )
+        other_new_pos_only_optional = slice_dict(
+            other.pos_only_required, n_pos_only_required
+        )
+        self.pos_only_required = pos_only_required
 
-        # any leftover, are optional positional only args
-        # These should be combined with the existing optional position only
-        pos_only_optional = interleave_dicts(
-            {
-                **slice_dict(self.pos_only_required, n_pos_only_required),
-                **self.pos_only_optional,
-            },
-            {
-                **slice_dict(other.pos_only_required, n_pos_only_required),
-                **other.pos_only_optional,
-            },
+        addititional_ordering: PartialKeyOrdering = []
+        # also add to ordering that new optional keys must come before old ones, because
+        # they used to be required
+        if self_new_pos_only_optional and self.pos_only_optional:
+            addititional_ordering.append(
+                (
+                    # last of required is before first of optional
+                    next(iter(reversed(self_new_pos_only_optional.keys()))),
+                    next(iter(self.pos_only_optional.keys())),
+                )
+            )
+        if other_new_pos_only_optional and other.pos_only_optional:
+            addititional_ordering.append(
+                (
+                    next(iter(reversed(other_new_pos_only_optional.keys()))),
+                    next(iter(other.pos_only_optional.keys())),
+                )
+            )
+        update_unify(
+            self.pos_only_optional,
+            self_new_pos_only_optional,
+            other.pos_only_optional,
+            other_new_pos_only_optional,
         )
 
-        # sanity check, verify no duplicate keys
-        assert not set(pos_only_required.keys()) & (pos_only_optional.keys())
+        self.pos_only_optional_ordering += (
+            other.pos_only_optional_ordering
+            + partial_key_ordering(self_new_pos_only_optional)
+            + partial_key_ordering(other_new_pos_only_optional)
+            + addititional_ordering
+        )
 
-        self.pos_only_optional = pos_only_optional
-        self.pos_only_required = pos_only_required
 
     def _copy_pos_or_kw(self, other: Signature) -> None:
         # First take off new optional keys from self and other, making sure to keep order
@@ -342,6 +379,7 @@ class Signature(pydantic.BaseModel):
         pos_or_kw_required_keys = set(self_pos_or_kw_required_keys) & set(
             other_pos_or_kw_required_keys
         )
+        # Pop off all required keys that are not in both sets
         self_new_optional = {
             k: self.pos_or_kw_required.pop(k)
             for k in self_pos_or_kw_required_keys
@@ -353,17 +391,20 @@ class Signature(pydantic.BaseModel):
             if k not in pos_or_kw_required_keys
         }
         # Now we can merge the required keys
-        update(
-            self.pos_or_kw_required,
-            other.pos_or_kw_required,
-            lambda l, r: unify((l, r)),
+        update_unify(
+            self.pos_or_kw_required, other.pos_or_kw_required,
         )
 
-        self.pos_or_kw_optional = interleave_dicts(
-            self_new_optional,
-            other_new_optional,
+        update_unify(
             self.pos_or_kw_optional,
+            other_new_optional,
+            self_new_optional,
             other.pos_or_kw_optional,
+        )
+        self.pos_or_kw_optional_ordering += (
+            other.pos_or_kw_optional_ordering
+            + partial_key_ordering(self_new_optional)
+            + partial_key_ordering(other_new_optional)
         )
 
     def _copy_var_pos(self, other: Signature) -> None:
@@ -391,12 +432,8 @@ class Signature(pydantic.BaseModel):
             lambda l, r: unify((l, r)),
         )
         # merge required and optional
-        update(
-            self.kw_only_required, other.kw_only_required, lambda l, r: unify((l, r)),
-        )
-        update(
-            self.kw_only_optional, other.kw_only_optional, lambda l, r: unify((l, r)),
-        )
+        update_unify(self.kw_only_required, other.kw_only_required)
+        update_unify(self.kw_only_optional, other.kw_only_optional)
 
     def _copy_var_kw(self, other: Signature) -> None:
         self.var_kw = (
@@ -411,25 +448,23 @@ Class.update_forward_refs()
 Module.update_forward_refs()
 
 
-def interleave_dicts(*ds: typing.Dict[str, Type]) -> typing.Dict[str, Type]:
-    # Now we just need to merge all the items, making sure that if any two items
-    # had an ordering in an existing optional that ordering is preserved.
+def partial_key_ordering(d: typing.Dict[str, Type]) -> PartialKeyOrdering:
+    prev_key = None
+    pairs: PartialKeyOrdering = []
+    for key in d.keys():
+        if prev_key is not None:
+            pairs.append((prev_key, key))
+        prev_key = key
+    return pairs
 
-    # We do this by creating a graph of all the nodes, with a `types` atribute for a set of the types
-    # We should have an edge pointing from all earlier params to later ones, so then we can
-    # topologically sort it to get proper ordering
-    g = networkx.DiGraph()
-    for d in ds:
-        prev_key = None
-        for key, tp in d.items():
-            if key in g:
-                g.nodes[key]["types"].add(tp)
-            else:
-                g.add_node(key, types={tp})
-            if prev_key is not None:
-                g.add_edge(prev_key, key)
-            prev_key = key
-    return {k: unify(g.nodes[k]["types"]) for k in networkx.topological_sort(g)}
+
+def possibly_order_dict(
+    d: typing.Dict[str, Type], order: PartialKeyOrdering
+) -> typing.Dict[str, Type]:
+    """
+    Resort dict by topographical sorting of order
+    """
+    return {k: d[k] for k in networkx.topological_sort(networkx.DiGraph(order))}
 
 
 def unify_named_types(
@@ -485,9 +520,10 @@ def move(
         l[k] = v
 
 
+
 def update(
     l: typing.Dict[K, V],
-    r: typing.Dict[K, V],
+    *rs: typing.Dict[K, V],
     f: typing.Callable[[V, V], typing.Union[DontAdd, V]],
 ) -> None:
     """
@@ -495,12 +531,17 @@ def update(
 
     On conflicting keys calls function with left and right values to return result.
     """
-    for k, v in r.items():
-        if k in l:
-            res = f(l[k], v)
-            if isinstance(res, DontAdd):
-                del l[k]
+    for r in rs:
+        for k, v in r.items():
+            if k in l:
+                res = f(l[k], v)
+                if isinstance(res, DontAdd):
+                    del l[k]
+                else:
+                    l[k] = res
             else:
-                l[k] = res
-        else:
-            l[k] = v
+                l[k] = v
+
+
+update_ior = functools.partial(update, f=operator.ior)
+update_unify = functools.partial(update, f=lambda l, r: unify((l, r)))
