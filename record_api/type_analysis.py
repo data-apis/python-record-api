@@ -9,6 +9,8 @@ import typing
 import collections
 import pydantic
 import abc
+import ast
+
 
 __all__ = [
     "create_type",
@@ -106,6 +108,10 @@ class OutputTypeBase(BaseModel, abc.ABC):
     ) -> OutputType:
         ...
 
+    @property
+    @abc.abstractmethod
+    def annotation(self) -> ast.AST:
+        ...
 
 class InputTypeBase(BaseModel, abc.ABC):
     @abc.abstractmethod
@@ -127,8 +133,9 @@ class NoneOutput(OutputTypeBase):
     def unify(cls, tps: typing.Iterable[NoneOutput]) -> NoneOutput:
         return NoneOutput()
 
-    def __str__(self):
-        return "None"
+    @property
+    def annotation(self):
+        return ast.Constant(None, None)
 
 
 class StringInput(InputTypeBase):
@@ -149,10 +156,15 @@ class StringOutput(OutputTypeBase):
     type: typing.Literal["str"] = "str"
     options: typing.Union[typing.FrozenSet[str], None] = None
 
-    def __str__(self):
+    @property
+    def annotation(self) -> ast.AST:
         if self.options:
+            return ast.Subscript(
+                ast.Name('Literal', ast.Load()),
+                ast.Index(ast.Tuple([ast.Constant(s, None) for s in self.options], ast.Load()), ast.Load())
+            )
             return f'Literal[{", ".join(map(str, self.options))}]'
-        return "str"
+        return ast.Name("int", ast.Load())
 
     @classmethod
     def unify(cls, tps: typing.Iterable[StringOutput]) -> StringOutput:
@@ -175,10 +187,16 @@ class ListOutput(OutputTypeBase):
     type: typing.Literal["list"] = "list"
     item: OutputType
 
-    def __str__(self):
-        if is_unkown(self.item):
-            return "list"
-        return f"list[{str(self.item)}]"
+
+    @property
+    def annotation(self) -> ast.AST:
+        if is_unknown(self.item):
+            return ast.Name("list", ast.Load())
+        return ast.Subscript(
+            ast.Name('list', ast.Load()),
+            ast.Index(self.item.annotation, ast.Load())
+        )
+
 
     @classmethod
     def unify(cls, tps: typing.Iterable[ListOutput]) -> ListOutput:
@@ -198,12 +216,19 @@ class TupleOutput(OutputTypeBase):
     # If just one item then tuple of arbitrary length of all the same type
     items: typing.Union[OutputType, typing.Tuple[OutputType, ...]]
 
-    def __str__(self):
+    @property
+    def annotation(self) -> ast.AST:
         if is_unknown(self.items):
-            return "tuple"
-        if isinstance(self.items, list):
-            return f'tuple[{", ".join(map(str, self.items))}]'
-        return f"tuple[{str(self.items)}, ...]"
+            return ast.Name("tuple", ast.Load())
+        if isinstance(self.items, tuple):
+            return ast.Subscript(
+                ast.Name('tuple', ast.Load()),
+                ast.Index(ast.Tuple([s.annotation for s in self.items], ast.Load()), ast.Load())
+            )
+        return ast.Subscript(
+            ast.Name('tuple', ast.Load()),
+            ast.Index(ast.Tuple([self.items.annotation, ast.Constant(..., None)], ast.Load()), ast.Load())
+        )
 
     @classmethod
     def unify(cls, tps: typing.Iterable[TupleOutput]) -> TupleOutput:
@@ -249,10 +274,14 @@ class DictOutput(OutputTypeBase):
     key: OutputType
     value: OutputType
 
-    def __str__(self):
+    @property
+    def annotation(self) -> ast.AST:
         if is_unknown(self.key) and is_unknown(self.value):
-            return "dict"
-        return f"dict[{str(self.key)}, {str(self.value)}]"
+            return ast.Name("tuple", ast.Load())
+        return ast.Subscript(
+            ast.Name('dict', ast.Load()),
+            ast.Index(ast.Tuple([self.key.annotation, self.value.annotation], ast.Load()), ast.Load())
+        )
 
     @classmethod
     def unify(cls, tps: typing.Iterable[DictOutput]) -> DictOutput:
@@ -264,9 +293,9 @@ class DictOutput(OutputTypeBase):
 class ObjectOutput(OutputTypeBase):
     type: typing.Literal["object"] = "object"
 
-    def __str__(self):
-        return "object"
-
+    @property
+    def annotation(self) -> ast.AST:
+        return ast.Name("object", ast.Load())
     @classmethod
     def unify(cls, tps: typing.Iterable[ObjectOutput]) -> ObjectOutput:
         return ObjectOutput()
@@ -302,17 +331,21 @@ class NamedOutput(BaseModel):
             return cls(name=input.__root__)
         return cls(name=input.name, module=input.module)
 
-    def __str__(self):
+    @property
+    def annotation(self) -> ast.AST:
         if self.module is None:
-            return self.name
-        return f"{self.module}.{self.name}"
+            return ast.Name(self.name, ast.Load())
+        return ast.Attribute(
+            ast.Name(self.module, ast.Load()), self.name, ast.Load()
+        )
 
 
 class OtherOutput(OutputTypeBase):
     type: NamedOutput
 
-    def __str__(self):
-        return str(self.type)
+    @property
+    def annotation(self) -> ast.AST:
+        return self.type.annotation
 
     @classmethod
     def unify(cls, tps: typing.Iterable[OtherOutput]) -> typing.Union[OtherOutput, UnionOutput]:
@@ -334,9 +367,11 @@ class ModuleOutput(OutputTypeBase):
     type: typing.Literal["module"] = "module"
     name: typing.Optional[str] = None
 
-    def __str__(self):
-        return "types.ModuleType"
-
+    @property
+    def annotation(self) -> ast.AST:
+        return ast.Attribute(
+            ast.Name("types", ast.Load()), "ModuleType", ast.Load()
+        )
     @classmethod
     def unify(cls, tps: typing.Iterable[ModuleOutput]) -> ModuleOutput:
         names = set(tp.name for tp in tps)
@@ -369,7 +404,8 @@ class SliceOutput(OutputTypeBase):
     stop: OutputType
     step: OutputType
 
-    def __str___(self):
+    @property
+    def annotation(self) -> ast.AST:
         """
         Doesn't exist yet as generic type, but should
 
@@ -380,8 +416,11 @@ class SliceOutput(OutputTypeBase):
             and is_unknown(self.stop)
             and is_unknown(self.step)
         ):
-            return "slice"
-        return f"slice[{str(self.start)}, {str(self.stop)}, {str(self.step)}]"
+            return ast.Name("slice", ast.Load())
+        return ast.Subscript(
+            ast.Name('slice', ast.Load()),
+            ast.Index(ast.Tuple([self.start.annotation, self.stop.annotation, self.step.annotation], ast.Load()), ast.Load())
+        )
 
     @classmethod
     def unify(cls, tps: typing.Iterable[SliceOutput]) -> SliceOutput:
@@ -408,10 +447,14 @@ class TypeOutput(OutputTypeBase):
     # If none, then any type
     name: typing.Optional[NamedOutput] = None
 
-    def __str__(self):
+    @property
+    def annotation(self) -> ast.AST:
         if self.name is None:
-            return "type"
-        return f"type[{str(self.name)}]"
+            return ast.Name("list", ast.Load())
+        return ast.Subscript(
+            ast.Name('list', ast.Load()),
+            ast.Index(self.name.annotation, ast.Load())
+        )
 
     @classmethod
     def unify(cls, tps: typing.Iterable[TypeOutput]) -> TypeOutput:
@@ -434,8 +477,9 @@ class FunctionOutput(OutputTypeBase):
     # If none, then any function
     name: typing.Optional[NamedOutput] = None
 
-    def __str__(self):
-        return "typing.Callable"
+    @property
+    def annotation(self) -> ast.AST:
+        return ast.Name("Callable", ast.Load())
 
     @classmethod
     def unify(cls, tps: typing.Iterable[FunctionOutput]) -> FunctionOutput:
@@ -471,8 +515,10 @@ class MethodOutput(OutputTypeBase):  # type: ignore
     name: str
     self: OutputType
 
-    def __str__(self):
-        return "typing.Callable"
+
+    @property
+    def annotation(self) -> ast.AST:
+        return ast.Name("Callable", ast.Load())
 
     @classmethod
     def unify(
@@ -512,8 +558,10 @@ class ClassMethodOutput(OutputTypeBase):  # type: ignore
     class_: NamedOutput
     name: str
 
-    def __str__(self):
-        return "typing.Callable"
+
+    @property
+    def annotation(self) -> ast.AST:
+        return ast.Name("Callable", ast.Load())
 
     @classmethod
     def unify(
@@ -578,15 +626,19 @@ class NumpyDTypeInput(InputTypeBase):
 
 class NumpyDTypeInputType(BaseModel):
     module: typing.Literal["numpy"]
-    name: typing.Literal["ndarray"]
+    name: typing.Literal["dtype"]
 
 
 class UnionOutput(OutputTypeBase):
     type: typing.Literal["union"] = "union"
     options: typing.Tuple[OutputType, ...]
 
-    def __str__(self):
-        return f'Union[{", ".join(map(str, self.options))}]'
+    @property
+    def annotation(self) -> ast.AST:
+        return ast.Subscript(
+            ast.Name('Union', ast.Load()),
+            ast.Index(ast.Tuple([o.annotation for o in self.options], ast.Load()), ast.Load())
+        )
 
     @classmethod
     def unify(cls, tps: typing.Iterable[UnionOutput]) -> OutputType:
@@ -609,6 +661,9 @@ class BottomOutput(OutputTypeBase):
         # So that when unified will give back no more options
         return UnionOutput(options=[])
 
+    @property
+    def annotation(self) -> ast.AST:
+        return ast.Name("object", ast.Load())
 
 # Make them unions not subclasses so they are closed
 # and pydantic will iterate through to find right one

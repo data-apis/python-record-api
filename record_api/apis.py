@@ -12,6 +12,7 @@ import warnings
 import itertools
 import pydantic
 import warnings
+import ast
 
 import tqdm.std
 import orjson
@@ -107,6 +108,49 @@ class Signature(pydantic.BaseModel):
     var_kw: typing.Optional[typing.Tuple[str, Type]] = None
 
     metadata: typing.Dict[str, int] = pydantic.Field(default_factory=dict)
+
+    @property
+    def ast(self) -> ast.arguments:
+        return ast.arguments(
+            posonlyargs=[
+                ast.arg(k, v.annotation)
+                for k, v in itertools.chain(
+                    self.pos_only_required.items(), self.pos_only_optional.items()
+                )
+            ],
+            args=[
+                ast.arg(k, v.annotation)
+                for k, v in itertools.chain(
+                    self.pos_or_kw_required.items(), self.pos_or_kw_optional.items()
+                )
+            ],
+            defaults=[
+                ast.Constant(..., None)
+                for _ in range(
+                    len(self.pos_only_optional) + len(self.pos_or_kw_optional)
+                )
+            ],
+            vararg=(
+                ast.arg(self.var_pos[0], self.var_pos[1].annotation)
+                if self.var_pos
+                else None
+            ),
+            kwarg=(
+                ast.arg(self.var_kw[0], self.var_kw[1].annotation)
+                if self.var_kw
+                else None
+            ),
+            kwonlyargs=[
+                ast.arg(k, v.annotation)
+                for k, v in itertools.chain(
+                    self.kw_only_required.items(), self.kw_only_optional.items()
+                )
+            ],
+            kw_defaults=(
+                [ast.Constant(None, None) for _ in range(len(self.kw_only_required))]
+                + [ast.Constant(..., None) for _ in range(len(self.kw_only_optional))]
+            ),
+        )
 
     @property
     def initial_args(self) -> typing.Iterator[Type]:
