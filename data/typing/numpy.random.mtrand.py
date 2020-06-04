@@ -1,4 +1,5 @@
 
+_rand = ...
 
 class RandomState():
 
@@ -74,4 +75,3 @@ class RandomState():
 
     def poisson(self, _0: numpy.ndarray, /):
         'usage.skimage: 2'
-_rand = ...

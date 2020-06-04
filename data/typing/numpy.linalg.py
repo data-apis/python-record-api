@@ -1,4 +1,5 @@
 
+LinAlgError = ...
 
 def svd(a: numpy.ndarray, full_matrices: bool=...):
     'usage.skimage: 7'
@@ -26,4 +27,3 @@ def eig(a: numpy.ndarray):
 
 def matrix_rank(M: numpy.ndarray):
     'usage.skimage: 1'
-LinAlgError = ...

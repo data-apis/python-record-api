@@ -15,7 +15,7 @@ def getmaskarray(arr: numpy.ma.core.MaskedArray):
 def MaskedArray.mean(self: numpy.ma.core.MaskedArray):
     'usage.skimage: 1'
 
-def MaskedArray.reshape(self: numpy.ma.core.MaskedArray, *s: Literal[('t', 'v')]):
+def MaskedArray.reshape(self: numpy.ma.core.MaskedArray, *s: Literal[('v', 't')]):
     'usage.skimage: 1'
 
 class MaskedArray():

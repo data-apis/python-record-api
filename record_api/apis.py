@@ -57,11 +57,12 @@ class Module(pydantic.BaseModel):
 
     @property
     def body(self) -> typing.Iterable[ast.AST]:
+        yield from assign_properties(self.properties)
+
         for name, sig in self.functions.items():
             yield sig.function_def(name)
         for name, class_ in self.classes.items():
             yield class_.class_def(name)
-        yield from assign_properties(self.properties)
 
     def __ior__(self, other: Module) -> Module:
         update(self.classes, other.classes, operator.ior)
