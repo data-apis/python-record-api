@@ -2,13 +2,15 @@
 
 LIBRARIES := sample_usage skimage
 
-all: data/api/sample_usage.json
+all: api
 
 clean: clean_groupby_location clean_api clean_raw
 
 
 clean_api:
 	rm -f data/api/*
+
+api: $(addprefix data/api/,$(addsuffix .json,$(LIBRARIES)))
 
 
 data/api/%.json: data/groupby_location/%.jsonl
