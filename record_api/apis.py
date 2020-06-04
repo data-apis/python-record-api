@@ -13,6 +13,7 @@ import itertools
 import pydantic
 import warnings
 import ast
+import networkx
 
 import tqdm.std
 import orjson
@@ -244,12 +245,12 @@ class Signature(pydantic.BaseModel):
         )
         self_new_optional = {
             k: self.pos_or_kw_required.pop(k)
-            for k in self.pos_or_kw_required.keys()
+            for k in self_pos_or_kw_required_keys
             if k not in pos_or_kw_required_keys
         }
         other_new_optional = {
             k: other.pos_or_kw_required.pop(k)
-            for k in other.pos_or_kw_required.keys()
+            for k in other_pos_or_kw_required_keys
             if k not in pos_or_kw_required_keys
         }
         # Now we can merge the required keys
@@ -261,37 +262,30 @@ class Signature(pydantic.BaseModel):
 
         # Now we just need to merge all the optional items, making sure that if any two items
         # had an ordering in an existing optional that ordering is preserved.
-        optionals: typing.List[typing.Dict[str, Type]] = [
+
+        # We do this by creating a graph of all the nodes, with a `types` atribute for a set of the types
+        # We should have an edge pointing from all earlier params to later ones, so then we can
+        # topologically sort it to get proper ordering
+        g = networkx.DiGraph()
+        for d in [
             self_new_optional,
             other_new_optional,
             self.pos_or_kw_optional,
             other.pos_or_kw_optional,
-        ]
+        ]:
+            prev_key = None
+            for key, tp in d.items():
+                if key in g:
+                    g.nodes[key]["types"].add(tp)
+                else:
+                    g.add_node(key, types={tp})
+                if prev_key is not None:
+                    g.add_edge(prev_key, key)
+                prev_key = key
 
-        self.pos_or_kw_optional: typing.Dict[str, Type] = {}
-
-        def get_values(k: str) -> typing.Iterator[Type]:
-            for d in pop_through_list(optionals):
-                if k not in d:
-                    continue
-                for new_k, v in pop_through_dict(d):
-                    if new_k == k:
-                        yield v
-                    # If we have a new key, find this in the remaining dicts
-                    # and set it
-                    else:
-                        self.pos_or_kw_optional[k] = unify([v, *get_values(new_k)])
-
-        def get_another_key():
-            for o in optionals:
-                for k in o.keys():
-                    return k
-
-        k = get_another_key()
-
-        while k is not None:
-            get_values(k)
-            k = get_another_key()
+        self.pos_or_kw_optional = {
+            k: unify(g.nodes[k]["types"]) for k in networkx.topological_sort(g)
+        }
 
     def _copy_var_pos(self, other: Signature) -> None:
         self.var_pos = (
@@ -404,29 +398,3 @@ def update(
         else:
             l[k] = v
 
-
-def pop_through_list(l: typing.List[K]) -> typing.Iterable[K]:
-    """
-    Iterates through a list by popping off each index and putting it back on
-    """
-    v = None
-    for i in range(len(l)):
-        if v:
-            l.insert(i - 1, v)
-        v = l.pop(i)
-        yield v
-    if v:
-        l.insert(i - 1, v)
-
-
-def pop_through_dict(d: typing.Dict[K, V]) -> typing.Iterable[typing.Tuple[K, V]]:
-    """
-    Iterates through each k, v in an ordered dict, popping each off and not adding them back
-    """
-    while d:
-        k = next(iter(d.keys()))
-        yield k, d.pop(k)
-
-
-if __name__ == "__main__":
-    __main__()
