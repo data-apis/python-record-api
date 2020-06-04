@@ -708,6 +708,12 @@
                   }
                 },
                 {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
                   "type": "slice",
                   "start": {
                     "type": {
@@ -723,12 +729,6 @@
                   },
                   "step": {
                     "type": "None"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
                   }
                 },
                 {
