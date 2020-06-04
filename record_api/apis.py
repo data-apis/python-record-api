@@ -88,6 +88,12 @@ class Class(pydantic.BaseModel):
     def body(self) -> typing.Iterable[ast.AST]:
         if self.constructor is not None:
             yield self.constructor.function_def("__init__")
+        yield from assign_properties(self.classproperties, True)
+
+        for name, sig in self.classmethods.items():
+            yield sig.function_def(name, is_classmethod=True)
+
+        yield from assign_properties(self.properties)
 
         for name, sig in self.methods.items():
             # copy and add self as first arg
@@ -97,12 +103,6 @@ class Class(pydantic.BaseModel):
             for k, v in old_pos_only_required.items():
                 sig.pos_only_required[k] = v
             yield sig.function_def(name)
-
-        for name, sig in self.classmethods.items():
-            yield sig.function_def(name, is_classmethod=True)
-
-        yield from assign_properties(self.properties)
-        yield from assign_properties(self.classproperties, True)
 
     def __ior__(self, other: Class) -> Class:
         if self.constructor and other.constructor:
