@@ -218,30 +218,20 @@ class Signature(pydantic.BaseModel):
 
         # any leftover, are optional positional only args
         # These should be combined with the existing optional position only
-        self.pos_only_optional = dict(
-            map(
-                unify_named_types,
-                itertools.zip_longest(
-                    itertools.islice(
-                        self.pos_only_required.items(), n_pos_only_required, None
-                    ),
-                    itertools.islice(
-                        other.pos_only_required.items(), n_pos_only_required, None
-                    ),
-                    self.pos_only_optional.items(),
-                    other.pos_only_optional.items(),
-                    fillvalue=(None, BottomOutput()),
-                ),
-            )
+        self.pos_only_optional = interleave_dicts(
+            slice_dict(self.pos_only_required, n_pos_only_required),
+            slice_dict(other.pos_only_required, n_pos_only_required),
+            self.pos_only_optional,
+            other.pos_only_optional,
         )
         self.pos_only_required = pos_only_required
 
     def _copy_pos_or_kw(self, other: Signature) -> None:
         # First take off new optional keys from self and other, making sure to keep order
-        self_pos_or_kw_required_keys = set(self.pos_or_kw_required.keys())
-        other_pos_or_kw_required_keys = set(other.pos_or_kw_required.keys())
-        pos_or_kw_required_keys = (
-            self_pos_or_kw_required_keys & other_pos_or_kw_required_keys
+        self_pos_or_kw_required_keys = list(self.pos_or_kw_required.keys())
+        other_pos_or_kw_required_keys = list(other.pos_or_kw_required.keys())
+        pos_or_kw_required_keys = set(self_pos_or_kw_required_keys) & set(
+            other_pos_or_kw_required_keys
         )
         self_new_optional = {
             k: self.pos_or_kw_required.pop(k)
@@ -260,32 +250,12 @@ class Signature(pydantic.BaseModel):
             lambda l, r: unify((l, r)),
         )
 
-        # Now we just need to merge all the optional items, making sure that if any two items
-        # had an ordering in an existing optional that ordering is preserved.
-
-        # We do this by creating a graph of all the nodes, with a `types` atribute for a set of the types
-        # We should have an edge pointing from all earlier params to later ones, so then we can
-        # topologically sort it to get proper ordering
-        g = networkx.DiGraph()
-        for d in [
+        self.pos_or_kw_optional = interleave_dicts(
             self_new_optional,
             other_new_optional,
             self.pos_or_kw_optional,
             other.pos_or_kw_optional,
-        ]:
-            prev_key = None
-            for key, tp in d.items():
-                if key in g:
-                    g.nodes[key]["types"].add(tp)
-                else:
-                    g.add_node(key, types={tp})
-                if prev_key is not None:
-                    g.add_edge(prev_key, key)
-                prev_key = key
-
-        self.pos_or_kw_optional = {
-            k: unify(g.nodes[k]["types"]) for k in networkx.topological_sort(g)
-        }
+        )
 
     def _copy_var_pos(self, other: Signature) -> None:
         self.var_pos = (
@@ -332,8 +302,29 @@ Class.update_forward_refs()
 Module.update_forward_refs()
 
 
+def interleave_dicts(*ds: typing.Dict[str, Type]) -> typing.Dict[str, Type]:
+    # Now we just need to merge all the items, making sure that if any two items
+    # had an ordering in an existing optional that ordering is preserved.
+
+    # We do this by creating a graph of all the nodes, with a `types` atribute for a set of the types
+    # We should have an edge pointing from all earlier params to later ones, so then we can
+    # topologically sort it to get proper ordering
+    g = networkx.DiGraph()
+    for d in ds:
+        prev_key = None
+        for key, tp in d.items():
+            if key in g:
+                g.nodes[key]["types"].add(tp)
+            else:
+                g.add_node(key, types={tp})
+            if prev_key is not None:
+                g.add_edge(prev_key, key)
+            prev_key = key
+    return {k: unify(g.nodes[k]["types"]) for k in networkx.topological_sort(g)}
+
+
 def unify_named_types(
-    name_and_types: typing.Iterable[typing.Tuple[str, Type]]
+    name_and_types: typing.Iterable[typing.Tuple[typing.Optional[str], Type]]
 ) -> typing.Tuple[str, Type]:
     """
     Verifies the names are the same and unifies the types. Returns None if no args passed in
@@ -354,6 +345,13 @@ class DontAdd:
 
 
 DONT_ADD = DontAdd()
+
+
+def slice_dict(d: typing.Dict[K, V], n: int) -> typing.Dict[K, V]:
+    """
+    Slices n off the front of the dict
+    """
+    return dict(kv for i, kv in enumerate(d.items()) if i < n)
 
 
 def remove_keys(d: typing.Dict[K, V], ks: typing.Iterable[K]) -> None:
@@ -397,4 +395,3 @@ def update(
                 l[k] = res
         else:
             l[k] = v
-
