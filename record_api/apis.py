@@ -204,7 +204,7 @@ class Signature(pydantic.BaseModel):
         self._copy_kw_only(other)
         self._copy_var_kw(other)
         # Merge metata, throwing away duplicate keys
-        update(self.metadata, other.metadata, lambda l, r: l)
+        update(self.metadata, other.metadata, lambda l, r: l + r)
         return self
 
     def _copy_pos_only(self, other: Signature) -> None:
