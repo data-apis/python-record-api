@@ -2,7 +2,7 @@
 
 LIBRARIES := sample_usage skimage
 
-all: api
+all: data/api.json
 
 clean: clean_groupby_location clean_api clean_raw
 
@@ -10,7 +10,11 @@ clean: clean_groupby_location clean_api clean_raw
 clean_api:
 	rm -f data/api/*
 
-api: $(addprefix data/api/,$(addsuffix .json,$(LIBRARIES)))
+
+data/api.json: $(addprefix data/api/,$(addsuffix .json,$(LIBRARIES)))
+	env PYTHON_RECORD_API_OUTPUT=$@ \
+		PYTHON_RECORD_API_INPUTS="$^"\
+		python -m record_api.combine_apis
 
 
 data/api/%.json: data/groupby_location/%.jsonl
