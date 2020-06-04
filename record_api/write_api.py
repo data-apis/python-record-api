@@ -18,6 +18,7 @@ import tqdm.std
 import orjson
 from typing_extensions import TypedDict
 import tqdm
+import black
 
 from . import jsonl
 from .type_analysis import *
@@ -33,7 +34,12 @@ def __main__():
 
     folder = pathlib.Path(OUTPUT)
     for name, module in tqdm.tqdm(api.modules.items()):
-        (folder / f"{name}.py").write_text(module.source)
+        (folder / f"{name}.py").write_text(
+            black.format_str(
+                module.source,
+                mode=black.FileMode([black.TargetVersion.PY38], is_pyi=False),
+            )
+        )
 
 
 if __name__ == "__main__":

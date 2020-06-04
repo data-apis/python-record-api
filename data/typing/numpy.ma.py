@@ -1,6 +1,6 @@
-
 array = ...
 masked = ...
 
-def zeros(*args: Literal[('v', 't')]):
-    'usage.skimage: 5'
+
+def zeros(*args: Literal[("v", "t")]):
+    "usage.skimage: 5"
