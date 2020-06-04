@@ -1,6 +1,6 @@
 .PHONY: groupby_location clean_groupby_location clean_api clean_raw clean_typing clean all
 
-LIBRARIES := sample_usage skimage
+LIBRARIES := sample_usage skimage xarray sklearn
 
 all: data/typing/numpy.py
 
@@ -39,9 +39,9 @@ clean_groupby_location:
 groupby_location: $(addprefix data/groupby_location/,$(addsuffix .jsonl,$(LIBRARIES)))
 
 
-data/groupby_location/%.jsonl: data/raw/%.jsonl
+data/groupby_location/%.jsonl: | data/raw/%.jsonl
 	env PYTHON_RECORD_API_OUTPUT=$@ \
-		PYTHON_RECORD_API_INPUT=$< \
+		PYTHON_RECORD_API_INPUT=$| \
 		python -m record_api.line_counts
 
 

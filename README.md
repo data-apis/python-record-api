@@ -2,7 +2,9 @@
 
 This module is mean to help you understand how a Python module is being used by other modules.
 
-Currently there is a `record_api.py` script that logs all function calls to the module of your choice.
+Currently, this logs all function calls from running a module, or when running pytest, from a specified module to another module.
+
+Then it builds hypothetical API for the target module, given all the calls it has taken.
 
 This is supported on Python version 3.8.
 
@@ -16,13 +18,16 @@ pip install -e .
 env PYTEST_DISABLE_PLUGIN_AUTOLOAD=true pytest record_api/test.py
 ```
 
-Now build the traces
+Now run the traces and build the results:
 
 ```bash
 make
 ```
 
-Here is how I can use it to see all the functions the scikit image tests call in NumPy:
+You can look in `data/typing/` for the final results of the generated API.
+
+Here are some notes on getting set up locally with a few projects. However,
+I had to disregard these and git clone things for some of them to get the tests to run:
 
 ```bash
 git clone git@github.com:scikit-image/scikit-image.git
@@ -42,6 +47,7 @@ conda create -n python-record-api -c conda-forge \
     python=3.8
 
 conda activate python-record-api
+pip install -e .
 pip install altair_data_server
 
 conda uninstall -c conda-forge --force matplotlib scikit-image
@@ -54,28 +60,7 @@ env MPLSETUPCFG=$PWD/matplotlib.setup.cfg pip install matplotlib --no-binary :al
 # Install scikit-image from source so we have tests as well
 pip install scikit-image --no-binary :all:
 
-# TODO: trace all of dask
-# TODO: add special pandas command
-echo "skimage
-dask.array
-sklearn
-matplotlib
-xarray
-pandas" | xargs -I % \
-env PYTHON_RECORD_API_OUTPUT_FILE=data/raw/%.jsonl \
-    PYTHON_RECORD_API_TO_MODULE=numpy \
-    PYTHON_RECORD_API_FROM_MODULE=% \
-    pytest --pyargs %
-
-echo "skimage
-sklearn
-matplotlib
-xarray" | xargs -I % \
-env PYTHON_RECORD_API_INPUT=data/raw/%.jsonl \
-    PYTHON_RECORD_API_OUTPUT_TYPED=data/counts_typed/%.csv \
-    PYTHON_RECORD_API_OUTPUT_UNTYPED=data/counts_untyped/%.csv \
-    python -m record_api.line_counts
-
+make
 ```
 
 ## How?
@@ -86,13 +71,19 @@ to get access to the top of the stack in the settrace function.
 
 It records all usage of the modules you specify, both all functions called that were defined in those modules, and all core operations that use objects defined in those libraries.
 
+## Limitations
+
+It doesn't currently track return values, so we don't know if someone called something whether it was actually a proper cal or not.
+We just assume it is.
+
+Also it doesn't currently record calls from Cython compiled code. This could be added later possibly by plugging into lldb.
+
 ## Why?
 
 The goal is to give us a sense of how different APIs are used in Python data science libraries, in order to have some data to back up decisions about creating future APIs.
 
 This let's us understand not only what exact functions are called, but the ways in which they are called, includig the type and values of their arguments.
 
-
 ## Tests
 
-There are some tests in the `record_api_test.py` which you can run with `python -m unittest record_api_test`. Unfortunately, we can't run coverage on our module, because it also uses `sys.settrace`. 
+There are some tests in the `record_api_test.py` which you can run with `python -m unittest record_api_test`. Unfortunately, we can't run coverage on our module, because it also uses `sys.settrace`.
