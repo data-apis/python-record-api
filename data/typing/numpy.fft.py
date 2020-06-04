@@ -2,7 +2,7 @@ def ifftshift(x: numpy.ndarray):
     "usage.skimage: 2"
 
 
-def fftfreq(n: int, d: numpy.ndarray = ...):
+def fftfreq(n: int = ...):
     "usage.skimage: 2"
 
 

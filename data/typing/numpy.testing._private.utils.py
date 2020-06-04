@@ -1,36 +1,33 @@
-def assert_almost_equal(actual, desired, decimal: int = ...):
+def assert_almost_equal(actual, desired=...):
     "usage.skimage: 340"
 
 
-def assert_equal(
-    actual,
-    desired,
-    err_msg: Literal[
-        (
-            "Different regionprops are equal",
-            "remove_small_holes in_place argument failed.",
-            "remove_small_objects in_place argument failed.",
-            "Same regionprops are not equal",
-        )
-    ] = ...,
-):
-    "usage.skimage: 664"
+def assert_equal(actual, desired=...):
+    "usage.skimage: 664\nusage.xarray: 21"
 
 
 def assert_array_equal(x, y):
-    "usage.skimage: 495"
+    "usage.skimage: 495\nusage.xarray: 307"
 
 
 def assert_allclose(
-    actual: Union[(numpy.int64, numpy.float64, float, numpy.ndarray)],
+    actual: Union[
+        (
+            float,
+            pandas.core.indexes.range.RangeIndex,
+            numpy.ndarray,
+            numpy.float64,
+            numpy.int64,
+        )
+    ],
     desired,
     rtol: float = ...,
     atol: Union[(int, float)] = ...,
 ):
-    "usage.skimage: 169"
+    "usage.skimage: 169\nusage.xarray: 27"
 
 
-def assert_array_almost_equal(x, y, decimal: int = ...):
+def assert_array_almost_equal(x, y=...):
     "usage.skimage: 107"
 
 
@@ -38,36 +35,20 @@ def assert_warns(warning_class: list, *args: Literal[("v", "t")]):
     "usage.skimage: 5"
 
 
-def assert_(
-    val: Union[(numpy.bool_, bool)],
-    msg: Literal[
-        (
-            "Maximum of `scharr` is larger than 1.",
-            "Minimum of `roberts` is smaller than 0.",
-            "Maximum of `farid` is larger than 1.",
-            "Maximum of `sobel` is larger than 1.",
-            "Minimum of `prewitt` is smaller than 0.",
-            "Maximum of `prewitt` is larger than 1.",
-            "Minimum of `farid` is smaller than 0.",
-            "Minimum of `sobel` is smaller than 0.",
-            "Minimum of `scharr` is smaller than 0.",
-            "Maximum of `roberts` is larger than 1.",
-        )
-    ] = ...,
-):
+def assert_(val: Union[(numpy.bool_, bool)] = ...):
     "usage.skimage: 91"
 
 
 def assert_array_less(
-    x: Union[(numpy.float64, numpy.ndarray)],
-    y: Union[(numpy.float64, float, numpy.ndarray)],
+    x: Union[(numpy.ndarray, numpy.float64)],
+    y: Union[(numpy.ndarray, float, numpy.float64)],
 ):
     "usage.skimage: 20"
 
 
 def assert_array_almost_equal_nulp(
     x: Union[(numpy.ma.core.MaskedArray, numpy.ndarray)],
-    y: Union[(numpy.ma.core.MaskedArray, numpy.float64, numpy.ndarray)],
+    y: Union[(numpy.ma.core.MaskedArray, numpy.ndarray, numpy.float64)],
 ):
     "usage.skimage: 4"
 

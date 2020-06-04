@@ -12,8 +12,10 @@
             }
           },
           "pos_only_optional": {},
+          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {},
           "pos_or_kw_optional": {},
+          "pos_or_kw_optional_ordering": [],
           "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
@@ -35,8 +37,10 @@
             }
           },
           "pos_only_optional": {},
+          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {},
           "pos_or_kw_optional": {},
+          "pos_or_kw_optional_ordering": [],
           "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
@@ -66,8 +70,10 @@
             }
           },
           "pos_only_optional": {},
+          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {},
           "pos_or_kw_optional": {},
+          "pos_or_kw_optional_ordering": [],
           "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
@@ -79,6 +85,7 @@
         "ones": {
           "pos_only_required": {},
           "pos_only_optional": {},
+          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "shape": {
               "type": "tuple",
@@ -99,6 +106,7 @@
             }
           },
           "pos_or_kw_optional": {},
+          "pos_or_kw_optional_ordering": [],
           "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
@@ -110,6 +118,7 @@
         "linspace": {
           "pos_only_required": {},
           "pos_only_optional": {},
+          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "start": {
               "type": {
@@ -131,6 +140,7 @@
             }
           },
           "pos_or_kw_optional": {},
+          "pos_or_kw_optional_ordering": [],
           "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
@@ -142,6 +152,7 @@
         "eye": {
           "pos_only_required": {},
           "pos_only_optional": {},
+          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "N": {
               "type": {
@@ -151,6 +162,7 @@
             }
           },
           "pos_or_kw_optional": {},
+          "pos_or_kw_optional_ordering": [],
           "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
@@ -175,8 +187,10 @@
             }
           },
           "pos_only_optional": {},
+          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {},
           "pos_or_kw_optional": {},
+          "pos_or_kw_optional_ordering": [],
           "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
@@ -195,8 +209,10 @@
             }
           },
           "pos_only_optional": {},
+          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {},
           "pos_or_kw_optional": {},
+          "pos_or_kw_optional_ordering": [],
           "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
@@ -215,8 +231,10 @@
             }
           },
           "pos_only_optional": {},
+          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {},
           "pos_or_kw_optional": {},
+          "pos_or_kw_optional_ordering": [],
           "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
@@ -228,6 +246,7 @@
         "column_stack": {
           "pos_only_required": {},
           "pos_only_optional": {},
+          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "tup": {
               "type": "list",
@@ -240,6 +259,7 @@
             }
           },
           "pos_or_kw_optional": {},
+          "pos_or_kw_optional_ordering": [],
           "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
@@ -269,8 +289,10 @@
             }
           },
           "pos_only_optional": {},
+          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {},
           "pos_or_kw_optional": {},
+          "pos_or_kw_optional_ordering": [],
           "var_pos": null,
           "kw_only_required": {
             "axis": {
@@ -316,8 +338,10 @@
               }
             },
             "pos_only_optional": {},
+            "pos_only_optional_ordering": [],
             "pos_or_kw_required": {},
             "pos_or_kw_optional": {},
+            "pos_or_kw_optional_ordering": [],
             "var_pos": null,
             "kw_only_required": {},
             "kw_only_optional": {},
@@ -330,8 +354,136 @@
             "__iter__": {
               "pos_only_required": {},
               "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "var_pos": null,
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "var_kw": null,
+              "metadata": {}
+            },
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "slice",
+                      "start": {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      "stop": {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      "step": {
+                        "type": "None"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": "tuple",
+                      "items": [
+                        {
+                          "type": "tuple",
+                          "items": [
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "tuple",
+                          "items": [
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "var_pos": null,
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "var_kw": null,
+              "metadata": {}
+            },
+            "__setitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
+                },
+                "_1": {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
               "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
@@ -341,8 +493,10 @@
             "sort": {
               "pos_only_required": {},
               "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
               "var_pos": null,
               "kw_only_required": {
                 "axis": {
@@ -370,8 +524,10 @@
                 }
               },
               "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
               "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
@@ -390,8 +546,10 @@
                 }
               },
               "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
               "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
@@ -410,8 +568,10 @@
                 }
               },
               "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
               "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
@@ -465,8 +625,10 @@
                   }
                 }
               },
+              "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
               "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
@@ -492,8 +654,10 @@
                 }
               },
               "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
               "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
@@ -548,8 +712,10 @@
               }
             },
             "pos_only_optional": {},
+            "pos_only_optional_ordering": [],
             "pos_or_kw_required": {},
             "pos_or_kw_optional": {},
+            "pos_or_kw_optional_ordering": [],
             "var_pos": null,
             "kw_only_required": {},
             "kw_only_optional": {},
@@ -584,8 +750,10 @@
                 }
               },
               "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
               "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
@@ -634,8 +802,10 @@
                 }
               },
               "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
               "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},

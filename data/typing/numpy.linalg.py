@@ -1,7 +1,7 @@
 LinAlgError = ...
 
 
-def svd(a: numpy.ndarray, full_matrices: bool = ...):
+def svd(a: numpy.ndarray = ...):
     "usage.skimage: 7"
 
 

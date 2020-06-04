@@ -156,6 +156,20 @@ def _setattr(
     return None
 
 
+
+def _getitem(inst: OutputType, idx: OutputType) -> typing.Optional[API]:
+    return record_method(inst, "__getitem__", sig(idx))
+
+
+def _setitem(
+    inst: OutputType, idx: OutputType, value: OutputType
+) -> typing.Optional[API]:
+    return record_method(inst, "__setitem__", sig(idx, value))
+
+def sig(*args: OutputType) -> Signature:
+    return Signature(pos_only_required={f"_{i}": v for i, v in enumerate(args)})
+
+
 FunctionCallback = typing.Union[
     typing.Callable[[], typing.Optional[API]],
     typing.Callable[[OutputType], typing.Optional[API]],
@@ -169,22 +183,15 @@ FUNCTIONS: typing.Dict[typing.Tuple[typing.Optional[str], str], FunctionCallback
     (None, "setattr"): _setattr,
     (None, "getattr"): functools.partial(_setattr, value_type=BottomOutput()),
     (None, "delattr"): functools.partial(_setattr, value_type=BottomOutput()),
+    ("_operator", "getitem"): _getitem,
+    ("_operator", "setitem"): _setitem,
 }
-
 
 @process_function.register
 def _method(f: MethodOutput, s: Signature) -> typing.Optional[API]:
     name = f.name
     self_ = f.self
-    if isinstance(self_, OtherOutput):
-        module = self_.type.module
-        cls_name = self_.type.name
-        if module is None:
-            warnings.warn(f"Ignoring method {name} on builtin type {cls_name}")
-            return None
-        return API(
-            modules={module: Module(classes={cls_name: Class(methods={name: s})})}
-        )
+
     if isinstance(self_, TypeOutput) and self_.name is not None:
         module = self_.name.module
         cls_name = self_.name.name
@@ -194,7 +201,20 @@ def _method(f: MethodOutput, s: Signature) -> typing.Optional[API]:
         return API(
             modules={module: Module(classes={cls_name: Class(classmethods={name: s})})}
         )
-    warnings.warn(f"Ignoring method {name} on {self_}")
+    return record_method(self_, name, s)
+
+
+def record_method(inst: OutputType, name: str, s: Signature) -> typing.Optional[API]:
+    if isinstance(inst, OtherOutput):
+        module = inst.type.module
+        cls_name = inst.type.name
+        if module is None:
+            warnings.warn(f"Ignoring method {name} on builtin type {cls_name}")
+            return None
+        return API(
+            modules={module: Module(classes={cls_name: Class(methods={name: s})})}
+        )
+    warnings.warn(f"Ignoring method {name} on {inst}")
     return None
 
 

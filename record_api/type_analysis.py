@@ -339,8 +339,8 @@ NamedInput = typing.Union[BuiltinNamedInput, ModuleNamedInput]
 class OtherInputType(InputTypeBase):
     t: NamedInput
 
-    def to_output(self) -> OtherOutput:
-        return OtherOutput(type=NamedOutput.from_input(self.t))
+    def to_output(self) -> typing.Union[OtherOutput, ObjectOutput]:
+        return OtherOutput.safe_create(self.t)
 
 
 class NamedOutput(BaseModel):
@@ -349,9 +349,11 @@ class NamedOutput(BaseModel):
     name: str
 
     @classmethod
-    def from_input(cls, input: NamedInput) -> NamedOutput:
+    def from_input(cls, input: NamedInput) -> typing.Optional[NamedOutput]:
         if isinstance(input, BuiltinNamedInput):
             return cls(name=input.__root__)
+        if '<' in input.name:
+            return None
         return cls(name=input.name, module=input.module)
 
     @property
@@ -364,6 +366,12 @@ class NamedOutput(BaseModel):
 class OtherOutput(OutputTypeBase):
     type: NamedOutput
 
+    @classmethod
+    def safe_create(cls, tp_i: NamedInput) -> typing.Union[OtherOutput, ObjectOutput]:
+        tp = NamedOutput.from_input(tp_i)
+        if tp is None:
+            return ObjectOutput()
+        return cls(type=tp)
     @property
     def annotation(self) -> ast.AST:
         return self.type.annotation
@@ -494,7 +502,7 @@ class FunctionInput(InputTypeBase):
     def to_output(self) -> typing.Union[FunctionOutput, MethodWithoutSelfOutput]:
         name = NamedOutput.from_input(self.v)
         # We are in some lambda
-        if "<" in name.name:
+        if not name:
             return FunctionOutput()
         if "." in name.name:
             # For some reason happens with MaskedArray.mean
@@ -654,8 +662,8 @@ class NumpyNDArrayInput(InputTypeBase):
     t: ModuleNamedInput
     v: NumpyNDArrayValue
 
-    def to_output(self) -> OtherOutput:
-        return OtherOutput(type=NamedOutput.from_input(self.t))
+    def to_output(self) -> typing.Union[OtherOutput, ObjectOutput]:
+        return OtherOutput.safe_create(self.t)
 
 
 class NumpyNDArrayValue(BaseModel):
@@ -666,8 +674,8 @@ class NumpyDTypeInput(InputTypeBase):
     t: ModuleNamedInput
     v: str
 
-    def to_output(self) -> OtherOutput:
-        return OtherOutput(type=NamedOutput.from_input(self.t))
+    def to_output(self) -> typing.Union[OtherOutput, ObjectOutput]:
+        return OtherOutput.safe_create(self.t)
 
 
 class UnionOutput(OutputTypeBase):
