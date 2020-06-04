@@ -152,7 +152,7 @@ def _setattr(
                 )
             }
         )
-    warnings.warn(f"Ignoring setattr on {instance}")
+    warnings.warn(f"Ignoring setattr of {attr} on {instance}")
     return None
 
 

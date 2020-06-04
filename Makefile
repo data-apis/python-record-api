@@ -1,6 +1,6 @@
 .PHONY: groupby_location clean_groupby_location clean_api clean_raw clean_typing clean all
 
-LIBRARIES := sample_usage skimage xarray
+LIBRARIES := sample_usage skimage xarray sklearn
 
 all: data/typing/numpy.py
 

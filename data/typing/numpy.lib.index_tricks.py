@@ -18,7 +18,17 @@ class MGridClass:
 
 
 class CClass:
-    def __getitem__(self, _0: tuple[(numpy.ndarray, numpy.ndarray, numpy.ndarray)], /):
+    def __getitem__(
+        self,
+        _0: Union[
+            (
+                numpy.ndarray,
+                tuple[(numpy.ndarray, numpy.ndarray, numpy.ndarray)],
+                tuple[(numpy.ndarray, numpy.ndarray)],
+            )
+        ],
+        /,
+    ):
         ""
 
 

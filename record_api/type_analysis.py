@@ -506,7 +506,6 @@ class FunctionInput(InputTypeBase):
             return FunctionOutput()
         if "." in name.name:
             # For some reason happens with MaskedArray.mean
-            print(name.name)
             classname, methodname = name.name.split(".")
             return MethodWithoutSelfOutput(
                 name=methodname, class_=NamedOutput(name=classname, module=name.module)
