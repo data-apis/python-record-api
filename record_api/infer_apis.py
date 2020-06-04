@@ -43,7 +43,7 @@ def __main__():
 def parse_line(
     n: int, function: object, params=None, bound_params=None,
 ) -> typing.Optional[API]:
-    if bound_params:
+    if bound_params is not None:
         signature = Signature.from_bound_params(**bound_params)
     else:
         signature = Signature.from_params(**params)
