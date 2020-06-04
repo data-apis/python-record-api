@@ -14,6 +14,7 @@ import pydantic
 import warnings
 import ast
 import networkx
+import astunparse
 
 import tqdm.std
 import orjson
@@ -49,6 +50,19 @@ class Module(pydantic.BaseModel):
     classes: typing.Dict[str, Class] = pydantic.Field(default_factory=dict)
     properties: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
 
+    @property
+    def source(self) -> str:
+        module = ast.Module(list(self.body), [])
+        return astunparse.unparse(module)
+
+    @property
+    def body(self) -> typing.Iterable[ast.AST]:
+        for name, sig in self.functions.items():
+            yield sig.function_def(name)
+        for name, class_ in self.classes.items():
+            yield class_.class_def(name)
+        yield from assign_properties(self.properties)
+
     def __ior__(self, other: Module) -> Module:
         update(self.classes, other.classes, operator.ior)
         update(self.functions, other.functions, operator.ior)
@@ -66,6 +80,29 @@ class Class(pydantic.BaseModel):
     classmethods: typing.Dict[str, Signature] = pydantic.Field(default_factory=dict)
     properties: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
     classproperties: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
+
+    def class_def(self, name: str) -> ast.ClassDef:
+        return ast.ClassDef(name, [], [], list(self.body), [])
+
+    @property
+    def body(self) -> typing.Iterable[ast.AST]:
+        if self.constructor is not None:
+            yield self.constructor.function_def("__init__")
+
+        for name, sig in self.methods.items():
+            # copy and add self as first arg
+            sig = sig.copy()
+            old_pos_only_required = sig.pos_only_required
+            sig.pos_only_required = {"self": BottomOutput()}
+            for k, v in old_pos_only_required.items():
+                sig.pos_only_required[k] = v
+            yield sig.function_def(name)
+
+        for name, sig in self.classmethods.items():
+            yield sig.function_def(name, is_classmethod=True)
+
+        yield from assign_properties(self.properties)
+        yield from assign_properties(self.classproperties, True)
 
     def __ior__(self, other: Class) -> Class:
         if self.constructor and other.constructor:
@@ -86,6 +123,28 @@ class Class(pydantic.BaseModel):
         remove_keys(self.properties, self.classproperties.keys())
 
         return self
+
+
+def assign_properties(
+    p: typing.Dict[str, Type], is_classvar=False
+) -> typing.Iterable[ast.AST]:
+    for name, tp in p.items():
+        ann = annotation(tp)
+        if ann is None:
+            yield ast.Assign(
+                [ast.Name(name, ast.Store())], ast.Constant(..., None), None
+            )
+        else:
+            yield ast.AnnAssign(
+                [ast.Name(name, ast.Store())],
+                ast.Subscript(
+                    ast.Name("ClassVar", ast.Load()), ast.Index(ann), ast.Load(),
+                )
+                if is_classvar
+                else ann,
+                ast.Constant(..., None),
+                1,
+            )
 
 
 class Signature(pydantic.BaseModel):
@@ -110,17 +169,33 @@ class Signature(pydantic.BaseModel):
 
     metadata: typing.Dict[str, int] = pydantic.Field(default_factory=dict)
 
+    def function_def(self, name: str, is_classmethod=False) -> ast.FunctionDef:
+        return ast.FunctionDef(
+            name,
+            self.arguments,
+            [self.docstring],
+            [ast.Name("classmethod", ast.Load())] if is_classmethod else [],
+            None,
+            None,
+        )
+
     @property
-    def ast(self) -> ast.arguments:
+    def docstring(self) -> ast.Expr:
+        return ast.Expr(
+            ast.Constant("\n".join(f"{k}: {v}" for k, v in self.metadata.items()), None)
+        )
+
+    @property
+    def arguments(self) -> ast.arguments:
         return ast.arguments(
             posonlyargs=[
-                ast.arg(k, v.annotation)
+                ast.arg(k, annotation(v))
                 for k, v in itertools.chain(
                     self.pos_only_required.items(), self.pos_only_optional.items()
                 )
             ],
             args=[
-                ast.arg(k, v.annotation)
+                ast.arg(k, annotation(v))
                 for k, v in itertools.chain(
                     self.pos_or_kw_required.items(), self.pos_or_kw_optional.items()
                 )
@@ -132,17 +207,17 @@ class Signature(pydantic.BaseModel):
                 )
             ],
             vararg=(
-                ast.arg(self.var_pos[0], self.var_pos[1].annotation)
+                ast.arg(self.var_pos[0], annotation(self.var_pos[1]))
                 if self.var_pos
                 else None
             ),
             kwarg=(
-                ast.arg(self.var_kw[0], self.var_kw[1].annotation)
+                ast.arg(self.var_kw[0], annotation(self.var_kw[1]))
                 if self.var_kw
                 else None
             ),
             kwonlyargs=[
-                ast.arg(k, v.annotation)
+                ast.arg(k, annotation(v))
                 for k, v in itertools.chain(
                     self.kw_only_required.items(), self.kw_only_optional.items()
                 )

@@ -16,6 +16,7 @@ __all__ = [
     "create_type",
     "OutputType",
     "unify",
+    "annotation",
     "NoneOutput",
     "StringOutput",
     "ListOutput",
@@ -38,6 +39,11 @@ MAX_UNION_ITEMS = 5
 # More than this and it will be tuple of arbitrary length
 MAX_TUPLE_ITEMS = 2
 
+
+def annotation(tp: OutputType) -> typing.Optional[ast.AST]:
+    if is_unknown(tp):
+        return None
+    return tp.annotation
 
 def create_type(o: object) -> OutputType:
     try:
@@ -161,7 +167,9 @@ class StringOutput(OutputTypeBase):
         if self.options:
             return ast.Subscript(
                 ast.Name('Literal', ast.Load()),
-                ast.Index(ast.Tuple([ast.Constant(s, None) for s in self.options], ast.Load()), ast.Load())
+                ast.Index(ast.Tuple(
+                    [ast.Constant(s, None) for s in self.options],
+                    ast.Load())), ast.Load()
             )
             return f'Literal[{", ".join(map(str, self.options))}]'
         return ast.Name("int", ast.Load())
@@ -194,7 +202,7 @@ class ListOutput(OutputTypeBase):
             return ast.Name("list", ast.Load())
         return ast.Subscript(
             ast.Name('list', ast.Load()),
-            ast.Index(self.item.annotation, ast.Load())
+            ast.Index(self.item.annotation), ast.Load()
         )
 
 
@@ -223,11 +231,11 @@ class TupleOutput(OutputTypeBase):
         if isinstance(self.items, tuple):
             return ast.Subscript(
                 ast.Name('tuple', ast.Load()),
-                ast.Index(ast.Tuple([s.annotation for s in self.items], ast.Load()), ast.Load())
+                ast.Index(ast.Tuple([s.annotation for s in self.items], ast.Load())), ast.Load()
             )
         return ast.Subscript(
             ast.Name('tuple', ast.Load()),
-            ast.Index(ast.Tuple([self.items.annotation, ast.Constant(..., None)], ast.Load()), ast.Load())
+            ast.Index(ast.Tuple([self.items.annotation, ast.Constant(..., None)], ast.Load())), ast.Load()
         )
 
     @classmethod
@@ -280,7 +288,7 @@ class DictOutput(OutputTypeBase):
             return ast.Name("tuple", ast.Load())
         return ast.Subscript(
             ast.Name('dict', ast.Load()),
-            ast.Index(ast.Tuple([self.key.annotation, self.value.annotation], ast.Load()), ast.Load())
+            ast.Index(ast.Tuple([self.key.annotation, self.value.annotation], ast.Load())), ast.Load()
         )
 
     @classmethod
@@ -419,7 +427,7 @@ class SliceOutput(OutputTypeBase):
             return ast.Name("slice", ast.Load())
         return ast.Subscript(
             ast.Name('slice', ast.Load()),
-            ast.Index(ast.Tuple([self.start.annotation, self.stop.annotation, self.step.annotation], ast.Load()), ast.Load())
+            ast.Index(ast.Tuple([self.start.annotation, self.stop.annotation, self.step.annotation], ast.Load())), ast.Load()
         )
 
     @classmethod
@@ -453,7 +461,8 @@ class TypeOutput(OutputTypeBase):
             return ast.Name("list", ast.Load())
         return ast.Subscript(
             ast.Name('list', ast.Load()),
-            ast.Index(self.name.annotation, ast.Load())
+            ast.Index(self.name.annotation),
+            ast.Load()
         )
 
     @classmethod
@@ -627,7 +636,8 @@ class UnionOutput(OutputTypeBase):
     def annotation(self) -> ast.AST:
         return ast.Subscript(
             ast.Name('Union', ast.Load()),
-            ast.Index(ast.Tuple([o.annotation for o in self.options], ast.Load()), ast.Load())
+            ast.Index(ast.Tuple([o.annotation for o in self.options], ast.Load())),
+            ast.Load()
         )
 
     @classmethod

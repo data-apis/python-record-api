@@ -2,13 +2,19 @@
 
 LIBRARIES := sample_usage skimage
 
-all: data/api.json
+all: data/typing/numpy.py
 
 clean: clean_groupby_location clean_api clean_raw
 
 
 clean_api:
 	rm -f data/api/*
+
+data/typing/numpy.py: data/api.json
+	env PYTHON_RECORD_API_OUTPUT=data/typing \
+		PYTHON_RECORD_API_INPUT="$^"\
+		python -m record_api.write_api
+
 
 
 data/api.json: $(addprefix data/api/,$(addsuffix .json,$(LIBRARIES)))

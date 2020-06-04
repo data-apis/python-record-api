@@ -80,6 +80,9 @@ def _function(f: FunctionOutput, s: Signature) -> typing.Optional[API]:
             warnings.warn(f"could not handle builtin {name}")
     else:
         return callback(*s.initial_args)
+    if module == "_operator":
+        warnings.warn(f"ignoring operator {name}")
+        return None
     return API(modules={module: Module(functions={name: s})})
 
 
