@@ -52,16 +52,16 @@ class RandomState():
     def uniform(self, _0: int=..., _1: int=..., _2: Union[(tuple[(int, int)], int)]=..., /, *, size: tuple[(int, int)]=..., low: float=..., high: float=...):
         'usage.skimage: 29'
 
-    def randint(self, _0: int, _1: int=..., /, *, size: Union[(tuple[(int, int)], tuple[(int, int, int)], int)]=..., dtype: list[numpy.uint8]=...):
+    def randint(self, _0: int, _1: int=..., /, *, size: Union[(tuple[(int, int, int)], tuple[(int, int)], int)]=..., dtype: list[numpy.uint8]=...):
         'usage.skimage: 15'
 
     def seed(self, _0: int=..., /, *, seed: int=...):
         'usage.skimage: 25'
 
-    def choice(self, _0: Union[(list[bool], int, numpy.ndarray)], _1: int=..., /, *, size: Union[(tuple[(int, int)], int)]=..., replace: bool=..., p: list[Union[(int, float)]]=...):
+    def choice(self, _0: Union[(list[bool], int, numpy.ndarray)], _1: int=..., /, *, size: Union[(int, tuple[(int, int)])]=..., replace: bool=..., p: list[Union[(int, float)]]=...):
         'usage.skimage: 7'
 
-    def normal(self, _0: Union[(int, float)]=..., _1: Union[(numpy.ndarray, float)]=..., _2: tuple[(int, int)]=..., /, *, size: tuple[(int, ...)]=...):
+    def normal(self, _0: Union[(int, float)]=..., _1: Union[(float, numpy.ndarray)]=..., _2: tuple[(int, int)]=..., /, *, size: tuple[(int, ...)]=...):
         'usage.skimage: 32'
 
     def randn(self, _0: int, _1: int=..., _2: int=..., _3: int=..., _4: int=..., /):

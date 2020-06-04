@@ -86,6 +86,16 @@ def _function(f: FunctionOutput, s: Signature) -> typing.Optional[API]:
     return API(modules={module: Module(functions={name: s})})
 
 
+@process_function.register
+def _method_no_self(f: MethodWithoutSelfOutput, s: Signature) -> typing.Optional[API]:
+    # assume that the signature has a default bound param of self, like MaskedArray.mean
+    module = f.class_.module
+    cls_name = f.class_.name
+    assert module
+    del s.pos_or_kw_required[next(iter(s.pos_or_kw_required.keys()))]
+    return API(modules={module: Module(classes={cls_name: Class(methods={f.name: s})})})
+
+
 def _iter(instance: OutputType) -> typing.Optional[API]:
     if not isinstance(instance, OtherOutput) or not instance.type.module:
         warnings.warn(f"iter with {instance}")
@@ -121,7 +131,7 @@ def _setattr(
             }
         )
     if isinstance(instance, ModuleOutput):
-        if attr == '__warningregistry__':
+        if attr == "__warningregistry__":
             # Skip this check on modules
             # https://docs.python.org/3/library/warnings.html#warnings.warn_explicit
             return None
