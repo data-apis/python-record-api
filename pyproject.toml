@@ -9,7 +9,12 @@ author-email = "s.shanabrook@gmail.com"
 home-page = "https://github.com/quansight-labs/python_record_api"
 classifiers = ["License :: OSI Approved :: MIT License"]
 requires = [
-    "tqdm"
+    "tqdm",
+    "networkx",
+    "orjson",
+    "black",
+    "pydantic",
+    "typing_extensions"
 ]
 
 [tool.flit.entrypoints.pytest11]
