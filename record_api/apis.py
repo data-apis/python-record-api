@@ -212,7 +212,7 @@ class Signature(pydantic.BaseModel):
     @property
     def docstring(self) -> ast.Expr:
         return ast.Expr(
-            ast.Constant("\n".join(f"{k}: {v}" for k, v in self.metadata.items()), None)
+            ast.Constant(", ".join(f"{k}: {v}" for k, v in self.metadata.items()), None)
         )
 
     @property

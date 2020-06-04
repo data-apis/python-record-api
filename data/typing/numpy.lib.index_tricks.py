@@ -6,7 +6,7 @@ class RClass:
 class OGridClass:
     def __getitem__(
         self,
-        _0: tuple[(slice[(Union[(int, None)], Union[(int, float)], None)], ...)],
+        _0: tuple[(slice[(Union[(None, int)], Union[(float, int)], None)], ...)],
         /,
     ):
         ""

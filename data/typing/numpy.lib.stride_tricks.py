@@ -3,4 +3,4 @@ def as_strided(
     shape: tuple[(Union[(int, numpy.int64)], ...)],
     strides: tuple[(Union[(int, numpy.int64)], ...)] = ...,
 ):
-    "usage.skimage: 11\nusage.xarray: 8"
+    "usage.skimage: 11, usage.xarray: 8"

@@ -13,7 +13,7 @@ class RandomState:
     @classmethod
     def randint(
         _0: numpy.random.mtrand.RandomState,
-        _1: Union[(int, float)],
+        _1: Union[(float, int)],
         _2: int = ...,
         _3: tuple[(int, int)] = ...,
         /,
@@ -22,13 +22,13 @@ class RandomState:
 
     @classmethod
     def choice(
-        _0: numpy.random.mtrand.RandomState, _1: Union[(list[Callable], range)] = ..., /
+        _0: numpy.random.mtrand.RandomState, _1: Union[(range, list[Callable])] = ..., /
     ):
-        "usage.skimage: 1\nusage.xarray: 1"
+        "usage.skimage: 1, usage.xarray: 1"
 
     @classmethod
     def uniform(
-        _0: numpy.random.mtrand.RandomState, _1: float, _2: Union[(int, float)], /
+        _0: numpy.random.mtrand.RandomState, _1: float, _2: Union[(float, int)], /
     ):
         "usage.skimage: 3"
 
@@ -38,7 +38,7 @@ class RandomState:
 
     @classmethod
     def randn(_0: numpy.random.mtrand.RandomState, _1: int = ..., /):
-        "usage.skimage: 1\nusage.xarray: 13"
+        "usage.skimage: 1, usage.xarray: 13"
 
     @classmethod
     def random_sample(_0: numpy.random.mtrand.RandomState, _1: tuple[(int, int)], /):
@@ -53,7 +53,7 @@ class RandomState:
         "usage.skimage: 4"
 
     def random(self=..., /, *, size: tuple[(int, ...)] = ...):
-        "usage.skimage: 29\nusage.xarray: 25"
+        "usage.skimage: 29, usage.xarray: 25"
 
     def rand(
         self,
@@ -64,20 +64,20 @@ class RandomState:
         _4: int = ...,
         /,
     ):
-        "usage.skimage: 90\nusage.xarray: 16"
+        "usage.skimage: 90, usage.xarray: 16"
 
     def uniform(
         self,
         _0: int = ...,
         _1: int = ...,
-        _2: Union[(int, tuple[(int, int)])] = ...,
+        _2: Union[(tuple[(int, int)], int)] = ...,
         /,
         *,
         size: Union[(tuple[(int, int)], list[int])] = ...,
-        low: float = ...,
         high: float = ...,
+        low: float = ...,
     ):
-        "usage.skimage: 29\nusage.xarray: 1"
+        "usage.skimage: 29, usage.xarray: 1"
 
     def randint(
         self,
@@ -86,10 +86,10 @@ class RandomState:
         _2: Union[(tuple[(int, int, int)], int)] = ...,
         /,
         *,
-        size: Union[(tuple[(int, int, int)], int, list[int], tuple[(int, int)])] = ...,
+        size: Union[(tuple[(int, int, int)], tuple[(int, int)], int, list[int])] = ...,
         dtype: list[numpy.uint8] = ...,
     ):
-        "usage.skimage: 15\nusage.xarray: 14"
+        "usage.skimage: 15, usage.xarray: 14"
 
     def seed(self=..., /, *, seed: int = ...):
         "usage.skimage: 25"
@@ -97,31 +97,31 @@ class RandomState:
     def choice(
         self,
         _0: Union[
-            (int, list[Literal[("c", "d", "a", "b")]], list[bool], numpy.ndarray)
+            (list[bool], list[Literal[("d", "c", "a", "b")]], int, numpy.ndarray)
         ] = ...,
         /,
         *,
-        size: Union[(int, list[int], tuple[(int, int)])] = ...,
+        size: Union[(tuple[(int, int)], int, list[int])] = ...,
         replace: bool = ...,
-        p: list[Union[(int, float)]] = ...,
+        p: list[Union[(float, int)]] = ...,
     ):
-        "usage.skimage: 7\nusage.xarray: 3"
+        "usage.skimage: 7, usage.xarray: 3"
 
     def normal(
         self,
-        _0: Union[(int, float)] = ...,
+        _0: Union[(float, int)] = ...,
         _1: Union[(numpy.ndarray, float)] = ...,
         _2: tuple[(int, int)] = ...,
         /,
         *,
         size: tuple[(int, ...)] = ...,
     ):
-        "usage.skimage: 32\nusage.xarray: 1"
+        "usage.skimage: 32, usage.xarray: 1"
 
     def randn(
         self, _0: int, _1: int = ..., _2: int = ..., _3: int = ..., _4: int = ..., /
     ):
-        "usage.skimage: 44\nusage.xarray: 164"
+        "usage.skimage: 44, usage.xarray: 164"
 
     def standard_normal(self, _0: tuple[(int, ...)], /):
         "usage.skimage: 6"

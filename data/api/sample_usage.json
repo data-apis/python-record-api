@@ -370,24 +370,6 @@
                   "type": "union",
                   "options": [
                     {
-                      "type": "slice",
-                      "start": {
-                        "type": {
-                          "module": null,
-                          "name": "int"
-                        }
-                      },
-                      "stop": {
-                        "type": {
-                          "module": null,
-                          "name": "int"
-                        }
-                      },
-                      "step": {
-                        "type": "None"
-                      }
-                    },
-                    {
                       "type": {
                         "module": null,
                         "name": "int"
@@ -443,6 +425,24 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "slice",
+                      "start": {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      "stop": {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      "step": {
+                        "type": "None"
+                      }
                     },
                     {
                       "type": {
@@ -592,6 +592,12 @@
                   "type": "union",
                   "options": [
                     {
+                      "type": {
+                        "module": null,
+                        "name": "int"
+                      }
+                    },
+                    {
                       "type": "tuple",
                       "items": [
                         {
@@ -607,12 +613,6 @@
                           }
                         }
                       ]
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
                     }
                   ]
                 }
