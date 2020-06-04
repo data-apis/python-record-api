@@ -206,7 +206,7 @@ class ListOutput(OutputTypeBase):
         if is_unknown(self.item):
             return ast.Name("list", ast.Load())
         return ast.Subscript(
-            ast.Name("list", ast.Load()), ast.Index(self.item.annotation), ast.Load()
+            ast.Name("List", ast.Load()), ast.Index(self.item.annotation), ast.Load()
         )
 
     @classmethod
@@ -233,12 +233,12 @@ class TupleOutput(OutputTypeBase):
             return ast.Name("tuple", ast.Load())
         if isinstance(self.items, tuple):
             return ast.Subscript(
-                ast.Name("tuple", ast.Load()),
+                ast.Name("Tuple", ast.Load()),
                 ast.Index(ast.Tuple([s.annotation for s in self.items], ast.Load())),
                 ast.Load(),
             )
         return ast.Subscript(
-            ast.Name("tuple", ast.Load()),
+            ast.Name("Tuple", ast.Load()),
             ast.Index(
                 ast.Tuple([self.items.annotation, ast.Constant(..., None)], ast.Load())
             ),
@@ -296,9 +296,9 @@ class DictOutput(OutputTypeBase):
     @property
     def annotation(self) -> ast.AST:
         if is_unknown(self.key) and is_unknown(self.value):
-            return ast.Name("tuple", ast.Load())
+            return ast.Name("dict", ast.Load())
         return ast.Subscript(
-            ast.Name("dict", ast.Load()),
+            ast.Name("Dict", ast.Load()),
             ast.Index(
                 ast.Tuple([self.key.annotation, self.value.annotation], ast.Load())
             ),
@@ -482,9 +482,9 @@ class TypeOutput(OutputTypeBase):
     @property
     def annotation(self) -> ast.AST:
         if self.name is None:
-            return ast.Name("list", ast.Load())
+            return ast.Name("type", ast.Load())
         return ast.Subscript(
-            ast.Name("list", ast.Load()), ast.Index(self.name.annotation), ast.Load()
+            ast.Name("Type", ast.Load()), ast.Index(self.name.annotation), ast.Load()
         )
 
     @classmethod

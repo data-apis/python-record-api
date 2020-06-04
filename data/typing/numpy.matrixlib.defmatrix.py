@@ -1,3 +1,6 @@
+from typing import *
+
+
 class matrix:
     def mean(self, /):
         "usage.sklearn: 2"

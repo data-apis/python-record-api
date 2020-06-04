@@ -371,6 +371,12 @@
                   "options": [
                     {
                       "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
                         "module": null,
                         "name": "int"
                       }
@@ -442,12 +448,6 @@
                       },
                       "step": {
                         "type": "None"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
                       }
                     }
                   ]
@@ -592,12 +592,6 @@
                   "type": "union",
                   "options": [
                     {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
                       "type": "tuple",
                       "items": [
                         {
@@ -613,6 +607,12 @@
                           }
                         }
                       ]
+                    },
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "int"
+                      }
                     }
                   ]
                 }

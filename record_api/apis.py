@@ -58,6 +58,7 @@ class Module(pydantic.BaseModel):
 
     @property
     def body(self) -> typing.Iterable[ast.AST]:
+        yield ast.ImportFrom("typing", [ast.alias("*", None)], 0)
         yield from assign_properties(self.properties)
 
         for name, sig in self.functions.items():

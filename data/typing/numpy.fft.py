@@ -1,3 +1,6 @@
+from typing import *
+
+
 def ifftshift(x: numpy.ndarray):
     "usage.skimage: 2"
 

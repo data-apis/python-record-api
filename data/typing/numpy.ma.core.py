@@ -1,14 +1,17 @@
-def isMaskedArray(x: Union[(numpy.ndarray, numpy.ma.core.MaskedArray)]):
+from typing import *
+
+
+def isMaskedArray(x: Union[(numpy.ma.core.MaskedArray, numpy.ndarray)]):
     "usage.skimage: 18"
 
 
 def array(
-    data: numpy.ndarray, mask: Union[(numpy.ndarray, bool, list[list[int]])] = ...
+    data: numpy.ndarray, mask: Union[(List[List[int]], bool, numpy.ndarray)] = ...
 ):
     "usage.skimage: 7, usage.sklearn: 4"
 
 
-def getdata(a: Union[(numpy.ma.core.MaskedArray, numpy.ndarray)]):
+def getdata(a: Union[(numpy.ndarray, numpy.ma.core.MaskedArray)]):
     "usage.skimage: 3, usage.sklearn: 2"
 
 
@@ -20,12 +23,12 @@ def masked_where(condition: numpy.ndarray, a: numpy.ndarray):
     "usage.xarray: 1"
 
 
-def masked_invalid(a: Union[(numpy.ndarray, list[float])]):
+def masked_invalid(a: Union[(numpy.ndarray, List[float])]):
     "usage.xarray: 4, usage.sklearn: 4"
 
 
 def concatenate(
-    arrays: tuple[(numpy.ma.core.MaskedArray, numpy.ma.core.MaskedArray)], axis: int
+    arrays: Tuple[(numpy.ma.core.MaskedArray, numpy.ma.core.MaskedArray)], axis: int
 ):
     "usage.xarray: 3"
 
@@ -50,27 +53,27 @@ class MaskedArray:
         self,
         _0: Union[
             (
-                tuple[(int, int)],
+                Tuple[(int, int)],
                 int,
-                tuple[(Union[(slice[(None, None, None)], int)], ...)],
+                Tuple[(Union[(slice[(None, None, None)], int)], ...)],
             )
         ],
         /,
     ):
         ""
 
-    def reshape(self, /, *s: Literal[("t", "v")]):
+    def reshape(self, /, *s: Literal[("v", "t")]):
         "usage.skimage: 1"
 
     def __setitem__(
         self,
         _0: Union[
             (
-                tuple[(Union[(numpy.ndarray, int, numpy.bool_)], int)],
+                Tuple[(int, int)],
                 int,
-                tuple[(int, int)],
+                Tuple[(int, int, int)],
+                Tuple[(Union[(numpy.bool_, numpy.ndarray, int)], int)],
                 slice[(None, None, None)],
-                tuple[(int, int, int)],
             )
         ],
         _1,

@@ -1,1 +1,3 @@
+from typing import *
+
 stride_tricks = ...

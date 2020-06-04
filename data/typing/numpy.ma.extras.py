@@ -1,4 +1,7 @@
-def average(a: numpy.ma.core.MaskedArray, weights: Union[(numpy.ndarray, None)] = ...):
+from typing import *
+
+
+def average(a: numpy.ma.core.MaskedArray, weights: Union[(None, numpy.ndarray)] = ...):
     "usage.sklearn: 8"
 
 

@@ -1,11 +1,14 @@
+from typing import *
+
+
 def _as_pairs(
     x: Union[
         (
-            list[tuple[(numpy.int64, numpy.int64)]],
+            List[Tuple[(numpy.int64, numpy.int64)]],
             int,
-            list[tuple[(int, int)]],
-            tuple[(tuple[(int, int)], ...)],
-            tuple[(int, int)],
+            Tuple[(Tuple[(int, int)], ...)],
+            List[Tuple[(int, int)]],
+            Tuple[(int, int)],
         )
     ],
     ndim: int,

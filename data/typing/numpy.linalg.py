@@ -1,3 +1,6 @@
+from typing import *
+
+
 def svd(a: numpy.ndarray = ...):
     "usage.skimage: 7, usage.sklearn: 3"
 
@@ -21,7 +24,7 @@ def solve(a: numpy.ndarray, b: numpy.ndarray):
 def norm(
     x: numpy.ndarray,
     ord: Union[(float, int, Literal[("fro",)])] = ...,
-    axis: Union[(int, None)] = ...,
+    axis: Union[(None, int)] = ...,
 ):
     "usage.skimage: 8, usage.sklearn: 22"
 
@@ -47,7 +50,7 @@ def lstsq(a: numpy.ndarray, b: numpy.ndarray = ...):
 
 
 class LinAlgError:
-    args: tuple[
+    args: Tuple[
         (
             Literal[("The kernel, DotProduct(sigma_0=1), is not returnin",)],
             Literal[("3-th leading minor of the array is not positive de",)],
