@@ -371,7 +371,6 @@ class Signature(pydantic.BaseModel):
             + addititional_ordering
         )
 
-
     def _copy_pos_or_kw(self, other: Signature) -> None:
         # First take off new optional keys from self and other, making sure to keep order
         self_pos_or_kw_required_keys = list(self.pos_or_kw_required.keys())
@@ -518,7 +517,6 @@ def move(
         if k in l:
             v = f(l[k], v)
         l[k] = v
-
 
 
 def update(
