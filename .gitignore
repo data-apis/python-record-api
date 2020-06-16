@@ -17,3 +17,4 @@ data/raw/*
 !data/*/sample_usage*
 !data/counts_untyped/*
 .hypothesis
+dist/
