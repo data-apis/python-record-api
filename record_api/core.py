@@ -34,9 +34,9 @@ write_line: Optional[Callable[[dict], None]] = None
 def get_tracer() -> Tracer:
     global TRACER
     if not TRACER:
-        FROM_MODULE = os.environ["PYTHON_RECORD_API_TO_MODULE"]
-        TO_MODULE = os.environ["PYTHON_RECORD_API_FROM_MODULE"]
-        TRACER = Tracer(FROM_MODULE, TO_MODULE)
+        FROM_MODULES = os.environ["PYTHON_RECORD_API_TO_MODULES"].split(",")
+        TO_MODULES = os.environ["PYTHON_RECORD_API_FROM_MODULES"].split(",")
+        TRACER = Tracer(FROM_MODULES, TO_MODULES)
     return TRACER
 
 
@@ -174,7 +174,6 @@ def default(o: object) -> object:
     if v:
         return {"t": t, "v": v}
     return {"t": t}
-
 
 
 # cache this b/c its expesnive
@@ -500,10 +499,10 @@ BINARY_OPS = {
 
 @dataclasses.dataclass
 class Tracer:
-    # the module we should trace calls to
-    calls_to_module: str
-    # the module we should trace calls from
-    calls_from_module: str
+    # the modules we should trace calls to
+    calls_to_modules: List[str]
+    # the modules we should trace calls from
+    calls_from_modules: List[str]
 
     def __enter__(self):
         sys.settrace(self)
@@ -521,7 +520,7 @@ class Tracer:
             if not module:
                 warnings.warn(f"Cannot get module of {value}")
                 continue
-            if module.startswith(self.calls_to_module):
+            if any(module.startswith(mod) for mod in self.calls_to_modules):
                 return True
         return False
 
@@ -542,10 +541,9 @@ class Tracer:
             frame_module_name = frame.f_globals["__name__"]
         except KeyError:
             return False
-        return (
-            frame_module_name == "__main__"
-            or frame_module_name == self.calls_from_module
-            or frame_module_name.startswith(self.calls_from_module + ".")
+        return frame_module_name == "__main__" or any(
+            frame_module_name == mod or frame_module_name.startswith(mod + ".")
+            for mod in self.calls_from_modules
         )
 
 

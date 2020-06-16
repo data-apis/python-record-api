@@ -4,6 +4,7 @@ import unittest
 from unittest.mock import call, patch, ANY
 
 import numpy as np
+import pandas as pd
 
 from . import Tracer
 
@@ -14,7 +15,7 @@ class TestMockNumPyMethod(unittest.TestCase):
         patcher = patch("record_api.core.log_call")
         self.mock = patcher.start()
         self.addCleanup(patcher.stop)
-        self.tracer = Tracer("numpy", "record_api.test")
+        self.tracer = Tracer(["numpy"], ["record_api.test"])
 
     def trace(self, source: str):
         """

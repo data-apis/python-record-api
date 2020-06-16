@@ -51,29 +51,29 @@ clean_raw:
 
 data/raw/skimage.jsonl:
 	env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
-		PYTHON_RECORD_API_TO_MODULE=numpy \
-		PYTHON_RECORD_API_FROM_MODULE=skimage \
+		PYTHON_RECORD_API_TO_MODULES=numpy \
+		PYTHON_RECORD_API_FROM_MODULES=skimage \
 		pytest --pyargs skimage
 
 
 
 data/raw/sklearn.jsonl:
 	env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
-		PYTHON_RECORD_API_TO_MODULE=numpy \
-		PYTHON_RECORD_API_FROM_MODULE=sklearn \
+		PYTHON_RECORD_API_TO_MODULES=numpy \
+		PYTHON_RECORD_API_FROM_MODULES=sklearn \
 		pytest --pyargs sklearn
 
 
 data/raw/xarray.jsonl:
 	env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
-		PYTHON_RECORD_API_TO_MODULE=numpy \
-		PYTHON_RECORD_API_FROM_MODULE=xarray \
+		PYTHON_RECORD_API_TO_MODULES=numpy \
+		PYTHON_RECORD_API_FROM_MODULES=xarray \
 		pytest --pyargs xarray
 
 
 data/raw/sample_usage.jsonl:
 	env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
-		PYTHON_RECORD_API_TO_MODULE=numpy \
-		PYTHON_RECORD_API_FROM_MODULE=record_api.sample_usage \
+		PYTHON_RECORD_API_TO_MODULES=numpy \
+		PYTHON_RECORD_API_FROM_MODULES=record_api.sample_usage \
 		PYTHON_RECORD_API_IMPORT_MODULES=numpy \
 		python -m record_api
