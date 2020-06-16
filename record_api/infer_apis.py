@@ -75,17 +75,21 @@ def _function(f: FunctionOutput, s: Signature) -> typing.Optional[API]:
         return None
     module = f.name.module
     name = f.name.name
+    # See if we special case the function
     try:
         callback = FUNCTIONS[module, name]
     except KeyError:
-        if module is None:
-            warnings.warn(f"could not handle builtin {name}")
-            return None
+        pass
     else:
         return callback(*s.initial_args)
+    # Otherwise skip if we have a builtin in operator we don't handle yet
+    if module is None:
+        warnings.warn(f"could not handle builtin {name}")
+        return None
     if module == "_operator":
         warnings.warn(f"ignoring operator {name}")
         return None
+    # Otherwise assume this is a normal function
     return API(modules={module: Module(functions={name: s})})
 
 
@@ -156,7 +160,6 @@ def _setattr(
     return None
 
 
-
 def _getitem(inst: OutputType, idx: OutputType) -> typing.Optional[API]:
     return record_method(inst, "__getitem__", sig(idx))
 
@@ -165,6 +168,37 @@ def _setitem(
     inst: OutputType, idx: OutputType, value: OutputType
 ) -> typing.Optional[API]:
     return record_method(inst, "__setitem__", sig(idx, value))
+
+
+def _unary_op(method_name: str, inst: OutputType) -> typing.Optional[API]:
+    return record_method(inst, f"__{method_name}__", sig())
+
+
+def _binary_op(
+    method_name: str, inst: OutputType, arg: OutputType
+) -> typing.Optional[API]:
+    l = record_method(inst, f"__{method_name}__", sig(arg))
+    r = record_method(arg, f"__r{method_name}__", sig(inst))
+    if l and r:
+        l |= r
+    return l or r
+
+
+def _comparator(
+    left_method_name: str, right_method_name: str, inst: OutputType, arg: OutputType
+) -> typing.Optional[API]:
+    
+    l = record_method(inst, f"__{left_method_name}__", sig(arg))
+    r = record_method(arg, f"__{right_method_name}__", sig(inst))
+    if l and r:
+        l |= r
+    return l or r
+
+def _binary_inplace_op(
+    method_name: str, inst: OutputType, arg: OutputType
+) -> typing.Optional[API]:
+    return record_method(inst, f"__i{method_name}__", sig(arg))
+
 
 def sig(*args: OutputType) -> Signature:
     return Signature(pos_only_required={f"_{i}": v for i, v in enumerate(args)})
@@ -178,6 +212,7 @@ FunctionCallback = typing.Union[
 ]
 
 
+
 FUNCTIONS: typing.Dict[typing.Tuple[typing.Optional[str], str], FunctionCallback] = {
     (None, "iter"): _iter,
     (None, "setattr"): _setattr,
@@ -185,7 +220,49 @@ FUNCTIONS: typing.Dict[typing.Tuple[typing.Optional[str], str], FunctionCallback
     (None, "delattr"): functools.partial(_setattr, value_type=BottomOutput()),
     ("_operator", "getitem"): _getitem,
     ("_operator", "setitem"): _setitem,
+    # Unary
+    ("_operator", "pos"): functools.partial(_unary_op, "pos"),
+    ("_operator", "neg"): functools.partial(_unary_op, "neg"),
+    ("_operator", "invert"): functools.partial(_unary_op, "invert"),
+    ("_operator", "not_"): functools.partial(_unary_op, "bool"),
+    # Binary
+    ("_operator", "pow"): functools.partial(_binary_op, "pow"),
+    ("_operator", "mul"): functools.partial(_binary_op, "mul"),
+    ("_operator", "matmul"): functools.partial(_binary_op, "matmul"),
+    ("_operator", "floordiv"): functools.partial(_binary_op, "floordiv"),
+    ("_operator", "truediv"): functools.partial(_binary_op, "truediv"),
+    ("_operator", "mod"): functools.partial(_binary_op, "mod"),
+    ("_operator", "add"): functools.partial(_binary_op, "add"),
+    ("_operator", "sub"): functools.partial(_binary_op, "sub"),
+    ("_operator", "lshift"): functools.partial(_binary_op, "lshift"),
+    ("_operator", "rshift"): functools.partial(_binary_op, "rshift"),
+    ("_operator", "and_"): functools.partial(_binary_op, "and"),
+    ("_operator", "xor"): functools.partial(_binary_op, "xor"),
+    ("_operator", "or_"): functools.partial(_binary_op, "or"),
+    # binary inplace
+    ("_operator", "ipow"): functools.partial(_binary_inplace_op, "pow"),
+    ("_operator", "imul"): functools.partial(_binary_inplace_op, "mul"),
+    ("_operator", "imatmul"): functools.partial(_binary_inplace_op, "matmul"),
+    ("_operator", "ifloordiv"): functools.partial(_binary_inplace_op, "floordiv"),
+    ("_operator", "itruediv"): functools.partial(_binary_inplace_op, "truediv"),
+    ("_operator", "imod"): functools.partial(_binary_inplace_op, "mod"),
+    ("_operator", "iadd"): functools.partial(_binary_inplace_op, "add"),
+    ("_operator", "isub"): functools.partial(_binary_inplace_op, "sub"),
+    ("_operator", "ilshift"): functools.partial(_binary_inplace_op, "lshift"),
+    ("_operator", "irshift"): functools.partial(_binary_inplace_op, "rshift"),
+    ("_operator", "iand_"): functools.partial(_binary_inplace_op, "and"),
+    ("_operator", "ixor"): functools.partial(_binary_inplace_op, "xor"),
+    ("_operator", "ior_"): functools.partial(_binary_inplace_op, "or"),
+    # Comparator
+    ("_operator", "lt"): functools.partial(_comparator, "lt", "gt"),
+    ("_operator", "le"): functools.partial(_comparator, "le", "ge"),
+    ("_operator", "gt"): functools.partial(_comparator, "gt", "lt"),
+    ("_operator", "ge"): functools.partial(_comparator, "ge", "le"),
+    ("_operator", "eq"): functools.partial(_comparator, "eq", "eq"),
+    ("_operator", "ne"): functools.partial(_comparator, "ne", "ne"),
+
 }
+
 
 @process_function.register
 def _method(f: MethodOutput, s: Signature) -> typing.Optional[API]:
