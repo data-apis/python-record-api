@@ -9,13 +9,11 @@ import pandas as pd
 from . import Tracer
 
 
-class TestMockNumPyMethod(unittest.TestCase):
+class BaseTest(unittest.TestCase):
     def setUp(self):
-        self.a = np.arange(10)
         patcher = patch("record_api.core.log_call")
         self.mock = patcher.start()
         self.addCleanup(patcher.stop)
-        self.tracer = Tracer(["numpy"], ["record_api.test"])
 
     def trace(self, source: str):
         """
@@ -24,13 +22,20 @@ class TestMockNumPyMethod(unittest.TestCase):
         alternatively could use IIFE but this is more verbose
         in the tests
         """
-        with self.tracer:
+        with self.tracer:  # type: ignore
             exec(source)
 
     def assertCalls(self, *calls):
         self.assertListEqual(
             self.mock.mock_calls, [*calls],
         )
+
+
+class TestMockNumPyMethod(BaseTest):
+    def setUp(self):
+        super().setUp()
+        self.a = np.arange(10)
+        self.tracer = Tracer(["numpy"], ["record_api.test"])
 
     def test_pos(self):
         self.trace("+self.a")
@@ -190,6 +195,20 @@ class TestMockNumPyMethod(unittest.TestCase):
         self.trace("np.ndarray.sum(self.a)")
         self.assertCalls(
             call(ANY, getattr, np, "ndarray"), call(ANY, np.ndarray.sum, self.a)
+        )
+
+
+class TestMockPandasMethod(BaseTest):
+    def setUp(self):
+        super().setUp()
+        self.tracer = Tracer(["pandas"], ["record_api.test"])
+        self.df = pd.DataFrame.from_records([{"hi": 1}])
+
+    def test_from_records(self):
+        self.trace("pd.DataFrame.from_records([{'hi': 1}])")
+        self.assertCalls(
+            call(ANY, getattr, pd, "DataFrame"),
+            call(ANY, pd.DataFrame.from_records, [{"hi": 1}]),
         )
 
 
