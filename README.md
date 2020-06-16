@@ -8,7 +8,57 @@ Then it builds hypothetical API for the target module, given all the calls it ha
 
 This is supported on Python version 3.8.
 
-## Example
+
+## Usage
+
+```bash
+pip install record_api
+
+# First, run some program and gather a trace. Either by:
+# a) Running a Python module:
+env PYTHON_RECORD_API_OUTPUT_FILE=out.jsonl \
+    PYTHON_RECORD_API_TO_MODULE=numpy \
+    PYTHON_RECORD_API_FROM_MODULE=record_api.sample_usage \
+    PYTHON_RECORD_API_IMPORT_MODULES=numpy \
+    python -m record_api
+# b) Running pytest, adding tracing around each test:
+env PYTHON_RECORD_API_OUTPUT_FILE=out.jsonl \
+    PYTHON_RECORD_API_TO_MODULE=numpy \
+    PYTHON_RECORD_API_FROM_MODULE=xarray \
+    pytest --pyargs xarray
+
+# This gives you a JSONL file with one line per call.
+# Next we can groupby function and args and count and count how many
+# lines had that call. This reduced the total data size
+# to make later processing quicker.
+# The assumption here is that the same call with the same types
+# from the same line is ignored.
+env PYTHON_RECORD_API_OUTPUT=grouped.jsonl \
+    PYTHON_RECORD_API_INPUT=out.jsonl \
+    python -m record_api.line_counts
+
+# Now we can take the grouped output and create a JSON file with the
+# inferred API
+# The LABEL is saved to record how many calls to this function happened from taht API
+env PYTHON_RECORD_API_OUTPUT=xarray-api.json \
+    PYTHON_RECORD_API_INPUT=grouped.jsonl \
+    PYTHON_RECORD_API_LABEL=xarray \
+    python -m record_api.infer_apis
+
+# (optional) Then, if you have produced  multiple apis, from different
+# library traces, you can join them
+env PYTHON_RECORD_API_OUTPUT=all_api.json \
+    PYTHON_RECORD_API_INPUTS=xarray-api.json,pandas-api.json
+    python -m record_api.combine_apis
+
+# Finally you can actually generate the mock APIs for the library you were tracing
+env PYTHON_RECORD_API_OUTPUT=typing/ \
+    PYTHON_RECORD_API_INPUT=all_api.json \
+    python -m record_api.write_api
+```
+
+
+## Development
 
 First install the local package:
 
