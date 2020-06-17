@@ -6,7 +6,6 @@
           "pos_only_required": {
             "_0": {
               "type": {
-                "module": null,
                 "name": "int"
               }
             }
@@ -16,10 +15,8 @@
           "pos_or_kw_required": {},
           "pos_or_kw_optional": {},
           "pos_or_kw_optional_ordering": [],
-          "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
-          "var_kw": null,
           "metadata": {
             "usage.sample_usage": 4
           }
@@ -30,7 +27,6 @@
               "type": "list",
               "item": {
                 "type": {
-                  "module": null,
                   "name": "int"
                 }
               }
@@ -41,10 +37,8 @@
           "pos_or_kw_required": {},
           "pos_or_kw_optional": {},
           "pos_or_kw_optional_ordering": [],
-          "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
-          "var_kw": null,
           "metadata": {
             "usage.sample_usage": 1
           }
@@ -56,13 +50,11 @@
               "items": [
                 {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 },
                 {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -74,10 +66,8 @@
           "pos_or_kw_required": {},
           "pos_or_kw_optional": {},
           "pos_or_kw_optional_ordering": [],
-          "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
-          "var_kw": null,
           "metadata": {
             "usage.sample_usage": 1
           }
@@ -92,13 +82,11 @@
               "items": [
                 {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 },
                 {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -107,10 +95,8 @@
           },
           "pos_or_kw_optional": {},
           "pos_or_kw_optional_ordering": [],
-          "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
-          "var_kw": null,
           "metadata": {
             "usage.sample_usage": 1
           }
@@ -122,29 +108,24 @@
           "pos_or_kw_required": {
             "start": {
               "type": {
-                "module": null,
                 "name": "int"
               }
             },
             "stop": {
               "type": {
-                "module": null,
                 "name": "int"
               }
             },
             "num": {
               "type": {
-                "module": null,
                 "name": "int"
               }
             }
           },
           "pos_or_kw_optional": {},
           "pos_or_kw_optional_ordering": [],
-          "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
-          "var_kw": null,
           "metadata": {
             "usage.sample_usage": 1
           }
@@ -156,17 +137,14 @@
           "pos_or_kw_required": {
             "N": {
               "type": {
-                "module": null,
                 "name": "int"
               }
             }
           },
           "pos_or_kw_optional": {},
           "pos_or_kw_optional_ordering": [],
-          "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
-          "var_kw": null,
           "metadata": {
             "usage.sample_usage": 1
           }
@@ -191,10 +169,8 @@
           "pos_or_kw_required": {},
           "pos_or_kw_optional": {},
           "pos_or_kw_optional_ordering": [],
-          "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
-          "var_kw": null,
           "metadata": {
             "usage.sample_usage": 1
           }
@@ -213,10 +189,8 @@
           "pos_or_kw_required": {},
           "pos_or_kw_optional": {},
           "pos_or_kw_optional_ordering": [],
-          "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
-          "var_kw": null,
           "metadata": {
             "usage.sample_usage": 1
           }
@@ -235,10 +209,8 @@
           "pos_or_kw_required": {},
           "pos_or_kw_optional": {},
           "pos_or_kw_optional_ordering": [],
-          "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
-          "var_kw": null,
           "metadata": {
             "usage.sample_usage": 1
           }
@@ -260,10 +232,8 @@
           },
           "pos_or_kw_optional": {},
           "pos_or_kw_optional_ordering": [],
-          "var_pos": null,
           "kw_only_required": {},
           "kw_only_optional": {},
-          "var_kw": null,
           "metadata": {
             "usage.sample_usage": 1
           }
@@ -293,17 +263,14 @@
           "pos_or_kw_required": {},
           "pos_or_kw_optional": {},
           "pos_or_kw_optional_ordering": [],
-          "var_pos": null,
           "kw_only_required": {
             "axis": {
               "type": {
-                "module": null,
                 "name": "int"
               }
             }
           },
           "kw_only_optional": {},
-          "var_kw": null,
           "metadata": {
             "usage.sample_usage": 1
           }
@@ -318,19 +285,16 @@
                 "items": [
                   {
                     "type": {
-                      "module": null,
                       "name": "int"
                     }
                   },
                   {
                     "type": {
-                      "module": null,
                       "name": "int"
                     }
                   },
                   {
                     "type": {
-                      "module": null,
                       "name": "int"
                     }
                   }
@@ -342,10 +306,8 @@
             "pos_or_kw_required": {},
             "pos_or_kw_optional": {},
             "pos_or_kw_optional_ordering": [],
-            "var_pos": null,
             "kw_only_required": {},
             "kw_only_optional": {},
-            "var_kw": null,
             "metadata": {
               "usage.sample_usage": 1
             }
@@ -358,10 +320,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__neg__": {
@@ -371,10 +331,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__invert__": {
@@ -384,10 +342,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__bool__": {
@@ -397,10 +353,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__iter__": {
@@ -410,10 +364,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__getitem__": {
@@ -429,19 +381,16 @@
                           "items": [
                             {
                               "type": {
-                                "module": null,
                                 "name": "int"
                               }
                             },
                             {
                               "type": {
-                                "module": null,
                                 "name": "int"
                               }
                             },
                             {
                               "type": {
-                                "module": null,
                                 "name": "int"
                               }
                             }
@@ -452,19 +401,16 @@
                           "items": [
                             {
                               "type": {
-                                "module": null,
                                 "name": "int"
                               }
                             },
                             {
                               "type": {
-                                "module": null,
                                 "name": "int"
                               }
                             },
                             {
                               "type": {
-                                "module": null,
                                 "name": "int"
                               }
                             }
@@ -480,7 +426,6 @@
                     },
                     {
                       "type": {
-                        "module": null,
                         "name": "int"
                       }
                     },
@@ -488,13 +433,11 @@
                       "type": "slice",
                       "start": {
                         "type": {
-                          "module": null,
                           "name": "int"
                         }
                       },
                       "stop": {
                         "type": {
-                          "module": null,
                           "name": "int"
                         }
                       },
@@ -510,17 +453,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__pow__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -530,17 +470,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__rpow__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -550,17 +487,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__mul__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -570,17 +504,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__rmul__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -590,10 +521,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__matmul__": {
@@ -610,10 +539,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__rmatmul__": {
@@ -630,17 +557,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__floordiv__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -650,17 +574,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__rfloordiv__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -670,17 +591,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__mod__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -690,17 +608,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__rmod__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -710,10 +625,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__add__": {
@@ -729,7 +642,6 @@
                     },
                     {
                       "type": {
-                        "module": null,
                         "name": "int"
                       }
                     }
@@ -741,10 +653,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__radd__": {
@@ -760,7 +670,6 @@
                     },
                     {
                       "type": {
-                        "module": null,
                         "name": "int"
                       }
                     }
@@ -772,17 +681,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__sub__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -792,17 +698,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__rsub__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -812,17 +715,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__lshift__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -832,17 +732,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__rlshift__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -852,17 +749,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__rshift__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -872,17 +766,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__rrshift__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -892,17 +783,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__and__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -912,17 +800,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__rand__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -932,17 +817,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__or__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -952,17 +834,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__ror__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -972,17 +851,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__ipow__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -992,17 +868,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__imul__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1012,17 +885,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__ifloordiv__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1032,17 +902,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__imod__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1052,17 +919,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__iadd__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1072,17 +936,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__isub__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1092,17 +953,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__ilshift__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1112,17 +970,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__irshift__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1132,17 +987,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__iand__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1152,17 +1004,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__ior__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1172,23 +1021,19 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__setitem__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 },
                 "_1": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1198,10 +1043,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__eq__": {
@@ -1218,17 +1061,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__le__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1238,10 +1078,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "sort": {
@@ -1251,17 +1089,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {
                 "axis": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
               },
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {
                 "usage.sample_usage": 1
               }
@@ -1270,7 +1105,6 @@
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1280,17 +1114,14 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             },
             "__contains__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1300,10 +1131,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {}
             }
           },
@@ -1322,10 +1151,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {
                 "usage.sample_usage": 1
               }
@@ -1344,10 +1171,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {
                 "usage.sample_usage": 1
               }
@@ -1366,10 +1191,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {
                 "usage.sample_usage": 1
               }
@@ -1390,13 +1213,11 @@
                       "items": [
                         {
                           "type": {
-                            "module": null,
                             "name": "int"
                           }
                         },
                         {
                           "type": {
-                            "module": null,
                             "name": "int"
                           }
                         }
@@ -1404,7 +1225,6 @@
                     },
                     {
                       "type": {
-                        "module": null,
                         "name": "int"
                       }
                     }
@@ -1414,7 +1234,6 @@
               "pos_only_optional": {
                 "_2": {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1423,10 +1242,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {
                 "usage.sample_usage": 2
               }
@@ -1442,7 +1259,6 @@
                 "_1": {
                   "type": "type",
                   "name": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1452,10 +1268,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {
                 "usage.sample_usage": 1
               }
@@ -1467,13 +1281,11 @@
               "items": [
                 {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 },
                 {
                   "type": {
-                    "module": null,
                     "name": "int"
                   }
                 }
@@ -1510,10 +1322,8 @@
             "pos_or_kw_required": {},
             "pos_or_kw_optional": {},
             "pos_or_kw_optional_ordering": [],
-            "var_pos": null,
             "kw_only_required": {},
             "kw_only_optional": {},
-            "var_kw": null,
             "metadata": {
               "usage.sample_usage": 1
             }
@@ -1524,7 +1334,6 @@
           "classproperties": {}
         },
         "ufunc": {
-          "constructor": null,
           "methods": {},
           "classmethods": {
             "reduce": {
@@ -1548,10 +1357,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {
                 "usage.sample_usage": 1
               }
@@ -1583,7 +1390,6 @@
       "functions": {},
       "classes": {
         "RandomState": {
-          "constructor": null,
           "methods": {},
           "classmethods": {
             "random": {
@@ -1600,10 +1406,8 @@
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
-              "var_pos": null,
               "kw_only_required": {},
               "kw_only_optional": {},
-              "var_kw": null,
               "metadata": {
                 "usage.sample_usage": 1
               }

@@ -1,7 +1,7 @@
 from typing import *
 
 
-def unique(values: List[int]):
+def unique(values: List[str]):
     "usage.xarray: 53"
 
 

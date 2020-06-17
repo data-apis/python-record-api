@@ -12,7 +12,7 @@ class Index:
     name = ...
     nlevels = ...
 
-    def set_names(self, /, names: Union[(int, numpy.str_, List[int])]):
+    def set_names(self, /, names: Union[(str, numpy.str_, List[str])]):
         "usage.xarray: 183"
 
     def equals(
@@ -52,7 +52,7 @@ class Index:
     def copy(self, /, deep: bool):
         "usage.xarray: 1"
 
-    def rename(self, /, name: int):
+    def rename(self, /, name: str):
         "usage.xarray: 15"
 
     def slice_indexer(self, /, start, end, step: None):
@@ -68,7 +68,7 @@ class Index:
         "usage.xarray: 3"
 
     def get_loc(
-        self, /, key: Union[(int, bool)], method: None = ..., tolerance: None = ...
+        self, /, key: Union[(str, bool)], method: None = ..., tolerance: None = ...
     ):
         "usage.xarray: 26"
 

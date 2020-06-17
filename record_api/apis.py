@@ -27,8 +27,6 @@ from .type_analysis import *
 __all__ = ["API", "Module", "Class", "Signature"]
 Type = OutputType
 
-# TODO: See if I can not dump defaults, besides strings?
-
 
 def orjson_dumps(v, *, default):
     # orjson.dumps returns bytes, to match standard json.dumps we need to decode
@@ -46,6 +44,9 @@ class API(pydantic.BaseModel):
     def __ior__(self, other: API) -> API:
         update_ior(self.modules, other.modules)
         return self
+
+    def json(self, **kwargs) -> str:
+        return super().json(exclude_none=True, **kwargs)
 
 
 class Module(pydantic.BaseModel):

@@ -198,7 +198,7 @@ class StringOutput(OutputTypeBase):
                 ast.Load(),
             )
             return f'Literal[{", ".join(map(str, self.options))}]'
-        return ast.Name("int", ast.Load())
+        return ast.Name("str", ast.Load())
 
     @classmethod
     def unify(cls, tps: typing.Iterable[StringOutput]) -> StringOutput:
@@ -640,7 +640,7 @@ class MethodOutput(OutputTypeBase):  # type: ignore
 
 
 class MethodInput(InputTypeBase):
-    t: typing.Literal["method"] = "method"
+    t: typing.Literal["method"]
     v: MethodInputValue
 
     def to_output(self) -> MethodOutput:
@@ -648,7 +648,7 @@ class MethodInput(InputTypeBase):
 
 
 class MethodDescriptorInput(InputTypeBase):
-    t: typing.Literal["method_descriptor"] = "method_descriptor"
+    t: typing.Literal["method_descriptor"]
     v: MethodDescriptorInputValue
 
     def to_output(self) -> ClassMethodOutput:

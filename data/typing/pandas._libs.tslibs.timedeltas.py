@@ -3,7 +3,7 @@ from typing import *
 
 class Timedelta:
     def __init__(
-        value: Union[(int, numpy.timedelta64, pandas._libs.tslibs.timedeltas.Timedelta)]
+        value: Union[(str, numpy.timedelta64, pandas._libs.tslibs.timedeltas.Timedelta)]
     ):
         "usage.xarray: 10"
 

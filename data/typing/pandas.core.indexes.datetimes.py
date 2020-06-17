@@ -2,12 +2,12 @@ from typing import *
 
 
 def date_range(
-    start: int,
+    start: str,
     end: Literal[
         ("2000-01-10", "2010-08-15", "2016-03-31", "2007-03-01", "2014-05-01")
     ] = ...,
     periods: int = ...,
-    freq: int = ...,
+    freq: str = ...,
     tz: Union[(pytz.tzfile.America / New_York, Literal[("US/Eastern",)])] = ...,
 ):
     "usage.xarray: 79"

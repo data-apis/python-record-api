@@ -29,12 +29,12 @@ def assert_allclose(
     desired,
     rtol: Union[(float, int)] = ...,
     atol: Union[(float, int)] = ...,
-    err_msg: int = ...,
+    err_msg: str = ...,
 ):
     "usage.skimage: 169, usage.xarray: 27, usage.sklearn: 307"
 
 
-def assert_array_almost_equal(x, y, decimal: int = ..., err_msg: int = ...):
+def assert_array_almost_equal(x, y, decimal: int = ..., err_msg: str = ...):
     "usage.skimage: 107, usage.sklearn: 641"
 
 

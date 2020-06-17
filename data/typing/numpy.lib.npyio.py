@@ -2,5 +2,5 @@ from typing import *
 
 
 class NpzFile:
-    def __getitem__(self, _0: int, /):
+    def __getitem__(self, _0: str, /):
         ""

@@ -62,7 +62,7 @@ def arange(
     _3: Type[numpy.uint8] = ...,
     /,
     *,
-    dtype: Union[(type, numpy.dtype, int)] = ...,
+    dtype: Union[(type, numpy.dtype, str)] = ...,
 ):
     "usage.sample_usage: 4, usage.skimage: 223, usage.xarray: 403, usage.sklearn: 151"
 
@@ -73,7 +73,7 @@ def array(
     *,
     dtype: Union[
         (
-            int,
+            str,
             numpy.dtype,
             None,
             type,
@@ -107,7 +107,7 @@ def zeros(
     _1: Union[(type, Literal[("bool", "double", "uint8")], numpy.dtype)] = ...,
     /,
     *,
-    dtype: Union[(type, int, numpy.dtype)] = ...,
+    dtype: Union[(type, str, numpy.dtype)] = ...,
     order: Literal[("C", "F", "f")] = ...,
     shape: Union[(int, Tuple[(int, ...)])] = ...,
 ):
@@ -210,7 +210,7 @@ def absolute(_0=..., /):
 
 def asarray(
     a,
-    dtype: Union[(None, type, int, numpy.dtype)] = ...,
+    dtype: Union[(None, type, str, numpy.dtype)] = ...,
     order: Union[(Literal[("C", "F")], None)] = ...,
 ):
     "usage.skimage: 247, usage.xarray: 870, usage.sklearn: 2199"
@@ -570,7 +570,7 @@ def min_scalar_type(_0: Union[(numpy.float64, int, numpy.int64)], /):
 def unique(
     ar: Union[
         (
-            List[Union[(int, int)]],
+            List[Union[(str, int)]],
             numpy.ndarray,
             numpy.memmap,
             pandas.core.series.Series,
@@ -1883,7 +1883,7 @@ class ndarray:
         "usage.sample_usage: 2, usage.skimage: 168, usage.xarray: 190, usage.sklearn: 163"
 
     @classmethod
-    def astype(_0: numpy.ndarray, _1: Union[(int, type, numpy.dtype)], /):
+    def astype(_0: numpy.ndarray, _1: Union[(str, type, numpy.dtype)], /):
         "usage.sample_usage: 1, usage.skimage: 555, usage.xarray: 75, usage.sklearn: 149"
 
     @classmethod
@@ -2365,7 +2365,7 @@ class dtype:
     isnative = ...
     metadata = ...
 
-    def __eq__(self, _0: Union[(numpy.dtype, int, type)], /):
+    def __eq__(self, _0: Union[(numpy.dtype, str, type)], /):
         ""
 
     def __ne__(self, _0: Union[(Literal[("bool", "S1")], numpy.dtype, type)], /):
@@ -3110,10 +3110,10 @@ class ulonglong:
 
 
 class void:
-    def __getitem__(self, _0: Union[(int, int)], /):
+    def __getitem__(self, _0: Union[(str, int)], /):
         ""
 
-    def __setitem__(self, _0: int, _1: Union[(int, float, bool, numpy.float64)], /):
+    def __setitem__(self, _0: str, _1: Union[(int, float, bool, numpy.float64)], /):
         ""
 
 
@@ -3135,16 +3135,16 @@ class str_:
     def __getitem__(self, _0: slice[(Union[(int, None)], Union[(int, None)], int)], /):
         ""
 
-    def __iadd__(self, _0: Union[(int, numpy.str_)], /):
+    def __iadd__(self, _0: Union[(str, numpy.str_)], /):
         ""
 
-    def __radd__(self, _0: int, /):
+    def __radd__(self, _0: str, /):
         ""
 
     def __contains__(self, _0: Literal[(" ",)], /):
         ""
 
-    def __ne__(self, _0: Union[(int, numpy.ndarray)], /):
+    def __ne__(self, _0: Union[(str, numpy.ndarray)], /):
         ""
 
     def __eq__(

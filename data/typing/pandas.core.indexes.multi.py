@@ -81,7 +81,7 @@ class MultiIndex:
     def equals(self, /, other: pandas.core.indexes.multi.MultiIndex):
         "usage.xarray: 8"
 
-    def get_level_values(self, /, level: int):
+    def get_level_values(self, /, level: str):
         "usage.xarray: 27"
 
     def get_loc(self, /, key: Tuple[(Literal[("a", "b")], int, int)]):
@@ -93,7 +93,7 @@ class MultiIndex:
         key: Union[
             (Tuple[(Union[(int, Literal[("a", "b")])], ...)], Literal[("a",)], int)
         ],
-        level: Union[(Tuple[(int, ...)], List[int], int)],
+        level: Union[(Tuple[(str, ...)], List[int], int)],
     ):
         "usage.xarray: 12"
 

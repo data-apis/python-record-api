@@ -15,7 +15,7 @@ class Timestamp:
     def __init__(
         ts_input: Union[
             (
-                int,
+                str,
                 pandas._libs.tslibs.nattype.NaTType,
                 pandas._libs.tslibs.timestamps.Timestamp,
             )
