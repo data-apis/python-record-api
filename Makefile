@@ -1,8 +1,13 @@
-.PHONY: groupby_location clean_groupby_location clean_api clean_raw clean_typing clean all
+.PHONY: groupby_location clean_groupby_location clean_api clean_raw clean_typing clean all test
 
 LIBRARIES := sample_usage skimage xarray sklearn
 
 all: data/typing/numpy.py
+
+test:
+	env PYTEST_DISABLE_PLUGIN_AUTOLOAD=true \
+		pytest record_api/test.py
+
 
 clean: clean_groupby_location clean_api clean_typing clean_raw
 

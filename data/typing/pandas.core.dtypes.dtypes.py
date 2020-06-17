@@ -7,7 +7,7 @@ class IntervalDtype:
 
 
 class CategoricalDtype:
-    def __init__(categories: List[Literal[("baz", "qux", "quux", "bar", "foo")]]):
+    def __init__(categories: List[Literal[("bar", "baz", "foo", "quux", "qux")]]):
         "usage.xarray: 2"
 
     def __eq__(self, _0: Literal[("O",)], /):

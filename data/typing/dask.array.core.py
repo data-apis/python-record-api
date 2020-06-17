@@ -17,7 +17,7 @@ class Array:
     def __eq__(self, _0: Union[(numpy.int64, numpy.ndarray)], /):
         ""
 
-    def __and__(self, _0: Union[(numpy.bool_, numpy.ndarray)], /):
+    def __and__(self, _0: Union[(numpy.ndarray, numpy.bool_)], /):
         ""
 
     def __rand__(self, _0: numpy.ndarray, /):

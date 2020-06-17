@@ -164,6 +164,10 @@ def _getitem(inst: OutputType, idx: OutputType) -> typing.Optional[API]:
     return record_method(inst, "__getitem__", sig(idx))
 
 
+def _contains(container: OutputType, item: OutputType) -> typing.Optional[API]:
+    return record_method(container, "__contains__", sig(item))
+
+
 def _setitem(
     inst: OutputType, idx: OutputType, value: OutputType
 ) -> typing.Optional[API]:
@@ -187,12 +191,13 @@ def _binary_op(
 def _comparator(
     left_method_name: str, right_method_name: str, inst: OutputType, arg: OutputType
 ) -> typing.Optional[API]:
-    
+
     l = record_method(inst, f"__{left_method_name}__", sig(arg))
     r = record_method(arg, f"__{right_method_name}__", sig(inst))
     if l and r:
         l |= r
     return l or r
+
 
 def _binary_inplace_op(
     method_name: str, inst: OutputType, arg: OutputType
@@ -212,7 +217,6 @@ FunctionCallback = typing.Union[
 ]
 
 
-
 FUNCTIONS: typing.Dict[typing.Tuple[typing.Optional[str], str], FunctionCallback] = {
     (None, "iter"): _iter,
     (None, "setattr"): _setattr,
@@ -220,6 +224,7 @@ FUNCTIONS: typing.Dict[typing.Tuple[typing.Optional[str], str], FunctionCallback
     (None, "delattr"): functools.partial(_setattr, value_type=BottomOutput()),
     ("_operator", "getitem"): _getitem,
     ("_operator", "setitem"): _setitem,
+    ("_operator", "contains"): _contains,
     # Unary
     ("_operator", "pos"): functools.partial(_unary_op, "pos"),
     ("_operator", "neg"): functools.partial(_unary_op, "neg"),
@@ -260,7 +265,6 @@ FUNCTIONS: typing.Dict[typing.Tuple[typing.Optional[str], str], FunctionCallback
     ("_operator", "ge"): functools.partial(_comparator, "ge", "le"),
     ("_operator", "eq"): functools.partial(_comparator, "eq", "eq"),
     ("_operator", "ne"): functools.partial(_comparator, "ne", "ne"),
-
 }
 
 

@@ -25,9 +25,9 @@ class CClass:
         self,
         _0: Union[
             (
+                numpy.ndarray,
                 Tuple[(numpy.ndarray, numpy.ndarray, numpy.ndarray)],
                 Tuple[(numpy.ndarray, numpy.ndarray)],
-                numpy.ndarray,
             )
         ],
         /,

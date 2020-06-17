@@ -11,10 +11,10 @@ class MultiIndex:
         arrays: list,
         names: Union[
             (
-                pandas.core.indexes.frozen.FrozenList,
                 Tuple[(Literal[("level_str",)], Literal[("level_date",)])],
-                List[Literal[("y", "y2", "y1", "x")]],
-                List[Literal[("y", "x")]],
+                List[Literal[("x", "y")]],
+                pandas.core.indexes.frozen.FrozenList,
+                List[Literal[("y1", "y2", "x", "y")]],
             )
         ],
     ):
@@ -24,26 +24,26 @@ class MultiIndex:
     def from_tuples(
         tuples: Union[
             (
-                Tuple[
-                    (
-                        Tuple[(Literal[("a",)], int)],
-                        Tuple[(Literal[("a",)], int)],
-                        Tuple[(Literal[("b",)], int)],
-                        Tuple[(Literal[("b",)], int)],
-                    )
-                ],
-                Tuple[
-                    (
-                        Tuple[(Literal[("b",)], int)],
-                        Tuple[(Literal[("b",)], int)],
-                        Tuple[(Literal[("a",)], int)],
-                        Tuple[(Literal[("a",)], int)],
-                    )
-                ],
                 List[List[int]],
+                Tuple[
+                    (
+                        Tuple[(Literal[("a",)], int)],
+                        Tuple[(Literal[("a",)], int)],
+                        Tuple[(Literal[("b",)], int)],
+                        Tuple[(Literal[("b",)], int)],
+                    )
+                ],
+                Tuple[
+                    (
+                        Tuple[(Literal[("b",)], int)],
+                        Tuple[(Literal[("b",)], int)],
+                        Tuple[(Literal[("a",)], int)],
+                        Tuple[(Literal[("a",)], int)],
+                    )
+                ],
             )
         ],
-        names: List[Literal[("level1", "two", "one", "level0")]],
+        names: List[Literal[("level0", "two", "level1", "one")]],
     ):
         "usage.xarray: 3"
 
@@ -74,24 +74,24 @@ class MultiIndex:
         /,
         level: Literal[
             (
+                "level_str",
+                "two",
                 "dim2",
                 "variable",
-                "y",
-                "x",
-                "dim1",
-                "level_2",
-                "level_1",
-                "two",
-                "level_date",
-                "level_str",
                 "one",
+                "dim1",
+                "level_1",
+                "level_date",
+                "y",
+                "level_2",
                 "a_quite_long_level_name",
+                "x",
             )
         ],
     ):
         "usage.xarray: 27"
 
-    def get_loc(self, /, key: Tuple[(Literal[("b", "a")], int, int)]):
+    def get_loc(self, /, key: Tuple[(Literal[("a", "b")], int, int)]):
         "usage.xarray: 3"
 
     def get_loc_level(self, /, key, level):
@@ -106,7 +106,7 @@ class MultiIndex:
     def copy(self, /, deep: bool):
         "usage.xarray: 1"
 
-    def reorder_levels(self, /, order: List[Literal[("level_1", "level_2")]]):
+    def reorder_levels(self, /, order: List[Literal[("level_2", "level_1")]]):
         "usage.xarray: 4"
 
     def set_names(self, /, names: List[Literal[("level1", "level0")]]):
@@ -117,7 +117,7 @@ class MultiIndex:
         /,
         levels: List[
             Union[
-                (pandas.core.indexes.base.Index, pandas.core.indexes.numeric.Int64Index)
+                (pandas.core.indexes.numeric.Int64Index, pandas.core.indexes.base.Index)
             ]
         ],
     ):

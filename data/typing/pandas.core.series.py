@@ -56,7 +56,7 @@ class Series:
     def iteritems(self, /):
         "usage.xarray: 1"
 
-    def __getitem__(self, _0: Union[(int, slice[(None, None, int)])], /):
+    def __getitem__(self, _0: Union[(slice[(None, None, int)], int)], /):
         ""
 
     def sum(self, /, skipna: bool = ...):

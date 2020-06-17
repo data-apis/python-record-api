@@ -10,7 +10,7 @@ class PeriodIndex:
     dtype = ...
 
     def __getitem__(
-        self, _0: Union[(int, slice[(Union[(None, int)], Union[(None, int)], None)])], /
+        self, _0: Union[(slice[(Union[(None, int)], Union[(None, int)], None)], int)], /
     ):
         ""
 

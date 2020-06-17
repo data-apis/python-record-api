@@ -20,16 +20,16 @@ class Int64Index:
         self,
         /,
         target: numpy.ndarray,
-        method: Union[(None, Literal[("backfill",)], Literal[("pad",)])],
-        tolerance: Union[(None, float, int)],
+        method: Union[(Literal[("backfill",)], Literal[("pad",)], None)],
+        tolerance: Union[(float, None, int)],
     ):
         "usage.xarray: 8"
 
     def get_loc(
         self,
         /,
-        key: Union[(numpy.float64, numpy.int64, int)],
-        method: Union[(None, Literal[("nearest",)])] = ...,
+        key: Union[(numpy.int64, numpy.float64, int)],
+        method: Union[(Literal[("nearest",)], None)] = ...,
     ):
         "usage.xarray: 5"
 
@@ -42,7 +42,7 @@ class Int64Index:
     def equals(self, /, other: pandas.core.indexes.numeric.Int64Index):
         "usage.xarray: 1"
 
-    def drop(self, /, labels: numpy.ndarray, errors: Literal[("raise", "ignore")]):
+    def drop(self, /, labels: numpy.ndarray, errors: Literal[("ignore", "raise")]):
         "usage.xarray: 2"
 
 
@@ -64,9 +64,9 @@ class Float64Index:
         /,
         other: Union[
             (
-                pandas.core.indexes.base.Index,
-                pandas.core.indexes.numeric.Int64Index,
                 pandas.core.indexes.numeric.Float64Index,
+                pandas.core.indexes.numeric.Int64Index,
+                pandas.core.indexes.base.Index,
             )
         ],
     ):
@@ -80,7 +80,7 @@ class Float64Index:
         /,
         target: numpy.ndarray,
         method: Union[
-            (Literal[("backfill",)], Literal[("pad",)], Literal[("nearest",)], None)
+            (Literal[("backfill",)], Literal[("nearest",)], Literal[("pad",)], None)
         ],
         tolerance: None,
     ):
@@ -89,8 +89,8 @@ class Float64Index:
     def get_loc(
         self,
         /,
-        key: Union[(float, numpy.int64, numpy.float64)],
-        method: Union[(None, Literal[("nearest",)])] = ...,
+        key: Union[(numpy.int64, numpy.float64, float)],
+        method: Union[(Literal[("nearest",)], None)] = ...,
     ):
         "usage.xarray: 7"
 

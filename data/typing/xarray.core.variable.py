@@ -6,10 +6,10 @@ class Variable:
         self,
         _0: Union[
             (
+                pandas._libs.tslibs.period.Period,
                 numpy.str_,
                 numpy.int64,
                 numpy.datetime64,
-                pandas._libs.tslibs.period.Period,
             )
         ],
         /,

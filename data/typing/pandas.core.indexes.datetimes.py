@@ -4,30 +4,30 @@ from typing import *
 def date_range(
     start: Literal[
         (
+            "2000/01/01",
             "20130101",
-            "20000101",
-            "2000",
-            "2011-09-01",
-            "2014-01-01",
+            "1970-01-01",
             "1/1/2011",
-            "2016-01-01",
-            "2000-1-1",
+            "2010-08-01",
+            "20100101",
+            "2011-09-01",
             "2007-02-01",
             "15/12/1999",
-            "2010-08-01",
-            "2000/01/01",
-            "20100101",
-            "2000-01-01",
-            "1970-01-01",
+            "2000-1-1",
+            "20000101",
             "01-01-2001",
+            "2016-01-01",
+            "2000-01-01",
+            "2000",
+            "2014-01-01",
         )
     ],
     end: Literal[
-        ("2014-05-01", "2000-01-10", "2010-08-15", "2016-03-31", "2007-03-01")
+        ("2010-08-15", "2007-03-01", "2014-05-01", "2016-03-31", "2000-01-10")
     ] = ...,
     periods: int = ...,
     freq: Literal[
-        ("M", "6H", "24H", "D", "7D", "h", "1D", "15min", "1h", "H", "3H", "2MS")
+        ("6H", "1h", "2MS", "M", "h", "24H", "1D", "3H", "7D", "15min", "H", "D")
     ] = ...,
     tz: Union[(pytz.tzfile.America / New_York, Literal[("US/Eastern",)])] = ...,
 ):
@@ -54,18 +54,18 @@ class DatetimeIndex:
     def copy(self, /, deep: bool):
         "usage.xarray: 1"
 
-    def floor(self, /, *args: Literal[("t", "v")]):
+    def floor(self, /, *args: Literal[("v", "t")]):
         "usage.xarray: 1"
 
-    def ceil(self, /, *args: Literal[("t", "v")]):
+    def ceil(self, /, *args: Literal[("v", "t")]):
         "usage.xarray: 1"
 
-    def round(self, /, *args: Literal[("t", "v")]):
+    def round(self, /, *args: Literal[("v", "t")]):
         "usage.xarray: 1"
 
     def __sub__(
         self,
-        _0: Union[(numpy.timedelta64, pandas._libs.tslibs.timestamps.Timestamp)],
+        _0: Union[(pandas._libs.tslibs.timestamps.Timestamp, numpy.timedelta64)],
         /,
     ):
         ""
@@ -78,18 +78,18 @@ class DatetimeIndex:
         /,
         start: Union[
             (
-                numpy.datetime64,
-                Literal[("2001",)],
                 Literal[("1999",)],
+                Literal[("2001",)],
+                numpy.datetime64,
                 Literal[("2000-01-01",)],
             )
         ],
         end: Union[
             (
-                Literal[("2002",)],
-                numpy.datetime64,
                 Literal[("2000-01-10",)],
+                numpy.datetime64,
                 Literal[("2005",)],
+                Literal[("2002",)],
             )
         ],
         step: None,
@@ -103,7 +103,7 @@ class DatetimeIndex:
         method: Union[
             (None, Literal[("backfill",)], Literal[("nearest",)], Literal[("pad",)])
         ],
-        tolerance: Union[(None, Literal[("6H",)], Literal[("12H",)])],
+        tolerance: Union[(None, Literal[("12H",)], Literal[("6H",)])],
     ):
         "usage.xarray: 7"
 
@@ -114,6 +114,6 @@ class DatetimeIndex:
         self,
         /,
         key: Union[(numpy.datetime64, Literal[("2000-01-01",)])],
-        method: Union[(None, Literal[("nearest",)])] = ...,
+        method: Union[(Literal[("nearest",)], None)] = ...,
     ):
         "usage.xarray: 3"

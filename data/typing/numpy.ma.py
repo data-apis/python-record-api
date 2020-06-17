@@ -10,9 +10,9 @@ average = ...
 median = ...
 
 
-def zeros(*args: Literal[("t", "v")]):
+def zeros(*args: Literal[("v", "t")]):
     "usage.skimage: 5"
 
 
-def ones(*args: Literal[("t", "v")]):
+def ones(*args: Literal[("v", "t")]):
     "usage.xarray: 1"

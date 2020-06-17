@@ -6,7 +6,7 @@ class DataFrame:
         "usage.xarray: 1"
 
     index: pandas.core.indexes.multi.MultiIndex = ...
-    columns: List[Literal[("C", "foo", "x")]] = ...
+    columns: List[Literal[("foo", "x", "C")]] = ...
     values = ...
     loc = ...
 
@@ -19,7 +19,7 @@ class DataFrame:
     def __getitem__(
         self,
         _0: Union[
-            (Literal[("x",)], int, Literal[("foo",)], List[Literal[("C", "foo")]])
+            (Literal[("foo",)], List[Literal[("foo", "C")]], Literal[("x",)], int)
         ],
         /,
     ):
@@ -35,7 +35,7 @@ class DataFrame:
         "usage.xarray: 8"
 
     def reindex(
-        self, /, labels: Union[(reversed, pandas.core.indexes.multi.MultiIndex)]
+        self, /, labels: Union[(pandas.core.indexes.multi.MultiIndex, reversed)]
     ):
         "usage.xarray: 2"
 

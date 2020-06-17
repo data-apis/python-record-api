@@ -7,8 +7,8 @@ class DatetimeIndexOpsMixin:
         /,
         other: Union[
             (
-                pandas.core.indexes.timedeltas.TimedeltaIndex,
                 pandas.core.indexes.datetimes.DatetimeIndex,
+                pandas.core.indexes.timedeltas.TimedeltaIndex,
             )
         ],
     ):

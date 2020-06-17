@@ -422,6 +422,30 @@
                   "type": "union",
                   "options": [
                     {
+                      "type": "slice",
+                      "start": {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      "stop": {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      "step": {
+                        "type": "None"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
                       "type": "tuple",
                       "items": [
                         {
@@ -473,33 +497,9 @@
                       ]
                     },
                     {
-                      "type": "slice",
-                      "start": {
-                        "type": {
-                          "module": null,
-                          "name": "int"
-                        }
-                      },
-                      "stop": {
-                        "type": {
-                          "module": null,
-                          "name": "int"
-                        }
-                      },
-                      "step": {
-                        "type": "None"
-                      }
-                    },
-                    {
                       "type": {
                         "module": null,
                         "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
                       }
                     }
                   ]
@@ -723,14 +723,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -754,14 +754,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -1267,6 +1267,26 @@
               }
             },
             "__gt__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "var_pos": null,
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "var_kw": null,
+              "metadata": {}
+            },
+            "__contains__": {
               "pos_only_required": {
                 "_0": {
                   "type": {

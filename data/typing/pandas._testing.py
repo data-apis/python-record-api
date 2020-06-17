@@ -8,9 +8,9 @@ def assert_frame_equal(
 
 
 def assert_index_equal(
-    left: Union[(pandas.core.indexes.base.Index, pandas.core.indexes.multi.MultiIndex)],
+    left: Union[(pandas.core.indexes.multi.MultiIndex, pandas.core.indexes.base.Index)],
     right: Union[
-        (pandas.core.indexes.base.Index, pandas.core.indexes.multi.MultiIndex)
+        (pandas.core.indexes.multi.MultiIndex, pandas.core.indexes.base.Index)
     ],
 ):
     "usage.xarray: 5"

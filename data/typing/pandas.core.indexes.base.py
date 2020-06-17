@@ -22,8 +22,8 @@ class Index:
             (
                 pandas.core.indexes.numeric.Float64Index,
                 pandas.core.indexes.numeric.Int64Index,
-                pandas.core.indexes.range.RangeIndex,
                 pandas.core.indexes.base.Index,
+                pandas.core.indexes.range.RangeIndex,
                 pandas.core.indexes.multi.MultiIndex,
             )
         ],
@@ -47,18 +47,18 @@ class Index:
         /,
         name: Literal[
             (
-                "dim2",
-                "y",
+                "xnew",
                 "z",
                 "x",
-                "time_new",
+                "dim3",
+                "dim2",
                 "renamed_dim2",
                 "three",
-                "time",
-                "dim3",
-                "abc",
-                "xnew",
                 "new_dim",
+                "abc",
+                "time_new",
+                "y",
+                "time",
             )
         ],
     ):
@@ -71,7 +71,7 @@ class Index:
         self,
         /,
         target: numpy.ndarray,
-        method: Union[(None, Literal[("pad",)])],
+        method: Union[(Literal[("pad",)], None)],
         tolerance: None,
     ):
         "usage.xarray: 3"
@@ -87,7 +87,7 @@ class Index:
     def __iter__(self, /):
         ""
 
-    def drop(self, /, labels: numpy.ndarray, errors: Literal[("raise", "ignore")]):
+    def drop(self, /, labels: numpy.ndarray, errors: Literal[("ignore", "raise")]):
         "usage.xarray: 2"
 
     def astype(self, /, dtype: numpy.dtype):
