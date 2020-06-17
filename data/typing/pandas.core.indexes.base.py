@@ -12,7 +12,7 @@ class Index:
     name = ...
     nlevels = ...
 
-    def set_names(self, /, names):
+    def set_names(self, /, names: Union[(int, numpy.str_, List[int])]):
         "usage.xarray: 183"
 
     def equals(
@@ -20,20 +20,30 @@ class Index:
         /,
         other: Union[
             (
+                pandas.core.indexes.base.Index,
                 pandas.core.indexes.multi.MultiIndex,
                 pandas.core.indexes.numeric.Float64Index,
-                pandas.core.indexes.base.Index,
-                pandas.core.indexes.range.RangeIndex,
                 pandas.core.indexes.numeric.Int64Index,
+                pandas.core.indexes.range.RangeIndex,
             )
         ],
     ):
         "usage.xarray: 24"
 
-    def __getitem__(self, _0, /):
+    def __getitem__(
+        self,
+        _0: Union[
+            (
+                slice[(Union[(None, int)], Union[(None, int)], Union[(None, int)])],
+                numpy.ndarray,
+                int,
+            )
+        ],
+        /,
+    ):
         ""
 
-    def append(self, /, other):
+    def append(self, /, other: Union[(list, pandas.core.indexes.numeric.Int64Index)]):
         "usage.xarray: 17"
 
     def to_series(self, /):
@@ -42,26 +52,7 @@ class Index:
     def copy(self, /, deep: bool):
         "usage.xarray: 1"
 
-    def rename(
-        self,
-        /,
-        name: Literal[
-            (
-                "xnew",
-                "dim3",
-                "dim2",
-                "z",
-                "time",
-                "x",
-                "y",
-                "abc",
-                "three",
-                "time_new",
-                "renamed_dim2",
-                "new_dim",
-            )
-        ],
-    ):
+    def rename(self, /, name: int):
         "usage.xarray: 15"
 
     def slice_indexer(self, /, start, end, step: None):
@@ -76,7 +67,9 @@ class Index:
     ):
         "usage.xarray: 3"
 
-    def get_loc(self, /, key, method: None = ..., tolerance: None = ...):
+    def get_loc(
+        self, /, key: Union[(int, bool)], method: None = ..., tolerance: None = ...
+    ):
         "usage.xarray: 26"
 
     def droplevel(

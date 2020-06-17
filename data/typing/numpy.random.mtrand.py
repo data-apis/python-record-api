@@ -11,7 +11,7 @@ class RandomState:
     @classmethod
     def rand(
         _0: numpy.random.mtrand.RandomState,
-        _1: Union[(numpy.int64, int)] = ...,
+        _1: Union[(int, numpy.int64)] = ...,
         _2: int = ...,
         /,
     ):
@@ -20,9 +20,9 @@ class RandomState:
     @classmethod
     def randint(
         _0: numpy.random.mtrand.RandomState,
-        _1: Union[(float, int, numpy.float64)],
+        _1: Union[(numpy.float64, int, float)],
         _2: int = ...,
-        _3: Union[(Tuple[(int, int)], List[int], int)] = ...,
+        _3: Union[(Tuple[(int, int)], int, List[int])] = ...,
         /,
     ):
         "usage.skimage: 8, usage.sklearn: 33"
@@ -30,7 +30,7 @@ class RandomState:
     @classmethod
     def choice(
         _0: numpy.random.mtrand.RandomState,
-        _1: Union[(List[int], List[Callable], range)] = ...,
+        _1: Union[(List[Union[(Callable, int)]], range)] = ...,
         /,
     ):
         "usage.skimage: 1, usage.xarray: 1, usage.sklearn: 1"
@@ -38,8 +38,8 @@ class RandomState:
     @classmethod
     def uniform(
         _0: numpy.random.mtrand.RandomState,
-        _1: Union[(float, int, numpy.ndarray)],
-        _2: Union[(float, int, numpy.ndarray)] = ...,
+        _1: Union[(numpy.ndarray, int, float)],
+        _2: Union[(numpy.ndarray, int, float)] = ...,
         /,
     ):
         "usage.skimage: 3, usage.sklearn: 9"
@@ -60,7 +60,7 @@ class RandomState:
 
     @classmethod
     def random_sample(
-        _0: numpy.random.mtrand.RandomState, _1: Union[(Tuple[(int, int)], int)], /
+        _0: numpy.random.mtrand.RandomState, _1: Union[(int, Tuple[(int, int)])], /
     ):
         "usage.skimage: 1, usage.sklearn: 20"
 
@@ -148,11 +148,9 @@ class RandomState:
         _2: Union[(int, Tuple[(int, int)])] = ...,
         /,
         *,
-        size: Union[
-            (List[int], Tuple[(int,)], int, Tuple[(int, int)], numpy.int64)
-        ] = ...,
-        high: Union[(float, int)] = ...,
+        size: Union[(Tuple[(int, ...)], int, numpy.int64, List[int])] = ...,
         low: Union[(float, int)] = ...,
+        high: Union[(float, int)] = ...,
     ):
         "usage.skimage: 29, usage.xarray: 1, usage.sklearn: 33"
 
@@ -163,8 +161,8 @@ class RandomState:
         _2: Union[(int, Tuple[(int, int, int)])] = ...,
         /,
         *,
-        size=...,
-        dtype: Union[(Type[bool], Type[numpy.uint8], Literal[("u8",)])] = ...,
+        size: Union[(numpy.int64, int, Tuple[(int, ...)], List[int])] = ...,
+        dtype: Union[(Literal[("u8",)], type)] = ...,
         low: int = ...,
         high: int = ...,
     ):
@@ -176,27 +174,25 @@ class RandomState:
     def choice(
         self,
         _0: Union[
-            (List[Literal[("b", "a", "d", "c")]], int, List[bool], numpy.ndarray)
+            (int, numpy.ndarray, List[Union[(Literal[("d", "c", "b", "a")], bool)]])
         ] = ...,
         /,
         *,
-        size: Union[(Tuple[(int, int)], List[int], int, numpy.int64)] = ...,
+        size: Union[(numpy.int64, int, Tuple[(int, int)], List[int])] = ...,
         replace: bool = ...,
-        p: Union[(numpy.ndarray, List[Union[(float, int)]])] = ...,
+        p: Union[(numpy.ndarray, List[Union[(int, float)]])] = ...,
     ):
         "usage.skimage: 7, usage.xarray: 5, usage.sklearn: 10"
 
     def normal(
         self,
-        _0: Union[(float, int)] = ...,
-        _1: Union[(float, numpy.ndarray)] = ...,
+        _0: Union[(int, float)] = ...,
+        _1: Union[(numpy.ndarray, float)] = ...,
         _2: Tuple[(int, int)] = ...,
         /,
         *,
-        size: Union[
-            (Tuple[(int, int)], Tuple[(numpy.int64, int)], int, Tuple[(int, ...)])
-        ] = ...,
-        scale: Union[(int, float, numpy.ndarray, numpy.float64)] = ...,
+        size: Union[(int, Tuple[(Union[(int, numpy.int64)], ...)])] = ...,
+        scale: Union[(int, numpy.ndarray, numpy.float64, float)] = ...,
         loc: Union[(int, numpy.ndarray)] = ...,
     ):
         "usage.skimage: 32, usage.xarray: 1, usage.sklearn: 72"
@@ -209,7 +205,7 @@ class RandomState:
     def standard_normal(self, _0: Tuple[(int, ...)], /):
         "usage.skimage: 6"
 
-    def gamma(self, _0: Union[(float, int)] = ..., /, *, size: int = ...):
+    def gamma(self, _0: Union[(int, float)] = ..., /, *, size: int = ...):
         "usage.skimage: 2, usage.sklearn: 1"
 
     def poisson(self, _0: numpy.ndarray, /):

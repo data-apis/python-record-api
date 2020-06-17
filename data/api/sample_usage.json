@@ -422,12 +422,6 @@
                   "type": "union",
                   "options": [
                     {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
                       "type": "tuple",
                       "items": [
                         {
@@ -482,6 +476,12 @@
                       "type": {
                         "module": "numpy",
                         "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "int"
                       }
                     },
                     {
@@ -723,14 +723,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -754,14 +754,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]

@@ -2,57 +2,5 @@ from typing import *
 
 
 class NpzFile:
-    def __getitem__(
-        self,
-        _0: Literal[
-            (
-                "pop_percentile",
-                "otsu",
-                "mean",
-                "windowed_histogram",
-                "008",
-                "pop",
-                "subtract_mean_percentile",
-                "mean_bilateral",
-                "percentile",
-                "entropy",
-                "geometric_mean",
-                "grad_matlab",
-                "pop_bilateral",
-                "mean_percentile",
-                "sum_percentile",
-                "maximum",
-                "majority",
-                "median",
-                "002",
-                "003",
-                "004",
-                "modal",
-                "threshold",
-                "minimum",
-                "enhance_contrast",
-                "001",
-                "005",
-                "010",
-                "007",
-                "threshold_percentile",
-                "009",
-                "sum_bilateral",
-                "000",
-                "subtract_mean",
-                "mssim_matlab",
-                "sum",
-                "gradient",
-                "autolevel",
-                "gradient_percentile",
-                "006",
-                "arr_0",
-                "equalize",
-                "noise_filter",
-                "enhance_contrast_percentile",
-                "autolevel_percentile",
-            )
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: int, /):
         ""

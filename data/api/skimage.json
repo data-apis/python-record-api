@@ -13,12 +13,6 @@
                 {
                   "type": {
                     "module": null,
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "module": null,
                     "name": "int"
                   }
                 },
@@ -32,6 +26,12 @@
                   "type": {
                     "module": "numpy",
                     "name": "int64"
+                  }
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "float"
                   }
                 }
               ]
@@ -42,19 +42,13 @@
                 {
                   "type": {
                     "module": null,
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float32"
+                    "name": "float"
                   }
                 },
                 {
                   "type": {
                     "module": null,
-                    "name": "float"
+                    "name": "int"
                   }
                 },
                 {
@@ -67,6 +61,12 @@
                   "type": {
                     "module": "numpy",
                     "name": "int64"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "float32"
                   }
                 }
               ]
@@ -107,13 +107,13 @@
                 {
                   "type": {
                     "module": null,
-                    "name": "float"
+                    "name": "int"
                   }
                 },
                 {
                   "type": {
                     "module": null,
-                    "name": "int"
+                    "name": "float"
                   }
                 },
                 {
@@ -165,7 +165,31 @@
           "kw_only_required": {},
           "kw_only_optional": {
             "dtype": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "dtype"
+                  }
+                },
+                {
+                  "type": "str",
+                  "options": [
+                    "float",
+                    "uint16",
+                    "float64",
+                    "float32"
+                  ]
+                },
+                {
+                  "type": "None"
+                },
+                {
+                  "type": "type",
+                  "name": null
+                }
+              ]
             },
             "ndmin": {
               "type": {
@@ -182,9 +206,9 @@
             "order": {
               "type": "str",
               "options": [
-                "C",
+                "K",
                 "F",
-                "K"
+                "C"
               ]
             }
           },
@@ -223,7 +247,25 @@
           },
           "pos_or_kw_optional": {
             "dtype": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "type",
+                  "name": null
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "dtype"
+                  }
+                },
+                {
+                  "type": "str",
+                  "options": [
+                    "uint8"
+                  ]
+                }
+              ]
             },
             "order": {
               "type": "str",
@@ -259,27 +301,19 @@
               "type": "union",
               "options": [
                 {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
                   "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
+                  "items": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
                     }
-                  ]
+                  }
                 },
                 {
                   "type": "list",
@@ -289,29 +323,6 @@
                       "name": "ndarray"
                     }
                   }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
                 }
               ]
             }
@@ -364,6 +375,46 @@
               "type": "union",
               "options": [
                 {
+                  "type": "tuple",
+                  "items": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": "union",
+                          "options": [
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "float"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": "numpy",
+                                "name": "int64"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "ndarray"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
                   "type": "list",
                   "item": {
                     "type": {
@@ -371,131 +422,6 @@
                       "name": "ndarray"
                     }
                   }
-                },
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": "union",
-                      "options": [
-                        {
-                          "type": "list",
-                          "item": {
-                            "type": {
-                              "module": "numpy",
-                              "name": "int64"
-                            }
-                          }
-                        },
-                        {
-                          "type": {
-                            "module": "numpy",
-                            "name": "ndarray"
-                          }
-                        },
-                        {
-                          "type": "list",
-                          "item": {
-                            "type": "union",
-                            "options": [
-                              {
-                                "type": {
-                                  "module": null,
-                                  "name": "float"
-                                }
-                              },
-                              {
-                                "type": {
-                                  "module": null,
-                                  "name": "int"
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "union",
-                      "options": [
-                        {
-                          "type": "list",
-                          "item": {
-                            "type": {
-                              "module": "numpy",
-                              "name": "int64"
-                            }
-                          }
-                        },
-                        {
-                          "type": {
-                            "module": "numpy",
-                            "name": "ndarray"
-                          }
-                        },
-                        {
-                          "type": "list",
-                          "item": {
-                            "type": "union",
-                            "options": [
-                              {
-                                "type": {
-                                  "module": null,
-                                  "name": "float"
-                                }
-                              },
-                              {
-                                "type": {
-                                  "module": null,
-                                  "name": "int"
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  ]
                 }
               ]
             }
@@ -520,14 +446,14 @@
               "options": [
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
+                    "module": "numpy.ma.core",
+                    "name": "MaskedArray"
                   }
                 },
                 {
                   "type": {
-                    "module": "numpy.ma.core",
-                    "name": "MaskedArray"
+                    "module": "numpy",
+                    "name": "ndarray"
                   }
                 }
               ]
@@ -582,7 +508,44 @@
           "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "a": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
+                    }
+                  }
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "float"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              ]
             }
           },
           "pos_or_kw_optional": {
@@ -609,7 +572,26 @@
           "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "rep": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "str",
+                  "options": [
+                    "float64",
+                    "float32"
+                  ]
+                },
+                {
+                  "type": "type",
+                  "name": null
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "dtype"
+                  }
+                }
+              ]
             }
           },
           "pos_or_kw_optional": {},
@@ -628,7 +610,19 @@
           "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "arg1": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "dtype"
+                  }
+                },
+                {
+                  "type": "type",
+                  "name": null
+                }
+              ]
             },
             "arg2": {
               "type": "type",
@@ -659,13 +653,13 @@
                 {
                   "type": {
                     "module": null,
-                    "name": "float"
+                    "name": "int"
                   }
                 },
                 {
                   "type": {
                     "module": null,
-                    "name": "int"
+                    "name": "float"
                   }
                 },
                 {
@@ -695,28 +689,14 @@
               "type": "union",
               "options": [
                 {
-                  "type": "type",
-                  "name": {
+                  "type": {
                     "module": "numpy",
-                    "name": "float32"
-                  }
-                },
-                {
-                  "type": "type",
-                  "name": {
-                    "module": "numpy",
-                    "name": "float64"
+                    "name": "dtype"
                   }
                 },
                 {
                   "type": "type",
                   "name": null
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "dtype"
-                  }
                 }
               ]
             }
@@ -729,12 +709,81 @@
         "zeros": {
           "pos_only_required": {
             "_0": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "int64"
+                  }
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "int64"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
+                    }
+                  }
+                }
+              ]
             }
           },
           "pos_only_optional": {
             "_1": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "type",
+                  "name": null
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "dtype"
+                  }
+                },
+                {
+                  "type": "str",
+                  "options": [
+                    "bool",
+                    "double",
+                    "uint8"
+                  ]
+                }
+              ]
             }
           },
           "pos_only_optional_ordering": [],
@@ -745,13 +794,29 @@
           "kw_only_required": {},
           "kw_only_optional": {
             "dtype": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "dtype"
+                  }
+                },
+                {
+                  "type": "type",
+                  "name": null
+                },
+                {
+                  "type": "str",
+                  "options": null
+                }
+              ]
             },
             "order": {
               "type": "str",
               "options": [
-                "C",
-                "F"
+                "F",
+                "C"
               ]
             }
           },
@@ -786,7 +851,38 @@
               ]
             },
             "newshape": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "int64"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
+                    }
+                  }
+                }
+              ]
             }
           },
           "pos_or_kw_optional": {
@@ -917,15 +1013,6 @@
               "type": "union",
               "options": [
                 {
-                  "type": "list",
-                  "item": {
-                    "type": {
-                      "module": null,
-                      "name": "bool"
-                    }
-                  }
-                },
-                {
                   "type": {
                     "module": "numpy",
                     "name": "ndarray"
@@ -935,6 +1022,15 @@
                   "type": {
                     "module": "numpy",
                     "name": "bool_"
+                  }
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": {
+                      "module": null,
+                      "name": "bool"
+                    }
                   }
                 }
               ]
@@ -1014,12 +1110,79 @@
           "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "shape": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "int64"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
+                    }
+                  }
+                },
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "int64"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
             }
           },
           "pos_or_kw_optional": {
             "dtype": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "type",
+                  "name": null
+                },
+                {
+                  "type": "str",
+                  "options": [
+                    "uint8"
+                  ]
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "dtype"
+                  }
+                }
+              ]
             },
             "order": {
               "type": "str",
@@ -1076,8 +1239,8 @@
             "invalid": {
               "type": "str",
               "options": [
-                "ignore",
-                "warn"
+                "warn",
+                "ignore"
               ]
             }
           },
@@ -1206,7 +1369,85 @@
           "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "arrays": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "list",
+                  "item": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "ndarray"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "float64"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "tuple",
+                  "items": [
+                    {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": {
+                            "module": "numpy",
+                            "name": "ndarray"
+                          }
+                        },
+                        {
+                          "type": {
+                            "module": "numpy",
+                            "name": "float64"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": {
+                            "module": "numpy",
+                            "name": "float64"
+                          }
+                        },
+                        {
+                          "type": {
+                            "module": "numpy",
+                            "name": "ndarray"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": {
+                            "module": "numpy",
+                            "name": "float64"
+                          }
+                        },
+                        {
+                          "type": {
+                            "module": "numpy",
+                            "name": "ndarray"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           },
           "pos_or_kw_optional": {
@@ -1272,15 +1513,6 @@
                   }
                 },
                 {
-                  "type": "list",
-                  "item": {
-                    "type": {
-                      "module": null,
-                      "name": "int"
-                    }
-                  }
-                },
-                {
                   "type": "tuple",
                   "items": [
                     {
@@ -1300,10 +1532,21 @@
                 {
                   "type": "list",
                   "item": {
-                    "type": {
-                      "module": "numpy",
-                      "name": "int64"
-                    }
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "int64"
+                        }
+                      }
+                    ]
                   }
                 }
               ]
@@ -1354,7 +1597,56 @@
           "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "a": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
+                    }
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy.ma.core",
+                    "name": "MaskedArray"
+                  }
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "int64"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "ndarray"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
             }
           },
           "pos_or_kw_optional": {
@@ -1363,49 +1655,18 @@
               "options": [
                 {
                   "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
+                  "items": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
                     }
-                  ]
+                  }
                 },
                 {
                   "type": {
                     "module": null,
                     "name": "int"
                   }
-                },
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
                 }
               ]
             },
@@ -1473,8 +1734,8 @@
               "options": [
                 {
                   "type": {
-                    "module": null,
-                    "name": "int"
+                    "module": "numpy",
+                    "name": "ndarray"
                   }
                 },
                 {
@@ -1485,8 +1746,8 @@
                 },
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
+                    "module": null,
+                    "name": "int"
                   }
                 }
               ]
@@ -1522,14 +1783,14 @@
               "options": [
                 {
                   "type": {
-                    "module": null,
-                    "name": "int"
+                    "module": "numpy",
+                    "name": "ndarray"
                   }
                 },
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
+                    "module": null,
+                    "name": "int"
                   }
                 }
               ]
@@ -1540,13 +1801,13 @@
                 {
                   "type": {
                     "module": null,
-                    "name": "float"
+                    "name": "int"
                   }
                 },
                 {
                   "type": {
                     "module": null,
-                    "name": "int"
+                    "name": "float"
                   }
                 },
                 {
@@ -1579,13 +1840,13 @@
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "ndarray"
+                    "name": "float64"
                   }
                 },
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "float64"
+                    "name": "ndarray"
                   }
                 }
               ]
@@ -1633,20 +1894,20 @@
               "options": [
                 {
                   "type": {
-                    "module": "dask.array.core",
-                    "name": "Array"
-                  }
-                },
-                {
-                  "type": {
                     "module": null,
                     "name": "int"
                   }
                 },
                 {
                   "type": {
-                    "module": null,
-                    "name": "float"
+                    "module": "numpy",
+                    "name": "int64"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "dask.array.core",
+                    "name": "Array"
                   }
                 },
                 {
@@ -1657,8 +1918,8 @@
                 },
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "int64"
+                    "module": null,
+                    "name": "float"
                   }
                 }
               ]
@@ -1671,25 +1932,25 @@
                 {
                   "type": {
                     "module": null,
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "module": null,
                     "name": "int"
                   }
                 },
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "float64"
+                    "module": null,
+                    "name": "float"
                   }
                 },
                 {
                   "type": {
                     "module": "numpy",
                     "name": "int64"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "float64"
                   }
                 }
               ]
@@ -1698,10 +1959,7 @@
               "type": "union",
               "options": [
                 {
-                  "type": {
-                    "module": null,
-                    "name": "float"
-                  }
+                  "type": "None"
                 },
                 {
                   "type": {
@@ -1712,11 +1970,14 @@
                 {
                   "type": {
                     "module": null,
-                    "name": "int"
+                    "name": "float"
                   }
                 },
                 {
-                  "type": "None"
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
                 }
               ]
             },
@@ -1781,20 +2042,6 @@
               "options": [
                 {
                   "type": "type",
-                  "name": {
-                    "module": null,
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": "type",
-                  "name": {
-                    "module": "numpy",
-                    "name": "int64"
-                  }
-                },
-                {
-                  "type": "type",
                   "name": null
                 },
                 {
@@ -1844,29 +2091,31 @@
               "type": "union",
               "options": [
                 {
+                  "type": "list",
+                  "item": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "ndarray"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "skimage.feature._hessian_det_appx",
+                          "name": "_memoryviewslice"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
                   "type": "tuple",
                   "items": {
                     "type": {
                       "module": "numpy",
                       "name": "ndarray"
-                    }
-                  }
-                },
-                {
-                  "type": "list",
-                  "item": {
-                    "type": {
-                      "module": "numpy",
-                      "name": "ndarray"
-                    }
-                  }
-                },
-                {
-                  "type": "list",
-                  "item": {
-                    "type": {
-                      "module": "skimage.feature._hessian_det_appx",
-                      "name": "_memoryviewslice"
                     }
                   }
                 }
@@ -1930,7 +2179,55 @@
         "concatenate": {
           "pos_only_required": {
             "_0": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": {
+                            "module": null,
+                            "name": "int"
+                          }
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "ndarray"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "ndarray"
+                        }
+                      },
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": {
+                            "module": null,
+                            "name": "int"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
             }
           },
           "pos_only_optional": {},
@@ -1967,13 +2264,13 @@
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "ndarray"
+                    "name": "float64"
                   }
                 },
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "float64"
+                    "name": "ndarray"
                   }
                 }
               ]
@@ -1990,13 +2287,13 @@
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "ndarray"
+                    "name": "float64"
                   }
                 },
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "float64"
+                    "name": "ndarray"
                   }
                 }
               ]
@@ -2084,12 +2381,6 @@
               "options": [
                 {
                   "type": {
-                    "module": "dask.array.core",
-                    "name": "Array"
-                  }
-                },
-                {
-                  "type": {
                     "module": "numpy",
                     "name": "ndarray"
                   }
@@ -2098,6 +2389,12 @@
                   "type": {
                     "module": "numpy",
                     "name": "bool_"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "dask.array.core",
+                    "name": "Array"
                   }
                 }
               ]
@@ -2109,14 +2406,8 @@
               "options": [
                 {
                   "type": {
-                    "module": null,
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "module": null,
-                    "name": "int"
+                    "module": "numpy",
+                    "name": "ndarray"
                   }
                 },
                 {
@@ -2127,8 +2418,14 @@
                 },
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
+                    "module": null,
+                    "name": "float"
+                  }
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "int"
                   }
                 }
               ]
@@ -2145,13 +2442,13 @@
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "float64"
+                    "name": "ndarray"
                   }
                 },
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "ndarray"
+                    "name": "float64"
                   }
                 }
               ]
@@ -2190,12 +2487,6 @@
                 {
                   "type": {
                     "module": null,
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "module": null,
                     "name": "int"
                   }
                 },
@@ -2209,6 +2500,12 @@
                   "type": {
                     "module": "numpy",
                     "name": "ndarray"
+                  }
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "float"
                   }
                 }
               ]
@@ -2235,25 +2532,25 @@
                 {
                   "type": {
                     "module": null,
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "module": null,
                     "name": "int"
                   }
                 },
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "float64"
+                    "module": null,
+                    "name": "float"
                   }
                 },
                 {
                   "type": {
                     "module": "numpy",
                     "name": "ndarray"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "float64"
                   }
                 }
               ]
@@ -2281,27 +2578,9 @@
               "type": "union",
               "options": [
                 {
-                  "type": "list",
-                  "item": {
-                    "type": {
-                      "module": null,
-                      "name": "float"
-                    }
-                  }
-                },
-                {
                   "type": {
                     "module": "numpy",
                     "name": "ndarray"
-                  }
-                },
-                {
-                  "type": "list",
-                  "item": {
-                    "type": {
-                      "module": null,
-                      "name": "int"
-                    }
                   }
                 },
                 {
@@ -2331,13 +2610,6 @@
             "dtype": {
               "type": "union",
               "options": [
-                {
-                  "type": "type",
-                  "name": {
-                    "module": null,
-                    "name": "bool"
-                  }
-                },
                 {
                   "type": "type",
                   "name": null
@@ -2476,14 +2748,14 @@
               "options": [
                 {
                   "type": {
-                    "module": null,
-                    "name": "float"
+                    "module": "numpy",
+                    "name": "dtype"
                   }
                 },
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "dtype"
+                    "module": null,
+                    "name": "float"
                   }
                 },
                 {
@@ -2542,12 +2814,73 @@
         "empty": {
           "pos_only_required": {
             "_0": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
+                    }
+                  }
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "int64"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
             }
           },
           "pos_only_optional": {
             "_1": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "dtype"
+                  }
+                },
+                {
+                  "type": "type",
+                  "name": null
+                },
+                {
+                  "type": "str",
+                  "options": [
+                    "float32"
+                  ]
+                }
+              ]
             }
           },
           "pos_only_optional_ordering": [],
@@ -2558,13 +2891,31 @@
           "kw_only_required": {},
           "kw_only_optional": {
             "dtype": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "type",
+                  "name": null
+                },
+                {
+                  "type": "str",
+                  "options": [
+                    "uint8"
+                  ]
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "dtype"
+                  }
+                }
+              ]
             },
             "order": {
               "type": "str",
               "options": [
-                "C",
-                "F"
+                "F",
+                "C"
               ]
             }
           },
@@ -2580,14 +2931,14 @@
               "options": [
                 {
                   "type": {
-                    "module": null,
-                    "name": "int"
+                    "module": "numpy",
+                    "name": "float64"
                   }
                 },
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "float64"
+                    "module": null,
+                    "name": "int"
                   }
                 },
                 {
@@ -2675,29 +3026,6 @@
               "type": "union",
               "options": [
                 {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
-                },
-                {
                   "type": {
                     "module": "numpy",
                     "name": "ndarray"
@@ -2705,20 +3033,12 @@
                 },
                 {
                   "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
+                  "items": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
                     }
-                  ]
+                  }
                 }
               ]
             }
@@ -2762,29 +3082,6 @@
               "type": "union",
               "options": [
                 {
-                  "type": {
-                    "module": null,
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
                   "type": "tuple",
                   "items": {
                     "type": {
@@ -2794,21 +3091,16 @@
                   }
                 },
                 {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
                 }
               ]
             },
@@ -2818,7 +3110,25 @@
           },
           "pos_or_kw_optional": {
             "dtype": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "str",
+                  "options": [
+                    "float64"
+                  ]
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "dtype"
+                  }
+                },
+                {
+                  "type": "type",
+                  "name": null
+                }
+              ]
             }
           },
           "pos_or_kw_optional_ordering": [],
@@ -2849,11 +3159,11 @@
                   {
                     "type": "str",
                     "options": [
-                      "a1",
-                      "L1",
-                      "b1",
                       "pair",
-                      "1"
+                      "1",
+                      "L1",
+                      "a1",
+                      "b1"
                     ]
                   },
                   {
@@ -2882,13 +3192,13 @@
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "ndarray"
+                    "name": "bool_"
                   }
                 },
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "bool_"
+                    "name": "ndarray"
                   }
                 }
               ]
@@ -2899,13 +3209,13 @@
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "ndarray"
+                    "name": "bool_"
                   }
                 },
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "bool_"
+                    "name": "ndarray"
                   }
                 }
               ]
@@ -2930,18 +3240,18 @@
               "type": "union",
               "options": [
                 {
-                  "type": {
-                    "module": null,
-                    "name": "int"
-                  }
-                },
-                {
                   "type": "list",
                   "item": {
                     "type": {
                       "module": null,
                       "name": "int"
                     }
+                  }
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "int"
                   }
                 },
                 {
@@ -2974,13 +3284,13 @@
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "ndarray"
+                    "name": "float64"
                   }
                 },
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "float64"
+                    "name": "ndarray"
                   }
                 }
               ]
@@ -3006,60 +3316,29 @@
               "options": [
                 {
                   "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "float64"
+                  }
+                },
+                {
+                  "type": {
                     "module": null,
                     "name": "int"
                   }
                 },
                 {
                   "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
+                  "items": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
                     }
-                  ]
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
                   }
                 }
               ]
@@ -3068,55 +3347,24 @@
               "type": "union",
               "options": [
                 {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
-                },
-                {
                   "type": {
                     "module": null,
                     "name": "int"
                   }
                 },
                 {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
-                },
-                {
                   "type": {
                     "module": "numpy",
                     "name": "ndarray"
+                  }
+                },
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
+                    }
                   }
                 }
               ]
@@ -3136,17 +3384,17 @@
                 "name": "ndarray"
               }
             },
-            "casting": {
-              "type": "str",
-              "options": [
-                "unsafe"
-              ]
-            },
             "dtype": {
               "type": {
                 "module": "numpy",
                 "name": "dtype"
               }
+            },
+            "casting": {
+              "type": "str",
+              "options": [
+                "unsafe"
+              ]
             }
           },
           "var_kw": null,
@@ -3171,13 +3419,13 @@
                 {
                   "type": {
                     "module": null,
-                    "name": "float"
+                    "name": "int"
                   }
                 },
                 {
                   "type": {
                     "module": null,
-                    "name": "int"
+                    "name": "float"
                   }
                 },
                 {
@@ -3301,8 +3549,8 @@
                 },
                 {
                   "type": {
-                    "module": null,
-                    "name": "float"
+                    "module": "numpy",
+                    "name": "float64"
                   }
                 },
                 {
@@ -3319,8 +3567,8 @@
                 },
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "float64"
+                    "module": null,
+                    "name": "float"
                   }
                 }
               ]
@@ -3345,29 +3593,6 @@
               "type": "union",
               "options": [
                 {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
-                },
-                {
                   "type": {
                     "module": "numpy",
                     "name": "ndarray"
@@ -3375,20 +3600,12 @@
                 },
                 {
                   "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
+                  "items": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
                     }
-                  ]
+                  }
                 }
               ]
             },
@@ -3397,55 +3614,24 @@
               "options": [
                 {
                   "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
+                  "type": {
                     "module": null,
                     "name": "float"
                   }
                 },
                 {
                   "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
+                  "items": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
                     }
-                  ]
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
                   }
-                },
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
                 }
               ]
             }
@@ -3597,7 +3783,33 @@
           "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "a": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              ]
             }
           },
           "pos_or_kw_optional": {
@@ -3606,61 +3818,18 @@
               "options": [
                 {
                   "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
+                  "items": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
                     }
-                  ]
+                  }
                 },
                 {
                   "type": {
                     "module": "numpy",
                     "name": "ndarray"
                   }
-                },
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
                 },
                 {
                   "type": "list",
@@ -3740,14 +3909,14 @@
               "options": [
                 {
                   "type": {
-                    "module": "dask.array.core",
-                    "name": "Array"
+                    "module": "numpy",
+                    "name": "ndarray"
                   }
                 },
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
+                    "module": "dask.array.core",
+                    "name": "Array"
                   }
                 }
               ]
@@ -3788,53 +3957,6 @@
               "type": "union",
               "options": [
                 {
-                  "type": {
-                    "module": null,
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "int64"
-                  }
-                },
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "float64"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "float64"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "float64"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "float64"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "float64"
-                      }
-                    }
-                  ]
-                },
-                {
                   "type": "list",
                   "item": {
                     "type": "union",
@@ -3853,6 +3975,53 @@
                       }
                     ]
                   }
+                },
+                {
+                  "type": "tuple",
+                  "items": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "int64"
+                  }
                 }
               ]
             }
@@ -3867,6 +4036,9 @@
             "range": {
               "type": "union",
               "options": [
+                {
+                  "type": "None"
+                },
                 {
                   "type": "tuple",
                   "items": [
@@ -3883,9 +4055,6 @@
                       }
                     }
                   ]
-                },
-                {
-                  "type": "None"
                 }
               ]
             }
@@ -3995,22 +4164,24 @@
                 {
                   "type": "list",
                   "item": {
-                    "type": {
-                      "module": null,
-                      "name": "int"
-                    }
-                  }
-                },
-                {
-                  "type": "list",
-                  "item": {
-                    "type": "list",
-                    "item": {
-                      "type": {
-                        "module": null,
-                        "name": "int"
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": {
+                            "module": null,
+                            "name": "int"
+                          }
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
                       }
-                    }
+                    ]
                   }
                 }
               ]
@@ -4025,40 +4196,11 @@
               "options": [
                 {
                   "type": "str",
-                  "options": [
-                    "mean"
-                  ]
-                },
-                {
-                  "type": "str",
-                  "options": [
-                    "edge"
-                  ]
+                  "options": null
                 },
                 {
                   "type": "function",
                   "name": null
-                },
-                {
-                  "type": "str",
-                  "options": [
-                    "constant",
-                    "wrap",
-                    "median",
-                    "maximum",
-                    "mean",
-                    "linear_ramp",
-                    "minimum",
-                    "reflect",
-                    "symmetric",
-                    "edge"
-                  ]
-                },
-                {
-                  "type": "str",
-                  "options": [
-                    "constant"
-                  ]
                 }
               ]
             }
@@ -4271,6 +4413,12 @@
                 },
                 {
                   "type": {
+                    "module": "numpy",
+                    "name": "float64"
+                  }
+                },
+                {
+                  "type": {
                     "module": null,
                     "name": "float"
                   }
@@ -4279,12 +4427,6 @@
                   "type": {
                     "module": "numpy",
                     "name": "ndarray"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
                   }
                 }
               ]
@@ -4313,6 +4455,12 @@
               "options": [
                 {
                   "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
+                  "type": {
                     "module": "dask.array.core",
                     "name": "Array"
                   }
@@ -4325,12 +4473,6 @@
                       "name": "float64"
                     }
                   }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
                 }
               ]
             }
@@ -4339,12 +4481,6 @@
             "axis": {
               "type": "union",
               "options": [
-                {
-                  "type": {
-                    "module": null,
-                    "name": "int"
-                  }
-                },
                 {
                   "type": "tuple",
                   "items": [
@@ -4361,6 +4497,12 @@
                       }
                     }
                   ]
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
                 }
               ]
             },
@@ -4429,27 +4571,9 @@
               "type": "union",
               "options": [
                 {
-                  "type": "list",
-                  "item": {
-                    "type": {
-                      "module": "numpy",
-                      "name": "float64"
-                    }
-                  }
-                },
-                {
                   "type": {
                     "module": "numpy",
                     "name": "ndarray"
-                  }
-                },
-                {
-                  "type": "list",
-                  "item": {
-                    "type": {
-                      "module": null,
-                      "name": "int"
-                    }
                   }
                 },
                 {
@@ -4457,11 +4581,77 @@
                     "module": "numpy",
                     "name": "float64"
                   }
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "float64"
+                        }
+                      }
+                    ]
+                  }
                 }
               ]
             },
             "b": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "dask.array.core",
+                    "name": "Array"
+                  }
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "float64"
+                  }
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "float64"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
             }
           },
           "pos_or_kw_optional": {
@@ -4546,7 +4736,50 @@
           "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "tup": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "list",
+                  "item": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "float64"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "int64"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "ndarray"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "float32"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                }
+              ]
             }
           },
           "pos_or_kw_optional": {},
@@ -4569,14 +4802,14 @@
               "options": [
                 {
                   "type": {
-                    "module": "dask.array.core",
-                    "name": "Array"
+                    "module": "numpy",
+                    "name": "ndarray"
                   }
                 },
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
+                    "module": "dask.array.core",
+                    "name": "Array"
                   }
                 }
               ]
@@ -4787,15 +5020,6 @@
               "type": "union",
               "options": [
                 {
-                  "type": "list",
-                  "item": {
-                    "type": {
-                      "module": "numpy",
-                      "name": "ndarray"
-                    }
-                  }
-                },
-                {
                   "type": "tuple",
                   "items": [
                     {
@@ -4811,6 +5035,15 @@
                       }
                     }
                   ]
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
                 }
               ]
             }
@@ -4859,12 +5092,6 @@
               "options": [
                 {
                   "type": {
-                    "module": null,
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
                     "module": "numpy",
                     "name": "ndarray"
                   }
@@ -4873,6 +5100,12 @@
                   "type": {
                     "module": "numpy",
                     "name": "float64"
+                  }
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "float"
                   }
                 }
               ]
@@ -4883,13 +5116,13 @@
                 {
                   "type": {
                     "module": null,
-                    "name": "float"
+                    "name": "int"
                   }
                 },
                 {
                   "type": {
                     "module": null,
-                    "name": "int"
+                    "name": "float"
                   }
                 }
               ]
@@ -4985,13 +5218,13 @@
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "ndarray"
+                    "name": "float64"
                   }
                 },
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "float64"
+                    "name": "ndarray"
                   }
                 }
               ]
@@ -5067,12 +5300,6 @@
               "type": "union",
               "options": [
                 {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
                   "type": "list",
                   "item": {
                     "type": "union",
@@ -5080,13 +5307,13 @@
                       {
                         "type": {
                           "module": "numpy",
-                          "name": "int64"
+                          "name": "float64"
                         }
                       },
                       {
                         "type": {
                           "module": "numpy",
-                          "name": "float64"
+                          "name": "int64"
                         }
                       }
                     ]
@@ -5108,6 +5335,12 @@
                       }
                     }
                   ]
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
                 }
               ]
             }
@@ -5295,13 +5528,13 @@
                       {
                         "type": {
                           "module": null,
-                          "name": "float"
+                          "name": "int"
                         }
                       },
                       {
                         "type": {
                           "module": null,
-                          "name": "int"
+                          "name": "float"
                         }
                       }
                     ]
@@ -5343,12 +5576,6 @@
               "type": "union",
               "options": [
                 {
-                  "type": {
-                    "module": null,
-                    "name": "int"
-                  }
-                },
-                {
                   "type": "tuple",
                   "items": [
                     {
@@ -5364,6 +5591,12 @@
                       }
                     }
                   ]
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
                 }
               ]
             }
@@ -5517,8 +5750,8 @@
                   }
                 },
                 {
-                  "type": "tuple",
-                  "items": {
+                  "type": "list",
+                  "item": {
                     "type": {
                       "module": null,
                       "name": "int"
@@ -5526,8 +5759,8 @@
                   }
                 },
                 {
-                  "type": "list",
-                  "item": {
+                  "type": "tuple",
+                  "items": {
                     "type": {
                       "module": null,
                       "name": "int"
@@ -5696,12 +5929,6 @@
               "type": "union",
               "options": [
                 {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
                   "type": "tuple",
                   "items": [
                     {
@@ -5726,41 +5953,18 @@
                       "name": "int"
                     }
                   }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
                 }
               ]
             },
             "reps": {
               "type": "union",
               "options": [
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
-                },
                 {
                   "type": "list",
                   "item": {
@@ -5778,23 +5982,6 @@
                       "name": "int"
                     }
                   }
-                },
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
                 }
               ]
             }
@@ -6027,6 +6214,12 @@
               "type": "union",
               "options": [
                 {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
                   "type": "tuple",
                   "items": [
                     {
@@ -6048,12 +6241,6 @@
                       }
                     }
                   ]
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
                 },
                 {
                   "type": "list",
@@ -6070,6 +6257,12 @@
               "type": "union",
               "options": [
                 {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
                   "type": "tuple",
                   "items": [
                     {
@@ -6091,12 +6284,6 @@
                       }
                     }
                   ]
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
                 }
               ]
             }
@@ -6125,54 +6312,23 @@
                 {
                   "type": {
                     "module": null,
-                    "name": "int"
+                    "name": "float"
                   }
                 },
                 {
                   "type": {
                     "module": null,
-                    "name": "float"
+                    "name": "int"
                   }
                 },
                 {
                   "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
+                  "items": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
                     }
-                  ]
-                },
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
+                  }
                 }
               ]
             }
@@ -6759,7 +6915,44 @@
         "ravel_multi_index": {
           "pos_only_required": {
             "_0": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": {
+                      "module": null,
+                      "name": "int"
+                    }
+                  }
+                },
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "ndarray"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
             },
             "_1": {
               "type": "tuple",
@@ -6782,8 +6975,8 @@
             "order": {
               "type": "str",
               "options": [
-                "C",
-                "F"
+                "F",
+                "C"
               ]
             }
           },
@@ -7004,14 +7197,14 @@
               "options": [
                 {
                   "type": {
-                    "module": null,
-                    "name": "float"
+                    "module": "numpy",
+                    "name": "float64"
                   }
                 },
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "float64"
+                    "module": null,
+                    "name": "float"
                   }
                 }
               ]
@@ -7260,14 +7453,14 @@
               "options": [
                 {
                   "type": {
-                    "module": null,
-                    "name": "int"
+                    "module": "numpy",
+                    "name": "float64"
                   }
                 },
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "float64"
+                    "module": null,
+                    "name": "int"
                   }
                 }
               ]
@@ -7667,6 +7860,12 @@
                   "options": [
                     {
                       "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
                         "module": null,
                         "name": "float"
                       }
@@ -7675,12 +7874,6 @@
                       "type": {
                         "module": null,
                         "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
                       }
                     }
                   ]
@@ -7775,8 +7968,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
                       }
                     },
                     {
@@ -7788,19 +7987,13 @@
                     {
                       "type": {
                         "module": "numpy",
-                        "name": "float64"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
                         "name": "int64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -7830,8 +8023,14 @@
                     },
                     {
                       "type": {
-                        "module": null,
-                        "name": "float"
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     },
                     {
@@ -7842,14 +8041,8 @@
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "int64"
+                        "module": null,
+                        "name": "float"
                       }
                     }
                   ]
@@ -7873,8 +8066,8 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
@@ -7886,13 +8079,13 @@
                     {
                       "type": {
                         "module": null,
-                        "name": "float"
+                        "name": "int"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "float"
                       }
                     },
                     {
@@ -7975,18 +8168,18 @@
                       }
                     },
                     {
+                      "type": {
+                        "module": "numpy",
+                        "name": "matrix"
+                      }
+                    },
+                    {
                       "type": "list",
                       "item": {
                         "type": {
                           "module": null,
                           "name": "int"
                         }
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "matrix"
                       }
                     }
                   ]
@@ -8087,6 +8280,12 @@
                   "options": [
                     {
                       "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    },
+                    {
+                      "type": {
                         "module": null,
                         "name": "int"
                       }
@@ -8107,12 +8306,6 @@
                           }
                         }
                       ]
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "int64"
-                      }
                     }
                   ]
                 }
@@ -8135,6 +8328,12 @@
                   "options": [
                     {
                       "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
                         "module": null,
                         "name": "int"
                       }
@@ -8143,12 +8342,6 @@
                       "type": {
                         "module": null,
                         "name": "float"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
                       }
                     },
                     {
@@ -8190,12 +8383,6 @@
                     {
                       "type": {
                         "module": null,
-                        "name": "float"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
                         "name": "int"
                       }
                     },
@@ -8203,6 +8390,12 @@
                       "type": {
                         "module": "numpy",
                         "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "float"
                       }
                     }
                   ]
@@ -8549,14 +8742,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "float64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "float64"
+                        "module": null,
+                        "name": "int"
                       }
                     },
                     {
@@ -8608,21 +8801,7 @@
                   "options": [
                     {
                       "type": "type",
-                      "name": {
-                        "module": "numpy",
-                        "name": "uint8"
-                      }
-                    },
-                    {
-                      "type": "type",
                       "name": null
-                    },
-                    {
-                      "type": "type",
-                      "name": {
-                        "module": "numpy",
-                        "name": "int16"
-                      }
                     },
                     {
                       "type": {
@@ -8889,7 +9068,23 @@
                   }
                 },
                 "_1": {
-                  "type": "object"
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "dtype"
+                      }
+                    },
+                    {
+                      "type": "str",
+                      "options": null
+                    },
+                    {
+                      "type": "type",
+                      "name": null
+                    }
+                  ]
                 }
               },
               "pos_only_optional": {},
@@ -8914,7 +9109,50 @@
                   }
                 },
                 "_1": {
-                  "type": "object"
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": "tuple",
+                      "items": {
+                        "type": "union",
+                        "options": [
+                          {
+                            "type": {
+                              "module": "numpy",
+                              "name": "int64"
+                            }
+                          },
+                          {
+                            "type": {
+                              "module": null,
+                              "name": "int"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "list",
+                      "item": {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      }
+                    }
+                  ]
                 }
               },
               "pos_only_optional": {
@@ -9166,13 +9404,13 @@
                     {
                       "type": {
                         "module": null,
-                        "name": "int"
+                        "name": "bool"
                       }
                     },
                     {
                       "type": {
                         "module": null,
-                        "name": "bool"
+                        "name": "int"
                       }
                     }
                   ]
@@ -9384,7 +9622,28 @@
               },
               "pos_only_optional": {
                 "_1": {
-                  "type": "object"
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "str",
+                      "options": [
+                        "|S3",
+                        "uint8",
+                        "|S24",
+                        "|S16"
+                      ]
+                    },
+                    {
+                      "type": "type",
+                      "name": null
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "dtype"
+                      }
+                    }
+                  ]
                 }
               },
               "pos_only_optional_ordering": [],
@@ -9669,28 +9928,17 @@
               "options": [
                 {
                   "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": "tuple",
                   "items": {
                     "type": {
                       "module": null,
                       "name": "int"
                     }
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
                   }
                 }
               ]
@@ -9743,14 +9991,8 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "float"
+                        "module": "numpy",
+                        "name": "uint8"
                       }
                     },
                     {
@@ -9761,8 +10003,14 @@
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "uint8"
+                        "module": null,
+                        "name": "float"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "int"
                       }
                     },
                     {
@@ -9792,14 +10040,8 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "float"
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
@@ -9810,8 +10052,14 @@
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "float"
                       }
                     },
                     {
@@ -9841,14 +10089,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "float32"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "float32"
+                        "module": null,
+                        "name": "int"
                       }
                     },
                     {
@@ -10012,8 +10260,20 @@
                   "options": [
                     {
                       "type": {
+                        "module": "numpy",
+                        "name": "uint8"
+                      }
+                    },
+                    {
+                      "type": {
                         "module": null,
                         "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
                       }
                     },
                     {
@@ -10026,18 +10286,6 @@
                       "type": {
                         "module": "numpy",
                         "name": "ndarray"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "uint8"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "float64"
                       }
                     }
                   ]
@@ -10061,8 +10309,8 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "float"
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
@@ -10079,8 +10327,8 @@
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "float"
                       }
                     }
                   ]
@@ -10146,13 +10394,13 @@
                     {
                       "type": {
                         "module": null,
-                        "name": "int"
+                        "name": "float"
                       }
                     },
                     {
                       "type": {
-                        "module": null,
-                        "name": "float"
+                        "module": "numpy",
+                        "name": "float64"
                       }
                     },
                     {
@@ -10163,8 +10411,8 @@
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "float64"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -10256,8 +10504,8 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     },
                     {
@@ -10274,14 +10522,14 @@
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "int"
                       }
                     },
                     {
                       "type": {
                         "module": "numpy",
-                        "name": "int64"
+                        "name": "ndarray"
                       }
                     }
                   ]
@@ -10306,13 +10554,13 @@
                     {
                       "type": {
                         "module": null,
-                        "name": "float"
+                        "name": "int"
                       }
                     },
                     {
                       "type": {
                         "module": null,
-                        "name": "int"
+                        "name": "float"
                       }
                     }
                   ]
@@ -10337,13 +10585,19 @@
                     {
                       "type": {
                         "module": "numpy",
+                        "name": "int64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
                         "name": "float16"
                       }
                     },
                     {
                       "type": {
                         "module": "numpy",
-                        "name": "float32"
+                        "name": "float64"
                       }
                     },
                     {
@@ -10355,13 +10609,7 @@
                     {
                       "type": {
                         "module": "numpy",
-                        "name": "float64"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "int64"
+                        "name": "float32"
                       }
                     }
                   ]
@@ -10386,13 +10634,13 @@
                     {
                       "type": {
                         "module": null,
-                        "name": "float"
+                        "name": "int"
                       }
                     },
                     {
                       "type": {
                         "module": null,
-                        "name": "int"
+                        "name": "float"
                       }
                     }
                   ]
@@ -10417,13 +10665,13 @@
                     {
                       "type": {
                         "module": null,
-                        "name": "float"
+                        "name": "int"
                       }
                     },
                     {
                       "type": {
                         "module": null,
-                        "name": "int"
+                        "name": "float"
                       }
                     },
                     {
@@ -10539,8 +10787,8 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "float"
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     },
                     {
@@ -10551,8 +10799,8 @@
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "int64"
+                        "module": null,
+                        "name": "float"
                       }
                     },
                     {
@@ -10583,18 +10831,6 @@
                     {
                       "type": {
                         "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "int64"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
                         "name": "float"
                       }
                     },
@@ -10606,8 +10842,20 @@
                     },
                     {
                       "type": {
+                        "module": null,
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
                         "module": "numpy",
                         "name": "float64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     }
                   ]
@@ -10631,14 +10879,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "int64"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -10662,14 +10910,8 @@
                   "options": [
                     {
                       "type": {
-                        "module": "dask.array.core",
-                        "name": "Array"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     },
                     {
@@ -10680,14 +10922,20 @@
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "dask.array.core",
+                        "name": "Array"
                       }
                     },
                     {
                       "type": {
                         "module": "numpy",
-                        "name": "int64"
+                        "name": "ndarray"
                       }
                     }
                   ]
@@ -10711,12 +10959,6 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
                         "module": "numpy",
                         "name": "int64"
                       }
@@ -10725,6 +10967,12 @@
                       "type": {
                         "module": "numpy",
                         "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -10771,6 +11019,12 @@
                     },
                     {
                       "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
                         "module": null,
                         "name": "int"
                       }
@@ -10779,12 +11033,6 @@
                       "type": {
                         "module": "numpy",
                         "name": "int64"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
                       }
                     }
                   ]
@@ -10896,8 +11144,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "float"
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
@@ -10908,14 +11162,8 @@
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "int64"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "float"
                       }
                     }
                   ]
@@ -10959,8 +11207,8 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "float"
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     },
                     {
@@ -10971,8 +11219,8 @@
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "int64"
+                        "module": null,
+                        "name": "float"
                       }
                     }
                   ]
@@ -11016,12 +11264,6 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
                         "module": "numpy",
                         "name": "int64"
                       }
@@ -11030,6 +11272,12 @@
                       "type": {
                         "module": "numpy",
                         "name": "float64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "int"
                       }
                     },
                     {
@@ -11059,12 +11307,6 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "float"
-                      }
-                    },
-                    {
-                      "type": {
                         "module": "numpy",
                         "name": "float64"
                       }
@@ -11073,6 +11315,12 @@
                       "type": {
                         "module": null,
                         "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "float"
                       }
                     },
                     {
@@ -11123,7 +11371,7 @@
                     {
                       "type": {
                         "module": "numpy",
-                        "name": "ndarray"
+                        "name": "int64"
                       }
                     },
                     {
@@ -11135,7 +11383,7 @@
                     {
                       "type": {
                         "module": "numpy",
-                        "name": "int64"
+                        "name": "ndarray"
                       }
                     }
                   ]
@@ -11166,13 +11414,13 @@
                     {
                       "type": {
                         "module": "numpy",
-                        "name": "int64"
+                        "name": "ndarray"
                       }
                     },
                     {
                       "type": {
                         "module": "numpy",
-                        "name": "ndarray"
+                        "name": "int64"
                       }
                     }
                   ]
@@ -11333,7 +11581,26 @@
             "__eq__": {
               "pos_only_required": {
                 "_0": {
-                  "type": "object"
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "str",
+                      "options": [
+                        "bool",
+                        "float64"
+                      ]
+                    },
+                    {
+                      "type": "type",
+                      "name": null
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "dtype"
+                      }
+                    }
+                  ]
                 }
               },
               "pos_only_optional": {},
@@ -11354,17 +11621,7 @@
                   "options": [
                     {
                       "type": "type",
-                      "name": {
-                        "module": "numpy",
-                        "name": "bool_"
-                      }
-                    },
-                    {
-                      "type": "type",
-                      "name": {
-                        "module": null,
-                        "name": "bool"
-                      }
+                      "name": null
                     },
                     {
                       "type": {
@@ -11437,14 +11694,14 @@
                 "type": "union",
                 "options": [
                   {
-                    "type": "type",
-                    "name": null
-                  },
-                  {
                     "type": {
                       "module": "numpy",
                       "name": "dtype"
                     }
+                  },
+                  {
+                    "type": "type",
+                    "name": null
                   }
                 ]
               }
@@ -11638,14 +11895,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "int64"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -11682,14 +11939,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "int64"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -11750,6 +12007,12 @@
                   "options": [
                     {
                       "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    },
+                    {
+                      "type": {
                         "module": null,
                         "name": "int"
                       }
@@ -11757,19 +12020,13 @@
                     {
                       "type": {
                         "module": "numpy",
-                        "name": "int64"
+                        "name": "ndarray"
                       }
                     },
                     {
                       "type": {
                         "module": "numpy",
                         "name": "uint8"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
                       }
                     }
                   ]
@@ -11793,6 +12050,12 @@
                   "options": [
                     {
                       "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
                         "module": null,
                         "name": "int"
                       }
@@ -11807,12 +12070,6 @@
                       "type": {
                         "module": "numpy",
                         "name": "uint8"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
                       }
                     }
                   ]
@@ -11856,12 +12113,6 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
                         "module": "numpy",
                         "name": "float64"
                       }
@@ -11870,6 +12121,12 @@
                       "type": {
                         "module": "numpy",
                         "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -11893,14 +12150,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "float64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "float64"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -12043,14 +12300,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -12162,14 +12419,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "int"
                       }
                     },
                     {
@@ -12290,14 +12547,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "uint64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "uint64"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -12362,13 +12619,13 @@
                     {
                       "type": {
                         "module": null,
-                        "name": "float"
+                        "name": "int"
                       }
                     },
                     {
                       "type": {
                         "module": null,
-                        "name": "int"
+                        "name": "float"
                       }
                     }
                   ]
@@ -12393,13 +12650,13 @@
                     {
                       "type": {
                         "module": "numpy",
-                        "name": "float64"
+                        "name": "uint64"
                       }
                     },
                     {
                       "type": {
                         "module": "numpy",
-                        "name": "uint64"
+                        "name": "float64"
                       }
                     }
                   ]
@@ -12535,14 +12792,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "int64"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -12635,14 +12892,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "int64"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -12855,14 +13112,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "int64"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -12934,14 +13191,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "int64"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -13103,14 +13360,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "float64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "float64"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -13135,13 +13392,13 @@
                     {
                       "type": {
                         "module": null,
-                        "name": "float"
+                        "name": "int"
                       }
                     },
                     {
                       "type": {
                         "module": null,
-                        "name": "int"
+                        "name": "float"
                       }
                     }
                   ]
@@ -13165,14 +13422,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "float"
+                        "module": "numpy",
+                        "name": "float64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "float64"
+                        "module": null,
+                        "name": "float"
                       }
                     }
                   ]
@@ -13196,14 +13453,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "float"
+                        "module": "numpy",
+                        "name": "float64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "float64"
+                        "module": null,
+                        "name": "float"
                       }
                     }
                   ]
@@ -13227,8 +13484,8 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "float"
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
@@ -13239,8 +13496,8 @@
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "float"
                       }
                     }
                   ]
@@ -13285,13 +13542,13 @@
                     {
                       "type": {
                         "module": null,
-                        "name": "float"
+                        "name": "int"
                       }
                     },
                     {
                       "type": {
                         "module": null,
-                        "name": "int"
+                        "name": "float"
                       }
                     }
                   ]
@@ -13316,12 +13573,6 @@
                     {
                       "type": {
                         "module": null,
-                        "name": "float"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
                         "name": "int"
                       }
                     },
@@ -13329,6 +13580,12 @@
                       "type": {
                         "module": "numpy",
                         "name": "float32"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "float"
                       }
                     }
                   ]
@@ -13536,14 +13793,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "int"
                       }
                     },
                     {
@@ -13844,14 +14101,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "float"
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "float"
                       }
                     }
                   ]
@@ -13968,14 +14225,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "int64"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -14027,14 +14284,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "int64"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "int64"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -14255,10 +14512,10 @@
             "err_msg": {
               "type": "str",
               "options": [
-                "Same regionprops are not equal",
-                "remove_small_objects in_place argument failed.",
                 "remove_small_holes in_place argument failed.",
-                "Different regionprops are equal"
+                "remove_small_objects in_place argument failed.",
+                "Different regionprops are equal",
+                "Same regionprops are not equal"
               ]
             }
           },
@@ -14277,10 +14534,210 @@
           "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "x": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "skimage.util._map_array",
+                    "name": "ArrayMap"
+                  }
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
+                },
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "float"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "uint8"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "float64"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": "tuple",
+                        "items": [
+                          {
+                            "type": {
+                              "module": null,
+                              "name": "int"
+                            }
+                          },
+                          {
+                            "type": {
+                              "module": null,
+                              "name": "int"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
             },
             "y": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "list",
+                  "item": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": "tuple",
+                        "items": [
+                          {
+                            "type": {
+                              "module": null,
+                              "name": "int"
+                            }
+                          },
+                          {
+                            "type": {
+                              "module": null,
+                              "name": "int"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "float"
+                        }
+                      },
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": "union",
+                          "options": [
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "float"
+                              }
+                            },
+                            {
+                              "type": "list",
+                              "item": {
+                                "type": "tuple",
+                                "items": [
+                                  {
+                                    "type": {
+                                      "module": null,
+                                      "name": "int"
+                                    }
+                                  },
+                                  {
+                                    "type": {
+                                      "module": null,
+                                      "name": "int"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "bool"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "float"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              ]
             }
           },
           "pos_or_kw_optional": {},
@@ -14304,7 +14761,13 @@
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "int64"
+                    "name": "ndarray"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "float64"
                   }
                 },
                 {
@@ -14316,13 +14779,7 @@
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
+                    "name": "int64"
                   }
                 }
               ]
@@ -14384,10 +14841,141 @@
           "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "x": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "float64"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              ]
             },
             "y": {
-              "type": "object"
+              "type": "union",
+              "options": [
+                {
+                  "type": "tuple",
+                  "items": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "float"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": {
+                    "module": null,
+                    "name": "int"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
+                  "type": "list",
+                  "item": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": "tuple",
+                        "items": [
+                          {
+                            "type": {
+                              "module": null,
+                              "name": "int"
+                            }
+                          },
+                          {
+                            "type": {
+                              "module": null,
+                              "name": "int"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "float"
+                        }
+                      },
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": "tuple",
+                          "items": [
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
             }
           },
           "pos_or_kw_optional": {
@@ -14462,18 +15050,7 @@
           "pos_or_kw_optional": {
             "msg": {
               "type": "str",
-              "options": [
-                "Maximum of `scharr` is larger than 1.",
-                "Maximum of `roberts` is larger than 1.",
-                "Maximum of `prewitt` is larger than 1.",
-                "Minimum of `prewitt` is smaller than 0.",
-                "Minimum of `roberts` is smaller than 0.",
-                "Maximum of `farid` is larger than 1.",
-                "Minimum of `farid` is smaller than 0.",
-                "Minimum of `scharr` is smaller than 0.",
-                "Minimum of `sobel` is smaller than 0.",
-                "Maximum of `sobel` is larger than 1."
-              ]
+              "options": null
             }
           },
           "pos_or_kw_optional_ordering": [],
@@ -14496,13 +15073,13 @@
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "ndarray"
+                    "name": "float64"
                   }
                 },
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "float64"
+                    "name": "ndarray"
                   }
                 }
               ]
@@ -14519,13 +15096,13 @@
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "ndarray"
+                    "name": "float64"
                   }
                 },
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "float64"
+                    "name": "ndarray"
                   }
                 }
               ]
@@ -14551,14 +15128,14 @@
               "options": [
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
+                    "module": "numpy.ma.core",
+                    "name": "MaskedArray"
                   }
                 },
                 {
                   "type": {
-                    "module": "numpy.ma.core",
-                    "name": "MaskedArray"
+                    "module": "numpy",
+                    "name": "ndarray"
                   }
                 }
               ]
@@ -14569,13 +15146,13 @@
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "ndarray"
+                    "name": "float64"
                   }
                 },
                 {
                   "type": {
                     "module": "numpy",
-                    "name": "float64"
+                    "name": "ndarray"
                   }
                 },
                 {
@@ -14637,7 +15214,75 @@
             "__getitem__": {
               "pos_only_required": {
                 "_0": {
-                  "type": "object"
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "tuple",
+                      "items": {
+                        "type": "union",
+                        "options": [
+                          {
+                            "type": {
+                              "module": null,
+                              "name": "int"
+                            }
+                          },
+                          {
+                            "type": {
+                              "module": null,
+                              "name": "float"
+                            }
+                          },
+                          {
+                            "type": "tuple",
+                            "items": [
+                              {
+                                "type": {
+                                  "module": null,
+                                  "name": "float"
+                                }
+                              },
+                              {
+                                "type": {
+                                  "module": null,
+                                  "name": "float"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "list",
+                      "item": {
+                        "type": "list",
+                        "item": {
+                          "type": "union",
+                          "options": [
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "float"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    }
+                  ]
                 }
               },
               "pos_only_optional": {},
@@ -14669,13 +15314,13 @@
                       "type": "union",
                       "options": [
                         {
+                          "type": "None"
+                        },
+                        {
                           "type": {
                             "module": null,
                             "name": "int"
                           }
-                        },
-                        {
-                          "type": "None"
                         }
                       ]
                     },
@@ -14685,13 +15330,13 @@
                         {
                           "type": {
                             "module": null,
-                            "name": "float"
+                            "name": "int"
                           }
                         },
                         {
                           "type": {
                             "module": null,
-                            "name": "int"
+                            "name": "float"
                           }
                         }
                       ]
@@ -14724,7 +15369,136 @@
             "__getitem__": {
               "pos_only_required": {
                 "_0": {
-                  "type": "object"
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "tuple",
+                      "items": {
+                        "type": "slice",
+                        "start": {
+                          "type": "union",
+                          "options": [
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": "numpy",
+                                "name": "float64"
+                              }
+                            },
+                            {
+                              "type": "None"
+                            }
+                          ]
+                        },
+                        "stop": {
+                          "type": "union",
+                          "options": [
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": "numpy",
+                                "name": "float64"
+                              }
+                            }
+                          ]
+                        },
+                        "step": {
+                          "type": "union",
+                          "options": [
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "complex"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "float"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": "numpy",
+                                "name": "float64"
+                              }
+                            },
+                            {
+                              "type": "None"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "list",
+                      "item": {
+                        "type": "slice",
+                        "start": {
+                          "type": "union",
+                          "options": [
+                            {
+                              "type": "None"
+                            },
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": "numpy",
+                                "name": "int64"
+                              }
+                            }
+                          ]
+                        },
+                        "stop": {
+                          "type": "union",
+                          "options": [
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "int"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": null,
+                                "name": "float"
+                              }
+                            },
+                            {
+                              "type": {
+                                "module": "numpy",
+                                "name": "int64"
+                              }
+                            }
+                          ]
+                        },
+                        "step": {
+                          "type": "None"
+                        }
+                      }
+                    }
+                  ]
                 }
               },
               "pos_only_optional": {},
@@ -14863,7 +15637,30 @@
             "random": {
               "pos_only_required": {
                 "_0": {
-                  "type": "object"
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": "tuple",
+                      "items": {
+                        "type": {
+                          "module": null,
+                          "name": "int"
+                        }
+                      }
+                    }
+                  ]
                 }
               },
               "pos_only_optional": {},
@@ -15039,13 +15836,13 @@
                     }
                   ]
                 },
-                "high": {
+                "low": {
                   "type": {
                     "module": null,
                     "name": "float"
                   }
                 },
-                "low": {
+                "high": {
                   "type": {
                     "module": null,
                     "name": "float"
@@ -15086,49 +15883,18 @@
                   "options": [
                     {
                       "type": "tuple",
-                      "items": [
-                        {
-                          "type": {
-                            "module": null,
-                            "name": "int"
-                          }
-                        },
-                        {
-                          "type": {
-                            "module": null,
-                            "name": "int"
-                          }
-                        },
-                        {
-                          "type": {
-                            "module": null,
-                            "name": "int"
-                          }
+                      "items": {
+                        "type": {
+                          "module": null,
+                          "name": "int"
                         }
-                      ]
+                      }
                     },
                     {
                       "type": {
                         "module": null,
                         "name": "int"
                       }
-                    },
-                    {
-                      "type": "tuple",
-                      "items": [
-                        {
-                          "type": {
-                            "module": null,
-                            "name": "int"
-                          }
-                        },
-                        {
-                          "type": {
-                            "module": null,
-                            "name": "int"
-                          }
-                        }
-                      ]
                     }
                   ]
                 },
@@ -15190,14 +15956,14 @@
                     },
                     {
                       "type": {
-                        "module": null,
-                        "name": "int"
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "int"
                       }
                     }
                   ]
@@ -15222,12 +15988,6 @@
                   "type": "union",
                   "options": [
                     {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
                       "type": "tuple",
                       "items": [
                         {
@@ -15243,6 +16003,12 @@
                           }
                         }
                       ]
+                    },
+                    {
+                      "type": {
+                        "module": null,
+                        "name": "int"
+                      }
                     }
                   ]
                 },
@@ -15287,13 +16053,13 @@
                     {
                       "type": {
                         "module": null,
-                        "name": "float"
+                        "name": "int"
                       }
                     },
                     {
                       "type": {
                         "module": null,
-                        "name": "int"
+                        "name": "float"
                       }
                     }
                   ]
@@ -15303,14 +16069,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": null,
-                        "name": "float"
+                        "module": "numpy",
+                        "name": "ndarray"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
+                        "module": null,
+                        "name": "float"
                       }
                     }
                   ]
@@ -15566,13 +16332,13 @@
                     {
                       "type": {
                         "module": null,
-                        "name": "float"
+                        "name": "int"
                       }
                     },
                     {
                       "type": {
                         "module": null,
-                        "name": "int"
+                        "name": "float"
                       }
                     }
                   ]
@@ -15902,53 +16668,7 @@
               "pos_only_required": {
                 "_0": {
                   "type": "str",
-                  "options": [
-                    "grad_matlab",
-                    "enhance_contrast_percentile",
-                    "noise_filter",
-                    "mssim_matlab",
-                    "gradient_percentile",
-                    "otsu",
-                    "subtract_mean_percentile",
-                    "mean_percentile",
-                    "pop_bilateral",
-                    "mean_bilateral",
-                    "sum",
-                    "gradient",
-                    "percentile",
-                    "001",
-                    "006",
-                    "threshold_percentile",
-                    "002",
-                    "pop_percentile",
-                    "subtract_mean",
-                    "009",
-                    "threshold",
-                    "005",
-                    "pop",
-                    "autolevel",
-                    "autolevel_percentile",
-                    "median",
-                    "minimum",
-                    "arr_0",
-                    "010",
-                    "007",
-                    "008",
-                    "modal",
-                    "004",
-                    "000",
-                    "majority",
-                    "entropy",
-                    "equalize",
-                    "enhance_contrast",
-                    "maximum",
-                    "mean",
-                    "geometric_mean",
-                    "003",
-                    "sum_percentile",
-                    "windowed_histogram",
-                    "sum_bilateral"
-                  ]
+                  "options": null
                 }
               },
               "pos_only_optional": {},
@@ -16281,20 +17001,31 @@
               "type": "union",
               "options": [
                 {
-                  "type": "list",
-                  "item": {
-                    "type": "tuple",
-                    "items": [
+                  "type": "tuple",
+                  "items": {
+                    "type": "union",
+                    "options": [
                       {
-                        "type": {
-                          "module": "numpy",
-                          "name": "int64"
-                        }
+                        "type": "tuple",
+                        "items": [
+                          {
+                            "type": {
+                              "module": null,
+                              "name": "int"
+                            }
+                          },
+                          {
+                            "type": {
+                              "module": null,
+                              "name": "int"
+                            }
+                          }
+                        ]
                       },
                       {
                         "type": {
-                          "module": "numpy",
-                          "name": "int64"
+                          "module": null,
+                          "name": "int"
                         }
                       }
                     ]
@@ -16312,56 +17043,41 @@
                     "type": "tuple",
                     "items": [
                       {
-                        "type": {
-                          "module": null,
-                          "name": "int"
-                        }
+                        "type": "union",
+                        "options": [
+                          {
+                            "type": {
+                              "module": null,
+                              "name": "int"
+                            }
+                          },
+                          {
+                            "type": {
+                              "module": "numpy",
+                              "name": "int64"
+                            }
+                          }
+                        ]
                       },
                       {
-                        "type": {
-                          "module": null,
-                          "name": "int"
-                        }
+                        "type": "union",
+                        "options": [
+                          {
+                            "type": {
+                              "module": null,
+                              "name": "int"
+                            }
+                          },
+                          {
+                            "type": {
+                              "module": "numpy",
+                              "name": "int64"
+                            }
+                          }
+                        ]
                       }
                     ]
                   }
-                },
-                {
-                  "type": "tuple",
-                  "items": {
-                    "type": "tuple",
-                    "items": [
-                      {
-                        "type": {
-                          "module": null,
-                          "name": "int"
-                        }
-                      },
-                      {
-                        "type": {
-                          "module": null,
-                          "name": "int"
-                        }
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": null,
-                        "name": "int"
-                      }
-                    }
-                  ]
                 }
               ]
             },
@@ -16412,14 +17128,14 @@
                 "options": [
                   {
                     "type": {
-                      "module": null,
-                      "name": "int"
+                      "module": "numpy",
+                      "name": "int64"
                     }
                   },
                   {
                     "type": {
-                      "module": "numpy",
-                      "name": "int64"
+                      "module": null,
+                      "name": "int"
                     }
                   }
                 ]
@@ -16432,14 +17148,14 @@
                 "options": [
                   {
                     "type": {
-                      "module": null,
-                      "name": "int"
+                      "module": "numpy",
+                      "name": "int64"
                     }
                   },
                   {
                     "type": {
-                      "module": "numpy",
-                      "name": "int64"
+                      "module": null,
+                      "name": "int"
                     }
                   }
                 ]
@@ -16516,6 +17232,12 @@
                   }
                 },
                 {
+                  "type": {
+                    "module": null,
+                    "name": "bool"
+                  }
+                },
+                {
                   "type": "list",
                   "item": {
                     "type": "list",
@@ -16525,12 +17247,6 @@
                         "name": "int"
                       }
                     }
-                  }
-                },
-                {
-                  "type": {
-                    "module": null,
-                    "name": "bool"
                   }
                 }
               ]
@@ -16542,14 +17258,14 @@
               "options": [
                 {
                   "type": {
-                    "module": null,
-                    "name": "float"
+                    "module": "numpy",
+                    "name": "float64"
                   }
                 },
                 {
                   "type": {
-                    "module": "numpy",
-                    "name": "float64"
+                    "module": null,
+                    "name": "float"
                   }
                 }
               ]
@@ -16646,14 +17362,14 @@
                   "options": [
                     {
                       "type": {
-                        "module": "numpy",
-                        "name": "float64"
+                        "module": "numpy.ma.core",
+                        "name": "MaskedArray"
                       }
                     },
                     {
                       "type": {
-                        "module": "numpy.ma.core",
-                        "name": "MaskedArray"
+                        "module": "numpy",
+                        "name": "float64"
                       }
                     }
                   ]
@@ -16758,12 +17474,6 @@
                     "type": "union",
                     "options": [
                       {
-                        "type": {
-                          "module": null,
-                          "name": "int"
-                        }
-                      },
-                      {
                         "type": "slice",
                         "start": {
                           "type": "None"
@@ -16773,6 +17483,12 @@
                         },
                         "step": {
                           "type": "None"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": null,
+                          "name": "int"
                         }
                       }
                     ]
@@ -16861,43 +17577,12 @@
                   "options": [
                     {
                       "type": "tuple",
-                      "items": [
-                        {
-                          "type": {
-                            "module": null,
-                            "name": "int"
-                          }
-                        },
-                        {
-                          "type": {
-                            "module": null,
-                            "name": "int"
-                          }
-                        },
-                        {
-                          "type": {
-                            "module": null,
-                            "name": "int"
-                          }
+                      "items": {
+                        "type": {
+                          "module": null,
+                          "name": "int"
                         }
-                      ]
-                    },
-                    {
-                      "type": "tuple",
-                      "items": [
-                        {
-                          "type": {
-                            "module": null,
-                            "name": "int"
-                          }
-                        },
-                        {
-                          "type": {
-                            "module": null,
-                            "name": "int"
-                          }
-                        }
-                      ]
+                      }
                     },
                     {
                       "type": "slice",

@@ -6,8 +6,8 @@ class _LocIndexer:
         self,
         _0: Union[
             (
-                Tuple[(slice[(None, None, None)], List[Literal[("a", "x")]])],
                 numpy.ndarray,
+                Tuple[(slice[(None, None, None)], List[Literal[("x", "a")]])],
             )
         ],
         /,

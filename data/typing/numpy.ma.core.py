@@ -6,7 +6,7 @@ def isMaskedArray(x: Union[(numpy.ndarray, numpy.ma.core.MaskedArray)]):
 
 
 def array(
-    data: numpy.ndarray, mask: Union[(bool, List[List[int]], numpy.ndarray)] = ...
+    data: numpy.ndarray, mask: Union[(numpy.ndarray, bool, List[List[int]])] = ...
 ):
     "usage.skimage: 7, usage.sklearn: 4"
 
@@ -23,7 +23,7 @@ def masked_where(condition: numpy.ndarray, a: numpy.ndarray):
     "usage.xarray: 1"
 
 
-def masked_invalid(a: Union[(List[float], numpy.ndarray)]):
+def masked_invalid(a: Union[(numpy.ndarray, List[float])]):
     "usage.xarray: 4, usage.sklearn: 4"
 
 
@@ -65,22 +65,14 @@ class MaskedArray:
         ""
 
     def __getitem__(
-        self,
-        _0: Union[
-            (
-                Tuple[(int, int)],
-                Tuple[(Union[(int, slice[(None, None, None)])], ...)],
-                int,
-            )
-        ],
-        /,
+        self, _0: Union[(Tuple[(Union[(slice[(None, None, None)], int)], ...)], int)], /
     ):
         ""
 
     def __isub__(self, _0: numpy.float64, /):
         ""
 
-    def reshape(self, /, *s: Literal[("t", "v")]):
+    def reshape(self, /, *s: Literal[("v", "t")]):
         "usage.skimage: 1"
 
     def __eq__(self, _0: int, /):
@@ -90,11 +82,9 @@ class MaskedArray:
         self,
         _0: Union[
             (
-                Tuple[(int, int)],
-                slice[(None, None, None)],
                 int,
-                Tuple[(int, int, int)],
-                Tuple[(Union[(int, numpy.bool_, numpy.ndarray)], int)],
+                slice[(None, None, None)],
+                Tuple[(Union[(numpy.ndarray, numpy.bool_, int)], ...)],
             )
         ],
         _1,

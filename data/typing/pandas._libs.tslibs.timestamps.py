@@ -12,7 +12,15 @@ class _Timestamp:
 
 
 class Timestamp:
-    def __init__(ts_input):
+    def __init__(
+        ts_input: Union[
+            (
+                int,
+                pandas._libs.tslibs.nattype.NaTType,
+                pandas._libs.tslibs.timestamps.Timestamp,
+            )
+        ]
+    ):
         "usage.xarray: 25"
 
     tz = ...
@@ -26,8 +34,8 @@ class Timestamp:
         _0: Union[
             (
                 pandas._libs.tslibs.nattype.NaTType,
-                pandas.core.indexes.timedeltas.TimedeltaIndex,
                 pandas._libs.tslibs.timedeltas.Timedelta,
+                pandas.core.indexes.timedeltas.TimedeltaIndex,
             )
         ],
         /,

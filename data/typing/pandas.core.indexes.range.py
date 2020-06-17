@@ -26,11 +26,9 @@ class RangeIndex:
         self,
         _0: Union[
             (
-                numpy.ndarray,
-                slice[(None, int, None)],
-                slice[(int, int, None)],
-                slice[(None, None, int)],
+                slice[(Union[(None, int)], Union[(int, None)], Union[(None, int)])],
                 int,
+                numpy.ndarray,
             )
         ],
         /,

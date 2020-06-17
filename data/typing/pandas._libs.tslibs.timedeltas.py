@@ -2,7 +2,9 @@ from typing import *
 
 
 class Timedelta:
-    def __init__(value):
+    def __init__(
+        value: Union[(int, numpy.timedelta64, pandas._libs.tslibs.timedeltas.Timedelta)]
+    ):
         "usage.xarray: 10"
 
     def __add__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):

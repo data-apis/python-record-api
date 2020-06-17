@@ -4,11 +4,9 @@ from typing import *
 def _as_pairs(
     x: Union[
         (
-            List[Tuple[(numpy.int64, numpy.int64)]],
+            Tuple[(Union[(Tuple[(int, int)], int)], ...)],
             int,
-            List[Tuple[(int, int)]],
-            Tuple[(Tuple[(int, int)], ...)],
-            Tuple[(int, int)],
+            List[Tuple[(Union[(int, numpy.int64)], Union[(int, numpy.int64)])]],
         )
     ],
     ndim: int,

@@ -1,7 +1,8 @@
 """
 Functions and tools to unify types.
 
-__str__ of output types should be representation as type signature in function paramater
+Note that this uses dicts as ordered sets in many places so that input and output
+has the same ordering, so that git diffs are better
 """
 from __future__ import annotations
 
@@ -35,8 +36,10 @@ __all__ = [
     "BottomOutput",
 ]
 
-# If thera are more than this amount in a union, just use any
+# If there are more than this amount in a union, just use any
 MAX_UNION_ITEMS = 5
+# If there are more than this amount in a string literal, just use any
+MAX_STRING_ITEMS = 5
 # More than this and it will be tuple of arbitrary length
 MAX_TUPLE_ITEMS = 2
 
@@ -60,32 +63,45 @@ def unify_inputs(types: typing.Iterable[InputType]) -> OutputType:
 
 
 def unify(types: typing.Iterable[OutputType]) -> OutputType:
-    types = set(types)
+    # groupby by the type to collect all types with same kind together
     tp_tps_to_tps: typing.DefaultDict[
-        typing.Type[OutputType], typing.Set[OutputType]
-    ] = collections.defaultdict(set)
-    for tp in types:
-        tp_tps_to_tps[type(tp)].add(tp)
+        # Use dict for values as ordered set to preserve ordering
+        typing.Type[OutputType],
+        typing.Dict[OutputType, None],
+    ] = collections.defaultdict(dict)
 
-    unified_types: typing.Set[OutputType] = set()
+    types = list(types)
+    while types:
+        tp = types.pop()
+        if isinstance(tp, ObjectOutput):
+            return ObjectOutput()
+        # If we have a union, add all to existing types
+        if isinstance(tp, UnionOutput):
+            types.extend(tp.options)
+            continue
+        tp_tps_to_tps[type(tp)][tp] = None
 
-    if ObjectOutput in tp_tps_to_tps:
-        return ObjectOutput()
+    # OK now we know that tp_tps_to_tps contains no union types
+    # Now try to unify each of the kinds to give us a set of types to add to to the unified
+    # Used a dict here as an ordered set
+    unified_types: typing.Dict[OutputType, None] = {}
 
+    # Sort so order of final types is preserved
     for tp_tp, tps in tp_tps_to_tps.items():
-        res: OutputType = _unify_output_tp(tp_tp, tps)
+        res: OutputType = _unify_output_tp(tp_tp, tps.keys())
         if isinstance(res, UnionOutput):
-            unified_types |= set(res.options)
+            for o in res.options:
+                unified_types[o] = None
         else:
-            unified_types.add(res)
+            unified_types[res] = None
 
     if not unified_types:
         return BottomOutput()
     if len(unified_types) > MAX_UNION_ITEMS:
         return ObjectOutput()
     if len(unified_types) == 1:
-        return unified_types.pop()
-    return UnionOutput(options=unified_types)
+        return next(iter(unified_types.keys()))
+    return UnionOutput(options=tuple(unified_types.keys()))
 
 
 OUTPUT_TYPE = typing.TypeVar("OUTPUT_TYPE", bound="OutputTypeBase")
@@ -169,7 +185,7 @@ class StringOutput(OutputTypeBase):
     """
 
     type: typing.Literal["str"] = "str"
-    options: typing.Union[typing.FrozenSet[str], None] = None
+    options: typing.Union[typing.Tuple[str, ...], None] = None
 
     @property
     def annotation(self) -> ast.AST:
@@ -186,12 +202,15 @@ class StringOutput(OutputTypeBase):
 
     @classmethod
     def unify(cls, tps: typing.Iterable[StringOutput]) -> StringOutput:
-        options: typing.Set[str] = set()
+        options: typing.Dict[str, None] = {}
         for tp in tps:
             if tp.options is None:
                 return StringOutput()
-            options.update(tp.options)
-        return StringOutput(options=options)
+            for o in tp.options:
+                options[o] = None
+            if len(options) > MAX_STRING_ITEMS:
+                return StringOutput()
+        return StringOutput(options=tuple(options.keys()))
 
 
 class ListInput(InputTypeBase):
@@ -256,27 +275,25 @@ class TupleOutput(OutputTypeBase):
         length = None if None in lengths or len(lengths) != 1 else lengths.pop()
         if length is not None and length > MAX_UNION_ITEMS:
             length = None
-        # Is list if we have a fixed length typle
-        all_items: typing.Union[
-            typing.Set[OutputType], typing.List[typing.Set[OutputType]]
-        ] = [set() for _ in range(length)] if length is not None else set()
+        if length is None:
+            possible_values: typing.List[OutputType] = []
+            for tp in tps:
+                items = tp.items
+                if isinstance(items, tuple):
+                    possible_values.extend(items)
+                else:
+                    possible_values.append(items)
+            return TupleOutput(items=unify(possible_values))
+        i_to_possible_values: typing.List[typing.List[OutputType]] = [
+            [] for _ in range(length)
+        ]
         for tp in tps:
             items = tp.items
-            if isinstance(all_items, set):
-                if isinstance(items, tuple):
-                    all_items |= set(items)
-                else:
-                    all_items.add(items)
-            else:
-                assert isinstance(items, tuple)
-                for i, item in enumerate(items):
-                    all_items[i].add(item)
+            assert isinstance(items, tuple)
+            for i, item in enumerate(items):
+                i_to_possible_values[i].append(item)
 
-        return TupleOutput(
-            items=unify(all_items)
-            if isinstance(all_items, set)
-            else tuple(map(unify, all_items))
-        )
+        return TupleOutput(items=tuple(map(unify, i_to_possible_values)))
 
 
 class DictInput(InputTypeBase):
@@ -385,10 +402,10 @@ class OtherOutput(OutputTypeBase):
     def unify(
         cls, tps: typing.Iterable[OtherOutput]
     ) -> typing.Union[OtherOutput, UnionOutput]:
-        tps = set(tps)
+        tps = {t: None for t in tps}
         if len(tps) == 1:
-            return tps.pop()
-        return UnionOutput(options=tps)
+            return next(iter(tps.keys()))
+        return UnionOutput(options=tuple(tps.keys()))
 
     @property
     def module(self) -> typing.Optional[str]:
@@ -413,9 +430,9 @@ class ModuleOutput(OutputTypeBase):
 
     @classmethod
     def unify(cls, tps: typing.Iterable[ModuleOutput]) -> ModuleOutput:
-        names = set(tp.name for tp in tps)
+        names = set(tps)
         if len(names) == 1:
-            return ModuleOutput(name=names.pop())
+            return names.pop()
         return ModuleOutput()
 
     @property
@@ -469,13 +486,13 @@ class SliceOutput(OutputTypeBase):
 
     @classmethod
     def unify(cls, tps: typing.Iterable[SliceOutput]) -> SliceOutput:
-        start: typing.Set[OutputType] = set()
-        stop: typing.Set[OutputType] = set()
-        step: typing.Set[OutputType] = set()
+        start: typing.List[OutputType] = []
+        stop: typing.List[OutputType] = []
+        step: typing.List[OutputType] = []
         for tp in tps:
-            start.add(tp.start)
-            stop.add(tp.stop)
-            step.add(tp.step)
+            start.append(tp.start)
+            stop.append(tp.stop)
+            step.append(tp.step)
         return SliceOutput(start=unify(start), step=unify(step), stop=unify(stop))
 
 
@@ -716,6 +733,7 @@ class NumpyDTypeInput(InputTypeBase):
 
 class UnionOutput(OutputTypeBase):
     type: typing.Literal["union"] = "union"
+    # Can't be sets because when serializing, serialized as dicts
     options: typing.Tuple[OutputType, ...]
 
     @property
@@ -727,13 +745,9 @@ class UnionOutput(OutputTypeBase):
         )
 
     @classmethod
-    def unify(cls, tps: typing.Iterable[UnionOutput]) -> OutputType:
-        options: typing.Set[OutputType] = set()
-        for tp in tps:
-            options |= set(tp.options)
-        if len(options) == 1:
-            return options.pop()
-        return UnionOutput(options=options)
+    def unify(cls, unions: typing.Iterable[UnionOutput]) -> OutputType:
+        # This should never be called
+        raise NotImplementedError()
 
 
 class BottomOutput(OutputTypeBase):

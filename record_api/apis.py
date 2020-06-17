@@ -27,6 +27,8 @@ from .type_analysis import *
 __all__ = ["API", "Module", "Class", "Signature"]
 Type = OutputType
 
+# TODO: See if I can not dump defaults, besides strings?
+
 
 def orjson_dumps(v, *, default):
     # orjson.dumps returns bytes, to match standard json.dumps we need to decode
@@ -195,10 +197,7 @@ class Signature(pydantic.BaseModel):
         if self.var_kw:
             all_keys.append(self.var_kw[0])
 
-        if len(all_keys) != len(set(all_keys)):
-            import pudb
-
-            pudb.set_trace()
+        assert len(all_keys) == len(set(all_keys))
 
     def function_def(self, name: str, is_classmethod=False) -> ast.FunctionDef:
         return ast.FunctionDef(
@@ -511,13 +510,17 @@ def move(
     f: typing.Callable[[V, V], V],
 ) -> None:
     """
-    Moves keys from right to left
+    Moves keys from right to left, making sure to use original ordering in r
     """
-    for k in keys:
-        v = r.pop(k)
+    for k, v in r.items():
+        if k not in keys:
+            continue
         if k in l:
             v = f(l[k], v)
         l[k] = v
+
+    for k in keys:
+        del r[k]
 
 
 def update(

@@ -32,7 +32,7 @@ class Series:
     def any(self, /):
         "usage.xarray: 1"
 
-    def resample(self, /, rule: Literal[("3H", "1H", "24H")] = ...):
+    def resample(self, /, rule: Literal[("1H", "3H", "24H")] = ...):
         "usage.xarray: 14"
 
     def dropna(self, /):

@@ -13,15 +13,25 @@ class Int64Index:
     name = ...
     nlevels = ...
 
-    def __getitem__(self, _0, /):
+    def __getitem__(
+        self,
+        _0: Union[
+            (
+                numpy.ndarray,
+                int,
+                slice[(Union[(None, int)], Union[(int, None)], Union[(None, int)])],
+            )
+        ],
+        /,
+    ):
         ""
 
     def get_indexer(
         self,
         /,
         target: numpy.ndarray,
-        method: Union[(Literal[("pad",)], None, Literal[("backfill",)])],
-        tolerance: Union[(int, None, float)],
+        method: Union[(Literal[("pad", "backfill")], None)],
+        tolerance: Union[(float, int, None)],
     ):
         "usage.xarray: 8"
 
@@ -64,24 +74,32 @@ class Float64Index:
         /,
         other: Union[
             (
+                pandas.core.indexes.base.Index,
                 pandas.core.indexes.numeric.Float64Index,
                 pandas.core.indexes.numeric.Int64Index,
-                pandas.core.indexes.base.Index,
             )
         ],
     ):
         "usage.xarray: 10"
 
-    def __getitem__(self, _0, /):
+    def __getitem__(
+        self,
+        _0: Union[
+            (
+                slice[(Union[(int, None)], Union[(None, int)], Union[(int, None)])],
+                numpy.ndarray,
+                int,
+            )
+        ],
+        /,
+    ):
         ""
 
     def get_indexer(
         self,
         /,
         target: numpy.ndarray,
-        method: Union[
-            (Literal[("pad",)], Literal[("nearest",)], None, Literal[("backfill",)])
-        ],
+        method: Union[(Literal[("nearest", "backfill", "pad")], None)],
         tolerance: None,
     ):
         "usage.xarray: 8"
@@ -89,7 +107,7 @@ class Float64Index:
     def get_loc(
         self,
         /,
-        key: Union[(numpy.float64, numpy.int64, float)],
+        key: Union[(numpy.int64, float, numpy.float64)],
         method: Union[(Literal[("nearest",)], None)] = ...,
     ):
         "usage.xarray: 7"
