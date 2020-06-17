@@ -197,6 +197,11 @@ class TestMockNumPyMethod(BaseTest):
             call(ANY, getattr, np, "ndarray"), call(ANY, np.ndarray.sum, self.a)
         )
 
+    def test_contains(self):
+        self.trace("1 in self.a")
+        self.trace("self.a in []")
+        self.mock.assert_called_once_with(ANY, op.contains, self.a, 1)
+
 
 class TestMockPandasMethod(BaseTest):
     def setUp(self):
