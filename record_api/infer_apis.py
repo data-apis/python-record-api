@@ -250,9 +250,9 @@ FUNCTIONS: typing.Dict[typing.Tuple[typing.Optional[str], str], FunctionCallback
     ("_operator", "isub"): functools.partial(_binary_inplace_op, "sub"),
     ("_operator", "ilshift"): functools.partial(_binary_inplace_op, "lshift"),
     ("_operator", "irshift"): functools.partial(_binary_inplace_op, "rshift"),
-    ("_operator", "iand_"): functools.partial(_binary_inplace_op, "and"),
+    ("_operator", "iand"): functools.partial(_binary_inplace_op, "and"),
     ("_operator", "ixor"): functools.partial(_binary_inplace_op, "xor"),
-    ("_operator", "ior_"): functools.partial(_binary_inplace_op, "or"),
+    ("_operator", "ior"): functools.partial(_binary_inplace_op, "or"),
     # Comparator
     ("_operator", "lt"): functools.partial(_comparator, "lt", "gt"),
     ("_operator", "le"): functools.partial(_comparator, "le", "ge"),
@@ -286,7 +286,6 @@ def record_method(inst: OutputType, name: str, s: Signature) -> typing.Optional[
         module = inst.type.module
         cls_name = inst.type.name
         if module is None:
-            warnings.warn(f"Ignoring method {name} on builtin type {cls_name}")
             return None
         return API(
             modules={module: Module(classes={cls_name: Class(methods={name: s})})}

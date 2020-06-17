@@ -7,8 +7,8 @@ def assert_almost_equal(
     decimal: int = ...,
     err_msg: Literal[
         (
-            "Point is not on expected unit circle",
             "Point is not on expected circle",
+            "Point is not on expected unit circle",
             "Unexpected std",
         )
     ] = ...,
@@ -21,7 +21,7 @@ def assert_equal(actual, desired=...):
 
 
 def assert_array_equal(x, y=...):
-    "usage.skimage: 495, usage.xarray: 307, usage.sklearn: 562"
+    "usage.skimage: 495, usage.xarray: 322, usage.sklearn: 562"
 
 
 def assert_allclose(
@@ -32,30 +32,30 @@ def assert_allclose(
     err_msg: Literal[
         (
             "",
-            "StackingClassifier",
-            "Idempotency check failed for method transform",
-            "VotingRegressor",
-            "StackingRegressor",
-            "For VotingRegressor sample_weight=None is not equi",
-            "predict_proba of StackingClassifier is not invaria",
-            "For StackingClassifier sample_weight=None is not e",
-            "Idempotency check failed for method predict",
-            "For VotingClassifier sample_weight=None is not equ",
-            "transform of StackingClassifier is not invariant w",
-            "predict of VotingClassifier is not invariant when ",
-            "predict of StackingClassifier is not invariant whe",
-            "predict of StackingRegressor is not invariant when",
-            "predict of VotingRegressor is not invariant when a",
             "transform of VotingClassifier is not invariant whe",
-            "consecutive fit_transform outcomes not consistent ",
-            "transform of VotingRegressor is not invariant when",
-            "Idempotency check failed for method predict_proba",
-            "transform of StackingRegressor is not invariant wh",
             "Idempotency check failed for method decision_funct",
+            "predict of VotingRegressor is not invariant when a",
+            "consecutive fit_transform outcomes not consistent ",
+            "predict of StackingRegressor is not invariant when",
+            "predict_proba of StackingClassifier is not invaria",
+            "VotingRegressor",
             "For StackingRegressor sample_weight=None is not eq",
-            "fit_transform and transform outcomes not consisten",
+            "Idempotency check failed for method predict",
+            "Idempotency check failed for method predict_proba",
             "decision_function of StackingClassifier is not inv",
+            "For VotingClassifier sample_weight=None is not equ",
+            "StackingRegressor",
+            "predict of StackingClassifier is not invariant whe",
+            "fit_transform and transform outcomes not consisten",
+            "transform of StackingClassifier is not invariant w",
+            "Idempotency check failed for method transform",
+            "predict of VotingClassifier is not invariant when ",
+            "For VotingRegressor sample_weight=None is not equi",
+            "transform of VotingRegressor is not invariant when",
+            "For StackingClassifier sample_weight=None is not e",
             "VotingClassifier",
+            "transform of StackingRegressor is not invariant wh",
+            "StackingClassifier",
         )
     ] = ...,
 ):
@@ -69,33 +69,33 @@ def assert_array_almost_equal(
     err_msg: Literal[
         (
             "x scores are not orthogonal",
-            "with solver = lbfgs",
+            "nipals and svd implementations lead to different x",
+            "Parameters: strategy = mean, missing_values = nan,",
+            "y weights are not orthogonal",
             "rotation on Y failed",
             "inverse_transform failed",
             "x weights are not orthogonal",
-            "nipals and svd implementations lead to different y",
-            "Parameters: strategy = median, missing_values = na",
-            "Parameters: strategy = mean, missing_values = nan,",
-            "with solver = newton-cg",
-            "Y != UQ'",
-            "Clusters are not centered on hypercube vertices",
-            "Wrong number of samples per class",
-            "with solver = sag",
-            "y scores are not orthogonal",
-            "y weights are not orthogonal",
             "Clusters should not be centered on hypercube verti",
             "rotation on X failed",
+            "with solver = newton-cg",
+            "Wrong number of samples per class",
+            "with solver = lbfgs",
             "with solver = liblinear",
             "X != TP'",
+            "with solver = sag",
+            "Y != UQ'",
+            "nipals and svd implementations lead to different y",
+            "y scores are not orthogonal",
             "with solver = saga",
-            "nipals and svd implementations lead to different x",
+            "Clusters are not centered on hypercube vertices",
+            "Parameters: strategy = median, missing_values = na",
         )
     ] = ...,
 ):
     "usage.skimage: 107, usage.sklearn: 641"
 
 
-def assert_warns(warning_class: type, *args: Literal[("v", "t")]):
+def assert_warns(warning_class: type, *args: Literal[("t", "v")]):
     "usage.skimage: 5"
 
 
@@ -104,15 +104,15 @@ def assert_(val: Union[(bool, numpy.bool_)] = ...):
 
 
 def assert_array_less(
-    x: Union[(float, numpy.ndarray, int, numpy.float64)],
-    y: Union[(float, numpy.ndarray, int, numpy.float64)],
+    x: Union[(float, int, numpy.ndarray, numpy.float64)],
+    y: Union[(float, int, numpy.ndarray, numpy.float64)],
 ):
     "usage.skimage: 20, usage.sklearn: 9"
 
 
 def assert_array_almost_equal_nulp(
-    x: Union[(numpy.ma.core.MaskedArray, numpy.ndarray)],
-    y: Union[(numpy.float64, numpy.ma.core.MaskedArray, numpy.ndarray)],
+    x: Union[(numpy.ndarray, numpy.ma.core.MaskedArray)],
+    y: Union[(numpy.ndarray, numpy.ma.core.MaskedArray, numpy.float64)],
 ):
     "usage.skimage: 4"
 

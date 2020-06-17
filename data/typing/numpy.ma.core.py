@@ -1,7 +1,7 @@
 from typing import *
 
 
-def isMaskedArray(x: Union[(numpy.ma.core.MaskedArray, numpy.ndarray)]):
+def isMaskedArray(x: Union[(numpy.ndarray, numpy.ma.core.MaskedArray)]):
     "usage.skimage: 18"
 
 
@@ -11,19 +11,19 @@ def array(
     "usage.skimage: 7, usage.sklearn: 4"
 
 
-def getdata(a: Union[(numpy.ndarray, numpy.ma.core.MaskedArray)]):
+def getdata(a: Union[(numpy.ma.core.MaskedArray, numpy.ndarray)]):
     "usage.skimage: 3, usage.sklearn: 2"
 
 
 def getmaskarray(arr: numpy.ma.core.MaskedArray):
-    "usage.skimage: 1, usage.xarray: 1, usage.sklearn: 1"
+    "usage.skimage: 1, usage.xarray: 2, usage.sklearn: 1"
 
 
 def masked_where(condition: numpy.ndarray, a: numpy.ndarray):
     "usage.xarray: 1"
 
 
-def masked_invalid(a: Union[(numpy.ndarray, List[float])]):
+def masked_invalid(a: Union[(List[float], numpy.ndarray)]):
     "usage.xarray: 4, usage.sklearn: 4"
 
 
@@ -49,31 +49,52 @@ class MaskedArray:
     def mean(self, /):
         "usage.skimage: 1, usage.sklearn: 1"
 
+    def __sub__(self, _0: Union[(numpy.ma.core.MaskedArray, numpy.float64)], /):
+        ""
+
+    def __rsub__(self, _0: numpy.ma.core.MaskedArray, /):
+        ""
+
+    def __truediv__(self, _0: numpy.ma.core.MaskedArray, /):
+        ""
+
+    def __rtruediv__(self, _0: numpy.ma.core.MaskedArray, /):
+        ""
+
+    def __add__(self, _0: numpy.float64, /):
+        ""
+
     def __getitem__(
         self,
         _0: Union[
             (
                 Tuple[(int, int)],
-                int,
                 Tuple[(Union[(slice[(None, None, None)], int)], ...)],
+                int,
             )
         ],
         /,
     ):
         ""
 
-    def reshape(self, /, *s: Literal[("v", "t")]):
+    def __isub__(self, _0: numpy.float64, /):
+        ""
+
+    def reshape(self, /, *s: Literal[("t", "v")]):
         "usage.skimage: 1"
+
+    def __eq__(self, _0: int, /):
+        ""
 
     def __setitem__(
         self,
         _0: Union[
             (
-                Tuple[(int, int)],
-                int,
-                Tuple[(int, int, int)],
-                Tuple[(Union[(numpy.bool_, numpy.ndarray, int)], int)],
                 slice[(None, None, None)],
+                Tuple[(Union[(numpy.bool_, int, numpy.ndarray)], int)],
+                int,
+                Tuple[(int, int)],
+                Tuple[(int, int, int)],
             )
         ],
         _1,
@@ -83,3 +104,12 @@ class MaskedArray:
 
     def filled(self, /, fill_value: float):
         "usage.xarray: 2"
+
+    def __imul__(self, _0: int, /):
+        ""
+
+    def __mul__(self, _0: numpy.float64, /):
+        ""
+
+    def __radd__(self, _0: numpy.float64, /):
+        ""

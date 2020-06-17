@@ -9,7 +9,7 @@ class RClass:
 class OGridClass:
     def __getitem__(
         self,
-        _0: Tuple[(slice[(Union[(None, int)], Union[(float, int)], None)], ...)],
+        _0: Tuple[(slice[(Union[(None, int)], Union[(int, float)], None)], ...)],
         /,
     ):
         ""
@@ -26,8 +26,8 @@ class CClass:
         _0: Union[
             (
                 Tuple[(numpy.ndarray, numpy.ndarray, numpy.ndarray)],
-                numpy.ndarray,
                 Tuple[(numpy.ndarray, numpy.ndarray)],
+                numpy.ndarray,
             )
         ],
         /,

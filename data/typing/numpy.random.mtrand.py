@@ -20,9 +20,9 @@ class RandomState:
     @classmethod
     def randint(
         _0: numpy.random.mtrand.RandomState,
-        _1: Union[(float, numpy.float64, int)],
+        _1: Union[(float, int, numpy.float64)],
         _2: int = ...,
-        _3: Union[(Tuple[(int, int)], int, List[int])] = ...,
+        _3: Union[(Tuple[(int, int)], List[int], int)] = ...,
         /,
     ):
         "usage.skimage: 8, usage.sklearn: 33"
@@ -30,7 +30,7 @@ class RandomState:
     @classmethod
     def choice(
         _0: numpy.random.mtrand.RandomState,
-        _1: Union[(range, List[Callable], List[int])] = ...,
+        _1: Union[(List[Callable], List[int], range)] = ...,
         /,
     ):
         "usage.skimage: 1, usage.xarray: 1, usage.sklearn: 1"
@@ -38,8 +38,8 @@ class RandomState:
     @classmethod
     def uniform(
         _0: numpy.random.mtrand.RandomState,
-        _1: Union[(float, numpy.ndarray, int)],
-        _2: Union[(float, numpy.ndarray, int)] = ...,
+        _1: Union[(float, int, numpy.ndarray)],
+        _2: Union[(float, int, numpy.ndarray)] = ...,
         /,
     ):
         "usage.skimage: 3, usage.sklearn: 9"
@@ -67,7 +67,7 @@ class RandomState:
     @classmethod
     def permutation(
         _0: numpy.random.mtrand.RandomState,
-        _1: Union[(List[numpy.int64], numpy.ndarray, int, numpy.int64)],
+        _1: Union[(List[numpy.int64], int, numpy.ndarray, numpy.int64)],
         /,
     ):
         "usage.skimage: 1, usage.sklearn: 18"
@@ -145,14 +145,14 @@ class RandomState:
         self,
         _0: Union[(float, int)] = ...,
         _1: Union[(float, int)] = ...,
-        _2: Union[(Tuple[(int, int)], int)] = ...,
+        _2: Union[(int, Tuple[(int, int)])] = ...,
         /,
         *,
         size: Union[
-            (Tuple[(int,)], Tuple[(int, int)], int, List[int], numpy.int64)
+            (List[int], int, Tuple[(int,)], numpy.int64, Tuple[(int, int)])
         ] = ...,
-        high: Union[(float, int)] = ...,
         low: Union[(float, int)] = ...,
+        high: Union[(float, int)] = ...,
     ):
         "usage.skimage: 29, usage.xarray: 1, usage.sklearn: 33"
 
@@ -164,9 +164,9 @@ class RandomState:
         /,
         *,
         size=...,
-        dtype: Union[(Type[numpy.uint8], Literal[("u8",)], Type[bool])] = ...,
-        low: int = ...,
+        dtype: Union[(Type[numpy.uint8], Type[bool], Literal[("u8",)])] = ...,
         high: int = ...,
+        low: int = ...,
     ):
         "usage.skimage: 15, usage.xarray: 14, usage.sklearn: 62"
 
@@ -176,35 +176,35 @@ class RandomState:
     def choice(
         self,
         _0: Union[
-            (List[bool], List[Literal[("d", "b", "a", "c")]], numpy.ndarray, int)
+            (numpy.ndarray, int, List[Literal[("d", "a", "b", "c")]], List[bool])
         ] = ...,
         /,
         *,
-        size: Union[(numpy.int64, Tuple[(int, int)], int, List[int])] = ...,
+        size: Union[(Tuple[(int, int)], List[int], int, numpy.int64)] = ...,
         replace: bool = ...,
-        p: Union[(numpy.ndarray, List[Union[(float, int)]])] = ...,
+        p: Union[(List[Union[(float, int)]], numpy.ndarray)] = ...,
     ):
-        "usage.skimage: 7, usage.xarray: 3, usage.sklearn: 10"
+        "usage.skimage: 7, usage.xarray: 5, usage.sklearn: 10"
 
     def normal(
         self,
-        _0: Union[(float, int)] = ...,
-        _1: Union[(float, numpy.ndarray)] = ...,
+        _0: Union[(int, float)] = ...,
+        _1: Union[(numpy.ndarray, float)] = ...,
         _2: Tuple[(int, int)] = ...,
         /,
         *,
         size: Union[
-            (Tuple[(int, ...)], Tuple[(int, int)], Tuple[(numpy.int64, int)], int)
+            (Tuple[(int, int)], Tuple[(numpy.int64, int)], int, Tuple[(int, ...)])
         ] = ...,
-        scale: Union[(numpy.float64, numpy.ndarray, float, int)] = ...,
-        loc: Union[(numpy.ndarray, int)] = ...,
+        scale: Union[(int, numpy.ndarray, numpy.float64, float)] = ...,
+        loc: Union[(int, numpy.ndarray)] = ...,
     ):
         "usage.skimage: 32, usage.xarray: 1, usage.sklearn: 72"
 
     def randn(
         self, _0: int, _1: int = ..., _2: int = ..., _3: int = ..., _4: int = ..., /
     ):
-        "usage.skimage: 44, usage.xarray: 164, usage.sklearn: 13"
+        "usage.skimage: 44, usage.xarray: 178, usage.sklearn: 13"
 
     def standard_normal(self, _0: Tuple[(int, ...)], /):
         "usage.skimage: 6"

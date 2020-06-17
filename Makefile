@@ -55,6 +55,11 @@ data/raw/skimage.jsonl:
 		PYTHON_RECORD_API_FROM_MODULES=skimage \
 		pytest --pyargs skimage
 
+data/raw/dask.jsonl:
+	env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
+		PYTHON_RECORD_API_TO_MODULES=pandas,numpy \
+		PYTHON_RECORD_API_FROM_MODULES=dask \
+		pytest --pyargs dask
 
 
 data/raw/sklearn.jsonl:
@@ -65,8 +70,8 @@ data/raw/sklearn.jsonl:
 
 
 data/raw/xarray.jsonl:
-	env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
-		PYTHON_RECORD_API_TO_MODULES=numpy \
+	-env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
+		PYTHON_RECORD_API_TO_MODULES=numpy,pandas \
 		PYTHON_RECORD_API_FROM_MODULES=xarray \
 		pytest --pyargs xarray
 
