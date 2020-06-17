@@ -20,15 +20,15 @@ class Int64Index:
         self,
         /,
         target: numpy.ndarray,
-        method: Union[(Literal[("backfill",)], Literal[("pad",)], None)],
-        tolerance: Union[(float, None, int)],
+        method: Union[(Literal[("pad",)], None, Literal[("backfill",)])],
+        tolerance: Union[(int, None, float)],
     ):
         "usage.xarray: 8"
 
     def get_loc(
         self,
         /,
-        key: Union[(numpy.int64, numpy.float64, int)],
+        key: Union[(numpy.float64, int, numpy.int64)],
         method: Union[(Literal[("nearest",)], None)] = ...,
     ):
         "usage.xarray: 5"
@@ -80,7 +80,7 @@ class Float64Index:
         /,
         target: numpy.ndarray,
         method: Union[
-            (Literal[("backfill",)], Literal[("nearest",)], Literal[("pad",)], None)
+            (Literal[("pad",)], Literal[("nearest",)], None, Literal[("backfill",)])
         ],
         tolerance: None,
     ):
@@ -89,7 +89,7 @@ class Float64Index:
     def get_loc(
         self,
         /,
-        key: Union[(numpy.int64, numpy.float64, float)],
+        key: Union[(numpy.float64, numpy.int64, float)],
         method: Union[(Literal[("nearest",)], None)] = ...,
     ):
         "usage.xarray: 7"

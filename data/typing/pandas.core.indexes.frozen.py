@@ -12,8 +12,8 @@ class FrozenList:
         self,
         _0: Union[
             (
-                pandas.core.indexes.frozen.FrozenList,
                 Tuple[(Literal[("x_level_0",)], Literal[("x_level_1",)])],
+                pandas.core.indexes.frozen.FrozenList,
             )
         ],
         /,

@@ -43,6 +43,7 @@ env PYTHON_RECORD_API_OUTPUT=grouped.jsonl \
 env PYTHON_RECORD_API_OUTPUT=xarray-api.json \
     PYTHON_RECORD_API_INPUT=grouped.jsonl \
     PYTHON_RECORD_API_LABEL=xarray \
+    PYTHON_RECORD_API_MODULES=numpy \
     python -m record_api.infer_apis
 
 # (optional) Then, if you have produced  multiple apis, from different

@@ -20,11 +20,11 @@ class Index:
         /,
         other: Union[
             (
+                pandas.core.indexes.multi.MultiIndex,
                 pandas.core.indexes.numeric.Float64Index,
-                pandas.core.indexes.numeric.Int64Index,
                 pandas.core.indexes.base.Index,
                 pandas.core.indexes.range.RangeIndex,
-                pandas.core.indexes.multi.MultiIndex,
+                pandas.core.indexes.numeric.Int64Index,
             )
         ],
     ):
@@ -48,17 +48,17 @@ class Index:
         name: Literal[
             (
                 "xnew",
-                "z",
-                "x",
                 "dim3",
                 "dim2",
-                "renamed_dim2",
-                "three",
-                "new_dim",
-                "abc",
-                "time_new",
-                "y",
+                "z",
                 "time",
+                "x",
+                "y",
+                "abc",
+                "three",
+                "time_new",
+                "renamed_dim2",
+                "new_dim",
             )
         ],
     ):

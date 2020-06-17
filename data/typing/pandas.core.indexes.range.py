@@ -15,8 +15,8 @@ class RangeIndex:
         /,
         other: Union[
             (
-                pandas.core.indexes.numeric.Int64Index,
                 pandas.core.indexes.range.RangeIndex,
+                pandas.core.indexes.numeric.Int64Index,
             )
         ],
     ):
@@ -26,10 +26,10 @@ class RangeIndex:
         self,
         _0: Union[
             (
-                slice[(int, int, None)],
-                slice[(None, int, None)],
-                slice[(None, None, int)],
                 numpy.ndarray,
+                slice[(None, int, None)],
+                slice[(int, int, None)],
+                slice[(None, None, int)],
                 int,
             )
         ],

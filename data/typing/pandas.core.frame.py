@@ -6,7 +6,7 @@ class DataFrame:
         "usage.xarray: 1"
 
     index: pandas.core.indexes.multi.MultiIndex = ...
-    columns: List[Literal[("foo", "x", "C")]] = ...
+    columns: List[Literal[("C", "foo", "x")]] = ...
     values = ...
     loc = ...
 
@@ -19,7 +19,7 @@ class DataFrame:
     def __getitem__(
         self,
         _0: Union[
-            (Literal[("foo",)], List[Literal[("foo", "C")]], Literal[("x",)], int)
+            (List[Literal[("C", "foo")]], int, Literal[("foo",)], Literal[("x",)])
         ],
         /,
     ):
@@ -51,5 +51,5 @@ class DataFrame:
     def apply(self, /, func: Callable):
         "usage.xarray: 1"
 
-    def rolling(self, /, window: int, min_periods: Union[(None, int)], center: bool):
+    def rolling(self, /, window: int, min_periods: Union[(int, None)], center: bool):
         "usage.xarray: 3"

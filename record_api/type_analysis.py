@@ -120,6 +120,10 @@ class OutputTypeBase(BaseModel, abc.ABC):
     def annotation(self) -> ast.AST:
         ...
 
+    @property
+    def module(self) -> typing.Optional[str]:
+        return None
+
 
 class InputTypeBase(BaseModel, abc.ABC):
     @abc.abstractmethod
@@ -352,7 +356,7 @@ class NamedOutput(BaseModel):
     def from_input(cls, input: NamedInput) -> typing.Optional[NamedOutput]:
         if isinstance(input, BuiltinNamedInput):
             return cls(name=input.__root__)
-        if '<' in input.name:
+        if "<" in input.name:
             return None
         return cls(name=input.name, module=input.module)
 
@@ -372,6 +376,7 @@ class OtherOutput(OutputTypeBase):
         if tp is None:
             return ObjectOutput()
         return cls(type=tp)
+
     @property
     def annotation(self) -> ast.AST:
         return self.type.annotation
@@ -384,6 +389,10 @@ class OtherOutput(OutputTypeBase):
         if len(tps) == 1:
             return tps.pop()
         return UnionOutput(options=tps)
+
+    @property
+    def module(self) -> typing.Optional[str]:
+        return self.type.module
 
 
 class ModuleInput(InputTypeBase):
@@ -408,6 +417,10 @@ class ModuleOutput(OutputTypeBase):
         if len(names) == 1:
             return ModuleOutput(name=names.pop())
         return ModuleOutput()
+
+    @property
+    def module(self) -> typing.Optional[str]:
+        return self.name
 
 
 class SliceInput(InputTypeBase):
@@ -494,6 +507,12 @@ class TypeOutput(OutputTypeBase):
             return TypeOutput(name=names.pop())
         return TypeOutput()
 
+    @property
+    def module(self) -> typing.Optional[str]:
+        if self.name:
+            return self.name.module
+        return None
+
 
 class FunctionInput(InputTypeBase):
     t: typing.Literal["function"]
@@ -531,6 +550,10 @@ class MethodWithoutSelfOutput(OutputTypeBase):
             return tps.pop()
         return FunctionOutput()
 
+    @property
+    def module(self) -> typing.Optional[str]:
+        return self.class_.name
+
 
 class FunctionOutput(OutputTypeBase):
     type: typing.Literal["function"] = "function"
@@ -547,6 +570,12 @@ class FunctionOutput(OutputTypeBase):
         if len(names) == 1:
             return FunctionOutput(name=names.pop())
         return FunctionOutput()
+
+    @property
+    def module(self) -> typing.Optional[str]:
+        if self.name:
+            return self.name.module
+        return None
 
 
 class BuiltinFunctionInput(InputTypeBase):
@@ -587,6 +616,10 @@ class MethodOutput(OutputTypeBase):  # type: ignore
         if len(tps) == 1:
             return tps.pop()
         return FunctionOutput()
+
+    @property
+    def module(self) -> typing.Optional[str]:
+        return self.self.module
 
 
 class MethodInput(InputTypeBase):
@@ -629,6 +662,10 @@ class ClassMethodOutput(OutputTypeBase):  # type: ignore
         if len(tps) == 1:
             return tps.pop()
         return FunctionOutput()
+
+    @property
+    def module(self) -> typing.Optional[str]:
+        return self.class_.module
 
 
 class NumpyUfuncInput(InputTypeBase):

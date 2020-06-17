@@ -12,7 +12,7 @@ class CategoricalIndex:
     def __getitem__(
         self,
         _0: Union[
-            (slice[(Union[(None, int)], Union[(None, int)], None)], numpy.ndarray, int)
+            (slice[(Union[(int, None)], Union[(int, None)], None)], int, numpy.ndarray)
         ],
         /,
     ):

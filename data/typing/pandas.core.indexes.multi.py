@@ -11,10 +11,10 @@ class MultiIndex:
         arrays: list,
         names: Union[
             (
-                Tuple[(Literal[("level_str",)], Literal[("level_date",)])],
                 List[Literal[("x", "y")]],
+                Tuple[(Literal[("level_str",)], Literal[("level_date",)])],
                 pandas.core.indexes.frozen.FrozenList,
-                List[Literal[("y1", "y2", "x", "y")]],
+                List[Literal[("y2", "x", "y1", "y")]],
             )
         ],
     ):
@@ -24,7 +24,6 @@ class MultiIndex:
     def from_tuples(
         tuples: Union[
             (
-                List[List[int]],
                 Tuple[
                     (
                         Tuple[(Literal[("a",)], int)],
@@ -33,6 +32,7 @@ class MultiIndex:
                         Tuple[(Literal[("b",)], int)],
                     )
                 ],
+                List[List[int]],
                 Tuple[
                     (
                         Tuple[(Literal[("b",)], int)],
@@ -74,24 +74,24 @@ class MultiIndex:
         /,
         level: Literal[
             (
-                "level_str",
-                "two",
-                "dim2",
-                "variable",
-                "one",
-                "dim1",
-                "level_1",
-                "level_date",
-                "y",
                 "level_2",
-                "a_quite_long_level_name",
+                "level_str",
+                "dim2",
+                "dim1",
+                "y",
+                "level_date",
                 "x",
+                "one",
+                "variable",
+                "a_quite_long_level_name",
+                "two",
+                "level_1",
             )
         ],
     ):
         "usage.xarray: 27"
 
-    def get_loc(self, /, key: Tuple[(Literal[("a", "b")], int, int)]):
+    def get_loc(self, /, key: Tuple[(Literal[("b", "a")], int, int)]):
         "usage.xarray: 3"
 
     def get_loc_level(self, /, key, level):
@@ -109,7 +109,7 @@ class MultiIndex:
     def reorder_levels(self, /, order: List[Literal[("level_2", "level_1")]]):
         "usage.xarray: 4"
 
-    def set_names(self, /, names: List[Literal[("level1", "level0")]]):
+    def set_names(self, /, names: List[Literal[("level0", "level1")]]):
         "usage.xarray: 1"
 
     def set_levels(

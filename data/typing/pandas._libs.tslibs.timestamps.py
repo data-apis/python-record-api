@@ -25,8 +25,8 @@ class Timestamp:
         self,
         _0: Union[
             (
-                pandas.core.indexes.timedeltas.TimedeltaIndex,
                 pandas._libs.tslibs.nattype.NaTType,
+                pandas.core.indexes.timedeltas.TimedeltaIndex,
                 pandas._libs.tslibs.timedeltas.Timedelta,
             )
         ],

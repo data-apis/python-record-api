@@ -32,7 +32,7 @@ class Series:
     def any(self, /):
         "usage.xarray: 1"
 
-    def resample(self, /, rule: Literal[("3H", "24H", "1H")] = ...):
+    def resample(self, /, rule: Literal[("3H", "1H", "24H")] = ...):
         "usage.xarray: 14"
 
     def dropna(self, /):
@@ -50,7 +50,7 @@ class Series:
     def shift(self, /, periods: int):
         "usage.xarray: 1"
 
-    def rolling(self, /, window: int, min_periods: Union[(None, int)], center: bool):
+    def rolling(self, /, window: int, min_periods: Union[(int, None)], center: bool):
         "usage.xarray: 3"
 
     def iteritems(self, /):

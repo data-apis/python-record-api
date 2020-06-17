@@ -1,17 +1,17 @@
 from typing import *
 
 
-def isMaskedArray(x: Union[(numpy.ma.core.MaskedArray, numpy.ndarray)]):
+def isMaskedArray(x: Union[(numpy.ndarray, numpy.ma.core.MaskedArray)]):
     "usage.skimage: 18"
 
 
 def array(
-    data: numpy.ndarray, mask: Union[(numpy.ndarray, bool, List[List[int]])] = ...
+    data: numpy.ndarray, mask: Union[(bool, List[List[int]], numpy.ndarray)] = ...
 ):
     "usage.skimage: 7, usage.sklearn: 4"
 
 
-def getdata(a: Union[(numpy.ndarray, numpy.ma.core.MaskedArray)]):
+def getdata(a: Union[(numpy.ma.core.MaskedArray, numpy.ndarray)]):
     "usage.skimage: 3, usage.sklearn: 2"
 
 
@@ -49,7 +49,7 @@ class MaskedArray:
     def mean(self, /):
         "usage.skimage: 1, usage.sklearn: 1"
 
-    def __sub__(self, _0: Union[(numpy.float64, numpy.ma.core.MaskedArray)], /):
+    def __sub__(self, _0: Union[(numpy.ma.core.MaskedArray, numpy.float64)], /):
         ""
 
     def __rsub__(self, _0: numpy.ma.core.MaskedArray, /):
@@ -80,7 +80,7 @@ class MaskedArray:
     def __isub__(self, _0: numpy.float64, /):
         ""
 
-    def reshape(self, /, *s: Literal[("v", "t")]):
+    def reshape(self, /, *s: Literal[("t", "v")]):
         "usage.skimage: 1"
 
     def __eq__(self, _0: int, /):
@@ -90,11 +90,11 @@ class MaskedArray:
         self,
         _0: Union[
             (
+                Tuple[(int, int)],
+                slice[(None, None, None)],
                 int,
                 Tuple[(int, int, int)],
-                Tuple[(Union[(numpy.ndarray, numpy.bool_, int)], int)],
-                slice[(None, None, None)],
-                Tuple[(int, int)],
+                Tuple[(Union[(int, numpy.bool_, numpy.ndarray)], int)],
             )
         ],
         _1,

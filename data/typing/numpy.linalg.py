@@ -23,8 +23,8 @@ def solve(a: numpy.ndarray, b: numpy.ndarray):
 
 def norm(
     x: numpy.ndarray,
-    ord: Union[(Literal[("fro",)], float, int)] = ...,
-    axis: Union[(None, int)] = ...,
+    ord: Union[(int, Literal[("fro",)], float)] = ...,
+    axis: Union[(int, None)] = ...,
 ):
     "usage.skimage: 8, usage.sklearn: 22"
 

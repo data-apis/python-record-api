@@ -34,6 +34,7 @@ data/api/%.json: data/groupby_location/%.jsonl
 	env PYTHON_RECORD_API_OUTPUT=$@ \
 		PYTHON_RECORD_API_INPUT=$< \
 		PYTHON_RECORD_API_LABEL=$(*F) \
+		PYTHON_RECORD_API_MODULES=pandas,numpy \
 		python -m record_api.infer_apis
 
 

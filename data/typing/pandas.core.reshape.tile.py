@@ -4,11 +4,11 @@ from typing import *
 def cut(
     x: Union[
         (
+            pandas.core.indexes.datetimes.DatetimeIndex,
             numpy.flatiter,
             numpy.ndarray,
-            range,
-            pandas.core.indexes.datetimes.DatetimeIndex,
             xarray.core.dataarray.DataArray,
+            range,
         )
     ],
     bins,

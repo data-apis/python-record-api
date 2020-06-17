@@ -26,6 +26,10 @@ from .apis import *
 INPUT = os.environ["PYTHON_RECORD_API_INPUT"]
 OUTPUT = os.environ["PYTHON_RECORD_API_OUTPUT"]
 LABEL = os.environ["PYTHON_RECORD_API_LABEL"]
+# Must pass in modules to constrain to, because when we see `__add__`
+# we trace on both inputs, which could lead to adding traces on modules
+# we don't care about
+MODULES = os.environ["PYTHON_RECORD_API_MODULES"].split(",")
 
 
 def __main__():
@@ -178,11 +182,27 @@ def _unary_op(method_name: str, inst: OutputType) -> typing.Optional[API]:
     return record_method(inst, f"__{method_name}__", sig())
 
 
+def should_output(o: OutputType) -> bool:
+    module = o.module
+    if module is None:
+        return False
+    return any(module == mod or module.startswith(f"{mod}.") for mod in MODULES)
+
+
 def _binary_op(
     method_name: str, inst: OutputType, arg: OutputType
 ) -> typing.Optional[API]:
-    l = record_method(inst, f"__{method_name}__", sig(arg))
-    r = record_method(arg, f"__r{method_name}__", sig(inst))
+
+    l = (
+        record_method(inst, f"__{method_name}__", sig(arg))
+        if should_output(inst)
+        else None
+    )
+    r = (
+        record_method(arg, f"__r{method_name}__", sig(inst))
+        if should_output(arg)
+        else None
+    )
     if l and r:
         l |= r
     return l or r
@@ -192,8 +212,16 @@ def _comparator(
     left_method_name: str, right_method_name: str, inst: OutputType, arg: OutputType
 ) -> typing.Optional[API]:
 
-    l = record_method(inst, f"__{left_method_name}__", sig(arg))
-    r = record_method(arg, f"__{right_method_name}__", sig(inst))
+    l = (
+        record_method(inst, f"__{left_method_name}__", sig(arg))
+        if should_output(inst)
+        else None
+    )
+    r = (
+        record_method(arg, f"__{right_method_name}__", sig(inst))
+        if should_output(arg)
+        else None
+    )
     if l and r:
         l |= r
     return l or r
@@ -202,7 +230,13 @@ def _comparator(
 def _binary_inplace_op(
     method_name: str, inst: OutputType, arg: OutputType
 ) -> typing.Optional[API]:
-    return record_method(inst, f"__i{method_name}__", sig(arg))
+    # If we can trace the inst, do this
+    if should_output(inst):
+        return record_method(inst, f"__i{method_name}__", sig(arg))
+    # otherwise, try recording reversed one for right arg
+    if should_output(arg):
+        return record_method(arg, f"__r{method_name}__", sig(inst))
+    return None
 
 
 def sig(*args: OutputType) -> Signature:
@@ -290,9 +324,25 @@ def record_method(inst: OutputType, name: str, s: Signature) -> typing.Optional[
         module = inst.type.module
         cls_name = inst.type.name
         if module is None:
+            warnings.warn(f"Ignoring method {name} on builtin type {cls_name}")
             return None
         return API(
             modules={module: Module(classes={cls_name: Class(methods={name: s})})}
+        )
+    if isinstance(inst, TypeOutput):
+        if name in ("__eq__" or "__ne__"):
+            # Assume checking for equality on types just uses builtin
+            return None
+        if inst.name is None:
+            warnings.warn(f"Ignoring method {name} on Any type")
+            return None
+        module = inst.name.module
+        cls_name = inst.name.name
+        if module is None:
+            warnings.warn(f"Ignoring method {name} on {cls_name} builtin type")
+            return None
+        return API(
+            modules={module: Module(classes={cls_name: Class(classmethods={name: s})})}
         )
     warnings.warn(f"Ignoring method {name} on {inst}")
     return None
