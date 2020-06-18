@@ -8,6 +8,7 @@ import itertools
 import operator as op
 import os
 import sys
+import importlib
 import types
 import warnings
 from typing import *
@@ -69,6 +70,23 @@ def _encode_slice(s: slice):
         "stop": preprocess(s.stop),
         "step": preprocess(s.step),
     }
+
+
+# # cache this b/c its expesnive
+# @functools.lru_cache(None, False)
+# def find_root_module(o: object):
+#     """
+#     Looks from the top of the module tree down to see if it is exportd from a parent module
+#     """
+#     full_module = o.__module__
+#     modules = full_module.split(".")
+#     if len(modules) == 1:
+#         return modules[0]
+#     for i in range(len(modules) - 1):
+#         parent_module = ".".join(modules[i:])
+#         mod = importlib.import_module(parent_module)
+#         # Export by module
+#         if o in mod
 
 
 @encode.register(types.FunctionType)
@@ -229,6 +247,7 @@ class Bound:
         return b
 
 
+# TODO: Make not args kwargs, since kwarg could be fn
 def log_call(location: str, fn: Callable, *args, **kwargs) -> None:
     bound = Bound.create(fn, args, kwargs)
     line: Dict = {"location": location, "function": preprocess(fn)}
