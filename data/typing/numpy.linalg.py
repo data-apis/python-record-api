@@ -1,8 +1,10 @@
 from typing import *
 
+_umath_linalg = ...
+
 
 def svd(a: numpy.ndarray = ...):
-    "usage.skimage: 7, usage.sklearn: 3"
+    "usage.skimage: 7, usage.sklearn: 3, usage.dask: 5"
 
 
 def inv(a: numpy.ndarray):
@@ -13,8 +15,8 @@ def eigvalsh(a: numpy.ndarray):
     "usage.skimage: 2"
 
 
-def det(a: numpy.ndarray):
-    "usage.skimage: 5, usage.sklearn: 1"
+def det(a: Union[(dask.array.core.Array, numpy.ndarray)]):
+    "usage.skimage: 5, usage.sklearn: 1, usage.dask: 2"
 
 
 def solve(a: numpy.ndarray, b: numpy.ndarray):
@@ -22,11 +24,12 @@ def solve(a: numpy.ndarray, b: numpy.ndarray):
 
 
 def norm(
-    x: numpy.ndarray,
-    ord: Union[(float, int, Literal[("fro",)])] = ...,
-    axis: Union[(None, int)] = ...,
+    x,
+    ord: Union[(None, int, float, Literal[("nuc", "fro")])] = ...,
+    axis: Union[(None, int, Tuple[(int, ...)])] = ...,
+    keepdims: bool = ...,
 ):
-    "usage.skimage: 8, usage.sklearn: 22"
+    "usage.skimage: 8, usage.sklearn: 22, usage.dask: 32"
 
 
 def pinv(a: numpy.ndarray):
@@ -46,7 +49,15 @@ def slogdet(a: numpy.ndarray):
 
 
 def lstsq(a: numpy.ndarray, b: numpy.ndarray = ...):
-    "usage.sklearn: 2"
+    "usage.sklearn: 2, usage.dask: 3"
+
+
+def eigvals(a: Union[(numpy.ndarray, dask.array.core.Array)]):
+    "usage.dask: 2"
+
+
+def qr(a: numpy.ndarray):
+    "usage.dask: 5"
 
 
 class LinAlgError:

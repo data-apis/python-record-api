@@ -1,0 +1,6 @@
+from typing import *
+
+
+class TimedeltaArray:
+    asi8 = ...
+    dtype = ...

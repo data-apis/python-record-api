@@ -1,5 +1,5 @@
 from typing import *
 
 
-def to_datetime(arg: Union[(List[str], numpy.ndarray)]):
-    "usage.xarray: 4"
+def to_datetime(arg=...):
+    "usage.xarray: 4, usage.dask: 44"

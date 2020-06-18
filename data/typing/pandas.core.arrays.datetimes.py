@@ -1,0 +1,6 @@
+from typing import *
+
+
+class DatetimeArray:
+    asi8 = ...
+    dtype = ...

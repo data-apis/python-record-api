@@ -16,3 +16,15 @@ class DatetimeIndexOpsMixin:
 
     def take(self, /, indices: numpy.ndarray):
         "usage.xarray: 1"
+
+    def min(self, /):
+        "usage.dask: 9"
+
+    def max(self, /):
+        "usage.dask: 9"
+
+    def tolist(self, /):
+        "usage.dask: 4"
+
+    def shift(self, /, periods: int):
+        "usage.dask: 4"

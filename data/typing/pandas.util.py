@@ -1,0 +1,3 @@
+from typing import *
+
+hash_pandas_object = ...

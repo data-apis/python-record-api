@@ -18,3 +18,4 @@ data/raw/*
 !data/counts_untyped/*
 .hypothesis
 dist/
+data/groupby_location/

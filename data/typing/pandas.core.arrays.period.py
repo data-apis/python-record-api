@@ -1,0 +1,6 @@
+from typing import *
+
+
+class PeriodArray:
+    asi8 = ...
+    dtype = ...

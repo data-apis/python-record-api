@@ -1,0 +1,3 @@
+from typing import *
+
+_put_lines: Callable = ...

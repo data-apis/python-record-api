@@ -2,13 +2,19 @@ from typing import *
 
 
 class RangeIndex:
+    __module__ = ...
+    __name__ = ...
     dtype = ...
     values = ...
-    name = ...
+    name: Union[(Literal[("ix", "renamed")], None)] = ...
     size = ...
     is_unique = ...
     shape = ...
     is_monotonic = ...
+    array = ...
+    is_monotonic_increasing = ...
+    names = ...
+    is_all_dates = ...
 
     def equals(
         self,
@@ -20,15 +26,15 @@ class RangeIndex:
             )
         ],
     ):
-        "usage.xarray: 8"
+        "usage.xarray: 8, usage.dask: 2"
 
     def __getitem__(
         self,
         _0: Union[
             (
-                slice[(Union[(None, int)], Union[(int, None)], Union[(None, int)])],
                 int,
                 numpy.ndarray,
+                slice[(Union[(int, None)], Union[(None, int)], Union[(int, None)])],
             )
         ],
         /,
@@ -46,3 +52,39 @@ class RangeIndex:
 
     def copy(self, /, deep: bool):
         "usage.xarray: 1"
+
+    def __contains__(self, _0: Union[(int, Literal[("dtype", "divisions")])], /):
+        ""
+
+    def min(self, /):
+        "usage.dask: 6"
+
+    def max(self, /):
+        "usage.dask: 6"
+
+    def tolist(self, /):
+        "usage.dask: 1"
+
+    def drop_duplicates(self, /):
+        "usage.dask: 1"
+
+    def __mul__(self, _0: int, /):
+        ""
+
+    def __add__(self, _0: int, /):
+        ""
+
+    def __rmul__(self, _0: int, /):
+        ""
+
+    def __neg__(self, /):
+        ""
+
+    def to_series(self, /):
+        "usage.dask: 1"
+
+    def to_frame(self, /, name: Union[(Literal[("bar",)], None)] = ...):
+        "usage.dask: 3"
+
+    def memory_usage(self, /):
+        "usage.dask: 1"

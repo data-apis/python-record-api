@@ -17,11 +17,11 @@ def assert_almost_equal(
 
 
 def assert_equal(actual, desired=...):
-    "usage.skimage: 664, usage.xarray: 21"
+    "usage.skimage: 664, usage.xarray: 21, usage.dask: 26"
 
 
 def assert_array_equal(x, y=...):
-    "usage.skimage: 495, usage.xarray: 322, usage.sklearn: 562"
+    "usage.skimage: 495, usage.xarray: 322, usage.sklearn: 562, usage.dask: 28"
 
 
 def assert_allclose(
@@ -35,7 +35,7 @@ def assert_allclose(
 
 
 def assert_array_almost_equal(x, y, decimal: int = ..., err_msg: str = ...):
-    "usage.skimage: 107, usage.sklearn: 641"
+    "usage.skimage: 107, usage.sklearn: 641, usage.dask: 1"
 
 
 def assert_warns(warning_class: type, *args: Literal[("v", "t")]):

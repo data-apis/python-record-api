@@ -2,19 +2,21 @@ from typing import *
 
 
 def date_range(
-    start: str,
-    end: Literal[
-        ("2000-01-10", "2010-08-15", "2016-03-31", "2007-03-01", "2014-05-01")
-    ] = ...,
+    start: Union[(int, pandas._libs.tslibs.timestamps.Timestamp, str)],
+    end: Union[(pandas._libs.tslibs.timestamps.Timestamp, str)] = ...,
     periods: int = ...,
-    freq: str = ...,
-    tz: Union[(pytz.tzfile.America / New_York, Literal[("US/Eastern",)])] = ...,
+    freq=...,
+    tz=...,
+    name: Union[(None, str)] = ...,
+    closed: Union[(Literal[("left",)], None)] = ...,
 ):
-    "usage.xarray: 79"
+    "usage.xarray: 79, usage.dask: 89"
 
 
 class DatetimeIndex:
-    name = ...
+    __module__ = ...
+    __name__ = ...
+    name: Union[(Literal[("index",)], None)] = ...
     dtype = ...
     values = ...
     is_monotonic_increasing = ...
@@ -26,14 +28,20 @@ class DatetimeIndex:
     time = ...
     hour = ...
     ndim = ...
+    array = ...
+    freq: None = ...
+    tz = ...
+    names = ...
+    day = ...
+    is_all_dates = ...
 
     def __getitem__(
         self,
         _0: Union[
             (
-                slice[(Union[(int, None)], Union[(None, int)], Union[(None, int)])],
                 int,
                 numpy.ndarray,
+                slice[(Union[(None, int)], Union[(int, None)], Union[(int, None)])],
             )
         ],
         /,
@@ -60,7 +68,7 @@ class DatetimeIndex:
         ""
 
     def to_series(self, /):
-        "usage.xarray: 7"
+        "usage.xarray: 7, usage.dask: 4"
 
     def slice_indexer(
         self,
@@ -80,7 +88,7 @@ class DatetimeIndex:
     ):
         "usage.xarray: 7"
 
-    def __add__(self, _0: pandas.tseries.offsets.Hour, /):
+    def __add__(self, _0, /):
         ""
 
     def get_loc(
@@ -90,3 +98,36 @@ class DatetimeIndex:
         method: Union[(None, Literal[("nearest",)])] = ...,
     ):
         "usage.xarray: 3"
+
+    def min(self, /):
+        "usage.dask: 1"
+
+    def max(self, /):
+        "usage.dask: 1"
+
+    def shift(
+        self,
+        /,
+        periods: int,
+        freq: Union[
+            (None, Literal[("W", "S")], pandas._libs.tslibs.timedeltas.Timedelta)
+        ],
+    ):
+        "usage.dask: 11"
+
+    def _maybe_cast_slice_bound(
+        self, /, label: str, side: Literal[("right", "left")], kind: Literal[("loc",)]
+    ):
+        "usage.dask: 23"
+
+    def to_frame(self, /, name: Union[(Literal[("foo",)], None)] = ...):
+        "usage.dask: 3"
+
+    def __gt__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        ""
+
+    def __le__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        ""
+
+    def tz_localize(self, /, *args: Literal[("v", "t")]):
+        "usage.dask: 2"

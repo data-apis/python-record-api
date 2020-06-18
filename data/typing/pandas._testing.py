@@ -2,15 +2,27 @@ from typing import *
 
 
 def assert_frame_equal(
-    left: pandas.core.frame.DataFrame, right: pandas.core.frame.DataFrame
+    left: pandas.core.frame.DataFrame = ..., right: pandas.core.frame.DataFrame = ...
 ):
-    "usage.xarray: 9"
+    "usage.xarray: 9, usage.dask: 24"
 
 
-def assert_index_equal(
-    left: Union[(pandas.core.indexes.multi.MultiIndex, pandas.core.indexes.base.Index)],
-    right: Union[
-        (pandas.core.indexes.multi.MultiIndex, pandas.core.indexes.base.Index)
-    ],
+def assert_index_equal(left, right):
+    "usage.xarray: 5, usage.dask: 68"
+
+
+def assert_series_equal(
+    left: pandas.core.series.Series,
+    right: pandas.core.series.Series,
+    check_less_precise: bool = ...,
+    check_dtype: bool = ...,
+    check_names: bool = ...,
 ):
-    "usage.xarray: 5"
+    "usage.dask: 20"
+
+
+def assert_extension_array_equal(
+    left: pandas.core.arrays.categorical.Categorical,
+    right: pandas.core.arrays.categorical.Categorical,
+):
+    "usage.dask: 1"
