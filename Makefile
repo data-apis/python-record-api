@@ -1,6 +1,6 @@
 .PHONY: groupby_location clean_groupby_location clean_api clean_raw clean_typing clean all test
 
-LIBRARIES := sample_usage skimage xarray sklearn
+LIBRARIES := sample_usage skimage xarray sklearn dask
 
 all: data/typing/numpy.py
 
@@ -62,7 +62,7 @@ data/raw/skimage.jsonl:
 		pytest --pyargs skimage
 
 data/raw/dask.jsonl:
-	env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
+	-env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
 		PYTHON_RECORD_API_TO_MODULES=pandas,numpy \
 		PYTHON_RECORD_API_FROM_MODULES=dask \
 		pytest --pyargs dask
