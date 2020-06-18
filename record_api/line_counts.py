@@ -24,19 +24,16 @@ OUTPUT = os.environ["PYTHON_RECORD_API_OUTPUT"]
 def __main__():
 
     # Conceptual mapping of {function, params} to set of locations
-    calls: typing.List[typing.Tuple[dict, typing.Set[str]]] = []
+    calls: typing.DefaultDict[bytes, typing.Set[str]] = collections.defaultdict(set)
     with jsonl.read(INPUT) as f:
         for row in f:
             location = row.pop("location")
-            for row_, locations in calls:
-                if row_ == row:
-                    locations.add(location)
-                    break
-            else:
-                calls.append((row, {location}))
+            # Dump so we can hash
+            calls[orjson.dumps(row, option=orjson.OPT_SORT_KEYS)].add(location)
 
     with jsonl.write(OUTPUT) as write:
-        for row_, locations in tqdm.tqdm(calls, "writing"):
+        for row_bytes, locations in tqdm.tqdm(calls.items(), "writing"):
+            row_ = orjson.loads(row_bytes)
             row_["n"] = len(locations)
             write(row_)
 
