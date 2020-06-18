@@ -5,6 +5,7 @@ import orjson
 import tqdm
 import typing
 import io
+import warnings
 
 
 __all__ = ["read", "write"]
@@ -28,7 +29,11 @@ def read(path: str) -> typing.Iterator[typing.Iterable[dict]]:
 
 def read_lines(path, n: int, stream: io.TextIOWrapper) -> typing.Iterable[dict]:
     for _ in tqdm.trange(n, desc=f"reading {path}"):
-        yield orjson.loads(stream.readline())
+        line = stream.readline()
+        try:
+            yield orjson.loads(line)
+        except orjson.JSONDecodeError:
+            warnings.warn(f"Could not decode line:\n{line}")
 
 
 @contextlib.contextmanager
