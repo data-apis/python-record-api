@@ -198,7 +198,9 @@ class Signature(pydantic.BaseModel):
         if self.var_kw:
             all_keys.append(self.var_kw[0])
 
-        assert len(all_keys) == len(set(all_keys))
+        if len(all_keys) != len(set(all_keys)):
+            import pudb
+            pudb.set_trace()
 
     def function_def(self, name: str, is_classmethod=False) -> ast.FunctionDef:
         return ast.FunctionDef(
@@ -435,6 +437,20 @@ class Signature(pydantic.BaseModel):
         update_unify(self.kw_only_required, other.kw_only_required)
         update_unify(self.kw_only_optional, other.kw_only_optional)
 
+        # Move any kw_only to pos_or_kw that already exist there
+        # (this pops up when sometimes a function is bound and sometimes it isn't, like numpy.amin in dask, not sure why this is)
+        move(
+            self.pos_or_kw_required,
+            self.kw_only_required,
+            set(self.kw_only_required) & set(self.pos_or_kw_required),
+            lambda l, r: unify((l, r)),
+        )
+        move(
+            self.pos_or_kw_optional,
+            self.kw_only_optional,
+            set(self.kw_only_optional) & set(self.pos_or_kw_optional),
+            lambda l, r: unify((l, r)),
+        )
     def _copy_var_kw(self, other: Signature) -> None:
         self.var_kw = (
             unify_named_types((self.var_kw, other.var_kw,))
