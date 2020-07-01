@@ -6,7 +6,7 @@ class StringMethods:
         "\n    usage.dask: 1\n    "
         ...
 
-    def contains(self: object, /, pat: Literal[("a", "d")]):
+    def contains(self: object, /, pat: Literal["a", "d"]):
         "\n    usage.dask: 9\n    "
         ...
 

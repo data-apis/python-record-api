@@ -2,14 +2,14 @@ from typing import *
 
 
 def timedelta_range(
-    start: Union[Literal[("1 day", "1 days")], numpy.timedelta64, int],
+    start: Union[Literal["1 day", "1 days"], numpy.timedelta64, int],
     periods: int = ...,
     end: Literal["30 days"] = ...,
     freq: Union[
         pandas.tseries.offsets.Day,
         pandas.tseries.offsets.Minute,
         pandas.tseries.offsets.Hour,
-        Literal[("H", "D", "T", "6H")],
+        Literal["H", "D", "T", "6H"],
         None,
     ] = ...,
 ):
@@ -18,7 +18,7 @@ def timedelta_range(
 
 
 class TimedeltaIndex:
-    def __init__(data: List[numpy.timedelta64], name: Literal[("timedelta", "foo")]):
+    def __init__(data: List[numpy.timedelta64], name: Literal["timedelta", "foo"]):
         "\n    usage.dask: 2\n    "
         ...
 
@@ -55,15 +55,15 @@ class TimedeltaIndex:
         "\n    usage.xarray: 1\n    "
         ...
 
-    def floor(self: object, /, *args: Literal[("v", "t")]):
+    def floor(self: object, /, *args: Literal["v", "t"]):
         "\n    usage.xarray: 1\n    "
         ...
 
-    def ceil(self: object, /, *args: Literal[("v", "t")]):
+    def ceil(self: object, /, *args: Literal["v", "t"]):
         "\n    usage.xarray: 1\n    "
         ...
 
-    def round(self: object, /, *args: Literal[("v", "t")]):
+    def round(self: object, /, *args: Literal["v", "t"]):
         "\n    usage.xarray: 1\n    "
         ...
 

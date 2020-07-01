@@ -22,7 +22,7 @@ class DataFrame:
 
     @classmethod
     def from_dict(
-        data: List[Dict[Literal[("y", "x")], Union[Literal[("a", "b", "c", "d")], int]]]
+        data: List[Dict[Literal["y", "x"], Union[Literal["a", "b", "c", "d"], int]]]
     ):
         "\n    usage.dask: 1\n    "
         ...
@@ -188,7 +188,7 @@ class DataFrame:
             pandas.core.indexes.numeric.Int64Index,
             pandas.core.frame.DataFrame,
             pandas.core.indexes.base.Index,
-            List[Literal[("b", "a")]],
+            List[Literal["b", "a"]],
             str,
         ],
         _1: object,
@@ -246,7 +246,7 @@ class DataFrame:
         min_periods: Union[int, None] = ...,
         center: bool = ...,
         win_type: None = ...,
-        axis: Union[int, Literal[("rows", "columns", "coulombs")]] = ...,
+        axis: Union[int, Literal["rows", "columns", "coulombs"]] = ...,
     ):
         "\n    usage.xarray: 3\n    usage.dask: 85\n    "
         ...
@@ -266,14 +266,14 @@ class DataFrame:
             Dict[
                 Union[int, str],
                 Union[
-                    Literal[("category", "f8")],
+                    Literal["category", "f8"],
                     numpy.dtype,
                     pandas.core.dtypes.dtypes.CategoricalDtype,
                     Type[float],
                 ],
             ],
             pandas.core.series.Series,
-            Literal[("float", "float64")],
+            Literal["float", "float64"],
             type,
         ],
     ):
@@ -290,7 +290,7 @@ class DataFrame:
         self: object,
         /,
         by: Union[
-            List[Union[Tuple[Literal[("a", "A", "B", "b")], str], float, int, str]],
+            List[Union[Tuple[Literal["a", "A", "B", "b"], str], float, int, str]],
             Literal["KEY"],
         ],
     ):
@@ -306,9 +306,7 @@ class DataFrame:
         /,
         include: Union[
             List[
-                Union[
-                    type, Literal[("category", "bool", "number", "object", "datetime")]
-                ]
+                Union[type, Literal["category", "bool", "number", "object", "datetime"]]
             ],
             None,
         ],
@@ -320,7 +318,7 @@ class DataFrame:
         self: object,
         /,
         value: Union[pandas.core.series.Series, int, None, Literal["-"]] = ...,
-        method: Union[None, Literal[("ffill", "pad", "bfill")]] = ...,
+        method: Union[None, Literal["ffill", "pad", "bfill"]] = ...,
         axis: int = ...,
         limit: Union[None, int] = ...,
     ):
@@ -338,15 +336,15 @@ class DataFrame:
     def drop(
         self: object,
         /,
-        columns: Union[List[str], Literal[("category_2", "dt")]] = ...,
+        columns: Union[List[str], Literal["category_2", "dt"]] = ...,
         inplace: bool = ...,
         labels: Union[
-            Literal[("a", "_index", "y", "timedelta", "_partitions")],
-            List[Union[int, Literal[("z", "y", "x", "a")]]],
+            Literal["a", "_index", "y", "timedelta", "_partitions"],
+            List[Union[int, Literal["z", "y", "x", "a"]]],
             int,
         ] = ...,
         axis: int = ...,
-        errors: Literal[("raise", "ignore")] = ...,
+        errors: Literal["raise", "ignore"] = ...,
     ):
         "\n    usage.dask: 32\n    "
         ...
@@ -404,12 +402,10 @@ class DataFrame:
         self: object,
         /,
         path_or_buf: Literal[
-            (
-                "/private/var/folders/xn/05ktz3056kqd9n8frgd6236h00",
-                "/var/folders/xn/05ktz3056kqd9n8frgd6236h0000gn/T/t",
-            )
+            "/private/var/folders/xn/05ktz3056kqd9n8frgd6236h00",
+            "/var/folders/xn/05ktz3056kqd9n8frgd6236h0000gn/T/t",
         ],
-        orient: Literal[("values", "columns", "index", "records", "split")],
+        orient: Literal["values", "columns", "index", "records", "split"],
         lines: bool,
     ):
         "\n    usage.dask: 24\n    "
@@ -733,7 +729,7 @@ class DataFrame:
     def sum(
         self: object,
         /,
-        axis: Union[int, Literal[("columns", "index")]] = ...,
+        axis: Union[int, Literal["columns", "index"]] = ...,
         min_count: int = ...,
     ):
         "\n    usage.dask: 33\n    "
@@ -742,7 +738,7 @@ class DataFrame:
     def prod(
         self: object,
         /,
-        axis: Union[int, Literal[("columns", "index")]] = ...,
+        axis: Union[int, Literal["columns", "index"]] = ...,
         min_count: int = ...,
     ):
         "\n    usage.dask: 15\n    "
@@ -771,7 +767,7 @@ class DataFrame:
     def var(
         self: object,
         /,
-        axis: Union[Literal[("columns", "index")], int] = ...,
+        axis: Union[Literal["columns", "index"], int] = ...,
         skipna: Union[bool, None] = ...,
         ddof: int = ...,
     ):
@@ -781,7 +777,7 @@ class DataFrame:
     def std(
         self: object,
         /,
-        axis: Union[Literal[("columns", "index")], int] = ...,
+        axis: Union[Literal["columns", "index"], int] = ...,
         skipna: bool = ...,
         ddof: int = ...,
     ):
@@ -791,7 +787,7 @@ class DataFrame:
     def sem(
         self: object,
         /,
-        axis: Union[int, Literal[("columns", "index")]] = ...,
+        axis: Union[int, Literal["columns", "index"]] = ...,
         skipna: Union[bool, None] = ...,
         ddof: int = ...,
     ):
@@ -801,10 +797,8 @@ class DataFrame:
     def drop_duplicates(
         self: object,
         /,
-        subset: Union[
-            Literal[("ticker", "y")], None, List[Literal[("x", "y", "z")]]
-        ] = ...,
-        keep: Union[Literal[("last", "first")], bool] = ...,
+        subset: Union[Literal["ticker", "y"], None, List[Literal["x", "y", "z"]]] = ...,
+        keep: Union[Literal["last", "first"], bool] = ...,
     ):
         "\n    usage.dask: 43\n    "
         ...
@@ -829,13 +823,13 @@ class DataFrame:
             List[
                 Union[
                     Type[numpy.timedelta64],
-                    Literal[("number", "object", "bool", "datetime")],
+                    Literal["number", "object", "bool", "datetime"],
                 ]
             ],
             None,
             Literal["all"],
         ] = ...,
-        exclude: Union[None, List[Literal[("object", "number")]]] = ...,
+        exclude: Union[None, List[Literal["object", "number"]]] = ...,
     ):
         "\n    usage.dask: 21\n    "
         ...
@@ -884,9 +878,9 @@ class DataFrame:
     def dropna(
         self: object,
         /,
-        how: Literal[("any", "all")] = ...,
+        how: Literal["any", "all"] = ...,
         thresh: Union[int, None] = ...,
-        subset: Union[None, List[Literal[("x", "z", "y")]]] = ...,
+        subset: Union[None, List[Literal["x", "z", "y"]]] = ...,
     ):
         "\n    usage.dask: 21\n    "
         ...
@@ -913,13 +907,13 @@ class DataFrame:
         ...
 
     def rename_axis(
-        self: object, /, mapper: Union[Literal[("myindex", "newindex")], List[None]]
+        self: object, /, mapper: Union[Literal["myindex", "newindex"], List[None]]
     ):
         "\n    usage.dask: 5\n    "
         ...
 
     def isin(
-        self: object, /, values: Union[Dict[Literal[("b", "a")], List[int]], List[int]]
+        self: object, /, values: Union[Dict[Literal["b", "a"], List[int]], List[int]]
     ):
         "\n    usage.dask: 6\n    "
         ...
@@ -932,8 +926,8 @@ class DataFrame:
         self: object,
         /,
         other: pandas.core.frame.DataFrame,
-        join: Literal[("right", "left", "outer", "inner")],
-        axis: Union[Literal[("XXX", "columns", "index")], None, int] = ...,
+        join: Literal["right", "left", "outer", "inner"],
+        axis: Union[Literal["XXX", "columns", "index"], None, int] = ...,
         fill_value: Union[None, int] = ...,
     ):
         "\n    usage.dask: 48\n    "
@@ -992,13 +986,13 @@ class DataFrame:
         ...
 
     def nlargest(
-        self: object, /, n: int, columns: Union[List[Literal[("c", "a")]], Literal["a"]]
+        self: object, /, n: int, columns: Union[List[Literal["c", "a"]], Literal["a"]]
     ):
         "\n    usage.dask: 4\n    "
         ...
 
     def nsmallest(
-        self: object, /, n: int, columns: Union[List[Literal[("c", "a")]], Literal["a"]]
+        self: object, /, n: int, columns: Union[List[Literal["c", "a"]], Literal["a"]]
     ):
         "\n    usage.dask: 4\n    "
         ...
@@ -1028,7 +1022,7 @@ class DataFrame:
         /,
         periods: int = ...,
         freq: Union[
-            Literal[("H", "D", "B", "W", "S")],
+            Literal["H", "D", "B", "W", "S"],
             None,
             pandas._libs.tslibs.timedeltas.Timedelta,
         ] = ...,
@@ -1045,7 +1039,7 @@ class DataFrame:
         "\n    usage.dask: 8\n    "
         ...
 
-    def query(self: object, /, expr: Literal[("B != 9", "B != 0")]):
+    def query(self: object, /, expr: Literal["B != 9", "B != 0"]):
         "\n    usage.dask: 4\n    "
         ...
 
@@ -1077,15 +1071,15 @@ class DataFrame:
         right: pandas.core.frame.DataFrame,
         how: str,
         on: Union[
-            Literal[("KEY", "x", "emp_id", "idx")], List[Literal[("idx", "k")]], None
+            Literal["KEY", "x", "emp_id", "idx"], List[Literal["idx", "k"]], None
         ] = ...,
         left_on: Union[str, List[str], None] = ...,
         right_on: Union[str, List[str], None] = ...,
         left_index: bool = ...,
         right_index: bool = ...,
         suffixes: Union[
-            Tuple[Literal[("_x", "1")], Literal[("_y", "2")]],
-            List[Literal[("_r", "_l", "", "r", "l")]],
+            Tuple[Literal["_x", "1"], Literal["_y", "2"]],
+            List[Literal["_r", "_l", "", "r", "l"]],
         ] = ...,
         indicator: bool = ...,
     ):
@@ -1096,9 +1090,9 @@ class DataFrame:
         self: object,
         /,
         other: pandas.core.frame.DataFrame,
-        how: Literal[("right", "left", "outer", "inner")] = ...,
-        lsuffix: Literal[("l", "_l")] = ...,
-        rsuffix: Literal[("r", "_r")] = ...,
+        how: Literal["right", "left", "outer", "inner"] = ...,
+        lsuffix: Literal["l", "_l"] = ...,
+        rsuffix: Literal["r", "_r"] = ...,
     ):
         "\n    usage.dask: 31\n    "
         ...
@@ -1118,10 +1112,10 @@ class DataFrame:
     def melt(
         self: object,
         /,
-        id_vars: Union[Literal[("B", "C")], None] = ...,
-        value_vars: Union[List[Literal[("C", "A")]], Literal["C"], None] = ...,
+        id_vars: Union[Literal["B", "C"], None] = ...,
+        value_vars: Union[List[Literal["C", "A"]], Literal["C"], None] = ...,
         var_name: Union[Literal["myvar"], None] = ...,
-        value_name: Literal[("myval", "value")] = ...,
+        value_name: Literal["myval", "value"] = ...,
         col_level: None = ...,
     ):
         "\n    usage.dask: 10\n    "
@@ -1141,7 +1135,7 @@ class DataFrame:
         values: Literal["B"],
         index: Literal["A"],
         columns: Literal["C"],
-        aggfunc: Literal[("count", "sum", "mean")],
+        aggfunc: Literal["count", "sum", "mean"],
     ):
         "\n    usage.dask: 3\n    "
         ...
@@ -1154,8 +1148,8 @@ class DataFrame:
         self: object,
         /,
         rule: object,
-        closed: Union[None, Literal[("left", "right")]] = ...,
-        label: Union[None, Literal[("left", "right")]] = ...,
+        closed: Union[None, Literal["left", "right"]] = ...,
+        label: Union[None, Literal["left", "right"]] = ...,
     ):
         "\n    usage.dask: 63\n    "
         ...

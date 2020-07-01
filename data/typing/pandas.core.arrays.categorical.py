@@ -23,12 +23,10 @@ class Categorical:
             pandas.core.indexes.base.Index,
             List[
                 Literal[
-                    (
-                        "2014-01-03.csv",
-                        "2014-01-02.csv",
-                        "2014-01-01.csv",
-                        "/private/var/folders/xn/05ktz3056kqd9n8frgd6236h00",
-                    )
+                    "2014-01-03.csv",
+                    "2014-01-02.csv",
+                    "2014-01-01.csv",
+                    "/private/var/folders/xn/05ktz3056kqd9n8frgd6236h00",
                 ]
             ],
         ],
@@ -55,7 +53,7 @@ class Categorical:
 
     def __contains__(
         self: object,
-        _0: Literal[("2014-01-03.csv", "2014-01-02.csv", "2014-01-01.csv")],
+        _0: Literal["2014-01-03.csv", "2014-01-02.csv", "2014-01-01.csv"],
         /,
     ):
         "\n    usage.dask: 6\n    "
@@ -77,7 +75,7 @@ class CategoricalAccessor:
     # usage.dask: 2
     codes: object
 
-    def set_categories(self: object, /, *args: Literal[("v", "t")]):
+    def set_categories(self: object, /, *args: Literal["v", "t"]):
         "\n    usage.dask: 9\n    "
         ...
 

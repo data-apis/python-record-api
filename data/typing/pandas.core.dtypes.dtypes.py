@@ -28,7 +28,7 @@ class CategoricalDtype:
         self: object,
         _0: Union[
             pandas.core.dtypes.dtypes.CategoricalDtype,
-            Literal[("category", "O")],
+            Literal["category", "O"],
             Type[object],
         ],
         /,

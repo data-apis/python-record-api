@@ -4,9 +4,7 @@ from typing import *
 class Series:
     def __init__(
         data: List[
-            Literal[
-                ("a", "b", "c", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
-            ]
+            Literal["a", "b", "c", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]
         ]
     ):
         "\n    usage.dask: 5\n    "
@@ -137,8 +135,8 @@ class Series:
         self: object,
         /,
         rule: object,
-        closed: Union[None, Literal[("left", "right")]] = ...,
-        label: Union[None, Literal[("left", "right")]] = ...,
+        closed: Union[None, Literal["left", "right"]] = ...,
+        label: Union[None, Literal["left", "right"]] = ...,
     ):
         "\n    usage.xarray: 14\n    usage.dask: 83\n    "
         ...
@@ -171,7 +169,7 @@ class Series:
     def rolling(
         self: object,
         /,
-        window: Union[Literal[("3S", "2S", "1S")], int, pandas.tseries.offsets.Second],
+        window: Union[Literal["3S", "2S", "1S"], int, pandas.tseries.offsets.Second],
         min_periods: Union[None, int] = ...,
         center: bool = ...,
         win_type: None = ...,
@@ -250,7 +248,7 @@ class Series:
             int,
             pandas.core.series.Series,
             dask.dataframe.core.Series,
-            Literal[("object", "a", "i8", "category")],
+            Literal["object", "a", "i8", "category"],
             Type[numpy.float64],
         ],
         /,
@@ -633,7 +631,7 @@ class Series:
         self: object,
         /,
         include: List[
-            Union[Type[numpy.timedelta64], Literal[("number", "object")]]
+            Union[Type[numpy.timedelta64], Literal["number", "object"]]
         ] = ...,
         exclude: None = ...,
     ):
@@ -711,7 +709,7 @@ class Series:
         self: object,
         /,
         other: pandas.core.series.Series,
-        join: Literal[("right", "left", "outer", "inner")],
+        join: Literal["right", "left", "outer", "inner"],
         axis: Union[int, None] = ...,
         fill_value: Union[None, int] = ...,
     ):
@@ -748,7 +746,7 @@ class Series:
         self: object,
         /,
         value: Union[pandas.core.series.Series, numpy.float64, int, None] = ...,
-        method: Union[None, Literal[("bfill", "ffill", "pad")]] = ...,
+        method: Union[None, Literal["bfill", "ffill", "pad"]] = ...,
         axis: int = ...,
         limit: Union[None, int] = ...,
     ):

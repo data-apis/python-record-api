@@ -18,7 +18,7 @@ class MultiIndex:
     def from_arrays(
         arrays: List[
             Union[
-                List[Union[int, Literal[("b", "a", "z", "y", "c")]]],
+                List[Union[int, Literal["b", "a", "z", "y", "c"]]],
                 pandas.core.indexes.datetimes.DatetimeIndex,
                 pandas.core.indexes.numeric.Int64Index,
                 pandas.core.indexes.category.CategoricalIndex,
@@ -33,14 +33,14 @@ class MultiIndex:
     def from_tuples(
         tuples: Union[
             Tuple[
-                Tuple[Literal[("a", "b")], int],
-                Tuple[Literal[("a", "b")], int],
-                Tuple[Literal[("b", "a")], int],
-                Tuple[Literal[("b", "a")], int],
+                Tuple[Literal["a", "b"], int],
+                Tuple[Literal["a", "b"], int],
+                Tuple[Literal["b", "a"], int],
+                Tuple[Literal["b", "a"], int],
             ],
             List[List[int]],
         ],
-        names: List[Literal[("level1", "level0", "two", "one")]],
+        names: List[Literal["level1", "level0", "two", "one"]],
     ):
         "\n    usage.xarray: 3\n    "
         ...
@@ -56,11 +56,9 @@ class MultiIndex:
     # usage.dask: 11
     names: List[
         Literal[
-            (
-                "-overlapped-index-name-1",
-                "-overlapped-index-name-0",
-                "-overlapped-index-name-2",
-            )
+            "-overlapped-index-name-1",
+            "-overlapped-index-name-0",
+            "-overlapped-index-name-2",
         ]
     ]
 
@@ -122,14 +120,14 @@ class MultiIndex:
         "\n    usage.xarray: 27\n    usage.dask: 5\n    "
         ...
 
-    def get_loc(self: object, /, key: Tuple[Literal[("a", "b")], int, int]):
+    def get_loc(self: object, /, key: Tuple[Literal["a", "b"], int, int]):
         "\n    usage.xarray: 3\n    "
         ...
 
     def get_loc_level(
         self: object,
         /,
-        key: Union[Tuple[Union[int, Literal[("a", "b")]], ...], Literal["a"], int],
+        key: Union[Tuple[Union[int, Literal["a", "b"]], ...], Literal["a"], int],
         level: Union[Tuple[str, ...], List[int], int],
     ):
         "\n    usage.xarray: 12\n    "
@@ -149,12 +147,12 @@ class MultiIndex:
         "\n    usage.xarray: 1\n    "
         ...
 
-    def reorder_levels(self: object, /, order: List[Literal[("level_1", "level_2")]]):
+    def reorder_levels(self: object, /, order: List[Literal["level_1", "level_2"]]):
         "\n    usage.xarray: 4\n    "
         ...
 
     def set_names(
-        self: object, /, names: List[Literal[("level1", "level0", "b", "a", "c")]]
+        self: object, /, names: List[Literal["level1", "level0", "b", "a", "c"]]
     ):
         "\n    usage.xarray: 1\n    usage.dask: 2\n    "
         ...
@@ -191,7 +189,7 @@ class MultiIndex:
         ...
 
     def __contains__(
-        self: object, _0: Literal[("dtype", "_meta", "columns", "divisions")], /
+        self: object, _0: Literal["dtype", "_meta", "columns", "divisions"], /
     ):
         "\n    usage.dask: 4\n    "
         ...

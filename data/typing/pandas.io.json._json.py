@@ -7,7 +7,7 @@ def read_json(
         _io.StringIO,
         Literal["/var/folders/xn/05ktz3056kqd9n8frgd6236h0000gn/T/t"],
     ],
-    orient: Literal[("values", "columns", "index", "records", "split")] = ...,
+    orient: Literal["values", "columns", "index", "records", "split"] = ...,
     lines: bool = ...,
 ):
     "\n    usage.dask: 13\n    "

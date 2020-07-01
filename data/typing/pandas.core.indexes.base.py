@@ -156,7 +156,7 @@ class Index:
 
     def __eq__(
         self: object,
-        _0: Union[List[Literal[("x", "b", "c", "a")]], pandas.core.indexes.base.Index],
+        _0: Union[List[Literal["x", "b", "c", "a"]], pandas.core.indexes.base.Index],
         /,
     ):
         "\n    usage.dask: 14\n    "
@@ -182,7 +182,7 @@ class Index:
         self: object,
         /,
         label: object,
-        side: Literal[("left", "right")],
+        side: Literal["left", "right"],
         kind: Literal["loc"],
     ):
         "\n    usage.dask: 32\n    "
@@ -223,7 +223,7 @@ class Index:
         self: object,
         /,
         index: bool = ...,
-        name: Union[Literal[("bar", "foo")], None] = ...,
+        name: Union[Literal["bar", "foo"], None] = ...,
     ):
         "\n    usage.dask: 6\n    "
         ...

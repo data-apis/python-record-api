@@ -72,11 +72,11 @@ core: object
 set_fill_value: object
 
 
-def zeros(*args: Literal[("v", "t")]):
+def zeros(*args: Literal["v", "t"]):
     "\n    usage.skimage: 5\n    "
     ...
 
 
-def ones(*args: Literal[("v", "t")]):
+def ones(*args: Literal["v", "t"]):
     "\n    usage.xarray: 1\n    "
     ...

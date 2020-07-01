@@ -41,7 +41,7 @@ class DatetimeIndexResampler:
     def aggregate(
         self: object,
         /,
-        func: Union[Callable, Literal["mean"], List[Literal[("min", "mean")]]],
+        func: Union[Callable, Literal["mean"], List[Literal["min", "mean"]]],
     ):
         "\n    usage.dask: 9\n    "
         ...

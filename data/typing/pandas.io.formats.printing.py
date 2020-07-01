@@ -6,8 +6,8 @@ def pprint_thing(
         numpy.dtype,
         int,
         pandas.core.dtypes.dtypes.CategoricalDtype,
-        Literal[("z", "C", "y", "x")],
-        Tuple[Literal["C"], Literal[("count", "sum")]],
+        Literal["z", "C", "y", "x"],
+        Tuple[Literal["C"], Literal["count", "sum"]],
     ]
 ):
     "\n    usage.dask: 17\n    "

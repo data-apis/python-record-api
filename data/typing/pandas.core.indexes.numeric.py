@@ -40,7 +40,7 @@ class Int64Index:
 
     # usage.xarray: 11
     # usage.dask: 19
-    name: Union[None, Literal[("foo", "C", "b", "idx", "a")]]
+    name: Union[None, Literal["foo", "C", "b", "idx", "a"]]
 
     # usage.xarray: 1
     # usage.dask: 1
@@ -76,7 +76,7 @@ class Int64Index:
         self: object,
         /,
         target: numpy.ndarray,
-        method: Union[Literal[("pad", "backfill")], None],
+        method: Union[Literal["pad", "backfill"], None],
         tolerance: Union[float, int, None],
     ):
         "\n    usage.xarray: 8\n    "
@@ -104,14 +104,14 @@ class Int64Index:
         ...
 
     def drop(
-        self: object, /, labels: numpy.ndarray, errors: Literal[("ignore", "raise")]
+        self: object, /, labels: numpy.ndarray, errors: Literal["ignore", "raise"]
     ):
         "\n    usage.xarray: 2\n    "
         ...
 
     def __contains__(
         self: object,
-        _0: Union[None, Literal[("__UNKNOWN_CATEGORIES__", "dtype", "divisions")], int],
+        _0: Union[None, Literal["__UNKNOWN_CATEGORIES__", "dtype", "divisions"], int],
         /,
     ):
         "\n    usage.dask: 6\n    "
@@ -159,7 +159,7 @@ class Int64Index:
         ...
 
     def set_names(
-        self: object, /, names: List[Literal[("a", "b", "key")]], inplace: bool
+        self: object, /, names: List[Literal["a", "b", "key"]], inplace: bool
     ):
         "\n    usage.dask: 3\n    "
         ...
@@ -251,7 +251,7 @@ class Float64Index:
         self: object,
         /,
         target: numpy.ndarray,
-        method: Union[Literal[("nearest", "backfill", "pad")], None],
+        method: Union[Literal["nearest", "backfill", "pad"], None],
         tolerance: None,
     ):
         "\n    usage.xarray: 8\n    "
@@ -275,7 +275,7 @@ class Float64Index:
         ...
 
     def __contains__(
-        self: object, _0: Literal[("dtype", "divisions", "__UNKNOWN_CATEGORIES__")], /
+        self: object, _0: Literal["dtype", "divisions", "__UNKNOWN_CATEGORIES__"], /
     ):
         "\n    usage.dask: 4\n    "
         ...

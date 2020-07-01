@@ -97,15 +97,15 @@ class DatetimeIndex:
         "\n    usage.xarray: 1\n    "
         ...
 
-    def floor(self: object, /, *args: Literal[("v", "t")]):
+    def floor(self: object, /, *args: Literal["v", "t"]):
         "\n    usage.xarray: 1\n    "
         ...
 
-    def ceil(self: object, /, *args: Literal[("v", "t")]):
+    def ceil(self: object, /, *args: Literal["v", "t"]):
         "\n    usage.xarray: 1\n    "
         ...
 
-    def round(self: object, /, *args: Literal[("v", "t")]):
+    def round(self: object, /, *args: Literal["v", "t"]):
         "\n    usage.xarray: 1\n    "
         ...
 
@@ -124,8 +124,8 @@ class DatetimeIndex:
     def slice_indexer(
         self: object,
         /,
-        start: Union[Literal[("2001", "1999", "2000-01-01")], numpy.datetime64],
-        end: Union[Literal[("2002", "2005", "2000-01-10")], numpy.datetime64],
+        start: Union[Literal["2001", "1999", "2000-01-01"], numpy.datetime64],
+        end: Union[Literal["2002", "2005", "2000-01-10"], numpy.datetime64],
         step: None,
     ):
         "\n    usage.xarray: 4\n    "
@@ -135,8 +135,8 @@ class DatetimeIndex:
         self: object,
         /,
         target: numpy.ndarray,
-        method: Union[Literal[("nearest", "backfill", "pad")], None],
-        tolerance: Union[Literal[("6H", "12H")], None],
+        method: Union[Literal["nearest", "backfill", "pad"], None],
+        tolerance: Union[Literal["6H", "12H"], None],
     ):
         "\n    usage.xarray: 7\n    "
         ...
@@ -166,9 +166,7 @@ class DatetimeIndex:
         self: object,
         /,
         periods: int,
-        freq: Union[
-            None, Literal[("W", "S")], pandas._libs.tslibs.timedeltas.Timedelta
-        ],
+        freq: Union[None, Literal["W", "S"], pandas._libs.tslibs.timedeltas.Timedelta],
     ):
         "\n    usage.dask: 11\n    "
         ...
@@ -177,7 +175,7 @@ class DatetimeIndex:
         self: object,
         /,
         label: str,
-        side: Literal[("right", "left")],
+        side: Literal["right", "left"],
         kind: Literal["loc"],
     ):
         "\n    usage.dask: 23\n    "
@@ -195,6 +193,6 @@ class DatetimeIndex:
         "\n    usage.dask: 1\n    "
         ...
 
-    def tz_localize(self: object, /, *args: Literal[("v", "t")]):
+    def tz_localize(self: object, /, *args: Literal["v", "t"]):
         "\n    usage.dask: 2\n    "
         ...

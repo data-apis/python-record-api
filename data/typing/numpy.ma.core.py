@@ -242,7 +242,7 @@ class MaskedArray:
         "\n    usage.skimage: 2\n    "
         ...
 
-    def reshape(self: object, /, *s: Literal[("v", "t")]):
+    def reshape(self: object, /, *s: Literal["v", "t"]):
         "\n    usage.skimage: 1\n    usage.dask: 9\n    "
         ...
 

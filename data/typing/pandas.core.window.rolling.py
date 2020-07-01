@@ -61,7 +61,7 @@ class Rolling:
         /,
         func: Callable,
         raw: bool,
-        engine: Literal[("numba", "cython")] = ...,
+        engine: Literal["numba", "cython"] = ...,
         engine_kwargs: None = ...,
         args: Tuple[None, ...] = ...,
         kwargs: dict = ...,
@@ -77,7 +77,7 @@ class Rolling:
         self: object,
         /,
         func: Union[
-            Dict[Literal[("B", "A")], Union[Callable, List[Callable]]], List[Callable]
+            Dict[Literal["B", "A"], Union[Callable, List[Callable]]], List[Callable]
         ],
     ):
         "\n    usage.dask: 8\n    "

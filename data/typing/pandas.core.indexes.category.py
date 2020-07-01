@@ -6,11 +6,11 @@ class CategoricalIndex:
         data: Union[
             pandas.core.arrays.categorical.Categorical,
             pandas.core.indexes.base.Index,
-            List[Literal[("B", "A", "xyx")]],
+            List[Literal["B", "A", "xyx"]],
         ],
-        name: Literal[("b", "foo", "A", "B", "C")],
+        name: Literal["b", "foo", "A", "B", "C"],
         categories: Union[
-            List[Literal[("zzz", "xyx", "__UNKNOWN_CATEGORIES__")]],
+            List[Literal["zzz", "xyx", "__UNKNOWN_CATEGORIES__"]],
             pandas.core.indexes.numeric.Float64Index,
             pandas.core.indexes.base.Index,
             pandas.core.indexes.datetimes.DatetimeIndex,
@@ -108,7 +108,7 @@ class CategoricalIndex:
         "\n    usage.dask: 1\n    "
         ...
 
-    def set_categories(self: object, /, *args: Literal[("v", "t")]):
+    def set_categories(self: object, /, *args: Literal["v", "t"]):
         "\n    usage.dask: 3\n    "
         ...
 
@@ -124,6 +124,6 @@ class CategoricalIndex:
         "\n    usage.dask: 2\n    "
         ...
 
-    def __contains__(self: object, _0: Literal[("dtype", "divisions")], /):
+    def __contains__(self: object, _0: Literal["dtype", "divisions"], /):
         "\n    usage.dask: 2\n    "
         ...

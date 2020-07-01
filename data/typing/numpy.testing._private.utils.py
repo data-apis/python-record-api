@@ -6,11 +6,9 @@ def assert_almost_equal(
     desired: object,
     decimal: int = ...,
     err_msg: Literal[
-        (
-            "Point is not on expected circle",
-            "Point is not on expected unit circle",
-            "Unexpected std",
-        )
+        "Point is not on expected circle",
+        "Point is not on expected unit circle",
+        "Unexpected std",
     ] = ...,
 ):
     "\n    usage.skimage: 340\n    usage.sklearn: 244\n    "
@@ -45,7 +43,7 @@ def assert_array_almost_equal(
     ...
 
 
-def assert_warns(warning_class: type, *args: Literal[("v", "t")]):
+def assert_warns(warning_class: type, *args: Literal["v", "t"]):
     "\n    usage.skimage: 5\n    "
     ...
 

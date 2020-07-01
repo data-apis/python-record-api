@@ -31,7 +31,7 @@ def solve(a: numpy.ndarray, b: numpy.ndarray):
 
 def norm(
     x: object,
-    ord: Union[None, int, float, Literal[("nuc", "fro")]] = ...,
+    ord: Union[None, int, float, Literal["nuc", "fro"]] = ...,
     axis: Union[None, int, Tuple[int, ...]] = ...,
     keepdims: bool = ...,
 ):

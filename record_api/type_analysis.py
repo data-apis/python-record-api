@@ -197,18 +197,12 @@ class StringOutput(OutputTypeBase):
     @property
     def annotation(self) -> cst.BaseExpression:
         if self.options:
-            inner: cst.BaseExpression
-            if len(self.options) == 1:
-                inner = cst.SimpleString(repr(self.options[0]))
-            else:
-                inner = cst.Tuple(
-                    [
-                        cst.Element(cst.SimpleString(repr(option)))
-                        for option in self.options
-                    ]
-                )
-            return cst.helpers.parse_template_expression(
-                "Literal[{inner}]", parser_config, inner=inner
+            return cst.Subscript(
+                cst.Name("Literal"),
+                [
+                    cst.SubscriptElement(cst.Index(cst.SimpleString(repr(option))))
+                    for option in self.options
+                ],
             )
         return cst.Name("str")
 

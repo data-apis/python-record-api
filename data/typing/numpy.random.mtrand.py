@@ -192,7 +192,7 @@ class RandomState:
         /,
         *,
         size: Union[Tuple[Union[int, None], ...], int, numpy.int64, List[int]] = ...,
-        dtype: Union[Literal[("l", "uint8", "u8")], type] = ...,
+        dtype: Union[Literal["l", "uint8", "u8"], type] = ...,
         low: int = ...,
         high: int = ...,
     ):

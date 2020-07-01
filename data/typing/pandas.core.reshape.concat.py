@@ -7,7 +7,7 @@ def concat(
         Dict[int, pandas.core.series.Series],
     ],
     axis: int = ...,
-    join: Literal[("inner", "outer")] = ...,
+    join: Literal["inner", "outer"] = ...,
     sort: bool = ...,
 ):
     "\n    usage.dask: 141\n    "

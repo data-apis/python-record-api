@@ -91,8 +91,7 @@ class SeriesGroupBy:
         self: object,
         /,
         func: Union[
-            Literal[("var", "sum", "mean")],
-            List[Literal[("max", "min", "mean", "sum")]],
+            Literal["var", "sum", "mean"], List[Literal["max", "min", "mean", "sum"]]
         ],
     ):
         "\n    usage.dask: 10\n    "
@@ -169,7 +168,7 @@ class DataFrameGroupBy:
         func: Union[
             Callable, Literal["sum"], numpy.int64, dask.utils.methodcaller, Callable
         ],
-        *args: Literal[("v", "t")],
+        *args: Literal["v", "t"],
     ):
         "\n    usage.dask: 63\n    "
         ...
@@ -227,14 +226,13 @@ class DataFrameGroupBy:
         /,
         func: Union[
             Dict[
-                Literal[("b", "c", "e")],
+                Literal["b", "c", "e"],
                 Union[
-                    Literal[("mean", "sum", "count", "std")],
-                    List[Literal[("sum", "mean")]],
+                    Literal["mean", "sum", "count", "std"], List[Literal["sum", "mean"]]
                 ],
             ],
             str,
-            List[Literal[("max", "min", "sum", "mean")]],
+            List[Literal["max", "min", "sum", "mean"]],
         ],
     ):
         "\n    usage.dask: 22\n    "

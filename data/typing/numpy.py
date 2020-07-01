@@ -268,7 +268,7 @@ def array(
     ] = ...,
     ndmin: int = ...,
     copy: bool = ...,
-    order: Union[Literal[("F", "C", "K")], None] = ...,
+    order: Union[Literal["F", "C", "K"], None] = ...,
 ):
     "\n    usage.sample_usage: 3\n    usage.skimage: 1076\n    usage.xarray: 400\n    usage.sklearn: 815\n    usage.dask: 485\n    "
     ...
@@ -282,11 +282,11 @@ def zeros(
         List[int],
         Tuple[Union[numpy.int64, int, None], ...],
     ] = ...,
-    _1: Union[type, numpy.dtype, Literal[("bool", "double", "uint8")]] = ...,
+    _1: Union[type, numpy.dtype, Literal["bool", "double", "uint8"]] = ...,
     /,
     *,
     dtype: Union[type, str, numpy.dtype] = ...,
-    order: Literal[("C", "F", "f")] = ...,
+    order: Literal["C", "F", "f"] = ...,
     shape: Union[Tuple[int, ...], int] = ...,
 ):
     "\n    usage.sample_usage: 1\n    usage.skimage: 787\n    usage.xarray: 52\n    usage.sklearn: 350\n    usage.dask: 50\n    "
@@ -305,7 +305,7 @@ def ones(
         str,
         List[
             Tuple[
-                Literal[("a", "b", "c", "col1", "col2")],
+                Literal["a", "b", "c", "col1", "col2"],
                 Union[Literal["f8"], Tuple[Literal["f4"], Union[int, Tuple[int, int]]]],
             ]
         ],
@@ -313,7 +313,7 @@ def ones(
         numpy.dtype,
         None,
     ] = ...,
-    order: Literal[("C", "F")] = ...,
+    order: Literal["C", "F"] = ...,
 ):
     "\n    usage.sample_usage: 1\n    usage.skimage: 269\n    usage.xarray: 59\n    usage.sklearn: 210\n    usage.dask: 183\n    "
     ...
@@ -393,7 +393,7 @@ def absolute(_0: object, /, *, out: dask.dataframe.core.DataFrame = ...):
 def asarray(
     a: object,
     dtype: Union[numpy.dtype, numpy.ndarray, type, str, None] = ...,
-    order: Union[Literal[("C", "F")], None] = ...,
+    order: Union[Literal["C", "F"], None] = ...,
 ):
     "\n    usage.skimage: 247\n    usage.xarray: 870\n    usage.sklearn: 2199\n    usage.dask: 126\n    "
     ...
@@ -405,9 +405,7 @@ def sum(
     out: Union[
         dask.dataframe.core.Scalar, dask.array.core.Array, dask.dataframe.core.Series
     ] = ...,
-    dtype: Union[
-        Literal[("i8", "f8", "i4", "f4", "u4")], numpy.dtype, None, type
-    ] = ...,
+    dtype: Union[Literal["i8", "f8", "i4", "f4", "u4"], numpy.dtype, None, type] = ...,
     keepdims: bool = ...,
 ):
     "\n    usage.skimage: 125\n    usage.xarray: 54\n    usage.sklearn: 208\n    usage.dask: 256\n    "
@@ -440,7 +438,7 @@ def asanyarray(a: object):
     ...
 
 
-def obj2sctype(rep: Union[Literal[("float64", "float32")], type, numpy.dtype]):
+def obj2sctype(rep: Union[Literal["float64", "float32"], type, numpy.dtype]):
     "\n    usage.skimage: 14\n    "
     ...
 
@@ -535,7 +533,7 @@ def seterr(
     divide: Literal["warn"] = ...,
     over: Literal["warn"] = ...,
     under: Literal["ignore"] = ...,
-    invalid: Literal[("warn", "ignore")] = ...,
+    invalid: Literal["warn", "ignore"] = ...,
 ):
     "\n    usage.skimage: 2\n    usage.sklearn: 4\n    usage.dask: 2\n    "
     ...
@@ -618,17 +616,15 @@ def log10(_0: object, /, *, out: dask.dataframe.core.DataFrame = ...):
 
 def load(
     file: Literal[
-        (
-            "/var/folders/xn/05ktz3056kqd9n8frgd6236h0000gn/T/t",
-            "/Users/saul/Downloads/scikit-image-0.17.0/skimage/",
-        )
+        "/var/folders/xn/05ktz3056kqd9n8frgd6236h0000gn/T/t",
+        "/Users/saul/Downloads/scikit-image-0.17.0/skimage/",
     ]
 ):
     "\n    usage.skimage: 28\n    usage.dask: 7\n    "
     ...
 
 
-def meshgrid(*xi: Literal[("v", "t")]):
+def meshgrid(*xi: Literal["v", "t"]):
     "\n    usage.skimage: 28\n    usage.xarray: 6\n    usage.sklearn: 2\n    usage.dask: 5\n    "
     ...
 
@@ -710,7 +706,7 @@ def can_cast(
     _1: Union[numpy.dtype, Type[bool]],
     /,
     *,
-    casting: Literal[("unsafe", "safe", "same_kind")] = ...,
+    casting: Literal["unsafe", "safe", "same_kind"] = ...,
 ):
     "\n    usage.skimage: 9\n    usage.dask: 19\n    "
     ...
@@ -729,7 +725,7 @@ def empty(
     dtype: Union[
         numpy.dtype, type, List[Tuple[str, Union[numpy.dtype, Type[numpy.int64]]]], str
     ] = ...,
-    order: Literal[("C", "F")] = ...,
+    order: Literal["C", "F"] = ...,
     shape: Union[Tuple[int, ...], int] = ...,
 ):
     "\n    usage.skimage: 129\n    usage.xarray: 11\n    usage.sklearn: 131\n    usage.dask: 137\n    "
@@ -763,7 +759,7 @@ def zeros_like(
     a: Union[numpy.ndarray, Tuple[int, ...]],
     dtype: Union[numpy.dtype, type] = ...,
     shape: Union[int, Tuple[int, int]] = ...,
-    order: Literal[("F", "C")] = ...,
+    order: Literal["F", "C"] = ...,
 ):
     "\n    usage.skimage: 70\n    usage.xarray: 43\n    usage.sklearn: 15\n    usage.dask: 8\n    "
     ...
@@ -779,10 +775,8 @@ def full(
 
 def loadtxt(
     fname: Literal[
-        (
-            "/usr/local/Caskroom/miniconda/base/envs/python-rec",
-            "/Users/saul/Downloads/scikit-image-0.17.0/skimage/",
-        )
+        "/usr/local/Caskroom/miniconda/base/envs/python-rec",
+        "/Users/saul/Downloads/scikit-image-0.17.0/skimage/",
     ]
 ):
     "\n    usage.skimage: 1\n    usage.sklearn: 5\n    "
@@ -937,7 +931,7 @@ def pad(array: Union[numpy.ndarray, List[Union[List[int], int]]], pad_width: obj
     ...
 
 
-def product(*args: Literal[("v", "t")]):
+def product(*args: Literal["v", "t"]):
     "\n    usage.skimage: 14\n    usage.sklearn: 1\n    "
     ...
 
@@ -946,7 +940,7 @@ def apply_along_axis(
     func1d: Union[int, sklearn.gaussian_process.kernels.PairwiseKernel, Callable],
     axis: Union[Callable, int],
     arr: Union[int, numpy.ndarray],
-    *args: Literal[("v", "t")],
+    *args: Literal["v", "t"],
 ):
     "\n    usage.skimage: 8\n    usage.sklearn: 5\n    usage.dask: 4\n    "
     ...
@@ -984,7 +978,7 @@ def mean(
     axis: Union[int, Tuple[Union[int, None], ...], None] = ...,
     out: Union[dask.dataframe.core.Scalar, dask.dataframe.core.Series] = ...,
     keepdims: bool = ...,
-    dtype: Union[Literal[("float32", "i8", "f8")], None, type] = ...,
+    dtype: Union[Literal["float32", "i8", "f8"], None, type] = ...,
 ):
     "\n    usage.skimage: 61\n    usage.xarray: 32\n    usage.sklearn: 102\n    usage.dask: 116\n    "
     ...
@@ -1075,7 +1069,7 @@ def split(ary: numpy.ndarray, indices_or_sections: Union[numpy.ndarray, int]):
     ...
 
 
-def atleast_1d(*arys: Literal[("v", "t")]):
+def atleast_1d(*arys: Literal["v", "t"]):
     "\n    usage.skimage: 11\n    usage.xarray: 24\n    usage.sklearn: 38\n    usage.dask: 4\n    "
     ...
 
@@ -1093,7 +1087,7 @@ def isclose(
 
 def gradient(
     f: Union[float, int, numpy.ndarray, xarray.core.dataarray.DataArray],
-    *varargs: Literal[("v", "t")],
+    *varargs: Literal["v", "t"],
 ):
     "\n    usage.skimage: 8\n    usage.xarray: 5\n    usage.dask: 14\n    "
     ...
@@ -1159,7 +1153,7 @@ def copy(a: Union[numpy.ndarray, numpy.float64]):
     ...
 
 
-def atleast_2d(*arys: Literal[("v", "t")]):
+def atleast_2d(*arys: Literal["v", "t"]):
     "\n    usage.skimage: 7\n    usage.xarray: 2\n    usage.sklearn: 25\n    usage.dask: 3\n    "
     ...
 
@@ -1196,7 +1190,7 @@ def prod(
     axis: Union[int, Tuple[Union[None, int], ...], None] = ...,
     out: Union[dask.dataframe.core.Scalar, dask.dataframe.core.Series] = ...,
     keepdims: bool = ...,
-    dtype: Union[Literal[("i8", "f8", "i4", "f4")], type] = ...,
+    dtype: Union[Literal["i8", "f8", "i4", "f4"], type] = ...,
 ):
     "\n    usage.skimage: 9\n    usage.xarray: 15\n    usage.sklearn: 8\n    usage.dask: 134\n    "
     ...
@@ -1210,10 +1204,10 @@ def true_divide(_0: object, _1: object, /, *, out: numpy.ndarray = ...):
 def unravel_index(
     _0: Union[numpy.int64, numpy.ndarray, int],
     _1: Tuple[Union[int, None], ...] = ...,
-    _2: Literal[("F", "C")] = ...,
+    _2: Literal["F", "C"] = ...,
     /,
     *,
-    order: Literal[("F", "C")] = ...,
+    order: Literal["F", "C"] = ...,
     shape: Tuple[int, ...] = ...,
 ):
     "\n    usage.skimage: 18\n    usage.sklearn: 1\n    usage.dask: 12\n    "
@@ -1263,7 +1257,7 @@ def subtract(
     ...
 
 
-def ix_(*args: Literal[("v", "t")]):
+def ix_(*args: Literal["v", "t"]):
     "\n    usage.skimage: 2\n    usage.xarray: 3\n    usage.sklearn: 2\n    "
     ...
 
@@ -1309,7 +1303,7 @@ def insert(
 def full_like(
     a: object,
     fill_value: object,
-    dtype: Union[type, Literal[("i8", "f8", "i4", "f4")], numpy.dtype, None] = ...,
+    dtype: Union[type, Literal["i8", "f8", "i4", "f4"], numpy.dtype, None] = ...,
     shape: Tuple[int, ...] = ...,
 ):
     "\n    usage.skimage: 1\n    usage.xarray: 10\n    usage.sklearn: 3\n    usage.dask: 50\n    "
@@ -1358,7 +1352,7 @@ def cross(a: numpy.ndarray, b: numpy.ndarray):
     ...
 
 
-def einsum(*operands: Literal[("v", "t")]):
+def einsum(*operands: Literal["v", "t"]):
     "\n    usage.skimage: 1\n    usage.xarray: 80\n    usage.sklearn: 10\n    usage.dask: 136\n    "
     ...
 
@@ -1469,7 +1463,7 @@ def ravel_multi_index(
     _1: Tuple[int, ...],
     /,
     *,
-    order: Literal[("F", "C")] = ...,
+    order: Literal["F", "C"] = ...,
 ):
     "\n    usage.skimage: 18\n    usage.dask: 3\n    "
     ...
@@ -1489,7 +1483,7 @@ def in1d(
 
 
 def take(
-    a: Union[numpy.ndarray, List[Union[Literal[("three", "two", "one")], int]]],
+    a: Union[numpy.ndarray, List[Union[Literal["three", "two", "one"], int]]],
     indices: Union[List[int], int, numpy.ndarray],
 ):
     "\n    usage.skimage: 1\n    usage.xarray: 11\n    usage.sklearn: 8\n    usage.dask: 3\n    "
@@ -1527,7 +1521,7 @@ def tensordot(
     ...
 
 
-def atleast_3d(*arys: Literal[("v", "t")]):
+def atleast_3d(*arys: Literal["v", "t"]):
     "\n    usage.skimage: 11\n    usage.sklearn: 6\n    usage.dask: 3\n    "
     ...
 
@@ -1603,7 +1597,7 @@ def around(a: Union[numpy.ndarray, Tuple[numpy.float64, numpy.float64]]):
     ...
 
 
-def alltrue(*args: Literal[("v", "t")]):
+def alltrue(*args: Literal["v", "t"]):
     "\n    usage.skimage: 2\n    usage.dask: 1\n    "
     ...
 
@@ -1632,7 +1626,7 @@ def get_printoptions():
     ...
 
 
-def broadcast_arrays(*args: Literal[("v", "t")]):
+def broadcast_arrays(*args: Literal["v", "t"]):
     "\n    usage.xarray: 3\n    usage.dask: 10\n    "
     ...
 
@@ -1743,7 +1737,7 @@ def isin(
 def nansum(
     a: Union[numpy.ndarray, numpy.ma.core.MaskedArray],
     axis: Union[int, Tuple[Union[int, None], ...], None] = ...,
-    dtype: Union[numpy.dtype, Literal[("i8", "f8")]] = ...,
+    dtype: Union[numpy.dtype, Literal["i8", "f8"]] = ...,
     keepdims: bool = ...,
 ):
     "\n    usage.xarray: 8\n    usage.sklearn: 3\n    usage.dask: 135\n    "
@@ -1825,7 +1819,7 @@ def trapz(
 def nanprod(
     a: numpy.ndarray,
     axis: Union[int, Tuple[Union[int, None], ...], None] = ...,
-    dtype: Union[Literal[("i8", "f8")], None] = ...,
+    dtype: Union[Literal["i8", "f8"], None] = ...,
     out: None = ...,
     keepdims: bool = ...,
 ):
@@ -2282,7 +2276,7 @@ def piecewise(
     x: Union[int, numpy.ndarray],
     condlist: Union[numpy.ndarray, List[numpy.ndarray]],
     funclist: List[Union[Callable, int, numpy.ndarray]],
-    *args: Literal[("v", "t")],
+    *args: Literal["v", "t"],
 ):
     "\n    usage.dask: 6\n    "
     ...
@@ -2293,7 +2287,7 @@ def argwhere(a: numpy.ndarray):
     ...
 
 
-def einsum_path(*operands: Literal[("v", "t")]):
+def einsum_path(*operands: Literal["v", "t"]):
     "\n    usage.dask: 2\n    "
     ...
 
@@ -2847,11 +2841,9 @@ class ndarray:
             numpy.ndarray,
             int,
             Literal[
-                (
-                    "Deleting features without observed values: %s",
-                    "Features %s are constant.",
-                    "unable to convert object into a variable without a",
-                )
+                "Deleting features without observed values: %s",
+                "Features %s are constant.",
+                "unable to convert object into a variable without a",
             ],
         ],
         /,
@@ -3037,7 +3029,7 @@ class ndarray:
         /,
         *,
         axis: Union[Tuple[Union[int, None], ...], None, int] = ...,
-        dtype: Union[Literal[("f8", "i8")], numpy.dtype, Type[numpy.float64]] = ...,
+        dtype: Union[Literal["f8", "i8"], numpy.dtype, Type[numpy.float64]] = ...,
         keepdims: bool = ...,
         out: numpy.ndarray = ...,
     ):
@@ -3084,7 +3076,7 @@ class ndarray:
         /,
         *,
         copy: bool = ...,
-        dtype: Union[Literal[("i2", ">u4", "i1")], numpy.dtype, type] = ...,
+        dtype: Union[Literal["i2", ">u4", "i1"], numpy.dtype, type] = ...,
     ):
         "\n    usage.skimage: 34\n    usage.xarray: 89\n    usage.sklearn: 62\n    usage.dask: 29\n    "
         ...
@@ -3108,7 +3100,7 @@ class ndarray:
         self: object,
         /,
         *,
-        dtype: Union[Literal[("|S512", "|S80", "|S16")], Type[numpy.uint8]],
+        dtype: Union[Literal["|S512", "|S80", "|S16"], Type[numpy.uint8]],
     ):
         "\n    usage.skimage: 4\n    usage.sklearn: 3\n    "
         ...
@@ -3129,7 +3121,7 @@ class ndarray:
         "\n    usage.skimage: 2\n    usage.dask: 1\n    "
         ...
 
-    def ravel(self: object, /, *, order: Literal[("K", "F", "C")] = ...):
+    def ravel(self: object, /, *, order: Literal["K", "F", "C"] = ...):
         "\n    usage.skimage: 2\n    usage.xarray: 1\n    usage.sklearn: 2\n    usage.dask: 23\n    "
         ...
 
@@ -3186,7 +3178,7 @@ class ndarray:
         "\n    usage.sklearn: 3\n    usage.dask: 3\n    "
         ...
 
-    def copy(self: object, /, *, order: Literal[("F", "K")] = ...):
+    def copy(self: object, /, *, order: Literal["F", "K"] = ...):
         "\n    usage.sklearn: 4\n    usage.dask: 1\n    "
         ...
 
@@ -3288,7 +3280,7 @@ class dtype:
             None,
             List[
                 Tuple[
-                    Literal[("values", "indices", "inverse", "counts")],
+                    Literal["values", "indices", "inverse", "counts"],
                     Union[numpy.dtype, Type[numpy.int64]],
                 ]
             ],
@@ -3304,11 +3296,9 @@ class dtype:
     def __rmod__(
         self: object,
         _0: Literal[
-            (
-                ", dtype=%s",
-                "            <xarray.Dataset>\n            Dimension",
-                "Only bool or integer image types are supported. Go",
-            )
+            ", dtype=%s",
+            "            <xarray.Dataset>\n            Dimension",
+            "Only bool or integer image types are supported. Go",
         ],
         /,
     ):
@@ -3488,12 +3478,10 @@ class float64:
     def __rmod__(
         self: object,
         _0: Literal[
-            (
-                "%0.2f MB",
-                "Increasing number of chunks by factor of %d",
-                "Bad index.  Must be integer-like: %s",
-                "%.16g",
-            )
+            "%0.2f MB",
+            "Increasing number of chunks by factor of %d",
+            "Bad index.  Must be integer-like: %s",
+            "%.16g",
         ],
         /,
     ):
@@ -3649,13 +3637,11 @@ class int64:
             numpy.int64,
             int,
             Literal[
-                (
-                    "not %s",
-                    "Fitting estimator with %d features.",
-                    "This solver needs samples of at least 2 classes in",
-                    "%d",
-                    "[MiniBatchKMeans] Reassigning %i cluster centers.",
-                )
+                "not %s",
+                "Fitting estimator with %d features.",
+                "This solver needs samples of at least 2 classes in",
+                "%d",
+                "[MiniBatchKMeans] Reassigning %i cluster centers.",
             ],
         ],
         /,
@@ -3708,7 +3694,7 @@ class generic:
     @classmethod
     def astype(
         _0: object,
-        _1: Union[Literal[("int64", "i8", "f8", "timedelta64[ns]")], numpy.dtype, type],
+        _1: Union[Literal["int64", "i8", "f8", "timedelta64[ns]"], numpy.dtype, type],
         /,
     ):
         "\n    usage.skimage: 12\n    usage.xarray: 7\n    usage.sklearn: 1\n    usage.dask: 11\n    "
@@ -3812,7 +3798,7 @@ class flagsobj:
     # usage.sklearn: 2
     contiguous: object
 
-    def __getitem__(self: object, _0: Literal[("F_CONTIGUOUS", "C_CONTIGUOUS")], /):
+    def __getitem__(self: object, _0: Literal["F_CONTIGUOUS", "C_CONTIGUOUS"], /):
         "\n    usage.skimage: 2\n    usage.xarray: 4\n    usage.sklearn: 1\n    "
         ...
 
@@ -4070,7 +4056,7 @@ class uint64:
 
 
 class ndindex:
-    def __init__(*shape: Literal[("v", "t")]):
+    def __init__(*shape: Literal["v", "t"]):
         "\n    usage.skimage: 1\n    usage.dask: 6\n    "
         ...
 
@@ -4729,7 +4715,7 @@ class str_:
     def __eq__(
         self: object,
         _0: Union[
-            Literal[("ZN", "CRIM", "c", "b", "a")],
+            Literal["ZN", "CRIM", "c", "b", "a"],
             numpy.ndarray,
             xarray.core.variable.Variable,
             xarray.core.dataarray.DataArray,
@@ -4772,7 +4758,7 @@ class bytes_:
 
 
 class timedelta64:
-    def __init__(_0: Union[int, datetime.timedelta], _1: Literal[("D", "ns")], /):
+    def __init__(_0: Union[int, datetime.timedelta], _1: Literal["D", "ns"], /):
         "\n    usage.xarray: 1\n    usage.dask: 7\n    "
         ...
 
@@ -4827,7 +4813,7 @@ class timedelta64:
 
 
 class datetime64:
-    def __init__(_0: Literal[("NaT", "2014")], /):
+    def __init__(_0: Literal["NaT", "2014"], /):
         "\n    usage.dask: 3\n    "
         ...
 
@@ -4867,7 +4853,7 @@ class datetime64:
 class broadcast:
     def __init__(
         _0: Union[dask.array.core.Array, int, numpy.ndarray, List[int]],
-        _1: Union[Literal[("z", "_not_supplied")], numpy.ndarray, List[int]] = ...,
+        _1: Union[Literal["z", "_not_supplied"], numpy.ndarray, List[int]] = ...,
         _2: numpy.ndarray = ...,
         /,
     ):

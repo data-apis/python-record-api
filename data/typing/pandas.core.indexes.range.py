@@ -18,7 +18,7 @@ class RangeIndex:
 
     # usage.xarray: 4
     # usage.dask: 16
-    name: Union[Literal[("ix", "renamed")], None]
+    name: Union[Literal["ix", "renamed"], None]
 
     # usage.xarray: 3
     size: object
@@ -85,7 +85,7 @@ class RangeIndex:
         "\n    usage.xarray: 1\n    "
         ...
 
-    def __contains__(self: object, _0: Union[int, Literal[("dtype", "divisions")]], /):
+    def __contains__(self: object, _0: Union[int, Literal["dtype", "divisions"]], /):
         "\n    usage.dask: 3\n    "
         ...
 
