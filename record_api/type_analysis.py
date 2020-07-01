@@ -35,7 +35,7 @@ __all__ = [
     "ClassMethodOutput",
     "UnionOutput",
     "BottomOutput",
-    "parser_config"
+    "parser_config",
 ]
 
 # If there are more than this amount in a union, just use any
@@ -365,7 +365,9 @@ NamedInput = typing.Union[BuiltinNamedInput, ModuleNamedInput]
 class OtherInputType(InputTypeBase):
     t: NamedInput
 
-    def to_output(self) -> typing.Union[OtherOutput, ObjectOutput]:
+    def to_output(self) -> typing.Union[OtherOutput, StringOutput, ObjectOutput]:
+        if self.t == BuiltinNamedInput(__root__="str"):
+            return StringOutput()
         return OtherOutput.safe_create(self.t)
 
 
@@ -516,7 +518,9 @@ class TypeOutput(OutputTypeBase):
     def annotation(self):
         if self.name is None:
             return cst.Name("type")
-        return cst.Subscript(cst.Name("Type"), [cst.SubscriptElement(cst.Index(self.name.annotation))])
+        return cst.Subscript(
+            cst.Name("Type"), [cst.SubscriptElement(cst.Index(self.name.annotation))]
+        )
 
     @classmethod
     def unify(cls, tps: typing.Iterable[TypeOutput]) -> TypeOutput:
@@ -741,7 +745,7 @@ class UnionOutput(OutputTypeBase):
     def annotation(self):
         return cst.Subscript(
             cst.Name("Union"),
-            [cst.SubscriptElement(cst.Index(o.annotation)) for o in self.options]
+            [cst.SubscriptElement(cst.Index(o.annotation)) for o in self.options],
         )
 
     @classmethod

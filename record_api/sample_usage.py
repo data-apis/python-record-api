@@ -62,6 +62,10 @@ def fn():
     x |= y
     x[0] = y
 
+    np.array("df")
+    # Long string should be recorded properly
+    np.array("df" * 100)
+
     # unpack
     _, *_s = x
 
@@ -121,7 +125,7 @@ def fn():
 
     # reduction
     np.add.reduce(x)
-    
+
     np.ndarray((0, 1, 2))
 
 

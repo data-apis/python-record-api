@@ -8,7 +8,6 @@ import itertools
 import operator as op
 import os
 import sys
-import importlib
 import types
 import warnings
 from typing import *
@@ -23,7 +22,6 @@ __all__ = ["Tracer", "setup", "finalize", "get_tracer"]
 
 DEBUG = os.environ.get("PYTHON_RECORD_API_DEBUG", False)
 
-MAX_LENGTH = 50
 
 # global cache for tracer based on env variables
 TRACER = None
@@ -146,8 +144,10 @@ else:
         return u._func.__name__
 
 
-MAX_SEQUENCE = 5
-MAX_STRING = 50
+MAX_LIST = 10
+MAX_TUPLE = 10
+MAX_DICT = 10
+MAX_STRING = 20
 
 
 def preprocess(o):
@@ -159,21 +159,21 @@ def preprocess(o):
     All non primitives subclasses are passed through to be handled by `default`.
     """
     tp = type(o)
-    if tp == str:
-        return o[:MAX_STRING]
+    if tp == str and len(o) <= MAX_STRING:
+        return o
     if tp == list:
-        return [preprocess(v) for v in o[:MAX_SEQUENCE]]
+        return [preprocess(v) for v in o[:MAX_LIST]]
     if tp == dict:
         return {
             "t": "dict",
             "v": [
-                [preprocess(k), preprocess(v)] for k, v in list(o.items())[:MAX_LENGTH]
+                [preprocess(k), preprocess(v)] for k, v in list(o.items())[:MAX_DICT]
             ],
         }
     if tp == tuple:
         return {
             "t": "tuple",
-            "v": [preprocess(v) for v in o[:MAX_SEQUENCE]],
+            "v": [preprocess(v) for v in o[:MAX_TUPLE]],
         }
     if isinstance(o, (int, float, bool, list, str, dict, tuple)):
         # Don't send literals of these
