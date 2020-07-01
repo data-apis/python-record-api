@@ -2,37 +2,43 @@ from typing import *
 
 
 class StringMethods:
-    def upper(self, /):
-        "usage.dask: 1"
+    def upper(self: object, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
-    def contains(self=..., /, pat: Literal[("a", "d")] = ...):
-        "usage.dask: 9"
+    def contains(self: object, /, pat: Literal[("a", "d")]):
+        "\n    usage.dask: 9\n    "
+        ...
 
-    def __getitem__(self, _0: Union[(int, slice[(None, int, None)])], /):
-        ""
+    def __getitem__(self: object, _0: Union[int, slice[None, int, None]], /):
+        "\n    usage.dask: 4\n    "
+        ...
 
-    def extractall(self, /, pat: Literal[("(.*)b(.*)",)] = ...):
-        "usage.dask: 3"
+    def extractall(self: object, /, pat: Literal["(.*)b(.*)"]):
+        "\n    usage.dask: 3\n    "
+        ...
 
     def cat(
-        self,
+        self: object,
         /,
         others: Union[
-            (
-                Tuple[(pandas.core.series.Series, ...)],
-                pandas.core.series.Series,
-                List[pandas.core.series.Series],
-            )
+            Tuple[pandas.core.series.Series, ...],
+            pandas.core.series.Series,
+            List[pandas.core.series.Series],
         ],
-        sep: Literal[(":",)] = ...,
+        sep: Literal[":"],
     ):
-        "usage.dask: 4"
+        "\n    usage.dask: 4\n    "
+        ...
 
-    def split(self, /, n: int, expand: bool = ...):
-        "usage.dask: 5"
+    def split(self: object, /, n: int, expand: bool):
+        "\n    usage.dask: 5\n    "
+        ...
 
-    def count(self, /, pat: Literal[("A",)]):
-        "usage.dask: 1"
+    def count(self: object, /, pat: Literal["A"]):
+        "\n    usage.dask: 1\n    "
+        ...
 
-    def isalpha(self, /):
-        "usage.dask: 1"
+    def isalpha(self: object, /):
+        "\n    usage.dask: 1\n    "
+        ...

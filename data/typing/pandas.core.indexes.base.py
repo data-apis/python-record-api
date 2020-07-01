@@ -2,166 +2,228 @@ from typing import *
 
 
 class Index:
-    __name__ = ...
-    dtype = ...
-    values = ...
-    is_monotonic_increasing = ...
-    size = ...
-    is_unique = ...
-    is_monotonic = ...
-    shape = ...
-    name: Union[(None, Literal[("A",)])] = ...
-    nlevels = ...
-    array = ...
-    names: List[Literal[("-overlapped-index-name-0",)]] = ...
-    str = ...
 
-    def set_names(self, /, names: Union[(str, numpy.str_, List[str])]):
-        "usage.xarray: 183"
+    # usage.dask: 2
+    __name__: ClassVar[object]
+
+    # usage.xarray: 6
+    # usage.dask: 14
+    dtype: object
+
+    # usage.xarray: 3
+    values: object
+
+    # usage.xarray: 1
+    # usage.dask: 2
+    is_monotonic_increasing: object
+
+    # usage.xarray: 7
+    size: object
+
+    # usage.xarray: 5
+    is_unique: object
+
+    # usage.xarray: 1
+    # usage.dask: 1
+    is_monotonic: object
+
+    # usage.xarray: 1
+    shape: object
+
+    # usage.xarray: 11
+    # usage.dask: 14
+    name: Union[None, Literal["A"]]
+
+    # usage.xarray: 1
+    nlevels: object
+
+    # usage.dask: 1
+    array: object
+
+    # usage.dask: 3
+    names: List[Literal["-overlapped-index-name-0"]]
+
+    # usage.dask: 1
+    str: object
+
+    def set_names(self: object, /, names: Union[str, numpy.str_, List[str]]):
+        "\n    usage.xarray: 183\n    "
+        ...
 
     def equals(
-        self,
+        self: object,
         /,
         other: Union[
-            (
-                pandas.core.indexes.base.Index,
-                pandas.core.indexes.numeric.Int64Index,
-                pandas.core.indexes.range.RangeIndex,
-                pandas.core.indexes.numeric.Float64Index,
-                pandas.core.indexes.multi.MultiIndex,
-            )
+            pandas.core.indexes.base.Index,
+            pandas.core.indexes.numeric.Int64Index,
+            pandas.core.indexes.range.RangeIndex,
+            pandas.core.indexes.numeric.Float64Index,
+            pandas.core.indexes.multi.MultiIndex,
         ],
     ):
-        "usage.xarray: 24, usage.dask: 3"
+        "\n    usage.xarray: 24\n    usage.dask: 3\n    "
+        ...
 
     def __getitem__(
-        self,
+        self: object,
         _0: Union[
-            (
-                int,
-                numpy.ndarray,
-                slice[(Union[(int, None)], Union[(int, None)], Union[(int, None)])],
-            )
+            int,
+            numpy.ndarray,
+            slice[Union[int, None], Union[int, None], Union[int, None]],
         ],
         /,
     ):
-        ""
+        "\n    usage.xarray: 14\n    usage.dask: 22\n    "
+        ...
 
     def append(
-        self,
+        self: object,
         /,
         other: Union[
-            (
-                pandas.core.indexes.category.CategoricalIndex,
-                pandas.core.indexes.numeric.Int64Index,
-                list,
-            )
+            pandas.core.indexes.category.CategoricalIndex,
+            pandas.core.indexes.numeric.Int64Index,
+            list,
         ],
     ):
-        "usage.xarray: 17, usage.dask: 16"
+        "\n    usage.xarray: 17\n    usage.dask: 16\n    "
+        ...
 
-    def to_series(self, /):
-        "usage.xarray: 3, usage.dask: 7"
+    def to_series(self: object, /):
+        "\n    usage.xarray: 3\n    usage.dask: 7\n    "
+        ...
 
-    def copy(self, /, deep: bool):
-        "usage.xarray: 1"
+    def copy(self: object, /, deep: bool):
+        "\n    usage.xarray: 1\n    "
+        ...
 
-    def rename(self, /, name: str):
-        "usage.xarray: 15, usage.dask: 1"
+    def rename(self: object, /, name: str):
+        "\n    usage.xarray: 15\n    usage.dask: 1\n    "
+        ...
 
-    def slice_indexer(self, /, start, end, step: None):
-        "usage.xarray: 12"
+    def slice_indexer(self: object, /, start: object, end: object, step: None):
+        "\n    usage.xarray: 12\n    "
+        ...
 
     def get_indexer(
-        self,
+        self: object,
         /,
         target: numpy.ndarray,
-        method: Union[(Literal[("pad",)], None)],
+        method: Union[Literal["pad"], None],
         tolerance: None,
     ):
-        "usage.xarray: 3"
+        "\n    usage.xarray: 3\n    "
+        ...
 
     def get_loc(
-        self, /, key: Union[(str, bool)], method: None = ..., tolerance: None = ...
+        self: object,
+        /,
+        key: Union[str, bool],
+        method: None = ...,
+        tolerance: None = ...,
     ):
-        "usage.xarray: 26"
+        "\n    usage.xarray: 26\n    "
+        ...
 
     def droplevel(
-        self, /, level: Union[(List[Literal[("level_1",)]], Literal[("level_1",)])]
+        self: object, /, level: Union[List[Literal["level_1"]], Literal["level_1"]]
     ):
-        "usage.xarray: 2"
+        "\n    usage.xarray: 2\n    "
+        ...
 
-    def __iter__(self, /):
-        ""
+    def __iter__(self: object, /):
+        "\n    usage.xarray: 3\n    usage.dask: 22\n    "
+        ...
 
-    def drop(self, /, labels: numpy.ndarray = ...):
-        "usage.xarray: 2, usage.dask: 1"
+    def drop(self: object, /, labels: numpy.ndarray):
+        "\n    usage.xarray: 2\n    usage.dask: 1\n    "
+        ...
 
-    def astype(self, /, dtype: Union[(numpy.dtype, Literal[("int64",)])]):
-        "usage.xarray: 1, usage.dask: 12"
+    def astype(self: object, /, dtype: Union[numpy.dtype, Literal["int64"]]):
+        "\n    usage.xarray: 1\n    usage.dask: 12\n    "
+        ...
 
-    def __contains__(self, _0: str, /):
-        ""
+    def __contains__(self: object, _0: str, /):
+        "\n    usage.dask: 135\n    "
+        ...
 
     def difference(
-        self, /, other: Union[(List[Literal[("A",)]], pandas.core.indexes.base.Index)]
+        self: object,
+        /,
+        other: Union[List[Literal["A"]], pandas.core.indexes.base.Index],
     ):
-        "usage.dask: 6"
+        "\n    usage.dask: 6\n    "
+        ...
 
     def __eq__(
-        self,
-        _0: Union[
-            (List[Literal[("x", "b", "c", "a")]], pandas.core.indexes.base.Index)
-        ],
+        self: object,
+        _0: Union[List[Literal[("x", "b", "c", "a")]], pandas.core.indexes.base.Index],
         /,
     ):
-        ""
+        "\n    usage.dask: 14\n    "
+        ...
 
-    def intersection(self, /, other: pandas.core.indexes.base.Index):
-        "usage.dask: 2"
+    def intersection(self: object, /, other: pandas.core.indexes.base.Index):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def _get_level_values(self, /, level: int):
-        "usage.dask: 7"
+    def _get_level_values(self: object, /, level: int):
+        "\n    usage.dask: 7\n    "
+        ...
 
-    def min(self, /):
-        "usage.dask: 1"
+    def min(self: object, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
-    def max(self, /):
-        "usage.dask: 1"
+    def max(self: object, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
     def get_slice_bound(
-        self, /, label, side: Literal[("left", "right")], kind: Literal[("loc",)]
+        self: object,
+        /,
+        label: object,
+        side: Literal[("left", "right")],
+        kind: Literal["loc"],
     ):
-        "usage.dask: 32"
+        "\n    usage.dask: 32\n    "
+        ...
 
-    def memory_usage(self, /):
-        "usage.dask: 3"
+    def memory_usage(self: object, /):
+        "\n    usage.dask: 3\n    "
+        ...
 
-    def dropna(self, /):
-        "usage.dask: 1"
+    def dropna(self: object, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
-    def drop_duplicates(self, /):
-        "usage.dask: 1"
+    def drop_duplicates(self: object, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
-    def isin(self, /, values: Union[(pandas.core.series.Series, List[int])]):
-        "usage.dask: 4"
+    def isin(self: object, /, values: Union[pandas.core.series.Series, List[int]]):
+        "\n    usage.dask: 4\n    "
+        ...
 
-    def shift(self, /, periods: int, freq: None):
-        "usage.dask: 1"
+    def shift(self: object, /, periods: int, freq: None):
+        "\n    usage.dask: 1\n    "
+        ...
 
     def union(
-        self,
+        self: object,
         /,
         other: Union[
-            (
-                pandas.core.indexes.datetimes.DatetimeIndex,
-                pandas.core.indexes.numeric.Int64Index,
-            )
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas.core.indexes.numeric.Int64Index,
         ],
     ):
-        "usage.dask: 2"
+        "\n    usage.dask: 2\n    "
+        ...
 
     def to_frame(
-        self, /, index: bool = ..., name: Union[(Literal[("bar", "foo")], None)] = ...
+        self: object,
+        /,
+        index: bool = ...,
+        name: Union[Literal[("bar", "foo")], None] = ...,
     ):
-        "usage.dask: 6"
+        "\n    usage.dask: 6\n    "
+        ...

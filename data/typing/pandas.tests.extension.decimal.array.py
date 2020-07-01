@@ -2,15 +2,21 @@ from typing import *
 
 
 class DecimalArray:
-    __module__ = ...
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
 
     @classmethod
-    def _from_sequence(scalars: List[decimal.Decimal] = ...):
-        "usage.dask: 3"
+    def _from_sequence(scalars: List[decimal.Decimal]):
+        "\n    usage.dask: 3\n    "
+        ...
 
 
 class DecimalDtype:
-    kind = ...
 
-    def __eq__(self, _0: Type[object], /):
-        ""
+    # usage.dask: 1
+    kind: object
+
+    def __eq__(self: object, _0: Type[object], /):
+        "\n    usage.dask: 1\n    "
+        ...

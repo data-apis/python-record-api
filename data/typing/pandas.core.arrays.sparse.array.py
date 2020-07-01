@@ -2,4 +2,6 @@ from typing import *
 
 
 class SparseArray:
-    __module__ = ...
+
+    # usage.dask: 1
+    __module__: ClassVar[object]

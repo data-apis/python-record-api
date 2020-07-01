@@ -2,23 +2,30 @@ from typing import *
 
 
 class IndexOpsMixin:
-    def to_numpy(self, /):
-        "usage.xarray: 2"
+    def to_numpy(self: object, /):
+        "\n    usage.xarray: 2\n    "
+        ...
 
-    def factorize(self, /):
-        "usage.xarray: 4"
+    def factorize(self: object, /):
+        "\n    usage.xarray: 4\n    "
+        ...
 
-    def tolist(self, /):
-        "usage.dask: 14"
+    def tolist(self: object, /):
+        "\n    usage.dask: 14\n    "
+        ...
 
-    def min(self, /):
-        "usage.dask: 14"
+    def min(self: object, /):
+        "\n    usage.dask: 14\n    "
+        ...
 
-    def max(self, /):
-        "usage.dask: 14"
+    def max(self: object, /):
+        "\n    usage.dask: 14\n    "
+        ...
 
-    def searchsorted(self, /, value: numpy.ndarray):
-        "usage.dask: 2"
+    def searchsorted(self: object, /, value: numpy.ndarray):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def nunique(self, /):
-        "usage.dask: 4"
+    def nunique(self: object, /):
+        "\n    usage.dask: 4\n    "
+        ...

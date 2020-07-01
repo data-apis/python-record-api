@@ -1,5 +1,8 @@
 from typing import *
 
 
-def to_timedelta(arg, unit: str = ..., errors: Literal[("coerce", "raise")] = ...):
-    "usage.xarray: 34, usage.dask: 16"
+def to_timedelta(
+    arg: object, unit: str = ..., errors: Literal[("coerce", "raise")] = ...
+):
+    "\n    usage.xarray: 34\n    usage.dask: 16\n    "
+    ...

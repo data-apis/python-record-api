@@ -1,5 +1,6 @@
 from typing import *
 
 
-def set_string_function(f: Union[(None, Callable)]):
-    "usage.dask: 2"
+def set_string_function(f: Union[None, Callable]):
+    "\n    usage.dask: 2\n    "
+    ...

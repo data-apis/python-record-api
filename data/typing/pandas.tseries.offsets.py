@@ -2,126 +2,157 @@ from typing import *
 
 
 class Hour:
-    __module__ = ...
-    nanos = ...
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
+    # usage.dask: 1
+    nanos: object
 
     def __radd__(
-        self,
+        self: object,
         _0: Union[
-            (
-                pandas._libs.tslibs.timestamps.Timestamp,
-                pandas.core.indexes.datetimes.DatetimeIndex,
-            )
+            pandas._libs.tslibs.timestamps.Timestamp,
+            pandas.core.indexes.datetimes.DatetimeIndex,
         ],
         /,
     ):
-        ""
+        "\n    usage.xarray: 1\n    usage.dask: 2\n    "
+        ...
 
-    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        ""
+    def __rsub__(self: object, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
 
 class Day:
-    __module__ = ...
-    nanos = ...
 
-    def __eq__(self, _0: pandas.tseries.offsets.Day, /):
-        ""
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
+    # usage.dask: 2
+    nanos: object
+
+    def __eq__(self: object, _0: pandas.tseries.offsets.Day, /):
+        "\n    usage.dask: 8\n    "
+        ...
 
     def __radd__(
-        self,
+        self: object,
         _0: Union[
-            (
-                pandas.core.indexes.datetimes.DatetimeIndex,
-                pandas._libs.tslibs.timestamps.Timestamp,
-            )
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas._libs.tslibs.timestamps.Timestamp,
         ],
         /,
     ):
-        ""
+        "\n    usage.dask: 3\n    "
+        ...
 
-    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        ""
+    def __rsub__(self: object, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
 
 class Tick:
-    def is_anchored(self, /):
-        "usage.dask: 6"
+    def is_anchored(self: object, /):
+        "\n    usage.dask: 6\n    "
+        ...
 
 
 class Week:
-    __module__ = ...
 
-    def is_anchored(self, /):
-        "usage.dask: 2"
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
+    def is_anchored(self: object, /):
+        "\n    usage.dask: 2\n    "
+        ...
 
     def __radd__(
-        self,
+        self: object,
         _0: Union[
-            (
-                pandas.core.indexes.datetimes.DatetimeIndex,
-                pandas._libs.tslibs.timestamps.Timestamp,
-            )
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas._libs.tslibs.timestamps.Timestamp,
         ],
         /,
     ):
-        ""
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        ""
+    def __rsub__(self: object, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
 
 class DateOffset:
-    def is_anchored(self, /):
-        "usage.dask: 3"
+    def is_anchored(self: object, /):
+        "\n    usage.dask: 3\n    "
+        ...
 
 
 class BusinessDay:
-    __module__ = ...
 
-    def __radd__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        ""
+    # usage.dask: 1
+    __module__: ClassVar[object]
 
-    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        ""
+    def __radd__(self: object, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        "\n    usage.dask: 1\n    "
+        ...
+
+    def __rsub__(self: object, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
 
 class MonthEnd:
-    __module__ = ...
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
 
     def __radd__(
-        self,
+        self: object,
         _0: Union[
-            (
-                pandas.core.indexes.datetimes.DatetimeIndex,
-                pandas._libs.tslibs.timestamps.Timestamp,
-            )
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas._libs.tslibs.timestamps.Timestamp,
         ],
         /,
     ):
-        ""
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        ""
+    def __rsub__(self: object, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
 
 class Second:
-    __module__ = ...
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
 
 
 class Minute:
-    __module__ = ...
-    nanos = ...
 
-    def __radd__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
-        ""
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
+    # usage.dask: 1
+    nanos: object
+
+    def __radd__(self: object, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
     def __rmod__(
-        self, _0: Literal[("Resampling frequency %s that does not evenly divid",)], /
+        self: object,
+        _0: Literal["Resampling frequency %s that does not evenly divid"],
+        /,
     ):
-        ""
+        "\n    usage.dask: 1\n    "
+        ...
 
 
 class Nano:
-    def __radd__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
-        ""
+    def __radd__(self: object, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+        "\n    usage.dask: 1\n    "
+        ...

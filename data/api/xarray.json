@@ -4,84 +4,214 @@
       "functions": {},
       "classes": {},
       "properties": {
-        "Index": {
-          "type": "bottom"
-        },
-        "PeriodIndex": {
-          "type": "bottom"
-        },
-        "MultiIndex": {
-          "type": "bottom"
-        },
-        "Timestamp": {
-          "type": "bottom"
-        },
-        "NaT": {
-          "type": "bottom"
-        },
-        "date_range": {
-          "type": "bottom"
-        },
-        "Series": {
-          "type": "bottom"
-        },
-        "DataFrame": {
-          "type": "bottom"
-        },
-        "timedelta_range": {
-          "type": "bottom"
-        },
-        "__version__": {
-          "type": "bottom"
-        },
-        "to_datetime": {
-          "type": "bottom"
-        },
-        "to_timedelta": {
-          "type": "bottom"
-        },
-        "Categorical": {
-          "type": "bottom"
-        },
-        "factorize": {
-          "type": "bottom"
-        },
-        "CategoricalIndex": {
-          "type": "bottom"
-        },
-        "testing": {
-          "type": "bottom"
-        },
-        "cut": {
-          "type": "bottom"
-        },
-        "Grouper": {
-          "type": "bottom"
-        },
-        "DateOffset": {
-          "type": "bottom"
-        },
-        "DatetimeIndex": {
-          "type": "bottom"
-        },
-        "period_range": {
-          "type": "bottom"
-        },
-        "CategoricalDtype": {
-          "type": "bottom"
-        },
-        "Timedelta": {
-          "type": "bottom"
-        },
-        "Interval": {
-          "type": "bottom"
-        },
-        "plotting": {
-          "type": "bottom"
-        },
-        "Period": {
-          "type": "bottom"
-        }
+        "Index": [
+          {
+            "usage.xarray": 40
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "PeriodIndex": [
+          {
+            "usage.xarray": 5
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "MultiIndex": [
+          {
+            "usage.xarray": 68
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "Timestamp": [
+          {
+            "usage.xarray": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "NaT": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "date_range": [
+          {
+            "usage.xarray": 77
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "Series": [
+          {
+            "usage.xarray": 13
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "DataFrame": [
+          {
+            "usage.xarray": 12
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "timedelta_range": [
+          {
+            "usage.xarray": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "__version__": [
+          {
+            "usage.xarray": 6
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "to_datetime": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "to_timedelta": [
+          {
+            "usage.xarray": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "Categorical": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "factorize": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "CategoricalIndex": [
+          {
+            "usage.xarray": 6
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "testing": [
+          {
+            "usage.xarray": 5
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "cut": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "Grouper": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "DateOffset": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "DatetimeIndex": [
+          {
+            "usage.xarray": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "period_range": [
+          {
+            "usage.xarray": 4
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "CategoricalDtype": [
+          {
+            "usage.xarray": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "Timedelta": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "Interval": [
+          {
+            "usage.xarray": 6
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "plotting": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "Period": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ]
       }
     },
     "pandas.core.indexes.numeric": {
@@ -157,7 +287,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 16
+              }
             },
             "get_indexer": {
               "pos_only_required": {},
@@ -294,7 +426,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "equals": {
               "pos_only_required": {},
@@ -346,36 +480,86 @@
           },
           "classmethods": {},
           "properties": {
-            "dtype": {
-              "type": "bottom"
-            },
-            "values": {
-              "type": "bottom"
-            },
-            "is_monotonic_increasing": {
-              "type": "bottom"
-            },
-            "size": {
-              "type": "bottom"
-            },
-            "is_monotonic_decreasing": {
-              "type": "bottom"
-            },
-            "is_unique": {
-              "type": "bottom"
-            },
-            "shape": {
-              "type": "bottom"
-            },
-            "is_monotonic": {
-              "type": "bottom"
-            },
-            "name": {
-              "type": "bottom"
-            },
-            "nlevels": {
-              "type": "bottom"
-            }
+            "dtype": [
+              {
+                "usage.xarray": 6
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "values": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_monotonic_increasing": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "size": [
+              {
+                "usage.xarray": 6
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_monotonic_decreasing": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_unique": [
+              {
+                "usage.xarray": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "shape": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_monotonic": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "name": [
+              {
+                "usage.xarray": 11
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "nlevels": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -505,7 +689,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 13
+              }
             },
             "get_indexer": {
               "pos_only_required": {},
@@ -653,30 +839,70 @@
           },
           "classmethods": {},
           "properties": {
-            "dtype": {
-              "type": "bottom"
-            },
-            "values": {
-              "type": "bottom"
-            },
-            "is_monotonic_increasing": {
-              "type": "bottom"
-            },
-            "size": {
-              "type": "bottom"
-            },
-            "is_unique": {
-              "type": "bottom"
-            },
-            "is_monotonic": {
-              "type": "bottom"
-            },
-            "shape": {
-              "type": "bottom"
-            },
-            "name": {
-              "type": "bottom"
-            }
+            "dtype": [
+              {
+                "usage.xarray": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "values": [
+              {
+                "usage.xarray": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_monotonic_increasing": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "size": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_unique": [
+              {
+                "usage.xarray": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_monotonic": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "shape": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "name": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -8311,7 +8537,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 230
+              }
             },
             "__ne__": {
               "pos_only_required": {
@@ -8346,7 +8574,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 34
+              }
             },
             "__rmod__": {
               "pos_only_required": {
@@ -8364,26 +8594,53 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "kind": {
-              "type": "bottom"
-            },
-            "type": {
-              "type": "bottom"
-            },
-            "itemsize": {
-              "type": "bottom"
-            },
-            "isnative": {
-              "type": "bottom"
-            },
-            "metadata": {
-              "type": "bottom"
-            }
+            "kind": [
+              {
+                "usage.xarray": 476
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "type": [
+              {
+                "usage.xarray": 74
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "itemsize": [
+              {
+                "usage.xarray": 33
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "isnative": [
+              {
+                "usage.xarray": 18
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "metadata": [
+              {
+                "usage.xarray": 5
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -8402,7 +8659,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 330
+              }
             },
             "__and__": {
               "pos_only_required": {
@@ -8437,7 +8696,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             },
             "__rand__": {
               "pos_only_required": {
@@ -8472,7 +8733,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             },
             "__or__": {
               "pos_only_required": {
@@ -8507,7 +8770,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 4
+              }
             },
             "__ror__": {
               "pos_only_required": {
@@ -8547,7 +8812,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 6
+              }
             },
             "__getitem__": {
               "pos_only_required": {
@@ -8562,7 +8829,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 747
+              }
             },
             "__floordiv__": {
               "pos_only_required": {
@@ -8579,7 +8848,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__mod__": {
               "pos_only_required": {
@@ -8596,7 +8867,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "astype": {
               "pos_only_required": {},
@@ -8673,7 +8946,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 83
+              }
             },
             "__rmul__": {
               "pos_only_required": {
@@ -8688,7 +8963,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 56
+              }
             },
             "__truediv__": {
               "pos_only_required": {
@@ -8728,7 +9005,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 9
+              }
             },
             "__ge__": {
               "pos_only_required": {
@@ -8756,7 +9035,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 5
+              }
             },
             "__mul__": {
               "pos_only_required": {
@@ -8771,7 +9052,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 41
+              }
             },
             "__setitem__": {
               "pos_only_required": {
@@ -8845,7 +9128,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 142
+              }
             },
             "__invert__": {
               "pos_only_required": {},
@@ -8856,7 +9141,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 7
+              }
             },
             "__sub__": {
               "pos_only_required": {
@@ -8871,7 +9158,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 25
+              }
             },
             "__gt__": {
               "pos_only_required": {
@@ -8888,7 +9177,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 9
+              }
             },
             "reshape": {
               "pos_only_required": {
@@ -8941,7 +9232,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 40
+              }
             },
             "transpose": {
               "pos_only_required": {
@@ -8980,7 +9273,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             },
             "__iadd__": {
               "pos_only_required": {
@@ -9009,7 +9304,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 4
+              }
             },
             "__add__": {
               "pos_only_required": {
@@ -9055,7 +9352,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 32
+              }
             },
             "__isub__": {
               "pos_only_required": {
@@ -9072,7 +9371,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__itruediv__": {
               "pos_only_required": {
@@ -9100,7 +9401,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__imul__": {
               "pos_only_required": {
@@ -9128,7 +9431,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__ior__": {
               "pos_only_required": {
@@ -9146,7 +9451,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__le__": {
               "pos_only_required": {
@@ -9179,7 +9486,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 15
+              }
             },
             "__neg__": {
               "pos_only_required": {},
@@ -9190,7 +9499,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 21
+              }
             },
             "mean": {
               "pos_only_required": {},
@@ -9260,7 +9571,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 14
+              }
             },
             "all": {
               "pos_only_required": {},
@@ -9372,7 +9685,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 11
+              }
             },
             "__ne__": {
               "pos_only_required": {
@@ -9417,7 +9732,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 15
+              }
             },
             "__rtruediv__": {
               "pos_only_required": {
@@ -9435,7 +9752,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "item": {
               "pos_only_required": {},
@@ -9544,7 +9863,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "std": {
               "pos_only_required": {},
@@ -10090,54 +10411,134 @@
             }
           },
           "properties": {
-            "ndim": {
-              "type": "bottom"
-            },
-            "dtype": {
-              "type": "bottom"
-            },
-            "shape": {
-              "type": "bottom"
-            },
-            "flags": {
-              "type": "bottom"
-            },
-            "flat": {
-              "type": "bottom"
-            },
-            "size": {
-              "type": "bottom"
-            },
-            "T": {
-              "type": "bottom"
-            },
-            "coords": {
-              "type": "bottom"
-            },
-            "variables": {
-              "type": "bottom"
-            },
-            "variable": {
-              "type": "bottom"
-            },
-            "strides": {
-              "type": "bottom"
-            },
-            "base": {
-              "type": "bottom"
-            },
-            "real": {
-              "type": "bottom"
-            },
-            "imag": {
-              "type": "bottom"
-            },
-            "dims": {
-              "type": "bottom"
-            },
-            "attrs": {
-              "type": "bottom"
-            }
+            "ndim": [
+              {
+                "usage.xarray": 263
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "dtype": [
+              {
+                "usage.xarray": 726
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "shape": [
+              {
+                "usage.xarray": 333
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "flags": [
+              {
+                "usage.xarray": 9
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "flat": [
+              {
+                "usage.xarray": 43
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "size": [
+              {
+                "usage.xarray": 48
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "T": [
+              {
+                "usage.xarray": 34
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "coords": [
+              {
+                "usage.xarray": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "variables": [
+              {
+                "usage.xarray": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "variable": [
+              {
+                "usage.xarray": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "strides": [
+              {
+                "usage.xarray": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "base": [
+              {
+                "usage.xarray": 8
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "real": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "imag": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "dims": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "attrs": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -10282,7 +10683,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__iadd__": {
               "pos_only_required": {
@@ -10308,7 +10711,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 12
+              }
             },
             "__radd__": {
               "pos_only_required": {
@@ -10323,7 +10728,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 11
+              }
             },
             "__contains__": {
               "pos_only_required": {
@@ -10341,7 +10748,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__ne__": {
               "pos_only_required": {
@@ -10360,7 +10769,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -10403,14 +10814,21 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 6
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "dtype": {
-              "type": "bottom"
-            }
+            "dtype": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -10480,7 +10898,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__iadd__": {
               "pos_only_required": {
@@ -10508,7 +10928,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__radd__": {
               "pos_only_required": {
@@ -10525,7 +10947,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -10543,7 +10967,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
@@ -10569,17 +10995,29 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 4
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "writeable": {
-              "type": "bottom"
-            },
-            "owndata": {
-              "type": "bottom"
-            }
+            "writeable": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "owndata": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -10644,7 +11082,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 7
+              }
             },
             "__truediv__": {
               "pos_only_required": {
@@ -10662,7 +11102,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             },
             "__rmul__": {
               "pos_only_required": {
@@ -10690,7 +11132,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 5
+              }
             },
             "__add__": {
               "pos_only_required": {
@@ -10708,7 +11152,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__ne__": {
               "pos_only_required": {
@@ -10726,7 +11172,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__rsub__": {
               "pos_only_required": {
@@ -10744,7 +11192,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -10762,14 +11212,21 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 4
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "dtype": {
-              "type": "bottom"
-            }
+            "dtype": [
+              {
+                "usage.xarray": 7
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -10944,7 +11401,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 50
+              }
             },
             "__radd__": {
               "pos_only_required": {
@@ -10984,7 +11443,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 9
+              }
             },
             "__add__": {
               "pos_only_required": {
@@ -11023,7 +11484,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 9
+              }
             },
             "__getitem__": {
               "pos_only_required": {
@@ -11046,7 +11509,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__rsub__": {
               "pos_only_required": {
@@ -11061,7 +11526,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 12
+              }
             },
             "__truediv__": {
               "pos_only_required": {
@@ -11100,7 +11567,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 7
+              }
             },
             "__mul__": {
               "pos_only_required": {
@@ -11129,7 +11598,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             },
             "__rmul__": {
               "pos_only_required": {
@@ -11158,7 +11629,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             },
             "__le__": {
               "pos_only_required": {
@@ -11203,7 +11676,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 13
+              }
             },
             "__iadd__": {
               "pos_only_required": {
@@ -11235,7 +11710,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 6
+              }
             },
             "__ge__": {
               "pos_only_required": {
@@ -11264,7 +11741,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 6
+              }
             },
             "__gt__": {
               "pos_only_required": {
@@ -11309,7 +11788,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 8
+              }
             },
             "__lt__": {
               "pos_only_required": {
@@ -11338,7 +11819,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__sub__": {
               "pos_only_required": {
@@ -11371,7 +11854,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 13
+              }
             },
             "__neg__": {
               "pos_only_required": {},
@@ -11382,7 +11867,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__ne__": {
               "pos_only_required": {
@@ -11410,7 +11897,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 6
+              }
             },
             "__rtruediv__": {
               "pos_only_required": {
@@ -11439,14 +11928,21 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "dtype": {
-              "type": "bottom"
-            }
+            "dtype": [
+              {
+                "usage.xarray": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -11484,7 +11980,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             },
             "__rsub__": {
               "pos_only_required": {
@@ -11518,7 +12016,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 9
+              }
             },
             "__rmul__": {
               "pos_only_required": {
@@ -11557,7 +12057,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__add__": {
               "pos_only_required": {
@@ -11590,7 +12092,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 11
+              }
             },
             "__le__": {
               "pos_only_required": {
@@ -11618,7 +12122,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 4
+              }
             },
             "__radd__": {
               "pos_only_required": {
@@ -11635,7 +12141,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -11650,7 +12158,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 24
+              }
             },
             "__floordiv__": {
               "pos_only_required": {
@@ -11667,7 +12177,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__sub__": {
               "pos_only_required": {
@@ -11706,7 +12218,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 10
+              }
             },
             "__neg__": {
               "pos_only_required": {},
@@ -11717,7 +12231,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__ge__": {
               "pos_only_required": {
@@ -11757,7 +12273,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 4
+              }
             },
             "__getitem__": {
               "pos_only_required": {
@@ -11782,7 +12300,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__ne__": {
               "pos_only_required": {
@@ -11799,7 +12319,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 5
+              }
             },
             "__iadd__": {
               "pos_only_required": {
@@ -11827,7 +12349,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             },
             "__truediv__": {
               "pos_only_required": {
@@ -11844,7 +12368,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__lt__": {
               "pos_only_required": {
@@ -11879,7 +12405,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             },
             "__gt__": {
               "pos_only_required": {
@@ -11897,17 +12425,29 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "shape": {
-              "type": "bottom"
-            },
-            "dtype": {
-              "type": "bottom"
-            }
+            "shape": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "dtype": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -11965,7 +12505,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 8
+              }
             },
             "__setitem__": {
               "pos_only_required": {
@@ -11988,7 +12530,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__iter__": {
               "pos_only_required": {},
@@ -11999,7 +12543,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 8
+              }
             }
           },
           "classmethods": {},
@@ -12035,7 +12581,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__rand__": {
               "pos_only_required": {
@@ -12070,7 +12618,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             },
             "__or__": {
               "pos_only_required": {
@@ -12099,7 +12649,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             },
             "__ror__": {
               "pos_only_required": {
@@ -12133,7 +12685,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 4
+              }
             },
             "__bool__": {
               "pos_only_required": {},
@@ -12144,7 +12698,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             },
             "all": {
               "pos_only_required": {},
@@ -12168,7 +12724,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -12185,7 +12743,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             }
           },
           "classmethods": {},
@@ -12210,7 +12770,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 4
+              }
             },
             "__rsub__": {
               "pos_only_required": {
@@ -12228,7 +12790,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -12269,14 +12833,21 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 14
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "dtype": {
-              "type": "bottom"
-            }
+            "dtype": [
+              {
+                "usage.xarray": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -12308,7 +12879,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__iadd__": {
               "pos_only_required": {
@@ -12325,7 +12898,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__gt__": {
               "pos_only_required": {
@@ -12343,7 +12918,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -12361,14 +12938,21 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "dtype": {
-              "type": "bottom"
-            }
+            "dtype": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -12458,9 +13042,14 @@
           "methods": {},
           "classmethods": {},
           "properties": {
-            "shape": {
-              "type": "bottom"
-            }
+            "shape": [
+              {
+                "usage.xarray": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -12507,7 +13096,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
@@ -12532,14 +13123,21 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "dtype": {
-              "type": "bottom"
-            }
+            "dtype": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -12561,7 +13159,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__le__": {
               "pos_only_required": {
@@ -12589,7 +13189,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__iadd__": {
               "pos_only_required": {
@@ -12606,7 +13208,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__gt__": {
               "pos_only_required": {
@@ -12624,7 +13228,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
@@ -12649,7 +13255,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
@@ -12692,7 +13300,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             }
           },
           "classmethods": {},
@@ -12740,96 +13350,246 @@
         }
       },
       "properties": {
-        "ma": {
-          "type": "bottom"
-        },
-        "inexact": {
-          "type": "bottom"
-        },
-        "integer": {
-          "type": "bottom"
-        },
-        "character": {
-          "type": "bottom"
-        },
-        "void": {
-          "type": "bottom"
-        },
-        "random": {
-          "type": "bottom"
-        },
-        "number": {
-          "type": "bottom"
-        },
-        "floating": {
-          "type": "bottom"
-        },
-        "bool": {
-          "type": "bottom"
-        },
-        "nan": {
-          "type": "bottom"
-        },
-        "string_": {
-          "type": "bottom"
-        },
-        "r_": {
-          "type": "bottom"
-        },
-        "complexfloating": {
-          "type": "bottom"
-        },
-        "float": {
-          "type": "bottom"
-        },
-        "pi": {
-          "type": "bottom"
-        },
-        "NaN": {
-          "type": "bottom"
-        },
-        "testing": {
-          "type": "bottom"
-        },
-        "intp": {
-          "type": "bottom"
-        },
-        "newaxis": {
-          "type": "bottom"
-        },
-        "lib": {
-          "type": "bottom"
-        },
-        "complex": {
-          "type": "bottom"
-        },
-        "float16": {
-          "type": "bottom"
-        },
-        "int": {
-          "type": "bottom"
-        },
-        "e": {
-          "type": "bottom"
-        },
-        "inf": {
-          "type": "bottom"
-        },
-        "min": {
-          "type": "bottom"
-        },
-        "__version__": {
-          "type": "bottom"
-        },
-        "int_": {
-          "type": "bottom"
-        },
-        "float_": {
-          "type": "bottom"
-        },
-        "max": {
-          "type": "bottom"
-        }
+        "ma": [
+          {
+            "usage.xarray": 15
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "inexact": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "integer": [
+          {
+            "usage.xarray": 14
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "character": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "void": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "random": [
+          {
+            "usage.xarray": 229
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "number": [
+          {
+            "usage.xarray": 3
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "floating": [
+          {
+            "usage.xarray": 10
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "bool": [
+          {
+            "usage.xarray": 3
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "nan": [
+          {
+            "usage.xarray": 269
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "string_": [
+          {
+            "usage.xarray": 3
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "r_": [
+          {
+            "usage.xarray": 3
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "complexfloating": [
+          {
+            "usage.xarray": 3
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "float": [
+          {
+            "usage.xarray": 3
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "pi": [
+          {
+            "usage.xarray": 10
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "NaN": [
+          {
+            "usage.xarray": 6
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "testing": [
+          {
+            "usage.xarray": 71
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "intp": [
+          {
+            "usage.xarray": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "newaxis": [
+          {
+            "usage.xarray": 19
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "lib": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "complex": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "float16": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "int": [
+          {
+            "usage.xarray": 3
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "e": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "inf": [
+          {
+            "usage.xarray": 11
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "min": [
+          {
+            "usage.xarray": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "__version__": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "int_": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "float_": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "max": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ]
       }
     },
     "pandas.core.indexes.datetimes": {
@@ -13040,7 +13800,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 17
+              }
             },
             "copy": {
               "pos_only_required": {},
@@ -13157,7 +13919,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             },
             "to_series": {
               "pos_only_required": {},
@@ -13294,7 +14058,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "get_loc": {
               "pos_only_required": {},
@@ -13348,42 +14114,102 @@
           },
           "classmethods": {},
           "properties": {
-            "name": {
-              "type": "bottom"
-            },
-            "dtype": {
-              "type": "bottom"
-            },
-            "values": {
-              "type": "bottom"
-            },
-            "is_monotonic_increasing": {
-              "type": "bottom"
-            },
-            "size": {
-              "type": "bottom"
-            },
-            "is_monotonic": {
-              "type": "bottom"
-            },
-            "is_unique": {
-              "type": "bottom"
-            },
-            "shape": {
-              "type": "bottom"
-            },
-            "month": {
-              "type": "bottom"
-            },
-            "time": {
-              "type": "bottom"
-            },
-            "hour": {
-              "type": "bottom"
-            },
-            "ndim": {
-              "type": "bottom"
-            }
+            "name": [
+              {
+                "usage.xarray": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "dtype": [
+              {
+                "usage.xarray": 5
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "values": [
+              {
+                "usage.xarray": 9
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_monotonic_increasing": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "size": [
+              {
+                "usage.xarray": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_monotonic": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_unique": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "shape": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "month": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "time": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "hour": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "ndim": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -13546,7 +14372,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 14
+              }
             },
             "append": {
               "pos_only_required": {},
@@ -13838,7 +14666,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             },
             "drop": {
               "pos_only_required": {},
@@ -13890,33 +14720,78 @@
           },
           "classmethods": {},
           "properties": {
-            "dtype": {
-              "type": "bottom"
-            },
-            "values": {
-              "type": "bottom"
-            },
-            "is_monotonic_increasing": {
-              "type": "bottom"
-            },
-            "size": {
-              "type": "bottom"
-            },
-            "is_unique": {
-              "type": "bottom"
-            },
-            "is_monotonic": {
-              "type": "bottom"
-            },
-            "shape": {
-              "type": "bottom"
-            },
-            "name": {
-              "type": "bottom"
-            },
-            "nlevels": {
-              "type": "bottom"
-            }
+            "dtype": [
+              {
+                "usage.xarray": 6
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "values": [
+              {
+                "usage.xarray": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_monotonic_increasing": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "size": [
+              {
+                "usage.xarray": 7
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_unique": [
+              {
+                "usage.xarray": 5
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_monotonic": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "shape": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "name": [
+              {
+                "usage.xarray": 11
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "nlevels": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -14204,7 +15079,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "shift": {
               "pos_only_required": {},
@@ -14309,7 +15186,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "sum": {
               "pos_only_required": {},
@@ -14444,24 +15323,49 @@
           },
           "classmethods": {},
           "properties": {
-            "dt": {
-              "type": "bottom"
-            },
-            "values": {
-              "type": "bottom"
-            },
-            "index": {
-              "type": {
-                "module": "pandas.core.indexes.datetimes",
-                "name": "DatetimeIndex"
+            "dt": [
+              {
+                "usage.xarray": 4
+              },
+              {
+                "type": "bottom"
               }
-            },
-            "name": {
-              "type": "None"
-            },
-            "loc": {
-              "type": "bottom"
-            }
+            ],
+            "values": [
+              {
+                "usage.xarray": 18
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "index": [
+              {
+                "usage.xarray": 23
+              },
+              {
+                "type": {
+                  "module": "pandas.core.indexes.datetimes",
+                  "name": "DatetimeIndex"
+                }
+              }
+            ],
+            "name": [
+              {
+                "usage.xarray": 5
+              },
+              {
+                "type": "None"
+              }
+            ],
+            "loc": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -14496,12 +15400,22 @@
       },
       "classes": {},
       "properties": {
-        "MaskedArray": {
-          "type": "bottom"
-        },
-        "concatenate": {
-          "type": "bottom"
-        }
+        "MaskedArray": [
+          {
+            "usage.xarray": 6
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "concatenate": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ]
       }
     },
     "pandas.core.indexes.datetimelike": {
@@ -14670,7 +15584,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             },
             "__radd__": {
               "pos_only_required": {
@@ -14705,17 +15621,29 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 5
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "tz": {
-              "type": "bottom"
-            },
-            "value": {
-              "type": "bottom"
-            }
+            "tz": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "value": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -14769,9 +15697,14 @@
           },
           "classmethods": {},
           "properties": {
-            "month": {
-              "type": "bottom"
-            }
+            "month": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -15141,7 +16074,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__add__": {
               "pos_only_required": {
@@ -15159,7 +16094,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__getitem__": {
               "pos_only_required": {
@@ -15203,7 +16140,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 4
+              }
             },
             "get_indexer": {
               "pos_only_required": {},
@@ -15260,15 +16199,30 @@
           },
           "classmethods": {},
           "properties": {
-            "dtype": {
-              "type": "bottom"
-            },
-            "name": {
-              "type": "bottom"
-            },
-            "values": {
-              "type": "bottom"
-            }
+            "dtype": [
+              {
+                "usage.xarray": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "name": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "values": [
+              {
+                "usage.xarray": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -15379,7 +16333,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 7
+              }
             },
             "__iter__": {
               "pos_only_required": {},
@@ -15390,7 +16346,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "get_indexer": {
               "pos_only_required": {},
@@ -15465,27 +16423,62 @@
           },
           "classmethods": {},
           "properties": {
-            "dtype": {
-              "type": "bottom"
-            },
-            "values": {
-              "type": "bottom"
-            },
-            "name": {
-              "type": "bottom"
-            },
-            "size": {
-              "type": "bottom"
-            },
-            "is_unique": {
-              "type": "bottom"
-            },
-            "shape": {
-              "type": "bottom"
-            },
-            "is_monotonic": {
-              "type": "bottom"
-            }
+            "dtype": [
+              {
+                "usage.xarray": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "values": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "name": [
+              {
+                "usage.xarray": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "size": [
+              {
+                "usage.xarray": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_unique": [
+              {
+                "usage.xarray": 5
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "shape": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_monotonic": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -16085,7 +17078,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             }
           },
           "classmethods": {},
@@ -16177,7 +17172,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             }
           },
           "classmethods": {},
@@ -16255,7 +17252,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             }
           },
           "classmethods": {},
@@ -16286,7 +17285,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
@@ -16345,12 +17346,22 @@
           "methods": {},
           "classmethods": {},
           "properties": {
-            "codes": {
-              "type": "bottom"
-            },
-            "categories": {
-              "type": "bottom"
-            }
+            "codes": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "categories": [
+              {
+                "usage.xarray": 6
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -16430,7 +17441,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 16
+              }
             },
             "append": {
               "pos_only_required": {},
@@ -17080,42 +18093,102 @@
             }
           },
           "properties": {
-            "dtype": {
-              "type": "bottom"
-            },
-            "values": {
-              "type": "bottom"
-            },
-            "names": {
-              "type": "bottom"
-            },
-            "name": {
-              "type": "bottom"
-            },
-            "nlevels": {
-              "type": "bottom"
-            },
-            "levels": {
-              "type": "bottom"
-            },
-            "codes": {
-              "type": "bottom"
-            },
-            "is_unique": {
-              "type": "bottom"
-            },
-            "shape": {
-              "type": "bottom"
-            },
-            "rename": {
-              "type": "bottom"
-            },
-            "size": {
-              "type": "bottom"
-            },
-            "is_monotonic": {
-              "type": "bottom"
-            }
+            "dtype": [
+              {
+                "usage.xarray": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "values": [
+              {
+                "usage.xarray": 5
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "names": [
+              {
+                "usage.xarray": 23
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "name": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "nlevels": [
+              {
+                "usage.xarray": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "levels": [
+              {
+                "usage.xarray": 17
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "codes": [
+              {
+                "usage.xarray": 5
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_unique": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "shape": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "rename": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "size": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_monotonic": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -17242,7 +18315,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 20
+              }
             },
             "__getitem__": {
               "pos_only_required": {
@@ -17278,7 +18353,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 11
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -17318,7 +18395,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             }
           },
           "classmethods": {},
@@ -17362,9 +18441,14 @@
       "functions": {},
       "classes": {},
       "properties": {
-        "stride_tricks": {
-          "type": "bottom"
-        }
+        "stride_tricks": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ]
       }
     },
     "numpy.lib.stride_tricks": {
@@ -17517,7 +18601,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 8
+              }
             },
             "stack": {
               "pos_only_required": {},
@@ -17556,7 +18642,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "equals": {
               "pos_only_required": {},
@@ -17708,29 +18796,49 @@
           },
           "classmethods": {},
           "properties": {
-            "index": {
-              "type": {
-                "module": "pandas.core.indexes.multi",
-                "name": "MultiIndex"
+            "index": [
+              {
+                "usage.xarray": 10
+              },
+              {
+                "type": {
+                  "module": "pandas.core.indexes.multi",
+                  "name": "MultiIndex"
+                }
               }
-            },
-            "columns": {
-              "type": "list",
-              "item": {
-                "type": "str",
-                "options": [
-                  "foo",
-                  "C",
-                  "x"
-                ]
+            ],
+            "columns": [
+              {
+                "usage.xarray": 9
+              },
+              {
+                "type": "list",
+                "item": {
+                  "type": "str",
+                  "options": [
+                    "foo",
+                    "C",
+                    "x"
+                  ]
+                }
               }
-            },
-            "values": {
-              "type": "bottom"
-            },
-            "loc": {
-              "type": "bottom"
-            }
+            ],
+            "values": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "loc": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -18073,23 +19181,45 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "name": {
-              "type": "bottom"
-            },
-            "dtype": {
-              "type": "bottom"
-            },
-            "shape": {
-              "type": "bottom"
-            },
-            "values": {
-              "type": "bottom"
-            }
+            "name": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "dtype": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "shape": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "values": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -18117,7 +19247,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
@@ -18169,7 +19301,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
@@ -18194,7 +19328,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
@@ -18219,7 +19355,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
@@ -18287,9 +19425,14 @@
           "methods": {},
           "classmethods": {},
           "properties": {
-            "loffset": {
-              "type": "None"
-            }
+            "loffset": [
+              {
+                "usage.xarray": 3
+              },
+              {
+                "type": "None"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -18376,7 +19519,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
@@ -18390,21 +19535,46 @@
       "functions": {},
       "classes": {},
       "properties": {
-        "randn": {
-          "type": "bottom"
-        },
-        "random": {
-          "type": "bottom"
-        },
-        "randint": {
-          "type": "bottom"
-        },
-        "uniform": {
-          "type": "bottom"
-        },
-        "choice": {
-          "type": "bottom"
-        }
+        "randn": [
+          {
+            "usage.xarray": 6
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "random": [
+          {
+            "usage.xarray": 3
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "randint": [
+          {
+            "usage.xarray": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "uniform": [
+          {
+            "usage.xarray": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "choice": [
+          {
+            "usage.xarray": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ]
       }
     },
     "pandas.core.indexes.category": {
@@ -18470,7 +19640,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 5
+              }
             },
             "equals": {
               "pos_only_required": {},
@@ -18521,24 +19693,54 @@
           },
           "classmethods": {},
           "properties": {
-            "name": {
-              "type": "bottom"
-            },
-            "dtype": {
-              "type": "bottom"
-            },
-            "categories": {
-              "type": "bottom"
-            },
-            "values": {
-              "type": "bottom"
-            },
-            "size": {
-              "type": "bottom"
-            },
-            "is_unique": {
-              "type": "bottom"
-            }
+            "name": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "dtype": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "categories": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "values": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "size": [
+              {
+                "usage.xarray": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "is_unique": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -18731,7 +19933,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 5
+              }
             },
             "__getitem__": {
               "pos_only_required": {
@@ -18758,7 +19962,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__imul__": {
               "pos_only_required": {
@@ -18775,7 +19981,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__mul__": {
               "pos_only_required": {
@@ -18793,7 +20001,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             },
             "__radd__": {
               "pos_only_required": {
@@ -18811,29 +20021,61 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "dtype": {
-              "type": "bottom"
-            },
-            "mask": {
-              "type": "bottom"
-            },
-            "base": {
-              "type": "bottom"
-            },
-            "data": {
-              "type": "bottom"
-            },
-            "ndim": {
-              "type": "bottom"
-            },
-            "shape": {
-              "type": "bottom"
-            }
+            "dtype": [
+              {
+                "usage.xarray": 8
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "mask": [
+              {
+                "usage.xarray": 6
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "base": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "data": [
+              {
+                "usage.xarray": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "ndim": [
+              {
+                "usage.xarray": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "shape": [
+              {
+                "usage.xarray": 6
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -18957,7 +20199,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 6
+              }
             },
             "astype": {
               "pos_only_required": {},
@@ -18982,12 +20226,22 @@
           },
           "classmethods": {},
           "properties": {
-            "name": {
-              "type": "bottom"
-            },
-            "dtype": {
-              "type": "bottom"
-            }
+            "name": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "dtype": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -19015,7 +20269,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             }
           },
           "classmethods": {},
@@ -19040,7 +20296,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
@@ -19103,7 +20361,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 3
+              }
             }
           },
           "classmethods": {},
@@ -19167,7 +20427,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 1
+              }
             }
           },
           "classmethods": {},
@@ -19203,15 +20465,30 @@
           "methods": {},
           "classmethods": {},
           "properties": {
-            "mid": {
-              "type": "bottom"
-            },
-            "left": {
-              "type": "bottom"
-            },
-            "right": {
-              "type": "bottom"
-            }
+            "mid": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "left": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "right": [
+              {
+                "usage.xarray": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -19250,7 +20527,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.xarray": 2
+              }
             }
           },
           "classmethods": {},

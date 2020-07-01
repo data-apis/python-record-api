@@ -2,40 +2,60 @@ from typing import *
 
 
 class IntBlock:
-    values = ...
+
+    # usage.dask: 2
+    values: object
 
 
 class FloatBlock:
-    values = ...
+
+    # usage.dask: 2
+    values: object
 
 
 class DatetimeBlock:
-    values = ...
+
+    # usage.dask: 2
+    values: object
 
 
 class ObjectBlock:
-    values = ...
+
+    # usage.dask: 2
+    values: object
 
 
 class ExtensionBlock:
-    values = ...
+
+    # usage.dask: 2
+    values: object
 
 
 class BoolBlock:
-    values = ...
+
+    # usage.dask: 2
+    values: object
 
 
 class TimeDeltaBlock:
-    values = ...
+
+    # usage.dask: 2
+    values: object
 
 
 class CategoricalBlock:
-    values = ...
+
+    # usage.dask: 2
+    values: object
 
 
 class DatetimeTZBlock:
-    values = ...
+
+    # usage.dask: 2
+    values: object
 
 
 class ComplexBlock:
-    values = ...
+
+    # usage.dask: 1
+    values: object

@@ -1,6 +1,13 @@
 from typing import *
 
-assert_frame_equal = ...
-assert_series_equal = ...
-assert_index_equal = ...
-assert_extension_array_equal = ...
+# usage.dask: 1
+assert_frame_equal: object
+
+# usage.dask: 1
+assert_series_equal: object
+
+# usage.dask: 1
+assert_index_equal: object
+
+# usage.dask: 1
+assert_extension_array_equal: object

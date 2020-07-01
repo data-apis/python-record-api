@@ -2,46 +2,67 @@ from typing import *
 
 
 class TimeGrouper:
-    loffset: None = ...
-    closed = ...
-    label = ...
+
+    # usage.xarray: 3
+    loffset: None
+
+    # usage.dask: 1
+    closed: object
+
+    # usage.dask: 1
+    label: object
 
 
 class DatetimeIndexResampler:
-    agg = ...
 
-    def g(self, /):
-        "usage.xarray: 4, usage.dask: 5"
+    # usage.dask: 1
+    agg: object
 
-    def pad(self, /):
-        "usage.xarray: 2"
+    def g(self: object, /):
+        "\n    usage.xarray: 4\n    usage.dask: 5\n    "
+        ...
 
-    def backfill(self, /):
-        "usage.xarray: 1"
+    def pad(self: object, /):
+        "\n    usage.xarray: 2\n    "
+        ...
 
-    def asfreq(self, /):
-        "usage.xarray: 7"
+    def backfill(self: object, /):
+        "\n    usage.xarray: 1\n    "
+        ...
 
-    def count(self, /):
-        "usage.dask: 5"
+    def asfreq(self: object, /):
+        "\n    usage.xarray: 7\n    "
+        ...
+
+    def count(self: object, /):
+        "\n    usage.dask: 5\n    "
+        ...
 
     def aggregate(
-        self,
+        self: object,
         /,
-        func: Union[(Callable, Literal[("mean",)], List[Literal[("min", "mean")]])],
+        func: Union[Callable, Literal["mean"], List[Literal[("min", "mean")]]],
     ):
-        "usage.dask: 9"
+        "\n    usage.dask: 9\n    "
+        ...
 
-    def h(self, /):
-        "usage.dask: 3"
+    def h(self: object, /):
+        "\n    usage.dask: 3\n    "
+        ...
 
-    def size(self, /):
-        "usage.dask: 3"
+    def size(self: object, /):
+        "\n    usage.dask: 3\n    "
+        ...
 
-    def quantile(self, /):
-        "usage.dask: 3"
+    def quantile(self: object, /):
+        "\n    usage.dask: 3\n    "
+        ...
 
 
 class Resampler:
-    __module__ = ...
-    __name__ = ...
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
+    # usage.dask: 1
+    __name__: ClassVar[object]

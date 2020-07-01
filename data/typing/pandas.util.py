@@ -1,3 +1,4 @@
 from typing import *
 
-hash_pandas_object = ...
+# usage.dask: 1
+hash_pandas_object: object

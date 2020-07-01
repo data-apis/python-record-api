@@ -2,66 +2,83 @@ from typing import *
 
 
 class Rolling:
-    window = ...
-    win_type = ...
-    min_periods = ...
 
-    def mean(self, /):
-        "usage.xarray: 4, usage.dask: 14"
+    # usage.dask: 1
+    window: object
 
-    def sum(self, /):
-        "usage.dask: 9"
+    # usage.dask: 1
+    win_type: object
 
-    def count(self, /):
-        "usage.dask: 9"
+    # usage.dask: 1
+    min_periods: object
 
-    def median(self, /):
-        "usage.dask: 5"
+    def mean(self: object, /):
+        "\n    usage.xarray: 4\n    usage.dask: 14\n    "
+        ...
 
-    def min(self, /):
-        "usage.dask: 5"
+    def sum(self: object, /):
+        "\n    usage.dask: 9\n    "
+        ...
 
-    def max(self, /):
-        "usage.dask: 5"
+    def count(self: object, /):
+        "\n    usage.dask: 9\n    "
+        ...
 
-    def std(self=..., /):
-        "usage.dask: 6"
+    def median(self: object, /):
+        "\n    usage.dask: 5\n    "
+        ...
 
-    def var(self=..., /):
-        "usage.dask: 5"
+    def min(self: object, /):
+        "\n    usage.dask: 5\n    "
+        ...
 
-    def skew(self, /):
-        "usage.dask: 5"
+    def max(self: object, /):
+        "\n    usage.dask: 5\n    "
+        ...
 
-    def kurt(self, /):
-        "usage.dask: 5"
+    def std(self: object, /):
+        "\n    usage.dask: 6\n    "
+        ...
 
-    def quantile(self, /, quantile: float):
-        "usage.dask: 5"
+    def var(self: object, /):
+        "\n    usage.dask: 5\n    "
+        ...
+
+    def skew(self: object, /):
+        "\n    usage.dask: 5\n    "
+        ...
+
+    def kurt(self: object, /):
+        "\n    usage.dask: 5\n    "
+        ...
+
+    def quantile(self: object, /, quantile: float):
+        "\n    usage.dask: 5\n    "
+        ...
 
     def apply(
-        self,
+        self: object,
         /,
         func: Callable,
         raw: bool,
         engine: Literal[("numba", "cython")] = ...,
         engine_kwargs: None = ...,
-        args: Tuple[(None, ...)] = ...,
+        args: Tuple[None, ...] = ...,
         kwargs: dict = ...,
     ):
-        "usage.dask: 9"
+        "\n    usage.dask: 9\n    "
+        ...
 
-    def cov(self, /):
-        "usage.dask: 5"
+    def cov(self: object, /):
+        "\n    usage.dask: 5\n    "
+        ...
 
     def aggregate(
-        self,
+        self: object,
         /,
         func: Union[
-            (
-                Dict[(Literal[("B", "A")], Union[(Callable, List[Callable])])],
-                List[Callable],
-            )
+            Dict[Literal[("B", "A")], Union[Callable, List[Callable]]], List[Callable]
         ],
     ):
-        "usage.dask: 8"
+        "\n    usage.dask: 8\n    "
+        ...

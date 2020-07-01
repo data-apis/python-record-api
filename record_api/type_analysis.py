@@ -199,10 +199,13 @@ class StringOutput(OutputTypeBase):
         if self.options:
             inner: cst.BaseExpression
             if len(self.options) == 1:
-                inner = cst.SimpleString(self.options[0])
+                inner = cst.SimpleString(repr(self.options[0]))
             else:
                 inner = cst.Tuple(
-                    [cst.Element(cst.SimpleString(option)) for option in self.options]
+                    [
+                        cst.Element(cst.SimpleString(repr(option)))
+                        for option in self.options
+                    ]
                 )
             return cst.helpers.parse_template_expression(
                 "Literal[{inner}]", parser_config, inner=inner
@@ -385,10 +388,14 @@ class NamedOutput(BaseModel):
         return cls(name=input.name, module=input.module)
 
     @property
-    def annotation(self):
-        if self.module is None:
-            return cst.Name(self.name)
-        return cst.Attribute(cst.Name(self.module), cst.Name(self.name))
+    def annotation(self) -> typing.Union[cst.Name, cst.Attribute]:
+        first_name, *rest = (
+            self.module.split(".") + [self.name] if self.module else [self.name]
+        )
+        expr: typing.Union[cst.Name, cst.Attribute] = cst.Name(first_name)
+        for name in rest:
+            expr = cst.Attribute(expr, cst.Name(name))
+        return expr
 
 
 class OtherOutput(OutputTypeBase):

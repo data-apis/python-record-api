@@ -1,3 +1,4 @@
 from typing import *
 
-numeric = ...
+# usage.dask: 3
+numeric: object

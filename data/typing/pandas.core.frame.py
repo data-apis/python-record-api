@@ -2,309 +2,406 @@ from typing import *
 
 
 class DataFrame:
-    def __init__(
-        data: Union[(Dict[(Literal[("x",)], List[Literal[("a",)]])], List[List[int]])]
-    ):
-        "usage.xarray: 1, usage.dask: 1"
+    def __init__(data: Union[Dict[Literal["x"], List[Literal["a"]]], List[List[int]]]):
+        "\n    usage.xarray: 1\n    usage.dask: 1\n    "
+        ...
 
-    __name__ = ...
-    shape = ...
-    __module__ = ...
+    # usage.dask: 3
+    __name__: ClassVar[object]
+
+    # usage.dask: 1
+    shape: ClassVar[object]
+
+    # usage.dask: 4
+    __module__: ClassVar[object]
 
     @classmethod
     def __ne__(_0: type, /):
-        ""
+        "\n    usage.dask: 3\n    "
+        ...
 
     @classmethod
     def from_dict(
-        data: List[
-            Dict[(Literal[("y", "x")], Union[(Literal[("a", "b", "c", "d")], int)])]
-        ]
+        data: List[Dict[Literal[("y", "x")], Union[Literal[("a", "b", "c", "d")], int]]]
     ):
-        "usage.dask: 1"
+        "\n    usage.dask: 1\n    "
+        ...
 
-    index = ...
-    columns = ...
-    values = ...
-    loc = ...
-    _data = ...
-    iloc = ...
-    dtypes = ...
-    x: pandas.core.series.Series = ...
-    empty = ...
-    id = ...
-    amount = ...
-    path = ...
-    _constructor_sliced = ...
-    fruit = ...
-    Date: pandas.core.series.Series = ...
-    a: pandas.core.series.Series = ...
-    dt_col = ...
-    str_col = ...
-    string_col = ...
-    b = ...
-    T = ...
-    A = ...
-    div = ...
-    divide = ...
-    rdiv = ...
-    X = ...
-    c = ...
-    __class__ = ...
-    y: pandas.core.series.Series = ...
-    z = ...
-    w: pandas.core.series.Series = ...
-    tz = ...
-    ndim = ...
-    B = ...
-    size = ...
-    d = ...
-    col2 = ...
-    col1 = ...
-    C = ...
-    F = ...
-    A_a = ...
-    i32 = ...
-    _partitions = ...
-    e = ...
-    f = ...
+    # usage.xarray: 10
+    # usage.dask: 189
+    index: object
 
-    def reset_index(self, /, level: int = ..., drop: bool = ...):
-        "usage.xarray: 3, usage.dask: 28"
+    # usage.xarray: 9
+    # usage.dask: 141
+    columns: object
 
-    def set_index(self, /, keys=...):
-        "usage.xarray: 10, usage.dask: 115"
+    # usage.xarray: 2
+    # usage.dask: 31
+    values: object
 
-    def __getitem__(self, _0, /):
-        ""
+    # usage.xarray: 1
+    # usage.dask: 68
+    loc: object
 
-    def stack(self=..., /):
-        "usage.xarray: 1, usage.dask: 1"
+    # usage.dask: 1
+    _data: object
+
+    # usage.dask: 41
+    iloc: object
+
+    # usage.dask: 26
+    dtypes: object
+
+    # usage.dask: 81
+    x: pandas.core.series.Series
+
+    # usage.dask: 7
+    empty: object
+
+    # usage.dask: 2
+    id: object
+
+    # usage.dask: 1
+    amount: object
+
+    # usage.dask: 2
+    path: object
+
+    # usage.dask: 1
+    _constructor_sliced: object
+
+    # usage.dask: 2
+    fruit: object
+
+    # usage.dask: 2
+    Date: pandas.core.series.Series
+
+    # usage.dask: 116
+    a: pandas.core.series.Series
+
+    # usage.dask: 2
+    dt_col: object
+
+    # usage.dask: 12
+    str_col: object
+
+    # usage.dask: 4
+    string_col: object
+
+    # usage.dask: 66
+    b: object
+
+    # usage.dask: 5
+    T: object
+
+    # usage.dask: 40
+    A: object
+
+    # usage.dask: 3
+    div: object
+
+    # usage.dask: 3
+    divide: object
+
+    # usage.dask: 3
+    rdiv: object
+
+    # usage.dask: 2
+    X: object
+
+    # usage.dask: 1
+    c: object
+
+    # usage.dask: 7
+    __class__: object
+
+    # usage.dask: 37
+    y: pandas.core.series.Series
+
+    # usage.dask: 4
+    z: object
+
+    # usage.dask: 7
+    w: pandas.core.series.Series
+
+    # usage.dask: 1
+    tz: object
+
+    # usage.dask: 3
+    ndim: object
+
+    # usage.dask: 15
+    B: object
+
+    # usage.dask: 2
+    size: object
+
+    # usage.dask: 4
+    d: object
+
+    # usage.dask: 1
+    col2: object
+
+    # usage.dask: 1
+    col1: object
+
+    # usage.dask: 4
+    C: object
+
+    # usage.dask: 1
+    F: object
+
+    # usage.dask: 3
+    A_a: object
+
+    # usage.dask: 2
+    i32: object
+
+    # usage.dask: 2
+    _partitions: object
+
+    # usage.dask: 2
+    e: object
+
+    # usage.dask: 3
+    f: object
+
+    def reset_index(self: object, /, level: int = ..., drop: bool = ...):
+        "\n    usage.xarray: 3\n    usage.dask: 28\n    "
+        ...
+
+    def set_index(self: object, /, keys: object):
+        "\n    usage.xarray: 10\n    usage.dask: 115\n    "
+        ...
+
+    def __getitem__(self: object, _0: object, /):
+        "\n    usage.xarray: 8\n    usage.dask: 520\n    "
+        ...
+
+    def stack(self: object, /):
+        "\n    usage.xarray: 1\n    usage.dask: 1\n    "
+        ...
 
     def __setitem__(
-        self,
+        self: object,
         _0: Union[
-            (
-                pandas.core.indexes.numeric.Int64Index,
-                pandas.core.frame.DataFrame,
-                pandas.core.indexes.base.Index,
-                List[Literal[("b", "a")]],
-                str,
-            )
+            pandas.core.indexes.numeric.Int64Index,
+            pandas.core.frame.DataFrame,
+            pandas.core.indexes.base.Index,
+            List[Literal[("b", "a")]],
+            str,
         ],
-        _1,
+        _1: object,
         /,
     ):
-        ""
+        "\n    usage.xarray: 1\n    usage.dask: 128\n    "
+        ...
 
-    def equals(self, /, other: pandas.core.frame.DataFrame):
-        "usage.xarray: 8, usage.dask: 2"
+    def equals(self: object, /, other: pandas.core.frame.DataFrame):
+        "\n    usage.xarray: 8\n    usage.dask: 2\n    "
+        ...
 
     def reindex(
-        self=...,
+        self: object,
         /,
         labels: Union[
-            (
-                List[str],
-                pandas.core.indexes.numeric.Int64Index,
-                pandas.core.indexes.multi.MultiIndex,
-                pandas.core.indexes.datetimes.DatetimeIndex,
-                reversed,
-            )
+            List[str],
+            pandas.core.indexes.numeric.Int64Index,
+            pandas.core.indexes.multi.MultiIndex,
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            reversed,
         ] = ...,
-        fill_value: Union[(int, float)] = ...,
+        fill_value: Union[int, float] = ...,
     ):
-        "usage.xarray: 2, usage.dask: 12"
+        "\n    usage.xarray: 2\n    usage.dask: 12\n    "
+        ...
 
-    def items(self, /):
-        "usage.xarray: 1"
+    def items(self: object, /):
+        "\n    usage.xarray: 1\n    "
+        ...
 
-    def iteritems(self, /):
-        "usage.xarray: 1, usage.dask: 2"
+    def iteritems(self: object, /):
+        "\n    usage.xarray: 1\n    usage.dask: 2\n    "
+        ...
 
-    def to_xarray(self, /):
-        "usage.xarray: 5"
+    def to_xarray(self: object, /):
+        "\n    usage.xarray: 5\n    "
+        ...
 
     def apply(
-        self,
+        self: object,
         /,
-        func: Callable = ...,
+        func: Callable,
         raw: bool = ...,
         result_type: None = ...,
-        args: Tuple[(None, ...)] = ...,
+        args: Tuple[None, ...] = ...,
     ):
-        "usage.xarray: 1, usage.dask: 10"
+        "\n    usage.xarray: 1\n    usage.dask: 10\n    "
+        ...
 
     def rolling(
-        self,
+        self: object,
         /,
-        window: Union[(pandas.tseries.offsets.Second, float, int, str)],
-        min_periods: Union[(int, None)] = ...,
+        window: Union[pandas.tseries.offsets.Second, float, int, str],
+        min_periods: Union[int, None] = ...,
         center: bool = ...,
         win_type: None = ...,
-        axis: Union[(int, Literal[("rows", "columns", "coulombs")])] = ...,
+        axis: Union[int, Literal[("rows", "columns", "coulombs")]] = ...,
     ):
-        "usage.xarray: 3, usage.dask: 85"
+        "\n    usage.xarray: 3\n    usage.dask: 85\n    "
+        ...
 
     def rename(
-        self,
+        self: object,
         /,
-        columns: Union[
-            (Dict[(str, Union[(int, str)])], collections.OrderedDict, Callable)
-        ] = ...,
+        columns: Union[Dict[str, Union[int, str]], collections.OrderedDict, Callable],
     ):
-        "usage.dask: 18"
+        "\n    usage.dask: 18\n    "
+        ...
 
     def astype(
-        self,
+        self: object,
         /,
         dtype: Union[
-            (
-                Dict[
-                    (
-                        Union[(int, str)],
-                        Union[
-                            (
-                                Literal[("category", "f8")],
-                                numpy.dtype,
-                                pandas.core.dtypes.dtypes.CategoricalDtype,
-                                Type[float],
-                            )
-                        ],
-                    )
+            Dict[
+                Union[int, str],
+                Union[
+                    Literal[("category", "f8")],
+                    numpy.dtype,
+                    pandas.core.dtypes.dtypes.CategoricalDtype,
+                    Type[float],
                 ],
-                pandas.core.series.Series,
-                Literal[("float", "float64")],
-                type,
-            )
-        ] = ...,
-    ):
-        "usage.dask: 32"
-
-    def itertuples(
-        self, /, index: bool = ..., name: Union[(None, Literal[("Pandas",)])] = ...
-    ):
-        "usage.dask: 9"
-
-    def sort_values(
-        self,
-        /,
-        by: Union[
-            (
-                List[
-                    Union[
-                        (Tuple[(Literal[("a", "A", "B", "b")], str)], float, int, str)
-                    ]
-                ],
-                Literal[("KEY",)],
-            )
+            ],
+            pandas.core.series.Series,
+            Literal[("float", "float64")],
+            type,
         ],
     ):
-        "usage.dask: 179"
+        "\n    usage.dask: 32\n    "
+        ...
 
-    def sort_index(self=..., /):
-        "usage.dask: 8"
+    def itertuples(
+        self: object, /, index: bool = ..., name: Union[None, Literal["Pandas"]] = ...
+    ):
+        "\n    usage.dask: 9\n    "
+        ...
+
+    def sort_values(
+        self: object,
+        /,
+        by: Union[
+            List[Union[Tuple[Literal[("a", "A", "B", "b")], str], float, int, str]],
+            Literal["KEY"],
+        ],
+    ):
+        "\n    usage.dask: 179\n    "
+        ...
+
+    def sort_index(self: object, /):
+        "\n    usage.dask: 8\n    "
+        ...
 
     def select_dtypes(
-        self,
+        self: object,
         /,
         include: Union[
-            (
-                List[
-                    Union[
-                        (
-                            type,
-                            Literal[
-                                ("category", "bool", "number", "object", "datetime")
-                            ],
-                        )
-                    ]
-                ],
-                None,
-            )
-        ] = ...,
+            List[
+                Union[
+                    type, Literal[("category", "bool", "number", "object", "datetime")]
+                ]
+            ],
+            None,
+        ],
     ):
-        "usage.dask: 20"
+        "\n    usage.dask: 20\n    "
+        ...
 
     def fillna(
-        self,
+        self: object,
         /,
-        value: Union[(pandas.core.series.Series, int, None, Literal[("-",)])] = ...,
-        method: Union[(None, Literal[("ffill", "pad", "bfill")])] = ...,
+        value: Union[pandas.core.series.Series, int, None, Literal["-"]] = ...,
+        method: Union[None, Literal[("ffill", "pad", "bfill")]] = ...,
         axis: int = ...,
-        limit: Union[(None, int)] = ...,
+        limit: Union[None, int] = ...,
     ):
-        "usage.dask: 31"
+        "\n    usage.dask: 31\n    "
+        ...
 
-    def head(self=..., /):
-        "usage.dask: 18"
+    def head(self: object, /):
+        "\n    usage.dask: 18\n    "
+        ...
 
-    def assign(self, /):
-        "usage.dask: 16"
+    def assign(self: object, /):
+        "\n    usage.dask: 16\n    "
+        ...
 
     def drop(
-        self,
+        self: object,
         /,
-        columns: Union[(List[str], Literal[("category_2", "dt")])] = ...,
+        columns: Union[List[str], Literal[("category_2", "dt")]] = ...,
         inplace: bool = ...,
         labels: Union[
-            (
-                Literal[("a", "_index", "y", "timedelta", "_partitions")],
-                List[Union[(int, Literal[("z", "y", "x", "a")])]],
-                int,
-            )
+            Literal[("a", "_index", "y", "timedelta", "_partitions")],
+            List[Union[int, Literal[("z", "y", "x", "a")]]],
+            int,
         ] = ...,
         axis: int = ...,
         errors: Literal[("raise", "ignore")] = ...,
     ):
-        "usage.dask: 32"
+        "\n    usage.dask: 32\n    "
+        ...
 
-    def copy(self=..., /):
-        "usage.dask: 16"
+    def copy(self: object, /):
+        "\n    usage.dask: 16\n    "
+        ...
 
     def groupby(
-        self=...,
+        self: object,
         /,
-        by=...,
+        by: object = ...,
         group_keys: bool = ...,
-        level: Union[(List[int], int)] = ...,
+        level: Union[List[int], int] = ...,
         sort: bool = ...,
         *,
         dropna: bool = ...,
     ):
-        "usage.dask: 448"
+        "\n    usage.dask: 448\n    "
+        ...
 
-    def get(self, /, key: str):
-        "usage.dask: 10"
+    def get(self: object, /, key: str):
+        "\n    usage.dask: 10\n    "
+        ...
 
     def to_csv(
-        self,
+        self: object,
         /,
         path_or_buf: Union[
-            (
-                _io.TextIOWrapper,
-                Literal[("/var/folders/xn/05ktz3056kqd9n8frgd6236h0000gn/T/t",)],
-            )
-        ] = ...,
-        index: bool = ...,
+            _io.TextIOWrapper,
+            Literal["/var/folders/xn/05ktz3056kqd9n8frgd6236h0000gn/T/t"],
+        ],
+        index: bool,
     ):
-        "usage.dask: 5"
+        "\n    usage.dask: 5\n    "
+        ...
 
     def __eq__(
-        self,
-        _0: Union[(dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int)],
+        self: object,
+        _0: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int],
         /,
     ):
-        ""
+        "\n    usage.dask: 17\n    "
+        ...
 
-    def all(self, /, axis: int = ..., skipna: bool = ...):
-        "usage.dask: 11"
+    def all(self: object, /, axis: int = ..., skipna: bool = ...):
+        "\n    usage.dask: 11\n    "
+        ...
 
-    def to_records(self=..., /):
-        "usage.dask: 4"
+    def to_records(self: object, /):
+        "\n    usage.dask: 4\n    "
+        ...
 
     def to_json(
-        self,
+        self: object,
         /,
         path_or_buf: Literal[
             (
@@ -315,681 +412,760 @@ class DataFrame:
         orient: Literal[("values", "columns", "index", "records", "split")],
         lines: bool,
     ):
-        "usage.dask: 24"
+        "\n    usage.dask: 24\n    "
+        ...
 
     def __add__(
-        self,
+        self: object,
         _0: Union[
-            (
-                numpy.ndarray,
-                dask.dataframe.core.Scalar,
-                pandas.core.frame.DataFrame,
-                int,
-                float,
-            )
+            numpy.ndarray,
+            dask.dataframe.core.Scalar,
+            pandas.core.frame.DataFrame,
+            int,
+            float,
         ],
         /,
     ):
-        ""
+        "\n    usage.dask: 26\n    "
+        ...
 
     def __radd__(
-        self,
+        self: object,
         _0: Union[
-            (
-                dask.dataframe.core.Scalar,
-                int,
-                pandas.core.frame.DataFrame,
-                dask.dataframe.core.DataFrame,
-            )
+            dask.dataframe.core.Scalar,
+            int,
+            pandas.core.frame.DataFrame,
+            dask.dataframe.core.DataFrame,
         ],
         /,
     ):
-        ""
+        "\n    usage.dask: 5\n    "
+        ...
 
-    def __mul__(self, _0: Union[(int, pandas.core.frame.DataFrame)], /):
-        ""
+    def __mul__(self: object, _0: Union[int, pandas.core.frame.DataFrame], /):
+        "\n    usage.dask: 2\n    "
+        ...
 
     def __rmul__(
-        self,
-        _0: Union[(dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int)],
+        self: object,
+        _0: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int],
         /,
     ):
-        ""
+        "\n    usage.dask: 3\n    "
+        ...
 
     def __sub__(
-        self,
-        _0: Union[(pandas.core.series.Series, pandas.core.frame.DataFrame, int)],
+        self: object,
+        _0: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
         /,
     ):
-        ""
+        "\n    usage.dask: 10\n    "
+        ...
 
     def __rsub__(
-        self,
-        _0: Union[(dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int)],
+        self: object,
+        _0: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int],
         /,
     ):
-        ""
+        "\n    usage.dask: 4\n    "
+        ...
 
-    def __truediv__(self, _0: Union[(int, pandas.core.frame.DataFrame)], /):
-        ""
+    def __truediv__(self: object, _0: Union[int, pandas.core.frame.DataFrame], /):
+        "\n    usage.dask: 3\n    "
+        ...
 
     def __rtruediv__(
-        self,
-        _0: Union[(dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int)],
+        self: object,
+        _0: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int],
         /,
     ):
-        ""
+        "\n    usage.dask: 4\n    "
+        ...
 
-    def __floordiv__(self, _0: Union[(int, pandas.core.frame.DataFrame)], /):
-        ""
+    def __floordiv__(self: object, _0: Union[int, pandas.core.frame.DataFrame], /):
+        "\n    usage.dask: 2\n    "
+        ...
 
     def __rfloordiv__(
-        self,
-        _0: Union[(dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int)],
+        self: object,
+        _0: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int],
         /,
     ):
-        ""
+        "\n    usage.dask: 3\n    "
+        ...
 
-    def __pow__(self, _0: Union[(int, pandas.core.frame.DataFrame)], /):
-        ""
+    def __pow__(self: object, _0: Union[int, pandas.core.frame.DataFrame], /):
+        "\n    usage.dask: 4\n    "
+        ...
 
     def __rpow__(
-        self,
-        _0: Union[(dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int)],
+        self: object,
+        _0: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int],
         /,
     ):
-        ""
+        "\n    usage.dask: 3\n    "
+        ...
 
-    def __mod__(self, _0: Union[(int, pandas.core.frame.DataFrame)], /):
-        ""
+    def __mod__(self: object, _0: Union[int, pandas.core.frame.DataFrame], /):
+        "\n    usage.dask: 2\n    "
+        ...
 
     def __rmod__(
-        self,
-        _0: Union[(dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int)],
+        self: object,
+        _0: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int],
         /,
     ):
-        ""
+        "\n    usage.dask: 3\n    "
+        ...
 
-    def __and__(self, _0: Union[(bool, pandas.core.frame.DataFrame)], /):
-        ""
+    def __and__(self: object, _0: Union[bool, pandas.core.frame.DataFrame], /):
+        "\n    usage.dask: 2\n    "
+        ...
 
     def __rand__(
-        self,
-        _0: Union[(dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, bool)],
+        self: object,
+        _0: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, bool],
         /,
     ):
-        ""
+        "\n    usage.dask: 3\n    "
+        ...
 
-    def __or__(self, _0: Union[(bool, pandas.core.frame.DataFrame)], /):
-        ""
+    def __or__(self: object, _0: Union[bool, pandas.core.frame.DataFrame], /):
+        "\n    usage.dask: 4\n    "
+        ...
 
     def __ror__(
-        self,
-        _0: Union[(dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, bool)],
+        self: object,
+        _0: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, bool],
         /,
     ):
-        ""
+        "\n    usage.dask: 5\n    "
+        ...
 
-    def __xor__(self, _0: Union[(bool, pandas.core.frame.DataFrame)], /):
-        ""
+    def __xor__(self: object, _0: Union[bool, pandas.core.frame.DataFrame], /):
+        "\n    usage.dask: 2\n    "
+        ...
 
     def __rxor__(
-        self,
-        _0: Union[(dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, bool)],
+        self: object,
+        _0: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, bool],
         /,
     ):
-        ""
+        "\n    usage.dask: 3\n    "
+        ...
 
     def __gt__(
-        self,
-        _0: Union[(pandas.core.series.Series, pandas.core.frame.DataFrame, int)],
+        self: object,
+        _0: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
         /,
     ):
-        ""
+        "\n    usage.dask: 3\n    "
+        ...
 
     def __lt__(
-        self,
-        _0: Union[(dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int)],
+        self: object,
+        _0: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int],
         /,
     ):
-        ""
+        "\n    usage.dask: 3\n    "
+        ...
 
-    def __le__(self, _0, /):
-        ""
+    def __le__(self: object, _0: object, /):
+        "\n    usage.dask: 12\n    "
+        ...
 
     def __ge__(
-        self,
-        _0: Union[(dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int)],
+        self: object,
+        _0: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int],
         /,
     ):
-        ""
+        "\n    usage.dask: 7\n    "
+        ...
 
     def __ne__(
-        self,
-        _0: Union[(dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int)],
+        self: object,
+        _0: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame, int],
         /,
     ):
-        ""
+        "\n    usage.dask: 5\n    "
+        ...
 
-    def lt(self, /, other: Union[(int, pandas.core.frame.DataFrame)]):
-        "usage.dask: 2"
+    def lt(self: object, /, other: Union[int, pandas.core.frame.DataFrame]):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def gt(self, /, other: Union[(int, pandas.core.frame.DataFrame)]):
-        "usage.dask: 2"
+    def gt(self: object, /, other: Union[int, pandas.core.frame.DataFrame]):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def le(self, /, other: Union[(int, pandas.core.frame.DataFrame)]):
-        "usage.dask: 2"
+    def le(self: object, /, other: Union[int, pandas.core.frame.DataFrame]):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def ge(self, /, other: Union[(int, pandas.core.frame.DataFrame)]):
-        "usage.dask: 2"
+    def ge(self: object, /, other: Union[int, pandas.core.frame.DataFrame]):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def ne(self, /, other: Union[(int, pandas.core.frame.DataFrame)]):
-        "usage.dask: 2"
+    def ne(self: object, /, other: Union[int, pandas.core.frame.DataFrame]):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def eq(self, /, other: Union[(int, pandas.core.frame.DataFrame)]):
-        "usage.dask: 2"
+    def eq(self: object, /, other: Union[int, pandas.core.frame.DataFrame]):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def __neg__(self, /):
-        ""
+    def __neg__(self: object, /):
+        "\n    usage.dask: 5\n    "
+        ...
 
-    def __invert__(self, /):
-        ""
+    def __invert__(self: object, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
-    def any(self, /, axis: int = ..., skipna: bool = ...):
-        "usage.dask: 9"
+    def any(self: object, /, axis: int = ..., skipna: bool = ...):
+        "\n    usage.dask: 9\n    "
+        ...
 
     def add(
-        self=...,
+        self: object,
         /,
-        other: Union[
-            (pandas.core.frame.DataFrame, int, pandas.core.series.Series)
-        ] = ...,
+        other: Union[pandas.core.frame.DataFrame, int, pandas.core.series.Series],
     ):
-        "usage.dask: 11"
+        "\n    usage.dask: 11\n    "
+        ...
 
     def sub(
-        self=...,
+        self: object,
         /,
-        other: Union[
-            (pandas.core.series.Series, pandas.core.frame.DataFrame, int)
-        ] = ...,
+        other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
     ):
-        "usage.dask: 9"
+        "\n    usage.dask: 9\n    "
+        ...
 
     def mul(
-        self=...,
+        self: object,
         /,
-        other: Union[
-            (pandas.core.frame.DataFrame, int, pandas.core.series.Series)
-        ] = ...,
+        other: Union[pandas.core.frame.DataFrame, int, pandas.core.series.Series],
     ):
-        "usage.dask: 11"
+        "\n    usage.dask: 11\n    "
+        ...
 
     def truediv(
-        self=...,
+        self: object,
         /,
-        other: Union[
-            (pandas.core.series.Series, pandas.core.frame.DataFrame, int)
-        ] = ...,
+        other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
     ):
-        "usage.dask: 27"
+        "\n    usage.dask: 27\n    "
+        ...
 
     def floordiv(
-        self=...,
+        self: object,
         /,
-        other: Union[
-            (pandas.core.series.Series, pandas.core.frame.DataFrame, int)
-        ] = ...,
+        other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
     ):
-        "usage.dask: 9"
+        "\n    usage.dask: 9\n    "
+        ...
 
     def pow(
-        self=...,
+        self: object,
         /,
-        other: Union[
-            (pandas.core.series.Series, pandas.core.frame.DataFrame, int)
-        ] = ...,
+        other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
     ):
-        "usage.dask: 9"
+        "\n    usage.dask: 9\n    "
+        ...
 
     def mod(
-        self=...,
+        self: object,
         /,
-        other: Union[
-            (pandas.core.series.Series, pandas.core.frame.DataFrame, int)
-        ] = ...,
+        other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
     ):
-        "usage.dask: 9"
+        "\n    usage.dask: 9\n    "
+        ...
 
     def radd(
-        self=...,
+        self: object,
         /,
-        other: Union[
-            (pandas.core.series.Series, pandas.core.frame.DataFrame, int)
-        ] = ...,
+        other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
     ):
-        "usage.dask: 9"
+        "\n    usage.dask: 9\n    "
+        ...
 
     def rsub(
-        self=...,
+        self: object,
         /,
-        other: Union[
-            (pandas.core.series.Series, pandas.core.frame.DataFrame, int)
-        ] = ...,
+        other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
     ):
-        "usage.dask: 9"
+        "\n    usage.dask: 9\n    "
+        ...
 
     def rmul(
-        self=...,
+        self: object,
         /,
-        other: Union[
-            (pandas.core.series.Series, pandas.core.frame.DataFrame, int)
-        ] = ...,
+        other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
     ):
-        "usage.dask: 9"
+        "\n    usage.dask: 9\n    "
+        ...
 
     def rtruediv(
-        self=...,
+        self: object,
         /,
-        other: Union[
-            (pandas.core.series.Series, pandas.core.frame.DataFrame, int)
-        ] = ...,
+        other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
     ):
-        "usage.dask: 18"
+        "\n    usage.dask: 18\n    "
+        ...
 
     def rpow(
-        self=...,
+        self: object,
         /,
-        other: Union[
-            (pandas.core.series.Series, pandas.core.frame.DataFrame, int)
-        ] = ...,
+        other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
     ):
-        "usage.dask: 9"
+        "\n    usage.dask: 9\n    "
+        ...
 
     def rmod(
-        self=...,
+        self: object,
         /,
-        other: Union[
-            (pandas.core.series.Series, pandas.core.frame.DataFrame, int)
-        ] = ...,
+        other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
     ):
-        "usage.dask: 9"
+        "\n    usage.dask: 9\n    "
+        ...
 
     def sum(
-        self=...,
+        self: object,
         /,
-        axis: Union[(int, Literal[("columns", "index")])] = ...,
+        axis: Union[int, Literal[("columns", "index")]] = ...,
         min_count: int = ...,
     ):
-        "usage.dask: 33"
+        "\n    usage.dask: 33\n    "
+        ...
 
     def prod(
-        self=...,
+        self: object,
         /,
-        axis: Union[(int, Literal[("columns", "index")])] = ...,
+        axis: Union[int, Literal[("columns", "index")]] = ...,
         min_count: int = ...,
     ):
-        "usage.dask: 15"
+        "\n    usage.dask: 15\n    "
+        ...
 
-    def min(self=..., /):
-        "usage.dask: 15"
+    def min(self: object, /):
+        "\n    usage.dask: 15\n    "
+        ...
 
-    def max(self=..., /):
-        "usage.dask: 15"
+    def max(self: object, /):
+        "\n    usage.dask: 15\n    "
+        ...
 
-    def mean(self=..., /):
-        "usage.dask: 20"
+    def mean(self: object, /):
+        "\n    usage.dask: 20\n    "
+        ...
 
-    def _get_numeric_data(self, /):
-        "usage.dask: 4"
+    def _get_numeric_data(self: object, /):
+        "\n    usage.dask: 4\n    "
+        ...
 
-    def count(self=..., /):
-        "usage.dask: 17"
+    def count(self: object, /):
+        "\n    usage.dask: 17\n    "
+        ...
 
     def var(
-        self,
+        self: object,
         /,
-        axis: Union[(Literal[("columns", "index")], int)] = ...,
-        skipna: Union[(bool, None)] = ...,
+        axis: Union[Literal[("columns", "index")], int] = ...,
+        skipna: Union[bool, None] = ...,
         ddof: int = ...,
     ):
-        "usage.dask: 31"
+        "\n    usage.dask: 31\n    "
+        ...
 
     def std(
-        self,
+        self: object,
         /,
-        axis: Union[(Literal[("columns", "index")], int)] = ...,
+        axis: Union[Literal[("columns", "index")], int] = ...,
         skipna: bool = ...,
         ddof: int = ...,
     ):
-        "usage.dask: 23"
+        "\n    usage.dask: 23\n    "
+        ...
 
     def sem(
-        self,
+        self: object,
         /,
-        axis: Union[(int, Literal[("columns", "index")])] = ...,
-        skipna: Union[(bool, None)] = ...,
+        axis: Union[int, Literal[("columns", "index")]] = ...,
+        skipna: Union[bool, None] = ...,
         ddof: int = ...,
     ):
-        "usage.dask: 23"
+        "\n    usage.dask: 23\n    "
+        ...
 
     def drop_duplicates(
-        self,
+        self: object,
         /,
         subset: Union[
-            (Literal[("ticker", "y")], None, List[Literal[("x", "y", "z")]])
+            Literal[("ticker", "y")], None, List[Literal[("x", "y", "z")]]
         ] = ...,
-        keep: Union[(Literal[("last", "first")], bool)] = ...,
+        keep: Union[Literal[("last", "first")], bool] = ...,
     ):
-        "usage.dask: 43"
+        "\n    usage.dask: 43\n    "
+        ...
 
-    def take(self, /, indices: numpy.ndarray):
-        "usage.dask: 1"
+    def take(self: object, /, indices: numpy.ndarray):
+        "\n    usage.dask: 1\n    "
+        ...
 
-    def to_string(self, /, max_rows: int, show_dimensions: bool):
-        "usage.dask: 2"
+    def to_string(self: object, /, max_rows: int, show_dimensions: bool):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def tail(self, /, n: int):
-        "usage.dask: 5"
+    def tail(self: object, /, n: int):
+        "\n    usage.dask: 5\n    "
+        ...
 
     def describe(
-        self,
+        self: object,
         /,
-        percentiles: Union[(None, List[float])] = ...,
+        percentiles: Union[None, List[float]] = ...,
         include: Union[
-            (
-                List[
-                    Union[
-                        (
-                            Type[numpy.timedelta64],
-                            Literal[("number", "object", "bool", "datetime")],
-                        )
-                    ]
-                ],
-                None,
-                Literal[("all",)],
-            )
+            List[
+                Union[
+                    Type[numpy.timedelta64],
+                    Literal[("number", "object", "bool", "datetime")],
+                ]
+            ],
+            None,
+            Literal["all"],
         ] = ...,
-        exclude: Union[(None, List[Literal[("object", "number")]])] = ...,
+        exclude: Union[None, List[Literal[("object", "number")]]] = ...,
     ):
-        "usage.dask: 21"
+        "\n    usage.dask: 21\n    "
+        ...
 
     def quantile(
-        self,
+        self: object,
         /,
-        q: Union[(List[Union[(float, numpy.float64)]], float)] = ...,
+        q: Union[List[Union[float, numpy.float64]], float] = ...,
         axis: int = ...,
     ):
-        "usage.dask: 7"
+        "\n    usage.dask: 7\n    "
+        ...
 
-    def __iter__(self, /):
-        ""
+    def __iter__(self: object, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
-    def cumsum(self, /, axis: Union[(int, None)] = ..., skipna: bool = ...):
-        "usage.dask: 11"
+    def cumsum(self: object, /, axis: Union[int, None] = ..., skipna: bool = ...):
+        "\n    usage.dask: 11\n    "
+        ...
 
-    def cumprod(self, /, axis: Union[(int, None)] = ..., skipna: bool = ...):
-        "usage.dask: 11"
+    def cumprod(self: object, /, axis: Union[int, None] = ..., skipna: bool = ...):
+        "\n    usage.dask: 11\n    "
+        ...
 
-    def cummin(self, /, axis: Union[(int, None)] = ..., skipna: bool = ...):
-        "usage.dask: 11"
+    def cummin(self: object, /, axis: Union[int, None] = ..., skipna: bool = ...):
+        "\n    usage.dask: 11\n    "
+        ...
 
-    def isnull(self, /):
-        "usage.dask: 6"
+    def isnull(self: object, /):
+        "\n    usage.dask: 6\n    "
+        ...
 
     def where(
-        self=...,
+        self: object,
         /,
-        cond: Union[(pandas.core.series.Series, pandas.core.frame.DataFrame)] = ...,
+        cond: Union[pandas.core.series.Series, pandas.core.frame.DataFrame],
     ):
-        "usage.dask: 8"
+        "\n    usage.dask: 8\n    "
+        ...
 
-    def cummax(self, /, axis: Union[(int, None)] = ..., skipna: bool = ...):
-        "usage.dask: 11"
+    def cummax(self: object, /, axis: Union[int, None] = ..., skipna: bool = ...):
+        "\n    usage.dask: 11\n    "
+        ...
 
     def dropna(
-        self,
+        self: object,
         /,
         how: Literal[("any", "all")] = ...,
-        thresh: Union[(int, None)] = ...,
-        subset: Union[(None, List[Literal[("x", "z", "y")]])] = ...,
+        thresh: Union[int, None] = ...,
+        subset: Union[None, List[Literal[("x", "z", "y")]]] = ...,
     ):
-        "usage.dask: 21"
+        "\n    usage.dask: 21\n    "
+        ...
 
     def clip(
-        self,
+        self: object,
         /,
-        lower: Union[(None, int, float)] = ...,
-        upper: Union[(float, int, None)] = ...,
+        lower: Union[None, int, float] = ...,
+        upper: Union[float, int, None] = ...,
     ):
-        "usage.dask: 12"
+        "\n    usage.dask: 12\n    "
+        ...
 
-    def squeeze(self, /):
-        "usage.dask: 3"
+    def squeeze(self: object, /):
+        "\n    usage.dask: 3\n    "
+        ...
 
     def mask(
-        self,
+        self: object,
         /,
-        cond: Union[(pandas.core.series.Series, pandas.core.frame.DataFrame)] = ...,
+        cond: Union[pandas.core.series.Series, pandas.core.frame.DataFrame],
     ):
-        "usage.dask: 6"
+        "\n    usage.dask: 6\n    "
+        ...
 
     def rename_axis(
-        self, /, mapper: Union[(Literal[("myindex", "newindex")], List[None])] = ...
+        self: object, /, mapper: Union[Literal[("myindex", "newindex")], List[None]]
     ):
-        "usage.dask: 5"
+        "\n    usage.dask: 5\n    "
+        ...
 
     def isin(
-        self, /, values: Union[(Dict[(Literal[("b", "a")], List[int])], List[int])]
+        self: object, /, values: Union[Dict[Literal[("b", "a")], List[int]], List[int]]
     ):
-        "usage.dask: 6"
+        "\n    usage.dask: 6\n    "
+        ...
 
-    def notnull(self, /):
-        "usage.dask: 2"
+    def notnull(self: object, /):
+        "\n    usage.dask: 2\n    "
+        ...
 
     def align(
-        self,
+        self: object,
         /,
         other: pandas.core.frame.DataFrame,
         join: Literal[("right", "left", "outer", "inner")],
-        axis: Union[(Literal[("XXX", "columns", "index")], None, int)] = ...,
-        fill_value: Union[(None, int)] = ...,
+        axis: Union[Literal[("XXX", "columns", "index")], None, int] = ...,
+        fill_value: Union[None, int] = ...,
     ):
-        "usage.dask: 48"
+        "\n    usage.dask: 48\n    "
+        ...
 
-    def combine(
-        self, /, other: pandas.core.frame.DataFrame = ..., func: Callable = ...
-    ):
-        "usage.dask: 7"
+    def combine(self: object, /, other: pandas.core.frame.DataFrame, func: Callable):
+        "\n    usage.dask: 7\n    "
+        ...
 
-    def combine_first(self, /, other: pandas.core.frame.DataFrame):
-        "usage.dask: 3"
+    def combine_first(self: object, /, other: pandas.core.frame.DataFrame):
+        "\n    usage.dask: 3\n    "
+        ...
 
     def sample(
-        self, /, frac: float, random_state: numpy.random.mtrand.RandomState = ...
+        self: object, /, frac: float, random_state: numpy.random.mtrand.RandomState
     ):
-        "usage.dask: 2"
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def memory_usage(self, /, index: bool = ...):
-        "usage.dask: 5"
+    def memory_usage(self: object, /, index: bool):
+        "\n    usage.dask: 5\n    "
+        ...
 
-    def ffill(self=..., /):
-        "usage.dask: 2"
+    def ffill(self: object, /):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def bfill(self=..., /):
-        "usage.dask: 2"
+    def bfill(self: object, /):
+        "\n    usage.dask: 2\n    "
+        ...
 
     def to_timestamp(
-        self, /, freq: None = ..., how: Literal[("start",)] = ..., axis: int = ...
+        self: object, /, freq: None = ..., how: Literal["start"] = ..., axis: int = ...
     ):
-        "usage.dask: 2"
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def applymap(self, /, func: Callable):
-        "usage.dask: 3"
+    def applymap(self: object, /, func: Callable):
+        "\n    usage.dask: 3\n    "
+        ...
 
-    def abs(self, /):
-        "usage.dask: 3"
+    def abs(self: object, /):
+        "\n    usage.dask: 3\n    "
+        ...
 
-    def round(self=..., /):
-        "usage.dask: 3"
+    def round(self: object, /):
+        "\n    usage.dask: 3\n    "
+        ...
 
-    def cov(self=..., /):
-        "usage.dask: 6"
+    def cov(self: object, /):
+        "\n    usage.dask: 6\n    "
+        ...
 
-    def corr(self=..., /):
-        "usage.dask: 5"
+    def corr(self: object, /):
+        "\n    usage.dask: 5\n    "
+        ...
 
     def nlargest(
-        self, /, n: int, columns: Union[(List[Literal[("c", "a")]], Literal[("a",)])]
+        self: object, /, n: int, columns: Union[List[Literal[("c", "a")]], Literal["a"]]
     ):
-        "usage.dask: 4"
+        "\n    usage.dask: 4\n    "
+        ...
 
     def nsmallest(
-        self, /, n: int, columns: Union[(List[Literal[("c", "a")]], Literal[("a",)])]
+        self: object, /, n: int, columns: Union[List[Literal[("c", "a")]], Literal["a"]]
     ):
-        "usage.dask: 4"
+        "\n    usage.dask: 4\n    "
+        ...
 
-    def iterrows(self, /):
-        "usage.dask: 2"
+    def iterrows(self: object, /):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def info(self, /, buf: _io.StringIO, memory_usage: bool):
-        "usage.dask: 1"
+    def info(self: object, /, buf: _io.StringIO, memory_usage: bool):
+        "\n    usage.dask: 1\n    "
+        ...
 
-    def idxmax(self=..., /):
-        "usage.dask: 7"
+    def idxmax(self: object, /):
+        "\n    usage.dask: 7\n    "
+        ...
 
-    def idxmin(self=..., /):
-        "usage.dask: 5"
+    def idxmin(self: object, /):
+        "\n    usage.dask: 5\n    "
+        ...
 
-    def diff(self, /, periods: int = ..., axis: int = ...):
-        "usage.dask: 7"
+    def diff(self: object, /, periods: int = ..., axis: int = ...):
+        "\n    usage.dask: 7\n    "
+        ...
 
     def shift(
-        self,
+        self: object,
         /,
         periods: int = ...,
         freq: Union[
-            (
-                Literal[("H", "D", "B", "W", "S")],
-                None,
-                pandas._libs.tslibs.timedeltas.Timedelta,
-            )
+            Literal[("H", "D", "B", "W", "S")],
+            None,
+            pandas._libs.tslibs.timedeltas.Timedelta,
         ] = ...,
         axis: int = ...,
     ):
-        "usage.dask: 29"
+        "\n    usage.dask: 29\n    "
+        ...
 
-    def first(self, /, offset: str):
-        "usage.dask: 24"
+    def first(self: object, /, offset: str):
+        "\n    usage.dask: 24\n    "
+        ...
 
-    def last(self, /, offset: str):
-        "usage.dask: 8"
+    def last(self: object, /, offset: str):
+        "\n    usage.dask: 8\n    "
+        ...
 
-    def query(self, /, expr: Literal[("B != 9", "B != 0")]):
-        "usage.dask: 4"
+    def query(self: object, /, expr: Literal[("B != 9", "B != 0")]):
+        "\n    usage.dask: 4\n    "
+        ...
 
     def replace(
-        self,
+        self: object,
         /,
-        to_replace: Union[(Dict[(int, int)], int)],
-        value: Union[(None, int)] = ...,
+        to_replace: Union[Dict[int, int], int],
+        value: Union[None, int] = ...,
         regex: bool = ...,
     ):
-        "usage.dask: 4"
+        "\n    usage.dask: 4\n    "
+        ...
 
-    def explode(self, /, column: Literal[("A",)]):
-        "usage.dask: 2"
+    def explode(self: object, /, column: Literal["A"]):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def to_html(self, /, max_rows: int, show_dimensions: bool = ...):
-        "usage.dask: 2"
+    def to_html(self: object, /, max_rows: int, show_dimensions: bool):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def __itruediv__(self, _0: pandas.core.frame.DataFrame, /):
-        ""
+    def __itruediv__(self: object, _0: pandas.core.frame.DataFrame, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
     def merge(
-        self,
+        self: object,
         /,
         right: pandas.core.frame.DataFrame,
         how: str,
         on: Union[
-            (Literal[("KEY", "x", "emp_id", "idx")], List[Literal[("idx", "k")]], None)
+            Literal[("KEY", "x", "emp_id", "idx")], List[Literal[("idx", "k")]], None
         ] = ...,
-        left_on: Union[(str, List[str], None)] = ...,
-        right_on: Union[(str, List[str], None)] = ...,
+        left_on: Union[str, List[str], None] = ...,
+        right_on: Union[str, List[str], None] = ...,
         left_index: bool = ...,
         right_index: bool = ...,
         suffixes: Union[
-            (
-                Tuple[(Literal[("_x", "1")], Literal[("_y", "2")])],
-                List[Literal[("_r", "_l", "", "r", "l")]],
-            )
+            Tuple[Literal[("_x", "1")], Literal[("_y", "2")]],
+            List[Literal[("_r", "_l", "", "r", "l")]],
         ] = ...,
         indicator: bool = ...,
     ):
-        "usage.dask: 365"
+        "\n    usage.dask: 365\n    "
+        ...
 
     def join(
-        self,
+        self: object,
         /,
         other: pandas.core.frame.DataFrame,
         how: Literal[("right", "left", "outer", "inner")] = ...,
         lsuffix: Literal[("l", "_l")] = ...,
         rsuffix: Literal[("r", "_r")] = ...,
     ):
-        "usage.dask: 31"
+        "\n    usage.dask: 31\n    "
+        ...
 
     def __contains__(
-        self, _0: Union[(pandas._libs.tslibs.timestamps.Timestamp, int, numpy.int64)], /
+        self: object,
+        _0: Union[pandas._libs.tslibs.timestamps.Timestamp, int, numpy.int64],
+        /,
     ):
-        ""
+        "\n    usage.dask: 6\n    "
+        ...
 
-    def isna(self, /):
-        "usage.dask: 1"
+    def isna(self: object, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
     def melt(
-        self,
+        self: object,
         /,
-        id_vars: Union[(Literal[("B", "C")], None)] = ...,
-        value_vars: Union[(List[Literal[("C", "A")]], Literal[("C",)], None)] = ...,
-        var_name: Union[(Literal[("myvar",)], None)] = ...,
+        id_vars: Union[Literal[("B", "C")], None] = ...,
+        value_vars: Union[List[Literal[("C", "A")]], Literal["C"], None] = ...,
+        var_name: Union[Literal["myvar"], None] = ...,
         value_name: Literal[("myval", "value")] = ...,
         col_level: None = ...,
     ):
-        "usage.dask: 10"
+        "\n    usage.dask: 10\n    "
+        ...
 
     def append(
-        self,
+        self: object,
         /,
-        other: Union[(pandas.core.frame.DataFrame, pandas.core.series.Series)] = ...,
+        other: Union[pandas.core.frame.DataFrame, pandas.core.series.Series],
     ):
-        "usage.dask: 12"
+        "\n    usage.dask: 12\n    "
+        ...
 
     def pivot_table(
-        self,
+        self: object,
         /,
-        values: Literal[("B",)],
-        index: Literal[("A",)],
-        columns: Literal[("C",)],
+        values: Literal["B"],
+        index: Literal["A"],
+        columns: Literal["C"],
         aggfunc: Literal[("count", "sum", "mean")],
     ):
-        "usage.dask: 3"
+        "\n    usage.dask: 3\n    "
+        ...
 
-    def __array_wrap__(self, /, result: numpy.ndarray):
-        "usage.dask: 2"
+    def __array_wrap__(self: object, /, result: numpy.ndarray):
+        "\n    usage.dask: 2\n    "
+        ...
 
     def resample(
-        self,
+        self: object,
         /,
-        rule,
-        closed: Union[(None, Literal[("left", "right")])] = ...,
-        label: Union[(None, Literal[("left", "right")])] = ...,
+        rule: object,
+        closed: Union[None, Literal[("left", "right")]] = ...,
+        label: Union[None, Literal[("left", "right")]] = ...,
     ):
-        "usage.dask: 63"
+        "\n    usage.dask: 63\n    "
+        ...
 
 
 class Pandas:
-    def __iter__(self, /):
-        ""
+    def __iter__(self: object, /):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def __eq__(self, _0: pandas.core.frame.Pandas, /):
-        ""
+    def __eq__(self: object, _0: pandas.core.frame.Pandas, /):
+        "\n    usage.dask: 4\n    "
+        ...

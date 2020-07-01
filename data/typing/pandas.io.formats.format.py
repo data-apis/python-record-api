@@ -1,3 +1,4 @@
 from typing import *
 
-_put_lines: Callable = ...
+# usage.dask: 3
+_put_lines: Callable

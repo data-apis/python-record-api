@@ -26,6 +26,10 @@ def orjson_dumps(v, *, default):
 Metadata = typing.Dict[str, int]
 
 
+def bad_name(name: str) -> bool:
+    return "?" in name or "<" in name
+
+
 class API(pydantic.BaseModel):
     # Dotted module name to module
     modules: typing.Dict[str, Module] = pydantic.Field(default_factory=dict)
@@ -66,6 +70,8 @@ class Module(pydantic.BaseModel):
         yield from assign_properties(self.properties)
 
         for name, sig in self.functions.items():
+            if bad_name(name):
+                continue
             yield sig.function_def(name)
         for name, class_ in self.classes.items():
             yield class_.class_def(name)
@@ -102,11 +108,15 @@ class Class(pydantic.BaseModel):
         yield from assign_properties(self.classproperties, True)
 
         for name, sig in self.classmethods.items():
+            if bad_name(name):
+                continue
             yield sig.function_def(name, is_classmethod=True)
 
         yield from assign_properties(self.properties)
 
         for name, sig in self.methods.items():
+            if bad_name(name):
+                continue
             # copy and add self as first arg
             sig = sig.copy()
             old_pos_only_required = sig.pos_only_required
@@ -229,7 +239,7 @@ class Signature(pydantic.BaseModel):
     @property
     def docstring(self) -> cst.BaseExpression:
         return cst.SimpleString(
-            "\n    " + "\n    ".join(metadata_lines(self.metadata)) + "\n    "
+            repr("\n    " + "\n    ".join(metadata_lines(self.metadata)) + "\n    ")
         )
 
     @property

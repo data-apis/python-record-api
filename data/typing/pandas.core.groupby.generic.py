@@ -2,189 +2,252 @@ from typing import *
 
 
 class SeriesGroupBy:
-    __name__ = ...
-    obj = ...
-    idxmin = ...
-    idxmax = ...
 
-    def first(self, /):
-        "usage.xarray: 1, usage.dask: 14"
+    # usage.dask: 1
+    __name__: ClassVar[object]
 
-    def sum(self, /):
-        "usage.dask: 20"
+    # usage.dask: 5
+    obj: object
 
-    def nunique(self, /):
-        "usage.dask: 14"
+    # usage.dask: 1
+    idxmin: object
 
-    def count(self, /):
-        "usage.dask: 15"
+    # usage.dask: 1
+    idxmax: object
 
-    def apply(self, /, func: Union[(Callable, Literal[("sum",)], Callable)]):
-        "usage.dask: 21"
+    def first(self: object, /):
+        "\n    usage.xarray: 1\n    usage.dask: 14\n    "
+        ...
 
-    def mean(self, /):
-        "usage.dask: 13"
+    def sum(self: object, /):
+        "\n    usage.dask: 20\n    "
+        ...
 
-    def min(self, /):
-        "usage.dask: 10"
+    def nunique(self: object, /):
+        "\n    usage.dask: 14\n    "
+        ...
 
-    def max(self, /):
-        "usage.dask: 11"
+    def count(self: object, /):
+        "\n    usage.dask: 15\n    "
+        ...
 
-    def size(self, /):
-        "usage.dask: 10"
+    def apply(self: object, /, func: Union[Callable, Literal["sum"], Callable]):
+        "\n    usage.dask: 21\n    "
+        ...
 
-    def std(self=..., /):
-        "usage.dask: 10"
+    def mean(self: object, /):
+        "\n    usage.dask: 13\n    "
+        ...
 
-    def var(self=..., /):
-        "usage.dask: 8"
+    def min(self: object, /):
+        "\n    usage.dask: 10\n    "
+        ...
 
-    def last(self, /):
-        "usage.dask: 10"
+    def max(self: object, /):
+        "\n    usage.dask: 11\n    "
+        ...
 
-    def prod(self, /):
-        "usage.dask: 9"
+    def size(self: object, /):
+        "\n    usage.dask: 10\n    "
+        ...
 
-    def get_group(self, /, name: int):
-        "usage.dask: 3"
+    def std(self: object, /):
+        "\n    usage.dask: 10\n    "
+        ...
 
-    def transform(self, /, func: Union[(Callable, Literal[("sum",)], Callable)]):
-        "usage.dask: 19"
+    def var(self: object, /):
+        "\n    usage.dask: 8\n    "
+        ...
 
-    def cumsum(self, /):
-        "usage.dask: 3"
+    def last(self: object, /):
+        "\n    usage.dask: 10\n    "
+        ...
 
-    def cumprod(self, /):
-        "usage.dask: 3"
+    def prod(self: object, /):
+        "\n    usage.dask: 9\n    "
+        ...
 
-    def cumcount(self, /):
-        "usage.dask: 2"
+    def get_group(self: object, /, name: int):
+        "\n    usage.dask: 3\n    "
+        ...
+
+    def transform(self: object, /, func: Union[Callable, Literal["sum"], Callable]):
+        "\n    usage.dask: 19\n    "
+        ...
+
+    def cumsum(self: object, /):
+        "\n    usage.dask: 3\n    "
+        ...
+
+    def cumprod(self: object, /):
+        "\n    usage.dask: 3\n    "
+        ...
+
+    def cumcount(self: object, /):
+        "\n    usage.dask: 2\n    "
+        ...
 
     def aggregate(
-        self,
+        self: object,
         /,
         func: Union[
-            (
-                Literal[("var", "sum", "mean")],
-                List[Literal[("max", "min", "mean", "sum")]],
-            )
+            Literal[("var", "sum", "mean")],
+            List[Literal[("max", "min", "mean", "sum")]],
         ],
     ):
-        "usage.dask: 10"
+        "\n    usage.dask: 10\n    "
+        ...
 
-    def __iter__(self, /):
-        ""
+    def __iter__(self: object, /):
+        "\n    usage.dask: 2\n    "
+        ...
 
-    def value_counts(self, /):
-        "usage.dask: 2"
+    def value_counts(self: object, /):
+        "\n    usage.dask: 2\n    "
+        ...
 
 
 class DataFrameGroupBy:
-    __name__ = ...
-    groups = ...
-    y = ...
-    obj = ...
-    a = ...
-    A = ...
-    b = ...
-    B = ...
-    z = ...
-    _selected_obj = ...
-    idxmin = ...
-    idxmax = ...
-    x = ...
-    e = ...
 
-    def get_group(self, /, name: Union[(float, int)]):
-        "usage.dask: 5"
+    # usage.dask: 1
+    __name__: ClassVar[object]
 
-    def sum(self=..., /):
-        "usage.dask: 26"
+    # usage.dask: 2
+    groups: object
 
-    def __getitem__(self, _0, /):
-        ""
+    # usage.dask: 3
+    y: object
+
+    # usage.dask: 4
+    obj: object
+
+    # usage.dask: 24
+    a: object
+
+    # usage.dask: 1
+    A: object
+
+    # usage.dask: 20
+    b: object
+
+    # usage.dask: 1
+    B: object
+
+    # usage.dask: 2
+    z: object
+
+    # usage.dask: 1
+    _selected_obj: object
+
+    # usage.dask: 1
+    idxmin: object
+
+    # usage.dask: 1
+    idxmax: object
+
+    # usage.dask: 1
+    x: object
+
+    # usage.dask: 1
+    e: object
+
+    def get_group(self: object, /, name: Union[float, int]):
+        "\n    usage.dask: 5\n    "
+        ...
+
+    def sum(self: object, /):
+        "\n    usage.dask: 26\n    "
+        ...
+
+    def __getitem__(self: object, _0: object, /):
+        "\n    usage.dask: 219\n    "
+        ...
 
     def apply(
-        self,
+        self: object,
         /,
         func: Union[
-            (
-                Callable,
-                Literal[("sum",)],
-                numpy.int64,
-                dask.utils.methodcaller,
-                Callable,
-            )
+            Callable, Literal["sum"], numpy.int64, dask.utils.methodcaller, Callable
         ],
         *args: Literal[("v", "t")],
     ):
-        "usage.dask: 63"
+        "\n    usage.dask: 63\n    "
+        ...
 
-    def count(self, /):
-        "usage.dask: 12"
+    def count(self: object, /):
+        "\n    usage.dask: 12\n    "
+        ...
 
-    def mean(self, /):
-        "usage.dask: 15"
+    def mean(self: object, /):
+        "\n    usage.dask: 15\n    "
+        ...
 
-    def min(self, /):
-        "usage.dask: 9"
+    def min(self: object, /):
+        "\n    usage.dask: 9\n    "
+        ...
 
-    def max(self, /):
-        "usage.dask: 10"
+    def max(self: object, /):
+        "\n    usage.dask: 10\n    "
+        ...
 
-    def size(self, /):
-        "usage.dask: 9"
+    def size(self: object, /):
+        "\n    usage.dask: 9\n    "
+        ...
 
-    def std(self=..., /):
-        "usage.dask: 9"
+    def std(self: object, /):
+        "\n    usage.dask: 9\n    "
+        ...
 
-    def var(self=..., /):
-        "usage.dask: 7"
+    def var(self: object, /):
+        "\n    usage.dask: 7\n    "
+        ...
 
-    def first(self, /):
-        "usage.dask: 12"
+    def first(self: object, /):
+        "\n    usage.dask: 12\n    "
+        ...
 
-    def last(self, /):
-        "usage.dask: 10"
+    def last(self: object, /):
+        "\n    usage.dask: 10\n    "
+        ...
 
-    def prod(self=..., /):
-        "usage.dask: 11"
+    def prod(self: object, /):
+        "\n    usage.dask: 11\n    "
+        ...
 
-    def nunique(self, /):
-        "usage.dask: 1"
+    def nunique(self: object, /):
+        "\n    usage.dask: 1\n    "
+        ...
 
-    def transform(self, /, func: Union[(Callable, Literal[("sum",)], Callable)]):
-        "usage.dask: 19"
+    def transform(self: object, /, func: Union[Callable, Literal["sum"], Callable]):
+        "\n    usage.dask: 19\n    "
+        ...
 
     def aggregate(
-        self,
+        self: object,
         /,
         func: Union[
-            (
-                Dict[
-                    (
-                        Literal[("b", "c", "e")],
-                        Union[
-                            (
-                                Literal[("mean", "sum", "count", "std")],
-                                List[Literal[("sum", "mean")]],
-                            )
-                        ],
-                    )
+            Dict[
+                Literal[("b", "c", "e")],
+                Union[
+                    Literal[("mean", "sum", "count", "std")],
+                    List[Literal[("sum", "mean")]],
                 ],
-                str,
-                List[Literal[("max", "min", "sum", "mean")]],
-            )
+            ],
+            str,
+            List[Literal[("max", "min", "sum", "mean")]],
         ],
     ):
-        "usage.dask: 22"
+        "\n    usage.dask: 22\n    "
+        ...
 
-    def cumsum(self=..., /):
-        "usage.dask: 4"
+    def cumsum(self: object, /):
+        "\n    usage.dask: 4\n    "
+        ...
 
-    def cumprod(self=..., /):
-        "usage.dask: 4"
+    def cumprod(self: object, /):
+        "\n    usage.dask: 4\n    "
+        ...
 
-    def cumcount(self, /):
-        "usage.dask: 3"
+    def cumcount(self: object, /):
+        "\n    usage.dask: 3\n    "
+        ...

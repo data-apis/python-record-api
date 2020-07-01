@@ -2,4 +2,5 @@ from typing import *
 
 
 def register():
-    "usage.xarray: 1"
+    "\n    usage.xarray: 1\n    "
+    ...

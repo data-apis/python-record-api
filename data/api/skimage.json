@@ -7109,7 +7109,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 149
+              }
             },
             "__sub__": {
               "pos_only_required": {
@@ -7124,7 +7126,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 374
+              }
             },
             "__rsub__": {
               "pos_only_required": {
@@ -7139,7 +7143,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 274
+              }
             },
             "mean": {
               "pos_only_required": {},
@@ -7198,7 +7204,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2171
+              }
             },
             "__mul__": {
               "pos_only_required": {
@@ -7213,7 +7221,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 402
+              }
             },
             "__rmul__": {
               "pos_only_required": {
@@ -7228,7 +7238,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 574
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -7243,7 +7255,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 327
+              }
             },
             "__mod__": {
               "pos_only_required": {
@@ -7276,7 +7290,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 7
+              }
             },
             "__gt__": {
               "pos_only_required": {
@@ -7291,7 +7307,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 159
+              }
             },
             "__setitem__": {
               "pos_only_required": {
@@ -7309,7 +7327,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1514
+              }
             },
             "__imul__": {
               "pos_only_required": {
@@ -7324,7 +7344,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 42
+              }
             },
             "__iadd__": {
               "pos_only_required": {
@@ -7339,7 +7361,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 131
+              }
             },
             "__truediv__": {
               "pos_only_required": {
@@ -7384,7 +7408,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 249
+              }
             },
             "__le__": {
               "pos_only_required": {
@@ -7429,7 +7455,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 122
+              }
             },
             "__rtruediv__": {
               "pos_only_required": {
@@ -7474,7 +7502,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 102
+              }
             },
             "__radd__": {
               "pos_only_required": {
@@ -7489,7 +7519,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 268
+              }
             },
             "__matmul__": {
               "pos_only_required": {
@@ -7518,7 +7550,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 50
+              }
             },
             "__rmatmul__": {
               "pos_only_required": {
@@ -7555,7 +7589,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 52
+              }
             },
             "__invert__": {
               "pos_only_required": {},
@@ -7566,7 +7602,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 26
+              }
             },
             "__add__": {
               "pos_only_required": {
@@ -7581,7 +7619,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 316
+              }
             },
             "__itruediv__": {
               "pos_only_required": {
@@ -7596,7 +7636,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 38
+              }
             },
             "__isub__": {
               "pos_only_required": {
@@ -7611,7 +7653,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 45
+              }
             },
             "__neg__": {
               "pos_only_required": {},
@@ -7622,7 +7666,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 42
+              }
             },
             "__contains__": {
               "pos_only_required": {
@@ -7665,7 +7711,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 13
+              }
             },
             "__ne__": {
               "pos_only_required": {
@@ -7713,7 +7761,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 44
+              }
             },
             "__pow__": {
               "pos_only_required": {
@@ -7746,7 +7796,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 173
+              }
             },
             "__ge__": {
               "pos_only_required": {
@@ -7761,7 +7813,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 92
+              }
             },
             "__rpow__": {
               "pos_only_required": {
@@ -7789,7 +7843,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             },
             "sum": {
               "pos_only_required": {},
@@ -7851,7 +7907,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 5
+              }
             },
             "min": {
               "pos_only_required": {},
@@ -7895,7 +7953,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "cumsum": {
               "pos_only_required": {},
@@ -7942,7 +8002,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 33
+              }
             },
             "__rand__": {
               "pos_only_required": {
@@ -7960,7 +8022,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 31
+              }
             },
             "__or__": {
               "pos_only_required": {
@@ -7978,7 +8042,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 8
+              }
             },
             "__ror__": {
               "pos_only_required": {
@@ -7996,7 +8062,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 8
+              }
             },
             "__lt__": {
               "pos_only_required": {
@@ -8014,7 +8082,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 17
+              }
             },
             "__ior__": {
               "pos_only_required": {
@@ -8032,7 +8102,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             },
             "__floordiv__": {
               "pos_only_required": {
@@ -8066,7 +8138,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 14
+              }
             },
             "argmax": {
               "pos_only_required": {},
@@ -8169,7 +8243,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__rfloordiv__": {
               "pos_only_required": {
@@ -8187,7 +8263,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "view": {
               "pos_only_required": {},
@@ -9091,73 +9169,120 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             }
           },
           "properties": {
-            "T": {
-              "type": "bottom"
-            },
-            "size": {
-              "type": "bottom"
-            },
-            "ndim": {
-              "type": "bottom"
-            },
-            "dtype": {
-              "type": "bottom"
-            },
-            "shape": {
-              "type": "union",
-              "options": [
-                {
-                  "type": "tuple",
-                  "items": {
+            "T": [
+              {
+                "usage.skimage": 87
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "size": [
+              {
+                "usage.skimage": 106
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "ndim": [
+              {
+                "usage.skimage": 513
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "dtype": [
+              {
+                "usage.skimage": 636
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "shape": [
+              {
+                "usage.skimage": 1335
+              },
+              {
+                "type": "union",
+                "options": [
+                  {
+                    "type": "tuple",
+                    "items": {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  },
+                  {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                ]
+              }
+            ],
+            "flags": [
+              {
+                "usage.skimage": 15
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "flat": [
+              {
+                "usage.skimage": 20
+              },
+              {
+                "type": {
+                  "module": "numpy",
+                  "name": "ndarray"
+                }
+              }
+            ],
+            "itemsize": [
+              {
+                "usage.skimage": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "strides": [
+              {
+                "usage.skimage": 12
+              },
+              {
+                "type": "tuple",
+                "items": [
+                  {
+                    "type": {
+                      "name": "int"
+                    }
+                  },
+                  {
+                    "type": {
+                      "name": "int"
+                    }
+                  },
+                  {
                     "type": {
                       "name": "int"
                     }
                   }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            },
-            "flags": {
-              "type": "bottom"
-            },
-            "flat": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
+                ]
               }
-            },
-            "itemsize": {
-              "type": "bottom"
-            },
-            "strides": {
-              "type": "tuple",
-              "items": [
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              ]
-            }
+            ]
           },
           "classproperties": {}
         },
@@ -9206,7 +9331,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 127
+              }
             },
             "__rmul__": {
               "pos_only_required": {
@@ -9251,7 +9378,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 176
+              }
             },
             "__gt__": {
               "pos_only_required": {
@@ -9296,7 +9425,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 74
+              }
             },
             "__rsub__": {
               "pos_only_required": {
@@ -9311,7 +9442,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 111
+              }
             },
             "__rtruediv__": {
               "pos_only_required": {
@@ -9326,7 +9459,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 106
+              }
             },
             "__iadd__": {
               "pos_only_required": {
@@ -9360,7 +9495,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 9
+              }
             },
             "__truediv__": {
               "pos_only_required": {
@@ -9375,7 +9512,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 96
+              }
             },
             "__radd__": {
               "pos_only_required": {
@@ -9390,7 +9529,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 87
+              }
             },
             "__add__": {
               "pos_only_required": {
@@ -9405,7 +9546,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 78
+              }
             },
             "__sub__": {
               "pos_only_required": {
@@ -9450,7 +9593,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 154
+              }
             },
             "__mul__": {
               "pos_only_required": {
@@ -9489,7 +9634,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 81
+              }
             },
             "__getitem__": {
               "pos_only_required": {
@@ -9514,7 +9661,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__neg__": {
               "pos_only_required": {},
@@ -9525,7 +9674,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 22
+              }
             },
             "__ge__": {
               "pos_only_required": {
@@ -9564,7 +9715,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 62
+              }
             },
             "__pow__": {
               "pos_only_required": {
@@ -9591,7 +9744,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 36
+              }
             },
             "__lt__": {
               "pos_only_required": {
@@ -9606,7 +9761,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 60
+              }
             },
             "__imod__": {
               "pos_only_required": {
@@ -9623,7 +9780,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -9668,7 +9827,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 106
+              }
             },
             "__mod__": {
               "pos_only_required": {
@@ -9695,7 +9856,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 9
+              }
             },
             "__itruediv__": {
               "pos_only_required": {
@@ -9741,7 +9904,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 12
+              }
             },
             "__rpow__": {
               "pos_only_required": {
@@ -9768,7 +9933,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             },
             "__ne__": {
               "pos_only_required": {
@@ -9801,7 +9968,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 9
+              }
             },
             "__isub__": {
               "pos_only_required": {
@@ -9819,7 +9988,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__imul__": {
               "pos_only_required": {
@@ -9847,7 +10018,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 5
+              }
             },
             "__rfloordiv__": {
               "pos_only_required": {
@@ -9865,17 +10038,29 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "ndim": {
-              "type": "bottom"
-            },
-            "shape": {
-              "type": "bottom"
-            }
+            "ndim": [
+              {
+                "usage.skimage": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "shape": [
+              {
+                "usage.skimage": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -9918,7 +10103,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 8
+              }
             },
             "__add__": {
               "pos_only_required": {
@@ -9963,7 +10150,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 38
+              }
             },
             "__ne__": {
               "pos_only_required": {
@@ -9991,7 +10180,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 6
+              }
             },
             "__ge__": {
               "pos_only_required": {
@@ -10036,7 +10227,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 17
+              }
             },
             "__rsub__": {
               "pos_only_required": {
@@ -10070,7 +10263,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 30
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -10085,7 +10280,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 90
+              }
             },
             "__rtruediv__": {
               "pos_only_required": {
@@ -10125,7 +10322,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 11
+              }
             },
             "__sub__": {
               "pos_only_required": {
@@ -10158,7 +10357,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 25
+              }
             },
             "__floordiv__": {
               "pos_only_required": {
@@ -10175,7 +10376,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 5
+              }
             },
             "__isub__": {
               "pos_only_required": {
@@ -10203,7 +10406,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__le__": {
               "pos_only_required": {
@@ -10242,7 +10447,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 18
+              }
             },
             "__iadd__": {
               "pos_only_required": {
@@ -10260,7 +10467,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__gt__": {
               "pos_only_required": {
@@ -10293,7 +10502,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 11
+              }
             },
             "__rfloordiv__": {
               "pos_only_required": {
@@ -10310,7 +10521,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__radd__": {
               "pos_only_required": {
@@ -10350,7 +10563,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 17
+              }
             },
             "__truediv__": {
               "pos_only_required": {
@@ -10389,7 +10604,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 15
+              }
             },
             "__pow__": {
               "pos_only_required": {
@@ -10406,7 +10623,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__mul__": {
               "pos_only_required": {
@@ -10441,7 +10660,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 4
+              }
             },
             "__lt__": {
               "pos_only_required": {
@@ -10475,7 +10696,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 14
+              }
             },
             "__itruediv__": {
               "pos_only_required": {
@@ -10493,7 +10716,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__mod__": {
               "pos_only_required": {
@@ -10510,7 +10735,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__neg__": {
               "pos_only_required": {},
@@ -10521,7 +10748,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 7
+              }
             },
             "__imod__": {
               "pos_only_required": {
@@ -10538,14 +10767,21 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "ndim": {
-              "type": "bottom"
-            }
+            "ndim": [
+              {
+                "usage.skimage": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -10633,7 +10869,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 282
+              }
             },
             "__ne__": {
               "pos_only_required": {
@@ -10659,7 +10897,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 27
+              }
             },
             "__rmod__": {
               "pos_only_required": {
@@ -10677,26 +10917,53 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "type": {
-              "type": "bottom"
-            },
-            "kind": {
-              "type": "bottom"
-            },
-            "itemsize": {
-              "type": "bottom"
-            },
-            "name": {
-              "type": "bottom"
-            },
-            "char": {
-              "type": "bottom"
-            }
+            "type": [
+              {
+                "usage.skimage": 64
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "kind": [
+              {
+                "usage.skimage": 59
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "itemsize": [
+              {
+                "usage.skimage": 40
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "name": [
+              {
+                "usage.skimage": 6
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "char": [
+              {
+                "usage.skimage": 12
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -10732,12 +10999,22 @@
           "methods": {},
           "classmethods": {},
           "properties": {
-            "min": {
-              "type": "bottom"
-            },
-            "max": {
-              "type": "bottom"
-            }
+            "min": [
+              {
+                "usage.skimage": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "max": [
+              {
+                "usage.skimage": 7
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -10765,18 +11042,38 @@
           "methods": {},
           "classmethods": {},
           "properties": {
-            "eps": {
-              "type": "bottom"
-            },
-            "resolution": {
-              "type": "bottom"
-            },
-            "max": {
-              "type": "bottom"
-            },
-            "min": {
-              "type": "bottom"
-            }
+            "eps": [
+              {
+                "usage.skimage": 11
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "resolution": [
+              {
+                "usage.skimage": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "max": [
+              {
+                "usage.skimage": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "min": [
+              {
+                "usage.skimage": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -10798,22 +11095,39 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "writeable": {
-              "type": {
-                "name": "bool"
+            "writeable": [
+              {
+                "usage.skimage": 3
+              },
+              {
+                "type": {
+                  "name": "bool"
+                }
               }
-            },
-            "f_contiguous": {
-              "type": "bottom"
-            },
-            "c_contiguous": {
-              "type": "bottom"
-            }
+            ],
+            "f_contiguous": [
+              {
+                "usage.skimage": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "c_contiguous": [
+              {
+                "usage.skimage": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -10828,7 +11142,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             },
             "__bool__": {
               "pos_only_required": {},
@@ -10839,7 +11155,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 18
+              }
             },
             "__rpow__": {
               "pos_only_required": {
@@ -10856,7 +11174,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "classmethods": {
@@ -10876,7 +11196,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "properties": {},
@@ -10910,7 +11232,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 4
+              }
             },
             "__iter__": {
               "pos_only_required": {},
@@ -10921,7 +11245,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__getitem__": {
               "pos_only_required": {
@@ -10949,7 +11275,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 5
+              }
             },
             "__setitem__": {
               "pos_only_required": {
@@ -10975,7 +11303,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "classmethods": {},
@@ -11022,7 +11352,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 20
+              }
             },
             "__rsub__": {
               "pos_only_required": {
@@ -11062,7 +11394,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 9
+              }
             },
             "__rmul__": {
               "pos_only_required": {
@@ -11079,7 +11413,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             },
             "__lt__": {
               "pos_only_required": {
@@ -11113,7 +11449,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 5
+              }
             },
             "__ge__": {
               "pos_only_required": {
@@ -11141,7 +11479,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 4
+              }
             },
             "__truediv__": {
               "pos_only_required": {
@@ -11158,7 +11498,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__radd__": {
               "pos_only_required": {
@@ -11193,7 +11535,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             },
             "__add__": {
               "pos_only_required": {
@@ -11221,7 +11565,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 9
+              }
             },
             "__sub__": {
               "pos_only_required": {
@@ -11249,7 +11595,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 5
+              }
             },
             "__le__": {
               "pos_only_required": {
@@ -11277,7 +11625,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 8
+              }
             },
             "__ne__": {
               "pos_only_required": {
@@ -11295,7 +11645,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__gt__": {
               "pos_only_required": {
@@ -11312,7 +11664,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 5
+              }
             },
             "__rtruediv__": {
               "pos_only_required": {
@@ -11330,7 +11684,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__pow__": {
               "pos_only_required": {
@@ -11347,7 +11703,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "classmethods": {},
@@ -11388,7 +11746,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 19
+              }
             },
             "__rtruediv__": {
               "pos_only_required": {
@@ -11405,7 +11765,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__ge__": {
               "pos_only_required": {
@@ -11422,7 +11784,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__le__": {
               "pos_only_required": {
@@ -11439,7 +11803,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             },
             "__ne__": {
               "pos_only_required": {
@@ -11467,7 +11833,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 5
+              }
             },
             "__lt__": {
               "pos_only_required": {
@@ -11495,7 +11863,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             },
             "__truediv__": {
               "pos_only_required": {
@@ -11512,7 +11882,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__rsub__": {
               "pos_only_required": {
@@ -11530,7 +11902,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__rmul__": {
               "pos_only_required": {
@@ -11557,7 +11931,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__gt__": {
               "pos_only_required": {
@@ -11586,7 +11962,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             }
           },
           "classmethods": {},
@@ -11627,7 +12005,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             }
           },
           "classmethods": {},
@@ -11651,7 +12031,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__ge__": {
               "pos_only_required": {
@@ -11668,7 +12050,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__le__": {
               "pos_only_required": {
@@ -11685,7 +12069,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -11713,7 +12099,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             }
           },
           "classmethods": {},
@@ -11756,7 +12144,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__add__": {
               "pos_only_required": {
@@ -11773,7 +12163,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -11801,7 +12193,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 9
+              }
             },
             "__le__": {
               "pos_only_required": {
@@ -11818,7 +12212,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 4
+              }
             },
             "__ne__": {
               "pos_only_required": {
@@ -11836,7 +12232,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             }
           },
           "classmethods": {},
@@ -11879,7 +12277,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__le__": {
               "pos_only_required": {
@@ -11896,7 +12296,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             },
             "__sub__": {
               "pos_only_required": {
@@ -11914,7 +12316,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__rsub__": {
               "pos_only_required": {
@@ -11932,7 +12336,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__rtruediv__": {
               "pos_only_required": {
@@ -11950,7 +12356,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__pow__": {
               "pos_only_required": {
@@ -11967,7 +12375,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -11995,7 +12405,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             }
           },
           "classmethods": {},
@@ -12019,7 +12431,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__le__": {
               "pos_only_required": {
@@ -12036,7 +12450,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -12064,7 +12480,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             }
           },
           "classmethods": {},
@@ -12158,7 +12576,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 5
+              }
             },
             "__gt__": {
               "pos_only_required": {
@@ -12191,7 +12611,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 4
+              }
             },
             "__add__": {
               "pos_only_required": {
@@ -12219,7 +12641,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__ge__": {
               "pos_only_required": {
@@ -12246,7 +12670,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             },
             "__lt__": {
               "pos_only_required": {
@@ -12274,7 +12700,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 5
+              }
             },
             "__truediv__": {
               "pos_only_required": {
@@ -12302,7 +12730,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__rmul__": {
               "pos_only_required": {
@@ -12335,7 +12765,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 4
+              }
             },
             "__mul__": {
               "pos_only_required": {
@@ -12352,7 +12784,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__le__": {
               "pos_only_required": {
@@ -12379,7 +12813,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 4
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -12412,7 +12848,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 5
+              }
             },
             "__rtruediv__": {
               "pos_only_required": {
@@ -12430,7 +12868,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__rsub__": {
               "pos_only_required": {
@@ -12459,7 +12899,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             },
             "__pow__": {
               "pos_only_required": {
@@ -12476,7 +12918,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "classmethods": {},
@@ -12501,7 +12945,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__neg__": {
               "pos_only_required": {},
@@ -12512,7 +12958,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__matmul__": {
               "pos_only_required": {
@@ -12530,14 +12978,21 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "A": {
-              "type": "bottom"
-            }
+            "A": [
+              {
+                "usage.skimage": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -12558,7 +13013,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__le__": {
               "pos_only_required": {
@@ -12575,7 +13032,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -12609,7 +13068,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             },
             "__gt__": {
               "pos_only_required": {
@@ -12626,7 +13087,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "classmethods": {},
@@ -12651,7 +13114,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__mul__": {
               "pos_only_required": {
@@ -12669,7 +13134,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__rmul__": {
               "pos_only_required": {
@@ -12687,7 +13154,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__truediv__": {
               "pos_only_required": {
@@ -12722,7 +13191,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             },
             "__rsub__": {
               "pos_only_required": {
@@ -12739,7 +13210,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__itruediv__": {
               "pos_only_required": {
@@ -12757,7 +13230,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__rtruediv__": {
               "pos_only_required": {
@@ -12775,17 +13250,29 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "imag": {
-              "type": "bottom"
-            },
-            "real": {
-              "type": "bottom"
-            }
+            "imag": [
+              {
+                "usage.skimage": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "real": [
+              {
+                "usage.skimage": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -12807,7 +13294,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__rsub__": {
               "pos_only_required": {
@@ -12836,7 +13325,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 3
+              }
             },
             "__pow__": {
               "pos_only_required": {
@@ -12853,7 +13344,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__rmul__": {
               "pos_only_required": {
@@ -12881,7 +13374,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -12898,7 +13393,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__gt__": {
               "pos_only_required": {
@@ -12916,7 +13413,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "classmethods": {},
@@ -12934,14 +13433,21 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "multi_index": {
-              "type": "bottom"
-            }
+            "multi_index": [
+              {
+                "usage.skimage": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         },
@@ -12962,7 +13468,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -12990,7 +13498,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             }
           },
           "classmethods": {},
@@ -13014,7 +13524,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__eq__": {
               "pos_only_required": {
@@ -13042,7 +13554,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             }
           },
           "classmethods": {},
@@ -13066,7 +13580,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 33
+              }
             }
           },
           "classmethods": {},
@@ -13075,126 +13591,326 @@
         }
       },
       "properties": {
-        "abs": {
-          "type": "bottom"
-        },
-        "testing": {
-          "type": "bottom"
-        },
-        "r_": {
-          "type": "bottom"
-        },
-        "random": {
-          "type": "bottom"
-        },
-        "floating": {
-          "type": "bottom"
-        },
-        "newaxis": {
-          "type": "bottom"
-        },
-        "pi": {
-          "type": "bottom"
-        },
-        "float": {
-          "type": "bottom"
-        },
-        "bool": {
-          "type": "bottom"
-        },
-        "int": {
-          "type": "bottom"
-        },
-        "ogrid": {
-          "type": "bottom"
-        },
-        "integer": {
-          "type": "bottom"
-        },
-        "mgrid": {
-          "type": "bottom"
-        },
-        "round": {
-          "type": "bottom"
-        },
-        "float_": {
-          "type": "bottom"
-        },
-        "nan": {
-          "type": "bottom"
-        },
-        "min": {
-          "type": "bottom"
-        },
-        "max": {
-          "type": "bottom"
-        },
-        "double": {
-          "type": "bottom"
-        },
-        "inf": {
-          "type": "bottom"
-        },
-        "intp": {
-          "type": "bottom"
-        },
-        "linalg": {
-          "type": "bottom"
-        },
-        "divide": {
-          "type": "bottom"
-        },
-        "signedinteger": {
-          "type": "bottom"
-        },
-        "complex": {
-          "type": "bottom"
-        },
-        "unsignedinteger": {
-          "type": "bottom"
-        },
-        "__version__": {
-          "type": "bottom"
-        },
-        "int_": {
-          "type": "bottom"
-        },
-        "typecodes": {
-          "type": "bottom"
-        },
-        "e": {
-          "type": "bottom"
-        },
-        "c_": {
-          "type": "bottom"
-        },
-        "uint": {
-          "type": "bottom"
-        },
-        "NaN": {
-          "type": "bottom"
-        },
-        "ma": {
-          "type": "bottom"
-        },
-        "NAN": {
-          "type": "bottom"
-        },
-        "bitwise_xor": {
-          "type": "bottom"
-        },
-        "complex64": {
-          "type": "bottom"
-        },
-        "s_": {
-          "type": "bottom"
-        },
-        "bool8": {
-          "type": "bottom"
-        },
-        "ubyte": {
-          "type": "bottom"
-        }
+        "abs": [
+          {
+            "usage.skimage": 7
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "testing": [
+          {
+            "usage.skimage": 82
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "r_": [
+          {
+            "usage.skimage": 11
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "random": [
+          {
+            "usage.skimage": 248
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "floating": [
+          {
+            "usage.skimage": 11
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "newaxis": [
+          {
+            "usage.skimage": 55
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "pi": [
+          {
+            "usage.skimage": 88
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "float": [
+          {
+            "usage.skimage": 57
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "bool": [
+          {
+            "usage.skimage": 82
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "int": [
+          {
+            "usage.skimage": 24
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "ogrid": [
+          {
+            "usage.skimage": 9
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "integer": [
+          {
+            "usage.skimage": 10
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "mgrid": [
+          {
+            "usage.skimage": 55
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "round": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "float_": [
+          {
+            "usage.skimage": 6
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "nan": [
+          {
+            "usage.skimage": 21
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "min": [
+          {
+            "usage.skimage": 6
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "max": [
+          {
+            "usage.skimage": 27
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "double": [
+          {
+            "usage.skimage": 98
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "inf": [
+          {
+            "usage.skimage": 37
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "intp": [
+          {
+            "usage.skimage": 20
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "linalg": [
+          {
+            "usage.skimage": 34
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "divide": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "signedinteger": [
+          {
+            "usage.skimage": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "complex": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "unsignedinteger": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "__version__": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "int_": [
+          {
+            "usage.skimage": 3
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "typecodes": [
+          {
+            "usage.skimage": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "e": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "c_": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "uint": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "NaN": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "ma": [
+          {
+            "usage.skimage": 27
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "NAN": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "bitwise_xor": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "complex64": [
+          {
+            "usage.skimage": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "s_": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "bool8": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "ubyte": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ]
       }
     },
     "numpy.testing._private.utils": {
@@ -13870,12 +14586,22 @@
       "functions": {},
       "classes": {},
       "properties": {
-        "assert_allclose": {
-          "type": "bottom"
-        },
-        "assert_almost_equal": {
-          "type": "bottom"
-        }
+        "assert_allclose": [
+          {
+            "usage.skimage": 10
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "assert_almost_equal": [
+          {
+            "usage.skimage": 3
+          },
+          {
+            "type": "bottom"
+          }
+        ]
       }
     },
     "numpy.lib.index_tricks": {
@@ -13958,7 +14684,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 16
+              }
             }
           },
           "classmethods": {},
@@ -14014,7 +14742,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 9
+              }
             }
           },
           "classmethods": {},
@@ -14157,7 +14887,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 61
+              }
             }
           },
           "classmethods": {},
@@ -14199,7 +14931,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "classmethods": {},
@@ -14255,7 +14989,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             }
           },
           "classmethods": {},
@@ -15156,42 +15892,92 @@
         }
       },
       "properties": {
-        "_rand": {
-          "type": "bottom"
-        }
+        "_rand": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ]
       }
     },
     "numpy.random": {
       "functions": {},
       "classes": {},
       "properties": {
-        "rand": {
-          "type": "bottom"
-        },
-        "uniform": {
-          "type": "bottom"
-        },
-        "randint": {
-          "type": "bottom"
-        },
-        "seed": {
-          "type": "bottom"
-        },
-        "normal": {
-          "type": "bottom"
-        },
-        "mtrand": {
-          "type": "bottom"
-        },
-        "RandomState": {
-          "type": "bottom"
-        },
-        "randn": {
-          "type": "bottom"
-        },
-        "choice": {
-          "type": "bottom"
-        }
+        "rand": [
+          {
+            "usage.skimage": 18
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "uniform": [
+          {
+            "usage.skimage": 24
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "randint": [
+          {
+            "usage.skimage": 13
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "seed": [
+          {
+            "usage.skimage": 4
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "normal": [
+          {
+            "usage.skimage": 5
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "mtrand": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "RandomState": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "randn": [
+          {
+            "usage.skimage": 10
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "choice": [
+          {
+            "usage.skimage": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ]
       }
     },
     "numpy.lib.npyio": {
@@ -15212,7 +15998,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 56
+              }
             }
           },
           "classmethods": {},
@@ -15419,9 +16207,14 @@
       },
       "classes": {},
       "properties": {
-        "LinAlgError": {
-          "type": "bottom"
-        }
+        "LinAlgError": [
+          {
+            "usage.skimage": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ]
       }
     },
     "numpy.fft": {
@@ -15860,7 +16653,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 4
+              }
             },
             "__rsub__": {
               "pos_only_required": {
@@ -15878,7 +16673,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "__truediv__": {
               "pos_only_required": {
@@ -15896,7 +16693,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__rtruediv__": {
               "pos_only_required": {
@@ -15914,7 +16713,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__add__": {
               "pos_only_required": {
@@ -15932,7 +16733,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__getitem__": {
               "pos_only_required": {
@@ -15969,7 +16772,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 6
+              }
             },
             "__isub__": {
               "pos_only_required": {
@@ -15987,7 +16792,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 2
+              }
             },
             "reshape": {
               "pos_only_required": {},
@@ -16027,7 +16834,9 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 1
+              }
             },
             "__setitem__": {
               "pos_only_required": {
@@ -16080,23 +16889,45 @@
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
               "kw_only_optional": {},
-              "metadata": {}
+              "metadata": {
+                "usage.skimage": 6
+              }
             }
           },
           "classmethods": {},
           "properties": {
-            "ndim": {
-              "type": "bottom"
-            },
-            "shape": {
-              "type": "bottom"
-            },
-            "fill_value": {
-              "type": "bottom"
-            },
-            "mask": {
-              "type": "bottom"
-            }
+            "ndim": [
+              {
+                "usage.skimage": 8
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "shape": [
+              {
+                "usage.skimage": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "fill_value": [
+              {
+                "usage.skimage": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "mask": [
+              {
+                "usage.skimage": 5
+              },
+              {
+                "type": "bottom"
+              }
+            ]
           },
           "classproperties": {}
         }
@@ -16131,12 +16962,22 @@
       },
       "classes": {},
       "properties": {
-        "array": {
-          "type": "bottom"
-        },
-        "masked": {
-          "type": "bottom"
-        }
+        "array": [
+          {
+            "usage.skimage": 5
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "masked": [
+          {
+            "usage.skimage": 4
+          },
+          {
+            "type": "bottom"
+          }
+        ]
       }
     }
   }
