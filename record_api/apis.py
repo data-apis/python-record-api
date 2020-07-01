@@ -3,34 +3,27 @@ This analysis is meant to run on the raw data and produce a JSON represenation o
 inferred API.
 """
 from __future__ import annotations
-
-import collections
-import operator
-import os
-import typing
-import warnings
-import itertools
-import pydantic
-import warnings
-import ast
-import networkx
-import astunparse
 import functools
+import operator
+import typing
 
-import tqdm.std
+import libcst as cst
+import networkx
 import orjson
-from typing_extensions import TypedDict
+import pydantic
 
-from . import jsonl
 from .type_analysis import *
 
-__all__ = ["API", "Module", "Class", "Signature"]
+__all__ = ["API", "Module", "Class", "Signature", "Metadata"]
 Type = OutputType
 
 
 def orjson_dumps(v, *, default):
     # orjson.dumps returns bytes, to match standard json.dumps we need to decode
     return orjson.dumps(v, default=default, option=orjson.OPT_INDENT_2).decode()  # type: ignore
+
+
+Metadata = typing.Dict[str, int]
 
 
 class API(pydantic.BaseModel):
@@ -52,16 +45,24 @@ class API(pydantic.BaseModel):
 class Module(pydantic.BaseModel):
     functions: typing.Dict[str, Signature] = pydantic.Field(default_factory=dict)
     classes: typing.Dict[str, Class] = pydantic.Field(default_factory=dict)
-    properties: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
+    properties: typing.Dict[str, typing.Tuple[Metadata, Type]] = pydantic.Field(
+        default_factory=dict
+    )
 
     @property
     def source(self) -> str:
-        module = ast.Module(list(self.body), [])
-        return astunparse.unparse(module)
+        module = cst.Module(list(self.body))
+        return module.code
 
     @property
-    def body(self) -> typing.Iterable[ast.AST]:
-        yield ast.ImportFrom("typing", [ast.alias("*", None)], 0)
+    def body(
+        self,
+    ) -> typing.Iterable[
+        typing.Union[cst.BaseCompoundStatement, cst.SimpleStatementLine]
+    ]:
+        yield cst.SimpleStatementLine(
+            [cst.ImportFrom(cst.Name("typing"), names=cst.ImportStar())]
+        )
         yield from assign_properties(self.properties)
 
         for name, sig in self.functions.items():
@@ -73,8 +74,8 @@ class Module(pydantic.BaseModel):
         update_ior(self.classes, other.classes)
         update_ior(self.functions, other.functions)
 
+        update_metadata_and_types(self.properties, other.properties)
         # properties are union of properties, minus any things that are already classes/functins
-        update_unify(self.properties, other.properties)
         remove_keys(self.properties, self.classes.keys())
         remove_keys(self.properties, self.functions.keys())
         return self
@@ -84,14 +85,18 @@ class Class(pydantic.BaseModel):
     constructor: typing.Union[Signature, None] = None
     methods: typing.Dict[str, Signature] = pydantic.Field(default_factory=dict)
     classmethods: typing.Dict[str, Signature] = pydantic.Field(default_factory=dict)
-    properties: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
-    classproperties: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
+    properties: typing.Dict[str, typing.Tuple[Metadata, Type]] = pydantic.Field(
+        default_factory=dict
+    )
+    classproperties: typing.Dict[str, typing.Tuple[Metadata, Type]] = pydantic.Field(
+        default_factory=dict
+    )
 
-    def class_def(self, name: str) -> ast.ClassDef:
-        return ast.ClassDef(name, [], [], list(self.body), [])
+    def class_def(self, name: str) -> cst.ClassDef:
+        return cst.ClassDef(cst.Name(name), cst.IndentedBlock(list(self.body)),)
 
     @property
-    def body(self) -> typing.Iterable[ast.AST]:
+    def body(self) -> typing.Iterable[cst.BaseStatement]:
         if self.constructor is not None:
             yield self.constructor.function_def("__init__")
         yield from assign_properties(self.classproperties, True)
@@ -118,13 +123,14 @@ class Class(pydantic.BaseModel):
         update_ior(self.methods, other.methods)
         update_ior(self.classmethods, other.classmethods)
 
-        update_unify(self.classproperties, other.classproperties)
+        update_metadata_and_types(self.classproperties, other.classproperties)
         remove_keys(self.classproperties, self.methods.keys())
         remove_keys(self.classproperties, self.classmethods.keys())
 
-        update_unify(self.properties, other.properties)
+        update_metadata_and_types(self.properties, other.properties)
         remove_keys(self.properties, self.methods.keys())
         remove_keys(self.properties, self.classmethods.keys())
+        # TODO: merge metadata before deleting
         # Anything that is both a class property and a property should be only a class property
         remove_keys(self.properties, self.classproperties.keys())
 
@@ -132,25 +138,30 @@ class Class(pydantic.BaseModel):
 
 
 def assign_properties(
-    p: typing.Dict[str, Type], is_classvar=False
-) -> typing.Iterable[ast.AST]:
-    for name, tp in p.items():
-        ann = annotation(tp)
-        if ann is None:
-            yield ast.Assign(
-                [ast.Name(name, ast.Store())], ast.Constant(..., None), None
-            )
-        else:
-            yield ast.AnnAssign(
-                [ast.Name(name, ast.Store())],
-                ast.Subscript(
-                    ast.Name("ClassVar", ast.Load()), ast.Index(ann), ast.Load(),
+    p: typing.Dict[str, typing.Tuple[Metadata, Type]], is_classvar=False
+) -> typing.Iterable[cst.SimpleStatementLine]:
+    for name, metadata_and_tp in p.items():
+        metadata, tp = metadata_and_tp
+        ann = tp.annotation
+        yield cst.SimpleStatementLine(
+            [
+                cst.AnnAssign(
+                    cst.Name(name),
+                    cst.Annotation(
+                        cst.Subscript(
+                            cst.Name("ClassVar"), [cst.SubscriptElement(cst.Index(ann))]
+                        )
+                        if is_classvar
+                        else ann
+                    ),
                 )
-                if is_classvar
-                else ann,
-                ast.Constant(..., None),
-                1,
-            )
+            ],
+            leading_lines=[cst.EmptyLine()]
+            + [
+                cst.EmptyLine(comment=cst.Comment("# " + l))
+                for l in metadata_lines(metadata)
+            ],
+        )
 
 
 PartialKeyOrdering = typing.List[typing.Tuple[str, str]]
@@ -200,71 +211,79 @@ class Signature(pydantic.BaseModel):
 
         if len(all_keys) != len(set(all_keys)):
             import pudb
+
             pudb.set_trace()
 
-    def function_def(self, name: str, is_classmethod=False) -> ast.FunctionDef:
-        return ast.FunctionDef(
-            name,
-            self.arguments,
-            [self.docstring],
-            [ast.Name("classmethod", ast.Load())] if is_classmethod else [],
-            None,
-            None,
+    def function_def(self, name: str, is_classmethod=False) -> cst.FunctionDef:
+        return cst.FunctionDef(
+            cst.Name(name),
+            self.parameters,
+            cst.IndentedBlock([cst.SimpleStatementLine([s]) for s in self.body()]),
+            [cst.Decorator(cst.Name("classmethod"))] if is_classmethod else [],
+        )
+
+    def body(self) -> typing.Iterable[cst.BaseSmallStatement]:
+        yield cst.Expr(self.docstring)
+        yield cst.Expr(cst.Ellipsis())
+
+    @property
+    def docstring(self) -> cst.BaseExpression:
+        return cst.SimpleString(
+            "\n    " + "\n    ".join(metadata_lines(self.metadata)) + "\n    "
         )
 
     @property
-    def docstring(self) -> ast.Expr:
-        return ast.Expr(
-            ast.Constant(", ".join(f"{k}: {v}" for k, v in self.metadata.items()), None)
-        )
-
-    @property
-    def arguments(self) -> ast.arguments:
-        return ast.arguments(
-            posonlyargs=[
-                ast.arg(k, annotation(v))
-                for k, v in itertools.chain(
-                    self.pos_only_required.items(),
-                    possibly_order_dict(
-                        self.pos_only_optional, self.pos_only_optional_ordering
-                    ).items(),
+    def parameters(self) -> cst.Parameters:
+        return cst.Parameters(
+            posonly_params=[
+                cst.Param(cst.Name(k), cst.Annotation(v.annotation))
+                for k, v in self.pos_only_required.items()
+            ]
+            + [
+                cst.Param(
+                    cst.Name(k), cst.Annotation(v.annotation), default=cst.Ellipsis()
                 )
+                for k, v in possibly_order_dict(
+                    self.pos_only_optional, self.pos_only_optional_ordering
+                ).items()
             ],
-            args=[
-                ast.arg(k, annotation(v))
-                for k, v in itertools.chain(
-                    self.pos_or_kw_required.items(),
-                    possibly_order_dict(
-                        self.pos_or_kw_optional, self.pos_or_kw_optional_ordering
-                    ).items(),
+            params=[
+                cst.Param(cst.Name(k), cst.Annotation(v.annotation))
+                for k, v in self.pos_or_kw_required.items()
+            ]
+            + [
+                cst.Param(
+                    cst.Name(k), cst.Annotation(v.annotation), default=cst.Ellipsis()
                 )
+                for k, v in possibly_order_dict(
+                    self.pos_or_kw_optional, self.pos_or_kw_optional_ordering
+                ).items()
             ],
-            defaults=[
-                ast.Constant(..., None)
-                for _ in range(
-                    len(self.pos_only_optional) + len(self.pos_or_kw_optional)
+            star_arg=(
+                cst.Param(
+                    cst.Name(self.var_pos[0]),
+                    cst.Annotation(self.var_pos[1].annotation),
                 )
-            ],
-            vararg=(
-                ast.arg(self.var_pos[0], annotation(self.var_pos[1]))
                 if self.var_pos
-                else None
+                else cst.MaybeSentinel.DEFAULT
             ),
-            kwarg=(
-                ast.arg(self.var_kw[0], annotation(self.var_kw[1]))
+            star_kwarg=(
+                cst.Param(
+                    cst.Name(self.var_kw[0]), cst.Annotation(self.var_kw[1].annotation)
+                )
                 if self.var_kw
                 else None
             ),
-            kwonlyargs=[
-                ast.arg(k, annotation(v))
-                for k, v in itertools.chain(
-                    self.kw_only_required.items(), self.kw_only_optional.items()
+            kwonly_params=[
+                cst.Param(cst.Name(k), cst.Annotation(v.annotation))
+                for k, v in self.kw_only_required.items()
+            ]
+            + [
+                cst.Param(
+                    cst.Name(k), cst.Annotation(v.annotation), default=cst.Ellipsis()
                 )
+                for k, v in self.kw_only_optional.items()
             ],
-            kw_defaults=(
-                [ast.Constant(None, None) for _ in range(len(self.kw_only_required))]
-                + [ast.Constant(..., None) for _ in range(len(self.kw_only_optional))]
-            ),
         )
 
     @property
@@ -322,8 +341,7 @@ class Signature(pydantic.BaseModel):
 
         self.validate_keys_unique()
 
-        # Merge metata, throwing away duplicate keys
-        update(self.metadata, other.metadata, f=operator.add)
+        update_add(self.metadata, other.metadata)
         return self
 
     def _copy_pos_only(self, other: Signature) -> None:
@@ -451,6 +469,7 @@ class Signature(pydantic.BaseModel):
             set(self.kw_only_optional) & set(self.pos_or_kw_optional),
             lambda l, r: unify((l, r)),
         )
+
     def _copy_var_kw(self, other: Signature) -> None:
         self.var_kw = (
             unify_named_types((self.var_kw, other.var_kw,))
@@ -462,6 +481,11 @@ class Signature(pydantic.BaseModel):
 API.update_forward_refs()
 Class.update_forward_refs()
 Module.update_forward_refs()
+
+
+def metadata_lines(m: Metadata) -> typing.Iterable[str]:
+    for k, v in m.items():
+        yield f"{k}: {v}"
 
 
 def partial_key_ordering(d: typing.Dict[str, Type]) -> PartialKeyOrdering:
@@ -563,4 +587,16 @@ def update(
 
 
 update_ior = functools.partial(update, f=operator.ior)
+update_add = functools.partial(update, f=operator.add)
 update_unify = functools.partial(update, f=lambda l, r: unify((l, r)))
+
+
+def _f(
+    l: typing.Tuple[Metadata, OutputType], r: typing.Tuple[Metadata, OutputType]
+) -> typing.Tuple[Metadata, OutputType]:
+    update_add(l[0], r[0])
+    return (l[0], unify((l[1], r[1])))
+
+
+update_metadata_and_types = functools.partial(update, f=_f)
+

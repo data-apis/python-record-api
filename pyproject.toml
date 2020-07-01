@@ -14,7 +14,8 @@ requires = [
     "orjson",
     "black",
     "pydantic",
-    "typing_extensions"
+    "typing_extensions",
+    "libcst"
 ]
 
 [tool.flit.entrypoints.pytest11]
