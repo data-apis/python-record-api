@@ -47,7 +47,9 @@ class Index:
     str: object
 
     def set_names(self: object, /, names: Union[str, numpy.str_, List[str]]):
-        "\n    usage.xarray: 183\n    "
+        """
+        usage.xarray: 183
+        """
         ...
 
     def equals(
@@ -61,7 +63,10 @@ class Index:
             pandas.core.indexes.multi.MultiIndex,
         ],
     ):
-        "\n    usage.xarray: 24\n    usage.dask: 3\n    "
+        """
+        usage.xarray: 24
+        usage.dask: 3
+        """
         ...
 
     def __getitem__(
@@ -73,7 +78,10 @@ class Index:
         ],
         /,
     ):
-        "\n    usage.xarray: 14\n    usage.dask: 22\n    "
+        """
+        usage.xarray: 14
+        usage.dask: 22
+        """
         ...
 
     def append(
@@ -85,23 +93,36 @@ class Index:
             list,
         ],
     ):
-        "\n    usage.xarray: 17\n    usage.dask: 16\n    "
+        """
+        usage.xarray: 17
+        usage.dask: 16
+        """
         ...
 
     def to_series(self: object, /):
-        "\n    usage.xarray: 3\n    usage.dask: 7\n    "
+        """
+        usage.xarray: 3
+        usage.dask: 7
+        """
         ...
 
     def copy(self: object, /, deep: bool):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def rename(self: object, /, name: str):
-        "\n    usage.xarray: 15\n    usage.dask: 1\n    "
+        """
+        usage.xarray: 15
+        usage.dask: 1
+        """
         ...
 
     def slice_indexer(self: object, /, start: object, end: object, step: None):
-        "\n    usage.xarray: 12\n    "
+        """
+        usage.xarray: 12
+        """
         ...
 
     def get_indexer(
@@ -111,7 +132,9 @@ class Index:
         method: Union[Literal["pad"], None],
         tolerance: None,
     ):
-        "\n    usage.xarray: 3\n    "
+        """
+        usage.xarray: 3
+        """
         ...
 
     def get_loc(
@@ -121,29 +144,44 @@ class Index:
         method: None = ...,
         tolerance: None = ...,
     ):
-        "\n    usage.xarray: 26\n    "
+        """
+        usage.xarray: 26
+        """
         ...
 
     def droplevel(
         self: object, /, level: Union[List[Literal["level_1"]], Literal["level_1"]]
     ):
-        "\n    usage.xarray: 2\n    "
+        """
+        usage.xarray: 2
+        """
         ...
 
     def __iter__(self: object, /):
-        "\n    usage.xarray: 3\n    usage.dask: 22\n    "
+        """
+        usage.xarray: 3
+        usage.dask: 22
+        """
         ...
 
     def drop(self: object, /, labels: numpy.ndarray):
-        "\n    usage.xarray: 2\n    usage.dask: 1\n    "
+        """
+        usage.xarray: 2
+        usage.dask: 1
+        """
         ...
 
     def astype(self: object, /, dtype: Union[numpy.dtype, Literal["int64"]]):
-        "\n    usage.xarray: 1\n    usage.dask: 12\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 12
+        """
         ...
 
     def __contains__(self: object, _0: str, /):
-        "\n    usage.dask: 135\n    "
+        """
+        usage.dask: 135
+        """
         ...
 
     def difference(
@@ -151,7 +189,9 @@ class Index:
         /,
         other: Union[List[Literal["A"]], pandas.core.indexes.base.Index],
     ):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def __eq__(
@@ -159,23 +199,33 @@ class Index:
         _0: Union[List[Literal["x", "b", "c", "a"]], pandas.core.indexes.base.Index],
         /,
     ):
-        "\n    usage.dask: 14\n    "
+        """
+        usage.dask: 14
+        """
         ...
 
     def intersection(self: object, /, other: pandas.core.indexes.base.Index):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def _get_level_values(self: object, /, level: int):
-        "\n    usage.dask: 7\n    "
+        """
+        usage.dask: 7
+        """
         ...
 
     def min(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def max(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def get_slice_bound(
@@ -185,27 +235,39 @@ class Index:
         side: Literal["left", "right"],
         kind: Literal["loc"],
     ):
-        "\n    usage.dask: 32\n    "
+        """
+        usage.dask: 32
+        """
         ...
 
     def memory_usage(self: object, /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def dropna(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def drop_duplicates(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def isin(self: object, /, values: Union[pandas.core.series.Series, List[int]]):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def shift(self: object, /, periods: int, freq: None):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def union(
@@ -216,7 +278,9 @@ class Index:
             pandas.core.indexes.numeric.Int64Index,
         ],
     ):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def to_frame(
@@ -225,5 +289,7 @@ class Index:
         index: bool = ...,
         name: Union[Literal["bar", "foo"], None] = ...,
     ):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...

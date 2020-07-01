@@ -16,75 +16,112 @@ class SeriesGroupBy:
     idxmax: object
 
     def first(self: object, /):
-        "\n    usage.xarray: 1\n    usage.dask: 14\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 14
+        """
         ...
 
     def sum(self: object, /):
-        "\n    usage.dask: 20\n    "
+        """
+        usage.dask: 20
+        """
         ...
 
     def nunique(self: object, /):
-        "\n    usage.dask: 14\n    "
+        """
+        usage.dask: 14
+        """
         ...
 
     def count(self: object, /):
-        "\n    usage.dask: 15\n    "
+        """
+        usage.dask: 15
+        """
         ...
 
     def apply(self: object, /, func: Union[Callable, Literal["sum"], Callable]):
-        "\n    usage.dask: 21\n    "
+        """
+        usage.dask: 21
+        """
         ...
 
     def mean(self: object, /):
-        "\n    usage.dask: 13\n    "
+        """
+        usage.dask: 13
+        """
         ...
 
     def min(self: object, /):
-        "\n    usage.dask: 10\n    "
+        """
+        usage.dask: 10
+        """
         ...
 
     def max(self: object, /):
-        "\n    usage.dask: 11\n    "
+        """
+        usage.dask: 11
+        """
         ...
 
     def size(self: object, /):
-        "\n    usage.dask: 10\n    "
+        """
+        usage.dask: 10
+        """
         ...
 
     def std(self: object, /):
-        "\n    usage.dask: 10\n    "
+        """
+        usage.dask: 10
+        """
         ...
 
     def var(self: object, /):
-        "\n    usage.dask: 8\n    "
+        """
+        usage.dask: 8
+        """
         ...
 
     def last(self: object, /):
-        "\n    usage.dask: 10\n    "
+        """
+        usage.dask: 10
+        """
         ...
 
     def prod(self: object, /):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def get_group(self: object, /, name: int):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def transform(self: object, /, func: Union[Callable, Literal["sum"], Callable]):
-        "\n    usage.dask: 19\n    "
+        """
+        usage.dask: 19
+        """
         ...
 
     def cumsum(self: object, /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def cumprod(self: object, /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def cumcount(self: object, /):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def aggregate(
@@ -94,15 +131,21 @@ class SeriesGroupBy:
             Literal["var", "sum", "mean"], List[Literal["max", "min", "mean", "sum"]]
         ],
     ):
-        "\n    usage.dask: 10\n    "
+        """
+        usage.dask: 10
+        """
         ...
 
     def __iter__(self: object, /):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def value_counts(self: object, /):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
 
@@ -151,15 +194,21 @@ class DataFrameGroupBy:
     e: object
 
     def get_group(self: object, /, name: Union[float, int]):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def sum(self: object, /):
-        "\n    usage.dask: 26\n    "
+        """
+        usage.dask: 26
+        """
         ...
 
     def __getitem__(self: object, _0: object, /):
-        "\n    usage.dask: 219\n    "
+        """
+        usage.dask: 219
+        """
         ...
 
     def apply(
@@ -170,55 +219,81 @@ class DataFrameGroupBy:
         ],
         *args: Literal["v", "t"],
     ):
-        "\n    usage.dask: 63\n    "
+        """
+        usage.dask: 63
+        """
         ...
 
     def count(self: object, /):
-        "\n    usage.dask: 12\n    "
+        """
+        usage.dask: 12
+        """
         ...
 
     def mean(self: object, /):
-        "\n    usage.dask: 15\n    "
+        """
+        usage.dask: 15
+        """
         ...
 
     def min(self: object, /):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def max(self: object, /):
-        "\n    usage.dask: 10\n    "
+        """
+        usage.dask: 10
+        """
         ...
 
     def size(self: object, /):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def std(self: object, /):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def var(self: object, /):
-        "\n    usage.dask: 7\n    "
+        """
+        usage.dask: 7
+        """
         ...
 
     def first(self: object, /):
-        "\n    usage.dask: 12\n    "
+        """
+        usage.dask: 12
+        """
         ...
 
     def last(self: object, /):
-        "\n    usage.dask: 10\n    "
+        """
+        usage.dask: 10
+        """
         ...
 
     def prod(self: object, /):
-        "\n    usage.dask: 11\n    "
+        """
+        usage.dask: 11
+        """
         ...
 
     def nunique(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def transform(self: object, /, func: Union[Callable, Literal["sum"], Callable]):
-        "\n    usage.dask: 19\n    "
+        """
+        usage.dask: 19
+        """
         ...
 
     def aggregate(
@@ -235,17 +310,25 @@ class DataFrameGroupBy:
             List[Literal["max", "min", "sum", "mean"]],
         ],
     ):
-        "\n    usage.dask: 22\n    "
+        """
+        usage.dask: 22
+        """
         ...
 
     def cumsum(self: object, /):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def cumprod(self: object, /):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def cumcount(self: object, /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...

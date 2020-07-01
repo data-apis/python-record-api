@@ -4,12 +4,16 @@ from typing import *
 class _Timestamp:
     @classmethod
     def to_datetime64(_0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     @classmethod
     def to_pydatetime(_0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
 
@@ -21,7 +25,10 @@ class Timestamp:
             pandas._libs.tslibs.nattype.NaTType,
         ]
     ):
-        "\n    usage.xarray: 25\n    usage.dask: 8\n    "
+        """
+        usage.xarray: 25
+        usage.dask: 8
+        """
         ...
 
     # usage.dask: 1
@@ -48,7 +55,9 @@ class Timestamp:
     tzinfo: object
 
     def __rsub__(self: object, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
-        "\n    usage.xarray: 2\n    "
+        """
+        usage.xarray: 2
+        """
         ...
 
     def __radd__(
@@ -60,7 +69,9 @@ class Timestamp:
         ],
         /,
     ):
-        "\n    usage.xarray: 5\n    "
+        """
+        usage.xarray: 5
+        """
         ...
 
     def __ge__(
@@ -72,7 +83,9 @@ class Timestamp:
         ],
         /,
     ):
-        "\n    usage.dask: 20\n    "
+        """
+        usage.dask: 20
+        """
         ...
 
     def __le__(
@@ -80,7 +93,9 @@ class Timestamp:
         _0: Union[pandas._libs.tslibs.timestamps.Timestamp, pandas.core.series.Series],
         /,
     ):
-        "\n    usage.dask: 19\n    "
+        """
+        usage.dask: 19
+        """
         ...
 
     def __eq__(
@@ -88,19 +103,27 @@ class Timestamp:
         _0: Union[pandas._libs.tslibs.timestamps.Timestamp, Literal["2000"]],
         /,
     ):
-        "\n    usage.dask: 45\n    "
+        """
+        usage.dask: 45
+        """
         ...
 
     def tz_localize(self: object, /, tz: None):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def __ne__(self: object, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        "\n    usage.dask: 10\n    "
+        """
+        usage.dask: 10
+        """
         ...
 
     def __gt__(self: object, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def __lt__(
@@ -111,21 +134,31 @@ class Timestamp:
         ],
         /,
     ):
-        "\n    usage.dask: 7\n    "
+        """
+        usage.dask: 7
+        """
         ...
 
     def ceil(self: object, /, freq: str):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def round(self: object, /, freq: Literal["15s"]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def __add__(self: object, _0: object, /):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def __sub__(self: object, _0: object, /):
-        "\n    usage.dask: 8\n    "
+        """
+        usage.dask: 8
+        """
         ...

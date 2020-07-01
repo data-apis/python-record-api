@@ -11,13 +11,20 @@ class Period:
         ],
         /,
     ):
-        "\n    usage.xarray: 2\n    usage.dask: 2\n    "
+        """
+        usage.xarray: 2
+        usage.dask: 2
+        """
         ...
 
     def __ge__(self: object, _0: pandas._libs.tslibs.period.Period, /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def __le__(self: object, _0: pandas._libs.tslibs.period.Period, /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...

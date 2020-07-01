@@ -7,5 +7,7 @@ class SparseDtype:
     kind: object
 
     def __eq__(self: object, _0: Literal["Sparse[uint8, 0]"], /):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...

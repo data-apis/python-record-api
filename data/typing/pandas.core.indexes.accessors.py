@@ -10,31 +10,45 @@ class DatetimeProperties:
     date: object
 
     def floor(self: object, /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def ceil(self: object, /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def round(self: object, /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def to_pydatetime(self: object, /):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
 
 class TimedeltaProperties:
     def floor(self: object, /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def ceil(self: object, /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def round(self: object, /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...

@@ -7,7 +7,9 @@ class Series:
             Literal["a", "b", "c", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]
         ]
     ):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     # usage.dask: 5
@@ -18,7 +20,9 @@ class Series:
 
     @classmethod
     def __ne__(_0: Type[pandas.core.series.Series], /):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     # usage.xarray: 4
@@ -87,7 +91,9 @@ class Series:
     nbytes: object
 
     def rank(self: object, /, method: Literal["dense"], ascending: bool):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def astype(
@@ -97,19 +103,29 @@ class Series:
             type, str, pandas.core.dtypes.dtypes.CategoricalDtype, numpy.dtype
         ],
     ):
-        "\n    usage.xarray: 1\n    usage.dask: 52\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 52
+        """
         ...
 
     def median(self: object, /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def reset_index(self: object, /):
-        "\n    usage.xarray: 2\n    usage.dask: 6\n    "
+        """
+        usage.xarray: 2
+        usage.dask: 6
+        """
         ...
 
     def unstack(self: object, /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def groupby(
@@ -120,15 +136,24 @@ class Series:
         by: object = ...,
         group_keys: bool = ...,
     ):
-        "\n    usage.xarray: 1\n    usage.dask: 64\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 64
+        """
         ...
 
     def isnull(self: object, /):
-        "\n    usage.xarray: 1\n    usage.dask: 5\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 5
+        """
         ...
 
     def any(self: object, /, axis: int = ..., skipna: bool = ...):
-        "\n    usage.xarray: 1\n    usage.dask: 8\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 8
+        """
         ...
 
     def resample(
@@ -138,19 +163,31 @@ class Series:
         closed: Union[None, Literal["left", "right"]] = ...,
         label: Union[None, Literal["left", "right"]] = ...,
     ):
-        "\n    usage.xarray: 14\n    usage.dask: 83\n    "
+        """
+        usage.xarray: 14
+        usage.dask: 83
+        """
         ...
 
     def dropna(self: object, /):
-        "\n    usage.xarray: 1\n    usage.dask: 7\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 7
+        """
         ...
 
     def to_frame(self: object, /):
-        "\n    usage.xarray: 2\n    usage.dask: 26\n    "
+        """
+        usage.xarray: 2
+        usage.dask: 26
+        """
         ...
 
     def equals(self: object, /, other: pandas.core.series.Series):
-        "\n    usage.xarray: 1\n    usage.dask: 3\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 3
+        """
         ...
 
     def __setitem__(
@@ -159,11 +196,17 @@ class Series:
         _1: Union[int, float],
         /,
     ):
-        "\n    usage.xarray: 2\n    usage.dask: 3\n    "
+        """
+        usage.xarray: 2
+        usage.dask: 3
+        """
         ...
 
     def shift(self: object, /, periods: int = ..., freq: object = ...):
-        "\n    usage.xarray: 1\n    usage.dask: 32\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 32
+        """
         ...
 
     def rolling(
@@ -175,15 +218,24 @@ class Series:
         win_type: None = ...,
         axis: int = ...,
     ):
-        "\n    usage.xarray: 3\n    usage.dask: 24\n    "
+        """
+        usage.xarray: 3
+        usage.dask: 24
+        """
         ...
 
     def iteritems(self: object, /):
-        "\n    usage.xarray: 1\n    usage.dask: 4\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 4
+        """
         ...
 
     def __getitem__(self: object, _0: object, /):
-        "\n    usage.xarray: 2\n    usage.dask: 83\n    "
+        """
+        usage.xarray: 2
+        usage.dask: 83
+        """
         ...
 
     def sum(
@@ -192,7 +244,10 @@ class Series:
         axis: Union[Literal["columns"], None, int] = ...,
         skipna: bool = ...,
     ):
-        "\n    usage.xarray: 2\n    usage.dask: 42\n    "
+        """
+        usage.xarray: 2
+        usage.dask: 42
+        """
         ...
 
     def min(
@@ -201,7 +256,10 @@ class Series:
         axis: Union[Literal["columns"], None, int] = ...,
         skipna: bool = ...,
     ):
-        "\n    usage.xarray: 1\n    usage.dask: 15\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 15
+        """
         ...
 
     def max(
@@ -210,7 +268,10 @@ class Series:
         axis: Union[Literal["columns"], None, int] = ...,
         skipna: bool = ...,
     ):
-        "\n    usage.xarray: 1\n    usage.dask: 19\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 19
+        """
         ...
 
     def mean(
@@ -219,7 +280,10 @@ class Series:
         axis: Union[Literal["columns"], None, int] = ...,
         skipna: bool = ...,
     ):
-        "\n    usage.xarray: 1\n    usage.dask: 25\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 25
+        """
         ...
 
     def var(
@@ -229,7 +293,10 @@ class Series:
         skipna: Union[None, bool] = ...,
         ddof: int = ...,
     ):
-        "\n    usage.xarray: 1\n    usage.dask: 14\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 14
+        """
         ...
 
     def prod(
@@ -239,7 +306,10 @@ class Series:
         skipna: bool = ...,
         min_count: int = ...,
     ):
-        "\n    usage.xarray: 1\n    usage.dask: 10\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 10
+        """
         ...
 
     def __eq__(
@@ -253,77 +323,114 @@ class Series:
         ],
         /,
     ):
-        "\n    usage.sklearn: 1\n    usage.dask: 48\n    "
+        """
+        usage.sklearn: 1
+        usage.dask: 48
+        """
         ...
 
     def to_dict(self: object, /):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def all(self: object, /, axis: int = ..., skipna: bool = ...):
-        "\n    usage.dask: 24\n    "
+        """
+        usage.dask: 24
+        """
         ...
 
     def unique(self: object, /):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def tolist(self: object, /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def memory_usage(self: object, /, index: bool):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def __iter__(self: object, /):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def searchsorted(
         self: object, /, value: pandas.core.series.Series, side: Literal["right"]
     ):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def __ge__(self: object, _0: object, /):
-        "\n    usage.dask: 22\n    "
+        """
+        usage.dask: 22
+        """
         ...
 
     def __invert__(self: object, /):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def __mod__(self: object, _0: Union[pandas.core.series.Series, int], /):
-        "\n    usage.dask: 7\n    "
+        """
+        usage.dask: 7
+        """
         ...
 
     def __mul__(self: object, _0: Union[int, float, pandas.core.series.Series], /):
-        "\n    usage.dask: 8\n    "
+        """
+        usage.dask: 8
+        """
         ...
 
     def __truediv__(self: object, _0: Union[int, float, pandas.core.series.Series], /):
-        "\n    usage.dask: 12\n    "
+        """
+        usage.dask: 12
+        """
         ...
 
     def drop_duplicates(self: object, /):
-        "\n    usage.dask: 12\n    "
+        """
+        usage.dask: 12
+        """
         ...
 
     def count(self: object, /, *, axis: Union[Literal["columns"], int] = ...):
-        "\n    usage.dask: 10\n    "
+        """
+        usage.dask: 10
+        """
         ...
 
     def sort_values(self: object, /):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def sort_index(self: object, /):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def __add__(self: object, _0: object, /):
-        "\n    usage.dask: 57\n    "
+        """
+        usage.dask: 57
+        """
         ...
 
     def __radd__(
@@ -337,7 +444,9 @@ class Series:
         ],
         /,
     ):
-        "\n    usage.dask: 20\n    "
+        """
+        usage.dask: 20
+        """
         ...
 
     def __rmul__(
@@ -345,13 +454,17 @@ class Series:
         _0: Union[dask.dataframe.core.Series, pandas.core.series.Series, int],
         /,
     ):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def __sub__(
         self: object, _0: Union[numpy.float64, pandas.core.series.Series, int], /
     ):
-        "\n    usage.dask: 20\n    "
+        """
+        usage.dask: 20
+        """
         ...
 
     def __rsub__(
@@ -364,7 +477,9 @@ class Series:
         ],
         /,
     ):
-        "\n    usage.dask: 13\n    "
+        """
+        usage.dask: 13
+        """
         ...
 
     def __rtruediv__(
@@ -372,11 +487,15 @@ class Series:
         _0: Union[dask.dataframe.core.Series, pandas.core.series.Series, int],
         /,
     ):
-        "\n    usage.dask: 11\n    "
+        """
+        usage.dask: 11
+        """
         ...
 
     def __floordiv__(self: object, _0: Union[float, pandas.core.series.Series, int], /):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def __rfloordiv__(
@@ -384,11 +503,15 @@ class Series:
         _0: Union[dask.dataframe.core.Series, pandas.core.series.Series, int],
         /,
     ):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def __pow__(self: object, _0: Union[float, pandas.core.series.Series, int], /):
-        "\n    usage.dask: 8\n    "
+        """
+        usage.dask: 8
+        """
         ...
 
     def __rpow__(
@@ -396,7 +519,9 @@ class Series:
         _0: Union[dask.dataframe.core.Series, pandas.core.series.Series, int],
         /,
     ):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def __rmod__(
@@ -404,11 +529,15 @@ class Series:
         _0: Union[dask.dataframe.core.Series, pandas.core.series.Series, int],
         /,
     ):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def __and__(self: object, _0: Union[bool, pandas.core.series.Series], /):
-        "\n    usage.dask: 7\n    "
+        """
+        usage.dask: 7
+        """
         ...
 
     def __rand__(
@@ -416,11 +545,15 @@ class Series:
         _0: Union[dask.dataframe.core.Series, pandas.core.series.Series, bool],
         /,
     ):
-        "\n    usage.dask: 8\n    "
+        """
+        usage.dask: 8
+        """
         ...
 
     def __or__(self: object, _0: Union[bool, pandas.core.series.Series], /):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def __ror__(
@@ -428,11 +561,15 @@ class Series:
         _0: Union[dask.dataframe.core.Series, pandas.core.series.Series, bool],
         /,
     ):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def __xor__(self: object, _0: Union[bool, pandas.core.series.Series], /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def __rxor__(
@@ -440,7 +577,9 @@ class Series:
         _0: Union[dask.dataframe.core.Series, pandas.core.series.Series, bool],
         /,
     ):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def __gt__(
@@ -448,7 +587,9 @@ class Series:
         _0: Union[numpy.int64, int, pandas.core.series.Series, numpy.float64],
         /,
     ):
-        "\n    usage.dask: 60\n    "
+        """
+        usage.dask: 60
+        """
         ...
 
     def __lt__(
@@ -462,11 +603,15 @@ class Series:
         ],
         /,
     ):
-        "\n    usage.dask: 7\n    "
+        """
+        usage.dask: 7
+        """
         ...
 
     def __le__(self: object, _0: object, /):
-        "\n    usage.dask: 21\n    "
+        """
+        usage.dask: 21
+        """
         ...
 
     def __ne__(
@@ -474,109 +619,151 @@ class Series:
         _0: Union[dask.dataframe.core.Series, pandas.core.series.Series, int],
         /,
     ):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def lt(self: object, /, other: Union[pandas.core.series.Series, int]):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def gt(self: object, /, other: Union[pandas.core.series.Series, int]):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def le(self: object, /, other: Union[pandas.core.series.Series, int]):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def ge(self: object, /, other: Union[pandas.core.series.Series, int]):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def ne(self: object, /, other: Union[pandas.core.series.Series, int]):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def eq(self: object, /, other: Union[pandas.core.series.Series, int]):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def __neg__(self: object, /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def add(self: object, /, other: Union[pandas.core.series.Series, int]):
-        "\n    usage.dask: 7\n    "
+        """
+        usage.dask: 7
+        """
         ...
 
     def sub(
         self: object, /, other: Union[int, pandas.core.series.Series], fill_value: int
     ):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def mul(self: object, /, other: Union[pandas.core.series.Series, int]):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def truediv(
         self: object, /, other: Union[int, pandas.core.series.Series], fill_value: int
     ):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def floordiv(
         self: object, /, other: Union[int, pandas.core.series.Series], fill_value: int
     ):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def pow(
         self: object, /, other: Union[int, pandas.core.series.Series], fill_value: int
     ):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def mod(
         self: object, /, other: Union[int, pandas.core.series.Series], fill_value: int
     ):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def radd(
         self: object, /, other: Union[int, pandas.core.series.Series], fill_value: int
     ):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def rsub(
         self: object, /, other: Union[int, pandas.core.series.Series], fill_value: int
     ):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def rmul(
         self: object, /, other: Union[int, pandas.core.series.Series], fill_value: int
     ):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def rtruediv(
         self: object, /, other: Union[int, pandas.core.series.Series], fill_value: int
     ):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def rpow(
         self: object, /, other: Union[int, pandas.core.series.Series], fill_value: int
     ):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def rmod(
         self: object, /, other: Union[int, pandas.core.series.Series], fill_value: int
     ):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def std(
@@ -586,7 +773,9 @@ class Series:
         skipna: bool = ...,
         ddof: int = ...,
     ):
-        "\n    usage.dask: 12\n    "
+        """
+        usage.dask: 12
+        """
         ...
 
     def sem(
@@ -596,35 +785,51 @@ class Series:
         skipna: Union[bool, None] = ...,
         ddof: int = ...,
     ):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def nunique(self: object, /):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def value_counts(self: object, /):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def rename(self: object, /, *, inplace: bool = ...):
-        "\n    usage.dask: 23\n    "
+        """
+        usage.dask: 23
+        """
         ...
 
     def copy(self: object, /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def head(self: object, /, n: int):
-        "\n    usage.dask: 7\n    "
+        """
+        usage.dask: 7
+        """
         ...
 
     def tail(self: object, /, n: int):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def quantile(self: object, /):
-        "\n    usage.dask: 7\n    "
+        """
+        usage.dask: 7
+        """
         ...
 
     def describe(
@@ -635,7 +840,9 @@ class Series:
         ] = ...,
         exclude: None = ...,
     ):
-        "\n    usage.dask: 7\n    "
+        """
+        usage.dask: 7
+        """
         ...
 
     def apply(
@@ -645,31 +852,45 @@ class Series:
         convert_dtype: bool = ...,
         args: Tuple[None, ...] = ...,
     ):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def where(self: object, /, cond: pandas.core.series.Series):
-        "\n    usage.dask: 8\n    "
+        """
+        usage.dask: 8
+        """
         ...
 
     def cumsum(self: object, /, axis: None = ..., skipna: bool = ...):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def cumprod(self: object, /, axis: None = ..., skipna: bool = ...):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def cummin(self: object, /, axis: None = ..., skipna: bool = ...):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def cummax(self: object, /, axis: None = ..., skipna: bool = ...):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def notna(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def clip(
@@ -678,23 +899,33 @@ class Series:
         lower: Union[None, int, float] = ...,
         upper: Union[float, int, None] = ...,
     ):
-        "\n    usage.dask: 13\n    "
+        """
+        usage.dask: 13
+        """
         ...
 
     def squeeze(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def mask(self: object, /, cond: pandas.core.series.Series):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def to_string(self: object, /, max_rows: int):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def isin(self: object, /, values: Union[pandas.core.series.Series, List[int]]):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def map(
@@ -702,7 +933,9 @@ class Series:
         /,
         arg: Union[Callable, pandas.core.series.Series, Dict[numpy.int64, numpy.int64]],
     ):
-        "\n    usage.dask: 15\n    "
+        """
+        usage.dask: 15
+        """
         ...
 
     def align(
@@ -713,7 +946,9 @@ class Series:
         axis: Union[int, None] = ...,
         fill_value: Union[None, int] = ...,
     ):
-        "\n    usage.dask: 20\n    "
+        """
+        usage.dask: 20
+        """
         ...
 
     def combine(
@@ -723,23 +958,33 @@ class Series:
         func: Callable,
         fill_value: Union[None, int],
     ):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def combine_first(self: object, /, other: pandas.core.series.Series):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def round(self: object, /):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def between(self: object, /, left: int, right: int):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def notnull(self: object, /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def fillna(
@@ -750,19 +995,27 @@ class Series:
         axis: int = ...,
         limit: Union[None, int] = ...,
     ):
-        "\n    usage.dask: 23\n    "
+        """
+        usage.dask: 23
+        """
         ...
 
     def nlargest(self: object, /, n: int):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def abs(self: object, /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def cov(self: object, /, other: pandas.core.series.Series):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def replace(
@@ -772,35 +1025,51 @@ class Series:
         value: Union[None, float, int] = ...,
         regex: bool = ...,
     ):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def autocorr(self: object, /, lag: int):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def nsmallest(self: object, /, n: int):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def diff(self: object, /):
-        "\n    usage.dask: 7\n    "
+        """
+        usage.dask: 7
+        """
         ...
 
     def first(self: object, /, offset: str):
-        "\n    usage.dask: 24\n    "
+        """
+        usage.dask: 24
+        """
         ...
 
     def last(self: object, /, offset: str):
-        "\n    usage.dask: 8\n    "
+        """
+        usage.dask: 8
+        """
         ...
 
     def explode(self: object, /):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def __itruediv__(self: object, _0: pandas.core.series.Series, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def reindex(
@@ -813,21 +1082,31 @@ class Series:
             numpy.ndarray,
         ],
     ):
-        "\n    usage.dask: 8\n    "
+        """
+        usage.dask: 8
+        """
         ...
 
     def idxmax(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def items(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def append(self: object, /, to_append: pandas.core.series.Series):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def __array_wrap__(self: object, /, result: numpy.ndarray):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...

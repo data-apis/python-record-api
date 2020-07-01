@@ -10,15 +10,21 @@ def pprint_thing(
         Tuple[Literal["C"], Literal["count", "sum"]],
     ]
 ):
-    "\n    usage.dask: 17\n    "
+    """
+    usage.dask: 17
+    """
     ...
 
 
 class PrettyDict:
     def __iter__(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def __contains__(self: object, _0: int, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...

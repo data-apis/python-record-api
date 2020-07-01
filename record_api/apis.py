@@ -104,13 +104,13 @@ class Class(pydantic.BaseModel):
     @property
     def body(self) -> typing.Iterable[cst.BaseStatement]:
         if self.constructor is not None:
-            yield self.constructor.function_def("__init__")
+            yield self.constructor.function_def("__init__", indent=1)
         yield from assign_properties(self.classproperties, True)
 
         for name, sig in self.classmethods.items():
             if bad_name(name):
                 continue
-            yield sig.function_def(name, is_classmethod=True)
+            yield sig.function_def(name, is_classmethod=True, indent=1)
 
         yield from assign_properties(self.properties)
 
@@ -123,7 +123,7 @@ class Class(pydantic.BaseModel):
             sig.pos_only_required = {"self": BottomOutput()}
             for k, v in old_pos_only_required.items():
                 sig.pos_only_required[k] = v
-            yield sig.function_def(name)
+            yield sig.function_def(name, indent=1)
 
     def __ior__(self, other: Class) -> Class:
         if self.constructor and other.constructor:
@@ -224,23 +224,26 @@ class Signature(pydantic.BaseModel):
 
             pudb.set_trace()
 
-    def function_def(self, name: str, is_classmethod=False) -> cst.FunctionDef:
+    def function_def(
+        self, name: str, is_classmethod=False, indent=0
+    ) -> cst.FunctionDef:
         return cst.FunctionDef(
             cst.Name(name),
             self.parameters,
-            cst.IndentedBlock([cst.SimpleStatementLine([s]) for s in self.body()]),
+            cst.IndentedBlock(
+                [cst.SimpleStatementLine([s]) for s in self.body(indent)]
+            ),
             [cst.Decorator(cst.Name("classmethod"))] if is_classmethod else [],
         )
 
-    def body(self) -> typing.Iterable[cst.BaseSmallStatement]:
-        yield cst.Expr(self.docstring)
+    def body(self, indent: int) -> typing.Iterable[cst.BaseSmallStatement]:
+        yield cst.Expr(self.docstring(indent))
         yield cst.Expr(cst.Ellipsis())
 
-    @property
-    def docstring(self) -> cst.BaseExpression:
-        return cst.SimpleString(
-            repr("\n    " + "\n    ".join(metadata_lines(self.metadata)) + "\n    ")
-        )
+    def docstring(self, indent: int) -> cst.BaseExpression:
+        i = " " * ((indent + 1) * 4)
+        inner = f"\n{i}".join(metadata_lines(self.metadata))
+        return cst.SimpleString(f'"""\n{i}{inner}\n{i}"""')
 
     @property
     def parameters(self) -> cst.Parameters:

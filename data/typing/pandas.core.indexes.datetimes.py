@@ -10,7 +10,10 @@ def date_range(
     name: Union[None, str] = ...,
     closed: Union[Literal["left"], None] = ...,
 ):
-    "\n    usage.xarray: 79\n    usage.dask: 89\n    "
+    """
+    usage.xarray: 79
+    usage.dask: 89
+    """
     ...
 
 
@@ -90,23 +93,34 @@ class DatetimeIndex:
         ],
         /,
     ):
-        "\n    usage.xarray: 17\n    usage.dask: 22\n    "
+        """
+        usage.xarray: 17
+        usage.dask: 22
+        """
         ...
 
     def copy(self: object, /, deep: bool):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def floor(self: object, /, *args: Literal["v", "t"]):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def ceil(self: object, /, *args: Literal["v", "t"]):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def round(self: object, /, *args: Literal["v", "t"]):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def __sub__(
@@ -114,11 +128,16 @@ class DatetimeIndex:
         _0: Union[numpy.timedelta64, pandas._libs.tslibs.timestamps.Timestamp],
         /,
     ):
-        "\n    usage.xarray: 3\n    "
+        """
+        usage.xarray: 3
+        """
         ...
 
     def to_series(self: object, /):
-        "\n    usage.xarray: 7\n    usage.dask: 4\n    "
+        """
+        usage.xarray: 7
+        usage.dask: 4
+        """
         ...
 
     def slice_indexer(
@@ -128,7 +147,9 @@ class DatetimeIndex:
         end: Union[Literal["2002", "2005", "2000-01-10"], numpy.datetime64],
         step: None,
     ):
-        "\n    usage.xarray: 4\n    "
+        """
+        usage.xarray: 4
+        """
         ...
 
     def get_indexer(
@@ -138,11 +159,16 @@ class DatetimeIndex:
         method: Union[Literal["nearest", "backfill", "pad"], None],
         tolerance: Union[Literal["6H", "12H"], None],
     ):
-        "\n    usage.xarray: 7\n    "
+        """
+        usage.xarray: 7
+        """
         ...
 
     def __add__(self: object, _0: object, /):
-        "\n    usage.xarray: 1\n    usage.dask: 7\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 7
+        """
         ...
 
     def get_loc(
@@ -151,15 +177,21 @@ class DatetimeIndex:
         key: Union[Literal["2000-01-01"], numpy.datetime64],
         method: Union[None, Literal["nearest"]],
     ):
-        "\n    usage.xarray: 3\n    "
+        """
+        usage.xarray: 3
+        """
         ...
 
     def min(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def max(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def shift(
@@ -168,7 +200,9 @@ class DatetimeIndex:
         periods: int,
         freq: Union[None, Literal["W", "S"], pandas._libs.tslibs.timedeltas.Timedelta],
     ):
-        "\n    usage.dask: 11\n    "
+        """
+        usage.dask: 11
+        """
         ...
 
     def _maybe_cast_slice_bound(
@@ -178,21 +212,31 @@ class DatetimeIndex:
         side: Literal["right", "left"],
         kind: Literal["loc"],
     ):
-        "\n    usage.dask: 23\n    "
+        """
+        usage.dask: 23
+        """
         ...
 
     def to_frame(self: object, /, name: Union[Literal["foo"], None]):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def __gt__(self: object, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def __le__(self: object, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def tz_localize(self: object, /, *args: Literal["v", "t"]):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...

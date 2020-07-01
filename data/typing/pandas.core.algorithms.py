@@ -2,7 +2,9 @@ from typing import *
 
 
 def unique(values: List[str]):
-    "\n    usage.xarray: 53\n    "
+    """
+    usage.xarray: 53
+    """
     ...
 
 
@@ -15,5 +17,7 @@ def factorize(
     ],
     sort: bool,
 ):
-    "\n    usage.xarray: 4\n    "
+    """
+    usage.xarray: 4
+    """
     ...

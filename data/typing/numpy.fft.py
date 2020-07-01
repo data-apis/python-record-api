@@ -5,17 +5,26 @@ __name__: object
 
 
 def ifftshift(x: numpy.ndarray):
-    "\n    usage.skimage: 2\n    usage.dask: 4\n    "
+    """
+    usage.skimage: 2
+    usage.dask: 4
+    """
     ...
 
 
 def fftfreq(n: int):
-    "\n    usage.skimage: 2\n    usage.dask: 1\n    "
+    """
+    usage.skimage: 2
+    usage.dask: 1
+    """
     ...
 
 
 def fftshift(x: numpy.ndarray):
-    "\n    usage.skimage: 3\n    usage.dask: 4\n    "
+    """
+    usage.skimage: 3
+    usage.dask: 4
+    """
     ...
 
 
@@ -26,7 +35,9 @@ def fft(
     *,
     axes: Tuple[int] = ...,
 ):
-    "\n    usage.dask: 40\n    "
+    """
+    usage.dask: 40
+    """
     ...
 
 
@@ -35,7 +46,9 @@ def fft2(
     s: Union[Tuple[int, int], None] = ...,
     axes: Tuple[int, ...] = ...,
 ):
-    "\n    usage.dask: 35\n    "
+    """
+    usage.dask: 35
+    """
     ...
 
 
@@ -46,7 +59,9 @@ def ifft(
     *,
     axes: Tuple[int] = ...,
 ):
-    "\n    usage.dask: 36\n    "
+    """
+    usage.dask: 36
+    """
     ...
 
 
@@ -57,7 +72,9 @@ def rfft(
     *,
     axes: Tuple[int] = ...,
 ):
-    "\n    usage.dask: 35\n    "
+    """
+    usage.dask: 35
+    """
     ...
 
 
@@ -68,7 +85,9 @@ def irfft(
     *,
     axes: Tuple[int] = ...,
 ):
-    "\n    usage.dask: 35\n    "
+    """
+    usage.dask: 35
+    """
     ...
 
 
@@ -79,7 +98,9 @@ def hfft(
     *,
     axes: Tuple[int] = ...,
 ):
-    "\n    usage.dask: 35\n    "
+    """
+    usage.dask: 35
+    """
     ...
 
 
@@ -90,59 +111,77 @@ def ihfft(
     *,
     axes: Tuple[int] = ...,
 ):
-    "\n    usage.dask: 35\n    "
+    """
+    usage.dask: 35
+    """
     ...
 
 
 def ifft2(
     a: numpy.ndarray, s: Union[Tuple[int, int], None] = ..., axes: Tuple[int, ...] = ...
 ):
-    "\n    usage.dask: 33\n    "
+    """
+    usage.dask: 33
+    """
     ...
 
 
 def fftn(
     a: numpy.ndarray, s: Union[Tuple[int, int], None] = ..., axes: Tuple[int, ...] = ...
 ):
-    "\n    usage.dask: 33\n    "
+    """
+    usage.dask: 33
+    """
     ...
 
 
 def ifftn(
     a: numpy.ndarray, s: Union[Tuple[int, int], None] = ..., axes: Tuple[int, ...] = ...
 ):
-    "\n    usage.dask: 33\n    "
+    """
+    usage.dask: 33
+    """
     ...
 
 
 def rfft2(
     a: numpy.ndarray, s: Union[Tuple[int, int], None] = ..., axes: Tuple[int, ...] = ...
 ):
-    "\n    usage.dask: 33\n    "
+    """
+    usage.dask: 33
+    """
     ...
 
 
 def irfft2(
     a: numpy.ndarray, s: Union[Tuple[int, int], None] = ..., axes: Tuple[int, ...] = ...
 ):
-    "\n    usage.dask: 33\n    "
+    """
+    usage.dask: 33
+    """
     ...
 
 
 def rfftn(
     a: numpy.ndarray, s: Union[Tuple[int, int], None] = ..., axes: Tuple[int, ...] = ...
 ):
-    "\n    usage.dask: 33\n    "
+    """
+    usage.dask: 33
+    """
     ...
 
 
 def irfftn(
     a: numpy.ndarray, s: Union[Tuple[int, int], None] = ..., axes: Tuple[int, ...] = ...
 ):
-    "\n    usage.dask: 33\n    "
+    """
+    usage.dask: 33
+    """
     ...
 
 
 def rfftfreq(n: int, d: float):
-    "\n    usage.dask: 1\n    "
+    """
+    usage.dask: 1
+    """
     ...

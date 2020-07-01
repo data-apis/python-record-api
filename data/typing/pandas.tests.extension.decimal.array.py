@@ -8,7 +8,9 @@ class DecimalArray:
 
     @classmethod
     def _from_sequence(scalars: List[decimal.Decimal]):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
 
@@ -18,5 +20,7 @@ class DecimalDtype:
     kind: object
 
     def __eq__(self: object, _0: Type[object], /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...

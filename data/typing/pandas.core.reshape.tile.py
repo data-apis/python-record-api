@@ -17,5 +17,7 @@ def cut(
     precision: int = ...,
     include_lowest: bool = ...,
 ):
-    "\n    usage.xarray: 12\n    "
+    """
+    usage.xarray: 12
+    """
     ...

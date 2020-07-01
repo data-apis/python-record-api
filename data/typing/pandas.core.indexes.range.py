@@ -52,7 +52,10 @@ class RangeIndex:
             pandas.core.indexes.range.RangeIndex, pandas.core.indexes.numeric.Int64Index
         ],
     ):
-        "\n    usage.xarray: 8\n    usage.dask: 2\n    "
+        """
+        usage.xarray: 8
+        usage.dask: 2
+        """
         ...
 
     def __getitem__(
@@ -64,71 +67,106 @@ class RangeIndex:
         ],
         /,
     ):
-        "\n    usage.xarray: 7\n    usage.dask: 5\n    "
+        """
+        usage.xarray: 7
+        usage.dask: 5
+        """
         ...
 
     def __iter__(self: object, /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def get_indexer(
         self: object, /, target: numpy.ndarray, method: None, tolerance: None
     ):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def get_loc(self: object, /, key: int, method: None, tolerance: None):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def copy(self: object, /, deep: bool):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def __contains__(self: object, _0: Union[int, Literal["dtype", "divisions"]], /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def min(self: object, /):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def max(self: object, /):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def tolist(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def drop_duplicates(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def __mul__(self: object, _0: int, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def __add__(self: object, _0: int, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def __rmul__(self: object, _0: int, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def __neg__(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def to_series(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def to_frame(self: object, /, name: Union[Literal["bar"], None]):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def memory_usage(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...

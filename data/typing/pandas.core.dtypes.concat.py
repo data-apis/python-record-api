@@ -10,5 +10,7 @@ def union_categoricals(
         ]
     ]
 ):
-    "\n    usage.dask: 14\n    "
+    """
+    usage.dask: 14
+    """
     ...

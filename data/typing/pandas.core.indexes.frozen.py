@@ -3,11 +3,17 @@ from typing import *
 
 class FrozenList:
     def __iter__(self: object, /):
-        "\n    usage.xarray: 20\n    usage.dask: 8\n    "
+        """
+        usage.xarray: 20
+        usage.dask: 8
+        """
         ...
 
     def __getitem__(self: object, _0: Union[int, slice[int, None, int]], /):
-        "\n    usage.xarray: 11\n    usage.dask: 1\n    "
+        """
+        usage.xarray: 11
+        usage.dask: 1
+        """
         ...
 
     def __eq__(
@@ -18,5 +24,8 @@ class FrozenList:
         ],
         /,
     ):
-        "\n    usage.xarray: 3\n    usage.dask: 6\n    "
+        """
+        usage.xarray: 3
+        usage.dask: 6
+        """
         ...

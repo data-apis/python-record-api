@@ -10,5 +10,7 @@ def _as_pairs(
     ndim: int,
     as_index: bool,
 ):
-    "\n    usage.skimage: 6\n    "
+    """
+    usage.skimage: 6
+    """
     ...

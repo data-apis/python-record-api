@@ -16,9 +16,13 @@ class IntervalIndex:
     values: object
 
     def equals(self: object, /, other: pandas.core.indexes.interval.IntervalIndex):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def __getitem__(self: object, _0: slice[None, None, None], /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...

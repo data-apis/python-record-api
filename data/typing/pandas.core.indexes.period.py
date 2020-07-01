@@ -6,7 +6,10 @@ def period_range(
     periods: int = ...,
     name: Union[Literal["foo"], None] = ...,
 ):
-    "\n    usage.xarray: 4\n    usage.dask: 11\n    "
+    """
+    usage.xarray: 4
+    usage.dask: 11
+    """
     ...
 
 
@@ -14,7 +17,9 @@ class PeriodIndex:
     def __init__(
         data: List[Literal["1970-01-01"]], freq: Literal["d"], name: Literal["foo"]
     ):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     # usage.dask: 1
@@ -48,15 +53,22 @@ class PeriodIndex:
         _0: Union[int, slice[Union[int, None], Union[None, int], Union[int, None]]],
         /,
     ):
-        "\n    usage.xarray: 6\n    usage.dask: 5\n    "
+        """
+        usage.xarray: 6
+        usage.dask: 5
+        """
         ...
 
     def astype(self: object, /, dtype: Literal["object"]):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def shift(self: object, /, periods: int):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def _maybe_cast_slice_bound(
@@ -66,5 +78,7 @@ class PeriodIndex:
         side: Literal["right", "left"],
         kind: Literal["loc"],
     ):
-        "\n    usage.dask: 10\n    "
+        """
+        usage.dask: 10
+        """
         ...

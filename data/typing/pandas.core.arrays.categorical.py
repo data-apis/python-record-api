@@ -13,7 +13,10 @@ class Categorical:
         categories: Union[None, pandas.core.indexes.base.Index] = ...,
         ordered: bool = ...,
     ):
-        "\n    usage.xarray: 4\n    usage.dask: 10\n    "
+        """
+        usage.xarray: 4
+        usage.dask: 10
+        """
         ...
 
     @classmethod
@@ -31,7 +34,9 @@ class Categorical:
             ],
         ],
     ):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     # usage.xarray: 1
@@ -56,11 +61,15 @@ class Categorical:
         _0: Literal["2014-01-03.csv", "2014-01-02.csv", "2014-01-01.csv"],
         /,
     ):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def sort_values(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
 
@@ -76,29 +85,43 @@ class CategoricalAccessor:
     codes: object
 
     def set_categories(self: object, /, *args: Literal["v", "t"]):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def as_ordered(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def add_categories(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def as_unordered(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def remove_categories(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def rename_categories(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def reorder_categories(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...

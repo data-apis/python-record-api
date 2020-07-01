@@ -10,7 +10,9 @@ class IntegerArray:
 class Int64Dtype:
     @classmethod
     def is_dtype(dtype: pandas.core.series.Series):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     # usage.dask: 1
@@ -19,5 +21,7 @@ class Int64Dtype:
 
 class Int32Dtype:
     def __init__():
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...

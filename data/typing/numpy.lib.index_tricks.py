@@ -12,7 +12,11 @@ class RClass:
         ],
         /,
     ):
-        "\n    usage.skimage: 16\n    usage.xarray: 3\n    usage.sklearn: 24\n    "
+        """
+        usage.skimage: 16
+        usage.xarray: 3
+        usage.sklearn: 24
+        """
         ...
 
 
@@ -22,7 +26,10 @@ class OGridClass:
         _0: Tuple[slice[Union[None, int], Union[int, float], Union[None, int]], ...],
         /,
     ):
-        "\n    usage.skimage: 9\n    usage.dask: 2\n    "
+        """
+        usage.skimage: 9
+        usage.dask: 2
+        """
         ...
 
 
@@ -48,7 +55,10 @@ class MGridClass:
         ],
         /,
     ):
-        "\n    usage.skimage: 61\n    usage.sklearn: 1\n    "
+        """
+        usage.skimage: 61
+        usage.sklearn: 1
+        """
         ...
 
 
@@ -56,7 +66,10 @@ class CClass:
     def __getitem__(
         self: object, _0: Union[numpy.ndarray, Tuple[numpy.ndarray, ...]], /
     ):
-        "\n    usage.skimage: 1\n    usage.sklearn: 26\n    "
+        """
+        usage.skimage: 1
+        usage.sklearn: 26
+        """
         ...
 
 
@@ -64,5 +77,7 @@ class IndexExpression:
     def __getitem__(
         self: object, _0: Tuple[slice[int, int, int], slice[int, int, int]], /
     ):
-        "\n    usage.skimage: 1\n    "
+        """
+        usage.skimage: 1
+        """
         ...

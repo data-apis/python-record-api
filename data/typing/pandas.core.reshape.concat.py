@@ -10,5 +10,7 @@ def concat(
     join: Literal["inner", "outer"] = ...,
     sort: bool = ...,
 ):
-    "\n    usage.dask: 141\n    "
+    """
+    usage.dask: 141
+    """
     ...

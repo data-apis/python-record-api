@@ -3,11 +3,15 @@ from typing import *
 
 class NaTType:
     def __add__(self: object, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        "\n    usage.xarray: 2\n    "
+        """
+        usage.xarray: 2
+        """
         ...
 
     def __ge__(self: object, _0: pandas._libs.tslibs.nattype.NaTType, /):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def __le__(
@@ -15,13 +19,19 @@ class NaTType:
         _0: Union[pandas.core.series.Series, pandas._libs.tslibs.nattype.NaTType],
         /,
     ):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def __gt__(self: object, _0: pandas._libs.tslibs.nattype.NaTType, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def __lt__(self: object, _0: pandas._libs.tslibs.nattype.NaTType, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...

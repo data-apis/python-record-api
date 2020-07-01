@@ -10,5 +10,7 @@ def read_json(
     orient: Literal["values", "columns", "index", "records", "split"] = ...,
     lines: bool = ...,
 ):
-    "\n    usage.dask: 13\n    "
+    """
+    usage.dask: 13
+    """
     ...

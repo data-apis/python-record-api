@@ -13,47 +13,70 @@ class Rolling:
     min_periods: object
 
     def mean(self: object, /):
-        "\n    usage.xarray: 4\n    usage.dask: 14\n    "
+        """
+        usage.xarray: 4
+        usage.dask: 14
+        """
         ...
 
     def sum(self: object, /):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def count(self: object, /):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def median(self: object, /):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def min(self: object, /):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def max(self: object, /):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def std(self: object, /):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def var(self: object, /):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def skew(self: object, /):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def kurt(self: object, /):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def quantile(self: object, /, quantile: float):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def apply(
@@ -66,11 +89,15 @@ class Rolling:
         args: Tuple[None, ...] = ...,
         kwargs: dict = ...,
     ):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def cov(self: object, /):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def aggregate(
@@ -80,5 +107,7 @@ class Rolling:
             Dict[Literal["B", "A"], Union[Callable, List[Callable]]], List[Callable]
         ],
     ):
-        "\n    usage.dask: 8\n    "
+        """
+        usage.dask: 8
+        """
         ...

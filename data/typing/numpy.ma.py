@@ -73,10 +73,14 @@ set_fill_value: object
 
 
 def zeros(*args: Literal["v", "t"]):
-    "\n    usage.skimage: 5\n    "
+    """
+    usage.skimage: 5
+    """
     ...
 
 
 def ones(*args: Literal["v", "t"]):
-    "\n    usage.xarray: 1\n    "
+    """
+    usage.xarray: 1
+    """
     ...

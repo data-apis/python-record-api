@@ -19,23 +19,34 @@ class DatetimeIndexResampler:
     agg: object
 
     def g(self: object, /):
-        "\n    usage.xarray: 4\n    usage.dask: 5\n    "
+        """
+        usage.xarray: 4
+        usage.dask: 5
+        """
         ...
 
     def pad(self: object, /):
-        "\n    usage.xarray: 2\n    "
+        """
+        usage.xarray: 2
+        """
         ...
 
     def backfill(self: object, /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def asfreq(self: object, /):
-        "\n    usage.xarray: 7\n    "
+        """
+        usage.xarray: 7
+        """
         ...
 
     def count(self: object, /):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
     def aggregate(
@@ -43,19 +54,27 @@ class DatetimeIndexResampler:
         /,
         func: Union[Callable, Literal["mean"], List[Literal["min", "mean"]]],
     ):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def h(self: object, /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def size(self: object, /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def quantile(self: object, /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
 

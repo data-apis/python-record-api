@@ -11,5 +11,7 @@ def array(
         pandas.core.dtypes.dtypes.CategoricalDtype,
     ],
 ):
-    "\n    usage.dask: 15\n    "
+    """
+    usage.dask: 15
+    """
     ...

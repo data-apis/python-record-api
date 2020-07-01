@@ -12,7 +12,9 @@ class RandomState:
 
     @classmethod
     def random(_0: numpy.random.mtrand.RandomState, /):
-        "\n    usage.sample_usage: 1\n    "
+        """
+        usage.sample_usage: 1
+        """
         ...
 
     @classmethod
@@ -23,7 +25,11 @@ class RandomState:
         _3: int = ...,
         /,
     ):
-        "\n    usage.skimage: 4\n    usage.sklearn: 114\n    usage.dask: 4\n    "
+        """
+        usage.skimage: 4
+        usage.sklearn: 114
+        usage.dask: 4
+        """
         ...
 
     @classmethod
@@ -34,7 +40,10 @@ class RandomState:
         _3: Union[Tuple[int, int], int, List[int]] = ...,
         /,
     ):
-        "\n    usage.skimage: 8\n    usage.sklearn: 33\n    "
+        """
+        usage.skimage: 8
+        usage.sklearn: 33
+        """
         ...
 
     @classmethod
@@ -43,7 +52,11 @@ class RandomState:
         _1: Union[List[Union[Callable, int]], range],
         /,
     ):
-        "\n    usage.skimage: 1\n    usage.xarray: 1\n    usage.sklearn: 1\n    "
+        """
+        usage.skimage: 1
+        usage.xarray: 1
+        usage.sklearn: 1
+        """
         ...
 
     @classmethod
@@ -53,12 +66,18 @@ class RandomState:
         _2: Union[numpy.ndarray, int, float],
         /,
     ):
-        "\n    usage.skimage: 3\n    usage.sklearn: 9\n    "
+        """
+        usage.skimage: 3
+        usage.sklearn: 9
+        """
         ...
 
     @classmethod
     def seed(_0: numpy.random.mtrand.RandomState, _1: int, /):
-        "\n    usage.skimage: 1\n    usage.dask: 1\n    "
+        """
+        usage.skimage: 1
+        usage.dask: 1
+        """
         ...
 
     @classmethod
@@ -69,14 +88,22 @@ class RandomState:
         _3: int = ...,
         /,
     ):
-        "\n    usage.skimage: 1\n    usage.xarray: 13\n    usage.sklearn: 238\n    "
+        """
+        usage.skimage: 1
+        usage.xarray: 13
+        usage.sklearn: 238
+        """
         ...
 
     @classmethod
     def random_sample(
         _0: numpy.random.mtrand.RandomState, _1: Union[int, Tuple[int, int]], /
     ):
-        "\n    usage.skimage: 1\n    usage.sklearn: 20\n    usage.dask: 1\n    "
+        """
+        usage.skimage: 1
+        usage.sklearn: 20
+        usage.dask: 1
+        """
         ...
 
     @classmethod
@@ -85,27 +112,40 @@ class RandomState:
         _1: Union[numpy.int64, int, numpy.ndarray, List[numpy.int64]],
         /,
     ):
-        "\n    usage.skimage: 1\n    usage.sklearn: 18\n    "
+        """
+        usage.skimage: 1
+        usage.sklearn: 18
+        """
         ...
 
     @classmethod
     def standard_normal(_0: numpy.random.mtrand.RandomState, _1: Tuple[int, ...], /):
-        "\n    usage.skimage: 4\n    usage.sklearn: 2\n    "
+        """
+        usage.skimage: 4
+        usage.sklearn: 2
+        """
         ...
 
     @classmethod
     def multinomial(_0: numpy.random.mtrand.RandomState, _1: int, _2: numpy.ndarray, /):
-        "\n    usage.sklearn: 4\n    "
+        """
+        usage.sklearn: 4
+        """
         ...
 
     @classmethod
     def shuffle(_0: numpy.random.mtrand.RandomState, _1: numpy.ndarray, /):
-        "\n    usage.sklearn: 18\n    usage.dask: 4\n    "
+        """
+        usage.sklearn: 18
+        usage.dask: 4
+        """
         ...
 
     @classmethod
     def poisson(_0: numpy.random.mtrand.RandomState, _1: int, /):
-        "\n    usage.sklearn: 2\n    "
+        """
+        usage.sklearn: 2
+        """
         ...
 
     @classmethod
@@ -116,14 +156,18 @@ class RandomState:
         _3: Tuple[int, int],
         /,
     ):
-        "\n    usage.sklearn: 2\n    "
+        """
+        usage.sklearn: 2
+        """
         ...
 
     @classmethod
     def binomial(
         _0: numpy.random.mtrand.RandomState, _1: int, _2: Union[float, numpy.float64], /
     ):
-        "\n    usage.sklearn: 3\n    "
+        """
+        usage.sklearn: 3
+        """
         ...
 
     @classmethod
@@ -134,28 +178,41 @@ class RandomState:
         _3: int,
         /,
     ):
-        "\n    usage.sklearn: 2\n    "
+        """
+        usage.sklearn: 2
+        """
         ...
 
     @classmethod
     def normal(
         _0: numpy.random.mtrand.RandomState, _1: int, _2: int, _3: Tuple[int, int], /
     ):
-        "\n    usage.sklearn: 3\n    "
+        """
+        usage.sklearn: 3
+        """
         ...
 
     @classmethod
     def chisquare(_0: numpy.random.mtrand.RandomState, _1: int, _2: int, /):
-        "\n    usage.sklearn: 2\n    "
+        """
+        usage.sklearn: 2
+        """
         ...
 
     @classmethod
     def bytes(_0: numpy.random.mtrand.RandomState, _1: int, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def random(self: object, /, *, size: Union[int, Tuple[int, ...]] = ...):
-        "\n    usage.skimage: 29\n    usage.xarray: 25\n    usage.sklearn: 2\n    usage.dask: 158\n    "
+        """
+        usage.skimage: 29
+        usage.xarray: 25
+        usage.sklearn: 2
+        usage.dask: 158
+        """
         ...
 
     def rand(
@@ -167,7 +224,12 @@ class RandomState:
         _4: int = ...,
         /,
     ):
-        "\n    usage.skimage: 90\n    usage.xarray: 16\n    usage.sklearn: 5\n    usage.dask: 26\n    "
+        """
+        usage.skimage: 90
+        usage.xarray: 16
+        usage.sklearn: 5
+        usage.dask: 26
+        """
         ...
 
     def uniform(
@@ -181,7 +243,12 @@ class RandomState:
         low: Union[float, int] = ...,
         high: Union[float, int] = ...,
     ):
-        "\n    usage.skimage: 29\n    usage.xarray: 1\n    usage.sklearn: 33\n    usage.dask: 10\n    "
+        """
+        usage.skimage: 29
+        usage.xarray: 1
+        usage.sklearn: 33
+        usage.dask: 10
+        """
         ...
 
     def randint(
@@ -196,11 +263,19 @@ class RandomState:
         low: int = ...,
         high: int = ...,
     ):
-        "\n    usage.skimage: 15\n    usage.xarray: 14\n    usage.sklearn: 62\n    usage.dask: 133\n    "
+        """
+        usage.skimage: 15
+        usage.xarray: 14
+        usage.sklearn: 62
+        usage.dask: 133
+        """
         ...
 
     def seed(self: object, /, *, seed: int = ...):
-        "\n    usage.skimage: 25\n    usage.dask: 18\n    "
+        """
+        usage.skimage: 25
+        usage.dask: 18
+        """
         ...
 
     def choice(
@@ -218,7 +293,12 @@ class RandomState:
         replace: bool = ...,
         p: Union[None, numpy.ndarray, List[Union[float, int]]] = ...,
     ):
-        "\n    usage.skimage: 7\n    usage.xarray: 5\n    usage.sklearn: 10\n    usage.dask: 32\n    "
+        """
+        usage.skimage: 7
+        usage.xarray: 5
+        usage.sklearn: 10
+        usage.dask: 32
+        """
         ...
 
     def normal(
@@ -234,7 +314,12 @@ class RandomState:
         scale: Union[int, numpy.ndarray, numpy.float64, float] = ...,
         loc: Union[int, numpy.ndarray] = ...,
     ):
-        "\n    usage.skimage: 32\n    usage.xarray: 1\n    usage.sklearn: 72\n    usage.dask: 23\n    "
+        """
+        usage.skimage: 32
+        usage.xarray: 1
+        usage.sklearn: 72
+        usage.dask: 23
+        """
         ...
 
     def randn(
@@ -246,19 +331,31 @@ class RandomState:
         _4: int = ...,
         /,
     ):
-        "\n    usage.skimage: 44\n    usage.xarray: 178\n    usage.sklearn: 13\n    usage.dask: 90\n    "
+        """
+        usage.skimage: 44
+        usage.xarray: 178
+        usage.sklearn: 13
+        usage.dask: 90
+        """
         ...
 
     def standard_normal(
         self: object, /, *, size: Tuple[int, ...] = ..., dtype: Literal["float64"] = ...
     ):
-        "\n    usage.skimage: 6\n    usage.dask: 3\n    "
+        """
+        usage.skimage: 6
+        usage.dask: 3
+        """
         ...
 
     def gamma(
         self: object, _0: Union[int, float], /, *, size: Union[Tuple[int], int] = ...
     ):
-        "\n    usage.skimage: 2\n    usage.sklearn: 1\n    usage.dask: 1\n    "
+        """
+        usage.skimage: 2
+        usage.sklearn: 1
+        usage.dask: 1
+        """
         ...
 
     def poisson(
@@ -268,27 +365,42 @@ class RandomState:
         *,
         size: Union[int, Tuple[int, ...]] = ...,
     ):
-        "\n    usage.skimage: 2\n    usage.dask: 3\n    "
+        """
+        usage.skimage: 2
+        usage.dask: 3
+        """
         ...
 
     def random_sample(self: object, /, *, size: Tuple[int, ...] = ...):
-        "\n    usage.xarray: 1\n    usage.sklearn: 2\n    usage.dask: 4\n    "
+        """
+        usage.xarray: 1
+        usage.sklearn: 2
+        usage.dask: 4
+        """
         ...
 
     def multivariate_normal(
         self: object, _0: numpy.ndarray, _1: numpy.ndarray, /, *, size: int
     ):
-        "\n    usage.sklearn: 4\n    "
+        """
+        usage.sklearn: 4
+        """
         ...
 
     def binomial(
         self: object, _0: int, _1: float, /, *, size: Union[Tuple[int, ...], int]
     ):
-        "\n    usage.sklearn: 4\n    usage.dask: 1\n    "
+        """
+        usage.sklearn: 4
+        usage.dask: 1
+        """
         ...
 
     def exponential(self: object, /, *, size: Union[Tuple[int, ...], int]):
-        "\n    usage.sklearn: 1\n    usage.dask: 2\n    "
+        """
+        usage.sklearn: 1
+        usage.dask: 2
+        """
         ...
 
     def lognormal(
@@ -299,7 +411,10 @@ class RandomState:
         *,
         size: Union[Tuple[int], int],
     ):
-        "\n    usage.sklearn: 3\n    usage.dask: 1\n    "
+        """
+        usage.sklearn: 3
+        usage.dask: 1
+        """
         ...
 
     def multinomial(
@@ -310,109 +425,164 @@ class RandomState:
         *,
         size: Union[int, Tuple[int, ...]],
     ):
-        "\n    usage.sklearn: 1\n    usage.dask: 4\n    "
+        """
+        usage.sklearn: 1
+        usage.dask: 4
+        """
         ...
 
     def beta(self: object, _0: int, _1: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def chisquare(self: object, _0: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def f(self: object, _0: int, _1: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def geometric(self: object, _0: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def gumbel(self: object, _0: int, _1: float, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def hypergeometric(self: object, _0: int, _1: int, _2: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def laplace(self: object, _0: float, _1: float, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def logistic(self: object, _0: float, _1: float, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def logseries(self: object, _0: float, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def negative_binomial(self: object, _0: int, _1: float, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def noncentral_chisquare(self: object, _0: int, _1: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def noncentral_f(self: object, _0: int, _1: int, _2: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def pareto(self: object, _0: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def power(self: object, _0: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def rayleigh(self: object, _0: float, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def triangular(self: object, _0: int, _1: int, _2: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def vonmises(self: object, _0: int, _1: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def wald(self: object, _0: int, _1: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def weibull(self: object, _0: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def zipf(self: object, _0: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def standard_cauchy(self: object, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def standard_exponential(self: object, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def standard_gamma(self: object, _0: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def standard_t(self: object, _0: int, /, *, size: Tuple[int]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def shuffle(self: object, _0: Union[numpy.ndarray, List[int]], /):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def permutation(self: object, _0: Union[numpy.ndarray, int], /):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...

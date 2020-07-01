@@ -184,12 +184,6 @@ class StringInput(InputTypeBase):
 
 
 class StringOutput(OutputTypeBase):
-    """
-    >>> str(StringOutput())
-    str
-    >>> str(StringOutput(options=["hi", "there"]))
-    Literal["hi", "there"]
-    """
 
     type: typing.Literal["str"] = "str"
     options: typing.Union[typing.Tuple[str, ...], None] = None

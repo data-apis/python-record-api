@@ -8,5 +8,7 @@ def melt(
     value_name: Literal["myval"] = ...,
     var_name: Literal["myvar"] = ...,
 ):
-    "\n    usage.dask: 5\n    "
+    """
+    usage.dask: 5
+    """
     ...

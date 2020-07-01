@@ -3,7 +3,10 @@ from typing import *
 
 class _LocIndexer:
     def __getitem__(self: object, _0: object, /):
-        "\n    usage.xarray: 3\n    usage.dask: 257\n    "
+        """
+        usage.xarray: 3
+        usage.dask: 257
+        """
         ...
 
 
@@ -25,7 +28,9 @@ class _iLocIndexer:
         ],
         /,
     ):
-        "\n    usage.dask: 68\n    "
+        """
+        usage.dask: 68
+        """
         ...
 
     def __setitem__(
@@ -34,11 +39,15 @@ class _iLocIndexer:
         _1: float,
         /,
     ):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
 
 class IndexingError:
     def __init__(_0: Literal["Too many indexers"], /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...

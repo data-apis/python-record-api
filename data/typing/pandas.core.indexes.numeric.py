@@ -69,7 +69,10 @@ class Int64Index:
         ],
         /,
     ):
-        "\n    usage.xarray: 16\n    usage.dask: 11\n    "
+        """
+        usage.xarray: 16
+        usage.dask: 11
+        """
         ...
 
     def get_indexer(
@@ -79,7 +82,9 @@ class Int64Index:
         method: Union[Literal["pad", "backfill"], None],
         tolerance: Union[float, int, None],
     ):
-        "\n    usage.xarray: 8\n    "
+        """
+        usage.xarray: 8
+        """
         ...
 
     def get_loc(
@@ -88,25 +93,36 @@ class Int64Index:
         key: Union[numpy.float64, int, numpy.int64],
         method: Union[Literal["nearest"], None],
     ):
-        "\n    usage.xarray: 5\n    "
+        """
+        usage.xarray: 5
+        """
         ...
 
     def copy(self: object, /, deep: bool):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def __iter__(self: object, /):
-        "\n    usage.xarray: 1\n    usage.dask: 4\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 4
+        """
         ...
 
     def equals(self: object, /, other: pandas.core.indexes.numeric.Int64Index):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def drop(
         self: object, /, labels: numpy.ndarray, errors: Literal["ignore", "raise"]
     ):
-        "\n    usage.xarray: 2\n    "
+        """
+        usage.xarray: 2
+        """
         ...
 
     def __contains__(
@@ -114,27 +130,39 @@ class Int64Index:
         _0: Union[None, Literal["__UNKNOWN_CATEGORIES__", "dtype", "divisions"], int],
         /,
     ):
-        "\n    usage.dask: 6\n    "
+        """
+        usage.dask: 6
+        """
         ...
 
     def __le__(self: object, _0: Union[float, int], /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def __ge__(self: object, _0: Union[float, int], /):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def min(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def max(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def drop_duplicates(self: object, /):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def isin(
@@ -147,35 +175,49 @@ class Int64Index:
             List[int],
         ],
     ):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def dropna(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def __gt__(self: object, _0: Union[float, int], /):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def set_names(
         self: object, /, names: List[Literal["a", "b", "key"]], inplace: bool
     ):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def to_series(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def to_frame(self: object, /, index: bool, name: Union[Literal["bar"], None]):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
 
 class Float64Index:
     def __init__(data: List[float], name: Literal["b"]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     # usage.dask: 1
@@ -220,7 +262,9 @@ class Float64Index:
     names: List[Literal["-overlapped-index-name-0"]]
 
     def copy(self: object, /, deep: bool):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def equals(
@@ -232,7 +276,10 @@ class Float64Index:
             pandas.core.indexes.base.Index,
         ],
     ):
-        "\n    usage.xarray: 10\n    usage.dask: 1\n    "
+        """
+        usage.xarray: 10
+        usage.dask: 1
+        """
         ...
 
     def __getitem__(
@@ -244,7 +291,10 @@ class Float64Index:
         ],
         /,
     ):
-        "\n    usage.xarray: 13\n    usage.dask: 5\n    "
+        """
+        usage.xarray: 13
+        usage.dask: 5
+        """
         ...
 
     def get_indexer(
@@ -254,7 +304,9 @@ class Float64Index:
         method: Union[Literal["nearest", "backfill", "pad"], None],
         tolerance: None,
     ):
-        "\n    usage.xarray: 8\n    "
+        """
+        usage.xarray: 8
+        """
         ...
 
     def get_loc(
@@ -263,31 +315,44 @@ class Float64Index:
         key: Union[numpy.int64, float, numpy.float64],
         method: Union[Literal["nearest"], None],
     ):
-        "\n    usage.xarray: 7\n    "
+        """
+        usage.xarray: 7
+        """
         ...
 
     def astype(self: object, /, dtype: numpy.dtype):
-        "\n    usage.xarray: 1\n    usage.dask: 1\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 1
+        """
         ...
 
     def identical(self: object, /, other: pandas.core.indexes.numeric.Float64Index):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def __contains__(
         self: object, _0: Literal["dtype", "divisions", "__UNKNOWN_CATEGORIES__"], /
     ):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def set_names(self: object, /, names: List[Literal["b"]], inplace: bool):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
 
 class UInt64Index:
     def __init__(data: List[int], name: Literal["foo"]):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     # usage.dask: 1

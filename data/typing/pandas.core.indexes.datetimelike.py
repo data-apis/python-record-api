@@ -10,25 +10,37 @@ class DatetimeIndexOpsMixin:
             pandas.core.indexes.datetimes.DatetimeIndex,
         ],
     ):
-        "\n    usage.xarray: 8\n    "
+        """
+        usage.xarray: 8
+        """
         ...
 
     def take(self: object, /, indices: numpy.ndarray):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def min(self: object, /):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def max(self: object, /):
-        "\n    usage.dask: 9\n    "
+        """
+        usage.dask: 9
+        """
         ...
 
     def tolist(self: object, /):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...
 
     def shift(self: object, /, periods: int):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...

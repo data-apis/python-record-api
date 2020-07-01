@@ -28,7 +28,9 @@ def merge(
     npartitions: None = ...,
     shuffle: Union[None, Literal["tasks", "disk"]] = ...,
 ):
-    "\n    usage.dask: 444\n    "
+    """
+    usage.dask: 444
+    """
     ...
 
 
@@ -46,5 +48,7 @@ def merge_asof(
     allow_exact_matches: bool = ...,
     direction: Literal["backward", "nearest", "forward"] = ...,
 ):
-    "\n    usage.dask: 27\n    "
+    """
+    usage.dask: 27
+    """
     ...

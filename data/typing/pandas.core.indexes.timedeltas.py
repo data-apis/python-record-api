@@ -13,13 +13,18 @@ def timedelta_range(
         None,
     ] = ...,
 ):
-    "\n    usage.xarray: 2\n    usage.dask: 9\n    "
+    """
+    usage.xarray: 2
+    usage.dask: 9
+    """
     ...
 
 
 class TimedeltaIndex:
     def __init__(data: List[numpy.timedelta64], name: Literal["timedelta", "foo"]):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     # usage.dask: 1
@@ -52,39 +57,56 @@ class TimedeltaIndex:
     names: object
 
     def copy(self: object, /, deep: bool):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def floor(self: object, /, *args: Literal["v", "t"]):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def ceil(self: object, /, *args: Literal["v", "t"]):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def round(self: object, /, *args: Literal["v", "t"]):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def __truediv__(self: object, _0: numpy.timedelta64, /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def __add__(self: object, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def __getitem__(
         self: object, _0: Union[int, numpy.ndarray, slice[int, int, int]], /
     ):
-        "\n    usage.xarray: 4\n    usage.dask: 5\n    "
+        """
+        usage.xarray: 4
+        usage.dask: 5
+        """
         ...
 
     def get_indexer(
         self: object, /, target: numpy.ndarray, method: None, tolerance: None
     ):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def get_loc(
@@ -94,7 +116,9 @@ class TimedeltaIndex:
         method: None,
         tolerance: None,
     ):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def shift(
@@ -103,5 +127,7 @@ class TimedeltaIndex:
         periods: int,
         freq: Union[None, Literal["S"], pandas._libs.tslibs.timedeltas.Timedelta],
     ):
-        "\n    usage.dask: 8\n    "
+        """
+        usage.dask: 8
+        """
         ...

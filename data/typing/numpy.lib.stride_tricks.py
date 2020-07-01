@@ -6,5 +6,9 @@ def as_strided(
     shape: Tuple[Union[numpy.int64, int], ...],
     strides: Tuple[Union[numpy.int64, int], ...],
 ):
-    "\n    usage.skimage: 11\n    usage.xarray: 8\n    usage.sklearn: 6\n    "
+    """
+    usage.skimage: 11
+    usage.xarray: 8
+    usage.sklearn: 6
+    """
     ...

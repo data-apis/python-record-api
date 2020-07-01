@@ -17,7 +17,9 @@ class CategoricalIndex:
         ] = ...,
         ordered: bool = ...,
     ):
-        "\n    usage.dask: 12\n    "
+        """
+        usage.dask: 12
+        """
         ...
 
     # usage.dask: 2
@@ -71,59 +73,89 @@ class CategoricalIndex:
         ],
         /,
     ):
-        "\n    usage.xarray: 5\n    usage.dask: 5\n    "
+        """
+        usage.xarray: 5
+        usage.dask: 5
+        """
         ...
 
     def equals(self: object, /, other: pandas.core.indexes.category.CategoricalIndex):
-        "\n    usage.xarray: 2\n    usage.dask: 1\n    "
+        """
+        usage.xarray: 2
+        usage.dask: 1
+        """
         ...
 
     def get_indexer(
         self: object, /, target: numpy.ndarray, method: None, tolerance: None
     ):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
     def add_categories(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def as_ordered(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def as_unordered(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def remove_categories(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def rename_categories(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def reorder_categories(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def set_categories(self: object, /, *args: Literal["v", "t"]):
-        "\n    usage.dask: 3\n    "
+        """
+        usage.dask: 3
+        """
         ...
 
     def reindex(self: object, /, target: pandas.core.indexes.base.Index):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def dropna(self: object, /):
-        "\n    usage.dask: 1\n    "
+        """
+        usage.dask: 1
+        """
         ...
 
     def __eq__(self: object, _0: pandas.core.indexes.category.CategoricalIndex, /):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...
 
     def __contains__(self: object, _0: Literal["dtype", "divisions"], /):
-        "\n    usage.dask: 2\n    "
+        """
+        usage.dask: 2
+        """
         ...

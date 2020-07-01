@@ -8,5 +8,7 @@ def pivot_table(
     columns: Literal["B", "C"],
     aggfunc: Literal["count", "sum", "mean"],
 ):
-    "\n    usage.dask: 7\n    "
+    """
+    usage.dask: 7
+    """
     ...

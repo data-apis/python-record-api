@@ -5,27 +5,41 @@ _umath_linalg: object
 
 
 def svd(a: numpy.ndarray):
-    "\n    usage.skimage: 7\n    usage.sklearn: 3\n    usage.dask: 5\n    "
+    """
+    usage.skimage: 7
+    usage.sklearn: 3
+    usage.dask: 5
+    """
     ...
 
 
 def inv(a: numpy.ndarray):
-    "\n    usage.skimage: 7\n    "
+    """
+    usage.skimage: 7
+    """
     ...
 
 
 def eigvalsh(a: numpy.ndarray):
-    "\n    usage.skimage: 2\n    "
+    """
+    usage.skimage: 2
+    """
     ...
 
 
 def det(a: Union[dask.array.core.Array, numpy.ndarray]):
-    "\n    usage.skimage: 5\n    usage.sklearn: 1\n    usage.dask: 2\n    "
+    """
+    usage.skimage: 5
+    usage.sklearn: 1
+    usage.dask: 2
+    """
     ...
 
 
 def solve(a: numpy.ndarray, b: numpy.ndarray):
-    "\n    usage.skimage: 2\n    "
+    """
+    usage.skimage: 2
+    """
     ...
 
 
@@ -35,42 +49,62 @@ def norm(
     axis: Union[None, int, Tuple[int, ...]] = ...,
     keepdims: bool = ...,
 ):
-    "\n    usage.skimage: 8\n    usage.sklearn: 22\n    usage.dask: 32\n    "
+    """
+    usage.skimage: 8
+    usage.sklearn: 22
+    usage.dask: 32
+    """
     ...
 
 
 def pinv(a: numpy.ndarray):
-    "\n    usage.skimage: 1\n    "
+    """
+    usage.skimage: 1
+    """
     ...
 
 
 def eig(a: numpy.ndarray):
-    "\n    usage.skimage: 3\n    usage.sklearn: 2\n    "
+    """
+    usage.skimage: 3
+    usage.sklearn: 2
+    """
     ...
 
 
 def matrix_rank(M: numpy.ndarray):
-    "\n    usage.skimage: 1\n    "
+    """
+    usage.skimage: 1
+    """
     ...
 
 
 def slogdet(a: numpy.ndarray):
-    "\n    usage.sklearn: 1\n    "
+    """
+    usage.sklearn: 1
+    """
     ...
 
 
 def lstsq(a: numpy.ndarray, b: numpy.ndarray):
-    "\n    usage.sklearn: 2\n    usage.dask: 3\n    "
+    """
+    usage.sklearn: 2
+    usage.dask: 3
+    """
     ...
 
 
 def eigvals(a: Union[numpy.ndarray, dask.array.core.Array]):
-    "\n    usage.dask: 2\n    "
+    """
+    usage.dask: 2
+    """
     ...
 
 
 def qr(a: numpy.ndarray):
-    "\n    usage.dask: 5\n    "
+    """
+    usage.dask: 5
+    """
     ...
 
 

@@ -9,5 +9,7 @@ class HighLevelGraph:
         ],
         /,
     ):
-        "\n    usage.dask: 4\n    "
+        """
+        usage.dask: 4
+        """
         ...

@@ -11,5 +11,7 @@ def get_dummies(
     drop_first: bool = ...,
     dtype: Union[Literal["float64"], Type[numpy.uint8]] = ...,
 ):
-    "\n    usage.dask: 22\n    "
+    """
+    usage.dask: 22
+    """
     ...

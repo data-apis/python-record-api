@@ -8,5 +8,7 @@ def hash_pandas_object(
     hash_key: None = ...,
     categorize: bool = ...,
 ):
-    "\n    usage.dask: 26\n    "
+    """
+    usage.dask: 26
+    """
     ...

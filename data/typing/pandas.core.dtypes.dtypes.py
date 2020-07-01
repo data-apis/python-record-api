@@ -3,13 +3,18 @@ from typing import *
 
 class IntervalDtype:
     def __eq__(self: object, _0: Literal["O"], /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
 
 class CategoricalDtype:
     def __init__(categories: List[str]):
-        "\n    usage.xarray: 2\n    usage.dask: 1\n    "
+        """
+        usage.xarray: 2
+        usage.dask: 1
+        """
         ...
 
     # usage.dask: 1
@@ -33,7 +38,10 @@ class CategoricalDtype:
         ],
         /,
     ):
-        "\n    usage.xarray: 1\n    usage.dask: 18\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 18
+        """
         ...
 
     def __ne__(
@@ -41,7 +49,9 @@ class CategoricalDtype:
         _0: Union[pandas.core.dtypes.dtypes.CategoricalDtype, Literal["category"]],
         /,
     ):
-        "\n    usage.dask: 5\n    "
+        """
+        usage.dask: 5
+        """
         ...
 
 
@@ -57,7 +67,9 @@ class PeriodDtype:
     kind: object
 
     def __eq__(self: object, _0: Literal["O"], /):
-        "\n    usage.xarray: 1\n    "
+        """
+        usage.xarray: 1
+        """
         ...
 
 
@@ -82,5 +94,8 @@ class DatetimeTZDtype:
         ],
         /,
     ):
-        "\n    usage.xarray: 1\n    usage.dask: 3\n    "
+        """
+        usage.xarray: 1
+        usage.dask: 3
+        """
         ...
