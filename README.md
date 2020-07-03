@@ -17,14 +17,14 @@ pip install record_api
 # First, run some program and gather a trace. Either by:
 # a) Running a Python module:
 env PYTHON_RECORD_API_OUTPUT_FILE=out.jsonl \
-    PYTHON_RECORD_API_TO_MODULES=numpy \
-    PYTHON_RECORD_API_FROM_MODULES=record_api.sample_usage \
-    PYTHON_RECORD_API_IMPORT_MODULES=numpy \
+    PYTHON_RECORD_API_TO_MODULE=numpy \
+    PYTHON_RECORD_API_FROM_MODULE=record_api.sample_usage \
+    PYTHON_RECORD_API_IMPORT_MODULE=numpy \
     python -m record_api
 # b) Running pytest, adding tracing around each test:
 env PYTHON_RECORD_API_OUTPUT_FILE=out.jsonl \
-    PYTHON_RECORD_API_TO_MODULES=numpy \
-    PYTHON_RECORD_API_FROM_MODULES=xarray \
+    PYTHON_RECORD_API_TO_MODULE=numpy \
+    PYTHON_RECORD_API_FROM_MODULE=xarray \
     pytest --pyargs xarray
 
 # This gives you a JSONL file with one line per call.
@@ -43,7 +43,7 @@ env PYTHON_RECORD_API_OUTPUT=grouped.jsonl \
 env PYTHON_RECORD_API_OUTPUT=xarray-api.json \
     PYTHON_RECORD_API_INPUT=grouped.jsonl \
     PYTHON_RECORD_API_LABEL=xarray \
-    PYTHON_RECORD_API_MODULES=numpy \
+    PYTHON_RECORD_API_MODULE=numpy \
     python -m record_api.infer_apis
 
 # (optional) Then, if you have produced  multiple apis, from different
