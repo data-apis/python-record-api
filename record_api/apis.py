@@ -654,9 +654,8 @@ def merge_property_into_method(
     l: Signature, r: typing.Tuple[Metadata, OutputType]
 ) -> Signature:
     """
-    Merges a property into a method by dropping type of property and merging metadat
+    Merges a property into a method by just using method
     """
-    update_add(l.metadata, r[0])
     return l
 
 

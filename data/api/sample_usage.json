@@ -214,7 +214,7 @@
           },
           "kw_only_optional": {},
           "metadata": {
-            "usage.sample_usage": 2
+            "usage.sample_usage": 1
           }
         }
       },
@@ -1135,7 +1135,7 @@
                 }
               },
               "metadata": {
-                "usage.sample_usage": 3
+                "usage.sample_usage": 2
               }
             },
             "__gt__": {
