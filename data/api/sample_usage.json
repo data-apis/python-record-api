@@ -1398,6 +1398,33 @@
             "type": "bottom"
           }
         ],
+        "add": [
+          {
+            "usage.sample_usage": 2
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "add"
+          }
+        ],
+        "exp": [
+          {
+            "usage.sample_usage": 1
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "exp"
+          }
+        ],
+        "log": [
+          {
+            "usage.sample_usage": 1
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "log"
+          }
+        ],
         "ndarray": [
           {
             "usage.sample_usage": 1
@@ -1407,14 +1434,6 @@
           }
         ],
         "polynomial": [
-          {
-            "usage.sample_usage": 1
-          },
-          {
-            "type": "bottom"
-          }
-        ],
-        "add": [
           {
             "usage.sample_usage": 1
           },

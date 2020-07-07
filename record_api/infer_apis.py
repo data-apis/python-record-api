@@ -98,11 +98,16 @@ def _method_descriptor(f: MethodDescriptorOutput, s: Signature) -> typing.Option
 @process_function.register
 def _ufunc(f: NumpyUfuncOutput, s: Signature) -> typing.Optional[API]:
     """
-    Calling ufuncs should translate to __call__ of ufunc class
+    Calling ufuncs should translate to __call__ of ufunc class + attribute with type ufunc for name
     """
     # Otherwise assume this is a normal function
     return API(
-        modules={"numpy": Module(classes={"ufunc": Class(methods={"__call__": s})})}
+        modules={
+            "numpy": Module(
+                properties={f.name: (s.metadata, f)},
+                classes={"ufunc": Class(methods={"__call__": s})},
+            )
+        }
     )
 
 
