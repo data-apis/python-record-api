@@ -72,7 +72,7 @@ class Module(pydantic.BaseModel):
         for name, sig in self.functions.items():
             if bad_name(name):
                 continue
-            yield sig.function_def(name)
+            yield sig.function_def(name, "function")
         for name, class_ in self.classes.items():
             yield class_.class_def(name)
 
@@ -114,26 +114,20 @@ class Class(pydantic.BaseModel):
     @property
     def body(self) -> typing.Iterable[cst.BaseStatement]:
         if self.constructor is not None:
-            yield self.constructor.function_def("__init__", indent=1)
+            yield self.constructor.function_def("__init__", "method", indent=1)
         yield from assign_properties(self.classproperties, True)
 
         for name, sig in self.classmethods.items():
             if bad_name(name):
                 continue
-            yield sig.function_def(name, is_classmethod=True, indent=1)
+            yield sig.function_def(name, "classmethod", indent=1)
 
         yield from assign_properties(self.properties)
 
         for name, sig in self.methods.items():
             if bad_name(name):
                 continue
-            # copy and add self as first arg
-            sig = sig.copy()
-            old_pos_only_required = sig.pos_only_required
-            sig.pos_only_required = {"self": BottomOutput()}
-            for k, v in old_pos_only_required.items():
-                sig.pos_only_required[k] = v
-            yield sig.function_def(name, indent=1)
+            yield sig.function_def(name, "method", indent=1)
 
     def __ior__(self, other: Class) -> Class:
         """
@@ -255,15 +249,18 @@ class Signature(pydantic.BaseModel):
             pudb.set_trace()
 
     def function_def(
-        self, name: str, is_classmethod=False, indent=0
+        self,
+        name: str,
+        type: typing.Literal["function", "classmethod", "method"],
+        indent=0,
     ) -> cst.FunctionDef:
         return cst.FunctionDef(
             cst.Name(name),
-            self.parameters,
+            self.parameters(type),
             cst.IndentedBlock(
                 [cst.SimpleStatementLine([s]) for s in self.body(indent)]
             ),
-            [cst.Decorator(cst.Name("classmethod"))] if is_classmethod else [],
+            [cst.Decorator(cst.Name("classmethod"))] if type == "classmethod" else [],
         )
 
     def body(self, indent: int) -> typing.Iterable[cst.BaseSmallStatement]:
@@ -275,21 +272,26 @@ class Signature(pydantic.BaseModel):
         inner = f"\n{i}".join(metadata_lines(self.metadata))
         return cst.SimpleString(f'"""\n{i}{inner}\n{i}"""')
 
-    @property
-    def parameters(self) -> cst.Parameters:
+    def parameters(
+        self, type: typing.Literal["function", "classmethod", "method"]
+    ) -> cst.Parameters:
+        posonly_params = [
+            cst.Param(cst.Name(k), cst.Annotation(v.annotation))
+            for k, v in self.pos_only_required.items()
+        ] + [
+            cst.Param(cst.Name(k), cst.Annotation(v.annotation), default=cst.Ellipsis())
+            for k, v in possibly_order_dict(
+                self.pos_only_optional, self.pos_only_optional_ordering
+            ).items()
+        ]
+
+        if type == "classmethod":
+            posonly_params.insert(0, cst.Param(cst.Name("cls")))
+        elif type == "method":
+            posonly_params.insert(0, cst.Param(cst.Name("self")))
+
         return cst.Parameters(
-            posonly_params=[
-                cst.Param(cst.Name(k), cst.Annotation(v.annotation))
-                for k, v in self.pos_only_required.items()
-            ]
-            + [
-                cst.Param(
-                    cst.Name(k), cst.Annotation(v.annotation), default=cst.Ellipsis()
-                )
-                for k, v in possibly_order_dict(
-                    self.pos_only_optional, self.pos_only_optional_ordering
-                ).items()
-            ],
+            posonly_params=posonly_params,
             params=[
                 cst.Param(cst.Name(k), cst.Annotation(v.annotation))
                 for k, v in self.pos_or_kw_required.items()
