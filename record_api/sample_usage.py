@@ -95,9 +95,11 @@ def fn():
     np.exp(x)
     np.log(x)
     x.mean()
+    # as class method
+    np.ndarray.mean(x)
 
-    # as classmethod
-    np.ndarray.sum(x)
+    # actual class method
+    np.polynomial.chebyshev.Chebyshev.basis(10)
 
     # comparison
     x == x

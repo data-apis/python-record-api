@@ -23,7 +23,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 150
+            "usage.dask": 164
           }
         },
         "isscalar": {
@@ -128,7 +128,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 485
+            "usage.dask": 556
           }
         },
         "prod": {
@@ -258,7 +258,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 134
+            "usage.dask": 141
           }
         },
         "amax": {
@@ -779,7 +779,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 137
+            "usage.dask": 165
           }
         },
         "allclose": {
@@ -824,7 +824,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 83
+            "usage.dask": 106
           }
         },
         "arange": {
@@ -1103,7 +1103,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 341
+            "usage.dask": 377
           }
         },
         "ones": {
@@ -1247,7 +1247,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 183
+            "usage.dask": 224
           }
         },
         "asarray": {
@@ -1285,7 +1285,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 126
+            "usage.dask": 131
           }
         },
         "dot": {
@@ -1305,7 +1305,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 13
+            "usage.dask": 28
           }
         },
         "eye": {
@@ -1343,7 +1343,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 35
+            "usage.dask": 49
           }
         },
         "frombuffer": {
@@ -1370,7 +1370,7 @@
           },
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 1
+            "usage.dask": 2
           }
         },
         "inv": {
@@ -1441,7 +1441,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 25
+            "usage.dask": 32
           }
         },
         "eig": {
@@ -1530,7 +1530,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 30
+            "usage.dask": 35
           }
         },
         "concatenate": {
@@ -1562,7 +1562,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 96
+            "usage.dask": 106
           }
         },
         "ceil": {
@@ -1708,7 +1708,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 116
+            "usage.dask": 136
           }
         },
         "sum": {
@@ -2321,7 +2321,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 256
+            "usage.dask": 283
           }
         },
         "zeros": {
@@ -2418,7 +2418,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 50
+            "usage.dask": 83
           }
         },
         "can_cast": {
@@ -2464,7 +2464,7 @@
           },
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 19
+            "usage.dask": 21
           }
         },
         "block": {
@@ -2654,7 +2654,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 29
+            "usage.dask": 38
           }
         },
         "maximum": {
@@ -2767,7 +2767,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 80
+            "usage.dask": 82
           }
         },
         "exp": {
@@ -2811,7 +2811,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 12
+            "usage.dask": 15
           }
         },
         "promote_types": {
@@ -2935,7 +2935,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 23
+            "usage.dask": 30
           }
         },
         "broadcast_to": {
@@ -3006,7 +3006,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 23
+            "usage.dask": 25
           }
         },
         "broadcast_arrays": {
@@ -3029,7 +3029,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 10
+            "usage.dask": 12
           }
         },
         "full": {
@@ -3116,7 +3116,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 10
+            "usage.dask": 12
           }
         },
         "ones_like": {
@@ -3420,7 +3420,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 59
+            "usage.dask": 60
           }
         },
         "searchsorted": {
@@ -3484,7 +3484,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 16
+            "usage.dask": 21
           }
         },
         "diff": {
@@ -3545,7 +3545,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 11
+            "usage.dask": 13
           }
         },
         "nonzero": {
@@ -3582,7 +3582,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 10
+            "usage.dask": 12
           }
         },
         "var": {
@@ -3712,7 +3712,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 96
+            "usage.dask": 100
           }
         },
         "sqrt": {
@@ -3736,7 +3736,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 63
+            "usage.dask": 67
           }
         },
         "amin": {
@@ -4238,7 +4238,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 35
+            "usage.dask": 37
           }
         },
         "sin": {
@@ -4279,7 +4279,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 52
+            "usage.dask": 58
           }
         },
         "floor": {
@@ -4378,7 +4378,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 47
+            "usage.dask": 50
           }
         },
         "log10": {
@@ -4474,7 +4474,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 42
+            "usage.dask": 43
           }
         },
         "cos": {
@@ -4498,7 +4498,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 42
+            "usage.dask": 43
           }
         },
         "tan": {
@@ -5325,7 +5325,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 25
+            "usage.dask": 28
           }
         },
         "real": {
@@ -5468,7 +5468,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 23
+            "usage.dask": 24
           }
         },
         "fabs": {
@@ -5571,7 +5571,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 9
+            "usage.dask": 10
           }
         },
         "empty_like": {
@@ -5625,7 +5625,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 8
+            "usage.dask": 9
           }
         },
         "modf": {
@@ -5656,7 +5656,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 9
+            "usage.dask": 10
           }
         },
         "around": {
@@ -5681,7 +5681,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 1
+            "usage.dask": 2
           }
         },
         "nan_to_num": {
@@ -5809,7 +5809,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 17
+            "usage.dask": 22
           }
         },
         "isclose": {
@@ -5877,7 +5877,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 3
+            "usage.dask": 6
           }
         },
         "flatnonzero": {
@@ -5934,7 +5934,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 6
+            "usage.dask": 7
           }
         },
         "load": {
@@ -5961,7 +5961,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 7
+            "usage.dask": 15
           }
         },
         "ascontiguousarray": {
@@ -6058,7 +6058,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 39
+            "usage.dask": 42
           }
         },
         "cumprod": {
@@ -6141,7 +6141,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 14
+            "usage.dask": 17
           }
         },
         "nancumsum": {
@@ -6485,7 +6485,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 50
+            "usage.dask": 51
           }
         },
         "true_divide": {
@@ -6624,7 +6624,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 22
+            "usage.dask": 34
           }
         },
         "zeros_like": {
@@ -6685,7 +6685,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 8
+            "usage.dask": 9
           }
         },
         "cov": {
@@ -6721,7 +6721,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 11
+            "usage.dask": 14
           }
         },
         "dstack": {
@@ -6760,7 +6760,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 5
+            "usage.dask": 7
           }
         },
         "hstack": {
@@ -6893,7 +6893,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 14
+            "usage.dask": 16
           }
         },
         "indices": {
@@ -6953,7 +6953,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 5
+            "usage.dask": 7
           }
         },
         "triu": {
@@ -6979,7 +6979,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 8
+            "usage.dask": 11
           }
         },
         "tril": {
@@ -7005,7 +7005,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 7
+            "usage.dask": 10
           }
         },
         "diag": {
@@ -7036,7 +7036,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 8
+            "usage.dask": 12
           }
         },
         "diagonal": {
@@ -7112,7 +7112,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 23
+            "usage.dask": 42
           }
         },
         "fromfunction": {
@@ -7144,7 +7144,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 2
+            "usage.dask": 4
           }
         },
         "repeat": {
@@ -7174,7 +7174,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 4
+            "usage.dask": 5
           }
         },
         "tile": {
@@ -7324,7 +7324,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 21
+            "usage.dask": 24
           }
         },
         "std": {
@@ -7454,7 +7454,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 92
+            "usage.dask": 107
           }
         },
         "einsum": {
@@ -7477,7 +7477,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 136
+            "usage.dask": 142
           }
         },
         "g": {
@@ -7909,7 +7909,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 134
+            "usage.dask": 148
           }
         },
         "unique": {
@@ -8003,7 +8003,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 30
+            "usage.dask": 38
           }
         },
         "any": {
@@ -8326,7 +8326,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 124
+            "usage.dask": 127
           }
         },
         "unravel_index": {
@@ -8414,7 +8414,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 12
+            "usage.dask": 13
           }
         },
         "ravel_multi_index": {
@@ -8558,7 +8558,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 36
+            "usage.dask": 38
           }
         },
         "swapaxes": {
@@ -8588,7 +8588,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 4
+            "usage.dask": 5
           }
         },
         "multiply": {
@@ -8652,7 +8652,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 23
+            "usage.dask": 24
           }
         },
         "percentile": {
@@ -8685,7 +8685,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 8
+            "usage.dask": 9
           }
         },
         "interp": {
@@ -8744,7 +8744,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 8
+            "usage.dask": 10
           }
         },
         "roll": {
@@ -8844,7 +8844,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 12
+            "usage.dask": 13
           }
         },
         "nansum": {
@@ -9139,7 +9139,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 135
+            "usage.dask": 143
           }
         },
         "nanprod": {
@@ -9223,7 +9223,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 71
+            "usage.dask": 74
           }
         },
         "nanmin": {
@@ -9483,7 +9483,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 106
+            "usage.dask": 110
           }
         },
         "nanmax": {
@@ -9743,7 +9743,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 106
+            "usage.dask": 110
           }
         },
         "nanvar": {
@@ -9820,7 +9820,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 49
+            "usage.dask": 51
           }
         },
         "nanstd": {
@@ -9897,7 +9897,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 49
+            "usage.dask": 52
           }
         },
         "expand_dims": {
@@ -10011,7 +10011,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 28
+            "usage.dask": 31
           }
         },
         "nanargmax": {
@@ -10100,7 +10100,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 28
+            "usage.dask": 31
           }
         },
         "nanmean": {
@@ -10161,7 +10161,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 11
+            "usage.dask": 13
           }
         },
         "partition": {
@@ -10191,7 +10191,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 1
+            "usage.dask": 2
           }
         },
         "argpartition": {
@@ -10221,7 +10221,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 1
+            "usage.dask": 2
           }
         },
         "take_along_axis": {
@@ -10295,7 +10295,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 8
+            "usage.dask": 9
           }
         },
         "atleast_1d": {
@@ -10405,7 +10405,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 4
+            "usage.dask": 5
           }
         },
         "rollaxis": {
@@ -10447,7 +10447,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 5
+            "usage.dask": 6
           }
         },
         "flipud": {
@@ -10561,7 +10561,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 4
+            "usage.dask": 5
           }
         },
         "apply_along_axis": {
@@ -10627,7 +10627,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 4
+            "usage.dask": 5
           }
         },
         "apply_over_axes": {
@@ -10826,7 +10826,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 14
+            "usage.dask": 16
           }
         },
         "bincount": {
@@ -10884,7 +10884,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 6
+            "usage.dask": 11
           }
         },
         "digitize": {
@@ -10928,7 +10928,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 8
+            "usage.dask": 12
           }
         },
         "iterable": {
@@ -11116,7 +11116,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 11
+            "usage.dask": 18
           }
         },
         "corrcoef": {
@@ -11148,7 +11148,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 5
+            "usage.dask": 6
           }
         },
         "isin": {
@@ -11207,7 +11207,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 4
+            "usage.dask": 6
           }
         },
         "in1d": {
@@ -11238,7 +11238,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 1
+            "usage.dask": 2
           }
         },
         "shape": {
@@ -11258,7 +11258,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 1
+            "usage.dask": 2
           }
         },
         "union1d": {
@@ -11374,7 +11374,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 3
+            "usage.dask": 4
           }
         },
         "take": {
@@ -11423,7 +11423,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 3
+            "usage.dask": 5
           }
         },
         "compress": {
@@ -11475,7 +11475,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 4
+            "usage.dask": 5
           }
         },
         "count_nonzero": {
@@ -11533,7 +11533,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 21
+            "usage.dask": 22
           }
         },
         "extract": {
@@ -11712,7 +11712,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 6
+            "usage.dask": 9
           }
         },
         "argwhere": {
@@ -11807,7 +11807,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 11
+            "usage.dask": 21
           }
         },
         "einsum_path": {
@@ -11830,7 +11830,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 2
+            "usage.dask": 3
           }
         },
         "average": {
@@ -11872,7 +11872,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 2
+            "usage.dask": 4
           }
         },
         "equal": {
@@ -11912,7 +11912,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 2
+            "usage.dask": 4
           }
         },
         "seterr": {
@@ -11969,7 +11969,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 2
+            "usage.dask": 4
           }
         },
         "power": {
@@ -12279,7 +12279,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 40
+            "usage.dask": 41
           }
         },
         "reciprocal": {
@@ -12385,7 +12385,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 18
+            "usage.dask": 19
           }
         },
         "bitwise_or": {
@@ -12566,7 +12566,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 20
+            "usage.dask": 21
           }
         },
         "greater": {
@@ -13091,7 +13091,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 1
+            "usage.dask": 2
           }
         },
         "asmatrix": {
@@ -13446,86 +13446,6 @@
                 "usage.dask": 188
               }
             },
-            "ravel": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {
-                "order": {
-                  "type": "str",
-                  "options": [
-                    "K",
-                    "F"
-                  ]
-                }
-              },
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 23
-              }
-            },
-            "astype": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "dtype"
-                      }
-                    },
-                    {
-                      "type": "str",
-                      "options": [
-                        "i8"
-                      ]
-                    },
-                    {
-                      "type": "type"
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "copy": {
-                  "type": {
-                    "name": "bool"
-                  }
-                },
-                "dtype": {
-                  "type": "str",
-                  "options": [
-                    "i2"
-                  ]
-                }
-              },
-              "metadata": {
-                "usage.dask": 29
-              }
-            },
-            "tolist": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 7
-              }
-            },
             "__mul__": {
               "pos_only_required": {
                 "_0": {
@@ -13558,78 +13478,6 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.dask": 189
-              }
-            },
-            "sum": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "axis": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": "None"
-                    },
-                    {
-                      "type": "tuple",
-                      "items": {
-                        "type": "union",
-                        "options": [
-                          {
-                            "type": "None"
-                          },
-                          {
-                            "type": {
-                              "name": "int"
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                },
-                "dtype": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "dtype"
-                      }
-                    },
-                    {
-                      "type": "str",
-                      "options": [
-                        "f8",
-                        "i8"
-                      ]
-                    }
-                  ]
-                },
-                "keepdims": {
-                  "type": {
-                    "name": "bool"
-                  }
-                },
-                "out": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.dask": 126
               }
             },
             "__radd__": {
@@ -13755,36 +13603,6 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.dask": 1
-              }
-            },
-            "reshape": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "tuple",
-                  "items": {
-                    "type": "union",
-                    "options": [
-                      {
-                        "type": "None"
-                      },
-                      {
-                        "type": {
-                          "name": "int"
-                        }
-                      }
-                    ]
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 11
               }
             },
             "__sub__": {
@@ -13945,25 +13763,6 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.dask": 6
-              }
-            },
-            "all": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "axis": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.dask": 86
               }
             },
             "__truediv__": {
@@ -14449,19 +14248,6 @@
                 "usage.dask": 9
               }
             },
-            "copy": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 1
-              }
-            },
             "__imod__": {
               "pos_only_required": {
                 "_0": {
@@ -14479,88 +14265,6 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.dask": 3
-              }
-            },
-            "cumsum": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {
-                "axis": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 4
-              }
-            },
-            "cumprod": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {
-                "axis": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 3
-              }
-            },
-            "std": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {
-                "keepdims": {
-                  "type": {
-                    "name": "bool"
-                  }
-                }
-              },
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 1
-              }
-            },
-            "repeat": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {
-                "axis": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 1
               }
             },
             "__isub__": {
@@ -14656,54 +14360,6 @@
                 "usage.dask": 1
               }
             },
-            "mean": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "axis": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": "None"
-                    },
-                    {
-                      "type": "tuple",
-                      "items": {
-                        "type": "union",
-                        "options": [
-                          {
-                            "type": "None"
-                          },
-                          {
-                            "type": {
-                              "name": "int"
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                },
-                "keepdims": {
-                  "type": {
-                    "name": "bool"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.dask": 10
-              }
-            },
             "argmin": {
               "pos_only_required": {},
               "pos_only_optional": {},
@@ -14720,7 +14376,7 @@
               },
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 4
               }
             },
             "trace": {
@@ -14804,63 +14460,7 @@
                 }
               },
               "metadata": {
-                "usage.dask": 7
-              }
-            },
-            "min": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {
-                "keepdims": {
-                  "type": {
-                    "name": "bool"
-                  }
-                }
-              },
-              "kw_only_optional": {
-                "axis": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "out": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.dask": 2
-              }
-            },
-            "max": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {
-                "axis": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "kw_only_optional": {
-                "keepdims": {
-                  "type": {
-                    "name": "bool"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.dask": 2
+                "usage.dask": 8
               }
             },
             "squeeze": {
@@ -14902,43 +14502,6 @@
               },
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 3
-              }
-            },
-            "any": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 1
-              }
-            },
-            "clip": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "min": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "max": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "metadata": {
                 "usage.dask": 4
               }
             },
@@ -14958,27 +14521,7 @@
               },
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 3
-              }
-            },
-            "sort": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {
-                "kind": {
-                  "type": "str",
-                  "options": [
-                    "mergesort"
-                  ]
-                }
-              },
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 1
+                "usage.dask": 6
               }
             },
             "__rshift__": {
@@ -15022,7 +14565,8 @@
           },
           "classmethods": {
             "any": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_0": {
                   "type": {
                     "module": "numpy",
@@ -15030,7 +14574,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
@@ -15038,7 +14581,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 13
+                "usage.dask": 15
               }
             },
             "reshape": {
@@ -15057,8 +14600,31 @@
                         "module": "numpy",
                         "name": "matrix"
                       }
+                    },
+                    {
+                      "type": "tuple",
+                      "items": {
+                        "type": "union",
+                        "options": [
+                          {
+                            "type": {
+                              "name": "int"
+                            }
+                          },
+                          {
+                            "type": "None"
+                          }
+                        ]
+                      }
                     }
                   ]
+                }
+              },
+              "pos_only_optional": {
+                "_2": {
+                  "type": {
+                    "name": "int"
+                  }
                 },
                 "_1": {
                   "type": "union",
@@ -15085,13 +14651,6 @@
                       }
                     }
                   ]
-                }
-              },
-              "pos_only_optional": {
-                "_2": {
-                  "type": {
-                    "name": "int"
-                  }
                 },
                 "_3": {
                   "type": {
@@ -15106,8 +14665,24 @@
               },
               "pos_only_optional_ordering": [
                 [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
                   "_2",
                   "_3"
+                ],
+                [
+                  "_1",
+                  "_2"
                 ],
                 [
                   "_2",
@@ -15116,6 +14691,10 @@
                 [
                   "_3",
                   "_4"
+                ],
+                [
+                  "_1",
+                  "_2"
                 ]
               ],
               "pos_or_kw_required": {},
@@ -15124,11 +14703,12 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 177
+                "usage.dask": 189
               }
             },
             "sum": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_0": {
                   "type": {
                     "module": "numpy",
@@ -15136,15 +14716,73 @@
                   }
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
-              "kw_only_optional": {},
+              "kw_only_optional": {
+                "axis": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": "None"
+                    },
+                    {
+                      "type": "tuple",
+                      "items": {
+                        "type": "union",
+                        "options": [
+                          {
+                            "type": "None"
+                          },
+                          {
+                            "type": {
+                              "name": "int"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "dtype": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "dtype"
+                      }
+                    },
+                    {
+                      "type": "str",
+                      "options": [
+                        "f8",
+                        "i8"
+                      ]
+                    }
+                  ]
+                },
+                "keepdims": {
+                  "type": {
+                    "name": "bool"
+                  }
+                },
+                "out": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              },
               "metadata": {
-                "usage.dask": 34
+                "usage.dask": 218
               }
             },
             "view": {
@@ -15195,24 +14833,8 @@
               }
             },
             "astype": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy.ma.core",
-                        "name": "MaskedArray"
-                      }
-                    }
-                  ]
-                },
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_1": {
                   "type": "union",
                   "options": [
@@ -15229,21 +14851,70 @@
                       "type": "type"
                     }
                   ]
+                },
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "dtype"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy.ma.core",
+                        "name": "MaskedArray"
+                      }
+                    },
+                    {
+                      "type": "type"
+                    },
+                    {
+                      "type": "str",
+                      "options": [
+                        "i8"
+                      ]
+                    }
+                  ]
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
+              "pos_only_optional_ordering": [
+                [
+                  "_0",
+                  "_1"
+                ]
+              ],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
-              "kw_only_optional": {},
+              "kw_only_optional": {
+                "copy": {
+                  "type": {
+                    "name": "bool"
+                  }
+                },
+                "dtype": {
+                  "type": "str",
+                  "options": [
+                    "i2"
+                  ]
+                }
+              },
               "metadata": {
-                "usage.dask": 160
+                "usage.dask": 204
               }
             },
             "mean": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_0": {
                   "type": {
                     "module": "numpy",
@@ -15251,19 +14922,54 @@
                   }
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
-              "kw_only_optional": {},
+              "kw_only_optional": {
+                "axis": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": "None"
+                    },
+                    {
+                      "type": "tuple",
+                      "items": {
+                        "type": "union",
+                        "options": [
+                          {
+                            "type": "None"
+                          },
+                          {
+                            "type": {
+                              "name": "int"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "keepdims": {
+                  "type": {
+                    "name": "bool"
+                  }
+                }
+              },
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 20
               }
             },
             "all": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_0": {
                   "type": {
                     "module": "numpy",
@@ -15271,15 +14977,20 @@
                   }
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
-              "kw_only_optional": {},
+              "kw_only_optional": {
+                "axis": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
               "metadata": {
-                "usage.dask": 4
+                "usage.dask": 176
               }
             },
             "item": {
@@ -15303,7 +15014,8 @@
               }
             },
             "min": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_0": {
                   "type": {
                     "module": "numpy",
@@ -15311,15 +15023,31 @@
                   }
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
-              "kw_only_optional": {},
+              "kw_only_optional": {
+                "axis": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "keepdims": {
+                  "type": {
+                    "name": "bool"
+                  }
+                },
+                "out": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              },
               "metadata": {
-                "usage.dask": 5
+                "usage.dask": 9
               }
             },
             "dot": {
@@ -15360,7 +15088,8 @@
               }
             },
             "tolist": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_0": {
                   "type": {
                     "module": "numpy",
@@ -15368,7 +15097,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
@@ -15376,11 +15104,12 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 32
+                "usage.dask": 46
               }
             },
             "std": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_0": {
                   "type": {
                     "module": "numpy",
@@ -15388,15 +15117,20 @@
                   }
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
-              "kw_only_optional": {},
+              "kw_only_optional": {
+                "keepdims": {
+                  "type": {
+                    "name": "bool"
+                  }
+                }
+              },
               "metadata": {
-                "usage.dask": 3
+                "usage.dask": 5
               }
             },
             "__array_wrap__": {
@@ -15446,7 +15180,13 @@
               }
             },
             "clip": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_2": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
                 "_0": {
                   "type": {
                     "module": "numpy",
@@ -15459,25 +15199,39 @@
                   }
                 }
               },
-              "pos_only_optional": {
-                "_2": {
+              "pos_only_optional_ordering": [
+                [
+                  "_0",
+                  "_1"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ]
+              ],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {
+                "min": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "max": {
                   "type": {
                     "name": "int"
                   }
                 }
               },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 3
+                "usage.dask": 11
               }
             },
             "ravel": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_0": {
                   "type": {
                     "module": "numpy",
@@ -15485,15 +15239,22 @@
                   }
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
-              "kw_only_optional": {},
+              "kw_only_optional": {
+                "order": {
+                  "type": "str",
+                  "options": [
+                    "K",
+                    "F"
+                  ]
+                }
+              },
               "metadata": {
-                "usage.dask": 12
+                "usage.dask": 58
               }
             },
             "transpose": {
@@ -15591,7 +15352,8 @@
               }
             },
             "cumsum": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_0": {
                   "type": {
                     "module": "numpy",
@@ -15599,19 +15361,25 @@
                   }
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
-              "kw_only_optional": {},
+              "kw_only_optional": {
+                "axis": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
               "metadata": {
-                "usage.dask": 3
+                "usage.dask": 11
               }
             },
             "cumprod": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_0": {
                   "type": {
                     "module": "numpy",
@@ -15619,19 +15387,25 @@
                   }
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
-              "kw_only_optional": {},
+              "kw_only_optional": {
+                "axis": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 7
               }
             },
             "copy": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_0": {
                   "type": "union",
                   "options": [
@@ -15650,7 +15424,6 @@
                   ]
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
@@ -15658,11 +15431,12 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 7
+                "usage.dask": 8
               }
             },
             "max": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_0": {
                   "type": {
                     "module": "numpy",
@@ -15670,15 +15444,25 @@
                   }
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
-              "kw_only_optional": {},
+              "kw_only_optional": {
+                "axis": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "keepdims": {
+                  "type": {
+                    "name": "bool"
+                  }
+                }
+              },
               "metadata": {
-                "usage.dask": 7
+                "usage.dask": 11
               }
             },
             "__array_function__": {
@@ -15833,30 +15617,48 @@
             "repeat": {
               "pos_only_required": {
                 "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional": {
                 "_1": {
                   "type": {
                     "name": "int"
                   }
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
-              "kw_only_optional": {},
+              "kw_only_optional": {
+                "axis": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 3
               }
             },
             "sort": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_0": {
                   "type": {
                     "module": "numpy",
@@ -15864,15 +15666,21 @@
                   }
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
-              "kw_only_optional": {},
+              "kw_only_optional": {
+                "kind": {
+                  "type": "str",
+                  "options": [
+                    "mergesort"
+                  ]
+                }
+              },
               "metadata": {
-                "usage.dask": 3
+                "usage.dask": 5
               }
             },
             "prod": {
@@ -16128,7 +15936,7 @@
             ],
             "__name__": [
               {
-                "usage.dask": 5
+                "usage.dask": 6
               },
               {
                 "type": "bottom"
@@ -16295,41 +16103,6 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.dask": 25
-              }
-            },
-            "__ne__": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "name": "float"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "float64"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 11
               }
             },
             "__mul__": {
@@ -16648,7 +16421,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             },
             "__iadd__": {
@@ -16784,10 +16557,31 @@
             "__ne__": {
               "pos_only_required": {
                 "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "dtype"
-                  }
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "float"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "dtype"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
+                      }
+                    }
+                  ]
                 }
               },
               "pos_only_optional": {},
@@ -16798,7 +16592,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 12
               }
             }
           },
@@ -16975,41 +16769,6 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.dask": 96
-              }
-            },
-            "__ne__": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "name": "float"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "int64"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 16
               }
             },
             "__gt__": {
@@ -17774,10 +17533,31 @@
             "__ne__": {
               "pos_only_required": {
                 "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "dtype"
-                  }
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "float"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "dtype"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    }
+                  ]
                 }
               },
               "pos_only_optional": {},
@@ -17788,7 +17568,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 18
               }
             }
           },
@@ -17977,7 +17757,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             },
             "__eq__": {
@@ -18679,7 +18459,7 @@
           "classproperties": {
             "shape": [
               {
-                "usage.dask": 1
+                "usage.dask": 6
               },
               {
                 "type": "bottom"
@@ -18843,7 +18623,7 @@
               },
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 4
               }
             },
             "all": {
@@ -18856,7 +18636,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 4
               }
             },
             "__setitem__": {
@@ -20608,7 +20388,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             },
             "__getitem__": {
@@ -20723,6 +20503,54 @@
         }
       },
       "properties": {
+        "ndarray": [
+          {
+            "usage.dask": 81
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "dtype": [
+          {
+            "usage.dask": 12
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "errstate": [
+          {
+            "usage.dask": 10
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "vectorize": [
+          {
+            "usage.dask": 3
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "float64": [
+          {
+            "usage.dask": 33
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "uint32": [
+          {
+            "usage.dask": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
         "random": [
           {
             "usage.dask": 422
@@ -20755,6 +20583,38 @@
             "type": "bottom"
           }
         ],
+        "int64": [
+          {
+            "usage.dask": 32
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "int32": [
+          {
+            "usage.dask": 13
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "float32": [
+          {
+            "usage.dask": 26
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "int16": [
+          {
+            "usage.dask": 7
+          },
+          {
+            "type": "bottom"
+          }
+        ],
         "__version__": [
           {
             "usage.dask": 2
@@ -20766,6 +20626,14 @@
         "newaxis": [
           {
             "usage.dask": 9
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "object_": [
+          {
+            "usage.dask": 6
           },
           {
             "type": "bottom"
@@ -20787,9 +20655,41 @@
             "type": "bottom"
           }
         ],
+        "int8": [
+          {
+            "usage.dask": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
         "integer": [
           {
             "usage.dask": 6
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "matrix": [
+          {
+            "usage.dask": 3
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "datetime64": [
+          {
+            "usage.dask": 9
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "uint8": [
+          {
+            "usage.dask": 11
           },
           {
             "type": "bottom"
@@ -20806,6 +20706,14 @@
         "intp": [
           {
             "usage.dask": 21
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "memmap": [
+          {
+            "usage.dask": 3
           },
           {
             "type": "bottom"
@@ -20867,6 +20775,14 @@
             "type": "bottom"
           }
         ],
+        "complex128": [
+          {
+            "usage.dask": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
         "testing": [
           {
             "usage.dask": 27
@@ -20878,6 +20794,14 @@
         "ogrid": [
           {
             "usage.dask": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "bool_": [
+          {
+            "usage.dask": 2
           },
           {
             "type": "bottom"
@@ -20939,6 +20863,22 @@
             "type": "bottom"
           }
         ],
+        "ufunc": [
+          {
+            "usage.dask": 6
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "timedelta64": [
+          {
+            "usage.dask": 4
+          },
+          {
+            "type": "bottom"
+          }
+        ],
         "mod": [
           {
             "usage.dask": 1
@@ -20955,7 +20895,23 @@
             "type": "bottom"
           }
         ],
+        "uint64": [
+          {
+            "usage.dask": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
         "bool": [
+          {
+            "usage.dask": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "longlong": [
           {
             "usage.dask": 1
           },
@@ -21074,34 +21030,6 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.dask": 23
-              }
-            },
-            "random_sample": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_0": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "size": {
-                  "type": "tuple",
-                  "items": {
-                    "type": {
-                      "name": "int"
-                    }
-                  }
-                }
-              },
-              "metadata": {
-                "usage.dask": 4
               }
             },
             "random": {
@@ -21292,7 +21220,7 @@
                 }
               },
               "metadata": {
-                "usage.dask": 133
+                "usage.dask": 137
               }
             },
             "randn": {
@@ -21328,79 +21256,6 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.dask": 90
-              }
-            },
-            "rand": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional": {
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_2": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_3": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_1",
-                  "_2"
-                ],
-                [
-                  "_1",
-                  "_2"
-                ],
-                [
-                  "_2",
-                  "_3"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 26
-              }
-            },
-            "seed": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_0": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "seed": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.dask": 18
               }
             },
             "standard_normal": {
@@ -22107,7 +21962,7 @@
               },
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 3
+                "usage.dask": 4
               }
             },
             "power": {
@@ -22664,40 +22519,7 @@
                 }
               },
               "metadata": {
-                "usage.dask": 32
-              }
-            },
-            "shuffle": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    },
-                    {
-                      "type": "list",
-                      "item": {
-                        "type": {
-                          "name": "int"
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 6
+                "usage.dask": 33
               }
             },
             "permutation": {
@@ -22760,19 +22582,24 @@
             "rand": {
               "pos_only_required": {
                 "_0": {
-                  "type": {
-                    "module": "numpy.random.mtrand",
-                    "name": "RandomState"
-                  }
-                },
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy.random.mtrand",
+                        "name": "RandomState"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
                 }
               },
               "pos_only_optional": {
-                "_3": {
+                "_1": {
                   "type": {
                     "name": "int"
                   }
@@ -22781,9 +22608,34 @@
                   "type": {
                     "name": "int"
                   }
+                },
+                "_3": {
+                  "type": {
+                    "name": "int"
+                  }
                 }
               },
               "pos_only_optional_ordering": [
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_2",
+                  "_3"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ],
                 [
                   "_2",
                   "_3"
@@ -22795,42 +22647,84 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 4
+                "usage.dask": 33
               }
             },
             "seed": {
-              "pos_only_required": {
-                "_0": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_1": {
                   "type": {
-                    "module": "numpy.random.mtrand",
-                    "name": "RandomState"
+                    "name": "int"
                   }
                 },
-                "_1": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy.random.mtrand",
+                        "name": "RandomState"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional_ordering": [
+                [
+                  "_0",
+                  "_1"
+                ]
+              ],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {
+                "seed": {
                   "type": {
                     "name": "int"
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 19
               }
             },
             "shuffle": {
               "pos_only_required": {
                 "_0": {
-                  "type": {
-                    "module": "numpy.random.mtrand",
-                    "name": "RandomState"
-                  }
-                },
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy.random.mtrand",
+                        "name": "RandomState"
+                      }
+                    },
+                    {
+                      "type": "list",
+                      "item": {
+                        "type": {
+                          "name": "int"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional": {
                 "_1": {
                   "type": {
                     "module": "numpy",
@@ -22838,7 +22732,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
@@ -22846,16 +22739,27 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 4
+                "usage.dask": 10
               }
             },
             "random_sample": {
-              "pos_only_required": {
+              "pos_only_required": {},
+              "pos_only_optional": {
                 "_0": {
-                  "type": {
-                    "module": "numpy.random.mtrand",
-                    "name": "RandomState"
-                  }
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy.random.mtrand",
+                        "name": "RandomState"
+                      }
+                    }
+                  ]
                 },
                 "_1": {
                   "type": {
@@ -22863,15 +22767,28 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
+              "pos_only_optional_ordering": [
+                [
+                  "_0",
+                  "_1"
+                ]
+              ],
               "pos_or_kw_required": {},
               "pos_or_kw_optional": {},
               "pos_or_kw_optional_ordering": [],
               "kw_only_required": {},
-              "kw_only_optional": {},
+              "kw_only_optional": {
+                "size": {
+                  "type": "tuple",
+                  "items": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                }
+              },
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 6
               }
             }
           },
@@ -23157,7 +23074,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 32
+            "usage.dask": 36
           }
         },
         "det": {
@@ -23219,7 +23136,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 2
+            "usage.dask": 3
           }
         },
         "qr": {
@@ -23239,7 +23156,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 5
+            "usage.dask": 7
           }
         },
         "svd": {
@@ -23265,7 +23182,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 5
+            "usage.dask": 7
           }
         },
         "lstsq": {
@@ -23307,7 +23224,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.dask": 3
+            "usage.dask": 6
           }
         }
       },
@@ -23455,7 +23372,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 18
+                "usage.dask": 30
               }
             },
             "astype": {
@@ -23542,7 +23459,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 32
+                "usage.dask": 34
               }
             },
             "itertuples": {
@@ -23584,7 +23501,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 14
               }
             },
             "reset_index": {
@@ -23613,7 +23530,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 28
+                "usage.dask": 52
               }
             },
             "sort_values": {
@@ -23676,7 +23593,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 179
+                "usage.dask": 180
               }
             },
             "sort_index": {
@@ -23695,7 +23612,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 8
+                "usage.dask": 9
               }
             },
             "select_dtypes": {
@@ -23765,7 +23682,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 20
+                "usage.dask": 28
               }
             },
             "__setitem__": {
@@ -24004,7 +23921,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 31
+                "usage.dask": 41
               }
             },
             "head": {
@@ -24036,7 +23953,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 16
+                "usage.dask": 32
               }
             },
             "drop": {
@@ -24248,7 +24165,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 32
+                "usage.dask": 47
               }
             },
             "set_index": {
@@ -24271,7 +24188,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 115
+                "usage.dask": 131
               }
             },
             "copy": {
@@ -24290,7 +24207,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 16
+                "usage.dask": 19
               }
             },
             "groupby": {
@@ -24557,7 +24474,7 @@
                 }
               },
               "metadata": {
-                "usage.dask": 448
+                "usage.dask": 468
               }
             },
             "get": {
@@ -24655,7 +24572,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 12
+                "usage.dask": 17
               }
             },
             "to_csv": {
@@ -24705,7 +24622,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 5
+                "usage.dask": 7
               }
             },
             "__eq__": {
@@ -24770,7 +24687,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 11
+                "usage.dask": 17
               }
             },
             "to_records": {
@@ -24789,7 +24706,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 4
+                "usage.dask": 5
               }
             },
             "to_json": {
@@ -24825,7 +24742,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 24
+                "usage.dask": 32
               }
             },
             "__add__": {
@@ -25642,42 +25559,6 @@
                 "usage.dask": 7
               }
             },
-            "__ne__": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "module": "dask.dataframe.core",
-                        "name": "DataFrame"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "pandas.core.frame",
-                        "name": "DataFrame"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 5
-              }
-            },
             "lt": {
               "pos_only_required": {},
               "pos_only_optional": {},
@@ -25910,7 +25791,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 13
               }
             },
             "add": {
@@ -25969,7 +25850,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 11
+                "usage.dask": 14
               }
             },
             "sub": {
@@ -26028,7 +25909,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 12
               }
             },
             "mul": {
@@ -26087,7 +25968,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 11
+                "usage.dask": 14
               }
             },
             "truediv": {
@@ -26146,7 +26027,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 27
+                "usage.dask": 30
               }
             },
             "floordiv": {
@@ -26205,7 +26086,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 12
               }
             },
             "pow": {
@@ -26264,7 +26145,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 12
               }
             },
             "mod": {
@@ -26323,7 +26204,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 12
               }
             },
             "radd": {
@@ -26382,7 +26263,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 12
               }
             },
             "rsub": {
@@ -26441,7 +26322,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 12
               }
             },
             "rmul": {
@@ -26500,7 +26381,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 12
               }
             },
             "rtruediv": {
@@ -26559,7 +26440,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 18
+                "usage.dask": 21
               }
             },
             "rpow": {
@@ -26618,7 +26499,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 12
               }
             },
             "rmod": {
@@ -26677,7 +26558,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 12
               }
             },
             "sum": {
@@ -26723,7 +26604,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 33
+                "usage.dask": 39
               }
             },
             "prod": {
@@ -26769,7 +26650,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 15
+                "usage.dask": 19
               }
             },
             "min": {
@@ -26805,7 +26686,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 15
+                "usage.dask": 18
               }
             },
             "max": {
@@ -26841,7 +26722,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 15
+                "usage.dask": 18
               }
             },
             "mean": {
@@ -26877,7 +26758,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 20
+                "usage.dask": 25
               }
             },
             "_get_numeric_data": {
@@ -26921,7 +26802,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 17
+                "usage.dask": 19
               }
             },
             "var": {
@@ -27003,7 +26884,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 31
+                "usage.dask": 44
               }
             },
             "std": {
@@ -27065,7 +26946,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 23
+                "usage.dask": 33
               }
             },
             "sem": {
@@ -27151,7 +27032,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 23
+                "usage.dask": 33
               }
             },
             "drop_duplicates": {
@@ -27253,7 +27134,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 43
+                "usage.dask": 49
               }
             },
             "take": {
@@ -27310,7 +27191,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 4
               }
             },
             "tail": {
@@ -27500,7 +27381,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 21
+                "usage.dask": 24
               }
             },
             "quantile": {
@@ -27561,7 +27442,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 7
+                "usage.dask": 9
               }
             },
             "__iter__": {
@@ -27615,7 +27496,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 11
+                "usage.dask": 16
               }
             },
             "cumprod": {
@@ -27656,7 +27537,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 11
+                "usage.dask": 16
               }
             },
             "cummin": {
@@ -27697,7 +27578,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 11
+                "usage.dask": 16
               }
             },
             "isnull": {
@@ -27769,7 +27650,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 8
+                "usage.dask": 10
               }
             },
             "cummax": {
@@ -27810,7 +27691,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 11
+                "usage.dask": 16
               }
             },
             "dropna": {
@@ -27916,7 +27797,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 21
+                "usage.dask": 35
               }
             },
             "clip": {
@@ -27979,7 +27860,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 12
+                "usage.dask": 15
               }
             },
             "squeeze": {
@@ -28078,7 +27959,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 5
+                "usage.dask": 6
               }
             },
             "isin": {
@@ -28297,7 +28178,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 48
+                "usage.dask": 54
               }
             },
             "combine": {
@@ -28339,7 +28220,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 7
+                "usage.dask": 9
               }
             },
             "combine_first": {
@@ -28390,7 +28271,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 4
               }
             },
             "memory_usage": {
@@ -28415,7 +28296,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 5
+                "usage.dask": 8
               }
             },
             "ffill": {
@@ -28434,7 +28315,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             },
             "bfill": {
@@ -28453,7 +28334,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             },
             "to_timestamp": {
@@ -28571,7 +28452,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 10
+                "usage.dask": 16
               }
             },
             "applymap": {
@@ -28658,7 +28539,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 5
+                "usage.dask": 6
               }
             },
             "nlargest": {
@@ -28776,7 +28657,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             },
             "idxmax": {
@@ -28800,7 +28681,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 7
+                "usage.dask": 11
               }
             },
             "idxmin": {
@@ -28824,7 +28705,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 5
+                "usage.dask": 7
               }
             },
             "diff": {
@@ -28853,7 +28734,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 7
+                "usage.dask": 8
               }
             },
             "shift": {
@@ -28938,7 +28819,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 29
+                "usage.dask": 34
               }
             },
             "first": {
@@ -29104,7 +28985,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 4
               }
             },
             "__itruediv__": {
@@ -29143,7 +29024,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             },
             "equals": {
@@ -29163,7 +29044,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 4
               }
             },
             "merge": {
@@ -31601,7 +31482,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 365
+                "usage.dask": 391
               }
             },
             "join": {
@@ -31686,7 +31567,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 31
+                "usage.dask": 43
               }
             },
             "__contains__": {
@@ -31841,7 +31722,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 10
+                "usage.dask": 14
               }
             },
             "append": {
@@ -31878,7 +31759,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 12
+                "usage.dask": 20
               }
             },
             "pivot_table": {
@@ -31918,7 +31799,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 3
+                "usage.dask": 4
               }
             },
             "rolling": {
@@ -32205,7 +32086,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 85
+                "usage.dask": 99
               }
             },
             "__array_wrap__": {
@@ -32278,7 +32159,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 63
+                "usage.dask": 66
               }
             }
           },
@@ -32286,7 +32167,29 @@
             "__ne__": {
               "pos_only_required": {
                 "_0": {
-                  "type": "type"
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "type"
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "pandas.core.frame",
+                        "name": "DataFrame"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "dask.dataframe.core",
+                        "name": "DataFrame"
+                      }
+                    }
+                  ]
                 }
               },
               "pos_only_optional": {},
@@ -32297,7 +32200,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 3
+                "usage.dask": 8
               }
             },
             "from_dict": {
@@ -32727,7 +32630,7 @@
           "classproperties": {
             "__name__": [
               {
-                "usage.dask": 3
+                "usage.dask": 4
               },
               {
                 "type": "bottom"
@@ -32735,7 +32638,7 @@
             ],
             "shape": [
               {
-                "usage.dask": 1
+                "usage.dask": 6
               },
               {
                 "type": "bottom"
@@ -33880,7 +33783,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             },
             "drop": {
@@ -34221,7 +34124,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             },
             "__mul__": {
@@ -34338,7 +34241,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 3
+                "usage.dask": 4
               }
             },
             "memory_usage": {
@@ -34719,7 +34622,16 @@
           "classproperties": {}
         }
       },
-      "properties": {}
+      "properties": {
+        "IndexingError": [
+          {
+            "usage.dask": 4
+          },
+          {
+            "type": "bottom"
+          }
+        ]
+      }
     },
     "pandas.core.series": {
       "functions": {},
@@ -34788,7 +34700,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 26
+                "usage.dask": 27
               }
             },
             "to_dict": {
@@ -34904,7 +34816,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 24
+                "usage.dask": 43
               }
             },
             "sum": {
@@ -34952,7 +34864,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 42
+                "usage.dask": 48
               }
             },
             "__getitem__": {
@@ -35006,7 +34918,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 52
+                "usage.dask": 55
               }
             },
             "unique": {
@@ -35019,7 +34931,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 10
               }
             },
             "tolist": {
@@ -35032,7 +34944,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 3
+                "usage.dask": 4
               }
             },
             "memory_usage": {
@@ -35057,7 +34969,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 6
+                "usage.dask": 11
               }
             },
             "__iter__": {
@@ -35096,7 +35008,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             },
             "__ge__": {
@@ -35156,7 +35068,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 19
+                "usage.dask": 21
               }
             },
             "__invert__": {
@@ -35290,7 +35202,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 12
+                "usage.dask": 14
               }
             },
             "count": {
@@ -35320,7 +35232,7 @@
                 }
               },
               "metadata": {
-                "usage.dask": 10
+                "usage.dask": 11
               }
             },
             "sort_values": {
@@ -35339,7 +35251,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 4
+                "usage.dask": 5
               }
             },
             "sort_index": {
@@ -35358,7 +35270,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 4
+                "usage.dask": 5
               }
             },
             "reset_index": {
@@ -35377,7 +35289,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 6
+                "usage.dask": 10
               }
             },
             "iteritems": {
@@ -35390,7 +35302,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 4
+                "usage.dask": 5
               }
             },
             "__add__": {
@@ -36091,42 +36003,6 @@
                 "usage.dask": 21
               }
             },
-            "__ne__": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "module": "dask.dataframe.core",
-                        "name": "Series"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "pandas.core.series",
-                        "name": "Series"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.dask": 5
-              }
-            },
             "lt": {
               "pos_only_required": {},
               "pos_only_optional": {},
@@ -36397,7 +36273,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 7
+                "usage.dask": 10
               }
             },
             "sub": {
@@ -36432,7 +36308,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             },
             "mul": {
@@ -36468,7 +36344,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 4
+                "usage.dask": 5
               }
             },
             "truediv": {
@@ -36503,7 +36379,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 6
+                "usage.dask": 7
               }
             },
             "floordiv": {
@@ -36538,7 +36414,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             },
             "pow": {
@@ -36573,7 +36449,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             },
             "mod": {
@@ -36608,7 +36484,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             },
             "radd": {
@@ -36643,7 +36519,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             },
             "rsub": {
@@ -36678,7 +36554,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             },
             "rmul": {
@@ -36713,7 +36589,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             },
             "rtruediv": {
@@ -36748,7 +36624,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 4
+                "usage.dask": 5
               }
             },
             "rpow": {
@@ -36783,7 +36659,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             },
             "rmod": {
@@ -36818,7 +36694,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             },
             "prod": {
@@ -36861,7 +36737,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 10
+                "usage.dask": 12
               }
             },
             "min": {
@@ -36904,7 +36780,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 15
+                "usage.dask": 17
               }
             },
             "std": {
@@ -36956,7 +36832,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 12
+                "usage.dask": 18
               }
             },
             "var": {
@@ -37020,7 +36896,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 14
+                "usage.dask": 20
               }
             },
             "sem": {
@@ -37089,7 +36965,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 14
               }
             },
             "mean": {
@@ -37132,7 +37008,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 25
+                "usage.dask": 30
               }
             },
             "nunique": {
@@ -37244,7 +37120,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 64
+                "usage.dask": 72
               }
             },
             "rename": {
@@ -37284,7 +37160,7 @@
                 }
               },
               "metadata": {
-                "usage.dask": 23
+                "usage.dask": 25
               }
             },
             "copy": {
@@ -37438,7 +37314,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 7
+                "usage.dask": 8
               }
             },
             "apply": {
@@ -37541,7 +37417,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 8
+                "usage.dask": 10
               }
             },
             "cumsum": {
@@ -37725,7 +37601,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 13
+                "usage.dask": 16
               }
             },
             "squeeze": {
@@ -37794,7 +37670,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             },
             "isin": {
@@ -37890,7 +37766,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 32
+                "usage.dask": 37
               }
             },
             "map": {
@@ -38042,7 +37918,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 20
+                "usage.dask": 22
               }
             },
             "combine": {
@@ -38078,7 +37954,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 6
+                "usage.dask": 7
               }
             },
             "combine_first": {
@@ -38326,7 +38202,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 23
+                "usage.dask": 29
               }
             },
             "nlargest": {
@@ -38567,7 +38443,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 3
+                "usage.dask": 6
               }
             },
             "explode": {
@@ -38678,7 +38554,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 8
+                "usage.dask": 13
               }
             },
             "idxmax": {
@@ -38836,7 +38712,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 24
+                "usage.dask": 29
               }
             },
             "__array_wrap__": {
@@ -38925,7 +38801,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 83
+                "usage.dask": 87
               }
             }
           },
@@ -38933,11 +38809,33 @@
             "__ne__": {
               "pos_only_required": {
                 "_0": {
-                  "type": "type",
-                  "name": {
-                    "module": "pandas.core.series",
-                    "name": "Series"
-                  }
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "dask.dataframe.core",
+                        "name": "Series"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "pandas.core.series",
+                        "name": "Series"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": "type",
+                      "name": {
+                        "module": "pandas.core.series",
+                        "name": "Series"
+                      }
+                    }
+                  ]
                 }
               },
               "pos_only_optional": {},
@@ -38948,7 +38846,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 7
               }
             }
           },
@@ -39125,7 +39023,7 @@
           "classproperties": {
             "__name__": [
               {
-                "usage.dask": 5
+                "usage.dask": 7
               },
               {
                 "type": "bottom"
@@ -39772,7 +39670,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             },
             "isin": {
@@ -39889,7 +39787,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 3
+                "usage.dask": 4
               }
             },
             "to_series": {
@@ -40198,7 +40096,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             },
             "astype": {
@@ -40724,7 +40622,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 40
+            "usage.dask": 43
           }
         },
         "fft2": {
@@ -40953,7 +40851,7 @@
             }
           },
           "metadata": {
-            "usage.dask": 36
+            "usage.dask": 37
           }
         },
         "rfft": {
@@ -43757,7 +43655,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             },
             "__mul__": {
@@ -43868,7 +43766,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 27
+                "usage.dask": 39
               }
             },
             "__truediv__": {
@@ -44117,7 +44015,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             },
             "cumprod": {
@@ -44136,7 +44034,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             }
           },
@@ -45212,7 +45110,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 5
+                "usage.dask": 6
               }
             }
           },
@@ -45293,7 +45191,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 14
               }
             },
             "as_ordered": {
@@ -45768,7 +45666,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 26
+                "usage.dask": 27
               }
             },
             "__getitem__": {
@@ -45843,7 +45741,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 63
+                "usage.dask": 73
               }
             },
             "count": {
@@ -45991,7 +45889,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 11
+                "usage.dask": 12
               }
             },
             "nunique": {
@@ -46040,7 +45938,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 19
+                "usage.dask": 21
               }
             },
             "aggregate": {
@@ -46356,7 +46254,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 21
+                "usage.dask": 24
               }
             },
             "mean": {
@@ -46540,7 +46438,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 19
+                "usage.dask": 21
               }
             },
             "cumsum": {
@@ -47471,7 +47369,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             },
             "max": {
@@ -47484,7 +47382,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             },
             "to_series": {
@@ -47537,7 +47435,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 11
+                "usage.dask": 13
               }
             },
             "_maybe_cast_slice_bound": {
@@ -47601,7 +47499,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 3
+                "usage.dask": 4
               }
             },
             "__gt__": {
@@ -47681,7 +47579,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             }
           },
@@ -48171,7 +48069,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 1
+                "usage.dask": 2
               }
             },
             "__add__": {
@@ -48449,7 +48347,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 12
               }
             },
             "__getitem__": {
@@ -48513,7 +48411,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 3
+                "usage.dask": 5
               }
             },
             "cat": {
@@ -48566,7 +48464,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 4
+                "usage.dask": 7
               }
             },
             "split": {
@@ -48594,7 +48492,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 5
+                "usage.dask": 9
               }
             },
             "count": {
@@ -48808,7 +48706,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 5
+                "usage.dask": 9
               }
             },
             "__getitem__": {
@@ -48943,7 +48841,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 11
+                "usage.dask": 12
               }
             },
             "set_names": {
@@ -48973,7 +48871,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 2
+                "usage.dask": 3
               }
             },
             "union": {
@@ -49042,7 +48940,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 7
+                "usage.dask": 8
               }
             },
             "from_product": {
@@ -49757,7 +49655,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 8
+                "usage.dask": 10
               }
             }
           },
@@ -51624,7 +51522,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 3
+                "usage.dask": 4
               }
             }
           },
@@ -55884,7 +55782,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.dask": 9
+                "usage.dask": 12
               }
             },
             "cov": {

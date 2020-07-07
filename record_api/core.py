@@ -118,6 +118,16 @@ def _encode_method(m: types.MethodType):
 
 @encode.register
 def _encode_method_descriptor(m: types.MethodDescriptorType):
+    """
+    This is actually a method, not a classmethod!
+
+    np.ndarray.mean(x)
+    or
+    np.arange(10).mean()
+
+    both end up being the same call, we can't tell the difference.
+    """
+    # TODO: Remove class, we can grab off of first arg
     return {"name": m.__name__, "class": m.__objclass__}
 
 

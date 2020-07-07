@@ -35,7 +35,9 @@ __all__ = [
     "ClassMethodOutput",
     "UnionOutput",
     "BottomOutput",
+    "MethodDescriptorOutput",
     "parser_config",
+    "NumpyUfuncOutput",
 ]
 
 # If there are more than this amount in a union, just use any
@@ -61,7 +63,7 @@ def create_type(o: object) -> OutputType:
     try:
         tp = pydantic.parse_obj_as(InputType, o)  # type: ignore
     except pydantic.error_wrappers.ValidationError:
-        raise ValueError(o)
+        raise ValueError(f"Could not parse JSON as input type: {o}")
     return to_output(tp)
 
 
@@ -649,12 +651,29 @@ class MethodInput(InputTypeBase):
 
 class MethodDescriptorInput(InputTypeBase):
     t: typing.Literal["method_descriptor"]
+    # TODO: Remove value, b/c its on signature
     v: MethodDescriptorInputValue
 
-    def to_output(self) -> ClassMethodOutput:
-        return ClassMethodOutput(
-            name=self.v.name, class_=self.v.class_.to_output().name
-        )
+    def to_output(self) -> MethodDescriptorOutput:
+        return MethodDescriptorOutput(name=self.v.name)
+
+
+class MethodDescriptorOutput(OutputTypeBase):  # type: ignore
+    type: typing.Literal["method_descriptor"] = "method_descriptor"
+    name: str
+
+    @property
+    def annotation(self):
+        return cst.Name("Callable")
+
+    @classmethod
+    def unify(
+        cls, tps: typing.Iterable[MethodDescriptorOutput]
+    ) -> typing.Union[MethodDescriptorOutput, FunctionOutput]:
+        tps = set(tps)
+        if len(tps) == 1:
+            return tps.pop()
+        return FunctionOutput()
 
 
 class MethodDescriptorInputValue(BaseModel):
@@ -689,8 +708,24 @@ class NumpyUfuncInput(InputTypeBase):
     t: NumpyUfuncInputType
     v: str
 
-    def to_output(self) -> FunctionOutput:
-        return FunctionOutput(name=NamedOutput(module="numpy", name=self.v))
+    def to_output(self) -> NumpyUfuncOutput:
+        return NumpyUfuncOutput(name=self.v)
+
+
+class NumpyUfuncOutput(OutputTypeBase):
+    type: typing.Literal["numpy.ufunc"] = "numpy.ufunc"
+    name: typing.Optional[str] = None
+
+    @property
+    def annotation(self):
+        return NamedOutput(module="numpy", name="ufunc").annotation
+
+    @classmethod
+    def unify(cls, tps: typing.Iterable[NumpyUfuncOutput]) -> NumpyUfuncOutput:
+        names = set(tp.name for tp in tps)
+        if len(names) == 1:
+            return NumpyUfuncOutput(name=names.pop())
+        return NumpyUfuncOutput()
 
 
 class NumpyUfuncInputType(BaseModel):
@@ -766,6 +801,18 @@ class BottomOutput(OutputTypeBase):
         return cst.Name("object")
 
 
+class OtherTypeInput(InputTypeBase):
+    """
+    Types that have different metaclasses will have a `t` that isn't `type` but their metaclass.
+    """
+
+    t: NamedInput
+    v: NamedInput
+
+    def to_output(self) -> TypeOutput:
+        return TypeOutput(name=NamedOutput.from_input(self.v))
+
+
 # Make them unions not subclasses so they are closed
 # and pydantic will iterate through to find right one
 InputType = typing.Union[
@@ -787,6 +834,7 @@ InputType = typing.Union[
     NumpyConvert2MAInput,
     NumpyNDArrayInput,
     NumpyDTypeInput,
+    OtherTypeInput,
 ]
 OutputType = typing.Union[
     NoneOutput,
@@ -805,6 +853,8 @@ OutputType = typing.Union[
     ClassMethodOutput,
     UnionOutput,
     BottomOutput,
+    MethodDescriptorOutput,
+    NumpyUfuncOutput,
 ]
 
 for cls in (InputType.__args__ + OutputType.__args__) + (  # type: ignore

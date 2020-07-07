@@ -61,9 +61,12 @@
 {"function":{"t":{"module":"numpy","name":"ufunc"},"v":"add"},"params":{"args":[{"t":{"module":"numpy","name":"ndarray"},"v":{"dtype":"int64"}},{"t":{"module":"numpy","name":"ndarray"},"v":{"dtype":"int64"}}]},"n":1}
 {"function":{"t":{"module":"numpy","name":"ufunc"},"v":"exp"},"params":{"args":[{"t":{"module":"numpy","name":"ndarray"},"v":{"dtype":"int64"}}]},"n":1}
 {"function":{"t":{"module":"numpy","name":"ufunc"},"v":"log"},"params":{"args":[{"t":{"module":"numpy","name":"ndarray"},"v":{"dtype":"int64"}}]},"n":1}
-{"function":{"t":"method_descriptor","v":{"class":{"t":"type","v":{"module":"numpy","name":"ndarray"}},"name":"mean"}},"params":{"args":[{"t":{"module":"numpy","name":"ndarray"},"v":{"dtype":"int64"}}]},"n":1}
+{"function":{"t":"method_descriptor","v":{"class":{"t":"type","v":{"module":"numpy","name":"ndarray"}},"name":"mean"}},"params":{"args":[{"t":{"module":"numpy","name":"ndarray"},"v":{"dtype":"int64"}}]},"n":2}
 {"function":{"t":"builtin_function_or_method","v":"getattr"},"params":{"args":[{"t":"module","v":"numpy"},"ndarray"]},"n":1}
-{"function":{"t":"method_descriptor","v":{"class":{"t":"type","v":{"module":"numpy","name":"ndarray"}},"name":"sum"}},"params":{"args":[{"t":{"module":"numpy","name":"ndarray"},"v":{"dtype":"int64"}}]},"n":1}
+{"function":{"t":"builtin_function_or_method","v":"getattr"},"params":{"args":[{"t":"module","v":"numpy"},"polynomial"]},"n":1}
+{"function":{"t":"builtin_function_or_method","v":"getattr"},"params":{"args":[{"t":"module","v":"numpy.polynomial"},"chebyshev"]},"n":1}
+{"function":{"t":"builtin_function_or_method","v":"getattr"},"params":{"args":[{"t":"module","v":"numpy.polynomial.chebyshev"},"Chebyshev"]},"n":1}
+{"bound_params":{"pos_or_kw":[["deg",{"t":"int"}]]},"function":{"t":"method","v":{"name":"basis","self":{"t":{"module":"abc","name":"ABCMeta"},"v":{"module":"numpy.polynomial.chebyshev","name":"Chebyshev"}}}},"n":1}
 {"bound_params":{"pos_only":[["a",{"t":{"module":"numpy","name":"ndarray"},"v":{"dtype":"int64"}}],["b",{"t":{"module":"numpy","name":"ndarray"},"v":{"dtype":"int64"}}]]},"function":{"t":"builtin_function_or_method","v":{"module":"_operator","name":"eq"}},"n":1}
 {"bound_params":{"pos_only":[["a",{"t":{"module":"numpy","name":"ndarray"},"v":{"dtype":"int64"}}],["b",{"t":"int"}]]},"function":{"t":"builtin_function_or_method","v":{"module":"_operator","name":"le"}},"n":1}
 {"function":{"t":"method_descriptor","v":{"class":{"t":"type","v":{"module":"numpy","name":"ndarray"}},"name":"sort"}},"params":{"args":[{"t":{"module":"numpy","name":"ndarray"},"v":{"dtype":"int64"}}]},"n":1}

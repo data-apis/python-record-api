@@ -77,13 +77,23 @@ class Module(pydantic.BaseModel):
             yield class_.class_def(name)
 
     def __ior__(self, other: Module) -> Module:
-        update_ior(self.classes, other.classes)
-        update_ior(self.functions, other.functions)
-
+        """
+        property -> function
+        function -> class constructor
+        """
+        # properties
         update_metadata_and_types(self.properties, other.properties)
-        # properties are union of properties, minus any things that are already classes/functins
-        remove_keys(self.properties, self.classes.keys())
-        remove_keys(self.properties, self.functions.keys())
+
+        # functions
+        update_ior(self.functions, other.functions)
+        # property -> function
+        merge_intersection(self.functions, self.properties, merge_property_into_method)
+
+        # classes
+        update_ior(self.classes, other.classes)
+        # function -> class constructor
+        merge_intersection(self.classes, self.functions, merge_method_class)
+
         return self
 
 
@@ -126,23 +136,43 @@ class Class(pydantic.BaseModel):
             yield sig.function_def(name, indent=1)
 
     def __ior__(self, other: Class) -> Class:
+        """
+        There is a partial ordering of things here which define which get combined to which:
+
+        * property -> classproperty
+        * property -> method
+        * method -> classmethod
+        * classproperty -> classmethod
+
+        * (implicit) property -> classmethod 
+        """
         if self.constructor and other.constructor:
             self.constructor |= other.constructor
         else:
             self.constructor = other.constructor
-        update_ior(self.methods, other.methods)
-        update_ior(self.classmethods, other.classmethods)
-
-        update_metadata_and_types(self.classproperties, other.classproperties)
-        remove_keys(self.classproperties, self.methods.keys())
-        remove_keys(self.classproperties, self.classmethods.keys())
-
+        # properties
         update_metadata_and_types(self.properties, other.properties)
-        remove_keys(self.properties, self.methods.keys())
-        remove_keys(self.properties, self.classmethods.keys())
-        # TODO: merge metadata before deleting
-        # Anything that is both a class property and a property should be only a class property
-        remove_keys(self.properties, self.classproperties.keys())
+
+        # class properties
+        update_metadata_and_types(self.classproperties, other.classproperties)
+        # property -> classproperty
+        merge_intersection(
+            self.classproperties, self.properties, merge_methods_properties
+        )
+
+        # methods
+        update_ior(self.methods, other.methods)
+        # property -> method
+        merge_intersection(self.methods, self.properties, merge_property_into_method)
+
+        # class methods
+        update_ior(self.classmethods, other.classmethods)
+        # method -> classmethod
+        merge_intersection(self.classmethods, self.methods, operator.ior)
+        # classproperty -> classmethod
+        merge_intersection(
+            self.classmethods, self.classproperties, merge_property_into_method
+        )
 
         return self
 
@@ -314,6 +344,7 @@ class Signature(pydantic.BaseModel):
     ) -> Signature:
         # If we don't know what the args/kwargs are, assume the args are positional only
         # and the kwargs and keyword only
+        # TODO: Add ordering!
         return cls(
             pos_only_required={f"_{i}": create_type(v) for i, v in enumerate(args)},
             kw_only_required={k: create_type(v) for k, v in kwargs.items()},
@@ -343,6 +374,9 @@ class Signature(pydantic.BaseModel):
         )
 
     def __ior__(self, other: Signature) -> Signature:
+        """
+        pos only
+        """
         self.validate_keys_unique()
         other.validate_keys_unique()
 
@@ -535,6 +569,7 @@ def unify_named_types(
 
 K = typing.TypeVar("K")
 V = typing.TypeVar("V")
+VR = typing.TypeVar("VR")
 
 
 class DontAdd:
@@ -577,6 +612,17 @@ def move(
         del r[k]
 
 
+def merge_intersection(
+    l: typing.Dict[K, V], r: typing.Dict[K, VR], f: typing.Callable[[V, VR], V]
+) -> None:
+    """
+    Moves all keys that are present in both left and right only to left, using function to merge them!
+    """
+    for k in set(l.keys()) & set(r.keys()):
+        vr = r.pop(k)
+        l[k] = f(l[k], vr)
+
+
 def update(
     l: typing.Dict[K, V],
     *rs: typing.Dict[K, V],
@@ -604,12 +650,27 @@ update_add = functools.partial(update, f=operator.add)
 update_unify = functools.partial(update, f=lambda l, r: unify((l, r)))
 
 
-def _f(
+def merge_property_into_method(
+    l: Signature, r: typing.Tuple[Metadata, OutputType]
+) -> Signature:
+    """
+    Merges a property into a method by dropping type of property and merging metadat
+    """
+    update_add(l.metadata, r[0])
+    return l
+
+
+def merge_method_class(l: Class, r: Signature) -> Class:
+    l |= Class(constructor=r)
+    return l
+
+
+def merge_methods_properties(
     l: typing.Tuple[Metadata, OutputType], r: typing.Tuple[Metadata, OutputType]
 ) -> typing.Tuple[Metadata, OutputType]:
     update_add(l[0], r[0])
     return (l[0], unify((l[1], r[1])))
 
 
-update_metadata_and_types = functools.partial(update, f=_f)
+update_metadata_and_types = functools.partial(update, f=merge_methods_properties)
 

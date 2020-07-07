@@ -12,6 +12,7 @@ from . import jsonl
 from .apis import *
 from .type_analysis import *
 
+# TODO: add support for classmethods!
 
 INPUT = os.environ["PYTHON_RECORD_API_INPUT"]
 OUTPUT = os.environ["PYTHON_RECORD_API_OUTPUT"]
@@ -60,6 +61,49 @@ def _type(f: TypeOutput, s: Signature) -> typing.Optional[API]:
         warnings.warn(f"Ignoring call to builtin type {name}")
         return None
     return API(modules={module: Module(classes={name: Class(constructor=s)})})
+
+
+@process_function.register
+def _method_descriptor(f: MethodDescriptorOutput, s: Signature) -> typing.Optional[API]:
+    """
+    Method where type is first arg of signature...
+    """
+    if "_0" not in s.pos_only_required:
+        # TODO: Might have to support other initial self arg if there is a method_descriptor with a signature set!
+        warnings.warn(
+            f"Cannot deal with method descriptor with signature that doesn't have _0 pos only required\n{f!r}\n{s!r}"
+        )
+        return None
+    self_arg = s.pos_only_required.pop("_0")
+    if isinstance(self_arg, OtherOutput):
+        tp = self_arg.type
+        if not tp.module:
+            warnings.warn(
+                f"Cannot deal with method descriptor with no module\n{f!r}\n{s!r}"
+            )
+            return None
+        return API(
+            modules={tp.module: Module(classes={tp.name: Class(methods={f.name: s})})}
+        )
+    if isinstance(self_arg, NumpyUfuncOutput):
+        return API(
+            modules={"numpy": Module(classes={"ufunc": Class(methods={f.name: s})})}
+        )
+    warnings.warn(
+        f"Cannot deal with method descriptor with non other output self arg\n{f!r}\n{s!r}\n{self_arg!r}"
+    )
+    return None
+
+
+@process_function.register
+def _ufunc(f: NumpyUfuncOutput, s: Signature) -> typing.Optional[API]:
+    """
+    Calling ufuncs should translate to __call__ of ufunc class
+    """
+    # Otherwise assume this is a normal function
+    return API(
+        modules={"numpy": Module(classes={"ufunc": Class(methods={"__call__": s})})}
+    )
 
 
 @process_function.register
