@@ -69,11 +69,11 @@ class Module(pydantic.BaseModel):
         )
         yield from assign_properties(self.properties)
 
-        for name, sig in self.functions.items():
+        for name, sig in sort_items(self.functions):
             if bad_name(name):
                 continue
             yield sig.function_def(name, "function")
-        for name, class_ in self.classes.items():
+        for name, class_ in sort_items(self.classes):
             yield class_.class_def(name)
 
     def __ior__(self, other: Module) -> Module:
@@ -117,14 +117,14 @@ class Class(pydantic.BaseModel):
             yield self.constructor.function_def("__init__", "method", indent=1)
         yield from assign_properties(self.classproperties, True)
 
-        for name, sig in self.classmethods.items():
+        for name, sig in sort_items(self.classmethods):
             if bad_name(name):
                 continue
             yield sig.function_def(name, "classmethod", indent=1)
 
         yield from assign_properties(self.properties)
 
-        for name, sig in self.methods.items():
+        for name, sig in sort_items(self.methods):
             if bad_name(name):
                 continue
             yield sig.function_def(name, "method", indent=1)
@@ -174,7 +174,7 @@ class Class(pydantic.BaseModel):
 def assign_properties(
     p: typing.Dict[str, typing.Tuple[Metadata, Type]], is_classvar=False
 ) -> typing.Iterable[cst.SimpleStatementLine]:
-    for name, metadata_and_tp in p.items():
+    for name, metadata_and_tp in sort_items(p):
         metadata, tp = metadata_and_tp
         ann = tp.annotation
         yield cst.SimpleStatementLine(
@@ -197,6 +197,8 @@ def assign_properties(
             ],
         )
 
+def sort_items(d: typing.Dict[str, V]) -> typing.Iterable[typing.Tuple[str, V]]:
+    return sorted(d.items(), key=lambda kv: kv[0])
 
 PartialKeyOrdering = typing.List[typing.Tuple[str, str]]
 
