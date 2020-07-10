@@ -33,7 +33,7 @@ spec:
 
   - name: record-api
     container:
-      image: "dataapis/python-record-api:{{workflow.parameters.label}}-{{workflow.parameters.tag}}"
+      image: "saulshanabrook/python-record-api:{{workflow.parameters.label}}-{{workflow.parameters.tag}}"
       env:
       - name: PYTHON_RECORD_API_OUTPUT_FILE
         value: /tmp/raw.jsonl
@@ -52,7 +52,7 @@ spec:
       - name: grouped
         path: /tmp/grouped.jsonl
     container:
-      image: "dataapis/python-record-api:base-{{workflow.parameters.tag}}"
+      image: "saulshanabrook/python-record-api:base-{{workflow.parameters.tag}}"
       command: [python, -m, record_api.line_counts]
       env:
         - name: PYTHON_RECORD_API_INPUT
@@ -70,7 +70,7 @@ spec:
       - name: api
         path: /tmp/api.json
     container:
-      image: "dataapis/python-record-api:base-{{workflow.parameters.tag}}"
+      image: "saulshanabrook/python-record-api:base-{{workflow.parameters.tag}}"
       command: [python, -m, record_api.infer_apis]
       env:
         - name: PYTHON_RECORD_API_LABEL

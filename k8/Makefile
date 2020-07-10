@@ -1,6 +1,6 @@
 all: images
 
-VERSION := 1.1.0
+VERSION := 0.0.0
 
 IMAGES := dask sample-usage skimage sklearn xarray 
 
@@ -28,8 +28,8 @@ argo-workflow-submit:
 images: $(addprefix image-,$(IMAGES))
 
 image-%: image-record-api
-	docker build -t dataapis/python-record-api:$(*F)-$(VERSION) --build-arg label=$(VERSION) ./images/$(*F)
+	docker build -t saulshanabrook/python-record-api:$(*F)-$(VERSION) ./images/$(*F)
 
 
 image-record-api:
-	docker build -t dataapis/python-record-api:base-$(VERSION) ./images/record-api
+	docker build -t saulshanabrook/python-record-api:base-1.1.0 ./images/record-api
