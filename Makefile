@@ -1,6 +1,6 @@
 .PHONY: groupby_location clean_groupby_location clean_api clean_raw clean_typing clean all test
 
-LIBRARIES := sample-usage skimage xarray sklearn dask
+LIBRARIES := dask pandas sample-usage skimage sklearn xarray
 
 all: data/typing/numpy.py
 

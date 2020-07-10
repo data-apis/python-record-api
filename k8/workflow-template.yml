@@ -1,13 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Workflow
+kind: WorkflowTemplate
 metadata:
+  name: python-record-api
   generateName: record-
 spec:
+  podGC:
+    strategy: OnWorkflowCompletion
   entrypoint: all
   arguments:
     parameters:
     - name: label
+      value: "1.1.0"
     - name: tag
+      value: sample-usage
   templates:
   - name: all
     steps:
@@ -28,7 +33,7 @@ spec:
 
   - name: record-api
     container:
-      image: "dataapis/{{workflow.parameters.label}}:{{workflow.parameters.tag}}"
+      image: "dataapis/python-record-api:{{workflow.parameters.label}}-{{workflow.parameters.tag}}"
       env:
       - name: PYTHON_RECORD_API_OUTPUT_FILE
         value: /tmp/raw.jsonl
@@ -47,7 +52,7 @@ spec:
       - name: grouped
         path: /tmp/grouped.jsonl
     container:
-      image: "dataapis/record_api:{{workflow.parameters.tag}}"
+      image: "dataapis/python-record-api:base-{{workflow.parameters.tag}}"
       command: [python, -m, record_api.line_counts]
       env:
         - name: PYTHON_RECORD_API_INPUT
@@ -65,7 +70,7 @@ spec:
       - name: api
         path: /tmp/api.json
     container:
-      image: "dataapis/record_api:{{workflow.parameters.tag}}"
+      image: "dataapis/python-record-api:base-{{workflow.parameters.tag}}"
       command: [python, -m, record_api.infer_apis]
       env:
         - name: PYTHON_RECORD_API_LABEL

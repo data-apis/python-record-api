@@ -1,5 +1,5 @@
 ARG label
-FROM dataapis/record-api:$label
+FROM dataapis/python-record-api:base-$label
 
 RUN pip install numpy
 

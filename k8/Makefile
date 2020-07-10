@@ -1,6 +1,8 @@
 all: images
 
-IMAGES := sample-usage
+VERSION := 1.1.0
+
+IMAGES := dask sample-usage skimage sklearn xarray 
 
 all: $(addprefix ../data/api/,$(addsuffix .json,$(IMAGES)))
 
@@ -13,18 +15,21 @@ all: $(addprefix ../data/api/,$(addsuffix .json,$(IMAGES)))
 	rm api
 	mv -f api.json $@
 
-argo-submit-%: image-%
+argo-submit-%: image-% argo-workflow-submit
 	-argo delete record-$(*F)
-	argo submit record.workflow.yml -p label="$(*F)" -p tag="1.1.0" --name 'record-$(*F)' --watch
+	argo submit --from workflowtemplate/python-record-api -p label="$(*F)" -p tag="$(VERSION)" --name 'record-$(*F)' --watch
 
+
+argo-workflow-submit:
+	-argo template delete python-record-api
+	argo template create workflow-template.yml
 
 
 images: $(addprefix image-,$(IMAGES))
 
 image-%: image-record-api
-	docker build -t dataapis/$(*F):1.1.0 --build-arg label=1.1.0 ./images/$(*F)
-
+	docker build -t dataapis/python-record-api:$(*F)-$(VERSION) --build-arg label=$(VERSION) ./images/$(*F)
 
 
 image-record-api:
-	docker build -t dataapis/record-api:1.1.0 ./images/record-api
+	docker build -t dataapis/python-record-api:base-$(VERSION) ./images/record-api
