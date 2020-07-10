@@ -1,3 +1,4 @@
 from typing import *
 
-NDArrayOperatorsMixin = ...
+# usage.dask: 1
+NDArrayOperatorsMixin: object

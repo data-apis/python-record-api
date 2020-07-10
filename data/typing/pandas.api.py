@@ -1,3 +1,4 @@
 from typing import *
 
-types = ...
+# usage.dask: 18
+types: object

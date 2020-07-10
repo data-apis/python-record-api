@@ -1,3 +1,4 @@
 from typing import *
 
-frequencies = ...
+# usage.dask: 6
+frequencies: object

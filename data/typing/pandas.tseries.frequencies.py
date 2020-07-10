@@ -1,5 +1,8 @@
 from typing import *
 
 
-def to_offset(freq):
-    "usage.dask: 37"
+def to_offset(freq: object):
+    """
+    usage.dask: 37
+    """
+    ...

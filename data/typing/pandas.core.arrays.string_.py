@@ -2,4 +2,6 @@ from typing import *
 
 
 class StringDtype:
-    kind = ...
+
+    # usage.dask: 1
+    kind: object

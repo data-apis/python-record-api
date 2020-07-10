@@ -3,25 +3,14 @@ This analysis is meant to run on the raw data and produce a JSON represenation o
 inferred API.
 """
 from __future__ import annotations
-
-import collections
-import operator
+import functools
 import os
 import typing
 import warnings
-import itertools
-import dataclasses
-import warnings
-import functools
-
-import tqdm.std
-import orjson
-from typing_extensions import TypedDict
 
 from . import jsonl
-from .type_analysis import *
 from .apis import *
-
+from .type_analysis import *
 
 INPUT = os.environ["PYTHON_RECORD_API_INPUT"]
 OUTPUT = os.environ["PYTHON_RECORD_API_OUTPUT"]
@@ -38,7 +27,15 @@ def __main__():
         for row in f:
             new_api = parse_line(**row)
             if new_api:
-                api |= new_api
+                # Enable for debugging
+                # new_api.validate_again()
+                try:
+                    api |= new_api
+                except Exception:
+                    raise ValueError(
+                        f"Could not process line:\n\n  line={row!r}\n\n  new_api={new_api!r}"
+                    )
+                api.validate_again()
     res = api.json()
     with open(OUTPUT, "w") as o:
         o.write(res)
@@ -73,6 +70,60 @@ def _type(f: TypeOutput, s: Signature) -> typing.Optional[API]:
 
 
 @process_function.register
+def _method_descriptor(f: MethodDescriptorOutput, s: Signature) -> typing.Optional[API]:
+    """
+    Method where type is first arg of signature...
+    """
+    if "_0" not in s.pos_only_required:
+        # TODO: Might have to support other initial self arg if there is a method_descriptor with a signature set!
+        warnings.warn(
+            f"Cannot deal with method descriptor with signature that doesn't have _0 pos only required\n{f!r}\n{s!r}"
+        )
+        return None
+    self_arg = s.pos_only_required["_0"]
+    # Move all other integer keys down one
+    s.pos_only_required = {
+        (f"_{(int(k[1:]) - 1)}" if k.startswith("_") else k): v
+        for k, v in s.pos_only_required.items()
+        if k != "_0"
+    }
+    if isinstance(self_arg, OtherOutput):
+        tp = self_arg.type
+        if not tp.module:
+            warnings.warn(
+                f"Cannot deal with method descriptor with no module\n{f!r}\n{s!r}"
+            )
+            return None
+        return API(
+            modules={tp.module: Module(classes={tp.name: Class(methods={f.name: s})})}
+        )
+    if isinstance(self_arg, NumpyUfuncOutput):
+        return API(
+            modules={"numpy": Module(classes={"ufunc": Class(methods={f.name: s})})}
+        )
+    warnings.warn(
+        f"Cannot deal with method descriptor with non other output self arg\n{f!r}\n{s!r}\n{self_arg!r}"
+    )
+    return None
+
+
+@process_function.register
+def _ufunc(f: NumpyUfuncOutput, s: Signature) -> typing.Optional[API]:
+    """
+    Calling ufuncs should translate to __call__ of ufunc class + attribute with type ufunc for name
+    """
+    # Otherwise assume this is a normal function
+    return API(
+        modules={
+            "numpy": Module(
+                properties={f.name: (s.metadata, f)},
+                classes={"ufunc": Class(methods={"__call__": s})},
+            )
+        }
+    )
+
+
+@process_function.register
 def _function(f: FunctionOutput, s: Signature) -> typing.Optional[API]:
     if not f.name:
         warnings.warn(f"cannot deal with function with no name {f} {s}")
@@ -85,7 +136,7 @@ def _function(f: FunctionOutput, s: Signature) -> typing.Optional[API]:
     except KeyError:
         pass
     else:
-        return callback(*s.initial_args)
+        return callback(s.metadata, *s.initial_args)
     # Otherwise skip if we have a builtin in operator we don't handle yet
     if module is None:
         warnings.warn(f"could not handle builtin {name}")
@@ -107,21 +158,28 @@ def _method_no_self(f: MethodWithoutSelfOutput, s: Signature) -> typing.Optional
     return API(modules={module: Module(classes={cls_name: Class(methods={f.name: s})})})
 
 
-def _iter(instance: OutputType) -> typing.Optional[API]:
+def _iter(metadata: Metadata, instance: OutputType) -> typing.Optional[API]:
     if not isinstance(instance, OtherOutput) or not instance.type.module:
         warnings.warn(f"iter with {instance}")
         return None
     return API(
         modules={
             instance.type.module: Module(
-                classes={instance.type.name: Class(methods={"__iter__": Signature()})}
+                classes={
+                    instance.type.name: Class(
+                        methods={"__iter__": Signature(metadata=metadata)}
+                    )
+                }
             )
         }
     )
 
 
 def _setattr(
-    instance: OutputType, attr_type: OutputType, value_type: OutputType
+    metadata: Metadata,
+    instance: OutputType,
+    attr_type: OutputType,
+    value_type: OutputType,
 ) -> typing.Optional[API]:
     if (
         not isinstance(attr_type, StringOutput)
@@ -132,12 +190,13 @@ def _setattr(
         return None
 
     attr = next(iter(attr_type.options))
+    properties = {attr: (metadata, value_type)}
     if isinstance(instance, OtherOutput):
         # getting an attribute on a instance
         return API(
             modules={
                 instance.type.module: Module(
-                    classes={instance.type.name: Class(properties={attr: value_type})}
+                    classes={instance.type.name: Class(properties=properties)}
                 )
             }
         )
@@ -147,16 +206,14 @@ def _setattr(
             # https://docs.python.org/3/library/warnings.html#warnings.warn_explicit
             return None
         assert instance.name
-        return API(modules={instance.name: Module(properties={attr: value_type})})
+        return API(modules={instance.name: Module(properties=properties)})
     if isinstance(instance, TypeOutput):
         assert instance.name
         assert instance.name.module
         return API(
             modules={
                 instance.name.module: Module(
-                    classes={
-                        instance.name.name: Class(classproperties={attr: value_type})
-                    }
+                    classes={instance.name.name: Class(classproperties=properties)}
                 )
             }
         )
@@ -164,22 +221,28 @@ def _setattr(
     return None
 
 
-def _getitem(inst: OutputType, idx: OutputType) -> typing.Optional[API]:
-    return record_method(inst, "__getitem__", sig(idx))
+def _getitem(
+    metadata: Metadata, inst: OutputType, idx: OutputType
+) -> typing.Optional[API]:
+    return record_method(inst, "__getitem__", sig(metadata, idx))
 
 
-def _contains(container: OutputType, item: OutputType) -> typing.Optional[API]:
-    return record_method(container, "__contains__", sig(item))
+def _contains(
+    metadata: Metadata, container: OutputType, item: OutputType
+) -> typing.Optional[API]:
+    return record_method(container, "__contains__", sig(metadata, item))
 
 
 def _setitem(
-    inst: OutputType, idx: OutputType, value: OutputType
+    metadata: Metadata, inst: OutputType, idx: OutputType, value: OutputType
 ) -> typing.Optional[API]:
-    return record_method(inst, "__setitem__", sig(idx, value))
+    return record_method(inst, "__setitem__", sig(metadata, idx, value))
 
 
-def _unary_op(method_name: str, inst: OutputType) -> typing.Optional[API]:
-    return record_method(inst, f"__{method_name}__", sig())
+def _unary_op(
+    method_name: str, metadata: Metadata, inst: OutputType
+) -> typing.Optional[API]:
+    return record_method(inst, f"__{method_name}__", sig(metadata))
 
 
 def should_output(o: OutputType) -> bool:
@@ -190,16 +253,16 @@ def should_output(o: OutputType) -> bool:
 
 
 def _binary_op(
-    method_name: str, inst: OutputType, arg: OutputType
+    method_name: str, metadata: Metadata, inst: OutputType, arg: OutputType
 ) -> typing.Optional[API]:
 
     l = (
-        record_method(inst, f"__{method_name}__", sig(arg))
+        record_method(inst, f"__{method_name}__", sig(metadata, arg))
         if should_output(inst)
         else None
     )
     r = (
-        record_method(arg, f"__r{method_name}__", sig(inst))
+        record_method(arg, f"__r{method_name}__", sig(metadata, inst))
         if should_output(arg)
         else None
     )
@@ -209,16 +272,20 @@ def _binary_op(
 
 
 def _comparator(
-    left_method_name: str, right_method_name: str, inst: OutputType, arg: OutputType
+    left_method_name: str,
+    right_method_name: str,
+    metadata: Metadata,
+    inst: OutputType,
+    arg: OutputType,
 ) -> typing.Optional[API]:
 
     l = (
-        record_method(inst, f"__{left_method_name}__", sig(arg))
+        record_method(inst, f"__{left_method_name}__", sig(metadata, arg))
         if should_output(inst)
         else None
     )
     r = (
-        record_method(arg, f"__{right_method_name}__", sig(inst))
+        record_method(arg, f"__{right_method_name}__", sig(metadata, inst))
         if should_output(arg)
         else None
     )
@@ -228,26 +295,30 @@ def _comparator(
 
 
 def _binary_inplace_op(
-    method_name: str, inst: OutputType, arg: OutputType
+    method_name: str, metadata: Metadata, inst: OutputType, arg: OutputType
 ) -> typing.Optional[API]:
     # If we can trace the inst, do this
     if should_output(inst):
-        return record_method(inst, f"__i{method_name}__", sig(arg))
+        return record_method(inst, f"__i{method_name}__", sig(metadata, arg))
     # otherwise, try recording reversed one for right arg
     if should_output(arg):
-        return record_method(arg, f"__r{method_name}__", sig(inst))
+        return record_method(arg, f"__r{method_name}__", sig(metadata, inst))
     return None
 
 
-def sig(*args: OutputType) -> Signature:
-    return Signature(pos_only_required={f"_{i}": v for i, v in enumerate(args)})
+def sig(metadata: Metadata, *args: OutputType) -> Signature:
+    return Signature(
+        metadata=metadata, pos_only_required={f"_{i}": v for i, v in enumerate(args)}
+    )
 
 
 FunctionCallback = typing.Union[
-    typing.Callable[[], typing.Optional[API]],
-    typing.Callable[[OutputType], typing.Optional[API]],
-    typing.Callable[[OutputType, OutputType], typing.Optional[API]],
-    typing.Callable[[OutputType, OutputType, OutputType], typing.Optional[API]],
+    typing.Callable[[Metadata], typing.Optional[API]],
+    typing.Callable[[Metadata, OutputType], typing.Optional[API]],
+    typing.Callable[[Metadata, OutputType, OutputType], typing.Optional[API]],
+    typing.Callable[
+        [Metadata, OutputType, OutputType, OutputType], typing.Optional[API]
+    ],
 ]
 
 

@@ -1,3 +1,4 @@
 from typing import *
 
-algos = ...
+# usage.dask: 1
+algos: object

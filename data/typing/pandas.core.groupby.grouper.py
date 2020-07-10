@@ -2,4 +2,6 @@ from typing import *
 
 
 class Grouper:
-    __module__ = ...
+
+    # usage.dask: 1
+    __module__: ClassVar[object]

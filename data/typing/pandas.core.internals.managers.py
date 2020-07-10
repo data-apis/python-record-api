@@ -2,8 +2,12 @@ from typing import *
 
 
 class BlockManager:
-    blocks = ...
+
+    # usage.dask: 1
+    blocks: object
 
 
 class SingleBlockManager:
-    blocks = ...
+
+    # usage.dask: 1
+    blocks: object

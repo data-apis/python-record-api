@@ -39,7 +39,7 @@ env PYTHON_RECORD_API_OUTPUT=grouped.jsonl \
 
 # Now we can take the grouped output and create a JSON file with the
 # inferred API
-# The LABEL is saved to record how many calls to this function happened from taht API
+# The LABEL is saved to record how many calls to this function happened from that API
 env PYTHON_RECORD_API_OUTPUT=xarray-api.json \
     PYTHON_RECORD_API_INPUT=grouped.jsonl \
     PYTHON_RECORD_API_LABEL=xarray \

@@ -3,4 +3,7 @@ from typing import *
 
 class _ctypes:
     def _as_parameter_(self, /):
-        "usage.dask: 2"
+        """
+        usage.dask: 2
+        """
+        ...

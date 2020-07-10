@@ -62,6 +62,10 @@ def fn():
     x |= y
     x[0] = y
 
+    np.array("df")
+    # Long string should be recorded properly
+    np.array("df" * 100)
+
     # unpack
     _, *_s = x
 
@@ -91,9 +95,11 @@ def fn():
     np.exp(x)
     np.log(x)
     x.mean()
+    # as class method
+    np.ndarray.mean(x)
 
-    # as classmethod
-    np.ndarray.sum(x)
+    # actual class method
+    np.polynomial.chebyshev.Chebyshev.basis(10)
 
     # comparison
     x == x
@@ -121,7 +127,7 @@ def fn():
 
     # reduction
     np.add.reduce(x)
-    
+
     np.ndarray((0, 1, 2))
 
 
