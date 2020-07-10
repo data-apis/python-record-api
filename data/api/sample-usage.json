@@ -18,7 +18,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.sample_usage": 4
+            "usage.sample-usage": 4
           }
         },
         "array": {
@@ -48,7 +48,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.sample_usage": 3
+            "usage.sample-usage": 3
           }
         },
         "zeros": {
@@ -77,7 +77,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           }
         },
         "ones": {
@@ -106,7 +106,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           }
         },
         "linspace": {
@@ -135,7 +135,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           }
         },
         "eye": {
@@ -154,7 +154,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           }
         },
         "column_stack": {
@@ -177,7 +177,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           }
         },
         "concatenate": {
@@ -214,7 +214,7 @@
           },
           "kw_only_optional": {},
           "metadata": {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           }
         }
       },
@@ -251,7 +251,7 @@
             "kw_only_required": {},
             "kw_only_optional": {},
             "metadata": {
-              "usage.sample_usage": 1
+              "usage.sample-usage": 1
             }
           },
           "methods": {
@@ -265,7 +265,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__neg__": {
@@ -278,7 +278,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__invert__": {
@@ -291,7 +291,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__bool__": {
@@ -304,7 +304,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__iter__": {
@@ -317,7 +317,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 2
+                "usage.sample-usage": 2
               }
             },
             "__getitem__": {
@@ -408,7 +408,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 5
+                "usage.sample-usage": 5
               }
             },
             "__pow__": {
@@ -427,7 +427,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__rpow__": {
@@ -446,7 +446,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 2
+                "usage.sample-usage": 2
               }
             },
             "__mul__": {
@@ -465,7 +465,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__rmul__": {
@@ -484,7 +484,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 2
+                "usage.sample-usage": 2
               }
             },
             "__matmul__": {
@@ -504,7 +504,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__rmatmul__": {
@@ -524,7 +524,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__floordiv__": {
@@ -543,7 +543,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__rfloordiv__": {
@@ -562,7 +562,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__mod__": {
@@ -581,7 +581,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__rmod__": {
@@ -600,7 +600,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__add__": {
@@ -630,7 +630,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 2
+                "usage.sample-usage": 2
               }
             },
             "__radd__": {
@@ -660,7 +660,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 2
+                "usage.sample-usage": 2
               }
             },
             "__sub__": {
@@ -679,7 +679,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__rsub__": {
@@ -698,7 +698,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__lshift__": {
@@ -717,7 +717,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__rlshift__": {
@@ -736,7 +736,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__rshift__": {
@@ -755,7 +755,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__rrshift__": {
@@ -774,7 +774,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__and__": {
@@ -793,7 +793,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__rand__": {
@@ -812,7 +812,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__or__": {
@@ -831,7 +831,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__ror__": {
@@ -850,7 +850,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__ipow__": {
@@ -869,7 +869,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__imul__": {
@@ -888,7 +888,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__ifloordiv__": {
@@ -907,7 +907,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__imod__": {
@@ -926,7 +926,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__iadd__": {
@@ -945,7 +945,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__isub__": {
@@ -964,7 +964,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__ilshift__": {
@@ -983,7 +983,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__irshift__": {
@@ -1002,7 +1002,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__iand__": {
@@ -1021,7 +1021,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__ior__": {
@@ -1040,7 +1040,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__setitem__": {
@@ -1064,7 +1064,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "mean": {
@@ -1077,7 +1077,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 2
+                "usage.sample-usage": 2
               }
             },
             "__eq__": {
@@ -1097,7 +1097,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 2
+                "usage.sample-usage": 2
               }
             },
             "__le__": {
@@ -1116,7 +1116,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "sort": {
@@ -1135,7 +1135,7 @@
                 }
               },
               "metadata": {
-                "usage.sample_usage": 2
+                "usage.sample-usage": 2
               }
             },
             "__gt__": {
@@ -1154,7 +1154,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "reshape": {
@@ -1199,7 +1199,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 2
+                "usage.sample-usage": 2
               }
             },
             "astype": {
@@ -1219,7 +1219,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             },
             "__contains__": {
@@ -1238,7 +1238,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             }
           },
@@ -1246,7 +1246,7 @@
           "properties": {
             "shape": [
               {
-                "usage.sample_usage": 2
+                "usage.sample-usage": 2
               },
               {
                 "type": "tuple",
@@ -1266,7 +1266,7 @@
             ],
             "ndim": [
               {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               },
               {
                 "type": "bottom"
@@ -1274,7 +1274,7 @@
             ],
             "dtype": [
               {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               },
               {
                 "type": "bottom"
@@ -1282,7 +1282,7 @@
             ],
             "size": [
               {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               },
               {
                 "type": "bottom"
@@ -1290,7 +1290,7 @@
             ],
             "T": [
               {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               },
               {
                 "type": "bottom"
@@ -1318,7 +1318,7 @@
             "kw_only_required": {},
             "kw_only_optional": {},
             "metadata": {
-              "usage.sample_usage": 1
+              "usage.sample-usage": 1
             }
           },
           "methods": {},
@@ -1352,7 +1352,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 3
+                "usage.sample-usage": 3
               }
             },
             "reduce": {
@@ -1372,7 +1372,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             }
           },
@@ -1384,7 +1384,7 @@
       "properties": {
         "int16": [
           {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           },
           {
             "type": "bottom"
@@ -1392,7 +1392,7 @@
         ],
         "random": [
           {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           },
           {
             "type": "bottom"
@@ -1400,7 +1400,7 @@
         ],
         "add": [
           {
-            "usage.sample_usage": 2
+            "usage.sample-usage": 2
           },
           {
             "type": "numpy.ufunc",
@@ -1409,7 +1409,7 @@
         ],
         "exp": [
           {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           },
           {
             "type": "numpy.ufunc",
@@ -1418,7 +1418,7 @@
         ],
         "log": [
           {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           },
           {
             "type": "numpy.ufunc",
@@ -1427,7 +1427,7 @@
         ],
         "ndarray": [
           {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           },
           {
             "type": "bottom"
@@ -1435,7 +1435,7 @@
         ],
         "polynomial": [
           {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           },
           {
             "type": "bottom"
@@ -1449,7 +1449,7 @@
       "properties": {
         "mtrand": [
           {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           },
           {
             "type": "bottom"
@@ -1472,7 +1472,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             }
           },
@@ -1489,7 +1489,7 @@
       "properties": {
         "chebyshev": [
           {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           },
           {
             "type": "bottom"
@@ -1519,7 +1519,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.sample_usage": 1
+                "usage.sample-usage": 1
               }
             }
           },
@@ -1530,7 +1530,7 @@
       "properties": {
         "Chebyshev": [
           {
-            "usage.sample_usage": 1
+            "usage.sample-usage": 1
           },
           {
             "type": "bottom"

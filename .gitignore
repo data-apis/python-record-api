@@ -19,3 +19,4 @@ data/raw/*
 .hypothesis
 dist/
 data/groupby_location/
+**/.DS_Store
