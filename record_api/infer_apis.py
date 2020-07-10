@@ -12,8 +12,6 @@ from . import jsonl
 from .apis import *
 from .type_analysis import *
 
-# TODO: add support for classmethods!
-
 INPUT = os.environ["PYTHON_RECORD_API_INPUT"]
 OUTPUT = os.environ["PYTHON_RECORD_API_OUTPUT"]
 LABEL = os.environ["PYTHON_RECORD_API_LABEL"]
@@ -29,7 +27,15 @@ def __main__():
         for row in f:
             new_api = parse_line(**row)
             if new_api:
-                api |= new_api
+                # Enable for debugging
+                # new_api.validate_again()
+                try:
+                    api |= new_api
+                except Exception:
+                    raise ValueError(
+                        f"Could not process line:\n\n  line={row!r}\n\n  new_api={new_api!r}"
+                    )
+                api.validate_again()
     res = api.json()
     with open(OUTPUT, "w") as o:
         o.write(res)
@@ -74,7 +80,13 @@ def _method_descriptor(f: MethodDescriptorOutput, s: Signature) -> typing.Option
             f"Cannot deal with method descriptor with signature that doesn't have _0 pos only required\n{f!r}\n{s!r}"
         )
         return None
-    self_arg = s.pos_only_required.pop("_0")
+    self_arg = s.pos_only_required["_0"]
+    # Move all other integer keys down one
+    s.pos_only_required = {
+        (f"_{(int(k[1:]) - 1)}" if k.startswith("_") else k): v
+        for k, v in s.pos_only_required.items()
+        if k != "_0"
+    }
     if isinstance(self_arg, OtherOutput):
         tp = self_arg.type
         if not tp.module:

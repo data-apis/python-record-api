@@ -8,6 +8,7 @@ import operator
 import typing
 
 import libcst as cst
+import libcst
 import networkx
 import orjson
 import pydantic
@@ -30,7 +31,22 @@ def bad_name(name: str) -> bool:
     return "?" in name or "<" in name
 
 
-class API(pydantic.BaseModel):
+class BaseModel(pydantic.BaseModel):
+    def __repr_args__(self) -> pydantic.ReprArgs:
+        for k, v in super().__repr_args__():
+            if v:
+                yield k, v
+
+    def validate_again(self) -> None:
+        """
+        Use to manually validate for debugging when fields change
+        """
+        _, _, validation_error = pydantic.validate_model(type(self), self.dict())
+        if validation_error:
+            raise validation_error
+
+
+class API(BaseModel):
     # Dotted module name to module
     modules: typing.Dict[str, Module] = pydantic.Field(default_factory=dict)
 
@@ -46,7 +62,7 @@ class API(pydantic.BaseModel):
         return super().json(exclude_none=True, **kwargs)
 
 
-class Module(pydantic.BaseModel):
+class Module(BaseModel):
     functions: typing.Dict[str, Signature] = pydantic.Field(default_factory=dict)
     classes: typing.Dict[str, Class] = pydantic.Field(default_factory=dict)
     properties: typing.Dict[str, typing.Tuple[Metadata, Type]] = pydantic.Field(
@@ -55,7 +71,11 @@ class Module(pydantic.BaseModel):
 
     @property
     def source(self) -> str:
+        # try:
         module = cst.Module(list(self.body))
+        # except libcst.CSTValidationError:
+        #     raise RuntimeError(f"Could not output source for:\n{self!r}")
+
         return module.code
 
     @property
@@ -97,7 +117,7 @@ class Module(pydantic.BaseModel):
         return self
 
 
-class Class(pydantic.BaseModel):
+class Class(BaseModel):
     constructor: typing.Union[Signature, None] = None
     methods: typing.Dict[str, Signature] = pydantic.Field(default_factory=dict)
     classmethods: typing.Dict[str, Signature] = pydantic.Field(default_factory=dict)
@@ -175,6 +195,8 @@ def assign_properties(
     p: typing.Dict[str, typing.Tuple[Metadata, Type]], is_classvar=False
 ) -> typing.Iterable[cst.SimpleStatementLine]:
     for name, metadata_and_tp in sort_items(p):
+        if bad_name(name):
+            continue
         metadata, tp = metadata_and_tp
         ann = tp.annotation
         yield cst.SimpleStatementLine(
@@ -197,28 +219,28 @@ def assign_properties(
             ],
         )
 
+
 def sort_items(d: typing.Dict[str, V]) -> typing.Iterable[typing.Tuple[str, V]]:
     return sorted(d.items(), key=lambda kv: kv[0])
 
-PartialKeyOrdering = typing.List[typing.Tuple[str, str]]
+
+PartialKeyOrdering = typing.Set[typing.Tuple[str, str]]
 
 
-class Signature(pydantic.BaseModel):
+class Signature(BaseModel):
     # See for a helpful spec https://www.python.org/dev/peps/pep-0570/#syntax-and-semantics
     # Also keyword only PEP https://www.python.org/dev/peps/pep-3102/
 
     pos_only_required: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
     pos_only_optional: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
     # If there are any pos_only_optional, then there cannot be any required pos_or_kw
-    pos_only_optional_ordering: PartialKeyOrdering = pydantic.Field(
-        default_factory=list
-    )
+    pos_only_optional_ordering: PartialKeyOrdering = pydantic.Field(default_factory=set)
 
     pos_or_kw_required: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
     pos_or_kw_optional: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
     # Partial ordering of args, (pred, suc) pairs
     pos_or_kw_optional_ordering: PartialKeyOrdering = pydantic.Field(
-        default_factory=list
+        default_factory=set
     )
     # Variable args are allowed if it this is not none
     var_pos: typing.Optional[typing.Tuple[str, Type]] = None
@@ -231,24 +253,38 @@ class Signature(pydantic.BaseModel):
 
     metadata: typing.Dict[str, int] = pydantic.Field(default_factory=dict)
 
-    def validate_keys_unique(self) -> None:
+    @pydantic.validator("pos_only_required")
+    @classmethod
+    def validate_pos_only_required_ordering(cls, v):
+        last_i = None
+        for k in v:
+            if k.startswith("_"):
+                i = int(k[1:])
+                if last_i is not None:
+                    if i <= last_i:
+                        raise ValueError(repr(v))
+                last_i = i
+        return v
+
+    @pydantic.root_validator()
+    @classmethod
+    def validate_keys_unique(cls, values) -> None:
         all_keys = [
-            *self.pos_only_required.keys(),
-            *self.pos_only_optional.keys(),
-            *self.pos_or_kw_required.keys(),
-            *self.pos_or_kw_optional.keys(),
-            *self.kw_only_required.keys(),
-            *self.kw_only_optional.keys(),
+            *values["pos_only_required"].keys(),
+            *values["pos_only_optional"].keys(),
+            *values["pos_or_kw_required"].keys(),
+            *values["pos_or_kw_optional"].keys(),
+            *values["kw_only_required"].keys(),
+            *values["kw_only_optional"].keys(),
         ]
-        if self.var_pos:
-            all_keys.append(self.var_pos[0])
-        if self.var_kw:
-            all_keys.append(self.var_kw[0])
+        if values["var_pos"]:
+            all_keys.append(values["var_pos"][0])
+        if values["var_kw"]:
+            all_keys.append(values["var_kw"][0])
 
         if len(all_keys) != len(set(all_keys)):
-            import pudb
-
-            pudb.set_trace()
+            raise ValueError(repr(all_keys))
+        return values
 
     def function_def(
         self,
@@ -348,7 +384,6 @@ class Signature(pydantic.BaseModel):
     ) -> Signature:
         # If we don't know what the args/kwargs are, assume the args are positional only
         # and the kwargs and keyword only
-        # TODO: Add ordering!
         return cls(
             pos_only_required={f"_{i}": create_type(v) for i, v in enumerate(args)},
             kw_only_required={k: create_type(v) for k, v in kwargs.items()},
@@ -378,19 +413,11 @@ class Signature(pydantic.BaseModel):
         )
 
     def __ior__(self, other: Signature) -> Signature:
-        """
-        pos only
-        """
-        self.validate_keys_unique()
-        other.validate_keys_unique()
-
         self._copy_pos_only(other)
         self._copy_pos_or_kw(other)
         self._copy_var_pos(other)
         self._copy_kw_only(other)
         self._copy_var_kw(other)
-
-        self.validate_keys_unique()
 
         update_add(self.metadata, other.metadata)
         return self
@@ -411,11 +438,11 @@ class Signature(pydantic.BaseModel):
         )
         self.pos_only_required = pos_only_required
 
-        addititional_ordering: PartialKeyOrdering = []
+        addititional_ordering: PartialKeyOrdering = set()
         # also add to ordering that new optional keys must come before old ones, because
         # they used to be required
         if self_new_pos_only_optional and self.pos_only_optional:
-            addititional_ordering.append(
+            addititional_ordering.add(
                 (
                     # last of required is before first of optional
                     next(iter(reversed(self_new_pos_only_optional.keys()))),
@@ -423,7 +450,7 @@ class Signature(pydantic.BaseModel):
                 )
             )
         if other_new_pos_only_optional and other.pos_only_optional:
-            addititional_ordering.append(
+            addititional_ordering.add(
                 (
                     next(iter(reversed(other_new_pos_only_optional.keys()))),
                     next(iter(other.pos_only_optional.keys())),
@@ -436,11 +463,11 @@ class Signature(pydantic.BaseModel):
             other_new_pos_only_optional,
         )
 
-        self.pos_only_optional_ordering += (
-            other.pos_only_optional_ordering
-            + partial_key_ordering(self_new_pos_only_optional)
-            + partial_key_ordering(other_new_pos_only_optional)
-            + addititional_ordering
+        self.pos_only_optional_ordering.update(
+            other.pos_only_optional_ordering,
+            partial_key_ordering(self_new_pos_only_optional),
+            partial_key_ordering(other_new_pos_only_optional),
+            addititional_ordering,
         )
 
     def _copy_pos_or_kw(self, other: Signature) -> None:
@@ -472,10 +499,10 @@ class Signature(pydantic.BaseModel):
             self_new_optional,
             other.pos_or_kw_optional,
         )
-        self.pos_or_kw_optional_ordering += (
-            other.pos_or_kw_optional_ordering
-            + partial_key_ordering(self_new_optional)
-            + partial_key_ordering(other_new_optional)
+        self.pos_or_kw_optional_ordering.update(
+            other.pos_or_kw_optional_ordering,
+            partial_key_ordering(self_new_optional),
+            partial_key_ordering(other_new_optional),
         )
 
     def _copy_var_pos(self, other: Signature) -> None:
@@ -541,10 +568,10 @@ def metadata_lines(m: Metadata) -> typing.Iterable[str]:
 
 def partial_key_ordering(d: typing.Dict[str, Type]) -> PartialKeyOrdering:
     prev_key = None
-    pairs: PartialKeyOrdering = []
+    pairs: PartialKeyOrdering = set()
     for key in d.keys():
         if prev_key is not None:
-            pairs.append((prev_key, key))
+            pairs.add((prev_key, key))
         prev_key = key
     return pairs
 
@@ -555,7 +582,7 @@ def possibly_order_dict(
     """
     Resort dict by topographical sorting of order
     """
-    return {k: d[k] for k in networkx.topological_sort(networkx.DiGraph(order))}
+    return {k: d[k] for k in networkx.topological_sort(networkx.DiGraph(list(order)))}
 
 
 def unify_named_types(
@@ -567,7 +594,8 @@ def unify_named_types(
     """
     names, tps = zip(*filter(lambda x: x is not None, name_and_types))  # type: ignore
     unique_names = set(filter(lambda x: x is not None, names))
-    assert len(unique_names) == 1
+    if len(unique_names) != 1:
+        raise ValueError(f"Cannot unify the types {name_and_types!r}")
     return unique_names.pop(), unify(tps)
 
 

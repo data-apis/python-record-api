@@ -1159,7 +1159,7 @@
             },
             "reshape": {
               "pos_only_required": {
-                "_1": {
+                "_0": {
                   "type": "union",
                   "options": [
                     {
@@ -1186,7 +1186,7 @@
                 }
               },
               "pos_only_optional": {
-                "_2": {
+                "_1": {
                   "type": {
                     "name": "int"
                   }
@@ -1204,7 +1204,7 @@
             },
             "astype": {
               "pos_only_required": {
-                "_1": {
+                "_0": {
                   "type": "type",
                   "name": {
                     "name": "int"
@@ -1357,7 +1357,7 @@
             },
             "reduce": {
               "pos_only_required": {
-                "_1": {
+                "_0": {
                   "type": {
                     "module": "numpy",
                     "name": "ndarray"

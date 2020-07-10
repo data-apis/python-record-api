@@ -87,49 +87,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 84
-          }
-        },
-        "exp": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {
-            "dtype": {
-              "type": {
-                "module": "numpy",
-                "name": "dtype"
-              }
-            }
-          },
-          "metadata": {
-            "usage.skimage": 27
+            "usage.skimage": 70
           }
         },
         "array": {
@@ -195,24 +153,7 @@
             }
           },
           "metadata": {
-            "usage.skimage": 1345
-          }
-        },
-        "absolute": {
-          "pos_only_required": {
-            "_0": {
-              "type": "object"
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 113
+            "usage.skimage": 1076
           }
         },
         "asarray": {
@@ -265,7 +206,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 274
+            "usage.skimage": 247
           }
         },
         "sum": {
@@ -333,7 +274,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 171
+            "usage.skimage": 125
           }
         },
         "vstack": {
@@ -436,7 +377,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 208
+            "usage.skimage": 113
           }
         },
         "round_": {
@@ -517,7 +458,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 52
+            "usage.skimage": 50
           }
         },
         "obj2sctype": {
@@ -583,69 +524,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 163
-          }
-        },
-        "multiply": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            },
-            "_1": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {
-            "out": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            },
-            "dtype": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "dtype"
-                  }
-                },
-                {
-                  "type": "type"
-                }
-              ]
-            }
-          },
-          "metadata": {
-            "usage.skimage": 35
+            "usage.skimage": 162
           }
         },
         "zeros": {
@@ -756,7 +635,7 @@
             }
           },
           "metadata": {
-            "usage.skimage": 1066
+            "usage.skimage": 787
           }
         },
         "reshape": {
@@ -828,38 +707,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 46
-          }
-        },
-        "sqrt": {
-          "pos_only_required": {
-            "_0": {
-              "type": "object"
-            }
-          },
-          "pos_only_optional": {
-            "_1": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {
-            "out": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "metadata": {
-            "usage.skimage": 114
+            "usage.skimage": 43
           }
         },
         "moveaxis": {
@@ -920,7 +768,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 16
+            "usage.skimage": 14
           }
         },
         "any": {
@@ -959,7 +807,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 47
+            "usage.skimage": 39
           }
         },
         "empty_like": {
@@ -1013,7 +861,7 @@
             }
           },
           "metadata": {
-            "usage.skimage": 58
+            "usage.skimage": 48
           }
         },
         "ones": {
@@ -1112,7 +960,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 372
+            "usage.skimage": 269
           }
         },
         "triu": {
@@ -1181,81 +1029,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 4
-          }
-        },
-        "isnan": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": "list",
-                  "item": {
-                    "type": {
-                      "name": "float"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 22
-          }
-        },
-        "floor": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 19
+            "usage.skimage": 2
           }
         },
         "stack": {
@@ -1356,7 +1130,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 49
+            "usage.skimage": 35
           }
         },
         "choose": {
@@ -1570,33 +1344,6 @@
             "usage.skimage": 105
           }
         },
-        "rint": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {
-            "out": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 3
-          }
-        },
         "clip": {
           "pos_only_required": {},
           "pos_only_optional": {},
@@ -1643,89 +1390,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 79
-          }
-        },
-        "power": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              ]
-            },
-            "_1": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 11
-          }
-        },
-        "log10": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 4
+            "usage.skimage": 61
           }
         },
         "load": {
@@ -1907,7 +1572,7 @@
             }
           },
           "metadata": {
-            "usage.skimage": 246
+            "usage.skimage": 223
           }
         },
         "meshgrid": {
@@ -1930,7 +1595,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 36
+            "usage.skimage": 28
           }
         },
         "dstack": {
@@ -2001,26 +1666,6 @@
             "usage.skimage": 22
           }
         },
-        "cbrt": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 4
-          }
-        },
         "concatenate": {
           "pos_only_required": {
             "_0": {
@@ -2087,125 +1732,7 @@
             }
           },
           "metadata": {
-            "usage.skimage": 64
-          }
-        },
-        "hypot": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            },
-            "_1": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 14
-          }
-        },
-        "arctan2": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "int64"
-                  }
-                }
-              ]
-            },
-            "_1": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "int64"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 8
+            "usage.skimage": 48
           }
         },
         "where": {
@@ -2308,88 +1835,6 @@
             "usage.skimage": 26
           }
         },
-        "cos": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "float"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 49
-          }
-        },
-        "sin": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 48
-          }
-        },
         "ascontiguousarray": {
           "pos_only_required": {},
           "pos_only_optional": {},
@@ -2445,7 +1890,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 79
+            "usage.skimage": 67
           }
         },
         "swapaxes": {
@@ -2518,7 +1963,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 21
+            "usage.skimage": 16
           }
         },
         "ones_like": {
@@ -2542,7 +1987,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 35
+            "usage.skimage": 26
           }
         },
         "can_cast": {
@@ -2607,7 +2052,7 @@
             }
           },
           "metadata": {
-            "usage.skimage": 10
+            "usage.skimage": 9
           }
         },
         "empty": {
@@ -2713,7 +2158,7 @@
             }
           },
           "metadata": {
-            "usage.skimage": 159
+            "usage.skimage": 129
           }
         },
         "min_scalar_type": {
@@ -2798,7 +2243,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 76
+            "usage.skimage": 68
           }
         },
         "zeros_like": {
@@ -2850,7 +2295,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 86
+            "usage.skimage": 70
           }
         },
         "full": {
@@ -2912,7 +2357,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 52
+            "usage.skimage": 36
           }
         },
         "loadtxt": {
@@ -2953,211 +2398,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 2
-          }
-        },
-        "logical_and": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "bool_"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            },
-            "_1": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "bool_"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 13
-          }
-        },
-        "deg2rad": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": "list",
-                  "item": {
-                    "type": {
-                      "name": "int"
-                    }
-                  }
-                },
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 18
-          }
-        },
-        "rad2deg": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 6
-          }
-        },
-        "maximum": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": "tuple",
-                  "items": {
-                    "type": {
-                      "name": "int"
-                    }
-                  }
-                }
-              ]
-            },
-            "_1": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": "tuple",
-                  "items": {
-                    "type": {
-                      "name": "int"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {
-            "out": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            },
-            "dtype": {
-              "type": {
-                "module": "numpy",
-                "name": "dtype"
-              }
-            },
-            "casting": {
-              "type": "str",
-              "options": [
-                "unsafe"
-              ]
-            }
-          },
-          "metadata": {
-            "usage.skimage": 18
+            "usage.skimage": 1
           }
         },
         "percentile": {
@@ -3201,33 +2442,6 @@
           "kw_only_optional": {},
           "metadata": {
             "usage.skimage": 11
-          }
-        },
-        "logical_not": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {
-            "out": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "metadata": {
-            "usage.skimage": 16
           }
         },
         "isscalar": {
@@ -3277,111 +2491,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 46
-          }
-        },
-        "ceil": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "int64"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "float"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 31
-          }
-        },
-        "minimum": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": "tuple",
-                  "items": {
-                    "type": {
-                      "name": "int"
-                    }
-                  }
-                }
-              ]
-            },
-            "_1": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": "tuple",
-                  "items": {
-                    "type": {
-                      "name": "int"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 9
+            "usage.skimage": 39
           }
         },
         "dot": {
@@ -3428,75 +2538,6 @@
           "kw_only_optional": {},
           "metadata": {
             "usage.skimage": 5
-          }
-        },
-        "arcsin": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "name": "float"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 1
-          }
-        },
-        "ellipkinc": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "float64"
-              }
-            },
-            "_1": {
-              "type": {
-                "name": "float"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 1
-          }
-        },
-        "ellipeinc": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "float64"
-              }
-            },
-            "_1": {
-              "type": {
-                "name": "float"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 1
           }
         },
         "transpose": {
@@ -3567,7 +2608,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 24
+            "usage.skimage": 21
           }
         },
         "shape": {
@@ -3587,7 +2628,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 2
+            "usage.skimage": 1
           }
         },
         "promote_types": {
@@ -3650,7 +2691,7 @@
             }
           },
           "metadata": {
-            "usage.skimage": 15
+            "usage.skimage": 12
           }
         },
         "histogram": {
@@ -3768,7 +2809,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 11
+            "usage.skimage": 7
           }
         },
         "interp": {
@@ -3811,7 +2852,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 7
+            "usage.skimage": 6
           }
         },
         "polyfit": {
@@ -3903,7 +2944,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 186
+            "usage.skimage": 126
           }
         },
         "product": {
@@ -3954,7 +2995,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 14
+            "usage.skimage": 8
           }
         },
         "count_nonzero": {
@@ -3974,7 +3015,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 10
+            "usage.skimage": 9
           }
         },
         "cumsum": {
@@ -4017,7 +3058,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 34
+            "usage.skimage": 29
           }
         },
         "take_along_axis": {
@@ -4048,74 +3089,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 2
-          }
-        },
-        "square": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 7
-          }
-        },
-        "log": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "module": "dask.array.core",
-                    "name": "Array"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 19
+            "usage.skimage": 1
           }
         },
         "mean": {
@@ -4193,37 +3167,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 81
-          }
-        },
-        "log2": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 5
+            "usage.skimage": 61
           }
         },
         "allclose": {
@@ -4350,7 +3294,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 58
+            "usage.skimage": 33
           }
         },
         "argsort": {
@@ -4478,7 +3422,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 22
+            "usage.skimage": 18
           }
         },
         "logspace": {
@@ -4532,51 +3476,6 @@
             "usage.skimage": 2
           }
         },
-        "logical_or": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            },
-            "_1": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 3
-          }
-        },
-        "isinf": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "name": "float"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 2
-          }
-        },
         "delete": {
           "pos_only_required": {},
           "pos_only_optional": {},
@@ -4615,7 +3514,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 4
+            "usage.skimage": 3
           }
         },
         "split": {
@@ -4765,7 +3664,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 4
+            "usage.skimage": 3
           }
         },
         "gradient": {
@@ -4785,7 +3684,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 9
+            "usage.skimage": 8
           }
         },
         "argmin": {
@@ -4825,38 +3724,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 14
-          }
-        },
-        "arctan": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 3
+            "usage.skimage": 10
           }
         },
         "sort": {
@@ -4882,88 +3750,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 21
-          }
-        },
-        "spacing": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "name": "int"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 1
-          }
-        },
-        "isfinite": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": "list",
-                  "item": {
-                    "type": "union",
-                    "options": [
-                      {
-                        "type": {
-                          "module": "numpy",
-                          "name": "float64"
-                        }
-                      },
-                      {
-                        "type": {
-                          "module": "numpy",
-                          "name": "int64"
-                        }
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 10
+            "usage.skimage": 14
           }
         },
         "diff": {
@@ -4999,7 +3786,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 21
+            "usage.skimage": 15
           }
         },
         "flatnonzero": {
@@ -5193,7 +3980,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 24
+            "usage.skimage": 14
           }
         },
         "indices": {
@@ -5234,7 +4021,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 7
+            "usage.skimage": 6
           }
         },
         "tri": {
@@ -5276,37 +4063,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 10
-          }
-        },
-        "less": {
-          "pos_only_required": {
-            "_0": {
-              "type": "tuple",
-              "items": {
-                "type": {
-                  "name": "int"
-                }
-              }
-            },
-            "_1": {
-              "type": "tuple",
-              "items": {
-                "type": {
-                  "name": "int"
-                }
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 3
+            "usage.skimage": 9
           }
         },
         "prod": {
@@ -5350,50 +4107,6 @@
             "usage.skimage": 9
           }
         },
-        "true_divide": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            },
-            "_1": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "int64"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {
-            "out": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "metadata": {
-            "usage.skimage": 2
-          }
-        },
         "unravel_index": {
           "pos_only_required": {
             "_0": {
@@ -5435,7 +4148,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 19
+            "usage.skimage": 18
           }
         },
         "apply_over_axes": {
@@ -5477,7 +4190,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 20
+            "usage.skimage": 10
           }
         },
         "tile": {
@@ -5599,58 +4312,6 @@
             "usage.skimage": 1
           }
         },
-        "sign": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 4
-          }
-        },
-        "subtract": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "name": "int"
-              }
-            },
-            "_1": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {
-            "dtype": {
-              "type": {
-                "module": "numpy",
-                "name": "dtype"
-              }
-            }
-          },
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 14
-          }
-        },
         "ix_": {
           "pos_only_required": {},
           "pos_only_optional": {},
@@ -5671,7 +4332,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 3
+            "usage.skimage": 2
           }
         },
         "convolve": {
@@ -5705,40 +4366,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 2
-          }
-        },
-        "invert": {
-          "pos_only_required": {
-            "_0": {
-              "type": "union",
-              "options": [
-                {
-                  "type": "list",
-                  "item": {
-                    "type": {
-                      "name": "bool"
-                    }
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 11
+            "usage.skimage": 1
           }
         },
         "array_equal": {
@@ -5822,81 +4450,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 8
-          }
-        },
-        "add": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            },
-            "_1": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": "tuple",
-                  "items": {
-                    "type": {
-                      "name": "int"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {
-            "dtype": {
-              "type": "type"
-            }
-          },
-          "metadata": {
-            "usage.skimage": 12
-          }
-        },
-        "reciprocal": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {
-            "out": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 2
+            "usage.skimage": 5
           }
         },
         "insert": {
@@ -5932,7 +4486,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 6
+            "usage.skimage": 3
           }
         },
         "full_like": {
@@ -5977,51 +4531,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 4
-          }
-        },
-        "floor_divide": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            },
-            "_1": {
-              "type": {
-                "name": "int"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {
-            "out": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            },
-            "dtype": {
-              "type": {
-                "module": "numpy",
-                "name": "dtype"
-              }
-            },
-            "casting": {
-              "type": "str",
-              "options": [
-                "unsafe"
-              ]
-            }
-          },
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 5
+            "usage.skimage": 2
           }
         },
         "fromfile": {
@@ -6048,7 +4558,7 @@
           },
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 2
+            "usage.skimage": 1
           }
         },
         "median": {
@@ -6084,7 +4594,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 8
+            "usage.skimage": 5
           }
         },
         "asfortranarray": {
@@ -6202,7 +4712,7 @@
           },
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 2
+            "usage.skimage": 1
           }
         },
         "fliplr": {
@@ -6267,7 +4777,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 4
+            "usage.skimage": 3
           }
         },
         "flipud": {
@@ -6306,7 +4816,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 2
+            "usage.skimage": 1
           }
         },
         "result_type": {
@@ -6449,40 +4959,7 @@
             }
           },
           "metadata": {
-            "usage.skimage": 20
-          }
-        },
-        "logical_xor": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            },
-            "_1": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {
-            "out": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 2
+            "usage.skimage": 18
           }
         },
         "in1d": {
@@ -6605,42 +5082,6 @@
             "usage.skimage": 1
           }
         },
-        "fmax": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            },
-            "_1": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                }
-              ]
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 3
-          }
-        },
         "fix": {
           "pos_only_required": {},
           "pos_only_optional": {},
@@ -6709,7 +5150,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 2
+            "usage.skimage": 1
           }
         },
         "atleast_3d": {
@@ -6753,26 +5194,6 @@
           "kw_only_optional": {},
           "metadata": {
             "usage.skimage": 4
-          }
-        },
-        "conjugate": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 2
           }
         },
         "angle": {
@@ -6829,26 +5250,6 @@
           "kw_only_optional": {},
           "metadata": {
             "usage.skimage": 1
-          }
-        },
-        "tanh": {
-          "pos_only_required": {
-            "_0": {
-              "type": {
-                "module": "numpy",
-                "name": "ndarray"
-              }
-            }
-          },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
-          "metadata": {
-            "usage.skimage": 2
           }
         },
         "ndim": {
@@ -6955,7 +5356,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 2
+            "usage.skimage": 1
           }
         },
         "std": {
@@ -6975,7 +5376,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 4
+            "usage.skimage": 1
           }
         },
         "hamming": {
@@ -7067,7 +5468,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 4
+            "usage.skimage": 2
           }
         },
         "may_share_memory": {
@@ -7093,11 +5494,104 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 4
+            "usage.skimage": 2
           }
         }
       },
       "classes": {
+        "ufunc": {
+          "methods": {
+            "__call__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "object"
+                }
+              },
+              "pos_only_optional": {
+                "_1": {
+                  "type": "object"
+                }
+              },
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {
+                "dtype": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "dtype"
+                      }
+                    },
+                    {
+                      "type": "type"
+                    }
+                  ]
+                },
+                "out": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                "casting": {
+                  "type": "str",
+                  "options": [
+                    "unsafe"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.skimage": 648
+              }
+            },
+            "reduce": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "tuple",
+                      "items": [
+                        {
+                          "type": {
+                            "name": "int"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "item": {
+                        "type": {
+                          "module": "numpy",
+                          "name": "ndarray"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 6
+              }
+            }
+          },
+          "classmethods": {},
+          "properties": {},
+          "classproperties": {}
+        },
         "ndarray": {
           "methods": {
             "__iter__": {
@@ -7111,6 +5605,43 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.skimage": 149
+              }
+            },
+            "astype": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "dtype"
+                      }
+                    },
+                    {
+                      "type": "str"
+                    },
+                    {
+                      "type": "type"
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {
+                "copy": {
+                  "type": {
+                    "name": "bool"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.skimage": 589
               }
             },
             "__sub__": {
@@ -7145,6 +5676,56 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.skimage": 274
+              }
+            },
+            "mean": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {
+                "axis": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "tuple",
+                      "items": [
+                        {
+                          "type": {
+                            "name": "int"
+                          }
+                        },
+                        {
+                          "type": {
+                            "name": "int"
+                          }
+                        },
+                        {
+                          "type": {
+                            "name": "int"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.skimage": 51
               }
             },
             "__getitem__": {
@@ -7287,6 +5868,100 @@
                 "usage.skimage": 1514
               }
             },
+            "reshape": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": "tuple",
+                      "items": {
+                        "type": "union",
+                        "options": [
+                          {
+                            "type": {
+                              "module": "numpy",
+                              "name": "int64"
+                            }
+                          },
+                          {
+                            "type": {
+                              "name": "int"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "list",
+                      "item": {
+                        "type": {
+                          "name": "int"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional": {
+                "_1": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "_2": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "_3": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional_ordering": [
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_2",
+                  "_3"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ]
+              ],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 168
+              }
+            },
             "__imul__": {
               "pos_only_required": {
                 "_0": {
@@ -7413,6 +6088,57 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.skimage": 122
+              }
+            },
+            "copy": {
+              "pos_only_required": {},
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 135
+              }
+            },
+            "max": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 126
+              }
+            },
+            "ptp": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 5
               }
             },
             "__rtruediv__": {
@@ -7626,6 +6352,25 @@
                 "usage.skimage": 42
               }
             },
+            "min": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 98
+              }
+            },
             "__contains__": {
               "pos_only_required": {
                 "_0": {
@@ -7669,6 +6414,32 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.skimage": 13
+              }
+            },
+            "any": {
+              "pos_only_required": {},
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 15
+              }
+            },
+            "nonzero": {
+              "pos_only_required": {},
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 4
               }
             },
             "__pow__": {
@@ -7723,6 +6494,35 @@
                 "usage.skimage": 92
               }
             },
+            "fill": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "bool"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 5
+              }
+            },
             "__rpow__": {
               "pos_only_required": {
                 "_0": {
@@ -7753,6 +6553,97 @@
                 "usage.skimage": 3
               }
             },
+            "sum": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {
+                "axis": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.skimage": 109
+              }
+            },
+            "all": {
+              "pos_only_required": {},
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 48
+              }
+            },
+            "flatten": {
+              "pos_only_required": {},
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 16
+              }
+            },
+            "ravel": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_0": {
+                  "type": "str",
+                  "options": [
+                    "C",
+                    "F"
+                  ]
+                }
+              },
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 209
+              }
+            },
+            "cumsum": {
+              "pos_only_required": {},
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {
+                "axis": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.skimage": 7
+              }
+            },
             "__ifloordiv__": {
               "pos_only_required": {
                 "_0": {
@@ -7770,6 +6661,63 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.skimage": 5
+              }
+            },
+            "transpose": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "_1": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "_2": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional_ordering": [
+                [
+                  "_0",
+                  "_1"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ]
+              ],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 5
+              }
+            },
+            "argmin": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 2
               }
             },
             "__iand__": {
@@ -7840,6 +6788,51 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.skimage": 31
+              }
+            },
+            "view": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "str",
+                      "options": [
+                        "|S3",
+                        "uint8",
+                        "|S24",
+                        "|S16"
+                      ]
+                    },
+                    {
+                      "type": "type"
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "dtype"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {
+                "dtype": {
+                  "type": "type",
+                  "name": {
+                    "module": "numpy",
+                    "name": "uint8"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.skimage": 26
               }
             },
             "__or__": {
@@ -7958,6 +6951,119 @@
                 "usage.skimage": 14
               }
             },
+            "swapaxes": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "_1": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 2
+              }
+            },
+            "argmax": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {
+                "axis": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.skimage": 7
+              }
+            },
+            "argsort": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 5
+              }
+            },
+            "tolist": {
+              "pos_only_required": {},
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 7
+              }
+            },
+            "std": {
+              "pos_only_required": {},
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {
+                "axis": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.skimage": 65
+              }
+            },
+            "tobytes": {
+              "pos_only_required": {},
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 2
+              }
+            },
             "__rmod__": {
               "pos_only_required": {
                 "_0": {
@@ -7998,6 +7104,39 @@
                 "usage.skimage": 2
               }
             },
+            "dot": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 1
+              }
+            },
+            "conj": {
+              "pos_only_required": {},
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 4
+              }
+            },
             "clip": {
               "pos_only_required": {},
               "pos_only_optional": {},
@@ -8022,7 +7161,7 @@
                 }
               },
               "metadata": {
-                "usage.skimage": 5
+                "usage.skimage": 3
               }
             },
             "repeat": {
@@ -8047,7 +7186,7 @@
               },
               "kw_only_optional": {},
               "metadata": {
-                "usage.skimage": 4
+                "usage.skimage": 2
               }
             },
             "var": {
@@ -8066,7 +7205,7 @@
                 }
               },
               "metadata": {
-                "usage.skimage": 14
+                "usage.skimage": 7
               }
             },
             "sort": {
@@ -8091,900 +7230,11 @@
                 }
               },
               "metadata": {
-                "usage.skimage": 18
+                "usage.skimage": 9
               }
             }
           },
           "classmethods": {
-            "astype": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "dtype"
-                      }
-                    },
-                    {
-                      "type": "type"
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {
-                "_1": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "dtype"
-                      }
-                    },
-                    {
-                      "type": "str"
-                    },
-                    {
-                      "type": "type"
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "copy": {
-                  "type": {
-                    "name": "bool"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.skimage": 622
-              }
-            },
-            "reshape": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                "_1": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    },
-                    {
-                      "type": "tuple",
-                      "items": {
-                        "type": "union",
-                        "options": [
-                          {
-                            "type": {
-                              "module": "numpy",
-                              "name": "int64"
-                            }
-                          },
-                          {
-                            "type": {
-                              "name": "int"
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "type": "list",
-                      "item": {
-                        "type": {
-                          "name": "int"
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {
-                "_2": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_3": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_4": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_2",
-                  "_3"
-                ],
-                [
-                  "_2",
-                  "_3"
-                ],
-                [
-                  "_3",
-                  "_4"
-                ],
-                [
-                  "_2",
-                  "_3"
-                ],
-                [
-                  "_2",
-                  "_3"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 168
-              }
-            },
-            "copy": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 135
-              }
-            },
-            "max": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_0",
-                  "_1"
-                ],
-                [
-                  "_0",
-                  "_1"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 144
-              }
-            },
-            "ptp": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional": {
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 5
-              }
-            },
-            "min": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_0",
-                  "_1"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 116
-              }
-            },
-            "any": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 19
-              }
-            },
-            "nonzero": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 4
-              }
-            },
-            "mean": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_0",
-                  "_1"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "axis": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": "tuple",
-                      "items": [
-                        {
-                          "type": {
-                            "name": "int"
-                          }
-                        },
-                        {
-                          "type": {
-                            "name": "int"
-                          }
-                        },
-                        {
-                          "type": {
-                            "name": "int"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    }
-                  ]
-                }
-              },
-              "metadata": {
-                "usage.skimage": 79
-              }
-            },
-            "fill": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                "_1": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "name": "bool"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 5
-              }
-            },
-            "flatten": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 16
-              }
-            },
-            "ravel": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_1": {
-                  "type": "str",
-                  "options": [
-                    "C",
-                    "F"
-                  ]
-                },
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_0",
-                  "_1"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 211
-              }
-            },
-            "cumsum": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "axis": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.skimage": 13
-              }
-            },
-            "sum": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_0",
-                  "_1"
-                ],
-                [
-                  "_0",
-                  "_1"
-                ],
-                [
-                  "_0",
-                  "_1"
-                ],
-                [
-                  "_0",
-                  "_1"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "axis": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.skimage": 132
-              }
-            },
-            "transpose": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional": {
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_2": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_3": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_1",
-                  "_2"
-                ],
-                [
-                  "_2",
-                  "_3"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 5
-              }
-            },
-            "argmin": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional": {
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 2
-              }
-            },
-            "view": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_1": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": "str",
-                      "options": [
-                        "|S3",
-                        "uint8",
-                        "|S24",
-                        "|S16"
-                      ]
-                    },
-                    {
-                      "type": "type"
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "dtype"
-                      }
-                    }
-                  ]
-                },
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_0",
-                  "_1"
-                ],
-                [
-                  "_0",
-                  "_1"
-                ],
-                [
-                  "_0",
-                  "_1"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "dtype": {
-                  "type": "type",
-                  "name": {
-                    "module": "numpy",
-                    "name": "uint8"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.skimage": 30
-              }
-            },
-            "swapaxes": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_2": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 2
-              }
-            },
-            "argsort": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional": {
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 5
-              }
-            },
-            "argmax": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_0",
-                  "_1"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "axis": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.skimage": 8
-              }
-            },
-            "std": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "axis": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.skimage": 67
-              }
-            },
-            "all": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 95
-              }
-            },
-            "tobytes": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 2
-              }
-            },
-            "tolist": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 13
-              }
-            },
-            "dot": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                },
-                "_1": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 1
-              }
-            },
-            "conj": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 4
-              }
-            },
             "__ne__": {
               "pos_only_required": {
                 "_0": {
@@ -9296,6 +7546,27 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.skimage": 74
+              }
+            },
+            "astype": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "type",
+                  "name": {
+                    "module": "numpy",
+                    "name": "int64"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 1
               }
             },
             "__rsub__": {
@@ -10533,6 +8804,27 @@
                 "usage.skimage": 4
               }
             },
+            "astype": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "type",
+                  "name": {
+                    "module": "numpy",
+                    "name": "int64"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 3
+              }
+            },
             "__lt__": {
               "pos_only_required": {
                 "_0": {
@@ -10652,57 +8944,6 @@
               }
             ]
           },
-          "classproperties": {}
-        },
-        "generic": {
-          "methods": {},
-          "classmethods": {
-            "astype": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "object"
-                },
-                "_1": {
-                  "type": "type",
-                  "name": {
-                    "module": "numpy",
-                    "name": "int64"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 12
-              }
-            },
-            "conj": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "complex128"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 1
-              }
-            }
-          },
-          "properties": {},
           "classproperties": {}
         },
         "dtype": {
@@ -11223,6 +9464,27 @@
               "kw_only_optional": {},
               "metadata": {
                 "usage.skimage": 20
+              }
+            },
+            "astype": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "type",
+                  "name": {
+                    "module": "numpy",
+                    "name": "int64"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 2
               }
             },
             "__rsub__": {
@@ -11840,6 +10102,127 @@
           "properties": {},
           "classproperties": {}
         },
+        "int8": {
+          "methods": {
+            "astype": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "type",
+                  "name": {
+                    "module": "numpy",
+                    "name": "int64"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 2
+              }
+            },
+            "__lt__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 2
+              }
+            },
+            "__le__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 2
+              }
+            },
+            "__eq__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 3
+              }
+            },
+            "__gt__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 1
+              }
+            }
+          },
+          "classmethods": {},
+          "properties": {},
+          "classproperties": {}
+        },
         "ndindex": {
           "constructor": {
             "pos_only_required": {},
@@ -11883,100 +10266,6 @@
           "properties": {},
           "classproperties": {}
         },
-        "uint32": {
-          "methods": {
-            "__add__": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 1
-              }
-            },
-            "__ge__": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 1
-              }
-            },
-            "__le__": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 1
-              }
-            },
-            "__eq__": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "int64"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 2
-              }
-            }
-          },
-          "classmethods": {},
-          "properties": {},
-          "classproperties": {}
-        },
         "uint16": {
           "constructor": {
             "pos_only_required": {
@@ -11998,6 +10287,27 @@
             }
           },
           "methods": {
+            "astype": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "type",
+                  "name": {
+                    "module": "numpy",
+                    "name": "int64"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 2
+              }
+            },
             "__ge__": {
               "pos_only_required": {
                 "_0": {
@@ -12092,6 +10402,100 @@
                     "module": "numpy",
                     "name": "uint16"
                   }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 2
+              }
+            }
+          },
+          "classmethods": {},
+          "properties": {},
+          "classproperties": {}
+        },
+        "uint32": {
+          "methods": {
+            "__add__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 1
+              }
+            },
+            "__ge__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 1
+              }
+            },
+            "__le__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 1
+              }
+            },
+            "__eq__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
                 }
               },
               "pos_only_optional": {},
@@ -12304,6 +10708,27 @@
                 "usage.skimage": 1
               }
             },
+            "astype": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "type",
+                  "name": {
+                    "module": "numpy",
+                    "name": "int64"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 2
+              }
+            },
             "__le__": {
               "pos_only_required": {
                 "_0": {
@@ -12355,58 +10780,6 @@
             }
           },
           "classmethods": {},
-          "properties": {},
-          "classproperties": {}
-        },
-        "ufunc": {
-          "methods": {},
-          "classmethods": {
-            "reduce": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "function",
-                  "name": {
-                    "module": "numpy",
-                    "name": "multiply"
-                  }
-                },
-                "_1": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": "tuple",
-                      "items": [
-                        {
-                          "type": {
-                            "name": "int"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "item": {
-                        "type": {
-                          "module": "numpy",
-                          "name": "ndarray"
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 6
-              }
-            }
-          },
           "properties": {},
           "classproperties": {}
         },
@@ -12865,87 +11238,14 @@
           },
           "classproperties": {}
         },
-        "int8": {
+        "complex128": {
           "methods": {
-            "__lt__": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 2
-              }
-            },
-            "__le__": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 2
-              }
-            },
             "__eq__": {
               "pos_only_required": {
                 "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "int64"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 3
-              }
-            },
-            "__gt__": {
-              "pos_only_required": {
-                "_0": {
                   "type": {
-                    "name": "int"
+                    "module": "numpy",
+                    "name": "ndarray"
                   }
                 }
               },
@@ -12959,23 +11259,9 @@
               "metadata": {
                 "usage.skimage": 1
               }
-            }
-          },
-          "classmethods": {},
-          "properties": {},
-          "classproperties": {}
-        },
-        "complex128": {
-          "methods": {
-            "__eq__": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
+            },
+            "conj": {
+              "pos_only_required": {},
               "pos_only_optional": {},
               "pos_only_optional_ordering": [],
               "pos_or_kw_required": {},
@@ -13460,12 +11746,30 @@
         }
       },
       "properties": {
+        "exp": [
+          {
+            "usage.skimage": 27
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "exp"
+          }
+        ],
         "abs": [
           {
             "usage.skimage": 7
           },
           {
             "type": "bottom"
+          }
+        ],
+        "absolute": [
+          {
+            "usage.skimage": 113
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "absolute"
           }
         ],
         "testing": [
@@ -13524,12 +11828,48 @@
             "type": "bottom"
           }
         ],
+        "multiply": [
+          {
+            "usage.skimage": 35
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "multiply"
+          }
+        ],
+        "sqrt": [
+          {
+            "usage.skimage": 114
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "sqrt"
+          }
+        ],
         "bool_": [
           {
             "usage.skimage": 24
           },
           {
             "type": "bottom"
+          }
+        ],
+        "isnan": [
+          {
+            "usage.skimage": 22
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "isnan"
+          }
+        ],
+        "floor": [
+          {
+            "usage.skimage": 19
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "floor"
           }
         ],
         "uint8": [
@@ -13548,12 +11888,48 @@
             "type": "bottom"
           }
         ],
+        "rint": [
+          {
+            "usage.skimage": 3
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "rint"
+          }
+        ],
+        "power": [
+          {
+            "usage.skimage": 11
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "power"
+          }
+        ],
+        "log10": [
+          {
+            "usage.skimage": 4
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "log10"
+          }
+        ],
         "ndarray": [
           {
             "usage.skimage": 19
           },
           {
             "type": "bottom"
+          }
+        ],
+        "cbrt": [
+          {
+            "usage.skimage": 4
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "cbrt"
           }
         ],
         "newaxis": [
@@ -13564,12 +11940,48 @@
             "type": "bottom"
           }
         ],
+        "hypot": [
+          {
+            "usage.skimage": 14
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "hypot"
+          }
+        ],
+        "arctan2": [
+          {
+            "usage.skimage": 8
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "arctan2"
+          }
+        ],
         "pi": [
           {
             "usage.skimage": 88
           },
           {
             "type": "bottom"
+          }
+        ],
+        "cos": [
+          {
+            "usage.skimage": 49
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "cos"
+          }
+        ],
+        "sin": [
+          {
+            "usage.skimage": 48
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "sin"
           }
         ],
         "float": [
@@ -13588,6 +12000,42 @@
             "type": "bottom"
           }
         ],
+        "logical_and": [
+          {
+            "usage.skimage": 13
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "logical_and"
+          }
+        ],
+        "deg2rad": [
+          {
+            "usage.skimage": 18
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "deg2rad"
+          }
+        ],
+        "rad2deg": [
+          {
+            "usage.skimage": 6
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "rad2deg"
+          }
+        ],
+        "maximum": [
+          {
+            "usage.skimage": 18
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "maximum"
+          }
+        ],
         "int": [
           {
             "usage.skimage": 24
@@ -13596,12 +12044,39 @@
             "type": "bottom"
           }
         ],
+        "logical_not": [
+          {
+            "usage.skimage": 16
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "logical_not"
+          }
+        ],
+        "ceil": [
+          {
+            "usage.skimage": 31
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "ceil"
+          }
+        ],
         "ogrid": [
           {
             "usage.skimage": 9
           },
           {
             "type": "bottom"
+          }
+        ],
+        "minimum": [
+          {
+            "usage.skimage": 9
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "minimum"
           }
         ],
         "integer": [
@@ -13618,6 +12093,33 @@
           },
           {
             "type": "bottom"
+          }
+        ],
+        "arcsin": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "arcsin"
+          }
+        ],
+        "ellipkinc": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "ellipkinc"
+          }
+        ],
+        "ellipeinc": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "ellipeinc"
           }
         ],
         "round": [
@@ -13668,6 +12170,24 @@
             "type": "bottom"
           }
         ],
+        "square": [
+          {
+            "usage.skimage": 7
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "square"
+          }
+        ],
+        "log": [
+          {
+            "usage.skimage": 19
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "log"
+          }
+        ],
         "min": [
           {
             "usage.skimage": 6
@@ -13684,12 +12204,39 @@
             "type": "bottom"
           }
         ],
+        "log2": [
+          {
+            "usage.skimage": 5
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "log2"
+          }
+        ],
         "double": [
           {
             "usage.skimage": 98
           },
           {
             "type": "bottom"
+          }
+        ],
+        "logical_or": [
+          {
+            "usage.skimage": 3
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "logical_or"
+          }
+        ],
+        "isinf": [
+          {
+            "usage.skimage": 2
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "isinf"
           }
         ],
         "inf": [
@@ -13724,6 +12271,33 @@
             "type": "bottom"
           }
         ],
+        "arctan": [
+          {
+            "usage.skimage": 3
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "arctan"
+          }
+        ],
+        "spacing": [
+          {
+            "usage.skimage": 1
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "spacing"
+          }
+        ],
+        "isfinite": [
+          {
+            "usage.skimage": 10
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "isfinite"
+          }
+        ],
         "uint32": [
           {
             "usage.skimage": 21
@@ -13732,12 +12306,30 @@
             "type": "bottom"
           }
         ],
+        "less": [
+          {
+            "usage.skimage": 3
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "less"
+          }
+        ],
         "divide": [
           {
             "usage.skimage": 1
           },
           {
             "type": "bottom"
+          }
+        ],
+        "true_divide": [
+          {
+            "usage.skimage": 2
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "true_divide"
           }
         ],
         "signedinteger": [
@@ -13772,6 +12364,15 @@
             "type": "bottom"
           }
         ],
+        "sign": [
+          {
+            "usage.skimage": 4
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "sign"
+          }
+        ],
         "unsignedinteger": [
           {
             "usage.skimage": 1
@@ -13780,12 +12381,48 @@
             "type": "bottom"
           }
         ],
+        "subtract": [
+          {
+            "usage.skimage": 14
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "subtract"
+          }
+        ],
         "__version__": [
           {
             "usage.skimage": 1
           },
           {
             "type": "bottom"
+          }
+        ],
+        "invert": [
+          {
+            "usage.skimage": 11
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "invert"
+          }
+        ],
+        "add": [
+          {
+            "usage.skimage": 12
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "add"
+          }
+        ],
+        "reciprocal": [
+          {
+            "usage.skimage": 2
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "reciprocal"
           }
         ],
         "int_": [
@@ -13802,6 +12439,15 @@
           },
           {
             "type": "bottom"
+          }
+        ],
+        "floor_divide": [
+          {
+            "usage.skimage": 5
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "floor_divide"
           }
         ],
         "dtype": [
@@ -13836,6 +12482,24 @@
             "type": "bottom"
           }
         ],
+        "logical_xor": [
+          {
+            "usage.skimage": 2
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "logical_xor"
+          }
+        ],
+        "fmax": [
+          {
+            "usage.skimage": 3
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "fmax"
+          }
+        ],
         "NaN": [
           {
             "usage.skimage": 1
@@ -13860,12 +12524,30 @@
             "type": "bottom"
           }
         ],
+        "conjugate": [
+          {
+            "usage.skimage": 2
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "conjugate"
+          }
+        ],
         "NAN": [
           {
             "usage.skimage": 1
           },
           {
             "type": "bottom"
+          }
+        ],
+        "tanh": [
+          {
+            "usage.skimage": 2
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "tanh"
           }
         ],
         "bitwise_xor": [
@@ -15049,6 +13731,466 @@
                 "usage.skimage": 29
               }
             },
+            "rand": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_2": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "_1": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "_3": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "_4": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional_ordering": [
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_2",
+                  "_3"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_2",
+                  "_3"
+                ],
+                [
+                  "_3",
+                  "_4"
+                ],
+                [
+                  "_0",
+                  "_2"
+                ]
+              ],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 94
+              }
+            },
+            "uniform": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "float"
+                      }
+                    }
+                  ]
+                },
+                "_1": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "float"
+                      }
+                    }
+                  ]
+                },
+                "_2": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": "tuple",
+                      "items": [
+                        {
+                          "type": {
+                            "name": "int"
+                          }
+                        },
+                        {
+                          "type": {
+                            "name": "int"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional_ordering": [
+                [
+                  "_0",
+                  "_1"
+                ],
+                [
+                  "_0",
+                  "_1"
+                ],
+                [
+                  "_0",
+                  "_1"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_0",
+                  "_1"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ]
+              ],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {
+                "size": {
+                  "type": "tuple",
+                  "items": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                },
+                "low": {
+                  "type": {
+                    "name": "float"
+                  }
+                },
+                "high": {
+                  "type": {
+                    "name": "float"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.skimage": 32
+              }
+            },
+            "randint": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "float"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional": {
+                "_1": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "_2": {
+                  "type": "tuple",
+                  "items": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional_ordering": [
+                [
+                  "_1",
+                  "_2"
+                ]
+              ],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {
+                "size": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "tuple",
+                      "items": {
+                        "type": {
+                          "name": "int"
+                        }
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                },
+                "dtype": {
+                  "type": "type",
+                  "name": {
+                    "module": "numpy",
+                    "name": "uint8"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.skimage": 23
+              }
+            },
+            "choice": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "list",
+                      "item": {
+                        "type": "union",
+                        "options": [
+                          {
+                            "type": {
+                              "name": "bool"
+                            }
+                          },
+                          {
+                            "type": "function"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional": {
+                "_1": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {
+                "size": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "tuple",
+                      "items": [
+                        {
+                          "type": {
+                            "name": "int"
+                          }
+                        },
+                        {
+                          "type": {
+                            "name": "int"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                },
+                "replace": {
+                  "type": {
+                    "name": "bool"
+                  }
+                },
+                "p": {
+                  "type": "list",
+                  "item": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "name": "float"
+                        }
+                      },
+                      {
+                        "type": {
+                          "name": "int"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.skimage": 8
+              }
+            },
+            "seed": {
+              "pos_only_required": {},
+              "pos_only_optional": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {
+                "seed": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.skimage": 26
+              }
+            },
+            "randn": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional": {
+                "_1": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "_2": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "_3": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "_4": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "pos_only_optional_ordering": [
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_2",
+                  "_3"
+                ],
+                [
+                  "_1",
+                  "_2"
+                ],
+                [
+                  "_2",
+                  "_3"
+                ],
+                [
+                  "_3",
+                  "_4"
+                ]
+              ],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 45
+              }
+            },
             "normal": {
               "pos_only_required": {},
               "pos_only_optional": {
@@ -15128,7 +14270,78 @@
                 }
               },
               "metadata": {
-                "usage.skimage": 55
+                "usage.skimage": 32
+              }
+            },
+            "random_sample": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "tuple",
+                  "items": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 1
+              }
+            },
+            "permutation": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 1
+              }
+            },
+            "standard_normal": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "tuple",
+                  "items": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                }
+              },
+              "pos_only_optional": {},
+              "pos_only_optional_ordering": [],
+              "pos_or_kw_required": {},
+              "pos_or_kw_optional": {},
+              "pos_or_kw_optional_ordering": [],
+              "kw_only_required": {},
+              "kw_only_optional": {},
+              "metadata": {
+                "usage.skimage": 10
               }
             },
             "gamma": {
@@ -15177,661 +14390,7 @@
               }
             }
           },
-          "classmethods": {
-            "rand": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_2": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_3": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_4": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "module": "numpy.random.mtrand",
-                        "name": "RandomState"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_1",
-                  "_2"
-                ],
-                [
-                  "_1",
-                  "_2"
-                ],
-                [
-                  "_2",
-                  "_3"
-                ],
-                [
-                  "_1",
-                  "_2"
-                ],
-                [
-                  "_2",
-                  "_3"
-                ],
-                [
-                  "_3",
-                  "_4"
-                ],
-                [
-                  "_1",
-                  "_2"
-                ],
-                [
-                  "_0",
-                  "_1"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 94
-              }
-            },
-            "randint": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy.random.mtrand",
-                        "name": "RandomState"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {
-                "_2": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_3": {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    }
-                  ]
-                },
-                "_1": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "float"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_2",
-                  "_3"
-                ],
-                [
-                  "_1",
-                  "_2"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "size": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": "tuple",
-                      "items": {
-                        "type": {
-                          "name": "int"
-                        }
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    }
-                  ]
-                },
-                "dtype": {
-                  "type": "type",
-                  "name": {
-                    "module": "numpy",
-                    "name": "uint8"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.skimage": 24
-              }
-            },
-            "choice": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": "list",
-                      "item": {
-                        "type": {
-                          "name": "bool"
-                        }
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy",
-                        "name": "ndarray"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy.random.mtrand",
-                        "name": "RandomState"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {
-                "_1": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": "list",
-                      "item": {
-                        "type": "function"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "size": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": "tuple",
-                      "items": [
-                        {
-                          "type": {
-                            "name": "int"
-                          }
-                        },
-                        {
-                          "type": {
-                            "name": "int"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    }
-                  ]
-                },
-                "replace": {
-                  "type": {
-                    "name": "bool"
-                  }
-                },
-                "p": {
-                  "type": "list",
-                  "item": {
-                    "type": "union",
-                    "options": [
-                      {
-                        "type": {
-                          "name": "float"
-                        }
-                      },
-                      {
-                        "type": {
-                          "name": "int"
-                        }
-                      }
-                    ]
-                  }
-                }
-              },
-              "metadata": {
-                "usage.skimage": 12
-              }
-            },
-            "uniform": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy.random.mtrand",
-                        "name": "RandomState"
-                      }
-                    }
-                  ]
-                },
-                "_1": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "float"
-                      }
-                    }
-                  ]
-                },
-                "_2": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "float"
-                      }
-                    },
-                    {
-                      "type": "tuple",
-                      "items": [
-                        {
-                          "type": {
-                            "name": "int"
-                          }
-                        },
-                        {
-                          "type": {
-                            "name": "int"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_0",
-                  "_1"
-                ],
-                [
-                  "_1",
-                  "_2"
-                ],
-                [
-                  "_0",
-                  "_1"
-                ],
-                [
-                  "_1",
-                  "_2"
-                ],
-                [
-                  "_0",
-                  "_1"
-                ],
-                [
-                  "_1",
-                  "_2"
-                ],
-                [
-                  "_0",
-                  "_1"
-                ],
-                [
-                  "_1",
-                  "_2"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "size": {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    }
-                  ]
-                },
-                "low": {
-                  "type": {
-                    "name": "float"
-                  }
-                },
-                "high": {
-                  "type": {
-                    "name": "float"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.skimage": 32
-              }
-            },
-            "seed": {
-              "pos_only_required": {},
-              "pos_only_optional": {
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy.random.mtrand",
-                        "name": "RandomState"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_0",
-                  "_1"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {
-                "seed": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "metadata": {
-                "usage.skimage": 26
-              }
-            },
-            "randn": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy.random.mtrand",
-                        "name": "RandomState"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {
-                "_2": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_3": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_4": {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_1",
-                  "_2"
-                ],
-                [
-                  "_1",
-                  "_2"
-                ],
-                [
-                  "_2",
-                  "_3"
-                ],
-                [
-                  "_1",
-                  "_2"
-                ],
-                [
-                  "_2",
-                  "_3"
-                ],
-                [
-                  "_3",
-                  "_4"
-                ]
-              ],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 52
-              }
-            },
-            "random_sample": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy.random.mtrand",
-                    "name": "RandomState"
-                  }
-                },
-                "_1": {
-                  "type": "tuple",
-                  "items": [
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    },
-                    {
-                      "type": {
-                        "name": "int"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 1
-              }
-            },
-            "permutation": {
-              "pos_only_required": {
-                "_0": {
-                  "type": {
-                    "module": "numpy.random.mtrand",
-                    "name": "RandomState"
-                  }
-                },
-                "_1": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "ndarray"
-                  }
-                }
-              },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 1
-              }
-            },
-            "standard_normal": {
-              "pos_only_required": {
-                "_0": {
-                  "type": "union",
-                  "options": [
-                    {
-                      "type": "tuple",
-                      "items": {
-                        "type": {
-                          "name": "int"
-                        }
-                      }
-                    },
-                    {
-                      "type": {
-                        "module": "numpy.random.mtrand",
-                        "name": "RandomState"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pos_only_optional": {
-                "_1": {
-                  "type": "tuple",
-                  "items": {
-                    "type": {
-                      "name": "int"
-                    }
-                  }
-                }
-              },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
-              "metadata": {
-                "usage.skimage": 10
-              }
-            }
-          },
+          "classmethods": {},
           "properties": {},
           "classproperties": {}
         }
@@ -15980,7 +14539,7 @@
           "kw_only_required": {},
           "kw_only_optional": {},
           "metadata": {
-            "usage.skimage": 8
+            "usage.skimage": 7
           }
         },
         "inv": {
