@@ -83,8 +83,7 @@ data/raw/xarray.jsonl:
 
 
 data/raw/sample_usage.jsonl:
-	env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
+	time env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
 		PYTHON_RECORD_API_TO_MODULES=numpy \
 		PYTHON_RECORD_API_FROM_MODULES=record_api.sample_usage \
-		PYTHON_RECORD_API_IMPORT_MODULES=numpy \
 		python -m record_api

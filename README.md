@@ -19,7 +19,6 @@ pip install record_api
 env PYTHON_RECORD_API_OUTPUT_FILE=out.jsonl \
     PYTHON_RECORD_API_TO_MODULES=numpy \
     PYTHON_RECORD_API_FROM_MODULES=record_api.sample_usage \
-    PYTHON_RECORD_API_IMPORT_MODULES=numpy \
     python -m record_api
 # b) Running pytest, adding tracing around each test:
 env PYTHON_RECORD_API_OUTPUT_FILE=out.jsonl \
