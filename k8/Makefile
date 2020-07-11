@@ -6,7 +6,7 @@ IMAGES := dask pandas sample-usage skimage sklearn xarray
 
 all: $(addprefix ../data/api/,$(addsuffix .json,$(IMAGES)))
 
-../data/api/%.json:
+../data/api/%.json: .
 	argo wait record-$(*F)
 	argo get record-$(*F) -o json \
 		| jq -r '.status.nodes."record-$(*F)".outboundNodes[0]' \

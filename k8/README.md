@@ -35,5 +35,5 @@ open http://localhost:2746
 # To create argo
 make argo-workflow-submit
 make argo-submit
-make -j 8 all
+make all
 ```
