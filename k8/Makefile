@@ -6,7 +6,7 @@ IMAGES := dask pandas sample-usage skimage sklearn xarray
 
 all: $(addprefix ../data/api/,$(addsuffix .json,$(IMAGES)))
 
-../data/api/%.json: argo-submit-%
+../data/api/%.json:
 	argo wait record-$(*F)
 	argo get record-$(*F) -o json \
 		| jq -r '.status.nodes."record-$(*F)".outboundNodes[0]' \
@@ -18,8 +18,9 @@ all: $(addprefix ../data/api/,$(addsuffix .json,$(IMAGES)))
 
 argo-submit: $(addprefix argo-submit-,$(IMAGES))
 
-argo-submit-%: build-images argo-workflow-submit
+argo-submit-%:
 	-argo delete record-$(*F)
+	-argo wait record-$(*F)
 	argo submit --from workflowtemplate/python-record-api -p label="$(*F)" -p tag="$(VERSION)" --name 'record-$(*F)'
 
 

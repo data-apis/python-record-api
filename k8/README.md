@@ -19,7 +19,6 @@ Requires docker buildx >= 0.4.0
 
 ```bash
 # To create buildx 
-
 kubectl create ns buildx
 docker buildx create --driver kubernetes --use
 docker buildx bake --push
@@ -31,4 +30,10 @@ kubectl apply -n argo -f https://raw.githubusercontent.com/argoproj/argo/stable/
 kubectl config set-context --current --namespace=argo
 kubectl port-forward deployment/argo-server 2746:2746
 open http://localhost:2746
+
+
+# To create argo
+make argo-workflow-submit
+make argo-submit
+make -j 8 all
 ```

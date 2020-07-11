@@ -38,6 +38,15 @@ spec:
       env:
       - name: PYTHON_RECORD_API_OUTPUT_FILE
         value: /tmp/raw.jsonl
+      # https://github.com/argoproj/argo/blob/master/docs/resource-duration.md#request-defaults
+      # Must override or get defaults which are too low
+      resources:
+        requests:
+          memory: 1Gi
+          cpu: 500m
+        limits:
+          memory: 3Gi
+          cpu: 2000m
     outputs:
       artifacts:
       - name: raw
@@ -60,6 +69,13 @@ spec:
           value: /tmp/raw.jsonl
         - name: PYTHON_RECORD_API_OUTPUT
           value: /tmp/grouped.jsonl
+      resources:
+        requests:
+          memory: 1Gi
+          cpu: 500m
+        limits:
+          memory: 3Gi
+          cpu: 2000m
 
   - name: infer-api
     inputs:
@@ -82,4 +98,10 @@ spec:
           value: /tmp/grouped.jsonl
         - name: PYTHON_RECORD_API_OUTPUT
           value: /tmp/api.json
-      
+      resources:
+        requests:
+          memory: 1Gi
+          cpu: 500m
+        limits:
+          memory: 3Gi
+          cpu: 2000m
