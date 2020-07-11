@@ -1,4 +1,4 @@
-FROM dataapis/python-record-api:base-1.1.0
+FROM saulshanabrook/python-record-api:base-1.1.0
 
 RUN pip install numpy
 
