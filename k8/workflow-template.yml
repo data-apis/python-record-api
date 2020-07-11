@@ -11,9 +11,11 @@ spec:
   arguments:
     parameters:
     - name: label
-      value: "1.1.0"
-    - name: tag
       value: sample-usage
+    - name: tag
+      value: "1.1.0"
+    - name: base-tag
+      value: "1.1.0"
   templates:
   - name: all
     steps:
@@ -62,7 +64,7 @@ spec:
       - name: grouped
         path: /tmp/grouped.jsonl
     container:
-      image: "saulshanabrook/python-record-api:base-{{workflow.parameters.tag}}"
+      image: "saulshanabrook/python-record-api:base-{{workflow.parameters.base-tag}}"
       command: [python, -m, record_api.line_counts]
       env:
         - name: PYTHON_RECORD_API_INPUT
@@ -87,7 +89,7 @@ spec:
       - name: api
         path: /tmp/api.json
     container:
-      image: "saulshanabrook/python-record-api:base-{{workflow.parameters.tag}}"
+      image: "saulshanabrook/python-record-api:base-{{workflow.parameters.base-tag}}"
       command: [python, -m, record_api.infer_apis]
       env:
         - name: PYTHON_RECORD_API_LABEL

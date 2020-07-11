@@ -11,7 +11,7 @@ variable "BASE_USE_TAG" {
 }
 
 variable "TAG" {
-	default = "1.1.0"
+	default = "1.1.0v1"
 }
 
 group "default" {

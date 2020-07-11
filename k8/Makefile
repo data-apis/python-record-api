@@ -1,6 +1,9 @@
 all: images
 
-VERSION := 1.1.0
+BASE_BUILD_TAG := 1.1.0
+BASE_USE_TAG := 1.1.0
+
+TAG := 1.1.0v1
 
 IMAGES := dask pandas sample-usage skimage sklearn xarray 
 
@@ -21,7 +24,7 @@ argo-submit: $(addprefix argo-submit-,$(IMAGES))
 argo-submit-%:
 	-argo delete record-$(*F)
 	-argo wait record-$(*F)
-	argo submit --from workflowtemplate/python-record-api -p label="$(*F)" -p tag="$(VERSION)" --name 'record-$(*F)'
+	argo submit --from workflowtemplate/python-record-api -p label="$(*F)" -p tag="$(TAG)" -p base-tag="$(BASE_USE_TAG)" --name 'record-$(*F)'
 
 
 argo-workflow-submit:
@@ -32,7 +35,7 @@ argo-workflow-submit:
 push-images:  $(addprefix push-image-,$(IMAGES))
 
 push-image-%:
-	docker push saulshanabrook/python-record-api:$(*F)-$(VERSION)
+	docker push saulshanabrook/python-record-api:$(*F)-$(TAG)
 
 build-images:
 	docker buildx bake
