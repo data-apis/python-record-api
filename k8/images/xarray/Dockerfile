@@ -20,6 +20,10 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+# Must install numpy before cartopy
+
+RUN pip install --no-cache-dir numpy
+
 # Manually convered conda -> pip
 RUN pip install \
     --no-cache-dir \
@@ -46,7 +50,6 @@ RUN pip install \
     nc-time-axis \
     netcdf4 \
     numba \
-    numpy \
     pandas \
     pint \
     pip \
