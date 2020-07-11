@@ -1,8 +1,8 @@
 all: images
 
-VERSION := 0.0.0
+VERSION := 1.1.0
 
-IMAGES := dask sample-usage skimage sklearn xarray 
+IMAGES := dask pandas sample-usage skimage sklearn xarray 
 
 all: $(addprefix ../data/api/,$(addsuffix .json,$(IMAGES)))
 
@@ -15,9 +15,12 @@ all: $(addprefix ../data/api/,$(addsuffix .json,$(IMAGES)))
 	rm api
 	mv -f api.json $@
 
-argo-submit-%: image-% argo-workflow-submit
+
+argo-submit: $(addprefix argo-submit-,$(IMAGES))
+
+argo-submit-%: build-images argo-workflow-submit
 	-argo delete record-$(*F)
-	argo submit --from workflowtemplate/python-record-api -p label="$(*F)" -p tag="$(VERSION)" --name 'record-$(*F)' --watch
+	argo submit --from workflowtemplate/python-record-api -p label="$(*F)" -p tag="$(VERSION)" --name 'record-$(*F)'
 
 
 argo-workflow-submit:
@@ -25,5 +28,11 @@ argo-workflow-submit:
 	argo template create workflow-template.yml
 
 
-images:
+build-images:
 	docker buildx bake
+
+port-forward:
+	kubectl -n argo port-forward deployment/argo-server 2746:2746
+
+set-namespace:
+	kubectl config set-context --current --namespace=argo
