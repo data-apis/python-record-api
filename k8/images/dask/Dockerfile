@@ -26,6 +26,9 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 RUN python -c "import dask"
 
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install pytest-custom_exit_code
+
 ENV PYTHON_RECORD_API_TO_MODULES=numpy
 ENV PYTHON_RECORD_API_FROM_MODULES=dask
-CMD [ "pytest", "dask", "--verbose", "--doctest-modules" ]
+CMD [ "pytest", "dask", "--verbose", "--doctest-modules", "--suppress-tests-failed-exit-code"  ]

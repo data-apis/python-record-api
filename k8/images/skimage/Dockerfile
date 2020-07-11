@@ -24,6 +24,9 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 RUN python -c "import skimage"
 
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install pytest-custom_exit_code
+
 ENV PYTHON_RECORD_API_TO_MODULES=numpy
 ENV PYTHON_RECORD_API_FROM_MODULES=skimage
-CMD [ "pytest", "skimage", "--doctest-modules" ]
+CMD [ "pytest", "skimage", "--doctest-modules", "--suppress-tests-failed-exit-code"  ]

@@ -34,6 +34,9 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 RUN python -c "import pandas"
 
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install pytest-custom_exit_code
+
 ENV PYTHON_RECORD_API_TO_MODULES=numpy
 ENV PYTHON_RECORD_API_FROM_MODULES=sklearn
-CMD [ "pytest", "pandas", "--skip-slow", "--skip-network", "--skip-db", "-m", "'not single'", "-r", "sxX", "--strict" ]
+CMD [ "pytest", "pandas", "--skip-slow", "--skip-network", "--skip-db", "-m", "'not single'", "-r", "sxX", "--strict", "--suppress-tests-failed-exit-code"  ]
