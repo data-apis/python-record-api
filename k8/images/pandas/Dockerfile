@@ -2,7 +2,14 @@
 ARG FROM
 FROM ${FROM}
 
+
+RUN apt-get update && \
+    apt-get -y install --no-install-recommends \
+        libsnappy-dev \
+        && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /usr/src/app
+
 
 # Must build from source to be able to run tests
 # https://pandas.pydata.org/pandas-docs/stable/development/contributing.html#creating-a-development-environment
@@ -11,12 +18,6 @@ RUN git clone \
     --depth 1 \
     git://github.com/pandas-dev/pandas.git \
     .
-
-RUN --mount=type=cache,target=/var/cache/apt \
-    --mount=type=cache,target=/var/lib/apt \
-    apt-get update && \
-    apt-get -y install --no-install-recommends \
-        libsnappy-dev
 
 
 RUN --mount=type=cache,target=/root/.cache/pip \

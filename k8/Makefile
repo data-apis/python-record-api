@@ -28,6 +28,11 @@ argo-workflow-submit:
 	argo template create workflow-template.yml
 
 
+push-images:  $(addprefix push-image-,$(IMAGES))
+
+push-image-%:
+	docker push saulshanabrook/python-record-api:$(*F)-$(VERSION)
+
 build-images:
 	docker buildx bake
 

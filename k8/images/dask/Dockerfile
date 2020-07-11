@@ -17,7 +17,12 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     --editable \
     '.[complete]' \
     pytest \
-    moto
+    moto \
+    numpy \
+    pandas \
+    scipy \
+    bokeh \
+    psutil
 
 RUN python -c "import dask"
 

@@ -2,6 +2,13 @@
 ARG FROM
 FROM ${FROM}
 
+RUN apt-get update && \
+    apt-get -y install --no-install-recommends \
+        libproj-dev \
+        libgeos-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+
 WORKDIR /usr/src/app
 
 # Must build from source to be able to run tests
@@ -14,13 +21,6 @@ RUN git clone \
 # for cartopy
 # https://scitools.org.uk/cartopy/docs/latest/installing.html#required-dependencies
 
-# Caching from https://community.rstudio.com/t/docker-buildkit-cache-package-build-and-install/46839
-RUN --mount=type=cache,target=/var/cache/apt \
-    --mount=type=cache,target=/var/lib/apt \
-    apt-get update && \
-    apt-get -y install --no-install-recommends \
-        libproj-dev \
-        libgeos-dev
 
 # Must install numpy before cartopy
 RUN --mount=type=cache,target=/root/.cache/pip \
@@ -44,7 +44,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     h5netcdf \
     h5py \
     hypothesis \
-    iris \
+    # iris \
     isort==4.3.21 \
     lxml \
     matplotlib \

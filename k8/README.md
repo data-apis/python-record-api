@@ -15,3 +15,20 @@ This runs with experimental Docker for building, so we can
 have build caches: https://stackoverflow.com/a/58021389/907060
 
 Requires docker buildx >= 0.4.0
+
+
+```bash
+# To create buildx 
+
+kubectl create ns buildx
+docker buildx create --driver kubernetes --use
+docker buildx bake --push
+
+# To create argo
+kubectl create ns argo
+kubectl apply -n argo -f https://raw.githubusercontent.com/argoproj/argo/stable/manifests/quick-start-minimal.yaml
+# set default NS
+kubectl config set-context --current --namespace=argo
+kubectl port-forward deployment/argo-server 2746:2746
+open http://localhost:2746
+```
