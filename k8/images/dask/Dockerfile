@@ -15,7 +15,9 @@ RUN git clone \
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
     --editable \
-    '.[complete]'
+    '.[complete]' \
+    pytest \
+    moto
 
 RUN python -c "import dask"
 
