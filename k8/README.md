@@ -9,3 +9,9 @@ Run `make` here to submit a number of Argo jobs and wait for them to finish. It 
 Then run the parent `make` to combine those APIs.
 
 I chose to keep them separate, so we can still run things locally for testing and debugging.
+
+
+This runs with experimental Docker for building, so we can
+have build caches: https://stackoverflow.com/a/58021389/907060
+
+Requires docker buildx >= 0.4.0

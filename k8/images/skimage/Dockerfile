@@ -1,4 +1,6 @@
-FROM saulshanabrook/python-record-api:base-1.1.0
+# syntax = docker/dockerfile:1.1.7-experimental
+ARG FROM
+FROM ${FROM}
 
 WORKDIR /usr/src/app
 
@@ -10,12 +12,13 @@ RUN git clone \
     git://github.com/scikit-image/scikit-image.git \
     .
 
-RUN ls requirements/ \
+RUN --mount=type=cache,target=/root/.cache/pip \
+    ls requirements/ \
     | grep .txt \
-    | xargs -n 1 -I% pip install --no-cache-dir -r requirements/%
+    | xargs -n 1 -I% pip install -r requirements/%
 
-RUN pip install \
-    --no-cache-dir \
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install \
     -e \
     .
 

@@ -1,6 +1,9 @@
-FROM saulshanabrook/python-record-api:base-1.1.0
+# syntax = docker/dockerfile:1.1.7-experimental
+ARG FROM
+FROM ${FROM}
 
-RUN pip install --no-cache-dir \
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install \
     cython==0.29.21 \
     pandas==1.0.5 \
     pytest==5.4.3
@@ -15,9 +18,9 @@ RUN git clone \
     git://github.com/scikit-learn/scikit-learn.git \
     .
 ENV SKLEARN_FAIL_NO_OPENMP=true
-RUN pip install \
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install \
     --no-build-isolation \
-    --no-cache-dir \
     --editable \
     .
 

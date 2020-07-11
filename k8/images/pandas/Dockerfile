@@ -1,26 +1,35 @@
-FROM saulshanabrook/python-record-api:base-1.1.0
+# syntax = docker/dockerfile:1.1.7-experimental
+ARG FROM
+FROM ${FROM}
 
 WORKDIR /usr/src/app
 
 # Must build from source to be able to run tests
 # https://pandas.pydata.org/pandas-docs/stable/development/contributing.html#creating-a-development-environment
 RUN git clone \
-    --branch v0.15.1 \
+    --branch v1.0.5 \
     --depth 1 \
     git://github.com/pandas-dev/pandas.git \
     .
 
-RUN pip install \
-    --no-cache-dir \
+RUN --mount=type=cache,target=/var/cache/apt \
+    --mount=type=cache,target=/var/lib/apt \
+    apt-get update && \
+    apt-get -y install --no-install-recommends \
+        libsnappy-dev
+
+
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install \
      -r requirements-dev.txt
 
 
 RUN python setup.py build_ext --inplace -j 4
-RUN pip install \
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install \
     -e . \
     --no-build-isolation \
-    --no-use-pep517 \
-    --no-cache-dir
+    --no-use-pep517
 
 RUN python -c "import pandas"
 

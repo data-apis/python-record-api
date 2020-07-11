@@ -1,4 +1,6 @@
-FROM saulshanabrook/python-record-api:base-1.1.0
+# syntax = docker/dockerfile:1.1.7-experimental
+ARG FROM
+FROM ${FROM}
 
 WORKDIR /usr/src/app
 
@@ -9,9 +11,9 @@ RUN git clone \
     --depth 1 \
     git://github.com/dask/dask.git \
     .
-ENV SKLEARN_FAIL_NO_OPENMP=true
-RUN pip install \
-    --no-cache-dir \
+
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install \
     --editable \
     '.[complete]'
 

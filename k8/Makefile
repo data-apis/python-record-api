@@ -25,11 +25,5 @@ argo-workflow-submit:
 	argo template create workflow-template.yml
 
 
-images: $(addprefix image-,$(IMAGES))
-
-image-%: image-record-api
-	docker build -t saulshanabrook/python-record-api:$(*F)-$(VERSION) ./images/$(*F)
-
-
-image-record-api:
-	docker build -t saulshanabrook/python-record-api:base-1.1.0 ./images/record-api
+images:
+	docker buildx bake

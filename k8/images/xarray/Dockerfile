@@ -1,4 +1,6 @@
-FROM saulshanabrook/python-record-api:base-1.1.0
+# syntax = docker/dockerfile:1.1.7-experimental
+ARG FROM
+FROM ${FROM}
 
 WORKDIR /usr/src/app
 
@@ -9,24 +11,25 @@ RUN git clone \
     --depth 1 \
     git://github.com/pydata/xarray.git \
     .
-# TODO: Manually version?
 # for cartopy
 # https://scitools.org.uk/cartopy/docs/latest/installing.html#required-dependencies
-RUN apt-get update && \
+
+# Caching from https://community.rstudio.com/t/docker-buildkit-cache-package-build-and-install/46839
+RUN --mount=type=cache,target=/var/cache/apt \
+    --mount=type=cache,target=/var/lib/apt \
+    apt-get update && \
     apt-get -y install --no-install-recommends \
-    # https://proj.org/install.html#debian
-        proj-bin \
-        libgeos-dev && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+        libproj-dev \
+        libgeos-dev
 
 # Must install numpy before cartopy
-
-RUN pip install --no-cache-dir numpy
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install \
+    numpy
 
 # Manually convered conda -> pip
-RUN pip install \
-    --no-cache-dir \
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install \
     black \
     boto3 \
     bottleneck \
@@ -40,7 +43,6 @@ RUN pip install \
     flake8 \
     h5netcdf \
     h5py \
-    hdf5 \
     hypothesis \
     iris \
     isort==4.3.21 \
@@ -55,7 +57,7 @@ RUN pip install \
     pip \
     pseudonetcdf \
     pydap \
-    pynio \
+    # pynio \
     pytest \
     pytest-cov \
     pytest-env \
@@ -68,8 +70,8 @@ RUN pip install \
     zarr \
     numbagg
 
-RUN pip install \
-    --no-cache-dir \
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install \
     -e \
     .
 
