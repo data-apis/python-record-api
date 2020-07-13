@@ -1,0 +1,111 @@
+# https://argoproj.github.io/argo/fields/
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: python-record-api
+  generateName: record-
+spec:
+  podGC:
+    strategy: OnWorkflowCompletion
+  entrypoint: all
+  arguments:
+    parameters:
+    - name: label
+      value: sample-usage
+    - name: tag
+      value: "1.1.0"
+    - name: base-tag
+      value: "1.1.0"
+  templates:
+  - name: all
+    steps:
+    - - name: record-api
+        template: record-api
+    - - name: groupby-lines
+        template: groupby-lines
+        arguments:
+          artifacts:
+          - name: raw
+            from: "{{steps.record-api.outputs.artifacts.raw}}"
+    - - name: infer-api
+        template: infer-api
+        arguments:
+          artifacts:
+          - name: grouped
+            from: "{{steps.groupby-lines.outputs.artifacts.grouped}}"
+
+  - name: record-api
+    container:
+      image: "saulshanabrook/python-record-api:{{workflow.parameters.label}}-{{workflow.parameters.tag}}"
+      env:
+      - name: PYTHON_RECORD_API_OUTPUT_FILE
+        value: /tmp/raw.jsonl
+      - name: PYTHON_RECORD_API_TO_MODULES
+        value: numpy,pandas
+      # https://github.com/argoproj/argo/blob/master/docs/resource-duration.md#request-defaults
+      # Must override or get defaults which are too low
+      resources:
+        requests:
+          memory: 2Gi
+          cpu: 1000m
+        limits:
+          memory: 8Gi
+          cpu: 4000m
+    outputs:
+      artifacts:
+      - name: raw
+        path: /tmp/raw.jsonl
+
+  - name: groupby-lines
+    inputs:
+      artifacts:
+      - name: raw
+        path: /tmp/raw.jsonl
+    outputs:
+      artifacts:
+      - name: grouped
+        path: /tmp/grouped.jsonl
+    container:
+      image: "saulshanabrook/python-record-api:base-{{workflow.parameters.base-tag}}"
+      command: [python, -m, record_api.line_counts]
+      env:
+        - name: PYTHON_RECORD_API_INPUT
+          value: /tmp/raw.jsonl
+        - name: PYTHON_RECORD_API_OUTPUT
+          value: /tmp/grouped.jsonl
+      resources:
+        requests:
+          memory: 2Gi
+          cpu: 1000m
+        limits:
+          memory: 8Gi
+          cpu: 4000m
+
+  - name: infer-api
+    inputs:
+      artifacts:
+      - name: grouped
+        path: /tmp/grouped.jsonl
+    outputs:
+      artifacts:
+      - name: api
+        path: /tmp/api.json
+    container:
+      image: "saulshanabrook/python-record-api:base-{{workflow.parameters.base-tag}}"
+      command: [python, -m, record_api.infer_apis]
+      env:
+        - name: PYTHON_RECORD_API_LABEL
+          value: "{{workflow.parameters.label}}"
+        - name: PYTHON_RECORD_API_MODULES
+          value: pandas,numpy
+        - name: PYTHON_RECORD_API_INPUT
+          value: /tmp/grouped.jsonl
+        - name: PYTHON_RECORD_API_OUTPUT
+          value: /tmp/api.json
+      resources:
+        requests:
+          memory: 2Gi
+          cpu: 1000m
+        limits:
+          memory: 8Gi
+          cpu: 4000m

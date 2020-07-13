@@ -4,16 +4,25 @@ from typing import *
 class CClass:
     def __getitem__(self, _0: Union[numpy.ndarray, Tuple[numpy.ndarray, ...]], /):
         """
+        usage.pandas: 3
         usage.skimage: 1
-        usage.sklearn: 26
+        usage.sklearn: 40
         """
         ...
 
 
 class IndexExpression:
-    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
+    def __getitem__(
+        self,
+        _0: Union[
+            slice[None, None, None], Tuple[slice[int, int, int], slice[int, int, int]]
+        ],
+        /,
+    ):
         """
+        usage.pandas: 2
         usage.skimage: 1
+        usage.sklearn: 2
         """
         ...
 
@@ -32,16 +41,16 @@ class MGridClass:
             ],
             List[
                 slice[
-                    Union[numpy.int64, int, None],
-                    Union[numpy.int64, float, int],
-                    Union[numpy.int64, int, None],
+                    Union[numpy.int64, None],
+                    Union[numpy.int64, int],
+                    Union[numpy.int64, None],
                 ]
             ],
         ],
         /,
     ):
         """
-        usage.skimage: 61
+        usage.skimage: 57
         usage.sklearn: 1
         """
         ...
@@ -54,8 +63,7 @@ class OGridClass:
         /,
     ):
         """
-        usage.skimage: 9
-        usage.dask: 2
+        usage.skimage: 8
         """
         ...
 
@@ -64,16 +72,17 @@ class RClass:
     def __getitem__(
         self,
         _0: Union[
-            List[Union[List[Union[float, int]], int]],
             tuple,
+            slice[Union[int, None], int, Union[int, None]],
             numpy.ndarray,
-            slice[None, int, None],
+            List[Union[int, List[Union[int, float]]]],
         ],
         /,
     ):
         """
+        usage.pandas: 13
         usage.skimage: 16
+        usage.sklearn: 37
         usage.xarray: 3
-        usage.sklearn: 24
         """
         ...

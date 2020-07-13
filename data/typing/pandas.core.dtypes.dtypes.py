@@ -2,100 +2,56 @@ from typing import *
 
 
 class CategoricalDtype:
-    def __init__(self, /, categories: List[str]):
+    def __eq__(self, _0: Union[numpy.dtype, type], /):
         """
-        usage.xarray: 2
-        usage.dask: 1
-        """
-        ...
-
-    # usage.dask: 1
-    __module__: ClassVar[object]
-
-    # usage.dask: 7
-    categories: object
-
-    # usage.dask: 1
-    kind: object
-
-    # usage.dask: 1
-    ordered: object
-
-    def __eq__(
-        self,
-        _0: Union[
-            pandas.core.dtypes.dtypes.CategoricalDtype,
-            Literal["category", "O"],
-            Type[object],
-        ],
-        /,
-    ):
-        """
-        usage.xarray: 1
-        usage.dask: 18
+        usage.pandas: 19
         """
         ...
 
-    def __ne__(
-        self,
-        _0: Union[pandas.core.dtypes.dtypes.CategoricalDtype, Literal["category"]],
-        /,
-    ):
+    def __ne__(self, _0: numpy.dtype, /):
         """
-        usage.dask: 5
+        usage.pandas: 1
         """
         ...
 
 
 class DatetimeTZDtype:
-
-    # usage.dask: 1
-    __module__: ClassVar[object]
-
-    # usage.dask: 1
-    kind: object
-
-    # usage.dask: 1
-    name: object
-
-    # usage.dask: 1
-    tz: object
-
-    def __eq__(
-        self,
-        _0: Union[
-            Type[object], pandas.core.dtypes.dtypes.DatetimeTZDtype, Literal["O"]
-        ],
-        /,
-    ):
+    def __eq__(self, _0: Union[numpy.dtype, type], /):
         """
-        usage.xarray: 1
-        usage.dask: 3
+        usage.pandas: 24
+        """
+        ...
+
+    def __ne__(self, _0: numpy.dtype, /):
+        """
+        usage.pandas: 1
         """
         ...
 
 
 class IntervalDtype:
-    def __eq__(self, _0: Literal["O"], /):
+    def __eq__(self, _0: Union[numpy.dtype, type], /):
         """
-        usage.xarray: 1
+        usage.pandas: 13
+        """
+        ...
+
+    def __ne__(self, _0: numpy.dtype, /):
+        """
+        usage.pandas: 1
         """
         ...
 
 
 class PeriodDtype:
-
-    # usage.dask: 1
-    __module__: ClassVar[object]
-
-    # usage.dask: 1
-    kind: object
-
-    # usage.dask: 1
-    name: object
-
-    def __eq__(self, _0: Literal["O"], /):
+    def __eq__(self, _0: Union[numpy.dtype, type], /):
         """
-        usage.xarray: 1
+        usage.pandas: 22
+        """
+        ...
+
+    def __ne__(self, _0: numpy.dtype, /):
+        """
+        usage.pandas: 1
         """
         ...

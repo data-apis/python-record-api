@@ -2,159 +2,84 @@ from typing import *
 
 
 class Timestamp:
-    def __init__(
-        self,
-        /,
-        ts_input: Union[
-            str,
-            pandas._libs.tslibs.timestamps.Timestamp,
-            pandas._libs.tslibs.nattype.NaTType,
-        ],
-    ):
+    def __add__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.int64], /):
         """
-        usage.xarray: 7
-        usage.dask: 8
-        """
-        ...
-
-    # usage.dask: 1
-    __module__: ClassVar[object]
-
-    # usage.dask: 1
-    __name__: ClassVar[object]
-
-    # usage.dask: 1
-    dtype: object
-
-    # usage.dask: 1
-    freq: object
-
-    # usage.xarray: 1
-    # usage.dask: 5
-    tz: object
-
-    # usage.dask: 1
-    tzinfo: object
-
-    # usage.xarray: 1
-    # usage.dask: 1
-    value: object
-
-    def __add__(self, _0: object, /):
-        """
-        usage.dask: 6
+        usage.pandas: 23
         """
         ...
 
     def __eq__(
-        self, _0: Union[pandas._libs.tslibs.timestamps.Timestamp, Literal["2000"]], /
+        self, _0: Union[numpy.datetime64, numpy.float64, numpy.ndarray, numpy.int64], /
     ):
         """
-        usage.dask: 45
+        usage.pandas: 8
         """
         ...
 
-    def __ge__(
-        self,
-        _0: Union[
-            pandas.core.indexes.datetimes.DatetimeIndex,
-            pandas._libs.tslibs.timestamps.Timestamp,
-            numpy.datetime64,
-        ],
-        /,
+    def __floordiv__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    def __ge__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    def __lt__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    def __mod__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    def __mul__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    def __ne__(
+        self, _0: Union[numpy.int64, numpy.ndarray, numpy.datetime64, numpy.float64], /
     ):
         """
-        usage.dask: 20
+        usage.pandas: 4
         """
         ...
 
-    def __gt__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+    def __pow__(self, _0: numpy.ndarray, /):
         """
-        usage.dask: 6
-        """
-        ...
-
-    def __le__(
-        self,
-        _0: Union[pandas._libs.tslibs.timestamps.Timestamp, pandas.core.series.Series],
-        /,
-    ):
-        """
-        usage.dask: 19
+        usage.pandas: 1
         """
         ...
 
-    def __lt__(
-        self,
-        _0: Union[
-            pandas.core.indexes.datetimes.DatetimeIndex,
-            pandas._libs.tslibs.timestamps.Timestamp,
-        ],
-        /,
-    ):
+    def __radd__(self, _0: Union[numpy.ndarray, numpy.int64, numpy.timedelta64], /):
         """
-        usage.dask: 7
+        usage.pandas: 7
         """
         ...
 
-    def __ne__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+    def __rsub__(self, _0: Union[numpy.ndarray, numpy.int64, numpy.datetime64], /):
         """
-        usage.dask: 10
-        """
-        ...
-
-    def __radd__(
-        self,
-        _0: Union[
-            pandas._libs.tslibs.nattype.NaTType,
-            pandas._libs.tslibs.timedeltas.Timedelta,
-            pandas.core.indexes.timedeltas.TimedeltaIndex,
-        ],
-        /,
-    ):
-        """
-        usage.xarray: 5
+        usage.pandas: 8
         """
         ...
 
-    def __rsub__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+    def __sub__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.int64], /):
         """
-        usage.xarray: 2
-        """
-        ...
-
-    def __sub__(self, _0: object, /):
-        """
-        usage.dask: 8
+        usage.pandas: 14
         """
         ...
 
-    def ceil(self, /, freq: str):
+    def __truediv__(self, _0: numpy.ndarray, /):
         """
-        usage.dask: 6
-        """
-        ...
-
-    def round(self, /, freq: Literal["15s"]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def to_datetime64(self, /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    def to_pydatetime(self, /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    def tz_localize(self, /, tz: None):
-        """
-        usage.dask: 3
+        usage.pandas: 1
         """
         ...

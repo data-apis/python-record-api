@@ -2,12 +2,14 @@ from typing import *
 
 
 class SparseDtype:
-
-    # usage.dask: 1
-    kind: object
-
-    def __eq__(self, _0: Literal["Sparse[uint8, 0]"], /):
+    def __eq__(self, _0: Union[numpy.dtype, Type[numpy.object_]], /):
         """
-        usage.dask: 2
+        usage.pandas: 6
+        """
+        ...
+
+    def __ne__(self, _0: numpy.dtype, /):
+        """
+        usage.pandas: 2
         """
         ...

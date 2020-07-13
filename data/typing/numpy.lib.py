@@ -1,7 +1,8 @@
 from typing import *
 
-# usage.dask: 1
-mixins: object
+# usage.sklearn: 1
+arraysetops: object
 
+# usage.pandas: 2
 # usage.xarray: 1
 stride_tricks: object
