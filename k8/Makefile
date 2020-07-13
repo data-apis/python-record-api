@@ -13,10 +13,14 @@ all: $(addprefix ../data/api/,$(addsuffix .json,$(IMAGES)))
 	argo wait record-$(*F)
 	argo get record-$(*F) -o json \
 		| jq -r '.status.nodes."record-$(*F)".outboundNodes[0]' \
-		| xargs -n 1 -I% wget 'http://localhost:2746/artifacts/argo/record-$(*F)/%/api'
-	tar -xvf api
-	rm api
-	mv -f api.json $@
+		| xargs -n 1 -I% mc cat 'argo-artifacts-local/my-bucket/record-$(*F)/%/api.tgz' \
+		| tar -xvf - -C $(@D)
+	mv -f $(@D)/api.json $@
+
+# 	| xargs -n 1 -I% wget 'http://localhost:2746/artifacts/argo/record-$(*F)/%/api'
+# tar -xvf api
+# rm api
+# mv -f api.json $@
 
 
 argo-submit: $(addprefix argo-submit-,$(IMAGES))
