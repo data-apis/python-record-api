@@ -2,27 +2,14 @@ from typing import *
 
 
 class IntervalIndex:
-
-    # usage.xarray: 2
-    dtype: object
-
-    # usage.xarray: 1
-    name: object
-
-    # usage.xarray: 1
-    shape: object
-
-    # usage.xarray: 1
-    values: object
-
-    def __getitem__(self, _0: slice[None, None, None], /):
+    def __eq__(self, _0: numpy.ndarray, /):
         """
-        usage.xarray: 1
+        usage.pandas: 4
         """
         ...
 
-    def equals(self, /, other: pandas.core.indexes.interval.IntervalIndex):
+    def __gt__(self, _0: numpy.ndarray, /):
         """
-        usage.xarray: 1
+        usage.pandas: 2
         """
         ...

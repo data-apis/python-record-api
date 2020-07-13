@@ -14,8 +14,14 @@ I chose to keep them separate, so we can still run things locally for testing an
 This runs with experimental Docker for building, so we can
 have build caches: https://stackoverflow.com/a/58021389/907060
 
-Requires docker buildx >= 0.4.0
+Requires docker buildx master, b/c we need https://github.com/docker/buildx/pull/280
+and it hasn't been released yet.
 
+https://github.com/docker/buildx#with-docker-1809
+
+
+
+Buildx bake tutorial: https://github.com/FernandoMiguel/BuildKit
 
 ```bash
 # To create buildx  remote

@@ -1,64 +1,35 @@
 from typing import *
 
 
-def _check_fill_value(fill_value: Union[float, int], ndtype: numpy.dtype):
+def array(
+    data: Union[List[Union[int, float]], numpy.ma.core.MaskedArray, numpy.ndarray],
+    mask: Union[List[Union[bool, List[int]]], bool, numpy.ndarray],
+):
     """
-    usage.dask: 2
-    """
-    ...
-
-
-def array(data: numpy.ndarray, mask: Union[numpy.ndarray, bool, List[List[int]]]):
-    """
+    usage.pandas: 1
     usage.skimage: 7
     usage.sklearn: 4
-    usage.dask: 2
+    usage.xarray: 1
     """
     ...
 
 
 def concatenate(
-    arrays: Union[
-        List[Union[numpy.ma.core.MaskedArray, numpy.ndarray]],
-        Tuple[numpy.ma.core.MaskedArray, numpy.ma.core.MaskedArray],
-    ],
-    axis: int,
+    arrays: Tuple[numpy.ma.core.MaskedArray, numpy.ma.core.MaskedArray], axis: int
 ):
     """
     usage.xarray: 3
-    usage.dask: 38
     """
     ...
 
 
-def dot(
-    a: numpy.ma.core.MaskedArray, b: Union[numpy.ma.core.MaskedArray, numpy.ndarray]
+def getdata(
+    a: Union[numpy.ma.core.MaskedArray, numpy.ma.mrecords.MaskedRecords, numpy.ndarray]
 ):
     """
-    usage.dask: 3
-    """
-    ...
-
-
-def filled(a: Union[numpy.ma.core.MaskedArray, numpy.float64, numpy.ndarray]):
-    """
-    usage.dask: 31
-    """
-    ...
-
-
-def fix_invalid(a: Union[numpy.ma.core.MaskedArray, numpy.ndarray], fill_value: int):
-    """
-    usage.dask: 4
-    """
-    ...
-
-
-def getdata(a: Union[numpy.ndarray, numpy.ma.core.MaskedArray]):
-    """
+    usage.pandas: 1
     usage.skimage: 3
     usage.sklearn: 2
-    usage.dask: 9
     """
     ...
 
@@ -70,12 +41,12 @@ def getmask(a: numpy.ma.core.MaskedArray):
     ...
 
 
-def getmaskarray(arr: Union[numpy.ndarray, numpy.ma.core.MaskedArray]):
+def getmaskarray(arr: numpy.ma.core.MaskedArray):
     """
+    usage.pandas: 7
     usage.skimage: 1
-    usage.xarray: 2
     usage.sklearn: 1
-    usage.dask: 9
+    usage.xarray: 2
     """
     ...
 
@@ -87,185 +58,56 @@ def isMaskedArray(x: Union[numpy.ndarray, numpy.ma.core.MaskedArray]):
     ...
 
 
-def masked_equal(x: numpy.ndarray, value: int):
+def masked_invalid(a: Union[List[float], numpy.ndarray]):
     """
-    usage.dask: 5
-    """
-    ...
-
-
-def masked_greater(
-    x: Union[numpy.ndarray, dask.array.core.Array],
-    value: Union[numpy.ndarray, int, dask.array.core.Array, float],
-):
-    """
-    usage.dask: 23
-    """
-    ...
-
-
-def masked_greater_equal(
-    x: Union[numpy.ndarray, dask.array.core.Array], value: Union[int, numpy.ndarray]
-):
-    """
-    usage.dask: 3
-    """
-    ...
-
-
-def masked_inside(x: numpy.ndarray, v1: int, v2: int):
-    """
-    usage.dask: 3
-    """
-    ...
-
-
-def masked_invalid(a: Union[numpy.ndarray, List[float]]):
-    """
-    usage.xarray: 4
     usage.sklearn: 4
-    usage.dask: 3
+    usage.xarray: 4
     """
     ...
 
 
-def masked_less(
-    x: Union[numpy.ndarray, dask.array.core.Array], value: Union[int, numpy.ndarray]
-):
-    """
-    usage.dask: 3
-    """
-    ...
-
-
-def masked_less_equal(
-    x: Union[numpy.ndarray, dask.array.core.Array], value: Union[int, numpy.ndarray]
-):
-    """
-    usage.dask: 3
-    """
-    ...
-
-
-def masked_not_equal(
-    x: Union[numpy.ndarray, dask.array.core.Array], value: Union[int, numpy.ndarray]
-):
-    """
-    usage.dask: 3
-    """
-    ...
-
-
-def masked_outside(x: numpy.ndarray, v1: int, v2: int):
-    """
-    usage.dask: 3
-    """
-    ...
-
-
-def masked_values(
-    x: numpy.ndarray,
-    value: int,
-    rtol: float = ...,
-    atol: float = ...,
-    shrink: bool = ...,
-):
-    """
-    usage.dask: 4
-    """
-    ...
-
-
-def masked_where(condition: Union[numpy.ndarray, bool], a: numpy.ndarray):
+def masked_where(condition: numpy.ndarray, a: numpy.ndarray):
     """
     usage.xarray: 1
-    usage.dask: 3
     """
     ...
-
-
-def maximum_fill_value(obj: numpy.ma.core.MaskedArray):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-def minimum_fill_value(obj: numpy.ma.core.MaskedArray):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-def set_fill_value(
-    a: Union[numpy.ndarray, numpy.ma.core.MaskedArray],
-    fill_value: Union[int, numpy.ndarray],
-):
-    """
-    usage.dask: 3
-    """
-    ...
-
-
-class MaskError:
-    def __init__(
-        self, _0: Literal["Mask and data not compatible: data shape is (10, 1"], /
-    ):
-        """
-        usage.dask: 1
-        """
-        ...
 
 
 class MaskedArray:
 
-    # usage.dask: 2
-    __module__: ClassVar[object]
-
-    # usage.dask: 1
-    __array_priority__: object
-
-    # usage.dask: 1
-    __class__: object
-
     # usage.xarray: 1
     base: object
 
+    # usage.sklearn: 2
     # usage.xarray: 3
-    # usage.sklearn: 1
-    # usage.dask: 1
     data: object
 
+    # usage.pandas: 42
+    # usage.sklearn: 2
     # usage.xarray: 8
-    # usage.dask: 17
     dtype: object
 
     # usage.skimage: 2
-    # usage.dask: 13
-    fill_value: Union[
-        numpy.float64, numpy.bool_, numpy.int64, numpy.complex128, numpy.float32
-    ]
+    fill_value: object
 
     # usage.skimage: 5
+    # usage.sklearn: 2
     # usage.xarray: 6
-    # usage.dask: 4
     mask: object
 
+    # usage.pandas: 6
     # usage.skimage: 8
     # usage.xarray: 3
-    # usage.dask: 44
     ndim: object
 
     # usage.skimage: 3
+    # usage.sklearn: 1
     # usage.xarray: 6
-    # usage.dask: 35
     shape: object
 
-    def __add__(self, _0: Union[numpy.ma.core.MaskedArray, numpy.float64], /):
+    def __add__(self, _0: numpy.float64, /):
         """
         usage.skimage: 1
-        usage.dask: 1
         """
         ...
 
@@ -276,26 +118,12 @@ class MaskedArray:
         ...
 
     def __getitem__(
-        self,
-        _0: Union[
-            Tuple[
-                Union[
-                    int,
-                    ellipsis,
-                    slice[Union[None, int], Union[None, int], Union[None, int]],
-                    None,
-                ],
-                ...,
-            ],
-            int,
-        ],
-        /,
+        self, _0: Union[Tuple[Union[slice[None, None, None], int], ...], int], /
     ):
         """
         usage.skimage: 6
+        usage.sklearn: 21
         usage.xarray: 1
-        usage.sklearn: 8
-        usage.dask: 22
         """
         ...
 
@@ -311,44 +139,21 @@ class MaskedArray:
         """
         ...
 
-    def __le__(self, _0: int, /):
+    def __le__(self, _0: numpy.ndarray, /):
         """
-        usage.dask: 1
+        usage.sklearn: 2
         """
         ...
 
-    def __mul__(self, _0: Union[int, numpy.ma.core.MaskedArray, numpy.float64], /):
+    def __mul__(self, _0: numpy.float64, /):
         """
         usage.xarray: 1
-        usage.dask: 3
         """
         ...
 
-    def __pow__(self, _0: int, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    def __radd__(
-        self,
-        _0: Union[
-            dask.array.core.Array,
-            numpy.ma.core.MaskedArray,
-            numpy.ndarray,
-            numpy.float64,
-        ],
-        /,
-    ):
+    def __radd__(self, _0: numpy.float64, /):
         """
         usage.xarray: 1
-        usage.dask: 3
-        """
-        ...
-
-    def __rmul__(self, _0: numpy.ma.core.MaskedArray, /):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -356,78 +161,63 @@ class MaskedArray:
         """
         usage.skimage: 2
         usage.sklearn: 1
-        usage.dask: 4
         """
         ...
 
     def __rtruediv__(self, _0: numpy.ma.core.MaskedArray, /):
         """
         usage.skimage: 1
-        usage.dask: 1
         """
         ...
 
     def __setitem__(
         self,
         _0: Union[
-            numpy.ma.core.MaskedArray,
-            int,
             Tuple[Union[int, numpy.bool_, numpy.ndarray], ...],
             slice[None, None, None],
+            numpy.ndarray,
+            int,
         ],
         _1: object,
         /,
     ):
         """
+        usage.pandas: 18
         usage.skimage: 6
+        usage.sklearn: 25
         usage.xarray: 5
-        usage.sklearn: 17
-        usage.dask: 1
         """
         ...
 
-    def __sub__(self, _0: Union[numpy.ma.core.MaskedArray, int, numpy.float64], /):
+    def __sub__(self, _0: Union[numpy.ma.core.MaskedArray, numpy.float64], /):
         """
         usage.skimage: 4
         usage.sklearn: 1
-        usage.dask: 5
         """
         ...
 
     def __truediv__(self, _0: numpy.ma.core.MaskedArray, /):
         """
         usage.skimage: 1
-        usage.dask: 1
         """
         ...
 
-    def astype(self, _0: Union[numpy.dtype, Type[numpy.int64], Literal["bool"]], /):
+    def astype(self, _0: numpy.dtype, /):
         """
-        usage.dask: 10
-        """
-        ...
-
-    def copy(self, /):
-        """
-        usage.dask: 1
+        usage.pandas: 2
         """
         ...
 
-    def cumprod(self, /, axis: int):
+    def filled(self, /, fill_value: Union[float, int]):
         """
-        usage.dask: 1
-        """
-        ...
-
-    def cumsum(self, /, axis: int):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def filled(self, /, fill_value: float):
-        """
+        usage.sklearn: 1
         usage.xarray: 2
+        """
+        ...
+
+    def harden_mask(self, /):
+        """
+        usage.pandas: 2
         """
         ...
 
@@ -438,21 +228,33 @@ class MaskedArray:
         """
         ...
 
-    def reshape(self, /, *s: Literal["v", "t"]):
+    def min(self, /, axis: int):
         """
-        usage.skimage: 1
-        usage.dask: 9
+        usage.sklearn: 2
         """
         ...
 
-    def sum(
-        self,
-        /,
-        axis: Tuple[int, ...] = ...,
-        dtype: Union[Literal["f8"], numpy.dtype] = ...,
-        keepdims: bool = ...,
-    ):
+    def reshape(self, /, *s: Literal["v", "t"]):
         """
-        usage.dask: 27
+        usage.skimage: 1
+        usage.sklearn: 2
+        """
+        ...
+
+    def soften_mask(self, /):
+        """
+        usage.pandas: 4
+        """
+        ...
+
+    def sum(self, /, axis: int):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    def view(self, /):
+        """
+        usage.pandas: 4
         """
         ...

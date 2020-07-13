@@ -22,21 +22,21 @@ RUN git clone \
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
-     -r requirements-dev.txt
+    -v \
+     -r requirements-dev.txt \
+     pytest-custom_exit_code
 
 
 RUN python setup.py build_ext --inplace -j 4
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
+    -v \
     -e . \
     --no-build-isolation \
     --no-use-pep517
 
 RUN python -c "import pandas"
 
-RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install pytest-custom_exit_code
 
-ENV PYTHON_RECORD_API_TO_MODULES=numpy
 ENV PYTHON_RECORD_API_FROM_MODULES=pandas
 CMD [ "pytest", "pandas", "--skip-slow", "--skip-network", "--skip-db", "-m", "'not single'", "-r", "sxX", "--strict", "--suppress-tests-failed-exit-code"  ]

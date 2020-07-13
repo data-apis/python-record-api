@@ -1,131 +1,140 @@
 from typing import *
 
 
-def timedelta_range(
-    start: Union[Literal["1 day", "1 days"], numpy.timedelta64, int],
-    end: Literal["30 days"] = ...,
-    periods: int = ...,
-    freq: Union[
-        pandas.tseries.offsets.Day,
-        pandas.tseries.offsets.Minute,
-        pandas.tseries.offsets.Hour,
-        Literal["H", "D", "T", "6H"],
-        None,
-    ] = ...,
-):
-    """
-    usage.xarray: 2
-    usage.dask: 9
-    """
-    ...
-
-
 class TimedeltaIndex:
-    def __init__(
-        self, /, data: List[numpy.timedelta64], name: Literal["timedelta", "foo"]
+    def __add__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /):
+        """
+        usage.pandas: 22
+        """
+        ...
+
+    def __eq__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 5
+        """
+        ...
+
+    def __floordiv__(self, _0: numpy.timedelta64, /):
+        """
+        usage.pandas: 21
+        """
+        ...
+
+    def __ge__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    def __gt__(self, _0: numpy.timedelta64, /):
+        """
+        usage.pandas: 4
+        """
+        ...
+
+    def __iadd__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    def __isub__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    def __le__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    def __lt__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    def __mod__(self, _0: numpy.timedelta64, /):
+        """
+        usage.pandas: 6
+        """
+        ...
+
+    def __mul__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.int64], /):
+        """
+        usage.pandas: 18
+        """
+        ...
+
+    def __ne__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    def __pow__(self, _0: numpy.timedelta64, /):
+        """
+        usage.pandas: 4
+        """
+        ...
+
+    def __radd__(
+        self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /
     ):
         """
-        usage.dask: 2
+        usage.pandas: 18
         """
         ...
 
-    # usage.dask: 1
-    __module__: ClassVar[object]
-
-    # usage.dask: 2
-    __name__: ClassVar[object]
-
-    # usage.dask: 1
-    array: object
-
-    # usage.xarray: 4
-    # usage.dask: 3
-    dtype: object
-
-    # usage.dask: 3
-    freq: object
-
-    # usage.dask: 1
-    is_monotonic_increasing: object
-
-    # usage.xarray: 1
-    # usage.dask: 9
-    name: object
-
-    # usage.dask: 1
-    names: object
-
-    # usage.xarray: 4
-    values: object
-
-    def __add__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+    def __rfloordiv__(self, _0: numpy.timedelta64, /):
         """
-        usage.xarray: 1
+        usage.pandas: 7
         """
         ...
 
-    def __getitem__(self, _0: Union[int, numpy.ndarray, slice[int, int, int]], /):
+    def __rmod__(self, _0: numpy.timedelta64, /):
         """
-        usage.xarray: 4
-        usage.dask: 5
-        """
-        ...
-
-    def __truediv__(self, _0: numpy.timedelta64, /):
-        """
-        usage.xarray: 1
+        usage.pandas: 5
         """
         ...
 
-    def ceil(self, /, *args: Literal["v", "t"]):
+    def __rmul__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.int64], /):
         """
-        usage.xarray: 1
-        """
-        ...
-
-    def copy(self, /, deep: bool):
-        """
-        usage.xarray: 1
+        usage.pandas: 14
         """
         ...
 
-    def floor(self, /, *args: Literal["v", "t"]):
+    def __rpow__(self, _0: numpy.timedelta64, /):
         """
-        usage.xarray: 1
-        """
-        ...
-
-    def get_indexer(self, /, target: numpy.ndarray, method: None, tolerance: None):
-        """
-        usage.xarray: 1
+        usage.pandas: 4
         """
         ...
 
-    def get_loc(
-        self,
-        /,
-        key: pandas._libs.tslibs.timedeltas.Timedelta,
-        method: None,
-        tolerance: None,
+    def __rsub__(
+        self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /
     ):
         """
-        usage.xarray: 1
+        usage.pandas: 16
         """
         ...
 
-    def round(self, /, *args: Literal["v", "t"]):
+    def __rtruediv__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
         """
-        usage.xarray: 1
+        usage.pandas: 19
         """
         ...
 
-    def shift(
-        self,
-        /,
-        periods: int,
-        freq: Union[None, Literal["S"], pandas._libs.tslibs.timedeltas.Timedelta],
-    ):
+    def __sub__(self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /):
         """
-        usage.dask: 8
+        usage.pandas: 18
+        """
+        ...
+
+    def __truediv__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
+        """
+        usage.pandas: 21
+        usage.xarray: 2
         """
         ...

@@ -14,6 +14,7 @@ RUN git clone \
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
+    -v \
     --editable \
     '.[complete]' \
     pytest \
@@ -22,13 +23,10 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     pandas \
     scipy \
     bokeh \
-    psutil
+    psutil \
+    pytest-custom_exit_code
 
 RUN python -c "import dask"
 
-RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install pytest-custom_exit_code
-
-ENV PYTHON_RECORD_API_TO_MODULES=numpy
 ENV PYTHON_RECORD_API_FROM_MODULES=dask
 CMD [ "pytest", "dask", "--verbose", "--doctest-modules", "--suppress-tests-failed-exit-code"  ]

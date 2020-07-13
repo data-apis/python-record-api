@@ -40,6 +40,8 @@ spec:
       env:
       - name: PYTHON_RECORD_API_OUTPUT_FILE
         value: /tmp/raw.jsonl
+      - name: PYTHON_RECORD_API_TO_MODULES
+        value: numpy,pandas
       # https://github.com/argoproj/argo/blob/master/docs/resource-duration.md#request-defaults
       # Must override or get defaults which are too low
       resources:

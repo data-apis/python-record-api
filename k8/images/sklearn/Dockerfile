@@ -22,12 +22,11 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
     --no-build-isolation \
     --editable \
-    .
+    . \
+    -v \
+    pytest-custom_exit_code
 
 RUN python -c "import sklearn; sklearn.show_versions()"
-RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install pytest-custom_exit_code
 
-ENV PYTHON_RECORD_API_TO_MODULES=numpy
 ENV PYTHON_RECORD_API_FROM_MODULES=sklearn
 CMD [ "pytest", "sklearn", "--suppress-tests-failed-exit-code"  ]

@@ -2,357 +2,230 @@ from typing import *
 
 
 class Float64Index:
-    def __init__(self, /, data: List[float], name: Literal["b"]):
+    def __add__(self, _0: Union[numpy.float64, numpy.timedelta64, numpy.datetime64], /):
         """
-        usage.dask: 1
+        usage.pandas: 3
         """
         ...
 
-    # usage.dask: 1
-    __module__: ClassVar[object]
+    def __eq__(self, _0: Union[numpy.ndarray, numpy.float64], /):
+        """
+        usage.pandas: 9
+        """
+        ...
 
-    # usage.dask: 2
-    __name__: ClassVar[object]
+    def __floordiv__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 4
+        """
+        ...
 
-    # usage.dask: 1
-    array: object
+    def __mod__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 3
+        """
+        ...
 
-    # usage.xarray: 3
-    # usage.dask: 7
-    dtype: object
+    def __mul__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
+        """
+        usage.pandas: 5
+        """
+        ...
 
-    # usage.xarray: 2
-    # usage.dask: 1
-    is_monotonic: object
+    def __radd__(self, _0: Union[numpy.datetime64, numpy.timedelta64], /):
+        """
+        usage.pandas: 2
+        """
+        ...
 
-    # usage.xarray: 2
-    # usage.dask: 1
-    is_monotonic_increasing: object
+    def __rfloordiv__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 1
+        """
+        ...
 
-    # usage.xarray: 3
-    is_unique: object
+    def __rmul__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
+        """
+        usage.pandas: 2
+        """
+        ...
 
-    # usage.xarray: 1
-    # usage.dask: 9
-    name: Union[Literal["x"], None]
-
-    # usage.dask: 4
-    names: List[Literal["-overlapped-index-name-0"]]
-
-    # usage.xarray: 1
-    shape: object
-
-    # usage.xarray: 2
-    size: object
-
-    # usage.xarray: 3
-    # usage.dask: 2
-    values: object
-
-    def __contains__(
-        self, _0: Literal["dtype", "divisions", "__UNKNOWN_CATEGORIES__"], /
+    def __rsub__(
+        self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /
     ):
         """
-        usage.dask: 4
+        usage.pandas: 4
         """
         ...
 
-    def __getitem__(
+    def __rtruediv__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    def __sub__(
         self,
-        _0: Union[
-            int,
-            numpy.ndarray,
-            slice[Union[None, int], Union[int, None], Union[None, int]],
-        ],
+        _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64, numpy.float64],
         /,
     ):
         """
-        usage.xarray: 13
-        usage.dask: 5
+        usage.pandas: 5
         """
         ...
 
-    def astype(self, /, dtype: numpy.dtype):
+    def __truediv__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
         """
-        usage.xarray: 1
-        usage.dask: 1
-        """
-        ...
-
-    def copy(self, /, deep: bool):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    def equals(
-        self,
-        /,
-        other: Union[
-            pandas.core.indexes.numeric.Float64Index,
-            pandas.core.indexes.numeric.Int64Index,
-            pandas.core.indexes.base.Index,
-        ],
-    ):
-        """
-        usage.xarray: 10
-        usage.dask: 1
-        """
-        ...
-
-    def get_indexer(
-        self,
-        /,
-        target: numpy.ndarray,
-        method: Union[Literal["nearest", "backfill", "pad"], None],
-        tolerance: None,
-    ):
-        """
-        usage.xarray: 8
-        """
-        ...
-
-    def get_loc(
-        self,
-        /,
-        key: Union[numpy.int64, float, numpy.float64],
-        method: Union[Literal["nearest"], None],
-    ):
-        """
-        usage.xarray: 7
-        """
-        ...
-
-    def identical(self, /, other: pandas.core.indexes.numeric.Float64Index):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    def set_names(self, /, names: List[Literal["b"]], inplace: bool):
-        """
-        usage.dask: 1
+        usage.pandas: 5
         """
         ...
 
 
 class Int64Index:
+    def __add__(self, _0: Union[numpy.int64, numpy.timedelta64, numpy.datetime64], /):
+        """
+        usage.pandas: 3
+        """
+        ...
 
-    # usage.dask: 1
-    __module__: ClassVar[object]
+    def __eq__(self, _0: Union[numpy.ndarray, numpy.int64], /):
+        """
+        usage.pandas: 9
+        """
+        ...
 
-    # usage.dask: 3
-    __name__: ClassVar[object]
-
-    # usage.dask: 1
-    __class__: object
-
-    # usage.dask: 1
-    array: object
-
-    # usage.xarray: 6
-    # usage.dask: 11
-    dtype: object
-
-    # usage.xarray: 1
-    # usage.dask: 1
-    is_monotonic: object
-
-    # usage.xarray: 2
-    is_monotonic_decreasing: object
-
-    # usage.xarray: 2
-    # usage.dask: 2
-    is_monotonic_increasing: object
-
-    # usage.xarray: 4
-    is_unique: object
-
-    # usage.xarray: 11
-    # usage.dask: 19
-    name: Union[None, Literal["foo", "C", "b", "idx", "a"]]
-
-    # usage.dask: 6
-    names: Union[
-        pandas.core.indexes.frozen.FrozenList, List[Literal["-overlapped-index-name-0"]]
-    ]
-
-    # usage.dask: 2
-    nbytes: object
-
-    # usage.xarray: 1
-    # usage.dask: 1
-    nlevels: object
-
-    # usage.xarray: 2
-    shape: object
-
-    # usage.xarray: 6
-    # usage.dask: 2
-    size: object
-
-    # usage.xarray: 2
-    # usage.dask: 3
-    values: object
-
-    def __contains__(
-        self,
-        _0: Union[None, Literal["__UNKNOWN_CATEGORIES__", "dtype", "divisions"], int],
-        /,
+    def __floordiv__(
+        self, _0: Union[numpy.float64, numpy.int64, numpy.ndarray, numpy.uint64], /
     ):
         """
-        usage.dask: 6
+        usage.pandas: 11
         """
         ...
 
-    def __ge__(self, _0: Union[float, int], /):
+    def __mod__(self, _0: numpy.ndarray, /):
         """
-        usage.dask: 3
-        """
-        ...
-
-    def __getitem__(
-        self,
-        _0: Union[
-            int,
-            numpy.ndarray,
-            slice[Union[int, None], Union[None, int], Union[int, None]],
-        ],
-        /,
-    ):
-        """
-        usage.xarray: 16
-        usage.dask: 11
+        usage.pandas: 3
         """
         ...
 
-    def __gt__(self, _0: Union[float, int], /):
+    def __mul__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
         """
-        usage.dask: 2
-        """
-        ...
-
-    def __iter__(self, /):
-        """
-        usage.xarray: 1
-        usage.dask: 4
+        usage.pandas: 6
         """
         ...
 
-    def __le__(self, _0: Union[float, int], /):
+    def __radd__(self, _0: Union[numpy.datetime64, numpy.timedelta64], /):
         """
-        usage.dask: 3
-        """
-        ...
-
-    def copy(self, /, deep: bool):
-        """
-        usage.xarray: 1
+        usage.pandas: 4
         """
         ...
 
-    def drop(self, /, labels: numpy.ndarray, errors: Literal["ignore", "raise"]):
+    def __rfloordiv__(self, _0: numpy.ndarray, /):
         """
-        usage.xarray: 2
-        """
-        ...
-
-    def drop_duplicates(self, /):
-        """
-        usage.dask: 2
+        usage.pandas: 1
         """
         ...
 
-    def dropna(self, /):
+    def __rmul__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
         """
-        usage.dask: 1
-        """
-        ...
-
-    def equals(self, /, other: pandas.core.indexes.numeric.Int64Index):
-        """
-        usage.xarray: 1
+        usage.pandas: 5
         """
         ...
 
-    def get_indexer(
-        self,
-        /,
-        target: numpy.ndarray,
-        method: Union[Literal["pad", "backfill"], None],
-        tolerance: Union[float, int, None],
-    ):
+    def __rsub__(self, _0: Union[numpy.datetime64, numpy.timedelta64], /):
         """
-        usage.xarray: 8
+        usage.pandas: 4
         """
         ...
 
-    def get_loc(
-        self,
-        /,
-        key: Union[numpy.float64, int, numpy.int64],
-        method: Union[Literal["nearest"], None],
-    ):
+    def __rtruediv__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
         """
-        usage.xarray: 5
+        usage.pandas: 4
         """
         ...
 
-    def isin(
-        self,
-        /,
-        values: Union[
-            pandas.core.series.Series,
-            dask.delayed.Delayed,
-            dask.delayed.DelayedLeaf,
-            List[int],
-        ],
-    ):
+    def __sub__(self, _0: Union[numpy.int64, numpy.timedelta64, numpy.datetime64], /):
         """
-        usage.dask: 4
+        usage.pandas: 3
         """
         ...
 
-    def max(self, /):
+    def __truediv__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
         """
-        usage.dask: 1
-        """
-        ...
-
-    def min(self, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def set_names(self, /, names: List[Literal["a", "b", "key"]], inplace: bool):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    def to_frame(self, /, index: bool, name: Union[Literal["bar"], None]):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    def to_series(self, /):
-        """
-        usage.dask: 1
+        usage.pandas: 5
         """
         ...
 
 
 class UInt64Index:
-    def __init__(self, /, data: List[int], name: Literal["foo"]):
+    def __add__(self, _0: Union[numpy.datetime64, numpy.timedelta64], /):
         """
-        usage.dask: 1
+        usage.pandas: 2
         """
         ...
 
-    # usage.dask: 1
-    __module__: ClassVar[object]
+    def __eq__(self, _0: Union[numpy.ndarray, numpy.uint64], /):
+        """
+        usage.pandas: 7
+        """
+        ...
 
-    # usage.dask: 2
-    name: object
+    def __floordiv__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 4
+        """
+        ...
+
+    def __mod__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 3
+        """
+        ...
+
+    def __mul__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
+        """
+        usage.pandas: 5
+        """
+        ...
+
+    def __radd__(self, _0: Union[numpy.datetime64, numpy.timedelta64], /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    def __rfloordiv__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    def __rmul__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    def __rsub__(self, _0: Union[numpy.datetime64, numpy.timedelta64], /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    def __rtruediv__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    def __sub__(self, _0: Union[numpy.datetime64, numpy.timedelta64], /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    def __truediv__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
+        """
+        usage.pandas: 5
+        """
+        ...

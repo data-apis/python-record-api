@@ -1,6 +1,9 @@
 .PHONY: groupby_location clean_groupby_location clean_api clean_raw clean_typing clean all test
 
-LIBRARIES := dask pandas sample-usage skimage sklearn xarray
+
+LIBRARIES := pandas sample-usage skimage sklearn xarray
+
+.INTERMEDIATE: $(addprefix data/groupby_location/,$(addsuffix .jsonl,$(LIBRARIES)))
 
 all: data/typing/numpy.py
 
@@ -87,3 +90,11 @@ data/raw/sample-usage.jsonl:
 		PYTHON_RECORD_API_TO_MODULES=numpy \
 		PYTHON_RECORD_API_FROM_MODULES=record_api.sample_usage \
 		python -m record_api
+
+
+
+data/raw/%.jsonl:
+	-env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
+		PYTHON_RECORD_API_TO_MODULES=numpy,pandas \
+		PYTHON_RECORD_API_FROM_MODULES=$(*F) \
+		pytest --pyargs $(*F)

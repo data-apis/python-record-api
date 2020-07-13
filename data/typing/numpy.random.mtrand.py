@@ -1,18 +1,14 @@
 from typing import *
 
 # usage.skimage: 1
-# usage.sklearn: 1
+# usage.sklearn: 3
 _rand: object
 
 
 class RandomState:
-
-    # usage.dask: 1
-    __module__: ClassVar[object]
-
-    def beta(self, _0: int, _1: int, /, *, size: Tuple[int]):
+    def beta(self, _0: float, _1: float, /, *, size: int):
         """
-        usage.dask: 1
+        usage.pandas: 4
         """
         ...
 
@@ -25,126 +21,92 @@ class RandomState:
         size: Union[Tuple[int, ...], int] = ...,
     ):
         """
-        usage.sklearn: 7
-        usage.dask: 1
+        usage.sklearn: 11
         """
         ...
 
-    def bytes(self, _0: int, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def chisquare(self, _0: int, /, *, size: Tuple[int] = ...):
+    def chisquare(self, _0: int, _1: int, /):
         """
         usage.sklearn: 2
-        usage.dask: 1
         """
         ...
 
     def choice(
         self,
-        _0: object,
+        _0: Union[
+            List[
+                Union[
+                    Dict[
+                        str,
+                        Union[
+                            List[Union[str, int]],
+                            scipy.stats._distn_infrastructure.rv_frozen,
+                        ],
+                    ],
+                    int,
+                    bool,
+                    str,
+                    Callable,
+                ]
+            ],
+            range,
+            int,
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            numpy.ndarray,
+        ],
         /,
         *,
-        size: Union[Tuple[Union[int, None], ...], int, numpy.int64, List[int]] = ...,
+        p: Union[numpy.ndarray, None, List[Union[float, int]]] = ...,
         replace: bool = ...,
-        p: Union[None, numpy.ndarray, List[Union[float, int]]] = ...,
+        size: Union[List[int], Tuple[int, int], int, numpy.int64] = ...,
     ):
         """
+        usage.pandas: 36
         usage.skimage: 8
+        usage.sklearn: 23
         usage.xarray: 6
-        usage.sklearn: 11
-        usage.dask: 32
         """
         ...
 
-    def exponential(self, /, *, size: Union[Tuple[int, ...], int]):
+    def exponential(self, /, *, size: int):
         """
         usage.sklearn: 1
-        usage.dask: 2
-        """
-        ...
-
-    def f(self, _0: int, _1: int, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
         """
         ...
 
     def gamma(
         self,
         _0: Union[int, float],
-        _1: Union[int, numpy.float64, float] = ...,
+        _1: Union[float, numpy.float64] = ...,
         _2: Tuple[int, int] = ...,
         /,
         *,
-        size: Union[Tuple[int], int] = ...,
+        size: int = ...,
     ):
         """
         usage.skimage: 2
         usage.sklearn: 3
-        usage.dask: 1
         """
         ...
 
-    def geometric(self, _0: int, /, *, size: Tuple[int]):
+    def get_state(self, /):
         """
-        usage.dask: 1
-        """
-        ...
-
-    def gumbel(self, _0: int, _1: float, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def hypergeometric(self, _0: int, _1: int, _2: int, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def laplace(self, _0: float, _1: float, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def logistic(self, _0: float, _1: float, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
+        usage.pandas: 1
         """
         ...
 
     def lognormal(
-        self, _0: float = ..., _1: float = ..., /, *, size: Union[Tuple[int], int]
+        self, _0: float = ..., _1: float = ..., _2: int = ..., /, *, size: int = ...
     ):
         """
+        usage.pandas: 1
         usage.sklearn: 3
-        usage.dask: 1
         """
         ...
 
-    def logseries(self, _0: float, /, *, size: Tuple[int]):
+    def multinomial(self, _0: int, _1: numpy.ndarray, /, *, size: int = ...):
         """
-        usage.dask: 1
-        """
-        ...
-
-    def multinomial(
-        self,
-        _0: int,
-        _1: Union[List[float], numpy.ndarray],
-        /,
-        *,
-        size: Union[int, Tuple[int, ...]] = ...,
-    ):
-        """
-        usage.sklearn: 5
-        usage.dask: 4
+        usage.sklearn: 6
         """
         ...
 
@@ -152,82 +114,47 @@ class RandomState:
         self, _0: numpy.ndarray, _1: numpy.ndarray, /, *, size: int = ...
     ):
         """
-        usage.sklearn: 6
-        """
-        ...
-
-    def negative_binomial(self, _0: int, _1: float, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def noncentral_chisquare(self, _0: int, _1: int, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def noncentral_f(self, _0: int, _1: int, _2: int, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
+        usage.sklearn: 13
         """
         ...
 
     def normal(
         self,
-        _0: Union[numpy.float64, numpy.int64, float, dask.array.core.Array, int] = ...,
-        _1: Union[
-            dask.array.core.Array, numpy.float64, float, int, numpy.ndarray
-        ] = ...,
-        _2: Tuple[int, int] = ...,
+        _0: Union[numpy.ndarray, int, float] = ...,
+        _1: Union[int, float, numpy.ndarray] = ...,
+        _2: Union[int, Tuple[int, int]] = ...,
         /,
         *,
-        size: Union[Tuple[Union[numpy.int64, int, None], ...], int] = ...,
-        scale: Union[int, numpy.ndarray, numpy.float64, float] = ...,
-        loc: Union[int, numpy.ndarray] = ...,
+        size: Union[Tuple[Union[numpy.int64, int], ...], int] = ...,
+        loc: Union[float, numpy.ndarray, int] = ...,
+        scale: Union[int, numpy.ndarray, float, numpy.int64, numpy.float64] = ...,
     ):
         """
+        usage.pandas: 7
         usage.skimage: 32
-        usage.xarray: 1
-        usage.sklearn: 75
-        usage.dask: 23
-        """
-        ...
-
-    def pareto(self, _0: int, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
+        usage.sklearn: 141
+        usage.xarray: 3
         """
         ...
 
     def permutation(
-        self, _0: Union[int, numpy.ndarray, numpy.int64, List[numpy.int64]], /
+        self,
+        _0: Union[
+            List[Union[Tuple[int, int], numpy.int64]], numpy.ndarray, numpy.int64, int
+        ],
+        /,
     ):
         """
+        usage.pandas: 17
         usage.skimage: 1
-        usage.sklearn: 18
-        usage.dask: 4
+        usage.sklearn: 39
         """
         ...
 
-    def poisson(
-        self,
-        _0: Union[numpy.int64, float, int, numpy.ndarray],
-        /,
-        *,
-        size: Union[int, Tuple[int, ...]] = ...,
-    ):
+    def poisson(self, /, *, lam: numpy.ndarray = ..., size: int = ...):
         """
         usage.skimage: 2
-        usage.sklearn: 2
-        usage.dask: 3
-        """
-        ...
-
-    def power(self, _0: int, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
+        usage.sklearn: 6
         """
         ...
 
@@ -241,36 +168,36 @@ class RandomState:
         /,
     ):
         """
-        usage.skimage: 94
-        usage.xarray: 16
-        usage.sklearn: 119
-        usage.dask: 30
+        usage.pandas: 110
+        usage.skimage: 85
+        usage.sklearn: 269
+        usage.xarray: 19
         """
         ...
 
     def randint(
         self,
-        _0: Union[numpy.int64, int, float, numpy.float64] = ...,
+        _0: Union[int, float, numpy.float64] = ...,
         _1: int = ...,
-        _2: Union[int, numpy.ndarray, List[int], Tuple[int, ...]] = ...,
+        _2: Union[Tuple[int, ...], int, numpy.int64, List[int]] = ...,
         /,
         *,
-        size: Union[Tuple[Union[int, None], ...], int, numpy.int64, List[int]] = ...,
-        dtype: Union[Literal["l", "uint8", "u8"], type] = ...,
-        low: int = ...,
+        size: Union[Tuple[int, ...], List[int], int, numpy.int64] = ...,
+        dtype: Union[Literal["u8", "int64"], type] = ...,
         high: int = ...,
+        low: int = ...,
     ):
         """
-        usage.skimage: 23
+        usage.pandas: 160
+        usage.skimage: 24
+        usage.sklearn: 213
         usage.xarray: 14
-        usage.sklearn: 95
-        usage.dask: 133
         """
         ...
 
     def randn(
         self,
-        _0: Union[int, numpy.int64],
+        _0: Union[int, numpy.int64] = ...,
         _1: Union[int, numpy.int64] = ...,
         _2: int = ...,
         _3: int = ...,
@@ -278,131 +205,77 @@ class RandomState:
         /,
     ):
         """
-        usage.skimage: 45
-        usage.xarray: 191
-        usage.sklearn: 251
-        usage.dask: 90
+        usage.pandas: 749
+        usage.skimage: 46
+        usage.sklearn: 419
+        usage.xarray: 210
         """
         ...
 
-    def random(self, /, *, size: Union[int, Tuple[int, ...]] = ...):
+    def random(self, /, *, size: Tuple[int, ...] = ...):
         """
-        usage.sample_usage: 1
+        usage.pandas: 35
+        usage.sample-usage: 1
         usage.skimage: 29
-        usage.xarray: 25
-        usage.sklearn: 2
-        usage.dask: 158
+        usage.sklearn: 26
+        usage.xarray: 26
         """
         ...
 
     def random_sample(self, /, *, size: Tuple[int, ...] = ...):
         """
+        usage.pandas: 4
         usage.skimage: 1
+        usage.sklearn: 156
         usage.xarray: 1
-        usage.sklearn: 22
-        usage.dask: 5
-        """
-        ...
-
-    def rayleigh(self, _0: float, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
         """
         ...
 
     def seed(self, /, *, seed: int = ...):
         """
-        usage.skimage: 26
-        usage.dask: 19
+        usage.pandas: 21
+        usage.skimage: 25
         """
         ...
 
-    def shuffle(self, _0: Union[List[int], numpy.ndarray], /):
-        """
-        usage.sklearn: 18
-        usage.dask: 10
-        """
-        ...
-
-    def standard_cauchy(self, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def standard_exponential(self, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def standard_gamma(self, _0: int, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def standard_normal(
-        self, /, *, size: Tuple[int, ...] = ..., dtype: Literal["float64"] = ...
+    def set_state(
+        self, _0: Tuple[Literal["MT19937"], numpy.ndarray, int, int, float], /
     ):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    def shuffle(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 3
+        usage.sklearn: 26
+        usage.xarray: 2
+        """
+        ...
+
+    def standard_normal(self, _0: Tuple[int, ...], /):
         """
         usage.skimage: 10
         usage.sklearn: 2
-        usage.dask: 3
-        """
-        ...
-
-    def standard_t(self, _0: int, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def triangular(self, _0: int, _1: int, _2: int, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
         """
         ...
 
     def uniform(
         self,
-        _0: Union[float, int, numpy.ndarray] = ...,
-        _1: Union[float, int, numpy.ndarray] = ...,
-        _2: Union[int, Tuple[int, int]] = ...,
+        _0: Union[float, numpy.float64, numpy.ndarray, int] = ...,
+        _1: Union[numpy.float64, numpy.ndarray, int, float] = ...,
+        _2: Union[int, Tuple[int, int], List[int]] = ...,
         /,
         *,
-        size: Union[Tuple[int, ...], int, numpy.int64, List[int]] = ...,
+        size: Union[List[int], int, numpy.int64, Tuple[int, ...]] = ...,
+        high: Union[int, float] = ...,
         low: Union[float, int] = ...,
-        high: Union[float, int] = ...,
     ):
         """
-        usage.skimage: 32
+        usage.pandas: 6
+        usage.skimage: 29
+        usage.sklearn: 84
         usage.xarray: 1
-        usage.sklearn: 42
-        usage.dask: 10
-        """
-        ...
-
-    def vonmises(self, _0: int, _1: int, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def wald(self, _0: int, _1: int, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def weibull(self, _0: int, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def zipf(self, _0: int, /, *, size: Tuple[int]):
-        """
-        usage.dask: 1
         """
         ...
