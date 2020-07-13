@@ -18,21 +18,32 @@ Requires docker buildx >= 0.4.0
 
 
 ```bash
-# To create buildx 
+# To create buildx  remote
 kubectl create ns buildx
-docker buildx create --driver kubernetes --use
+docker buildx create --driver kubernetes --use --driver-opt namespace=buildx
 docker buildx bake --push
+
 
 # To create argo
 kubectl create ns argo
-kubectl apply -n argo -f https://raw.githubusercontent.com/argoproj/argo/stable/manifests/quick-start-minimal.yaml
 # set default NS
 kubectl config set-context --current --namespace=argo
+kubectl apply -f https://raw.githubusercontent.com/argoproj/argo/stable/manifests/namespace-install.yaml 
 kubectl port-forward deployment/argo-server 2746:2746
 open http://localhost:2746
 
+kubectl create rolebinding default-admin --clusterrole=admin --serviceaccount=argo:default -n argo
 
-# To create argo
+# Add minio
+# https://argoproj.github.io/argo/configure-artifact-repository/#configuring-minio
+# Configure to use minio
+# https://argoproj.github.io/argo/configure-artifact-repository/#s3-compatible-artifact-repository-bucket-such-as-aws-gcs-and-minio
+# https://www.alibabacloud.com/blog/installing-argo-in-your-kubernetes-cluster_595446   
+
+
+
+
+# To submit workflow
 make argo-workflow-submit
 make argo-submit
 make all
