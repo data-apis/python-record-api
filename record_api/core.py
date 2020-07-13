@@ -433,7 +433,7 @@ class Stack:
         }
         if val in COMPARISONS:
             self.process(
-                (self.TOS, self.TOS1) if "in" not in val else (self.TOS),
+                (self.TOS, self.TOS1) if "in" not in val else (self.TOS,),
                 COMPARISONS[val],
                 # "in" and "not in" are reversed
                 (self.TOS1, self.TOS,) if "in" not in val else (self.TOS, self.TOS1,),
