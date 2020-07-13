@@ -3,7 +3,7 @@ all: images
 BASE_BUILD_TAG := 1.1.0
 BASE_USE_TAG := 1.1.0
 
-TAG := 1.1.0v1
+TAG := 1.1.0v2
 
 IMAGES := dask pandas sample-usage skimage sklearn xarray 
 
