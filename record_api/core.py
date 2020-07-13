@@ -210,6 +210,16 @@ def signature(fn):
     return inspect.signature(fn)
 
 
+def safe_signature(fn):
+    """
+    If fn is hashable, cache it, otherwise dont use cached version
+    """
+    try:
+        hash(fn)
+    except Exception:
+        return inspect.signature(fn)
+    return signature(fn)
+
 @dataclasses.dataclass
 class Bound:
     """
@@ -236,7 +246,7 @@ class Bound:
     @classmethod
     def create(cls, fn, args, kwargs) -> Optional[Bound]:
         try:
-            sig = signature(fn)
+            sig = safe_signature(fn)
         except ValueError:
             return None
         try:
