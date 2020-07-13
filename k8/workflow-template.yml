@@ -44,11 +44,11 @@ spec:
       # Must override or get defaults which are too low
       resources:
         requests:
-          memory: 1Gi
-          cpu: 500m
+          memory: 2Gi
+          cpu: 1000m
         limits:
-          memory: 3Gi
-          cpu: 2000m
+          memory: 8Gi
+          cpu: 4000m
     outputs:
       artifacts:
       - name: raw
@@ -73,11 +73,11 @@ spec:
           value: /tmp/grouped.jsonl
       resources:
         requests:
-          memory: 1Gi
-          cpu: 500m
+          memory: 2Gi
+          cpu: 1000m
         limits:
-          memory: 3Gi
-          cpu: 2000m
+          memory: 8Gi
+          cpu: 4000m
 
   - name: infer-api
     inputs:
@@ -102,8 +102,8 @@ spec:
           value: /tmp/api.json
       resources:
         requests:
-          memory: 1Gi
-          cpu: 500m
+          memory: 2Gi
+          cpu: 1000m
         limits:
-          memory: 3Gi
-          cpu: 2000m
+          memory: 8Gi
+          cpu: 4000m
