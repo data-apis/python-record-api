@@ -124,6 +124,7 @@ def fn():
 
     # contains
     1 in x
+    np.int64(1) in [1, 2, 3]
 
     # reduction
     np.add.reduce(x)
