@@ -1,5 +1,7 @@
 all: images
 
+PYTHON_PACKAGE_VERSION := 1.1.3
+
 BASE_BUILD_TAG := 1.1.3
 BASE_USE_TAG := 1.1.3
 
@@ -73,6 +75,9 @@ define JQ_DOCKER_BAKE
 			base: {
 				context: "images/base",
 				dockerfile: "Dockerfile",
+				args: {
+					PYTHON_PACKAGE_VERSION: "${PYTHON_PACKAGE_VERSION}"
+				},
 				tags: [
 					"${IMAGE}:base-${BASE_BUILD_TAG}"
 				]
