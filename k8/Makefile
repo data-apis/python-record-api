@@ -1,15 +1,51 @@
-all: images
 
-PYTHON_PACKAGE_VERSION := 1.1.3
+PYTHON_PACKAGE_VERSION := $(shell python -c 'import record_api; print(record_api.__version__)')
 
-BASE_BUILD_TAG := 1.1.3
-BASE_USE_TAG := 1.1.3
-
-TAG := 1.1.3
+$(info Python package version = ${PYTHON_PACKAGE_VERSION})
 
 IMAGE := saulshanabrook/python-record-api
 
-IMAGES := dask matplotlib pandas sample-usage skimage sklearn xarray 
+# The tag for base image is base-{python version}-{version-increment}
+# The tag for other versions are {name}-{python version}-{base version increment}-{version increment}
+# So that if the python version is updated, all are rebuilt, and if the base version is updated, all are also rebuilt.
+
+version = $(shell cat images/$(1)/version)
+
+
+BASE_IMAGE := ${IMAGE}:base-${PYTHON_PACKAGE_VERSION}-$(call version,base)
+
+$(info Base image = ${BASE_IMAGE})
+
+sub_tag = $(1)-${PYTHON_PACKAGE_VERSION}-$(call version,base)-$(call version,$(1))
+sub_image = ${IMAGE}:$(call sub_tag,$(1))
+
+WORKFLOW_VERSION := $(shell cat argo/version)
+$(info Workflow version = ${WORKFLOW_VERSION})
+
+workflow_name = $(call sub_tag,$(1))-${WORKFLOW_VERSION}
+
+IMAGES := $(sort $(filter-out base,$(notdir $(wildcard images/*))))
+
+$(info Names = ${IMAGES})
+
+$(info )
+# ARGO_SUBMITTED_WORKFLOWS := $(shell argo list -o name)
+
+# # loop through images, any which have a workflow that is in argos submitted workflows should be notadd
+# # if they are not in there, they should be added
+
+# NOT_SUBMITTED_IMAGES := $(foreach \
+# 	name,\
+# 	$(IMAGES),\
+# 	$(if \
+# 		$(findstring \
+# 			$(call workflow_name,${name}),\
+# 			${ARGO_SUBMITTED_WORKFLOWS}\
+# 		),\
+# 		,\
+# 		${name}\
+# 	)
+# )
 
 all: $(addprefix ../data/api/,$(addsuffix .json,$(IMAGES)))
 
@@ -30,24 +66,16 @@ all: $(addprefix ../data/api/,$(addsuffix .json,$(IMAGES)))
 argo-submit: $(addprefix argo-submit-,$(IMAGES))
 
 argo-submit-%:
-	-argo delete record-$(*F)
-	# Wait for pod to be deleted before re-creating
-	sleep 10
-	argo submit \
-		--from workflowtemplate/python-record-api \
+	-argo submit \
+		argo/workflow.yml \
 		-p label="$(*F)" \
-		-p tag="$(TAG)" \
-		-p image="$(IMAGE)" \
-		-p base-tag="$(BASE_USE_TAG)" \
-		--name 'record-$(*F)'
-
-
-argo-workflow-submit:
-	-argo template delete python-record-api
-	argo template create workflow-template.yml
+		-p base-image="$(BASE_IMAGE)" \
+		-p image="$(call sub_image,$(*F))" \
+		--name "$(call workflow_name,$(*F))"
 
 
 push-images: docker-bake.json
+	docker buildx bake base --push
 	docker buildx bake --push
 
 
@@ -67,7 +95,7 @@ define JQ_DOCKER_BAKE
 {	
 	group: {
 		default: {
-			targets: (["base"] + ($$ARGS.positional))
+			targets: ($$ARGS.positional)
 		}
 	},
 	target: (
@@ -79,7 +107,7 @@ define JQ_DOCKER_BAKE
 					PYTHON_PACKAGE_VERSION: "${PYTHON_PACKAGE_VERSION}"
 				},
 				tags: [
-					"${IMAGE}:base-${BASE_BUILD_TAG}"
+					"${BASE_IMAGE}"
 				]
 			}
 		} +
@@ -91,10 +119,10 @@ define JQ_DOCKER_BAKE
 						context: ("images/" + .),
 						dockerfile: "Dockerfile",
 						args: {
-							FROM: "${IMAGE}:base-${BASE_USE_TAG}"
+							FROM: "${BASE_IMAGE}"
 						},
 						tags: [
-							("${IMAGE}:" + . + "-${TAG}")
+							($$ARGS.named[(.)])
 						]
 					}
 				}
@@ -110,12 +138,6 @@ export JQ_DOCKER_BAKE
 docker-bake.json: Makefile
 	jq "$$JQ_DOCKER_BAKE" \
 		--null-input \
+		$(foreach name,$(IMAGES),--arg $(name) $(call sub_image,$(name))) \
 		--args $(IMAGES) \
 		> $@
-
-
-port-forward:
-	kubectl -n argo port-forward deployment/argo-server 2746:2746
-
-set-namespace:
-	kubectl config set-context --current --namespace=argo

@@ -1,9 +1,6 @@
 # https://argoproj.github.io/argo/fields/
 apiVersion: argoproj.io/v1alpha1
-kind: WorkflowTemplate
-metadata:
-  name: python-record-api
-  generateName: record-
+kind: Workflow
 spec:
   podGC:
     strategy: OnWorkflowSuccess
@@ -12,9 +9,7 @@ spec:
     parameters:
       - name: label
         value: "..."
-      - name: tag
-        value: "..."
-      - name: base-tag
+      - name: base-image
         value: "..."
       - name: image
         value: "..."
@@ -38,7 +33,7 @@ spec:
 
     - name: record-api
       container:
-        image: "{{workflow.parameters.image}}:{{workflow.parameters.label}}-{{workflow.parameters.tag}}"
+        image: "{{workflow.parameters.image}}"
         env:
           - name: PYTHON_RECORD_API_OUTPUT_FILE
             value: /tmp/raw.jsonl
@@ -68,7 +63,7 @@ spec:
           - name: grouped
             path: /tmp/grouped.jsonl
       container:
-        image: "{{workflow.parameters.image}}:base-{{workflow.parameters.base-tag}}"
+        image: "{{workflow.parameters.base-image}}"
         command: [python, -m, record_api.line_counts]
         env:
           - name: PYTHON_RECORD_API_INPUT
@@ -93,7 +88,7 @@ spec:
           - name: api
             path: /tmp/api.json
       container:
-        image: "{{workflow.parameters.image}}:base-{{workflow.parameters.base-tag}}"
+        image: "{{workflow.parameters.base-image}}"
         command: [python, -m, record_api.infer_apis]
         env:
           - name: PYTHON_RECORD_API_LABEL
