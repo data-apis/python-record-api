@@ -220,6 +220,7 @@ def safe_signature(fn):
         return inspect.signature(fn)
     return signature(fn)
 
+
 @dataclasses.dataclass
 class Bound:
     """
@@ -267,8 +268,12 @@ class Bound:
         return b
 
 
-# TODO: Make not args kwargs, since kwarg could be fn
-def log_call(location: str, fn: Callable, *args, **kwargs) -> None:
+def log_call(
+    location: str,
+    fn: Callable,
+    args: Iterable = (),
+    kwargs: Mapping[str, Any] = {},
+) -> None:
     bound = Bound.create(fn, args, kwargs)
     line: Dict = {"location": location, "function": preprocess(fn)}
     if bound is None:
@@ -361,7 +366,8 @@ class Stack:
         if self.tracer.should_trace(*keyed_args):
             filename = self.frame.f_code.co_filename
             line = self.frame.f_lineno
-            log_call(f"{filename}:{line}", fn, *args, **kwargs)
+            # Don't pass kwargs if not used, so we can more easily test mock calls
+            log_call(f"{filename}:{line}", fn, tuple(args), *((kwargs,) if kwargs else ()))
 
     def __call__(self) -> None:
         """
