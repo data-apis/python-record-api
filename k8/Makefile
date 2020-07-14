@@ -5,6 +5,7 @@ BASE_USE_TAG := 1.1.3
 
 TAG := 1.1.3
 
+IMAGE := saulshanabrook/python-record-api
 
 IMAGES := dask matplotlib pandas sample-usage skimage sklearn xarray 
 
@@ -30,7 +31,13 @@ argo-submit-%:
 	-argo delete record-$(*F)
 	# Wait for pod to be deleted before re-creating
 	sleep 10
-	argo submit --from workflowtemplate/python-record-api -p label="$(*F)" -p tag="$(TAG)" -p base-tag="$(BASE_USE_TAG)" --name 'record-$(*F)'
+	argo submit \
+		--from workflowtemplate/python-record-api \
+		-p label="$(*F)" \
+		-p tag="$(TAG)" \
+		-p image="$(IMAGE)" \
+		-p base-tag="$(BASE_USE_TAG)" \
+		--name 'record-$(*F)'
 
 
 argo-workflow-submit:
@@ -67,7 +74,7 @@ define JQ_DOCKER_BAKE
 				context: "images/base",
 				dockerfile: "Dockerfile",
 				tags: [
-					"saulshanabrook/python-record-api:base-${BASE_BUILD_TAG}"
+					"${IMAGE}:base-${BASE_BUILD_TAG}"
 				]
 			}
 		} +
@@ -79,10 +86,10 @@ define JQ_DOCKER_BAKE
 						context: ("images/" + .),
 						dockerfile: "Dockerfile",
 						args: {
-							FROM: "saulshanabrook/python-record-api:base-${BASE_USE_TAG}"
+							FROM: "${IMAGE}:base-${BASE_USE_TAG}"
 						},
 						tags: [
-							("saulshanabrook/python-record-api:" + . + "-${TAG}")
+							("${IMAGE}:" + . + "-${TAG}")
 						]
 					}
 				}
