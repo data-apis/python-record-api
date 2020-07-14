@@ -1,9 +1,10 @@
 all: images
 
-BASE_BUILD_TAG := 1.1.2
-BASE_USE_TAG := 1.1.2
+BASE_BUILD_TAG := 1.1.3
+BASE_USE_TAG := 1.1.3
 
-TAG := 1.1.2
+TAG := 1.1.3
+
 
 IMAGES := dask matplotlib pandas sample-usage skimage sklearn xarray 
 
