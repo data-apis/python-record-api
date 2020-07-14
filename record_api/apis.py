@@ -28,7 +28,7 @@ Metadata = typing.Dict[str, int]
 
 
 def bad_name(name: str) -> bool:
-    return "?" in name or "<" in name
+    return not name.isidentifier()
 
 
 class BaseModel(pydantic.BaseModel):
