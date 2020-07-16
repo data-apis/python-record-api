@@ -3,39 +3,8 @@
 
 on: push
 jobs:
-  test:
-    name: Test and try publishing Python package
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout master
-        uses: actions/checkout@master
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
-
-      - name: Install flit
-        run: |
-          python -m pip install --upgrade pip
-          pip install flit
-
-      - name: Install package
-        run: flit install
-
-      - name: run tests
-        run: pytest record_api/test.py
-        env:
-          PYTEST_DISABLE_PLUGIN_AUTOLOAD: true
-      - name: Try publishing to PyPi
-        run: flit publish
-        continue-on-error: true
-        env: 
-          FLIT_USERNAME: ${{ secrets.PYPI_USERNAME }}
-          FLIT_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
   build:
-    needs: test
-    name: Build and push Docker images
+    name: Build, test and push Docker images
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master
@@ -62,8 +31,14 @@ jobs:
           curl https://github.com/argoproj/argo/releases/download/v2.9.3/argo-linux-amd64 -L -o $GITHUB_WORKSPACE/bin/argo
       - name: Make bin executable
         run: chmod +x $GITHUB_WORKSPACE/bin/*
-      - name: Verify argo
-        run: argo 
+      - name: Cache pip
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            pip-
+
       - name: Install flit
         run: |
           python -m pip install --upgrade pip
@@ -106,6 +81,18 @@ jobs:
       - name: Create buildx driver
         working-directory: ./k8
         run: make buildx-driver
+
+      - name: run tests
+        run: pytest record_api/test.py
+        env:
+          PYTEST_DISABLE_PLUGIN_AUTOLOAD: true
+
+      - name: Try publishing to PyPi
+        run: flit publish
+        continue-on-error: true
+        env: 
+          FLIT_USERNAME: ${{ secrets.PYPI_USERNAME }}
+          FLIT_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
 
       - name: Push images
         working-directory: ./k8
