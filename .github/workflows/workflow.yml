@@ -57,9 +57,10 @@ jobs:
           curl https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 -L -o bin/jq
           chmod +x bin/jq
           echo "::add-path::$GITHUB_WORKSPACE/bin"
+          jq --version
 
       - name: Install argo
-        run:
+        run: |
           curl -sLO https://github.com/argoproj/argo/releases/download/v2.9.3/argo-linux-amd64 -o bin/argo
           chmod +x bin/argo
       - name: Install flit
