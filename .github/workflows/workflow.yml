@@ -64,7 +64,7 @@ jobs:
         run: |
           curl -sLO https://github.com/argoproj/argo/releases/download/v2.9.3/argo-linux-amd64 -o $GITHUB_WORKSPACE/bin/argo
       - name: Make bin executable
-          chmod +x $GITHUB_WORKSPACE/bin/*
+        run: chmod +x $GITHUB_WORKSPACE/bin/*
 
       - name: Install flit
         run: |
