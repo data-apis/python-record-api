@@ -20,3 +20,10 @@ requires = [
 
 [tool.flit.entrypoints.pytest11]
 record_api = "record_api.pytest_plugin"
+
+[tool.flit.metadata.requires-extra]
+test = [
+    "pytest",
+    "numpy",
+    "pandas"
+]
