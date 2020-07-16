@@ -72,14 +72,23 @@ jobs:
       - name: Install package
         run: flit install
 
+      - name: Cache Buildx
+        id: cache-buildx
+        uses: actions/cache@v2
+        with:
+          path: ~/.docker/cli-plugins/docker-buildx
+          key: buildx
+
       - name: Clone buildx
         uses: actions/checkout@master
+        if: steps.cache-buildx.outputs.cache-hit != 'true'
         with:
           repository: docker/buildx
           path: buildx
           ref: fd6de6b6aeac780c59e5079a96b068076b676d73
 
       - name: Install buildx
+        if: steps.cache-buildx.outputs.cache-hit != 'true'
         working-directory: ./buildx
         run: make install
 
