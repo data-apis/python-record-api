@@ -3,7 +3,7 @@ PYTHON_PACKAGE_VERSION := $(shell python -c 'import record_api; print(record_api
 
 $(info Python package version = ${PYTHON_PACKAGE_VERSION})
 
-IMAGE := saulshanabrook/python-record-api
+IMAGE := registry.digitalocean.com/python-record-api
 
 # The tag for base image is base-{python version}-{version-increment}
 # The tag for other versions are {name}-{python version}-{base version increment}-{version increment}
@@ -12,17 +12,17 @@ IMAGE := saulshanabrook/python-record-api
 version = $(shell cat images/$(1)/version)
 
 
-BASE_IMAGE := ${IMAGE}:base-${PYTHON_PACKAGE_VERSION}-$(call version,base)
+BASE_IMAGE := ${IMAGE}/base:${PYTHON_PACKAGE_VERSION}-$(call version,base)
 
 $(info Base image = ${BASE_IMAGE})
 
-sub_tag = $(1)-${PYTHON_PACKAGE_VERSION}-$(call version,base)-$(call version,$(1))
-sub_image = ${IMAGE}:$(call sub_tag,$(1))
+sub_tag = $(1):${PYTHON_PACKAGE_VERSION}-$(call version,base)-$(call version,$(1))
+sub_image = ${IMAGE}/$(call sub_tag,$(1))
 
 WORKFLOW_VERSION := $(shell cat argo/version)
 $(info Workflow version = ${WORKFLOW_VERSION})
 
-workflow_name = $(call sub_tag,$(1))-${WORKFLOW_VERSION}
+workflow_name = $(subst :,-,$(call sub_tag,$(1)))-${WORKFLOW_VERSION}
 
 IMAGES := $(sort $(filter-out base,$(notdir $(wildcard images/*))))
 
@@ -107,6 +107,8 @@ test-%: docker-bake.json
 # Generate docker bake file with default group
 # https://github.com/docker/buildx/issues/183#issuecomment-551216260
 
+# file parsing
+# https://github.com/docker/buildx/blob/fd6de6b6aeac780c59e5079a96b068076b676d73/bake/bake.go#L333
 define JQ_DOCKER_BAKE
 {	
 	group: {
@@ -116,9 +118,13 @@ define JQ_DOCKER_BAKE
 	},
 	target: (
 		{
+			"base-base": {
+				dockerfile: "Dockerfile",
+				"cache-to": ["type=local,dest=./cache"]
+			},
 			base: {
 				context: "images/base",
-				dockerfile: "Dockerfile",
+				inherits: ["base-base"],
 				args: {
 					PYTHON_PACKAGE_VERSION: "${PYTHON_PACKAGE_VERSION}"
 				},
@@ -133,7 +139,7 @@ define JQ_DOCKER_BAKE
 				($$ARGS.positional[]) | {
 					(.): {
 						context: ("images/" + .),
-						dockerfile: "Dockerfile",
+						inherits: ["base-base"],
 						args: {
 							FROM: "${BASE_IMAGE}"
 						},
