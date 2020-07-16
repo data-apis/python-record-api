@@ -7,7 +7,7 @@ on:
       - master
 jobs:
   test:
-    name: Test python package
+    name: Test and try publishing Python package
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master
@@ -30,9 +30,15 @@ jobs:
         run: pytest record_api/test.py
         env:
           PYTEST_DISABLE_PLUGIN_AUTOLOAD: true
-
+      - name: Try publishing to PyPi
+        run: flit publish
+        continue-on-error: true
+        env: 
+          FLIT_USERNAME: ${{ secrets.PYPI_USERNAME }}
+          FLIT_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
   build:
-    name: Build and push images
+    needs: test
+    name: Build and push Docker images
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master
