@@ -104,3 +104,7 @@ jobs:
       - name: Push images
         working-directory: ./k8
         run: make push-images
+
+      - name: Submit argo jobs
+        working-directory: ./k8
+        run: make argo-submit
