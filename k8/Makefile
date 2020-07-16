@@ -14,10 +14,13 @@ version = $(shell cat images/$(1)/version)
 
 BASE_IMAGE := ${IMAGE}/base:${PYTHON_PACKAGE_VERSION}-$(call version,base)
 
+BASE_CACHE_IMAGE := ${IMAGE}/base:cache
+
 $(info Base image = ${BASE_IMAGE})
 
 sub_tag = $(1):${PYTHON_PACKAGE_VERSION}-$(call version,base)-$(call version,$(1))
 sub_image = ${IMAGE}/$(call sub_tag,$(1))
+sub_cache_image = ${IMAGE}/$(1):cache
 
 WORKFLOW_VERSION := $(shell cat argo/version)
 $(info Workflow version = ${WORKFLOW_VERSION})
@@ -120,11 +123,12 @@ define JQ_DOCKER_BAKE
 		{
 			"base-base": {
 				dockerfile: "Dockerfile",
-				"cache-to": ["type=local,dest=./cache"]
 			},
 			base: {
 				context: "images/base",
 				inherits: ["base-base"],
+				"cache-to": ["type=registry,ref=${BASE_CACHE_IMAGE},mode=max"],
+				"cache-from": ["type=registry,ref=${BASE_CACHE_IMAGE}"],
 				args: {
 					PYTHON_PACKAGE_VERSION: "${PYTHON_PACKAGE_VERSION}"
 				},
@@ -143,6 +147,8 @@ define JQ_DOCKER_BAKE
 						args: {
 							FROM: "${BASE_IMAGE}"
 						},
+						"cache-to": ["type=registry,ref=" + ($$ARGS.named[(. + "-cache")]) + ",mode=max"],
+						"cache-from": ["type=registry,ref=" + ($$ARGS.named[(. + "-cache")])],
 						tags: [
 							($$ARGS.named[(.)])
 						]
@@ -161,6 +167,7 @@ docker-bake.json: Makefile
 	jq "$$JQ_DOCKER_BAKE" \
 		--null-input \
 		$(foreach name,$(IMAGES),--arg $(name) $(call sub_image,$(name))) \
+		$(foreach name,$(IMAGES),--arg $(name)-cache $(call sub_cache_image,$(name))) \
 		--args $(IMAGES) \
 		> $@
 
