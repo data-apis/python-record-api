@@ -17,8 +17,6 @@ RUN git clone \
     git://github.com/scipy/scipy.git \
     .
 
-WORKDIR /usr/src/app/tests
-
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install pytest-custom_exit_code
 
