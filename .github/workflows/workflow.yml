@@ -1,10 +1,7 @@
 # from
 # https://github.com/do-community/example-doctl-action/blob/master/.github/workflows/workflow.yaml
 
-on:
-  push:
-    branches:
-      - master
+on: push
 jobs:
   test:
     name: Test and try publishing Python package
