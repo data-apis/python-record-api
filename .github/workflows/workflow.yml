@@ -109,3 +109,6 @@ jobs:
       - name: Submit argo jobs
         working-directory: ./k8
         run: make argo-submit
+      
+      - name: list argo jobs
+        run: argo list
