@@ -6,8 +6,33 @@ on:
     branches:
       - master
   jobs:
+    test:
+      name: Test python package
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout master
+          uses: actions/checkout@master
+
+        - name: Set up Python
+          uses: actions/setup-python@v2
+          with:
+            python-version: 3.8
+
+        - name: Install flit & pytest
+          run: |
+            python -m pip install --upgrade pip
+            pip install flit pytest
+
+        - name: Install package
+          run: flit install
+  
+        - name: run tests
+          run: pytest record_api/test.py
+          env:
+            PYTEST_DISABLE_PLUGIN_AUTOLOAD: true
+
     build:
-      name: Build, push, and deploy
+      name: Build and push images
       runs-on: ubuntu-latest
       steps:
         - name: Checkout master
