@@ -49,10 +49,15 @@ jobs:
         with:
           python-version: 3.8
 
+      # Must upgrade to 1.6 which isn't available by default on ubuntu
+      # https://stedolan.github.io/jq/download/
       - name: Ugprade jq
         run: |
-          sudo apt-get update
-          sudo apt-get install --only-upgrade jq
+          mkdir -p bin
+          curl https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 -L -o bin/jq
+          chmod +x bin/jq
+          echo "::add-path::./bin"
+
       - name: Install flit
         run: |
           python -m pip install --upgrade pip
