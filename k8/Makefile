@@ -29,6 +29,13 @@ IMAGES := $(sort $(filter-out base,$(notdir $(wildcard images/*))))
 $(info Names = ${IMAGES})
 
 $(info )
+
+$(info jq version = $(shell jq --version))
+$(info argo version = $(shell argo version --short))
+$(info docker builx version = $(shell docker buildx version))
+
+
+$(info )
 # ARGO_SUBMITTED_WORKFLOWS := $(shell argo list -o name)
 
 # # loop through images, any which have a workflow that is in argos submitted workflows should be notadd
