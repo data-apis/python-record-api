@@ -7,6 +7,7 @@ WORKDIR /usr/src/app
 # https://github.com/django/django-docker-box/blob/master/Dockerfile#L4
 RUN apt-get update && \
     apt-get -y install --no-install-recommends \
+        libmemcached-dev \
         build-essential \
         libsqlite3-mod-spatialite binutils libproj-dev gdal-bin libgdal20 libgeoip1 \
         libpq-dev \
