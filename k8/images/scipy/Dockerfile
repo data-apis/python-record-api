@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 # https://scipy.github.io/devdocs/building/linux.html#debian-ubuntu
 RUN apt-get update && \
     apt-get -y install --no-install-recommends \
-        gcc gfortran python-dev libopenblas-dev liblapack-dev cyt \
+        gcc gfortran python-dev libopenblas-dev liblapack-dev \
     && apt-get clean
 
 # https://scipy.github.io/devdocs/dev/contributor/development_workflow.html
