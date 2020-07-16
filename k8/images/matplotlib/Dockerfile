@@ -24,7 +24,6 @@ COPY matplotlib.setup.cfg .
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
-    -v \
     --editable \
     . \
     pytest \

@@ -22,7 +22,6 @@ RUN git clone \
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
-    -v \
      -r requirements-dev.txt \
      pytest-custom_exit_code
 
@@ -30,7 +29,6 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 RUN python setup.py build_ext --inplace -j 4
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
-    -v \
     -e . \
     --no-build-isolation \
     --no-use-pep517

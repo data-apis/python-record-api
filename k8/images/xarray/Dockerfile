@@ -30,7 +30,6 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 # Manually convered conda -> pip
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
-    -v \
     black \
     boto3 \
     bottleneck \
@@ -74,7 +73,6 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
-    -v \
     -e \
     .
 

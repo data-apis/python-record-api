@@ -23,7 +23,6 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     --no-build-isolation \
     --editable \
     . \
-    -v \
     pytest-custom_exit_code
 
 RUN python -c "import sklearn; sklearn.show_versions()"

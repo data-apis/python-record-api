@@ -15,13 +15,12 @@ RUN git clone \
 RUN --mount=type=cache,target=/root/.cache/pip \
     ls requirements/ \
     | grep .txt \
-    | xargs -n 1 -I% pip install -v -r requirements/%
+    | xargs -n 1 -I% pip install -r requirements/%
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
     -e \
     . \
-    -v \
     pytest-custom_exit_code
 
 RUN python -c "import skimage"
