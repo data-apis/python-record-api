@@ -58,6 +58,10 @@ jobs:
           chmod +x bin/jq
           echo "::add-path::./bin"
 
+      - name: Install argo
+        run:
+          curl -sLO https://github.com/argoproj/argo/releases/download/v2.9.3/argo-linux-amd64 -o bin/argo
+          chmod +x bin/argo
       - name: Install flit
         run: |
           python -m pip install --upgrade pip
