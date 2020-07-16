@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 # https://scipy.github.io/devdocs/building/linux.html#debian-ubuntu
 RUN apt-get update && \
     apt-get -y install --no-install-recommends \
-        gcc gfortran python-dev libopenblas-dev liblapack-dev \
+        gcc gfortran python-dev libopenblas-dev liblapack-dev pybind11-dev \
     && apt-get clean
 
 # https://scipy.github.io/devdocs/dev/contributor/development_workflow.html
@@ -18,7 +18,7 @@ RUN git clone \
     .
 
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install pytest-custom_exit_code
+    pip install pytest-custom_exit_code cython numpy pytest
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     python setup.py build_ext --inplace
