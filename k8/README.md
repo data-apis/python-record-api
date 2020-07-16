@@ -26,7 +26,8 @@ Buildx bake tutorial: https://github.com/FernandoMiguel/BuildKit
 ```bash
 # To create buildx  remote
 kubectl create ns buildx
-docker buildx create --driver kubernetes --use --driver-opt namespace=buildx
+kubectl apply -f ./resource-defaults.yml --namespace=buildx
+make buildx-driver
 docker buildx bake --push
 
 

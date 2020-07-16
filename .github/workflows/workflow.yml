@@ -1,0 +1,56 @@
+# from 
+# https://github.com/do-community/example-doctl-action/blob/master/.github/workflows/workflow.yaml
+
+on:
+    push:
+      branches:
+        - master
+  
+  jobs:
+  
+    build:
+      name: Build, push, and deploy
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout master
+        uses: actions/checkout@master
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install flit
+        run: |
+          python -m pip install --upgrade pip
+          pip install flit
+      
+      - name: Install package
+        run: flit install
+
+      - name: Clone buildx
+        uses: actions/checkout@master
+        with:
+          repository: docker/buildx
+          path: buildx
+          ref: fd6de6b6aeac780c59e5079a96b068076b676d73
+
+      - name: Install buildx
+        working-directory: ./buildx
+        run: make install
+
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+  
+      - name: Save DigitalOcean kubeconfig
+        run: doctl kubernetes cluster kubeconfig save python-record-api
+
+      - name: Create buildx driver
+        working-directory: ./k8
+        run: make buildx-driver
+
+      - name: Push images
+        working-directory: ./k8
+        run: make push-images

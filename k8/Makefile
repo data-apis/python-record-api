@@ -141,3 +141,7 @@ docker-bake.json: Makefile
 		$(foreach name,$(IMAGES),--arg $(name) $(call sub_image,$(name))) \
 		--args $(IMAGES) \
 		> $@
+
+
+buildx-driver:
+	docker buildx create --driver kubernetes --use --driver-opt namespace=buildx --node buildx0
