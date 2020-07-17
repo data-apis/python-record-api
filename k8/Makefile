@@ -27,7 +27,8 @@ $(info Workflow version = ${WORKFLOW_VERSION})
 
 workflow_name = $(subst :,-,$(call sub_tag,$(1)))-${WORKFLOW_VERSION}
 
-IMAGES := $(sort $(filter-out base,$(notdir $(wildcard images/*))))
+IGNORE_IMAGES := django base
+IMAGES := $(sort $(filter-out ${IGNORE_IMAGES},$(notdir $(wildcard images/*))))
 
 $(info Names = ${IMAGES})
 
