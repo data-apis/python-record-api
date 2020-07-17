@@ -116,5 +116,5 @@ jobs:
         uses: actions/upload-artifact@v2
         if: ${{ always() }}
         with:
-          name: argo-list
+          name: logs
           path: /tmp/my-logs/
