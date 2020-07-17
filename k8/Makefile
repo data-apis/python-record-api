@@ -174,3 +174,6 @@ docker-bake.json: Makefile
 
 buildx-driver:
 	docker buildx create --driver kubernetes --use --driver-opt namespace=buildx --node buildx0
+
+k8-argo-default:
+	kubectl config set-context --current --namespace=argo

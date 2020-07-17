@@ -98,9 +98,25 @@ jobs:
         working-directory: ./k8
         run: make push-images
 
+      - name: Set argo namespace
+        working-directory: ./k8
+        run: make k8-argo-default
+
       - name: Submit argo jobs
         working-directory: ./k8
-        run: make argo-submit
+        run: make argo-submit | tee argo-submit
       
+      - name: Upload submit artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: argo-submit
+          path: argo-submit
+
       - name: list argo jobs
-        run: argo list
+        run: argo list | tee argo-list
+
+      - name: Upload list artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: argo-list
+          path: argo-list
