@@ -13,7 +13,7 @@ RUN git clone \
 
 RUN apt-get update && \
     apt-get -y install --no-install-recommends \
-        libgdal1-dev \
+        libgdal-dev \
     && apt-get clean
 
 RUN --mount=type=cache,target=/root/.cache/pip \
