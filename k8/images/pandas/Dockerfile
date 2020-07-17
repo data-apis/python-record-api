@@ -23,9 +23,13 @@ RUN git clone \
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
      -r requirements-dev.txt \
-     matplotlib \
      pytest-custom_exit_code
 
+# need till released:
+# https://github.com/pandas-dev/pandas/pull/35323
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install \
+    'matplotlib>=3.0.0,<3.3.0'
 
 RUN python setup.py build_ext --inplace -j 4
 RUN --mount=type=cache,target=/root/.cache/pip \
