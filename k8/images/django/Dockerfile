@@ -32,6 +32,5 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     -r requirements/postgres.txt
 
 RUN python -c "import django"
-ENV DJANGO_SETTINGS_MODULE=settings.test_sqlite_gis
 ENV PYTHON_RECORD_API_FROM_MODULES=django
 CMD sh -c 'python runtests.py || exit 0'
