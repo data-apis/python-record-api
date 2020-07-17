@@ -13,7 +13,7 @@ RUN git clone \
 
 RUN apt-get update && \
     apt-get -y install --no-install-recommends \
-        libproj-dev gdal-bin libgdal20 libgeoip1 \
+        libgdal1-dev \
     && apt-get clean
 
 RUN --mount=type=cache,target=/root/.cache/pip \
