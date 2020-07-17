@@ -90,11 +90,11 @@ push-images: docker-bake.json
 
 
 test-%: docker-bake.json
-	docker buildx bake --push $(*F)
+	# docker buildx bake --push $(*F)
 	docker run \
 		--rm \
 		-e PYTHON_RECORD_API_OUTPUT_FILE=/tmp/d/out.jsonl \
-		-v (pwd)/tmp:/tmp/d \
+		-v $$PWD/tmp:/tmp/d \
 		$(call sub_image,$(*F))
 
 
