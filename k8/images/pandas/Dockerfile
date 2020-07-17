@@ -23,6 +23,7 @@ RUN git clone \
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
      -r requirements-dev.txt \
+     matplotlib \
      pytest-custom_exit_code
 
 
