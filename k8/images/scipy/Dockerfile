@@ -24,5 +24,6 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     python setup.py build_ext --inplace
 
 RUN python -c "import scipy"
+RUN python runtests.py --build-only
 ENV PYTHON_RECORD_API_FROM_MODULES=scipy
 CMD python runtests.py -v -- --suppress-tests-failed-exit-code
