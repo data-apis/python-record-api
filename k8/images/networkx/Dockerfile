@@ -11,6 +11,11 @@ RUN git clone \
     git://github.com/networkx/networkx.git \
     .
 
+RUN apt-get update && \
+    apt-get -y install --no-install-recommends \
+        libproj-dev gdal-bin libgdal20 libgeoip1 \
+    && apt-get clean
+
 RUN --mount=type=cache,target=/root/.cache/pip \
     ls requirements/ \
     | grep .txt \
