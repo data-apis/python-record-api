@@ -74,7 +74,7 @@ jobs:
 
       - name: Login DigitalOcean container registry
         run: doctl registry login
-        
+
       - name: Save DigitalOcean kubeconfig
         run: doctl kubernetes cluster kubeconfig save python-record-api
 
@@ -97,20 +97,23 @@ jobs:
       - name: Try publishing to PyPi
         run: flit publish
         continue-on-error: true
-        env: 
+        env:
           FLIT_USERNAME: ${{ secrets.PYPI_USERNAME }}
           FLIT_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
 
       - name: Push images
         working-directory: ./k8
         run: make push-images 2>&1 | tee /tmp/my-logs/push-images
+        shell: bash
 
       - name: Submit argo jobs
         working-directory: ./k8
         run: make argo-submit 2>&1 | tee /tmp/my-logs/argo-submit
-      
+        shell: bash
+
       - name: list argo jobs
         run: argo list 2>&1 | tee /tmp/my-logs/argo-list
+        shell: bash
 
       - name: Upload logs
         uses: actions/upload-artifact@v2
