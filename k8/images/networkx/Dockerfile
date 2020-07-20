@@ -13,20 +13,19 @@ RUN git clone \
 
 RUN apt-get update && \
     apt-get -y install --no-install-recommends \
-        libgdal-dev \
         graphviz libgraphviz-dev \
         libxml2-dev libxslt-dev \
     && apt-get clean
 
+# Skip gdal  https://github.com/networkx/networkx/issues/3786
 RUN --mount=type=cache,target=/root/.cache/pip \
-    ls requirements/ \
-    | grep .txt \
-    | xargs -n 1 -I% pip install -r requirements/%
-
-RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install \
-    -e . \
-    pytest-custom_exit_code
+    bash -c 'env CPLUS_INCLUDE_PATH=/usr/include/gdal C_INCLUDE_PATH=/usr/include/gdal \
+        pip install \
+        -r requirements/default.txt \
+        -r requirements/test.txt \
+        pygraphviz pydot \
+        pytest-custom_exit_code \
+        -e .'
 
 RUN python -c "import networkx"
 ENV PYTHONPATH=.
