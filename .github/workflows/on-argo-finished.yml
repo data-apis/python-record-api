@@ -2,7 +2,7 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: 'Argo workflow name'
+        description: "Argo workflow name"
         required: true
 name: Pull Collected Data
 jobs:
@@ -46,3 +46,8 @@ jobs:
       # Push file
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v2
+        with:
+          commit-message: "[Bot] Add API from ${{ github.event.inputs.name }}"
+          title: "[Bot] Add API from ${{ github.event.inputs.name }}"
+          body: |
+            Add data collected from Argo task ${{ github.event.inputs.name }}
