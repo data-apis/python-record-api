@@ -13,7 +13,7 @@ jobs:
       # Install minio
       - name: Create bin dir
         run: |
-          mkdir -p bin
+          mkdir -p /tmp/bin
           echo "::add-path::/tmp/bin"
       - name: Install minio
         run: |
