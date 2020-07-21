@@ -49,8 +49,9 @@ jobs:
         with:
           commit-message: |
             [Bot] Add API from ${{ github.event.inputs.name }}
-
-            http://161.35.253.136:2746/workflows/argo/${{ github.event.inputs.name }}
-          title: "[Bot] Add API from Argo"
+          title: |
+            [Bot] Add API from ${{ github.event.inputs.name }}
+          branch: bot-${{ github.event.inputs.name }}
           body: |
-            Add data collected from Argo
+            Pull API generatd by Argo Workflow
+            [`${{ github.event.inputs.name }}`](http://161.35.253.136:2746/workflows/argo/${{ github.event.inputs.name }})
