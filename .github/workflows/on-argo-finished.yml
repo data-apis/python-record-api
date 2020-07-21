@@ -30,15 +30,15 @@ jobs:
       - name: Save DigitalOcean kubeconfig
         run: doctl kubernetes cluster kubeconfig save python-record-api
 
-      - name: Set argo namespace
-        working-directory: ./k8
-        run: make k8-argo-default
       # Get access to minio
       - name: Login to minio
         run: mc config host add argo-artifacts-local http://167.172.2.91:9000 AKIAIOSFODNN7EXAMPLE wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY --api S3v4
       # Clone repo
       - name: Checkout master
         uses: actions/checkout@master
+      - name: Set argo namespace
+        working-directory: ./k8
+        run: make k8-argo-default
       # Fetch file
       - name: Fetch file
         run: make WORKFLOW_NAME=${{ github.event.inputs.name }} download-workflow
