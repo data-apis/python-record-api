@@ -1,9 +1,7 @@
 .PHONY: groupby_location clean_groupby_location clean_api clean_raw clean_typing clean all test
 
 
-LIBRARIES := pandas sample-usage skimage sklearn xarray
-
-.INTERMEDIATE: $(addprefix data/groupby_location/,$(addsuffix .jsonl,$(LIBRARIES)))
+# .INTERMEDIATE: $(addprefix data/groupby_location/,$(addsuffix .jsonl,$(LIBRARIES)))
 
 all: data/typing/numpy.py
 
@@ -33,7 +31,7 @@ data/api.json: $(wildcard data/api/*)
 		python -m record_api.combine_apis
 
 
-data/api/%.json: data/groupby_location/%.jsonl
+data/api/%.json: | data/groupby_location/%.jsonl
 	env PYTHON_RECORD_API_OUTPUT=$@ \
 		PYTHON_RECORD_API_INPUT=$< \
 		PYTHON_RECORD_API_LABEL=$(*F) \
@@ -45,9 +43,6 @@ clean_groupby_location:
 	rm -f data/groupby_location/*
 
 
-groupby_location: $(addprefix data/groupby_location/,$(addsuffix .jsonl,$(LIBRARIES)))
-
-
 data/groupby_location/%.jsonl: | data/raw/%.jsonl
 	env PYTHON_RECORD_API_OUTPUT=$@ \
 		PYTHON_RECORD_API_INPUT=$| \
@@ -57,44 +52,9 @@ data/groupby_location/%.jsonl: | data/raw/%.jsonl
 clean_raw:
 	rm -f data/raw/*
 
-
-data/raw/skimage.jsonl:
-	env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
-		PYTHON_RECORD_API_TO_MODULES=numpy \
-		PYTHON_RECORD_API_FROM_MODULES=skimage \
-		pytest --pyargs skimage
-
-data/raw/dask.jsonl:
-	-env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
-		PYTHON_RECORD_API_TO_MODULES=pandas,numpy \
-		PYTHON_RECORD_API_FROM_MODULES=dask \
-		pytest --pyargs dask
-
-
-data/raw/sklearn.jsonl:
-	env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
-		PYTHON_RECORD_API_TO_MODULES=numpy \
-		PYTHON_RECORD_API_FROM_MODULES=sklearn \
-		pytest --pyargs sklearn
-
-
-data/raw/xarray.jsonl:
-	-env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
-		PYTHON_RECORD_API_TO_MODULES=numpy,pandas \
-		PYTHON_RECORD_API_FROM_MODULES=xarray \
-		pytest --pyargs xarray
-
-
 data/raw/sample-usage.jsonl:
 	env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
 		PYTHON_RECORD_API_TO_MODULES=numpy \
 		PYTHON_RECORD_API_FROM_MODULES=record_api.sample_usage \
 		python -m record_api
 
-
-
-data/raw/%.jsonl:
-	-env PYTHON_RECORD_API_OUTPUT_FILE=$@ \
-		PYTHON_RECORD_API_TO_MODULES=numpy,pandas \
-		PYTHON_RECORD_API_FROM_MODULES=$(*F) \
-		pytest --pyargs $(*F)

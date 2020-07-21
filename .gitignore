@@ -14,7 +14,7 @@ src/*
 dask-worker-space/
 data/raw/*
 # Keep sample data in there for show
-!data/*/sample_usage*
+!data/*/sample-usage*
 .hypothesis
 dist/
 data/groupby_location/
