@@ -36,35 +36,35 @@ class RandomState:
         _0: Union[
             List[
                 Union[
-                    Dict[
-                        str,
-                        Union[
-                            List[Union[str, int]],
-                            scipy.stats._distn_infrastructure.rv_frozen,
-                        ],
-                    ],
+                    Callable,
                     int,
                     bool,
                     str,
-                    Callable,
+                    Dict[
+                        str,
+                        Union[
+                            scipy.stats._distn_infrastructure.rv_frozen,
+                            List[Union[int, str]],
+                        ],
+                    ],
                 ]
             ],
-            range,
             int,
-            pandas.core.indexes.datetimes.DatetimeIndex,
             numpy.ndarray,
+            range,
+            pandas.core.indexes.datetimes.DatetimeIndex,
         ],
         /,
         *,
-        p: Union[numpy.ndarray, None, List[Union[float, int]]] = ...,
         replace: bool = ...,
-        size: Union[List[int], Tuple[int, int], int, numpy.int64] = ...,
+        size: Union[numpy.int64, int, List[int], Tuple[int, int]] = ...,
+        p: Union[numpy.ndarray, List[Union[float, int]], None] = ...,
     ):
         """
-        usage.pandas: 36
         usage.skimage: 8
-        usage.sklearn: 23
         usage.xarray: 6
+        usage.pandas: 36
+        usage.sklearn: 23
         """
         ...
 
@@ -125,15 +125,15 @@ class RandomState:
         _2: Union[int, Tuple[int, int]] = ...,
         /,
         *,
-        size: Union[Tuple[Union[numpy.int64, int], ...], int] = ...,
-        loc: Union[float, numpy.ndarray, int] = ...,
+        size: Union[int, Tuple[Union[int, numpy.int64], ...]] = ...,
         scale: Union[int, numpy.ndarray, float, numpy.int64, numpy.float64] = ...,
+        loc: Union[float, numpy.ndarray, int] = ...,
     ):
         """
-        usage.pandas: 7
         usage.skimage: 32
-        usage.sklearn: 141
         usage.xarray: 3
+        usage.pandas: 7
+        usage.sklearn: 141
         """
         ...
 
@@ -145,8 +145,8 @@ class RandomState:
         /,
     ):
         """
-        usage.pandas: 17
         usage.skimage: 1
+        usage.pandas: 17
         usage.sklearn: 39
         """
         ...
@@ -160,7 +160,7 @@ class RandomState:
 
     def rand(
         self,
-        _0: Union[int, numpy.int64] = ...,
+        _0: Union[numpy.int64, int] = ...,
         _1: int = ...,
         _2: int = ...,
         _3: int = ...,
@@ -168,73 +168,73 @@ class RandomState:
         /,
     ):
         """
-        usage.pandas: 110
         usage.skimage: 85
-        usage.sklearn: 269
         usage.xarray: 19
+        usage.pandas: 110
+        usage.sklearn: 269
         """
         ...
 
     def randint(
         self,
-        _0: Union[int, float, numpy.float64] = ...,
+        _0: Union[numpy.float64, int, float] = ...,
         _1: int = ...,
-        _2: Union[Tuple[int, ...], int, numpy.int64, List[int]] = ...,
+        _2: Union[numpy.int64, int, List[int], Tuple[int, ...]] = ...,
         /,
         *,
-        size: Union[Tuple[int, ...], List[int], int, numpy.int64] = ...,
         dtype: Union[Literal["u8", "int64"], type] = ...,
+        size: Union[numpy.int64, int, Tuple[int, ...], List[int]] = ...,
         high: int = ...,
         low: int = ...,
     ):
         """
-        usage.pandas: 160
         usage.skimage: 24
-        usage.sklearn: 213
         usage.xarray: 14
+        usage.pandas: 160
+        usage.sklearn: 213
         """
         ...
 
     def randn(
         self,
         _0: Union[int, numpy.int64] = ...,
-        _1: Union[int, numpy.int64] = ...,
+        _1: Union[numpy.int64, int] = ...,
         _2: int = ...,
         _3: int = ...,
         _4: int = ...,
         /,
     ):
         """
-        usage.pandas: 749
         usage.skimage: 46
-        usage.sklearn: 419
         usage.xarray: 210
+        usage.pandas: 749
+        usage.sklearn: 419
         """
         ...
 
     def random(self, /, *, size: Tuple[int, ...] = ...):
         """
+        usage.skimage: 29
+        usage.xarray: 26
         usage.pandas: 35
         usage.sample-usage: 1
-        usage.skimage: 29
         usage.sklearn: 26
-        usage.xarray: 26
         """
         ...
 
     def random_sample(self, /, *, size: Tuple[int, ...] = ...):
         """
-        usage.pandas: 4
         usage.skimage: 1
-        usage.sklearn: 156
         usage.xarray: 1
+        usage.pandas: 4
+        usage.sklearn: 156
         """
         ...
 
     def seed(self, /, *, seed: int = ...):
         """
-        usage.pandas: 21
         usage.skimage: 25
+        usage.pandas: 21
         """
         ...
 
@@ -248,9 +248,9 @@ class RandomState:
 
     def shuffle(self, _0: numpy.ndarray, /):
         """
+        usage.xarray: 2
         usage.pandas: 3
         usage.sklearn: 26
-        usage.xarray: 2
         """
         ...
 
@@ -268,14 +268,14 @@ class RandomState:
         _2: Union[int, Tuple[int, int], List[int]] = ...,
         /,
         *,
-        size: Union[List[int], int, numpy.int64, Tuple[int, ...]] = ...,
+        size: Union[Tuple[int, ...], numpy.int64, int, List[int]] = ...,
         high: Union[int, float] = ...,
         low: Union[float, int] = ...,
     ):
         """
-        usage.pandas: 6
         usage.skimage: 29
-        usage.sklearn: 84
         usage.xarray: 1
+        usage.pandas: 6
+        usage.sklearn: 84
         """
         ...

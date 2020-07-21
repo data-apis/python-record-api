@@ -72,9 +72,9 @@ class DatetimeIndex:
         """
         ...
 
-    def __sub__(self, _0: Union[numpy.timedelta64, numpy.datetime64, numpy.ndarray], /):
+    def __sub__(self, _0: Union[numpy.datetime64, numpy.timedelta64, numpy.ndarray], /):
         """
-        usage.pandas: 75
         usage.xarray: 1
+        usage.pandas: 75
         """
         ...
