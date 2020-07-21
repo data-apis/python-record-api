@@ -230,7 +230,7 @@ errstate: object
 # usage.sklearn: 3
 euler_gamma: object
 
-# usage.skimage: 624
+# usage.skimage: 26
 # usage.xarray: 4
 # usage.pandas: 33
 # usage.sample-usage: 1
@@ -857,8 +857,8 @@ def allclose(
     a: object,
     b: object,
     rtol: Union[int, float] = ...,
-    equal_nan: bool = ...,
     atol: float = ...,
+    equal_nan: bool = ...,
 ):
     """
     usage.skimage: 31
@@ -2326,8 +2326,8 @@ def percentile(
         numpy.ndarray, int, pandas.core.frame.DataFrame, pandas.core.series.Series
     ] = ...,
     q: object = ...,
-    axis: Union[int, List[int], None] = ...,
     interpolation: Literal["midpoint", "linear", "nearest", "higher", "lower"] = ...,
+    axis: Union[int, List[int], None] = ...,
 ):
     """
     usage.skimage: 9
@@ -2907,9 +2907,9 @@ def std(
 def sum(
     a: object,
     axis: Union[None, int, Tuple[Union[int, None], ...]] = ...,
+    out: Union[numpy.ndarray, numpy.float64] = ...,
     dtype: Union[type, None] = ...,
     keepdims: bool = ...,
-    out: Union[numpy.ndarray, numpy.float64] = ...,
 ):
     """
     usage.skimage: 114
@@ -4031,7 +4031,7 @@ class float16:
 
     def __sub__(self, _0: numpy.float16, /):
         """
-        usage.skimage: 3
+        usage.skimage: 2
         """
         ...
 
@@ -4242,7 +4242,7 @@ class float64:
 
     def __add__(self, _0: object, /):
         """
-        usage.skimage: 115
+        usage.skimage: 76
         usage.xarray: 9
         usage.pandas: 36
         usage.sklearn: 167
@@ -4380,7 +4380,7 @@ class float64:
 
     def __radd__(self, _0: object, /):
         """
-        usage.skimage: 115
+        usage.skimage: 81
         usage.xarray: 9
         usage.pandas: 36
         usage.sklearn: 194
@@ -4429,7 +4429,7 @@ class float64:
 
     def __rtruediv__(self, _0: object, /):
         """
-        usage.skimage: 287
+        usage.skimage: 104
         usage.xarray: 3
         usage.pandas: 61
         usage.sklearn: 255
@@ -5962,7 +5962,7 @@ class ndarray:
 
     def __matmul__(self, _0: object, /):
         """
-        usage.skimage: 62
+        usage.skimage: 48
         usage.sample-usage: 1
         usage.sklearn: 69
         """
@@ -5980,7 +5980,7 @@ class ndarray:
 
     def __mul__(self, _0: object, /):
         """
-        usage.skimage: 896
+        usage.skimage: 376
         usage.xarray: 750
         usage.pandas: 256
         usage.sample-usage: 1
@@ -6036,7 +6036,7 @@ class ndarray:
 
     def __rand__(self, _0: object, /):
         """
-        usage.skimage: 14
+        usage.skimage: 12
         usage.xarray: 7
         usage.pandas: 88
         usage.sample-usage: 1
@@ -6062,7 +6062,7 @@ class ndarray:
 
     def __rmatmul__(self, _0: object, /):
         """
-        usage.skimage: 62
+        usage.skimage: 50
         usage.sample-usage: 1
         usage.sklearn: 69
         """
@@ -6070,7 +6070,7 @@ class ndarray:
 
     def __rmul__(self, _0: object, /):
         """
-        usage.skimage: 896
+        usage.skimage: 530
         usage.xarray: 74
         usage.pandas: 243
         usage.sample-usage: 2
@@ -6113,7 +6113,7 @@ class ndarray:
 
     def __rsub__(self, _0: object, /):
         """
-        usage.skimage: 406
+        usage.skimage: 222
         usage.xarray: 48
         usage.pandas: 273
         usage.sample-usage: 1
@@ -6154,7 +6154,7 @@ class ndarray:
 
     def __sub__(self, _0: object, /):
         """
-        usage.skimage: 406
+        usage.skimage: 309
         usage.xarray: 70
         usage.pandas: 228
         usage.sample-usage: 1
@@ -6164,7 +6164,7 @@ class ndarray:
 
     def __truediv__(self, _0: object, /):
         """
-        usage.skimage: 287
+        usage.skimage: 215
         usage.xarray: 16
         usage.pandas: 420
         usage.sklearn: 611
@@ -6980,7 +6980,7 @@ class ufunc:
         casting: Literal["no", "unsafe"] = ...,
     ):
         """
-        usage.skimage: 624
+        usage.skimage: 613
         usage.xarray: 325
         usage.pandas: 1228
         usage.sample-usage: 3
