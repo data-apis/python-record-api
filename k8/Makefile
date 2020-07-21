@@ -34,7 +34,7 @@ IMAGES := $(sort $(filter-out ${IGNORE_IMAGES},$(notdir $(wildcard images/*))))
 $(info Names = ${IMAGES})
 
 
-ifneq (${WORKFLOW_NAME},)
+ifdef WORKFLOW_NAME
 $(info )
 $(info workflow name = ${WORKFLOW_NAME})
 WORKFLOW_LABEL := $(shell python -c 'print("-".join("${WORKFLOW_NAME}".split("-")[:-4]))')
