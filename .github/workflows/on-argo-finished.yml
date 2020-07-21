@@ -1,10 +1,10 @@
-on: push
-workflow_dispatch:
+on:
+  workflow_dispatch:
     inputs:
       name:
         description: 'Argo workflow name'
         required: true
-name: Finished Argo Workflow
+name: Pull Collected Data
 jobs:
   build:
     name: Create PR for api file

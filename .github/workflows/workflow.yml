@@ -2,6 +2,7 @@
 # https://github.com/do-community/example-doctl-action/blob/master/.github/workflows/workflow.yaml
 
 on: push
+name: Build images and kick off builds
 jobs:
   build:
     name: Build, test and push Docker images
