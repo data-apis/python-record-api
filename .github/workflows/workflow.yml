@@ -32,6 +32,7 @@ jobs:
           curl https://github.com/argoproj/argo/releases/download/v2.9.3/argo-linux-amd64 -L -o $GITHUB_WORKSPACE/bin/argo
       - name: Make bin executable
         run: chmod +x $GITHUB_WORKSPACE/bin/*
+
       - name: Cache pip
         uses: actions/cache@v2
         with:

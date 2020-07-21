@@ -27,7 +27,7 @@ clean_api:
 	rm -f data/api.json data/api/*
 
 
-data/api.json: $(addprefix data/api/,$(addsuffix .json,$(LIBRARIES)))
+data/api.json: $(wildcard data/api/*)
 	env PYTHON_RECORD_API_OUTPUT=$@ \
 		PYTHON_RECORD_API_INPUTS="$^"\
 		python -m record_api.combine_apis
