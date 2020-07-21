@@ -5504,7 +5504,7 @@
                 }
               },
               "metadata": {
-                "usage.skimage": 624
+                "usage.skimage": 613
               }
             },
             "reduce": {
@@ -5616,7 +5616,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.skimage": 406
+                "usage.skimage": 309
               }
             },
             "__rsub__": {
@@ -5633,7 +5633,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.skimage": 406
+                "usage.skimage": 222
               }
             },
             "mean": {
@@ -5717,7 +5717,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.skimage": 896
+                "usage.skimage": 376
               }
             },
             "__rmul__": {
@@ -5734,7 +5734,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.skimage": 896
+                "usage.skimage": 530
               }
             },
             "__eq__": {
@@ -5986,7 +5986,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.skimage": 287
+                "usage.skimage": 215
               }
             },
             "__le__": {
@@ -6179,7 +6179,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.skimage": 62
+                "usage.skimage": 48
               }
             },
             "__rmatmul__": {
@@ -6218,7 +6218,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.skimage": 62
+                "usage.skimage": 50
               }
             },
             "__add__": {
@@ -6757,7 +6757,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.skimage": 14
+                "usage.skimage": 12
               }
             },
             "view": {
@@ -7537,7 +7537,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.skimage": 287
+                "usage.skimage": 104
               }
             },
             "__sub__": {
@@ -7686,7 +7686,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.skimage": 115
+                "usage.skimage": 76
               }
             },
             "__radd__": {
@@ -7703,7 +7703,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.skimage": 115
+                "usage.skimage": 81
               }
             },
             "__neg__": {
@@ -11283,7 +11283,7 @@
               "kw_only_required": {},
               "kw_only_optional": {},
               "metadata": {
-                "usage.skimage": 3
+                "usage.skimage": 2
               }
             },
             "__rsub__": {
@@ -11581,7 +11581,7 @@
       "properties": {
         "exp": [
           {
-            "usage.skimage": 624
+            "usage.skimage": 26
           },
           {
             "type": "numpy.ufunc",
@@ -13553,16 +13553,16 @@
                   "_3"
                 ],
                 [
+                  "_3",
+                  "_4"
+                ],
+                [
                   "_0",
                   "_1"
                 ],
                 [
                   "_1",
                   "_2"
-                ],
-                [
-                  "_3",
-                  "_4"
                 ]
               ],
               "pos_or_kw_required": {},
@@ -13921,12 +13921,12 @@
                   "_3"
                 ],
                 [
-                  "_1",
-                  "_2"
-                ],
-                [
                   "_3",
                   "_4"
+                ],
+                [
+                  "_1",
+                  "_2"
                 ]
               ],
               "pos_or_kw_required": {},
