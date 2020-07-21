@@ -48,6 +48,6 @@ jobs:
         uses: peter-evans/create-pull-request@v2
         with:
           commit-message: "[Bot] Add API from ${{ github.event.inputs.name }}"
-          title: "[Bot] Add API from ${{ github.event.inputs.name }}"
+          title: "[Bot] Add API from Argo"
           body: |
-            Add data collected from Argo task ${{ github.event.inputs.name }}
+            Add data collected from Argo
