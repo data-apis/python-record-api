@@ -47,7 +47,10 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v2
         with:
-          commit-message: "[Bot] Add API from ${{ github.event.inputs.name }}"
+          commit-message: |
+            [Bot] Add API from ${{ github.event.inputs.name }}
+
+            http://161.35.253.136:2746/workflows/argo/${{ github.event.inputs.name }}
           title: "[Bot] Add API from Argo"
           body: |
             Add data collected from Argo
