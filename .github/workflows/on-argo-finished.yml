@@ -1,0 +1,34 @@
+on: push
+workflow_dispatch:
+    inputs:
+      name:
+        description: 'Argo workflow name'
+        required: true
+name: Finished Argo Workflow
+jobs:
+  build:
+    name: Create PR for api file
+    runs-on: ubuntu-latest
+    steps:
+      # Install minio
+      - name: Create bin dir
+        run: |
+          mkdir -p bin
+          echo "::add-path::/tmp/bin"
+      - name: Install minio
+        run: |
+          curl https://dl.min.io/client/mc/release/linux-amd64/mc -L -o /tmp/bin/mc
+      - name: Make bin executable
+        run: chmod +x /tmp/bin/*
+      # Get access to minio
+      - name: Login to minio
+        run: mc config host add argo-artifacts-local http://167.172.2.91:9000 AKIAIOSFODNN7EXAMPLE wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY --api S3v4
+      # Clone repo
+      - name: Checkout master
+        uses: actions/checkout@master
+      # Fetch file
+      - name: Fetch file
+        run: make WORKFLOW_NAME=${{ github.event.inputs.name }} download-workflow
+      # Push file
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v2

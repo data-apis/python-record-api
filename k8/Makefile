@@ -30,7 +30,18 @@ workflow_name = $(subst :,-,$(call sub_tag,$(1)))-${WORKFLOW_VERSION}
 IGNORE_IMAGES := django base
 IMAGES := $(sort $(filter-out ${IGNORE_IMAGES},$(notdir $(wildcard images/*))))
 
+
 $(info Names = ${IMAGES})
+
+
+ifneq (${WORKFLOW_NAME},)
+$(info )
+$(info workflow name = ${WORKFLOW_NAME})
+WORKFLOW_LABEL := $(shell python -c 'print("-".join("${WORKFLOW_NAME}".split("-")[:-4]))')
+$(info workflow label = ${WORKFLOW_LABEL})
+endif
+
+
 
 $(info )
 
@@ -58,20 +69,13 @@ $(info )
 # 	)
 # )
 
-all: $(addprefix ../data/api/,$(addsuffix .json,$(IMAGES)))
-
-../data/api/%.json: .
-	argo wait record-$(*F)
-	argo get record-$(*F) -o json \
-		| jq -r '.status.nodes."record-$(*F)".outboundNodes[0]' \
-		| xargs -n 1 -I% mc cat 'argo-artifacts-local/my-bucket/record-$(*F)/%/api.tgz' \
-		| tar -xvf - -C $(@D)
-	mv -f $(@D)/api.json $@
-
-# 	| xargs -n 1 -I% wget 'http://localhost:2746/artifacts/argo/record-$(*F)/%/api'
-# tar -xvf api
-# rm api
-# mv -f api.json $@
+# Pass in the WORKFLOW_NAME as a variable
+download-workflow:
+	argo get ${WORKFLOW_NAME} -o json \
+		| jq -r '.status.nodes."${WORKFLOW_NAME}".outboundNodes[0]' \
+		| xargs -n 1 -I% mc cat 'argo-artifacts-local/my-bucket/${WORKFLOW_NAME}/%/api.tgz' \
+		| tar -xvf - -C ../data/api/
+	mv -f ../data/api/api.json ../data/api/${WORKFLOW_LABEL}.json
 
 
 argo-submit: $(addprefix argo-submit-,$(IMAGES))
