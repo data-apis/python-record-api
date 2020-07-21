@@ -4,8 +4,8 @@ from typing import *
 class CClass:
     def __getitem__(self, _0: Union[numpy.ndarray, Tuple[numpy.ndarray, ...]], /):
         """
-        usage.pandas: 3
         usage.skimage: 1
+        usage.pandas: 3
         usage.sklearn: 40
         """
         ...
@@ -20,8 +20,8 @@ class IndexExpression:
         /,
     ):
         """
-        usage.pandas: 2
         usage.skimage: 1
+        usage.pandas: 2
         usage.sklearn: 2
         """
         ...
@@ -72,17 +72,17 @@ class RClass:
     def __getitem__(
         self,
         _0: Union[
+            List[Union[List[Union[int, float]], int]],
             tuple,
-            slice[Union[int, None], int, Union[int, None]],
             numpy.ndarray,
-            List[Union[int, List[Union[int, float]]]],
+            slice[Union[int, None], int, Union[int, None]],
         ],
         /,
     ):
         """
-        usage.pandas: 13
         usage.skimage: 16
-        usage.sklearn: 37
         usage.xarray: 3
+        usage.pandas: 13
+        usage.sklearn: 37
         """
         ...

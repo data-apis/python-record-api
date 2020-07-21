@@ -2,14 +2,14 @@ from typing import *
 
 
 def array(
-    data: Union[List[Union[int, float]], numpy.ma.core.MaskedArray, numpy.ndarray],
-    mask: Union[List[Union[bool, List[int]]], bool, numpy.ndarray],
+    data: Union[numpy.ndarray, numpy.ma.core.MaskedArray, List[Union[int, float]]],
+    mask: Union[numpy.ndarray, bool, List[Union[List[int], bool]]],
 ):
     """
-    usage.pandas: 1
     usage.skimage: 7
-    usage.sklearn: 4
     usage.xarray: 1
+    usage.pandas: 1
+    usage.sklearn: 4
     """
     ...
 
@@ -24,11 +24,11 @@ def concatenate(
 
 
 def getdata(
-    a: Union[numpy.ma.core.MaskedArray, numpy.ma.mrecords.MaskedRecords, numpy.ndarray]
+    a: Union[numpy.ma.core.MaskedArray, numpy.ndarray, numpy.ma.mrecords.MaskedRecords]
 ):
     """
-    usage.pandas: 1
     usage.skimage: 3
+    usage.pandas: 1
     usage.sklearn: 2
     """
     ...
@@ -43,10 +43,10 @@ def getmask(a: numpy.ma.core.MaskedArray):
 
 def getmaskarray(arr: numpy.ma.core.MaskedArray):
     """
-    usage.pandas: 7
     usage.skimage: 1
-    usage.sklearn: 1
     usage.xarray: 2
+    usage.pandas: 7
+    usage.sklearn: 1
     """
     ...
 
@@ -58,10 +58,10 @@ def isMaskedArray(x: Union[numpy.ndarray, numpy.ma.core.MaskedArray]):
     ...
 
 
-def masked_invalid(a: Union[List[float], numpy.ndarray]):
+def masked_invalid(a: Union[numpy.ndarray, List[float]]):
     """
-    usage.sklearn: 4
     usage.xarray: 4
+    usage.sklearn: 4
     """
     ...
 
@@ -78,31 +78,31 @@ class MaskedArray:
     # usage.xarray: 1
     base: object
 
-    # usage.sklearn: 2
     # usage.xarray: 3
+    # usage.sklearn: 2
     data: object
 
+    # usage.xarray: 8
     # usage.pandas: 42
     # usage.sklearn: 2
-    # usage.xarray: 8
     dtype: object
 
     # usage.skimage: 2
     fill_value: object
 
     # usage.skimage: 5
-    # usage.sklearn: 2
     # usage.xarray: 6
+    # usage.sklearn: 2
     mask: object
 
-    # usage.pandas: 6
     # usage.skimage: 8
     # usage.xarray: 3
+    # usage.pandas: 6
     ndim: object
 
     # usage.skimage: 3
-    # usage.sklearn: 1
     # usage.xarray: 6
+    # usage.sklearn: 1
     shape: object
 
     def __add__(self, _0: numpy.float64, /):
@@ -118,12 +118,12 @@ class MaskedArray:
         ...
 
     def __getitem__(
-        self, _0: Union[Tuple[Union[slice[None, None, None], int], ...], int], /
+        self, _0: Union[int, Tuple[Union[slice[None, None, None], int], ...]], /
     ):
         """
         usage.skimage: 6
-        usage.sklearn: 21
         usage.xarray: 1
+        usage.sklearn: 21
         """
         ...
 
@@ -173,19 +173,19 @@ class MaskedArray:
     def __setitem__(
         self,
         _0: Union[
-            Tuple[Union[int, numpy.bool_, numpy.ndarray], ...],
-            slice[None, None, None],
-            numpy.ndarray,
             int,
+            numpy.ndarray,
+            slice[None, None, None],
+            Tuple[Union[int, numpy.bool_, numpy.ndarray], ...],
         ],
         _1: object,
         /,
     ):
         """
-        usage.pandas: 18
         usage.skimage: 6
-        usage.sklearn: 25
         usage.xarray: 5
+        usage.pandas: 18
+        usage.sklearn: 25
         """
         ...
 
@@ -208,10 +208,10 @@ class MaskedArray:
         """
         ...
 
-    def filled(self, /, fill_value: Union[float, int]):
+    def filled(self, /, fill_value: Union[int, float]):
         """
-        usage.sklearn: 1
         usage.xarray: 2
+        usage.sklearn: 1
         """
         ...
 

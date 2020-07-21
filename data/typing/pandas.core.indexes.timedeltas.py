@@ -134,7 +134,7 @@ class TimedeltaIndex:
 
     def __truediv__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
         """
-        usage.pandas: 21
         usage.xarray: 2
+        usage.pandas: 21
         """
         ...
