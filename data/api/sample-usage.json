@@ -1379,6 +1379,31 @@
           "classmethods": {},
           "properties": {},
           "classproperties": {}
+        },
+        "int64": {
+          "constructor": {
+            "pos_only_required": {
+              "_0": {
+                "type": {
+                  "name": "int"
+                }
+              }
+            },
+            "pos_only_optional": {},
+            "pos_only_optional_ordering": [],
+            "pos_or_kw_required": {},
+            "pos_or_kw_optional": {},
+            "pos_or_kw_optional_ordering": [],
+            "kw_only_required": {},
+            "kw_only_optional": {},
+            "metadata": {
+              "usage.sample-usage": 1
+            }
+          },
+          "methods": {},
+          "classmethods": {},
+          "properties": {},
+          "classproperties": {}
         }
       },
       "properties": {
