@@ -20,7 +20,7 @@ jobs:
           curl https://dl.min.io/client/mc/release/linux-amd64/mc -L -o /tmp/bin/mc
       - name: Install argo
         run: |
-          curl https://github.com/argoproj/argo/releases/download/v2.9.3/argo-linux-amd64 -L -o $GITHUB_WORKSPACE/bin/argo
+          curl https://github.com/argoproj/argo/releases/download/v2.9.3/argo-linux-amd64 -L -o /tmp/bin/argo
       - name: Make bin executable
         run: chmod +x /tmp/bin/*
       - name: Install doctl
