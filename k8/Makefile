@@ -74,7 +74,7 @@ download-workflow:
 	argo get ${WORKFLOW_NAME} -o json \
 		| jq -r '.status.nodes."${WORKFLOW_NAME}".outboundNodes[0]' \
 		| xargs -n 1 -I% mc cat 'argo-artifacts-local/my-bucket/${WORKFLOW_NAME}/%/api.tgz' \
-		| tar -xvf - -C ../data/api/
+		| tar -xvzf - -C ../data/api/
 	mv -f ../data/api/api.json ../data/api/${WORKFLOW_LABEL}.json
 
 
