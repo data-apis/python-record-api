@@ -65,7 +65,7 @@ env PYTHON_RECORD_API_OUTPUT=typing/ \
 First install the local package:
 
 ```bash
-pip install -e .
+flit install --symlink
 # run the tests
 env PYTEST_DISABLE_PLUGIN_AUTOLOAD=true pytest record_api/test.py
 ```
