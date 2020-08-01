@@ -1,6 +1,6 @@
 # Python Record API
 
-![.github/workflows/workflow.yml](https://github.com/pydata-apis/python-record-api/workflows/.github/workflows/workflow.yml/badge.svg?branch=master)
+![.github/workflows/workflow.yml](https://github.com/data-apis/python-record-api/workflows/.github/workflows/workflow.yml/badge.svg?branch=master)
 
 This module is mean to help you understand how a Python module is being used by other modules.
 
