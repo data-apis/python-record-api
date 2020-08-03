@@ -562,7 +562,7 @@ Module.update_forward_refs()
 
 
 def metadata_lines(m: Metadata) -> typing.Iterable[str]:
-    for k, v in m.items():
+    for k, v in sort_items(m):
         yield f"{k}: {v}"
 
 
