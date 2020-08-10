@@ -33,6 +33,7 @@ def __main__():
     api = API.parse_file(INPUT)
 
     folder = pathlib.Path(OUTPUT)
+    folder.mkdir(parents=True, exist_ok=True)
     for name, module in tqdm.tqdm(api.modules.items()):
         (folder / f"{name}.py").write_text(
             black.format_str(
