@@ -125,7 +125,7 @@ It records all usage of the modules you specify, both all functions called that 
 
 ## Limitations
 
-It doesn't currently track return values, so we don't know if someone called something whether it was actually a proper cal or not.
+It doesn't currently track return values, so we don't know if someone called something whether it was actually a proper call or not.
 We just assume it is.
 
 Also it doesn't currently record calls from Cython compiled code. This could be added later possibly by plugging into lldb.
@@ -134,7 +134,7 @@ Also it doesn't currently record calls from Cython compiled code. This could be 
 
 The goal is to give us a sense of how different APIs are used in Python data science libraries, in order to have some data to back up decisions about creating future APIs.
 
-This let's us understand not only what exact functions are called, but the ways in which they are called, includig the type and values of their arguments.
+This let's us understand not only what exact functions are called, but the ways in which they are called, including the type and values of their arguments.
 
 ## Tests
 
