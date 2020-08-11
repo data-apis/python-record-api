@@ -1,14 +1,14 @@
 from typing import *
 
-# usage.xarray: 6
 # usage.pandas: 2
 # usage.sklearn: 2
+# usage.xarray: 6
 MaskedArray: object
 
-# usage.skimage: 5
-# usage.xarray: 1
 # usage.pandas: 1
+# usage.skimage: 5
 # usage.sklearn: 4
+# usage.xarray: 1
 array: object
 
 # usage.sklearn: 4
@@ -43,7 +43,7 @@ def ones(*args: Literal["v", "t"]):
 
 def zeros(*args: Literal["v", "t"]):
     """
-    usage.skimage: 5
     usage.pandas: 1
+    usage.skimage: 5
     """
     ...

@@ -61,10 +61,10 @@ class RandomState:
         p: Union[numpy.ndarray, List[Union[float, int]], None] = ...,
     ):
         """
-        usage.skimage: 8
-        usage.xarray: 6
         usage.pandas: 36
+        usage.skimage: 8
         usage.sklearn: 23
+        usage.xarray: 6
         """
         ...
 
@@ -130,10 +130,10 @@ class RandomState:
         loc: Union[float, numpy.ndarray, int] = ...,
     ):
         """
-        usage.skimage: 32
-        usage.xarray: 3
         usage.pandas: 7
+        usage.skimage: 32
         usage.sklearn: 141
+        usage.xarray: 3
         """
         ...
 
@@ -145,8 +145,8 @@ class RandomState:
         /,
     ):
         """
-        usage.skimage: 1
         usage.pandas: 17
+        usage.skimage: 1
         usage.sklearn: 39
         """
         ...
@@ -168,10 +168,10 @@ class RandomState:
         /,
     ):
         """
-        usage.skimage: 85
-        usage.xarray: 19
         usage.pandas: 110
+        usage.skimage: 85
         usage.sklearn: 269
+        usage.xarray: 19
         """
         ...
 
@@ -188,10 +188,10 @@ class RandomState:
         low: int = ...,
     ):
         """
-        usage.skimage: 24
-        usage.xarray: 14
         usage.pandas: 160
+        usage.skimage: 24
         usage.sklearn: 213
+        usage.xarray: 14
         """
         ...
 
@@ -205,36 +205,36 @@ class RandomState:
         /,
     ):
         """
-        usage.skimage: 46
-        usage.xarray: 210
         usage.pandas: 749
+        usage.skimage: 46
         usage.sklearn: 419
+        usage.xarray: 210
         """
         ...
 
     def random(self, /, *, size: Tuple[int, ...] = ...):
         """
-        usage.skimage: 29
-        usage.xarray: 26
         usage.pandas: 35
         usage.sample-usage: 1
+        usage.skimage: 29
         usage.sklearn: 26
+        usage.xarray: 26
         """
         ...
 
     def random_sample(self, /, *, size: Tuple[int, ...] = ...):
         """
-        usage.skimage: 1
-        usage.xarray: 1
         usage.pandas: 4
+        usage.skimage: 1
         usage.sklearn: 156
+        usage.xarray: 1
         """
         ...
 
     def seed(self, /, *, seed: int = ...):
         """
-        usage.skimage: 25
         usage.pandas: 21
+        usage.skimage: 25
         """
         ...
 
@@ -248,9 +248,9 @@ class RandomState:
 
     def shuffle(self, _0: numpy.ndarray, /):
         """
-        usage.xarray: 2
         usage.pandas: 3
         usage.sklearn: 26
+        usage.xarray: 2
         """
         ...
 
@@ -273,9 +273,9 @@ class RandomState:
         low: Union[float, int] = ...,
     ):
         """
-        usage.skimage: 29
-        usage.xarray: 1
         usage.pandas: 6
+        usage.skimage: 29
         usage.sklearn: 84
+        usage.xarray: 1
         """
         ...
