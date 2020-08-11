@@ -59,10 +59,6 @@ spec:
           - name: raw
             mountPath: /tmp/vol
     - name: groupby-lines
-      inputs:
-        artifacts:
-          - name: raw
-            path: /tmp/raw.jsonl
       outputs:
         artifacts:
           - name: grouped
