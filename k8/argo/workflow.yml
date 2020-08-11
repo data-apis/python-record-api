@@ -5,6 +5,17 @@ spec:
   podGC:
     strategy: OnWorkflowSuccess
   entrypoint: all
+  # Use volume to store temp full output, otherwise run out of ephemeral
+  # storage
+  # https://argoproj.github.io/argo/examples/#volumes
+  volumeClaimTemplates:
+    - metadata:
+        name: raw
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 100Gi
   arguments:
     parameters:
       - name: label
@@ -20,10 +31,6 @@ spec:
             template: record-api
         - - name: groupby-lines
             template: groupby-lines
-            arguments:
-              artifacts:
-                - name: raw
-                  from: "{{steps.record-api.outputs.artifacts.raw}}"
         - - name: infer-api
             template: infer-api
             arguments:
@@ -36,7 +43,7 @@ spec:
         image: "{{workflow.parameters.image}}"
         env:
           - name: PYTHON_RECORD_API_OUTPUT_FILE
-            value: /tmp/raw.jsonl
+            value: /tmp/vol/raw.jsonl
           - name: PYTHON_RECORD_API_TO_MODULES
             value: numpy,pandas
         # https://github.com/argoproj/argo/blob/master/docs/resource-duration.md#request-defaults
@@ -48,11 +55,9 @@ spec:
           limits:
             memory: 8Gi
             cpu: 4000m
-      outputs:
-        artifacts:
+        volumeMounts:
           - name: raw
-            path: /tmp/raw.jsonl
-
+            mountPath: /tmp/vol
     - name: groupby-lines
       inputs:
         artifacts:
@@ -67,7 +72,7 @@ spec:
         command: [python, -m, record_api.line_counts]
         env:
           - name: PYTHON_RECORD_API_INPUT
-            value: /tmp/raw.jsonl
+            value: /tmp/vol/raw.jsonl
           - name: PYTHON_RECORD_API_OUTPUT
             value: /tmp/grouped.jsonl
         resources:
@@ -77,7 +82,9 @@ spec:
           limits:
             memory: 8Gi
             cpu: 4000m
-
+        volumeMounts:
+          - name: raw
+            mountPath: /tmp/vol
     - name: infer-api
       inputs:
         artifacts:
