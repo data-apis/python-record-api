@@ -3,6 +3,6 @@ from typing import *
 # usage.sklearn: 1
 arraysetops: object
 
-# usage.xarray: 1
 # usage.pandas: 2
+# usage.xarray: 1
 stride_tricks: object

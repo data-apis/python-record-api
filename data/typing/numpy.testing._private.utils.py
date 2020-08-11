@@ -17,8 +17,8 @@ def assert_allclose(
 ):
     """
     usage.skimage: 158
-    usage.xarray: 38
     usage.sklearn: 760
+    usage.xarray: 38
     """
     ...
 
@@ -63,8 +63,8 @@ def assert_array_almost_equal_nulp(
 def assert_array_equal(x: object, y: object):
     """
     usage.skimage: 430
-    usage.xarray: 400
     usage.sklearn: 1475
+    usage.xarray: 400
     """
     ...
 
@@ -83,8 +83,8 @@ def assert_array_less(
 def assert_equal(actual: object, desired: object):
     """
     usage.skimage: 630
-    usage.xarray: 40
     usage.sklearn: 27
+    usage.xarray: 40
     """
     ...
 

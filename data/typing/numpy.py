@@ -7,74 +7,74 @@ ComplexWarning: object
 # usage.sklearn: 4
 Inf: object
 
-# usage.skimage: 1
 # usage.pandas: 1
+# usage.skimage: 1
 NAN: object
 
 # usage.sklearn: 2
 NINF: object
 
-# usage.skimage: 1
-# usage.xarray: 7
 # usage.pandas: 75
+# usage.skimage: 1
 # usage.sklearn: 7
+# usage.xarray: 7
 NaN: object
 
 # usage.skimage: 1
-# usage.xarray: 1
 # usage.sklearn: 4
+# usage.xarray: 1
 __version__: object
 
-# usage.skimage: 5
-# usage.xarray: 1
 # usage.pandas: 1
+# usage.skimage: 5
 # usage.sklearn: 28
+# usage.xarray: 1
 abs: object
 
-# usage.skimage: 96
-# usage.xarray: 1
 # usage.pandas: 47
+# usage.skimage: 96
 # usage.sklearn: 265
+# usage.xarray: 1
 absolute: numpy.ufunc
 
-# usage.skimage: 12
-# usage.xarray: 17
 # usage.pandas: 93
 # usage.sample-usage: 2
+# usage.skimage: 12
 # usage.sklearn: 4
+# usage.xarray: 17
 add: numpy.ufunc
 
-# usage.xarray: 2
 # usage.pandas: 15
+# usage.xarray: 2
 arccos: numpy.ufunc
 
-# usage.xarray: 2
 # usage.pandas: 15
+# usage.xarray: 2
 arccosh: numpy.ufunc
 
-# usage.skimage: 1
-# usage.xarray: 2
 # usage.pandas: 15
+# usage.skimage: 1
 # usage.sklearn: 2
+# usage.xarray: 2
 arcsin: numpy.ufunc
 
-# usage.xarray: 2
 # usage.pandas: 15
+# usage.xarray: 2
 arcsinh: numpy.ufunc
 
-# usage.skimage: 3
-# usage.xarray: 2
 # usage.pandas: 15
+# usage.skimage: 3
 # usage.sklearn: 2
+# usage.xarray: 2
 arctan: numpy.ufunc
 
+# usage.pandas: 1
 # usage.skimage: 8
 # usage.xarray: 2
-# usage.pandas: 1
 arctan2: numpy.ufunc
 
-# usage.xarray: 2
 # usage.pandas: 15
+# usage.xarray: 2
 arctanh: numpy.ufunc
 
 # usage.sklearn: 1
@@ -86,23 +86,23 @@ binom: numpy.ufunc
 # usage.pandas: 4
 bitwise_or: object
 
-# usage.skimage: 1
 # usage.pandas: 1
+# usage.skimage: 1
 bitwise_xor: object
 
-# usage.skimage: 50
-# usage.xarray: 5
 # usage.pandas: 62
+# usage.skimage: 50
 # usage.sklearn: 40
+# usage.xarray: 5
 bool: object
 
 # usage.skimage: 1
 bool8: object
 
-# usage.skimage: 23
-# usage.xarray: 7
 # usage.pandas: 78
+# usage.skimage: 23
 # usage.sklearn: 10
+# usage.xarray: 7
 bool_: object
 
 # usage.sklearn: 3
@@ -111,22 +111,22 @@ boxcox: numpy.ufunc
 # usage.xarray: 4
 broadcast: object
 
-# usage.xarray: 1
 # usage.pandas: 3
+# usage.xarray: 1
 bytes_: object
 
-# usage.skimage: 1
 # usage.pandas: 3
+# usage.skimage: 1
 # usage.sklearn: 40
 c_: object
 
 # usage.skimage: 2
 cbrt: numpy.ufunc
 
-# usage.skimage: 31
-# usage.xarray: 325
 # usage.pandas: 1
+# usage.skimage: 31
 # usage.sklearn: 19
+# usage.xarray: 325
 ceil: numpy.ufunc
 
 # usage.xarray: 1
@@ -135,9 +135,9 @@ character: object
 # usage.sklearn: 1
 chdtrc: numpy.ufunc
 
+# usage.pandas: 1
 # usage.skimage: 1
 # usage.xarray: 1
-# usage.pandas: 1
 complex: object
 
 # usage.pandas: 19
@@ -149,8 +149,8 @@ complex64: object
 # usage.pandas: 2
 complex_: object
 
-# usage.xarray: 3
 # usage.pandas: 6
+# usage.xarray: 3
 complexfloating: object
 
 # usage.skimage: 2
@@ -160,28 +160,28 @@ conjugate: numpy.ufunc
 # usage.xarray: 2
 copysign: numpy.ufunc
 
-# usage.xarray: 1
 # usage.pandas: 1
+# usage.xarray: 1
 core: object
 
-# usage.skimage: 49
-# usage.xarray: 14
 # usage.pandas: 19
+# usage.skimage: 49
 # usage.sklearn: 21
+# usage.xarray: 14
 cos: numpy.ufunc
 
-# usage.xarray: 2
 # usage.pandas: 15
 # usage.sklearn: 2
+# usage.xarray: 2
 cosh: numpy.ufunc
 
-# usage.xarray: 14
 # usage.pandas: 67
+# usage.xarray: 14
 datetime64: object
 
+# usage.pandas: 15
 # usage.skimage: 18
 # usage.xarray: 2
-# usage.pandas: 15
 deg2rad: numpy.ufunc
 
 # usage.xarray: 2
@@ -191,19 +191,19 @@ degrees: numpy.ufunc
 # usage.sklearn: 3
 divide: object
 
-# usage.xarray: 1
 # usage.pandas: 8
+# usage.xarray: 1
 divmod: numpy.ufunc
 
-# usage.skimage: 92
 # usage.pandas: 2
+# usage.skimage: 92
 # usage.sklearn: 13
 double: object
 
-# usage.skimage: 2
-# usage.xarray: 31
 # usage.pandas: 53
+# usage.skimage: 2
 # usage.sklearn: 4
+# usage.xarray: 31
 dtype: object
 
 # usage.skimage: 1
@@ -222,19 +222,19 @@ equal: numpy.ufunc
 # usage.sklearn: 1
 erf: numpy.ufunc
 
-# usage.xarray: 4
 # usage.pandas: 86
 # usage.sklearn: 37
+# usage.xarray: 4
 errstate: object
 
 # usage.sklearn: 3
 euler_gamma: object
 
-# usage.skimage: 26
-# usage.xarray: 4
 # usage.pandas: 33
 # usage.sample-usage: 1
+# usage.skimage: 26
 # usage.sklearn: 123
+# usage.xarray: 4
 exp: numpy.ufunc
 
 # usage.pandas: 15
@@ -243,14 +243,14 @@ exp2: numpy.ufunc
 # usage.sklearn: 27
 expit: numpy.ufunc
 
-# usage.xarray: 2
 # usage.pandas: 15
 # usage.sklearn: 6
+# usage.xarray: 2
 expm1: numpy.ufunc
 
-# usage.xarray: 5
 # usage.pandas: 6
 # usage.sklearn: 2
+# usage.xarray: 5
 fabs: numpy.ufunc
 
 # usage.sklearn: 2
@@ -266,65 +266,65 @@ finfo: object
 # usage.sklearn: 1
 flexible: object
 
-# usage.skimage: 54
-# usage.xarray: 4
 # usage.pandas: 4
+# usage.skimage: 54
 # usage.sklearn: 29
+# usage.xarray: 4
 float: object
 
-# usage.skimage: 7
-# usage.xarray: 1
 # usage.pandas: 2
+# usage.skimage: 7
 # usage.sklearn: 6
+# usage.xarray: 1
 float16: object
 
-# usage.skimage: 51
-# usage.xarray: 29
 # usage.pandas: 42
+# usage.skimage: 51
 # usage.sklearn: 236
+# usage.xarray: 29
 float32: object
 
-# usage.skimage: 52
-# usage.xarray: 40
 # usage.pandas: 208
+# usage.skimage: 52
 # usage.sklearn: 396
+# usage.xarray: 40
 float64: object
 
+# usage.pandas: 15
 # usage.skimage: 4
 # usage.xarray: 1
-# usage.pandas: 15
 float_: object
 
-# usage.skimage: 8
-# usage.xarray: 10
 # usage.pandas: 15
+# usage.skimage: 8
 # usage.sklearn: 3
+# usage.xarray: 10
 floating: object
 
-# usage.skimage: 18
-# usage.xarray: 2
 # usage.pandas: 8
+# usage.skimage: 18
 # usage.sklearn: 3
+# usage.xarray: 2
 floor: numpy.ufunc
 
-# usage.skimage: 5
 # usage.pandas: 1
+# usage.skimage: 5
 floor_divide: numpy.ufunc
 
 # usage.skimage: 3
-# usage.xarray: 2
 # usage.sklearn: 6
+# usage.xarray: 2
 fmax: numpy.ufunc
 
-# usage.xarray: 2
 # usage.sklearn: 5
+# usage.xarray: 2
 fmin: numpy.ufunc
 
 # usage.xarray: 2
 fmod: numpy.ufunc
 
-# usage.xarray: 7
 # usage.pandas: 1
+# usage.xarray: 7
 frexp: numpy.ufunc
 
 # usage.sklearn: 2
@@ -336,17 +336,17 @@ gammainc: numpy.ufunc
 # usage.sklearn: 11
 gammaln: numpy.ufunc
 
-# usage.xarray: 3
 # usage.pandas: 1
+# usage.xarray: 3
 generic: object
 
-# usage.xarray: 1
 # usage.pandas: 2
 # usage.sklearn: 1407
+# usage.xarray: 1
 greater: numpy.ufunc
 
-# usage.xarray: 1
 # usage.sklearn: 4
+# usage.xarray: 1
 greater_equal: numpy.ufunc
 
 # usage.skimage: 12
@@ -359,88 +359,88 @@ iinfo: object
 # usage.xarray: 1
 inexact: object
 
-# usage.skimage: 36
-# usage.xarray: 11
 # usage.pandas: 77
+# usage.skimage: 36
 # usage.sklearn: 115
+# usage.xarray: 11
 inf: object
 
 # usage.sklearn: 5
 infty: object
 
-# usage.skimage: 24
-# usage.xarray: 3
 # usage.pandas: 5
+# usage.skimage: 24
 # usage.sklearn: 94
+# usage.xarray: 3
 int: object
 
-# usage.skimage: 8
 # usage.pandas: 16
 # usage.sample-usage: 1
+# usage.skimage: 8
 # usage.sklearn: 5
 int16: object
 
-# usage.skimage: 30
-# usage.xarray: 7
 # usage.pandas: 140
+# usage.skimage: 30
 # usage.sklearn: 59
+# usage.xarray: 7
 int32: object
 
-# usage.skimage: 9
-# usage.xarray: 17
 # usage.pandas: 436
+# usage.skimage: 9
 # usage.sklearn: 48
+# usage.xarray: 17
 int64: object
 
-# usage.skimage: 31
 # usage.pandas: 40
+# usage.skimage: 31
 # usage.sklearn: 12
 int8: object
 
+# usage.pandas: 8
 # usage.skimage: 3
 # usage.xarray: 1
-# usage.pandas: 8
 int_: object
 
 # usage.sklearn: 5
 intc: object
 
-# usage.skimage: 8
-# usage.xarray: 14
 # usage.pandas: 30
+# usage.skimage: 8
 # usage.sklearn: 2
+# usage.xarray: 14
 integer: object
 
-# usage.skimage: 14
-# usage.xarray: 2
 # usage.pandas: 210
+# usage.skimage: 14
 # usage.sklearn: 38
+# usage.xarray: 2
 intp: object
 
 # usage.skimage: 11
 # usage.sklearn: 1
 invert: numpy.ufunc
 
-# usage.skimage: 10
-# usage.xarray: 6
 # usage.pandas: 27
+# usage.skimage: 10
 # usage.sklearn: 53
+# usage.xarray: 6
 isfinite: numpy.ufunc
 
-# usage.skimage: 2
-# usage.xarray: 2
 # usage.pandas: 31
+# usage.skimage: 2
 # usage.sklearn: 12
+# usage.xarray: 2
 isinf: numpy.ufunc
 
-# usage.skimage: 21
-# usage.xarray: 33
 # usage.pandas: 1228
+# usage.skimage: 21
 # usage.sklearn: 121
+# usage.xarray: 33
 isnan: numpy.ufunc
 
-# usage.xarray: 6
 # usage.pandas: 3
+# usage.xarray: 6
 isnat: numpy.ufunc
 
 # usage.sklearn: 2
@@ -450,75 +450,75 @@ kv: numpy.ufunc
 ldexp: numpy.ufunc
 
 # usage.skimage: 3
-# usage.xarray: 1
 # usage.sklearn: 5
+# usage.xarray: 1
 less: numpy.ufunc
 
 # usage.sklearn: 2
 less_equal: numpy.ufunc
 
-# usage.xarray: 1
 # usage.pandas: 2
 # usage.sklearn: 1
+# usage.xarray: 1
 lib: object
 
 # usage.skimage: 34
 # usage.sklearn: 52
 linalg: object
 
-# usage.skimage: 19
-# usage.xarray: 3
 # usage.pandas: 25
 # usage.sample-usage: 1
+# usage.skimage: 19
 # usage.sklearn: 191
+# usage.xarray: 3
 log: numpy.ufunc
 
-# usage.skimage: 4
-# usage.xarray: 2
 # usage.pandas: 19
+# usage.skimage: 4
 # usage.sklearn: 5
+# usage.xarray: 2
 log10: numpy.ufunc
 
-# usage.xarray: 2
 # usage.pandas: 15
 # usage.sklearn: 14
+# usage.xarray: 2
 log1p: numpy.ufunc
 
-# usage.skimage: 5
-# usage.xarray: 2
 # usage.pandas: 23
+# usage.skimage: 5
 # usage.sklearn: 26
+# usage.xarray: 2
 log2: numpy.ufunc
 
-# usage.xarray: 2
 # usage.pandas: 21
 # usage.sklearn: 8
+# usage.xarray: 2
 logaddexp: numpy.ufunc
 
 # usage.xarray: 2
 logaddexp2: numpy.ufunc
 
-# usage.skimage: 11
-# usage.xarray: 3
 # usage.pandas: 16
+# usage.skimage: 11
 # usage.sklearn: 2
+# usage.xarray: 3
 logical_and: numpy.ufunc
 
-# usage.skimage: 14
-# usage.xarray: 12
 # usage.pandas: 9
+# usage.skimage: 14
 # usage.sklearn: 25
+# usage.xarray: 12
 logical_not: numpy.ufunc
 
-# usage.skimage: 3
-# usage.xarray: 3
 # usage.pandas: 14
+# usage.skimage: 3
 # usage.sklearn: 14
+# usage.xarray: 3
 logical_or: numpy.ufunc
 
+# usage.pandas: 13
 # usage.skimage: 2
 # usage.xarray: 2
-# usage.pandas: 13
 logical_xor: numpy.ufunc
 
 # usage.sklearn: 1
@@ -527,10 +527,10 @@ logit: numpy.ufunc
 # usage.sklearn: 2
 longlong: object
 
-# usage.skimage: 27
-# usage.xarray: 16
 # usage.pandas: 5
+# usage.skimage: 27
 # usage.sklearn: 19
+# usage.xarray: 16
 ma: object
 
 # usage.sklearn: 1
@@ -540,16 +540,16 @@ matmul: numpy.ufunc
 # usage.sklearn: 4
 matrix: object
 
-# usage.skimage: 23
-# usage.xarray: 2
 # usage.pandas: 12
+# usage.skimage: 23
 # usage.sklearn: 27
+# usage.xarray: 2
 max: object
 
-# usage.skimage: 18
-# usage.xarray: 95
 # usage.pandas: 5
+# usage.skimage: 18
 # usage.sklearn: 56
+# usage.xarray: 95
 maximum: numpy.ufunc
 
 # usage.sklearn: 5
@@ -559,38 +559,38 @@ memmap: object
 # usage.sklearn: 1
 mgrid: object
 
-# usage.skimage: 6
-# usage.xarray: 2
 # usage.pandas: 11
+# usage.skimage: 6
 # usage.sklearn: 24
+# usage.xarray: 2
 min: object
 
-# usage.skimage: 9
-# usage.xarray: 4
 # usage.pandas: 6
+# usage.skimage: 9
 # usage.sklearn: 22
+# usage.xarray: 4
 minimum: numpy.ufunc
 
 # usage.pandas: 13
 modf: numpy.ufunc
 
-# usage.skimage: 36
-# usage.xarray: 2
 # usage.pandas: 3
+# usage.skimage: 36
 # usage.sklearn: 7
+# usage.xarray: 2
 multiply: numpy.ufunc
 
-# usage.skimage: 16
-# usage.xarray: 371
 # usage.pandas: 2265
+# usage.skimage: 16
 # usage.sklearn: 150
+# usage.xarray: 371
 nan: object
 
-# usage.skimage: 16
-# usage.xarray: 62
 # usage.pandas: 265
 # usage.sample-usage: 1
+# usage.skimage: 16
 # usage.sklearn: 63
+# usage.xarray: 62
 ndarray: object
 
 # usage.skimage: 1
@@ -602,23 +602,23 @@ nditer: object
 # usage.pandas: 1
 negative: numpy.ufunc
 
-# usage.skimage: 53
-# usage.xarray: 22
 # usage.pandas: 5
+# usage.skimage: 53
 # usage.sklearn: 240
+# usage.xarray: 22
 newaxis: object
 
-# usage.xarray: 2
 # usage.pandas: 4
 # usage.sklearn: 2
+# usage.xarray: 2
 nextafter: numpy.ufunc
 
 # usage.sklearn: 6
 not_equal: numpy.ufunc
 
-# usage.xarray: 5
 # usage.pandas: 21
 # usage.sklearn: 2
+# usage.xarray: 5
 number: object
 
 # usage.pandas: 46
@@ -632,10 +632,10 @@ object_: object
 # usage.skimage: 8
 ogrid: object
 
-# usage.skimage: 88
-# usage.xarray: 10
 # usage.pandas: 3
+# usage.skimage: 88
 # usage.sklearn: 51
+# usage.xarray: 10
 pi: object
 
 # usage.sample-usage: 1
@@ -651,25 +651,25 @@ power: numpy.ufunc
 # usage.sklearn: 15
 psi: numpy.ufunc
 
-# usage.skimage: 11
-# usage.xarray: 3
 # usage.pandas: 13
+# usage.skimage: 11
 # usage.sklearn: 33
+# usage.xarray: 3
 r_: object
 
+# usage.pandas: 15
 # usage.skimage: 8
 # usage.xarray: 2
-# usage.pandas: 15
 rad2deg: numpy.ufunc
 
 # usage.xarray: 2
 radians: numpy.ufunc
 
-# usage.skimage: 237
-# usage.xarray: 252
 # usage.pandas: 1043
 # usage.sample-usage: 1
+# usage.skimage: 237
 # usage.sklearn: 716
+# usage.xarray: 252
 random: object
 
 # usage.pandas: 1
@@ -681,109 +681,109 @@ recarray: object
 # usage.skimage: 2
 reciprocal: numpy.ufunc
 
-# usage.xarray: 2
 # usage.pandas: 1
 # usage.sklearn: 3
+# usage.xarray: 2
 remainder: numpy.ufunc
 
 # usage.skimage: 3
-# usage.xarray: 2
 # usage.sklearn: 2
+# usage.xarray: 2
 rint: numpy.ufunc
 
-# usage.skimage: 1
 # usage.pandas: 5
+# usage.skimage: 1
 round: object
 
-# usage.skimage: 1
 # usage.pandas: 1
+# usage.skimage: 1
 # usage.sklearn: 1
 s_: object
 
-# usage.skimage: 2
-# usage.xarray: 3
 # usage.pandas: 5
+# usage.skimage: 2
 # usage.sklearn: 35
+# usage.xarray: 3
 sign: numpy.ufunc
 
-# usage.xarray: 2
 # usage.pandas: 27
+# usage.xarray: 2
 signbit: numpy.ufunc
 
-# usage.skimage: 2
 # usage.pandas: 2
+# usage.skimage: 2
 # usage.sklearn: 1
 signedinteger: object
 
-# usage.skimage: 48
-# usage.xarray: 30
 # usage.pandas: 34
+# usage.skimage: 48
 # usage.sklearn: 32
+# usage.xarray: 30
 sin: numpy.ufunc
 
-# usage.xarray: 2
 # usage.pandas: 15
+# usage.xarray: 2
 sinh: numpy.ufunc
 
 # usage.skimage: 1
 # usage.sklearn: 6
 spacing: numpy.ufunc
 
-# usage.skimage: 110
-# usage.xarray: 4
 # usage.pandas: 58
+# usage.skimage: 110
 # usage.sklearn: 246
+# usage.xarray: 4
 sqrt: numpy.ufunc
 
 # usage.skimage: 7
-# usage.xarray: 2
 # usage.sklearn: 4
+# usage.xarray: 2
 square: numpy.ufunc
 
-# usage.xarray: 2
 # usage.pandas: 5
 # usage.sklearn: 1
+# usage.xarray: 2
 str_: object
 
 # usage.xarray: 3
 string_: object
 
-# usage.skimage: 14
-# usage.xarray: 2
 # usage.pandas: 38
+# usage.skimage: 14
 # usage.sklearn: 2
+# usage.xarray: 2
 subtract: numpy.ufunc
 
-# usage.xarray: 2
 # usage.pandas: 15
 # usage.sklearn: 1
+# usage.xarray: 2
 tan: numpy.ufunc
 
-# usage.skimage: 2
-# usage.xarray: 2
 # usage.pandas: 15
+# usage.skimage: 2
 # usage.sklearn: 9
+# usage.xarray: 2
 tanh: numpy.ufunc
 
 # usage.skimage: 83
-# usage.xarray: 106
 # usage.sklearn: 56
+# usage.xarray: 106
 testing: object
 
-# usage.xarray: 27
 # usage.pandas: 121
+# usage.xarray: 27
 timedelta64: object
 
-# usage.skimage: 2
 # usage.pandas: 5
+# usage.skimage: 2
 # usage.sklearn: 3
 true_divide: numpy.ufunc
 
 # usage.xarray: 2
 trunc: numpy.ufunc
 
-# usage.skimage: 4
 # usage.pandas: 8
+# usage.skimage: 4
 typecodes: object
 
 # usage.skimage: 1
@@ -795,41 +795,41 @@ ufunc: object
 # usage.skimage: 1
 uint: object
 
-# usage.skimage: 44
 # usage.pandas: 3
+# usage.skimage: 44
 # usage.sklearn: 1
 uint16: object
 
-# usage.skimage: 19
 # usage.pandas: 5
+# usage.skimage: 19
 # usage.sklearn: 23
 uint32: object
 
-# usage.skimage: 3
 # usage.pandas: 43
+# usage.skimage: 3
 # usage.sklearn: 1
 uint64: object
 
-# usage.skimage: 297
-# usage.xarray: 5
 # usage.pandas: 34
+# usage.skimage: 297
 # usage.sklearn: 20
+# usage.xarray: 5
 uint8: object
 
-# usage.xarray: 2
 # usage.pandas: 2
+# usage.xarray: 2
 unicode_: object
 
-# usage.skimage: 1
 # usage.pandas: 2
+# usage.skimage: 1
 unsignedinteger: object
 
-# usage.xarray: 2
 # usage.pandas: 1
+# usage.xarray: 2
 vectorize: object
 
-# usage.xarray: 1
 # usage.pandas: 1
+# usage.xarray: 1
 void: object
 
 # usage.sklearn: 2
@@ -845,10 +845,10 @@ def all(
     out: Union[numpy.ndarray, object, None] = ...,
 ):
     """
-    usage.skimage: 96
-    usage.xarray: 38
     usage.pandas: 81
+    usage.skimage: 96
     usage.sklearn: 163
+    usage.xarray: 38
     """
     ...
 
@@ -857,14 +857,14 @@ def allclose(
     a: object,
     b: object,
     rtol: Union[int, float] = ...,
-    atol: float = ...,
     equal_nan: bool = ...,
+    atol: float = ...,
 ):
     """
-    usage.skimage: 31
-    usage.xarray: 50
     usage.pandas: 42
+    usage.skimage: 31
     usage.sklearn: 63
+    usage.xarray: 50
     """
     ...
 
@@ -882,20 +882,20 @@ def amax(
     keepdims: Union[int, bool] = ...,
 ):
     """
-    usage.skimage: 97
-    usage.xarray: 31
     usage.pandas: 41
+    usage.skimage: 97
     usage.sklearn: 70
+    usage.xarray: 31
     """
     ...
 
 
 def amin(a: object):
     """
-    usage.skimage: 56
-    usage.xarray: 32
     usage.pandas: 53
+    usage.skimage: 56
     usage.sklearn: 73
+    usage.xarray: 32
     """
     ...
 
@@ -910,10 +910,10 @@ def angle(z: Union[numpy.ndarray, xarray.core.dataarray.DataArray]):
 
 def any(a: object, axis: Union[int, None] = ..., out: Union[bool, object, None] = ...):
     """
-    usage.skimage: 36
-    usage.xarray: 21
     usage.pandas: 46
+    usage.skimage: 36
     usage.sklearn: 83
+    usage.xarray: 21
     """
     ...
 
@@ -936,8 +936,8 @@ def apply_along_axis(
     *args: Literal["v", "t"],
 ):
     """
-    usage.skimage: 8
     usage.pandas: 7
+    usage.skimage: 8
     usage.sklearn: 5
     """
     ...
@@ -961,31 +961,31 @@ def arange(
     step: Union[int, float] = ...,
 ):
     """
-    usage.skimage: 174
-    usage.xarray: 666
     usage.pandas: 894
     usage.sample-usage: 4
+    usage.skimage: 174
     usage.sklearn: 373
+    usage.xarray: 666
     """
     ...
 
 
 def argmax(a: object):
     """
-    usage.skimage: 18
-    usage.xarray: 17
     usage.pandas: 23
+    usage.skimage: 18
     usage.sklearn: 77
+    usage.xarray: 17
     """
     ...
 
 
 def argmin(a: object):
     """
-    usage.skimage: 10
-    usage.xarray: 11
     usage.pandas: 23
+    usage.skimage: 10
     usage.sklearn: 23
+    usage.xarray: 11
     """
     ...
 
@@ -999,20 +999,20 @@ def argpartition(a: numpy.ndarray, kth: Union[int, numpy.int64], axis: int):
 
 def argsort(a: object):
     """
-    usage.skimage: 19
-    usage.xarray: 1
     usage.pandas: 62
+    usage.skimage: 19
     usage.sklearn: 57
+    usage.xarray: 1
     """
     ...
 
 
 def around(a: object):
     """
-    usage.skimage: 1
-    usage.xarray: 8
     usage.pandas: 4
+    usage.skimage: 1
     usage.sklearn: 11
+    usage.xarray: 8
     """
     ...
 
@@ -1028,11 +1028,11 @@ def array(
     subok: bool = ...,
 ):
     """
-    usage.skimage: 927
-    usage.xarray: 664
     usage.pandas: 6865
     usage.sample-usage: 3
+    usage.skimage: 927
     usage.sklearn: 2254
+    usage.xarray: 664
     """
     ...
 
@@ -1060,10 +1060,10 @@ def array_equal(
     ],
 ):
     """
-    usage.skimage: 5
-    usage.xarray: 3
     usage.pandas: 142
+    usage.skimage: 5
     usage.sklearn: 33
+    usage.xarray: 3
     """
     ...
 
@@ -1093,10 +1093,10 @@ def array_split(
 
 def asanyarray(a: object):
     """
-    usage.skimage: 48
-    usage.xarray: 1
     usage.pandas: 42
+    usage.skimage: 48
     usage.sklearn: 34
+    usage.xarray: 1
     """
     ...
 
@@ -1107,10 +1107,10 @@ def asarray(
     order: Union[Literal["F", "C"], None] = ...,
 ):
     """
-    usage.skimage: 222
-    usage.xarray: 1097
     usage.pandas: 3941
+    usage.skimage: 222
     usage.sklearn: 3078
+    usage.xarray: 1097
     """
     ...
 
@@ -1140,20 +1140,20 @@ def asmatrix(data: numpy.ndarray):
 
 def atleast_1d(*arys: Literal["v", "t"]):
     """
-    usage.skimage: 11
-    usage.xarray: 41
     usage.pandas: 4
+    usage.skimage: 11
     usage.sklearn: 70
+    usage.xarray: 41
     """
     ...
 
 
 def atleast_2d(*arys: Literal["v", "t"]):
     """
-    usage.skimage: 7
-    usage.xarray: 2
     usage.pandas: 18
+    usage.skimage: 7
     usage.sklearn: 45
+    usage.xarray: 2
     """
     ...
 
@@ -1187,8 +1187,8 @@ def bincount(
     weights: Union[numpy.ndarray, List[Union[int, float]], None] = ...,
 ):
     """
-    usage.skimage: 12
     usage.pandas: 10
+    usage.skimage: 12
     usage.sklearn: 97
     """
     ...
@@ -1203,8 +1203,8 @@ def broadcast_arrays(*args: Literal["v", "t"]):
 
 def broadcast_to(array: object, shape: Tuple[Union[int, None], ...]):
     """
-    usage.xarray: 31
     usage.pandas: 14
+    usage.xarray: 31
     """
     ...
 
@@ -1227,8 +1227,8 @@ def can_cast(
     _0: object, _1: Union[numpy.dtype, Type[bool]], /, *, casting: Literal["safe"] = ...
 ):
     """
-    usage.skimage: 9
     usage.pandas: 21
+    usage.skimage: 9
     """
     ...
 
@@ -1246,8 +1246,8 @@ def clip(
     a_max: object,
 ):
     """
-    usage.skimage: 58
     usage.pandas: 1
+    usage.skimage: 58
     usage.sklearn: 51
     """
     ...
@@ -1255,8 +1255,8 @@ def clip(
 
 def column_stack(tup: Union[List[numpy.ndarray], Tuple[numpy.ndarray, numpy.ndarray]]):
     """
-    usage.skimage: 9
     usage.sample-usage: 1
+    usage.skimage: 9
     usage.sklearn: 5
     """
     ...
@@ -1274,11 +1274,11 @@ def compress(
 
 def concatenate(_0: Union[tuple, list], /, *, axis: int = ...):
     """
-    usage.skimage: 42
-    usage.xarray: 69
     usage.pandas: 312
     usage.sample-usage: 1
+    usage.skimage: 42
     usage.sklearn: 127
+    usage.xarray: 69
     """
     ...
 
@@ -1292,8 +1292,8 @@ def convolve(a: numpy.ndarray, v: List[float], mode: Literal["valid"]):
 
 def copy(a: Union[numpy.ndarray, numpy.float64]):
     """
-    usage.skimage: 13
     usage.pandas: 1
+    usage.skimage: 13
     usage.sklearn: 41
     """
     ...
@@ -1332,10 +1332,10 @@ def cross(a: numpy.ndarray, b: numpy.ndarray):
 
 def cumprod(a: object, axis: int = ..., dtype: None = ...):
     """
-    usage.skimage: 5
-    usage.xarray: 10
     usage.pandas: 9
+    usage.skimage: 5
     usage.sklearn: 2
+    usage.xarray: 10
     """
     ...
 
@@ -1349,26 +1349,26 @@ def cumproduct(*args: Literal["v", "t"]):
 
 def cumsum(a: object, axis: Union[None, int] = ..., dtype: Union[type, None] = ...):
     """
-    usage.skimage: 29
-    usage.xarray: 18
     usage.pandas: 26
+    usage.skimage: 29
     usage.sklearn: 33
+    usage.xarray: 18
     """
     ...
 
 
 def datetime_data(_0: numpy.dtype, /):
     """
-    usage.xarray: 1
     usage.pandas: 14
+    usage.xarray: 1
     """
     ...
 
 
 def delete(arr: numpy.ndarray, obj: object):
     """
-    usage.skimage: 4
     usage.pandas: 28
+    usage.skimage: 4
     usage.sklearn: 7
     """
     ...
@@ -1405,10 +1405,10 @@ def diagonal(a: numpy.ndarray):
 
 def diff(a: Union[List[numpy.float64], numpy.ndarray], n: int = ..., axis: int = ...):
     """
-    usage.skimage: 14
-    usage.xarray: 13
     usage.pandas: 6
+    usage.skimage: 14
     usage.sklearn: 49
+    usage.xarray: 13
     """
     ...
 
@@ -1428,8 +1428,8 @@ def dot(
     out: numpy.ndarray = ...,
 ):
     """
-    usage.skimage: 1
     usage.pandas: 15
+    usage.skimage: 1
     usage.sklearn: 572
     """
     ...
@@ -1459,8 +1459,8 @@ def ediff1d(ary: numpy.ndarray, to_begin: Union[float, numpy.float64, None]):
 def einsum(*operands: Literal["v", "t"]):
     """
     usage.skimage: 1
-    usage.xarray: 83
     usage.sklearn: 15
+    usage.xarray: 83
     """
     ...
 
@@ -1492,10 +1492,10 @@ def empty(
     shape: Union[Tuple[int, ...], int] = ...,
 ):
     """
-    usage.skimage: 117
-    usage.xarray: 23
     usage.pandas: 423
+    usage.skimage: 117
     usage.sklearn: 189
+    usage.xarray: 23
     """
     ...
 
@@ -1509,19 +1509,19 @@ def empty_like(
     subok: bool = ...,
 ):
     """
-    usage.skimage: 48
-    usage.xarray: 2
     usage.pandas: 18
+    usage.skimage: 48
     usage.sklearn: 26
+    usage.xarray: 2
     """
     ...
 
 
 def expand_dims(a: Union[numpy.ndarray, numpy.float64], axis: int):
     """
-    usage.xarray: 5
     usage.pandas: 19
     usage.sklearn: 6
+    usage.xarray: 5
     """
     ...
 
@@ -1532,9 +1532,9 @@ def eye(
     dtype: Union[Literal["int64", "float64"], numpy.dtype, type] = ...,
 ):
     """
-    usage.skimage: 38
     usage.pandas: 9
     usage.sample-usage: 1
+    usage.skimage: 38
     usage.sklearn: 52
     """
     ...
@@ -1573,19 +1573,19 @@ def fix(
     ]
 ):
     """
+    usage.pandas: 2
     usage.skimage: 2
     usage.xarray: 1
-    usage.pandas: 2
     """
     ...
 
 
 def flatnonzero(a: numpy.ndarray):
     """
-    usage.skimage: 6
-    usage.xarray: 2
     usage.pandas: 2
+    usage.skimage: 6
     usage.sklearn: 35
+    usage.xarray: 2
     """
     ...
 
@@ -1621,8 +1621,8 @@ def frombuffer(
     dtype: Union[type, numpy.dtype, Literal["<i4", "int8"]] = ...,
 ):
     """
-    usage.skimage: 1
     usage.pandas: 22
+    usage.skimage: 1
     usage.sklearn: 8
     """
     ...
@@ -1661,10 +1661,10 @@ def full(
     fill_value: object,
 ):
     """
-    usage.skimage: 32
-    usage.xarray: 20
     usage.pandas: 30
+    usage.skimage: 32
     usage.sklearn: 97
+    usage.xarray: 20
     """
     ...
 
@@ -1672,16 +1672,16 @@ def full(
 def full_like(a: object, fill_value: object):
     """
     usage.skimage: 1
-    usage.xarray: 17
     usage.sklearn: 10
+    usage.xarray: 17
     """
     ...
 
 
 def get_printoptions():
     """
-    usage.xarray: 3
     usage.sklearn: 1
+    usage.xarray: 3
     """
     ...
 
@@ -1721,8 +1721,8 @@ def histogram(
     a: numpy.ndarray, range: Union[None, Tuple[int, int]] = ..., weights: None = ...
 ):
     """
-    usage.skimage: 7
     usage.pandas: 2
+    usage.skimage: 7
     usage.sklearn: 1
     """
     ...
@@ -1754,10 +1754,10 @@ def hstack(
     ]
 ):
     """
-    usage.skimage: 30
-    usage.xarray: 1
     usage.pandas: 9
+    usage.skimage: 30
     usage.sklearn: 179
+    usage.xarray: 1
     """
     ...
 
@@ -1771,10 +1771,10 @@ def identity(n: int):
 
 def imag(val: Union[numpy.ndarray, xarray.core.dataarray.DataArray, numpy.complex128]):
     """
-    usage.skimage: 1
-    usage.xarray: 1
     usage.pandas: 2
+    usage.skimage: 1
     usage.sklearn: 1
+    usage.xarray: 1
     """
     ...
 
@@ -1797,8 +1797,8 @@ def in1d(
     ],
 ):
     """
-    usage.skimage: 2
     usage.pandas: 6
+    usage.skimage: 2
     usage.sklearn: 35
     """
     ...
@@ -1825,8 +1825,8 @@ def insert(
     values: Union[numpy.int64, int, float, numpy.ndarray, None],
 ):
     """
-    usage.skimage: 3
     usage.pandas: 15
+    usage.skimage: 3
     usage.sklearn: 4
     """
     ...
@@ -1841,10 +1841,10 @@ def interp(
     period: None = ...,
 ):
     """
-    usage.skimage: 6
-    usage.xarray: 2
     usage.pandas: 3
+    usage.skimage: 6
     usage.sklearn: 8
+    usage.xarray: 2
     """
     ...
 
@@ -1872,10 +1872,10 @@ def isclose(
     equal_nan: bool = ...,
 ):
     """
-    usage.skimage: 3
-    usage.xarray: 13
     usage.pandas: 4
+    usage.skimage: 3
     usage.sklearn: 11
+    usage.xarray: 13
     """
     ...
 
@@ -1889,8 +1889,8 @@ def iscomplex(x: xarray.core.dataarray.DataArray):
 
 def iscomplexobj(x: numpy.ndarray):
     """
-    usage.skimage: 4
     usage.pandas: 2
+    usage.skimage: 4
     """
     ...
 
@@ -1918,8 +1918,8 @@ def isposinf(x: Union[int, float]):
 
 def isreal(x: Union[numpy.ndarray, xarray.core.dataarray.DataArray]):
     """
-    usage.xarray: 1
     usage.sklearn: 4
+    usage.xarray: 1
     """
     ...
 
@@ -1927,18 +1927,18 @@ def isreal(x: Union[numpy.ndarray, xarray.core.dataarray.DataArray]):
 def isscalar(element: object):
     """
     usage.skimage: 68
-    usage.xarray: 50
     usage.sklearn: 26
+    usage.xarray: 50
     """
     ...
 
 
 def issubdtype(arg1: Union[numpy.dtype, type], arg2: Union[type, numpy.dtype]):
     """
-    usage.skimage: 143
-    usage.xarray: 308
     usage.pandas: 83
+    usage.skimage: 143
     usage.sklearn: 44
+    usage.xarray: 308
     """
     ...
 
@@ -1954,8 +1954,8 @@ def iterable(y: object):
 def ix_(*args: Literal["v", "t"]):
     """
     usage.skimage: 2
-    usage.xarray: 4
     usage.sklearn: 4
+    usage.xarray: 4
     """
     ...
 
@@ -1976,10 +1976,10 @@ def lexsort(
     /,
 ):
     """
-    usage.skimage: 1
-    usage.xarray: 2
     usage.pandas: 11
+    usage.skimage: 1
     usage.sklearn: 2
+    usage.xarray: 2
     """
     ...
 
@@ -1990,11 +1990,11 @@ def linspace(
     num: Union[int, numpy.int64],
 ):
     """
-    usage.skimage: 67
-    usage.xarray: 231
     usage.pandas: 19
     usage.sample-usage: 1
+    usage.skimage: 67
     usage.sklearn: 95
+    usage.xarray: 231
     """
     ...
 
@@ -2008,8 +2008,8 @@ def load(file: str):
 
 def loadtxt(fname: Union[str, tarfile.ExFileObject]):
     """
-    usage.skimage: 1
     usage.pandas: 2
+    usage.skimage: 1
     usage.sklearn: 6
     """
     ...
@@ -2029,8 +2029,8 @@ def logspace(
 
 def may_share_memory(_0: object, _1: object, /):
     """
-    usage.skimage: 2
     usage.pandas: 3
+    usage.skimage: 2
     usage.sklearn: 96
     """
     ...
@@ -2043,20 +2043,20 @@ def mean(
     dtype: Union[type, None] = ...,
 ):
     """
-    usage.skimage: 58
-    usage.xarray: 42
     usage.pandas: 26
+    usage.skimage: 58
     usage.sklearn: 231
+    usage.xarray: 42
     """
     ...
 
 
 def median(a: object):
     """
-    usage.skimage: 5
-    usage.xarray: 8
     usage.pandas: 17
+    usage.skimage: 5
     usage.sklearn: 38
+    usage.xarray: 8
     """
     ...
 
@@ -2064,16 +2064,16 @@ def median(a: object):
 def meshgrid(*xi: Literal["v", "t"], indexing: Literal["ij"] = ..., sparse: bool = ...):
     """
     usage.skimage: 27
-    usage.xarray: 6
     usage.sklearn: 6
+    usage.xarray: 6
     """
     ...
 
 
 def min_scalar_type(_0: object, /):
     """
-    usage.skimage: 5
     usage.pandas: 10
+    usage.skimage: 5
     """
     ...
 
@@ -2128,9 +2128,9 @@ def nancumsum(a: object, axis: int, dtype: None):
 
 def nanmax(a: object):
     """
-    usage.xarray: 14
     usage.pandas: 7
     usage.sklearn: 8
+    usage.xarray: 14
     """
     ...
 
@@ -2141,27 +2141,27 @@ def nanmean(
     dtype: Union[None, type] = ...,
 ):
     """
-    usage.xarray: 27
     usage.pandas: 2
     usage.sklearn: 4
+    usage.xarray: 27
     """
     ...
 
 
 def nanmedian(a: object):
     """
-    usage.xarray: 3
     usage.pandas: 3
     usage.sklearn: 2
+    usage.xarray: 3
     """
     ...
 
 
 def nanmin(a: object):
     """
-    usage.xarray: 13
     usage.pandas: 6
     usage.sklearn: 9
+    usage.xarray: 13
     """
     ...
 
@@ -2171,8 +2171,8 @@ def nanpercentile(
     q: Union[numpy.ndarray, numpy.float64, Tuple[Union[int, float], Union[int, float]]],
 ):
     """
-    usage.xarray: 20
     usage.sklearn: 6
+    usage.xarray: 20
     """
     ...
 
@@ -2184,8 +2184,8 @@ def nanprod(
     out: None = ...,
 ):
     """
-    usage.xarray: 10
     usage.pandas: 4
+    usage.xarray: 10
     """
     ...
 
@@ -2201,8 +2201,8 @@ def nanquantile(
 
 def nanstd(a: object, axis: Union[int, None], dtype: None = ..., ddof: int = ...):
     """
-    usage.xarray: 4
     usage.sklearn: 1
+    usage.xarray: 4
     """
     ...
 
@@ -2213,9 +2213,9 @@ def nansum(
     dtype: Type[numpy.float64] = ...,
 ):
     """
-    usage.xarray: 8
     usage.pandas: 6
     usage.sklearn: 9
+    usage.xarray: 8
     """
     ...
 
@@ -2227,16 +2227,16 @@ def nanvar(
     ddof: int = ...,
 ):
     """
-    usage.xarray: 13
     usage.sklearn: 10
+    usage.xarray: 13
     """
     ...
 
 
 def ndim(a: object):
     """
-    usage.skimage: 4
     usage.pandas: 703
+    usage.skimage: 4
     usage.sklearn: 4
     """
     ...
@@ -2244,10 +2244,10 @@ def ndim(a: object):
 
 def nonzero(a: numpy.ndarray):
     """
-    usage.skimage: 17
-    usage.xarray: 4
     usage.pandas: 4
+    usage.skimage: 17
     usage.sklearn: 15
+    usage.xarray: 4
     """
     ...
 
@@ -2271,21 +2271,21 @@ def ones(
     order: Literal["C", "F"] = ...,
 ):
     """
-    usage.skimage: 248
-    usage.xarray: 73
     usage.pandas: 116
     usage.sample-usage: 1
+    usage.skimage: 248
     usage.sklearn: 435
+    usage.xarray: 73
     """
     ...
 
 
 def ones_like(a: object):
     """
-    usage.skimage: 26
-    usage.xarray: 17
     usage.pandas: 6
+    usage.skimage: 26
     usage.sklearn: 37
+    usage.xarray: 17
     """
     ...
 
@@ -2308,8 +2308,8 @@ def pad(
 ):
     """
     usage.skimage: 39
-    usage.xarray: 63
     usage.sklearn: 2
+    usage.xarray: 63
     """
     ...
 
@@ -2326,14 +2326,14 @@ def percentile(
         numpy.ndarray, int, pandas.core.frame.DataFrame, pandas.core.series.Series
     ] = ...,
     q: object = ...,
-    interpolation: Literal["midpoint", "linear", "nearest", "higher", "lower"] = ...,
     axis: Union[int, List[int], None] = ...,
+    interpolation: Literal["midpoint", "linear", "nearest", "higher", "lower"] = ...,
 ):
     """
-    usage.skimage: 9
-    usage.xarray: 20
     usage.pandas: 54
+    usage.skimage: 9
     usage.sklearn: 25
+    usage.xarray: 20
     """
     ...
 
@@ -2358,18 +2358,18 @@ def prod(
     dtype: Union[Type[numpy.float64], Literal["i8"]] = ...,
 ):
     """
-    usage.skimage: 9
-    usage.xarray: 22
     usage.pandas: 52
+    usage.skimage: 9
     usage.sklearn: 10
+    usage.xarray: 22
     """
     ...
 
 
 def product(*args: Literal["v", "t"]):
     """
-    usage.skimage: 14
     usage.pandas: 1
+    usage.skimage: 14
     usage.sklearn: 5
     """
     ...
@@ -2377,8 +2377,8 @@ def product(*args: Literal["v", "t"]):
 
 def promote_types(_0: numpy.dtype, _1: numpy.dtype, /):
     """
-    usage.skimage: 1
     usage.pandas: 55
+    usage.skimage: 1
     """
     ...
 
@@ -2421,10 +2421,10 @@ def quantile(
 
 def ravel(a: object):
     """
-    usage.skimage: 12
-    usage.xarray: 49
     usage.pandas: 2
+    usage.skimage: 12
     usage.sklearn: 80
+    usage.xarray: 49
     """
     ...
 
@@ -2446,10 +2446,10 @@ def real(
     val: Union[numpy.ndarray, xarray.core.dataarray.DataArray, float, numpy.complex128]
 ):
     """
-    usage.skimage: 8
-    usage.xarray: 1
     usage.pandas: 1
+    usage.skimage: 8
     usage.sklearn: 5
+    usage.xarray: 1
     """
     ...
 
@@ -2465,9 +2465,9 @@ def repeat(
     foo: Literal["bar"] = ...,
 ):
     """
-    usage.xarray: 4
     usage.pandas: 168
     usage.sklearn: 69
+    usage.xarray: 4
     """
     ...
 
@@ -2485,10 +2485,10 @@ def reshape(
     newshape: Union[Tuple[Union[int, numpy.int64, None], ...], List[int]],
 ):
     """
-    usage.skimage: 33
-    usage.xarray: 16
     usage.pandas: 6
+    usage.skimage: 33
     usage.sklearn: 97
+    usage.xarray: 16
     """
     ...
 
@@ -2705,10 +2705,10 @@ def result_type(
     /,
 ):
     """
-    usage.skimage: 7
-    usage.xarray: 114
     usage.pandas: 128
+    usage.skimage: 7
     usage.sklearn: 20
+    usage.xarray: 114
     """
     ...
 
@@ -2718,9 +2718,9 @@ def roll(
     shift: Union[int, numpy.ndarray, Tuple[int, int]],
 ):
     """
+    usage.pandas: 10
     usage.skimage: 14
     usage.xarray: 1
-    usage.pandas: 10
     """
     ...
 
@@ -2746,10 +2746,10 @@ def round_(
     out: Union[pandas.core.series.Series, pandas.core.frame.DataFrame] = ...,
 ):
     """
-    usage.skimage: 30
-    usage.xarray: 3
     usage.pandas: 12
+    usage.skimage: 30
     usage.sklearn: 11
+    usage.xarray: 3
     """
     ...
 
@@ -2763,10 +2763,10 @@ def sctype2char(sctype: numpy.dtype):
 
 def searchsorted(a: object, v: object):
     """
-    usage.skimage: 3
-    usage.xarray: 3
     usage.pandas: 24
+    usage.skimage: 3
     usage.sklearn: 66
+    usage.xarray: 3
     """
     ...
 
@@ -2787,8 +2787,8 @@ def set_printoptions(
 ):
     """
     usage.skimage: 1
-    usage.xarray: 3
     usage.sklearn: 2
+    usage.xarray: 3
     """
     ...
 
@@ -2820,8 +2820,8 @@ def seterr(
 def shape(a: Union[numpy.ndarray, numpy.ma.core.MaskedArray]):
     """
     usage.skimage: 1
-    usage.xarray: 12
     usage.sklearn: 22
+    usage.xarray: 12
     """
     ...
 
@@ -2843,10 +2843,10 @@ def size(a: Union[List[int], numpy.ndarray, pandas.core.series.Series]):
 
 def sort(a: Union[List[Union[numpy.float64, float, int]], numpy.ndarray]):
     """
-    usage.skimage: 14
-    usage.xarray: 2
     usage.pandas: 33
+    usage.skimage: 14
     usage.sklearn: 48
+    usage.xarray: 2
     """
     ...
 
@@ -2855,8 +2855,8 @@ def split(
     ary: numpy.ndarray, indices_or_sections: Union[numpy.ndarray, int, List[int]]
 ):
     """
-    usage.skimage: 1
     usage.pandas: 4
+    usage.skimage: 1
     usage.sklearn: 7
     """
     ...
@@ -2864,10 +2864,10 @@ def split(
 
 def squeeze(a: object):
     """
-    usage.skimage: 18
-    usage.xarray: 2
     usage.pandas: 5
+    usage.skimage: 18
     usage.sklearn: 23
+    usage.xarray: 2
     """
     ...
 
@@ -2896,10 +2896,10 @@ def std(
     ddof: int = ...,
 ):
     """
-    usage.skimage: 1
-    usage.xarray: 16
     usage.pandas: 20
+    usage.skimage: 1
     usage.sklearn: 14
+    usage.xarray: 16
     """
     ...
 
@@ -2912,10 +2912,10 @@ def sum(
     keepdims: bool = ...,
 ):
     """
-    usage.skimage: 114
-    usage.xarray: 75
     usage.pandas: 38
+    usage.skimage: 114
     usage.sklearn: 397
+    usage.xarray: 75
     """
     ...
 
@@ -2923,18 +2923,18 @@ def sum(
 def swapaxes(a: object, axis1: int, axis2: int):
     """
     usage.skimage: 2
-    usage.xarray: 9
     usage.sklearn: 2
+    usage.xarray: 9
     """
     ...
 
 
 def take(a: object, indices: Union[numpy.ndarray, int, List[int]]):
     """
-    usage.skimage: 1
-    usage.xarray: 13
     usage.pandas: 52
+    usage.skimage: 1
     usage.sklearn: 10
+    usage.xarray: 13
     """
     ...
 
@@ -2960,10 +2960,10 @@ def tensordot(
 
 def tile(A: object, reps: Union[List[int], int, numpy.int64, Tuple[int, ...]]):
     """
-    usage.skimage: 15
-    usage.xarray: 6
     usage.pandas: 49
+    usage.skimage: 15
     usage.sklearn: 31
+    usage.xarray: 6
     """
     ...
 
@@ -2977,10 +2977,10 @@ def trace(a: numpy.ndarray, axis1: int = ..., axis2: int = ...):
 
 def transpose(a: object):
     """
-    usage.skimage: 21
-    usage.xarray: 8
     usage.pandas: 18
+    usage.skimage: 21
     usage.sklearn: 37
+    usage.xarray: 8
     """
     ...
 
@@ -2990,8 +2990,8 @@ def trapz(
     x: Union[numpy.ndarray, xarray.core.dataarray.DataArray],
 ):
     """
-    usage.xarray: 4
     usage.sklearn: 2
+    usage.xarray: 4
     """
     ...
 
@@ -3047,10 +3047,10 @@ def unique(
     return_counts: bool = ...,
 ):
     """
-    usage.skimage: 64
-    usage.xarray: 15
     usage.pandas: 22
+    usage.skimage: 64
     usage.sklearn: 572
+    usage.xarray: 15
     """
     ...
 
@@ -3084,9 +3084,9 @@ def var(
     ddof: int = ...,
 ):
     """
-    usage.xarray: 31
     usage.pandas: 13
     usage.sklearn: 55
+    usage.xarray: 31
     """
     ...
 
@@ -3111,8 +3111,8 @@ def vstack(
     ]
 ):
     """
-    usage.skimage: 32
     usage.pandas: 49
+    usage.skimage: 32
     usage.sklearn: 166
     """
     ...
@@ -3120,10 +3120,10 @@ def vstack(
 
 def where(_0: object, _1: object = ..., _2: object = ..., /):
     """
-    usage.skimage: 26
-    usage.xarray: 39
     usage.pandas: 175
+    usage.skimage: 26
     usage.sklearn: 77
+    usage.xarray: 39
     """
     ...
 
@@ -3146,11 +3146,11 @@ def zeros(
     shape: Union[List[int], Tuple[int, int], int] = ...,
 ):
     """
-    usage.skimage: 757
-    usage.xarray: 77
     usage.pandas: 125
     usage.sample-usage: 1
+    usage.skimage: 757
     usage.sklearn: 597
+    usage.xarray: 77
     """
     ...
 
@@ -3161,10 +3161,10 @@ def zeros_like(
     order: Literal["F", "C"] = ...,
 ):
     """
-    usage.skimage: 68
-    usage.xarray: 49
     usage.pandas: 20
+    usage.skimage: 68
     usage.sklearn: 76
+    usage.xarray: 49
     """
     ...
 
@@ -3186,8 +3186,8 @@ class bool_:
         /,
     ):
         """
-        usage.skimage: 1
         usage.pandas: 16
+        usage.skimage: 1
         usage.sklearn: 1
         """
         ...
@@ -3219,25 +3219,25 @@ class bool_:
         /,
     ):
         """
-        usage.xarray: 4
         usage.pandas: 9
+        usage.xarray: 4
         """
         ...
 
     def __bool__(self, /):
         """
-        usage.skimage: 18
-        usage.xarray: 3
         usage.pandas: 66
+        usage.skimage: 18
         usage.sklearn: 67
+        usage.xarray: 3
         """
         ...
 
     def __eq__(self, _0: object, /):
         """
-        usage.xarray: 4
         usage.pandas: 94
         usage.sklearn: 10
+        usage.xarray: 4
         """
         ...
 
@@ -3264,9 +3264,9 @@ class bool_:
 
     def __invert__(self, /):
         """
+        usage.pandas: 1
         usage.skimage: 3
         usage.xarray: 1
-        usage.pandas: 1
         """
         ...
 
@@ -3306,8 +3306,8 @@ class bool_:
         /,
     ):
         """
-        usage.xarray: 8
         usage.pandas: 3
+        usage.xarray: 8
         """
         ...
 
@@ -3342,8 +3342,8 @@ class bool_:
         /,
     ):
         """
-        usage.xarray: 4
         usage.pandas: 9
+        usage.xarray: 4
         """
         ...
 
@@ -3355,15 +3355,15 @@ class bool_:
         /,
     ):
         """
-        usage.xarray: 8
         usage.pandas: 3
+        usage.xarray: 8
         """
         ...
 
     def __rpow__(self, _0: Union[pandas._libs.missing.NAType, int], /):
         """
-        usage.skimage: 1
         usage.pandas: 1
+        usage.skimage: 1
         """
         ...
 
@@ -3397,16 +3397,16 @@ class bool_:
 
     def all(self, /):
         """
-        usage.xarray: 9
         usage.pandas: 4
         usage.sklearn: 1
+        usage.xarray: 9
         """
         ...
 
     def any(self, /):
         """
-        usage.xarray: 2
         usage.pandas: 6
+        usage.xarray: 2
         """
         ...
 
@@ -3447,8 +3447,8 @@ class bytes_:
 
     def __eq__(self, _0: Union[numpy.bytes_, numpy.ndarray], /):
         """
-        usage.xarray: 1
         usage.pandas: 2
+        usage.xarray: 1
         """
         ...
 
@@ -3512,8 +3512,8 @@ class complex128:
         self, _0: Union[numpy.complex128, int, complex, float, numpy.ndarray], /
     ):
         """
-        usage.skimage: 1
         usage.pandas: 6
+        usage.skimage: 1
         """
         ...
 
@@ -3609,8 +3609,8 @@ class datetime64:
         """
         ...
 
-    # usage.xarray: 3
     # usage.pandas: 8
+    # usage.xarray: 3
     dtype: object
 
     # usage.pandas: 1
@@ -3618,15 +3618,15 @@ class datetime64:
 
     def __add__(self, _0: object, /):
         """
-        usage.xarray: 4
         usage.pandas: 32
+        usage.xarray: 4
         """
         ...
 
     def __eq__(self, _0: object, /):
         """
-        usage.xarray: 14
         usage.pandas: 32
+        usage.xarray: 14
         """
         ...
 
@@ -3658,8 +3658,8 @@ class datetime64:
 
     def __rsub__(self, _0: object, /):
         """
-        usage.xarray: 2
         usage.pandas: 28
+        usage.xarray: 2
         """
         ...
 
@@ -3696,10 +3696,10 @@ class dtype:
     # usage.xarray: 14
     byteorder: object
 
-    # usage.skimage: 12
-    # usage.xarray: 3
     # usage.pandas: 1
+    # usage.skimage: 12
     # usage.sklearn: 2
+    # usage.xarray: 3
     char: object
 
     # usage.pandas: 6
@@ -3711,23 +3711,23 @@ class dtype:
     # usage.xarray: 25
     isnative: object
 
-    # usage.skimage: 41
-    # usage.xarray: 37
     # usage.pandas: 130
+    # usage.skimage: 41
     # usage.sklearn: 11
+    # usage.xarray: 37
     itemsize: object
 
-    # usage.skimage: 60
-    # usage.xarray: 550
     # usage.pandas: 643
+    # usage.skimage: 60
     # usage.sklearn: 285
+    # usage.xarray: 550
     kind: object
 
     # usage.xarray: 5
     metadata: object
 
-    # usage.skimage: 6
     # usage.pandas: 263
+    # usage.skimage: 6
     # usage.sklearn: 6
     name: object
 
@@ -3737,18 +3737,18 @@ class dtype:
     # usage.pandas: 25
     shape: object
 
-    # usage.skimage: 65
-    # usage.xarray: 75
     # usage.pandas: 1037
+    # usage.skimage: 65
     # usage.sklearn: 16
+    # usage.xarray: 75
     type: object
 
     def __eq__(self, _0: object, /):
         """
-        usage.skimage: 186
-        usage.xarray: 326
         usage.pandas: 2263
+        usage.skimage: 186
         usage.sklearn: 551
+        usage.xarray: 326
         """
         ...
 
@@ -3772,18 +3772,18 @@ class dtype:
 
     def __ne__(self, _0: object, /):
         """
-        usage.skimage: 27
-        usage.xarray: 53
         usage.pandas: 457
+        usage.skimage: 27
         usage.sklearn: 71
+        usage.xarray: 53
         """
         ...
 
     def __rmod__(self, _0: str, /):
         """
         usage.skimage: 1
-        usage.xarray: 1
         usage.sklearn: 3
+        usage.xarray: 1
         """
         ...
 
@@ -3797,27 +3797,27 @@ class dtype:
 class errstate:
     def __init__(self, /):
         """
-        usage.xarray: 4
         usage.pandas: 86
         usage.sklearn: 37
+        usage.xarray: 4
         """
         ...
 
 
 class finfo:
 
-    # usage.skimage: 10
     # usage.pandas: 4
+    # usage.skimage: 10
     # usage.sklearn: 46
     eps: object
 
-    # usage.skimage: 2
     # usage.pandas: 7
+    # usage.skimage: 2
     # usage.sklearn: 4
     max: object
 
-    # usage.skimage: 2
     # usage.pandas: 3
+    # usage.skimage: 2
     # usage.sklearn: 5
     min: object
 
@@ -3836,24 +3836,24 @@ class flagsobj:
     # usage.sklearn: 2
     contiguous: object
 
-    # usage.skimage: 1
     # usage.pandas: 4
+    # usage.skimage: 1
     # usage.sklearn: 2
     f_contiguous: object
 
     # usage.xarray: 1
     owndata: object
 
-    # usage.skimage: 3
-    # usage.xarray: 4
     # usage.pandas: 14
+    # usage.skimage: 3
     # usage.sklearn: 7
+    # usage.xarray: 4
     writeable: bool
 
     def __getitem__(self, _0: Literal["WRITEABLE", "C_CONTIGUOUS", "F_CONTIGUOUS"], /):
         """
-        usage.xarray: 4
         usage.sklearn: 21
+        usage.xarray: 4
         """
         ...
 
@@ -3877,18 +3877,18 @@ class flatiter:
         /,
     ):
         """
-        usage.skimage: 5
-        usage.xarray: 10
         usage.pandas: 1
+        usage.skimage: 5
         usage.sklearn: 33
+        usage.xarray: 10
         """
         ...
 
     def __iter__(self, /):
         """
         usage.skimage: 2
-        usage.xarray: 8
         usage.sklearn: 4
+        usage.xarray: 8
         """
         ...
 
@@ -3901,10 +3901,10 @@ class flatiter:
         /,
     ):
         """
-        usage.skimage: 2
-        usage.xarray: 1
         usage.pandas: 11
+        usage.skimage: 2
         usage.sklearn: 45
+        usage.xarray: 1
         """
         ...
 
@@ -4048,9 +4048,9 @@ class float32:
         """
         ...
 
-    # usage.xarray: 1
     # usage.pandas: 4
     # usage.sklearn: 2
+    # usage.xarray: 1
     dtype: object
 
     # usage.pandas: 1
@@ -4061,42 +4061,42 @@ class float32:
 
     def __add__(self, _0: object, /):
         """
-        usage.skimage: 2
         usage.pandas: 3
+        usage.skimage: 2
         usage.sklearn: 9
         """
         ...
 
     def __eq__(self, _0: object, /):
         """
-        usage.skimage: 6
-        usage.xarray: 4
         usage.pandas: 9
+        usage.skimage: 6
         usage.sklearn: 14
+        usage.xarray: 4
         """
         ...
 
     def __ge__(self, _0: Union[int, numpy.float64, float], /):
         """
-        usage.skimage: 3
         usage.pandas: 1
+        usage.skimage: 3
         usage.sklearn: 5
         """
         ...
 
     def __gt__(self, _0: Union[int, numpy.float32, numpy.float64, float], /):
         """
-        usage.skimage: 4
-        usage.xarray: 1
         usage.pandas: 1
+        usage.skimage: 4
         usage.sklearn: 5
+        usage.xarray: 1
         """
         ...
 
     def __iadd__(self, _0: Union[numpy.float32, int], /):
         """
-        usage.xarray: 2
         usage.sklearn: 2
+        usage.xarray: 2
         """
         ...
 
@@ -4108,10 +4108,10 @@ class float32:
 
     def __le__(self, _0: Union[float, int, numpy.float64], /):
         """
-        usage.skimage: 4
-        usage.xarray: 2
         usage.pandas: 2
+        usage.skimage: 4
         usage.sklearn: 10
+        usage.xarray: 2
         """
         ...
 
@@ -4124,8 +4124,8 @@ class float32:
 
     def __mul__(self, _0: object, /):
         """
-        usage.skimage: 1
         usage.pandas: 4
+        usage.skimage: 1
         usage.sklearn: 18
         """
         ...
@@ -4138,8 +4138,8 @@ class float32:
 
     def __pow__(self, _0: int, /):
         """
-        usage.skimage: 1
         usage.pandas: 1
+        usage.skimage: 1
         usage.sklearn: 2
         """
         ...
@@ -4159,8 +4159,8 @@ class float32:
 
     def __rmul__(self, _0: object, /):
         """
-        usage.skimage: 4
         usage.pandas: 3
+        usage.skimage: 4
         usage.sklearn: 20
         """
         ...
@@ -4169,32 +4169,32 @@ class float32:
         self, _0: Union[float, int, numpy.float32, numpy.ndarray, numpy.float64], /
     ):
         """
-        usage.skimage: 3
         usage.pandas: 7
+        usage.skimage: 3
         usage.sklearn: 18
         """
         ...
 
     def __rtruediv__(self, _0: object, /):
         """
-        usage.skimage: 1
         usage.pandas: 14
+        usage.skimage: 1
         usage.sklearn: 13
         """
         ...
 
     def __sub__(self, _0: object, /):
         """
-        usage.skimage: 5
         usage.pandas: 7
+        usage.skimage: 5
         usage.sklearn: 18
         """
         ...
 
     def __truediv__(self, _0: object, /):
         """
-        usage.skimage: 2
         usage.pandas: 14
+        usage.skimage: 2
         usage.sklearn: 16
         """
         ...
@@ -4219,22 +4219,22 @@ class float64:
         """
         usage.pandas: 31
         usage.skimage: 7
-        usage.xarray: 6
         usage.sklearn: 43
+        usage.xarray: 6
         """
         ...
 
-    # usage.xarray: 4
     # usage.pandas: 9
     # usage.sklearn: 10
+    # usage.xarray: 4
     dtype: object
 
-    # usage.skimage: 1
     # usage.pandas: 2
+    # usage.skimage: 1
     ndim: object
 
-    # usage.xarray: 1
     # usage.sklearn: 5
+    # usage.xarray: 1
     shape: object
 
     # usage.pandas: 1
@@ -4242,19 +4242,19 @@ class float64:
 
     def __add__(self, _0: object, /):
         """
-        usage.skimage: 76
-        usage.xarray: 9
         usage.pandas: 36
+        usage.skimage: 76
         usage.sklearn: 167
+        usage.xarray: 9
         """
         ...
 
     def __eq__(self, _0: object, /):
         """
-        usage.skimage: 96
-        usage.xarray: 53
         usage.pandas: 381
+        usage.skimage: 96
         usage.sklearn: 1084
+        usage.xarray: 53
         """
         ...
 
@@ -4266,10 +4266,10 @@ class float64:
 
     def __ge__(self, _0: object, /):
         """
-        usage.skimage: 61
-        usage.xarray: 6
         usage.pandas: 8
+        usage.skimage: 61
         usage.sklearn: 122
+        usage.xarray: 6
         """
         ...
 
@@ -4282,19 +4282,19 @@ class float64:
 
     def __gt__(self, _0: object, /):
         """
-        usage.skimage: 70
-        usage.xarray: 9
         usage.pandas: 15
+        usage.skimage: 70
         usage.sklearn: 237
+        usage.xarray: 9
         """
         ...
 
     def __iadd__(self, _0: object, /):
         """
-        usage.skimage: 9
-        usage.xarray: 7
         usage.pandas: 1
+        usage.skimage: 9
         usage.sklearn: 69
+        usage.xarray: 7
         """
         ...
 
@@ -4313,8 +4313,8 @@ class float64:
 
     def __isub__(self, _0: Union[numpy.ndarray, numpy.float64, int, float], /):
         """
-        usage.skimage: 1
         usage.pandas: 2
+        usage.skimage: 1
         usage.sklearn: 20
         """
         ...
@@ -4328,69 +4328,69 @@ class float64:
 
     def __le__(self, _0: object, /):
         """
-        usage.skimage: 116
-        usage.xarray: 14
         usage.pandas: 13
+        usage.skimage: 116
         usage.sklearn: 187
+        usage.xarray: 14
         """
         ...
 
     def __lt__(self, _0: object, /):
         """
-        usage.skimage: 61
-        usage.xarray: 9
         usage.pandas: 5
+        usage.skimage: 61
         usage.sklearn: 84
+        usage.xarray: 9
         """
         ...
 
     def __mod__(self, _0: object, /):
         """
-        usage.skimage: 7
         usage.pandas: 11
+        usage.skimage: 7
         usage.sklearn: 1
         """
         ...
 
     def __mul__(self, _0: object, /):
         """
-        usage.skimage: 77
-        usage.xarray: 7
         usage.pandas: 71
+        usage.skimage: 77
         usage.sklearn: 276
+        usage.xarray: 7
         """
         ...
 
     def __neg__(self, /):
         """
-        usage.skimage: 22
-        usage.xarray: 2
         usage.pandas: 2
+        usage.skimage: 22
         usage.sklearn: 54
+        usage.xarray: 2
         """
         ...
 
     def __pow__(self, _0: object, /):
         """
-        usage.skimage: 36
         usage.pandas: 13
+        usage.skimage: 36
         usage.sklearn: 43
         """
         ...
 
     def __radd__(self, _0: object, /):
         """
-        usage.skimage: 81
-        usage.xarray: 9
         usage.pandas: 36
+        usage.skimage: 81
         usage.sklearn: 194
+        usage.xarray: 9
         """
         ...
 
     def __rfloordiv__(self, _0: object, /):
         """
-        usage.skimage: 1
         usage.pandas: 6
+        usage.skimage: 1
         """
         ...
 
@@ -4403,71 +4403,71 @@ class float64:
 
     def __rmul__(self, _0: object, /):
         """
-        usage.skimage: 173
-        usage.xarray: 3
         usage.pandas: 22
+        usage.skimage: 173
         usage.sklearn: 331
+        usage.xarray: 3
         """
         ...
 
     def __rpow__(self, _0: object, /):
         """
-        usage.skimage: 3
         usage.pandas: 4
+        usage.skimage: 3
         usage.sklearn: 4
         """
         ...
 
     def __rsub__(self, _0: object, /):
         """
-        usage.skimage: 107
-        usage.xarray: 13
         usage.pandas: 26
+        usage.skimage: 107
         usage.sklearn: 233
+        usage.xarray: 13
         """
         ...
 
     def __rtruediv__(self, _0: object, /):
         """
-        usage.skimage: 104
-        usage.xarray: 3
         usage.pandas: 61
+        usage.skimage: 104
         usage.sklearn: 255
+        usage.xarray: 3
         """
         ...
 
     def __sub__(self, _0: object, /):
         """
-        usage.skimage: 154
-        usage.xarray: 14
         usage.pandas: 28
+        usage.skimage: 154
         usage.sklearn: 153
+        usage.xarray: 14
         """
         ...
 
     def __truediv__(self, _0: object, /):
         """
-        usage.skimage: 96
-        usage.xarray: 8
         usage.pandas: 61
+        usage.skimage: 96
         usage.sklearn: 212
+        usage.xarray: 8
         """
         ...
 
     def astype(self, _0: Union[type, Literal["timedelta64[ns]"], numpy.dtype], /):
         """
-        usage.skimage: 1
-        usage.xarray: 4
         usage.pandas: 8
+        usage.skimage: 1
         usage.sklearn: 2
+        usage.xarray: 4
         """
         ...
 
     def item(self, /):
         """
-        usage.xarray: 3
         usage.pandas: 1
         usage.sklearn: 4
+        usage.xarray: 3
         """
         ...
 
@@ -4493,19 +4493,19 @@ class float64:
 class iinfo:
     def __init__(self, /, int_type: Union[type, str, numpy.dtype]):
         """
-        usage.skimage: 35
         usage.pandas: 35
+        usage.skimage: 35
         usage.sklearn: 3
         """
         ...
 
-    # usage.skimage: 7
     # usage.pandas: 25
+    # usage.skimage: 7
     # usage.sklearn: 13
     max: object
 
-    # usage.skimage: 3
     # usage.pandas: 10
+    # usage.skimage: 3
     min: object
 
 
@@ -4533,9 +4533,9 @@ class int16:
 
     def __eq__(self, _0: object, /):
         """
+        usage.pandas: 81
         usage.skimage: 2
         usage.xarray: 1
-        usage.pandas: 81
         """
         ...
 
@@ -4549,15 +4549,15 @@ class int16:
 
     def __ge__(self, _0: int, /):
         """
-        usage.skimage: 1
         usage.pandas: 2
+        usage.skimage: 1
         """
         ...
 
     def __le__(self, _0: int, /):
         """
-        usage.skimage: 3
         usage.pandas: 2
+        usage.skimage: 3
         """
         ...
 
@@ -4588,8 +4588,8 @@ class int16:
         self, _0: Union[pandas.core.arrays.integer.IntegerArray, numpy.ndarray, int], /
     ):
         """
-        usage.skimage: 1
         usage.pandas: 2
+        usage.skimage: 1
         """
         ...
 
@@ -4609,8 +4609,8 @@ class int16:
         self, _0: Union[pandas.core.arrays.timedeltas.TimedeltaArray, numpy.int16], /
     ):
         """
-        usage.skimage: 2
         usage.pandas: 1
+        usage.skimage: 2
         """
         ...
 
@@ -4625,15 +4625,15 @@ class int16:
         /,
     ):
         """
-        usage.skimage: 1
         usage.pandas: 5
+        usage.skimage: 1
         """
         ...
 
     def __sub__(self, _0: object, /):
         """
-        usage.skimage: 2
         usage.pandas: 5
+        usage.skimage: 2
         """
         ...
 
@@ -4674,8 +4674,8 @@ class int32:
         """
         ...
 
-    # usage.xarray: 1
     # usage.pandas: 4
+    # usage.xarray: 1
     dtype: object
 
     # usage.xarray: 1
@@ -4690,10 +4690,10 @@ class int32:
 
     def __eq__(self, _0: object, /):
         """
-        usage.skimage: 3
-        usage.xarray: 3
         usage.pandas: 77
+        usage.skimage: 3
         usage.sklearn: 16
+        usage.xarray: 3
         """
         ...
 
@@ -4707,8 +4707,8 @@ class int32:
 
     def __ge__(self, _0: Union[float, int], /):
         """
-        usage.skimage: 1
         usage.pandas: 3
+        usage.skimage: 1
         usage.sklearn: 6
         """
         ...
@@ -4728,8 +4728,8 @@ class int32:
 
     def __le__(self, _0: Union[float, int], /):
         """
-        usage.skimage: 2
         usage.pandas: 3
+        usage.skimage: 2
         usage.sklearn: 8
         """
         ...
@@ -4840,8 +4840,8 @@ class int32:
 
     def astype(self, _0: Union[numpy.dtype, Type[numpy.int64]], /):
         """
-        usage.skimage: 2
         usage.pandas: 1
+        usage.skimage: 2
         """
         ...
 
@@ -4859,20 +4859,20 @@ class int64:
         """
         usage.pandas: 74
         usage.skimage: 6
-        usage.xarray: 5
         usage.sklearn: 36
+        usage.xarray: 5
         """
         ...
 
     # usage.xarray: 1
     coords: object
 
-    # usage.xarray: 1
     # usage.pandas: 5
+    # usage.xarray: 1
     dtype: object
 
-    # usage.skimage: 1
     # usage.pandas: 3
+    # usage.skimage: 1
     ndim: object
 
     # usage.xarray: 1
@@ -4889,19 +4889,19 @@ class int64:
 
     def __add__(self, _0: object, /):
         """
-        usage.skimage: 37
-        usage.xarray: 12
         usage.pandas: 63
+        usage.skimage: 37
         usage.sklearn: 61
+        usage.xarray: 12
         """
         ...
 
     def __eq__(self, _0: object, /):
         """
-        usage.skimage: 89
-        usage.xarray: 41
         usage.pandas: 513
+        usage.skimage: 89
         usage.sklearn: 213
+        usage.xarray: 41
         """
         ...
 
@@ -4917,19 +4917,19 @@ class int64:
         /,
     ):
         """
-        usage.skimage: 5
-        usage.xarray: 1
         usage.pandas: 6
+        usage.skimage: 5
         usage.sklearn: 2
+        usage.xarray: 1
         """
         ...
 
     def __ge__(self, _0: object, /):
         """
-        usage.skimage: 16
-        usage.xarray: 4
         usage.pandas: 19
+        usage.skimage: 16
         usage.sklearn: 32
+        usage.xarray: 4
         """
         ...
 
@@ -4941,19 +4941,19 @@ class int64:
 
     def __gt__(self, _0: object, /):
         """
-        usage.skimage: 9
-        usage.xarray: 1
         usage.pandas: 24
+        usage.skimage: 9
         usage.sklearn: 42
+        usage.xarray: 1
         """
         ...
 
     def __iadd__(self, _0: Union[int, numpy.float64, numpy.int64], /):
         """
-        usage.skimage: 1
-        usage.xarray: 3
         usage.pandas: 3
+        usage.skimage: 1
         usage.sklearn: 4
+        usage.xarray: 3
         """
         ...
 
@@ -4977,34 +4977,34 @@ class int64:
 
     def __isub__(self, _0: Union[int, numpy.int64], /):
         """
-        usage.skimage: 2
         usage.pandas: 6
+        usage.skimage: 2
         usage.sklearn: 4
         """
         ...
 
     def __itruediv__(self, _0: Union[float, numpy.float64], /):
         """
-        usage.skimage: 2
         usage.pandas: 1
+        usage.skimage: 2
         """
         ...
 
     def __le__(self, _0: object, /):
         """
-        usage.skimage: 15
-        usage.xarray: 4
         usage.pandas: 27
+        usage.skimage: 15
         usage.sklearn: 53
+        usage.xarray: 4
         """
         ...
 
     def __lt__(self, _0: object, /):
         """
-        usage.skimage: 11
-        usage.xarray: 3
         usage.pandas: 10
+        usage.skimage: 11
         usage.sklearn: 7
+        usage.xarray: 3
         """
         ...
 
@@ -5019,43 +5019,43 @@ class int64:
         /,
     ):
         """
-        usage.skimage: 1
         usage.pandas: 10
+        usage.skimage: 1
         usage.sklearn: 2
         """
         ...
 
     def __mul__(self, _0: object, /):
         """
-        usage.skimage: 4
-        usage.xarray: 1
         usage.pandas: 59
+        usage.skimage: 4
         usage.sklearn: 33
+        usage.xarray: 1
         """
         ...
 
     def __neg__(self, /):
         """
-        usage.skimage: 6
-        usage.xarray: 1
         usage.pandas: 3
+        usage.skimage: 6
         usage.sklearn: 8
+        usage.xarray: 1
         """
         ...
 
     def __pow__(self, _0: object, /):
         """
-        usage.skimage: 2
         usage.pandas: 10
+        usage.skimage: 2
         """
         ...
 
     def __radd__(self, _0: object, /):
         """
-        usage.skimage: 17
-        usage.xarray: 1
         usage.pandas: 63
+        usage.skimage: 17
         usage.sklearn: 61
+        usage.xarray: 1
         """
         ...
 
@@ -5065,8 +5065,8 @@ class int64:
         /,
     ):
         """
-        usage.skimage: 1
         usage.pandas: 2
+        usage.skimage: 1
         usage.sklearn: 3
         """
         ...
@@ -5080,10 +5080,10 @@ class int64:
 
     def __rmul__(self, _0: object, /):
         """
-        usage.skimage: 8
-        usage.xarray: 2
         usage.pandas: 59
+        usage.skimage: 8
         usage.sklearn: 33
+        usage.xarray: 2
         """
         ...
 
@@ -5095,44 +5095,44 @@ class int64:
 
     def __rsub__(self, _0: object, /):
         """
-        usage.skimage: 28
-        usage.xarray: 10
         usage.pandas: 32
+        usage.skimage: 28
         usage.sklearn: 60
+        usage.xarray: 10
         """
         ...
 
     def __rtruediv__(self, _0: object, /):
         """
-        usage.skimage: 11
-        usage.xarray: 3
         usage.pandas: 5
+        usage.skimage: 11
         usage.sklearn: 53
+        usage.xarray: 3
         """
         ...
 
     def __sub__(self, _0: object, /):
         """
-        usage.skimage: 22
-        usage.xarray: 10
         usage.pandas: 26
+        usage.skimage: 22
         usage.sklearn: 60
+        usage.xarray: 10
         """
         ...
 
     def __truediv__(self, _0: object, /):
         """
-        usage.skimage: 14
-        usage.xarray: 2
         usage.pandas: 22
+        usage.skimage: 14
         usage.sklearn: 53
+        usage.xarray: 2
         """
         ...
 
     def astype(self, _0: Union[numpy.dtype, Type[numpy.int64]], /):
         """
-        usage.skimage: 3
         usage.pandas: 3
+        usage.skimage: 3
         """
         ...
 
@@ -5179,10 +5179,10 @@ class int8:
 
     def __eq__(self, _0: object, /):
         """
-        usage.skimage: 2
-        usage.xarray: 1
         usage.pandas: 75
+        usage.skimage: 2
         usage.sklearn: 2
+        usage.xarray: 1
         """
         ...
 
@@ -5202,8 +5202,8 @@ class int8:
 
     def __le__(self, _0: int, /):
         """
-        usage.skimage: 1
         usage.pandas: 2
+        usage.skimage: 1
         """
         ...
 
@@ -5303,8 +5303,8 @@ class int8:
 
     def astype(self, _0: Union[numpy.dtype, Type[numpy.int64]], /):
         """
-        usage.skimage: 2
         usage.pandas: 1
+        usage.skimage: 2
         """
         ...
 
@@ -5319,8 +5319,8 @@ class longlong:
 
     def __eq__(self, _0: Union[int, numpy.int64], /):
         """
-        usage.skimage: 2
         usage.pandas: 8
+        usage.skimage: 2
         """
         ...
 
@@ -5605,29 +5605,29 @@ class ndarray:
     @classmethod
     def __ne__(cls, _0: object, /):
         """
-        usage.skimage: 42
-        usage.xarray: 15
         usage.pandas: 142
+        usage.skimage: 42
         usage.sklearn: 182
+        usage.xarray: 15
         """
         ...
 
     @classmethod
     def __rmod__(cls, _0: object, /):
         """
-        usage.sklearn: 11
-        usage.skimage: 1
-        usage.xarray: 1
         usage.pandas: 57
         usage.sample-usage: 1
+        usage.skimage: 1
+        usage.sklearn: 11
+        usage.xarray: 1
         """
         ...
 
-    # usage.skimage: 84
-    # usage.xarray: 34
     # usage.pandas: 211
     # usage.sample-usage: 1
+    # usage.skimage: 84
     # usage.sklearn: 765
+    # usage.xarray: 34
     T: object
 
     # usage.pandas: 2
@@ -5639,9 +5639,9 @@ class ndarray:
     # usage.xarray: 1
     attrs: object
 
-    # usage.xarray: 8
     # usage.pandas: 87
     # usage.sklearn: 2
+    # usage.xarray: 8
     base: object
 
     # usage.sklearn: 1
@@ -5656,30 +5656,30 @@ class ndarray:
     # usage.xarray: 2
     dims: object
 
-    # usage.skimage: 550
-    # usage.xarray: 847
     # usage.pandas: 3135
     # usage.sample-usage: 1
+    # usage.skimage: 550
     # usage.sklearn: 1008
+    # usage.xarray: 847
     dtype: object
 
-    # usage.skimage: 13
-    # usage.xarray: 21
     # usage.pandas: 86
+    # usage.skimage: 13
     # usage.sklearn: 62
+    # usage.xarray: 21
     flags: object
 
-    # usage.skimage: 21
-    # usage.xarray: 46
     # usage.pandas: 14
+    # usage.skimage: 21
     # usage.sklearn: 67
+    # usage.xarray: 46
     flat: numpy.ndarray
 
     # usage.xarray: 3
     imag: object
 
-    # usage.skimage: 4
     # usage.pandas: 11
+    # usage.skimage: 4
     # usage.sklearn: 2
     itemsize: object
 
@@ -5690,35 +5690,35 @@ class ndarray:
     # usage.sklearn: 3
     nbytes: object
 
-    # usage.skimage: 462
-    # usage.xarray: 309
     # usage.pandas: 741
     # usage.sample-usage: 1
+    # usage.skimage: 462
     # usage.sklearn: 467
+    # usage.xarray: 309
     ndim: object
 
-    # usage.xarray: 3
     # usage.pandas: 1
+    # usage.xarray: 3
     real: object
 
-    # usage.skimage: 1138
-    # usage.xarray: 349
     # usage.pandas: 695
     # usage.sample-usage: 2
+    # usage.skimage: 1138
     # usage.sklearn: 3271
+    # usage.xarray: 349
     shape: Union[Tuple[int, ...], numpy.ndarray]
 
-    # usage.skimage: 88
-    # usage.xarray: 64
     # usage.pandas: 147
     # usage.sample-usage: 1
+    # usage.skimage: 88
     # usage.sklearn: 240
+    # usage.xarray: 64
     size: object
 
-    # usage.skimage: 12
-    # usage.xarray: 4
     # usage.pandas: 1
+    # usage.skimage: 12
     # usage.sklearn: 7
+    # usage.xarray: 4
     strides: Tuple[int, int, int]
 
     # usage.xarray: 6
@@ -5735,21 +5735,21 @@ class ndarray:
 
     def __add__(self, _0: object, /):
         """
-        usage.skimage: 268
-        usage.xarray: 76
         usage.pandas: 272
         usage.sample-usage: 2
+        usage.skimage: 268
         usage.sklearn: 639
+        usage.xarray: 76
         """
         ...
 
     def __and__(self, _0: object, /):
         """
-        usage.skimage: 14
-        usage.xarray: 7
         usage.pandas: 88
         usage.sample-usage: 1
+        usage.skimage: 14
         usage.sklearn: 12
+        usage.xarray: 7
         """
         ...
 
@@ -5762,86 +5762,86 @@ class ndarray:
 
     def __contains__(self, _0: object, /):
         """
-        usage.skimage: 13
-        usage.xarray: 3
         usage.pandas: 13
         usage.sample-usage: 1
+        usage.skimage: 13
         usage.sklearn: 33
+        usage.xarray: 3
         """
         ...
 
     def __eq__(self, _0: object, /):
         """
-        usage.skimage: 268
-        usage.xarray: 365
         usage.pandas: 895
         usage.sample-usage: 2
+        usage.skimage: 268
         usage.sklearn: 1084
+        usage.xarray: 365
         """
         ...
 
     def __floordiv__(self, _0: object, /):
         """
-        usage.skimage: 11
-        usage.xarray: 1
         usage.pandas: 58
         usage.sample-usage: 1
+        usage.skimage: 11
         usage.sklearn: 12
+        usage.xarray: 1
         """
         ...
 
     def __ge__(self, _0: object, /):
         """
-        usage.skimage: 58
-        usage.xarray: 7
         usage.pandas: 90
+        usage.skimage: 58
         usage.sklearn: 85
+        usage.xarray: 7
         """
         ...
 
     def __getitem__(self, _0: object, /):
         """
-        usage.skimage: 1989
-        usage.xarray: 886
         usage.pandas: 2206
         usage.sample-usage: 5
+        usage.skimage: 1989
         usage.sklearn: 4815
+        usage.xarray: 886
         """
         ...
 
     def __gt__(self, _0: object, /):
         """
-        usage.skimage: 136
-        usage.xarray: 10
         usage.pandas: 82
         usage.sample-usage: 1
+        usage.skimage: 136
         usage.sklearn: 160
+        usage.xarray: 10
         """
         ...
 
     def __iadd__(self, _0: object, /):
         """
-        usage.skimage: 128
-        usage.xarray: 7
         usage.pandas: 13
         usage.sample-usage: 1
+        usage.skimage: 128
         usage.sklearn: 266
+        usage.xarray: 7
         """
         ...
 
     def __iand__(self, _0: Union[numpy.ndarray, pandas.core.series.Series, int], /):
         """
-        usage.skimage: 2
         usage.pandas: 4
         usage.sample-usage: 1
+        usage.skimage: 2
         usage.sklearn: 4
         """
         ...
 
     def __ifloordiv__(self, _0: int, /):
         """
-        usage.skimage: 6
         usage.sample-usage: 1
+        usage.skimage: 6
         """
         ...
 
@@ -5860,30 +5860,30 @@ class ndarray:
 
     def __imul__(self, _0: object, /):
         """
-        usage.skimage: 39
-        usage.xarray: 4
         usage.pandas: 4
         usage.sample-usage: 1
+        usage.skimage: 39
         usage.sklearn: 178
+        usage.xarray: 4
         """
         ...
 
     def __invert__(self, /):
         """
-        usage.skimage: 26
-        usage.xarray: 9
         usage.pandas: 122
         usage.sample-usage: 1
+        usage.skimage: 26
         usage.sklearn: 84
+        usage.xarray: 9
         """
         ...
 
     def __ior__(self, _0: Union[int, numpy.ndarray, bool], /):
         """
-        usage.skimage: 3
-        usage.xarray: 1
         usage.pandas: 9
         usage.sample-usage: 1
+        usage.skimage: 3
+        usage.xarray: 1
         """
         ...
 
@@ -5903,29 +5903,29 @@ class ndarray:
 
     def __isub__(self, _0: object, /):
         """
-        usage.skimage: 42
-        usage.xarray: 1
         usage.pandas: 8
         usage.sample-usage: 1
+        usage.skimage: 42
         usage.sklearn: 142
+        usage.xarray: 1
         """
         ...
 
     def __iter__(self, /):
         """
-        usage.skimage: 134
-        usage.xarray: 92
         usage.pandas: 181
         usage.sample-usage: 2
+        usage.skimage: 134
         usage.sklearn: 254
+        usage.xarray: 92
         """
         ...
 
     def __itruediv__(self, _0: object, /):
         """
         usage.skimage: 38
-        usage.xarray: 3
         usage.sklearn: 153
+        usage.xarray: 3
         """
         ...
 
@@ -5937,11 +5937,11 @@ class ndarray:
 
     def __le__(self, _0: object, /):
         """
-        usage.skimage: 93
-        usage.xarray: 17
         usage.pandas: 134
         usage.sample-usage: 1
+        usage.skimage: 93
         usage.sklearn: 192
+        usage.xarray: 17
         """
         ...
 
@@ -5954,57 +5954,57 @@ class ndarray:
 
     def __lt__(self, _0: object, /):
         """
-        usage.skimage: 13
         usage.pandas: 48
+        usage.skimage: 13
         usage.sklearn: 17
         """
         ...
 
     def __matmul__(self, _0: object, /):
         """
-        usage.skimage: 48
         usage.sample-usage: 1
+        usage.skimage: 48
         usage.sklearn: 69
         """
         ...
 
     def __mod__(self, _0: object, /):
         """
-        usage.skimage: 5
-        usage.xarray: 3
         usage.pandas: 52
         usage.sample-usage: 1
+        usage.skimage: 5
         usage.sklearn: 16
+        usage.xarray: 3
         """
         ...
 
     def __mul__(self, _0: object, /):
         """
-        usage.skimage: 376
-        usage.xarray: 750
         usage.pandas: 256
         usage.sample-usage: 1
+        usage.skimage: 376
         usage.sklearn: 523
+        usage.xarray: 750
         """
         ...
 
     def __neg__(self, /):
         """
-        usage.skimage: 41
-        usage.xarray: 24
         usage.pandas: 25
         usage.sample-usage: 1
+        usage.skimage: 41
         usage.sklearn: 141
+        usage.xarray: 24
         """
         ...
 
     def __or__(self, _0: object, /):
         """
-        usage.skimage: 4
-        usage.xarray: 11
         usage.pandas: 61
         usage.sample-usage: 1
+        usage.skimage: 4
         usage.sklearn: 7
+        usage.xarray: 11
         """
         ...
 
@@ -6016,39 +6016,39 @@ class ndarray:
 
     def __pow__(self, _0: object, /):
         """
-        usage.skimage: 167
-        usage.xarray: 11
         usage.pandas: 63
         usage.sample-usage: 1
+        usage.skimage: 167
         usage.sklearn: 302
+        usage.xarray: 11
         """
         ...
 
     def __radd__(self, _0: object, /):
         """
-        usage.skimage: 239
-        usage.xarray: 52
         usage.pandas: 289
         usage.sample-usage: 2
+        usage.skimage: 239
         usage.sklearn: 639
+        usage.xarray: 52
         """
         ...
 
     def __rand__(self, _0: object, /):
         """
-        usage.skimage: 12
-        usage.xarray: 7
         usage.pandas: 88
         usage.sample-usage: 1
+        usage.skimage: 12
         usage.sklearn: 12
+        usage.xarray: 7
         """
         ...
 
     def __rfloordiv__(self, _0: object, /):
         """
-        usage.skimage: 2
         usage.pandas: 107
         usage.sample-usage: 1
+        usage.skimage: 2
         usage.sklearn: 1
         """
         ...
@@ -6062,37 +6062,37 @@ class ndarray:
 
     def __rmatmul__(self, _0: object, /):
         """
-        usage.skimage: 50
         usage.sample-usage: 1
+        usage.skimage: 50
         usage.sklearn: 69
         """
         ...
 
     def __rmul__(self, _0: object, /):
         """
-        usage.skimage: 530
-        usage.xarray: 74
         usage.pandas: 243
         usage.sample-usage: 2
+        usage.skimage: 530
         usage.sklearn: 936
+        usage.xarray: 74
         """
         ...
 
     def __ror__(self, _0: object, /):
         """
-        usage.skimage: 4
-        usage.xarray: 11
         usage.pandas: 61
         usage.sample-usage: 1
+        usage.skimage: 4
         usage.sklearn: 7
+        usage.xarray: 11
         """
         ...
 
     def __rpow__(self, _0: object, /):
         """
-        usage.skimage: 3
         usage.pandas: 50
         usage.sample-usage: 2
+        usage.skimage: 3
         usage.sklearn: 2
         """
         ...
@@ -6113,20 +6113,20 @@ class ndarray:
 
     def __rsub__(self, _0: object, /):
         """
-        usage.skimage: 222
-        usage.xarray: 48
         usage.pandas: 273
         usage.sample-usage: 1
+        usage.skimage: 222
         usage.sklearn: 986
+        usage.xarray: 48
         """
         ...
 
     def __rtruediv__(self, _0: object, /):
         """
-        usage.skimage: 83
-        usage.xarray: 1
         usage.pandas: 420
+        usage.skimage: 83
         usage.sklearn: 611
+        usage.xarray: 1
         """
         ...
 
@@ -6138,11 +6138,11 @@ class ndarray:
 
     def __setitem__(self, _0: object, _1: object, /):
         """
-        usage.skimage: 1348
-        usage.xarray: 178
         usage.pandas: 5607
         usage.sample-usage: 1
+        usage.skimage: 1348
         usage.sklearn: 1434
+        usage.xarray: 178
         """
         ...
 
@@ -6154,20 +6154,20 @@ class ndarray:
 
     def __sub__(self, _0: object, /):
         """
-        usage.skimage: 309
-        usage.xarray: 70
         usage.pandas: 228
         usage.sample-usage: 1
+        usage.skimage: 309
         usage.sklearn: 986
+        usage.xarray: 70
         """
         ...
 
     def __truediv__(self, _0: object, /):
         """
-        usage.skimage: 215
-        usage.xarray: 16
         usage.pandas: 420
+        usage.skimage: 215
         usage.sklearn: 611
+        usage.xarray: 16
         """
         ...
 
@@ -6179,37 +6179,37 @@ class ndarray:
 
     def all(self, /, *, axis: int = ...):
         """
-        usage.skimage: 28
-        usage.xarray: 45
         usage.pandas: 248
+        usage.skimage: 28
         usage.sklearn: 72
+        usage.xarray: 45
         """
         ...
 
     def any(self, /, *, axis: int = ...):
         """
-        usage.skimage: 15
-        usage.xarray: 10
         usage.pandas: 175
+        usage.skimage: 15
         usage.sklearn: 55
+        usage.xarray: 10
         """
         ...
 
     def argmax(self, /, *, axis: int = ...):
         """
-        usage.skimage: 7
-        usage.xarray: 2
         usage.pandas: 16
+        usage.skimage: 7
         usage.sklearn: 40
+        usage.xarray: 2
         """
         ...
 
     def argmin(self, /, *, axis: int = ...):
         """
-        usage.skimage: 2
-        usage.xarray: 2
         usage.pandas: 13
+        usage.skimage: 2
         usage.sklearn: 10
+        usage.xarray: 2
         """
         ...
 
@@ -6222,10 +6222,10 @@ class ndarray:
         order: None = ...,
     ):
         """
-        usage.skimage: 6
-        usage.xarray: 4
         usage.pandas: 79
+        usage.skimage: 6
         usage.sklearn: 16
+        usage.xarray: 4
         """
         ...
 
@@ -6239,11 +6239,11 @@ class ndarray:
         subok: bool = ...,
     ):
         """
-        usage.skimage: 469
-        usage.xarray: 481
         usage.pandas: 1453
         usage.sample-usage: 1
+        usage.skimage: 469
         usage.sklearn: 555
+        usage.xarray: 481
         """
         ...
 
@@ -6259,8 +6259,8 @@ class ndarray:
     ):
         """
         usage.skimage: 3
-        usage.xarray: 8
         usage.sklearn: 1
+        usage.xarray: 8
         """
         ...
 
@@ -6285,17 +6285,17 @@ class ndarray:
 
     def copy(self, /, *, order: Literal["F", "K"] = ...):
         """
-        usage.skimage: 93
-        usage.xarray: 17
         usage.pandas: 284
+        usage.skimage: 93
         usage.sklearn: 227
+        usage.xarray: 17
         """
         ...
 
     def cumsum(self, /, *, axis: int = ...):
         """
-        usage.skimage: 7
         usage.pandas: 6
+        usage.skimage: 7
         usage.sklearn: 6
         """
         ...
@@ -6309,35 +6309,35 @@ class ndarray:
 
     def fill(self, _0: object, /):
         """
-        usage.skimage: 5
         usage.pandas: 107
+        usage.skimage: 5
         usage.sklearn: 29
         """
         ...
 
     def flatten(self, /):
         """
-        usage.skimage: 16
-        usage.xarray: 5
         usage.pandas: 1
+        usage.skimage: 16
         usage.sklearn: 17
+        usage.xarray: 5
         """
         ...
 
     def item(self, /):
         """
-        usage.xarray: 24
         usage.pandas: 31
         usage.sklearn: 3
+        usage.xarray: 24
         """
         ...
 
     def max(self, /, *, axis: int = ...):
         """
-        usage.skimage: 126
-        usage.xarray: 16
         usage.pandas: 48
+        usage.skimage: 126
         usage.sklearn: 88
+        usage.xarray: 16
         """
         ...
 
@@ -6345,29 +6345,29 @@ class ndarray:
         self, /, *, axis: Union[int, Tuple[int, int, int]] = ..., keepdims: bool = ...
     ):
         """
-        usage.skimage: 47
-        usage.xarray: 6
         usage.pandas: 11
         usage.sample-usage: 2
+        usage.skimage: 47
         usage.sklearn: 250
+        usage.xarray: 6
         """
         ...
 
     def min(self, /, *, axis: int = ...):
         """
-        usage.skimage: 90
-        usage.xarray: 18
         usage.pandas: 48
+        usage.skimage: 90
         usage.sklearn: 82
+        usage.xarray: 18
         """
         ...
 
     def nonzero(self, /):
         """
-        usage.skimage: 4
-        usage.xarray: 4
         usage.pandas: 29
+        usage.skimage: 4
         usage.sklearn: 7
+        usage.xarray: 4
         """
         ...
 
@@ -6391,10 +6391,10 @@ class ndarray:
 
     def ravel(self, /, *, order: Literal["F", "K", "C"] = ...):
         """
-        usage.skimage: 97
-        usage.xarray: 47
         usage.pandas: 171
+        usage.skimage: 97
         usage.sklearn: 285
+        usage.xarray: 47
         """
         ...
 
@@ -6406,10 +6406,10 @@ class ndarray:
         axis: int = ...,
     ):
         """
-        usage.skimage: 2
-        usage.xarray: 1
         usage.pandas: 69
+        usage.skimage: 2
         usage.sklearn: 3
+        usage.xarray: 1
         """
         ...
 
@@ -6427,19 +6427,19 @@ class ndarray:
         order: Literal["F"] = ...,
     ):
         """
-        usage.skimage: 135
-        usage.xarray: 297
         usage.pandas: 373
         usage.sample-usage: 2
+        usage.skimage: 135
         usage.sklearn: 374
+        usage.xarray: 297
         """
         ...
 
     def round(self, /, *, decimals: int = ..., out: None = ...):
         """
-        usage.xarray: 6
         usage.pandas: 13
         usage.sklearn: 12
+        usage.xarray: 6
         """
         ...
 
@@ -6455,9 +6455,9 @@ class ndarray:
         sorter: Union[None, numpy.ndarray, range] = ...,
     ):
         """
-        usage.xarray: 21
         usage.pandas: 162
         usage.sklearn: 10
+        usage.xarray: 21
         """
         ...
 
@@ -6470,27 +6470,27 @@ class ndarray:
 
     def sort(self, /, *, order: Literal["accumulator"] = ..., axis: int = ...):
         """
-        usage.skimage: 9
         usage.pandas: 3
         usage.sample-usage: 2
+        usage.skimage: 9
         usage.sklearn: 7
         """
         ...
 
     def squeeze(self, /, *, axis: int = ...):
         """
-        usage.xarray: 9
         usage.pandas: 12
         usage.sklearn: 21
+        usage.xarray: 9
         """
         ...
 
     def std(self, /, *, axis: Union[int, Tuple[int, int]] = ..., ddof: int = ...):
         """
-        usage.skimage: 64
-        usage.xarray: 4
         usage.pandas: 8
+        usage.skimage: 64
         usage.sklearn: 36
+        usage.xarray: 4
         """
         ...
 
@@ -6503,17 +6503,17 @@ class ndarray:
         keepdims: bool = ...,
     ):
         """
-        usage.skimage: 100
-        usage.xarray: 15
         usage.pandas: 101
+        usage.skimage: 100
         usage.sklearn: 458
+        usage.xarray: 15
         """
         ...
 
     def swapaxes(self, _0: int, _1: int, /):
         """
-        usage.skimage: 2
         usage.pandas: 7
+        usage.skimage: 2
         usage.sklearn: 1
         """
         ...
@@ -6528,9 +6528,9 @@ class ndarray:
         out: numpy.ndarray = ...,
     ):
         """
-        usage.xarray: 6
         usage.pandas: 287
         usage.sklearn: 123
+        usage.xarray: 6
         """
         ...
 
@@ -6542,10 +6542,10 @@ class ndarray:
 
     def tolist(self, /):
         """
-        usage.skimage: 7
-        usage.xarray: 21
         usage.pandas: 44
+        usage.skimage: 7
         usage.sklearn: 54
+        usage.xarray: 21
         """
         ...
 
@@ -6557,27 +6557,27 @@ class ndarray:
         /,
     ):
         """
-        usage.skimage: 5
-        usage.xarray: 21
         usage.pandas: 33
+        usage.skimage: 5
         usage.sklearn: 12
+        usage.xarray: 21
         """
         ...
 
     def var(self, /, *, axis: int = ...):
         """
-        usage.skimage: 7
         usage.pandas: 2
+        usage.skimage: 7
         usage.sklearn: 7
         """
         ...
 
     def view(self, /, *, dtype: Union[str, type, numpy.dtype] = ...):
         """
-        usage.skimage: 27
-        usage.xarray: 11
         usage.pandas: 247
+        usage.skimage: 27
         usage.sklearn: 7
+        usage.xarray: 11
         """
         ...
 
@@ -6621,8 +6621,8 @@ class object_:
         self, _0: Union[numpy.ndarray, bytes, Literal["foobar", "", "XXX"]], /
     ):
         """
-        usage.xarray: 3
         usage.pandas: 2
+        usage.xarray: 3
         """
         ...
 
@@ -6665,8 +6665,8 @@ class str_:
     # usage.pandas: 2
     __name__: ClassVar[object]
 
-    # usage.xarray: 1
     # usage.pandas: 1
+    # usage.xarray: 1
     dtype: object
 
     def __add__(self, _0: Literal["%"], /):
@@ -6677,9 +6677,9 @@ class str_:
 
     def __eq__(self, _0: object, /):
         """
-        usage.xarray: 6
         usage.pandas: 33
         usage.sklearn: 26
+        usage.xarray: 6
         """
         ...
 
@@ -6705,16 +6705,16 @@ class str_:
 
     def __ne__(self, _0: Union[str, numpy.ndarray, numpy.str_], /):
         """
-        usage.xarray: 2
         usage.pandas: 10
         usage.sklearn: 9
+        usage.xarray: 2
         """
         ...
 
     def __radd__(self, _0: str, /):
         """
-        usage.xarray: 11
         usage.pandas: 1
+        usage.xarray: 11
         """
         ...
 
@@ -6745,12 +6745,12 @@ class str_:
 
 class timedelta64:
 
-    # usage.xarray: 1
     # usage.pandas: 7
+    # usage.xarray: 1
     __name__: ClassVar[object]
 
-    # usage.xarray: 7
     # usage.pandas: 5
+    # usage.xarray: 7
     dtype: object
 
     # usage.pandas: 1
@@ -6758,8 +6758,8 @@ class timedelta64:
 
     def __add__(self, _0: object, /):
         """
-        usage.xarray: 1
         usage.pandas: 59
+        usage.xarray: 1
         """
         ...
 
@@ -6767,8 +6767,8 @@ class timedelta64:
         self, _0: Union[numpy.timedelta64, pandas._libs.tslibs.timedeltas.Timedelta], /
     ):
         """
-        usage.xarray: 4
         usage.pandas: 65
+        usage.xarray: 4
         """
         ...
 
@@ -6834,8 +6834,8 @@ class timedelta64:
         /,
     ):
         """
-        usage.xarray: 1
         usage.pandas: 3
+        usage.xarray: 1
         """
         ...
 
@@ -6900,8 +6900,8 @@ class timedelta64:
 
     def __rmul__(self, _0: object, /):
         """
-        usage.xarray: 5
         usage.pandas: 20
+        usage.xarray: 5
         """
         ...
 
@@ -6922,15 +6922,15 @@ class timedelta64:
 
     def __rsub__(self, _0: object, /):
         """
-        usage.xarray: 1
         usage.pandas: 75
+        usage.xarray: 1
         """
         ...
 
     def __rtruediv__(self, _0: object, /):
         """
-        usage.xarray: 16
         usage.pandas: 36
+        usage.xarray: 16
         """
         ...
 
@@ -6942,8 +6942,8 @@ class timedelta64:
 
     def __truediv__(self, _0: object, /):
         """
-        usage.xarray: 3
         usage.pandas: 29
+        usage.xarray: 3
         """
         ...
 
@@ -6955,8 +6955,8 @@ class timedelta64:
         /,
     ):
         """
-        usage.xarray: 5
         usage.pandas: 15
+        usage.xarray: 5
         """
         ...
 
@@ -6980,11 +6980,11 @@ class ufunc:
         casting: Literal["no", "unsafe"] = ...,
     ):
         """
-        usage.skimage: 613
-        usage.xarray: 325
         usage.pandas: 1228
         usage.sample-usage: 3
+        usage.skimage: 613
         usage.sklearn: 1407
+        usage.xarray: 325
         """
         ...
 
@@ -7017,11 +7017,11 @@ class ufunc:
 
     def reduce(self, _0: object, /):
         """
-        usage.skimage: 6
-        usage.xarray: 1
         usage.pandas: 5
         usage.sample-usage: 1
+        usage.skimage: 6
         usage.sklearn: 8
+        usage.xarray: 1
         """
         ...
 
@@ -7043,15 +7043,15 @@ class uint16:
 
     def __add__(self, _0: object, /):
         """
-        usage.skimage: 1
         usage.pandas: 8
+        usage.skimage: 1
         """
         ...
 
     def __eq__(self, _0: object, /):
         """
-        usage.skimage: 9
         usage.pandas: 66
+        usage.skimage: 9
         """
         ...
 
@@ -7102,8 +7102,8 @@ class uint16:
 
     def __ne__(self, _0: numpy.uint16, /):
         """
-        usage.skimage: 2
         usage.pandas: 8
+        usage.skimage: 2
         """
         ...
 
@@ -7176,8 +7176,8 @@ class uint16:
 
     def astype(self, _0: Union[numpy.dtype, Type[numpy.int64]], /):
         """
-        usage.skimage: 2
         usage.pandas: 1
+        usage.skimage: 2
         """
         ...
 
@@ -7192,15 +7192,15 @@ class uint32:
 
     def __add__(self, _0: object, /):
         """
-        usage.skimage: 1
         usage.pandas: 8
+        usage.skimage: 1
         """
         ...
 
     def __eq__(self, _0: object, /):
         """
-        usage.skimage: 2
         usage.pandas: 66
+        usage.skimage: 2
         usage.sklearn: 1
         """
         ...
@@ -7368,8 +7368,8 @@ class uint64:
 
     def __eq__(self, _0: object, /):
         """
-        usage.skimage: 11
         usage.pandas: 84
+        usage.skimage: 11
         usage.sklearn: 7
         """
         ...
@@ -7384,15 +7384,15 @@ class uint64:
 
     def __ge__(self, _0: int, /):
         """
-        usage.skimage: 1
         usage.pandas: 1
+        usage.skimage: 1
         """
         ...
 
     def __gt__(self, _0: Union[numpy.uint64, numpy.float64], /):
         """
-        usage.skimage: 2
         usage.pandas: 2
+        usage.skimage: 2
         """
         ...
 
@@ -7410,8 +7410,8 @@ class uint64:
 
     def __lt__(self, _0: Union[numpy.uint64, int], /):
         """
-        usage.skimage: 1
         usage.pandas: 2
+        usage.skimage: 1
         """
         ...
 
@@ -7441,8 +7441,8 @@ class uint64:
 
     def __ne__(self, _0: Union[numpy.uint64, float, int], /):
         """
-        usage.skimage: 5
         usage.pandas: 9
+        usage.skimage: 5
         usage.sklearn: 4
         """
         ...
@@ -7471,8 +7471,8 @@ class uint64:
 
     def __rmul__(self, _0: Union[numpy.uint64, numpy.ndarray, float, int], /):
         """
-        usage.skimage: 2
         usage.pandas: 6
+        usage.skimage: 2
         """
         ...
 
@@ -7480,8 +7480,8 @@ class uint64:
         self, _0: Union[pandas.core.arrays.timedeltas.TimedeltaArray, numpy.ndarray], /
     ):
         """
-        usage.skimage: 1
         usage.pandas: 1
+        usage.skimage: 1
         """
         ...
 
@@ -7496,8 +7496,8 @@ class uint64:
         /,
     ):
         """
-        usage.skimage: 2
         usage.pandas: 5
+        usage.skimage: 2
         """
         ...
 
@@ -7525,8 +7525,8 @@ class uint64:
         /,
     ):
         """
-        usage.skimage: 1
         usage.pandas: 4
+        usage.skimage: 1
         """
         ...
 
@@ -7545,9 +7545,9 @@ class uint8:
     @classmethod
     def __ne__(cls, _0: Union[numpy.uint8, numpy.dtype], /):
         """
-        usage.sklearn: 2
-        usage.skimage: 2
         usage.pandas: 8
+        usage.skimage: 2
+        usage.sklearn: 2
         """
         ...
 
@@ -7556,17 +7556,17 @@ class uint8:
 
     def __add__(self, _0: object, /):
         """
-        usage.skimage: 8
         usage.pandas: 8
+        usage.skimage: 8
         """
         ...
 
     def __eq__(self, _0: object, /):
         """
-        usage.skimage: 14
-        usage.xarray: 3
         usage.pandas: 66
+        usage.skimage: 14
         usage.sklearn: 3
+        usage.xarray: 3
         """
         ...
 
@@ -7637,8 +7637,8 @@ class uint8:
         self, _0: Union[pandas.core.arrays.integer.IntegerArray, numpy.ndarray, int], /
     ):
         """
-        usage.skimage: 1
         usage.pandas: 2
+        usage.skimage: 1
         """
         ...
 
@@ -7646,8 +7646,8 @@ class uint8:
         self, _0: Union[numpy.uint8, pandas._libs.missing.NAType, numpy.float64], /
     ):
         """
-        usage.skimage: 2
         usage.pandas: 6
+        usage.skimage: 2
         """
         ...
 
@@ -7659,8 +7659,8 @@ class uint8:
 
     def __rmul__(self, _0: Union[numpy.ndarray, float], /):
         """
-        usage.skimage: 3
         usage.pandas: 1
+        usage.skimage: 3
         """
         ...
 
@@ -7676,8 +7676,8 @@ class uint8:
         /,
     ):
         """
-        usage.skimage: 7
         usage.pandas: 1
+        usage.skimage: 7
         """
         ...
 
@@ -7692,8 +7692,8 @@ class uint8:
         /,
     ):
         """
-        usage.skimage: 2
         usage.pandas: 5
+        usage.skimage: 2
         """
         ...
 
@@ -7708,8 +7708,8 @@ class uint8:
         /,
     ):
         """
-        usage.skimage: 5
         usage.pandas: 3
+        usage.skimage: 5
         """
         ...
 
@@ -7725,15 +7725,15 @@ class uint8:
         /,
     ):
         """
-        usage.skimage: 1
         usage.pandas: 4
+        usage.skimage: 1
         """
         ...
 
     def astype(self, _0: Union[numpy.dtype, Type[numpy.int64]], /):
         """
-        usage.skimage: 2
         usage.pandas: 1
+        usage.skimage: 2
         """
         ...
 
@@ -7753,8 +7753,8 @@ class ulonglong:
 
     def __eq__(self, _0: Union[numpy.uint64, int, numpy.int64], /):
         """
-        usage.skimage: 2
         usage.pandas: 84
+        usage.skimage: 2
         """
         ...
 
@@ -7774,8 +7774,8 @@ class vectorize:
         signature: str = ...,
     ):
         """
-        usage.xarray: 78
         usage.pandas: 4
+        usage.xarray: 78
         """
         ...
 
