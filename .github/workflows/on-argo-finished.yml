@@ -29,6 +29,21 @@ jobs:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - name: Save DigitalOcean kubeconfig
         run: doctl kubernetes cluster kubeconfig save python-record-api
+      - name: Cache pip
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            pip-
+
+      - name: Install flit
+        run: |
+          python -m pip install --upgrade pip
+          pip install flit
+
+      - name: Install package
+        run: flit install
       # Clone repo
       - name: Checkout master
         uses: actions/checkout@master
