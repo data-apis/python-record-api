@@ -2,6 +2,16 @@ from typing import *
 
 
 class SparseArray:
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
+    # usage.sklearn: 1
+    __name__: ClassVar[object]
+
+    # usage.sklearn: 1
+    __class__: object
+
     def __and__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 2

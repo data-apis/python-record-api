@@ -1,8 +1,9 @@
 from typing import *
 
 
-def average(a: numpy.ma.core.MaskedArray, weights: Union[numpy.ndarray, None]):
+def average(a: numpy.ma.core.MaskedArray, weights: Union[None, numpy.ndarray]):
     """
+    usage.dask: 1
     usage.sklearn: 8
     """
     ...
@@ -10,6 +11,7 @@ def average(a: numpy.ma.core.MaskedArray, weights: Union[numpy.ndarray, None]):
 
 def masked_all(shape: Tuple[int, ...]):
     """
+    usage.matplotlib: 1
     usage.pandas: 14
     """
     ...

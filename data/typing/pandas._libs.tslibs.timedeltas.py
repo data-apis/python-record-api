@@ -2,16 +2,47 @@ from typing import *
 
 
 class Timedelta:
-    def __add__(self, _0: Union[numpy.ndarray, numpy.float64, numpy.int64], /):
+    def __init__(self, /, value: Literal["1", "1 hours"], unit: Literal["ms"]):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
+    # usage.xarray: 1
+    __name__: ClassVar[object]
+
+    def __add__(
+        self,
+        _0: Union[
+            numpy.int64,
+            numpy.float64,
+            numpy.ndarray,
+            pandas._libs.tslibs.timestamps.Timestamp,
+        ],
+        /,
+    ):
         """
         usage.pandas: 17
+        usage.xarray: 2
         """
         ...
 
     def __eq__(
-        self, _0: Union[numpy.ndarray, numpy.float64, numpy.int64, numpy.timedelta64], /
+        self,
+        _0: Union[
+            pandas._libs.tslibs.timedeltas.Timedelta,
+            numpy.timedelta64,
+            numpy.int64,
+            numpy.float64,
+            numpy.ndarray,
+        ],
+        /,
     ):
         """
+        usage.dask: 6
         usage.pandas: 58
         """
         ...
@@ -28,9 +59,22 @@ class Timedelta:
         """
         ...
 
-    def __gt__(self, _0: numpy.ndarray, /):
+    def __ge__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
         """
+        usage.dask: 3
+        """
+        ...
+
+    def __gt__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
+        """
+        usage.dask: 2
         usage.pandas: 1
+        """
+        ...
+
+    def __le__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.dask: 3
         """
         ...
 
@@ -52,18 +96,9 @@ class Timedelta:
         """
         ...
 
-    def __radd__(
-        self,
-        _0: Union[
-            numpy.ndarray,
-            numpy.int64,
-            numpy.datetime64,
-            numpy.timedelta64,
-            numpy.float64,
-        ],
-        /,
-    ):
+    def __radd__(self, _0: object, /):
         """
+        usage.dask: 1
         usage.pandas: 8
         """
         ...
@@ -86,18 +121,9 @@ class Timedelta:
         """
         ...
 
-    def __rsub__(
-        self,
-        _0: Union[
-            numpy.ndarray,
-            numpy.float64,
-            numpy.timedelta64,
-            numpy.int64,
-            numpy.datetime64,
-        ],
-        /,
-    ):
+    def __rsub__(self, _0: object, /):
         """
+        usage.dask: 3
         usage.pandas: 10
         """
         ...
@@ -119,5 +145,23 @@ class Timedelta:
     def __truediv__(self, _0: object, /):
         """
         usage.pandas: 33
+        """
+        ...
+
+    def to_numpy(self, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    def to_timedelta64(self, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    def total_seconds(self, /):
+        """
+        usage.xarray: 1
         """
         ...

@@ -10,6 +10,10 @@ class StringArray:
 
 
 class StringDtype:
+
+    # usage.dask: 1
+    kind: object
+
     def __eq__(self, _0: numpy.dtype, /):
         """
         usage.pandas: 7

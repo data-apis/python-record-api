@@ -2,6 +2,13 @@ from typing import *
 
 
 class TimedeltaArray:
+
+    # usage.dask: 1
+    asi8: object
+
+    # usage.dask: 1
+    dtype: object
+
     def __add__(
         self,
         _0: Union[

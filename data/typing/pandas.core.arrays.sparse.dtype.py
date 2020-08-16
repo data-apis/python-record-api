@@ -2,8 +2,21 @@ from typing import *
 
 
 class SparseDtype:
-    def __eq__(self, _0: Union[numpy.dtype, Type[numpy.object_]], /):
+
+    # usage.dask: 1
+    # usage.sklearn: 1
+    kind: object
+
+    # usage.sklearn: 1
+    name: object
+
+    def __eq__(
+        self,
+        _0: Union[Literal["Sparse[uint8, 0]"], Type[numpy.object_], numpy.dtype],
+        /,
+    ):
         """
+        usage.dask: 2
         usage.pandas: 6
         """
         ...
