@@ -52,7 +52,7 @@ jobs:
         run: make k8-argo-default
       # Fetch file
       - name: Fetch file
-        run: env MC_HOST_ARTIFACT=${{ secrets.S3_HOST }} make WORKFLOW_NAME=${{ github.event.inputs.name }} download-workflow
+        run: env MC_HOST_artifact=${{ secrets.S3_HOST }} make WORKFLOW_NAME=${{ github.event.inputs.name }} download-workflow
         working-directory: ./k8
       # Push file
       - name: Create Pull Request
