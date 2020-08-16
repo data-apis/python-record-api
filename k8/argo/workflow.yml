@@ -53,7 +53,7 @@ spec:
             cpu: 1000m
           limits:
             memory: 8Gi
-            cpu: 4000m
+            cpu: 2000m
         volumeMounts:
           - name: data
             mountPath: /tmp/vol
