@@ -6,8 +6,20 @@ _rand: object
 
 
 class RandomState:
-    def beta(self, _0: float, _1: float, /, *, size: int):
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
+    def beta(
+        self,
+        _0: Union[int, float],
+        _1: Union[int, float],
+        /,
+        *,
+        size: Union[Tuple[int], int],
+    ):
         """
+        usage.dask: 1
         usage.pandas: 4
         """
         ...
@@ -15,52 +27,41 @@ class RandomState:
     def binomial(
         self,
         _0: int,
-        _1: Union[float, numpy.float64],
+        _1: Union[numpy.float64, float],
         /,
         *,
-        size: Union[Tuple[int, ...], int] = ...,
+        size: Union[int, Tuple[int, ...]] = ...,
     ):
         """
+        usage.dask: 1
         usage.sklearn: 11
         """
         ...
 
-    def chisquare(self, _0: int, _1: int, /):
+    def bytes(self, _0: int, /):
         """
+        usage.dask: 1
+        """
+        ...
+
+    def chisquare(self, _0: int, /, *, size: Tuple[int] = ...):
+        """
+        usage.dask: 1
         usage.sklearn: 2
         """
         ...
 
     def choice(
         self,
-        _0: Union[
-            List[
-                Union[
-                    Callable,
-                    int,
-                    bool,
-                    str,
-                    Dict[
-                        str,
-                        Union[
-                            scipy.stats._distn_infrastructure.rv_frozen,
-                            List[Union[int, str]],
-                        ],
-                    ],
-                ]
-            ],
-            int,
-            numpy.ndarray,
-            range,
-            pandas.core.indexes.datetimes.DatetimeIndex,
-        ],
+        _0: object,
         /,
         *,
         replace: bool = ...,
-        size: Union[numpy.int64, int, List[int], Tuple[int, int]] = ...,
-        p: Union[numpy.ndarray, List[Union[float, int]], None] = ...,
+        size: Union[numpy.int64, int, List[int], Tuple[Union[None, int], ...]] = ...,
+        p: Union[numpy.ndarray, List[Union[int, float]], None] = ...,
     ):
         """
+        usage.dask: 32
         usage.pandas: 36
         usage.skimage: 8
         usage.sklearn: 23
@@ -68,24 +69,38 @@ class RandomState:
         """
         ...
 
-    def exponential(self, /, *, size: int):
+    def exponential(self, /, *, size: Union[int, Tuple[int, ...]]):
         """
+        usage.dask: 2
         usage.sklearn: 1
+        """
+        ...
+
+    def f(self, _0: int, _1: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
         """
         ...
 
     def gamma(
         self,
         _0: Union[int, float],
-        _1: Union[float, numpy.float64] = ...,
+        _1: Union[float, numpy.float64, int] = ...,
         _2: Tuple[int, int] = ...,
         /,
         *,
-        size: int = ...,
+        size: Union[int, Tuple[int]] = ...,
     ):
         """
+        usage.dask: 1
         usage.skimage: 2
         usage.sklearn: 3
+        """
+        ...
+
+    def geometric(self, _0: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -95,17 +110,65 @@ class RandomState:
         """
         ...
 
+    def gumbel(self, _0: int, _1: float, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def hypergeometric(self, _0: int, _1: int, _2: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def laplace(self, _0: float, _1: float, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def logistic(self, _0: float, _1: float, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def lognormal(
-        self, _0: float = ..., _1: float = ..., _2: int = ..., /, *, size: int = ...
+        self,
+        _0: float = ...,
+        _1: float = ...,
+        _2: int = ...,
+        /,
+        *,
+        mean: float = ...,
+        sigma: float = ...,
+        size: Union[int, Tuple[int, ...]] = ...,
     ):
         """
+        usage.dask: 1
+        usage.matplotlib: 1
         usage.pandas: 1
         usage.sklearn: 3
         """
         ...
 
-    def multinomial(self, _0: int, _1: numpy.ndarray, /, *, size: int = ...):
+    def logseries(self, _0: float, /, *, size: Tuple[int]):
         """
+        usage.dask: 1
+        """
+        ...
+
+    def multinomial(
+        self,
+        _0: int,
+        _1: Union[numpy.ndarray, List[float]],
+        /,
+        *,
+        size: Union[int, Tuple[int, ...]] = ...,
+    ):
+        """
+        usage.dask: 4
         usage.sklearn: 6
         """
         ...
@@ -118,22 +181,50 @@ class RandomState:
         """
         ...
 
+    def negative_binomial(self, _0: int, _1: float, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def noncentral_chisquare(self, _0: int, _1: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def noncentral_f(self, _0: int, _1: int, _2: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def normal(
         self,
-        _0: Union[numpy.ndarray, int, float] = ...,
-        _1: Union[int, float, numpy.ndarray] = ...,
+        _0: object = ...,
+        _1: Union[
+            int, float, numpy.ndarray, numpy.float64, dask.array.core.Array
+        ] = ...,
         _2: Union[int, Tuple[int, int]] = ...,
         /,
         *,
-        size: Union[int, Tuple[Union[int, numpy.int64], ...]] = ...,
+        size: Union[int, Tuple[Union[None, int, numpy.int64], ...]] = ...,
         scale: Union[int, numpy.ndarray, float, numpy.int64, numpy.float64] = ...,
         loc: Union[float, numpy.ndarray, int] = ...,
     ):
         """
+        usage.dask: 23
+        usage.matplotlib: 25
         usage.pandas: 7
         usage.skimage: 32
         usage.sklearn: 141
         usage.xarray: 3
+        """
+        ...
+
+    def pareto(self, _0: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -145,16 +236,26 @@ class RandomState:
         /,
     ):
         """
+        usage.dask: 4
         usage.pandas: 17
         usage.skimage: 1
         usage.sklearn: 39
         """
         ...
 
-    def poisson(self, /, *, lam: numpy.ndarray = ..., size: int = ...):
+    def poisson(
+        self, /, *, size: Union[int, Tuple[int, ...]] = ..., lam: numpy.ndarray = ...
+    ):
         """
+        usage.dask: 3
         usage.skimage: 2
         usage.sklearn: 6
+        """
+        ...
+
+    def power(self, _0: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -168,6 +269,8 @@ class RandomState:
         /,
     ):
         """
+        usage.dask: 30
+        usage.matplotlib: 39
         usage.pandas: 110
         usage.skimage: 85
         usage.sklearn: 269
@@ -177,17 +280,19 @@ class RandomState:
 
     def randint(
         self,
-        _0: Union[numpy.float64, int, float] = ...,
+        _0: Union[numpy.float64, int, float, numpy.int64] = ...,
         _1: int = ...,
-        _2: Union[numpy.int64, int, List[int], Tuple[int, ...]] = ...,
+        _2: Union[numpy.int64, int, numpy.ndarray, List[int], Tuple[int, ...]] = ...,
         /,
         *,
-        dtype: Union[Literal["u8", "int64"], type] = ...,
-        size: Union[numpy.int64, int, Tuple[int, ...], List[int]] = ...,
+        dtype: Union[Literal["u8", "l", "uint8", "int64"], type] = ...,
+        size: Union[numpy.int64, int, Tuple[Union[None, int], ...], List[int]] = ...,
         high: int = ...,
         low: int = ...,
     ):
         """
+        usage.dask: 133
+        usage.matplotlib: 3
         usage.pandas: 160
         usage.skimage: 24
         usage.sklearn: 213
@@ -205,6 +310,8 @@ class RandomState:
         /,
     ):
         """
+        usage.dask: 88
+        usage.matplotlib: 17
         usage.pandas: 749
         usage.skimage: 46
         usage.sklearn: 419
@@ -212,8 +319,10 @@ class RandomState:
         """
         ...
 
-    def random(self, /, *, size: Tuple[int, ...] = ...):
+    def random(self, /, *, size: Union[int, Tuple[int, ...]] = ...):
         """
+        usage.dask: 157
+        usage.matplotlib: 24
         usage.pandas: 35
         usage.sample-usage: 1
         usage.skimage: 29
@@ -224,6 +333,8 @@ class RandomState:
 
     def random_sample(self, /, *, size: Tuple[int, ...] = ...):
         """
+        usage.dask: 5
+        usage.matplotlib: 1
         usage.pandas: 4
         usage.skimage: 1
         usage.sklearn: 156
@@ -231,8 +342,16 @@ class RandomState:
         """
         ...
 
+    def rayleigh(self, _0: float, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def seed(self, /, *, seed: int = ...):
         """
+        usage.dask: 15
+        usage.matplotlib: 83
         usage.pandas: 21
         usage.skimage: 25
         """
@@ -246,18 +365,54 @@ class RandomState:
         """
         ...
 
-    def shuffle(self, _0: numpy.ndarray, /):
+    def shuffle(self, _0: Union[numpy.ndarray, List[int]], /):
         """
+        usage.dask: 10
+        usage.matplotlib: 1
         usage.pandas: 3
         usage.sklearn: 26
         usage.xarray: 2
         """
         ...
 
-    def standard_normal(self, _0: Tuple[int, ...], /):
+    def standard_cauchy(self, /, *, size: Tuple[int]):
         """
+        usage.dask: 1
+        """
+        ...
+
+    def standard_exponential(self, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def standard_gamma(self, _0: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def standard_normal(
+        self, /, *, size: Tuple[int, ...] = ..., dtype: Literal["float64"] = ...
+    ):
+        """
+        usage.dask: 3
+        usage.matplotlib: 20
         usage.skimage: 10
         usage.sklearn: 2
+        """
+        ...
+
+    def standard_t(self, _0: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def triangular(self, _0: int, _1: int, _2: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -273,9 +428,35 @@ class RandomState:
         low: Union[float, int] = ...,
     ):
         """
+        usage.dask: 9
+        usage.matplotlib: 3
         usage.pandas: 6
         usage.skimage: 29
         usage.sklearn: 84
         usage.xarray: 1
+        """
+        ...
+
+    def vonmises(self, _0: int, _1: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def wald(self, _0: int, _1: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def weibull(self, _0: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def zipf(self, _0: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
         """
         ...

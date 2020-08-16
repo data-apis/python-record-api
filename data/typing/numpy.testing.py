@@ -1,5 +1,6 @@
 from typing import *
 
+# usage.matplotlib: 6
 # usage.skimage: 10
 # usage.sklearn: 6
 assert_allclose: object

@@ -2,6 +2,13 @@ from typing import *
 
 
 class DatetimeArray:
+
+    # usage.dask: 1
+    asi8: object
+
+    # usage.dask: 1
+    dtype: object
+
     def __add__(self, _0: Union[numpy.datetime64, numpy.timedelta64, numpy.ndarray], /):
         """
         usage.pandas: 17

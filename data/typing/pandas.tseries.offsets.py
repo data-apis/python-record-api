@@ -58,15 +58,31 @@ class BYearEnd:
 
 
 class BusinessDay:
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
     def __mul__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 1
         """
         ...
 
+    def __radd__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __rmul__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 1
+        """
+        ...
+
+    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -218,17 +234,57 @@ class DateOffset:
         """
         ...
 
+    def is_anchored(self, /):
+        """
+        usage.dask: 3
+        """
+        ...
+
 
 class Day:
+    def __init__(self, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
+    def __eq__(self, _0: Union[None, pandas.tseries.offsets.Day], /):
+        """
+        usage.dask: 9
+        """
+        ...
+
     def __mul__(self, _0: Union[numpy.ndarray, numpy.int64], /):
         """
         usage.pandas: 3
         """
         ...
 
+    def __radd__(
+        self,
+        _0: Union[
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas._libs.tslibs.timestamps.Timestamp,
+        ],
+        /,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
     def __rmul__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 1
+        """
+        ...
+
+    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -300,15 +356,38 @@ class FY5253Quarter:
 
 
 class Hour:
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
     def __mul__(self, _0: Union[numpy.ndarray, numpy.int64], /):
         """
         usage.pandas: 2
         """
         ...
 
+    def __radd__(
+        self,
+        _0: Union[
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas._libs.tslibs.timestamps.Timestamp,
+        ],
+        /,
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
     def __rmul__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 2
+        """
+        ...
+
+    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -398,6 +477,10 @@ class Milli:
 
 
 class Minute:
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
     def __add__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 3
@@ -407,6 +490,12 @@ class Minute:
     def __mul__(self, _0: Union[numpy.ndarray, numpy.int64], /):
         """
         usage.pandas: 2
+        """
+        ...
+
+    def __radd__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -450,9 +539,26 @@ class MonthBegin:
 
 
 class MonthEnd:
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
     def __mul__(self, _0: Union[numpy.ndarray, numpy.int64], /):
         """
         usage.pandas: 3
+        """
+        ...
+
+    def __radd__(
+        self,
+        _0: Union[
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas._libs.tslibs.timestamps.Timestamp,
+        ],
+        /,
+    ):
+        """
+        usage.dask: 2
         """
         ...
 
@@ -462,11 +568,30 @@ class MonthEnd:
         """
         ...
 
+    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
 
 class Nano:
     def __mul__(self, _0: Union[numpy.ndarray, numpy.int64], /):
         """
         usage.pandas: 2
+        """
+        ...
+
+    def __radd__(
+        self,
+        _0: Union[
+            pandas._libs.tslibs.timestamps.Timestamp,
+            pandas.core.indexes.datetimes.DatetimeIndex,
+        ],
+        /,
+    ):
+        """
+        usage.dask: 2
         """
         ...
 
@@ -504,9 +629,19 @@ class QuarterBegin:
 
 
 class QuarterEnd:
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
     def __mul__(self, _0: Union[numpy.ndarray, numpy.int64], /):
         """
         usage.pandas: 2
+        """
+        ...
+
+    def __radd__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -518,6 +653,10 @@ class QuarterEnd:
 
 
 class Second:
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
     def __add__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 3
@@ -583,16 +722,53 @@ class SemiMonthEnd:
         ...
 
 
+class Tick:
+    def is_anchored(self, /):
+        """
+        usage.dask: 6
+        """
+        ...
+
+
 class Week:
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
     def __mul__(self, _0: Union[numpy.ndarray, numpy.int64], /):
         """
         usage.pandas: 2
         """
         ...
 
+    def __radd__(
+        self,
+        _0: Union[
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas._libs.tslibs.timestamps.Timestamp,
+        ],
+        /,
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
     def __rmul__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 1
+        """
+        ...
+
+    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def is_anchored(self, /):
+        """
+        usage.dask: 2
         """
         ...
 

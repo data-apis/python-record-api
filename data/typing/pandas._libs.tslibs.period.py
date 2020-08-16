@@ -8,15 +8,31 @@ class Period:
         """
         ...
 
-    def __eq__(self, _0: numpy.ndarray, /):
+    def __eq__(
+        self,
+        _0: Union[
+            pandas._libs.tslibs.period.Period,
+            xarray.core.variable.Variable,
+            numpy.ndarray,
+        ],
+        /,
+    ):
         """
-        usage.xarray: 1
+        usage.dask: 2
+        usage.xarray: 2
         """
         ...
 
-    def __ge__(self, _0: numpy.ndarray, /):
+    def __ge__(self, _0: Union[pandas._libs.tslibs.period.Period, numpy.ndarray], /):
         """
+        usage.dask: 3
         usage.pandas: 1
+        """
+        ...
+
+    def __le__(self, _0: pandas._libs.tslibs.period.Period, /):
+        """
+        usage.dask: 3
         """
         ...
 

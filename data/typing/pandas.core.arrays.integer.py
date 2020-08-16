@@ -2,6 +2,13 @@ from typing import *
 
 
 class Int16Dtype:
+
+    # usage.sklearn: 1
+    kind: object
+
+    # usage.sklearn: 1
+    name: object
+
     def __eq__(self, _0: Union[Type[numpy.object_], numpy.dtype], /):
         """
         usage.pandas: 9
@@ -16,6 +23,12 @@ class Int16Dtype:
 
 
 class Int32Dtype:
+    def __init__(self, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __eq__(self, _0: Union[Type[numpy.object_], numpy.dtype], /):
         """
         usage.pandas: 9
@@ -30,6 +43,16 @@ class Int32Dtype:
 
 
 class Int64Dtype:
+    @classmethod
+    def is_dtype(cls, /, dtype: pandas.core.series.Series):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    # usage.dask: 1
+    kind: object
+
     def __eq__(self, _0: Union[numpy.dtype, Type[numpy.object_]], /):
         """
         usage.pandas: 9
@@ -44,6 +67,13 @@ class Int64Dtype:
 
 
 class Int8Dtype:
+
+    # usage.sklearn: 1
+    kind: object
+
+    # usage.sklearn: 1
+    name: object
+
     def __eq__(self, _0: Union[Type[numpy.object_], numpy.dtype], /):
         """
         usage.pandas: 9
@@ -58,6 +88,10 @@ class Int8Dtype:
 
 
 class IntegerArray:
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
     def __add__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 2
@@ -114,6 +148,13 @@ class IntegerArray:
 
 
 class UInt16Dtype:
+
+    # usage.sklearn: 1
+    kind: object
+
+    # usage.sklearn: 1
+    name: object
+
     def __eq__(self, _0: Union[Type[numpy.object_], numpy.dtype], /):
         """
         usage.pandas: 9
@@ -156,6 +197,13 @@ class UInt64Dtype:
 
 
 class UInt8Dtype:
+
+    # usage.sklearn: 1
+    kind: object
+
+    # usage.sklearn: 1
+    name: object
+
     def __eq__(self, _0: Union[Type[numpy.object_], numpy.dtype], /):
         """
         usage.pandas: 9

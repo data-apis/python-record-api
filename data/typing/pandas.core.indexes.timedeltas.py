@@ -1,10 +1,65 @@
 from typing import *
 
 
+def timedelta_range(
+    start: Union[Literal["1 day", "1 days"], numpy.timedelta64, int], periods: int
+):
+    """
+    usage.dask: 9
+    usage.xarray: 1
+    """
+    ...
+
+
 class TimedeltaIndex:
-    def __add__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /):
+    def __init__(
+        self, /, data: List[numpy.timedelta64], name: Literal["timedelta", "foo"]
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    # usage.dask: 1
+    __module__: ClassVar[object]
+
+    # usage.dask: 2
+    __name__: ClassVar[object]
+
+    # usage.dask: 1
+    array: object
+
+    # usage.dask: 3
+    # usage.xarray: 6
+    dtype: object
+
+    # usage.dask: 3
+    freq: object
+
+    # usage.dask: 9
+    # usage.xarray: 1
+    name: object
+
+    # usage.dask: 1
+    names: object
+
+    # usage.xarray: 4
+    values: object
+
+    def __add__(
+        self,
+        _0: Union[
+            numpy.datetime64,
+            numpy.timedelta64,
+            numpy.ndarray,
+            pandas._libs.tslibs.timestamps.Timestamp,
+            xarray.coding.cftimeindex.CFTimeIndex,
+        ],
+        /,
+    ):
         """
         usage.pandas: 22
+        usage.xarray: 2
         """
         ...
 
@@ -23,6 +78,13 @@ class TimedeltaIndex:
     def __ge__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 1
+        """
+        ...
+
+    def __getitem__(self, _0: Union[int, numpy.ndarray, slice[int, int, int]], /):
+        """
+        usage.dask: 5
+        usage.xarray: 4
         """
         ...
 
@@ -81,10 +143,19 @@ class TimedeltaIndex:
         ...
 
     def __radd__(
-        self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /
+        self,
+        _0: Union[
+            numpy.timedelta64,
+            numpy.datetime64,
+            numpy.ndarray,
+            xarray.coding.cftimeindex.CFTimeIndex,
+            pandas._libs.tslibs.timestamps.Timestamp,
+        ],
+        /,
     ):
         """
         usage.pandas: 18
+        usage.xarray: 2
         """
         ...
 
@@ -113,10 +184,18 @@ class TimedeltaIndex:
         ...
 
     def __rsub__(
-        self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /
+        self,
+        _0: Union[
+            numpy.timedelta64,
+            numpy.datetime64,
+            numpy.ndarray,
+            xarray.coding.cftimeindex.CFTimeIndex,
+        ],
+        /,
     ):
         """
         usage.pandas: 16
+        usage.xarray: 1
         """
         ...
 
@@ -136,5 +215,46 @@ class TimedeltaIndex:
         """
         usage.pandas: 21
         usage.xarray: 2
+        """
+        ...
+
+    def copy(self, /, deep: bool):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    def equals(self, /, other: pandas.core.indexes.timedeltas.TimedeltaIndex):
+        """
+        usage.xarray: 4
+        """
+        ...
+
+    def get_indexer(self, /, target: numpy.ndarray, method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    def get_loc(
+        self,
+        /,
+        key: pandas._libs.tslibs.timedeltas.Timedelta,
+        method: None,
+        tolerance: None,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    def shift(
+        self,
+        /,
+        periods: int,
+        freq: Union[None, Literal["S"], pandas._libs.tslibs.timedeltas.Timedelta],
+    ):
+        """
+        usage.dask: 8
         """
         ...

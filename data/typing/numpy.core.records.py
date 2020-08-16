@@ -12,3 +12,26 @@ def fromarrays(
     usage.pandas: 9
     """
     ...
+
+
+def fromrecords(
+    recList: List[
+        List[
+            Union[
+                Literal[
+                    "2014-01-11T00:00:00",
+                    "1976-03-05T00:00:01",
+                    "1983-07-09T17:17:34",
+                    "2054-06-20T14:31:45",
+                    "2000-10-31T11:50:23",
+                ],
+                int,
+            ]
+        ]
+    ],
+    names: List[Literal["c", "b", "a"]],
+):
+    """
+    usage.matplotlib: 2
+    """
+    ...
