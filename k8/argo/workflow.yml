@@ -49,11 +49,11 @@ spec:
         # Must override or get defaults which are too low
         resources:
           requests:
-            memory: 3Gi
+            memory: 6Gi
             cpu: 1000m
           limits:
             memory: 8Gi
-            cpu: 2000m
+            cpu: 4000m
         volumeMounts:
           - name: data
             mountPath: /tmp/vol
