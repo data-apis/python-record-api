@@ -1939,8 +1939,8 @@ zetac: numpy.ufunc
 def all(
     a: object = ...,
     axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
-    out: Union[numpy.ndarray, object, None] = ...,
     keepdims: bool = ...,
+    out: Union[numpy.ndarray, object, None] = ...,
     *,
     computing_meta: bool = ...,
 ):
@@ -1960,8 +1960,8 @@ def allclose(
     a: object,
     b: object,
     rtol: Union[int, float] = ...,
-    atol: Union[float, int, numpy.float64] = ...,
     equal_nan: bool = ...,
+    atol: Union[float, int, numpy.float64] = ...,
 ):
     """
     usage.dask: 84
@@ -1986,8 +1986,8 @@ def alltrue(*args: Literal["v", "t"]):
 def amax(
     a: object = ...,
     axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
-    out: Union[dask.dataframe.core.Series, dask.dataframe.core.Scalar, int] = ...,
     keepdims: Union[bool, int] = ...,
+    out: Union[dask.dataframe.core.Series, dask.dataframe.core.Scalar, int] = ...,
     *,
     computing_meta: bool = ...,
 ):
@@ -2006,8 +2006,8 @@ def amax(
 def amin(
     a: object = ...,
     axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
-    out: Union[dask.dataframe.core.Series, dask.dataframe.core.Scalar, int] = ...,
     keepdims: Union[bool, int] = ...,
+    out: Union[dask.dataframe.core.Series, dask.dataframe.core.Scalar, int] = ...,
     *,
     computing_meta: bool = ...,
 ):
@@ -2037,8 +2037,8 @@ def angle(z: object):
 def any(
     a: object = ...,
     axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
-    out: Union[bool, object, None] = ...,
     keepdims: bool = ...,
+    out: Union[bool, object, None] = ...,
     *,
     computing_meta: bool = ...,
 ):
@@ -2682,8 +2682,8 @@ def cross(a: numpy.ndarray, b: numpy.ndarray):
 def cumprod(
     a: object,
     axis: Union[None, int] = ...,
-    out: Union[dask.dataframe.core.DataFrame, dask.array.core.Array] = ...,
     dtype: None = ...,
+    out: Union[dask.dataframe.core.DataFrame, dask.array.core.Array] = ...,
 ):
     """
     usage.dask: 14
@@ -2706,13 +2706,13 @@ def cumproduct(*args: Literal["v", "t"]):
 def cumsum(
     a: object,
     axis: Union[None, int] = ...,
+    dtype: Union[type, None, numpy.dtype] = ...,
     out: Union[
         numpy.ndarray,
         pandas.core.arrays.sparse.array.SparseArray,
         dask.dataframe.core.DataFrame,
         dask.array.core.Array,
     ] = ...,
-    dtype: Union[type, None, numpy.dtype] = ...,
 ):
     """
     usage.dask: 41
@@ -3657,8 +3657,8 @@ def linspace(
     stop: Union[numpy.float64, float, int, numpy.int64, numpy.float32],
     num: object = ...,
     endpoint: Union[bool, int] = ...,
-    dtype: Union[type, numpy.dtype, Literal["int64"]] = ...,
     retstep: bool = ...,
+    dtype: Union[type, numpy.dtype, Literal["int64"]] = ...,
 ):
     """
     usage.dask: 26
@@ -3718,11 +3718,11 @@ def may_share_memory(_0: object, _1: object, /):
 def mean(
     a: object,
     axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
+    dtype: Union[type, None, Literal["float32", "i8", "f8"]] = ...,
     keepdims: bool = ...,
     out: Union[
         dask.dataframe.core.Series, dask.dataframe.core.Scalar, numpy.float64
     ] = ...,
-    dtype: Union[type, None, Literal["float32", "i8", "f8"]] = ...,
 ):
     """
     usage.dask: 78
@@ -3739,8 +3739,8 @@ def mean(
 def median(
     a: object,
     axis: Union[int, Tuple[int, ...], None, List[int]] = ...,
-    overwrite_input: bool = ...,
     keepdims: bool = ...,
+    overwrite_input: bool = ...,
 ):
     """
     usage.dask: 18
@@ -3882,8 +3882,8 @@ def nanmax(
 def nanmean(
     a: object,
     axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
-    keepdims: bool = ...,
     dtype: Union[None, type] = ...,
+    keepdims: bool = ...,
 ):
     """
     usage.dask: 11
@@ -4000,9 +4000,9 @@ def nansum(
 def nanvar(
     a: object,
     axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
-    keepdims: bool = ...,
     dtype: Union[type, None] = ...,
     ddof: int = ...,
+    keepdims: bool = ...,
 ):
     """
     usage.dask: 11
@@ -4248,8 +4248,8 @@ def prod(
     a: object,
     axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
     dtype: Union[type, Literal["i8", "f8", "i4", "f4"]] = ...,
-    out: Union[dask.dataframe.core.Scalar, dask.dataframe.core.Series] = ...,
     keepdims: bool = ...,
+    out: Union[dask.dataframe.core.Scalar, dask.dataframe.core.Series] = ...,
 ):
     """
     usage.dask: 100
@@ -4922,6 +4922,8 @@ def std(
 def sum(
     a: object,
     axis: Union[None, int, Tuple[Union[None, int], ...]] = ...,
+    dtype: Union[type, None, numpy.dtype, Literal["f8", "i8", "i4", "f4", "u4"]] = ...,
+    keepdims: bool = ...,
     out: Union[
         numpy.ndarray,
         numpy.float64,
@@ -4929,8 +4931,6 @@ def sum(
         dask.array.core.Array,
         dask.dataframe.core.Series,
     ] = ...,
-    dtype: Union[type, None, numpy.dtype, Literal["f8", "i8", "i4", "f4", "u4"]] = ...,
-    keepdims: bool = ...,
 ):
     """
     usage.dask: 216

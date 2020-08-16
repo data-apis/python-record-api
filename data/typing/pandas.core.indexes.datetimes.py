@@ -3,8 +3,8 @@ from typing import *
 
 def date_range(
     start: Union[pandas._libs.tslibs.timestamps.Timestamp, int, str],
-    periods: int = ...,
     end: Union[pandas._libs.tslibs.timestamps.Timestamp, str] = ...,
+    periods: int = ...,
     freq: object = ...,
     tz: object = ...,
     name: Union[None, str] = ...,

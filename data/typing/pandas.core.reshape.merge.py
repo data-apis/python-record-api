@@ -40,10 +40,10 @@ def merge(
 def merge_asof(
     left: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame],
     right: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame],
-    left_on: Literal["a"] = ...,
+    left_index: bool = ...,
     on: Literal["time", "a"] = ...,
     by: Literal["ticker"] = ...,
-    left_index: bool = ...,
+    left_on: Literal["a"] = ...,
     right_index: bool = ...,
     left_by: Union[Literal["ticker"], None] = ...,
     right_by: Union[Literal["ticker"], None] = ...,
