@@ -2,6 +2,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 spec:
+  imagePullSecrets:
+    - name: registry-python-record-api
   podGC:
     strategy: OnWorkflowSuccess
   entrypoint: all
@@ -33,6 +35,8 @@ spec:
             template: groupby-lines
         - - name: infer-api
             template: infer-api
+        - - name: trigger-github-action
+            template: trigger-github-action
     - name: record-api
       container:
         image: "{{workflow.parameters.image}}"
@@ -45,7 +49,7 @@ spec:
         # Must override or get defaults which are too low
         resources:
           requests:
-            memory: 4Gi
+            memory: 3Gi
             cpu: 1000m
           limits:
             memory: 8Gi
@@ -77,6 +81,7 @@ spec:
         artifacts:
           - name: api
             path: /tmp/api.json
+            globalName: 'api'
       container:
         image: "{{workflow.parameters.base-image}}"
         command: [python, -m, record_api.infer_apis]
@@ -99,3 +104,24 @@ spec:
         volumeMounts:
           - name: data
             mountPath: /tmp/vol
+    - name: trigger-github-action
+      container:
+        image: "curlimages/curl"
+        args:
+          - -X
+          - POST
+          - -H
+          - "Accept: application/vnd.github.v3+json"
+          - -H
+          - "Authorization: token $(GITHUB_TOKEN)"
+          - "https://api.github.com/repos/data-apis/python-record-api/actions/workflows/1946357/dispatches"
+          - -d
+          - '{"ref": "master", "inputs": {"name": "{{workflow.name}}" }}'
+          - --verbose
+        env:
+          - name: GITHUB_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: github
+                key: token
+                optional: false

@@ -29,10 +29,6 @@ jobs:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - name: Save DigitalOcean kubeconfig
         run: doctl kubernetes cluster kubeconfig save python-record-api
-
-      # Get access to minio
-      - name: Login to minio
-        run: mc config host add argo-artifacts-local http://167.172.2.91:9000 AKIAIOSFODNN7EXAMPLE wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY --api S3v4
       # Clone repo
       - name: Checkout master
         uses: actions/checkout@master
@@ -41,7 +37,7 @@ jobs:
         run: make k8-argo-default
       # Fetch file
       - name: Fetch file
-        run: make WORKFLOW_NAME=${{ github.event.inputs.name }} download-workflow
+        run: env MC_HOST_ARTIFACT=${{ secrets.S3_HOST }} make WORKFLOW_NAME=${{ github.event.inputs.name }} download-workflow
         working-directory: ./k8
       # Push file
       - name: Create Pull Request
@@ -54,4 +50,4 @@ jobs:
           branch: bot-${{ github.event.inputs.name }}
           body: |
             Pull API generatd by Argo Workflow
-            [`${{ github.event.inputs.name }}`](http://161.35.253.136:2746/workflows/argo/${{ github.event.inputs.name }})
+            [`${{ github.event.inputs.name }}`](http://167.172.14.45:2746/workflows/argo/${{ github.event.inputs.name }})
