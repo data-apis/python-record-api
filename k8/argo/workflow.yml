@@ -2,9 +2,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 spec:
+  imagePullSecrets:
+    - name: registry-python-record-api
   podGC:
     strategy: OnWorkflowSuccess
   entrypoint: all
+  # Use volume to store temp full output, otherwise run out of ephemeral
+  # storage
+  # https://argoproj.github.io/argo/examples/#volumes
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 100Gi
   arguments:
     parameters:
       - name: label
@@ -20,56 +33,39 @@ spec:
             template: record-api
         - - name: groupby-lines
             template: groupby-lines
-            arguments:
-              artifacts:
-                - name: raw
-                  from: "{{steps.record-api.outputs.artifacts.raw}}"
         - - name: infer-api
             template: infer-api
-            arguments:
-              artifacts:
-                - name: grouped
-                  from: "{{steps.groupby-lines.outputs.artifacts.grouped}}"
-
+        - - name: trigger-github-action
+            template: trigger-github-action
     - name: record-api
       container:
         image: "{{workflow.parameters.image}}"
         env:
           - name: PYTHON_RECORD_API_OUTPUT_FILE
-            value: /tmp/raw.jsonl
+            value: /tmp/vol/raw.jsonl
           - name: PYTHON_RECORD_API_TO_MODULES
             value: numpy,pandas
         # https://github.com/argoproj/argo/blob/master/docs/resource-duration.md#request-defaults
         # Must override or get defaults which are too low
         resources:
           requests:
-            memory: 1Gi
-            cpu: 500m
+            memory: 3Gi
+            cpu: 1000m
           limits:
             memory: 8Gi
             cpu: 4000m
-      outputs:
-        artifacts:
-          - name: raw
-            path: /tmp/raw.jsonl
-
+        volumeMounts:
+          - name: data
+            mountPath: /tmp/vol
     - name: groupby-lines
-      inputs:
-        artifacts:
-          - name: raw
-            path: /tmp/raw.jsonl
-      outputs:
-        artifacts:
-          - name: grouped
-            path: /tmp/grouped.jsonl
       container:
         image: "{{workflow.parameters.base-image}}"
         command: [python, -m, record_api.line_counts]
         env:
           - name: PYTHON_RECORD_API_INPUT
-            value: /tmp/raw.jsonl
+            value: /tmp/vol/raw.jsonl
           - name: PYTHON_RECORD_API_OUTPUT
-            value: /tmp/grouped.jsonl
+            value: /tmp/vol/grouped.jsonl
         resources:
           requests:
             memory: 1Gi
@@ -77,16 +73,15 @@ spec:
           limits:
             memory: 8Gi
             cpu: 4000m
-
+        volumeMounts:
+          - name: data
+            mountPath: /tmp/vol
     - name: infer-api
-      inputs:
-        artifacts:
-          - name: grouped
-            path: /tmp/grouped.jsonl
       outputs:
         artifacts:
           - name: api
             path: /tmp/api.json
+            globalName: 'api'
       container:
         image: "{{workflow.parameters.base-image}}"
         command: [python, -m, record_api.infer_apis]
@@ -96,7 +91,7 @@ spec:
           - name: PYTHON_RECORD_API_MODULES
             value: pandas,numpy
           - name: PYTHON_RECORD_API_INPUT
-            value: /tmp/grouped.jsonl
+            value: /tmp/vol/grouped.jsonl
           - name: PYTHON_RECORD_API_OUTPUT
             value: /tmp/api.json
         resources:
@@ -106,3 +101,27 @@ spec:
           limits:
             memory: 8Gi
             cpu: 4000m
+        volumeMounts:
+          - name: data
+            mountPath: /tmp/vol
+    - name: trigger-github-action
+      container:
+        image: "curlimages/curl"
+        args:
+          - -X
+          - POST
+          - -H
+          - "Accept: application/vnd.github.v3+json"
+          - -H
+          - "Authorization: token $(GITHUB_TOKEN)"
+          - "https://api.github.com/repos/data-apis/python-record-api/actions/workflows/1946357/dispatches"
+          - -d
+          - '{"ref": "master", "inputs": {"name": "{{workflow.name}}" }}'
+          - --verbose
+        env:
+          - name: GITHUB_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: github
+                key: token
+                optional: false

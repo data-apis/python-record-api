@@ -72,8 +72,8 @@ $(info )
 # Pass in the WORKFLOW_NAME as a variable
 download-workflow:
 	argo get ${WORKFLOW_NAME} -o json \
-		| jq -r '.status.nodes."${WORKFLOW_NAME}".outboundNodes[0]' \
-		| xargs -n 1 -I% mc cat 'argo-artifacts-local/my-bucket/${WORKFLOW_NAME}/%/api.tgz' \
+		| jq -r '.status.outputs.artifacts[0].s3 | "artifact/" + .bucket + "/" + .key' \
+		| xargs mc cat \
 		| tar -xvzf - -C ../data/api/
 	mv -f ../data/api/api.json ../data/api/${WORKFLOW_LABEL}.json
 

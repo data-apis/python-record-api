@@ -35,23 +35,32 @@ docker buildx bake --push
 kubectl create ns argo
 # set default NS
 kubectl config set-context --current --namespace=argo
+# install Argo
 kubectl apply -f https://raw.githubusercontent.com/argoproj/argo/stable/manifests/namespace-install.yaml 
-kubectl port-forward deployment/argo-server 2746:2746
-open http://localhost:2746
+# expose argo UI
+kubectl patch svc argo-server -n argo -p '{"spec": {"type": "LoadBalancer"}}'
+kubectl get svc argo-server -n argo
 
+# Add  ability to pull images
+doctl registry kubernetes-manifest --namespace argo | kubectl apply -f -
+# Maybe not needed?
+kubectl patch serviceaccount argo-server -p '{"imagePullSecrets": [{"name": "registry-python-record-api"}]}'
+kubectl patch serviceaccount argo -p '{"imagePullSecrets": [{"name": "registry-python-record-api"}]}'
+kubectl patch serviceaccount default -p '{"imagePullSecrets": [{"name": "registry-python-record-api"}]}'
+
+
+# These are some magic incarnations, one or both might not be needed 🤷‍♂ :embe
 kubectl create rolebinding default-admin --clusterrole=admin --serviceaccount=argo:default -n argo
+kubectl create rolebinding namespace-admin --clusterrole=admin --serviceaccount=default:default
 
-# Add minio
-# https://argoproj.github.io/argo/configure-artifact-repository/#configuring-minio
-# Configure to use minio
-# https://argoproj.github.io/argo/configure-artifact-repository/#s3-compatible-artifact-repository-bucket-such-as-aws-gcs-and-minio
-# https://www.alibabacloud.com/blog/installing-argo-in-your-kubernetes-cluster_595446   
-
-
+# Create Digital OCean spaces (or other s3 compatible backend) with `record-api` bucket and set keys:
+kubectl create secret generic artifact-s3 --from-literal=accesskey=ACCESS_KEY --from-literal=secretkey=SECRET_KEY
+jq --null-input '{data: {artifactRepository: {archiveLogs: true, s3: {bucket: "record-api", endpoint: "S3_ENDPOINT", accessKeySecret: {name: "artifact-s3", key: "accesskey"}, secretKeySecret: {name: "artifact-s3", key: "secretkey"}}}|tojson}}' --compact-output | xargs -0 -n 1  kubectl patch configmap workflow-controller-configmap --dry-run -p
+# Create github token with repo and actions permission to trigger action on completion
+kubectl create secret generic github --from-literal=token=TOKEN
 
 
 # To submit workflow
-make argo-workflow-submit
 make argo-submit
 make all
 ```
