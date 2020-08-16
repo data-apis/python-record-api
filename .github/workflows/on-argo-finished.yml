@@ -29,6 +29,10 @@ jobs:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - name: Save DigitalOcean kubeconfig
         run: doctl kubernetes cluster kubeconfig save python-record-api
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
       - name: Cache pip
         uses: actions/cache@v2
         with:
