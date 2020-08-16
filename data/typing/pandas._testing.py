@@ -31,8 +31,8 @@ def assert_index_equal(left: object, right: object):
 def assert_series_equal(
     left: pandas.core.series.Series,
     right: pandas.core.series.Series,
-    check_dtype: bool = ...,
     check_less_precise: bool = ...,
+    check_dtype: bool = ...,
     check_names: bool = ...,
 ):
     """

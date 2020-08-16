@@ -597,10 +597,10 @@ class Series:
     def groupby(
         self,
         /,
-        level: Union[List[int], int] = ...,
-        sort: bool = ...,
         by: object = ...,
         group_keys: bool = ...,
+        level: Union[List[int], int] = ...,
+        sort: bool = ...,
     ):
         """
         usage.dask: 64

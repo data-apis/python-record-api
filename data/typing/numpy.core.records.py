@@ -1,5 +1,11 @@
 from typing import *
 
+# usage.scipy: 1
+recarray: object
+
+# usage.scipy: 1
+record: object
+
 
 def fromarrays(
     arrayList: List[numpy.ndarray],

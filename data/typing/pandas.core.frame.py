@@ -730,10 +730,10 @@ class DataFrame:
     def groupby(
         self,
         /,
-        level: Union[List[int], int] = ...,
         by: object = ...,
-        sort: bool = ...,
         group_keys: bool = ...,
+        level: Union[List[int], int] = ...,
+        sort: bool = ...,
         *,
         dropna: bool = ...,
     ):
@@ -1240,8 +1240,8 @@ class DataFrame:
     def std(
         self,
         /,
-        axis: Union[Literal["columns", "index"], int] = ...,
         skipna: bool = ...,
+        axis: Union[Literal["columns", "index"], int] = ...,
         ddof: int = ...,
     ):
         """
