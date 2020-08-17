@@ -1,6 +1,35 @@
 from typing import *
 
 
+@overload
+def period_range(
+    start: Literal["2000", "2000-01-01"], periods: int, freq: Literal["B"] = ...
+):
+    """
+    usage.xarray: 4
+    """
+    ...
+
+
+@overload
+def period_range(
+    start: Literal["1970-01-01", "2011-01-01", "2000-01-01", "1/1/2001"],
+    freq: Union[
+        pandas.tseries.offsets.Day,
+        pandas.tseries.offsets.YearEnd,
+        pandas.tseries.offsets.BusinessDay,
+        pandas.tseries.offsets.Hour,
+        Literal["D", "H", "B", "A"],
+    ],
+    periods: int = ...,
+    name: Union[Literal["foo"], None] = ...,
+):
+    """
+    usage.dask: 11
+    """
+    ...
+
+
 def period_range(
     start: Literal["1970-01-01", "2011-01-01", "2000-01-01", "1/1/2001", "2000"],
     periods: int = ...,
@@ -14,17 +43,6 @@ def period_range(
 
 
 class PeriodIndex:
-    def __init__(
-        self,
-        /,
-        data: List[Literal["1970-01-01"]],
-        freq: Literal["d"],
-        name: Literal["foo"],
-    ):
-        """
-        usage.dask: 1
-        """
-        ...
 
     # usage.dask: 1
     __module__: ClassVar[object]
@@ -68,6 +86,24 @@ class PeriodIndex:
     def __ge__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Union[int, slice[Union[None, int], Union[int, None], Union[None, int]]],
+        /,
+    ):
+        """
+        usage.xarray: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Union[slice[int, int, int], int], /):
+        """
+        usage.dask: 5
         """
         ...
 

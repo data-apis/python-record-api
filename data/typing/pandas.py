@@ -114,25 +114,12 @@ UInt8Dtype: object
 # usage.xarray: 6
 __version__: object
 
-# usage.dask: 1
-_libs: object
-
-# usage.dask: 20
-# usage.sklearn: 10
-api: object
-
 # usage.dask: 15
 array: object
-
-# usage.sklearn: 3
-arrays: object
 
 # usage.dask: 31
 # usage.sklearn: 2
 concat: object
-
-# usage.dask: 12
-core: object
 
 # usage.xarray: 1
 cut: object
@@ -182,10 +169,6 @@ read_csv: object
 # usage.dask: 3
 read_json: object
 
-# usage.dask: 2
-# usage.xarray: 5
-testing: object
-
 # usage.dask: 3
 # usage.xarray: 1
 timedelta_range: object
@@ -200,9 +183,3 @@ to_numeric: object
 # usage.dask: 3
 # usage.xarray: 2
 to_timedelta: object
-
-# usage.dask: 5
-tseries: object
-
-# usage.dask: 2
-util: object

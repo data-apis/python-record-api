@@ -7,7 +7,12 @@ class DecimalArray:
     __module__: ClassVar[object]
 
     @classmethod
-    def _from_sequence(cls, /, scalars: List[decimal.Decimal]):
+    def _from_sequence(
+        cls,
+        /,
+        scalars: List[decimal.Decimal],
+        dtype: pandas.tests.extension.decimal.array.DecimalDtype = ...,
+    ):
         """
         usage.dask: 3
         """
@@ -18,6 +23,20 @@ class DecimalDtype:
 
     # usage.dask: 1
     kind: object
+
+    @overload
+    def __eq__(self, _0: numpy.dtype, /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Type[object], /):
+        """
+        usage.dask: 1
+        """
+        ...
 
     def __eq__(self, _0: Union[Type[object], numpy.dtype], /):
         """

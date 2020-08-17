@@ -27,12 +27,6 @@ exponential: object
 # usage.scipy: 1
 lognormal: object
 
-# usage.sample-usage: 1
-# usage.scipy: 1
-# usage.skimage: 1
-# usage.sklearn: 18
-mtrand: object
-
 # usage.dask: 1
 multinomial: object
 

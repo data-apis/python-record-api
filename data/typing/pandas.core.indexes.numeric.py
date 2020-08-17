@@ -2,11 +2,6 @@ from typing import *
 
 
 class Float64Index:
-    def __init__(self, /, data: List[float], name: Literal["b"]):
-        """
-        usage.dask: 1
-        """
-        ...
 
     # usage.dask: 1
     __module__: ClassVar[object]
@@ -69,6 +64,28 @@ class Float64Index:
     def __floordiv__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Union[
+            slice[Union[int, None], Union[None, int], Union[int, None]],
+            numpy.ndarray,
+            int,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 15
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Union[slice[int, int, int], int], /):
+        """
+        usage.dask: 5
         """
         ...
 
@@ -147,6 +164,22 @@ class Float64Index:
         """
         ...
 
+    @overload
+    def astype(self, /, dtype: Union[Type[float], numpy.dtype]):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def astype(
+        self, /, dtype: Union[numpy.dtype, pandas.core.dtypes.dtypes.CategoricalDtype]
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
     def astype(
         self,
         /,
@@ -189,6 +222,7 @@ class Float64Index:
         /,
         key: Union[numpy.int64, float, numpy.float64],
         method: Union[Literal["nearest"], None],
+        tolerance: Union[int, None] = ...,
     ):
         """
         usage.xarray: 7
@@ -288,6 +322,30 @@ class Int64Index:
     def __ge__(self, _0: Union[float, int], /):
         """
         usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Union[
+            numpy.ndarray,
+            int,
+            slice[Union[None, int], Union[int, None], Union[None, int]],
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 16
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Union[slice[Union[int, None], int, Union[int, None]], int], /
+    ):
+        """
+        usage.dask: 11
         """
         ...
 
@@ -426,6 +484,7 @@ class Int64Index:
         /,
         key: Union[float, numpy.int64, int, numpy.float64],
         method: Union[None, Literal["nearest"]],
+        tolerance: None = ...,
     ):
         """
         usage.xarray: 6
@@ -479,11 +538,6 @@ class Int64Index:
 
 
 class UInt64Index:
-    def __init__(self, /, data: List[int], name: Literal["foo"]):
-        """
-        usage.dask: 1
-        """
-        ...
 
     # usage.dask: 1
     __module__: ClassVar[object]

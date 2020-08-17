@@ -13,7 +13,27 @@ def apply_along_axis(
     ...
 
 
-def average(a: numpy.ma.core.MaskedArray, weights: Union[None, numpy.ndarray]):
+@overload
+def average(a: numpy.ma.core.MaskedArray, axis: int, weights: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def average(
+    a: numpy.ma.core.MaskedArray, weights: Union[numpy.ndarray, None], axis: int = ...
+):
+    """
+    usage.sklearn: 8
+    """
+    ...
+
+
+def average(
+    a: numpy.ma.core.MaskedArray, weights: Union[None, numpy.ndarray], axis: int = ...
+):
     """
     usage.dask: 1
     usage.sklearn: 8
@@ -35,11 +55,53 @@ def mask_cols(a: numpy.ma.core.MaskedArray):
     ...
 
 
-def masked_all(shape: Union[Tuple[int, ...], int]):
+@overload
+def masked_all(shape: Tuple[int, ...], dtype: Union[Literal["M8[ns]"], type] = ...):
+    """
+    usage.pandas: 14
+    """
+    ...
+
+
+@overload
+def masked_all(shape: int):
+    """
+    usage.scipy: 3
+    """
+    ...
+
+
+@overload
+def masked_all(shape: Tuple[int, int]):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+def masked_all(
+    shape: Union[Tuple[int, ...], int], dtype: Union[Literal["M8[ns]"], type] = ...
+):
     """
     usage.matplotlib: 1
     usage.pandas: 14
     usage.scipy: 3
+    """
+    ...
+
+
+@overload
+def median(a: numpy.ndarray, axis: None):
+    """
+    usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def median(a: numpy.ma.core.MaskedArray, axis: int):
+    """
+    usage.sklearn: 1
     """
     ...
 

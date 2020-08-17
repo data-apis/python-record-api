@@ -2,17 +2,26 @@ from typing import *
 
 
 class Timedelta:
-    def __init__(self, /, value: Literal["1", "1 hours"], unit: Literal["ms"]):
-        """
-        usage.dask: 2
-        """
-        ...
 
     # usage.dask: 1
     __module__: ClassVar[object]
 
     # usage.xarray: 1
     __name__: ClassVar[object]
+
+    @overload
+    def __add__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Union[numpy.ndarray, numpy.float64, numpy.int64], /):
+        """
+        usage.pandas: 17
+        """
+        ...
 
     def __add__(
         self,
@@ -27,6 +36,22 @@ class Timedelta:
         """
         usage.pandas: 17
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __eq__(
+        self, _0: Union[numpy.ndarray, numpy.float64, numpy.int64, numpy.timedelta64], /
+    ):
+        """
+        usage.pandas: 58
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.dask: 6
         """
         ...
 
@@ -65,6 +90,20 @@ class Timedelta:
         """
         ...
 
+    @overload
+    def __gt__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
     def __gt__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
         """
         usage.dask: 2
@@ -96,6 +135,30 @@ class Timedelta:
         """
         ...
 
+    @overload
+    def __radd__(
+        self,
+        _0: Union[
+            numpy.ndarray,
+            numpy.int64,
+            numpy.datetime64,
+            numpy.timedelta64,
+            numpy.float64,
+        ],
+        /,
+    ):
+        """
+        usage.pandas: 8
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __radd__(self, _0: object, /):
         """
         usage.dask: 1
@@ -118,6 +181,30 @@ class Timedelta:
     def __rmul__(self, _0: Union[numpy.float64, numpy.ndarray, numpy.timedelta64], /):
         """
         usage.pandas: 7
+        """
+        ...
+
+    @overload
+    def __rsub__(
+        self,
+        _0: Union[
+            numpy.ndarray,
+            numpy.float64,
+            numpy.timedelta64,
+            numpy.int64,
+            numpy.datetime64,
+        ],
+        /,
+    ):
+        """
+        usage.pandas: 10
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 3
         """
         ...
 

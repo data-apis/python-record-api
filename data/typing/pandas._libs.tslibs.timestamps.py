@@ -2,21 +2,6 @@ from typing import *
 
 
 class Timestamp:
-    def __init__(
-        self,
-        /,
-        ts_input: Literal[
-            "2000",
-            "2016-10-17 00:00:00",
-            "2016-10-16 10:00:00",
-            "2016-10-15 00:00:00",
-            "1970-01-01",
-        ],
-    ):
-        """
-        usage.dask: 5
-        """
-        ...
 
     # usage.dask: 1
     __module__: ClassVar[object]
@@ -41,11 +26,50 @@ class Timestamp:
     # usage.xarray: 1
     value: object
 
+    @overload
+    def __add__(self, _0: pandas.core.indexes.timedeltas.TimedeltaIndex, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.int64], /):
+        """
+        usage.pandas: 23
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: object, /):
+        """
+        usage.dask: 8
+        """
+        ...
+
     def __add__(self, _0: object, /):
         """
         usage.dask: 8
         usage.pandas: 23
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __eq__(
+        self, _0: Union[numpy.datetime64, numpy.float64, numpy.ndarray, numpy.int64], /
+    ):
+        """
+        usage.pandas: 8
+        """
+        ...
+
+    @overload
+    def __eq__(
+        self, _0: Union[pandas._libs.tslibs.timestamps.Timestamp, Literal["2000"]], /
+    ):
+        """
+        usage.dask: 43
         """
         ...
 
@@ -59,6 +83,28 @@ class Timestamp:
     def __floordiv__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    @overload
+    def __ge__(
+        self,
+        _0: Union[
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas._libs.tslibs.timestamps.Timestamp,
+            numpy.datetime64,
+        ],
+        /,
+    ):
+        """
+        usage.dask: 21
         """
         ...
 
@@ -94,6 +140,27 @@ class Timestamp:
         """
         ...
 
+    @overload
+    def __lt__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def __lt__(
+        self,
+        _0: Union[
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas._libs.tslibs.timestamps.Timestamp,
+        ],
+        /,
+    ):
+        """
+        usage.dask: 9
+        """
+        ...
+
     def __lt__(
         self,
         _0: Union[
@@ -121,6 +188,22 @@ class Timestamp:
         """
         ...
 
+    @overload
+    def __ne__(
+        self, _0: Union[numpy.int64, numpy.ndarray, numpy.datetime64, numpy.float64], /
+    ):
+        """
+        usage.pandas: 4
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 10
+        """
+        ...
+
     def __ne__(
         self,
         _0: Union[
@@ -144,10 +227,46 @@ class Timestamp:
         """
         ...
 
+    @overload
+    def __radd__(
+        self,
+        _0: Union[
+            pandas._libs.tslibs.nattype.NaTType,
+            pandas._libs.tslibs.timedeltas.Timedelta,
+            pandas.core.indexes.timedeltas.TimedeltaIndex,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 5
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: Union[numpy.ndarray, numpy.int64, numpy.timedelta64], /):
+        """
+        usage.pandas: 7
+        """
+        ...
+
     def __radd__(self, _0: object, /):
         """
         usage.pandas: 7
         usage.xarray: 5
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+        """
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: Union[numpy.ndarray, numpy.int64, numpy.datetime64], /):
+        """
+        usage.pandas: 8
         """
         ...
 
@@ -164,6 +283,20 @@ class Timestamp:
         """
         usage.pandas: 8
         usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.int64], /):
+        """
+        usage.pandas: 14
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: object, /):
+        """
+        usage.dask: 8
         """
         ...
 

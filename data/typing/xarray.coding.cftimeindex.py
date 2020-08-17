@@ -19,6 +19,8 @@ class CFTimeIndex:
         /,
         target: Union[numpy.ndarray, pandas.core.indexes.base.Index],
         method: Union[Literal["backfill", "pad", "nearest"], None],
+        limit: None = ...,
+        tolerance: Union[datetime.timedelta, None] = ...,
     ):
         """
         usage.xarray: 9

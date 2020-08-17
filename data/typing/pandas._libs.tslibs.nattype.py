@@ -2,6 +2,20 @@ from typing import *
 
 
 class NaTType:
+    @overload
+    def __add__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
+        """
+        usage.pandas: 9
+        """
+        ...
+
     def __add__(
         self,
         _0: Union[

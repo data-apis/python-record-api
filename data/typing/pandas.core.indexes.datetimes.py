@@ -1,6 +1,36 @@
 from typing import *
 
 
+@overload
+def date_range(
+    start: str,
+    end: str = ...,
+    periods: int = ...,
+    freq: Union[str, pandas._libs.tslibs.offsets.DateOffset] = ...,
+    tz: Union[Unknown, Literal["US/Eastern"]] = ...,
+):
+    """
+    usage.xarray: 122
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Union[str, int, pandas._libs.tslibs.timestamps.Timestamp],
+    periods: int = ...,
+    end: Union[str, pandas._libs.tslibs.timestamps.Timestamp] = ...,
+    freq: object = ...,
+    tz: object = ...,
+    name: Union[None, str] = ...,
+    closed: Union[None, Literal["left"]] = ...,
+):
+    """
+    usage.dask: 97
+    """
+    ...
+
+
 def date_range(
     start: Union[pandas._libs.tslibs.timestamps.Timestamp, int, str],
     end: Union[pandas._libs.tslibs.timestamps.Timestamp, str] = ...,
@@ -86,6 +116,29 @@ class DatetimeIndex:
     # usage.xarray: 16
     values: object
 
+    @overload
+    def __add__(
+        self, _0: Union[datetime.timedelta, pandas._libs.tslibs.offsets.Hour], /
+    ):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /):
+        """
+        usage.pandas: 103
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: object, /):
+        """
+        usage.dask: 8
+        """
+        ...
+
     def __add__(self, _0: object, /):
         """
         usage.dask: 8
@@ -112,6 +165,32 @@ class DatetimeIndex:
         """
         ...
 
+    @overload
+    def __getitem__(
+        self,
+        _0: Union[
+            slice[Union[int, None], Union[None, int], Union[int, None]],
+            int,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 20
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Union[slice[Union[int, None], Union[int, None], Union[int, None]], int],
+        /,
+    ):
+        """
+        usage.dask: 22
+        """
+        ...
+
     def __getitem__(
         self,
         _0: Union[
@@ -124,6 +203,20 @@ class DatetimeIndex:
         """
         usage.dask: 22
         usage.xarray: 20
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: Union[numpy.ndarray, numpy.datetime64], /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -149,6 +242,20 @@ class DatetimeIndex:
     def __isub__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
         """
         usage.pandas: 3
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: Union[numpy.ndarray, numpy.datetime64], /):
+        """
+        usage.pandas: 5
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -190,6 +297,22 @@ class DatetimeIndex:
     ):
         """
         usage.pandas: 32
+        """
+        ...
+
+    @overload
+    def __sub__(
+        self, _0: Union[numpy.timedelta64, pandas._libs.tslibs.timestamps.Timestamp], /
+    ):
+        """
+        usage.xarray: 4
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /):
+        """
+        usage.pandas: 75
         """
         ...
 
@@ -258,6 +381,7 @@ class DatetimeIndex:
         /,
         key: Union[Literal["2000-01-01"], numpy.datetime64],
         method: Union[None, Literal["nearest"]],
+        tolerance: None = ...,
     ):
         """
         usage.xarray: 3
@@ -305,7 +429,7 @@ class DatetimeIndex:
         """
         ...
 
-    def to_frame(self, /, name: Union[Literal["foo"], None]):
+    def to_frame(self, /, name: Union[Literal["foo"], None], index: bool = ...):
         """
         usage.dask: 3
         """

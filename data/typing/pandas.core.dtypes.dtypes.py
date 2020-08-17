@@ -19,6 +19,42 @@ class CategoricalDtype:
     # usage.dask: 4
     ordered: object
 
+    @overload
+    def __eq__(self, _0: Literal["O"], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Union[numpy.dtype, type], /):
+        """
+        usage.pandas: 19
+        """
+        ...
+
+    @overload
+    def __eq__(
+        self,
+        _0: Union[
+            pandas.core.dtypes.dtypes.CategoricalDtype,
+            Literal["category"],
+            Type[object],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 19
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas.core.dtypes.dtypes.CategoricalDtype, /):
+        """
+        usage.sklearn: 6
+        """
+        ...
+
     def __eq__(
         self,
         _0: Union[
@@ -34,6 +70,24 @@ class CategoricalDtype:
         usage.pandas: 19
         usage.sklearn: 6
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: numpy.dtype, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def __ne__(
+        self,
+        _0: Union[pandas.core.dtypes.dtypes.CategoricalDtype, Literal["category"]],
+        /,
+    ):
+        """
+        usage.dask: 5
         """
         ...
 
@@ -65,6 +119,29 @@ class DatetimeTZDtype:
     # usage.dask: 1
     tz: object
 
+    @overload
+    def __eq__(self, _0: Literal["O"], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Union[numpy.dtype, type], /):
+        """
+        usage.pandas: 24
+        """
+        ...
+
+    @overload
+    def __eq__(
+        self, _0: Union[pandas.core.dtypes.dtypes.DatetimeTZDtype, Type[object]], /
+    ):
+        """
+        usage.dask: 3
+        """
+        ...
+
     def __eq__(
         self,
         _0: Union[
@@ -87,6 +164,20 @@ class DatetimeTZDtype:
 
 
 class IntervalDtype:
+    @overload
+    def __eq__(self, _0: Literal["O"], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Union[numpy.dtype, type], /):
+        """
+        usage.pandas: 13
+        """
+        ...
+
     def __eq__(self, _0: Union[type, numpy.dtype, Literal["O"]], /):
         """
         usage.pandas: 13
@@ -111,6 +202,20 @@ class PeriodDtype:
 
     # usage.dask: 1
     name: object
+
+    @overload
+    def __eq__(self, _0: Literal["O"], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Union[numpy.dtype, type], /):
+        """
+        usage.pandas: 22
+        """
+        ...
 
     def __eq__(self, _0: Union[type, numpy.dtype, Literal["O"]], /):
         """

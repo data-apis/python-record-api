@@ -98,14 +98,23 @@ class BooleanArray:
 
 
 class BooleanDtype:
-    def __init__(self, /):
-        """
-        usage.dask: 2
-        """
-        ...
 
     # usage.dask: 1
     kind: object
+
+    @overload
+    def __eq__(self, _0: Union[numpy.dtype, Type[numpy.object_]], /):
+        """
+        usage.pandas: 7
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas.core.arrays.boolean.BooleanDtype, /):
+        """
+        usage.dask: 6
+        """
+        ...
 
     def __eq__(
         self,

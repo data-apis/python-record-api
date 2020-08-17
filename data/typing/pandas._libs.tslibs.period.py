@@ -8,6 +8,20 @@ class Period:
         """
         ...
 
+    @overload
+    def __eq__(self, _0: Union[numpy.ndarray, xarray.core.variable.Variable], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas._libs.tslibs.period.Period, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
     def __eq__(
         self,
         _0: Union[
@@ -20,6 +34,20 @@ class Period:
         """
         usage.dask: 2
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: pandas._libs.tslibs.period.Period, /):
+        """
+        usage.dask: 3
         """
         ...
 

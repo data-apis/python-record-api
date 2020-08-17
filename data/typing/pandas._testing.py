@@ -12,10 +12,33 @@ def assert_extension_array_equal(
 
 
 def assert_frame_equal(
-    left: pandas.core.frame.DataFrame, right: pandas.core.frame.DataFrame
+    left: pandas.core.frame.DataFrame,
+    right: pandas.core.frame.DataFrame,
+    check_dtype: bool = ...,
+    check_categorical: bool = ...,
+    check_less_precise: bool = ...,
 ):
     """
     usage.dask: 23
+    """
+    ...
+
+
+@overload
+def assert_index_equal(
+    left: Union[pandas.core.indexes.multi.MultiIndex, pandas.core.indexes.base.Index],
+    right: Union[pandas.core.indexes.multi.MultiIndex, pandas.core.indexes.base.Index],
+):
+    """
+    usage.xarray: 5
+    """
+    ...
+
+
+@overload
+def assert_index_equal(left: object, right: object):
+    """
+    usage.dask: 68
     """
     ...
 

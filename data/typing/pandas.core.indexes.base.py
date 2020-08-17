@@ -55,12 +55,81 @@ class Index:
         """
         ...
 
+    @overload
+    def __eq__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 4
+        """
+        ...
+
+    @overload
+    def __eq__(
+        self,
+        _0: Union[List[Literal["x", "b", "c", "a"]], pandas.core.indexes.base.Index],
+        /,
+    ):
+        """
+        usage.dask: 14
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: List[str], /):
+        """
+        usage.sklearn: 6
+        """
+        ...
+
     def __eq__(
         self, _0: Union[List[str], numpy.ndarray, pandas.core.indexes.base.Index], /
     ):
         """
         usage.dask: 14
         usage.pandas: 4
+        usage.sklearn: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Union[
+            slice[Union[None, int], Union[None, int], Union[None, int]],
+            numpy.ndarray,
+            int,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 15
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Union[
+            slice[Union[None, int], Union[int, None], Union[None, int]],
+            numpy.ndarray,
+            int,
+            List[Union[bool, int]],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 27
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Union[
+            slice[Union[None, int], int, Union[None, int]], List[int], numpy.ndarray
+        ],
+        /,
+    ):
+        """
         usage.sklearn: 6
         """
         ...
@@ -102,6 +171,20 @@ class Index:
         """
         ...
 
+    @overload
+    def __rsub__(self, _0: xarray.coding.cftimeindex.CFTimeIndex, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 4
+        """
+        ...
+
     def __rsub__(
         self, _0: Union[numpy.ndarray, xarray.coding.cftimeindex.CFTimeIndex], /
     ):
@@ -123,6 +206,30 @@ class Index:
         """
         ...
 
+    @overload
+    def append(
+        self,
+        /,
+        other: Union[
+            list,
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas.core.indexes.numeric.Int64Index,
+        ],
+    ):
+        """
+        usage.xarray: 21
+        """
+        ...
+
+    @overload
+    def append(
+        self, /, other: Union[list, pandas.core.indexes.category.CategoricalIndex]
+    ):
+        """
+        usage.dask: 16
+        """
+        ...
+
     def append(
         self,
         /,
@@ -136,6 +243,26 @@ class Index:
         """
         usage.dask: 16
         usage.xarray: 21
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: numpy.dtype):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def astype(
+        self,
+        /,
+        dtype: Union[
+            Literal["int64"], pandas.core.dtypes.dtypes.CategoricalDtype, numpy.dtype
+        ],
+    ):
+        """
+        usage.dask: 12
         """
         ...
 
@@ -166,7 +293,21 @@ class Index:
         """
         ...
 
+    @overload
+    def drop(self, /, labels: numpy.ndarray, errors: Literal["ignore", "raise"]):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
     def drop(self, /, labels: numpy.ndarray):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def drop(self, /, labels: numpy.ndarray, errors: Literal["ignore", "raise"] = ...):
         """
         usage.dask: 1
         usage.xarray: 2
@@ -191,6 +332,26 @@ class Index:
         """
         ...
 
+    @overload
+    def equals(self, /, other: object):
+        """
+        usage.xarray: 38
+        """
+        ...
+
+    @overload
+    def equals(
+        self,
+        /,
+        other: Union[
+            pandas.core.indexes.numeric.Int64Index, pandas.core.indexes.base.Index
+        ],
+    ):
+        """
+        usage.dask: 3
+        """
+        ...
+
     def equals(self, /, other: object):
         """
         usage.dask: 3
@@ -207,6 +368,26 @@ class Index:
     ):
         """
         usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def get_loc(
+        self,
+        /,
+        key: object,
+        method: Union[None, Literal["backfill", "pad", "nearest"]] = ...,
+        tolerance: Union[None, datetime.timedelta] = ...,
+    ):
+        """
+        usage.xarray: 66
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Union[str, numpy.str_]):
+        """
+        usage.sklearn: 20
         """
         ...
 
@@ -256,6 +437,20 @@ class Index:
         ...
 
     def min(self, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, name: str):
+        """
+        usage.xarray: 15
+        """
+        ...
+
+    @overload
+    def rename(self, /, name: Literal["renamed"]):
         """
         usage.dask: 1
         """

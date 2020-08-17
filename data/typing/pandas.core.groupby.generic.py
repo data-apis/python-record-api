@@ -98,13 +98,13 @@ class DataFrameGroupBy:
         """
         ...
 
-    def cumprod(self, /):
+    def cumprod(self, /, axis: int = ...):
         """
         usage.dask: 4
         """
         ...
 
-    def cumsum(self, /):
+    def cumsum(self, /, axis: int = ...):
         """
         usage.dask: 4
         """
@@ -164,7 +164,7 @@ class DataFrameGroupBy:
         """
         ...
 
-    def std(self, /):
+    def std(self, /, ddof: int = ...):
         """
         usage.dask: 9
         """
@@ -182,7 +182,7 @@ class DataFrameGroupBy:
         """
         ...
 
-    def var(self, /):
+    def var(self, /, ddof: int = ...):
         """
         usage.dask: 7
         """
@@ -306,7 +306,7 @@ class SeriesGroupBy:
         """
         ...
 
-    def std(self, /):
+    def std(self, /, ddof: int = ...):
         """
         usage.dask: 10
         """
@@ -330,7 +330,7 @@ class SeriesGroupBy:
         """
         ...
 
-    def var(self, /):
+    def var(self, /, ddof: int = ...):
         """
         usage.dask: 8
         """

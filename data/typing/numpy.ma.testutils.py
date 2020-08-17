@@ -10,9 +10,38 @@ def assert_almost_equal(
         float,
     ],
     desired: object,
+    decimal: int = ...,
 ):
     """
     usage.scipy: 131
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(
+    x: object,
+    y: Union[
+        numpy.ndarray,
+        scipy.stats.stats.SkewtestResult,
+        numpy.ma.core.MaskedArray,
+        scipy.stats.stats.NormaltestResult,
+        scipy.stats.stats.KurtosistestResult,
+    ],
+    decimal: int = ...,
+):
+    """
+    usage.scipy: 13
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(
+    x: numpy.ma.core.MaskedArray, y: Union[numpy.ma.core.MaskedArray, numpy.ndarray]
+):
+    """
+    usage.matplotlib: 3
     """
     ...
 
@@ -26,6 +55,7 @@ def assert_array_almost_equal(
         scipy.stats.stats.NormaltestResult,
         scipy.stats.stats.SkewtestResult,
     ],
+    decimal: int = ...,
 ):
     """
     usage.matplotlib: 3
