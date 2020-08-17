@@ -18,6 +18,10 @@ __all__ = ["API", "Module", "Class", "Signature", "Metadata"]
 Type = OutputType
 
 
+# If there are more than 2 optional positional only args, convert them all to variadic positional args
+MAX_OPTIONAL_POSITIONAL_ONLY_ARGS = 2
+
+
 def orjson_dumps(v, *, default):
     # orjson.dumps returns bytes, to match standard json.dumps we need to decode
     return orjson.dumps(v, default=default, option=orjson.OPT_INDENT_2).decode()  # type: ignore
@@ -555,7 +559,28 @@ class Signature(BaseModel):
         self._copy_var_kw(other)
 
         update_add(self.metadata, other.metadata)
+        self._trim_positional_only_args()
         return self
+
+    def _trim_positional_only_args(self):
+        """
+        If there are excss positional only args, move them to variable positional only args
+        """
+        # if we already have var pos only args, remove all positional only args
+        if (
+            self.var_pos
+            or len(self.pos_only_optional) > MAX_OPTIONAL_POSITIONAL_ONLY_ARGS
+        ):
+            var_pos_output = unify(
+                [
+                    self.var_pos[1] if self.var_pos else BottomOutput(),
+                    *self.pos_only_optional.values(),
+                ]
+            )
+            var_pos_label = self.var_pos[0] if self.var_pos else "_args"
+            self.var_pos = (var_pos_label, var_pos_output)
+            self.pos_only_optional = {}
+            self.pos_only_optional_ordering = []
 
     def _copy_pos_only(self, other: Signature) -> None:
         pos_only_required = dict(
