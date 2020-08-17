@@ -1,6 +1,199 @@
 {
   "modules": {
     "numpy": {
+      "function_overloads": {
+        "arange": [
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": {
+                  "name": "int"
+                }
+              }
+            },
+            "metadata": {
+              "usage.sample-usage": 4
+            }
+          }
+        ],
+        "array": [
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": "str",
+                "options": [
+                  "df"
+                ]
+              }
+            },
+            "metadata": {
+              "usage.sample-usage": 1
+            }
+          },
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": "str"
+              }
+            },
+            "metadata": {
+              "usage.sample-usage": 1
+            }
+          },
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": "list",
+                "item": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              }
+            },
+            "metadata": {
+              "usage.sample-usage": 1
+            }
+          }
+        ],
+        "zeros": [
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": "tuple",
+                "items": [
+                  {
+                    "type": {
+                      "name": "int"
+                    }
+                  },
+                  {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                ]
+              }
+            },
+            "metadata": {
+              "usage.sample-usage": 1
+            }
+          }
+        ],
+        "ones": [
+          {
+            "pos_or_kw_required": {
+              "shape": {
+                "type": "tuple",
+                "items": [
+                  {
+                    "type": {
+                      "name": "int"
+                    }
+                  },
+                  {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                ]
+              }
+            },
+            "metadata": {
+              "usage.sample-usage": 1
+            }
+          }
+        ],
+        "linspace": [
+          {
+            "pos_or_kw_required": {
+              "start": {
+                "type": {
+                  "name": "int"
+                }
+              },
+              "stop": {
+                "type": {
+                  "name": "int"
+                }
+              },
+              "num": {
+                "type": {
+                  "name": "int"
+                }
+              }
+            },
+            "metadata": {
+              "usage.sample-usage": 1
+            }
+          }
+        ],
+        "eye": [
+          {
+            "pos_or_kw_required": {
+              "N": {
+                "type": {
+                  "name": "int"
+                }
+              }
+            },
+            "metadata": {
+              "usage.sample-usage": 1
+            }
+          }
+        ],
+        "column_stack": [
+          {
+            "pos_or_kw_required": {
+              "tup": {
+                "type": "list",
+                "item": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              }
+            },
+            "metadata": {
+              "usage.sample-usage": 1
+            }
+          }
+        ],
+        "concatenate": [
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": "tuple",
+                "items": [
+                  {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  },
+                  {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                ]
+              }
+            },
+            "kw_only_required": {
+              "axis": {
+                "type": {
+                  "name": "int"
+                }
+              }
+            },
+            "metadata": {
+              "usage.sample-usage": 1
+            }
+          }
+        ]
+      },
       "functions": {
         "arange": {
           "pos_only_required": {
@@ -10,13 +203,6 @@
               }
             }
           },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
           "metadata": {
             "usage.sample-usage": 4
           }
@@ -40,13 +226,6 @@
               ]
             }
           },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
           "metadata": {
             "usage.sample-usage": 3
           }
@@ -69,21 +248,11 @@
               ]
             }
           },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
           "metadata": {
             "usage.sample-usage": 1
           }
         },
         "ones": {
-          "pos_only_required": {},
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "shape": {
               "type": "tuple",
@@ -101,18 +270,11 @@
               ]
             }
           },
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
           "metadata": {
             "usage.sample-usage": 1
           }
         },
         "linspace": {
-          "pos_only_required": {},
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "start": {
               "type": {
@@ -130,18 +292,11 @@
               }
             }
           },
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
           "metadata": {
             "usage.sample-usage": 1
           }
         },
         "eye": {
-          "pos_only_required": {},
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "N": {
               "type": {
@@ -149,18 +304,11 @@
               }
             }
           },
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
           "metadata": {
             "usage.sample-usage": 1
           }
         },
         "column_stack": {
-          "pos_only_required": {},
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
           "pos_or_kw_required": {
             "tup": {
               "type": "list",
@@ -172,10 +320,6 @@
               }
             }
           },
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
-          "kw_only_required": {},
-          "kw_only_optional": {},
           "metadata": {
             "usage.sample-usage": 1
           }
@@ -200,11 +344,6 @@
               ]
             }
           },
-          "pos_only_optional": {},
-          "pos_only_optional_ordering": [],
-          "pos_or_kw_required": {},
-          "pos_or_kw_optional": {},
-          "pos_or_kw_optional_ordering": [],
           "kw_only_required": {
             "axis": {
               "type": {
@@ -212,7 +351,6 @@
               }
             }
           },
-          "kw_only_optional": {},
           "metadata": {
             "usage.sample-usage": 1
           }
@@ -220,6 +358,35 @@
       },
       "classes": {
         "ndarray": {
+          "constructor_overloads": [
+            {
+              "pos_only_required": {
+                "_0": {
+                  "type": "tuple",
+                  "items": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.sample-usage": 1
+              }
+            }
+          ],
           "constructor": {
             "pos_only_required": {
               "_0": {
@@ -243,79 +410,805 @@
                 ]
               }
             },
-            "pos_only_optional": {},
-            "pos_only_optional_ordering": [],
-            "pos_or_kw_required": {},
-            "pos_or_kw_optional": {},
-            "pos_or_kw_optional_ordering": [],
-            "kw_only_required": {},
-            "kw_only_optional": {},
             "metadata": {
               "usage.sample-usage": 1
             }
           },
+          "method_overloads": {
+            "__pos__": [
+              {
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__neg__": [
+              {
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__invert__": [
+              {
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__bool__": [
+              {
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__iter__": [
+              {
+                "metadata": {
+                  "usage.sample-usage": 2
+                }
+              }
+            ],
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "slice",
+                    "start": {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    "stop": {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    "step": {
+                      "type": "None"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": "tuple",
+                        "items": [
+                          {
+                            "type": {
+                              "name": "int"
+                            }
+                          },
+                          {
+                            "type": {
+                              "name": "int"
+                            }
+                          },
+                          {
+                            "type": {
+                              "name": "int"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "tuple",
+                        "items": [
+                          {
+                            "type": {
+                              "name": "int"
+                            }
+                          },
+                          {
+                            "type": {
+                              "name": "int"
+                            }
+                          },
+                          {
+                            "type": {
+                              "name": "int"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__pow__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__rpow__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 2
+                }
+              }
+            ],
+            "__mul__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__rmul__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 2
+                }
+              }
+            ],
+            "__matmul__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__rmatmul__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__floordiv__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__rfloordiv__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__mod__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__rmod__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__add__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__radd__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__sub__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__rsub__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__lshift__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__rlshift__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__rshift__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__rrshift__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__and__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__rand__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__or__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__ror__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__ipow__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__imul__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__ifloordiv__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__imod__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__iadd__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__isub__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__ilshift__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__irshift__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__iand__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__ior__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__setitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  },
+                  "_1": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "mean": [
+              {
+                "metadata": {
+                  "usage.sample-usage": 2
+                }
+              }
+            ],
+            "__eq__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 2
+                }
+              }
+            ],
+            "__lt__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "sort": [
+              {
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              },
+              {
+                "kw_only_required": {
+                  "axis": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__gt__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "reshape": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  },
+                  "_1": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": {
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": {
+                          "name": "int"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "astype": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "type",
+                    "name": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ],
+            "__contains__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ]
+          },
           "methods": {
             "__pos__": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
             },
             "__neg__": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
             },
             "__invert__": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
             },
             "__bool__": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
             },
             "__iter__": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 2
               }
@@ -400,13 +1293,6 @@
                   ]
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 5
               }
@@ -419,13 +1305,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -438,13 +1317,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 2
               }
@@ -457,13 +1329,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -476,13 +1341,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 2
               }
@@ -496,13 +1354,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -516,13 +1367,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -535,13 +1379,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -554,13 +1391,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -573,13 +1403,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -592,13 +1415,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -622,13 +1438,6 @@
                   ]
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 2
               }
@@ -652,13 +1461,6 @@
                   ]
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 2
               }
@@ -671,13 +1473,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -690,13 +1485,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -709,13 +1497,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -728,13 +1509,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -747,13 +1521,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -766,13 +1533,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -785,13 +1545,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -804,13 +1557,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -823,13 +1569,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -842,13 +1581,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -861,13 +1593,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -880,13 +1605,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -899,13 +1617,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -918,13 +1629,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -937,13 +1641,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -956,13 +1653,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -975,13 +1665,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -994,13 +1677,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -1013,13 +1689,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -1032,13 +1701,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -1056,26 +1718,11 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
             },
             "mean": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 2
               }
@@ -1089,18 +1736,11 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 2
               }
             },
-            "__le__": {
+            "__lt__": {
               "pos_only_required": {
                 "_0": {
                   "type": {
@@ -1108,25 +1748,11 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
             },
             "sort": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
               "kw_only_optional": {
                 "axis": {
                   "type": {
@@ -1146,13 +1772,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -1192,12 +1811,6 @@
                   }
                 }
               },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 2
               }
@@ -1211,13 +1824,6 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
@@ -1230,19 +1836,11 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
             }
           },
-          "classmethods": {},
           "properties": {
             "shape": [
               {
@@ -1296,10 +1894,25 @@
                 "type": "bottom"
               }
             ]
-          },
-          "classproperties": {}
+          }
         },
         "dtype": {
+          "constructor_overloads": [
+            {
+              "pos_only_required": {
+                "_0": {
+                  "type": "type",
+                  "name": {
+                    "module": "numpy",
+                    "name": "int16"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.sample-usage": 1
+              }
+            }
+          ],
           "constructor": {
             "pos_only_required": {
               "_0": {
@@ -1310,23 +1923,63 @@
                 }
               }
             },
-            "pos_only_optional": {},
-            "pos_only_optional_ordering": [],
-            "pos_or_kw_required": {},
-            "pos_or_kw_optional": {},
-            "pos_or_kw_optional_ordering": [],
-            "kw_only_required": {},
-            "kw_only_optional": {},
             "metadata": {
               "usage.sample-usage": 1
             }
-          },
-          "methods": {},
-          "classmethods": {},
-          "properties": {},
-          "classproperties": {}
+          }
         },
         "ufunc": {
+          "method_overloads": {
+            "__call__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 2
+                }
+              }
+            ],
+            "reduce": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ]
+          },
           "methods": {
             "__call__": {
               "pos_only_required": {
@@ -1345,12 +1998,6 @@
                   }
                 }
               },
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 3
               }
@@ -1364,23 +2011,27 @@
                   }
                 }
               },
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
             }
-          },
-          "classmethods": {},
-          "properties": {},
-          "classproperties": {}
+          }
         },
         "int64": {
+          "constructor_overloads": [
+            {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.sample-usage": 1
+              }
+            }
+          ],
           "constructor": {
             "pos_only_required": {
               "_0": {
@@ -1389,33 +2040,14 @@
                 }
               }
             },
-            "pos_only_optional": {},
-            "pos_only_optional_ordering": [],
-            "pos_or_kw_required": {},
-            "pos_or_kw_optional": {},
-            "pos_or_kw_optional_ordering": [],
-            "kw_only_required": {},
-            "kw_only_optional": {},
             "metadata": {
               "usage.sample-usage": 1
             }
-          },
-          "methods": {},
-          "classmethods": {},
-          "properties": {},
-          "classproperties": {}
+          }
         }
       },
       "properties": {
         "int16": [
-          {
-            "usage.sample-usage": 1
-          },
-          {
-            "type": "bottom"
-          }
-        ],
-        "random": [
           {
             "usage.sample-usage": 1
           },
@@ -1449,89 +2081,68 @@
             "type": "numpy.ufunc",
             "name": "log"
           }
-        ],
-        "ndarray": [
-          {
-            "usage.sample-usage": 1
-          },
-          {
-            "type": "bottom"
-          }
-        ],
-        "polynomial": [
-          {
-            "usage.sample-usage": 1
-          },
-          {
-            "type": "bottom"
-          }
         ]
       }
     },
-    "numpy.random": {
-      "functions": {},
-      "classes": {},
-      "properties": {
-        "mtrand": [
-          {
-            "usage.sample-usage": 1
-          },
-          {
-            "type": "bottom"
-          }
-        ]
-      }
-    },
+    "numpy.random": {},
     "numpy.random.mtrand": {
-      "functions": {},
       "classes": {
         "RandomState": {
-          "methods": {
-            "random": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
-              "pos_or_kw_required": {},
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
+          "constructor_overloads": [
+            {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
               "metadata": {
                 "usage.sample-usage": 1
               }
             }
+          ],
+          "method_overloads": {
+            "random": [
+              {
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ]
           },
-          "classmethods": {},
-          "properties": {},
-          "classproperties": {}
-        }
-      },
-      "properties": {}
-    },
-    "numpy.polynomial": {
-      "functions": {},
-      "classes": {},
-      "properties": {
-        "chebyshev": [
-          {
-            "usage.sample-usage": 1
-          },
-          {
-            "type": "bottom"
+          "methods": {
+            "random": {
+              "metadata": {
+                "usage.sample-usage": 1
+              }
+            }
           }
-        ]
+        }
       }
     },
+    "numpy.polynomial": {},
     "numpy.polynomial.chebyshev": {
-      "functions": {},
       "classes": {
         "Chebyshev": {
-          "methods": {},
+          "classmethod_overloads": {
+            "basis": [
+              {
+                "pos_or_kw_required": {
+                  "deg": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.sample-usage": 1
+                }
+              }
+            ]
+          },
           "classmethods": {
             "basis": {
-              "pos_only_required": {},
-              "pos_only_optional": {},
-              "pos_only_optional_ordering": [],
               "pos_or_kw_required": {
                 "deg": {
                   "type": {
@@ -1539,28 +2150,12 @@
                   }
                 }
               },
-              "pos_or_kw_optional": {},
-              "pos_or_kw_optional_ordering": [],
-              "kw_only_required": {},
-              "kw_only_optional": {},
               "metadata": {
                 "usage.sample-usage": 1
               }
             }
-          },
-          "properties": {},
-          "classproperties": {}
-        }
-      },
-      "properties": {
-        "Chebyshev": [
-          {
-            "usage.sample-usage": 1
-          },
-          {
-            "type": "bottom"
           }
-        ]
+        }
       }
     }
   }
