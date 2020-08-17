@@ -98,11 +98,14 @@ jobs:
 
       - name: Try publishing to PyPi
         run: flit publish
+        id: flit-publish
         continue-on-error: true
         env:
           FLIT_USERNAME: ${{ secrets.PYPI_USERNAME }}
           FLIT_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-
+      - name: Sleep to let published packages percolate...
+        run: sleep 60
+        if: steps.flit-publish.outcome == 'success'
       - name: Push images
         working-directory: ./k8
         run: make push-images 2>&1 | tee /tmp/my-logs/push-images
