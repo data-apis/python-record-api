@@ -8,12 +8,38 @@ Currently, this logs all function calls from running a module, or when running p
 
 Then it builds hypothetical API for the target module, given all the calls it has taken.
 
-This is supported on Python version 3.8.
 
+*Sample generated function, from [`data/typing/numpy.py`](./data/typing/numpy.py)*
+
+```python
+def argmax(
+    a: object = ...,
+    axis: Union[int, None] = ...,
+    out: Union[dask.array.core.Array, int, numpy.ndarray] = ...,
+    *,
+    keepdims: bool = ...,
+):
+    """
+    usage.dask: 36
+    usage.pandas: 23
+    usage.scipy: 24
+    usage.skimage: 18
+    usage.sklearn: 77
+    usage.xarray: 17
+    """
+    ...
+```
+
+## Hosted Usage
+
+We have this repository set up with Kubernetes and Github Actions to automatically analyze a number of libraries. The ones we have added are in [`k8/images`](./k8/images). Do you have a library that you would also like to see analyzed? Please open a PR adding that image to the folder there. Make sure to test it locally first, to see that it runs.
+
+Once it's added to the repo, it will be run and the data will be added to `data/api/<library_name>.json` and from there, it will be used to generate the NumPy and Pandas APIs. Those are present in [`data/api.json`](./data/api.json), in machine readable form, as well as in [`data/typing`](data/typing) in human readable form.
 
 ## Usage
 
 ```bash
+# Supported on Python 3.8
 pip install record_api
 
 # First, run some program and gather a trace. Either by:
@@ -77,43 +103,6 @@ make
 ```
 
 You can look in `data/typing/` for the final results of the generated API.
-
-Here are some notes on getting set up locally with a few projects. However,
-I had to disregard these and git clone things for some of them to get the tests to run:
-
-```bash
-git clone git@github.com:scikit-image/scikit-image.git
-conda create -n python-record-api -c conda-forge \
-    jupyterlab \
-    scikit-image \
-    dask \
-    scipy \
-    scikit-learn \
-    xarray \
-    altair \
-    pandas \
-    swifter \
-    cython \
-    pytest \
-    hypothesis \
-    python=3.8
-
-conda activate python-record-api
-pip install -e .
-pip install altair_data_server
-
-conda uninstall -c conda-forge --force matplotlib scikit-image
-
-# install matplotlib from source so we have tests
-# https://matplotlib.org/3.2.1/devel/contributing.html#other-ways-to-contribute
-env MPLSETUPCFG=$PWD/matplotlib.setup.cfg pip install matplotlib --no-binary :all:
-
-# TODO: Fix install of pandas and skimage
-# Install scikit-image from source so we have tests as well
-pip install scikit-image --no-binary :all:
-
-make
-```
 
 ## How?
 
