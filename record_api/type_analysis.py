@@ -149,7 +149,6 @@ class OutputTypeBase(BaseModel, abc.ABC):
     def module(self) -> typing.Optional[str]:
         return None
 
-
     # Set field set to be all fields, so none are ignored even if not set
     @property  # type: ignore
     def __fields_set__(self) -> typing.Set[str]:  # type: ignore
@@ -158,6 +157,7 @@ class OutputTypeBase(BaseModel, abc.ABC):
     @__fields_set__.setter
     def __fields_set__(self, val: typing.Set[str]) -> None:
         pass
+
 
 class InputTypeBase(BaseModel, abc.ABC):
     @abc.abstractmethod
