@@ -30,6 +30,38 @@ def bad_name(name: str) -> bool:
     return not name.isidentifier()
 
 
+class BaseModel(pydantic.BaseModel):
+    class Config:
+        extra = "forbid"
+
+    # Set fields set to be all those that are truthy, so only those are expoed with `skip_defaults`
+    @property  # type: ignore
+    def __fields_set__(self) -> typing.Set[str]:  # type: ignore
+        s = set()
+        for k, v in self.__values__.items():
+            if v:
+                s.add(k)
+        return s
+
+    @__fields_set__.setter
+    def __fields_set__(self, val: typing.Set[str]) -> None:
+        pass
+
+    def __repr_args__(self) -> pydantic.ReprArgs:  # type: ignore
+        # Dont show empty valyes
+        for k, v in super().__repr_args__():
+            if v:
+                yield k, v
+
+    def validate_again(self) -> None:
+        """
+        Use to manually validate for debugging when fields change
+        """
+        _, _, validation_error = pydantic.validate_model(type(self), self.dict())
+        if validation_error:
+            raise validation_error
+
+
 class API(BaseModel):
     # Dotted module name to module
     modules: typing.Dict[str, Module] = pydantic.Field(default_factory=dict)
