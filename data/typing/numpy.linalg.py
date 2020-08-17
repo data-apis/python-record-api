@@ -287,10 +287,17 @@ def solve(a: Union[numpy.ndarray, numpy.matrix], b: numpy.ndarray):
 
 
 @overload
-def svd(a: numpy.ndarray, full_matrices: bool = ...):
+def svd(a: numpy.ndarray):
     """
-    usage.skimage: 7
-    usage.sklearn: 6
+    usage.skimage: 6
+    """
+    ...
+
+
+@overload
+def svd(a: numpy.ndarray, full_matrices: bool):
+    """
+    usage.skimage: 1
     """
     ...
 
@@ -307,6 +314,14 @@ def svd(a: numpy.ndarray, full_matrices: bool = ..., compute_uv: bool = ...):
 def svd(a: numpy.ndarray, full_matrices: int = ...):
     """
     usage.dask: 4
+    """
+    ...
+
+
+@overload
+def svd(a: numpy.ndarray, full_matrices: bool = ...):
+    """
+    usage.sklearn: 6
     """
     ...
 

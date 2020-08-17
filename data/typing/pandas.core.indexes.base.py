@@ -91,17 +91,58 @@ class Index:
         ...
 
     @overload
-    def __getitem__(
-        self,
-        _0: Union[
-            slice[Union[None, int], Union[None, int], Union[None, int]],
-            numpy.ndarray,
-            int,
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: int, /):
         """
-        usage.xarray: 15
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -206,22 +247,6 @@ class Index:
         """
         ...
 
-    @overload
-    def append(
-        self,
-        /,
-        other: Union[
-            list,
-            pandas.core.indexes.datetimes.DatetimeIndex,
-            pandas.core.indexes.numeric.Int64Index,
-        ],
-    ):
-        """
-        usage.xarray: 21
-        """
-        ...
-
-    @overload
     def append(
         self, /, other: Union[list, pandas.core.indexes.category.CategoricalIndex]
     ):
@@ -230,30 +255,6 @@ class Index:
         """
         ...
 
-    def append(
-        self,
-        /,
-        other: Union[
-            pandas.core.indexes.category.CategoricalIndex,
-            pandas.core.indexes.numeric.Int64Index,
-            pandas.core.indexes.datetimes.DatetimeIndex,
-            list,
-        ],
-    ):
-        """
-        usage.dask: 16
-        usage.xarray: 21
-        """
-        ...
-
-    @overload
-    def astype(self, /, dtype: numpy.dtype):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
     def astype(
         self,
         /,
@@ -263,19 +264,6 @@ class Index:
     ):
         """
         usage.dask: 12
-        """
-        ...
-
-    def astype(
-        self,
-        /,
-        dtype: Union[
-            numpy.dtype, pandas.core.dtypes.dtypes.CategoricalDtype, Literal["int64"]
-        ],
-    ):
-        """
-        usage.dask: 12
-        usage.xarray: 1
         """
         ...
 
@@ -294,9 +282,16 @@ class Index:
         ...
 
     @overload
-    def drop(self, /, labels: numpy.ndarray, errors: Literal["ignore", "raise"]):
+    def drop(self, /, labels: numpy.ndarray, errors: Literal["raise"]):
         """
-        usage.xarray: 2
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: numpy.ndarray, errors: Literal["ignore"]):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -320,12 +315,6 @@ class Index:
         """
         ...
 
-    def droplevel(self, /, level: Union[List[Literal["level_1"]], Literal["level_1"]]):
-        """
-        usage.xarray: 2
-        """
-        ...
-
     def dropna(self, /):
         """
         usage.dask: 1
@@ -333,9 +322,9 @@ class Index:
         ...
 
     @overload
-    def equals(self, /, other: object):
+    def equals(self, /, other: pandas.core.indexes.base.Index):
         """
-        usage.xarray: 38
+        usage.xarray: 7
         """
         ...
 
@@ -352,10 +341,32 @@ class Index:
         """
         ...
 
-    def equals(self, /, other: object):
+    def equals(
+        self,
+        /,
+        other: Union[
+            pandas.core.indexes.base.Index, pandas.core.indexes.numeric.Int64Index
+        ],
+    ):
         """
         usage.dask: 3
-        usage.xarray: 38
+        usage.xarray: 7
+        """
+        ...
+
+    @overload
+    def get_indexer(self, /, target: numpy.ndarray, method: None, tolerance: None):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self, /, target: numpy.ndarray, method: Literal["pad"], tolerance: None
+    ):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -372,15 +383,156 @@ class Index:
         ...
 
     @overload
-    def get_loc(
-        self,
-        /,
-        key: object,
-        method: Union[None, Literal["backfill", "pad", "nearest"]] = ...,
-        tolerance: Union[None, datetime.timedelta] = ...,
-    ):
+    def get_loc(self, /, key: Literal["b"], method: None, tolerance: None):
         """
-        usage.xarray: 66
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: bool, method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["a"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["c"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["2000-01-01"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["2000-01-02"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["2000-01-03"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["d"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: str, method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["row0"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["col0"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["col1"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["col2"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["row1"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["one"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["two"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["three"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["five"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["A"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["B"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["C"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["C++"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -394,13 +546,13 @@ class Index:
     def get_loc(
         self,
         /,
-        key: object,
-        method: Union[None, Literal["backfill", "pad", "nearest"]] = ...,
-        tolerance: Union[None, datetime.timedelta] = ...,
+        key: Union[numpy.str_, bool, str],
+        method: None = ...,
+        tolerance: None = ...,
     ):
         """
         usage.sklearn: 20
-        usage.xarray: 66
+        usage.xarray: 22
         """
         ...
 
@@ -442,42 +594,15 @@ class Index:
         """
         ...
 
-    @overload
-    def rename(self, /, name: str):
-        """
-        usage.xarray: 15
-        """
-        ...
-
-    @overload
     def rename(self, /, name: Literal["renamed"]):
         """
         usage.dask: 1
         """
         ...
 
-    def rename(self, /, name: str):
-        """
-        usage.dask: 1
-        usage.xarray: 15
-        """
-        ...
-
-    def set_names(self, /, names: Union[str, numpy.str_, List[str]]):
-        """
-        usage.xarray: 197
-        """
-        ...
-
     def shift(self, /, periods: int, freq: None):
         """
         usage.dask: 1
-        """
-        ...
-
-    def slice_indexer(self, /, start: object, end: object, step: None):
-        """
-        usage.xarray: 11
         """
         ...
 
@@ -492,7 +617,6 @@ class Index:
     def to_series(self, /):
         """
         usage.dask: 11
-        usage.xarray: 3
         """
         ...
 

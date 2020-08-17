@@ -3,16 +3,9 @@ from typing import *
 
 class FrozenList:
     @overload
-    def __eq__(
-        self,
-        _0: Union[
-            pandas.core.indexes.frozen.FrozenList,
-            Tuple[Literal["x_level_0"], Literal["x_level_1"]],
-        ],
-        /,
-    ):
+    def __eq__(self, _0: Tuple[Literal["x_level_0"], Literal["x_level_1"]], /):
         """
-        usage.xarray: 3
+        usage.xarray: 1
         """
         ...
 
@@ -20,6 +13,7 @@ class FrozenList:
     def __eq__(self, _0: pandas.core.indexes.frozen.FrozenList, /):
         """
         usage.dask: 6
+        usage.xarray: 2
         """
         ...
 
@@ -38,16 +32,17 @@ class FrozenList:
         ...
 
     @overload
-    def __getitem__(self, _0: Union[slice[int, None, int], int], /):
+    def __getitem__(self, _0: int, /):
         """
-        usage.xarray: 11
+        usage.dask: 1
+        usage.xarray: 10
         """
         ...
 
     @overload
-    def __getitem__(self, _0: int, /):
+    def __getitem__(self, _0: slice[int, None, int], /):
         """
-        usage.dask: 1
+        usage.xarray: 1
         """
         ...
 

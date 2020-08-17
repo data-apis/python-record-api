@@ -248,6 +248,228 @@ class Series:
         """
         ...
 
+    @overload
+    def __getitem__(self, _0: cftime._cftime.DatetimeNoLeap, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["0001"], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[Literal["0001-01-01"], Literal["0001-12-30"], Literal["0001-01-01"]],
+        /,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, Literal["0001-12-30"], None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            cftime._cftime.DatetimeNoLeap,
+            cftime._cftime.DatetimeNoLeap,
+            cftime._cftime.DatetimeNoLeap,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, cftime._cftime.DatetimeNoLeap, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: cftime._cftime.Datetime360Day, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            cftime._cftime.Datetime360Day,
+            cftime._cftime.Datetime360Day,
+            cftime._cftime.Datetime360Day,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, cftime._cftime.Datetime360Day, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: cftime._cftime.DatetimeJulian, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            cftime._cftime.DatetimeJulian,
+            cftime._cftime.DatetimeJulian,
+            cftime._cftime.DatetimeJulian,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, cftime._cftime.DatetimeJulian, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: cftime._cftime.DatetimeAllLeap, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            cftime._cftime.DatetimeAllLeap,
+            cftime._cftime.DatetimeAllLeap,
+            cftime._cftime.DatetimeAllLeap,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, cftime._cftime.DatetimeAllLeap, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: cftime._cftime.DatetimeGregorian, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            cftime._cftime.DatetimeGregorian,
+            cftime._cftime.DatetimeGregorian,
+            cftime._cftime.DatetimeGregorian,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, cftime._cftime.DatetimeGregorian, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: cftime._cftime.DatetimeProlepticGregorian, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            cftime._cftime.DatetimeProlepticGregorian,
+            cftime._cftime.DatetimeProlepticGregorian,
+            cftime._cftime.DatetimeProlepticGregorian,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: slice[None, cftime._cftime.DatetimeProlepticGregorian, None], /
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: int, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: object, /):
+        """
+        usage.dask: 84
+        """
+        ...
+
     def __getitem__(self, _0: object, /):
         """
         usage.dask: 84
@@ -1379,11 +1601,30 @@ class Series:
         ...
 
     @overload
-    def resample(
-        self, /, rule: Literal["1H", "3H", "24H"], loffset: Literal["-12H"] = ...
-    ):
+    def resample(self, /, rule: Literal["24H"]):
         """
-        usage.xarray: 14
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def resample(self, /, rule: Literal["24H"], loffset: Literal["-12H"]):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def resample(self, /, rule: Literal["3H"]):
+        """
+        usage.xarray: 8
+        """
+        ...
+
+    @overload
+    def resample(self, /, rule: Literal["1H"]):
+        """
+        usage.xarray: 2
         """
         ...
 
@@ -1432,9 +1673,16 @@ class Series:
         ...
 
     @overload
-    def rolling(self, /, window: int, min_periods: Union[int, None], center: bool):
+    def rolling(self, /, window: int, min_periods: None, center: bool):
         """
-        usage.xarray: 3
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def rolling(self, /, window: int, min_periods: int, center: bool):
+        """
+        usage.xarray: 2
         """
         ...
 
@@ -1570,9 +1818,16 @@ class Series:
         ...
 
     @overload
-    def sum(self, /, skipna: bool, min_count: int = ...):
+    def sum(self, /, skipna: bool):
         """
-        usage.xarray: 2
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def sum(self, /, skipna: bool, min_count: int):
+        """
+        usage.xarray: 1
         """
         ...
 

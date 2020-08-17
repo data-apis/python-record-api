@@ -76,16 +76,16 @@ class TimedeltaIndex:
     values: object
 
     @overload
-    def __add__(
-        self,
-        _0: Union[
-            xarray.coding.cftimeindex.CFTimeIndex,
-            pandas._libs.tslibs.timestamps.Timestamp,
-        ],
-        /,
-    ):
+    def __add__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
-        usage.xarray: 2
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: xarray.coding.cftimeindex.CFTimeIndex, /):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -132,9 +132,23 @@ class TimedeltaIndex:
         ...
 
     @overload
-    def __getitem__(self, _0: Union[numpy.ndarray, int, slice[int, int, int]], /):
+    def __getitem__(self, _0: int, /):
         """
-        usage.xarray: 4
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -207,16 +221,16 @@ class TimedeltaIndex:
         ...
 
     @overload
-    def __radd__(
-        self,
-        _0: Union[
-            pandas._libs.tslibs.timestamps.Timestamp,
-            xarray.coding.cftimeindex.CFTimeIndex,
-        ],
-        /,
-    ):
+    def __radd__(self, _0: xarray.coding.cftimeindex.CFTimeIndex, /):
         """
-        usage.xarray: 2
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.xarray: 1
         """
         ...
 

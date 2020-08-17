@@ -24,6 +24,27 @@ class IntervalIndex:
         """
         ...
 
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
     def __getitem__(
         self, _0: slice[Union[None, int], Union[int, None], Union[None, int]], /
     ):
@@ -35,12 +56,6 @@ class IntervalIndex:
     def __gt__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 2
-        """
-        ...
-
-    def equals(self, /, other: pandas.core.indexes.interval.IntervalIndex):
-        """
-        usage.xarray: 1
         """
         ...
 

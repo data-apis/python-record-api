@@ -289,11 +289,30 @@ class DataFrame:
         ...
 
     @overload
-    def __getitem__(
-        self, _0: Union[Literal["x", "foo"], List[Literal["foo", "C"]], int], /
-    ):
+    def __getitem__(self, _0: Literal["foo"], /):
         """
-        usage.xarray: 8
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["foo", "C"]], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: int, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["x"], /):
+        """
+        usage.xarray: 3
         """
         ...
 
@@ -993,6 +1012,34 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def ewm(self, /, span: int):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def ewm(self, /, alpha: float):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def ewm(self, /, com: float):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def ewm(self, /, halflife: int):
+        """
+        usage.xarray: 1
+        """
+        ...
+
     def ewm(
         self,
         /,
@@ -1092,6 +1139,76 @@ class DataFrame:
     def info(self, /, buf: _io.StringIO, memory_usage: bool):
         """
         usage.dask: 1
+        """
+        ...
+
+    @overload
+    def interpolate(self, /, method: Literal["linear"], axis: int):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def interpolate(self, /, method: Literal["nearest"], axis: int):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def interpolate(self, /, method: Literal["zero"], axis: int):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def interpolate(self, /, method: Literal["slinear"], axis: int):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def interpolate(self, /, method: Literal["quadratic"], axis: int):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def interpolate(self, /, method: Literal["cubic"], axis: int):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def interpolate(self, /, method: Literal["time"], axis: int):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def interpolate(self, /, method: Literal["index"], axis: int):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def interpolate(self, /, method: Literal["values"], axis: int):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def interpolate(self, /, method: Literal["polynomial"], axis: int):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -1374,9 +1491,16 @@ class DataFrame:
         ...
 
     @overload
-    def reindex(self, /, labels: Union[reversed, pandas.core.indexes.multi.MultiIndex]):
+    def reindex(self, /, labels: pandas.core.indexes.multi.MultiIndex):
         """
-        usage.xarray: 2
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def reindex(self, /, labels: reversed):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -1492,9 +1616,16 @@ class DataFrame:
         ...
 
     @overload
-    def rolling(self, /, window: int, min_periods: Union[int, None], center: bool):
+    def rolling(self, /, window: int, min_periods: None, center: bool):
         """
-        usage.xarray: 3
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def rolling(self, /, window: int, min_periods: int, center: bool):
+        """
+        usage.xarray: 2
         """
         ...
 
@@ -1644,9 +1775,72 @@ class DataFrame:
         ...
 
     @overload
-    def set_index(self, /, keys: object):
+    def set_index(self, /, keys: List[Literal["y", "x"]]):
         """
-        usage.xarray: 15
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: pandas.core.indexes.multi.MultiIndex):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: pandas.core.indexes.base.Index):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: pandas.core.indexes.range.RangeIndex):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["ind"]):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: pandas.core.indexes.category.CategoricalIndex):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: List[Literal["i2", "i1"]]):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["i1"]):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["x"]):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: pandas.core.indexes.numeric.Int64Index):
+        """
+        usage.xarray: 1
         """
         ...
 

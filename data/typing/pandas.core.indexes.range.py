@@ -83,17 +83,37 @@ class RangeIndex:
         ...
 
     @overload
-    def __getitem__(
-        self,
-        _0: Union[
-            slice[Union[None, int], Union[int, None], Union[None, int]],
-            int,
-            numpy.ndarray,
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: slice[None, int, None], /):
         """
-        usage.xarray: 7
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: int, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -228,15 +248,9 @@ class RangeIndex:
         ...
 
     @overload
-    def equals(
-        self,
-        /,
-        other: Union[
-            pandas.core.indexes.range.RangeIndex, pandas.core.indexes.numeric.Int64Index
-        ],
-    ):
+    def equals(self, /, other: pandas.core.indexes.numeric.Int64Index):
         """
-        usage.xarray: 8
+        usage.xarray: 3
         """
         ...
 
@@ -256,7 +270,7 @@ class RangeIndex:
     ):
         """
         usage.dask: 2
-        usage.xarray: 8
+        usage.xarray: 3
         """
         ...
 

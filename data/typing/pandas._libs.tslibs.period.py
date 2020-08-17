@@ -9,9 +9,16 @@ class Period:
         ...
 
     @overload
-    def __eq__(self, _0: Union[numpy.ndarray, xarray.core.variable.Variable], /):
+    def __eq__(self, _0: xarray.core.variable.Variable, /):
         """
-        usage.xarray: 2
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: numpy.ndarray, /):
+        """
+        usage.xarray: 1
         """
         ...
 

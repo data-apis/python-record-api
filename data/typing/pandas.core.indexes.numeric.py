@@ -68,17 +68,72 @@ class Float64Index:
         ...
 
     @overload
-    def __getitem__(
-        self,
-        _0: Union[
-            slice[Union[int, None], Union[None, int], Union[int, None]],
-            numpy.ndarray,
-            int,
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: numpy.ndarray, /):
         """
-        usage.xarray: 15
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: int, /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -164,32 +219,11 @@ class Float64Index:
         """
         ...
 
-    @overload
-    def astype(self, /, dtype: Union[Type[float], numpy.dtype]):
-        """
-        usage.xarray: 2
-        """
-        ...
-
-    @overload
     def astype(
         self, /, dtype: Union[numpy.dtype, pandas.core.dtypes.dtypes.CategoricalDtype]
     ):
         """
         usage.dask: 2
-        """
-        ...
-
-    def astype(
-        self,
-        /,
-        dtype: Union[
-            pandas.core.dtypes.dtypes.CategoricalDtype, numpy.dtype, Type[float]
-        ],
-    ):
-        """
-        usage.dask: 2
-        usage.xarray: 2
         """
         ...
 
@@ -205,6 +239,40 @@ class Float64Index:
         """
         ...
 
+    @overload
+    def get_indexer(self, /, target: numpy.ndarray, method: None, tolerance: None):
+        """
+        usage.xarray: 5
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self, /, target: numpy.ndarray, method: Literal["pad"], tolerance: None
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self, /, target: numpy.ndarray, method: Literal["backfill"], tolerance: None
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self, /, target: numpy.ndarray, method: Literal["nearest"], tolerance: None
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
     def get_indexer(
         self,
         /,
@@ -214,6 +282,41 @@ class Float64Index:
     ):
         """
         usage.xarray: 8
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: float, method: Literal["nearest"], tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: float, method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: float, method: Literal["nearest"], tolerance: int):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: numpy.float64, method: Literal["nearest"]):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: numpy.int64, method: Literal["nearest"]):
+        """
+        usage.xarray: 2
         """
         ...
 
@@ -326,17 +429,51 @@ class Int64Index:
         ...
 
     @overload
-    def __getitem__(
-        self,
-        _0: Union[
-            numpy.ndarray,
-            int,
-            slice[Union[None, int], Union[int, None], Union[None, int]],
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: numpy.ndarray, /):
         """
-        usage.xarray: 16
+        usage.xarray: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: int, /):
+        """
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -443,6 +580,20 @@ class Int64Index:
         """
         ...
 
+    @overload
+    def drop(self, /, labels: numpy.ndarray, errors: Literal["raise"]):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: numpy.ndarray, errors: Literal["ignore"]):
+        """
+        usage.xarray: 1
+        """
+        ...
+
     def drop(self, /, labels: numpy.ndarray, errors: Literal["raise", "ignore"]):
         """
         usage.xarray: 3
@@ -467,6 +618,58 @@ class Int64Index:
         """
         ...
 
+    @overload
+    def get_indexer(self, /, target: numpy.ndarray, method: None, tolerance: None):
+        """
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self, /, target: numpy.ndarray, method: Literal["backfill"], tolerance: int
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self, /, target: numpy.ndarray, method: Literal["backfill"], tolerance: float
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self, /, target: numpy.ndarray, method: Literal["backfill"], tolerance: None
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self, /, target: numpy.ndarray, method: Literal["pad"], tolerance: None
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self, /, target: numpy.ndarray, method: Literal["pad"], tolerance: float
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
     def get_indexer(
         self,
         /,
@@ -476,6 +679,34 @@ class Int64Index:
     ):
         """
         usage.xarray: 8
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: int, method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: numpy.int64, method: Literal["nearest"]):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: numpy.float64, method: Literal["nearest"]):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: float, method: None, tolerance: None):
+        """
+        usage.xarray: 1
         """
         ...
 

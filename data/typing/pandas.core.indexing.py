@@ -7,10 +7,226 @@ class IndexingError:
 
 class _LocIndexer:
     @overload
+    def __getitem__(self, _0: cftime._cftime.DatetimeNoLeap, /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["0001"], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[Literal["0001-01-01"], Literal["0001-12-30"], Literal["0001-01-01"]],
+        /,
+    ):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, Literal["0001-12-30"], None], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            cftime._cftime.DatetimeNoLeap,
+            cftime._cftime.DatetimeNoLeap,
+            cftime._cftime.DatetimeNoLeap,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, cftime._cftime.DatetimeNoLeap, None], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: cftime._cftime.Datetime360Day, /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            cftime._cftime.Datetime360Day,
+            cftime._cftime.Datetime360Day,
+            cftime._cftime.Datetime360Day,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, cftime._cftime.Datetime360Day, None], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: cftime._cftime.DatetimeJulian, /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            cftime._cftime.DatetimeJulian,
+            cftime._cftime.DatetimeJulian,
+            cftime._cftime.DatetimeJulian,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, cftime._cftime.DatetimeJulian, None], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: cftime._cftime.DatetimeAllLeap, /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            cftime._cftime.DatetimeAllLeap,
+            cftime._cftime.DatetimeAllLeap,
+            cftime._cftime.DatetimeAllLeap,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, cftime._cftime.DatetimeAllLeap, None], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: cftime._cftime.DatetimeGregorian, /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            cftime._cftime.DatetimeGregorian,
+            cftime._cftime.DatetimeGregorian,
+            cftime._cftime.DatetimeGregorian,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, cftime._cftime.DatetimeGregorian, None], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: cftime._cftime.DatetimeProlepticGregorian, /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            cftime._cftime.DatetimeProlepticGregorian,
+            cftime._cftime.DatetimeProlepticGregorian,
+            cftime._cftime.DatetimeProlepticGregorian,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: slice[None, cftime._cftime.DatetimeProlepticGregorian, None], /
+    ):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], List[Literal["x", "a"]]], /
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: object, /):
         """
         usage.dask: 263
-        usage.xarray: 45
         """
         ...
 
@@ -52,9 +268,16 @@ class _LocIndexer:
 
 class _iLocIndexer:
     @overload
-    def __getitem__(self, _0: Union[slice[None, int, None], int], /):
+    def __getitem__(self, _0: int, /):
         """
-        usage.xarray: 5
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.xarray: 3
         """
         ...
 
