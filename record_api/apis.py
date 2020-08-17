@@ -30,21 +30,6 @@ def bad_name(name: str) -> bool:
     return not name.isidentifier()
 
 
-class BaseModel(pydantic.BaseModel):
-    def __repr_args__(self) -> pydantic.ReprArgs:  # type: ignore
-        for k, v in super().__repr_args__():
-            if v:
-                yield k, v
-
-    def validate_again(self) -> None:
-        """
-        Use to manually validate for debugging when fields change
-        """
-        _, _, validation_error = pydantic.validate_model(type(self), self.dict())
-        if validation_error:
-            raise validation_error
-
-
 class API(BaseModel):
     # Dotted module name to module
     modules: typing.Dict[str, Module] = pydantic.Field(default_factory=dict)
@@ -58,7 +43,7 @@ class API(BaseModel):
         return self
 
     def json(self, **kwargs) -> str:
-        return super().json(exclude_none=True, **kwargs)
+        return super().json(exclude_none=True, skip_defaults=True, **kwargs)
 
 
 class Module(BaseModel):

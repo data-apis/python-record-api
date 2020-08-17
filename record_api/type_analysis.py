@@ -38,6 +38,7 @@ __all__ = [
     "MethodDescriptorOutput",
     "parser_config",
     "NumpyUfuncOutput",
+    "BaseModel",
 ]
 
 # If there are more than this amount in a union, just use any
@@ -130,6 +131,33 @@ class BaseModel(pydantic.BaseModel):
     # https://github.com/samuelcolvin/pydantic/issues/1303#issuecomment-599712964
     def __hash__(self):
         return hash((type(self),) + tuple(self.__dict__.values()))
+
+    # Set fields set to be all those that are truthy, so only those are expoed with `skip_defaults`
+    @property
+    def __fields_set__(self) -> typing.Set[str]:
+        s = set()
+        for k, v in self.__values__.items():
+            if v:
+                s.add(k)
+        return s
+
+    @__fields_set__.setter
+    def __fields_set__(self, val: typing.Set[str]) -> None:
+        pass
+
+    def __repr_args__(self) -> pydantic.ReprArgs:  # type: ignore
+        # Dont show empty valyes
+        for k, v in super().__repr_args__():
+            if v:
+                yield k, v
+
+    def validate_again(self) -> None:
+        """
+        Use to manually validate for debugging when fields change
+        """
+        _, _, validation_error = pydantic.validate_model(type(self), self.dict())
+        if validation_error:
+            raise validation_error
 
 
 class OutputTypeBase(BaseModel, abc.ABC):
