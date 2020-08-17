@@ -373,7 +373,7 @@ class NamedOutput(BaseModel):
     def from_input(cls, input: NamedInput) -> typing.Optional[NamedOutput]:
         if isinstance(input, BuiltinNamedInput):
             return cls(name=input.__root__)
-        if "<" in input.name:
+        if not input.name.isidentifier():
             return None
         return cls(name=input.name, module=input.module)
 
@@ -382,9 +382,12 @@ class NamedOutput(BaseModel):
         first_name, *rest = (
             self.module.split(".") + [self.name] if self.module else [self.name]
         )
-        expr: typing.Union[cst.Name, cst.Attribute] = cst.Name(first_name)
-        for name in rest:
-            expr = cst.Attribute(expr, cst.Name(name))
+        try:
+            expr: typing.Union[cst.Name, cst.Attribute] = cst.Name(first_name)
+            for name in rest:
+                expr = cst.Attribute(expr, cst.Name(name))
+        except cst._nodes.base.CSTValidationError:
+            return cst.Name("Unknown")
         return expr
 
 
