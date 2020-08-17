@@ -20,7 +20,7 @@ jobs:
       # https://stedolan.github.io/jq/download/
       - name: Create bin dir
         run: |
-          mkdir -p bin
+          mkdir -p /tmp/bin
           echo "::add-path::/tmp/bin"
 
       - name: Install new jq version
