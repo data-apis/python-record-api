@@ -23,7 +23,14 @@ RUN --mount=type=cache,target=/root/.cache/pip \
         pip install \
         -r requirements/default.txt \
         -r requirements/test.txt \
-        pygraphviz pydot \
+        pygraphviz \
+        pydot \
+        numpy \
+        pandas \
+        lxml \
+        pyyaml \
+        matplotlib \
+        scipy \
         pytest-custom_exit_code \
         -e .'
 
