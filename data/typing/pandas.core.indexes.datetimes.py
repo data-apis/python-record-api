@@ -2,15 +2,493 @@ from typing import *
 
 
 @overload
+def date_range(start: Literal["2000-01-01"], periods: int):
+    """
+    usage.xarray: 27
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1999-01-05"], periods: int):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-02-01"], periods: int):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2010-01-01"], periods: int, freq: Literal["1D"]):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-02-01"], periods: int, freq: Literal["A"]):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-02-01"], periods: int, freq: Literal["M"]):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-02-01"], periods: int, freq: Literal["D"]):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int):
+    """
+    usage.xarray: 5
+    """
+    ...
+
+
+@overload
 def date_range(
-    start: str,
-    end: str = ...,
-    periods: int = ...,
-    freq: Union[str, pandas._libs.tslibs.offsets.DateOffset] = ...,
-    tz: Union[Unknown, Literal["US/Eastern"]] = ...,
+    start: Literal["2000-01-02T01:03:51"], periods: int, freq: Literal["1777S"]
 ):
     """
-    usage.xarray: 122
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2000-01-01T12:07:01"], periods: int, freq: Literal["8003D"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2000-01-01T12:07:01"], periods: int, freq: Literal["6H"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2000-01-01T12:07:01"], periods: int, freq: Literal["3D"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2000-01-01T12:07:01"], periods: int, freq: Literal["11D"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2000-01-01T12:07:01"], periods: int, freq: Literal["3MS"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2000-01-01T12:07:01"], periods: int, freq: Literal["7M"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2000-01-01T12:07:01"], periods: int, freq: Literal["43QS-AUG"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2000-01-01T12:07:01"], periods: int, freq: Literal["11Q-JUN"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2000-01-01T12:07:01"], periods: int, freq: Literal["3AS-MAR"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2000-01-01T12:07:01"], periods: int, freq: Literal["7A-MAY"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2004-01-01T12:07:01"], periods: int, freq: Literal["3D"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1970-01-01"], periods: int, freq: Literal["h"]):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-01-01"], periods: int, freq: Literal["h"]):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2001-04-01-00"], end: Literal["2001-04-30-23"], freq: Literal["H"]
+):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2001-04-01"], end: Literal["2001-04-05"], freq: Literal["D"]
+):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2001-05-01"], end: Literal["2001-05-05"], freq: Literal["D"]
+):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-01-16"], periods: int):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-01-01"], periods: int, freq: Literal["MS"]):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2100"], periods: int):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-01-01"], periods: int, freq: Literal["D"]):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-01-01"], periods: int, freq: Literal["6H"]):
+    """
+    usage.xarray: 20
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int, freq: Literal["D"]):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-01-01"], periods: int, freq: Literal["1D"]):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2007-02-01"], end: Literal["2007-03-01"], freq: Literal["D"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2016-01-01"], end: Literal["2016-03-31"], freq: Literal["1D"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["20130101"], periods: int):
+    """
+    usage.xarray: 5
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int, freq: Literal["2MS"]):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-01-01"], periods: int, freq: Literal["H"]):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1/1/2011"], periods: int, freq: Literal["H"]):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-01-01"], periods: int, freq: Literal["M"]):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["20100101"], periods: int):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-01-01"], periods: int, freq: Literal["3H"]):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["20130101"], periods: int, tz: Literal["US/Eastern"]):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["15/12/1999"], periods: int):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int, freq: Literal["7D"]):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2010-08-01"], end: Literal["2010-08-15"], freq: Literal["15min"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2010-08-01"], end: Literal["2010-08-15"], freq: Literal["24H"]
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["01-01-2001"], periods: int, freq: Literal["D"]):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["01-01-2001"], periods: int, freq: Literal["H"]):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2001-01-01"], periods: int, freq: Literal["H"]):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["20000101"], periods: int):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-01-01"], end: Literal["2000-01-10"]):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-1-1"], periods: int):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["15/12/1999"],
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.DateOffset,
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2011-09-01"], periods: int):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["10-09-2010"], periods: int, freq: Literal["1y"]):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2000-01-01"], periods: int, freq: Literal["1h"], tz: object
+):
+    """
+    usage.xarray: 1
     """
     ...
 
@@ -33,8 +511,8 @@ def date_range(
 
 def date_range(
     start: Union[pandas._libs.tslibs.timestamps.Timestamp, int, str],
-    end: Union[pandas._libs.tslibs.timestamps.Timestamp, str] = ...,
     periods: int = ...,
+    end: Union[pandas._libs.tslibs.timestamps.Timestamp, str] = ...,
     freq: object = ...,
     tz: object = ...,
     name: Union[None, str] = ...,
@@ -117,11 +595,16 @@ class DatetimeIndex:
     values: object
 
     @overload
-    def __add__(
-        self, _0: Union[datetime.timedelta, pandas._libs.tslibs.offsets.Hour], /
-    ):
+    def __add__(self, _0: pandas._libs.tslibs.offsets.Hour, /):
         """
-        usage.xarray: 2
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: datetime.timedelta, /):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -166,17 +649,51 @@ class DatetimeIndex:
         ...
 
     @overload
-    def __getitem__(
-        self,
-        _0: Union[
-            slice[Union[int, None], Union[None, int], Union[int, None]],
-            int,
-            numpy.ndarray,
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: int, /):
         """
-        usage.xarray: 20
+        usage.xarray: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.xarray: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -301,11 +818,16 @@ class DatetimeIndex:
         ...
 
     @overload
-    def __sub__(
-        self, _0: Union[numpy.timedelta64, pandas._libs.tslibs.timestamps.Timestamp], /
-    ):
+    def __sub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
-        usage.xarray: 4
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: numpy.timedelta64, /):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -364,6 +886,79 @@ class DatetimeIndex:
         """
         ...
 
+    @overload
+    def get_indexer(self, /, target: numpy.ndarray, method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self, /, target: numpy.ndarray, method: Literal["pad"], tolerance: None
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self, /, target: numpy.ndarray, method: Literal["backfill"], tolerance: None
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self, /, target: numpy.ndarray, method: Literal["nearest"], tolerance: None
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self,
+        /,
+        target: numpy.ndarray,
+        method: Literal["pad"],
+        tolerance: Literal["12H"],
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self,
+        /,
+        target: numpy.ndarray,
+        method: Literal["backfill"],
+        tolerance: Literal["12H"],
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_indexer(
+        self,
+        /,
+        target: numpy.ndarray,
+        method: Literal["nearest"],
+        tolerance: Literal["6H"],
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
     def get_indexer(
         self,
         /,
@@ -373,6 +968,20 @@ class DatetimeIndex:
     ):
         """
         usage.xarray: 7
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: numpy.datetime64, method: Literal["nearest"]):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["2000-01-01"], method: None, tolerance: None):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -417,18 +1026,6 @@ class DatetimeIndex:
         """
         ...
 
-    def slice_indexer(
-        self,
-        /,
-        start: Union[Literal["2001", "1999", "2000-01-01"], numpy.datetime64],
-        end: Union[Literal["2002", "2005", "2000-01-10"], numpy.datetime64],
-        step: None,
-    ):
-        """
-        usage.xarray: 4
-        """
-        ...
-
     def to_frame(self, /, name: Union[Literal["foo"], None], index: bool = ...):
         """
         usage.dask: 3
@@ -444,7 +1041,6 @@ class DatetimeIndex:
     def to_series(self, /):
         """
         usage.dask: 4
-        usage.xarray: 7
         """
         ...
 

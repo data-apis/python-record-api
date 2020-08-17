@@ -2,11 +2,25 @@ from typing import *
 
 
 @overload
-def period_range(
-    start: Literal["2000", "2000-01-01"], periods: int, freq: Literal["B"] = ...
-):
+def period_range(start: Literal["2000-01-01"], periods: int, freq: Literal["B"]):
     """
-    usage.xarray: 4
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def period_range(start: Literal["2000-01-01"], periods: int):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def period_range(start: Literal["2000"], periods: int, freq: Literal["B"]):
+    """
+    usage.xarray: 1
     """
     ...
 
@@ -90,13 +104,30 @@ class PeriodIndex:
         ...
 
     @overload
-    def __getitem__(
-        self,
-        _0: Union[int, slice[Union[None, int], Union[int, None], Union[None, int]]],
-        /,
-    ):
+    def __getitem__(self, _0: slice[None, int, None], /):
         """
-        usage.xarray: 6
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: int, /):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -185,12 +216,6 @@ class PeriodIndex:
     ):
         """
         usage.dask: 10
-        """
-        ...
-
-    def astype(self, /, dtype: Literal["object"]):
-        """
-        usage.xarray: 1
         """
         ...
 

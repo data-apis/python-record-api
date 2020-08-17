@@ -100,27 +100,192 @@ class MGridClass:
     @overload
     def __getitem__(
         self,
-        _0: Union[
-            Tuple[
-                slice[
-                    Union[int, numpy.float64, None],
-                    Union[int, numpy.float64],
-                    Union[int, numpy.float64, None],
-                ],
-                ...,
-            ],
-            List[
-                slice[
-                    Union[None, numpy.int64],
-                    Union[int, numpy.int64],
-                    Union[None, numpy.int64],
-                ]
-            ],
+        _0: Tuple[
+            slice[numpy.float64, numpy.float64, numpy.float64],
+            slice[numpy.float64, numpy.float64, numpy.float64],
+            slice[numpy.float64, numpy.float64, numpy.float64],
         ],
         /,
     ):
         """
-        usage.skimage: 57
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
+        """
+        usage.skimage: 35
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, int, None], slice[None, int, None]], /):
+        """
+        usage.skimage: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[numpy.float64, numpy.float64, numpy.float64],
+            slice[numpy.float64, numpy.float64, numpy.float64],
+        ],
+        /,
+    ):
+        """
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, int, None], slice[None, int, None]], /):
+        """
+        usage.skimage: 2
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, int, None], slice[None, int, None], slice[None, int, None]
+        ],
+        /,
+    ):
+        """
+        usage.skimage: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[numpy.float64, numpy.float64, numpy.float64],
+            slice[numpy.float64, numpy.float64, numpy.float64],
+            slice[numpy.float64, numpy.float64, numpy.float64],
+        ],
+        /,
+    ):
+        """
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[slice[numpy.int64, numpy.int64, numpy.int64]], /):
+        """
+        usage.skimage: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[int, int, int], slice[int, int, int], slice[int, int, int]],
+        /,
+    ):
+        """
+        usage.skimage: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[slice[None, int, None]], /):
+        """
+        usage.skimage: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
+        """
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[int, int, int], slice[int, int, int], slice[int, int, int]],
+        /,
+    ):
+        """
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+        ],
+        /,
+    ):
+        """
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+        ],
+        /,
+    ):
+        """
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+        ],
+        /,
+    ):
+        """
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+        ],
+        /,
+    ):
+        """
+        usage.skimage: 1
         """
         ...
 
@@ -152,13 +317,6 @@ class MGridClass:
     ):
         """
         usage.matplotlib: 12
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[None, int, None], slice[None, int, None]], /):
-        """
-        usage.sklearn: 1
         """
         ...
 
@@ -195,13 +353,47 @@ class MGridClass:
 
 class OGridClass:
     @overload
+    def __getitem__(self, _0: Tuple[slice[int, float, int], slice[int, float, int]], /):
+        """
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
+        """
+        usage.skimage: 3
+        """
+        ...
+
+    @overload
     def __getitem__(
         self,
-        _0: Tuple[slice[Union[None, int], Union[int, float], Union[None, int]], ...],
+        _0: Tuple[slice[int, int, int], slice[int, int, int], slice[int, int, int]],
         /,
     ):
         """
-        usage.skimage: 8
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, int, None], slice[None, int, None]], /):
+        """
+        usage.skimage: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, int, None], slice[None, int, None], slice[None, int, None]
+        ],
+        /,
+    ):
+        """
+        usage.skimage: 1
         """
         ...
 
@@ -255,26 +447,79 @@ class OGridClass:
 
 class RClass:
     @overload
-    def __getitem__(
-        self,
-        _0: Union[
-            Tuple[Union[int, float, Tuple[float, float]], ...],
-            List[List[Union[float, int]]],
-            numpy.ndarray,
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: Tuple[float, float], /):
         """
-        usage.skimage: 16
+        usage.skimage: 2
         """
         ...
 
     @overload
-    def __getitem__(
-        self, _0: Union[slice[None, int, None], Tuple[int, numpy.ndarray]], /
-    ):
+    def __getitem__(self, _0: Tuple[int, int, int, int, int], /):
         """
-        usage.xarray: 3
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[List[Union[int, float]]], /):
+        """
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[List[int]], /):
+        """
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int, int], /):
+        """
+        usage.skimage: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, float, float], /):
+        """
+        usage.skimage: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, int, int], /):
+        """
+        usage.skimage: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.skimage: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Tuple[float, float], float], /):
+        """
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, numpy.ndarray], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.xarray: 2
         """
         ...
 

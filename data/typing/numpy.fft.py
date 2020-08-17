@@ -76,9 +76,17 @@ def fft2(
 
 
 @overload
-def fftfreq(n: int, d: numpy.ndarray = ...):
+def fftfreq(n: int, d: numpy.ndarray):
     """
-    usage.skimage: 2
+    usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def fftfreq(n: int):
+    """
+    usage.skimage: 1
     """
     ...
 

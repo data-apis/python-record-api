@@ -2,12 +2,6 @@ from typing import *
 
 
 class IndexOpsMixin:
-    def factorize(self, /):
-        """
-        usage.xarray: 4
-        """
-        ...
-
     def max(self, /):
         """
         usage.dask: 18
@@ -29,12 +23,6 @@ class IndexOpsMixin:
     def searchsorted(self, /, value: numpy.ndarray):
         """
         usage.dask: 2
-        """
-        ...
-
-    def to_numpy(self, /):
-        """
-        usage.xarray: 3
         """
         ...
 

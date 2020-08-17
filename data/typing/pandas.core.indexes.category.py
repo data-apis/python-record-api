@@ -72,17 +72,30 @@ class CategoricalIndex:
         ...
 
     @overload
-    def __getitem__(
-        self,
-        _0: Union[
-            numpy.ndarray,
-            int,
-            slice[Union[int, None], Union[None, int], Union[int, None]],
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: slice[None, int, None], /):
         """
-        usage.xarray: 5
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: int, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.xarray: 2
         """
         ...
 
@@ -135,7 +148,6 @@ class CategoricalIndex:
     def equals(self, /, other: pandas.core.indexes.category.CategoricalIndex):
         """
         usage.dask: 1
-        usage.xarray: 2
         """
         ...
 

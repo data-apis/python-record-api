@@ -26,11 +26,21 @@ def assert_frame_equal(
 
 @overload
 def assert_index_equal(
-    left: Union[pandas.core.indexes.multi.MultiIndex, pandas.core.indexes.base.Index],
-    right: Union[pandas.core.indexes.multi.MultiIndex, pandas.core.indexes.base.Index],
+    left: pandas.core.indexes.base.Index, right: pandas.core.indexes.base.Index
 ):
     """
-    usage.xarray: 5
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def assert_index_equal(
+    left: pandas.core.indexes.multi.MultiIndex,
+    right: pandas.core.indexes.multi.MultiIndex,
+):
+    """
+    usage.xarray: 3
     """
     ...
 

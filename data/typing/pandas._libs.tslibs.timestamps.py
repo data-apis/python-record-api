@@ -228,17 +228,23 @@ class Timestamp:
         ...
 
     @overload
-    def __radd__(
-        self,
-        _0: Union[
-            pandas._libs.tslibs.nattype.NaTType,
-            pandas._libs.tslibs.timedeltas.Timedelta,
-            pandas.core.indexes.timedeltas.TimedeltaIndex,
-        ],
-        /,
-    ):
+    def __radd__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
         """
-        usage.xarray: 5
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: pandas.core.indexes.timedeltas.TimedeltaIndex, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: pandas._libs.tslibs.nattype.NaTType, /):
+        """
+        usage.xarray: 2
         """
         ...
 

@@ -16,13 +16,43 @@ def allclose(a: numpy.ma.core.MaskedArray, b: numpy.ma.core.MaskedArray):
 
 
 @overload
-def array(
-    data: numpy.ndarray,
-    mask: Union[numpy.ndarray, bool, List[List[int]]],
-    fill_value: Union[numpy.float64, float] = ...,
-):
+def array(data: numpy.ndarray, mask: List[List[int]]):
     """
-    usage.skimage: 7
+    usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def array(data: numpy.ndarray, mask: bool, fill_value: float):
+    """
+    usage.skimage: 2
+    """
+    ...
+
+
+@overload
+def array(data: numpy.ndarray, mask: numpy.ndarray, fill_value: float):
+    """
+    usage.skimage: 2
+    """
+    ...
+
+
+@overload
+def array(data: numpy.ndarray, mask: numpy.ndarray, fill_value: numpy.float64):
+    """
+    usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def array(data: numpy.ndarray, mask: numpy.ndarray):
+    """
+    usage.dask: 2
+    usage.skimage: 1
+    usage.sklearn: 4
     """
     ...
 
@@ -77,15 +107,6 @@ def array(
 ):
     """
     usage.matplotlib: 45
-    """
-    ...
-
-
-@overload
-def array(data: numpy.ndarray, mask: numpy.ndarray):
-    """
-    usage.dask: 2
-    usage.sklearn: 4
     """
     ...
 
@@ -322,10 +343,18 @@ def fix_invalid(
 
 
 @overload
-def getdata(a: Union[numpy.ndarray, numpy.ma.core.MaskedArray]):
+def getdata(a: numpy.ndarray):
     """
-    usage.matplotlib: 20
-    usage.skimage: 3
+    usage.skimage: 2
+    """
+    ...
+
+
+@overload
+def getdata(a: numpy.ma.core.MaskedArray):
+    """
+    usage.skimage: 1
+    usage.sklearn: 2
     """
     ...
 
@@ -339,17 +368,17 @@ def getdata(a: numpy.ma.mrecords.MaskedRecords):
 
 
 @overload
-def getdata(a: Union[numpy.ma.core.MaskedArray, numpy.ndarray]):
+def getdata(a: Union[numpy.ndarray, numpy.ma.core.MaskedArray]):
     """
-    usage.dask: 9
+    usage.matplotlib: 20
     """
     ...
 
 
 @overload
-def getdata(a: numpy.ma.core.MaskedArray):
+def getdata(a: Union[numpy.ma.core.MaskedArray, numpy.ndarray]):
     """
-    usage.sklearn: 2
+    usage.dask: 9
     """
     ...
 
@@ -435,9 +464,17 @@ def getmaskarray(arr: Union[numpy.ma.core.MaskedArray, numpy.ndarray]):
 
 
 @overload
-def isMaskedArray(x: Union[numpy.ndarray, numpy.ma.core.MaskedArray]):
+def isMaskedArray(x: numpy.ndarray):
     """
-    usage.skimage: 18
+    usage.skimage: 7
+    """
+    ...
+
+
+@overload
+def isMaskedArray(x: numpy.ma.core.MaskedArray):
+    """
+    usage.skimage: 11
     """
     ...
 
@@ -1126,16 +1163,33 @@ class MaskedArray:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[Union[slice[None, None, None], int], ...], /):
+    def __getitem__(self, _0: Tuple[int, int], /):
         """
-        usage.skimage: 6
+        usage.skimage: 2
+        usage.xarray: 1
         """
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[int, int], /):
+    def __getitem__(self, _0: Tuple[slice[None, None, None], int], /):
         """
-        usage.xarray: 1
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int, int], /):
+        """
+        usage.skimage: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, None, None], int], /
+    ):
+        """
+        usage.skimage: 1
         """
         ...
 
@@ -1647,25 +1701,45 @@ class MaskedArray:
 
     @overload
     def __setitem__(
-        self,
-        _0: Union[Tuple[int, ...], slice[None, None, None]],
-        _1: Union[int, numpy.ma.core.MaskedConstant],
-        /,
+        self, _0: slice[None, None, None], _1: numpy.ma.core.MaskedConstant, /
     ):
         """
-        usage.skimage: 6
+        usage.skimage: 4
         """
         ...
 
     @overload
-    def __setitem__(
-        self,
-        _0: Tuple[Union[numpy.ndarray, numpy.bool_, int], int],
-        _1: Union[int, float],
-        /,
-    ):
+    def __setitem__(self, _0: Tuple[int, int], _1: int, /):
         """
-        usage.xarray: 5
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int, int], _1: int, /):
+        """
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: float, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[numpy.bool_, int], _1: int, /):
+        """
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[numpy.ndarray, int], _1: int, /):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -1741,9 +1815,17 @@ class MaskedArray:
         ...
 
     @overload
-    def __sub__(self, _0: Union[numpy.ma.core.MaskedArray, numpy.float64], /):
+    def __sub__(self, _0: numpy.float64, /):
         """
-        usage.skimage: 4
+        usage.skimage: 2
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: numpy.ma.core.MaskedArray, /):
+        """
+        usage.skimage: 2
+        usage.sklearn: 1
         """
         ...
 
@@ -1779,13 +1861,6 @@ class MaskedArray:
     def __sub__(self, _0: Union[int, numpy.ma.core.MaskedArray], /):
         """
         usage.dask: 5
-        """
-        ...
-
-    @overload
-    def __sub__(self, _0: numpy.ma.core.MaskedArray, /):
-        """
-        usage.sklearn: 1
         """
         ...
 
@@ -1937,13 +2012,6 @@ class MaskedArray:
         ...
 
     @overload
-    def filled(self, /, fill_value: float):
-        """
-        usage.xarray: 2
-        """
-        ...
-
-    @overload
     def filled(self, /, fill_value: Union[float, bool, int]):
         """
         usage.scipy: 7
@@ -1969,7 +2037,6 @@ class MaskedArray:
         usage.matplotlib: 17
         usage.scipy: 7
         usage.sklearn: 1
-        usage.xarray: 2
         """
         ...
 
@@ -1992,24 +2059,22 @@ class MaskedArray:
         ...
 
     @overload
-    def mean(self, /):
+    def mean(self, /, axis: Union[None, int] = ..., keepdims: bool = ...):
         """
-        usage.skimage: 1
-        usage.sklearn: 1
+        usage.scipy: 32
         """
         ...
 
     @overload
-    def mean(self, /, axis: Union[None, int] = ..., keepdims: bool = ...):
+    def mean(self, /):
         """
-        usage.scipy: 32
+        usage.sklearn: 1
         """
         ...
 
     def mean(self, /, axis: Union[None, int] = ..., keepdims: bool = ...):
         """
         usage.scipy: 32
-        usage.skimage: 1
         usage.sklearn: 1
         """
         ...
@@ -2067,7 +2132,6 @@ class MaskedArray:
         usage.dask: 9
         usage.matplotlib: 9
         usage.scipy: 16
-        usage.skimage: 1
         usage.sklearn: 2
         """
         ...

@@ -1,8 +1,5 @@
 from typing import *
 
-# usage.sample-usage: 1
-Chebyshev: object
-
 
 class Chebyshev:
     @classmethod

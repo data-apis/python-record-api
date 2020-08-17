@@ -2,23 +2,152 @@ from typing import *
 
 
 @overload
-def as_strided(
-    x: numpy.ndarray,
-    shape: Tuple[Union[numpy.int64, int], ...],
-    strides: Tuple[Union[numpy.int64, int], ...],
-):
+def as_strided(x: numpy.ndarray, shape: Tuple[int, int], strides: Tuple[int, int]):
     """
-    usage.skimage: 11
+    usage.matplotlib: 5
+    usage.skimage: 1
     """
     ...
 
 
 @overload
 def as_strided(
-    x: object, shape: Tuple[int, ...], strides: Tuple[int, ...], writeable: bool
+    x: numpy.ndarray, shape: Tuple[int, int, int], strides: Tuple[int, int, int]
 ):
     """
-    usage.xarray: 10
+    usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def as_strided(x: numpy.ndarray, shape: Tuple[int], strides: Tuple[int]):
+    """
+    usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def as_strided(
+    x: numpy.ndarray,
+    shape: Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64],
+    strides: Tuple[numpy.int64, numpy.int64, int, int],
+):
+    """
+    usage.skimage: 3
+    """
+    ...
+
+
+@overload
+def as_strided(
+    x: numpy.ndarray,
+    shape: Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64],
+    strides: Tuple[int, int, numpy.int64, numpy.int64],
+):
+    """
+    usage.skimage: 2
+    """
+    ...
+
+
+@overload
+def as_strided(
+    x: numpy.ndarray,
+    shape: Tuple[numpy.int64, numpy.int64],
+    strides: Tuple[numpy.int64, int],
+):
+    """
+    usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def as_strided(
+    x: numpy.ndarray,
+    shape: Tuple[
+        numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64
+    ],
+    strides: Tuple[numpy.int64, numpy.int64, numpy.int64, int, int, int],
+):
+    """
+    usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def as_strided(
+    x: numpy.ndarray,
+    shape: Tuple[numpy.int64, numpy.int64],
+    strides: Tuple[int, numpy.int64],
+):
+    """
+    usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def as_strided(
+    x: numpy.ndarray,
+    shape: Tuple[int, int, int, int],
+    strides: Tuple[int, int, int, int],
+    writeable: bool,
+):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def as_strided(
+    x: numpy.ndarray, shape: Tuple[int, int], strides: Tuple[int, int], writeable: bool
+):
+    """
+    usage.xarray: 4
+    """
+    ...
+
+
+@overload
+def as_strided(
+    x: numpy.ndarray,
+    shape: Tuple[int, int, int],
+    strides: Tuple[int, int, int],
+    writeable: bool,
+):
+    """
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def as_strided(
+    x: object,
+    shape: Tuple[int, int, int],
+    strides: Tuple[int, int, int],
+    writeable: bool,
+):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def as_strided(
+    x: object,
+    shape: Tuple[int, int, int, int],
+    strides: Tuple[int, int, int, int],
+    writeable: bool,
+):
+    """
+    usage.xarray: 1
     """
     ...
 
@@ -39,14 +168,6 @@ def as_strided(
 ):
     """
     usage.scipy: 22
-    """
-    ...
-
-
-@overload
-def as_strided(x: numpy.ndarray, shape: Tuple[int, int], strides: Tuple[int, int]):
-    """
-    usage.matplotlib: 5
     """
     ...
 
