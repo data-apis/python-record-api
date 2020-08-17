@@ -96,13 +96,14 @@ push-images: docker-bake.json
 
 test-%: docker-bake.json
 	# docker buildx bake --push $(*F)
-	docker run \
+	kubectl run \
+		$(*F) \
 		--rm \
 		-it \
-		-e PYTHON_RECORD_API_TO_MODULES=numpy,pandas \
-		-e PYTHON_RECORD_API_OUTPUT_FILE=/tmp/d/out.jsonl \
-		-v $$PWD/tmp:/tmp/d \
-		$(call sub_image,$(*F))
+		--restart='Never' \
+		--env=PYTHON_RECORD_API_TO_MODULES=numpy,pandas \
+		--env=PYTHON_RECORD_API_OUTPUT_FILE=/dev/stdout \
+		--image=$(call sub_image,$(*F))
 
 
 # push-images:  $(addprefix push-image-,$(IMAGES))
