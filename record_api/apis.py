@@ -31,7 +31,7 @@ def bad_name(name: str) -> bool:
 
 
 class BaseModel(pydantic.BaseModel):
-    def __repr_args__(self) -> pydantic.ReprArgs:
+    def __repr_args__(self) -> pydantic.ReprArgs:  # type: ignore
         for k, v in super().__repr_args__():
             if v:
                 yield k, v
@@ -62,11 +62,24 @@ class API(BaseModel):
 
 
 class Module(BaseModel):
+    function_overloads: typing.Dict[str, typing.List[Signature]] = pydantic.Field(
+        default_factory=dict
+    )
     functions: typing.Dict[str, Signature] = pydantic.Field(default_factory=dict)
     classes: typing.Dict[str, Class] = pydantic.Field(default_factory=dict)
     properties: typing.Dict[str, typing.Tuple[Metadata, Type]] = pydantic.Field(
         default_factory=dict
     )
+
+    @pydantic.root_validator
+    def set_overloads(cls, values):
+        """
+        Set the overloads to be the values, if they are not set
+        """
+        values["function_overloads"] = values.get("function_overloads", {}) or {
+            k: create_overloads(v) for k, v in values["functions"].items()
+        }
+        return values
 
     @property
     def source(self) -> str:
@@ -88,10 +101,8 @@ class Module(BaseModel):
         )
         yield from assign_properties(self.properties)
 
-        for name, sig in sort_items(self.functions):
-            if bad_name(name):
-                continue
-            yield sig.function_def(name, "function")
+        yield from function_defs(self.function_overloads, self.functions, "function")
+
         for name, class_ in sort_items(self.classes):
             yield class_.class_def(name)
 
@@ -107,18 +118,37 @@ class Module(BaseModel):
         update_ior(self.functions, other.functions)
         # property -> function
         merge_intersection(self.functions, self.properties, merge_property_into_method)
+        # function overloads
+        update_overloads(self.function_overloads, other.function_overloads)
 
         # classes
         update_ior(self.classes, other.classes)
         # function -> class constructor
         merge_intersection(self.classes, self.functions, merge_method_class)
+        merge_intersection(
+            self.classes, self.function_overloads, merge_method_overloads_class
+        )
 
         return self
 
 
+def create_overloads(s: Signature) -> typing.List[Signature]:
+    """
+    Copies signature to create overloads. Needs to copy because we inplace update the signature later on
+    """
+    return [s.copy(deep=True)]
+
+
 class Class(BaseModel):
+    constructor_overloads: typing.List[Signature] = pydantic.Field(default_factory=list)
     constructor: typing.Union[Signature, None] = None
+    method_overloads: typing.Dict[str, typing.List[Signature]] = pydantic.Field(
+        default_factory=dict
+    )
     methods: typing.Dict[str, Signature] = pydantic.Field(default_factory=dict)
+    classmethod_overloads: typing.Dict[str, typing.List[Signature]] = pydantic.Field(
+        default_factory=dict
+    )
     classmethods: typing.Dict[str, Signature] = pydantic.Field(default_factory=dict)
     properties: typing.Dict[str, typing.Tuple[Metadata, Type]] = pydantic.Field(
         default_factory=dict
@@ -127,26 +157,48 @@ class Class(BaseModel):
         default_factory=dict
     )
 
+    @pydantic.root_validator
+    def set_overloads(cls, values):
+        """
+        Set the overloads to be the values, if not passed in.
+        """
+        if values["constructor"] and not values["constructor_overloads"]:
+            values["constructor_overloads"] = create_overloads(values["constructor"])
+        values["method_overloads"] = values.get("method_overloads", {}) or {
+            k: create_overloads(v) for k, v in values["methods"].items()
+        }
+        values["classmethod_overloads"] = values.get("classmethod_overloads", {}) or {
+            k: create_overloads(v) for k, v in values["classmethods"].items()
+        }
+        return values
+
     def class_def(self, name: str) -> cst.ClassDef:
         return cst.ClassDef(cst.Name(name), cst.IndentedBlock(list(self.body)),)
 
     @property
     def body(self) -> typing.Iterable[cst.BaseStatement]:
         if self.constructor is not None:
-            yield self.constructor.function_def("__init__", "method", indent=1)
+            function_def_with_overloads(
+                "__init__",
+                self.constructor_overloads,
+                self.constructor,
+                "method",
+                indent=1,
+            )
         yield from assign_properties(self.classproperties, True)
 
-        for name, sig in sort_items(self.classmethods):
-            if bad_name(name):
-                continue
-            yield sig.function_def(name, "classmethod", indent=1)
-
+        yield from function_defs(
+            self.classmethod_overloads, self.classmethods, "classmethod", 1
+        )
         yield from assign_properties(self.properties)
 
-        for name, sig in sort_items(self.methods):
-            if bad_name(name):
-                continue
-            yield sig.function_def(name, "method", indent=1)
+        yield from function_defs(self.method_overloads, self.methods, "method", 1)
+
+    def ior_constructor(self, other: typing.Optional[Signature]) -> None:
+        if self.constructor and other:
+            self.constructor |= other
+        else:
+            self.constructor = other
 
     def __ior__(self, other: Class) -> Class:
         """
@@ -159,10 +211,9 @@ class Class(BaseModel):
 
         * (implicit) property -> classmethod 
         """
-        if self.constructor and other.constructor:
-            self.constructor |= other.constructor
-        else:
-            self.constructor = other.constructor
+        self.ior_constructor(other.constructor)
+        merge_overloads(self.constructor_overloads, other.constructor_overloads)
+
         # properties
         update_metadata_and_types(self.properties, other.properties)
 
@@ -177,11 +228,19 @@ class Class(BaseModel):
         update_ior(self.methods, other.methods)
         # property -> method
         merge_intersection(self.methods, self.properties, merge_property_into_method)
+        # method overloads
+        update_overloads(self.method_overloads, other.method_overloads)
 
         # class methods
         update_ior(self.classmethods, other.classmethods)
         # method -> classmethod
         merge_intersection(self.classmethods, self.methods, operator.ior)
+        # classmethod overloads
+        merge_intersection(
+            self.classmethod_overloads, self.method_overloads, merge_overloads
+        )
+        update_overloads(self.classmethod_overloads, other.classmethod_overloads)
+
         # classproperty -> classmethod
         merge_intersection(
             self.classmethods, self.classproperties, merge_property_into_method
@@ -224,6 +283,37 @@ def sort_items(d: typing.Dict[str, V]) -> typing.Iterable[typing.Tuple[str, V]]:
 
 
 PartialKeyOrdering = typing.List[typing.Tuple[str, str]]
+
+
+def function_defs(
+    overloads: typing.Dict[str, typing.List[Signature]],
+    functions: typing.Dict[str, Signature],
+    type: typing.Literal["function", "classmethod", "method"],
+    indent: int = 0,
+) -> typing.Iterable[cst.FunctionDef]:
+    """
+    Exports CST for functions plus overloads
+    """
+    for name, sig in sort_items(functions):
+        if bad_name(name):
+            continue
+        yield from function_def_with_overloads(
+            name, overloads.get(name, []), sig, type, indent
+        )
+
+
+def function_def_with_overloads(
+    name: str,
+    overloads: typing.List[Signature],
+    fn: Signature,
+    type: typing.Literal["function", "classmethod", "method"],
+    indent: int = 0,
+) -> typing.Iterable[cst.FunctionDef]:
+    # Don't print overloads if just one!
+    if len(overloads) > 1:
+        for overload in overloads:
+            yield overload.function_def(name, type, indent=indent, overload=True)
+    yield fn.function_def(name, type, indent=indent)
 
 
 class Signature(BaseModel):
@@ -292,14 +382,20 @@ class Signature(BaseModel):
         name: str,
         type: typing.Literal["function", "classmethod", "method"],
         indent=0,
+        overload=False,
     ) -> cst.FunctionDef:
+        decorators: typing.List[cst.Decorator] = []
+        if overload:
+            decorators.append(cst.Decorator(cst.Name("overload")))
+        if type == "classmethod":
+            decorators.append(cst.Decorator(cst.Name("classmethod")))
         return cst.FunctionDef(
             cst.Name(name),
             self.parameters(type),
             cst.IndentedBlock(
                 [cst.SimpleStatementLine([s]) for s in self.body(indent)]
             ),
-            [cst.Decorator(cst.Name("classmethod"))] if type == "classmethod" else [],
+            decorators,
         )
 
     def body(self, indent: int) -> typing.Iterable[cst.BaseSmallStatement]:
@@ -412,6 +508,17 @@ class Signature(BaseModel):
                 else None
             ),
         )
+
+    def content_equal(self, other: Signature) -> bool:
+        """
+        Returns true if all fields besides metadata are equal
+        """
+        for field in self.__fields__.keys():
+            if field == "metadata":
+                continue
+            if getattr(self, field) != getattr(other, field):
+                return False
+        return True
 
     def __ior__(self, other: Signature) -> Signature:
         self._copy_pos_only(other)
@@ -696,7 +803,12 @@ def merge_property_into_method(
 
 
 def merge_method_class(l: Class, r: Signature) -> Class:
-    l |= Class(constructor=r)
+    l.ior_constructor(r)
+    return l
+
+
+def merge_method_overloads_class(l: Class, r: typing.List[Signature]) -> Class:
+    merge_overloads(l.constructor_overloads, r)
     return l
 
 
@@ -708,6 +820,27 @@ def merge_methods_properties(
 
 
 update_metadata_and_types = functools.partial(update, f=merge_methods_properties)
+
+
+def merge_overloads(
+    old: typing.List[Signature], new: typing.List[Signature]
+) -> typing.List[Signature]:
+    """
+    Merges the two lists of overloads, updating the old list. Any signatures that match, we take the union of their metadata.
+    """
+    for new_sig in new:
+        # Iterate through all the old signatures, if we find one which matches, update that and break
+        for old_sig in old:
+            if new_sig.content_equal(old_sig):
+                update_add(old_sig.metadata, new_sig.metadata)
+                break
+        # Otherwise, we didn't find one, so add the new one to the old
+        else:
+            old.append(new_sig)
+    return old
+
+
+update_overloads = functools.partial(update, f=merge_overloads)
 
 
 T = typing.TypeVar("T")
