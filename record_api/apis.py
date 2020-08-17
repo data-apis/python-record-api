@@ -72,6 +72,11 @@ class API(BaseModel):
 
     def __ior__(self, other: API) -> API:
         update_ior(self.modules, other.modules)
+        # Remove any properties which are other just other modules
+        for module_name, module in self.modules.items():
+            for property_ in list(module.properties.keys()):
+                if f"{module_name}.{property_}" in self.modules:
+                    del module.properties[property_]
         return self
 
     def json(self, **kwargs) -> str:
@@ -140,6 +145,11 @@ class Module(BaseModel):
 
         # classes
         update_ior(self.classes, other.classes)
+        # property -> classes
+        merge_intersection(
+            self.classes, self.properties, lambda class_, property: class_
+        )
+
         # function -> class constructor
         merge_intersection(self.classes, self.functions, merge_method_class)
         merge_intersection(
