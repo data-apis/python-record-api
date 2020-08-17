@@ -21,17 +21,17 @@ jobs:
       - name: Create bin dir
         run: |
           mkdir -p bin
-          echo "::add-path::$GITHUB_WORKSPACE/bin"
+          echo "::add-path::/tmp/bin"
 
       - name: Install new jq version
         run: |
-          curl https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 -L -o $GITHUB_WORKSPACE/bin/jq
+          curl https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 -L -o /tmp/bin/jq
 
       - name: Install argo
         run: |
-          curl https://github.com/argoproj/argo/releases/download/v2.9.3/argo-linux-amd64 -L -o $GITHUB_WORKSPACE/bin/argo
+          curl https://github.com/argoproj/argo/releases/download/v2.9.3/argo-linux-amd64 -L -o /tmp/bin/argo
       - name: Make bin executable
-        run: chmod +x $GITHUB_WORKSPACE/bin/*
+        run: chmod +x /tmp/bin/*
 
       - name: Cache pip
         uses: actions/cache@v2
@@ -61,12 +61,12 @@ jobs:
         if: steps.cache-buildx.outputs.cache-hit != 'true'
         with:
           repository: docker/buildx
-          path: buildx
+          path: /tmp/buildx-source
           ref: fd6de6b6aeac780c59e5079a96b068076b676d73
 
       - name: Install buildx
         if: steps.cache-buildx.outputs.cache-hit != 'true'
-        working-directory: ./buildx
+        working-directory: /tmp/buildx-source
         run: make install
 
       - name: Install doctl
