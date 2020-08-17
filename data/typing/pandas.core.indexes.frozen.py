@@ -5,8 +5,8 @@ class FrozenList:
     def __eq__(
         self,
         _0: Union[
-            Tuple[Literal["x_level_0"], Literal["x_level_1"]],
             pandas.core.indexes.frozen.FrozenList,
+            Tuple[Literal["x_level_0"], Literal["x_level_1"]],
         ],
         /,
     ):

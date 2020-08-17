@@ -20,11 +20,11 @@ def assert_almost_equal(
 def assert_array_almost_equal(
     x: object,
     y: Union[
+        numpy.ndarray,
+        numpy.ma.core.MaskedArray,
         scipy.stats.stats.KurtosistestResult,
         scipy.stats.stats.NormaltestResult,
-        numpy.ma.core.MaskedArray,
         scipy.stats.stats.SkewtestResult,
-        numpy.ndarray,
     ],
 ):
     """

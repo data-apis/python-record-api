@@ -9,7 +9,7 @@ def isna(obj: object):
     ...
 
 
-def notna(obj: Union[numpy.ndarray, pandas.core.indexes.numeric.Int64Index]):
+def notna(obj: Union[pandas.core.indexes.numeric.Int64Index, numpy.ndarray]):
     """
     usage.dask: 2
     usage.xarray: 3

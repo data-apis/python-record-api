@@ -2,6 +2,11 @@ from typing import *
 
 
 class Float64Index:
+    def __init__(self, /, data: List[float], name: Literal["b"]):
+        """
+        usage.dask: 1
+        """
+        ...
 
     # usage.dask: 1
     __module__: ClassVar[object]
@@ -72,7 +77,7 @@ class Float64Index:
         _0: Union[
             int,
             numpy.ndarray,
-            slice[Union[int, None], Union[int, None], Union[int, None]],
+            slice[Union[None, int], Union[int, None], Union[None, int]],
         ],
         /,
     ):
@@ -146,7 +151,7 @@ class Float64Index:
         self,
         /,
         dtype: Union[
-            numpy.dtype, pandas.core.dtypes.dtypes.CategoricalDtype, Type[float]
+            pandas.core.dtypes.dtypes.CategoricalDtype, numpy.dtype, Type[float]
         ],
     ):
         """
@@ -289,9 +294,9 @@ class Int64Index:
     def __getitem__(
         self,
         _0: Union[
-            slice[Union[None, int], Union[int, None], Union[None, int]],
             int,
             numpy.ndarray,
+            slice[Union[int, None], Union[None, int], Union[int, None]],
         ],
         /,
     ):
@@ -474,6 +479,11 @@ class Int64Index:
 
 
 class UInt64Index:
+    def __init__(self, /, data: List[int], name: Literal["foo"]):
+        """
+        usage.dask: 1
+        """
+        ...
 
     # usage.dask: 1
     __module__: ClassVar[object]

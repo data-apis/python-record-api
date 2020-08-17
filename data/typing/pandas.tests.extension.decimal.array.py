@@ -19,7 +19,7 @@ class DecimalDtype:
     # usage.dask: 1
     kind: object
 
-    def __eq__(self, _0: Union[numpy.dtype, Type[object]], /):
+    def __eq__(self, _0: Union[Type[object], numpy.dtype], /):
         """
         usage.dask: 1
         usage.pandas: 2

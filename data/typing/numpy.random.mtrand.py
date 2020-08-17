@@ -13,11 +13,11 @@ class RandomState:
 
     def beta(
         self,
-        _0: Union[numpy.ndarray, numpy.float64, int, float],
-        _1: Union[numpy.ndarray, numpy.float64, int, float],
+        _0: Union[int, float, numpy.float64, numpy.ndarray],
+        _1: Union[int, float, numpy.float64, numpy.ndarray],
         /,
         *,
-        size: Union[int, Tuple[int]] = ...,
+        size: Union[Tuple[int], int] = ...,
     ):
         """
         usage.dask: 1
@@ -52,7 +52,7 @@ class RandomState:
         _0: Union[int, numpy.ndarray, numpy.float64],
         /,
         *,
-        size: Union[numpy.int64, Tuple[int]] = ...,
+        size: Union[Tuple[int], numpy.int64] = ...,
     ):
         """
         usage.dask: 1
@@ -66,9 +66,9 @@ class RandomState:
         _0: object,
         /,
         *,
-        p: Union[numpy.ndarray, None, List[Union[float, int]]] = ...,
         replace: bool = ...,
-        size: Union[List[int], Tuple[Union[int, None], ...], int, numpy.int64] = ...,
+        size: Union[numpy.int64, int, List[int], Tuple[Union[None, int], ...]] = ...,
+        p: Union[numpy.ndarray, List[Union[float, int]], None] = ...,
     ):
         """
         usage.dask: 32
@@ -96,8 +96,8 @@ class RandomState:
 
     def f(
         self,
-        _0: Union[numpy.ndarray, int],
-        _1: Union[numpy.ndarray, int],
+        _0: Union[int, numpy.ndarray],
+        _1: Union[int, numpy.ndarray],
         /,
         *,
         size: Tuple[int] = ...,
@@ -111,7 +111,7 @@ class RandomState:
     def gamma(
         self,
         _0: Union[int, float, numpy.ndarray],
-        _1: Union[float, int, numpy.float64] = ...,
+        _1: Union[float, numpy.float64, int] = ...,
         _2: Tuple[int, int] = ...,
         /,
         *,
@@ -127,7 +127,7 @@ class RandomState:
 
     def geometric(
         self,
-        _0: Union[numpy.ndarray, numpy.float64, int],
+        _0: Union[int, numpy.ndarray, numpy.float64],
         /,
         *,
         size: Tuple[Union[int, numpy.int64, None], ...],
@@ -146,7 +146,7 @@ class RandomState:
         ...
 
     def gumbel(
-        self, _0: int = ..., _1: float = ..., /, *, size: Union[int, Tuple[int]]
+        self, _0: int = ..., _1: float = ..., /, *, size: Union[Tuple[int], int]
     ):
         """
         usage.dask: 1
@@ -156,9 +156,9 @@ class RandomState:
 
     def hypergeometric(
         self,
-        _0: Union[numpy.ndarray, int],
-        _1: Union[numpy.ndarray, numpy.int64, int],
-        _2: Union[numpy.ndarray, int],
+        _0: Union[int, numpy.ndarray],
+        _1: Union[int, numpy.ndarray, numpy.int64],
+        _2: Union[int, numpy.ndarray],
         /,
         *,
         size: Tuple[Union[int, numpy.int64, None], ...],
@@ -171,11 +171,11 @@ class RandomState:
 
     def laplace(
         self,
-        _0: Union[int, float],
-        _1: Union[int, float],
+        _0: Union[float, int],
+        _1: Union[float, int],
         /,
         *,
-        size: Tuple[Union[int, numpy.int64, None], ...],
+        size: Tuple[Union[None, numpy.int64, int], ...],
     ):
         """
         usage.dask: 1
@@ -189,7 +189,7 @@ class RandomState:
         _1: float = ...,
         /,
         *,
-        size: Tuple[Union[int, numpy.int64, None], ...],
+        size: Tuple[Union[None, numpy.int64, int], ...],
     ):
         """
         usage.dask: 1
@@ -204,9 +204,9 @@ class RandomState:
         _2: int = ...,
         /,
         *,
+        size: Union[int, Tuple[int, ...]] = ...,
         mean: float = ...,
         sigma: float = ...,
-        size: Union[int, Tuple[int, ...]] = ...,
     ):
         """
         usage.dask: 1
@@ -219,7 +219,7 @@ class RandomState:
 
     def logseries(
         self,
-        _0: Union[numpy.ndarray, float],
+        _0: Union[float, numpy.ndarray],
         /,
         *,
         size: Tuple[Union[int, numpy.int64, None], ...],
@@ -256,8 +256,8 @@ class RandomState:
 
     def negative_binomial(
         self,
-        _0: Union[numpy.ndarray, int],
-        _1: Union[numpy.ndarray, float],
+        _0: Union[int, numpy.ndarray],
+        _1: Union[float, numpy.ndarray],
         /,
         *,
         size: Tuple[int] = ...,
@@ -270,8 +270,8 @@ class RandomState:
 
     def noncentral_chisquare(
         self,
-        _0: Union[numpy.ndarray, int],
-        _1: Union[numpy.ndarray, int],
+        _0: Union[int, numpy.ndarray],
+        _1: Union[int, numpy.ndarray],
         /,
         *,
         size: Tuple[int] = ...,
@@ -284,9 +284,9 @@ class RandomState:
 
     def noncentral_f(
         self,
-        _0: Union[numpy.ndarray, int],
-        _1: Union[numpy.ndarray, int],
-        _2: Union[numpy.ndarray, int],
+        _0: Union[int, numpy.ndarray],
+        _1: Union[int, numpy.ndarray],
+        _2: Union[int, numpy.ndarray],
         /,
         *,
         size: Tuple[int] = ...,
@@ -301,13 +301,13 @@ class RandomState:
         self,
         _0: object = ...,
         _1: Union[
-            int, float, dask.array.core.Array, numpy.float64, numpy.ndarray
+            int, float, numpy.ndarray, numpy.float64, dask.array.core.Array
         ] = ...,
         _2: Union[int, Tuple[int, int]] = ...,
         /,
         *,
-        size: Union[Tuple[Union[None, numpy.int64, int], ...], int, numpy.int64] = ...,
-        scale: Union[int, numpy.float64, numpy.int64, float, numpy.ndarray] = ...,
+        size: Union[int, numpy.int64, Tuple[Union[None, numpy.int64, int], ...]] = ...,
+        scale: Union[int, numpy.ndarray, float, numpy.int64, numpy.float64] = ...,
         loc: Union[int, numpy.ndarray, float] = ...,
     ):
         """
@@ -321,7 +321,7 @@ class RandomState:
         """
         ...
 
-    def pareto(self, _0: Union[float, int], /, *, size: Union[int, Tuple[int]] = ...):
+    def pareto(self, _0: Union[int, float], /, *, size: Union[Tuple[int], int] = ...):
         """
         usage.dask: 1
         usage.scipy: 7
@@ -350,7 +350,7 @@ class RandomState:
 
     def poisson(
         self,
-        _0: Union[int, numpy.int64, float, numpy.ndarray] = ...,
+        _0: Union[int, numpy.ndarray, float, numpy.int64] = ...,
         _1: Tuple[Union[int, numpy.int64, None], ...] = ...,
         /,
         *,
@@ -373,7 +373,7 @@ class RandomState:
 
     def rand(
         self,
-        _0: Union[int, numpy.int64] = ...,
+        _0: Union[numpy.int64, int] = ...,
         _1: int = ...,
         _2: int = ...,
         _3: int = ...,
@@ -396,15 +396,15 @@ class RandomState:
 
     def randint(
         self,
-        _0: Union[int, float, numpy.int64, numpy.ndarray, numpy.float64] = ...,
+        _0: Union[numpy.float64, int, float, numpy.ndarray, numpy.int64] = ...,
         _1: Union[int, float] = ...,
-        _2: Union[Tuple[int, ...], int, numpy.ndarray, numpy.int64, List[int]] = ...,
+        _2: Union[numpy.int64, int, numpy.ndarray, List[int], Tuple[int, ...]] = ...,
         /,
         *,
+        dtype: Union[Literal["u8", "l", "uint8", "int64"], type, numpy.dtype] = ...,
         size: Union[
-            Tuple[Union[None, numpy.int64, int], ...], List[int], None, int, numpy.int64
+            numpy.int64, int, Tuple[Union[None, numpy.int64, int], ...], None, List[int]
         ] = ...,
-        dtype: Union[Literal["u8", "int64", "l", "uint8"], type, numpy.dtype] = ...,
         high: Union[int, numpy.ndarray, None] = ...,
         low: int = ...,
     ):
@@ -422,7 +422,7 @@ class RandomState:
     def randn(
         self,
         _0: Union[int, numpy.int64] = ...,
-        _1: Union[int, numpy.int64] = ...,
+        _1: Union[numpy.int64, int] = ...,
         _2: int = ...,
         _3: int = ...,
         _4: int = ...,
@@ -439,7 +439,7 @@ class RandomState:
         """
         ...
 
-    def random(self, /, *, size: Union[Tuple[int, ...], List[int], int] = ...):
+    def random(self, /, *, size: Union[int, Tuple[int, ...], List[int]] = ...):
         """
         usage.dask: 157
         usage.matplotlib: 24
@@ -464,7 +464,7 @@ class RandomState:
         """
         ...
 
-    def rayleigh(self, _0: Union[int, float], /, *, size: Tuple[int] = ...):
+    def rayleigh(self, _0: Union[float, int], /, *, size: Tuple[int] = ...):
         """
         usage.dask: 1
         usage.scipy: 1
@@ -507,7 +507,7 @@ class RandomState:
         """
         ...
 
-    def standard_exponential(self, /, *, size: Union[int, Tuple[int]] = ...):
+    def standard_exponential(self, /, *, size: Union[Tuple[int], int] = ...):
         """
         usage.dask: 1
         usage.scipy: 13
@@ -515,7 +515,7 @@ class RandomState:
         ...
 
     def standard_gamma(
-        self, _0: Union[numpy.ndarray, int], /, *, size: Tuple[int] = ...
+        self, _0: Union[int, numpy.ndarray], /, *, size: Tuple[int] = ...
     ):
         """
         usage.dask: 1
@@ -527,8 +527,8 @@ class RandomState:
         self,
         /,
         *,
+        size: Union[Tuple[Union[numpy.int64, int, None], ...], int] = ...,
         dtype: Literal["float64"] = ...,
-        size: Union[int, Tuple[Union[int, numpy.int64, None], ...]] = ...,
     ):
         """
         usage.dask: 3
@@ -541,10 +541,10 @@ class RandomState:
 
     def standard_t(
         self,
-        _0: Union[numpy.ndarray, int],
+        _0: Union[int, numpy.ndarray],
         /,
         *,
-        size: Tuple[Union[int, numpy.int64, None], ...],
+        size: Tuple[Union[None, numpy.int64, int], ...],
     ):
         """
         usage.dask: 1
@@ -555,7 +555,7 @@ class RandomState:
     def triangular(
         self,
         _0: int,
-        _1: Union[numpy.ndarray, int],
+        _1: Union[int, numpy.ndarray],
         _2: int,
         /,
         *,
@@ -571,11 +571,11 @@ class RandomState:
         self,
         _0: Union[float, numpy.float64, numpy.ndarray, int] = ...,
         _1: Union[numpy.float64, numpy.ndarray, int, float] = ...,
-        _2: Union[int, Tuple[Union[None, int, numpy.int64], ...], List[int]] = ...,
+        _2: Union[int, Tuple[Union[int, numpy.int64, None], ...], List[int]] = ...,
         /,
         *,
         size: Union[
-            List[int], int, numpy.int64, Tuple[Union[None, numpy.int64, int], ...]
+            Tuple[Union[None, numpy.int64, int], ...], numpy.int64, int, List[int]
         ] = ...,
         high: Union[int, float] = ...,
         low: Union[float, int] = ...,
@@ -593,11 +593,11 @@ class RandomState:
 
     def vonmises(
         self,
-        _0: Union[float, int],
-        _1: Union[numpy.ndarray, int],
+        _0: Union[int, float],
+        _1: Union[int, numpy.ndarray],
         /,
         *,
-        size: Tuple[Union[int, None], ...],
+        size: Tuple[Union[None, int], ...],
     ):
         """
         usage.dask: 1
@@ -607,8 +607,8 @@ class RandomState:
 
     def wald(
         self,
-        _0: Union[numpy.ndarray, float, int],
-        _1: Union[float, int],
+        _0: Union[int, numpy.ndarray, float],
+        _1: Union[int, float],
         /,
         *,
         size: Tuple[Union[int, numpy.int64, None], ...],
@@ -627,7 +627,7 @@ class RandomState:
 
     def zipf(
         self,
-        _0: Union[numpy.ndarray, int],
+        _0: Union[int, numpy.ndarray],
         /,
         *,
         size: Tuple[Union[int, numpy.int64, None], ...],

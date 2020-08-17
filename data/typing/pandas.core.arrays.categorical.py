@@ -3,11 +3,20 @@ from typing import *
 
 class Categorical:
     def __init__(
-        self, /, values: Union[List[Union[int, Literal["c", "b", "a"]]], numpy.ndarray]
+        self,
+        /,
+        values: Union[
+            List[Union[str, int]],
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas.core.indexes.numeric.Float64Index,
+            pandas.core.indexes.base.Index,
+        ],
+        categories: Union[None, pandas.core.indexes.base.Index] = ...,
+        ordered: bool = ...,
     ):
         """
+        usage.dask: 10
         usage.sklearn: 1
-        usage.xarray: 4
         """
         ...
 
