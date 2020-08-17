@@ -133,8 +133,8 @@ class BaseModel(pydantic.BaseModel):
         return hash((type(self),) + tuple(self.__dict__.values()))
 
     # Set fields set to be all those that are truthy, so only those are expoed with `skip_defaults`
-    @property
-    def __fields_set__(self) -> typing.Set[str]:
+    @property  # type: ignore
+    def __fields_set__(self) -> typing.Set[str]: # type: ignore
         s = set()
         for k, v in self.__values__.items():
             if v:
