@@ -2,9 +2,9 @@ from typing import *
 
 
 def date_range(
-    start: Union[str, pandas._libs.tslibs.timestamps.Timestamp, int],
+    start: Union[pandas._libs.tslibs.timestamps.Timestamp, int, str],
+    end: Union[pandas._libs.tslibs.timestamps.Timestamp, str] = ...,
     periods: int = ...,
-    end: Union[str, pandas._libs.tslibs.timestamps.Timestamp] = ...,
     freq: object = ...,
     tz: object = ...,
     name: Union[None, str] = ...,
@@ -115,9 +115,9 @@ class DatetimeIndex:
     def __getitem__(
         self,
         _0: Union[
-            numpy.ndarray,
             int,
-            slice[Union[None, int], Union[None, int], Union[None, int]],
+            numpy.ndarray,
+            slice[Union[None, int], Union[int, None], Union[None, int]],
         ],
         /,
     ):
@@ -130,7 +130,7 @@ class DatetimeIndex:
     def __gt__(
         self,
         _0: Union[
-            numpy.datetime64, numpy.ndarray, pandas._libs.tslibs.timestamps.Timestamp
+            pandas._libs.tslibs.timestamps.Timestamp, numpy.datetime64, numpy.ndarray
         ],
         /,
     ):
@@ -155,7 +155,7 @@ class DatetimeIndex:
     def __le__(
         self,
         _0: Union[
-            numpy.datetime64, numpy.ndarray, pandas._libs.tslibs.timestamps.Timestamp
+            pandas._libs.tslibs.timestamps.Timestamp, numpy.datetime64, numpy.ndarray
         ],
         /,
     ):
@@ -196,10 +196,10 @@ class DatetimeIndex:
     def __sub__(
         self,
         _0: Union[
-            pandas._libs.tslibs.timestamps.Timestamp,
-            numpy.timedelta64,
             numpy.datetime64,
+            numpy.timedelta64,
             numpy.ndarray,
+            pandas._libs.tslibs.timestamps.Timestamp,
         ],
         /,
     ):

@@ -6,9 +6,9 @@ __name__: object
 
 def fft(
     a: Union[
-        List[float], numpy.ndarray, dask.array.core.Array, pandas.core.series.Series
+        dask.array.core.Array, numpy.ndarray, pandas.core.series.Series, List[float]
     ] = ...,
-    n: Union[int, None] = ...,
+    n: Union[None, int] = ...,
     axis: int = ...,
     *,
     axes: Tuple[int] = ...,
@@ -44,7 +44,7 @@ def fftfreq(n: int):
 
 
 def fftn(
-    a: numpy.ndarray, s: Union[Tuple[int, int], None] = ..., axes: Tuple[int, ...] = ...
+    a: numpy.ndarray, s: Union[None, Tuple[int, int]] = ..., axes: Tuple[int, ...] = ...
 ):
     """
     usage.dask: 33
@@ -76,8 +76,8 @@ def hfft(
 
 
 def ifft(
-    a: Union[List[float], numpy.ndarray] = ...,
-    n: Union[int, None] = ...,
+    a: Union[numpy.ndarray, List[float]] = ...,
+    n: Union[None, int] = ...,
     axis: int = ...,
     *,
     axes: Tuple[int] = ...,
@@ -107,7 +107,7 @@ def ifftn(
     ...
 
 
-def ifftshift(x: Union[List[int], numpy.ndarray]):
+def ifftshift(x: Union[numpy.ndarray, List[int]]):
     """
     usage.dask: 4
     usage.scipy: 4
@@ -130,7 +130,7 @@ def ihfft(
 
 def irfft(
     a: numpy.ndarray = ...,
-    n: Union[int, None] = ...,
+    n: Union[None, int] = ...,
     axis: int = ...,
     *,
     axes: Tuple[int] = ...,
@@ -162,7 +162,7 @@ def irfftn(
 
 def rfft(
     a: Union[numpy.ndarray, pandas.core.series.Series] = ...,
-    n: Union[int, None] = ...,
+    n: Union[None, int] = ...,
     axis: int = ...,
     *,
     axes: Tuple[int] = ...,

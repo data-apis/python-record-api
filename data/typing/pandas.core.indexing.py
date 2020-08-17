@@ -26,27 +26,27 @@ class _iLocIndexer:
     def __getitem__(
         self,
         _0: Union[
-            int,
-            numpy.ndarray,
             slice[
+                Union[numpy.int64, int, None],
                 Union[None, numpy.int64, int],
-                Union[None, int, numpy.int64],
-                Union[None, numpy.int64, int],
+                Union[numpy.int64, int, None],
             ],
-            List[int],
             Tuple[
                 Union[
+                    slice[Union[None, int], Union[None, int], Union[None, int]],
+                    numpy.ndarray,
+                    int,
+                ],
+                Union[
+                    List[Union[int, bool]],
                     int,
                     numpy.ndarray,
                     slice[Union[int, None], Union[int, None], Union[int, None]],
                 ],
-                Union[
-                    List[Union[bool, int]],
-                    numpy.ndarray,
-                    int,
-                    slice[Union[None, int], Union[None, int], Union[None, int]],
-                ],
             ],
+            List[int],
+            numpy.ndarray,
+            int,
         ],
         /,
     ):

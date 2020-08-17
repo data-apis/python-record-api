@@ -20,7 +20,7 @@ class MultiIndex:
 
     @classmethod
     def from_product(
-        cls, /, iterables: Union[pandas.core.indexes.frozen.FrozenList, list]
+        cls, /, iterables: Union[list, pandas.core.indexes.frozen.FrozenList]
     ):
         """
         usage.dask: 3
@@ -111,9 +111,9 @@ class MultiIndex:
     def __getitem__(
         self,
         _0: Union[
+            slice[Union[None, int], Union[int, None], Union[None, int]],
             int,
             numpy.ndarray,
-            slice[Union[int, None], Union[int, None], Union[int, None]],
         ],
         /,
     ):
@@ -171,7 +171,7 @@ class MultiIndex:
         """
         ...
 
-    def get_level_values(self, /, level: Union[str, int]):
+    def get_level_values(self, /, level: Union[int, str]):
         """
         usage.dask: 5
         usage.xarray: 27
@@ -222,9 +222,9 @@ class MultiIndex:
         /,
         levels: List[
             Union[
-                float,
                 pandas.core.indexes.base.Index,
                 pandas.core.indexes.numeric.Int64Index,
+                float,
                 str,
             ]
         ],
@@ -237,7 +237,7 @@ class MultiIndex:
         """
         ...
 
-    def set_names(self, /, names: List[Literal["b", "a", "c", "level1", "level0"]]):
+    def set_names(self, /, names: List[Literal["level1", "level0", "b", "a", "c"]]):
         """
         usage.dask: 2
         usage.xarray: 1

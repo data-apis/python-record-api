@@ -5,7 +5,7 @@ class NaTType:
     def __add__(
         self,
         _0: Union[
-            pandas._libs.tslibs.timestamps.Timestamp, numpy.ndarray, numpy.timedelta64
+            numpy.ndarray, numpy.timedelta64, pandas._libs.tslibs.timestamps.Timestamp
         ],
         /,
     ):

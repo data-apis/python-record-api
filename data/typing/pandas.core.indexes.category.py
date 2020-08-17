@@ -2,6 +2,27 @@ from typing import *
 
 
 class CategoricalIndex:
+    def __init__(
+        self,
+        /,
+        data: Union[
+            pandas.core.arrays.categorical.Categorical,
+            pandas.core.indexes.base.Index,
+            List[Literal["B", "A", "xyx"]],
+        ],
+        name: Literal["b", "foo", "A", "B", "C"],
+        categories: Union[
+            List[str],
+            pandas.core.indexes.numeric.Float64Index,
+            pandas.core.indexes.base.Index,
+            pandas.core.indexes.datetimes.DatetimeIndex,
+        ] = ...,
+        ordered: bool = ...,
+    ):
+        """
+        usage.dask: 12
+        """
+        ...
 
     # usage.dask: 1
     __module__: ClassVar[object]
@@ -49,7 +70,7 @@ class CategoricalIndex:
         ...
 
     def __eq__(
-        self, _0: Union[numpy.ndarray, pandas.core.indexes.category.CategoricalIndex], /
+        self, _0: Union[pandas.core.indexes.category.CategoricalIndex, numpy.ndarray], /
     ):
         """
         usage.dask: 2
@@ -60,7 +81,7 @@ class CategoricalIndex:
     def __getitem__(
         self,
         _0: Union[
-            slice[Union[int, None], Union[int, None], Union[int, None]],
+            slice[Union[None, int], Union[int, None], Union[None, int]],
             int,
             numpy.ndarray,
         ],

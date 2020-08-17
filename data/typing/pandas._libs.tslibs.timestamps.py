@@ -2,9 +2,19 @@ from typing import *
 
 
 class Timestamp:
-    def __init__(self, /, ts_input: Literal["2000-01-03", "2000-01-01T00"]):
+    def __init__(
+        self,
+        /,
+        ts_input: Literal[
+            "2000",
+            "2016-10-17 00:00:00",
+            "2016-10-16 10:00:00",
+            "2016-10-15 00:00:00",
+            "1970-01-01",
+        ],
+    ):
         """
-        usage.xarray: 2
+        usage.dask: 5
         """
         ...
 
@@ -55,10 +65,10 @@ class Timestamp:
     def __ge__(
         self,
         _0: Union[
-            numpy.ndarray,
             numpy.datetime64,
             pandas._libs.tslibs.timestamps.Timestamp,
             pandas.core.indexes.datetimes.DatetimeIndex,
+            numpy.ndarray,
         ],
         /,
     ):
@@ -87,9 +97,9 @@ class Timestamp:
     def __lt__(
         self,
         _0: Union[
-            numpy.ndarray,
             pandas._libs.tslibs.timestamps.Timestamp,
             pandas.core.indexes.datetimes.DatetimeIndex,
+            numpy.ndarray,
         ],
         /,
     ):
@@ -114,11 +124,11 @@ class Timestamp:
     def __ne__(
         self,
         _0: Union[
+            pandas._libs.tslibs.timestamps.Timestamp,
             numpy.float64,
             numpy.datetime64,
             numpy.ndarray,
             numpy.int64,
-            pandas._libs.tslibs.timestamps.Timestamp,
         ],
         /,
     ):
@@ -144,10 +154,10 @@ class Timestamp:
     def __rsub__(
         self,
         _0: Union[
-            pandas.core.indexes.datetimes.DatetimeIndex,
             numpy.datetime64,
             numpy.int64,
             numpy.ndarray,
+            pandas.core.indexes.datetimes.DatetimeIndex,
         ],
         /,
     ):
