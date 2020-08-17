@@ -436,7 +436,7 @@ class Stack:
         val = self.opvalcompare
         COMPARISONS = {
             "<": op.lt,
-            "<": op.le,
+            "<=": op.le,
             "==": op.eq,
             "!=": op.ne,
             ">": op.gt,
