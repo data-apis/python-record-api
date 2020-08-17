@@ -31,7 +31,24 @@ def bad_name(name: str) -> bool:
 
 
 class BaseModel(pydantic.BaseModel):
+    class Config:
+        extra = "forbid"
+
+    # Set fields set to be all those that are truthy, so only those are expoed with `skip_defaults`
+    @property  # type: ignore
+    def __fields_set__(self) -> typing.Set[str]:  # type: ignore
+        s = set()
+        for k, v in self.__values__.items():
+            if v:
+                s.add(k)
+        return s
+
+    @__fields_set__.setter
+    def __fields_set__(self, val: typing.Set[str]) -> None:
+        pass
+
     def __repr_args__(self) -> pydantic.ReprArgs:  # type: ignore
+        # Dont show empty valyes
         for k, v in super().__repr_args__():
             if v:
                 yield k, v
@@ -58,7 +75,7 @@ class API(BaseModel):
         return self
 
     def json(self, **kwargs) -> str:
-        return super().json(exclude_none=True, **kwargs)
+        return super().json(exclude_none=True, skip_defaults=True, **kwargs)
 
 
 class Module(BaseModel):
