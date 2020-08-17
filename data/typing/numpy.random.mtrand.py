@@ -643,11 +643,8 @@ class RandomState:
 
     def lognormal(
         self,
-        _0: float = ...,
-        _1: float = ...,
-        _2: int = ...,
         /,
-        *,
+        *_args: Union[int, float],
         size: Union[int, Tuple[int, ...]] = ...,
         mean: float = ...,
         sigma: float = ...,
@@ -983,13 +980,8 @@ class RandomState:
 
     def normal(
         self,
-        _0: object = ...,
-        _1: Union[
-            int, float, numpy.ndarray, numpy.float64, dask.array.core.Array
-        ] = ...,
-        _2: Union[int, Tuple[int, int]] = ...,
         /,
-        *,
+        *_args: object,
         size: Union[int, numpy.int64, Tuple[Union[None, numpy.int64, int], ...]] = ...,
         scale: Union[int, numpy.ndarray, float, numpy.int64, numpy.float64] = ...,
         loc: Union[int, numpy.ndarray, float] = ...,
@@ -1241,18 +1233,7 @@ class RandomState:
         """
         ...
 
-    def rand(
-        self,
-        _0: Union[numpy.int64, int] = ...,
-        _1: int = ...,
-        _2: int = ...,
-        _3: int = ...,
-        _4: int = ...,
-        _5: int = ...,
-        _6: int = ...,
-        _7: int = ...,
-        /,
-    ):
+    def rand(self, /, *_args: Union[numpy.int64, int]):
         """
         usage.dask: 30
         usage.matplotlib: 39
@@ -1441,11 +1422,8 @@ class RandomState:
 
     def randint(
         self,
-        _0: Union[numpy.float64, int, float, numpy.ndarray, numpy.int64] = ...,
-        _1: Union[int, float] = ...,
-        _2: Union[numpy.int64, int, numpy.ndarray, List[int], Tuple[int, ...]] = ...,
         /,
-        *,
+        *_args: object,
         dtype: Union[Literal["u8", "l", "uint8", "int64"], type, numpy.dtype] = ...,
         size: Union[
             numpy.int64, int, Tuple[Union[None, numpy.int64, int], ...], None, List[int]
@@ -1552,15 +1530,7 @@ class RandomState:
         """
         ...
 
-    def randn(
-        self,
-        _0: Union[int, numpy.int64] = ...,
-        _1: Union[numpy.int64, int] = ...,
-        _2: int = ...,
-        _3: int = ...,
-        _4: int = ...,
-        /,
-    ):
+    def randn(self, /, *_args: Union[int, numpy.int64]):
         """
         usage.dask: 88
         usage.matplotlib: 17
@@ -2208,11 +2178,8 @@ class RandomState:
 
     def uniform(
         self,
-        _0: Union[float, numpy.float64, numpy.ndarray, int] = ...,
-        _1: Union[numpy.float64, numpy.ndarray, int, float] = ...,
-        _2: Union[int, Tuple[Union[int, numpy.int64, None], ...], List[int]] = ...,
         /,
-        *,
+        *_args: object,
         size: Union[
             Tuple[Union[None, numpy.int64, int], ...], numpy.int64, int, List[int]
         ] = ...,
