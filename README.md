@@ -2,11 +2,7 @@
 
 ![.github/workflows/workflow.yml](https://github.com/data-apis/python-record-api/workflows/.github/workflows/workflow.yml/badge.svg?branch=master)
 
-This module is mean to help you understand how a Python module is being used by other modules.
-
-Currently, this logs all function calls from running a module, or when running pytest, from a specified module to another module.
-
-Then it builds hypothetical API for the target module, given all the calls it has taken.
+This module is mean to help you understand how a Python module is being used by other modules. Currently, this logs all function calls from running a module, or when running pytest, from a specified module to another module. Then it builds hypothetical API for the target module, given all the calls it has taken.
 
 
 *Sample generated function, from [`data/typing/numpy.py`](./data/typing/numpy.py)*
@@ -29,6 +25,8 @@ def argmax(
     """
     ...
 ```
+
+Contributions are very welcome! Please feel free to open an issue, or reach out directly, if there is anything you would like to discuss or explore! You can also check out the [issue tracker](https://github.com/data-apis/python-record-api/issues) for some possible next steps that we could use help on.
 
 ## Hosted Usage
 
