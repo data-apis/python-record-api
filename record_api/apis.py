@@ -710,7 +710,7 @@ def possibly_order_dict(
     """
     Resort dict by topographical sorting of order
     """
-    return {k: d[k] for k in networkx.topological_sort(networkx.DiGraph(order))}
+    return {k: d[k] for k in networkx.topological_sort(networkx.DiGraph(order))} or d
 
 
 def unify_named_types(
