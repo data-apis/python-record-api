@@ -29,7 +29,6 @@ RUN --mount=type=cache,target=/root/.cache/pip \
         pandas \
         lxml \
         pyyaml \
-        matplotlib \
         scipy \
         pytest-custom_exit_code \
         -e .'
