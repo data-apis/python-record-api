@@ -35,6 +35,10 @@ spec:
             template: groupby-lines
         - - name: infer-api
             template: infer-api
+            arguments:
+              artifacts:
+                - name: grouped
+                  from: "{{workflow.outputs.artifacts.grouped}}"
         - - name: trigger-github-action
             template: trigger-github-action
     - name: record-api
@@ -58,6 +62,11 @@ spec:
           - name: data
             mountPath: /tmp/vol
     - name: groupby-lines
+      outputs:
+        artifacts:
+          - name: grouped
+            path: /tmp/grouped.jsonl
+            globalName: "grouped"
       container:
         image: "{{workflow.parameters.base-image}}"
         command: [python, -m, record_api.line_counts]
@@ -65,7 +74,7 @@ spec:
           - name: PYTHON_RECORD_API_INPUT
             value: /tmp/vol/raw.jsonl
           - name: PYTHON_RECORD_API_OUTPUT
-            value: /tmp/vol/grouped.jsonl
+            value: /tmp/grouped.jsonl
         resources:
           requests:
             memory: 6Gi
@@ -77,11 +86,15 @@ spec:
           - name: data
             mountPath: /tmp/vol
     - name: infer-api
+      inputs:
+        artifacts:
+          - name: grouped
+            path: /tmp/grouped.jsonl
       outputs:
         artifacts:
           - name: api
             path: /tmp/api.json
-            globalName: 'api'
+            globalName: "api"
       container:
         image: "{{workflow.parameters.base-image}}"
         command: [python, -m, record_api.infer_apis]
@@ -91,19 +104,16 @@ spec:
           - name: PYTHON_RECORD_API_MODULES
             value: pandas,numpy
           - name: PYTHON_RECORD_API_INPUT
-            value: /tmp/vol/grouped.jsonl
+            value: /tmp/grouped.jsonl
           - name: PYTHON_RECORD_API_OUTPUT
             value: /tmp/api.json
         resources:
           requests:
-            memory: 1Gi
-            cpu: 500m
+            memory: 6Gi
+            cpu: 100m
           limits:
-            memory: 8Gi
+            memory: 16Gi
             cpu: 4000m
-        volumeMounts:
-          - name: data
-            mountPath: /tmp/vol
     - name: trigger-github-action
       container:
         image: "curlimages/curl"
