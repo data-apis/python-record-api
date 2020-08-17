@@ -35,7 +35,7 @@ def mask_cols(a: numpy.ma.core.MaskedArray):
     ...
 
 
-def masked_all(shape: Union[Tuple[int, ...], int]):
+def masked_all(shape: Union[int, Tuple[int, ...]]):
     """
     usage.matplotlib: 1
     usage.pandas: 14

@@ -19,13 +19,13 @@ def allclose(a: numpy.ma.core.MaskedArray, b: numpy.ma.core.MaskedArray):
 
 
 def array(
-    data: Union[numpy.ndarray, numpy.ma.core.MaskedArray, list],
-    dtype: Union[numpy.dtype, type] = ...,
-    copy: Union[bool, numpy.bool_] = ...,
+    data: Union[list, numpy.ma.core.MaskedArray, numpy.ndarray],
+    dtype: Union[type, numpy.dtype] = ...,
+    copy: Union[numpy.bool_, bool] = ...,
     subok: bool = ...,
     ndmin: int = ...,
     mask: Union[
-        numpy.ndarray, numpy.bool_, bool, List[Union[int, bool, List[int]]]
+        List[Union[List[int], bool, int]], bool, numpy.bool_, numpy.ndarray
     ] = ...,
 ):
     """
@@ -72,11 +72,11 @@ def compressed(x: Union[list, numpy.ma.core.MaskedArray, numpy.ndarray]):
 
 def concatenate(
     arrays: Union[
-        List[Union[numpy.ma.core.MaskedArray, numpy.ndarray]],
         Tuple[
             Union[numpy.ndarray, numpy.ma.core.MaskedArray],
-            Union[numpy.ndarray, numpy.ma.core.MaskedArray],
+            Union[numpy.ma.core.MaskedArray, numpy.ndarray],
         ],
+        List[Union[numpy.ndarray, numpy.ma.core.MaskedArray]],
     ],
     axis: int,
 ):
@@ -89,7 +89,7 @@ def concatenate(
 
 
 def dot(
-    a: numpy.ma.core.MaskedArray, b: Union[numpy.ndarray, numpy.ma.core.MaskedArray]
+    a: numpy.ma.core.MaskedArray, b: Union[numpy.ma.core.MaskedArray, numpy.ndarray]
 ):
     """
     usage.dask: 3
@@ -98,7 +98,7 @@ def dot(
     ...
 
 
-def filled(a: Union[numpy.ndarray, numpy.float64, numpy.ma.core.MaskedArray]):
+def filled(a: Union[numpy.ndarray, numpy.ma.core.MaskedArray, numpy.float64]):
     """
     usage.dask: 31
     usage.matplotlib: 23
@@ -109,9 +109,9 @@ def filled(a: Union[numpy.ndarray, numpy.float64, numpy.ma.core.MaskedArray]):
 
 def fix_invalid(
     a: Union[
+        List[Union[List[Union[int, float]], float, int]],
         numpy.ndarray,
         numpy.ma.core.MaskedArray,
-        List[Union[List[Union[int, float]], float, int]],
     ]
 ):
     """
@@ -180,8 +180,8 @@ def make_mask(m: numpy.ma.core.MaskedArray):
 
 
 def mask_or(
-    m1: Union[numpy.ndarray, numpy.bool_],
-    m2: Union[numpy.ndarray, numpy.bool_],
+    m1: Union[numpy.bool_, numpy.ndarray],
+    m2: Union[numpy.bool_, numpy.ndarray],
     copy: bool = ...,
     shrink: bool = ...,
 ):
@@ -209,8 +209,8 @@ def masked_equal(x: Union[numpy.ndarray, List[int]], value: int):
 
 
 def masked_greater(
-    x: Union[dask.array.core.Array, numpy.ndarray, numpy.ma.core.MaskedArray],
-    value: Union[float, dask.array.core.Array, int, numpy.ndarray],
+    x: Union[numpy.ndarray, numpy.ma.core.MaskedArray, dask.array.core.Array],
+    value: Union[float, int, numpy.ndarray, dask.array.core.Array],
 ):
     """
     usage.dask: 23
@@ -221,8 +221,8 @@ def masked_greater(
 
 
 def masked_greater_equal(
-    x: Union[dask.array.core.Array, numpy.ndarray, numpy.ma.core.MaskedArray],
-    value: Union[numpy.ndarray, int],
+    x: Union[numpy.ma.core.MaskedArray, dask.array.core.Array, numpy.ndarray],
+    value: Union[int, numpy.ndarray],
 ):
     """
     usage.dask: 3
@@ -250,8 +250,8 @@ def masked_invalid(a: object):
 
 
 def masked_less(
-    x: Union[dask.array.core.Array, numpy.ndarray, numpy.ma.core.MaskedArray],
-    value: Union[numpy.ndarray, int, float],
+    x: Union[numpy.ma.core.MaskedArray, dask.array.core.Array, numpy.ndarray],
+    value: Union[float, int, numpy.ndarray],
 ):
     """
     usage.dask: 3
@@ -261,8 +261,8 @@ def masked_less(
 
 
 def masked_less_equal(
-    x: Union[dask.array.core.Array, numpy.ndarray, numpy.ma.core.MaskedArray],
-    value: Union[numpy.ndarray, int],
+    x: Union[numpy.ma.core.MaskedArray, dask.array.core.Array, numpy.ndarray],
+    value: Union[int, numpy.ndarray],
 ):
     """
     usage.dask: 3
@@ -344,8 +344,8 @@ def minimum_fill_value(obj: numpy.ma.core.MaskedArray):
 
 
 def power(
-    a: Union[numpy.float64, float, numpy.ma.core.MaskedArray],
-    b: Union[numpy.ma.core.MaskedArray, numpy.ndarray, float],
+    a: Union[numpy.float64, numpy.ma.core.MaskedArray, float],
+    b: Union[float, numpy.ma.core.MaskedArray, numpy.ndarray],
 ):
     """
     usage.matplotlib: 4
@@ -494,7 +494,7 @@ class MaskedArray:
         ...
 
     def __eq__(
-        self, _0: Union[numpy.ma.core.MaskedArray, int, float, numpy.float64], /
+        self, _0: Union[int, numpy.ma.core.MaskedArray, float, numpy.float64], /
     ):
         """
         usage.matplotlib: 8
@@ -504,7 +504,7 @@ class MaskedArray:
         ...
 
     def __ge__(
-        self, _0: Union[numpy.float64, numpy.ndarray, int, numpy.ma.core.MaskedArray], /
+        self, _0: Union[int, numpy.ma.core.MaskedArray, numpy.float64, numpy.ndarray], /
     ):
         """
         usage.matplotlib: 3
@@ -524,7 +524,7 @@ class MaskedArray:
         ...
 
     def __gt__(
-        self, _0: Union[float, int, numpy.ma.core.MaskedConstant, numpy.float64], /
+        self, _0: Union[int, numpy.ma.core.MaskedConstant, numpy.float64, float], /
     ):
         """
         usage.matplotlib: 1
@@ -532,14 +532,14 @@ class MaskedArray:
         """
         ...
 
-    def __iadd__(self, _0: Union[numpy.ma.core.MaskedArray, numpy.int32], /):
+    def __iadd__(self, _0: Union[numpy.int32, numpy.ma.core.MaskedArray], /):
         """
         usage.matplotlib: 1
         usage.scipy: 1
         """
         ...
 
-    def __imul__(self, _0: Union[numpy.ma.core.MaskedArray, int, numpy.ndarray], /):
+    def __imul__(self, _0: Union[int, numpy.ndarray, numpy.ma.core.MaskedArray], /):
         """
         usage.matplotlib: 2
         usage.scipy: 2
@@ -583,7 +583,7 @@ class MaskedArray:
 
     def __itruediv__(
         self,
-        _0: Union[numpy.ma.core.MaskedArray, float, numpy.float64, numpy.ndarray],
+        _0: Union[numpy.ndarray, numpy.ma.core.MaskedArray, float, numpy.float64],
         /,
     ):
         """
@@ -646,7 +646,7 @@ class MaskedArray:
         """
         ...
 
-    def __rand__(self, _0: Union[numpy.ndarray, numpy.ma.core.MaskedArray], /):
+    def __rand__(self, _0: Union[numpy.ma.core.MaskedArray, numpy.ndarray], /):
         """
         usage.matplotlib: 3
         usage.scipy: 2
@@ -655,7 +655,7 @@ class MaskedArray:
 
     def __rmul__(
         self,
-        _0: Union[numpy.ma.core.MaskedArray, numpy.ndarray, float, numpy.float64, int],
+        _0: Union[float, numpy.ma.core.MaskedArray, numpy.ndarray, numpy.float64, int],
         /,
     ):
         """
@@ -665,7 +665,7 @@ class MaskedArray:
         """
         ...
 
-    def __ror__(self, _0: Union[numpy.ma.core.MaskedArray, bool], /):
+    def __ror__(self, _0: Union[bool, numpy.ma.core.MaskedArray], /):
         """
         usage.matplotlib: 1
         usage.scipy: 3
@@ -673,7 +673,7 @@ class MaskedArray:
         ...
 
     def __rsub__(
-        self, _0: Union[numpy.ma.core.MaskedArray, int, numpy.ndarray, numpy.float64], /
+        self, _0: Union[numpy.ma.core.MaskedArray, numpy.float64, numpy.ndarray, int], /
     ):
         """
         usage.dask: 4
@@ -742,7 +742,7 @@ class MaskedArray:
         """
         ...
 
-    def astype(self, _0: Union[Literal["bool", "d"], type, numpy.dtype], /):
+    def astype(self, _0: Union[Literal["d", "bool"], type, numpy.dtype], /):
         """
         usage.dask: 10
         usage.matplotlib: 7
@@ -899,7 +899,7 @@ class MaskedArray:
     def sum(
         self,
         /,
-        axis: Union[int, None, Tuple[int, ...]] = ...,
+        axis: Union[int, Tuple[int, ...], None] = ...,
         dtype: Union[Literal["f8"], numpy.dtype] = ...,
         keepdims: bool = ...,
     ):
@@ -985,7 +985,7 @@ class MaskedConstant:
         """
         ...
 
-    def __mul__(self, _0: Union[numpy.float64, numpy.ma.core.MaskedConstant], /):
+    def __mul__(self, _0: Union[numpy.ma.core.MaskedConstant, numpy.float64], /):
         """
         usage.matplotlib: 3
         usage.scipy: 4
@@ -1007,7 +1007,7 @@ class MaskedConstant:
     def __radd__(
         self,
         _0: Union[
-            numpy.ma.core.MaskedConstant, numpy.float64, numpy.ma.core.MaskedArray
+            numpy.ma.core.MaskedArray, numpy.ma.core.MaskedConstant, numpy.float64
         ],
         /,
     ):
@@ -1043,7 +1043,7 @@ class MaskedConstant:
         """
         ...
 
-    def __sub__(self, _0: Union[numpy.float64, float], /):
+    def __sub__(self, _0: Union[float, numpy.float64], /):
         """
         usage.matplotlib: 1
         usage.scipy: 1

@@ -2,7 +2,7 @@ from typing import *
 
 
 def timedelta_range(
-    start: Union[Literal["1 day", "1 days"], numpy.timedelta64, int], periods: int
+    start: Union[int, numpy.timedelta64, Literal["1 day", "1 days"]], periods: int
 ):
     """
     usage.dask: 9
@@ -12,13 +12,6 @@ def timedelta_range(
 
 
 class TimedeltaIndex:
-    def __init__(
-        self, /, data: List[numpy.timedelta64], name: Literal["timedelta", "foo"]
-    ):
-        """
-        usage.dask: 2
-        """
-        ...
 
     # usage.dask: 1
     __module__: ClassVar[object]
@@ -49,11 +42,11 @@ class TimedeltaIndex:
     def __add__(
         self,
         _0: Union[
+            pandas._libs.tslibs.timestamps.Timestamp,
+            xarray.coding.cftimeindex.CFTimeIndex,
             numpy.datetime64,
             numpy.timedelta64,
             numpy.ndarray,
-            pandas._libs.tslibs.timestamps.Timestamp,
-            xarray.coding.cftimeindex.CFTimeIndex,
         ],
         /,
     ):
@@ -81,7 +74,7 @@ class TimedeltaIndex:
         """
         ...
 
-    def __getitem__(self, _0: Union[int, numpy.ndarray, slice[int, int, int]], /):
+    def __getitem__(self, _0: Union[slice[int, int, int], int, numpy.ndarray], /):
         """
         usage.dask: 5
         usage.xarray: 4
@@ -145,11 +138,11 @@ class TimedeltaIndex:
     def __radd__(
         self,
         _0: Union[
+            xarray.coding.cftimeindex.CFTimeIndex,
+            pandas._libs.tslibs.timestamps.Timestamp,
             numpy.timedelta64,
             numpy.datetime64,
             numpy.ndarray,
-            xarray.coding.cftimeindex.CFTimeIndex,
-            pandas._libs.tslibs.timestamps.Timestamp,
         ],
         /,
     ):
@@ -186,10 +179,10 @@ class TimedeltaIndex:
     def __rsub__(
         self,
         _0: Union[
+            xarray.coding.cftimeindex.CFTimeIndex,
             numpy.timedelta64,
             numpy.datetime64,
             numpy.ndarray,
-            xarray.coding.cftimeindex.CFTimeIndex,
         ],
         /,
     ):

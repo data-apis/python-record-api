@@ -54,7 +54,7 @@ def eigh(a: numpy.ndarray):
     ...
 
 
-def eigvals(a: Union[dask.array.core.Array, numpy.ndarray]):
+def eigvals(a: Union[numpy.ndarray, dask.array.core.Array]):
     """
     usage.dask: 2
     usage.scipy: 2
@@ -105,7 +105,7 @@ def matrix_rank(M: numpy.ndarray):
 
 def norm(
     x: object,
-    ord: Union[Literal["fro", "nuc", "f"], int, float, None] = ...,
+    ord: Union[Literal["fro", "f", "nuc"], int, float, None] = ...,
     axis: Union[int, None, Tuple[int, ...]] = ...,
     keepdims: bool = ...,
 ):

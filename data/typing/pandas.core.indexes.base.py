@@ -56,7 +56,7 @@ class Index:
         ...
 
     def __eq__(
-        self, _0: Union[List[str], numpy.ndarray, pandas.core.indexes.base.Index], /
+        self, _0: Union[List[str], pandas.core.indexes.base.Index, numpy.ndarray], /
     ):
         """
         usage.dask: 14
@@ -68,10 +68,10 @@ class Index:
     def __getitem__(
         self,
         _0: Union[
-            numpy.ndarray,
             int,
+            numpy.ndarray,
+            slice[Union[None, int], Union[int, None], Union[None, int]],
             List[Union[bool, int]],
-            slice[Union[None, int], Union[None, int], Union[None, int]],
         ],
         /,
     ):
@@ -103,7 +103,7 @@ class Index:
         ...
 
     def __rsub__(
-        self, _0: Union[numpy.ndarray, xarray.coding.cftimeindex.CFTimeIndex], /
+        self, _0: Union[xarray.coding.cftimeindex.CFTimeIndex, numpy.ndarray], /
     ):
         """
         usage.pandas: 4
@@ -127,9 +127,9 @@ class Index:
         self,
         /,
         other: Union[
-            pandas.core.indexes.category.CategoricalIndex,
             pandas.core.indexes.numeric.Int64Index,
             pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas.core.indexes.category.CategoricalIndex,
             list,
         ],
     ):

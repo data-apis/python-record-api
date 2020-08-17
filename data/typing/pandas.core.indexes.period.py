@@ -2,7 +2,7 @@ from typing import *
 
 
 def period_range(
-    start: Literal["1970-01-01", "2011-01-01", "2000-01-01", "1/1/2001", "2000"],
+    start: Literal["2000", "2000-01-01", "1970-01-01", "2011-01-01", "1/1/2001"],
     periods: int = ...,
     name: Union[Literal["foo"], None] = ...,
 ):
@@ -14,17 +14,6 @@ def period_range(
 
 
 class PeriodIndex:
-    def __init__(
-        self,
-        /,
-        data: List[Literal["1970-01-01"]],
-        freq: Literal["d"],
-        name: Literal["foo"],
-    ):
-        """
-        usage.dask: 1
-        """
-        ...
 
     # usage.dask: 1
     __module__: ClassVar[object]
@@ -73,7 +62,7 @@ class PeriodIndex:
 
     def __getitem__(
         self,
-        _0: Union[int, slice[Union[int, None], Union[None, int], Union[int, None]]],
+        _0: Union[slice[Union[int, None], Union[int, None], Union[int, None]], int],
         /,
     ):
         """

@@ -23,12 +23,6 @@ class Int16Dtype:
 
 
 class Int32Dtype:
-    def __init__(self, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __eq__(self, _0: Union[Type[numpy.object_], numpy.dtype], /):
         """
         usage.pandas: 9

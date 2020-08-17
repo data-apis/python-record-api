@@ -8,7 +8,6 @@ import operator
 import typing
 
 import libcst as cst
-import libcst
 import networkx
 import orjson
 import pydantic
@@ -224,7 +223,7 @@ def sort_items(d: typing.Dict[str, V]) -> typing.Iterable[typing.Tuple[str, V]]:
     return sorted(d.items(), key=lambda kv: kv[0])
 
 
-PartialKeyOrdering = typing.Set[typing.Tuple[str, str]]
+PartialKeyOrdering = typing.List[typing.Tuple[str, str]]
 
 
 class Signature(BaseModel):
@@ -234,13 +233,15 @@ class Signature(BaseModel):
     pos_only_required: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
     pos_only_optional: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
     # If there are any pos_only_optional, then there cannot be any required pos_or_kw
-    pos_only_optional_ordering: PartialKeyOrdering = pydantic.Field(default_factory=set)
+    pos_only_optional_ordering: PartialKeyOrdering = pydantic.Field(
+        default_factory=list
+    )
 
     pos_or_kw_required: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
     pos_or_kw_optional: typing.Dict[str, Type] = pydantic.Field(default_factory=dict)
     # Partial ordering of args, (pred, suc) pairs
     pos_or_kw_optional_ordering: PartialKeyOrdering = pydantic.Field(
-        default_factory=set
+        default_factory=list
     )
     # Variable args are allowed if it this is not none
     var_pos: typing.Optional[typing.Tuple[str, Type]] = None
@@ -438,23 +439,25 @@ class Signature(BaseModel):
         )
         self.pos_only_required = pos_only_required
 
-        addititional_ordering: PartialKeyOrdering = set()
+        addititional_ordering: PartialKeyOrdering = []
         # also add to ordering that new optional keys must come before old ones, because
         # they used to be required
         if self_new_pos_only_optional and self.pos_only_optional:
-            addititional_ordering.add(
+            add_list(
+                addititional_ordering,
                 (
                     # last of required is before first of optional
                     next(iter(reversed(self_new_pos_only_optional.keys()))),
                     next(iter(self.pos_only_optional.keys())),
-                )
+                ),
             )
         if other_new_pos_only_optional and other.pos_only_optional:
-            addititional_ordering.add(
+            add_list(
+                addititional_ordering,
                 (
                     next(iter(reversed(other_new_pos_only_optional.keys()))),
                     next(iter(other.pos_only_optional.keys())),
-                )
+                ),
             )
         update_unify(
             self.pos_only_optional,
@@ -462,8 +465,8 @@ class Signature(BaseModel):
             other.pos_only_optional,
             other_new_pos_only_optional,
         )
-
-        self.pos_only_optional_ordering.update(
+        update_list(
+            self.pos_only_optional_ordering,
             other.pos_only_optional_ordering,
             partial_key_ordering(self_new_pos_only_optional),
             partial_key_ordering(other_new_pos_only_optional),
@@ -499,7 +502,8 @@ class Signature(BaseModel):
             self_new_optional,
             other.pos_or_kw_optional,
         )
-        self.pos_or_kw_optional_ordering.update(
+        update_list(
+            self.pos_or_kw_optional_ordering,
             other.pos_or_kw_optional_ordering,
             partial_key_ordering(self_new_optional),
             partial_key_ordering(other_new_optional),
@@ -568,10 +572,10 @@ def metadata_lines(m: Metadata) -> typing.Iterable[str]:
 
 def partial_key_ordering(d: typing.Dict[str, Type]) -> PartialKeyOrdering:
     prev_key = None
-    pairs: PartialKeyOrdering = set()
+    pairs: PartialKeyOrdering = []
     for key in d.keys():
         if prev_key is not None:
-            pairs.add((prev_key, key))
+            add_list(pairs, (prev_key, key))
         prev_key = key
     return pairs
 
@@ -582,7 +586,7 @@ def possibly_order_dict(
     """
     Resort dict by topographical sorting of order
     """
-    return {k: d[k] for k in networkx.topological_sort(networkx.DiGraph(list(order)))}
+    return {k: d[k] for k in networkx.topological_sort(networkx.DiGraph(order))}
 
 
 def unify_named_types(
@@ -705,3 +709,19 @@ def merge_methods_properties(
 
 update_metadata_and_types = functools.partial(update, f=merge_methods_properties)
 
+
+T = typing.TypeVar("T")
+
+# Set theoretic functions on lists
+# Don't use sets because we want to preserve insertion order for determinism
+
+
+def add_list(l: typing.List[T], a: T) -> None:
+    if a not in l:
+        l.append(a)
+
+
+def update_list(l: typing.List[T], *others: typing.Iterable[T]) -> None:
+    for other in others:
+        for x in other:
+            add_list(l, x)

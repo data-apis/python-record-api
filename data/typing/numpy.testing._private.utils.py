@@ -15,7 +15,7 @@ def assert_allclose(
     rtol: Union[int, float, numpy.float64, bool] = ...,
     atol: Union[int, float, numpy.float64, numpy.float32, numpy.float128] = ...,
     err_msg: Union[
-        str, Tuple[Union[complex, int, float, numpy.float64], ...], float, numpy.ndarray
+        str, numpy.ndarray, float, Tuple[Union[complex, int, float, numpy.float64], ...]
     ] = ...,
     verbose: bool = ...,
 ):
@@ -47,7 +47,7 @@ def assert_almost_equal(
 
 def assert_approx_equal(
     actual: Union[numpy.float64, float],
-    desired: Union[numpy.float64, int, float],
+    desired: Union[numpy.float64, float, int],
     significant: int = ...,
     err_msg: str = ...,
 ):
@@ -74,7 +74,7 @@ def assert_array_almost_equal(
 
 def assert_array_almost_equal_nulp(
     x: object,
-    y: Union[numpy.ndarray, numpy.ma.core.MaskedArray, float, int, numpy.float64],
+    y: Union[numpy.ma.core.MaskedArray, numpy.ndarray, numpy.float64, float, int],
 ):
     """
     usage.matplotlib: 1

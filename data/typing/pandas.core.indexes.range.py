@@ -43,7 +43,7 @@ class RangeIndex:
     # usage.xarray: 3
     values: object
 
-    def __add__(self, _0: Union[int, numpy.timedelta64, numpy.datetime64], /):
+    def __add__(self, _0: Union[numpy.timedelta64, numpy.datetime64, int], /):
         """
         usage.dask: 1
         usage.pandas: 2
@@ -71,9 +71,9 @@ class RangeIndex:
     def __getitem__(
         self,
         _0: Union[
-            int,
             numpy.ndarray,
-            slice[Union[int, None], Union[None, int], Union[int, None]],
+            int,
+            slice[Union[int, None], Union[int, None], Union[int, None]],
         ],
         /,
     ):
@@ -95,7 +95,7 @@ class RangeIndex:
         """
         ...
 
-    def __mul__(self, _0: Union[int, numpy.timedelta64, numpy.ndarray], /):
+    def __mul__(self, _0: Union[numpy.timedelta64, numpy.ndarray, int], /):
         """
         usage.dask: 1
         usage.pandas: 5
@@ -120,7 +120,7 @@ class RangeIndex:
         """
         ...
 
-    def __rmul__(self, _0: Union[int, numpy.ndarray, numpy.timedelta64], /):
+    def __rmul__(self, _0: Union[numpy.ndarray, numpy.timedelta64, int], /):
         """
         usage.dask: 1
         usage.pandas: 2
@@ -167,7 +167,7 @@ class RangeIndex:
         self,
         /,
         other: Union[
-            pandas.core.indexes.range.RangeIndex, pandas.core.indexes.numeric.Int64Index
+            pandas.core.indexes.numeric.Int64Index, pandas.core.indexes.range.RangeIndex
         ],
     ):
         """
@@ -185,7 +185,7 @@ class RangeIndex:
     def get_loc(
         self,
         /,
-        key: Union[Literal["random"], int],
+        key: Union[int, Literal["random"]],
         method: None = ...,
         tolerance: None = ...,
     ):

@@ -2,9 +2,9 @@ from typing import *
 
 
 class Timedelta:
-    def __init__(self, /, value: Literal["1", "1 hours"], unit: Literal["ms"]):
+    def __init__(self, /, value: Literal["1 day"]):
         """
-        usage.dask: 2
+        usage.xarray: 1
         """
         ...
 
@@ -17,10 +17,10 @@ class Timedelta:
     def __add__(
         self,
         _0: Union[
+            pandas._libs.tslibs.timestamps.Timestamp,
             numpy.int64,
             numpy.float64,
             numpy.ndarray,
-            pandas._libs.tslibs.timestamps.Timestamp,
         ],
         /,
     ):
@@ -33,11 +33,11 @@ class Timedelta:
     def __eq__(
         self,
         _0: Union[
-            pandas._libs.tslibs.timedeltas.Timedelta,
             numpy.timedelta64,
             numpy.int64,
             numpy.float64,
             numpy.ndarray,
+            pandas._libs.tslibs.timedeltas.Timedelta,
         ],
         /,
     ):
@@ -65,7 +65,7 @@ class Timedelta:
         """
         ...
 
-    def __gt__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
+    def __gt__(self, _0: Union[numpy.ndarray, pandas.core.series.Series], /):
         """
         usage.dask: 2
         usage.pandas: 1

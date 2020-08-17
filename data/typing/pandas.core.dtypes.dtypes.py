@@ -2,6 +2,11 @@ from typing import *
 
 
 class CategoricalDtype:
+    def __init__(self, /, categories: List[str]):
+        """
+        usage.xarray: 2
+        """
+        ...
 
     # usage.dask: 1
     __module__: ClassVar[object]
@@ -22,10 +27,10 @@ class CategoricalDtype:
     def __eq__(
         self,
         _0: Union[
-            pandas.core.dtypes.dtypes.CategoricalDtype,
-            numpy.dtype,
-            Literal["category", "O"],
+            Literal["O", "category"],
             type,
+            numpy.dtype,
+            pandas.core.dtypes.dtypes.CategoricalDtype,
         ],
         /,
     ):
@@ -40,7 +45,7 @@ class CategoricalDtype:
     def __ne__(
         self,
         _0: Union[
-            Literal["category"], pandas.core.dtypes.dtypes.CategoricalDtype, numpy.dtype
+            numpy.dtype, pandas.core.dtypes.dtypes.CategoricalDtype, Literal["category"]
         ],
         /,
     ):
@@ -68,7 +73,7 @@ class DatetimeTZDtype:
     def __eq__(
         self,
         _0: Union[
-            type, pandas.core.dtypes.dtypes.DatetimeTZDtype, numpy.dtype, Literal["O"]
+            Literal["O"], pandas.core.dtypes.dtypes.DatetimeTZDtype, numpy.dtype, type
         ],
         /,
     ):
@@ -87,7 +92,7 @@ class DatetimeTZDtype:
 
 
 class IntervalDtype:
-    def __eq__(self, _0: Union[type, numpy.dtype, Literal["O"]], /):
+    def __eq__(self, _0: Union[Literal["O"], type, numpy.dtype], /):
         """
         usage.pandas: 13
         usage.xarray: 1
@@ -112,7 +117,7 @@ class PeriodDtype:
     # usage.dask: 1
     name: object
 
-    def __eq__(self, _0: Union[type, numpy.dtype, Literal["O"]], /):
+    def __eq__(self, _0: Union[Literal["O"], type, numpy.dtype], /):
         """
         usage.pandas: 22
         usage.xarray: 1

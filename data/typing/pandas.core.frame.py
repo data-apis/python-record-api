@@ -2,6 +2,11 @@ from typing import *
 
 
 class DataFrame:
+    def __init__(self, /, data: List[List[int]]):
+        """
+        usage.xarray: 1
+        """
+        ...
 
     # usage.dask: 4
     __module__: ClassVar[object]
@@ -216,7 +221,7 @@ class DataFrame:
         """
         ...
 
-    def __eq__(self, _0: Union[pandas.core.frame.DataFrame, int, numpy.ndarray], /):
+    def __eq__(self, _0: Union[numpy.ndarray, pandas.core.frame.DataFrame, int], /):
         """
         usage.dask: 9
         usage.pandas: 6
@@ -229,7 +234,7 @@ class DataFrame:
         """
         ...
 
-    def __ge__(self, _0: Union[int, numpy.ndarray], /):
+    def __ge__(self, _0: Union[numpy.ndarray, int], /):
         """
         usage.dask: 2
         usage.pandas: 1
@@ -245,7 +250,7 @@ class DataFrame:
         ...
 
     def __gt__(
-        self, _0: Union[pandas.core.series.Series, numpy.timedelta64, numpy.ndarray], /
+        self, _0: Union[numpy.timedelta64, numpy.ndarray, pandas.core.series.Series], /
     ):
         """
         usage.dask: 1
@@ -314,7 +319,7 @@ class DataFrame:
         """
         ...
 
-    def __pow__(self, _0: Union[int, numpy.timedelta64], /):
+    def __pow__(self, _0: Union[numpy.timedelta64, int], /):
         """
         usage.dask: 2
         usage.pandas: 1
@@ -324,11 +329,11 @@ class DataFrame:
     def __radd__(
         self,
         _0: Union[
-            dask.dataframe.core.Scalar,
-            pandas.core.frame.DataFrame,
             numpy.datetime64,
             numpy.timedelta64,
             numpy.ndarray,
+            dask.dataframe.core.Scalar,
+            pandas.core.frame.DataFrame,
         ],
         /,
     ):
@@ -365,10 +370,10 @@ class DataFrame:
     def __rsub__(
         self,
         _0: Union[
-            pandas.core.frame.DataFrame,
             numpy.timedelta64,
             numpy.datetime64,
             numpy.ndarray,
+            pandas.core.frame.DataFrame,
         ],
         /,
     ):
@@ -380,7 +385,7 @@ class DataFrame:
 
     def __rtruediv__(
         self,
-        _0: Union[pandas.core.frame.DataFrame, numpy.timedelta64, numpy.ndarray],
+        _0: Union[numpy.timedelta64, numpy.ndarray, pandas.core.frame.DataFrame],
         /,
     ):
         """
@@ -406,7 +411,7 @@ class DataFrame:
 
     def __truediv__(
         self,
-        _0: Union[pandas.core.frame.DataFrame, numpy.timedelta64, numpy.ndarray],
+        _0: Union[numpy.timedelta64, numpy.ndarray, pandas.core.frame.DataFrame],
         /,
     ):
         """
@@ -1017,11 +1022,11 @@ class DataFrame:
         self,
         /,
         labels: Union[
-            List[str],
-            pandas.core.indexes.numeric.Int64Index,
             pandas.core.indexes.multi.MultiIndex,
-            pandas.core.indexes.datetimes.DatetimeIndex,
             reversed,
+            pandas.core.indexes.numeric.Int64Index,
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            List[str],
         ] = ...,
         fill_value: Union[int, float] = ...,
     ):
@@ -1102,8 +1107,8 @@ class DataFrame:
     def rolling(
         self,
         /,
-        window: Union[pandas.tseries.offsets.Second, float, int, str],
-        min_periods: Union[int, None] = ...,
+        window: Union[int, pandas.tseries.offsets.Second, float, str],
+        min_periods: Union[None, int] = ...,
         center: bool = ...,
         win_type: None = ...,
         axis: Union[int, Literal["rows", "columns", "coulombs"]] = ...,
@@ -1240,8 +1245,8 @@ class DataFrame:
     def std(
         self,
         /,
-        skipna: bool = ...,
         axis: Union[Literal["columns", "index"], int] = ...,
+        skipna: bool = ...,
         ddof: int = ...,
     ):
         """

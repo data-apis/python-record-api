@@ -31,7 +31,7 @@ data/api.json: $(wildcard data/api/*)
 		python -m record_api.combine_apis
 
 
-data/api/%.json: | data/groupby_location/%.jsonl
+data/api/%.json: data/groupby_location/%.jsonl
 	env PYTHON_RECORD_API_OUTPUT=$@ \
 		PYTHON_RECORD_API_INPUT=$< \
 		PYTHON_RECORD_API_LABEL=$(*F) \

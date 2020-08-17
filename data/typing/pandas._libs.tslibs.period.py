@@ -11,9 +11,9 @@ class Period:
     def __eq__(
         self,
         _0: Union[
-            pandas._libs.tslibs.period.Period,
             xarray.core.variable.Variable,
             numpy.ndarray,
+            pandas._libs.tslibs.period.Period,
         ],
         /,
     ):
@@ -23,7 +23,7 @@ class Period:
         """
         ...
 
-    def __ge__(self, _0: Union[pandas._libs.tslibs.period.Period, numpy.ndarray], /):
+    def __ge__(self, _0: Union[numpy.ndarray, pandas._libs.tslibs.period.Period], /):
         """
         usage.dask: 3
         usage.pandas: 1

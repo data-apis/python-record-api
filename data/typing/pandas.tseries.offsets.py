@@ -242,11 +242,6 @@ class DateOffset:
 
 
 class Day:
-    def __init__(self, /):
-        """
-        usage.dask: 1
-        """
-        ...
 
     # usage.dask: 1
     __module__: ClassVar[object]

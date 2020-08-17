@@ -1,7 +1,12 @@
 from typing import *
 
 
-def as_strided(x: object, shape: Tuple[Union[int, numpy.int64], ...]):
+def as_strided(
+    x: object,
+    shape: Tuple[Union[int, numpy.int64], ...],
+    strides: Union[Tuple[Union[int, numpy.int64], ...], List[int]] = ...,
+    writeable: bool = ...,
+):
     """
     usage.matplotlib: 5
     usage.pandas: 3

@@ -42,20 +42,20 @@ class MGridClass:
         _0: Union[
             Tuple[
                 slice[
-                    Union[None, numpy.float64, int, float],
-                    Union[int, numpy.float64, float],
-                    Union[None, numpy.float64, int, float],
+                    Union[None, float, int, numpy.float64],
+                    Union[int, float, numpy.float64],
+                    Union[None, float, int, numpy.float64],
                 ],
                 ...,
             ],
+            slice[int, int, int],
             List[
                 slice[
-                    Union[int, numpy.int64, None],
+                    Union[None, int, numpy.int64],
                     Union[int, numpy.int64],
-                    Union[int, numpy.int64, None],
+                    Union[None, int, numpy.int64],
                 ]
             ],
-            slice[int, int, int],
         ],
         /,
     ):
@@ -72,7 +72,7 @@ class OGridClass:
     def __getitem__(
         self,
         _0: Union[
-            Tuple[slice[Union[None, int], Union[int, float], Union[None, int]], ...],
+            Tuple[slice[Union[int, None], Union[float, int], Union[int, None]], ...],
             List[slice[int, int, int]],
         ],
         /,
@@ -90,15 +90,15 @@ class RClass:
     def __getitem__(
         self,
         _0: Union[
-            List[Union[List[Union[int, float]], numpy.ndarray, int]],
             tuple,
-            int,
-            numpy.ndarray,
             slice[
-                Union[int, numpy.int64, None],
-                Union[int, numpy.int64],
-                Union[int, numpy.int64, None],
+                Union[numpy.int64, int, None],
+                Union[numpy.int64, int],
+                Union[numpy.int64, int, None],
             ],
+            numpy.ndarray,
+            int,
+            List[Union[int, numpy.ndarray, List[Union[int, float]]]],
         ],
         /,
     ):

@@ -2,10 +2,17 @@ from typing import *
 
 
 class Series:
-    def __init__(self, /, data: List[str]):
+    def __init__(
+        self,
+        /,
+        data: Union[
+            Dict[Union[numpy.int64, numpy.float64], numpy.float64],
+            List[Union[Literal["c", "b", "a"], int]],
+        ],
+    ):
         """
-        usage.dask: 5
         usage.sklearn: 1
+        usage.xarray: 3
         """
         ...
 
@@ -86,7 +93,7 @@ class Series:
     # usage.dask: 48
     # usage.sklearn: 6
     # usage.xarray: 5
-    name: Union[str, None]
+    name: Union[None, str]
 
     # usage.dask: 2
     nbytes: object
@@ -119,7 +126,7 @@ class Series:
         """
         ...
 
-    def __and__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
+    def __and__(self, _0: Union[numpy.ndarray, pandas.core.series.Series], /):
         """
         usage.dask: 5
         usage.pandas: 3
@@ -146,7 +153,7 @@ class Series:
         """
         ...
 
-    def __floordiv__(self, _0: Union[int, float, numpy.ndarray, numpy.timedelta64], /):
+    def __floordiv__(self, _0: Union[numpy.ndarray, numpy.timedelta64, int, float], /):
         """
         usage.dask: 3
         usage.pandas: 6
@@ -220,7 +227,7 @@ class Series:
         """
         ...
 
-    def __mod__(self, _0: Union[int, numpy.ndarray, numpy.timedelta64], /):
+    def __mod__(self, _0: Union[numpy.ndarray, numpy.timedelta64, int], /):
         """
         usage.dask: 5
         usage.pandas: 57
@@ -240,14 +247,14 @@ class Series:
         """
         ...
 
-    def __or__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
+    def __or__(self, _0: Union[numpy.ndarray, pandas.core.series.Series], /):
         """
         usage.dask: 3
         usage.pandas: 3
         """
         ...
 
-    def __pow__(self, _0: Union[float, int, numpy.timedelta64], /):
+    def __pow__(self, _0: Union[numpy.timedelta64, float, int], /):
         """
         usage.dask: 5
         usage.pandas: 1
@@ -283,7 +290,7 @@ class Series:
         """
         ...
 
-    def __ror__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
+    def __ror__(self, _0: Union[numpy.ndarray, pandas.core.series.Series], /):
         """
         usage.dask: 3
         usage.pandas: 1
@@ -317,7 +324,7 @@ class Series:
         ...
 
     def __setitem__(
-        self, _0: Union[pandas.core.series.Series, int], _1: Union[int, float], /
+        self, _0: Union[int, pandas.core.series.Series], _1: Union[float, int], /
     ):
         """
         usage.dask: 3
@@ -339,7 +346,7 @@ class Series:
         """
         ...
 
-    def __xor__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
+    def __xor__(self, _0: Union[numpy.ndarray, pandas.core.series.Series], /):
         """
         usage.dask: 1
         usage.pandas: 1
@@ -404,7 +411,7 @@ class Series:
         self,
         /,
         dtype: Union[
-            pandas.core.dtypes.dtypes.CategoricalDtype, numpy.dtype, str, type
+            type, str, numpy.dtype, pandas.core.dtypes.dtypes.CategoricalDtype
         ],
     ):
         """
@@ -597,10 +604,10 @@ class Series:
     def groupby(
         self,
         /,
-        by: object = ...,
-        group_keys: bool = ...,
         level: Union[List[int], int] = ...,
         sort: bool = ...,
+        by: object = ...,
+        group_keys: bool = ...,
     ):
         """
         usage.dask: 64
@@ -889,7 +896,7 @@ class Series:
     def rolling(
         self,
         /,
-        window: Union[Literal["3S", "2S", "1S"], int, pandas.tseries.offsets.Second],
+        window: Union[int, pandas.tseries.offsets.Second, Literal["3S", "2S", "1S"]],
         min_periods: Union[None, int] = ...,
         center: bool = ...,
         win_type: None = ...,
@@ -1076,7 +1083,7 @@ class Series:
         self,
         /,
         axis: Union[Literal["columns"], None, int] = ...,
-        skipna: Union[None, bool] = ...,
+        skipna: Union[bool, None] = ...,
         ddof: int = ...,
     ):
         """

@@ -12,7 +12,7 @@ class SparseDtype:
 
     def __eq__(
         self,
-        _0: Union[Literal["Sparse[uint8, 0]"], Type[numpy.object_], numpy.dtype],
+        _0: Union[Type[numpy.object_], numpy.dtype, Literal["Sparse[uint8, 0]"]],
         /,
     ):
         """
