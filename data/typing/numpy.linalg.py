@@ -1,17 +1,5 @@
 from typing import *
 
-# usage.matplotlib: 2
-# usage.scipy: 6
-# usage.skimage: 2
-# usage.sklearn: 4
-LinAlgError: object
-
-# usage.dask: 4
-_umath_linalg: object
-
-# usage.scipy: 1
-linalg: object
-
 
 def cholesky(a: Union[List[List[float]], numpy.ndarray]):
     """
@@ -20,9 +8,28 @@ def cholesky(a: Union[List[List[float]], numpy.ndarray]):
     ...
 
 
-def cond(x: numpy.ndarray):
+def cond(x: numpy.ndarray, p: int = ...):
     """
     usage.scipy: 8
+    """
+    ...
+
+
+@overload
+def det(a: numpy.ndarray):
+    """
+    usage.matplotlib: 1
+    usage.scipy: 18
+    usage.skimage: 5
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def det(a: Union[numpy.ndarray, dask.array.core.Array]):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -54,6 +61,22 @@ def eigh(a: numpy.ndarray):
     ...
 
 
+@overload
+def eigvals(a: numpy.ndarray):
+    """
+    usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def eigvals(a: Union[numpy.ndarray, dask.array.core.Array]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
 def eigvals(a: Union[dask.array.core.Array, numpy.ndarray]):
     """
     usage.dask: 2
@@ -79,7 +102,33 @@ def inv(a: numpy.ndarray):
     ...
 
 
-def lstsq(a: numpy.ndarray, b: numpy.ndarray):
+@overload
+def lstsq(a: numpy.ndarray, b: numpy.ndarray, rcond: int):
+    """
+    usage.scipy: 9
+    """
+    ...
+
+
+@overload
+def lstsq(a: numpy.ndarray, b: numpy.ndarray, rcond: Union[numpy.float64, int]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def lstsq(a: numpy.ndarray, b: numpy.ndarray, rcond: None = ...):
+    """
+    usage.sklearn: 2
+    """
+    ...
+
+
+def lstsq(
+    a: numpy.ndarray, b: numpy.ndarray, rcond: Union[None, numpy.float64, int] = ...
+):
     """
     usage.dask: 3
     usage.scipy: 9
@@ -95,10 +144,80 @@ def matrix_power(a: numpy.ndarray, n: int):
     ...
 
 
+@overload
 def matrix_rank(M: numpy.ndarray):
+    """
+    usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def matrix_rank(M: numpy.ndarray, tol: Union[float, numpy.float64] = ...):
+    """
+    usage.scipy: 24
+    """
+    ...
+
+
+def matrix_rank(M: numpy.ndarray, tol: Union[float, numpy.float64] = ...):
     """
     usage.scipy: 24
     usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray):
+    """
+    usage.skimage: 8
+    """
+    ...
+
+
+@overload
+def norm(
+    x: object,
+    ord: Union[int, float, Literal["f", "fro"], None] = ...,
+    axis: Union[int, Tuple[int, ...], None] = ...,
+    keepdims: bool = ...,
+):
+    """
+    usage.scipy: 394
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, axis: int = ...):
+    """
+    usage.matplotlib: 4
+    """
+    ...
+
+
+@overload
+def norm(
+    x: object,
+    ord: Union[int, float, None, Literal["nuc", "fro"]] = ...,
+    axis: Union[Tuple[int, ...], None, int] = ...,
+    keepdims: bool = ...,
+):
+    """
+    usage.dask: 25
+    """
+    ...
+
+
+@overload
+def norm(
+    x: numpy.ndarray,
+    ord: Union[float, int, Literal["fro"]] = ...,
+    axis: Union[None, int] = ...,
+):
+    """
+    usage.sklearn: 45
     """
     ...
 
@@ -143,6 +262,22 @@ def slogdet(a: numpy.ndarray):
     ...
 
 
+@overload
+def solve(a: numpy.ndarray, b: numpy.ndarray):
+    """
+    usage.skimage: 2
+    """
+    ...
+
+
+@overload
+def solve(a: Union[numpy.matrix, numpy.ndarray], b: numpy.ndarray):
+    """
+    usage.scipy: 25
+    """
+    ...
+
+
 def solve(a: Union[numpy.ndarray, numpy.matrix], b: numpy.ndarray):
     """
     usage.scipy: 25
@@ -151,7 +286,34 @@ def solve(a: Union[numpy.ndarray, numpy.matrix], b: numpy.ndarray):
     ...
 
 
-def svd(a: numpy.ndarray):
+@overload
+def svd(a: numpy.ndarray, full_matrices: bool = ...):
+    """
+    usage.skimage: 7
+    usage.sklearn: 6
+    """
+    ...
+
+
+@overload
+def svd(a: numpy.ndarray, full_matrices: bool = ..., compute_uv: bool = ...):
+    """
+    usage.scipy: 10
+    """
+    ...
+
+
+@overload
+def svd(a: numpy.ndarray, full_matrices: int = ...):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+def svd(
+    a: numpy.ndarray, full_matrices: Union[bool, int] = ..., compute_uv: bool = ...
+):
     """
     usage.dask: 4
     usage.scipy: 10

@@ -26,7 +26,14 @@ class Generator:
         """
         ...
 
-    def chisquare(self, _0: Union[int, numpy.ndarray], /, *, size: numpy.int64 = ...):
+    def chisquare(
+        self,
+        _0: Union[int, numpy.ndarray],
+        _1: Tuple[numpy.int64] = ...,
+        /,
+        *,
+        size: numpy.int64 = ...,
+    ):
         """
         usage.scipy: 3
         """
@@ -106,7 +113,7 @@ class Generator:
         ...
 
     def multivariate_normal(
-        self, _0: numpy.ndarray, _1: numpy.ndarray, /, *, size: int = ...
+        self, _0: numpy.ndarray, _1: numpy.ndarray, _2: int = ..., /, *, size: int = ...
     ):
         """
         usage.scipy: 2
@@ -182,7 +189,13 @@ class Generator:
         """
         ...
 
-    def standard_normal(self, /, *, size: Tuple[Union[numpy.int64, int], ...] = ...):
+    def standard_normal(
+        self,
+        _0: Union[numpy.int64, int, Tuple[numpy.int64]] = ...,
+        /,
+        *,
+        size: Tuple[Union[numpy.int64, int], ...] = ...,
+    ):
         """
         usage.scipy: 10
         """

@@ -2,30 +2,13 @@ from typing import *
 
 
 class Categorical:
-    def __init__(
-        self,
-        /,
-        values: Union[
-            List[Union[str, int]],
-            pandas.core.indexes.datetimes.DatetimeIndex,
-            pandas.core.indexes.numeric.Float64Index,
-            pandas.core.indexes.base.Index,
-        ],
-        categories: Union[None, pandas.core.indexes.base.Index] = ...,
-        ordered: bool = ...,
-    ):
-        """
-        usage.dask: 10
-        usage.sklearn: 1
-        """
-        ...
-
     @classmethod
     def from_codes(
         cls,
         /,
         codes: Union[numpy.ndarray, List[int]],
         categories: Union[pandas.core.indexes.base.Index, List[str]],
+        ordered: bool = ...,
     ):
         """
         usage.dask: 5

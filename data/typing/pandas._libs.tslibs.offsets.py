@@ -2,11 +2,7 @@ from typing import *
 
 
 class DateOffset:
-    def __init__(self, /, *, months: int):
-        """
-        usage.xarray: 1
-        """
-        ...
+    pass
 
 
 class Hour:

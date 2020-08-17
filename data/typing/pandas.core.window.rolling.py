@@ -94,7 +94,7 @@ class Rolling:
         """
         ...
 
-    def std(self, /):
+    def std(self, /, ddof: int = ...):
         """
         usage.dask: 6
         """
@@ -106,7 +106,7 @@ class Rolling:
         """
         ...
 
-    def var(self, /):
+    def var(self, /, ddof: int = ...):
         """
         usage.dask: 5
         """

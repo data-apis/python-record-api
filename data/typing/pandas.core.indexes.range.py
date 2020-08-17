@@ -43,6 +43,20 @@ class RangeIndex:
     # usage.xarray: 3
     values: object
 
+    @overload
+    def __add__(self, _0: Union[numpy.datetime64, numpy.timedelta64], /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: int, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __add__(self, _0: Union[int, numpy.timedelta64, numpy.datetime64], /):
         """
         usage.dask: 1
@@ -65,6 +79,28 @@ class RangeIndex:
     def __floordiv__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Union[
+            slice[Union[None, int], Union[int, None], Union[None, int]],
+            int,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Union[slice[int, int, int], int], /):
+        """
+        usage.dask: 5
         """
         ...
 
@@ -95,6 +131,20 @@ class RangeIndex:
         """
         ...
 
+    @overload
+    def __mul__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
+        """
+        usage.pandas: 5
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: int, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __mul__(self, _0: Union[int, numpy.timedelta64, numpy.ndarray], /):
         """
         usage.dask: 1
@@ -117,6 +167,20 @@ class RangeIndex:
     def __rfloordiv__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
+        """
+        usage.pandas: 2
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: int, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -163,6 +227,26 @@ class RangeIndex:
         """
         ...
 
+    @overload
+    def equals(
+        self,
+        /,
+        other: Union[
+            pandas.core.indexes.range.RangeIndex, pandas.core.indexes.numeric.Int64Index
+        ],
+    ):
+        """
+        usage.xarray: 8
+        """
+        ...
+
+    @overload
+    def equals(self, /, other: pandas.core.indexes.range.RangeIndex):
+        """
+        usage.dask: 2
+        """
+        ...
+
     def equals(
         self,
         /,
@@ -179,6 +263,20 @@ class RangeIndex:
     def get_indexer(self, /, target: numpy.ndarray, method: None, tolerance: None):
         """
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: int, method: None, tolerance: None):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def get_loc(self, /, key: Literal["random"]):
+        """
+        usage.sklearn: 1
         """
         ...
 
@@ -219,7 +317,7 @@ class RangeIndex:
         """
         ...
 
-    def to_frame(self, /, name: Union[Literal["bar"], None]):
+    def to_frame(self, /, name: Union[Literal["bar"], None], index: bool = ...):
         """
         usage.dask: 3
         """

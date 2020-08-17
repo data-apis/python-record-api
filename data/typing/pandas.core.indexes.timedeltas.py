@@ -1,8 +1,44 @@
 from typing import *
 
 
+@overload
+def timedelta_range(start: int, periods: int):
+    """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
 def timedelta_range(
-    start: Union[Literal["1 day", "1 days"], numpy.timedelta64, int], periods: int
+    start: Union[numpy.timedelta64, Literal["1 day", "1 days"]],
+    periods: int,
+    freq: Union[
+        None,
+        Literal["H", "D", "T"],
+        pandas.tseries.offsets.Hour,
+        pandas.tseries.offsets.Minute,
+        pandas.tseries.offsets.Day,
+    ],
+    name: Union[Literal["timedelta", "foo"], None] = ...,
+):
+    """
+    usage.dask: 9
+    """
+    ...
+
+
+def timedelta_range(
+    start: Union[Literal["1 day", "1 days"], numpy.timedelta64, int],
+    periods: int,
+    freq: Union[
+        None,
+        Literal["H", "D", "T"],
+        pandas.tseries.offsets.Hour,
+        pandas.tseries.offsets.Minute,
+        pandas.tseries.offsets.Day,
+    ] = ...,
+    name: Union[Literal["timedelta", "foo"], None] = ...,
 ):
     """
     usage.dask: 9
@@ -12,13 +48,6 @@ def timedelta_range(
 
 
 class TimedeltaIndex:
-    def __init__(
-        self, /, data: List[numpy.timedelta64], name: Literal["timedelta", "foo"]
-    ):
-        """
-        usage.dask: 2
-        """
-        ...
 
     # usage.dask: 1
     __module__: ClassVar[object]
@@ -45,6 +74,27 @@ class TimedeltaIndex:
 
     # usage.xarray: 4
     values: object
+
+    @overload
+    def __add__(
+        self,
+        _0: Union[
+            xarray.coding.cftimeindex.CFTimeIndex,
+            pandas._libs.tslibs.timestamps.Timestamp,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /):
+        """
+        usage.pandas: 22
+        """
+        ...
 
     def __add__(
         self,
@@ -78,6 +128,20 @@ class TimedeltaIndex:
     def __ge__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Union[numpy.ndarray, int, slice[int, int, int]], /):
+        """
+        usage.xarray: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Union[slice[int, int, int], int], /):
+        """
+        usage.dask: 5
         """
         ...
 
@@ -142,6 +206,29 @@ class TimedeltaIndex:
         """
         ...
 
+    @overload
+    def __radd__(
+        self,
+        _0: Union[
+            pandas._libs.tslibs.timestamps.Timestamp,
+            xarray.coding.cftimeindex.CFTimeIndex,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __radd__(
+        self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /
+    ):
+        """
+        usage.pandas: 18
+        """
+        ...
+
     def __radd__(
         self,
         _0: Union[
@@ -183,6 +270,22 @@ class TimedeltaIndex:
         """
         ...
 
+    @overload
+    def __rsub__(self, _0: xarray.coding.cftimeindex.CFTimeIndex, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __rsub__(
+        self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /
+    ):
+        """
+        usage.pandas: 16
+        """
+        ...
+
     def __rsub__(
         self,
         _0: Union[
@@ -208,6 +311,20 @@ class TimedeltaIndex:
     def __sub__(self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /):
         """
         usage.pandas: 18
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: numpy.timedelta64, /):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
+        """
+        usage.pandas: 21
         """
         ...
 

@@ -203,6 +203,30 @@ class DataFrame:
     # usage.dask: 4
     z: object
 
+    @overload
+    def __add__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /):
+        """
+        usage.pandas: 37
+        """
+        ...
+
+    @overload
+    def __add__(
+        self,
+        _0: Union[
+            pandas.core.frame.DataFrame,
+            float,
+            dask.dataframe.core.Scalar,
+            int,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.dask: 24
+        """
+        ...
+
     def __add__(self, _0: object, /):
         """
         usage.dask: 24
@@ -213,6 +237,20 @@ class DataFrame:
     def __array_wrap__(self, /, result: numpy.ndarray):
         """
         usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 6
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Union[int, pandas.core.frame.DataFrame], /):
+        """
+        usage.dask: 9
         """
         ...
 
@@ -229,10 +267,47 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def __ge__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: int, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
     def __ge__(self, _0: Union[int, numpy.ndarray], /):
         """
         usage.dask: 2
         usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Union[Literal["x", "foo"], List[Literal["foo", "C"]], int], /
+    ):
+        """
+        usage.xarray: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: object, /):
+        """
+        usage.dask: 487
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Union[str, List[str], numpy.ndarray, int], /):
+        """
+        usage.sklearn: 213
         """
         ...
 
@@ -241,6 +316,20 @@ class DataFrame:
         usage.dask: 487
         usage.sklearn: 213
         usage.xarray: 8
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
+        """
+        usage.pandas: 4
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -293,6 +382,20 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def __mul__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.int64], /):
+        """
+        usage.pandas: 20
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: Union[int, float], /):
+        """
+        usage.sklearn: 4
+        """
+        ...
+
     def __mul__(
         self, _0: Union[float, int, numpy.int64, numpy.timedelta64, numpy.ndarray], /
     ):
@@ -314,10 +417,42 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def __pow__(self, _0: numpy.timedelta64, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def __pow__(self, _0: int, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
     def __pow__(self, _0: Union[int, numpy.timedelta64], /):
         """
         usage.dask: 2
         usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def __radd__(
+        self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /
+    ):
+        """
+        usage.pandas: 30
+        """
+        ...
+
+    @overload
+    def __radd__(
+        self, _0: Union[pandas.core.frame.DataFrame, dask.dataframe.core.Scalar], /
+    ):
+        """
+        usage.dask: 2
         """
         ...
 
@@ -362,6 +497,22 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def __rsub__(
+        self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /
+    ):
+        """
+        usage.pandas: 26
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __rsub__(
         self,
         _0: Union[
@@ -378,6 +529,20 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def __rtruediv__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
+        """
+        usage.pandas: 20
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __rtruediv__(
         self,
         _0: Union[pandas.core.frame.DataFrame, numpy.timedelta64, numpy.ndarray],
@@ -389,6 +554,49 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def __setitem__(self, _0: Literal["C"], _1: List[int], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Union[
+            str,
+            List[Literal["b", "a"]],
+            pandas.core.indexes.base.Index,
+            pandas.core.frame.DataFrame,
+            pandas.core.indexes.numeric.Int64Index,
+        ],
+        _1: object,
+        /,
+    ):
+        """
+        usage.dask: 129
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Union[str, int],
+        _1: Union[
+            pandas.core.series.Series,
+            numpy.ndarray,
+            pandas.core.arrays.categorical.Categorical,
+            pandas.core.arrays.sparse.array.SparseArray,
+            List[int],
+        ],
+        /,
+    ):
+        """
+        usage.sklearn: 178
+        """
+        ...
+
     def __setitem__(self, _0: object, _1: object, /):
         """
         usage.dask: 129
@@ -397,10 +605,40 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def __sub__(self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /):
+        """
+        usage.pandas: 30
+        """
+        ...
+
+    @overload
+    def __sub__(
+        self, _0: Union[int, pandas.core.series.Series, pandas.core.frame.DataFrame], /
+    ):
+        """
+        usage.dask: 8
+        """
+        ...
+
     def __sub__(self, _0: object, /):
         """
         usage.dask: 8
         usage.pandas: 30
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
+        """
+        usage.pandas: 22
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -431,6 +669,8 @@ class DataFrame:
         self,
         /,
         other: Union[pandas.core.frame.DataFrame, int, pandas.core.series.Series],
+        axis: Union[Literal["columns", "index"], int] = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 11
@@ -463,10 +703,35 @@ class DataFrame:
         ...
 
     def append(
-        self, /, other: Union[pandas.core.frame.DataFrame, pandas.core.series.Series]
+        self,
+        /,
+        other: Union[pandas.core.frame.DataFrame, pandas.core.series.Series],
+        sort: bool = ...,
     ):
         """
         usage.dask: 12
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def apply(
+        self,
+        /,
+        func: Callable,
+        axis: Union[int, Literal["columns"]],
+        raw: bool = ...,
+        result_type: None = ...,
+        args: Tuple[None, ...] = ...,
+    ):
+        """
+        usage.dask: 10
         """
         ...
 
@@ -496,6 +761,38 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def astype(
+        self,
+        /,
+        dtype: Union[
+            Dict[
+                Union[int, str],
+                Union[
+                    Literal["category", "f8"],
+                    numpy.dtype,
+                    pandas.core.dtypes.dtypes.CategoricalDtype,
+                    Type[float],
+                ],
+            ],
+            pandas.core.series.Series,
+            Literal["float", "float64"],
+            type,
+        ],
+        copy: bool = ...,
+    ):
+        """
+        usage.dask: 32
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Union[type, None]):
+        """
+        usage.sklearn: 4
+        """
+        ...
+
     def astype(
         self,
         /,
@@ -514,6 +811,7 @@ class DataFrame:
                 ],
             ],
         ],
+        copy: bool = ...,
     ):
         """
         usage.dask: 32
@@ -521,7 +819,7 @@ class DataFrame:
         """
         ...
 
-    def bfill(self, /):
+    def bfill(self, /, axis: int = ...):
         """
         usage.dask: 2
         """
@@ -538,7 +836,14 @@ class DataFrame:
         """
         ...
 
-    def combine(self, /, other: pandas.core.frame.DataFrame, func: Callable):
+    def combine(
+        self,
+        /,
+        other: pandas.core.frame.DataFrame,
+        func: Callable,
+        overwrite: bool = ...,
+        fill_value: Union[None, int] = ...,
+    ):
         """
         usage.dask: 7
         """
@@ -550,26 +855,40 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def copy(self, /, deep: bool = ...):
+        """
+        usage.dask: 16
+        """
+        ...
+
+    @overload
     def copy(self, /):
+        """
+        usage.sklearn: 4
+        """
+        ...
+
+    def copy(self, /, deep: bool = ...):
         """
         usage.dask: 16
         usage.sklearn: 4
         """
         ...
 
-    def corr(self, /):
+    def corr(self, /, min_periods: int = ...):
         """
         usage.dask: 4
         """
         ...
 
-    def count(self, /):
+    def count(self, /, axis: Union[Literal["columns", "index"], int] = ...):
         """
         usage.dask: 17
         """
         ...
 
-    def cov(self, /):
+    def cov(self, /, min_periods: int = ...):
         """
         usage.dask: 5
         """
@@ -674,7 +993,14 @@ class DataFrame:
         """
         ...
 
-    def ewm(self, /):
+    def ewm(
+        self,
+        /,
+        alpha: float = ...,
+        span: int = ...,
+        com: float = ...,
+        halflife: int = ...,
+    ):
         """
         usage.xarray: 4
         """
@@ -686,7 +1012,7 @@ class DataFrame:
         """
         ...
 
-    def ffill(self, /):
+    def ffill(self, /, axis: int = ...):
         """
         usage.dask: 2
         """
@@ -715,6 +1041,8 @@ class DataFrame:
         self,
         /,
         other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
+        axis: Union[Literal["columns", "index"], int] = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 9
@@ -729,6 +1057,7 @@ class DataFrame:
 
     def groupby(
         self,
+        _0: Literal["a"] = ...,
         /,
         by: object = ...,
         group_keys: bool = ...,
@@ -742,19 +1071,19 @@ class DataFrame:
         """
         ...
 
-    def head(self, /):
+    def head(self, /, n: int = ...):
         """
         usage.dask: 18
         """
         ...
 
-    def idxmax(self, /):
+    def idxmax(self, /, skipna: bool = ..., axis: int = ...):
         """
         usage.dask: 8
         """
         ...
 
-    def idxmin(self, /):
+    def idxmin(self, /, axis: int = ..., skipna: bool = ...):
         """
         usage.dask: 8
         """
@@ -837,20 +1166,27 @@ class DataFrame:
         ...
 
     def mask(
-        self, /, cond: Union[pandas.core.series.Series, pandas.core.frame.DataFrame]
+        self,
+        /,
+        cond: Union[pandas.core.series.Series, pandas.core.frame.DataFrame],
+        other: Union[pandas.core.frame.DataFrame, float] = ...,
     ):
         """
         usage.dask: 6
         """
         ...
 
-    def max(self, /):
+    def max(
+        self, /, skipna: bool = ..., axis: Union[Literal["columns", "index"], int] = ...
+    ):
         """
         usage.dask: 15
         """
         ...
 
-    def mean(self, /):
+    def mean(
+        self, /, skipna: bool = ..., axis: Union[Literal["columns", "index"], int] = ...
+    ):
         """
         usage.dask: 20
         """
@@ -870,7 +1206,21 @@ class DataFrame:
         """
         ...
 
-    def memory_usage(self, /):
+    @overload
+    def memory_usage(self, /, index: bool, deep: bool = ...):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def memory_usage(self, /, deep: bool):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    def memory_usage(self, /, deep: bool = ..., index: bool = ...):
         """
         usage.dask: 5
         usage.sklearn: 1
@@ -898,7 +1248,9 @@ class DataFrame:
         """
         ...
 
-    def min(self, /):
+    def min(
+        self, /, skipna: bool = ..., axis: Union[Literal["columns", "index"], int] = ...
+    ):
         """
         usage.dask: 15
         """
@@ -908,6 +1260,8 @@ class DataFrame:
         self,
         /,
         other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
+        axis: Union[Literal["columns", "index"], int] = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 9
@@ -924,6 +1278,8 @@ class DataFrame:
         self,
         /,
         other: Union[pandas.core.frame.DataFrame, int, pandas.core.series.Series],
+        axis: Union[Literal["columns", "index"], int] = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 11
@@ -969,6 +1325,8 @@ class DataFrame:
         self,
         /,
         other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
+        axis: Union[Literal["columns", "index"], int] = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 9
@@ -1007,9 +1365,35 @@ class DataFrame:
         self,
         /,
         other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
+        axis: Union[Literal["columns", "index"], int] = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 9
+        """
+        ...
+
+    @overload
+    def reindex(self, /, labels: Union[reversed, pandas.core.indexes.multi.MultiIndex]):
+        """
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def reindex(
+        self,
+        /,
+        labels: Union[
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas.core.indexes.multi.MultiIndex,
+            pandas.core.indexes.numeric.Int64Index,
+            List[str],
+        ] = ...,
+        fill_value: Union[int, float] = ...,
+    ):
+        """
+        usage.dask: 14
         """
         ...
 
@@ -1035,6 +1419,7 @@ class DataFrame:
         self,
         /,
         columns: Union[Dict[str, Union[int, str]], collections.OrderedDict, Callable],
+        mapper: None = ...,
     ):
         """
         usage.dask: 18
@@ -1042,7 +1427,10 @@ class DataFrame:
         ...
 
     def rename_axis(
-        self, /, mapper: Union[Literal["myindex", "newindex"], List[None], None]
+        self,
+        /,
+        mapper: Union[Literal["myindex", "newindex"], List[None], None],
+        copy: bool = ...,
     ):
         """
         usage.dask: 6
@@ -1083,6 +1471,8 @@ class DataFrame:
         self,
         /,
         other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
+        axis: Union[Literal["columns", "index"], int] = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 9
@@ -1093,9 +1483,33 @@ class DataFrame:
         self,
         /,
         other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
+        axis: Union[Literal["columns", "index"], int] = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 9
+        """
+        ...
+
+    @overload
+    def rolling(self, /, window: int, min_periods: Union[int, None], center: bool):
+        """
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def rolling(
+        self,
+        /,
+        window: Union[str, int, float, pandas.tseries.offsets.Second],
+        min_periods: Union[None, int] = ...,
+        center: bool = ...,
+        win_type: None = ...,
+        axis: Union[int, Literal["rows", "columns", "coulombs"]] = ...,
+    ):
+        """
+        usage.dask: 84
         """
         ...
 
@@ -1114,7 +1528,7 @@ class DataFrame:
         """
         ...
 
-    def round(self, /):
+    def round(self, /, decimals: int = ...):
         """
         usage.dask: 3
         """
@@ -1124,6 +1538,8 @@ class DataFrame:
         self,
         /,
         other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
+        axis: Union[Literal["columns", "index"], int] = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 9
@@ -1134,6 +1550,8 @@ class DataFrame:
         self,
         /,
         other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
+        axis: Union[Literal["columns", "index"], int] = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 9
@@ -1144,15 +1562,52 @@ class DataFrame:
         self,
         /,
         other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
+        axis: Union[Literal["columns", "index"], int] = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 18
         """
         ...
 
-    def sample(self, /, frac: float, random_state: numpy.random.mtrand.RandomState):
+    def sample(
+        self,
+        /,
+        frac: float,
+        random_state: numpy.random.mtrand.RandomState,
+        replace: bool = ...,
+    ):
         """
         usage.dask: 2
+        """
+        ...
+
+    @overload
+    def select_dtypes(
+        self,
+        /,
+        include: Union[
+            List[
+                Union[type, Literal["category", "bool", "number", "object", "datetime"]]
+            ],
+            None,
+        ],
+        exclude: Union[None, List[Union[Literal["object", "number"], type]]] = ...,
+    ):
+        """
+        usage.dask: 20
+        """
+        ...
+
+    @overload
+    def select_dtypes(
+        self,
+        /,
+        include: Union[List[Union[type, Literal["category"]]], None, type],
+        exclude: Union[None, List[Type[int]], Type[object]],
+    ):
+        """
+        usage.sklearn: 11
         """
         ...
 
@@ -1166,6 +1621,9 @@ class DataFrame:
                 Union[Literal["category", "bool", "number", "object", "datetime"], type]
             ],
         ],
+        exclude: Union[
+            Type[object], List[Union[type, Literal["object", "number"]]], None
+        ] = ...,
     ):
         """
         usage.dask: 20
@@ -1185,7 +1643,21 @@ class DataFrame:
         """
         ...
 
+    @overload
     def set_index(self, /, keys: object):
+        """
+        usage.xarray: 15
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: object, drop: bool = ...):
+        """
+        usage.dask: 119
+        """
+        ...
+
+    def set_index(self, /, keys: object, drop: bool = ...):
         """
         usage.dask: 119
         usage.xarray: 15
@@ -1208,7 +1680,7 @@ class DataFrame:
         """
         ...
 
-    def sort_index(self, /):
+    def sort_index(self, /, ascending: bool = ...):
         """
         usage.dask: 8
         """
@@ -1230,7 +1702,21 @@ class DataFrame:
         """
         ...
 
+    @overload
     def stack(self, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def stack(self, /, dropna: bool):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def stack(self, /, dropna: bool = ...):
         """
         usage.dask: 1
         usage.xarray: 1
@@ -1253,6 +1739,8 @@ class DataFrame:
         self,
         /,
         other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
+        axis: Union[Literal["columns", "index"], int] = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 9
@@ -1292,13 +1780,15 @@ class DataFrame:
             ],
         ],
         index: bool,
+        encoding: Literal["utf-16-be", "utf-16-le", "utf-16"] = ...,
+        header: bool = ...,
     ):
         """
         usage.dask: 5
         """
         ...
 
-    def to_html(self, /, max_rows: int, show_dimensions: bool):
+    def to_html(self, /, max_rows: int, show_dimensions: bool, notebook: bool = ...):
         """
         usage.dask: 2
         """
@@ -1316,7 +1806,7 @@ class DataFrame:
         """
         ...
 
-    def to_records(self, /):
+    def to_records(self, /, index: bool = ...):
         """
         usage.dask: 4
         """
@@ -1350,6 +1840,8 @@ class DataFrame:
         self,
         /,
         other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
+        axis: Union[Literal["columns", "index"], int] = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 27
@@ -1369,7 +1861,13 @@ class DataFrame:
         ...
 
     def where(
-        self, /, cond: Union[pandas.core.series.Series, pandas.core.frame.DataFrame]
+        self,
+        /,
+        cond: Union[pandas.core.series.Series, pandas.core.frame.DataFrame],
+        axis: int = ...,
+        other: Union[
+            pandas.core.frame.DataFrame, float, pandas.core.series.Series
+        ] = ...,
     ):
         """
         usage.dask: 8

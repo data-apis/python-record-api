@@ -14,7 +14,7 @@ class poly1d:
         """
         ...
 
-    def deriv(self, /):
+    def deriv(self, /, m: int = ...):
         """
         usage.scipy: 3
         """

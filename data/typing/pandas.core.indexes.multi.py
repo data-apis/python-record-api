@@ -10,17 +10,108 @@ class MultiIndex:
     # usage.xarray: 1
     __name__: ClassVar[object]
 
+    @overload
     @classmethod
-    def from_arrays(cls, /, arrays: list):
+    def from_arrays(
+        cls,
+        /,
+        arrays: List[
+            Union[
+                List[Union[Literal["c", "b", "a", "z", "y"], int]],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+                xarray.coding.cftimeindex.CFTimeIndex,
+                pandas.core.indexes.numeric.Int64Index,
+                pandas.core.indexes.category.CategoricalIndex,
+            ]
+        ],
+        names: Union[
+            pandas.core.indexes.frozen.FrozenList,
+            Tuple[Literal["level_str"], Literal["level_date"]],
+            List[Literal["y2", "y1", "y", "x"]],
+        ] = ...,
+    ):
+        """
+        usage.xarray: 8
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_arrays(
+        cls,
+        /,
+        arrays: List[
+            Union[
+                pandas.core.indexes.numeric.Int64Index,
+                pandas.core.indexes.category.CategoricalIndex,
+                pandas.core.indexes.base.Index,
+            ]
+        ],
+        names: pandas.core.indexes.frozen.FrozenList = ...,
+    ):
+        """
+        usage.dask: 7
+        """
+        ...
+
+    @classmethod
+    def from_arrays(
+        cls,
+        /,
+        arrays: list,
+        names: Union[
+            pandas.core.indexes.frozen.FrozenList,
+            List[Literal["y2", "y1", "y", "x"]],
+            Tuple[Literal["level_str"], Literal["level_date"]],
+        ] = ...,
+    ):
         """
         usage.dask: 7
         usage.xarray: 8
         """
         ...
 
+    @overload
     @classmethod
     def from_product(
-        cls, /, iterables: Union[list, pandas.core.indexes.frozen.FrozenList]
+        cls,
+        /,
+        iterables: Union[list, pandas.core.indexes.frozen.FrozenList],
+        names: Union[
+            List[str], Tuple[str, ...], pandas.core.indexes.frozen.FrozenList
+        ] = ...,
+    ):
+        """
+        usage.xarray: 38
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Union[Literal["e", "d", "c", "b", "a"], int]],
+                pandas.core.indexes.base.Index,
+                range,
+            ]
+        ],
+    ):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Union[list, pandas.core.indexes.frozen.FrozenList],
+        names: Union[
+            List[str], Tuple[str, ...], pandas.core.indexes.frozen.FrozenList
+        ] = ...,
     ):
         """
         usage.dask: 3
@@ -108,6 +199,28 @@ class MultiIndex:
         """
         ...
 
+    @overload
+    def __getitem__(
+        self,
+        _0: Union[
+            slice[Union[int, None], Union[None, int], Union[int, None]],
+            numpy.ndarray,
+            int,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 17
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Union[int, slice[int, int, int]], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
     def __getitem__(
         self,
         _0: Union[
@@ -171,6 +284,20 @@ class MultiIndex:
         """
         ...
 
+    @overload
+    def get_level_values(self, /, level: str):
+        """
+        usage.xarray: 27
+        """
+        ...
+
+    @overload
+    def get_level_values(self, /, level: int):
+        """
+        usage.dask: 5
+        """
+        ...
+
     def get_level_values(self, /, level: Union[int, str]):
         """
         usage.dask: 5
@@ -217,6 +344,28 @@ class MultiIndex:
         """
         ...
 
+    @overload
+    def set_levels(
+        self,
+        /,
+        levels: List[
+            Union[
+                pandas.core.indexes.numeric.Int64Index, pandas.core.indexes.base.Index
+            ]
+        ],
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def set_levels(self, /, levels: List[Union[str, float]], level: int, inplace: bool):
+        """
+        usage.dask: 11
+        """
+        ...
+
     def set_levels(
         self,
         /,
@@ -237,7 +386,26 @@ class MultiIndex:
         """
         ...
 
-    def set_names(self, /, names: List[Literal["level1", "level0", "b", "a", "c"]]):
+    @overload
+    def set_names(self, /, names: List[Literal["level1", "level0"]]):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def set_names(self, /, names: List[Literal["b", "a", "c"]], inplace: bool):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    def set_names(
+        self,
+        /,
+        names: List[Literal["level1", "level0", "b", "a", "c"]],
+        inplace: bool = ...,
+    ):
         """
         usage.dask: 2
         usage.xarray: 1

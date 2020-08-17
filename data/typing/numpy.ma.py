@@ -33,10 +33,6 @@ average: object
 # usage.xarray: 1
 concatenate: object
 
-# usage.dask: 1
-# usage.matplotlib: 2
-core: object
-
 # usage.scipy: 1
 corrcoef: object
 

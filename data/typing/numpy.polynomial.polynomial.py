@@ -4,6 +4,7 @@ from typing import *
 def polyval(
     x: Union[numpy.int64, int, numpy.ndarray],
     c: Union[List[Union[int, numpy.float64]], numpy.ndarray],
+    tensor: bool = ...,
 ):
     """
     usage.scipy: 21
