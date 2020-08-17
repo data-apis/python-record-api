@@ -170,7 +170,7 @@ endef
 
 export JQ_DOCKER_BAKE
 # https://stackoverflow.com/a/649462/907060
-docker-bake.json: Makefile
+docker-bake.json: Makefile images/
 	jq "$$JQ_DOCKER_BAKE" \
 		--null-input \
 		$(foreach name,$(IMAGES),--arg $(name) $(call sub_image,$(name))) \
