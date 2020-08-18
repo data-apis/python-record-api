@@ -312,9 +312,30 @@ class NpzFile:
         ...
 
     @overload
-    def __getitem__(self, _0: Literal["ymin", "dy", "dx", "elevation"], /):
+    def __getitem__(self, _0: Literal["elevation"], /):
         """
-        usage.matplotlib: 4
+        usage.matplotlib: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dx"], /):
+        """
+        usage.matplotlib: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dy"], /):
+        """
+        usage.matplotlib: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["ymin"], /):
+        """
+        usage.matplotlib: 1
         """
         ...
 

@@ -171,6 +171,7 @@ def matrix_rank(M: numpy.ndarray, tol: Union[float, numpy.float64] = ...):
 @overload
 def norm(x: numpy.ndarray):
     """
+    usage.matplotlib: 3
     usage.skimage: 8
     """
     ...
@@ -190,9 +191,9 @@ def norm(
 
 
 @overload
-def norm(x: numpy.ndarray, axis: int = ...):
+def norm(x: numpy.ndarray, axis: int):
     """
-    usage.matplotlib: 4
+    usage.matplotlib: 1
     """
     ...
 

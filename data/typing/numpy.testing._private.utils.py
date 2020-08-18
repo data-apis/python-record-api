@@ -44,6 +44,7 @@ def assert_(val: object, msg: object = ...):
 @overload
 def assert_allclose(actual: numpy.float64, desired: int, atol: float):
     """
+    usage.matplotlib: 4
     usage.skimage: 1
     """
     ...
@@ -60,6 +61,7 @@ def assert_allclose(actual: numpy.ndarray, desired: int, atol: float):
 @overload
 def assert_allclose(actual: numpy.ndarray, desired: numpy.ndarray, rtol: float):
     """
+    usage.matplotlib: 3
     usage.skimage: 11
     """
     ...
@@ -68,6 +70,7 @@ def assert_allclose(actual: numpy.ndarray, desired: numpy.ndarray, rtol: float):
 @overload
 def assert_allclose(actual: numpy.ndarray, desired: numpy.ndarray):
     """
+    usage.matplotlib: 22
     usage.skimage: 57
     usage.xarray: 21
     """
@@ -93,6 +96,7 @@ def assert_allclose(actual: float, desired: numpy.float64, atol: float):
 @overload
 def assert_allclose(actual: numpy.ndarray, desired: List[float]):
     """
+    usage.matplotlib: 3
     usage.skimage: 6
     """
     ...
@@ -111,6 +115,7 @@ def assert_allclose(
 @overload
 def assert_allclose(actual: numpy.ndarray, desired: int):
     """
+    usage.matplotlib: 2
     usage.skimage: 22
     """
     ...
@@ -127,6 +132,7 @@ def assert_allclose(actual: numpy.float64, desired: numpy.float64):
 @overload
 def assert_allclose(actual: numpy.ndarray, desired: numpy.ndarray, atol: float):
     """
+    usage.matplotlib: 100
     usage.skimage: 31
     """
     ...
@@ -159,6 +165,7 @@ def assert_allclose(actual: numpy.ndarray, desired: Tuple[float, float]):
 @overload
 def assert_allclose(actual: numpy.float64, desired: int):
     """
+    usage.matplotlib: 1
     usage.skimage: 1
     """
     ...
@@ -250,20 +257,188 @@ def assert_allclose(
 
 @overload
 def assert_allclose(
-    actual: Union[
-        Tuple[Union[numpy.float64, int, numpy.uint8], ...],
-        numpy.ndarray,
-        numpy.ma.core.MaskedArray,
-        numpy.float64,
-        List[Union[int, float, numpy.float64]],
-    ],
-    desired: object,
-    rtol: float = ...,
-    atol: float = ...,
-    err_msg: numpy.ndarray = ...,
+    actual: Tuple[numpy.float64, numpy.float64], desired: Tuple[float, float]
 ):
     """
-    usage.matplotlib: 184
+    usage.matplotlib: 9
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: Tuple[numpy.float64, numpy.float64],
+):
+    """
+    usage.matplotlib: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[numpy.float64], desired: List[numpy.float64]):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+    desired: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+    atol: float,
+):
+    """
+    usage.matplotlib: 8
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[float], rtol: float):
+    """
+    usage.matplotlib: 3
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: range):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: Tuple[numpy.float64, numpy.float64], desired: List[float]):
+    """
+    usage.matplotlib: 3
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: Tuple[int, int], desired: Tuple[int, int], rtol: float):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: float, atol: float):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[int]):
+    """
+    usage.matplotlib: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[Union[float, int]]):
+    """
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[Union[int, float]]):
+    """
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ma.core.MaskedArray, desired: numpy.ma.core.MaskedArray
+):
+    """
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[Union[int, float]], desired: numpy.ndarray):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.uint8, numpy.uint8, numpy.uint8, numpy.uint8, numpy.uint8],
+    desired: List[numpy.uint8],
+):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[Tuple[int, int]]):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: List[Tuple[Union[int, numpy.float64], Union[int, numpy.float64]]],
+    atol: float,
+):
+    """
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: List[List[Union[float, int]]],
+    err_msg: numpy.ndarray,
+):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+    desired: List[Union[int, float]],
+):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+    desired: List[Union[float, int]],
+):
+    """
+    usage.matplotlib: 1
     """
     ...
 
@@ -313,6 +488,7 @@ def assert_almost_equal(actual: numpy.float64, desired: int):
 @overload
 def assert_almost_equal(actual: numpy.float64, desired: float):
     """
+    usage.matplotlib: 8
     usage.skimage: 47
     """
     ...
@@ -329,6 +505,7 @@ def assert_almost_equal(actual: numpy.ndarray, desired: numpy.ndarray, decimal: 
 @overload
 def assert_almost_equal(actual: numpy.float64, desired: float, decimal: int):
     """
+    usage.matplotlib: 3
     usage.skimage: 35
     """
     ...
@@ -353,6 +530,7 @@ def assert_almost_equal(actual: numpy.float16, desired: float, decimal: int):
 @overload
 def assert_almost_equal(actual: numpy.ndarray, desired: numpy.ndarray):
     """
+    usage.matplotlib: 23
     usage.skimage: 116
     """
     ...
@@ -417,6 +595,7 @@ def assert_almost_equal(actual: numpy.ndarray, desired: List[int]):
 @overload
 def assert_almost_equal(actual: numpy.float64, desired: numpy.float64):
     """
+    usage.matplotlib: 2
     usage.skimage: 21
     """
     ...
@@ -509,6 +688,7 @@ def assert_almost_equal(
 @overload
 def assert_almost_equal(actual: float, desired: float):
     """
+    usage.matplotlib: 1
     usage.skimage: 16
     """
     ...
@@ -601,6 +781,7 @@ def assert_almost_equal(actual: float, desired: int):
 @overload
 def assert_almost_equal(actual: Tuple[float, float], desired: Tuple[float, float]):
     """
+    usage.matplotlib: 1
     usage.skimage: 3
     """
     ...
@@ -637,25 +818,49 @@ def assert_almost_equal(
 
 
 @overload
-def assert_almost_equal(
-    actual: Union[
-        List[Union[numpy.float64, float]],
-        Tuple[float, float],
-        numpy.ndarray,
-        numpy.float64,
-        float,
-    ],
-    desired: Union[
-        numpy.ndarray,
-        numpy.float64,
-        float,
-        Tuple[Union[int, float], Union[int, float]],
-        List[float],
-    ],
-    decimal: int = ...,
-):
+def assert_almost_equal(actual: List[numpy.float64], desired: numpy.ndarray):
     """
-    usage.matplotlib: 50
+    usage.matplotlib: 3
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: list, desired: numpy.ndarray):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.ndarray, desired: float):
+    """
+    usage.matplotlib: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: Tuple[float, float], desired: Tuple[int, int]):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: List[numpy.float64], desired: List[float]):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: List[float], desired: numpy.ndarray):
+    """
+    usage.matplotlib: 2
     """
     ...
 
@@ -745,6 +950,7 @@ def assert_array_almost_equal(x: numpy.ndarray, y: List[List[Tuple[int, int, int
 @overload
 def assert_array_almost_equal(x: numpy.ndarray, y: numpy.ndarray):
     """
+    usage.matplotlib: 29
     usage.skimage: 39
     """
     ...
@@ -761,6 +967,7 @@ def assert_array_almost_equal(x: numpy.ndarray, y: Tuple[int, int, int]):
 @overload
 def assert_array_almost_equal(x: numpy.ndarray, y: List[int]):
     """
+    usage.matplotlib: 2
     usage.skimage: 6
     """
     ...
@@ -769,6 +976,7 @@ def assert_array_almost_equal(x: numpy.ndarray, y: List[int]):
 @overload
 def assert_array_almost_equal(x: numpy.ndarray, y: List[Union[int, float]]):
     """
+    usage.matplotlib: 1
     usage.skimage: 3
     """
     ...
@@ -858,18 +1066,192 @@ def assert_array_almost_equal(
 
 @overload
 def assert_array_almost_equal(
-    x: Union[
-        Tuple[Union[numpy.float32, numpy.float64], ...],
-        List[Union[List[float], float, numpy.float64]],
-        numpy.ndarray,
-        numpy.ma.core.MaskedArray,
-        numpy.float64,
-    ],
-    y: object,
-    decimal: int = ...,
+    x: Tuple[numpy.float32, numpy.float32, numpy.float32, numpy.float32],
+    y: Tuple[float, float, float, float],
+    decimal: int,
 ):
     """
-    usage.matplotlib: 86
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ndarray, y: numpy.ndarray, decimal: int):
+    """
+    usage.matplotlib: 4
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(
+    x: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+    y: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+    decimal: int,
+):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.float64, y: float):
+    """
+    usage.matplotlib: 4
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ndarray, y: list):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(
+    x: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+    y: Tuple[int, int, int, int],
+    decimal: int,
+):
+    """
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: List[float], y: numpy.ndarray):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.float64, y: List[int]):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(
+    x: numpy.ma.core.MaskedArray, y: numpy.ma.core.MaskedArray
+):
+    """
+    usage.matplotlib: 4
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ma.core.MaskedArray, y: List[Union[int, float]]):
+    """
+    usage.matplotlib: 3
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ndarray, y: numpy.ma.core.MaskedArray):
+    """
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ma.core.MaskedArray, y: List[int]):
+    """
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ma.core.MaskedArray, y: numpy.ndarray):
+    """
+    usage.matplotlib: 7
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: List[numpy.float64], y: numpy.ma.core.MaskedArray):
+    """
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ma.core.MaskedArray, y: List[float]):
+    """
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ndarray, y: numpy.float64):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(
+    x: Tuple[numpy.float64, numpy.float64], y: List[float], decimal: int
+):
+    """
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ndarray, y: List[float], decimal: int):
+    """
+    usage.matplotlib: 4
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: List[float], y: numpy.ndarray, decimal: int):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: List[List[float]], y: numpy.ndarray):
+    """
+    usage.matplotlib: 5
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.float64, y: numpy.float64):
+    """
+    usage.matplotlib: 3
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: Tuple[numpy.float64, numpy.float64], y: numpy.ndarray):
+    """
+    usage.matplotlib: 1
     """
     ...
 
@@ -960,6 +1342,7 @@ def assert_array_almost_equal_nulp(
 @overload
 def assert_array_equal(x: List[int], y: List[int]):
     """
+    usage.matplotlib: 5
     usage.skimage: 6
     usage.xarray: 2
     """
@@ -969,6 +1352,7 @@ def assert_array_equal(x: List[int], y: List[int]):
 @overload
 def assert_array_equal(x: numpy.ndarray, y: numpy.ndarray):
     """
+    usage.matplotlib: 106
     usage.skimage: 321
     usage.xarray: 164
     """
@@ -1027,6 +1411,7 @@ def assert_array_equal(x: Tuple[int, int], y: Tuple[int, int]):
 @overload
 def assert_array_equal(x: numpy.ndarray, y: List[int]):
     """
+    usage.matplotlib: 10
     usage.skimage: 11
     usage.xarray: 7
     """
@@ -1077,6 +1462,7 @@ def assert_array_equal(x: List[Tuple[int, int]], y: List[Tuple[int, int]]):
 @overload
 def assert_array_equal(x: numpy.ndarray, y: List[List[int]]):
     """
+    usage.matplotlib: 12
     usage.skimage: 12
     """
     ...
@@ -1085,6 +1471,7 @@ def assert_array_equal(x: numpy.ndarray, y: List[List[int]]):
 @overload
 def assert_array_equal(x: numpy.ndarray, y: List[List[float]]):
     """
+    usage.matplotlib: 1
     usage.skimage: 6
     """
     ...
@@ -1093,6 +1480,7 @@ def assert_array_equal(x: numpy.ndarray, y: List[List[float]]):
 @overload
 def assert_array_equal(x: int, y: int):
     """
+    usage.matplotlib: 3
     usage.skimage: 7
     usage.xarray: 1
     """
@@ -1182,6 +1570,7 @@ def assert_array_equal(x: Tuple[int], y: Tuple[int]):
 @overload
 def assert_array_equal(x: numpy.ma.core.MaskedArray, y: numpy.ma.core.MaskedArray):
     """
+    usage.matplotlib: 3
     usage.xarray: 2
     """
     ...
@@ -1267,6 +1656,7 @@ def assert_array_equal(x: int, y: numpy.int64):
 @overload
 def assert_array_equal(x: List[int], y: numpy.ndarray):
     """
+    usage.matplotlib: 1
     usage.xarray: 4
     """
     ...
@@ -1291,6 +1681,7 @@ def assert_array_equal(x: numpy.ndarray, y: numpy.int64):
 @overload
 def assert_array_equal(x: List[float], y: numpy.ndarray):
     """
+    usage.matplotlib: 1
     usage.xarray: 3
     """
     ...
@@ -1472,6 +1863,7 @@ def assert_array_equal(x: Literal["foo"], y: Literal["foo"]):
 @overload
 def assert_array_equal(x: numpy.ma.core.MaskedArray, y: numpy.ndarray):
     """
+    usage.matplotlib: 2
     usage.xarray: 1
     """
     ...
@@ -1829,31 +2221,197 @@ def assert_array_equal(x: object, y: object, err_msg: str = ...):
 
 @overload
 def assert_array_equal(
-    x: Union[
-        numpy.ndarray,
-        int,
-        numpy.ma.core.MaskedArray,
-        Tuple[numpy.float64, ...],
-        List[
-            Union[
-                List[numpy.ndarray],
-                int,
-                float,
-                numpy.ndarray,
-                Literal[
-                    "2000-10-31T11:50:23",
-                    "2054-06-20T14:31:45",
-                    "1983-07-09T17:17:34",
-                    "1976-03-05T00:00:01",
-                    "2014-01-11T00:00:00",
-                ],
-            ]
-        ],
-    ],
-    y: object,
+    x: Tuple[numpy.float64, numpy.float64], y: Tuple[numpy.float64, numpy.float64]
 ):
     """
-    usage.matplotlib: 186
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: Tuple[numpy.float64, numpy.float64], y: Tuple[float, float]):
+    """
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: List[int], y: range):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: List[numpy.float64]):
+    """
+    usage.matplotlib: 6
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: float):
+    """
+    usage.matplotlib: 4
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: Literal["red"]):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: List[Union[int, float]]):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+    y: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+):
+    """
+    usage.matplotlib: 3
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+    y: numpy.ndarray,
+):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ma.core.MaskedArray, y: List[int]):
+    """
+    usage.matplotlib: 3
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ma.core.MaskedArray, y: int):
+    """
+    usage.matplotlib: 3
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ma.core.MaskedArray, y: List[Union[float, int]]):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: List[Tuple[int, int, int, int]]):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: numpy.ndarray, y: List[Tuple[int, Union[float, int], int, int]]
+):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: List[
+        Literal[
+            "2000-10-31T11:50:23",
+            "2054-06-20T14:31:45",
+            "1983-07-09T17:17:34",
+            "1976-03-05T00:00:01",
+            "2014-01-11T00:00:00",
+        ]
+    ],
+    y: List[
+        Literal[
+            "2000-10-31T11:50:23",
+            "2054-06-20T14:31:45",
+            "1983-07-09T17:17:34",
+            "1976-03-05T00:00:01",
+            "2014-01-11T00:00:00",
+        ]
+    ],
+):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: list, y: list):
+    """
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: List[numpy.ndarray], y: List[List[List[int]]]):
+    """
+    usage.matplotlib: 5
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: List[List[numpy.ndarray]], y: List[List[List[int]]]):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: List[float]):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: List[List[bool]]):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: bool):
+    """
+    usage.matplotlib: 1
     """
     ...
 
@@ -1988,6 +2546,7 @@ def assert_equal(actual: str, desired: str):
 @overload
 def assert_equal(actual: numpy.ndarray, desired: numpy.ndarray):
     """
+    usage.matplotlib: 3
     usage.skimage: 241
     usage.xarray: 3
     """
@@ -2227,6 +2786,7 @@ def assert_equal(actual: numpy.int64, desired: numpy.int64):
 @overload
 def assert_equal(actual: List[numpy.float64], desired: List[numpy.float64]):
     """
+    usage.matplotlib: 1
     usage.skimage: 1
     """
     ...
@@ -2628,16 +3188,49 @@ def assert_equal(
 
 
 @overload
-def assert_equal(
-    actual: Union[
-        List[Union[numpy.ndarray, numpy.float64, float]], numpy.ndarray, float
-    ],
-    desired: Union[
-        numpy.ndarray, numpy.float64, List[Union[bool, numpy.float64, float]]
-    ],
-):
+def assert_equal(actual: list, desired: list):
     """
-    usage.matplotlib: 12
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: float, desired: numpy.float64):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: List[float]):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: List[bool]):
+    """
+    usage.matplotlib: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[numpy.ndarray], desired: numpy.ndarray):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[float], desired: numpy.ndarray):
+    """
+    usage.matplotlib: 1
     """
     ...
 
