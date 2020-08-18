@@ -5,8 +5,8 @@ FROM ${FROM}
 
 RUN apt-get update && \
     apt-get -y install --no-install-recommends \
-        libsnappy-dev \
-        && rm -rf /var/lib/apt/lists/*
+    libsnappy-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /usr/src/app
 
@@ -20,10 +20,18 @@ RUN git clone \
     .
 
 
+# Don't install all depenedencies, so we only run tests
+# that use these!
+# Otherwise tests run out of memory
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
-     -r requirements-dev.txt \
-     pytest-custom_exit_code
+    pytest \
+    setuptools \
+    numpy \
+    python-dateutil \
+    pytz \
+    cython \
+    pytest-custom_exit_code
 
 
 RUN python setup.py build_ext --inplace -j 4
@@ -37,4 +45,4 @@ RUN python -c "import pandas"
 
 
 ENV PYTHON_RECORD_API_FROM_MODULES=pandas
-CMD [ "pytest", "pandas", "--skip-slow", "--skip-network", "--skip-db", "-m", "not single", "-r", "sxX", "--strict", "--suppress-tests-failed-exit-code"  ]
+CMD [ "pytest", "pandas", "-m", "not slow and not network and not clipboard", "--strict", "--suppress-tests-failed-exit-code"  ]
