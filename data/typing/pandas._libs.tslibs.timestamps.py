@@ -15,12 +15,9 @@ class Timestamp:
     # usage.dask: 1
     freq: object
 
-    # usage.dask: 5
+    # usage.dask: 4
     # usage.xarray: 1
     tz: object
-
-    # usage.dask: 1
-    tzinfo: object
 
     # usage.dask: 1
     # usage.xarray: 1
@@ -41,15 +38,29 @@ class Timestamp:
         ...
 
     @overload
-    def __add__(self, _0: object, /):
+    def __add__(self, _0: pandas._libs.tslibs.offsets.Day, /):
         """
-        usage.dask: 8
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: pandas._libs.tslibs.offsets.Nano, /):
+        """
+        usage.dask: 1
         """
         ...
 
     def __add__(self, _0: object, /):
         """
-        usage.dask: 8
+        usage.dask: 4
         usage.pandas: 23
         usage.xarray: 1
         """
@@ -65,17 +76,22 @@ class Timestamp:
         ...
 
     @overload
-    def __eq__(
-        self, _0: Union[pandas._libs.tslibs.timestamps.Timestamp, Literal["2000"]], /
-    ):
+    def __eq__(self, _0: Literal["2000"], /):
         """
-        usage.dask: 43
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 38
         """
         ...
 
     def __eq__(self, _0: object, /):
         """
-        usage.dask: 43
+        usage.dask: 39
         usage.pandas: 8
         """
         ...
@@ -94,49 +110,91 @@ class Timestamp:
         ...
 
     @overload
-    def __ge__(
-        self,
-        _0: Union[
-            pandas.core.indexes.datetimes.DatetimeIndex,
-            pandas._libs.tslibs.timestamps.Timestamp,
-            numpy.datetime64,
-        ],
-        /,
-    ):
+    def __ge__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
-        usage.dask: 21
+        usage.dask: 7
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: numpy.datetime64, /):
+        """
+        usage.dask: 1
         """
         ...
 
     def __ge__(
         self,
         _0: Union[
-            numpy.datetime64,
-            pandas._libs.tslibs.timestamps.Timestamp,
-            pandas.core.indexes.datetimes.DatetimeIndex,
-            numpy.ndarray,
+            pandas._libs.tslibs.timestamps.Timestamp, numpy.datetime64, numpy.ndarray
         ],
         /,
     ):
         """
-        usage.dask: 21
+        usage.dask: 8
         usage.pandas: 2
         """
         ...
 
+    @overload
     def __gt__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
-        usage.dask: 8
+        usage.dask: 20
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def __gt__(
+        self,
+        _0: Union[
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas._libs.tslibs.timestamps.Timestamp,
+        ],
+        /,
+    ):
+        """
+        usage.dask: 21
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 7
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: numpy.datetime64, /):
+        """
+        usage.dask: 1
         """
         ...
 
     def __le__(
         self,
-        _0: Union[pandas._libs.tslibs.timestamps.Timestamp, pandas.core.series.Series],
+        _0: Union[
+            numpy.datetime64,
+            pandas._libs.tslibs.timestamps.Timestamp,
+            pandas.core.series.Series,
+        ],
         /,
     ):
         """
-        usage.dask: 20
+        usage.dask: 9
         """
         ...
 
@@ -148,16 +206,16 @@ class Timestamp:
         ...
 
     @overload
-    def __lt__(
-        self,
-        _0: Union[
-            pandas.core.indexes.datetimes.DatetimeIndex,
-            pandas._libs.tslibs.timestamps.Timestamp,
-        ],
-        /,
-    ):
+    def __lt__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
-        usage.dask: 9
+        usage.dask: 20
+        """
+        ...
+
+    @overload
+    def __lt__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -171,7 +229,7 @@ class Timestamp:
         /,
     ):
         """
-        usage.dask: 9
+        usage.dask: 21
         usage.pandas: 1
         """
         ...
@@ -300,9 +358,44 @@ class Timestamp:
         ...
 
     @overload
-    def __sub__(self, _0: object, /):
+    def __sub__(self, _0: pandas._libs.tslibs.offsets.Day, /):
         """
-        usage.dask: 8
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: pandas._libs.tslibs.offsets.Hour, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: pandas._libs.tslibs.offsets.BusinessDay, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: pandas._libs.tslibs.offsets.Week, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: pandas._libs.tslibs.offsets.MonthEnd, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.dask: 3
         """
         ...
 
@@ -316,6 +409,20 @@ class Timestamp:
     def __truediv__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def ceil(self, /, freq: Literal["15s"]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def ceil(self, /, freq: Literal["1M"]):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -351,6 +458,6 @@ class Timestamp:
 
     def tz_localize(self, /, tz: None):
         """
-        usage.dask: 3
+        usage.dask: 2
         """
         ...

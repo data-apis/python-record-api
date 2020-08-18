@@ -859,7 +859,7 @@ isfinite: numpy.ufunc
 # usage.xarray: 2
 isinf: numpy.ufunc
 
-# usage.dask: 167
+# usage.dask: 168
 # usage.matplotlib: 25
 # usage.pandas: 1228
 # usage.scipy: 388
@@ -1658,6 +1658,7 @@ zetac: numpy.ufunc
 @overload
 def all(a: numpy.ndarray):
     """
+    usage.dask: 18
     usage.matplotlib: 27
     usage.skimage: 93
     usage.sklearn: 139
@@ -1669,6 +1670,7 @@ def all(a: numpy.ndarray):
 @overload
 def all(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 4
     usage.skimage: 1
     usage.sklearn: 5
     usage.xarray: 3
@@ -1679,6 +1681,7 @@ def all(a: numpy.ndarray, axis: int):
 @overload
 def all(a: numpy.ma.core.MaskedArray):
     """
+    usage.dask: 3
     usage.skimage: 1
     """
     ...
@@ -1796,22 +1799,179 @@ def all(a: object, axis: int = ...):
 
 
 @overload
+def all(a: numpy.ndarray, axis: Tuple[int, int], keepdims: bool):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
 def all(
-    _0: Union[numpy.ndarray, numpy.ma.core.MaskedArray] = ...,
-    /,
-    a: Union[
-        pandas.core.series.Series,
-        dask.array.core.Array,
-        numpy.ma.core.MaskedArray,
-        numpy.ndarray,
-    ] = ...,
-    axis: Union[Tuple[Union[None, int], ...], int] = ...,
-    keepdims: bool = ...,
-    *,
-    computing_meta: bool = ...,
+    _0: numpy.ndarray, /, *, axis: Tuple[int, int], computing_meta: bool, keepdims: bool
 ):
     """
-    usage.dask: 92
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def all(a: numpy.ndarray, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 8
+    """
+    ...
+
+
+@overload
+def all(
+    _0: numpy.ndarray, /, *, axis: Tuple[int], computing_meta: bool, keepdims: bool
+):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def all(a: numpy.ma.core.MaskedArray, axis: Tuple[int, int], keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def all(
+    _0: numpy.ma.core.MaskedArray,
+    /,
+    *,
+    axis: Tuple[int, int],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def all(a: numpy.ma.core.MaskedArray, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def all(
+    _0: numpy.ma.core.MaskedArray,
+    /,
+    *,
+    axis: Tuple[int],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def all(a: numpy.ma.core.MaskedArray, axis: int):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def all(a: numpy.ma.core.MaskedArray, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def all(a: numpy.ma.core.MaskedArray, axis: int, keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def all(a: dask.array.core.Array):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def all(a: numpy.ndarray, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def all(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 8
+    """
+    ...
+
+
+@overload
+def all(
+    _0: numpy.ndarray,
+    /,
+    *,
+    axis: Tuple[None, ...],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def all(a: numpy.ndarray, axis: Tuple[None, ...]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def all(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def all(a: numpy.ndarray, axis: Tuple[int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def all(a: pandas.core.series.Series):
+    """
+    usage.dask: 1
+    usage.sklearn: 10
     """
     ...
 
@@ -1828,14 +1988,6 @@ def all(a: numpy.bool_):
 def all(a: bool):
     """
     usage.sklearn: 5
-    """
-    ...
-
-
-@overload
-def all(a: pandas.core.series.Series):
-    """
-    usage.sklearn: 10
     """
     ...
 
@@ -1898,6 +2050,7 @@ def allclose(a: List[numpy.float64], b: List[numpy.float64]):
 @overload
 def allclose(a: numpy.ndarray, b: numpy.ndarray):
     """
+    usage.dask: 12
     usage.matplotlib: 3
     usage.skimage: 18
     usage.sklearn: 21
@@ -1909,6 +2062,7 @@ def allclose(a: numpy.ndarray, b: numpy.ndarray):
 @overload
 def allclose(a: numpy.float64, b: numpy.float64):
     """
+    usage.dask: 3
     usage.skimage: 1
     usage.sklearn: 9
     """
@@ -2024,6 +2178,7 @@ def allclose(
 @overload
 def allclose(a: numpy.ndarray, b: numpy.ndarray, equal_nan: bool):
     """
+    usage.dask: 27
     usage.xarray: 15
     """
     ...
@@ -2080,6 +2235,7 @@ def allclose(
 @overload
 def allclose(a: numpy.int64, b: numpy.int64, equal_nan: bool):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -2146,9 +2302,269 @@ def allclose(a: numpy.ndarray, b: numpy.float64):
 
 
 @overload
-def allclose(a: object, b: object, equal_nan: bool = ...):
+def allclose(a: Tuple[int, float], b: Tuple[numpy.int64, float], equal_nan: bool):
     """
-    usage.dask: 84
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.ndarray, b: numpy.int64, equal_nan: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.memmap, b: numpy.ndarray, equal_nan: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: Tuple[float, float, float], b: Tuple[float, float, float], equal_nan: bool
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.float64, b: numpy.float64, equal_nan: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: object, b: numpy.ndarray, equal_nan: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: object, b: object, equal_nan: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: float, b: numpy.float64):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def allclose(a: dask.array.core.Array, b: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.ndarray, b: dask.array.core.Array):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: numpy.ma.core.MaskedArray, b: numpy.ma.core.MaskedArray, equal_nan: bool
+):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.float64, b: numpy.ndarray, equal_nan: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.ndarray, b: numpy.ma.core.MaskedArray, equal_nan: bool):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.bool_, b: numpy.bool_, equal_nan: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.int64, b: numpy.ndarray, equal_nan: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.float32, b: numpy.float32, equal_nan: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.int32, b: numpy.int32, equal_nan: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.complex128, b: numpy.complex128, equal_nan: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: scipy.stats.stats.Power_divergenceResult,
+    b: scipy.stats.stats.Power_divergenceResult,
+    equal_nan: bool,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: scipy.stats.stats.NormaltestResult,
+    b: scipy.stats.stats.NormaltestResult,
+    equal_nan: bool,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: scipy.stats.stats.SkewtestResult,
+    b: scipy.stats.stats.SkewtestResult,
+    equal_nan: bool,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: scipy.stats.stats.KurtosistestResult,
+    b: scipy.stats.stats.KurtosistestResult,
+    equal_nan: bool,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: scipy.stats.stats.Ttest_indResult,
+    b: scipy.stats.stats.Ttest_indResult,
+    equal_nan: bool,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: scipy.stats.stats.Ttest_1sampResult,
+    b: scipy.stats.stats.Ttest_1sampResult,
+    equal_nan: bool,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: scipy.stats.stats.Ttest_relResult,
+    b: scipy.stats.stats.Ttest_relResult,
+    equal_nan: bool,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: scipy.stats.stats.F_onewayResult,
+    b: scipy.stats.stats.F_onewayResult,
+    equal_nan: bool,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.recarray, b: numpy.ndarray, equal_nan: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: float, b: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: int, b: numpy.float64):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -2156,7 +2572,24 @@ def allclose(a: object, b: object, equal_nan: bool = ...):
 @overload
 def allclose(a: float, b: float):
     """
+    usage.dask: 1
     usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.ndarray, b: numpy.recarray, equal_nan: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: dask.array.core.Array, b: dask.array.core.Array):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -2247,6 +2680,7 @@ def alltrue(*args: Literal["v", "t"]):
 @overload
 def amax(a: numpy.ndarray):
     """
+    usage.dask: 11
     usage.matplotlib: 35
     usage.skimage: 70
     usage.sklearn: 52
@@ -2276,6 +2710,7 @@ def amax(a: List[numpy.int64]):
 @overload
 def amax(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 6
     usage.matplotlib: 6
     usage.skimage: 6
     usage.sklearn: 14
@@ -2295,6 +2730,7 @@ def amax(a: List[numpy.ndarray], axis: int):
 @overload
 def amax(a: numpy.ndarray, axis: Tuple[int, int]):
     """
+    usage.dask: 1
     usage.skimage: 1
     usage.xarray: 1
     """
@@ -2304,6 +2740,7 @@ def amax(a: numpy.ndarray, axis: Tuple[int, int]):
 @overload
 def amax(a: numpy.ndarray, axis: Tuple[int, int], keepdims: bool):
     """
+    usage.dask: 13
     usage.skimage: 2
     """
     ...
@@ -2312,6 +2749,7 @@ def amax(a: numpy.ndarray, axis: Tuple[int, int], keepdims: bool):
 @overload
 def amax(a: numpy.ndarray, axis: Tuple[int, int, int], keepdims: bool):
     """
+    usage.dask: 10
     usage.skimage: 2
     """
     ...
@@ -2320,6 +2758,7 @@ def amax(a: numpy.ndarray, axis: Tuple[int, int, int], keepdims: bool):
 @overload
 def amax(a: numpy.ma.core.MaskedArray):
     """
+    usage.dask: 3
     usage.matplotlib: 1
     usage.skimage: 2
     """
@@ -2329,6 +2768,7 @@ def amax(a: numpy.ma.core.MaskedArray):
 @overload
 def amax(a: Tuple[int, int, int]):
     """
+    usage.dask: 1
     usage.skimage: 1
     """
     ...
@@ -2345,6 +2785,7 @@ def amax(a: Tuple[int]):
 @overload
 def amax(a: Tuple[int, int]):
     """
+    usage.dask: 1
     usage.skimage: 3
     """
     ...
@@ -2353,6 +2794,7 @@ def amax(a: Tuple[int, int]):
 @overload
 def amax(a: Tuple[int, int, int, int]):
     """
+    usage.dask: 1
     usage.skimage: 1
     """
     ...
@@ -2460,6 +2902,7 @@ def amax(a: List[numpy.float64]):
 @overload
 def amax(a: List[float]):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     """
     ...
@@ -2519,18 +2962,233 @@ def amax(a: Tuple[numpy.float64]):
 
 
 @overload
+def amax(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def amax(a: numpy.ndarray, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 16
+    """
+    ...
+
+
+@overload
 def amax(
-    _0: Union[numpy.ndarray, numpy.ma.core.MaskedArray] = ...,
-    /,
-    a: object = ...,
-    axis: Union[None, Tuple[Union[None, int], ...], int] = ...,
-    out: Union[dask.dataframe.core.Scalar, dask.dataframe.core.Series] = ...,
-    keepdims: bool = ...,
-    *,
-    computing_meta: bool = ...,
+    _0: numpy.ndarray, /, *, axis: Tuple[int], computing_meta: bool, keepdims: bool
 ):
     """
-    usage.dask: 148
+    usage.dask: 8
+    """
+    ...
+
+
+@overload
+def amax(
+    _0: numpy.ndarray,
+    /,
+    *,
+    axis: Tuple[int, int, int],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def amax(
+    _0: numpy.ndarray, /, *, axis: Tuple[int, int], computing_meta: bool, keepdims: bool
+):
+    """
+    usage.dask: 7
+    """
+    ...
+
+
+@overload
+def amax(a: numpy.ma.core.MaskedArray, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def amax(
+    _0: numpy.ma.core.MaskedArray,
+    /,
+    *,
+    axis: Tuple[int],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def amax(a: numpy.ma.core.MaskedArray, axis: Tuple[int, int], keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def amax(
+    _0: numpy.ma.core.MaskedArray,
+    /,
+    *,
+    axis: Tuple[int, int],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def amax(a: numpy.ma.core.MaskedArray, axis: int):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def amax(a: numpy.ma.core.MaskedArray, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def amax(a: numpy.ma.core.MaskedArray, axis: int, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def amax(a: numpy.ma.core.MaskedArray, axis: None, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def amax(a: dask.array.core.Array):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def amax(a: numpy.ndarray, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def amax(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 9
+    """
+    ...
+
+
+@overload
+def amax(
+    _0: numpy.ndarray,
+    /,
+    *,
+    axis: Tuple[None, ...],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def amax(a: numpy.ndarray, axis: Tuple[None, ...]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def amax(a: numpy.ndarray, axis: None, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def amax(a: dask.dataframe.core.DataFrame, axis: int, out: dask.dataframe.core.Series):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def amax(a: dask.dataframe.core.Series, axis: None, out: dask.dataframe.core.Scalar):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def amax(a: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def amax(a: dask.dataframe.core.Series):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def amax(a: pandas.core.series.Series):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def amax(a: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -2560,6 +3218,7 @@ def amax(
 @overload
 def amin(a: numpy.ndarray):
     """
+    usage.dask: 14
     usage.matplotlib: 31
     usage.skimage: 49
     usage.sklearn: 46
@@ -2589,6 +3248,7 @@ def amin(a: List[numpy.int64]):
 @overload
 def amin(a: numpy.ndarray, axis: Tuple[int, int]):
     """
+    usage.dask: 1
     usage.skimage: 1
     """
     ...
@@ -2606,6 +3266,7 @@ def amin(a: Tuple[int, int]):
 @overload
 def amin(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 6
     usage.matplotlib: 6
     usage.sklearn: 6
     usage.xarray: 6
@@ -2723,6 +3384,7 @@ def amin(a: List[numpy.float64]):
 @overload
 def amin(a: List[float]):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.sklearn: 1
     """
@@ -2775,18 +3437,274 @@ def amin(a: Tuple[numpy.float64]):
 
 
 @overload
+def amin(a: numpy.ndarray, axis: Tuple[int, int], keepdims: bool):
+    """
+    usage.dask: 13
+    """
+    ...
+
+
+@overload
 def amin(
-    _0: Union[numpy.ndarray, numpy.ma.core.MaskedArray] = ...,
-    /,
-    a: object = ...,
-    axis: Union[None, Tuple[Union[int, None], ...], int] = ...,
-    out: Union[dask.dataframe.core.Scalar, dask.dataframe.core.Series] = ...,
-    keepdims: bool = ...,
-    *,
-    computing_meta: bool = ...,
+    _0: numpy.ndarray, /, *, axis: Tuple[int, int], computing_meta: bool, keepdims: bool
 ):
     """
-    usage.dask: 149
+    usage.dask: 7
+    """
+    ...
+
+
+@overload
+def amin(a: dask.array.core.Array):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ndarray, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 16
+    """
+    ...
+
+
+@overload
+def amin(
+    _0: numpy.ndarray, /, *, axis: Tuple[int], computing_meta: bool, keepdims: bool
+):
+    """
+    usage.dask: 8
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ndarray, axis: Tuple[int, int, int], keepdims: bool):
+    """
+    usage.dask: 10
+    """
+    ...
+
+
+@overload
+def amin(
+    _0: numpy.ndarray,
+    /,
+    *,
+    axis: Tuple[int, int, int],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ma.core.MaskedArray, axis: Tuple[int, int], keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def amin(
+    _0: numpy.ma.core.MaskedArray,
+    /,
+    *,
+    axis: Tuple[int, int],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ma.core.MaskedArray):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ma.core.MaskedArray, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def amin(
+    _0: numpy.ma.core.MaskedArray,
+    /,
+    *,
+    axis: Tuple[int],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ma.core.MaskedArray, axis: int):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ma.core.MaskedArray, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ma.core.MaskedArray, axis: int, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ma.core.MaskedArray, axis: None, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ndarray, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 9
+    """
+    ...
+
+
+@overload
+def amin(
+    _0: numpy.ndarray,
+    /,
+    *,
+    axis: Tuple[None, ...],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ndarray, axis: Tuple[None, ...]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ndarray, axis: None, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def amin(a: int):
+    """
+    usage.dask: 1
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def amin(a: numpy.ndarray, axis: Tuple[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def amin(a: dask.dataframe.core.DataFrame, axis: int, out: dask.dataframe.core.Series):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def amin(a: dask.dataframe.core.Series, axis: None, out: dask.dataframe.core.Scalar):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def amin(a: dask.dataframe.core.Series):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def amin(a: pandas.core.series.Series):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def amin(a: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def amin(a: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -2795,14 +3713,6 @@ def amin(
 def amin(a: float):
     """
     usage.sklearn: 3
-    """
-    ...
-
-
-@overload
-def amin(a: int):
-    """
-    usage.sklearn: 2
     """
     ...
 
@@ -2832,6 +3742,7 @@ def amin(
 @overload
 def angle(z: numpy.ndarray):
     """
+    usage.dask: 3
     usage.matplotlib: 4
     usage.skimage: 3
     usage.xarray: 1
@@ -2856,14 +3767,81 @@ def angle(z: Union[numpy.ndarray, numpy.complex128, numpy.float64]):
 
 
 @overload
-def angle(
-    z: object,
-    deg: Union[
-        bool, numpy.ndarray, pandas.core.series.Series, pandas.core.frame.DataFrame
-    ] = ...,
-):
+def angle(z: bool, deg: numpy.ndarray):
     """
-    usage.dask: 25
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def angle(z: numpy.ndarray, deg: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def angle(z: bool, deg: pandas.core.series.Series):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def angle(z: pandas.core.series.Series, deg: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def angle(z: pandas.core.series.Series):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def angle(z: dask.dataframe.core.Series):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def angle(z: bool, deg: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def angle(z: pandas.core.frame.DataFrame, deg: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def angle(z: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def angle(z: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -2887,6 +3865,7 @@ def angle(
 @overload
 def any(a: numpy.bool_):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.skimage: 2
     usage.sklearn: 4
@@ -2897,6 +3876,7 @@ def any(a: numpy.bool_):
 @overload
 def any(a: numpy.ndarray):
     """
+    usage.dask: 10
     usage.matplotlib: 11
     usage.skimage: 33
     usage.sklearn: 61
@@ -2917,6 +3897,7 @@ def any(a: List[bool]):
 @overload
 def any(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 4
     usage.sklearn: 5
     usage.xarray: 4
     """
@@ -3036,25 +4017,177 @@ def any(a: bool):
 @overload
 def any(a: numpy.ma.core.MaskedArray):
     """
+    usage.dask: 3
     usage.matplotlib: 1
     """
     ...
 
 
 @overload
+def any(a: numpy.ma.core.MaskedArray, axis: Tuple[int, int], keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
 def any(
-    _0: Union[numpy.ndarray, numpy.ma.core.MaskedArray] = ...,
+    _0: numpy.ma.core.MaskedArray,
     /,
-    a: Union[
-        pandas.core.series.Series, numpy.ma.core.MaskedArray, numpy.bool_, numpy.ndarray
-    ] = ...,
-    axis: Union[Tuple[Union[None, int], ...], int] = ...,
-    keepdims: bool = ...,
     *,
-    computing_meta: bool = ...,
+    axis: Tuple[int, int],
+    computing_meta: bool,
+    keepdims: bool,
 ):
     """
-    usage.dask: 81
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def any(a: numpy.ma.core.MaskedArray, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def any(
+    _0: numpy.ma.core.MaskedArray,
+    /,
+    *,
+    axis: Tuple[int],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def any(a: numpy.ma.core.MaskedArray, axis: int):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def any(a: numpy.ma.core.MaskedArray, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def any(a: numpy.ma.core.MaskedArray, axis: int, keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def any(a: numpy.ndarray, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 8
+    """
+    ...
+
+
+@overload
+def any(
+    _0: numpy.ndarray, /, *, axis: Tuple[int], computing_meta: bool, keepdims: bool
+):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def any(a: numpy.ndarray, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def any(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 7
+    """
+    ...
+
+
+@overload
+def any(
+    _0: numpy.ndarray,
+    /,
+    *,
+    axis: Tuple[None, ...],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def any(a: numpy.ndarray, axis: Tuple[None, ...]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def any(a: numpy.ndarray, axis: Tuple[int, int], keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def any(
+    _0: numpy.ndarray, /, *, axis: Tuple[int, int], computing_meta: bool, keepdims: bool
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def any(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def any(a: numpy.ndarray, axis: Tuple[int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def any(a: pandas.core.series.Series):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -3231,6 +4364,7 @@ def apply_along_axis(func1d: Callable, axis: int, arr: numpy.ndarray):
 @overload
 def apply_along_axis(func1d: Callable, axis: int, arr: numpy.ndarray):
     """
+    usage.dask: 2
     usage.skimage: 6
     usage.sklearn: 3
     """
@@ -3242,6 +4376,7 @@ def apply_along_axis(
     func1d: Callable, axis: int, arr: numpy.ndarray, *args: Literal["v", "t"]
 ):
     """
+    usage.dask: 1
     usage.matplotlib: 2
     usage.pandas: 7
     usage.scipy: 81
@@ -3258,14 +4393,9 @@ def apply_along_axis(func1d: Callable, axis: int, arr: numpy.ndarray):
 
 
 @overload
-def apply_along_axis(
-    func1d: Union[Callable, int],
-    axis: Union[int, Callable],
-    arr: Union[numpy.ndarray, int],
-    *args: Literal["v", "t"],
-):
+def apply_along_axis(func1d: int, axis: Callable, arr: int, *args: Literal["v", "t"]):
     """
-    usage.dask: 4
+    usage.dask: 1
     """
     ...
 
@@ -3324,11 +4454,41 @@ def apply_over_axes(func: Callable, a: numpy.ndarray, axes: List[int]):
 
 
 @overload
-def apply_over_axes(
-    func: Callable, a: numpy.ndarray, axes: Union[Tuple[Union[None, int], ...], int]
-):
+def apply_over_axes(func: Callable, a: numpy.ndarray, axes: Tuple[None, ...]):
     """
-    usage.dask: 5
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def apply_over_axes(func: Callable, a: numpy.ndarray, axes: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def apply_over_axes(func: Callable, a: numpy.ndarray, axes: Tuple[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def apply_over_axes(func: Callable, a: numpy.ndarray, axes: Tuple[int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def apply_over_axes(func: Callable, a: numpy.ndarray, axes: Tuple[int, int, int]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -3349,6 +4509,7 @@ def apply_over_axes(
 @overload
 def arange(_0: int, /):
     """
+    usage.dask: 241
     usage.matplotlib: 188
     usage.sample-usage: 4
     usage.skimage: 95
@@ -3361,6 +4522,7 @@ def arange(_0: int, /):
 @overload
 def arange(_0: int, /, *, dtype: Type[float]):
     """
+    usage.dask: 3
     usage.matplotlib: 11
     usage.skimage: 6
     """
@@ -3387,6 +4549,7 @@ def arange(_0: numpy.float64, _1: numpy.float64, _2: float, /):
 @overload
 def arange(_0: int, _1: int, /):
     """
+    usage.dask: 15
     usage.matplotlib: 21
     usage.skimage: 20
     usage.sklearn: 35
@@ -3398,6 +4561,7 @@ def arange(_0: int, _1: int, /):
 @overload
 def arange(_0: int, _1: int, _2: int, /):
     """
+    usage.dask: 5
     usage.matplotlib: 26
     usage.skimage: 12
     usage.sklearn: 8
@@ -3417,6 +4581,7 @@ def arange(_0: int, _1: int, _2: int, _3: Type[numpy.uint8], /):
 @overload
 def arange(_0: int, /, *, dtype: Type[numpy.float32]):
     """
+    usage.dask: 4
     usage.skimage: 4
     usage.sklearn: 2
     usage.xarray: 4
@@ -3437,6 +4602,7 @@ def arange(_0: int, /, *, dtype: Type[numpy.float64]):
 @overload
 def arange(_0: numpy.int64, /):
     """
+    usage.dask: 4
     usage.matplotlib: 2
     usage.skimage: 5
     usage.sklearn: 6
@@ -3479,6 +4645,7 @@ def arange(_0: numpy.int64, /, *, dtype: numpy.dtype):
 @overload
 def arange(_0: int, _1: float, _2: float, /):
     """
+    usage.dask: 3
     usage.matplotlib: 11
     usage.skimage: 3
     """
@@ -3497,6 +4664,7 @@ def arange(_0: numpy.float64, _1: numpy.float64, _2: numpy.float64, /):
 @overload
 def arange(_0: int, _1: int, _2: float, /):
     """
+    usage.dask: 6
     usage.matplotlib: 16
     usage.skimage: 1
     usage.sklearn: 1
@@ -3507,6 +4675,7 @@ def arange(_0: int, _1: int, _2: float, /):
 @overload
 def arange(_0: int, /, *, dtype: Type[numpy.int64]):
     """
+    usage.dask: 4
     usage.skimage: 1
     usage.sklearn: 7
     usage.xarray: 5
@@ -3526,6 +4695,7 @@ def arange(_0: numpy.float64, /):
 @overload
 def arange(_0: int, /, *, dtype: numpy.dtype):
     """
+    usage.dask: 1
     usage.matplotlib: 7
     usage.skimage: 2
     """
@@ -3611,6 +4781,7 @@ def arange(_0: int, _1: int, /, *, dtype: Type[float]):
 @overload
 def arange(_0: float, /):
     """
+    usage.dask: 4
     usage.matplotlib: 1
     usage.xarray: 21
     """
@@ -3668,6 +4839,7 @@ def arange(_0: int, /, *, dtype: Literal["u2"]):
 @overload
 def arange(_0: int, /, *, dtype: Literal["i1"]):
     """
+    usage.dask: 2
     usage.xarray: 1
     """
     ...
@@ -3692,6 +4864,7 @@ def arange(_0: int, /, *, dtype: Literal["f2"]):
 @overload
 def arange(_0: int, /, *, dtype: Literal["f4"]):
     """
+    usage.dask: 3
     usage.xarray: 1
     """
     ...
@@ -3732,6 +4905,7 @@ def arange(_0: float, _1: float, /, *, dtype: Literal["float64"]):
 @overload
 def arange(_0: int, /, *, dtype: Type[numpy.int32]):
     """
+    usage.dask: 3
     usage.matplotlib: 15
     usage.sklearn: 1
     usage.xarray: 1
@@ -3742,6 +4916,7 @@ def arange(_0: int, /, *, dtype: Type[numpy.int32]):
 @overload
 def arange(_0: int, _1: int, /, *, dtype: Type[int]):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.xarray: 1
     """
@@ -3759,6 +4934,7 @@ def arange(_0: int, /, *, dtype: Literal["uint8"]):
 @overload
 def arange(_0: int, /, *, dtype: Literal["i8"]):
     """
+    usage.dask: 1
     usage.xarray: 2
     """
     ...
@@ -3816,6 +4992,7 @@ def arange(_0: numpy.int64, _1: numpy.int64, _2: numpy.int64, /):
 @overload
 def arange(_0: float, _1: float, _2: float, /):
     """
+    usage.dask: 3
     usage.matplotlib: 17
     usage.sklearn: 4
     """
@@ -3849,6 +5026,7 @@ def arange(_0: float, _1: float, _2: int, /):
 @overload
 def arange(_0: int, _1: float, _2: int, /):
     """
+    usage.dask: 1
     usage.matplotlib: 6
     """
     ...
@@ -3903,6 +5081,7 @@ def arange(
 @overload
 def arange(_0: int, _1: int, /, *, dtype: Type[numpy.int32]):
     """
+    usage.dask: 1
     usage.matplotlib: 4
     """
     ...
@@ -3931,18 +5110,323 @@ def arange(
 
 
 @overload
+def arange(_0: int, /, *, dtype: Literal["i4"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: int, _2: int, _3: numpy.dtype, /):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: int, /, *, dtype: Type[numpy.float32]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: int, _2: int, _3: Type[numpy.int32], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: int, _2: int, _3: Type[float], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: int, _2: int, _3: Type[int], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: float, _1: float, _2: float, _3: numpy.dtype, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: int, _2: int, /, *, dtype: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: float, _1: int, _2: int, /, *, dtype: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: float, _1: int, _2: int, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: float, _1: float, _2: int, _3: numpy.dtype, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: float, _2: int, /, *, dtype: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: int, _2: float, /, *, dtype: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.float32, _1: numpy.float32, _2: numpy.float32, /, *, dtype: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.float32, _1: numpy.float32, _2: numpy.float64, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.float64, _1: numpy.float64, _2: numpy.float32, _3: numpy.dtype, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.int32, _1: numpy.int32, _2: numpy.int32, /, *, dtype: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.int32, _1: numpy.int32, _2: numpy.int64, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.int64, _1: numpy.int64, _2: numpy.int32, _3: numpy.dtype, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.uint32, _1: numpy.uint32, _2: numpy.uint32, /, *, dtype: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.uint32, _1: numpy.uint32, _2: numpy.int64, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.int64, _1: numpy.int64, _2: numpy.uint32, _3: numpy.dtype, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.uint64, _1: numpy.uint64, _2: numpy.uint64, /, *, dtype: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.uint64, _1: numpy.uint64, _2: numpy.float64, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.float64, _1: numpy.float64, _2: numpy.uint64, _3: numpy.dtype, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
 def arange(
-    _0: object,
-    _1: object = ...,
-    _2: object = ...,
-    _3: Union[type, numpy.dtype, Literal["i8"]] = ...,
+    _0: numpy.uint32,
+    _1: numpy.uint32,
+    _2: numpy.uint32,
     /,
     *,
-    dtype: Union[str, type, numpy.dtype, None] = ...,
-    stop: int = ...,
+    dtype: Type[numpy.uint32],
 ):
     """
-    usage.dask: 347
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(
+    _0: numpy.int64, _1: numpy.int64, _2: numpy.uint32, _3: Type[numpy.uint32], /
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(
+    _0: numpy.uint64,
+    _1: numpy.uint64,
+    _2: numpy.uint64,
+    /,
+    *,
+    dtype: Type[numpy.uint64],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(
+    _0: numpy.float64, _1: numpy.float64, _2: numpy.uint64, _3: Type[numpy.uint64], /
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: float, _1: float, _2: float, /, *, dtype: Literal["i8"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: float, _1: float, _2: float, _3: Literal["i8"], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.int64, /, *, dtype: Literal["float32"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.int64, /, *, dtype: Literal["float64"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: int, _2: int, _3: Type[numpy.int64], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: int, _2: int, /, *, dtype: Literal["i4"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: int, /, *, stop: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: int, /, *, dtype: Literal["f8"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: int, /, *, dtype: Literal["f8"]):
+    """
+    usage.dask: 4
     """
     ...
 
@@ -4011,6 +5495,7 @@ def arange(
 @overload
 def argmax(a: numpy.ndarray):
     """
+    usage.dask: 6
     usage.skimage: 12
     usage.sklearn: 17
     usage.xarray: 4
@@ -4029,6 +5514,7 @@ def argmax(a: dask.array.core.Array):
 @overload
 def argmax(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 13
     usage.skimage: 3
     usage.sklearn: 57
     usage.xarray: 7
@@ -4039,6 +5525,7 @@ def argmax(a: numpy.ndarray, axis: int):
 @overload
 def argmax(a: numpy.ndarray, axis: None):
     """
+    usage.dask: 2
     usage.xarray: 1
     """
     ...
@@ -4103,17 +5590,65 @@ def argmax(a: numpy.ndarray, axis: int = ...):
 
 
 @overload
-def argmax(
-    _0: Union[numpy.ndarray, numpy.ma.core.MaskedArray] = ...,
-    /,
-    a: Union[dask.array.core.Array, numpy.ma.core.MaskedArray, numpy.ndarray] = ...,
-    axis: Union[int, None] = ...,
-    out: dask.array.core.Array = ...,
-    *,
-    keepdims: bool = ...,
-):
+def argmax(a: numpy.ma.core.MaskedArray):
     """
-    usage.dask: 36
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def argmax(_0: numpy.ma.core.MaskedArray, /, *, axis: None, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def argmax(a: numpy.ma.core.MaskedArray, axis: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def argmax(_0: numpy.ndarray, /, *, axis: None, keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def argmax(a: numpy.ma.core.MaskedArray, axis: int):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def argmax(_0: numpy.ma.core.MaskedArray, /, *, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def argmax(_0: numpy.ndarray, /, *, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def argmax(a: dask.array.core.Array, axis: int, out: dask.array.core.Array):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -4149,6 +5684,7 @@ def argmax(
 @overload
 def argmin(a: numpy.ndarray):
     """
+    usage.dask: 6
     usage.matplotlib: 2
     usage.skimage: 5
     usage.sklearn: 9
@@ -4159,6 +5695,7 @@ def argmin(a: numpy.ndarray):
 @overload
 def argmin(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 12
     usage.matplotlib: 4
     usage.skimage: 3
     usage.sklearn: 2
@@ -4179,6 +5716,7 @@ def argmin(a: List[numpy.float64]):
 @overload
 def argmin(a: numpy.ndarray, axis: None):
     """
+    usage.dask: 2
     usage.xarray: 1
     """
     ...
@@ -4243,16 +5781,65 @@ def argmin(a: numpy.ndarray, axis: int = ...):
 
 
 @overload
-def argmin(
-    _0: Union[numpy.ndarray, numpy.ma.core.MaskedArray] = ...,
-    /,
-    a: Union[numpy.ndarray, numpy.ma.core.MaskedArray, List[int]] = ...,
-    axis: Union[int, None] = ...,
-    *,
-    keepdims: bool = ...,
-):
+def argmin(a: List[int]):
     """
-    usage.dask: 35
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def argmin(a: numpy.ma.core.MaskedArray):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def argmin(_0: numpy.ma.core.MaskedArray, /, *, axis: None, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def argmin(a: numpy.ma.core.MaskedArray, axis: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def argmin(_0: numpy.ndarray, /, *, axis: None, keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def argmin(a: numpy.ma.core.MaskedArray, axis: int):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def argmin(_0: numpy.ma.core.MaskedArray, /, *, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def argmin(_0: numpy.ndarray, /, *, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -4321,6 +5908,7 @@ def argpartition(a: numpy.ndarray, kth: Union[numpy.int64, int], axis: int):
 @overload
 def argsort(a: numpy.ndarray):
     """
+    usage.dask: 5
     usage.matplotlib: 1
     usage.skimage: 17
     usage.sklearn: 31
@@ -4370,9 +5958,10 @@ def argsort(
 
 
 @overload
-def argsort(a: numpy.ndarray, axis: int = ...):
+def argsort(a: numpy.ndarray, axis: int):
     """
-    usage.dask: 12
+    usage.dask: 7
+    usage.sklearn: 7
     """
     ...
 
@@ -4402,14 +5991,6 @@ def argsort(
 ):
     """
     usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def argsort(a: numpy.ndarray, axis: int):
-    """
-    usage.sklearn: 7
     """
     ...
 
@@ -4537,6 +6118,7 @@ def around(a: object, decimals: int = ...):
 @overload
 def array(_0: List[float], /):
     """
+    usage.dask: 18
     usage.matplotlib: 79
     usage.skimage: 39
     usage.sklearn: 158
@@ -4567,6 +6149,7 @@ def array(_0: List[numpy.ndarray], /):
 @overload
 def array(_0: List[Union[int, float]], /):
     """
+    usage.dask: 5
     usage.matplotlib: 8
     usage.skimage: 5
     usage.sklearn: 14
@@ -4578,6 +6161,7 @@ def array(_0: List[Union[int, float]], /):
 @overload
 def array(_0: List[List[Union[float, int]]], /):
     """
+    usage.dask: 2
     usage.matplotlib: 7
     usage.skimage: 5
     usage.sklearn: 64
@@ -4617,6 +6201,7 @@ def array(_0: List[float], /, *, dtype: numpy.dtype):
 @overload
 def array(_0: numpy.ndarray, /):
     """
+    usage.dask: 8
     usage.matplotlib: 23
     usage.skimage: 14
     usage.sklearn: 72
@@ -4628,6 +6213,7 @@ def array(_0: numpy.ndarray, /):
 @overload
 def array(_0: List[int], /):
     """
+    usage.dask: 126
     usage.matplotlib: 41
     usage.sample-usage: 1
     usage.skimage: 101
@@ -4677,6 +6263,7 @@ def array(_0: Tuple[int, float, float], /):
 @overload
 def array(_0: Tuple[float, float, float], /):
     """
+    usage.dask: 1
     usage.matplotlib: 2
     usage.skimage: 1
     usage.sklearn: 2
@@ -4748,6 +6335,7 @@ def array(
 @overload
 def array(_0: List[List[int]], /):
     """
+    usage.dask: 33
     usage.matplotlib: 27
     usage.skimage: 153
     usage.sklearn: 422
@@ -4759,6 +6347,7 @@ def array(_0: List[List[int]], /):
 @overload
 def array(_0: List[numpy.float64], /):
     """
+    usage.dask: 4
     usage.matplotlib: 32
     usage.skimage: 12
     usage.sklearn: 61
@@ -4770,6 +6359,7 @@ def array(_0: List[numpy.float64], /):
 @overload
 def array(_0: Tuple[int, int], /):
     """
+    usage.dask: 4
     usage.matplotlib: 2
     usage.skimage: 31
     usage.sklearn: 7
@@ -4781,6 +6371,7 @@ def array(_0: Tuple[int, int], /):
 @overload
 def array(_0: List[numpy.int64], /):
     """
+    usage.dask: 3
     usage.matplotlib: 3
     usage.skimage: 10
     usage.sklearn: 17
@@ -4792,6 +6383,7 @@ def array(_0: List[numpy.int64], /):
 @overload
 def array(_0: List[List[List[int]]], /):
     """
+    usage.dask: 3
     usage.skimage: 7
     usage.sklearn: 3
     usage.xarray: 1
@@ -4857,6 +6449,7 @@ def array(_0: numpy.ndarray, /, *, dtype: Type[bool]):
 @overload
 def array(_0: List[float], /, *, dtype: Type[numpy.float64]):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.skimage: 2
     usage.sklearn: 3
@@ -4883,6 +6476,7 @@ def array(_0: numpy.ndarray, /, *, copy: bool, ndmin: int):
 @overload
 def array(_0: list, /):
     """
+    usage.dask: 5
     usage.matplotlib: 8
     usage.skimage: 11
     usage.sklearn: 13
@@ -4903,6 +6497,7 @@ def array(_0: List[Tuple[int, int]], /):
 @overload
 def array(_0: List[Union[float, int]], /):
     """
+    usage.dask: 5
     usage.matplotlib: 14
     usage.skimage: 9
     usage.sklearn: 21
@@ -5001,6 +6596,7 @@ def array(_0: List[List[List[Tuple[int, int]]]], /):
 @overload
 def array(_0: List[List[bool]], /):
     """
+    usage.dask: 3
     usage.matplotlib: 2
     usage.skimage: 11
     usage.sklearn: 5
@@ -5088,6 +6684,7 @@ def array(_0: List[List[int]], /, *, dtype: Type[numpy.int32]):
 @overload
 def array(_0: List[List[int]], /, *, dtype: Type[numpy.int64]):
     """
+    usage.dask: 1
     usage.skimage: 3
     usage.sklearn: 1
     usage.xarray: 1
@@ -5161,6 +6758,7 @@ def array(_0: Tuple[int, int], /, *, dtype: Literal["float"], ndmin: int):
 @overload
 def array(_0: int, /):
     """
+    usage.dask: 17
     usage.matplotlib: 3
     usage.skimage: 1
     usage.sklearn: 8
@@ -5196,6 +6794,7 @@ def array(_0: Tuple[int, int, int], /, *, dtype: Literal["float"], ndmin: int):
 @overload
 def array(_0: numpy.ndarray, /, *, copy: bool):
     """
+    usage.dask: 1
     usage.matplotlib: 4
     usage.skimage: 4
     usage.sklearn: 1
@@ -5206,6 +6805,7 @@ def array(_0: numpy.ndarray, /, *, copy: bool):
 @overload
 def array(_0: Tuple[int, int, int, int], /):
     """
+    usage.dask: 2
     usage.matplotlib: 1
     usage.skimage: 3
     """
@@ -5235,6 +6835,7 @@ def array(_0: List[int], /, *, dtype: Type[numpy.float64]):
 @overload
 def array(_0: List[int], /, *, dtype: numpy.dtype):
     """
+    usage.dask: 10
     usage.matplotlib: 3
     usage.skimage: 3
     usage.sklearn: 14
@@ -5277,6 +6878,7 @@ def array(_0: PIL.JpegImagePlugin.JpegImageFile, /, *, dtype: None):
 @overload
 def array(_0: List[List[float]], /, *, dtype: Type[numpy.float64]):
     """
+    usage.dask: 1
     usage.matplotlib: 3
     usage.skimage: 1
     usage.sklearn: 5
@@ -5439,6 +7041,7 @@ def array(_0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray],
 @overload
 def array(_0: Tuple[int, int, int, int, int], /):
     """
+    usage.dask: 1
     usage.skimage: 2
     """
     ...
@@ -5501,6 +7104,7 @@ def array(_0: List[numpy.int64], _1: Type[numpy.int32], /):
 @overload
 def array(_0: List[bool], /):
     """
+    usage.dask: 9
     usage.matplotlib: 2
     usage.skimage: 5
     usage.sklearn: 19
@@ -5606,6 +7210,7 @@ def array(_0: List[int], /, *, dtype: Type[numpy.uint32]):
 @overload
 def array(_0: List[int], /, *, dtype: Type[numpy.int64]):
     """
+    usage.dask: 1
     usage.skimage: 8
     usage.sklearn: 17
     """
@@ -5615,6 +7220,7 @@ def array(_0: List[int], /, *, dtype: Type[numpy.int64]):
 @overload
 def array(_0: List[int], /, *, dtype: Type[numpy.int16]):
     """
+    usage.dask: 1
     usage.skimage: 2
     """
     ...
@@ -5903,6 +7509,7 @@ def array(_0: Tuple[int, int], /, *, dtype: Type[numpy.ulonglong]):
 @overload
 def array(_0: List[List[List[List[int]]]], /):
     """
+    usage.dask: 2
     usage.skimage: 2
     """
     ...
@@ -6017,6 +7624,7 @@ def array(_0: List[Union[float, Literal["cdef", "ab"]]], /, *, dtype: Type[objec
 @overload
 def array(_0: float, /):
     """
+    usage.dask: 5
     usage.matplotlib: 1
     usage.sklearn: 9
     usage.xarray: 11
@@ -6631,6 +8239,7 @@ def array(_0: List[bytes], /, *, dtype: Literal["S"]):
 @overload
 def array(_0: bytes, /):
     """
+    usage.dask: 2
     usage.xarray: 2
     """
     ...
@@ -6639,6 +8248,7 @@ def array(_0: bytes, /):
 @overload
 def array(_0: dask.array.core.Array, /):
     """
+    usage.dask: 11
     usage.xarray: 5
     """
     ...
@@ -6655,6 +8265,7 @@ def array(_0: List[List[List[bytes]]], /):
 @overload
 def array(_0: numpy.int64, /):
     """
+    usage.dask: 6
     usage.xarray: 2
     """
     ...
@@ -6749,6 +8360,7 @@ def array(_0: List[int], /, *, dtype: Literal["uint32"]):
 @overload
 def array(_0: List[str], /):
     """
+    usage.dask: 3
     usage.matplotlib: 6
     usage.sklearn: 10
     usage.xarray: 6
@@ -6759,6 +8371,7 @@ def array(_0: List[str], /):
 @overload
 def array(_0: numpy.timedelta64, /):
     """
+    usage.dask: 4
     usage.xarray: 1
     """
     ...
@@ -6799,6 +8412,7 @@ def array(_0: List[Literal["c", "a"]], /):
 @overload
 def array(_0: List[Literal["c", "b", "a"]], /):
     """
+    usage.dask: 2
     usage.sklearn: 2
     usage.xarray: 3
     """
@@ -7002,6 +8616,7 @@ def array(_0: datetime.timedelta, /):
 @overload
 def array(_0: numpy.float64, /):
     """
+    usage.dask: 8
     usage.matplotlib: 2
     usage.sklearn: 4
     usage.xarray: 1
@@ -7012,6 +8627,7 @@ def array(_0: numpy.float64, /):
 @overload
 def array(_0: numpy.float32, /):
     """
+    usage.dask: 5
     usage.sklearn: 1
     usage.xarray: 1
     """
@@ -7021,6 +8637,7 @@ def array(_0: numpy.float32, /):
 @overload
 def array(_0: numpy.bool_, /):
     """
+    usage.dask: 4
     usage.xarray: 1
     """
     ...
@@ -7029,6 +8646,7 @@ def array(_0: numpy.bool_, /):
 @overload
 def array(_0: bool, /):
     """
+    usage.dask: 3
     usage.xarray: 1
     """
     ...
@@ -7310,6 +8928,7 @@ def array(_0: object, /):
 @overload
 def array(_0: List[Literal["c", "b", "a"]], /, *, dtype: Type[object]):
     """
+    usage.dask: 1
     usage.matplotlib: 2
     usage.sklearn: 3
     usage.xarray: 2
@@ -7435,6 +9054,7 @@ def array(_0: xarray.core.indexing.PandasIndexAdapter, /):
 @overload
 def array(_0: numpy.datetime64, /):
     """
+    usage.dask: 3
     usage.xarray: 1
     """
     ...
@@ -7606,6 +9226,7 @@ def array(_0: List[Tuple[Union[int, float], Union[float, int]]], /):
 @overload
 def array(_0: Tuple[float, float, float, float], /):
     """
+    usage.dask: 1
     usage.matplotlib: 4
     """
     ...
@@ -7748,6 +9369,7 @@ def array(_0: List[Union[List[numpy.float64], numpy.ndarray]], /):
 @overload
 def array(_0: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64], /):
     """
+    usage.dask: 2
     usage.matplotlib: 1
     """
     ...
@@ -8370,6 +9992,7 @@ def array(_0: List[Union[float, int]], _1: Type[float], /):
 @overload
 def array(_0: List[List[numpy.int64]], /):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.sklearn: 2
     """
@@ -8720,6 +10343,7 @@ def array(_0: List[Literal["fun", "is", "Python"]], /, *, dtype: Type[object]):
 @overload
 def array(_0: List[Literal["b", "a"]], /, *, dtype: Type[object]):
     """
+    usage.dask: 1
     usage.matplotlib: 2
     usage.sklearn: 1
     """
@@ -9873,27 +11497,879 @@ def array(_0: str, /):
 
 
 @overload
+def array(_0: List[numpy.int64], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["cc", "bb", "aa"]], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
 def array(
-    _0: object,
-    _1: Type[numpy.int32] = ...,
+    _0: List[Tuple[int, float]],
     /,
     *,
-    dtype: Union[
-        str,
-        type,
-        numpy.dtype,
-        List[
-            Tuple[
-                Literal["a", "b", "text", "numbers"],
-                Union[type, Literal["i4", "i8", "object", "S1", "f4"]],
-            ]
-        ],
-    ] = ...,
-    copy: bool = ...,
-    ndmin: int = ...,
+    dtype: List[Tuple[Literal["a", "b"], Literal["i4", "f4"]]],
 ):
     """
-    usage.dask: 495
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[dask.array.core.Array], /, *, dtype: Literal["O"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[int], /, *, dtype: Literal["i8"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[int]], /, *, dtype: Literal["u4"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.uint32, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: List[int], /, *, dtype: Literal["u4"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.int8, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[Literal["b", "a", "d", "c"]]], /):
+    """
+    usage.dask: 1
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def array(_0: list, /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 7
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[Literal["a"], int]],
+    /,
+    *,
+    dtype: List[Tuple[Literal["text", "numbers"], Literal["S1", "i4"]]],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: memoryview, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: complex, /):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.complex128, /):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.bytes_, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["1"], /):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.str_, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.uint8, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.ulonglong, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.longlong, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.void, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.complex256, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.float128, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.uint64, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.int32, /):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.complex64, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.uint16, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.int16, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.float16, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["2000-01-01"]], /, *, dtype: Literal["datetime64"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[int], /, *, copy: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def array(_0: list, /, *, copy: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[int], /, *, dtype: Literal["u8"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[int]], /, *, copy: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[bool], /, *, copy: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.timedelta64], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[dask.delayed.Delayed]], /, *, dtype: Type[object]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def array(_0: dask.delayed.Delayed, /, *, dtype: Type[object]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["abc", "a"]], /, *, dtype: Type[object]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[str, int]], /, *, dtype: Type[object]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[Tuple[str, int, int]]], /, *, dtype: Type[object]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[List[Tuple[str, int, int, int]]]], /, *, dtype: Type[object]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["foo"], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["ccc", "bb", "a"]], /, *, dtype: Type[object]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[int]], _1: Type[numpy.int32], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: float, /, *, dtype: Literal["f"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[int], /, *, dtype: Type[int]):
+    """
+    usage.dask: 1
+    usage.sklearn: 4
+    """
+    ...
+
+
+@overload
+def array(_0: Tuple[int, int], /, *, dtype: Literal["O"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Tuple[int], /, *, dtype: Literal["O"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[int]], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 4
+    usage.sklearn: 3
+    """
+    ...
+
+
+@overload
+def array(_0: int, /, *, dtype: Literal["O"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: Tuple[
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+    ],
+    /,
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def array(
+    _0: Tuple[
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+    ],
+    /,
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["e", "d", "a"]], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["e", "d", "a"]], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: Tuple[numpy.str_, numpy.str_, numpy.str_, numpy.str_, numpy.str_, numpy.str_], /
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: Tuple[
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+    ],
+    /,
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[int], /, *, dtype: Literal["f8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.float64], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: float, /, *, dtype: Literal["O"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.ndarray, /, *, dtype: Literal["i8"], ndmin: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[int], /, *, dtype: Literal["O"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: int, /, *, dtype: Type[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: dask.array.core.Array, /, *, copy: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Tuple[numpy.float64, numpy.float64], /, *, dtype: Literal["O"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Tuple[dask.array.core.Array, numpy.float64], /, *, dtype: Literal["O"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[complex, int]], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[dask.delayed.Delayed], /, *, dtype: Type[object]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["foo"]], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.datetime64], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[int], /, *, dtype: Type[numpy.object_]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[int, int]], /, *, dtype: List[Tuple[Literal["a", "b"], type]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[int, int]],
+    /,
+    *,
+    dtype: List[Tuple[Literal["a", "b"], Literal["i4"]]],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[int, Literal["a", "b"]]],
+    /,
+    *,
+    dtype: List[Tuple[Literal["a", "b"], Literal["i4", "object"]]],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.record, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.bool_], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.timedelta64], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.int32], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Tuple[numpy.float64], /):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.indexes.numeric.Int64Index, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[float], /, *, dtype: Literal["f4"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["B", "A", "C"]], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.float32], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["1", "0"]], /):
+    """
+    usage.dask: 1
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["2"]], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["1"]], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["2", "1", "0"]], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["3", "2"]], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["1", "2"]], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["3"]], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[float, int, Literal["2", "1.0"]]], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.series.Series, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.frame.DataFrame, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["2000-01-01T12:00:00"]], /, *, dtype: Literal["M8[ns]"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: float, /, *, dtype: Literal["f8"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[int, int]],
+    /,
+    *,
+    dtype: List[Tuple[Literal["a", "b"], Literal["i4", "i8"]]],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["aaa", "aa", "a"]], /, *, dtype: Type[object]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[Literal["aaa", "a"], None]], /, *, dtype: Type[object]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[int, Union[Literal["a", "aaa"], None]]], /, *, dtype: Type[object]
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[float, Literal["José", "foo"]]], /, *, dtype: Literal["O"]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -10026,14 +12502,6 @@ def array(_0: List[Literal["B", "A"]], /, *, dtype: numpy.dtype):
 def array(_0: List[List[Dict[Literal["c", "b", "a"], int]]], /, *, dtype: Type[object]):
     """
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def array(_0: List[int], /, *, dtype: Type[int]):
-    """
-    usage.sklearn: 4
     """
     ...
 
@@ -10435,14 +12903,6 @@ def array(_0: numpy.ndarray, /, *, dtype: Type[numpy.float32]):
 def array(_0: sklearn.utils.estimator_checks._NotAnArray, /):
     """
     usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[List[int]], /, *, dtype: numpy.dtype):
-    """
-    usage.sklearn: 3
     """
     ...
 
@@ -10945,14 +13405,6 @@ def array(_0: List[Literal["d", "c", "b", "a"]], /):
 
 
 @overload
-def array(_0: List[Literal["1", "0"]], /):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def array(_0: List[List[Union[int, float]]], /, *, dtype: Type[numpy.float64]):
     """
     usage.sklearn: 2
@@ -11267,14 +13719,6 @@ def array(_0: List[List[float]], /, *, dtype: Literal["float64"]):
 
 @overload
 def array(_0: List[List[int]], /, *, dtype: Literal["float64"]):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[List[Literal["b", "a", "d", "c"]]], /):
     """
     usage.sklearn: 1
     """
@@ -11945,6 +14389,7 @@ def array_split(
 @overload
 def asanyarray(a: numpy.ndarray):
     """
+    usage.dask: 16
     usage.matplotlib: 18
     usage.skimage: 33
     usage.sklearn: 28
@@ -11955,6 +14400,7 @@ def asanyarray(a: numpy.ndarray):
 @overload
 def asanyarray(a: List[int]):
     """
+    usage.dask: 9
     usage.matplotlib: 6
     usage.skimage: 4
     usage.sklearn: 1
@@ -11965,6 +14411,7 @@ def asanyarray(a: List[int]):
 @overload
 def asanyarray(a: List[Union[float, int]]):
     """
+    usage.dask: 2
     usage.skimage: 4
     """
     ...
@@ -11982,6 +14429,7 @@ def asanyarray(a: List[float]):
 @overload
 def asanyarray(a: Tuple[int, int, int]):
     """
+    usage.dask: 1
     usage.skimage: 1
     """
     ...
@@ -12007,6 +14455,7 @@ def asanyarray(a: Tuple[int, int]):
 @overload
 def asanyarray(a: float):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.xarray: 1
     """
@@ -12048,6 +14497,7 @@ def asanyarray(a: List[List[numpy.float64]]):
 @overload
 def asanyarray(a: list):
     """
+    usage.dask: 2
     usage.matplotlib: 4
     """
     ...
@@ -12430,6 +14880,7 @@ def asanyarray(a: List[Tuple[int, float]], dtype: Type[float]):
 @overload
 def asanyarray(a: int):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     """
     ...
@@ -12484,9 +14935,41 @@ def asanyarray(a: List[Union[int, numpy.float64]]):
 
 
 @overload
-def asanyarray(a: object):
+def asanyarray(a: pandas.core.frame.DataFrame):
     """
-    usage.dask: 45
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asanyarray(a: pandas.core.series.Series):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asanyarray(a: List[bool]):
+    """
+    usage.dask: 8
+    """
+    ...
+
+
+@overload
+def asanyarray(a: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asanyarray(a: Literal["Hello!"]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -12531,6 +15014,7 @@ def asanyarray(a: object, dtype: Union[type, Literal["int64"]] = ...):
 @overload
 def asarray(a: List[int]):
     """
+    usage.dask: 14
     usage.matplotlib: 42
     usage.skimage: 12
     usage.sklearn: 86
@@ -12553,6 +15037,7 @@ def asarray(a: List[Union[float, int]]):
 @overload
 def asarray(a: numpy.ndarray):
     """
+    usage.dask: 12
     usage.matplotlib: 96
     usage.skimage: 43
     usage.sklearn: 267
@@ -12564,6 +15049,7 @@ def asarray(a: numpy.ndarray):
 @overload
 def asarray(a: float):
     """
+    usage.dask: 1
     usage.matplotlib: 8
     usage.skimage: 2
     usage.sklearn: 4
@@ -12575,6 +15061,7 @@ def asarray(a: float):
 @overload
 def asarray(a: List[float]):
     """
+    usage.dask: 2
     usage.matplotlib: 30
     usage.skimage: 6
     usage.sklearn: 41
@@ -12626,6 +15113,7 @@ def asarray(a: numpy.ndarray, dtype: Type[numpy.float64]):
 @overload
 def asarray(a: int):
     """
+    usage.dask: 3
     usage.matplotlib: 4
     usage.skimage: 3
     usage.sklearn: 4
@@ -12682,6 +15170,7 @@ def asarray(a: List[numpy.int64]):
 @overload
 def asarray(a: Tuple[int, int]):
     """
+    usage.dask: 4
     usage.matplotlib: 6
     usage.skimage: 16
     usage.sklearn: 2
@@ -12692,6 +15181,7 @@ def asarray(a: Tuple[int, int]):
 @overload
 def asarray(a: Tuple[int, int, int]):
     """
+    usage.dask: 3
     usage.skimage: 14
     usage.sklearn: 3
     usage.xarray: 1
@@ -12770,6 +15260,7 @@ def asarray(a: List[Union[float, int]], dtype: Type[float]):
 @overload
 def asarray(a: List[List[int]]):
     """
+    usage.dask: 2
     usage.matplotlib: 5
     usage.skimage: 7
     usage.sklearn: 45
@@ -12799,6 +15290,7 @@ def asarray(a: Tuple[numpy.float64, numpy.float64], dtype: Type[float]):
 @overload
 def asarray(a: Tuple[numpy.float64, numpy.float64]):
     """
+    usage.dask: 2
     usage.skimage: 1
     """
     ...
@@ -12833,6 +15325,7 @@ def asarray(a: List[List[int]], dtype: Type[numpy.uint8]):
 @overload
 def asarray(a: numpy.float64):
     """
+    usage.dask: 1
     usage.skimage: 1
     usage.sklearn: 1
     usage.xarray: 2
@@ -12843,6 +15336,7 @@ def asarray(a: numpy.float64):
 @overload
 def asarray(a: range):
     """
+    usage.dask: 1
     usage.matplotlib: 6
     usage.skimage: 2
     usage.sklearn: 2
@@ -12854,6 +15348,7 @@ def asarray(a: range):
 @overload
 def asarray(a: Tuple[int, int, int, int]):
     """
+    usage.dask: 2
     usage.skimage: 9
     """
     ...
@@ -12886,6 +15381,7 @@ def asarray(a: List[Tuple[Union[int, float], Union[float, int], Union[int, float
 @overload
 def asarray(a: numpy.ndarray, dtype: numpy.dtype):
     """
+    usage.dask: 1
     usage.skimage: 15
     usage.sklearn: 15
     usage.xarray: 45
@@ -12896,6 +15392,7 @@ def asarray(a: numpy.ndarray, dtype: numpy.dtype):
 @overload
 def asarray(a: Tuple[int, int, int, int, int]):
     """
+    usage.dask: 2
     usage.skimage: 1
     """
     ...
@@ -13041,6 +15538,7 @@ def asarray(a: Tuple[numpy.int64, numpy.int64, numpy.int64], dtype: Type[float])
 @overload
 def asarray(a: Tuple[numpy.int64, numpy.int64, numpy.int64]):
     """
+    usage.dask: 2
     usage.skimage: 1
     """
     ...
@@ -13122,6 +15620,7 @@ def asarray(a: List[Literal["MMM_", "fOOomMm__fOo", "xYz", "Foo"]]):
 @overload
 def asarray(a: List[bool]):
     """
+    usage.dask: 1
     usage.sklearn: 5
     usage.xarray: 11
     """
@@ -13839,6 +16338,7 @@ def asarray(a: xarray.core.variable.Variable):
 @overload
 def asarray(a: pandas.core.series.Series):
     """
+    usage.dask: 3
     usage.sklearn: 7
     usage.xarray: 3
     """
@@ -14283,6 +16783,7 @@ def asarray(a: xarray.core.indexing.CopyOnWriteArray, dtype: None):
 @overload
 def asarray(a: dask.array.core.Array):
     """
+    usage.dask: 2
     usage.xarray: 5
     """
     ...
@@ -14356,6 +16857,7 @@ def asarray(a: xarray.core.indexing.MemoryCachedArray, dtype: None):
 @overload
 def asarray(a: numpy.int64):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.xarray: 4
     """
@@ -14496,6 +16998,7 @@ def asarray(a: Literal["x"]):
 @overload
 def asarray(a: numpy.bool_):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -15089,6 +17592,7 @@ def asarray(a: List[Literal["y", "x"]]):
 @overload
 def asarray(a: List[List[bool]]):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -15147,6 +17651,7 @@ def asarray(a: Literal["2000-01-01T12:00:00"]):
 @overload
 def asarray(a: object):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.xarray: 7
     """
@@ -15189,6 +17694,7 @@ def asarray(a: xarray.core.variable.Variable, dtype: numpy.dtype):
 @overload
 def asarray(a: pandas.core.indexes.base.Index):
     """
+    usage.dask: 4
     usage.sklearn: 3
     usage.xarray: 1
     """
@@ -15802,6 +18308,7 @@ def asarray(a: Literal["foo"], dtype: numpy.dtype):
 @overload
 def asarray(a: pandas.core.frame.DataFrame):
     """
+    usage.dask: 3
     usage.sklearn: 1
     usage.xarray: 2
     """
@@ -16054,6 +18561,7 @@ def asarray(a: numpy.ma.core.MaskedArray, dtype: Type[float]):
 @overload
 def asarray(a: Tuple[float, float, float, float]):
     """
+    usage.dask: 2
     usage.matplotlib: 2
     """
     ...
@@ -16409,6 +18917,7 @@ def asarray(
 @overload
 def asarray(a: List[None]):
     """
+    usage.dask: 2
     usage.matplotlib: 2
     usage.sklearn: 3
     """
@@ -16456,6 +18965,7 @@ def asarray(
 @overload
 def asarray(a: List[bool], dtype: Type[bool]):
     """
+    usage.dask: 1
     usage.matplotlib: 3
     """
     ...
@@ -16473,6 +18983,7 @@ def asarray(a: List[int], dtype: Type[numpy.float32]):
 @overload
 def asarray(a: Tuple[numpy.float64, numpy.float64, numpy.float64]):
     """
+    usage.dask: 2
     usage.matplotlib: 3
     """
     ...
@@ -17089,9 +19600,314 @@ def asarray(
 
 
 @overload
-def asarray(a: object, dtype: Union[type, numpy.ndarray, numpy.dtype] = ...):
+def asarray(a: pandas.core.arrays.numpy_.PandasArray):
     """
-    usage.dask: 125
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.matrix):
+    """
+    usage.dask: 1
+    usage.sklearn: 15
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[int], dtype: Type[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[int, int], dtype: Type[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[int, int, int], dtype: Type[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.dtype, dtype: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[None, None, None, None]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[Literal["a"], Literal["e"], Literal["i"], Literal["j"]]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.arrays.string_.StringArray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.arrays.boolean.BooleanArray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.arrays.integer.IntegerArray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+    ]
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[None, None]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[None, None, None]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64]
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[None, None, None, None, None]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+    ]
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[None, None, None, None, None, None]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[numpy.float64, float, numpy.float64]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[numpy.float64, float, float, float, numpy.float64]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[numpy.float64, float, float, float, float, numpy.float64]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+    ]
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+    ]
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+    ]
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+    ]
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[int, int, int, int, int, int, int, int, int, int]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+        pandas._libs.tslibs.timestamps.Timestamp,
+    ]
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.tests.extension.decimal.array.DecimalArray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[numpy.datetime64, numpy.datetime64]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[int, int, int, int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.arrays.sparse.array.SparseArray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[None, None, None, None, None, None, None, None, None, None]):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -17140,14 +19956,6 @@ def asarray(a: numpy.ndarray, dtype: None, order: Literal["C"]):
 def asarray(a: numpy.ndarray, dtype: numpy.dtype, order: Literal["C"]):
     """
     usage.sklearn: 5
-    """
-    ...
-
-
-@overload
-def asarray(a: numpy.matrix):
-    """
-    usage.sklearn: 15
     """
     ...
 
@@ -22518,6 +25326,28 @@ def asmatrix(
     ...
 
 
+@overload
+def atleast_1d(*arys: Literal["v", "t"]):
+    """
+    usage.dask: 3
+    usage.matplotlib: 116
+    usage.pandas: 4
+    usage.scipy: 686
+    usage.skimage: 11
+    usage.sklearn: 70
+    usage.xarray: 41
+    """
+    ...
+
+
+@overload
+def atleast_1d():
+    """
+    usage.dask: 1
+    """
+    ...
+
+
 def atleast_1d(*arys: Literal["v", "t"]):
     """
     usage.dask: 4
@@ -22531,6 +25361,28 @@ def atleast_1d(*arys: Literal["v", "t"]):
     ...
 
 
+@overload
+def atleast_2d(*arys: Literal["v", "t"]):
+    """
+    usage.dask: 2
+    usage.matplotlib: 12
+    usage.pandas: 18
+    usage.scipy: 239
+    usage.skimage: 7
+    usage.sklearn: 45
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def atleast_2d():
+    """
+    usage.dask: 1
+    """
+    ...
+
+
 def atleast_2d(*arys: Literal["v", "t"]):
     """
     usage.dask: 3
@@ -22540,6 +25392,26 @@ def atleast_2d(*arys: Literal["v", "t"]):
     usage.skimage: 7
     usage.sklearn: 45
     usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def atleast_3d(*arys: Literal["v", "t"]):
+    """
+    usage.dask: 2
+    usage.matplotlib: 4
+    usage.scipy: 1
+    usage.skimage: 10
+    usage.sklearn: 6
+    """
+    ...
+
+
+@overload
+def atleast_3d():
+    """
+    usage.dask: 1
     """
     ...
 
@@ -22564,9 +25436,18 @@ def average(a: numpy.ndarray, weights: Union[numpy.ndarray, None]):
 
 
 @overload
-def average(a: numpy.ndarray, axis: int = ..., weights: numpy.ndarray = ...):
+def average(a: numpy.ndarray, returned: bool):
     """
-    usage.dask: 2
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def average(a: numpy.ndarray, axis: int, weights: numpy.ndarray):
+    """
+    usage.dask: 1
+    usage.sklearn: 43
     """
     ...
 
@@ -22591,14 +25472,6 @@ def average(a: numpy.ndarray, weights: None):
 def average(a: numpy.ndarray, weights: numpy.ndarray):
     """
     usage.sklearn: 66
-    """
-    ...
-
-
-@overload
-def average(a: numpy.ndarray, axis: int, weights: numpy.ndarray):
-    """
-    usage.sklearn: 43
     """
     ...
 
@@ -22693,6 +25566,7 @@ def average(
 @overload
 def bincount(_0: numpy.ndarray, /, *, minlength: int):
     """
+    usage.dask: 1
     usage.matplotlib: 2
     usage.skimage: 6
     usage.sklearn: 18
@@ -22711,6 +25585,7 @@ def bincount(_0: dask.array.core.Array, /, *, minlength: int):
 @overload
 def bincount(_0: numpy.ndarray, /):
     """
+    usage.dask: 2
     usage.skimage: 5
     usage.sklearn: 40
     """
@@ -22768,6 +25643,7 @@ def bincount(_0: numpy.ndarray, /, *, weights: numpy.ndarray):
 @overload
 def bincount(_0: numpy.ndarray, /, *, minlength: int, weights: numpy.ndarray):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.sklearn: 13
     """
@@ -22775,15 +25651,17 @@ def bincount(_0: numpy.ndarray, /, *, minlength: int, weights: numpy.ndarray):
 
 
 @overload
-def bincount(
-    _0: Union[numpy.ndarray, List[int]],
-    /,
-    *,
-    minlength: int = ...,
-    weights: Union[numpy.ndarray, List[int]] = ...,
-):
+def bincount(_0: list, /):
     """
-    usage.dask: 6
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def bincount(_0: List[int], /, *, weights: List[int]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -22913,21 +25791,57 @@ def block(arrays: List[Union[List[numpy.ndarray], numpy.ndarray]]):
 
 
 @overload
-def block(
-    arrays: Union[
-        List[
-            Union[
-                List[Union[numpy.ndarray, dask.array.core.Array, List[numpy.ndarray]]],
-                numpy.ndarray,
-                dask.array.core.Array,
-            ]
-        ],
-        int,
-        numpy.ndarray,
-    ]
-):
+def block(arrays: List[numpy.ndarray]):
     """
-    usage.dask: 18
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def block(arrays: List[List[numpy.ndarray]]):
+    """
+    usage.dask: 7
+    """
+    ...
+
+
+@overload
+def block(arrays: List[List[dask.array.core.Array]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def block(arrays: List[List[List[numpy.ndarray]]]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def block(arrays: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def block(arrays: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def block(arrays: List[dask.array.core.Array]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -22959,6 +25873,25 @@ def bmat(obj: List[List[numpy.ndarray]]):
     ...
 
 
+@overload
+def broadcast_arrays(*args: Literal["v", "t"]):
+    """
+    usage.dask: 9
+    usage.matplotlib: 42
+    usage.scipy: 286
+    usage.xarray: 3
+    """
+    ...
+
+
+@overload
+def broadcast_arrays():
+    """
+    usage.dask: 1
+    """
+    ...
+
+
 def broadcast_arrays(*args: Literal["v", "t"]):
     """
     usage.dask: 10
@@ -22972,6 +25905,7 @@ def broadcast_arrays(*args: Literal["v", "t"]):
 @overload
 def broadcast_to(array: numpy.ndarray, shape: Tuple[int, int]):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.xarray: 7
     """
@@ -22981,6 +25915,7 @@ def broadcast_to(array: numpy.ndarray, shape: Tuple[int, int]):
 @overload
 def broadcast_to(array: numpy.ndarray, shape: Tuple[int, int, int]):
     """
+    usage.dask: 4
     usage.xarray: 3
     """
     ...
@@ -22989,6 +25924,7 @@ def broadcast_to(array: numpy.ndarray, shape: Tuple[int, int, int]):
 @overload
 def broadcast_to(array: numpy.ndarray, shape: Tuple[int]):
     """
+    usage.dask: 2
     usage.matplotlib: 1
     usage.xarray: 7
     """
@@ -22998,6 +25934,7 @@ def broadcast_to(array: numpy.ndarray, shape: Tuple[int]):
 @overload
 def broadcast_to(array: numpy.ndarray, shape: Tuple[int, int, int, int]):
     """
+    usage.dask: 3
     usage.xarray: 4
     """
     ...
@@ -23006,6 +25943,7 @@ def broadcast_to(array: numpy.ndarray, shape: Tuple[int, int, int, int]):
 @overload
 def broadcast_to(array: numpy.ndarray, shape: Tuple[int, int, int, int, int]):
     """
+    usage.dask: 2
     usage.xarray: 2
     """
     ...
@@ -23186,12 +26124,94 @@ def broadcast_to(array: Tuple[float, float], shape: int):
 
 
 @overload
+def broadcast_to(array: int, shape: Tuple[None, ...]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def broadcast_to(array: int, shape: Tuple[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def broadcast_to(array: int, shape: Tuple[int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def broadcast_to(array: int, shape: Tuple[int, int, int]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def broadcast_to(array: int, shape: Tuple[int, int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def broadcast_to(array: int, shape: Tuple[int, int, int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
 def broadcast_to(
-    array: Union[numpy.float64, int, numpy.ndarray],
-    shape: Union[Tuple[Union[None, int, numpy.int64], ...], List[int]],
+    array: numpy.ndarray, shape: Tuple[numpy.int64, numpy.int64, numpy.int64]
 ):
     """
-    usage.dask: 24
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def broadcast_to(
+    array: numpy.ndarray,
+    shape: Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def broadcast_to(array: int, shape: List[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def broadcast_to(array: numpy.float64, shape: Tuple[int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def broadcast_to(array: numpy.float64, shape: Tuple[int, int, int, int]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -23298,15 +26318,25 @@ def can_cast(
 
 
 @overload
-def can_cast(
-    _0: Union[numpy.dtype, numpy.ndarray],
-    _1: numpy.dtype,
-    /,
-    *,
-    casting: Literal["unsafe", "safe", "same_kind"],
-):
+def can_cast(_0: numpy.dtype, _1: numpy.dtype, /, *, casting: Literal["unsafe"]):
     """
-    usage.dask: 23
+    usage.dask: 21
+    """
+    ...
+
+
+@overload
+def can_cast(_0: numpy.ndarray, _1: numpy.dtype, /, *, casting: Literal["same_kind"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def can_cast(_0: numpy.dtype, _1: numpy.dtype, /, *, casting: Literal["safe"]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -23332,20 +26362,32 @@ def can_cast(
 @overload
 def choose(a: numpy.ndarray, choices: List[numpy.ndarray]):
     """
+    usage.dask: 1
     usage.skimage: 1
     """
     ...
 
 
 @overload
-def choose(
-    a: numpy.ndarray,
-    choices: Union[
-        List[Union[int, numpy.ndarray]], Tuple[Union[numpy.ndarray, int], numpy.ndarray]
-    ],
-):
+def choose(a: numpy.ndarray, choices: Tuple[int, numpy.ndarray]):
     """
-    usage.dask: 4
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def choose(a: numpy.ndarray, choices: List[Union[numpy.ndarray, int]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def choose(a: numpy.ndarray, choices: Tuple[numpy.ndarray, numpy.ndarray]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -23386,6 +26428,7 @@ def clip(a: numpy.ndarray, a_min: float, a_max: float):
 @overload
 def clip(a: numpy.ndarray, a_min: int, a_max: int):
     """
+    usage.dask: 5
     usage.matplotlib: 5
     usage.skimage: 18
     usage.sklearn: 1
@@ -23442,6 +26485,7 @@ def clip(
 @overload
 def clip(a: numpy.ndarray, a_min: int, a_max: None):
     """
+    usage.dask: 2
     usage.skimage: 1
     """
     ...
@@ -23624,19 +26668,41 @@ def clip(
 
 
 @overload
-def clip(
-    a: Union[
-        dask.dataframe.core.DataFrame,
-        dask.dataframe.core.Series,
-        numpy.ndarray,
-        pandas.core.series.Series,
-        pandas.core.frame.DataFrame,
-    ],
-    a_min: Union[float, int, None],
-    a_max: Union[float, int, None],
-):
+def clip(a: numpy.ndarray, a_min: None, a_max: int):
     """
-    usage.dask: 23
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def clip(a: pandas.core.series.Series, a_min: int, a_max: int):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def clip(a: dask.dataframe.core.Series, a_min: int, a_max: int):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def clip(a: pandas.core.frame.DataFrame, a_min: float, a_max: float):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def clip(a: dask.dataframe.core.DataFrame, a_min: float, a_max: float):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -23901,13 +26967,33 @@ def compress(condition: numpy.ndarray, a: numpy.ndarray, axis: int = ...):
 
 
 @overload
-def compress(
-    condition: Union[List[bool], numpy.ndarray],
-    a: numpy.ndarray,
-    axis: Union[int, None],
-):
+def compress(condition: numpy.ndarray, a: numpy.ndarray, axis: None):
     """
-    usage.dask: 4
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def compress(condition: numpy.ndarray, a: numpy.ndarray, axis: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def compress(condition: List[bool], a: numpy.ndarray, axis: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def compress(condition: List[bool], a: numpy.ndarray, axis: int):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -23972,6 +27058,7 @@ def concatenate(
 @overload
 def concatenate(_0: List[numpy.ndarray], /, *, axis: int):
     """
+    usage.dask: 75
     usage.skimage: 12
     usage.sklearn: 15
     usage.xarray: 33
@@ -24028,6 +27115,7 @@ def concatenate(_0: Tuple[numpy.ndarray, numpy.ndarray], /):
 @overload
 def concatenate(_0: List[numpy.ndarray], /):
     """
+    usage.dask: 17
     usage.matplotlib: 38
     usage.skimage: 6
     usage.sklearn: 68
@@ -24057,6 +27145,7 @@ def concatenate(_0: List[List[Union[int, float]]], /):
 @overload
 def concatenate(_0: List[Union[List[int], numpy.ndarray]], /):
     """
+    usage.dask: 1
     usage.matplotlib: 2
     usage.xarray: 3
     """
@@ -24099,6 +27188,7 @@ def concatenate(_0: List[sparse._coo.core.COO], /, *, axis: int):
 @overload
 def concatenate(_0: list, /, *, axis: int):
     """
+    usage.dask: 5
     usage.xarray: 7
     """
     ...
@@ -24383,9 +27473,41 @@ def concatenate(
 
 
 @overload
-def concatenate(_0: list, _1: int = ..., /, *, axis: int = ...):
+def concatenate(_0: List[dask.array.core.Array], /):
     """
-    usage.dask: 117
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def concatenate(_0: list, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[numpy.ndarray], _1: int, /):
+    """
+    usage.dask: 14
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[numpy.recarray], /, *, axis: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[pandas.core.series.Series], /, *, axis: int):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -24580,7 +27702,6 @@ def corrcoef(
 @overload
 def corrcoef(x: numpy.ndarray, rowvar: int = ..., y: numpy.ndarray = ...):
     """
-    usage.dask: 5
     usage.scipy: 3
     """
     ...
@@ -24589,6 +27710,24 @@ def corrcoef(x: numpy.ndarray, rowvar: int = ..., y: numpy.ndarray = ...):
 @overload
 def corrcoef(x: numpy.ndarray):
     """
+    usage.dask: 1
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def corrcoef(x: numpy.ndarray, rowvar: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def corrcoef(x: numpy.ndarray, y: numpy.ndarray):
+    """
+    usage.dask: 3
     usage.sklearn: 1
     """
     ...
@@ -24596,14 +27735,6 @@ def corrcoef(x: numpy.ndarray):
 
 @overload
 def corrcoef(x: numpy.ndarray, y: List[numpy.ndarray]):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def corrcoef(x: numpy.ndarray, y: numpy.ndarray):
     """
     usage.sklearn: 1
     """
@@ -24655,6 +27786,7 @@ def correlate(
 @overload
 def count_nonzero(a: numpy.ndarray):
     """
+    usage.dask: 4
     usage.skimage: 9
     usage.sklearn: 12
     """
@@ -24672,12 +27804,81 @@ def count_nonzero(
 
 
 @overload
-def count_nonzero(
-    a: Union[numpy.ndarray, List[bool], str],
-    axis: Union[Tuple[int, ...], int, None] = ...,
-):
+def count_nonzero(a: List[bool]):
     """
-    usage.dask: 21
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def count_nonzero(a: Literal["H"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def count_nonzero(a: Literal["e"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def count_nonzero(a: Literal["l"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def count_nonzero(a: Literal["o"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def count_nonzero(a: Literal[" "]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def count_nonzero(a: Literal["w"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def count_nonzero(a: Literal["r"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def count_nonzero(a: Literal["d"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def count_nonzero(a: numpy.ndarray, axis: None):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -24685,7 +27886,24 @@ def count_nonzero(
 @overload
 def count_nonzero(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 2
     usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def count_nonzero(a: numpy.ndarray, axis: Tuple[int]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def count_nonzero(a: numpy.ndarray, axis: Tuple[int, int]):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -24745,11 +27963,50 @@ def cov(m: numpy.ndarray, y: numpy.ndarray, bias: int):
 
 
 @overload
-def cov(
-    m: object, y: object = ..., rowvar: int = ..., ddof: int = ..., bias: int = ...
-):
+def cov(m: numpy.ndarray, y: numpy.ndarray):
     """
-    usage.dask: 11
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def cov(m: dask.array.core.Array, y: dask.array.core.Array):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def cov(m: object, y: object):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def cov(m: numpy.ndarray):
+    """
+    usage.dask: 1
+    usage.sklearn: 14
+    """
+    ...
+
+
+@overload
+def cov(m: numpy.ndarray, rowvar: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def cov(m: numpy.ndarray, ddof: int):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -24757,6 +28014,7 @@ def cov(
 @overload
 def cov(m: numpy.ndarray, bias: int):
     """
+    usage.dask: 1
     usage.sklearn: 8
     """
     ...
@@ -24774,14 +28032,6 @@ def cov(m: numpy.ndarray, rowvar: float, bias: float):
 def cov(m: numpy.ndarray, rowvar: bool):
     """
     usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def cov(m: numpy.ndarray):
-    """
-    usage.sklearn: 14
     """
     ...
 
@@ -24857,6 +28107,7 @@ def cumprod(a: Tuple[int, int, int, int, int]):
 @overload
 def cumprod(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 6
     usage.xarray: 1
     """
     ...
@@ -24927,26 +28178,52 @@ def cumprod(a: List[Union[numpy.int64, int]]):
 
 
 @overload
-def cumprod(
-    a: Union[
-        dask.dataframe.core.DataFrame,
-        dask.array.core.Array,
-        numpy.ma.core.MaskedArray,
-        numpy.ndarray,
-    ],
-    axis: Union[int, None] = ...,
-    out: Union[dask.dataframe.core.DataFrame, dask.array.core.Array] = ...,
-):
+def cumprod(a: numpy.ndarray):
     """
-    usage.dask: 14
+    usage.dask: 2
+    usage.sklearn: 2
     """
     ...
 
 
 @overload
-def cumprod(a: numpy.ndarray):
+def cumprod(a: numpy.ma.core.MaskedArray, axis: int):
     """
-    usage.sklearn: 2
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def cumprod(a: numpy.ndarray, axis: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def cumprod(a: dask.array.core.Array, axis: int, out: dask.array.core.Array):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def cumprod(a: dask.dataframe.core.DataFrame, out: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def cumprod(
+    a: dask.dataframe.core.DataFrame, axis: int, out: dask.dataframe.core.DataFrame
+):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -24978,6 +28255,7 @@ def cumproduct(*args: Literal["v", "t"]):
 @overload
 def cumsum(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 8
     usage.skimage: 4
     usage.sklearn: 3
     usage.xarray: 1
@@ -24988,6 +28266,7 @@ def cumsum(a: numpy.ndarray, axis: int):
 @overload
 def cumsum(a: numpy.ndarray):
     """
+    usage.dask: 8
     usage.matplotlib: 4
     usage.skimage: 15
     usage.sklearn: 16
@@ -25015,6 +28294,7 @@ def cumsum(a: dask.array.core.Array):
 @overload
 def cumsum(a: List[int]):
     """
+    usage.dask: 6
     usage.matplotlib: 5
     usage.sklearn: 7
     usage.xarray: 10
@@ -25124,6 +28404,7 @@ def cumsum(a: List[Union[numpy.float64, float, int]]):
 @overload
 def cumsum(a: List[Union[float, int]]):
     """
+    usage.dask: 1
     usage.matplotlib: 9
     """
     ...
@@ -25154,13 +28435,99 @@ def cumsum(a: List[Union[float, numpy.float64, int]]):
 
 
 @overload
+def cumsum(a: Tuple[int, int]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def cumsum(a: Tuple[int, int, int, int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def cumsum(a: numpy.ma.core.MaskedArray, axis: int):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def cumsum(a: Tuple[int, int, int, int]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def cumsum(a: Tuple[int]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def cumsum(a: numpy.ndarray, axis: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def cumsum(a: dask.array.core.Array, axis: int, out: dask.array.core.Array):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def cumsum(a: Tuple[int, int, int]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def cumsum(a: Tuple[int, int, int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def cumsum(a: Tuple[int, int, int, int, int, int, int, int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def cumsum(a: dask.dataframe.core.DataFrame, out: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
 def cumsum(
-    a: object,
-    axis: Union[int, None] = ...,
-    out: Union[dask.dataframe.core.DataFrame, dask.array.core.Array] = ...,
+    a: dask.dataframe.core.DataFrame, axis: int, out: dask.dataframe.core.DataFrame
 ):
     """
-    usage.dask: 41
+    usage.dask: 1
     """
     ...
 
@@ -25329,6 +28696,7 @@ def delete(arr: numpy.ndarray, obj: object, axis: int = ...):
 @overload
 def diag(v: numpy.ndarray):
     """
+    usage.dask: 5
     usage.skimage: 5
     usage.sklearn: 55
     """
@@ -25347,9 +28715,9 @@ def diag(
 
 
 @overload
-def diag(v: Union[numpy.ndarray, dask.array.core.Array]):
+def diag(v: dask.array.core.Array):
     """
-    usage.dask: 8
+    usage.dask: 3
     """
     ...
 
@@ -25397,14 +28765,65 @@ def diagonal(a: numpy.ndarray):
 
 
 @overload
-def diagonal(
-    a: Union[numpy.ndarray, dask.array.core.Array],
-    offset: int = ...,
-    axis1: int = ...,
-    axis2: int = ...,
-):
+def diagonal(a: dask.array.core.Array):
     """
-    usage.dask: 23
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def diagonal(a: dask.array.core.Array, offset: int):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def diagonal(a: dask.array.core.Array, axis1: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def diagonal(a: dask.array.core.Array, offset: int, axis1: int):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def diagonal(a: dask.array.core.Array, offset: int, axis1: int, axis2: int):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def diagonal(a: numpy.ndarray, axis1: int, axis2: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def diagonal(a: numpy.ndarray, offset: int, axis1: int, axis2: int):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def diagonal(a: numpy.ndarray, offset: int, axis1: int):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -25426,6 +28845,7 @@ def diagonal(
 @overload
 def diff(a: numpy.ndarray, n: int, axis: int):
     """
+    usage.dask: 1
     usage.skimage: 2
     usage.xarray: 2
     """
@@ -25435,6 +28855,7 @@ def diff(a: numpy.ndarray, n: int, axis: int):
 @overload
 def diff(a: numpy.ndarray):
     """
+    usage.dask: 3
     usage.matplotlib: 18
     usage.pandas: 6
     usage.skimage: 7
@@ -25447,6 +28868,7 @@ def diff(a: numpy.ndarray):
 @overload
 def diff(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 2
     usage.matplotlib: 5
     usage.skimage: 5
     usage.xarray: 7
@@ -25478,15 +28900,9 @@ def diff(a: Tuple[numpy.float64, numpy.float64]):
 
 
 @overload
-def diff(
-    a: Union[
-        List[Union[numpy.float64, numpy.int64]], dask.array.core.Array, numpy.ndarray
-    ],
-    n: int = ...,
-    axis: int = ...,
-):
+def diff(a: List[numpy.int64]):
     """
-    usage.dask: 12
+    usage.dask: 2
     """
     ...
 
@@ -25494,7 +28910,16 @@ def diff(
 @overload
 def diff(a: List[numpy.float64]):
     """
+    usage.dask: 3
     usage.sklearn: 8
+    """
+    ...
+
+
+@overload
+def diff(a: dask.array.core.Array):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -25539,9 +28964,17 @@ def digitize(x: numpy.ndarray, bins: numpy.ndarray):
 
 
 @overload
-def digitize(x: Union[numpy.ndarray, List[int]], bins: numpy.ndarray, right: bool):
+def digitize(x: List[int], bins: numpy.ndarray, right: bool):
     """
-    usage.dask: 8
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def digitize(x: numpy.ndarray, bins: numpy.ndarray, right: bool):
+    """
+    usage.dask: 6
     """
     ...
 
@@ -25560,6 +28993,7 @@ def digitize(
 @overload
 def dot(_0: numpy.ndarray, _1: numpy.ndarray, /):
     """
+    usage.dask: 10
     usage.matplotlib: 21
     usage.pandas: 15
     usage.skimage: 1
@@ -25571,7 +29005,7 @@ def dot(_0: numpy.ndarray, _1: numpy.ndarray, /):
 @overload
 def dot(_0: object, _1: object, /):
     """
-    usage.dask: 13
+    usage.dask: 1
     usage.scipy: 1080
     """
     ...
@@ -25605,6 +29039,14 @@ def dot(_0: numpy.ndarray, _1: List[numpy.float64], /):
 def dot(_0: numpy.ma.core.MaskedArray, _1: numpy.ma.core.MaskedArray, /):
     """
     usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def dot(_0: dask.array.core.Array, _1: dask.array.core.Array, /):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -25712,6 +29154,7 @@ def dstack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
 @overload
 def dstack(tup: Tuple[numpy.ndarray, numpy.ndarray]):
     """
+    usage.dask: 4
     usage.skimage: 3
     usage.sklearn: 4
     """
@@ -25753,9 +29196,25 @@ def dstack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ma.core.MaskedArray]):
 
 
 @overload
+def dstack(tup: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def dstack(tup: dask.array.core.Array):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
 def dstack(tup: object):
     """
-    usage.dask: 8
+    usage.dask: 1
     """
     ...
 
@@ -25782,13 +29241,33 @@ def ediff1d(
 
 
 @overload
-def ediff1d(
-    ary: numpy.ndarray,
-    to_end: Union[float, int, None, List[int]],
-    to_begin: Union[float, int, None, List[int]],
-):
+def ediff1d(ary: numpy.ndarray, to_end: None, to_begin: None):
     """
-    usage.dask: 4
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ediff1d(ary: numpy.ndarray, to_end: int, to_begin: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ediff1d(ary: numpy.ndarray, to_end: List[int], to_begin: List[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ediff1d(ary: numpy.ndarray, to_end: float, to_begin: float):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -25817,6 +29296,7 @@ def ediff1d(
 @overload
 def einsum(*operands: Literal["v", "t"]):
     """
+    usage.dask: 103
     usage.scipy: 33
     usage.skimage: 1
     usage.sklearn: 15
@@ -25826,16 +29306,36 @@ def einsum(*operands: Literal["v", "t"]):
 
 
 @overload
+def einsum(*operands: Literal["v", "t"], optimize: bool):
+    """
+    usage.dask: 33
+    """
+    ...
+
+
+@overload
 def einsum(
     *operands: Literal["v", "t"],
-    optimize: Union[
-        bool,
-        List[Union[Tuple[int, int], Literal["einsum_path"]]],
-        Literal["optimal", "greedy"],
-    ] = ...,
+    optimize: List[Union[Tuple[int, int], Literal["einsum_path"]]],
 ):
     """
-    usage.dask: 139
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def einsum(*operands: Literal["v", "t"], optimize: Literal["greedy"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def einsum(*operands: Literal["v", "t"], optimize: Literal["optimal"]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -25854,6 +29354,38 @@ def einsum(
     usage.skimage: 1
     usage.sklearn: 15
     usage.xarray: 83
+    """
+    ...
+
+
+@overload
+def einsum_path(*operands: Literal["v", "t"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def einsum_path(*operands: Literal["v", "t"], optimize: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def einsum_path(*operands: Literal["v", "t"], optimize: Literal["greedy"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def einsum_path(*operands: Literal["v", "t"], optimize: Literal["optimal"]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -25871,6 +29403,7 @@ def einsum_path(
 @overload
 def empty(_0: Tuple[int, int, int], /, *, dtype: numpy.dtype):
     """
+    usage.dask: 8
     usage.skimage: 12
     usage.sklearn: 2
     """
@@ -25896,6 +29429,7 @@ def empty(_0: Tuple[int, int, int, int, int], /, *, dtype: numpy.dtype):
 @overload
 def empty(_0: Tuple[int, int], /, *, dtype: numpy.dtype):
     """
+    usage.dask: 12
     usage.skimage: 4
     usage.sklearn: 41
     """
@@ -25929,6 +29463,7 @@ def empty(_0: Tuple[int, int], _1: Type[int], /):
 @overload
 def empty(_0: Tuple[int, int], /):
     """
+    usage.dask: 3
     usage.matplotlib: 3
     usage.skimage: 17
     usage.sklearn: 30
@@ -25956,6 +29491,7 @@ def empty(_0: Tuple[int, int, int, int], /, *, dtype: Type[float]):
 @overload
 def empty(_0: Tuple[int, int, int], /):
     """
+    usage.dask: 3
     usage.matplotlib: 3
     usage.skimage: 5
     usage.sklearn: 15
@@ -26066,6 +29602,7 @@ def empty(_0: Tuple[int, int], /, *, dtype: Type[int]):
 @overload
 def empty(_0: int, /):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.skimage: 3
     usage.sklearn: 33
@@ -26092,6 +29629,7 @@ def empty(_0: Tuple[int, int, int], /, *, dtype: Type[bool]):
 @overload
 def empty(_0: numpy.ndarray, /, *, dtype: numpy.dtype, order: Literal["F"]):
     """
+    usage.dask: 1
     usage.skimage: 2
     """
     ...
@@ -26100,6 +29638,7 @@ def empty(_0: numpy.ndarray, /, *, dtype: numpy.dtype, order: Literal["F"]):
 @overload
 def empty(_0: numpy.ndarray, /, *, dtype: numpy.dtype, order: Literal["C"]):
     """
+    usage.dask: 1
     usage.skimage: 4
     """
     ...
@@ -26108,6 +29647,7 @@ def empty(_0: numpy.ndarray, /, *, dtype: numpy.dtype, order: Literal["C"]):
 @overload
 def empty(_0: int, /, *, dtype: numpy.dtype):
     """
+    usage.dask: 1
     usage.skimage: 2
     usage.sklearn: 4
     """
@@ -26117,6 +29657,7 @@ def empty(_0: int, /, *, dtype: numpy.dtype):
 @overload
 def empty(_0: Tuple[int], /, *, dtype: numpy.dtype):
     """
+    usage.dask: 32
     usage.skimage: 14
     """
     ...
@@ -26182,6 +29723,7 @@ def empty(*, dtype: Literal["U"], shape: Tuple[int]):
 @overload
 def empty(*, dtype: Type[int], shape: Tuple[int]):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -26206,6 +29748,7 @@ def empty(*, dtype: Literal["S"], shape: Tuple[int]):
 @overload
 def empty(_0: Tuple[None, ...], /, *, dtype: Type[object]):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -26246,6 +29789,7 @@ def empty(_0: int, /, *, dtype: Type[numpy.int64]):
 @overload
 def empty(_0: Tuple[int], /, *, dtype: Type[object]):
     """
+    usage.dask: 1
     usage.xarray: 2
     """
     ...
@@ -26315,6 +29859,7 @@ def empty(
 @overload
 def empty(_0: Tuple[int, int], /, *, dtype: Type[object]):
     """
+    usage.dask: 2
     usage.matplotlib: 1
     usage.sklearn: 2
     """
@@ -26340,6 +29885,7 @@ def empty(_0: Tuple[int, int, int], /, *, dtype: Type[numpy.uint8]):
 @overload
 def empty(_0: Tuple[int], /):
     """
+    usage.dask: 2
     usage.matplotlib: 1
     usage.sklearn: 2
     """
@@ -26404,6 +29950,7 @@ def empty(_0: Tuple[int, int], /, *, dtype: Type[float]):
 @overload
 def empty(*, dtype: numpy.dtype, shape: Tuple[int, int, int]):
     """
+    usage.dask: 9
     usage.matplotlib: 1
     """
     ...
@@ -26460,22 +30007,337 @@ def empty(_0: List[int], /, *, dtype: Type[numpy.int32]):
 
 
 @overload
+def empty(*, dtype: numpy.dtype, shape: Tuple[int, int]):
+    """
+    usage.dask: 13
+    """
+    ...
+
+
+@overload
+def empty(_0: int, _1: int, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(*, dtype: numpy.dtype, shape: Tuple[int]):
+    """
+    usage.dask: 10
+    """
+    ...
+
+
+@overload
+def empty(_0: List[int], /, *, dtype: Literal["O"]):
+    """
+    usage.dask: 8
+    """
+    ...
+
+
+@overload
+def empty(*, dtype: numpy.dtype, shape: Tuple[int, int, int, int]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def empty(*, dtype: numpy.dtype, shape: Tuple[int, int, int, int, int]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[None, ...], /, *, dtype: Type[numpy.object_]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int], /, *, dtype: Type[numpy.object_]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int, int], /, *, dtype: Type[numpy.object_]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(*, shape: Tuple[int, int]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int, int, int, int], /):
+    """
+    usage.dask: 1
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int, int], /, *, dtype: numpy.dtype, order: Literal["C"]):
+    """
+    usage.dask: 1
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def empty(_0: List[int], /, *, dtype: numpy.dtype, order: Literal["C"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int, int], /, *, dtype: numpy.dtype, order: Literal["F"]):
+    """
+    usage.dask: 1
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: List[int], /, *, dtype: numpy.dtype, order: Literal["F"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int, int, int], /, *, dtype: Type[object]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
 def empty(
-    _0: Union[Tuple[Union[int, None], ...], List[int], numpy.ndarray, int] = ...,
-    _1: int = ...,
-    /,
     *,
-    shape: Tuple[int, ...] = ...,
-    dtype: Union[
-        Literal["f8", "i1", "O"],
-        type,
-        List[Tuple[str, Union[numpy.dtype, Type[numpy.int64]]]],
-        numpy.dtype,
-    ] = ...,
-    order: Literal["F", "C"] = ...,
+    dtype: List[Tuple[Literal["vals", "arg"], numpy.dtype]],
+    shape: Tuple[int, int, int],
 ):
     """
-    usage.dask: 149
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def empty(
+    *, dtype: List[Tuple[Literal["vals", "arg"], numpy.dtype]], shape: Tuple[int]
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def empty(
+    *, dtype: List[Tuple[Literal["vals", "arg"], numpy.dtype]], shape: Tuple[int, int]
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[None, ...], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def empty(*, dtype: numpy.dtype, shape: Tuple[int, int, int, int, int, int]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int, int, int], /, *, dtype: Type[numpy.object_]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int], /, *, dtype: List[Tuple[Literal["values"], numpy.dtype]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(
+    _0: Tuple[int],
+    /,
+    *,
+    dtype: List[
+        Tuple[Literal["values", "indices"], Union[numpy.dtype, Type[numpy.int64]]]
+    ],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(
+    _0: Tuple[int],
+    /,
+    *,
+    dtype: List[
+        Tuple[Literal["values", "inverse"], Union[numpy.dtype, Type[numpy.int64]]]
+    ],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(
+    _0: Tuple[int],
+    /,
+    *,
+    dtype: List[
+        Tuple[
+            Literal["values", "indices", "inverse"],
+            Union[numpy.dtype, Type[numpy.int64]],
+        ]
+    ],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(
+    _0: Tuple[int],
+    /,
+    *,
+    dtype: List[
+        Tuple[Literal["values", "counts"], Union[numpy.dtype, Type[numpy.int64]]]
+    ],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(
+    _0: Tuple[int],
+    /,
+    *,
+    dtype: List[
+        Tuple[
+            Literal["values", "indices", "counts"],
+            Union[numpy.dtype, Type[numpy.int64]],
+        ]
+    ],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(
+    _0: Tuple[int],
+    /,
+    *,
+    dtype: List[
+        Tuple[
+            Literal["values", "inverse", "counts"],
+            Union[numpy.dtype, Type[numpy.int64]],
+        ]
+    ],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(
+    _0: Tuple[int],
+    /,
+    *,
+    dtype: List[
+        Tuple[
+            Literal["values", "indices", "inverse", "counts"],
+            Union[numpy.dtype, Type[numpy.int64]],
+        ]
+    ],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: int, /, *, dtype: Literal["i1"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: int, /, *, dtype: Literal["f8"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[None, ...], /):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -26585,14 +30447,6 @@ def empty(*, dtype: Type[numpy.float32], shape: Tuple[int, int]):
 
 
 @overload
-def empty(_0: Tuple[int, int, int, int], /):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def empty(_0: int, /, *, dtype: Type[bool]):
     """
     usage.sklearn: 1
@@ -26604,14 +30458,6 @@ def empty(_0: int, /, *, dtype: Type[bool]):
 def empty(_0: int, /, *, dtype: Type[float]):
     """
     usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def empty(_0: Tuple[int, int], /, *, dtype: numpy.dtype, order: Literal["C"]):
-    """
-    usage.sklearn: 2
     """
     ...
 
@@ -26644,14 +30490,6 @@ def empty(_0: Tuple[numpy.int64, numpy.int64], /, *, dtype: numpy.dtype):
 def empty(_0: List[int], _1: numpy.dtype, /):
     """
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def empty(_0: Tuple[int, int], /, *, dtype: numpy.dtype, order: Literal["F"]):
-    """
-    usage.sklearn: 1
     """
     ...
 
@@ -26710,6 +30548,7 @@ def empty(
 @overload
 def empty_like(_0: numpy.ndarray, /):
     """
+    usage.dask: 3
     usage.matplotlib: 10
     usage.skimage: 33
     usage.sklearn: 19
@@ -26825,16 +30664,73 @@ def empty_like(_0: numpy.ndarray, /, *, dtype: type = ...):
 
 
 @overload
-def empty_like(
-    _0: numpy.ndarray,
-    /,
-    *,
-    dtype: numpy.dtype = ...,
-    shape: Union[Tuple[int, ...], None, int] = ...,
-    order: Literal["F", "C"] = ...,
-):
+def empty_like(_0: numpy.ndarray, /, *, dtype: numpy.dtype, shape: Tuple[int]):
     """
-    usage.dask: 12
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty_like(_0: numpy.ndarray, /, *, order: Literal["C"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty_like(_0: numpy.ndarray, /, *, order: Literal["F"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty_like(_0: numpy.ndarray, /, *, shape: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty_like(_0: numpy.ndarray, /, *, shape: Tuple[int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty_like(_0: numpy.ndarray, /, *, shape: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty_like(_0: numpy.ndarray, /, *, shape: Tuple[int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty_like(_0: numpy.ndarray, /, *, shape: Tuple[int, int, int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def empty_like(_0: numpy.ndarray, /, *, dtype: numpy.dtype, shape: Tuple[int, int]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -26979,6 +30875,7 @@ def extract(
 @overload
 def eye(N: int):
     """
+    usage.dask: 10
     usage.sample-usage: 1
     usage.skimage: 30
     usage.sklearn: 51
@@ -26989,6 +30886,7 @@ def eye(N: int):
 @overload
 def eye(N: int, dtype: Type[int]):
     """
+    usage.dask: 2
     usage.skimage: 5
     """
     ...
@@ -27013,6 +30911,7 @@ def eye(N: int, dtype: Type[numpy.float64]):
 @overload
 def eye(N: int, M: int):
     """
+    usage.dask: 14
     usage.matplotlib: 2
     usage.skimage: 1
     usage.sklearn: 1
@@ -27042,9 +30941,25 @@ def eye(
 
 
 @overload
-def eye(N: int, M: int = ..., k: int = ...):
+def eye(N: int, k: int):
     """
-    usage.dask: 33
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def eye(N: int, M: int, k: int):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def eye(N: int, dtype: Type[float]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -27236,6 +31151,7 @@ def flatnonzero(a: numpy.ndarray):
 @overload
 def flip(m: numpy.ndarray, axis: int):
     """
+    usage.dask: 2
     usage.scipy: 1
     usage.skimage: 3
     usage.xarray: 4
@@ -27254,8 +31170,16 @@ def flip(m: sparse._coo.core.COO, axis: int):
 @overload
 def flip(m: object, axis: int):
     """
-    usage.dask: 5
+    usage.dask: 1
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def flip(m: dask.array.core.Array, axis: int):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -27471,6 +31395,38 @@ def fromfile(
     ...
 
 
+@overload
+def fromfunction(function: Callable, shape: Tuple[int, int], *, dtype: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def fromfunction(function: Callable, shape: Tuple[int, int], *, dtype: Type[float]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def fromfunction(function: Callable, shape: Tuple[int, int], *, dtype: Literal["f8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def fromfunction(function: Callable, shape: Tuple[int, int], *, dtype: Literal["i8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
 def fromfunction(
     function: Callable,
     shape: Tuple[int, int],
@@ -27532,6 +31488,22 @@ def fromiter(
     usage.pandas: 3
     usage.scipy: 20
     usage.sklearn: 3
+    """
+    ...
+
+
+@overload
+def frompyfunc(_0: Callable, _1: int, _2: int, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def frompyfunc(_0: Callable, _1: int, _2: int, /):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -27630,6 +31602,7 @@ def full(shape: Tuple[int, int], fill_value: int, dtype: Type[numpy.uint8]):
 @overload
 def full(shape: Tuple[int, int], fill_value: float):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.skimage: 6
     usage.sklearn: 8
@@ -27699,6 +31672,7 @@ def full(shape: Tuple[int, int], fill_value: bool):
 @overload
 def full(shape: Tuple[int, int], fill_value: int):
     """
+    usage.dask: 2
     usage.skimage: 1
     usage.sklearn: 1
     usage.xarray: 2
@@ -27733,6 +31707,7 @@ def full(shape: Tuple[int, int, int], fill_value: int):
 @overload
 def full(shape: Tuple[int], fill_value: int):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -27845,16 +31820,89 @@ def full(shape: int, fill_value: float):
 
 
 @overload
+def full(_0: Tuple[int, int], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full(_0: Tuple[int], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
 def full(
-    _0: Tuple[int, ...] = ...,
-    /,
-    shape: Union[int, numpy.ndarray, List[int], Tuple[int, ...]] = ...,
-    fill_value: Union[int, float] = ...,
-    dtype: Union[Literal["i8"], numpy.dtype] = ...,
-    order: Literal["F", "C"] = ...,
+    shape: Tuple[int, int], fill_value: int, dtype: numpy.dtype, order: Literal["C"]
 ):
     """
-    usage.dask: 14
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full(shape: List[int], fill_value: int, dtype: numpy.dtype, order: Literal["C"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full(
+    shape: numpy.ndarray, fill_value: int, dtype: numpy.dtype, order: Literal["C"]
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full(
+    shape: Tuple[int, int], fill_value: int, dtype: numpy.dtype, order: Literal["F"]
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full(shape: List[int], fill_value: int, dtype: numpy.dtype, order: Literal["F"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full(
+    shape: numpy.ndarray, fill_value: int, dtype: numpy.dtype, order: Literal["F"]
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full(shape: Tuple[int, int], fill_value: int, dtype: Literal["i8"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full(shape: int, fill_value: int, dtype: Literal["i8"]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -28296,15 +32344,355 @@ def full_like(a: List[numpy.float64], fill_value: float):
 
 @overload
 def full_like(
-    a: object,
-    fill_value: Union[numpy.int64, numpy.float32, int, numpy.int32, numpy.float64],
-    dtype: Union[
-        Type[numpy.float64], Literal["i8", "f8", "i4", "f4"], numpy.dtype
-    ] = ...,
-    shape: Union[Tuple[int, ...], None, int] = ...,
+    a: numpy.ndarray,
+    fill_value: numpy.int64,
+    dtype: Type[numpy.float64],
+    shape: Tuple[int],
 ):
     """
-    usage.dask: 47
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def full_like(a: numpy.ndarray, fill_value: numpy.float64):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.int64,
+    dtype: numpy.dtype,
+    shape: Tuple[int, int],
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.int64,
+    dtype: Type[numpy.float64],
+    shape: Tuple[int, int],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: object, fill_value: numpy.int64, dtype: numpy.dtype, shape: Tuple[int, int]
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: object,
+    fill_value: numpy.int64,
+    dtype: Type[numpy.float64],
+    shape: Tuple[int, int],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(a: numpy.ndarray, fill_value: int, order: Literal["C"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(a: numpy.ndarray, fill_value: int, order: Literal["F"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(a: numpy.ndarray, fill_value: int, shape: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(a: numpy.ndarray, fill_value: int, shape: Tuple[int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(a: numpy.ndarray, fill_value: int, shape: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(a: numpy.ndarray, fill_value: int, shape: Tuple[int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(a: numpy.ndarray, fill_value: int, shape: Tuple[int, int, int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.int64,
+    dtype: numpy.dtype,
+    shape: Tuple[int, int, int],
+):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.float64,
+    dtype: Literal["f4"],
+    shape: Tuple[int, int, int],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.int64,
+    dtype: Literal["f4"],
+    shape: Tuple[int, int, int],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.float32,
+    dtype: Literal["f4"],
+    shape: Tuple[int, int, int],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.float64,
+    dtype: Literal["i4"],
+    shape: Tuple[int, int, int],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.int64,
+    dtype: Literal["i4"],
+    shape: Tuple[int, int, int],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.int32,
+    dtype: Literal["i4"],
+    shape: Tuple[int, int, int],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.int64,
+    dtype: Literal["f4"],
+    shape: Tuple[int, int],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray, fill_value: numpy.int64, dtype: Literal["f4"], shape: Tuple[int]
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.int64,
+    dtype: Literal["i4"],
+    shape: Tuple[int, int],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray, fill_value: numpy.int64, dtype: Literal["i4"], shape: Tuple[int]
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray, fill_value: numpy.int64, dtype: numpy.dtype, shape: Tuple[int]
+):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray, fill_value: numpy.float64, dtype: numpy.dtype, shape: Tuple[int]
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray, fill_value: numpy.int64, dtype: Literal["f8"], shape: Tuple[int]
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray, fill_value: numpy.int64, dtype: Literal["i8"], shape: Tuple[int]
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.float64,
+    dtype: Type[numpy.float64],
+    shape: Tuple[int],
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.float64,
+    dtype: numpy.dtype,
+    shape: Tuple[int, int],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.float64,
+    dtype: Type[numpy.float64],
+    shape: Tuple[int, int],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def full_like(
+    a: numpy.ndarray,
+    fill_value: numpy.float64,
+    dtype: numpy.dtype,
+    shape: Tuple[int, int, int],
+):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -28375,6 +32763,7 @@ def geterr():
 @overload
 def gradient(f: numpy.ndarray):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.skimage: 7
     """
@@ -28405,6 +32794,7 @@ def gradient(
 @overload
 def gradient(f: numpy.ndarray, *varargs: Literal["v", "t"], axis: int, edge_order: int):
     """
+    usage.dask: 4
     usage.xarray: 3
     """
     ...
@@ -28431,6 +32821,7 @@ def gradient(f: object, *varargs: Literal["v", "t"], axis: int, edge_order: int)
 @overload
 def gradient(f: numpy.ndarray, *varargs: Literal["v", "t"]):
     """
+    usage.dask: 2
     usage.matplotlib: 3
     """
     ...
@@ -28445,14 +32836,64 @@ def gradient(f: numpy.ma.core.MaskedArray, *varargs: Literal["v", "t"]):
 
 
 @overload
+def gradient(f: numpy.ndarray, *, axis: None, edge_order: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def gradient(f: int, *varargs: Literal["v", "t"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
 def gradient(
-    f: Union[numpy.ndarray, int, float],
-    *varargs: Literal["v", "t"],
-    axis: Union[int, None, Tuple[int, int]] = ...,
-    edge_order: int = ...,
+    f: numpy.ndarray, *varargs: Literal["v", "t"], axis: None, edge_order: int
 ):
     """
-    usage.dask: 17
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def gradient(f: float, *varargs: Literal["v", "t"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def gradient(f: numpy.ndarray, *, axis: int, edge_order: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def gradient(f: numpy.ndarray, *, axis: Tuple[int, int], edge_order: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def gradient(
+    f: numpy.ndarray,
+    *varargs: Literal["v", "t"],
+    axis: Tuple[int, int],
+    edge_order: int,
+):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -28642,6 +33083,7 @@ def histogram(a: numpy.ndarray, bins: List[Union[int, float]], density: bool):
 @overload
 def histogram(a: numpy.ndarray, bins: numpy.ndarray, range: None, weights: None):
     """
+    usage.dask: 2
     usage.matplotlib: 1
     """
     ...
@@ -28683,15 +33125,142 @@ def histogram(
 
 
 @overload
+def histogram(a: list):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def histogram(a: dask.array.core.Array, bins: numpy.ndarray):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def histogram(a: dask.array.core.Array, bins: int, range: Tuple[int, int]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
 def histogram(
-    a: Union[numpy.ndarray, dask.array.core.Array, list],
-    bins: Union[numpy.ndarray, int] = ...,
-    range: Union[List[numpy.float64], None, Tuple[int, int]] = ...,
-    weights: Union[None, dask.array.core.Array, numpy.ndarray] = ...,
-    density: bool = ...,
+    a: numpy.ndarray, bins: numpy.ndarray, range: Tuple[int, int], weights: None
 ):
     """
-    usage.dask: 17
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def histogram(a: dask.array.core.Array, bins: numpy.ndarray, density: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def histogram(
+    a: dask.array.core.Array, bins: numpy.ndarray, weights: dask.array.core.Array
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def histogram(
+    a: numpy.ndarray, bins: numpy.ndarray, range: None, weights: numpy.ndarray
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def histogram(
+    a: numpy.ndarray,
+    bins: int,
+    range: List[numpy.float64],
+    weights: numpy.ndarray,
+    density: bool,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def histogram(
+    a: numpy.ndarray,
+    bins: numpy.ndarray,
+    range: List[numpy.float64],
+    weights: numpy.ndarray,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def histogram(
+    a: numpy.ndarray,
+    bins: int,
+    range: List[numpy.float64],
+    weights: None,
+    density: bool,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def histogram(
+    a: numpy.ndarray, bins: numpy.ndarray, range: List[numpy.float64], weights: None
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def histogram(
+    a: numpy.ndarray,
+    bins: numpy.ndarray,
+    range: List[numpy.float64],
+    weights: numpy.ndarray,
+    density: bool,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def histogram(
+    a: numpy.ndarray,
+    bins: numpy.ndarray,
+    range: List[numpy.float64],
+    weights: None,
+    density: bool,
+):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -28892,6 +33461,7 @@ def hstack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
 @overload
 def hstack(tup: Tuple[numpy.ndarray, numpy.ndarray]):
     """
+    usage.dask: 3
     usage.matplotlib: 1
     usage.skimage: 1
     usage.sklearn: 39
@@ -28982,9 +33552,26 @@ def hstack(tup: List[Union[numpy.ndarray, List[numpy.float64]]]):
 
 
 @overload
+def hstack(tup: numpy.ndarray):
+    """
+    usage.dask: 1
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def hstack(tup: dask.array.core.Array):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
 def hstack(tup: object):
     """
-    usage.dask: 7
+    usage.dask: 1
     """
     ...
 
@@ -29055,14 +33642,6 @@ def hstack(tup: List[Union[pandas.core.frame.DataFrame, numpy.ndarray]]):
 def hstack(tup: Tuple[int, numpy.ndarray]):
     """
     usage.sklearn: 4
-    """
-    ...
-
-
-@overload
-def hstack(tup: numpy.ndarray):
-    """
-    usage.sklearn: 1
     """
     ...
 
@@ -29232,6 +33811,46 @@ def hstack(tup: object):
     ...
 
 
+@overload
+def i0(x: numpy.ndarray):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def i0(x: pandas.core.series.Series):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def i0(x: dask.dataframe.core.Series):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def i0(x: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def i0(x: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
 def i0(
     x: Union[
         dask.dataframe.core.DataFrame,
@@ -29292,6 +33911,7 @@ def identity(n: int, dtype: Union[type, numpy.dtype] = ...):
 @overload
 def imag(val: numpy.ndarray):
     """
+    usage.dask: 16
     usage.skimage: 1
     usage.sklearn: 1
     """
@@ -29317,8 +33937,47 @@ def imag(val: Union[numpy.ndarray, numpy.complex128]):
 @overload
 def imag(val: object):
     """
-    usage.dask: 31
     usage.scipy: 51
+    """
+    ...
+
+
+@overload
+def imag(val: dask.array.core.Array):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def imag(val: pandas.core.series.Series):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def imag(val: dask.dataframe.core.Series):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def imag(val: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def imag(val: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -29439,6 +34098,7 @@ def in1d(
 @overload
 def indices(dimensions: Tuple[int]):
     """
+    usage.dask: 1
     usage.skimage: 2
     """
     ...
@@ -29447,6 +34107,7 @@ def indices(dimensions: Tuple[int]):
 @overload
 def indices(dimensions: Tuple[int, int]):
     """
+    usage.dask: 2
     usage.matplotlib: 2
     usage.skimage: 2
     usage.sklearn: 2
@@ -29473,9 +34134,33 @@ def indices(
 
 
 @overload
-def indices(dimensions: Tuple[Union[int, None], ...], dtype: Type[float] = ...):
+def indices(dimensions: Tuple[None, ...]):
     """
-    usage.dask: 8
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def indices(dimensions: Tuple[None, ...], dtype: Type[float]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def indices(dimensions: Tuple[int], dtype: Type[float]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def indices(dimensions: Tuple[int, int, int], dtype: Type[float]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -29514,6 +34199,7 @@ def inner(_0: numpy.ndarray, _1: numpy.ndarray, /):
 @overload
 def insert(arr: numpy.ndarray, obj: int, values: numpy.ndarray, axis: int):
     """
+    usage.dask: 1
     usage.skimage: 3
     """
     ...
@@ -29553,14 +34239,33 @@ def insert(arr: numpy.ndarray, obj: int, values: float, axis: int):
 
 
 @overload
-def insert(
-    arr: numpy.ndarray,
-    obj: Union[List[int], int, slice[int, int, int]],
-    values: Union[int, numpy.ndarray],
-    axis: int,
-):
+def insert(arr: numpy.ndarray, obj: int, values: int, axis: int):
     """
-    usage.dask: 11
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def insert(arr: numpy.ndarray, obj: List[int], values: int, axis: int):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def insert(arr: numpy.ndarray, obj: slice[int, int, int], values: int, axis: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def insert(arr: numpy.ndarray, obj: List[int], values: numpy.ndarray, axis: int):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -29617,6 +34322,7 @@ def interp(x: numpy.flatiter, xp: numpy.ndarray, fp: numpy.ndarray):
 @overload
 def interp(x: numpy.ndarray, xp: numpy.ndarray, fp: numpy.ndarray):
     """
+    usage.dask: 4
     usage.matplotlib: 5
     usage.pandas: 3
     usage.skimage: 4
@@ -29766,15 +34472,27 @@ def interp(
 
 
 @overload
+def interp(x: numpy.ndarray, xp: numpy.ndarray, fp: List[float]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def interp(x: numpy.ndarray, xp: numpy.ndarray, fp: List[None]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
 def interp(
-    x: numpy.ndarray,
-    xp: numpy.ndarray,
-    fp: Union[
-        List[Union[None, float, pandas._libs.tslibs.nattype.NaTType]], numpy.ndarray
-    ],
+    x: numpy.ndarray, xp: numpy.ndarray, fp: List[pandas._libs.tslibs.nattype.NaTType]
 ):
     """
-    usage.dask: 8
+    usage.dask: 1
     """
     ...
 
@@ -29949,14 +34667,25 @@ def isclose(a: numpy.float64, b: float):
 
 
 @overload
-def isclose(
-    a: Union[numpy.ndarray, numpy.float64],
-    b: Union[numpy.ndarray, int],
-    rtol: float = ...,
-    atol: int = ...,
-):
+def isclose(a: numpy.ndarray, b: numpy.ndarray):
     """
-    usage.dask: 3
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isclose(a: numpy.float64, b: int, rtol: float, atol: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isclose(a: numpy.ndarray, b: numpy.ndarray, equal_nan: bool):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -30039,9 +34768,49 @@ def iscomplex(x: Union[numpy.float64, int, numpy.ndarray, float]):
 
 
 @overload
-def iscomplex(x: object):
+def iscomplex(x: numpy.ndarray):
     """
-    usage.dask: 28
+    usage.dask: 13
+    """
+    ...
+
+
+@overload
+def iscomplex(x: dask.array.core.Array):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def iscomplex(x: pandas.core.series.Series):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def iscomplex(x: dask.dataframe.core.Series):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def iscomplex(x: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def iscomplex(x: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -30160,14 +34929,37 @@ def isin(element: object, test_elements: object):
 
 
 @overload
+def isin(element: numpy.ndarray, test_elements: numpy.ndarray, invert: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
 def isin(
-    element: Union[dask.array.core.Array, numpy.ndarray],
-    test_elements: Union[numpy.ndarray, dask.array.core.Array],
-    assume_unique: bool = ...,
-    invert: bool = ...,
+    element: dask.array.core.Array, test_elements: dask.array.core.Array, invert: bool
 ):
     """
-    usage.dask: 4
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isin(element: numpy.ndarray, test_elements: numpy.ndarray, assume_unique: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isin(
+    element: dask.array.core.Array, test_elements: numpy.ndarray, assume_unique: bool
+):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -30300,17 +35092,50 @@ def isreal(x: numpy.float64):
 
 
 @overload
-def isreal(x: object):
+def isreal(x: numpy.ndarray):
     """
-    usage.dask: 28
+    usage.dask: 13
+    usage.sklearn: 4
     """
     ...
 
 
 @overload
-def isreal(x: numpy.ndarray):
+def isreal(x: dask.array.core.Array):
     """
-    usage.sklearn: 4
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isreal(x: pandas.core.series.Series):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def isreal(x: dask.dataframe.core.Series):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isreal(x: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def isreal(x: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -30336,6 +35161,7 @@ def isrealobj(x: numpy.ndarray):
 @overload
 def isscalar(element: int):
     """
+    usage.dask: 15
     usage.matplotlib: 2
     usage.skimage: 15
     usage.sklearn: 3
@@ -30346,6 +35172,7 @@ def isscalar(element: int):
 @overload
 def isscalar(element: numpy.ndarray):
     """
+    usage.dask: 145
     usage.matplotlib: 3
     usage.skimage: 5
     usage.sklearn: 5
@@ -30357,6 +35184,7 @@ def isscalar(element: numpy.ndarray):
 @overload
 def isscalar(element: List[int]):
     """
+    usage.dask: 2
     usage.matplotlib: 6
     usage.skimage: 8
     usage.sklearn: 6
@@ -30377,6 +35205,7 @@ def isscalar(element: List[Union[int, float]]):
 @overload
 def isscalar(element: float):
     """
+    usage.dask: 7
     usage.matplotlib: 3
     usage.skimage: 6
     usage.sklearn: 2
@@ -30398,6 +35227,7 @@ def isscalar(element: List[Union[float, int]]):
 @overload
 def isscalar(element: numpy.float64):
     """
+    usage.dask: 9
     usage.matplotlib: 1
     usage.skimage: 2
     usage.sklearn: 2
@@ -30408,6 +35238,7 @@ def isscalar(element: numpy.float64):
 @overload
 def isscalar(element: Tuple[int, int]):
     """
+    usage.dask: 2
     usage.matplotlib: 1
     usage.skimage: 4
     usage.sklearn: 1
@@ -30442,6 +35273,7 @@ def isscalar(element: Tuple[float, float]):
 @overload
 def isscalar(element: numpy.int64):
     """
+    usage.dask: 10
     usage.skimage: 1
     """
     ...
@@ -30482,6 +35314,7 @@ def isscalar(element: Tuple[int]):
 @overload
 def isscalar(element: slice[int, None, int]):
     """
+    usage.dask: 1
     usage.skimage: 1
     """
     ...
@@ -30522,6 +35355,7 @@ def isscalar(element: xarray.core.indexing.LazilyVectorizedIndexedArray):
 @overload
 def isscalar(element: Literal["a"]):
     """
+    usage.dask: 12
     usage.xarray: 1
     """
     ...
@@ -30578,6 +35412,7 @@ def isscalar(element: cftime._cftime.DatetimeProlepticGregorian):
 @overload
 def isscalar(element: numpy.timedelta64):
     """
+    usage.dask: 3
     usage.xarray: 1
     """
     ...
@@ -30666,6 +35501,7 @@ def isscalar(element: Tuple[numpy.int64, numpy.int64]):
 @overload
 def isscalar(element: numpy.datetime64):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -30674,7 +35510,7 @@ def isscalar(element: numpy.datetime64):
 @overload
 def isscalar(element: object):
     """
-    usage.dask: 547
+    usage.dask: 11
     usage.scipy: 289
     usage.xarray: 1
     """
@@ -30700,6 +35536,7 @@ def isscalar(element: xarray.core.indexing.MemoryCachedArray):
 @overload
 def isscalar(element: dask.array.core.Array):
     """
+    usage.dask: 2
     usage.xarray: 1
     """
     ...
@@ -30708,6 +35545,7 @@ def isscalar(element: dask.array.core.Array):
 @overload
 def isscalar(element: list):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     """
     ...
@@ -30750,6 +35588,7 @@ def isscalar(element: List[float]):
 @overload
 def isscalar(element: Tuple[numpy.ndarray, numpy.ndarray]):
     """
+    usage.dask: 15
     usage.matplotlib: 1
     """
     ...
@@ -30780,9 +35619,625 @@ def isscalar(element: List[range]):
 
 
 @overload
-def isscalar(element: Literal["abc"]):
+def isscalar(element: None):
     """
-    usage.sklearn: 1
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.uint32):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.float32):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.int8):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: complex):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Callable):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: dask.array.tests.test_array_core.MyArray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.complex128):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.bool_):
+    """
+    usage.dask: 8
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.bytes_):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.str_):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.uint8):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.ulonglong):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.longlong):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.void):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.complex256):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.float128):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.uint64):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.int32):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.complex64):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.uint16):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.int16):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.float16):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.matrix):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["x"]):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def isscalar(element: scipy.sparse.csr.csr_matrix):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def isscalar(element: scipy.sparse.coo.coo_matrix):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Type[numpy.float64]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["foo"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.dtype):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def isscalar(element: Type[numpy.ndarray]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Tuple[numpy.ndarray]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def isscalar(element: Tuple[int, numpy.ndarray]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.ma.core.MaskedArray):
+    """
+    usage.dask: 25
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.ma.core.MaskedConstant):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["f8"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Type[numpy.float32]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["amount"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["aa"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["path"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["filename"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["name"]):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["fruit"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["A"]):
+    """
+    usage.dask: 7
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["B"]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["b"]):
+    """
+    usage.dask: 8
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["numbers"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["Date"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["date_time"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["C"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["A_B"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["B_"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["x"]]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["b", "a"]]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["a", "b"]]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["c", "b", "a"]]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["name"]]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.record):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["date"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["val2"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["idx"]):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["dt_col"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["str_col"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["string_col"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["int_col"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["y"]):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["X"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["c"]):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def isscalar(element: pandas._libs.tslibs.timedeltas.Timedelta):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["y", "x"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["abcde"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["e"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def isscalar(element: pandas._libs.tslibs.timestamps.Timestamp):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["bool", "float", "int"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["float", "int"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: dask.dataframe.core.Series):
+    """
+    usage.dask: 7
     """
     ...
 
@@ -30790,13 +36245,737 @@ def isscalar(element: Literal["abc"]):
 @overload
 def isscalar(element: pandas.core.series.Series):
     """
+    usage.dask: 4
     usage.sklearn: 1
     """
     ...
 
 
 @overload
+def isscalar(element: Literal["w"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["cat"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["y_"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["v"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["id"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["tz"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["d", "c"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["d"]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["f"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["B", "A"]]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["z"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["cint"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["cdt", "clfoat", "cstr"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["cstr", "cint"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["cdt"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["z", "y"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["d", "b", "a"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["col2"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["col1"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Tuple[Literal["A"], Literal["0"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Tuple[Literal["A", "B"], Literal["0", "1"]]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["B", "A", "C"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: pandas.core.indexes.base.Index):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["Name"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["x", "y"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: dask.dataframe.core.Scalar):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["D"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: decimal.Decimal):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["a"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["_index"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["__series__"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["c", "b"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["b"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["a", "c", "b"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["A"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["AA"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["AA"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["AB"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["AB", "AA"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["B"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["d", "a"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["a", "d", "c"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["b", "a", "d", "c"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["a", "idx"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["idx", "a"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["g"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["cc"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["g0"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["g1"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["z", "x"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["group"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["group"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["category_1"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["value"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["category_2", "category_1"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["category_2"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["c", "a"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["_"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: slice[Literal["a"], Literal["e"], Literal["a"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: slice[Literal["a"], Literal["b"], Literal["a"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: slice[Literal["f"], None, Literal["f"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
 def isscalar(element: slice[int, int, int]):
+    """
+    usage.dask: 1
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: slice[None, int, None]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["2011-01-02"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["2011-01"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["2011"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(
+    element: slice[Literal["2011-01"], Literal["2012-05"], Literal["2011-01"]]
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: slice[Literal["2011"], Literal["2015"], Literal["2011"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["k"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["k"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["y"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["z"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["d"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["e"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["e", "d"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["c"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["E"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["F"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["G"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["H"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["I"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["cluster"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["a_a"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["A_a"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["timestamp"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["notz"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["id"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: List[Literal["name", "id"]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["Time"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def isscalar(element: Literal["abc"]):
     """
     usage.sklearn: 1
     """
@@ -30882,6 +37061,7 @@ def issubdtype(arg1: Type[numpy.float64], arg2: Type[numpy.uint8]):
 @overload
 def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.floating]):
     """
+    usage.dask: 2
     usage.skimage: 18
     usage.sklearn: 10
     usage.xarray: 64
@@ -30900,6 +37080,7 @@ def issubdtype(arg1: Type[numpy.float64], arg2: Type[numpy.bool_]):
 @overload
 def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.integer]):
     """
+    usage.dask: 16
     usage.matplotlib: 24
     usage.skimage: 31
     usage.sklearn: 4
@@ -31333,6 +37514,7 @@ def issubdtype(arg1: Type[numpy.bool_], arg2: Type[numpy.uint16]):
 @overload
 def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.datetime64]):
     """
+    usage.dask: 14
     usage.matplotlib: 11
     usage.xarray: 77
     """
@@ -31358,6 +37540,7 @@ def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.complexfloating]):
 @overload
 def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.number]):
     """
+    usage.dask: 15
     usage.xarray: 13
     """
     ...
@@ -31382,6 +37565,7 @@ def issubdtype(arg1: Type[int], arg2: Type[numpy.floating]):
 @overload
 def issubdtype(arg1: Type[int], arg2: Type[numpy.integer]):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -31463,14 +37647,6 @@ def issubdtype(arg1: Union[numpy.dtype, type], arg2: Union[type, numpy.dtype]):
 def issubdtype(arg1: Union[type, None, numpy.dtype, numpy.int64], arg2: type):
     """
     usage.scipy: 466
-    """
-    ...
-
-
-@overload
-def issubdtype(arg1: Union[Type[int], numpy.dtype], arg2: type):
-    """
-    usage.dask: 48
     """
     ...
 
@@ -33659,6 +39835,7 @@ def linspace(start: int, stop: int, num: int, dtype: Type[numpy.int8]):
 @overload
 def linspace(start: int, stop: int, num: int):
     """
+    usage.dask: 15
     usage.matplotlib: 88
     usage.sample-usage: 1
     usage.skimage: 23
@@ -33729,6 +39906,7 @@ def linspace(start: float, stop: float, num: int):
 @overload
 def linspace(start: float, stop: float, num: int, endpoint: bool):
     """
+    usage.dask: 1
     usage.skimage: 5
     usage.sklearn: 1
     usage.xarray: 1
@@ -33856,16 +40034,81 @@ def linspace(start: int, stop: float):
 
 
 @overload
-def linspace(
-    start: object,
-    stop: Union[numpy.float64, float, int],
-    num: int = ...,
-    endpoint: bool = ...,
-    dtype: Union[numpy.dtype, type] = ...,
-    retstep: bool = ...,
-):
+def linspace(start: int, stop: int, endpoint: bool):
     """
-    usage.dask: 26
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def linspace(start: int, stop: int, endpoint: bool, dtype: Type[float]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def linspace(start: int, stop: int, endpoint: bool, retstep: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def linspace(start: float, stop: float, num: int, endpoint: bool, dtype: Type[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def linspace(start: numpy.float64, stop: int, num: int, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def linspace(start: numpy.uint8, stop: int, num: int, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def linspace(start: numpy.int16, stop: int, num: int, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def linspace(start: numpy.float32, stop: int, num: int, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def linspace(start: numpy.bool_, stop: int, num: int, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def linspace(start: int, stop: numpy.float64, num: int):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -33910,6 +40153,7 @@ def linspace(
 @overload
 def load(file: str):
     """
+    usage.dask: 1
     usage.skimage: 21
     """
     ...
@@ -33932,9 +40176,41 @@ def load(file: _io.BufferedReader):
 
 
 @overload
-def load(file: str, mmap_mode: Literal["r"] = ...):
+def load(file: Literal["/tmp/tmpfk_q52db.npy"], mmap_mode: Literal["r"]):
     """
-    usage.dask: 7
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def load(file: Literal["/tmp/tmp7pu_zh_l.npy"], mmap_mode: Literal["r"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def load(file: Literal["/tmp/tmpd4ay6ms9.npy"], mmap_mode: Literal["r"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def load(file: Literal["/tmp/tmp3jfp1gkx.npy"], mmap_mode: Literal["r"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def load(file: Literal["/tmp/tmpu7vhvxgk.npy"], mmap_mode: Literal["r"]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -34446,6 +40722,7 @@ def may_share_memory(_0: object, _1: object, /):
 @overload
 def mean(a: numpy.ndarray):
     """
+    usage.dask: 21
     usage.matplotlib: 7
     usage.skimage: 35
     usage.sklearn: 128
@@ -34457,6 +40734,7 @@ def mean(a: numpy.ndarray):
 @overload
 def mean(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 12
     usage.matplotlib: 5
     usage.skimage: 13
     usage.sklearn: 73
@@ -34468,6 +40746,7 @@ def mean(a: numpy.ndarray, axis: int):
 @overload
 def mean(a: dask.array.core.Array):
     """
+    usage.dask: 2
     usage.skimage: 1
     """
     ...
@@ -34476,6 +40755,7 @@ def mean(a: dask.array.core.Array):
 @overload
 def mean(a: numpy.ndarray, axis: Tuple[int, int]):
     """
+    usage.dask: 1
     usage.skimage: 1
     usage.xarray: 2
     """
@@ -34606,6 +40886,7 @@ def mean(a: object, axis: Tuple[int]):
 @overload
 def mean(a: object):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -34654,6 +40935,7 @@ def mean(a: xarray.core.variable.Variable):
 @overload
 def mean(a: numpy.ndarray, keepdims: bool):
     """
+    usage.dask: 5
     usage.xarray: 3
     """
     ...
@@ -34662,6 +40944,7 @@ def mean(a: numpy.ndarray, keepdims: bool):
 @overload
 def mean(a: numpy.ndarray, axis: int, keepdims: bool):
     """
+    usage.dask: 1
     usage.xarray: 3
     """
     ...
@@ -34702,15 +40985,138 @@ def mean(a: object, axis: Union[None, int] = ..., keepdims: bool = ...):
 
 
 @overload
-def mean(
-    a: object,
-    axis: Union[None, Tuple[Union[int, None], ...], int] = ...,
-    dtype: Literal["float32", "i8", "f8"] = ...,
-    out: Union[dask.dataframe.core.Scalar, dask.dataframe.core.Series] = ...,
-    keepdims: bool = ...,
-):
+def mean(a: numpy.ma.core.MaskedArray):
     """
-    usage.dask: 78
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def mean(a: numpy.ma.core.MaskedArray, axis: int):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def mean(a: numpy.ma.core.MaskedArray, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def mean(a: numpy.ma.core.MaskedArray, axis: int, keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def mean(a: numpy.ndarray, axis: Tuple[None, ...]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def mean(a: numpy.ndarray, dtype: Literal["f8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def mean(a: numpy.ndarray, dtype: Literal["i8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def mean(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def mean(a: numpy.ndarray, axis: Tuple[int, int], dtype: Literal["float32"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def mean(a: numpy.ndarray, dtype: Literal["float32"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def mean(a: List[int]):
+    """
+    usage.dask: 1
+    usage.sklearn: 3
+    """
+    ...
+
+
+@overload
+def mean(a: dask.dataframe.core.DataFrame, axis: int, out: dask.dataframe.core.Series):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def mean(a: dask.dataframe.core.Series, axis: None, out: dask.dataframe.core.Scalar):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def mean(a: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def mean(a: dask.dataframe.core.Series):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def mean(a: pandas.core.series.Series):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def mean(a: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -34775,14 +41181,6 @@ def mean(a: List[Union[numpy.float64, float]]):
 
 @overload
 def mean(a: List[numpy.ndarray], axis: int):
-    """
-    usage.sklearn: 3
-    """
-    ...
-
-
-@overload
-def mean(a: List[int]):
     """
     usage.sklearn: 3
     """
@@ -34887,6 +41285,7 @@ def median(a: object, axis: int):
 @overload
 def median(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 2
     usage.sklearn: 15
     usage.xarray: 1
     """
@@ -34932,13 +41331,65 @@ def median(a: numpy.ndarray, axis: int, overwrite_input: bool):
 
 
 @overload
-def median(
-    a: Union[numpy.ndarray, Tuple[int, ...]],
-    axis: Union[List[int], int] = ...,
-    keepdims: bool = ...,
-):
+def median(a: Tuple[int]):
     """
-    usage.dask: 18
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def median(a: Tuple[int, int, int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def median(a: Tuple[int, int, int, int, int, int, int, int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def median(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def median(a: Tuple[int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def median(a: Tuple[int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def median(a: Tuple[int, int, int, int, int, int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def median(a: numpy.ndarray, axis: List[int], keepdims: bool):
+    """
+    usage.dask: 7
     """
     ...
 
@@ -34976,6 +41427,7 @@ def meshgrid(*xi: Literal["v", "t"]):
 @overload
 def meshgrid(*xi: Literal["v", "t"], indexing: Literal["ij"]):
     """
+    usage.dask: 1
     usage.skimage: 10
     usage.sklearn: 2
     usage.xarray: 2
@@ -34986,15 +41438,16 @@ def meshgrid(*xi: Literal["v", "t"], indexing: Literal["ij"]):
 @overload
 def meshgrid(*xi: Literal["v", "t"], indexing: Literal["ij"], sparse: bool):
     """
+    usage.dask: 4
     usage.skimage: 9
     """
     ...
 
 
 @overload
-def meshgrid(*xi: Literal["v", "t"], indexing: Literal["ij", "xy"], sparse: bool = ...):
+def meshgrid(*xi: Literal["v", "t"], indexing: Literal["xy"], sparse: bool):
     """
-    usage.dask: 9
+    usage.dask: 4
     """
     ...
 
@@ -35016,6 +41469,7 @@ def meshgrid(
 @overload
 def min_scalar_type(_0: int, /):
     """
+    usage.dask: 1
     usage.skimage: 3
     """
     ...
@@ -35089,6 +41543,7 @@ def min_scalar_type(_0: List[float], /):
 @overload
 def min_scalar_type(_0: numpy.ndarray, /):
     """
+    usage.dask: 1
     usage.matplotlib: 5
     """
     ...
@@ -35167,9 +41622,9 @@ def min_scalar_type(_0: List[numpy.float32], /):
 
 
 @overload
-def min_scalar_type(_0: Union[int, dask.array.core.Array, numpy.ndarray], /):
+def min_scalar_type(_0: dask.array.core.Array, /):
     """
-    usage.dask: 3
+    usage.dask: 1
     """
     ...
 
@@ -35198,6 +41653,7 @@ def mintypecode(
 @overload
 def moveaxis(a: numpy.ndarray, source: int, destination: int):
     """
+    usage.dask: 3
     usage.matplotlib: 1
     usage.skimage: 4
     usage.xarray: 1
@@ -35272,11 +41728,9 @@ def moveaxis(
 
 
 @overload
-def moveaxis(
-    a: Union[dask.array.core.Array, numpy.ndarray], source: int, destination: int
-):
+def moveaxis(a: dask.array.core.Array, source: int, destination: int):
     """
-    usage.dask: 4
+    usage.dask: 1
     """
     ...
 
@@ -35307,6 +41761,7 @@ def nan_to_num(x: List[numpy.float64]):
 @overload
 def nan_to_num(x: numpy.ndarray):
     """
+    usage.dask: 4
     usage.scipy: 4
     usage.sklearn: 7
     """
@@ -35314,9 +41769,73 @@ def nan_to_num(x: numpy.ndarray):
 
 
 @overload
-def nan_to_num(x: object):
+def nan_to_num(x: pandas.core.indexes.base.Index):
     """
-    usage.dask: 23
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nan_to_num(x: pandas.core.indexes.range.RangeIndex):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nan_to_num(x: pandas.core.indexes.numeric.Int64Index):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nan_to_num(x: pandas.core.indexes.category.CategoricalIndex):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nan_to_num(x: pandas.core.indexes.numeric.Float64Index):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nan_to_num(x: pandas.core.series.Series):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def nan_to_num(x: dask.dataframe.core.Series):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def nan_to_num(x: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def nan_to_num(x: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -35334,6 +41853,7 @@ def nan_to_num(x: object):
 @overload
 def nanargmax(a: numpy.ndarray):
     """
+    usage.dask: 7
     usage.xarray: 5
     """
     ...
@@ -35390,6 +41910,7 @@ def nanargmax(a: numpy.int32):
 @overload
 def nanargmax(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 14
     usage.xarray: 1
     """
     ...
@@ -35422,23 +41943,24 @@ def nanargmax(a: object, axis: int):
 @overload
 def nanargmax(a: numpy.ndarray, axis: None):
     """
+    usage.dask: 2
     usage.xarray: 1
     """
     ...
 
 
 @overload
-def nanargmax(
-    _0: numpy.ndarray = ...,
-    _1: Union[None, int] = ...,
-    /,
-    a: numpy.ndarray = ...,
-    axis: Union[int, None] = ...,
-    *,
-    keepdims: bool = ...,
-):
+def nanargmax(_0: numpy.ndarray, _1: None, /, *, keepdims: bool):
     """
-    usage.dask: 28
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def nanargmax(_0: numpy.ndarray, _1: int, /, *, keepdims: bool):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -35462,6 +41984,7 @@ def nanargmax(
 @overload
 def nanargmin(a: numpy.ndarray):
     """
+    usage.dask: 7
     usage.xarray: 6
     """
     ...
@@ -35518,6 +42041,7 @@ def nanargmin(a: numpy.int32):
 @overload
 def nanargmin(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 14
     usage.xarray: 1
     """
     ...
@@ -35548,17 +42072,25 @@ def nanargmin(a: object, axis: int):
 
 
 @overload
-def nanargmin(
-    _0: numpy.ndarray = ...,
-    _1: Union[None, int] = ...,
-    /,
-    a: numpy.ndarray = ...,
-    axis: Union[int, None] = ...,
-    *,
-    keepdims: bool = ...,
-):
+def nanargmin(_0: numpy.ndarray, _1: None, /, *, keepdims: bool):
     """
-    usage.dask: 28
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def nanargmin(a: numpy.ndarray, axis: None):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def nanargmin(_0: numpy.ndarray, _1: int, /, *, keepdims: bool):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -35604,9 +42136,25 @@ def nancumprod(a: object, axis: int, dtype: None):
 
 
 @overload
-def nancumprod(a: numpy.ndarray, axis: Union[None, int] = ...):
+def nancumprod(a: numpy.ndarray):
     """
-    usage.dask: 16
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def nancumprod(a: numpy.ndarray, axis: int):
+    """
+    usage.dask: 11
+    """
+    ...
+
+
+@overload
+def nancumprod(a: numpy.ndarray, axis: None):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -35644,9 +42192,25 @@ def nancumsum(a: object, axis: int, dtype: None):
 
 
 @overload
-def nancumsum(a: numpy.ndarray, axis: Union[None, int] = ...):
+def nancumsum(a: numpy.ndarray):
     """
-    usage.dask: 16
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def nancumsum(a: numpy.ndarray, axis: int):
+    """
+    usage.dask: 11
+    """
+    ...
+
+
+@overload
+def nancumsum(a: numpy.ndarray, axis: None):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -35662,6 +42226,7 @@ def nancumsum(a: object, axis: Union[int, None] = ..., dtype: None = ...):
 @overload
 def nanmax(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 6
     usage.sklearn: 6
     usage.xarray: 4
     """
@@ -35679,6 +42244,7 @@ def nanmax(a: numpy.ndarray, axis: Tuple[int]):
 @overload
 def nanmax(a: numpy.ndarray):
     """
+    usage.dask: 10
     usage.matplotlib: 2
     usage.xarray: 4
     """
@@ -35727,17 +42293,100 @@ def nanmax(a: Union[numpy.ndarray, pandas.core.series.Series]):
 
 
 @overload
+def nanmax(a: numpy.ndarray, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 8
+    """
+    ...
+
+
+@overload
 def nanmax(
-    _0: numpy.ndarray = ...,
-    /,
-    a: numpy.ndarray = ...,
-    axis: Union[Tuple[Union[None, int], ...], int, None] = ...,
-    keepdims: bool = ...,
-    *,
-    computing_meta: bool = ...,
+    _0: numpy.ndarray, /, *, axis: Tuple[int], computing_meta: bool, keepdims: bool
 ):
     """
-    usage.dask: 62
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def nanmax(a: numpy.ndarray, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def nanmax(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 9
+    """
+    ...
+
+
+@overload
+def nanmax(
+    _0: numpy.ndarray,
+    /,
+    *,
+    axis: Tuple[None, ...],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def nanmax(a: numpy.ndarray, axis: Tuple[None, ...]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def nanmax(a: numpy.ndarray, axis: None, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def nanmax(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def nanmax(a: numpy.ndarray, axis: Tuple[int, int], keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def nanmax(
+    _0: numpy.ndarray, /, *, axis: Tuple[int, int], computing_meta: bool, keepdims: bool
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def nanmax(a: numpy.ndarray, axis: Tuple[int, int]):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -35804,6 +42453,7 @@ def nanmean(a: numpy.ndarray, axis: None, dtype: Type[numpy.float64]):
 @overload
 def nanmean(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 5
     usage.sklearn: 4
     usage.xarray: 1
     """
@@ -35829,6 +42479,7 @@ def nanmean(a: numpy.ndarray, axis: Tuple[int], dtype: None):
 @overload
 def nanmean(a: numpy.ndarray):
     """
+    usage.dask: 1
     usage.xarray: 3
     """
     ...
@@ -35917,19 +42568,40 @@ def nanmean(a: pandas.core.series.Series):
 @overload
 def nanmean(a: numpy.ndarray, axis: int, keepdims: bool):
     """
+    usage.dask: 1
     usage.scipy: 1
     """
     ...
 
 
 @overload
-def nanmean(
-    a: numpy.ndarray,
-    axis: Union[Tuple[Union[None, int], ...], int] = ...,
-    keepdims: bool = ...,
-):
+def nanmean(a: numpy.ndarray, keepdims: bool):
     """
-    usage.dask: 11
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nanmean(a: numpy.ndarray, axis: Tuple[None, ...]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nanmean(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nanmean(a: numpy.ndarray, axis: Tuple[int, int]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -35984,9 +42656,17 @@ def nanmedian(a: Union[pandas.core.series.Series, numpy.ndarray], axis: int = ..
 
 
 @overload
-def nanmedian(a: numpy.ndarray, axis: Union[List[int], int], keepdims: bool):
+def nanmedian(a: numpy.ndarray, axis: List[int], keepdims: bool):
     """
-    usage.dask: 8
+    usage.dask: 7
+    """
+    ...
+
+
+@overload
+def nanmedian(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -36004,6 +42684,7 @@ def nanmedian(a: object, axis: Union[int, None, List[int]] = ..., keepdims: bool
 @overload
 def nanmin(a: numpy.ndarray, axis: Tuple[None, ...]):
     """
+    usage.dask: 4
     usage.xarray: 1
     """
     ...
@@ -36012,6 +42693,7 @@ def nanmin(a: numpy.ndarray, axis: Tuple[None, ...]):
 @overload
 def nanmin(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 7
     usage.sklearn: 5
     usage.xarray: 3
     """
@@ -36021,6 +42703,7 @@ def nanmin(a: numpy.ndarray, axis: int):
 @overload
 def nanmin(a: numpy.ndarray):
     """
+    usage.dask: 10
     usage.matplotlib: 2
     usage.sklearn: 2
     usage.xarray: 4
@@ -36070,17 +42753,92 @@ def nanmin(a: Union[numpy.ndarray, pandas.core.series.Series]):
 
 
 @overload
+def nanmin(a: numpy.ndarray, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 8
+    """
+    ...
+
+
+@overload
 def nanmin(
-    _0: numpy.ndarray = ...,
-    /,
-    a: numpy.ndarray = ...,
-    axis: Union[Tuple[Union[None, int], ...], int, None] = ...,
-    keepdims: bool = ...,
-    *,
-    computing_meta: bool = ...,
+    _0: numpy.ndarray, /, *, axis: Tuple[int], computing_meta: bool, keepdims: bool
 ):
     """
-    usage.dask: 62
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def nanmin(a: numpy.ndarray, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def nanmin(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 9
+    """
+    ...
+
+
+@overload
+def nanmin(
+    _0: numpy.ndarray,
+    /,
+    *,
+    axis: Tuple[None, ...],
+    computing_meta: bool,
+    keepdims: bool,
+):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def nanmin(a: numpy.ndarray, axis: None, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def nanmin(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def nanmin(a: numpy.ndarray, axis: Tuple[int, int], keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def nanmin(
+    _0: numpy.ndarray, /, *, axis: Tuple[int, int], computing_meta: bool, keepdims: bool
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def nanmin(a: numpy.ndarray, axis: Tuple[int, int]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -36250,13 +43008,73 @@ def nanprod(a: numpy.ndarray, axis: Union[None, int]):
 
 
 @overload
-def nanprod(
-    a: numpy.ndarray,
-    axis: Union[Tuple[Union[None, int], ...], int] = ...,
-    keepdims: bool = ...,
-):
+def nanprod(a: numpy.ndarray):
     """
-    usage.dask: 29
+    usage.dask: 10
+    """
+    ...
+
+
+@overload
+def nanprod(a: numpy.ndarray, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def nanprod(a: numpy.ndarray, axis: Tuple[None, ...]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def nanprod(a: numpy.ndarray, dtype: Literal["f8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def nanprod(a: numpy.ndarray, dtype: Literal["i8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def nanprod(a: numpy.ndarray, axis: int):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def nanprod(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nanprod(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nanprod(a: numpy.ndarray, axis: Tuple[int, int]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -36324,6 +43142,7 @@ def nanquantile(
 @overload
 def nanstd(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 5
     usage.sklearn: 1
     usage.xarray: 1
     """
@@ -36363,13 +43182,49 @@ def nanstd(a: numpy.ndarray, axis: int, ddof: int, keepdims: bool):
 
 
 @overload
-def nanstd(
-    a: numpy.ndarray,
-    axis: Union[Tuple[Union[None, int], ...], int] = ...,
-    keepdims: bool = ...,
-):
+def nanstd(a: numpy.ndarray):
     """
-    usage.dask: 11
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nanstd(a: numpy.ndarray, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nanstd(a: numpy.ndarray, axis: Tuple[None, ...]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nanstd(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nanstd(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nanstd(a: numpy.ndarray, axis: Tuple[int, int]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -36393,6 +43248,7 @@ def nanstd(
 @overload
 def nansum(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 11
     usage.sklearn: 2
     usage.xarray: 3
     """
@@ -36402,6 +43258,7 @@ def nansum(a: numpy.ndarray, axis: int):
 @overload
 def nansum(a: numpy.ndarray):
     """
+    usage.dask: 18
     usage.scipy: 1
     usage.sklearn: 4
     usage.xarray: 4
@@ -36428,14 +43285,99 @@ def nansum(
 
 
 @overload
+def nansum(a: numpy.ndarray, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def nansum(a: numpy.ndarray, axis: Tuple[None, ...]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def nansum(a: numpy.ndarray, dtype: Literal["f8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def nansum(a: numpy.ndarray, dtype: Literal["i8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def nansum(a: numpy.ndarray, axis: Tuple[int], dtype: numpy.dtype, keepdims: bool):
+    """
+    usage.dask: 11
+    """
+    ...
+
+
+@overload
 def nansum(
-    a: numpy.ndarray,
-    axis: Union[Tuple[Union[None, int], ...], int] = ...,
-    dtype: Union[numpy.dtype, Literal["i8", "f8"]] = ...,
-    keepdims: bool = ...,
+    a: numpy.ndarray, axis: Tuple[None, ...], dtype: numpy.dtype, keepdims: bool
 ):
     """
-    usage.dask: 82
+    usage.dask: 10
+    """
+    ...
+
+
+@overload
+def nansum(a: numpy.ndarray, axis: Tuple[int], dtype: Literal["f8"], keepdims: bool):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def nansum(a: numpy.ndarray, axis: Tuple[int], dtype: Literal["i8"], keepdims: bool):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def nansum(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nansum(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nansum(a: numpy.ndarray, axis: Tuple[int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nansum(a: numpy.ndarray, axis: Tuple[int, int], dtype: numpy.dtype, keepdims: bool):
+    """
+    usage.dask: 4
     """
     ...
 
@@ -36475,6 +43417,7 @@ def nansum(
 @overload
 def nanvar(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 4
     usage.sklearn: 4
     usage.xarray: 2
     """
@@ -36484,6 +43427,7 @@ def nanvar(a: numpy.ndarray, axis: int):
 @overload
 def nanvar(a: numpy.ndarray):
     """
+    usage.dask: 2
     usage.sklearn: 4
     usage.xarray: 4
     """
@@ -36555,13 +43499,41 @@ def nanvar(a: numpy.ndarray, axis: int, ddof: int):
 
 
 @overload
-def nanvar(
-    a: numpy.ndarray,
-    axis: Union[Tuple[Union[None, int], ...], int] = ...,
-    keepdims: bool = ...,
-):
+def nanvar(a: numpy.ndarray, keepdims: bool):
     """
-    usage.dask: 11
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nanvar(a: numpy.ndarray, axis: Tuple[None, ...]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nanvar(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nanvar(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def nanvar(a: numpy.ndarray, axis: Tuple[int, int]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -36593,6 +43565,7 @@ def nanvar(
 @overload
 def ndim(a: numpy.ndarray):
     """
+    usage.dask: 3
     usage.matplotlib: 7
     usage.skimage: 4
     usage.sklearn: 2
@@ -36644,9 +43617,33 @@ def ndim(a: numpy.ma.core.MaskedArray):
 
 
 @overload
-def ndim(a: Union[List[Union[int, List[int]]], None, int, numpy.ndarray]):
+def ndim(a: int):
     """
-    usage.dask: 10
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def ndim(a: List[int]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def ndim(a: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ndim(a: List[List[int]]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -36855,6 +43852,7 @@ def ones(shape: Tuple[int, int], dtype: Type[numpy.bool_]):
 @overload
 def ones(shape: Tuple[int, int]):
     """
+    usage.dask: 43
     usage.matplotlib: 4
     usage.sample-usage: 1
     usage.skimage: 76
@@ -36867,6 +43865,7 @@ def ones(shape: Tuple[int, int]):
 @overload
 def ones(shape: Tuple[int, int], dtype: Type[float]):
     """
+    usage.dask: 2
     usage.matplotlib: 1
     usage.skimage: 1
     usage.xarray: 3
@@ -36887,6 +43886,7 @@ def ones(shape: List[int]):
 @overload
 def ones(shape: Tuple[int, int, int]):
     """
+    usage.dask: 14
     usage.skimage: 17
     usage.sklearn: 2
     usage.xarray: 6
@@ -36897,6 +43897,7 @@ def ones(shape: Tuple[int, int, int]):
 @overload
 def ones(shape: Tuple[int, int, int, int]):
     """
+    usage.dask: 1
     usage.skimage: 8
     usage.sklearn: 1
     usage.xarray: 1
@@ -36916,6 +43917,7 @@ def ones(shape: Tuple[int, int], dtype: Type[numpy.uint8]):
 @overload
 def ones(shape: int):
     """
+    usage.dask: 38
     usage.matplotlib: 40
     usage.skimage: 19
     usage.sklearn: 214
@@ -36927,6 +43929,7 @@ def ones(shape: int):
 @overload
 def ones(shape: Tuple[int, int], dtype: Type[numpy.float32]):
     """
+    usage.dask: 4
     usage.skimage: 3
     usage.sklearn: 5
     """
@@ -36953,6 +43956,7 @@ def ones(shape: Tuple[int, int], dtype: Type[numpy.float64]):
 @overload
 def ones(shape: int, dtype: Type[numpy.int64]):
     """
+    usage.dask: 2
     usage.skimage: 1
     usage.sklearn: 6
     """
@@ -36988,6 +43992,7 @@ def ones(shape: Tuple[numpy.int64, numpy.int64], dtype: Type[numpy.uint16]):
 @overload
 def ones(shape: Tuple[int]):
     """
+    usage.dask: 3
     usage.matplotlib: 1
     usage.skimage: 5
     usage.sklearn: 21
@@ -36999,6 +44004,7 @@ def ones(shape: Tuple[int]):
 @overload
 def ones(shape: int, dtype: numpy.dtype):
     """
+    usage.dask: 2
     usage.matplotlib: 6
     usage.skimage: 2
     usage.sklearn: 13
@@ -37018,6 +44024,7 @@ def ones(shape: Tuple[int], dtype: Type[float]):
 @overload
 def ones(shape: int, dtype: Type[numpy.float64]):
     """
+    usage.dask: 1
     usage.matplotlib: 4
     usage.skimage: 1
     usage.sklearn: 11
@@ -37111,6 +44118,7 @@ def ones(shape: Tuple[int, int, int, int], dtype: Type[bool]):
 @overload
 def ones(shape: Tuple[int, int], dtype: Type[int]):
     """
+    usage.dask: 3
     usage.skimage: 1
     usage.sklearn: 1
     usage.xarray: 4
@@ -37138,6 +44146,7 @@ def ones(shape: numpy.ndarray):
 @overload
 def ones(shape: int, dtype: Type[bool]):
     """
+    usage.dask: 1
     usage.skimage: 1
     usage.sklearn: 13
     """
@@ -37223,23 +44232,197 @@ def ones(shape: int, dtype: Type[numpy.int32]):
 
 
 @overload
+def ones(shape: Tuple[int, int, int], dtype: Type[int]):
+    """
+    usage.dask: 8
+    """
+    ...
+
+
+@overload
+def ones(shape: int, dtype: Type[numpy.float32]):
+    """
+    usage.dask: 4
+    usage.sklearn: 16
+    """
+    ...
+
+
+@overload
+def ones(shape: int, dtype: Type[numpy.int16]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[None, ...], dtype: Type[numpy.float64]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[None, ...], dtype: Type[numpy.int64]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
 def ones(
-    shape: Union[Tuple[Union[None, int], ...], int, numpy.ndarray, List[int]],
-    dtype: Union[
-        numpy.dtype,
-        List[
-            Tuple[
-                Literal["a", "b", "c", "col1", "col2"],
-                Union[Literal["f8"], Tuple[Literal["f4"], Union[int, Tuple[int, int]]]],
-            ]
-        ],
-        type,
-        Literal["i4", "float32", "f8"],
-    ] = ...,
-    order: Literal["F", "C"] = ...,
+    shape: Tuple[int, int],
+    dtype: List[
+        Tuple[
+            Literal["col1", "col2"], Tuple[Literal["f4"], Union[int, Tuple[int, int]]]
+        ]
+    ],
 ):
     """
-    usage.dask: 186
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[int, int], dtype: numpy.dtype):
+    """
+    usage.dask: 13
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[int, int], dtype: Literal["f8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[int], dtype: numpy.dtype):
+    """
+    usage.dask: 14
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[int, int, int], dtype: Literal["float32"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[int, int], dtype: numpy.dtype, order: Literal["C"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: List[int], dtype: numpy.dtype, order: Literal["C"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: numpy.ndarray, dtype: numpy.dtype, order: Literal["C"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[int, int], dtype: numpy.dtype, order: Literal["F"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: List[int], dtype: numpy.dtype, order: Literal["F"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: numpy.ndarray, dtype: numpy.dtype, order: Literal["F"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[int, int, int], dtype: numpy.dtype):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[int, int, int, int], dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[None, ...], dtype: numpy.dtype):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def ones(
+    shape: Tuple[int, int], dtype: List[Tuple[Literal["a", "b", "c"], Literal["f8"]]]
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: int, dtype: Literal["i4"]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[int, int], dtype: Literal["i4"]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[int, int, int], dtype: Literal["i4"]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -37285,23 +44468,7 @@ def ones(shape: Tuple[int], dtype: Type[numpy.float64], order: Literal["C"]):
 
 
 @overload
-def ones(shape: int, dtype: Type[numpy.float32]):
-    """
-    usage.sklearn: 16
-    """
-    ...
-
-
-@overload
 def ones(shape: Tuple[int], dtype: Type[numpy.float32]):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def ones(shape: Tuple[int], dtype: numpy.dtype):
     """
     usage.sklearn: 2
     """
@@ -37349,14 +44516,6 @@ def ones(shape: int, dtype: Literal["int"]):
 
 
 @overload
-def ones(shape: Tuple[int, int], dtype: numpy.dtype):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def ones(shape: Tuple[int, int], dtype: Type[numpy.int32]):
     """
     usage.sklearn: 1
@@ -37396,6 +44555,7 @@ def ones(
 @overload
 def ones_like(a: numpy.ndarray):
     """
+    usage.dask: 2
     usage.matplotlib: 8
     usage.skimage: 17
     usage.sklearn: 29
@@ -37474,19 +44634,64 @@ def ones_like(a: numpy.ma.core.MaskedArray, dtype: Type[numpy.float32]):
 @overload
 def ones_like(a: numpy.ma.core.MaskedArray):
     """
+    usage.dask: 2
     usage.matplotlib: 1
     """
     ...
 
 
 @overload
-def ones_like(
-    a: Union[numpy.ndarray, numpy.ma.core.MaskedArray],
-    order: Literal["F", "C"] = ...,
-    shape: Union[Tuple[int, ...], int, None] = ...,
-):
+def ones_like(a: numpy.ndarray, order: Literal["C"]):
     """
-    usage.dask: 11
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones_like(a: numpy.ndarray, order: Literal["F"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones_like(a: numpy.ndarray, shape: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones_like(a: numpy.ndarray, shape: Tuple[int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones_like(a: numpy.ndarray, shape: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones_like(a: numpy.ndarray, shape: Tuple[int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ones_like(a: numpy.ndarray, shape: Tuple[int, int, int, int, int]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -37544,6 +44749,7 @@ def outer(a: numpy.ndarray, b: Union[numpy.ndarray, List[int]]):
 @overload
 def outer(a: numpy.ndarray, b: numpy.ndarray):
     """
+    usage.dask: 3
     usage.matplotlib: 1
     usage.sklearn: 14
     """
@@ -37551,11 +44757,9 @@ def outer(a: numpy.ndarray, b: numpy.ndarray):
 
 
 @overload
-def outer(
-    a: Union[numpy.float64, numpy.ndarray], b: Union[numpy.float64, numpy.ndarray]
-):
+def outer(a: numpy.float64, b: numpy.float64):
     """
-    usage.dask: 4
+    usage.dask: 1
     """
     ...
 
@@ -37592,6 +44796,7 @@ def pad(array: numpy.ndarray, pad_width: List[List[int]], mode: Literal["edge"])
 @overload
 def pad(array: numpy.ndarray, pad_width: int, mode: Literal["constant"]):
     """
+    usage.dask: 6
     usage.skimage: 13
     """
     ...
@@ -37616,6 +44821,7 @@ def pad(
     mode: Literal["constant"],
 ):
     """
+    usage.dask: 1
     usage.skimage: 4
     """
     ...
@@ -37628,6 +44834,7 @@ def pad(
     mode: Literal["constant"],
 ):
     """
+    usage.dask: 4
     usage.skimage: 1
     usage.xarray: 5
     """
@@ -37641,6 +44848,7 @@ def pad(
     mode: Literal["reflect"],
 ):
     """
+    usage.dask: 1
     usage.skimage: 2
     """
     ...
@@ -37662,6 +44870,7 @@ def pad(
 @overload
 def pad(array: numpy.ndarray, pad_width: int, mode: Literal["edge"]):
     """
+    usage.dask: 6
     usage.skimage: 4
     """
     ...
@@ -37682,6 +44891,7 @@ def pad(
 @overload
 def pad(array: numpy.ndarray, pad_width: Tuple[int, int], mode: Literal["constant"]):
     """
+    usage.dask: 5
     usage.sklearn: 1
     usage.xarray: 1
     """
@@ -37705,6 +44915,7 @@ def pad(
     mode: Literal["minimum"],
 ):
     """
+    usage.dask: 4
     usage.xarray: 2
     """
     ...
@@ -37727,6 +44938,7 @@ def pad(
     mode: Literal["maximum"],
 ):
     """
+    usage.dask: 4
     usage.xarray: 2
     """
     ...
@@ -37747,6 +44959,7 @@ def pad(
     mode: Literal["mean"],
 ):
     """
+    usage.dask: 4
     usage.xarray: 2
     """
     ...
@@ -37791,6 +45004,7 @@ def pad(
     mode: Literal["linear_ramp"],
 ):
     """
+    usage.dask: 4
     usage.xarray: 2
     """
     ...
@@ -37899,6 +45113,7 @@ def pad(
     mode: Literal["edge"],
 ):
     """
+    usage.dask: 4
     usage.xarray: 1
     """
     ...
@@ -37985,13 +45200,279 @@ def pad(
 
 
 @overload
+def pad(array: numpy.ndarray, pad_width: int, mode: Literal["linear_ramp"]):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: int, mode: Literal["reflect"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: int, mode: Literal["symmetric"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: int, mode: Literal["wrap"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: int, mode: Literal["empty"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
 def pad(
-    array: Union[dask.array.core.Array, numpy.ndarray],
-    pad_width: Union[int, Tuple[Union[Tuple[int, int], int], ...]],
-    mode: Union[str, Callable],
+    array: numpy.ndarray,
+    pad_width: Tuple[Tuple[int, int], Tuple[int, int]],
+    mode: Literal["linear_ramp"],
 ):
     """
-    usage.dask: 142
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def pad(
+    array: numpy.ndarray,
+    pad_width: Tuple[Tuple[int, int], Tuple[int, int]],
+    mode: Literal["symmetric"],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def pad(
+    array: numpy.ndarray,
+    pad_width: Tuple[Tuple[int, int], Tuple[int, int]],
+    mode: Literal["wrap"],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: Tuple[int, int], mode: Literal["maximum"]):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def pad(
+    array: numpy.ndarray,
+    pad_width: Tuple[Tuple[int, int], Tuple[int, int]],
+    mode: Literal["mean"],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: Tuple[int, int], mode: Literal["minimum"]):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: Tuple[int], mode: Literal["constant"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(
+    array: numpy.ndarray, pad_width: Tuple[Tuple[int, int]], mode: Literal["constant"]
+):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: Tuple[int], mode: Literal["edge"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: Tuple[int, int], mode: Literal["edge"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: Tuple[Tuple[int, int]], mode: Literal["edge"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: Tuple[int], mode: Literal["linear_ramp"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: Tuple[int, int], mode: Literal["linear_ramp"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(
+    array: numpy.ndarray,
+    pad_width: Tuple[Tuple[int, int]],
+    mode: Literal["linear_ramp"],
+):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: int, mode: Literal["maximum"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: Tuple[int], mode: Literal["maximum"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(
+    array: numpy.ndarray, pad_width: Tuple[Tuple[int, int]], mode: Literal["maximum"]
+):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: int, mode: Literal["mean"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: Tuple[int], mode: Literal["mean"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: Tuple[int, int], mode: Literal["mean"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: Tuple[Tuple[int, int]], mode: Literal["mean"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: int, mode: Literal["minimum"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(array: numpy.ndarray, pad_width: Tuple[int], mode: Literal["minimum"]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(
+    array: numpy.ndarray, pad_width: Tuple[Tuple[int, int]], mode: Literal["minimum"]
+):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def pad(
+    array: numpy.ndarray,
+    pad_width: Tuple[Tuple[int, int], Tuple[int, int]],
+    mode: Callable,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def pad(array: dask.array.core.Array, pad_width: int, mode: Literal["constant"]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -38203,11 +45684,17 @@ def percentile(a: numpy.ndarray, q: list):
 
 
 @overload
-def percentile(
-    a: numpy.ndarray, q: numpy.ndarray, interpolation: Literal["linear", "nearest"]
-):
+def percentile(a: numpy.ndarray, q: numpy.ndarray, interpolation: Literal["linear"]):
     """
-    usage.dask: 8
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def percentile(a: numpy.ndarray, q: numpy.ndarray, interpolation: Literal["nearest"]):
+    """
+    usage.dask: 3
     """
     ...
 
@@ -38285,13 +45772,39 @@ def piecewise(
 
 @overload
 def piecewise(
-    x: Union[int, numpy.ndarray],
-    condlist: Union[numpy.ndarray, List[numpy.ndarray]],
-    funclist: List[Union[Callable, int, numpy.ndarray]],
+    x: numpy.ndarray,
+    condlist: List[numpy.ndarray],
+    funclist: List[Union[int, Callable]],
     *args: Literal["v", "t"],
 ):
     """
-    usage.dask: 6
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def piecewise(
+    x: int,
+    condlist: numpy.ndarray,
+    funclist: List[numpy.ndarray],
+    *args: Literal["v", "t"],
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def piecewise(
+    x: numpy.ndarray,
+    condlist: List[numpy.ndarray],
+    funclist: List[Callable],
+    *args: Literal["v", "t"],
+):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -38403,6 +45916,7 @@ def polyval(
 @overload
 def prod(a: Tuple[int, int]):
     """
+    usage.dask: 2
     usage.matplotlib: 2
     usage.skimage: 2
     usage.sklearn: 3
@@ -38414,6 +45928,7 @@ def prod(a: Tuple[int, int]):
 @overload
 def prod(a: Tuple[int, int, int]):
     """
+    usage.dask: 6
     usage.skimage: 3
     usage.sklearn: 1
     usage.xarray: 3
@@ -38424,6 +45939,7 @@ def prod(a: Tuple[int, int, int]):
 @overload
 def prod(a: List[int]):
     """
+    usage.dask: 22
     usage.skimage: 1
     usage.xarray: 1
     """
@@ -38433,6 +45949,7 @@ def prod(a: List[int]):
 @overload
 def prod(a: numpy.ndarray):
     """
+    usage.dask: 9
     usage.skimage: 3
     usage.sklearn: 2
     """
@@ -38442,6 +45959,7 @@ def prod(a: numpy.ndarray):
 @overload
 def prod(a: Tuple[int]):
     """
+    usage.dask: 2
     usage.sklearn: 1
     usage.xarray: 3
     """
@@ -38451,6 +45969,7 @@ def prod(a: Tuple[int]):
 @overload
 def prod(a: Tuple[None, ...]):
     """
+    usage.dask: 2
     usage.matplotlib: 2
     usage.xarray: 1
     """
@@ -38460,6 +45979,7 @@ def prod(a: Tuple[None, ...]):
 @overload
 def prod(a: list):
     """
+    usage.dask: 4
     usage.xarray: 1
     """
     ...
@@ -38468,6 +45988,7 @@ def prod(a: list):
 @overload
 def prod(a: Tuple[int, int, int, int]):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -38476,6 +45997,7 @@ def prod(a: Tuple[int, int, int, int]):
 @overload
 def prod(a: Tuple[int, int, int, int, int]):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -38532,6 +46054,7 @@ def prod(a: object, axis: int):
 @overload
 def prod(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 4
     usage.xarray: 1
     """
     ...
@@ -38563,14 +46086,185 @@ def prod(
 
 
 @overload
-def prod(
-    a: object,
-    axis: Union[None, Tuple[Union[None, int], ...], int] = ...,
-    out: Union[dask.dataframe.core.Scalar, dask.dataframe.core.Series] = ...,
-    keepdims: bool = ...,
-):
+def prod(a: List[numpy.float64]):
     """
-    usage.dask: 100
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def prod(a: numpy.ma.core.MaskedArray):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def prod(a: numpy.ma.core.MaskedArray, axis: int):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def prod(a: numpy.ma.core.MaskedArray, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def prod(a: numpy.ma.core.MaskedArray, axis: int, keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def prod(a: List[Union[int, numpy.float64]]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def prod(a: Tuple[int, int, int], dtype: Literal["f4"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def prod(a: Tuple[int, int, int], dtype: Literal["i4"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def prod(a: numpy.ndarray, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def prod(a: numpy.ndarray, axis: Tuple[None, ...]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def prod(a: numpy.ndarray, dtype: Literal["f8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def prod(a: numpy.ndarray, dtype: Literal["i8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def prod(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def prod(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def prod(a: numpy.ndarray, axis: Tuple[int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def prod(a: Tuple[int], dtype: Type[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def prod(a: Tuple[int, int], dtype: Type[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def prod(a: dask.dataframe.core.DataFrame, axis: int, out: dask.dataframe.core.Series):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def prod(a: dask.dataframe.core.Series, axis: None, out: dask.dataframe.core.Scalar):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def prod(a: dask.dataframe.core.Series):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def prod(a: pandas.core.series.Series):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def prod(a: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def prod(a: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -38614,6 +46308,7 @@ def product(*args: Literal["v", "t"]):
 @overload
 def promote_types(_0: numpy.dtype, _1: numpy.dtype, /):
     """
+    usage.dask: 6
     usage.pandas: 55
     usage.skimage: 1
     """
@@ -38637,9 +46332,9 @@ def promote_types(_0: numpy.dtype, _1: Type[numpy.float32], /):
 
 
 @overload
-def promote_types(_0: numpy.dtype, _1: Union[numpy.dtype, Type[float]], /):
+def promote_types(_0: numpy.dtype, _1: Type[float], /):
     """
-    usage.dask: 7
+    usage.dask: 1
     """
     ...
 
@@ -38675,6 +46370,7 @@ def ptp(a: numpy.ndarray):
 @overload
 def ptp(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.sklearn: 1
     """
@@ -38682,9 +46378,9 @@ def ptp(a: numpy.ndarray, axis: int):
 
 
 @overload
-def ptp(a: numpy.ndarray, axis: Union[int, None]):
+def ptp(a: numpy.ndarray, axis: None):
     """
-    usage.dask: 2
+    usage.dask: 1
     """
     ...
 
@@ -39288,9 +46984,27 @@ def ravel_multi_index(_0: List[Tuple[int, int]], _1: Tuple[int, int], /):
 
 
 @overload
-def ravel_multi_index(_0: Tuple[numpy.int64, ...], _1: Tuple[int, ...], /):
+def ravel_multi_index(
+    _0: Tuple[numpy.int64, numpy.int64, numpy.int64], _1: Tuple[int, int, int], /
+):
     """
-    usage.dask: 3
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ravel_multi_index(_0: Tuple[numpy.int64], _1: Tuple[int], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def ravel_multi_index(_0: Tuple[numpy.int64, numpy.int64], _1: Tuple[int, int], /):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -39318,6 +47032,7 @@ def ravel_multi_index(
 @overload
 def real(val: numpy.ndarray):
     """
+    usage.dask: 17
     usage.skimage: 7
     usage.sklearn: 5
     """
@@ -39351,8 +47066,47 @@ def real(val: numpy.complex128):
 @overload
 def real(val: object):
     """
-    usage.dask: 32
     usage.scipy: 106
+    """
+    ...
+
+
+@overload
+def real(val: dask.array.core.Array):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def real(val: pandas.core.series.Series):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def real(val: dask.dataframe.core.Series):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def real(val: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def real(val: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -40080,6 +47834,7 @@ def result_type(_0: numpy.ndarray, /):
 @overload
 def result_type(_0: numpy.ndarray, _1: numpy.ndarray, /):
     """
+    usage.dask: 1
     usage.xarray: 25
     """
     ...
@@ -40401,6 +48156,7 @@ def result_type(_0: float, /):
 @overload
 def result_type(_0: numpy.ndarray, _1: float, /):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -40569,6 +48325,7 @@ def result_type(
 @overload
 def result_type(_0: numpy.dtype, /):
     """
+    usage.dask: 1
     usage.sklearn: 2
     usage.xarray: 1
     """
@@ -40586,6 +48343,7 @@ def result_type(_0: int, /):
 @overload
 def result_type(_0: numpy.dtype, _1: int, /):
     """
+    usage.dask: 4
     usage.xarray: 1
     """
     ...
@@ -40649,24 +48407,270 @@ def result_type(
 
 
 @overload
-def result_type(
-    _0: object,
-    _1: object = ...,
-    _2: Union[Literal["f8"], Type[numpy.float64], numpy.dtype] = ...,
-    _3: numpy.dtype = ...,
-    _4: numpy.dtype = ...,
-    /,
-):
+def result_type(_0: numpy.dtype, _1: numpy.dtype, /):
     """
-    usage.dask: 80
+    usage.dask: 18
+    usage.sklearn: 4
     """
     ...
 
 
 @overload
-def result_type(_0: numpy.dtype, _1: numpy.dtype, /):
+def result_type(_0: numpy.dtype, _1: float, /):
     """
-    usage.sklearn: 4
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.dtype, _1: numpy.int64, /):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.dtype, _1: numpy.ndarray, /):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def result_type(_0: int, _1: numpy.dtype, /):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def result_type(_0: int, _1: int, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: int, _1: float, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: int, _1: numpy.int64, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: int, _1: numpy.ndarray, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: float, _1: numpy.dtype, /):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def result_type(_0: float, _1: int, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: float, _1: float, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: float, _1: numpy.int64, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: float, _1: numpy.ndarray, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.int64, _1: numpy.dtype, /):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.int64, _1: int, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.int64, _1: float, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.int64, _1: numpy.int64, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.int64, _1: numpy.ndarray, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.ndarray, _1: numpy.dtype, /):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.ndarray, _1: int, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.ndarray, _1: numpy.int64, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(
+    _0: dask.array.core.Array, _1: dask.array.core.Array, _2: Type[numpy.float64], /
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.dtype, _1: numpy.dtype, _2: Type[numpy.float64], /):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.dtype, _1: numpy.dtype, _2: Literal["f8"], /):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def result_type(_0: dask.array.core.Array, _1: Type[numpy.float64], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.dtype, _1: Type[numpy.float64], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.int32, _1: numpy.dtype, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.dtype, _1: numpy.dtype, _2: numpy.dtype, /):
+    """
+    usage.dask: 2
+    usage.sklearn: 7
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.dtype, _1: Type[numpy.float32], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def result_type(
+    _0: numpy.dtype,
+    _1: numpy.dtype,
+    _2: numpy.dtype,
+    _3: numpy.dtype,
+    _4: numpy.dtype,
+    /,
+):
+    """
+    usage.dask: 1
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def result_type(_0: numpy.dtype, _1: numpy.dtype, _2: numpy.dtype, _3: numpy.dtype, /):
+    """
+    usage.dask: 1
+    usage.sklearn: 2
     """
     ...
 
@@ -40690,22 +48694,6 @@ def result_type(
 ):
     """
     usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def result_type(_0: numpy.dtype, _1: numpy.dtype, _2: numpy.dtype, /):
-    """
-    usage.sklearn: 7
-    """
-    ...
-
-
-@overload
-def result_type(_0: numpy.dtype, _1: numpy.dtype, _2: numpy.dtype, _3: numpy.dtype, /):
-    """
-    usage.sklearn: 2
     """
     ...
 
@@ -40732,21 +48720,6 @@ def result_type(
     _17: numpy.dtype,
     _18: numpy.dtype,
     _19: numpy.dtype,
-    /,
-):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def result_type(
-    _0: numpy.dtype,
-    _1: numpy.dtype,
-    _2: numpy.dtype,
-    _3: numpy.dtype,
-    _4: numpy.dtype,
     /,
 ):
     """
@@ -41002,6 +48975,7 @@ def result_type(_0: object, /, *_args: object):
 @overload
 def roll(a: numpy.ndarray, shift: int, axis: int):
     """
+    usage.dask: 1
     usage.matplotlib: 3
     usage.skimage: 8
     usage.xarray: 1
@@ -41020,6 +48994,7 @@ def roll(a: List[Union[float, int]], shift: int):
 @overload
 def roll(a: numpy.ndarray, shift: Tuple[int, int], axis: Tuple[int, int]):
     """
+    usage.dask: 1
     usage.skimage: 2
     """
     ...
@@ -41028,6 +49003,7 @@ def roll(a: numpy.ndarray, shift: Tuple[int, int], axis: Tuple[int, int]):
 @overload
 def roll(a: numpy.ndarray, shift: int):
     """
+    usage.dask: 2
     usage.matplotlib: 1
     usage.skimage: 2
     """
@@ -41051,13 +49027,9 @@ def roll(a: numpy.ndarray, shift: int, axis: int = ...):
 
 
 @overload
-def roll(
-    a: numpy.ndarray,
-    shift: Union[Tuple[int, int], int],
-    axis: Union[Tuple[int, int], None, int] = ...,
-):
+def roll(a: numpy.ndarray, shift: int, axis: None):
     """
-    usage.dask: 5
+    usage.dask: 1
     """
     ...
 
@@ -41081,6 +49053,7 @@ def roll(
 @overload
 def rollaxis(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 1
     usage.skimage: 12
     usage.sklearn: 4
     """
@@ -41090,6 +49063,7 @@ def rollaxis(a: numpy.ndarray, axis: int):
 @overload
 def rollaxis(a: numpy.ndarray, axis: int, start: int):
     """
+    usage.dask: 3
     usage.skimage: 2
     usage.sklearn: 1
     """
@@ -41105,11 +49079,9 @@ def rollaxis(a: numpy.ndarray, axis: int, start: int = ...):
 
 
 @overload
-def rollaxis(
-    a: Union[dask.array.core.Array, numpy.ndarray], axis: int, start: int = ...
-):
+def rollaxis(a: dask.array.core.Array, axis: int, start: int):
     """
-    usage.dask: 5
+    usage.dask: 1
     """
     ...
 
@@ -41178,6 +49150,7 @@ def round_(a: List[Union[int, float]]):
 @overload
 def round_(a: numpy.ndarray):
     """
+    usage.dask: 2
     usage.matplotlib: 4
     usage.skimage: 11
     usage.sklearn: 4
@@ -41212,6 +49185,7 @@ def round_(a: Tuple[int, int]):
 @overload
 def round_(a: numpy.ndarray, decimals: int):
     """
+    usage.dask: 3
     usage.matplotlib: 2
     usage.skimage: 5
     """
@@ -41321,12 +49295,17 @@ def round_(a: object, decimals: int = ...):
 
 
 @overload
-def round_(
-    a: Union[numpy.ndarray, dask.array.core.Array, numpy.ma.core.MaskedArray],
-    decimals: int = ...,
-):
+def round_(a: dask.array.core.Array):
     """
-    usage.dask: 9
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def round_(a: numpy.ma.core.MaskedArray, decimals: int):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -41352,6 +49331,54 @@ def round_(
     usage.skimage: 30
     usage.sklearn: 11
     usage.xarray: 3
+    """
+    ...
+
+
+@overload
+def save(file: Literal["/tmp/tmpfk_q52db.npy"], arr: numpy.memmap):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def save(file: Literal["/tmp/tmp7pu_zh_l.npy"], arr: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def save(file: Literal["/tmp/tmpd4ay6ms9.npy"], arr: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def save(file: Literal["/tmp/tmp3jfp1gkx.npy"], arr: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def save(file: Literal["/tmp/tmpu7vhvxgk.npy"], arr: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def save(file: Literal["/tmp/tmpjj901750.npy"], arr: numpy.ndarray):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -41460,13 +49487,81 @@ def searchsorted(
 
 
 @overload
+def searchsorted(a: Tuple[int, int], v: numpy.ndarray, side: Literal["right"]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def searchsorted(a: List[int], v: int, side: Literal["right"]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def searchsorted(a: numpy.ndarray, v: numpy.ndarray, side: Literal["left"]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def searchsorted(a: numpy.ndarray, v: numpy.ndarray, side: Literal["right"]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
 def searchsorted(
-    a: Union[numpy.ndarray, Tuple[int, ...], List[int]],
-    v: Union[numpy.ndarray, int],
-    side: Literal["right", "left"],
+    a: Tuple[int, int, int, int], v: numpy.ndarray, side: Literal["right"]
 ):
     """
-    usage.dask: 17
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def searchsorted(a: Tuple[int], v: numpy.ndarray, side: Literal["right"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def searchsorted(a: Tuple[int, int, int], v: numpy.ndarray, side: Literal["right"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def searchsorted(
+    a: Tuple[int, int, int, int, int], v: numpy.ndarray, side: Literal["right"]
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def searchsorted(
+    a: Tuple[int, int, int, int, int, int, int, int, int, int],
+    v: numpy.ndarray,
+    side: Literal["right"],
+):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -41784,6 +49879,7 @@ def seterr(
     invalid: Literal["warn"],
 ):
     """
+    usage.dask: 1
     usage.skimage: 1
     usage.sklearn: 3
     """
@@ -41791,21 +49887,9 @@ def seterr(
 
 
 @overload
-def seterr(
-    divide: Literal["warn"] = ...,
-    over: Literal["warn"] = ...,
-    under: Literal["ignore"] = ...,
-    invalid: Literal["warn"] = ...,
-):
-    """
-    usage.dask: 2
-    """
-    ...
-
-
-@overload
 def seterr(all: Literal["ignore"]):
     """
+    usage.dask: 1
     usage.sklearn: 2
     """
     ...
@@ -41969,17 +50053,41 @@ def sinc(x: Union[float, numpy.ndarray, List[int]]):
 
 
 @overload
-def sinc(
-    x: Union[
-        dask.dataframe.core.DataFrame,
-        dask.dataframe.core.Series,
-        numpy.ndarray,
-        pandas.core.series.Series,
-        pandas.core.frame.DataFrame,
-    ]
-):
+def sinc(x: numpy.ndarray):
     """
-    usage.dask: 17
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def sinc(x: pandas.core.series.Series):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def sinc(x: dask.dataframe.core.Series):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def sinc(x: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def sinc(x: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -42120,6 +50228,7 @@ def size(a: object, axis: int = ...):
 @overload
 def sort(a: numpy.ndarray):
     """
+    usage.dask: 6
     usage.matplotlib: 4
     usage.pandas: 33
     usage.skimage: 13
@@ -42132,6 +50241,7 @@ def sort(a: numpy.ndarray):
 @overload
 def sort(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 7
     usage.skimage: 1
     usage.sklearn: 3
     """
@@ -42154,9 +50264,9 @@ def sort(
 
 
 @overload
-def sort(a: Union[numpy.ndarray, dask.array.core.Array], axis: int = ...):
+def sort(a: dask.array.core.Array):
     """
-    usage.dask: 14
+    usage.dask: 1
     """
     ...
 
@@ -42274,6 +50384,7 @@ def squeeze(a: numpy.ndarray):
 @overload
 def squeeze(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 1
     usage.skimage: 7
     """
     ...
@@ -42290,6 +50401,7 @@ def squeeze(a: numpy.ndarray, axis: Tuple[int]):
 @overload
 def squeeze(a: numpy.ndarray, axis: Tuple[int, int]):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -42317,9 +50429,9 @@ def squeeze(
 
 
 @overload
-def squeeze(a: numpy.ndarray, axis: Union[Tuple[int, int], None, int]):
+def squeeze(a: numpy.ndarray, axis: None):
     """
-    usage.dask: 3
+    usage.dask: 1
     """
     ...
 
@@ -42379,6 +50491,7 @@ def squeeze(a: object, axis: Union[int, None, Tuple[int, ...]] = ...):
 @overload
 def stack(arrays: List[numpy.ndarray], axis: int):
     """
+    usage.dask: 21
     usage.matplotlib: 8
     usage.skimage: 12
     usage.xarray: 24
@@ -42429,6 +50542,7 @@ def stack(arrays: Tuple[numpy.float64, numpy.float64, numpy.ndarray], axis: int)
 @overload
 def stack(arrays: List[numpy.ndarray]):
     """
+    usage.dask: 2
     usage.skimage: 2
     usage.xarray: 2
     """
@@ -42470,6 +50584,7 @@ def stack(arrays: List[sparse._coo.core.COO], axis: int):
 @overload
 def stack(arrays: list, axis: int):
     """
+    usage.dask: 2
     usage.xarray: 3
     """
     ...
@@ -42492,9 +50607,41 @@ def stack(arrays: Tuple[numpy.ndarray, numpy.ndarray], axis: int):
 
 
 @overload
-def stack(arrays: Union[Tuple[numpy.ndarray, ...], list], axis: int = ...):
+def stack(arrays: List[dask.array.core.Array]):
     """
-    usage.dask: 32
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def stack(arrays: list):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def stack(arrays: List[numpy.ma.core.MaskedArray], axis: int):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def stack(arrays: Tuple[numpy.ndarray]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def stack(arrays: Tuple[numpy.ndarray, numpy.ndarray]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -42516,6 +50663,7 @@ def stack(
 @overload
 def std(a: numpy.ndarray):
     """
+    usage.dask: 9
     usage.skimage: 1
     usage.sklearn: 8
     usage.xarray: 1
@@ -42542,6 +50690,7 @@ def std(a: object, axis: None):
 @overload
 def std(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 9
     usage.sklearn: 6
     usage.xarray: 3
     """
@@ -42615,6 +50764,7 @@ def std(a: numpy.ndarray, axis: int, dtype: None, ddof: int):
 @overload
 def std(a: numpy.ndarray, axis: Tuple[int, int]):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -42645,15 +50795,131 @@ def std(
 
 
 @overload
+def std(a: numpy.ma.core.MaskedArray):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def std(a: numpy.ma.core.MaskedArray, axis: int):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def std(a: numpy.ma.core.MaskedArray, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def std(a: numpy.ma.core.MaskedArray, axis: int, keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def std(a: numpy.ndarray, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def std(a: numpy.ndarray, axis: Tuple[None, ...]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def std(a: numpy.ndarray, dtype: Literal["f8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def std(a: numpy.ndarray, dtype: Literal["i8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def std(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def std(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def std(a: List[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
 def std(
-    a: object,
-    axis: Union[None, Tuple[Union[None, int], ...], int] = ...,
-    out: Union[dask.dataframe.core.Scalar, dask.dataframe.core.Series] = ...,
-    ddof: int = ...,
-    keepdims: bool = ...,
+    a: dask.dataframe.core.DataFrame,
+    axis: int,
+    out: dask.dataframe.core.Series,
+    ddof: int,
 ):
     """
-    usage.dask: 55
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def std(
+    a: dask.dataframe.core.Series,
+    axis: None,
+    out: dask.dataframe.core.Scalar,
+    ddof: int,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def std(a: pandas.core.series.Series, ddof: int):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def std(a: numpy.ndarray, ddof: int):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -42680,6 +50946,7 @@ def std(
 @overload
 def sum(a: numpy.ndarray):
     """
+    usage.dask: 16
     usage.matplotlib: 13
     usage.skimage: 91
     usage.sklearn: 250
@@ -42691,6 +50958,7 @@ def sum(a: numpy.ndarray):
 @overload
 def sum(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 7
     usage.matplotlib: 14
     usage.skimage: 14
     usage.sklearn: 105
@@ -42710,6 +50978,7 @@ def sum(a: List[numpy.ndarray], axis: int):
 @overload
 def sum(a: Tuple[int, int]):
     """
+    usage.dask: 1
     usage.skimage: 1
     """
     ...
@@ -42718,6 +50987,7 @@ def sum(a: Tuple[int, int]):
 @overload
 def sum(a: Tuple[int, int, int]):
     """
+    usage.dask: 1
     usage.skimage: 1
     usage.sklearn: 1
     """
@@ -42727,6 +50997,7 @@ def sum(a: Tuple[int, int, int]):
 @overload
 def sum(a: numpy.ndarray, axis: Tuple[int, int]):
     """
+    usage.dask: 2
     usage.skimage: 1
     usage.xarray: 4
     """
@@ -42736,6 +51007,7 @@ def sum(a: numpy.ndarray, axis: Tuple[int, int]):
 @overload
 def sum(a: numpy.ndarray, axis: Tuple[int]):
     """
+    usage.dask: 1
     usage.xarray: 2
     """
     ...
@@ -42792,6 +51064,7 @@ def sum(a: numpy.ndarray, axis: int, dtype: None):
 @overload
 def sum(a: numpy.ndarray, axis: Tuple[None, ...]):
     """
+    usage.dask: 4
     usage.xarray: 1
     """
     ...
@@ -42800,6 +51073,7 @@ def sum(a: numpy.ndarray, axis: Tuple[None, ...]):
 @overload
 def sum(a: numpy.ndarray, axis: int, keepdims: bool):
     """
+    usage.dask: 1
     usage.sklearn: 1
     usage.xarray: 1
     """
@@ -42953,6 +51227,7 @@ def sum(a: object, axis: None):
 @overload
 def sum(a: object):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -43045,23 +51320,392 @@ def sum(a: List[float]):
 @overload
 def sum(a: numpy.ma.core.MaskedArray):
     """
+    usage.dask: 3
     usage.matplotlib: 1
     """
     ...
 
 
 @overload
+def sum(a: numpy.ndarray, axis: Tuple[int], dtype: numpy.dtype, keepdims: bool):
+    """
+    usage.dask: 25
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: int, dtype: Literal["u4"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: List[numpy.int64]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: Tuple[int, int], dtype: numpy.dtype, keepdims: bool):
+    """
+    usage.dask: 17
+    """
+    ...
+
+
+@overload
+def sum(a: dask.array.core.Array):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def sum(a: object, axis: Tuple[int], dtype: numpy.dtype, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def sum(a: object, axis: Tuple[int, int], dtype: numpy.dtype, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
 def sum(
-    a: object,
-    axis: Union[None, Tuple[Union[None, int], ...], int] = ...,
-    dtype: Union[numpy.dtype, Literal["f8", "i8", "i4", "f4", "u4"]] = ...,
-    keepdims: bool = ...,
-    out: Union[
-        dask.dataframe.core.Scalar, dask.array.core.Array, dask.dataframe.core.Series
-    ] = ...,
+    a: numpy.ndarray, axis: Tuple[int, int, int], dtype: numpy.dtype, keepdims: bool
 ):
     """
-    usage.dask: 216
+    usage.dask: 10
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ma.core.MaskedArray, axis: int):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ma.core.MaskedArray, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ma.core.MaskedArray, axis: int, keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def sum(
+    a: numpy.ma.core.MaskedArray,
+    axis: Tuple[int, int],
+    dtype: numpy.dtype,
+    keepdims: bool,
+):
+    """
+    usage.dask: 10
+    """
+    ...
+
+
+@overload
+def sum(
+    a: numpy.ma.core.MaskedArray, axis: Tuple[int], dtype: numpy.dtype, keepdims: bool
+):
+    """
+    usage.dask: 10
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ma.core.MaskedArray, axis: Tuple[int, int], keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def sum(
+    a: numpy.ma.core.MaskedArray,
+    axis: Tuple[int, int],
+    dtype: Literal["f8"],
+    keepdims: bool,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ma.core.MaskedArray, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def sum(
+    a: numpy.ma.core.MaskedArray, axis: Tuple[int], dtype: Literal["f8"], keepdims: bool
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: Tuple[None, ...], dtype: numpy.dtype, keepdims: bool):
+    """
+    usage.dask: 15
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: Tuple[None, ...], dtype: Literal["f4"], keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: int, dtype: Literal["f4"], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: Tuple[int], dtype: Literal["f4"], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: Tuple[int, int], dtype: Literal["f4"], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: None, dtype: Literal["f4"], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: Tuple[None, ...], dtype: Literal["i4"], keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: int, dtype: Literal["i4"], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: Tuple[int], dtype: Literal["i4"], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: Tuple[int, int], dtype: Literal["i4"], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: None, dtype: Literal["i4"], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, dtype: Literal["f8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, dtype: Literal["i8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: Tuple[int], dtype: Literal["f8"], keepdims: bool):
+    """
+    usage.dask: 11
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: Tuple[int], dtype: Literal["i8"], keepdims: bool):
+    """
+    usage.dask: 10
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: Tuple[int, int], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: Tuple[int, int], dtype: Literal["f8"], keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def sum(a: dask.array.core.Array, axis: int, out: dask.array.core.Array):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: Tuple[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: Tuple[int, int, int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: pandas.core.series.Series):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def sum(a: dask.dataframe.core.DataFrame, axis: int, out: dask.dataframe.core.Series):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: dask.dataframe.core.Series, axis: None, out: dask.dataframe.core.Scalar):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def sum(a: dask.dataframe.core.Series):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def sum(a: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def sum(a: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -43278,6 +51922,7 @@ def take(a: numpy.ndarray, indices: numpy.ndarray):
 @overload
 def take(a: numpy.ndarray, indices: int, axis: int):
     """
+    usage.dask: 1
     usage.xarray: 2
     """
     ...
@@ -43286,6 +51931,7 @@ def take(a: numpy.ndarray, indices: int, axis: int):
 @overload
 def take(a: numpy.ndarray, indices: List[int], axis: int):
     """
+    usage.dask: 1
     usage.xarray: 10
     """
     ...
@@ -43294,6 +51940,7 @@ def take(a: numpy.ndarray, indices: List[int], axis: int):
 @overload
 def take(a: numpy.ndarray, indices: numpy.ndarray, axis: int):
     """
+    usage.dask: 1
     usage.sklearn: 1
     usage.xarray: 1
     """
@@ -43350,14 +51997,6 @@ def take(a: numpy.ndarray, indices: List[int]):
 def take(a: List[int], indices: List[int]):
     """
     usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def take(a: numpy.ndarray, indices: Union[numpy.ndarray, int, List[int]], axis: int):
-    """
-    usage.dask: 3
     """
     ...
 
@@ -43431,6 +52070,7 @@ def take_along_axis(arr: numpy.ndarray, indices: numpy.ndarray, axis: int):
 @overload
 def tensordot(a: numpy.ndarray, b: numpy.ndarray, axes: Tuple[int, int]):
     """
+    usage.dask: 4
     usage.matplotlib: 1
     usage.skimage: 1
     """
@@ -43464,25 +52104,59 @@ def tensordot(a: numpy.ndarray, b: numpy.ndarray, axes: List[int]):
 @overload
 def tensordot(a: numpy.ndarray, b: numpy.ndarray, axes: int):
     """
+    usage.dask: 7
     usage.scipy: 2
     """
     ...
 
 
 @overload
+def tensordot(a: numpy.ndarray, b: numpy.ndarray, axes: Tuple[Tuple[int], Tuple[int]]):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def tensordot(a: object, b: object, axes: Tuple[Tuple[int], Tuple[int]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
 def tensordot(
-    a: object,
-    b: object,
-    axes: Union[
-        Tuple[
-            Union[int, Tuple[Union[int, None], ...]],
-            Union[int, Tuple[Union[int, None], ...]],
-        ],
-        int,
+    a: numpy.ndarray, b: numpy.ndarray, axes: Tuple[Tuple[int, int], Tuple[int, int]]
+):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def tensordot(
+    a: numpy.ndarray, b: numpy.ndarray, axes: Tuple[Tuple[None, ...], Tuple[None, ...]]
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def tensordot(
+    a: numpy.ndarray,
+    b: numpy.ndarray,
+    axes: Tuple[
+        Tuple[int, int, int, int, int, int, int, int, int, int],
+        Tuple[int, int, int, int, int, int, int, int, int, int],
     ],
 ):
     """
-    usage.dask: 23
+    usage.dask: 1
     """
     ...
 
@@ -43521,6 +52195,7 @@ def tile(A: List[int], reps: Tuple[int, int]):
 @overload
 def tile(A: numpy.ndarray, reps: Tuple[int, int]):
     """
+    usage.dask: 4
     usage.matplotlib: 15
     usage.skimage: 8
     usage.sklearn: 8
@@ -43532,6 +52207,7 @@ def tile(A: numpy.ndarray, reps: Tuple[int, int]):
 @overload
 def tile(A: numpy.ndarray, reps: Tuple[int, int, int]):
     """
+    usage.dask: 2
     usage.skimage: 2
     usage.xarray: 5
     """
@@ -43549,6 +52225,7 @@ def tile(A: numpy.ndarray, reps: List[int]):
 @overload
 def tile(A: numpy.ndarray, reps: Tuple[int, int, int, int]):
     """
+    usage.dask: 2
     usage.skimage: 1
     """
     ...
@@ -43592,6 +52269,7 @@ def tile(
 @overload
 def tile(A: numpy.ndarray, reps: int):
     """
+    usage.dask: 4
     usage.matplotlib: 9
     usage.sklearn: 3
     """
@@ -43615,9 +52293,33 @@ def tile(A: Tuple[float, numpy.float64], reps: Tuple[int, int]):
 
 
 @overload
-def tile(A: Union[numpy.ndarray, List[List[int]]], reps: Union[Tuple[int, ...], int]):
+def tile(A: List[List[int]], reps: int):
     """
-    usage.dask: 18
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def tile(A: List[List[int]], reps: Tuple[int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def tile(A: List[List[int]], reps: Tuple[int, int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def tile(A: numpy.ndarray, reps: Tuple[int]):
+    """
+    usage.dask: 3
     """
     ...
 
@@ -43854,6 +52556,7 @@ def transpose(a: Tuple[numpy.ndarray, numpy.ndarray]):
 @overload
 def transpose(a: numpy.ndarray, axes: Tuple[int, int, int, int]):
     """
+    usage.dask: 2
     usage.skimage: 2
     usage.sklearn: 2
     """
@@ -43872,6 +52575,7 @@ def transpose(a: numpy.ndarray, axes: List[int]):
 @overload
 def transpose(a: numpy.ndarray, axes: Tuple[int, int, int]):
     """
+    usage.dask: 5
     usage.skimage: 1
     usage.sklearn: 1
     usage.xarray: 3
@@ -43890,6 +52594,7 @@ def transpose(a: Tuple[numpy.ndarray]):
 @overload
 def transpose(a: numpy.ndarray, axes: Tuple[int, int]):
     """
+    usage.dask: 7
     usage.xarray: 3
     """
     ...
@@ -43906,6 +52611,7 @@ def transpose(a: sparse._coo.core.COO, axes: Tuple[int, int]):
 @overload
 def transpose(a: object, axes: Tuple[int, int]):
     """
+    usage.dask: 2
     usage.xarray: 1
     """
     ...
@@ -43938,9 +52644,25 @@ def transpose(a: numpy.ma.core.MaskedArray):
 
 
 @overload
-def transpose(a: object, axes: Tuple[Union[None, int], ...]):
+def transpose(a: numpy.ndarray, axes: Tuple[int]):
     """
-    usage.dask: 25
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def transpose(a: numpy.ndarray, axes: Tuple[None, ...]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def transpose(a: numpy.ma.core.MaskedArray, axes: Tuple[int, int, int]):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -44080,6 +52802,7 @@ def tri(N: int, M: int = ..., k: int = ..., dtype: type = ...):
 @overload
 def tril(m: numpy.ndarray):
     """
+    usage.dask: 6
     usage.matplotlib: 1
     usage.skimage: 1
     """
@@ -44089,7 +52812,6 @@ def tril(m: numpy.ndarray):
 @overload
 def tril(m: numpy.ndarray, k: int = ...):
     """
-    usage.dask: 7
     usage.scipy: 88
     """
     ...
@@ -44098,6 +52820,7 @@ def tril(m: numpy.ndarray, k: int = ...):
 @overload
 def tril(m: numpy.ndarray, k: int):
     """
+    usage.dask: 1
     usage.sklearn: 1
     """
     ...
@@ -44155,6 +52878,7 @@ def trim_zeros(filt: numpy.ndarray, trim: Literal["b", "f"]):
 @overload
 def triu(m: numpy.ndarray):
     """
+    usage.dask: 7
     usage.skimage: 1
     """
     ...
@@ -44163,8 +52887,15 @@ def triu(m: numpy.ndarray):
 @overload
 def triu(m: numpy.ndarray, k: int = ...):
     """
-    usage.dask: 8
     usage.scipy: 205
+    """
+    ...
+
+
+@overload
+def triu(m: numpy.ndarray, k: int):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -44218,12 +52949,9 @@ def union1d(ar1: List[Union[int, float, complex]], ar2: numpy.ndarray):
 
 
 @overload
-def union1d(
-    ar1: Union[numpy.ndarray, dask.array.core.Array],
-    ar2: Union[numpy.ndarray, dask.array.core.Array],
-):
+def union1d(ar1: dask.array.core.Array, ar2: dask.array.core.Array):
     """
-    usage.dask: 2
+    usage.dask: 1
     """
     ...
 
@@ -44231,6 +52959,7 @@ def union1d(
 @overload
 def union1d(ar1: numpy.ndarray, ar2: numpy.ndarray):
     """
+    usage.dask: 1
     usage.sklearn: 12
     """
     ...
@@ -44261,6 +52990,7 @@ def unique(ar: numpy.ndarray, return_inverse: bool):
 @overload
 def unique(ar: numpy.ndarray):
     """
+    usage.dask: 7
     usage.matplotlib: 6
     usage.skimage: 46
     usage.sklearn: 383
@@ -44353,22 +53083,61 @@ def unique(ar: numpy.ndarray, return_index: bool, return_inverse: bool):
 
 
 @overload
+def unique(ar: List[numpy.int64]):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def unique(ar: List[numpy.float64]):
+    """
+    usage.dask: 5
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def unique(ar: List[numpy.complex128]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def unique(ar: List[numpy.bool_]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def unique(ar: List[numpy.float32]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
 def unique(
-    ar: Union[
-        pandas.core.series.Series,
-        numpy.ndarray,
-        List[
-            Union[
-                numpy.float32, numpy.bool_, numpy.int64, numpy.float64, numpy.complex128
-            ]
-        ],
-    ],
-    return_index: bool = ...,
-    return_inverse: bool = ...,
-    return_counts: bool = ...,
+    ar: numpy.ndarray, return_index: bool, return_inverse: bool, return_counts: bool
 ):
     """
-    usage.dask: 30
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def unique(ar: pandas.core.series.Series):
+    """
+    usage.dask: 3
+    usage.sklearn: 1
     """
     ...
 
@@ -44470,14 +53239,6 @@ def unique(ar: List[Literal["copyright", "water", "salad", "tomato", "the"]]):
 
 
 @overload
-def unique(ar: pandas.core.series.Series):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def unique(ar: List[Literal["three", "two", "one"]]):
     """
     usage.sklearn: 3
@@ -44518,14 +53279,6 @@ def unique(ar: List[Literal["3", "2", "1"]]):
 
 
 @overload
-def unique(ar: List[numpy.float64]):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def unique(ar: List[float]):
     """
     usage.sklearn: 3
@@ -44540,7 +53293,7 @@ def unique(
     return_counts: bool = ...,
 ):
     """
-    usage.dask: 30
+    usage.dask: 29
     usage.matplotlib: 8
     usage.pandas: 22
     usage.scipy: 66
@@ -44561,6 +53314,7 @@ def unpackbits(_0: numpy.ndarray, /):
 @overload
 def unravel_index(_0: numpy.int64, _1: Tuple[int, int], /):
     """
+    usage.dask: 1
     usage.skimage: 8
     usage.sklearn: 1
     """
@@ -44578,6 +53332,7 @@ def unravel_index(_0: numpy.ndarray, _1: Tuple[int, int], /):
 @overload
 def unravel_index(_0: numpy.int64, _1: Tuple[int, int, int], /):
     """
+    usage.dask: 1
     usage.skimage: 4
     """
     ...
@@ -44637,17 +53392,81 @@ def unravel_index(_0: List[int], _1: Tuple[int, int], /):
 
 
 @overload
-def unravel_index(
-    _0: Union[numpy.ndarray, numpy.int64],
-    _1: Tuple[Union[int, None], ...] = ...,
-    _2: Literal["F", "C"] = ...,
-    /,
-    *,
-    order: Literal["F", "C"] = ...,
-    shape: Tuple[int, ...] = ...,
-):
+def unravel_index(_0: numpy.int64, _1: Tuple[int], /):
     """
-    usage.dask: 12
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def unravel_index(_0: numpy.ndarray, _1: Tuple[None, ...], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def unravel_index(_0: numpy.ndarray, _1: Tuple[int], _2: Literal["C"], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def unravel_index(_0: numpy.ndarray, /, *, order: Literal["C"], shape: Tuple[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def unravel_index(_0: numpy.ndarray, _1: Tuple[int], _2: Literal["F"], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def unravel_index(_0: numpy.ndarray, /, *, order: Literal["F"], shape: Tuple[int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def unravel_index(_0: numpy.ndarray, _1: Tuple[int, int], _2: Literal["C"], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def unravel_index(_0: numpy.ndarray, /, *, order: Literal["C"], shape: Tuple[int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def unravel_index(_0: numpy.ndarray, _1: Tuple[int, int], _2: Literal["F"], /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def unravel_index(_0: numpy.ndarray, /, *, order: Literal["F"], shape: Tuple[int, int]):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -44722,6 +53541,7 @@ def vander(x: numpy.ndarray, N: int = ...):
 @overload
 def var(a: numpy.ndarray, axis: int):
     """
+    usage.dask: 4
     usage.sklearn: 30
     usage.xarray: 4
     """
@@ -44739,6 +53559,7 @@ def var(a: numpy.ndarray, axis: None):
 @overload
 def var(a: numpy.ndarray, axis: Tuple[None, ...]):
     """
+    usage.dask: 3
     usage.xarray: 1
     """
     ...
@@ -44788,6 +53609,7 @@ def var(a: object, axis: None):
 @overload
 def var(a: object):
     """
+    usage.dask: 1
     usage.xarray: 1
     """
     ...
@@ -44870,23 +53692,124 @@ def var(a: Union[numpy.ndarray, List[float]], axis: int = ..., ddof: int = ...):
 
 
 @overload
-def var(
-    a: object,
-    axis: Union[None, Tuple[Union[None, int], ...], int] = ...,
-    out: Union[dask.dataframe.core.Scalar, dask.dataframe.core.Series] = ...,
-    ddof: int = ...,
-    keepdims: bool = ...,
-):
+def var(a: numpy.ndarray):
     """
-    usage.dask: 59
+    usage.dask: 20
+    usage.sklearn: 8
     """
     ...
 
 
 @overload
-def var(a: numpy.ndarray):
+def var(a: dask.array.core.Array):
     """
-    usage.sklearn: 8
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def var(a: numpy.ma.core.MaskedArray):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def var(a: numpy.ma.core.MaskedArray, axis: int):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def var(a: numpy.ma.core.MaskedArray, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def var(a: numpy.ma.core.MaskedArray, axis: int, keepdims: bool):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def var(a: numpy.ndarray, keepdims: bool):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def var(a: numpy.ndarray, dtype: Literal["f8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def var(a: numpy.ndarray, dtype: Literal["i8"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def var(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def var(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def var(a: numpy.ndarray, axis: Tuple[int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def var(
+    a: dask.dataframe.core.DataFrame,
+    axis: int,
+    out: dask.dataframe.core.Series,
+    ddof: int,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def var(
+    a: dask.dataframe.core.Series,
+    axis: None,
+    out: dask.dataframe.core.Scalar,
+    ddof: int,
+):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -44951,6 +53874,7 @@ def vstack(tup: Tuple[List[float], List[Union[int, float]]]):
 @overload
 def vstack(tup: Tuple[numpy.ndarray, numpy.ndarray]):
     """
+    usage.dask: 3
     usage.matplotlib: 9
     usage.skimage: 4
     usage.sklearn: 35
@@ -44969,6 +53893,7 @@ def vstack(tup: Tuple[List[numpy.int64], List[numpy.int64]]):
 @overload
 def vstack(tup: List[numpy.ndarray]):
     """
+    usage.dask: 3
     usage.matplotlib: 70
     usage.pandas: 49
     usage.skimage: 23
@@ -45133,9 +54058,25 @@ def vstack(tup: List[numpy.flatiter]):
 
 
 @overload
+def vstack(tup: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def vstack(tup: dask.array.core.Array):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
 def vstack(tup: object):
     """
-    usage.dask: 10
+    usage.dask: 1
     """
     ...
 
@@ -45266,6 +54207,7 @@ def where(_0: numpy.ndarray, _1: float, _2: int, /):
 @overload
 def where(_0: numpy.ndarray, _1: numpy.ndarray, _2: numpy.ndarray, /):
     """
+    usage.dask: 14
     usage.matplotlib: 1
     usage.skimage: 1
     usage.sklearn: 1
@@ -45277,6 +54219,7 @@ def where(_0: numpy.ndarray, _1: numpy.ndarray, _2: numpy.ndarray, /):
 @overload
 def where(_0: numpy.ndarray, _1: float, _2: numpy.ndarray, /):
     """
+    usage.dask: 3
     usage.skimage: 1
     usage.xarray: 7
     """
@@ -45303,6 +54246,7 @@ def where(_0: numpy.bool_, _1: float, _2: numpy.float64, /):
 @overload
 def where(_0: numpy.ndarray, _1: numpy.ndarray, _2: int, /):
     """
+    usage.dask: 7
     usage.skimage: 4
     usage.xarray: 1
     """
@@ -45312,6 +54256,7 @@ def where(_0: numpy.ndarray, _1: numpy.ndarray, _2: int, /):
 @overload
 def where(_0: numpy.ndarray, /):
     """
+    usage.dask: 2
     usage.matplotlib: 1
     usage.skimage: 12
     usage.sklearn: 63
@@ -45338,6 +54283,7 @@ def where(_0: numpy.ndarray, _1: int, _2: int, /):
 @overload
 def where(_0: numpy.bool_, _1: numpy.ndarray, _2: numpy.ndarray, /):
     """
+    usage.dask: 2
     usage.xarray: 3
     """
     ...
@@ -45370,6 +54316,7 @@ def where(_0: sparse._coo.core.COO, _1: sparse._coo.core.COO, _2: numpy.ndarray,
 @overload
 def where(_0: bool, _1: numpy.ndarray, _2: numpy.ndarray, /):
     """
+    usage.dask: 2
     usage.xarray: 1
     """
     ...
@@ -45488,6 +54435,7 @@ def where(_0: numpy.ndarray, _1: numpy.ndarray, _2: numpy.ma.core.MaskedArray, /
 @overload
 def where(_0: numpy.ndarray, _1: numpy.ndarray, _2: float, /):
     """
+    usage.dask: 6
     usage.matplotlib: 1
     """
     ...
@@ -45514,6 +54462,7 @@ def where(_0: numpy.ndarray, _1: numpy.float32, _2: numpy.float32, /):
 @overload
 def where(_0: numpy.ndarray, _1: int, _2: numpy.ndarray, /):
     """
+    usage.dask: 7
     usage.matplotlib: 1
     usage.sklearn: 4
     """
@@ -45529,14 +54478,89 @@ def where(_0: numpy.ma.core.MaskedArray, _1: numpy.ma.core.MaskedArray, _2: floa
 
 
 @overload
-def where(
-    _0: Union[numpy.ndarray, bool, int, numpy.bool_, dask.array.core.Array],
-    _1: Union[numpy.ndarray, numpy.float64, int, numpy.int32, float] = ...,
-    _2: Union[float, int, numpy.float64, dask.array.core.Array, numpy.ndarray] = ...,
-    /,
-):
+def where(_0: int, _1: numpy.ndarray, _2: int, /):
     """
-    usage.dask: 58
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def where(_0: int, _1: numpy.ndarray, _2: numpy.ndarray, /):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def where(_0: bool, _1: numpy.ndarray, _2: int, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def where(_0: numpy.bool_, _1: numpy.ndarray, _2: int, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def where(_0: numpy.ndarray, _1: numpy.int32, _2: numpy.ndarray, /):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def where(_0: bool, _1: numpy.int32, _2: numpy.ndarray, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def where(_0: numpy.bool_, _1: numpy.float64, _2: float, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def where(_0: numpy.bool_, _1: int, _2: numpy.float64, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def where(_0: dask.array.core.Array, _1: int, _2: dask.array.core.Array, /):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def where(_0: dask.array.core.Array, _1: numpy.float64, _2: dask.array.core.Array, /):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def where(_0: numpy.ndarray, _1: numpy.float64, _2: numpy.ndarray, /):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -45646,6 +54670,7 @@ def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.int64]):
 @overload
 def zeros(_0: Tuple[int, int], /):
     """
+    usage.dask: 4
     usage.matplotlib: 25
     usage.sample-usage: 1
     usage.skimage: 228
@@ -45667,6 +54692,7 @@ def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.float64]):
 @overload
 def zeros(_0: Tuple[int, int, int], /):
     """
+    usage.dask: 1
     usage.matplotlib: 6
     usage.skimage: 73
     usage.sklearn: 12
@@ -45702,6 +54728,7 @@ def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.uint8]):
 @overload
 def zeros(_0: int, /, *, dtype: Type[int]):
     """
+    usage.dask: 2
     usage.skimage: 3
     usage.sklearn: 15
     """
@@ -45747,6 +54774,7 @@ def zeros(_0: Tuple[int, int, int], /, *, dtype: Type[bool]):
 @overload
 def zeros(_0: int, /):
     """
+    usage.dask: 3
     usage.matplotlib: 38
     usage.skimage: 15
     usage.sklearn: 133
@@ -46537,6 +55565,7 @@ def zeros(_0: Tuple[int], /, *, dtype: Type[numpy.int16]):
 @overload
 def zeros(_0: int, /, *, dtype: Type[float]):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.sklearn: 2
     """
@@ -46577,25 +55606,118 @@ def zeros(_0: List[int], /, *, dtype: Type[numpy.float64]):
 
 
 @overload
-def zeros(
-    _0: Union[Tuple[Union[None, int], ...], int, numpy.ndarray, List[int]] = ...,
-    _1: Type[numpy.float64] = ...,
-    /,
-    *,
-    dtype: Union[numpy.dtype, Literal["<f8", "<f4", ">f8"], type] = ...,
-    shape: Tuple[int, ...] = ...,
-    order: Literal["F", "C"] = ...,
-):
+def zeros(_0: int, /, *, dtype: numpy.dtype):
     """
-    usage.dask: 52
+    usage.dask: 7
+    usage.sklearn: 44
     """
     ...
 
 
 @overload
-def zeros(_0: int, /, *, dtype: numpy.dtype):
+def zeros(_0: int, /, *, dtype: Literal[">f8"]):
     """
-    usage.sklearn: 44
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: int, /, *, dtype: Literal["<f4"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: int, /, *, dtype: Literal["<f8"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def zeros(*, shape: Tuple[int, int]):
+    """
+    usage.dask: 13
+    usage.sklearn: 11
+    """
+    ...
+
+
+@overload
+def zeros(*, shape: Tuple[int, int, int]):
+    """
+    usage.dask: 8
+    """
+    ...
+
+
+@overload
+def zeros(_0: int, _1: Type[numpy.float64], /):
+    """
+    usage.dask: 1
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[int, int], /, *, dtype: numpy.dtype, order: Literal["C"]):
+    """
+    usage.dask: 1
+    usage.sklearn: 4
+    """
+    ...
+
+
+@overload
+def zeros(_0: List[int], /, *, dtype: numpy.dtype, order: Literal["C"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: numpy.ndarray, /, *, dtype: numpy.dtype, order: Literal["C"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[int, int], /, *, dtype: numpy.dtype, order: Literal["F"]):
+    """
+    usage.dask: 1
+    usage.sklearn: 6
+    """
+    ...
+
+
+@overload
+def zeros(_0: List[int], /, *, dtype: numpy.dtype, order: Literal["F"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: numpy.ndarray, /, *, dtype: numpy.dtype, order: Literal["F"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[None, ...], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 3
     """
     ...
 
@@ -46625,31 +55747,7 @@ def zeros(_0: int, /, *, dtype: Type[numpy.int32]):
 
 
 @overload
-def zeros(_0: int, _1: Type[numpy.float64], /):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def zeros(*, dtype: Type[numpy.float64], shape: Tuple[int, int]):
-    """
-    usage.sklearn: 6
-    """
-    ...
-
-
-@overload
-def zeros(*, shape: Tuple[int, int]):
-    """
-    usage.sklearn: 11
-    """
-    ...
-
-
-@overload
-def zeros(_0: Tuple[int, int], /, *, dtype: numpy.dtype, order: Literal["F"]):
     """
     usage.sklearn: 6
     """
@@ -46740,14 +55838,6 @@ def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.float64], order: Literal[
 def zeros(*, dtype: Type[numpy.float64], order: Literal["C"], shape: int):
     """
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def zeros(_0: Tuple[int, int], /, *, dtype: numpy.dtype, order: Literal["C"]):
-    """
-    usage.sklearn: 4
     """
     ...
 
@@ -46851,6 +55941,7 @@ def zeros(
 @overload
 def zeros_like(a: numpy.ndarray):
     """
+    usage.dask: 3
     usage.matplotlib: 20
     usage.skimage: 46
     usage.sklearn: 64
@@ -46989,13 +56080,65 @@ def zeros_like(
 
 
 @overload
-def zeros_like(
-    a: numpy.ndarray,
-    dtype: numpy.dtype = ...,
-    shape: Union[int, Tuple[int, ...], None] = ...,
-):
+def zeros_like(a: numpy.ndarray, order: Literal["C"]):
     """
-    usage.dask: 14
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def zeros_like(a: numpy.ndarray, order: Literal["F"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def zeros_like(a: numpy.ndarray, shape: None):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def zeros_like(a: numpy.ndarray, shape: Tuple[int, int]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def zeros_like(a: numpy.ndarray, shape: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def zeros_like(a: numpy.ndarray, shape: Tuple[int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def zeros_like(a: numpy.ndarray, shape: Tuple[int, int, int, int, int]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def zeros_like(a: numpy.ndarray, dtype: numpy.dtype, shape: int):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -47295,6 +56438,20 @@ class bool_:
     def __ge__(self, _0: pandas._libs.missing.NAType, /):
         """
         usage.pandas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -48024,6 +57181,20 @@ class complex128:
         """
         ...
 
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __getitem__(self, _0: Tuple[Union[None, ellipsis], ...], /):
         """
         usage.dask: 2
@@ -48556,10 +57727,33 @@ class datetime64:
         """
         ...
 
+    @overload
     def __ge__(
         self, _0: Union[numpy.ndarray, pandas.core.indexes.datetimes.DatetimeIndex], /
     ):
         """
+        usage.pandas: 5
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def __ge__(
+        self,
+        _0: Union[
+            pandas._libs.tslibs.timestamps.Timestamp,
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
         usage.pandas: 5
         """
         ...
@@ -48797,6 +57991,7 @@ class dtype:
     @overload
     def __eq__(self, _0: numpy.dtype, /):
         """
+        usage.dask: 222
         usage.skimage: 80
         usage.sklearn: 266
         usage.xarray: 192
@@ -48806,6 +58001,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Type[bool], /):
         """
+        usage.dask: 17
         usage.skimage: 39
         usage.sklearn: 8
         usage.xarray: 24
@@ -48824,6 +58020,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Type[numpy.float64], /):
         """
+        usage.dask: 9
         usage.matplotlib: 1
         usage.skimage: 13
         usage.sklearn: 86
@@ -48842,6 +58039,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Type[numpy.float32], /):
         """
+        usage.dask: 9
         usage.skimage: 3
         usage.sklearn: 89
         usage.xarray: 9
@@ -48851,6 +58049,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Literal["bool"], /):
         """
+        usage.dask: 2
         usage.matplotlib: 1
         usage.skimage: 14
         usage.xarray: 2
@@ -48868,6 +58067,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Type[float], /):
         """
+        usage.dask: 2
         usage.skimage: 6
         usage.sklearn: 8
         usage.xarray: 10
@@ -48877,6 +58077,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Literal["float64"], /):
         """
+        usage.dask: 5
         usage.skimage: 4
         usage.sklearn: 2
         """
@@ -48892,6 +58093,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Type[numpy.int16], /):
         """
+        usage.dask: 3
         usage.skimage: 2
         usage.sklearn: 1
         """
@@ -48900,6 +58102,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Type[numpy.int32], /):
         """
+        usage.dask: 4
         usage.skimage: 1
         usage.sklearn: 12
         usage.xarray: 2
@@ -48909,6 +58112,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Type[numpy.int64], /):
         """
+        usage.dask: 9
         usage.skimage: 1
         usage.sklearn: 12
         usage.xarray: 4
@@ -48946,6 +58150,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Literal["float32"], /):
         """
+        usage.dask: 2
         usage.skimage: 1
         """
         ...
@@ -48988,6 +58193,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Type[object], /):
         """
+        usage.dask: 22
         usage.sklearn: 55
         usage.xarray: 6
         """
@@ -48996,6 +58202,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Literal["int64"], /):
         """
+        usage.dask: 2
         usage.sklearn: 3
         usage.xarray: 5
         """
@@ -49011,6 +58218,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Type[int], /):
         """
+        usage.dask: 1
         usage.sklearn: 3
         usage.xarray: 5
         """
@@ -49026,6 +58234,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Type[numpy.object_], /):
         """
+        usage.dask: 2
         usage.sklearn: 2
         usage.xarray: 1
         """
@@ -49069,6 +58278,7 @@ class dtype:
     @overload
     def __eq__(self, _0: Literal["object"], /):
         """
+        usage.dask: 3
         usage.sklearn: 1
         usage.xarray: 1
         """
@@ -49089,9 +58299,44 @@ class dtype:
         ...
 
     @overload
-    def __eq__(self, _0: Union[str, type, numpy.dtype], /):
+    def __eq__(self, _0: Literal["f8"], /):
         """
-        usage.dask: 329
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["u4"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["i8"], /):
+        """
+        usage.dask: 7
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["uint8"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["float"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["M8[ns]"], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -49110,6 +58355,69 @@ class dtype:
     def __ge__(self, _0: numpy.dtype, /):
         """
         usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: str, /):
+        """
+        usage.pandas: 58
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["a"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col1"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col2"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["text"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["values"], /):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["indices"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["inverse"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["counts"], /):
+        """
+        usage.dask: 3
         """
         ...
 
@@ -49157,6 +58465,7 @@ class dtype:
     @overload
     def __ne__(self, _0: numpy.dtype, /):
         """
+        usage.dask: 194
         usage.skimage: 22
         usage.sklearn: 30
         usage.xarray: 38
@@ -49166,6 +58475,7 @@ class dtype:
     @overload
     def __ne__(self, _0: Type[bool], /):
         """
+        usage.dask: 1
         usage.skimage: 4
         usage.sklearn: 4
         """
@@ -49188,6 +58498,7 @@ class dtype:
     @overload
     def __ne__(self, _0: Type[object], /):
         """
+        usage.dask: 3
         usage.sklearn: 7
         usage.xarray: 13
         """
@@ -49218,50 +58529,89 @@ class dtype:
     @overload
     def __ne__(self, _0: Type[numpy.float64], /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         usage.sklearn: 13
         """
         ...
 
     @overload
-    def __ne__(
-        self,
-        _0: Union[
-            numpy.dtype,
-            None,
-            List[
-                Tuple[
-                    Literal["values", "indices", "inverse", "counts"],
-                    Union[numpy.dtype, Type[numpy.int64]],
-                ]
-            ],
-            type,
-            str,
-        ],
-        /,
-    ):
+    def __ne__(self, _0: Literal["O"], /):
         """
-        usage.dask: 272
+        usage.dask: 27
         """
         ...
 
     @overload
-    def __ne__(self, _0: Type[float], /):
+    def __ne__(self, _0: Literal["f8"], /):
         """
-        usage.sklearn: 3
+        usage.dask: 6
         """
         ...
 
     @overload
-    def __ne__(self, _0: Type[int], /):
+    def __ne__(self, _0: Literal["i8"], /):
         """
-        usage.sklearn: 2
+        usage.dask: 7
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: Type[numpy.object_], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: Literal["u4"], /):
+        """
+        usage.dask: 1
         """
         ...
 
     @overload
     def __ne__(self, _0: Type[numpy.float32], /):
         """
+        usage.dask: 2
+        usage.sklearn: 3
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: Type[numpy.int8], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: Literal["bool"], /):
+        """
+        usage.dask: 2
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: Literal["float64"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: Type[int], /):
+        """
+        usage.dask: 2
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: Type[float], /):
+        """
+        usage.dask: 2
         usage.sklearn: 3
         """
         ...
@@ -49269,14 +58619,153 @@ class dtype:
     @overload
     def __ne__(self, _0: Type[numpy.int32], /):
         """
+        usage.dask: 1
         usage.sklearn: 5
         """
         ...
 
     @overload
-    def __ne__(self, _0: Literal["bool"], /):
+    def __ne__(self, _0: None, /):
         """
-        usage.sklearn: 2
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: Type[numpy.uint32], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: Type[numpy.uint64], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: Type[numpy.int64], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: List[Tuple[Literal["values"], numpy.dtype]], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __ne__(
+        self,
+        _0: List[
+            Tuple[Literal["values", "indices"], Union[numpy.dtype, Type[numpy.int64]]]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __ne__(
+        self,
+        _0: List[
+            Tuple[Literal["values", "inverse"], Union[numpy.dtype, Type[numpy.int64]]]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ne__(
+        self,
+        _0: List[
+            Tuple[
+                Literal["values", "indices", "inverse"],
+                Union[numpy.dtype, Type[numpy.int64]],
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ne__(
+        self,
+        _0: List[
+            Tuple[Literal["values", "counts"], Union[numpy.dtype, Type[numpy.int64]]]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __ne__(
+        self,
+        _0: List[
+            Tuple[
+                Literal["values", "indices", "counts"],
+                Union[numpy.dtype, Type[numpy.int64]],
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __ne__(
+        self,
+        _0: List[
+            Tuple[
+                Literal["values", "inverse", "counts"],
+                Union[numpy.dtype, Type[numpy.int64]],
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ne__(
+        self,
+        _0: List[
+            Tuple[
+                Literal["values", "indices", "inverse", "counts"],
+                Union[numpy.dtype, Type[numpy.int64]],
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: Literal["float"], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -49627,9 +59116,37 @@ class flatiter:
         ...
 
     @overload
-    def __setitem__(self, _0: int, _1: Tuple[Union[str, int], ...], /):
+    def __setitem__(self, _0: int, _1: Tuple[str, int], /):
         """
-        usage.dask: 6
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Tuple[str, int, int], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Tuple[str, int, int, int], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Tuple[Literal["A"], int, int], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Tuple[str, int, int, int, int], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -50267,7 +59784,7 @@ class float32:
         """
         ...
 
-    # usage.dask: 2
+    # usage.dask: 1
     # usage.pandas: 4
     # usage.scipy: 13
     # usage.sklearn: 2
@@ -50298,6 +59815,7 @@ class float32:
     @overload
     def __add__(self, _0: numpy.float64, /):
         """
+        usage.dask: 2
         usage.matplotlib: 1
         usage.skimage: 1
         usage.sklearn: 3
@@ -50325,15 +59843,9 @@ class float32:
         ...
 
     @overload
-    def __add__(self, _0: Union[numpy.float32, numpy.float64], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
     def __add__(self, _0: numpy.float32, /):
         """
+        usage.dask: 1
         usage.sklearn: 3
         """
         ...
@@ -50391,6 +59903,7 @@ class float32:
     @overload
     def __eq__(self, _0: int, /):
         """
+        usage.dask: 1
         usage.matplotlib: 1
         usage.skimage: 2
         usage.sklearn: 4
@@ -50423,13 +59936,6 @@ class float32:
         ...
 
     @overload
-    def __eq__(self, _0: Union[int, numpy.float32], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
     def __eq__(self, _0: numpy.flatiter, /):
         """
         usage.sklearn: 1
@@ -50438,7 +59944,7 @@ class float32:
 
     def __eq__(self, _0: object, /):
         """
-        usage.dask: 3
+        usage.dask: 1
         usage.matplotlib: 6
         usage.pandas: 9
         usage.scipy: 18
@@ -50494,6 +60000,27 @@ class float32:
         usage.scipy: 3
         usage.skimage: 1
         usage.sklearn: 9
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -51096,6 +60623,7 @@ class float32:
     @overload
     def __sub__(self, _0: numpy.float32, /):
         """
+        usage.dask: 1
         usage.matplotlib: 1
         usage.skimage: 2
         usage.sklearn: 3
@@ -51126,9 +60654,9 @@ class float32:
         ...
 
     @overload
-    def __sub__(self, _0: Union[int, numpy.float32], /):
+    def __sub__(self, _0: int, /):
         """
-        usage.dask: 2
+        usage.dask: 1
         """
         ...
 
@@ -51285,6 +60813,7 @@ class float64:
     @classmethod
     def __ne__(cls, _0: float, /):
         """
+        usage.dask: 1
         usage.matplotlib: 15
         usage.skimage: 1
         usage.sklearn: 2
@@ -51296,6 +60825,7 @@ class float64:
     @classmethod
     def __ne__(cls, _0: numpy.float64, /):
         """
+        usage.dask: 8
         usage.matplotlib: 14
         usage.skimage: 2
         usage.sklearn: 16
@@ -51307,6 +60837,7 @@ class float64:
     @classmethod
     def __ne__(cls, _0: int, /):
         """
+        usage.dask: 3
         usage.matplotlib: 14
         usage.skimage: 4
         usage.sklearn: 6
@@ -51317,16 +60848,9 @@ class float64:
     @classmethod
     def __ne__(cls, _0: numpy.dtype, /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         usage.sklearn: 13
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __ne__(cls, _0: Union[float, numpy.dtype, int, numpy.float64], /):
-        """
-        usage.dask: 13
         """
         ...
 
@@ -51420,6 +60944,7 @@ class float64:
     @overload
     def __add__(self, _0: numpy.float64, /):
         """
+        usage.dask: 7
         usage.matplotlib: 180
         usage.skimage: 42
         usage.sklearn: 92
@@ -51439,6 +60964,7 @@ class float64:
     @overload
     def __add__(self, _0: int, /):
         """
+        usage.dask: 12
         usage.matplotlib: 36
         usage.skimage: 19
         usage.sklearn: 18
@@ -51449,6 +60975,7 @@ class float64:
     @overload
     def __add__(self, _0: float, /):
         """
+        usage.dask: 2
         usage.matplotlib: 95
         usage.skimage: 7
         usage.sklearn: 43
@@ -51510,13 +61037,6 @@ class float64:
         ...
 
     @overload
-    def __add__(self, _0: Union[float, numpy.float64, int], /):
-        """
-        usage.dask: 21
-        """
-        ...
-
-    @overload
     def __add__(self, _0: bool, /):
         """
         usage.sklearn: 2
@@ -51544,6 +61064,7 @@ class float64:
     @overload
     def __eq__(self, _0: int, /):
         """
+        usage.dask: 12
         usage.matplotlib: 75
         usage.skimage: 45
         usage.sklearn: 106
@@ -51554,6 +61075,7 @@ class float64:
     @overload
     def __eq__(self, _0: float, /):
         """
+        usage.dask: 7
         usage.matplotlib: 30
         usage.skimage: 20
         usage.sklearn: 89
@@ -51564,6 +61086,7 @@ class float64:
     @overload
     def __eq__(self, _0: numpy.float64, /):
         """
+        usage.dask: 10
         usage.matplotlib: 74
         usage.skimage: 14
         usage.sklearn: 146
@@ -51574,6 +61097,7 @@ class float64:
     @overload
     def __eq__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 1
         usage.matplotlib: 3
         usage.skimage: 9
         usage.sklearn: 42
@@ -51592,7 +61116,6 @@ class float64:
     @overload
     def __eq__(self, _0: object, /):
         """
-        usage.dask: 35
         usage.pandas: 381
         usage.scipy: 272
         """
@@ -51601,6 +61124,7 @@ class float64:
     @overload
     def __eq__(self, _0: _pytest.python_api.ApproxScalar, /):
         """
+        usage.dask: 4
         usage.matplotlib: 3
         usage.sklearn: 42
         """
@@ -51617,6 +61141,13 @@ class float64:
     def __eq__(self, _0: numpy.float32, /):
         """
         usage.matplotlib: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -51694,6 +61225,7 @@ class float64:
     @overload
     def __ge__(self, _0: int, /):
         """
+        usage.dask: 4
         usage.matplotlib: 16
         usage.skimage: 10
         usage.sklearn: 23
@@ -51703,6 +61235,7 @@ class float64:
     @overload
     def __ge__(self, _0: numpy.float64, /):
         """
+        usage.dask: 3
         usage.matplotlib: 18
         usage.skimage: 2
         usage.sklearn: 32
@@ -51712,6 +61245,7 @@ class float64:
     @overload
     def __ge__(self, _0: float, /):
         """
+        usage.dask: 2
         usage.matplotlib: 5
         usage.skimage: 3
         usage.sklearn: 20
@@ -51739,7 +61273,6 @@ class float64:
     @overload
     def __ge__(self, _0: object, /):
         """
-        usage.dask: 29
         usage.scipy: 319
         """
         ...
@@ -51760,6 +61293,34 @@ class float64:
         ...
 
     @overload
+    def __ge__(self, _0: dask.dataframe.core.Series, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: dask.dataframe.core.DataFrame, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
     def __ge__(self, _0: numpy.float32, /):
         """
         usage.sklearn: 4
@@ -51768,7 +61329,7 @@ class float64:
 
     def __ge__(self, _0: object, /):
         """
-        usage.dask: 29
+        usage.dask: 13
         usage.matplotlib: 55
         usage.pandas: 8
         usage.scipy: 319
@@ -51781,6 +61342,7 @@ class float64:
     @overload
     def __getitem__(self, _0: Tuple[ellipsis, None], /):
         """
+        usage.dask: 1
         usage.skimage: 2
         """
         ...
@@ -51807,9 +61369,46 @@ class float64:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[Union[ellipsis, None], ...], /):
+    def __getitem__(self, _0: Tuple[ellipsis, None, None], /):
         """
-        usage.dask: 7
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None, None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[ellipsis, None, None, None, None, None, None, None], /
+    ):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -51826,6 +61425,7 @@ class float64:
     @overload
     def __gt__(self, _0: float, /):
         """
+        usage.dask: 10
         usage.matplotlib: 24
         usage.skimage: 35
         usage.sklearn: 150
@@ -51836,6 +61436,7 @@ class float64:
     @overload
     def __gt__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 1
         usage.matplotlib: 5
         usage.skimage: 3
         usage.sklearn: 22
@@ -51845,6 +61446,7 @@ class float64:
     @overload
     def __gt__(self, _0: numpy.float64, /):
         """
+        usage.dask: 10
         usage.matplotlib: 102
         usage.skimage: 64
         usage.sklearn: 93
@@ -51855,6 +61457,7 @@ class float64:
     @overload
     def __gt__(self, _0: int, /):
         """
+        usage.dask: 6
         usage.matplotlib: 33
         usage.skimage: 19
         usage.sklearn: 34
@@ -51940,15 +61543,15 @@ class float64:
         ...
 
     @overload
-    def __gt__(self, _0: Union[numpy.float64, int, float], /):
+    def __gt__(self, _0: pandas.core.series.Series, /):
         """
-        usage.dask: 10
+        usage.dask: 1
         """
         ...
 
     def __gt__(self, _0: object, /):
         """
-        usage.dask: 10
+        usage.dask: 28
         usage.matplotlib: 174
         usage.pandas: 15
         usage.scipy: 253
@@ -52229,6 +61832,7 @@ class float64:
     @overload
     def __le__(self, _0: int, /):
         """
+        usage.dask: 5
         usage.matplotlib: 29
         usage.skimage: 62
         usage.sklearn: 19
@@ -52238,6 +61842,7 @@ class float64:
     @overload
     def __le__(self, _0: numpy.float64, /):
         """
+        usage.dask: 3
         usage.matplotlib: 18
         usage.skimage: 2
         usage.sklearn: 32
@@ -52247,6 +61852,7 @@ class float64:
     @overload
     def __le__(self, _0: float, /):
         """
+        usage.dask: 1
         usage.matplotlib: 9
         usage.skimage: 4
         usage.sklearn: 17
@@ -52270,19 +61876,16 @@ class float64:
     @overload
     def __le__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 2
         usage.matplotlib: 16
         usage.sklearn: 5
         """
         ...
 
     @overload
-    def __le__(
-        self,
-        _0: Union[pandas.core.series.Series, numpy.float64, float, int, numpy.ndarray],
-        /,
-    ):
+    def __le__(self, _0: pandas.core.series.Series, /):
         """
-        usage.dask: 25
+        usage.dask: 1
         """
         ...
 
@@ -52302,7 +61905,7 @@ class float64:
 
     def __le__(self, _0: object, /):
         """
-        usage.dask: 25
+        usage.dask: 12
         usage.matplotlib: 72
         usage.pandas: 13
         usage.scipy: 418
@@ -52314,6 +61917,7 @@ class float64:
     @overload
     def __lt__(self, _0: float, /):
         """
+        usage.dask: 8
         usage.matplotlib: 55
         usage.skimage: 58
         usage.sklearn: 92
@@ -52324,6 +61928,7 @@ class float64:
     @overload
     def __lt__(self, _0: int, /):
         """
+        usage.dask: 4
         usage.matplotlib: 45
         usage.skimage: 37
         usage.sklearn: 34
@@ -52343,6 +61948,7 @@ class float64:
     @overload
     def __lt__(self, _0: numpy.float64, /):
         """
+        usage.dask: 10
         usage.matplotlib: 102
         usage.skimage: 64
         usage.sklearn: 93
@@ -52434,15 +62040,15 @@ class float64:
         ...
 
     @overload
-    def __lt__(self, _0: Union[numpy.float64, pandas.core.series.Series], /):
+    def __lt__(self, _0: pandas.core.series.Series, /):
         """
-        usage.dask: 3
+        usage.dask: 1
         """
         ...
 
     def __lt__(self, _0: object, /):
         """
-        usage.dask: 3
+        usage.dask: 23
         usage.matplotlib: 213
         usage.pandas: 5
         usage.scipy: 141
@@ -52506,6 +62112,7 @@ class float64:
     @overload
     def __mul__(self, _0: numpy.float64, /):
         """
+        usage.dask: 3
         usage.matplotlib: 81
         usage.skimage: 30
         usage.sklearn: 75
@@ -52516,6 +62123,7 @@ class float64:
     @overload
     def __mul__(self, _0: int, /):
         """
+        usage.dask: 5
         usage.matplotlib: 35
         usage.skimage: 12
         usage.sklearn: 38
@@ -52553,13 +62161,6 @@ class float64:
         """
         usage.matplotlib: 1
         usage.sklearn: 6
-        """
-        ...
-
-    @overload
-    def __mul__(self, _0: Union[int, numpy.float64], /):
-        """
-        usage.dask: 8
         """
         ...
 
@@ -52609,6 +62210,7 @@ class float64:
     @overload
     def __pow__(self, _0: int, /):
         """
+        usage.dask: 1
         usage.matplotlib: 9
         usage.skimage: 32
         usage.sklearn: 36
@@ -52618,6 +62220,7 @@ class float64:
     @overload
     def __pow__(self, _0: float, /):
         """
+        usage.dask: 2
         usage.matplotlib: 4
         usage.skimage: 4
         usage.sklearn: 6
@@ -52635,13 +62238,6 @@ class float64:
     def __pow__(self, _0: Union[numpy.ndarray, numpy.float64, int, float], /):
         """
         usage.scipy: 427
-        """
-        ...
-
-    @overload
-    def __pow__(self, _0: Union[int, float], /):
-        """
-        usage.dask: 3
         """
         ...
 
@@ -52666,6 +62262,7 @@ class float64:
     @overload
     def __radd__(self, _0: numpy.float64, /):
         """
+        usage.dask: 7
         usage.matplotlib: 180
         usage.skimage: 42
         usage.sklearn: 92
@@ -52676,6 +62273,7 @@ class float64:
     @overload
     def __radd__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 10
         usage.matplotlib: 10
         usage.skimage: 18
         usage.sklearn: 51
@@ -52686,6 +62284,7 @@ class float64:
     @overload
     def __radd__(self, _0: float, /):
         """
+        usage.dask: 2
         usage.matplotlib: 42
         usage.skimage: 4
         usage.sklearn: 32
@@ -52695,6 +62294,7 @@ class float64:
     @overload
     def __radd__(self, _0: int, /):
         """
+        usage.dask: 2
         usage.matplotlib: 29
         usage.skimage: 13
         usage.sklearn: 14
@@ -52715,6 +62315,7 @@ class float64:
     @overload
     def __radd__(self, _0: numpy.float32, /):
         """
+        usage.dask: 2
         usage.matplotlib: 1
         usage.skimage: 1
         usage.sklearn: 3
@@ -52732,7 +62333,6 @@ class float64:
     @overload
     def __radd__(self, _0: object, /):
         """
-        usage.dask: 26
         usage.pandas: 36
         usage.scipy: 861
         """
@@ -52770,6 +62370,20 @@ class float64:
     def __radd__(self, _0: numpy.ma.core.MaskedConstant, /):
         """
         usage.matplotlib: 5
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: numpy.uint64, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -52941,7 +62555,7 @@ class float64:
     @overload
     def __rmod__(self, _0: str, /):
         """
-        usage.dask: 5
+        usage.dask: 2
         usage.matplotlib: 1
         usage.sklearn: 12
         """
@@ -53004,6 +62618,27 @@ class float64:
         ...
 
     @overload
+    def __rmod__(self, _0: Literal["%d B"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%0.2f kB"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%0.2f MB"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
     def __rmod__(self, _0: Literal["%.16g"], /):
         """
         usage.sklearn: 2
@@ -53030,6 +62665,7 @@ class float64:
     @overload
     def __rmul__(self, _0: float, /):
         """
+        usage.dask: 4
         usage.matplotlib: 80
         usage.skimage: 67
         usage.sklearn: 137
@@ -53048,6 +62684,7 @@ class float64:
     @overload
     def __rmul__(self, _0: int, /):
         """
+        usage.dask: 5
         usage.matplotlib: 42
         usage.skimage: 46
         usage.sklearn: 79
@@ -53057,6 +62694,7 @@ class float64:
     @overload
     def __rmul__(self, _0: numpy.float64, /):
         """
+        usage.dask: 3
         usage.matplotlib: 81
         usage.skimage: 30
         usage.sklearn: 75
@@ -53067,6 +62705,7 @@ class float64:
     @overload
     def __rmul__(self, _0: numpy.int64, /):
         """
+        usage.dask: 1
         usage.skimage: 1
         usage.sklearn: 2
         """
@@ -53103,13 +62742,9 @@ class float64:
         ...
 
     @overload
-    def __rmul__(
-        self,
-        _0: Union[numpy.int64, float, numpy.float64, int, dask.array.core.Array],
-        /,
-    ):
+    def __rmul__(self, _0: dask.array.core.Array, /):
         """
-        usage.dask: 14
+        usage.dask: 1
         """
         ...
 
@@ -53188,6 +62823,7 @@ class float64:
     @overload
     def __rsub__(self, _0: int, /):
         """
+        usage.dask: 2
         usage.matplotlib: 34
         usage.skimage: 8
         usage.sklearn: 55
@@ -53198,6 +62834,7 @@ class float64:
     @overload
     def __rsub__(self, _0: numpy.float64, /):
         """
+        usage.dask: 2
         usage.matplotlib: 222
         usage.skimage: 63
         usage.sklearn: 94
@@ -53287,9 +62924,9 @@ class float64:
         ...
 
     @overload
-    def __rsub__(self, _0: Union[pandas.core.series.Series, int, numpy.float64], /):
+    def __rsub__(self, _0: pandas.core.series.Series, /):
         """
-        usage.dask: 13
+        usage.dask: 9
         """
         ...
 
@@ -53324,6 +62961,7 @@ class float64:
     @overload
     def __rtruediv__(self, _0: numpy.float64, /):
         """
+        usage.dask: 8
         usage.matplotlib: 91
         usage.skimage: 49
         usage.sklearn: 94
@@ -53334,6 +62972,7 @@ class float64:
     @overload
     def __rtruediv__(self, _0: int, /):
         """
+        usage.dask: 3
         usage.matplotlib: 9
         usage.skimage: 12
         usage.sklearn: 23
@@ -53344,6 +62983,7 @@ class float64:
     @overload
     def __rtruediv__(self, _0: float, /):
         """
+        usage.dask: 5
         usage.matplotlib: 39
         usage.skimage: 5
         usage.sklearn: 42
@@ -53404,11 +63044,9 @@ class float64:
         ...
 
     @overload
-    def __rtruediv__(
-        self, _0: Union[int, numpy.float64, float, dask.array.core.Array], /
-    ):
+    def __rtruediv__(self, _0: dask.array.core.Array, /):
         """
-        usage.dask: 18
+        usage.dask: 2
         """
         ...
 
@@ -53447,6 +63085,7 @@ class float64:
     @overload
     def __sub__(self, _0: numpy.float64, /):
         """
+        usage.dask: 2
         usage.matplotlib: 222
         usage.skimage: 63
         usage.sklearn: 94
@@ -53457,6 +63096,7 @@ class float64:
     @overload
     def __sub__(self, _0: float, /):
         """
+        usage.dask: 1
         usage.matplotlib: 90
         usage.skimage: 8
         usage.sklearn: 24
@@ -53467,6 +63107,7 @@ class float64:
     @overload
     def __sub__(self, _0: int, /):
         """
+        usage.dask: 5
         usage.matplotlib: 29
         usage.skimage: 78
         usage.sklearn: 18
@@ -53515,9 +63156,9 @@ class float64:
         ...
 
     @overload
-    def __sub__(self, _0: Union[numpy.float64, float, int, dask.array.core.Array], /):
+    def __sub__(self, _0: dask.array.core.Array, /):
         """
-        usage.dask: 9
+        usage.dask: 1
         """
         ...
 
@@ -53553,6 +63194,7 @@ class float64:
     @overload
     def __truediv__(self, _0: numpy.float64, /):
         """
+        usage.dask: 8
         usage.matplotlib: 91
         usage.skimage: 49
         usage.sklearn: 94
@@ -53563,6 +63205,7 @@ class float64:
     @overload
     def __truediv__(self, _0: int, /):
         """
+        usage.dask: 12
         usage.matplotlib: 40
         usage.skimage: 16
         usage.sklearn: 85
@@ -53603,6 +63246,7 @@ class float64:
     @overload
     def __truediv__(self, _0: numpy.int64, /):
         """
+        usage.dask: 2
         usage.skimage: 1
         usage.sklearn: 5
         usage.xarray: 1
@@ -53618,11 +63262,9 @@ class float64:
         ...
 
     @overload
-    def __truediv__(
-        self, _0: Union[dask.array.core.Array, numpy.float64, int, numpy.int64], /
-    ):
+    def __truediv__(self, _0: dask.array.core.Array, /):
         """
-        usage.dask: 23
+        usage.dask: 1
         """
         ...
 
@@ -53705,9 +63347,23 @@ class float64:
         ...
 
     @overload
-    def astype(self, _0: Union[numpy.dtype, Literal["i8", "f8"]], /):
+    def astype(self, _0: numpy.dtype, /):
         """
-        usage.dask: 5
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["f8"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["i8"], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -53789,9 +63445,16 @@ class float64:
         ...
 
     @overload
-    def reshape(self, _0: Tuple[int, ...], /):
+    def reshape(self, _0: Tuple[int], /):
         """
-        usage.dask: 2
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def reshape(self, _0: Tuple[int, int], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -53948,6 +63611,20 @@ class int16:
         """
         usage.pandas: 2
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -54331,7 +64008,6 @@ class int32:
         """
         ...
 
-    # usage.dask: 1
     # usage.pandas: 4
     # usage.scipy: 5
     # usage.xarray: 1
@@ -54372,21 +64048,23 @@ class int32:
         ...
 
     @overload
-    def __add__(self, _0: Union[int, numpy.int64], /):
+    def __add__(self, _0: numpy.int64, /):
         """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __add__(self, _0: bool, /):
-        """
+        usage.dask: 2
         usage.sklearn: 1
         """
         ...
 
     @overload
-    def __add__(self, _0: numpy.int64, /):
+    def __add__(self, _0: int, /):
+        """
+        usage.dask: 1
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: bool, /):
         """
         usage.sklearn: 1
         """
@@ -54401,13 +64079,6 @@ class int32:
 
     @overload
     def __add__(self, _0: numpy.float64, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __add__(self, _0: int, /):
         """
         usage.sklearn: 1
         """
@@ -54437,6 +64108,7 @@ class int32:
     @overload
     def __eq__(self, _0: int, /):
         """
+        usage.dask: 1
         usage.matplotlib: 4
         usage.skimage: 2
         usage.sklearn: 5
@@ -54446,6 +64118,7 @@ class int32:
     @overload
     def __eq__(self, _0: numpy.int64, /):
         """
+        usage.dask: 2
         usage.skimage: 1
         """
         ...
@@ -54495,13 +64168,6 @@ class int32:
         ...
 
     @overload
-    def __eq__(self, _0: Union[numpy.int32, numpy.int64, int], /):
-        """
-        usage.dask: 5
-        """
-        ...
-
-    @overload
     def __eq__(self, _0: Literal["mle"], /):
         """
         usage.sklearn: 2
@@ -54510,7 +64176,7 @@ class int32:
 
     def __eq__(self, _0: object, /):
         """
-        usage.dask: 5
+        usage.dask: 3
         usage.matplotlib: 4
         usage.pandas: 77
         usage.scipy: 34
@@ -54570,9 +64236,30 @@ class int32:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[Union[None, ellipsis], ...], /):
+    def __getitem__(self, _0: Tuple[ellipsis, None], /):
         """
-        usage.dask: 4
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None, None, None], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -55033,6 +64720,7 @@ class int64:
     @classmethod
     def __ne__(cls, _0: int, /):
         """
+        usage.dask: 7
         usage.matplotlib: 12
         usage.skimage: 4
         usage.sklearn: 25
@@ -55044,6 +64732,7 @@ class int64:
     @classmethod
     def __ne__(cls, _0: numpy.int64, /):
         """
+        usage.dask: 4
         usage.skimage: 2
         usage.sklearn: 2
         """
@@ -55109,6 +64798,7 @@ class int64:
     @classmethod
     def __ne__(cls, _0: float, /):
         """
+        usage.dask: 1
         usage.matplotlib: 1
         usage.sklearn: 1
         """
@@ -55116,9 +64806,9 @@ class int64:
 
     @overload
     @classmethod
-    def __ne__(cls, _0: Union[float, int, numpy.dtype, numpy.int64], /):
+    def __ne__(cls, _0: numpy.dtype, /):
         """
-        usage.dask: 14
+        usage.dask: 2
         """
         ...
 
@@ -55197,6 +64887,7 @@ class int64:
     @overload
     def __add__(self, _0: int, /):
         """
+        usage.dask: 6
         usage.matplotlib: 25
         usage.skimage: 25
         usage.sklearn: 35
@@ -55217,6 +64908,7 @@ class int64:
     @overload
     def __add__(self, _0: numpy.int64, /):
         """
+        usage.dask: 12
         usage.matplotlib: 10
         usage.skimage: 6
         usage.sklearn: 11
@@ -55226,6 +64918,7 @@ class int64:
     @overload
     def __add__(self, _0: float, /):
         """
+        usage.dask: 1
         usage.matplotlib: 6
         usage.skimage: 2
         usage.sklearn: 1
@@ -55236,6 +64929,7 @@ class int64:
     @overload
     def __add__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 1
         usage.matplotlib: 1
         usage.skimage: 2
         """
@@ -55253,13 +64947,6 @@ class int64:
     def __add__(self, _0: List[int], /):
         """
         usage.matplotlib: 1
-        """
-        ...
-
-    @overload
-    def __add__(self, _0: Union[float, numpy.ndarray, numpy.int64, int], /):
-        """
-        usage.dask: 20
         """
         ...
 
@@ -55290,9 +64977,16 @@ class int64:
         ...
 
     @overload
-    def __and__(self, _0: Union[bool, numpy.int64], /):
+    def __and__(self, _0: numpy.int64, /):
         """
-        usage.dask: 2
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __and__(self, _0: bool, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -55320,6 +65014,7 @@ class int64:
     @overload
     def __eq__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 2
         usage.matplotlib: 4
         usage.skimage: 7
         usage.sklearn: 38
@@ -55330,6 +65025,7 @@ class int64:
     @overload
     def __eq__(self, _0: int, /):
         """
+        usage.dask: 32
         usage.matplotlib: 26
         usage.skimage: 46
         usage.sklearn: 138
@@ -55340,6 +65036,7 @@ class int64:
     @overload
     def __eq__(self, _0: numpy.int64, /):
         """
+        usage.dask: 40
         usage.matplotlib: 22
         usage.skimage: 16
         usage.sklearn: 34
@@ -55372,6 +65069,7 @@ class int64:
     @overload
     def __eq__(self, _0: numpy.int32, /):
         """
+        usage.dask: 2
         usage.skimage: 1
         """
         ...
@@ -55442,7 +65140,6 @@ class int64:
     @overload
     def __eq__(self, _0: object, /):
         """
-        usage.dask: 82
         usage.pandas: 513
         usage.scipy: 175
         """
@@ -55451,8 +65148,23 @@ class int64:
     @overload
     def __eq__(self, _0: float, /):
         """
+        usage.dask: 3
         usage.matplotlib: 2
         usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: None, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -55465,7 +65177,7 @@ class int64:
 
     def __eq__(self, _0: object, /):
         """
-        usage.dask: 82
+        usage.dask: 81
         usage.matplotlib: 54
         usage.pandas: 513
         usage.scipy: 175
@@ -55478,6 +65190,7 @@ class int64:
     @overload
     def __floordiv__(self, _0: int, /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         usage.skimage: 5
         usage.sklearn: 2
@@ -55510,9 +65223,9 @@ class int64:
         ...
 
     @overload
-    def __floordiv__(self, _0: Union[int, numpy.int64], /):
+    def __floordiv__(self, _0: numpy.int64, /):
         """
-        usage.dask: 2
+        usage.dask: 1
         """
         ...
 
@@ -55531,6 +65244,7 @@ class int64:
     @overload
     def __ge__(self, _0: int, /):
         """
+        usage.dask: 8
         usage.matplotlib: 6
         usage.skimage: 3
         usage.sklearn: 13
@@ -55557,6 +65271,7 @@ class int64:
     @overload
     def __ge__(self, _0: numpy.int64, /):
         """
+        usage.dask: 9
         usage.matplotlib: 3
         usage.skimage: 1
         usage.sklearn: 3
@@ -55582,9 +65297,30 @@ class int64:
         ...
 
     @overload
-    def __ge__(self, _0: object, /):
+    def __ge__(self, _0: dask.dataframe.core.Series, /):
         """
-        usage.dask: 39
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: dask.dataframe.core.DataFrame, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -55597,7 +65333,7 @@ class int64:
 
     def __ge__(self, _0: object, /):
         """
-        usage.dask: 39
+        usage.dask: 21
         usage.matplotlib: 10
         usage.pandas: 19
         usage.scipy: 51
@@ -55622,9 +65358,65 @@ class int64:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[Union[ellipsis, None], ...], /):
+    def __getitem__(self, _0: Tuple[ellipsis, None], /):
         """
-        usage.dask: 9
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[None, None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[None, None], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -55648,6 +65440,7 @@ class int64:
     @overload
     def __gt__(self, _0: int, /):
         """
+        usage.dask: 19
         usage.matplotlib: 7
         usage.skimage: 12
         usage.sklearn: 37
@@ -55657,6 +65450,7 @@ class int64:
     @overload
     def __gt__(self, _0: numpy.int64, /):
         """
+        usage.dask: 15
         usage.matplotlib: 16
         usage.skimage: 5
         usage.sklearn: 13
@@ -55674,6 +65468,7 @@ class int64:
     @overload
     def __gt__(self, _0: float, /):
         """
+        usage.dask: 9
         usage.skimage: 1
         usage.sklearn: 4
         """
@@ -55719,16 +65514,9 @@ class int64:
         """
         ...
 
-    @overload
-    def __gt__(self, _0: Union[numpy.int64, int, float], /):
-        """
-        usage.dask: 20
-        """
-        ...
-
     def __gt__(self, _0: object, /):
         """
-        usage.dask: 20
+        usage.dask: 43
         usage.matplotlib: 26
         usage.pandas: 24
         usage.scipy: 50
@@ -55899,6 +65687,7 @@ class int64:
     @overload
     def __le__(self, _0: int, /):
         """
+        usage.dask: 9
         usage.matplotlib: 3
         usage.skimage: 3
         usage.sklearn: 17
@@ -55908,6 +65697,7 @@ class int64:
     @overload
     def __le__(self, _0: numpy.int64, /):
         """
+        usage.dask: 9
         usage.matplotlib: 3
         usage.skimage: 1
         usage.sklearn: 3
@@ -55933,9 +65723,9 @@ class int64:
         ...
 
     @overload
-    def __le__(self, _0: Union[float, numpy.int64, pandas.core.series.Series, int], /):
+    def __le__(self, _0: pandas.core.series.Series, /):
         """
-        usage.dask: 35
+        usage.dask: 1
         """
         ...
 
@@ -55948,7 +65738,7 @@ class int64:
 
     def __le__(self, _0: object, /):
         """
-        usage.dask: 35
+        usage.dask: 19
         usage.matplotlib: 8
         usage.pandas: 27
         usage.scipy: 99
@@ -55960,6 +65750,7 @@ class int64:
     @overload
     def __lt__(self, _0: numpy.int64, /):
         """
+        usage.dask: 15
         usage.matplotlib: 16
         usage.skimage: 5
         usage.sklearn: 13
@@ -55978,6 +65769,7 @@ class int64:
     @overload
     def __lt__(self, _0: int, /):
         """
+        usage.dask: 15
         usage.matplotlib: 13
         usage.skimage: 10
         usage.sklearn: 35
@@ -56025,32 +65817,30 @@ class int64:
         ...
 
     @overload
-    def __lt__(
-        self,
-        _0: Union[
-            dask.dataframe.core.Series,
-            float,
-            numpy.int64,
-            int,
-            pandas.core.series.Series,
-        ],
-        /,
-    ):
+    def __lt__(self, _0: float, /):
         """
-        usage.dask: 13
+        usage.dask: 6
+        usage.sklearn: 3
         """
         ...
 
     @overload
-    def __lt__(self, _0: float, /):
+    def __lt__(self, _0: pandas.core.series.Series, /):
         """
-        usage.sklearn: 3
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __lt__(self, _0: dask.dataframe.core.Series, /):
+        """
+        usage.dask: 1
         """
         ...
 
     def __lt__(self, _0: object, /):
         """
-        usage.dask: 13
+        usage.dask: 39
         usage.matplotlib: 34
         usage.pandas: 10
         usage.scipy: 7
@@ -56063,6 +65853,7 @@ class int64:
     @overload
     def __mod__(self, _0: int, /):
         """
+        usage.dask: 1
         usage.matplotlib: 3
         usage.scipy: 11
         usage.skimage: 1
@@ -56087,9 +65878,9 @@ class int64:
         ...
 
     @overload
-    def __mod__(self, _0: Union[int, numpy.int64], /):
+    def __mod__(self, _0: numpy.int64, /):
         """
-        usage.dask: 2
+        usage.dask: 1
         """
         ...
 
@@ -56117,6 +65908,7 @@ class int64:
     @overload
     def __mul__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 2
         usage.skimage: 2
         usage.sklearn: 2
         """
@@ -56125,6 +65917,7 @@ class int64:
     @overload
     def __mul__(self, _0: numpy.float64, /):
         """
+        usage.dask: 1
         usage.skimage: 1
         usage.sklearn: 2
         """
@@ -56133,6 +65926,7 @@ class int64:
     @overload
     def __mul__(self, _0: numpy.int64, /):
         """
+        usage.dask: 1
         usage.skimage: 1
         usage.sklearn: 5
         """
@@ -56141,6 +65935,7 @@ class int64:
     @overload
     def __mul__(self, _0: int, /):
         """
+        usage.dask: 5
         usage.matplotlib: 6
         usage.sklearn: 2
         usage.xarray: 1
@@ -56160,13 +65955,6 @@ class int64:
         """
         usage.matplotlib: 3
         usage.sklearn: 8
-        """
-        ...
-
-    @overload
-    def __mul__(self, _0: Union[numpy.float64, int, numpy.ndarray, numpy.int64], /):
-        """
-        usage.dask: 9
         """
         ...
 
@@ -56194,6 +65982,20 @@ class int64:
         """
         ...
 
+    @overload
+    def __or__(self, _0: numpy.int64, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __or__(self, _0: bool, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __or__(self, _0: Union[bool, numpy.int64], /):
         """
         usage.dask: 2
@@ -56203,6 +66005,7 @@ class int64:
     @overload
     def __pow__(self, _0: int, /):
         """
+        usage.dask: 2
         usage.scipy: 13
         usage.skimage: 2
         """
@@ -56226,9 +66029,9 @@ class int64:
         ...
 
     @overload
-    def __pow__(self, _0: Union[numpy.int64, int], /):
+    def __pow__(self, _0: numpy.int64, /):
         """
-        usage.dask: 3
+        usage.dask: 1
         """
         ...
 
@@ -56244,6 +66047,7 @@ class int64:
     @overload
     def __radd__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 2
         usage.matplotlib: 2
         usage.skimage: 2
         usage.sklearn: 1
@@ -56253,6 +66057,7 @@ class int64:
     @overload
     def __radd__(self, _0: int, /):
         """
+        usage.dask: 6
         usage.matplotlib: 8
         usage.skimage: 6
         usage.sklearn: 8
@@ -56271,6 +66076,7 @@ class int64:
     @overload
     def __radd__(self, _0: numpy.int64, /):
         """
+        usage.dask: 12
         usage.matplotlib: 10
         usage.skimage: 6
         usage.sklearn: 11
@@ -56280,7 +66086,6 @@ class int64:
     @overload
     def __radd__(self, _0: object, /):
         """
-        usage.dask: 26
         usage.pandas: 63
         usage.scipy: 145
         """
@@ -56289,7 +66094,22 @@ class int64:
     @overload
     def __radd__(self, _0: numpy.int32, /):
         """
+        usage.dask: 2
         usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: numpy.uint32, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 2
         """
         ...
 
@@ -56327,9 +66147,16 @@ class int64:
         ...
 
     @overload
-    def __rand__(self, _0: Union[bool, numpy.int64], /):
+    def __rand__(self, _0: numpy.int64, /):
         """
-        usage.dask: 2
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __rand__(self, _0: bool, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -56343,6 +66170,7 @@ class int64:
     @overload
     def __rfloordiv__(self, _0: int, /):
         """
+        usage.dask: 1
         usage.matplotlib: 1
         usage.scipy: 1
         usage.skimage: 1
@@ -56360,9 +66188,9 @@ class int64:
         ...
 
     @overload
-    def __rfloordiv__(self, _0: Union[int, numpy.int64], /):
+    def __rfloordiv__(self, _0: numpy.int64, /):
         """
-        usage.dask: 2
+        usage.dask: 1
         """
         ...
 
@@ -56417,9 +66245,23 @@ class int64:
         ...
 
     @overload
-    def __rmod__(self, _0: Union[int, numpy.int64, Literal["%d B"]], /):
+    def __rmod__(self, _0: Literal["%d B"], /):
         """
-        usage.dask: 3
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: numpy.int64, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: int, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -56487,6 +66329,7 @@ class int64:
     @overload
     def __rmul__(self, _0: int, /):
         """
+        usage.dask: 3
         usage.matplotlib: 3
         usage.skimage: 3
         """
@@ -56504,6 +66347,7 @@ class int64:
     @overload
     def __rmul__(self, _0: numpy.int64, /):
         """
+        usage.dask: 1
         usage.skimage: 1
         usage.sklearn: 5
         """
@@ -56540,13 +66384,6 @@ class int64:
         ...
 
     @overload
-    def __rmul__(self, _0: Union[numpy.int64, int], /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
     def __rmul__(self, _0: List[int], /):
         """
         usage.sklearn: 1
@@ -56562,6 +66399,20 @@ class int64:
         usage.skimage: 8
         usage.sklearn: 19
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __ror__(self, _0: numpy.int64, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ror__(self, _0: bool, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -56593,9 +66444,16 @@ class int64:
         ...
 
     @overload
-    def __rpow__(self, _0: Union[int, numpy.int64], /):
+    def __rpow__(self, _0: numpy.int64, /):
         """
-        usage.dask: 2
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __rpow__(self, _0: int, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -56623,6 +66481,7 @@ class int64:
     @overload
     def __rsub__(self, _0: int, /):
         """
+        usage.dask: 2
         usage.matplotlib: 2
         usage.skimage: 10
         usage.sklearn: 8
@@ -56633,6 +66492,7 @@ class int64:
     @overload
     def __rsub__(self, _0: numpy.int64, /):
         """
+        usage.dask: 1
         usage.matplotlib: 8
         usage.skimage: 9
         usage.sklearn: 11
@@ -56672,13 +66532,6 @@ class int64:
         """
         ...
 
-    @overload
-    def __rsub__(self, _0: Union[numpy.int64, int], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
     def __rsub__(self, _0: object, /):
         """
         usage.dask: 3
@@ -56694,6 +66547,7 @@ class int64:
     @overload
     def __rtruediv__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         usage.skimage: 6
         usage.sklearn: 15
@@ -56704,6 +66558,7 @@ class int64:
     @overload
     def __rtruediv__(self, _0: int, /):
         """
+        usage.dask: 2
         usage.skimage: 2
         usage.sklearn: 2
         """
@@ -56712,6 +66567,7 @@ class int64:
     @overload
     def __rtruediv__(self, _0: numpy.int64, /):
         """
+        usage.dask: 2
         usage.skimage: 2
         usage.sklearn: 7
         """
@@ -56720,6 +66576,7 @@ class int64:
     @overload
     def __rtruediv__(self, _0: numpy.float64, /):
         """
+        usage.dask: 2
         usage.skimage: 1
         usage.sklearn: 5
         usage.xarray: 1
@@ -56729,6 +66586,7 @@ class int64:
     @overload
     def __rtruediv__(self, _0: float, /):
         """
+        usage.dask: 2
         usage.matplotlib: 5
         usage.sklearn: 6
         usage.xarray: 1
@@ -56753,8 +66611,14 @@ class int64:
     @overload
     def __rtruediv__(self, _0: object, /):
         """
-        usage.dask: 10
         usage.scipy: 47
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: decimal.Decimal, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -56770,6 +66634,20 @@ class int64:
         """
         ...
 
+    @overload
+    def __rxor__(self, _0: numpy.int64, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __rxor__(self, _0: bool, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __rxor__(self, _0: Union[bool, numpy.int64], /):
         """
         usage.dask: 2
@@ -56779,6 +66657,7 @@ class int64:
     @overload
     def __sub__(self, _0: int, /):
         """
+        usage.dask: 6
         usage.matplotlib: 12
         usage.skimage: 12
         usage.sklearn: 32
@@ -56789,6 +66668,7 @@ class int64:
     @overload
     def __sub__(self, _0: numpy.int64, /):
         """
+        usage.dask: 1
         usage.matplotlib: 8
         usage.skimage: 9
         usage.sklearn: 11
@@ -56837,13 +66717,6 @@ class int64:
         """
         ...
 
-    @overload
-    def __sub__(self, _0: Union[numpy.int64, int], /):
-        """
-        usage.dask: 7
-        """
-        ...
-
     def __sub__(self, _0: object, /):
         """
         usage.dask: 7
@@ -56859,6 +66732,7 @@ class int64:
     @overload
     def __truediv__(self, _0: int, /):
         """
+        usage.dask: 3
         usage.matplotlib: 5
         usage.skimage: 7
         usage.sklearn: 10
@@ -56868,6 +66742,7 @@ class int64:
     @overload
     def __truediv__(self, _0: numpy.int64, /):
         """
+        usage.dask: 2
         usage.skimage: 2
         usage.sklearn: 7
         """
@@ -56876,6 +66751,7 @@ class int64:
     @overload
     def __truediv__(self, _0: float, /):
         """
+        usage.dask: 1
         usage.matplotlib: 3
         usage.skimage: 4
         usage.sklearn: 5
@@ -56908,13 +66784,6 @@ class int64:
         """
         ...
 
-    @overload
-    def __truediv__(self, _0: Union[numpy.int64, int, float], /):
-        """
-        usage.dask: 6
-        """
-        ...
-
     def __truediv__(self, _0: object, /):
         """
         usage.dask: 6
@@ -56924,6 +66793,20 @@ class int64:
         usage.skimage: 14
         usage.sklearn: 25
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __xor__(self, _0: numpy.int64, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __xor__(self, _0: bool, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -56943,6 +66826,7 @@ class int64:
     @overload
     def astype(self, _0: numpy.dtype, /):
         """
+        usage.dask: 1
         usage.pandas: 3
         """
         ...
@@ -56969,9 +66853,9 @@ class int64:
         ...
 
     @overload
-    def astype(self, _0: Union[Literal["int64"], numpy.dtype], /):
+    def astype(self, _0: Literal["int64"], /):
         """
-        usage.dask: 2
+        usage.dask: 1
         """
         ...
 
@@ -57747,11 +67631,16 @@ class matrix:
         ...
 
     @overload
-    def __getitem__(
-        self, _0: Union[Tuple[slice[int, int, int], slice[int, int, int]], int], /
-    ):
+    def __getitem__(self, _0: int, /):
         """
-        usage.dask: 2
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -58237,19 +68126,30 @@ class memmap:
         ...
 
     @overload
-    def __getitem__(
-        self,
-        _0: Union[
-            Tuple[
-                Union[slice[Union[None, int], Union[None, int], Union[None, int]], int],
-                Union[slice[None, None, None], int],
-            ],
-            slice[int, int, int],
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: slice[int, int, int], /):
         """
-        usage.dask: 7
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, slice[None, None, None]], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[None, None, None]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], int], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -58560,6 +68460,7 @@ class ndarray:
     @classmethod
     def __ne__(cls, _0: int, /):
         """
+        usage.dask: 3
         usage.matplotlib: 2
         usage.skimage: 9
         usage.sklearn: 82
@@ -58581,6 +68482,7 @@ class ndarray:
     @classmethod
     def __ne__(cls, _0: numpy.ndarray, /):
         """
+        usage.dask: 2
         usage.matplotlib: 18
         usage.skimage: 30
         usage.sklearn: 74
@@ -58626,14 +68528,6 @@ class ndarray:
     def __ne__(cls, _0: Tuple[float, float, float, float], /):
         """
         usage.matplotlib: 1
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __ne__(cls, _0: Union[int, numpy.ndarray], /):
-        """
-        usage.dask: 5
         """
         ...
 
@@ -58888,6 +68782,7 @@ class ndarray:
     @overload
     def __add__(self, _0: float, /):
         """
+        usage.dask: 10
         usage.matplotlib: 54
         usage.skimage: 28
         usage.sklearn: 61
@@ -58898,6 +68793,7 @@ class ndarray:
     @overload
     def __add__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 65
         usage.matplotlib: 213
         usage.sample-usage: 1
         usage.skimage: 177
@@ -58909,6 +68805,7 @@ class ndarray:
     @overload
     def __add__(self, _0: numpy.float64, /):
         """
+        usage.dask: 10
         usage.matplotlib: 10
         usage.skimage: 18
         usage.sklearn: 51
@@ -58919,6 +68816,7 @@ class ndarray:
     @overload
     def __add__(self, _0: int, /):
         """
+        usage.dask: 77
         usage.matplotlib: 94
         usage.sample-usage: 1
         usage.skimage: 41
@@ -58930,6 +68828,7 @@ class ndarray:
     @overload
     def __add__(self, _0: numpy.int64, /):
         """
+        usage.dask: 2
         usage.matplotlib: 2
         usage.skimage: 2
         usage.sklearn: 1
@@ -58939,6 +68838,7 @@ class ndarray:
     @overload
     def __add__(self, _0: dask.array.core.Array, /):
         """
+        usage.dask: 5
         usage.skimage: 1
         """
         ...
@@ -58988,7 +68888,6 @@ class ndarray:
     @overload
     def __add__(self, _0: object, /):
         """
-        usage.dask: 194
         usage.pandas: 272
         usage.scipy: 2298
         """
@@ -59080,6 +68979,69 @@ class ndarray:
         ...
 
     @overload
+    def __add__(self, _0: complex, /):
+        """
+        usage.dask: 6
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Literal["_"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Literal["_0"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Literal["_1"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Literal["."], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Literal[".0"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: dask.delayed.Delayed, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: numpy.ma.core.MaskedArray, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
     def __add__(self, _0: numpy.float32, /):
         """
         usage.sklearn: 8
@@ -59102,6 +69064,7 @@ class ndarray:
     @overload
     def __and__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 4
         usage.matplotlib: 46
         usage.skimage: 12
         usage.sklearn: 11
@@ -59160,9 +69123,9 @@ class ndarray:
         ...
 
     @overload
-    def __and__(self, _0: Union[numpy.ndarray, bool], /):
+    def __and__(self, _0: bool, /):
         """
-        usage.dask: 5
+        usage.dask: 1
         """
         ...
 
@@ -59176,6 +69139,326 @@ class ndarray:
         usage.skimage: 14
         usage.sklearn: 11
         usage.xarray: 4
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[Type[numpy.ndarray]],
+        _2: Tuple[numpy.ndarray, numpy.ndarray],
+        _3: Dict[Literal["equal_nan"], bool],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self, _0: Callable, _1: Tuple[None, ...], _2: Tuple[list], _3: dict, /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[list],
+        _3: Dict[Literal["axis"], int],
+        /,
+    ):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[numpy.ndarray, numpy.ndarray],
+        _3: dict,
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[numpy.ndarray],
+        _3: Dict[
+            Literal["keepdims", "dtype", "axis"], Union[bool, numpy.dtype, Tuple[int]]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[numpy.ndarray],
+        _3: Dict[Literal["axes"], Tuple[int, int]],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[numpy.ndarray, numpy.ndarray],
+        _3: Dict[Literal["axes"], Tuple[Tuple[int], Tuple[int]]],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[numpy.ndarray],
+        _3: Dict[
+            Literal["keepdims", "axis", "dtype"], Union[bool, numpy.dtype, Tuple[int]]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[numpy.ndarray, numpy.int64],
+        _3: Dict[Literal["dtype", "shape"], Union[numpy.dtype, Tuple[int, int]]],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[numpy.ndarray, numpy.ndarray],
+        _3: dict,
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self, _0: Callable, _1: Tuple[None, ...], _2: Tuple[numpy.ndarray], _3: dict, /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[numpy.ndarray],
+        _3: Dict[Literal["axis"], int],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self, _0: Callable, _1: Tuple[None, ...], _2: Tuple[numpy.ndarray], _3: dict, /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[numpy.ndarray, numpy.ndarray],
+        _3: Dict[Literal["equal_nan"], bool],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self, _0: Callable, _1: Tuple[None, ...], _2: Tuple[numpy.ndarray], _3: dict, /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[numpy.ndarray],
+        _3: Dict[
+            Literal["keepdims", "dtype", "axis"],
+            Union[bool, numpy.dtype, Tuple[int, int]],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[numpy.ndarray],
+        _3: Dict[
+            Literal["keepdims", "axis", "dtype"],
+            Union[bool, numpy.dtype, Tuple[int, int]],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self, _0: Callable, _1: Tuple[None, ...], _2: Tuple[list], _3: dict, /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[list],
+        _3: Dict[Literal["axis"], int],
+        /,
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self, _0: Callable, _1: Tuple[None, ...], _2: Tuple[numpy.ndarray], _3: dict, /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self, _0: Callable, _1: Tuple[None, ...], _2: Tuple[numpy.ndarray], _3: dict, /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[numpy.ndarray, numpy.int64],
+        _3: Dict[
+            Literal["dtype", "shape"], Union[Type[numpy.float64], Tuple[int, int]]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self,
+        _0: Callable,
+        _1: Tuple[None, ...],
+        _2: Tuple[numpy.ndarray],
+        _3: Dict[
+            Literal["dtype", "keepdims", "axis"],
+            Union[numpy.dtype, bool, Tuple[int, int]],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self, _0: Callable, _1: Tuple[None, ...], _2: Tuple[numpy.ndarray], _3: dict, /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __array_function__(
+        self, _0: Callable, _1: Tuple[None, ...], _2: Tuple[numpy.ndarray], _3: dict, /
+    ):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -59344,6 +69627,7 @@ class ndarray:
     @overload
     def __eq__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 134
         usage.matplotlib: 46
         usage.sample-usage: 2
         usage.skimage: 104
@@ -59365,6 +69649,7 @@ class ndarray:
     @overload
     def __eq__(self, _0: numpy.int64, /):
         """
+        usage.dask: 2
         usage.matplotlib: 4
         usage.skimage: 7
         usage.sklearn: 38
@@ -59375,6 +69660,7 @@ class ndarray:
     @overload
     def __eq__(self, _0: int, /):
         """
+        usage.dask: 47
         usage.matplotlib: 28
         usage.skimage: 111
         usage.sklearn: 269
@@ -59394,6 +69680,7 @@ class ndarray:
     @overload
     def __eq__(self, _0: numpy.float64, /):
         """
+        usage.dask: 1
         usage.matplotlib: 3
         usage.skimage: 9
         usage.sklearn: 42
@@ -59462,6 +69749,7 @@ class ndarray:
     @overload
     def __eq__(self, _0: List[int], /):
         """
+        usage.dask: 2
         usage.matplotlib: 1
         usage.skimage: 4
         usage.sklearn: 12
@@ -59565,6 +69853,7 @@ class ndarray:
     @overload
     def __eq__(self, _0: Literal["foo"], /):
         """
+        usage.dask: 1
         usage.sklearn: 1
         usage.xarray: 3
         """
@@ -59609,7 +69898,6 @@ class ndarray:
     @overload
     def __eq__(self, _0: object, /):
         """
-        usage.dask: 192
         usage.pandas: 895
         usage.scipy: 616
         usage.xarray: 5
@@ -59656,6 +69944,27 @@ class ndarray:
     def __eq__(self, _0: Tuple[numpy.float64, numpy.float64, numpy.float64, int], /):
         """
         usage.matplotlib: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: scipy.sparse.csr.csr_matrix, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: scipy.sparse.coo.coo_matrix, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: numpy.recarray, /):
+        """
+        usage.dask: 3
         """
         ...
 
@@ -59796,6 +70105,7 @@ class ndarray:
     @overload
     def __floordiv__(self, _0: int, /):
         """
+        usage.dask: 1
         usage.sample-usage: 1
         usage.skimage: 8
         usage.sklearn: 7
@@ -59806,6 +70116,7 @@ class ndarray:
     @overload
     def __floordiv__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 1
         usage.skimage: 2
         usage.sklearn: 1
         """
@@ -59833,9 +70144,9 @@ class ndarray:
         ...
 
     @overload
-    def __floordiv__(self, _0: Union[float, numpy.ndarray, int], /):
+    def __floordiv__(self, _0: float, /):
         """
-        usage.dask: 5
+        usage.dask: 3
         """
         ...
 
@@ -59877,6 +70188,7 @@ class ndarray:
     @overload
     def __ge__(self, _0: int, /):
         """
+        usage.dask: 12
         usage.matplotlib: 9
         usage.skimage: 43
         usage.sklearn: 47
@@ -59895,6 +70207,7 @@ class ndarray:
     @overload
     def __ge__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 2
         usage.matplotlib: 2
         usage.skimage: 5
         usage.sklearn: 7
@@ -59913,6 +70226,7 @@ class ndarray:
     @overload
     def __ge__(self, _0: numpy.float64, /):
         """
+        usage.dask: 2
         usage.matplotlib: 16
         usage.sklearn: 5
         """
@@ -59926,16 +70240,9 @@ class ndarray:
         """
         ...
 
-    @overload
-    def __ge__(self, _0: Union[numpy.float64, int, numpy.ndarray, float], /):
-        """
-        usage.dask: 17
-        """
-        ...
-
     def __ge__(self, _0: object, /):
         """
-        usage.dask: 17
+        usage.dask: 16
         usage.matplotlib: 39
         usage.pandas: 90
         usage.scipy: 464
@@ -59948,6 +70255,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: slice[None, int, None], /):
         """
+        usage.dask: 32
         usage.matplotlib: 53
         usage.skimage: 64
         usage.sklearn: 412
@@ -59958,6 +70266,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: slice[int, None, int], /):
         """
+        usage.dask: 17
         usage.matplotlib: 45
         usage.skimage: 25
         usage.sklearn: 184
@@ -59968,6 +70277,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.dask: 46
         usage.matplotlib: 433
         usage.sample-usage: 2
         usage.skimage: 360
@@ -59979,6 +70289,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[None, None, None], int], /):
         """
+        usage.dask: 6
         usage.matplotlib: 130
         usage.skimage: 109
         usage.sklearn: 483
@@ -59989,6 +70300,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 40
         usage.matplotlib: 182
         usage.sample-usage: 1
         usage.skimage: 244
@@ -60000,6 +70312,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
         """
+        usage.dask: 30
         usage.matplotlib: 4
         usage.skimage: 92
         usage.sklearn: 3
@@ -60027,6 +70340,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 5
         usage.matplotlib: 3
         usage.skimage: 5
         usage.sklearn: 3
@@ -60037,6 +70351,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[ellipsis, int], /):
         """
+        usage.dask: 5
         usage.matplotlib: 16
         usage.skimage: 100
         usage.xarray: 6
@@ -60055,6 +70370,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[ellipsis, None], /):
         """
+        usage.dask: 8
         usage.matplotlib: 8
         usage.skimage: 37
         usage.sklearn: 4
@@ -60065,6 +70381,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[int, int, slice[None, None, None]], /):
         """
+        usage.dask: 1
         usage.skimage: 6
         """
         ...
@@ -60090,6 +70407,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[int, int, int], /):
         """
+        usage.dask: 8
         usage.matplotlib: 1
         usage.skimage: 24
         usage.xarray: 3
@@ -60099,6 +70417,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[None, ellipsis], /):
         """
+        usage.dask: 2
         usage.skimage: 11
         usage.xarray: 2
         """
@@ -60121,6 +70440,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[int, int], /):
         """
+        usage.dask: 12
         usage.matplotlib: 82
         usage.skimage: 128
         usage.sklearn: 61
@@ -60140,6 +70460,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray], /):
         """
+        usage.dask: 3
         usage.matplotlib: 10
         usage.skimage: 27
         usage.sklearn: 51
@@ -60199,6 +70520,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: slice[int, int, int], /):
         """
+        usage.dask: 6
         usage.matplotlib: 44
         usage.sample-usage: 1
         usage.skimage: 10
@@ -60210,6 +70532,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[None, slice[None, None, None]], /):
         """
+        usage.dask: 15
         usage.matplotlib: 10
         usage.skimage: 4
         usage.sklearn: 24
@@ -60228,6 +70551,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[int, int, int], slice[None, None, None]], /):
         """
+        usage.dask: 1
         usage.matplotlib: 8
         usage.skimage: 5
         usage.sklearn: 14
@@ -60237,6 +70561,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[None, None, None], None], /):
         """
+        usage.dask: 14
         usage.matplotlib: 42
         usage.skimage: 12
         usage.sklearn: 266
@@ -60251,6 +70576,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 17
         usage.skimage: 20
         usage.sklearn: 1
         usage.xarray: 1
@@ -60274,6 +70600,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: slice[int, None, int], /):
         """
+        usage.dask: 1
         usage.matplotlib: 6
         usage.skimage: 2
         usage.sklearn: 17
@@ -60299,6 +70626,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[int, slice[None, None, None]], /):
         """
+        usage.dask: 2
         usage.matplotlib: 11
         usage.skimage: 25
         usage.sklearn: 70
@@ -60309,6 +70637,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: numpy.int64, /):
         """
+        usage.dask: 6
         usage.matplotlib: 13
         usage.skimage: 25
         usage.sklearn: 155
@@ -60319,6 +70648,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray], /):
         """
+        usage.dask: 2
         usage.matplotlib: 5
         usage.skimage: 11
         usage.sklearn: 6
@@ -60341,6 +70671,7 @@ class ndarray:
         self, _0: Tuple[slice[None, None, None], slice[None, int, None]], /
     ):
         """
+        usage.dask: 4
         usage.matplotlib: 3
         usage.skimage: 23
         usage.sklearn: 106
@@ -60371,6 +70702,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: slice[None, None, None], /):
         """
+        usage.dask: 1
         usage.matplotlib: 1
         usage.skimage: 1
         usage.sklearn: 17
@@ -60381,6 +70713,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[numpy.ndarray, slice[None, None, None]], /):
         """
+        usage.dask: 7
         usage.matplotlib: 5
         usage.skimage: 9
         usage.sklearn: 43
@@ -60398,6 +70731,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[None, None, None], List[int]], /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         usage.skimage: 2
         usage.sklearn: 36
@@ -60419,6 +70753,7 @@ class ndarray:
         self, _0: Tuple[slice[None, None, None], None, slice[None, None, None]], /
     ):
         """
+        usage.dask: 3
         usage.skimage: 2
         usage.sklearn: 7
         usage.xarray: 2
@@ -60447,6 +70782,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[None, int, None], slice[None, int, None]], /):
         """
+        usage.dask: 1
         usage.matplotlib: 14
         usage.skimage: 42
         usage.sklearn: 16
@@ -60496,6 +70832,7 @@ class ndarray:
         self, _0: Tuple[slice[None, None, None], slice[None, None, None], None], /
     ):
         """
+        usage.dask: 2
         usage.matplotlib: 1
         usage.skimage: 5
         usage.sklearn: 17
@@ -60567,6 +70904,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[List[int], slice[None, None, None]], /):
         """
+        usage.dask: 2
         usage.skimage: 1
         usage.xarray: 2
         """
@@ -60585,6 +70923,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: slice[None, None, None], /):
         """
+        usage.dask: 13
         usage.matplotlib: 43
         usage.skimage: 27
         usage.sklearn: 80
@@ -60595,6 +70934,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: None, /):
         """
+        usage.dask: 6
         usage.matplotlib: 13
         usage.skimage: 5
         usage.sklearn: 1
@@ -60606,6 +70946,7 @@ class ndarray:
         self, _0: Tuple[slice[None, None, None], slice[None, None, None]], /
     ):
         """
+        usage.dask: 4
         usage.matplotlib: 2
         usage.skimage: 16
         usage.sklearn: 4
@@ -60616,6 +70957,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[int, int, int], slice[None, int, None]], /):
         """
+        usage.dask: 1
         usage.skimage: 13
         usage.sklearn: 1
         """
@@ -60624,6 +70966,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, None, int]], /):
         """
+        usage.dask: 2
         usage.matplotlib: 1
         usage.skimage: 11
         usage.sklearn: 2
@@ -60664,6 +71007,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: List[int], /):
         """
+        usage.dask: 6
         usage.matplotlib: 11
         usage.skimage: 1
         usage.sklearn: 9
@@ -60735,6 +71079,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[None, None, None], numpy.ndarray], /):
         """
+        usage.dask: 6
         usage.skimage: 8
         usage.sklearn: 130
         usage.xarray: 5
@@ -60809,6 +71154,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: slice[numpy.int64, numpy.int64, numpy.int64], /):
         """
+        usage.dask: 4
         usage.matplotlib: 5
         usage.skimage: 1
         usage.sklearn: 13
@@ -60933,6 +71279,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[numpy.ndarray], /):
         """
+        usage.dask: 6
         usage.skimage: 6
         usage.sklearn: 3
         usage.xarray: 14
@@ -60942,6 +71289,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[None, ...], /):
         """
+        usage.dask: 34
         usage.skimage: 1
         usage.xarray: 5
         """
@@ -60950,6 +71298,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[int, int, int]], /):
         """
+        usage.dask: 47
         usage.skimage: 1
         usage.sklearn: 1
         usage.xarray: 1
@@ -60959,6 +71308,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[int], /):
         """
+        usage.dask: 6
         usage.matplotlib: 5
         usage.skimage: 1
         usage.sklearn: 1
@@ -60969,6 +71319,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[int, int, int, int], /):
         """
+        usage.dask: 3
         usage.skimage: 2
         """
         ...
@@ -60985,6 +71336,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 8
         usage.skimage: 1
         usage.xarray: 1
         """
@@ -61011,6 +71363,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 5
         usage.skimage: 1
         """
         ...
@@ -61018,6 +71371,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[numpy.int64, numpy.int64, numpy.int64]], /):
         """
+        usage.dask: 1
         usage.skimage: 1
         """
         ...
@@ -61025,6 +71379,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[int, None, int], slice[int, None, int]], /):
         """
+        usage.dask: 2
         usage.matplotlib: 4
         usage.skimage: 12
         usage.sklearn: 2
@@ -61148,6 +71503,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 4
         usage.skimage: 2
         usage.xarray: 1
         """
@@ -61179,6 +71535,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 4
         usage.skimage: 2
         """
         ...
@@ -61209,6 +71566,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 4
         usage.matplotlib: 1
         usage.skimage: 2
         usage.sklearn: 1
@@ -61324,6 +71682,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[int, None, int]], /):
         """
+        usage.dask: 3
         usage.skimage: 1
         usage.xarray: 9
         """
@@ -61464,6 +71823,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[ellipsis, None, None], /):
         """
+        usage.dask: 2
         usage.skimage: 1
         """
         ...
@@ -61471,6 +71831,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[None, int, None]], /):
         """
+        usage.dask: 4
         usage.skimage: 2
         usage.xarray: 9
         """
@@ -61485,6 +71846,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 2
         usage.skimage: 5
         usage.xarray: 2
         """
@@ -61537,6 +71899,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[int, None, int], slice[int, int, int]], /):
         """
+        usage.dask: 2
         usage.matplotlib: 1
         usage.skimage: 10
         """
@@ -61569,6 +71932,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 2
         usage.skimage: 1
         """
         ...
@@ -61576,6 +71940,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[None, ellipsis, None], /):
         """
+        usage.dask: 1
         usage.skimage: 2
         """
         ...
@@ -61659,6 +72024,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 1
         usage.skimage: 4
         """
         ...
@@ -61693,6 +72059,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[int, int, int], int], /):
         """
+        usage.dask: 1
         usage.matplotlib: 4
         usage.skimage: 2
         usage.sklearn: 22
@@ -61733,6 +72100,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[None, None, None]], /):
         """
+        usage.dask: 3
         usage.skimage: 1
         usage.sklearn: 1
         usage.xarray: 4
@@ -61742,6 +72110,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[None, None, None]], /):
         """
+        usage.dask: 1
         usage.xarray: 15
         """
         ...
@@ -61765,6 +72134,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[ellipsis], /):
         """
+        usage.dask: 1
         usage.xarray: 16
         """
         ...
@@ -61788,6 +72158,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 1
         usage.xarray: 1
         """
         ...
@@ -61881,6 +72252,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[int, int, int], numpy.ndarray], /):
         """
+        usage.dask: 1
         usage.xarray: 1
         """
         ...
@@ -61897,6 +72269,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[None, None], /):
         """
+        usage.dask: 1
         usage.xarray: 4
         """
         ...
@@ -62026,6 +72399,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[None], /):
         """
+        usage.dask: 1
         usage.xarray: 6
         """
         ...
@@ -62037,6 +72411,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 2
         usage.xarray: 6
         """
         ...
@@ -62098,6 +72473,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 1
         usage.xarray: 5
         """
         ...
@@ -62170,6 +72546,7 @@ class ndarray:
         self, _0: Tuple[None, slice[None, None, None], slice[None, None, None]], /
     ):
         """
+        usage.dask: 1
         usage.sklearn: 7
         usage.xarray: 1
         """
@@ -62547,6 +72924,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 4
         usage.xarray: 1
         """
         ...
@@ -62569,6 +72947,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 5
         usage.xarray: 3
         """
         ...
@@ -62618,6 +72997,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[int, slice[None, None, None], int], /):
         """
+        usage.dask: 1
         usage.xarray: 1
         """
         ...
@@ -62787,6 +73167,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: slice[None, int, None], /):
         """
+        usage.dask: 1
         usage.xarray: 4
         """
         ...
@@ -62954,6 +73335,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 2
         usage.xarray: 4
         """
         ...
@@ -63162,6 +73544,7 @@ class ndarray:
         self, _0: Tuple[slice[int, int, int], slice[None, None, None], numpy.ndarray], /
     ):
         """
+        usage.dask: 1
         usage.xarray: 2
         """
         ...
@@ -63337,6 +73720,7 @@ class ndarray:
         self, _0: Tuple[slice[int, int, int], numpy.ndarray, slice[None, None, None]], /
     ):
         """
+        usage.dask: 1
         usage.xarray: 2
         """
         ...
@@ -63397,6 +73781,7 @@ class ndarray:
         self, _0: Tuple[numpy.ndarray, slice[int, int, int], slice[None, None, None]], /
     ):
         """
+        usage.dask: 1
         usage.xarray: 2
         """
         ...
@@ -63608,6 +73993,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 4
         usage.xarray: 1
         """
         ...
@@ -63664,6 +74050,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 5
         usage.xarray: 2
         """
         ...
@@ -63686,6 +74073,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 1
         usage.xarray: 2
         """
         ...
@@ -63744,6 +74132,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 1
         usage.xarray: 2
         """
         ...
@@ -63784,6 +74173,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 1
         usage.xarray: 2
         """
         ...
@@ -63800,6 +74190,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[None, None, None], None, None], /):
         """
+        usage.dask: 5
         usage.matplotlib: 1
         usage.sklearn: 3
         usage.xarray: 4
@@ -63841,6 +74232,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[List[int], List[int]], /):
         """
+        usage.dask: 9
         usage.xarray: 4
         """
         ...
@@ -64018,6 +74410,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: list, /):
         """
+        usage.dask: 1
         usage.sklearn: 4
         usage.xarray: 1
         """
@@ -64035,7 +74428,6 @@ class ndarray:
     @overload
     def __getitem__(self, _0: object, /):
         """
-        usage.dask: 654
         usage.pandas: 2206
         usage.scipy: 9038
         """
@@ -64138,6 +74530,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[None, None, None], int, int], /):
         """
+        usage.dask: 2
         usage.matplotlib: 46
         usage.sklearn: 13
         """
@@ -64191,6 +74584,628 @@ class ndarray:
     def __getitem__(self, _0: Tuple[Tuple[int, int, int], Tuple[int, int, int]], /):
         """
         usage.sample-usage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["a"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["a", "b"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col1"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["col1"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col2"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["col2", "col1"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["chunk-location"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["array-location"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, ellipsis, int], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, None, None], List[int]], /
+    ):
+        """
+        usage.dask: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["text"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["text", "numbers"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[int], slice[None, None, None], List[int], List[int]], /
+    ):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            List[int], slice[None, None, None], List[int], slice[None, None, None]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            List[int], List[int], slice[None, None, None], slice[None, None, None]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], List[int], List[int], List[int]], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[int], List[int], List[int], slice[None, None, None]], /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[list, list, list, slice[None, None, None]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            slice[None, None, None],
+            numpy.ndarray,
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], slice[None, None, None], List[int], List[int]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], List[int], slice[None, None, None], List[int]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, int, None], slice[None, None, None]], /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[List[int]], List[List[int]]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int]], /):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[None, slice[None, None, None], slice[None, None, None], None], /
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[int, int, int], slice[None, None, None], slice[int, int, int]],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[None, None, slice[None, None, None]], /):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[None, None, None, slice[None, None, None]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], None, slice[None, None, None], None], /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[None, None, None],
+            None,
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            None,
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], None, None, slice[None, None, None]], /
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["vals"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["arg"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["b", "a"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["A"]], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["B", "A"]], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["C", "B", "A"]], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], slice[None, None, None], slice[None, None, None]
+        ],
+        /,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            None,
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[None, None, slice[None, None, None], slice[None, None, None]], /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[None, slice[None, None, None], None, slice[None, None, None]], /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[None, None, None, None, None, None, None, None, None, None], /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[int, int, int], slice[int, None, int], slice[int, None, int]],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[int, None, int], slice[int, int, int], slice[int, None, int]],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[int, None, int], slice[int, None, int], slice[int, int, int]],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["values"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["indices"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["counts"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[None, slice[None, None, None], None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[bool], /):
+        """
+        usage.dask: 2
+        usage.sklearn: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[list, slice[None, int, None], slice[None, int, None]], /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, int, None], list, slice[None, int, None]], /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, int, None], slice[None, int, None], list], /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], dask.array.core.Array], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[dask.array.core.Array, slice[None, None, None]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, slice[int, int, int]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, slice[None, int, None], None, ellipsis], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -64254,13 +75269,6 @@ class ndarray:
     def __getitem__(self, _0: pandas.core.series.Series, /):
         """
         usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[bool], /):
-        """
-        usage.sklearn: 3
         """
         ...
 
@@ -64609,6 +75617,7 @@ class ndarray:
     @overload
     def __gt__(self, _0: float, /):
         """
+        usage.dask: 9
         usage.matplotlib: 10
         usage.skimage: 13
         usage.sklearn: 58
@@ -64619,6 +75628,7 @@ class ndarray:
     @overload
     def __gt__(self, _0: int, /):
         """
+        usage.dask: 18
         usage.matplotlib: 26
         usage.sample-usage: 1
         usage.skimage: 90
@@ -64639,6 +75649,7 @@ class ndarray:
     @overload
     def __gt__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 3
         usage.matplotlib: 9
         usage.skimage: 18
         usage.sklearn: 18
@@ -64677,16 +75688,9 @@ class ndarray:
         """
         ...
 
-    @overload
-    def __gt__(self, _0: Union[numpy.ndarray, int, float], /):
-        """
-        usage.dask: 27
-        """
-        ...
-
     def __gt__(self, _0: object, /):
         """
-        usage.dask: 27
+        usage.dask: 30
         usage.matplotlib: 50
         usage.pandas: 82
         usage.sample-usage: 1
@@ -64700,6 +75704,7 @@ class ndarray:
     @overload
     def __iadd__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 8
         usage.matplotlib: 38
         usage.skimage: 78
         usage.sklearn: 161
@@ -64710,6 +75715,7 @@ class ndarray:
     @overload
     def __iadd__(self, _0: int, /):
         """
+        usage.dask: 2
         usage.matplotlib: 8
         usage.sample-usage: 1
         usage.skimage: 27
@@ -64740,6 +75746,7 @@ class ndarray:
     @overload
     def __iadd__(self, _0: numpy.float64, /):
         """
+        usage.dask: 2
         usage.matplotlib: 4
         usage.skimage: 3
         usage.sklearn: 29
@@ -64820,13 +75827,6 @@ class ndarray:
     def __iadd__(self, _0: List[Union[int, float]], /):
         """
         usage.matplotlib: 2
-        """
-        ...
-
-    @overload
-    def __iadd__(self, _0: Union[numpy.float64, int, numpy.ndarray], /):
-        """
-        usage.dask: 12
         """
         ...
 
@@ -65386,6 +76386,7 @@ class ndarray:
     @overload
     def __le__(self, _0: int, /):
         """
+        usage.dask: 3
         usage.matplotlib: 14
         usage.skimage: 16
         usage.sklearn: 22
@@ -65395,6 +76396,7 @@ class ndarray:
     @overload
     def __le__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 2
         usage.matplotlib: 2
         usage.skimage: 5
         usage.sklearn: 7
@@ -65457,13 +76459,6 @@ class ndarray:
         ...
 
     @overload
-    def __le__(self, _0: Union[numpy.float64, int, numpy.ndarray, float], /):
-        """
-        usage.dask: 35
-        """
-        ...
-
-    @overload
     def __le__(self, _0: numpy.float32, /):
         """
         usage.sklearn: 1
@@ -65472,7 +76467,7 @@ class ndarray:
 
     def __le__(self, _0: object, /):
         """
-        usage.dask: 35
+        usage.dask: 5
         usage.matplotlib: 41
         usage.pandas: 134
         usage.scipy: 561
@@ -65506,6 +76501,7 @@ class ndarray:
     @overload
     def __lt__(self, _0: float, /):
         """
+        usage.dask: 4
         usage.matplotlib: 17
         usage.skimage: 17
         usage.sklearn: 74
@@ -65516,6 +76512,7 @@ class ndarray:
     @overload
     def __lt__(self, _0: int, /):
         """
+        usage.dask: 28
         usage.matplotlib: 29
         usage.sample-usage: 1
         usage.skimage: 62
@@ -65536,6 +76533,7 @@ class ndarray:
     @overload
     def __lt__(self, _0: numpy.float64, /):
         """
+        usage.dask: 1
         usage.matplotlib: 5
         usage.skimage: 3
         usage.sklearn: 22
@@ -65545,6 +76543,7 @@ class ndarray:
     @overload
     def __lt__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 3
         usage.matplotlib: 9
         usage.skimage: 18
         usage.sklearn: 18
@@ -65566,16 +76565,9 @@ class ndarray:
         """
         ...
 
-    @overload
-    def __lt__(self, _0: Union[numpy.ndarray, int], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
     def __lt__(self, _0: object, /):
         """
-        usage.dask: 3
+        usage.dask: 36
         usage.matplotlib: 61
         usage.pandas: 48
         usage.sample-usage: 1
@@ -65657,6 +76649,7 @@ class ndarray:
     @overload
     def __mod__(self, _0: int, /):
         """
+        usage.dask: 11
         usage.matplotlib: 10
         usage.sample-usage: 1
         usage.skimage: 3
@@ -65676,6 +76669,7 @@ class ndarray:
     @overload
     def __mod__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 1
         usage.skimage: 1
         """
         ...
@@ -65691,13 +76685,6 @@ class ndarray:
     def __mod__(self, _0: Union[numpy.ndarray, numpy.float64, int], /):
         """
         usage.scipy: 23
-        """
-        ...
-
-    @overload
-    def __mod__(self, _0: Union[int, numpy.ndarray], /):
-        """
-        usage.dask: 12
         """
         ...
 
@@ -65717,6 +76704,7 @@ class ndarray:
     @overload
     def __mul__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 27
         usage.matplotlib: 154
         usage.skimage: 215
         usage.sklearn: 355
@@ -65727,6 +76715,7 @@ class ndarray:
     @overload
     def __mul__(self, _0: int, /):
         """
+        usage.dask: 35
         usage.matplotlib: 58
         usage.sample-usage: 1
         usage.skimage: 83
@@ -65747,6 +76736,7 @@ class ndarray:
     @overload
     def __mul__(self, _0: float, /):
         """
+        usage.dask: 3
         usage.matplotlib: 83
         usage.skimage: 36
         usage.sklearn: 60
@@ -65823,7 +76813,6 @@ class ndarray:
     @overload
     def __mul__(self, _0: object, /):
         """
-        usage.dask: 69
         usage.pandas: 256
         usage.scipy: 2345
         usage.xarray: 561
@@ -65847,6 +76836,7 @@ class ndarray:
     @overload
     def __mul__(self, _0: List[int], /):
         """
+        usage.dask: 1
         usage.matplotlib: 1
         usage.sklearn: 5
         """
@@ -65855,6 +76845,7 @@ class ndarray:
     @overload
     def __mul__(self, _0: complex, /):
         """
+        usage.dask: 2
         usage.matplotlib: 3
         """
         ...
@@ -65863,6 +76854,13 @@ class ndarray:
     def __mul__(self, _0: numpy.ma.core.MaskedArray, /):
         """
         usage.matplotlib: 1
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: Tuple[int, int, int], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -65909,6 +76907,7 @@ class ndarray:
     @overload
     def __or__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 2
         usage.matplotlib: 6
         usage.skimage: 4
         usage.sklearn: 7
@@ -65959,9 +76958,9 @@ class ndarray:
         ...
 
     @overload
-    def __or__(self, _0: Union[numpy.ndarray, bool], /):
+    def __or__(self, _0: bool, /):
         """
-        usage.dask: 3
+        usage.dask: 1
         """
         ...
 
@@ -65989,6 +76988,7 @@ class ndarray:
     @overload
     def __pow__(self, _0: int, /):
         """
+        usage.dask: 11
         usage.matplotlib: 69
         usage.sample-usage: 1
         usage.skimage: 154
@@ -66000,6 +77000,7 @@ class ndarray:
     @overload
     def __pow__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 1
         usage.skimage: 2
         """
         ...
@@ -66024,13 +77025,6 @@ class ndarray:
     def __pow__(self, _0: Union[numpy.float64, float, complex, int, numpy.ndarray], /):
         """
         usage.scipy: 872
-        """
-        ...
-
-    @overload
-    def __pow__(self, _0: Union[int, numpy.ndarray], /):
-        """
-        usage.dask: 12
         """
         ...
 
@@ -66067,6 +77061,7 @@ class ndarray:
     @overload
     def __radd__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 65
         usage.matplotlib: 213
         usage.sample-usage: 1
         usage.skimage: 177
@@ -66087,6 +77082,7 @@ class ndarray:
     @overload
     def __radd__(self, _0: int, /):
         """
+        usage.dask: 1
         usage.matplotlib: 13
         usage.sample-usage: 1
         usage.skimage: 34
@@ -66112,6 +77108,7 @@ class ndarray:
     @overload
     def __radd__(self, _0: numpy.int64, /):
         """
+        usage.dask: 1
         usage.matplotlib: 1
         usage.skimage: 2
         """
@@ -66162,9 +77159,29 @@ class ndarray:
     @overload
     def __radd__(self, _0: object, /):
         """
-        usage.dask: 78
         usage.pandas: 289
         usage.scipy: 2001
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: dask.array.core.Array, /):
+        """
+        usage.dask: 6
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 3
         """
         ...
 
@@ -66205,6 +77222,7 @@ class ndarray:
     @overload
     def __rand__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 4
         usage.matplotlib: 46
         usage.skimage: 12
         usage.sklearn: 11
@@ -66261,6 +77279,7 @@ class ndarray:
     @overload
     def __rand__(self, _0: bool, /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         """
         ...
@@ -66269,13 +77288,6 @@ class ndarray:
     def __rand__(self, _0: int, /):
         """
         usage.sample-usage: 1
-        """
-        ...
-
-    @overload
-    def __rand__(self, _0: Union[numpy.ndarray, bool], /):
-        """
-        usage.dask: 5
         """
         ...
 
@@ -66295,6 +77307,7 @@ class ndarray:
     @overload
     def __rfloordiv__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 1
         usage.skimage: 2
         usage.sklearn: 1
         """
@@ -66317,14 +77330,8 @@ class ndarray:
     @overload
     def __rfloordiv__(self, _0: int, /):
         """
+        usage.dask: 1
         usage.sample-usage: 1
-        """
-        ...
-
-    @overload
-    def __rfloordiv__(self, _0: Union[int, numpy.ndarray], /):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -66463,6 +77470,7 @@ class ndarray:
     @overload
     def __rmul__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 27
         usage.matplotlib: 154
         usage.skimage: 215
         usage.sklearn: 355
@@ -66483,6 +77491,7 @@ class ndarray:
     @overload
     def __rmul__(self, _0: float, /):
         """
+        usage.dask: 3
         usage.matplotlib: 177
         usage.skimage: 152
         usage.sklearn: 270
@@ -66493,6 +77502,7 @@ class ndarray:
     @overload
     def __rmul__(self, _0: int, /):
         """
+        usage.dask: 36
         usage.matplotlib: 82
         usage.sample-usage: 2
         usage.skimage: 120
@@ -66504,6 +77514,7 @@ class ndarray:
     @overload
     def __rmul__(self, _0: complex, /):
         """
+        usage.dask: 6
         usage.matplotlib: 2
         usage.skimage: 6
         usage.sklearn: 2
@@ -66514,6 +77525,7 @@ class ndarray:
     @overload
     def __rmul__(self, _0: numpy.int64, /):
         """
+        usage.dask: 2
         usage.skimage: 2
         usage.sklearn: 2
         """
@@ -66522,6 +77534,7 @@ class ndarray:
     @overload
     def __rmul__(self, _0: dask.array.core.Array, /):
         """
+        usage.dask: 2
         usage.skimage: 4
         """
         ...
@@ -66564,7 +77577,6 @@ class ndarray:
     @overload
     def __rmul__(self, _0: object, /):
         """
-        usage.dask: 77
         usage.pandas: 243
         usage.scipy: 4244
         """
@@ -66581,6 +77593,13 @@ class ndarray:
     def __rmul__(self, _0: numpy.ma.core.MaskedArray, /):
         """
         usage.matplotlib: 5
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: scipy.sparse.linalg.interface.MatrixLinearOperator, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -66628,6 +77647,7 @@ class ndarray:
     @overload
     def __ror__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 2
         usage.matplotlib: 6
         usage.skimage: 4
         usage.sklearn: 7
@@ -66638,6 +77658,7 @@ class ndarray:
     @overload
     def __ror__(self, _0: bool, /):
         """
+        usage.dask: 1
         usage.xarray: 3
         """
         ...
@@ -66692,13 +77713,6 @@ class ndarray:
         """
         ...
 
-    @overload
-    def __ror__(self, _0: Union[numpy.ndarray, bool], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
     def __ror__(self, _0: object, /):
         """
         usage.dask: 3
@@ -66715,6 +77729,7 @@ class ndarray:
     @overload
     def __rpow__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 1
         usage.skimage: 2
         """
         ...
@@ -66722,6 +77737,7 @@ class ndarray:
     @overload
     def __rpow__(self, _0: int, /):
         """
+        usage.dask: 1
         usage.matplotlib: 9
         usage.sample-usage: 2
         usage.skimage: 1
@@ -66746,15 +77762,9 @@ class ndarray:
     @overload
     def __rpow__(self, _0: float, /):
         """
+        usage.dask: 1
         usage.matplotlib: 7
         usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __rpow__(self, _0: Union[float, numpy.ndarray, int], /):
-        """
-        usage.dask: 3
         """
         ...
 
@@ -66827,6 +77837,7 @@ class ndarray:
     @overload
     def __rsub__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 17
         usage.matplotlib: 133
         usage.skimage: 183
         usage.sklearn: 526
@@ -66837,6 +77848,7 @@ class ndarray:
     @overload
     def __rsub__(self, _0: int, /):
         """
+        usage.dask: 3
         usage.matplotlib: 25
         usage.sample-usage: 1
         usage.skimage: 20
@@ -66979,13 +77991,6 @@ class ndarray:
         ...
 
     @overload
-    def __rsub__(self, _0: Union[numpy.ndarray, int], /):
-        """
-        usage.dask: 20
-        """
-        ...
-
-    @overload
     def __rsub__(self, _0: numpy.matrix, /):
         """
         usage.sklearn: 2
@@ -67022,6 +78027,7 @@ class ndarray:
     @overload
     def __rtruediv__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 11
         usage.matplotlib: 37
         usage.skimage: 68
         usage.sklearn: 204
@@ -67032,6 +78038,7 @@ class ndarray:
     @overload
     def __rtruediv__(self, _0: int, /):
         """
+        usage.dask: 2
         usage.matplotlib: 7
         usage.skimage: 5
         usage.sklearn: 40
@@ -67078,13 +78085,6 @@ class ndarray:
         ...
 
     @overload
-    def __rtruediv__(self, _0: Union[numpy.ndarray, int], /):
-        """
-        usage.dask: 13
-        """
-        ...
-
-    @overload
     def __rtruediv__(self, _0: numpy.memmap, /):
         """
         usage.sklearn: 2
@@ -67111,9 +78111,16 @@ class ndarray:
         ...
 
     @overload
-    def __rxor__(self, _0: Union[bool, numpy.ndarray], /):
+    def __rxor__(self, _0: numpy.ndarray, /):
         """
-        usage.dask: 2
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __rxor__(self, _0: bool, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -67127,6 +78134,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: numpy.ndarray, _1: numpy.ndarray, /):
         """
+        usage.dask: 2
         usage.matplotlib: 45
         usage.skimage: 52
         usage.sklearn: 114
@@ -67137,6 +78145,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: numpy.ndarray, _1: int, /):
         """
+        usage.dask: 7
         usage.matplotlib: 20
         usage.skimage: 68
         usage.sklearn: 130
@@ -67147,6 +78156,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: numpy.ndarray, _1: float, /):
         """
+        usage.dask: 7
         usage.matplotlib: 9
         usage.skimage: 14
         usage.sklearn: 65
@@ -67265,6 +78275,7 @@ class ndarray:
         self, _0: Tuple[slice[None, None, None], int], _1: numpy.ndarray, /
     ):
         """
+        usage.dask: 3
         usage.matplotlib: 31
         usage.skimage: 34
         usage.sklearn: 146
@@ -67284,6 +78295,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: int, _1: numpy.float64, /):
         """
+        usage.dask: 1
         usage.matplotlib: 26
         usage.skimage: 14
         usage.sklearn: 73
@@ -67386,6 +78398,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: int, _1: int, /):
         """
+        usage.dask: 4
         usage.matplotlib: 8
         usage.sample-usage: 1
         usage.skimage: 50
@@ -67397,6 +78410,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: Tuple[int, int], _1: float, /):
         """
+        usage.dask: 1
         usage.matplotlib: 15
         usage.skimage: 30
         usage.sklearn: 34
@@ -67487,6 +78501,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: Tuple[int, int], _1: int, /):
         """
+        usage.dask: 3
         usage.matplotlib: 9
         usage.skimage: 151
         usage.sklearn: 34
@@ -67509,6 +78524,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 14
         usage.skimage: 22
         usage.sklearn: 3
         """
@@ -67722,6 +78738,7 @@ class ndarray:
         self, _0: Tuple[int, int, slice[None, None, None]], _1: numpy.ndarray, /
     ):
         """
+        usage.dask: 4
         usage.skimage: 1
         """
         ...
@@ -67729,6 +78746,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: slice[int, None, int], _1: int, /):
         """
+        usage.dask: 1
         usage.matplotlib: 5
         usage.skimage: 2
         usage.sklearn: 6
@@ -67757,6 +78775,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: int, _1: float, /):
         """
+        usage.dask: 2
         usage.matplotlib: 13
         usage.skimage: 3
         usage.sklearn: 40
@@ -67850,6 +78869,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: int, _1: numpy.int64, /):
         """
+        usage.dask: 2
         usage.matplotlib: 2
         usage.skimage: 4
         usage.sklearn: 17
@@ -67859,6 +78879,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: slice[int, None, int], _1: numpy.ndarray, /):
         """
+        usage.dask: 2
         usage.matplotlib: 9
         usage.skimage: 5
         usage.sklearn: 2
@@ -67962,6 +78983,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 9
         usage.skimage: 6
         """
         ...
@@ -67974,6 +78996,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 1
         usage.skimage: 8
         usage.sklearn: 1
         """
@@ -68008,6 +79031,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: int, _1: numpy.ndarray, /):
         """
+        usage.dask: 3
         usage.matplotlib: 4
         usage.skimage: 31
         usage.sklearn: 101
@@ -68202,6 +79226,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: slice[None, int, None], _1: int, /):
         """
+        usage.dask: 3
         usage.matplotlib: 1
         usage.skimage: 1
         usage.sklearn: 20
@@ -68257,6 +79282,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: Tuple[slice[int, int, int]], _1: numpy.ndarray, /):
         """
+        usage.dask: 2
         usage.skimage: 2
         """
         ...
@@ -68432,6 +79458,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 3
         usage.skimage: 1
         """
         ...
@@ -68504,6 +79531,7 @@ class ndarray:
         /,
     ):
         """
+        usage.dask: 3
         usage.skimage: 1
         """
         ...
@@ -69154,6 +80182,7 @@ class ndarray:
         self, _0: Tuple[int, slice[None, None, None]], _1: numpy.ndarray, /
     ):
         """
+        usage.dask: 2
         usage.matplotlib: 7
         usage.skimage: 2
         usage.sklearn: 18
@@ -69748,6 +80777,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: Tuple[slice[int, int, int], int], _1: numpy.ndarray, /):
         """
+        usage.dask: 1
         usage.matplotlib: 8
         usage.skimage: 2
         """
@@ -70550,6 +81580,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: slice[None, None, None], _1: float, /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         usage.sklearn: 1
         usage.xarray: 1
@@ -70742,7 +81773,6 @@ class ndarray:
     @overload
     def __setitem__(self, _0: object, _1: object, /):
         """
-        usage.dask: 134
         usage.pandas: 5607
         usage.scipy: 3994
         """
@@ -70771,6 +81801,7 @@ class ndarray:
         self, _0: Tuple[slice[None, None, None], int, int], _1: numpy.ndarray, /
     ):
         """
+        usage.dask: 4
         usage.matplotlib: 17
         usage.sklearn: 1
         """
@@ -70833,6 +81864,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: slice[None, int, None], _1: numpy.ndarray, /):
         """
+        usage.dask: 3
         usage.matplotlib: 4
         usage.sklearn: 30
         """
@@ -71292,6 +82324,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: slice[int, int, int], _1: int, /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         usage.sklearn: 6
         """
@@ -71435,6 +82468,210 @@ class ndarray:
         ...
 
     @overload
+    def __setitem__(self, _0: Tuple[slice[int, int, int]], _1: int, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int], _1: Tuple[str, int], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Tuple[str, int, int], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int, int], _1: Tuple[str, int, int, int], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[int, int, int, int], _1: Tuple[str, int, int, int, int], /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[List[int]], _1: numpy.ndarray, /):
+        """
+        usage.dask: 6
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[List[int], slice[None, None, None]], _1: numpy.ndarray, /
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[List[int], slice[None, None, None], slice[None, None, None]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[int, int, int], slice[int, int, int], slice[int, int, int]],
+        _1: numpy.memmap,
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[int, int, int], slice[int, int, int]], _1: object, /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[int, int, int], slice[int, int, int], slice[int, int, int]],
+        _1: object,
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: dask.array.core.Array, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None]], _1: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int], _1: dask.array.core.Array, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[int, slice[None, None, None], int], _1: numpy.ndarray, /
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int, int], _1: dask.array.core.Array, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Tuple[Literal["A"], int, int], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, None, None], _1: numpy.int64, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["vals"], _1: numpy.ndarray, /):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["arg"], _1: numpy.ndarray, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["values"], _1: numpy.ndarray, /):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["inverse"], _1: numpy.ndarray, /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
     def __setitem__(self, _0: numpy.int64, _1: numpy.ndarray, /):
         """
         usage.sklearn: 16
@@ -71489,13 +82726,6 @@ class ndarray:
 
     @overload
     def __setitem__(self, _0: int, _1: numpy.matrix, /):
-        """
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: List[int], _1: numpy.ndarray, /):
         """
         usage.sklearn: 2
         """
@@ -72049,6 +83279,7 @@ class ndarray:
     @overload
     def __sub__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 17
         usage.matplotlib: 133
         usage.skimage: 183
         usage.sklearn: 526
@@ -72059,6 +83290,7 @@ class ndarray:
     @overload
     def __sub__(self, _0: float, /):
         """
+        usage.dask: 1
         usage.matplotlib: 34
         usage.skimage: 20
         usage.sklearn: 36
@@ -72069,6 +83301,7 @@ class ndarray:
     @overload
     def __sub__(self, _0: int, /):
         """
+        usage.dask: 27
         usage.matplotlib: 34
         usage.sample-usage: 1
         usage.skimage: 54
@@ -72304,13 +83537,6 @@ class ndarray:
         ...
 
     @overload
-    def __sub__(self, _0: Union[numpy.ndarray, float, int], /):
-        """
-        usage.dask: 45
-        """
-        ...
-
-    @overload
     def __sub__(self, _0: List[float], /):
         """
         usage.sklearn: 2
@@ -72349,6 +83575,7 @@ class ndarray:
     @overload
     def __truediv__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 11
         usage.matplotlib: 37
         usage.skimage: 68
         usage.sklearn: 204
@@ -72359,6 +83586,7 @@ class ndarray:
     @overload
     def __truediv__(self, _0: float, /):
         """
+        usage.dask: 3
         usage.matplotlib: 48
         usage.skimage: 62
         usage.sklearn: 72
@@ -72368,6 +83596,7 @@ class ndarray:
     @overload
     def __truediv__(self, _0: int, /):
         """
+        usage.dask: 7
         usage.matplotlib: 53
         usage.skimage: 44
         usage.sklearn: 88
@@ -72378,6 +83607,7 @@ class ndarray:
     @overload
     def __truediv__(self, _0: numpy.int64, /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         usage.skimage: 6
         usage.sklearn: 15
@@ -72388,6 +83618,7 @@ class ndarray:
     @overload
     def __truediv__(self, _0: numpy.timedelta64, /):
         """
+        usage.dask: 1
         usage.xarray: 4
         """
         ...
@@ -72405,15 +83636,6 @@ class ndarray:
         """
         usage.matplotlib: 1
         usage.sklearn: 4
-        """
-        ...
-
-    @overload
-    def __truediv__(
-        self, _0: Union[int, numpy.ndarray, numpy.timedelta64, numpy.int64, float], /
-    ):
-        """
-        usage.dask: 23
         """
         ...
 
@@ -72451,9 +83673,16 @@ class ndarray:
         ...
 
     @overload
-    def __xor__(self, _0: Union[bool, numpy.ndarray], /):
+    def __xor__(self, _0: numpy.ndarray, /):
         """
-        usage.dask: 2
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __xor__(self, _0: bool, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -72467,6 +83696,7 @@ class ndarray:
     @overload
     def all(self, /):
         """
+        usage.dask: 89
         usage.matplotlib: 16
         usage.skimage: 28
         usage.sklearn: 68
@@ -72491,15 +83721,9 @@ class ndarray:
     @overload
     def all(self, /, *, axis: int):
         """
+        usage.dask: 1
         usage.matplotlib: 1
         usage.sklearn: 4
-        """
-        ...
-
-    @overload
-    def all(self, /, *, axis: int = ...):
-        """
-        usage.dask: 90
         """
         ...
 
@@ -72713,6 +83937,7 @@ class ndarray:
     @overload
     def astype(self, _0: Literal["float32"], /):
         """
+        usage.dask: 2
         usage.skimage: 22
         usage.sklearn: 3
         """
@@ -72721,6 +83946,7 @@ class ndarray:
     @overload
     def astype(self, _0: Type[numpy.int64], /):
         """
+        usage.dask: 24
         usage.matplotlib: 5
         usage.skimage: 7
         usage.sklearn: 21
@@ -72731,6 +83957,7 @@ class ndarray:
     @overload
     def astype(self, _0: Type[numpy.uint8], /):
         """
+        usage.dask: 3
         usage.matplotlib: 4
         usage.skimage: 70
         usage.sklearn: 3
@@ -72748,6 +83975,7 @@ class ndarray:
     @overload
     def astype(self, _0: Type[int], /):
         """
+        usage.dask: 4
         usage.matplotlib: 17
         usage.sample-usage: 1
         usage.skimage: 20
@@ -72759,6 +83987,7 @@ class ndarray:
     @overload
     def astype(self, _0: numpy.dtype, /):
         """
+        usage.dask: 60
         usage.skimage: 46
         usage.sklearn: 8
         usage.xarray: 14
@@ -72768,6 +83997,7 @@ class ndarray:
     @overload
     def astype(self, _0: Type[float], /):
         """
+        usage.dask: 18
         usage.matplotlib: 13
         usage.skimage: 75
         usage.sklearn: 14
@@ -72778,6 +84008,7 @@ class ndarray:
     @overload
     def astype(self, _0: Type[bool], /):
         """
+        usage.dask: 6
         usage.matplotlib: 8
         usage.skimage: 29
         usage.sklearn: 12
@@ -72797,6 +84028,7 @@ class ndarray:
     @overload
     def astype(self, _0: Literal["float64"], /):
         """
+        usage.dask: 5
         usage.skimage: 17
         usage.sklearn: 3
         """
@@ -72805,6 +84037,7 @@ class ndarray:
     @overload
     def astype(self, _0: Literal["uint8"], /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         usage.skimage: 6
         usage.sklearn: 1
@@ -72829,6 +84062,7 @@ class ndarray:
     @overload
     def astype(self, _0: Type[numpy.float32], /):
         """
+        usage.dask: 1
         usage.skimage: 33
         usage.sklearn: 89
         usage.xarray: 11
@@ -72838,6 +84072,7 @@ class ndarray:
     @overload
     def astype(self, _0: Type[numpy.int32], /):
         """
+        usage.dask: 2
         usage.skimage: 12
         usage.sklearn: 17
         """
@@ -72846,6 +84081,7 @@ class ndarray:
     @overload
     def astype(self, _0: Type[numpy.uint32], /):
         """
+        usage.dask: 1
         usage.skimage: 4
         usage.sklearn: 3
         """
@@ -72862,6 +84098,7 @@ class ndarray:
     @overload
     def astype(self, _0: Type[numpy.int16], /):
         """
+        usage.dask: 2
         usage.matplotlib: 3
         usage.skimage: 14
         usage.sklearn: 1
@@ -72878,6 +84115,7 @@ class ndarray:
     @overload
     def astype(self, _0: Type[numpy.int8], /):
         """
+        usage.dask: 1
         usage.skimage: 5
         usage.sklearn: 2
         """
@@ -72903,6 +84141,7 @@ class ndarray:
     @overload
     def astype(self, _0: numpy.dtype, /, *, copy: bool):
         """
+        usage.dask: 5
         usage.skimage: 27
         usage.sklearn: 29
         usage.xarray: 35
@@ -72926,6 +84165,7 @@ class ndarray:
     @overload
     def astype(self, _0: Literal["int64"], /):
         """
+        usage.dask: 1
         usage.skimage: 1
         usage.sklearn: 7
         """
@@ -72969,6 +84209,7 @@ class ndarray:
     @overload
     def astype(self, _0: Literal["int32"], /):
         """
+        usage.dask: 1
         usage.xarray: 1
         """
         ...
@@ -73026,6 +84267,7 @@ class ndarray:
     @overload
     def astype(self, _0: Literal["bool"], /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         usage.xarray: 1
         """
@@ -73034,6 +84276,7 @@ class ndarray:
     @overload
     def astype(self, _0: Type[object], /):
         """
+        usage.dask: 5
         usage.sklearn: 4
         usage.xarray: 6
         """
@@ -73071,6 +84314,7 @@ class ndarray:
     @overload
     def astype(self, _0: Literal["f8"], /):
         """
+        usage.dask: 11
         usage.xarray: 1
         """
         ...
@@ -73078,6 +84322,7 @@ class ndarray:
     @overload
     def astype(self, _0: Literal["f4"], /):
         """
+        usage.dask: 5
         usage.xarray: 1
         """
         ...
@@ -73165,23 +84410,87 @@ class ndarray:
         ...
 
     @overload
-    def astype(
-        self,
-        _0: Union[numpy.dtype, str, type] = ...,
-        /,
-        *,
-        copy: bool = ...,
-        dtype: Literal["i2"] = ...,
-    ):
+    def astype(self, _0: Literal["i8"], /):
         """
-        usage.dask: 184
+        usage.dask: 9
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["i2"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["i8"], /, *, copy: bool):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["i4"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["u4"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["int8"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["int16"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["uint16"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["uint32"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["uint64"], /):
+        """
+        usage.dask: 1
         """
         ...
 
     @overload
     def astype(self, _0: Type[numpy.int64], /, *, copy: bool):
         """
+        usage.dask: 3
         usage.sklearn: 18
+        """
+        ...
+
+    @overload
+    def astype(self, /, *, dtype: Literal["i2"]):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -73379,6 +84688,20 @@ class ndarray:
         """
         ...
 
+    @overload
+    def choose(self, _0: List[Union[numpy.ndarray, int]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def choose(self, _0: List[numpy.ndarray], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def choose(self, _0: List[Union[int, numpy.ndarray]], /):
         """
         usage.dask: 2
@@ -73388,6 +84711,7 @@ class ndarray:
     @overload
     def clip(self, /, *, min: int):
         """
+        usage.dask: 1
         usage.skimage: 1
         """
         ...
@@ -73409,6 +84733,7 @@ class ndarray:
     @overload
     def clip(self, _0: int, _1: int, /):
         """
+        usage.dask: 2
         usage.xarray: 3
         """
         ...
@@ -73416,6 +84741,7 @@ class ndarray:
     @overload
     def clip(self, /, *, max: int, min: int):
         """
+        usage.dask: 2
         usage.xarray: 1
         """
         ...
@@ -73440,9 +84766,16 @@ class ndarray:
         ...
 
     @overload
-    def clip(self, _0: int = ..., _1: int = ..., /, *, min: int = ..., max: int = ...):
+    def clip(self, _0: int, /):
         """
-        usage.dask: 7
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def clip(self, /, *, max: int):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -73553,6 +84886,20 @@ class ndarray:
         """
         ...
 
+    @overload
+    def cumprod(self, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def cumprod(self, /, *, axis: int):
+        """
+        usage.dask: 3
+        """
+        ...
+
     def cumprod(self, /, *, axis: int = ...):
         """
         usage.dask: 4
@@ -73562,6 +84909,7 @@ class ndarray:
     @overload
     def cumsum(self, /):
         """
+        usage.dask: 3
         usage.matplotlib: 2
         usage.skimage: 1
         usage.sklearn: 6
@@ -73571,6 +84919,7 @@ class ndarray:
     @overload
     def cumsum(self, /, *, axis: int):
         """
+        usage.dask: 4
         usage.matplotlib: 1
         usage.skimage: 6
         """
@@ -73587,13 +84936,6 @@ class ndarray:
     def cumsum(self, /, *, dtype: Type[numpy.int64] = ...):
         """
         usage.scipy: 8
-        """
-        ...
-
-    @overload
-    def cumsum(self, /, *, axis: int = ...):
-        """
-        usage.dask: 7
         """
         ...
 
@@ -73619,6 +84961,7 @@ class ndarray:
     @overload
     def dot(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 7
         usage.matplotlib: 1
         usage.skimage: 1
         usage.sklearn: 82
@@ -73633,9 +84976,9 @@ class ndarray:
         ...
 
     @overload
-    def dot(self, _0: Union[numpy.ndarray, dask.array.core.Array], /):
+    def dot(self, _0: dask.array.core.Array, /):
         """
-        usage.dask: 8
+        usage.dask: 1
         """
         ...
 
@@ -73795,6 +85138,7 @@ class ndarray:
     @overload
     def max(self, /):
         """
+        usage.dask: 8
         usage.matplotlib: 57
         usage.skimage: 123
         usage.sklearn: 71
@@ -73817,15 +85161,16 @@ class ndarray:
         ...
 
     @overload
-    def max(self, /, *, axis: int = ..., keepdims: bool = ...):
+    def max(self, /, *, axis: int, keepdims: bool):
         """
-        usage.dask: 10
+        usage.dask: 1
         """
         ...
 
     @overload
     def max(self, /, *, axis: int):
         """
+        usage.dask: 1
         usage.sklearn: 17
         """
         ...
@@ -73847,6 +85192,7 @@ class ndarray:
     @overload
     def mean(self, /):
         """
+        usage.dask: 5
         usage.matplotlib: 6
         usage.sample-usage: 2
         usage.skimage: 26
@@ -73857,6 +85203,7 @@ class ndarray:
     @overload
     def mean(self, /, *, axis: int):
         """
+        usage.dask: 3
         usage.matplotlib: 8
         usage.skimage: 16
         usage.sklearn: 114
@@ -73883,6 +85230,7 @@ class ndarray:
     @overload
     def mean(self, /, *, axis: int, keepdims: bool):
         """
+        usage.dask: 1
         usage.xarray: 2
         """
         ...
@@ -73931,15 +85279,23 @@ class ndarray:
         ...
 
     @overload
-    def mean(
-        self,
-        /,
-        *,
-        axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
-        keepdims: bool = ...,
-    ):
+    def mean(self, /, *, axis: None, keepdims: bool):
         """
-        usage.dask: 12
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def mean(self, /, *, axis: Tuple[int, int], keepdims: bool):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def mean(self, /, *, axis: Tuple[None, ...]):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -73967,6 +85323,7 @@ class ndarray:
     @overload
     def min(self, /):
         """
+        usage.dask: 6
         usage.matplotlib: 50
         usage.skimage: 89
         usage.sklearn: 71
@@ -73996,11 +85353,16 @@ class ndarray:
         ...
 
     @overload
-    def min(
-        self, /, *, axis: int = ..., keepdims: bool = ..., out: numpy.ndarray = ...
-    ):
+    def min(self, /, *, axis: int, keepdims: bool):
         """
-        usage.dask: 8
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def min(self, /, *, keepdims: bool, out: numpy.ndarray):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -74128,6 +85490,7 @@ class ndarray:
     @overload
     def ravel(self, /):
         """
+        usage.dask: 12
         usage.matplotlib: 77
         usage.skimage: 82
         usage.sklearn: 285
@@ -74152,6 +85515,7 @@ class ndarray:
     @overload
     def ravel(self, /, *, order: Literal["F"]):
         """
+        usage.dask: 1
         usage.xarray: 1
         """
         ...
@@ -74171,9 +85535,9 @@ class ndarray:
         ...
 
     @overload
-    def ravel(self, /, *, order: Literal["K", "F"] = ...):
+    def ravel(self, /, *, order: Literal["K"]):
         """
-        usage.dask: 35
+        usage.dask: 22
         """
         ...
 
@@ -74198,6 +85562,7 @@ class ndarray:
     @overload
     def repeat(self, _0: int, /, *, axis: int):
         """
+        usage.dask: 1
         usage.matplotlib: 4
         usage.skimage: 2
         """
@@ -74225,9 +85590,9 @@ class ndarray:
         ...
 
     @overload
-    def repeat(self, _0: int, /, *, axis: int = ...):
+    def repeat(self, _0: int, /):
         """
-        usage.dask: 2
+        usage.dask: 1
         """
         ...
 
@@ -74267,6 +85632,7 @@ class ndarray:
     @overload
     def reshape(self, _0: Tuple[int, int], /):
         """
+        usage.dask: 94
         usage.matplotlib: 50
         usage.sample-usage: 1
         usage.skimage: 34
@@ -74278,6 +85644,7 @@ class ndarray:
     @overload
     def reshape(self, _0: int, _1: int, /):
         """
+        usage.dask: 18
         usage.matplotlib: 35
         usage.sample-usage: 1
         usage.skimage: 52
@@ -74303,6 +85670,7 @@ class ndarray:
     @overload
     def reshape(self, _0: Tuple[int, int, int], /):
         """
+        usage.dask: 26
         usage.matplotlib: 20
         usage.skimage: 12
         usage.sklearn: 12
@@ -74313,6 +85681,7 @@ class ndarray:
     @overload
     def reshape(self, _0: Tuple[int, int, int, int], /):
         """
+        usage.dask: 10
         usage.skimage: 7
         usage.sklearn: 2
         usage.xarray: 13
@@ -74322,6 +85691,7 @@ class ndarray:
     @overload
     def reshape(self, _0: Tuple[int, int, int, int, int, int], /):
         """
+        usage.dask: 1
         usage.skimage: 1
         """
         ...
@@ -74329,6 +85699,7 @@ class ndarray:
     @overload
     def reshape(self, _0: Tuple[int], /):
         """
+        usage.dask: 19
         usage.matplotlib: 4
         usage.skimage: 3
         usage.sklearn: 7
@@ -74358,6 +85729,7 @@ class ndarray:
     @overload
     def reshape(self, _0: Tuple[int, int, int, int, int], /):
         """
+        usage.dask: 6
         usage.skimage: 2
         usage.xarray: 2
         """
@@ -74380,6 +85752,7 @@ class ndarray:
     @overload
     def reshape(self, _0: int, _1: int, _2: int, _3: int, /):
         """
+        usage.dask: 3
         usage.skimage: 2
         usage.sklearn: 5
         usage.xarray: 2
@@ -74389,6 +85762,7 @@ class ndarray:
     @overload
     def reshape(self, _0: int, _1: int, _2: int, /):
         """
+        usage.dask: 6
         usage.matplotlib: 1
         usage.skimage: 7
         usage.sklearn: 10
@@ -74399,6 +85773,7 @@ class ndarray:
     @overload
     def reshape(self, _0: Tuple[None, ...], /):
         """
+        usage.dask: 2
         usage.matplotlib: 2
         usage.xarray: 15
         """
@@ -74443,16 +85818,16 @@ class ndarray:
         ...
 
     @overload
-    def reshape(
-        self,
-        _0: Union[int, Tuple[Union[None, int], ...]],
-        _1: int = ...,
-        _2: int = ...,
-        _3: int = ...,
-        /,
-    ):
+    def reshape(self, _0: Tuple[int, int, int, int, int, int, int], /):
         """
-        usage.dask: 187
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def reshape(self, _0: Tuple[int, int, int, int, int, int, int, int], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -74820,6 +86195,7 @@ class ndarray:
     @overload
     def sort(self, /):
         """
+        usage.dask: 3
         usage.matplotlib: 4
         usage.pandas: 3
         usage.sample-usage: 1
@@ -74835,9 +86211,9 @@ class ndarray:
         ...
 
     @overload
-    def sort(self, /, *, kind: Literal["mergesort"] = ...):
+    def sort(self, /, *, kind: Literal["mergesort"]):
         """
-        usage.dask: 4
+        usage.dask: 1
         """
         ...
 
@@ -74879,16 +86255,24 @@ class ndarray:
         ...
 
     @overload
-    def squeeze(self, /, *, axis: Union[Tuple[int, int], None, int]):
+    def squeeze(self, /, *, axis: None):
         """
-        usage.dask: 3
+        usage.dask: 1
         """
         ...
 
     @overload
     def squeeze(self, /, *, axis: int):
         """
+        usage.dask: 1
         usage.sklearn: 4
+        """
+        ...
+
+    @overload
+    def squeeze(self, /, *, axis: Tuple[int, int]):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -74908,6 +86292,7 @@ class ndarray:
     @overload
     def std(self, /):
         """
+        usage.dask: 3
         usage.skimage: 64
         usage.sklearn: 13
         usage.xarray: 2
@@ -74952,9 +86337,9 @@ class ndarray:
         ...
 
     @overload
-    def std(self, /, *, keepdims: bool = ...):
+    def std(self, /, *, keepdims: bool):
         """
-        usage.dask: 4
+        usage.dask: 1
         """
         ...
 
@@ -74987,6 +86372,7 @@ class ndarray:
     @overload
     def sum(self, /):
         """
+        usage.dask: 40
         usage.matplotlib: 14
         usage.skimage: 68
         usage.sklearn: 242
@@ -74997,6 +86383,7 @@ class ndarray:
     @overload
     def sum(self, /, *, axis: int):
         """
+        usage.dask: 18
         usage.skimage: 15
         usage.sklearn: 164
         usage.xarray: 3
@@ -75042,17 +86429,95 @@ class ndarray:
         ...
 
     @overload
-    def sum(
-        self,
-        /,
-        *,
-        axis: Union[int, None, Tuple[Union[int, None], ...]] = ...,
-        dtype: Union[Literal["f8", "i8"], numpy.dtype] = ...,
-        keepdims: bool = ...,
-        out: numpy.ndarray = ...,
-    ):
+    def sum(self, /, *, axis: Tuple[int, int], dtype: numpy.dtype, keepdims: bool):
         """
-        usage.dask: 144
+        usage.dask: 9
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: Tuple[int, int]):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: Tuple[int], dtype: numpy.dtype, keepdims: bool):
+        """
+        usage.dask: 17
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: int, keepdims: bool):
+        """
+        usage.dask: 3
+        usage.sklearn: 4
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: Tuple[int, int], dtype: Literal["f8"], keepdims: bool):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: None):
+        """
+        usage.dask: 3
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: Tuple[int, int, int], dtype: numpy.dtype, keepdims: bool):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: Tuple[None, ...], dtype: numpy.dtype, keepdims: bool):
+        """
+        usage.dask: 13
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: Tuple[int], dtype: Literal["f8"], keepdims: bool):
+        """
+        usage.dask: 14
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: Tuple[int], dtype: Literal["i8"], keepdims: bool):
+        """
+        usage.dask: 7
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: Tuple[int], keepdims: bool):
+        """
+        usage.dask: 6
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: Tuple[int, int, int], keepdims: bool):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, keepdims: bool, out: numpy.ndarray):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -75060,20 +86525,6 @@ class ndarray:
     def sum(self, /, *, axis: int, dtype: Type[numpy.float64]):
         """
         usage.sklearn: 7
-        """
-        ...
-
-    @overload
-    def sum(self, /, *, axis: int, keepdims: bool):
-        """
-        usage.sklearn: 4
-        """
-        ...
-
-    @overload
-    def sum(self, /, *, axis: None):
-        """
-        usage.sklearn: 2
         """
         ...
 
@@ -75254,26 +86705,50 @@ class ndarray:
     @overload
     def trace(self, /):
         """
+        usage.dask: 1
         usage.scipy: 3
         """
         ...
 
     @overload
-    def trace(
-        self,
-        _0: int = ...,
-        _1: int = ...,
-        _2: int = ...,
-        _3: type = ...,
-        /,
-        *,
-        axis1: int = ...,
-        axis2: int = ...,
-        dtype: type = ...,
-        offset: int = ...,
-    ):
+    def trace(self, _0: int, /):
         """
-        usage.dask: 7
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def trace(self, _0: int, _1: int, _2: int, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def trace(self, _0: int, _1: int, _2: int, _3: Type[int], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def trace(self, _0: int, _1: int, _2: int, _3: Type[float], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def trace(self, /, *, axis1: int, axis2: int, dtype: Type[int], offset: int):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def trace(self, /, *, axis1: int, axis2: int, dtype: Type[float], offset: int):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -75295,6 +86770,7 @@ class ndarray:
     @overload
     def transpose(self, _0: int, _1: int, _2: int, /):
         """
+        usage.dask: 1
         usage.skimage: 1
         usage.sklearn: 2
         """
@@ -75312,6 +86788,7 @@ class ndarray:
     @overload
     def transpose(self, _0: List[int], /):
         """
+        usage.dask: 7
         usage.xarray: 8
         """
         ...
@@ -75326,6 +86803,7 @@ class ndarray:
     @overload
     def transpose(self, _0: Tuple[int, int, int], /):
         """
+        usage.dask: 2
         usage.sklearn: 2
         usage.xarray: 3
         """
@@ -75372,19 +86850,6 @@ class ndarray:
     ):
         """
         usage.scipy: 97
-        """
-        ...
-
-    @overload
-    def transpose(
-        self,
-        _0: Union[Tuple[int, int, int], int, List[int]],
-        _1: int = ...,
-        _2: int = ...,
-        /,
-    ):
-        """
-        usage.dask: 10
         """
         ...
 
@@ -75474,6 +86939,7 @@ class ndarray:
     @overload
     def view(self, /):
         """
+        usage.dask: 2
         usage.skimage: 10
         usage.sklearn: 1
         """
@@ -75489,6 +86955,7 @@ class ndarray:
     @overload
     def view(self, _0: numpy.dtype, /):
         """
+        usage.dask: 6
         usage.skimage: 2
         usage.sklearn: 1
         """
@@ -75616,9 +87083,23 @@ class ndarray:
         ...
 
     @overload
-    def view(self, _0: Union[Literal["i1", "i4", "i2"], numpy.dtype] = ..., /):
+    def view(self, _0: Literal["i1"], /):
         """
-        usage.dask: 35
+        usage.dask: 22
+        """
+        ...
+
+    @overload
+    def view(self, _0: Literal["i4"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def view(self, _0: Literal["i2"], /):
+        """
+        usage.dask: 2
         """
         ...
 
@@ -76750,6 +88231,7 @@ class timedelta64:
     @overload
     def __rtruediv__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 1
         usage.xarray: 4
         """
         ...
@@ -76776,9 +88258,9 @@ class timedelta64:
         ...
 
     @overload
-    def __rtruediv__(self, _0: Union[numpy.ndarray, dask.array.core.Array], /):
+    def __rtruediv__(self, _0: dask.array.core.Array, /):
         """
-        usage.dask: 2
+        usage.dask: 1
         """
         ...
 
@@ -76888,6 +88370,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 461
         usage.matplotlib: 317
         usage.sample-usage: 2
         usage.skimage: 255
@@ -76899,6 +88382,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.int64, /):
         """
+        usage.dask: 3
         usage.matplotlib: 6
         usage.skimage: 3
         usage.sklearn: 7
@@ -76908,6 +88392,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.float64, /):
         """
+        usage.dask: 12
         usage.matplotlib: 167
         usage.skimage: 87
         usage.sklearn: 140
@@ -76925,6 +88410,7 @@ class ufunc:
     @overload
     def __call__(self, _0: int, /):
         """
+        usage.dask: 20
         usage.matplotlib: 58
         usage.skimage: 57
         usage.sklearn: 63
@@ -76950,6 +88436,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.ndarray, _1: float, /):
         """
+        usage.dask: 13
         usage.matplotlib: 1
         usage.skimage: 9
         usage.sklearn: 28
@@ -76960,6 +88447,7 @@ class ufunc:
     @overload
     def __call__(self, _0: int, _1: numpy.ndarray, /):
         """
+        usage.dask: 167
         usage.matplotlib: 3
         usage.skimage: 2
         usage.sklearn: 12
@@ -76979,6 +88467,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.ndarray, _1: numpy.ndarray, /):
         """
+        usage.dask: 330
         usage.matplotlib: 42
         usage.sample-usage: 1
         usage.skimage: 33
@@ -76990,6 +88479,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.ndarray, _1: int, /):
         """
+        usage.dask: 175
         usage.skimage: 9
         usage.sklearn: 43
         usage.xarray: 6
@@ -76999,6 +88489,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.float64, _1: numpy.float64, /):
         """
+        usage.dask: 1
         usage.matplotlib: 17
         usage.skimage: 5
         usage.sklearn: 6
@@ -77023,6 +88514,7 @@ class ufunc:
     @overload
     def __call__(self, _0: float, /):
         """
+        usage.dask: 35
         usage.matplotlib: 102
         usage.skimage: 58
         usage.sklearn: 83
@@ -77107,6 +88599,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.ndarray, _1: int, /, *, out: numpy.ndarray):
         """
+        usage.dask: 3
         usage.skimage: 1
         usage.sklearn: 2
         """
@@ -77152,6 +88645,7 @@ class ufunc:
     @overload
     def __call__(self, _0: dask.array.core.Array, /):
         """
+        usage.dask: 96
         usage.skimage: 2
         usage.xarray: 3
         """
@@ -77160,6 +88654,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.int64, _1: numpy.int64, /):
         """
+        usage.dask: 1
         usage.skimage: 1
         """
         ...
@@ -77167,6 +88662,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.ndarray, _1: numpy.float64, /):
         """
+        usage.dask: 1
         usage.skimage: 1
         usage.sklearn: 14
         usage.xarray: 1
@@ -77176,6 +88672,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.complex128, /):
         """
+        usage.dask: 1
         usage.skimage: 1
         """
         ...
@@ -77190,6 +88687,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.float32, /):
         """
+        usage.dask: 2
         usage.skimage: 1
         usage.sklearn: 11
         """
@@ -77212,6 +88710,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.ma.core.MaskedArray, /):
         """
+        usage.dask: 2
         usage.matplotlib: 18
         usage.skimage: 2
         usage.sklearn: 1
@@ -77229,6 +88728,7 @@ class ufunc:
     @overload
     def __call__(self, _0: int, _1: int, /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         usage.skimage: 1
         usage.sklearn: 3
@@ -77496,6 +88996,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.float64, _1: numpy.ndarray, /):
         """
+        usage.dask: 3
         usage.sklearn: 1
         usage.xarray: 1
         """
@@ -77588,6 +89089,7 @@ class ufunc:
     @overload
     def __call__(self, _0: float, _1: numpy.ndarray, /):
         """
+        usage.dask: 12
         usage.matplotlib: 3
         usage.sklearn: 4
         usage.xarray: 1
@@ -77634,6 +89136,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.ndarray, _1: dask.array.core.Array, /):
         """
+        usage.dask: 21
         usage.xarray: 3
         """
         ...
@@ -77685,6 +89188,7 @@ class ufunc:
     @overload
     def __call__(self, _0: object, /):
         """
+        usage.dask: 1
         usage.xarray: 7
         """
         ...
@@ -77765,6 +89269,7 @@ class ufunc:
     @overload
     def __call__(self, _0: Tuple[int, int], /):
         """
+        usage.dask: 6
         usage.matplotlib: 1
         """
         ...
@@ -77780,6 +89285,7 @@ class ufunc:
     @overload
     def __call__(self, _0: Tuple[int, float], /):
         """
+        usage.dask: 2
         usage.matplotlib: 1
         """
         ...
@@ -77787,6 +89293,7 @@ class ufunc:
     @overload
     def __call__(self, _0: Tuple[float, float], /):
         """
+        usage.dask: 11
         usage.matplotlib: 1
         """
         ...
@@ -77794,6 +89301,7 @@ class ufunc:
     @overload
     def __call__(self, _0: float, _1: float, /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         usage.sklearn: 9
         """
@@ -77831,6 +89339,7 @@ class ufunc:
     @overload
     def __call__(self, _0: int, _1: float, /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         """
         ...
@@ -77838,6 +89347,7 @@ class ufunc:
     @overload
     def __call__(self, _0: Tuple[int, int, int, int], /):
         """
+        usage.dask: 3
         usage.matplotlib: 1
         """
         ...
@@ -77845,6 +89355,7 @@ class ufunc:
     @overload
     def __call__(self, _0: Tuple[float, int], /):
         """
+        usage.dask: 1
         usage.matplotlib: 1
         """
         ...
@@ -77873,6 +89384,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.ndarray, _1: int, _2: numpy.ndarray, /):
         """
+        usage.dask: 2
         usage.matplotlib: 1
         usage.sklearn: 1
         """
@@ -77888,6 +89400,7 @@ class ufunc:
     @overload
     def __call__(self, _0: Tuple[float, float, float, float], /):
         """
+        usage.dask: 1
         usage.matplotlib: 1
         """
         ...
@@ -77929,23 +89442,624 @@ class ufunc:
         ...
 
     @overload
+    def __call__(self, _0: dask.array.core.Array, /, *, output_dtypes: Type[float]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
     def __call__(
         self,
-        _0: object,
-        _1: object = ...,
-        _2: Union[numpy.ndarray, None] = ...,
+        _0: dask.array.core.Array,
         /,
         *,
-        output_dtypes: Union[Tuple[Type[float], Type[float]], Type[float]] = ...,
-        out: Union[
-            dask.dataframe.core.DataFrame,
-            numpy.ndarray,
-            dask.array.core.Array,
-            dask.dataframe.core.Series,
-        ] = ...,
+        output_dtypes: Tuple[Type[float], Type[float]],
     ):
         """
-        usage.dask: 4505
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Tuple[int, int, int], /):
+        """
+        usage.dask: 7
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.ndarray, _1: numpy.int64, /):
+        """
+        usage.dask: 6
+        usage.sklearn: 3
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: int, _1: numpy.int64, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: float, _1: int, /):
+        """
+        usage.dask: 1
+        usage.sklearn: 8
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: float, _1: numpy.int64, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.int64, _1: numpy.ndarray, /):
+        """
+        usage.dask: 6
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.int64, _1: int, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.int64, _1: float, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: dask.array.core.Array, _1: dask.array.core.Array, /):
+        """
+        usage.dask: 75
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.ndarray, _1: numpy.ndarray, _2: None, /):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.float64, _1: numpy.float64, _2: None, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Tuple[float], /):
+        """
+        usage.dask: 6
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Tuple[int, int, int, int, int, int, int], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Tuple[int], /):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Tuple[float, float, float, float, float], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Tuple[int, int, int, int, int], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: object, _1: object, _2: None, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: object, _1: object, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.ma.core.MaskedArray, _1: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[float, float, float, float, float, float, float, float, float, float],
+        /,
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Tuple[int, int, int, int, int, int, int, int, int, int], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.float32, _1: numpy.float32, _2: None, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.int64, _1: numpy.int64, _2: None, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.float32, _1: numpy.float64, _2: None, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: dask.array.core.Array, _1: float, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: int, _1: int, _2: numpy.ndarray, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Tuple[int, int, int, int, int, int], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Tuple[None, ...], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: dask.array.core.Array, /, *, out: dask.array.core.Array):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: dask.array.core.Array, _1: int, /, *, out: dask.array.core.Array
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: dask.array.core.Array, _1: int, /, *, out: numpy.ndarray):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.float64, _1: float, _2: None, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 295
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: dask.dataframe.core.Series, /):
+        """
+        usage.dask: 128
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 290
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: dask.dataframe.groupby.DataFrameGroupBy, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: pandas.core.indexes.numeric.Int64Index, /):
+        """
+        usage.dask: 37
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: pandas.core.indexes.range.RangeIndex, /):
+        """
+        usage.dask: 111
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: dask.dataframe.core.Index, /):
+        """
+        usage.dask: 111
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: dask.dataframe.core.DataFrame, /):
+        """
+        usage.dask: 126
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: pandas.core.series.Series, _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 147
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: dask.dataframe.core.Series, _1: dask.dataframe.core.Series, /
+    ):
+        """
+        usage.dask: 42
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: dask.dataframe.core.Series, _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.dask: 42
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: pandas.core.frame.DataFrame, _1: pandas.core.frame.DataFrame, /
+    ):
+        """
+        usage.dask: 147
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: dask.dataframe.core.DataFrame, _1: dask.dataframe.core.DataFrame, /
+    ):
+        """
+        usage.dask: 42
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: dask.dataframe.core.DataFrame, _1: pandas.core.frame.DataFrame, /
+    ):
+        """
+        usage.dask: 42
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: dask.dataframe.core.DataFrame,
+        /,
+        *,
+        out: dask.dataframe.core.DataFrame,
+    ):
+        """
+        usage.dask: 44
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: dask.dataframe.core.DataFrame, /, *, out: dask.dataframe.core.Series
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: dask.dataframe.core.DataFrame,
+        _1: int,
+        /,
+        *,
+        out: dask.dataframe.core.DataFrame,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: pandas.core.frame.DataFrame, _1: int, /):
+        """
+        usage.dask: 85
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: pandas.core.series.Series, _1: int, /):
+        """
+        usage.dask: 84
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: dask.dataframe.core.Series, _1: int, /):
+        """
+        usage.dask: 63
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: int, _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 60
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: int, _1: dask.dataframe.core.Series, /):
+        """
+        usage.dask: 60
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: dask.dataframe.core.DataFrame, _1: int, /):
+        """
+        usage.dask: 63
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: int, _1: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 60
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: int, _1: dask.dataframe.core.DataFrame, /):
+        """
+        usage.dask: 60
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: pandas.core.series.Series, _1: numpy.int64, /):
+        """
+        usage.dask: 21
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: dask.dataframe.core.Series, _1: dask.dataframe.core.Scalar, /
+    ):
+        """
+        usage.dask: 63
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: pandas.core.series.Series, _1: dask.dataframe.core.Scalar, /
+    ):
+        """
+        usage.dask: 63
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.int64, _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 20
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: dask.dataframe.core.Scalar, _1: dask.dataframe.core.Series, /
+    ):
+        """
+        usage.dask: 60
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: dask.dataframe.core.Scalar, _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.dask: 40
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: pandas.core.frame.DataFrame, _1: numpy.int64, /):
+        """
+        usage.dask: 21
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: dask.dataframe.core.DataFrame, _1: dask.dataframe.core.Scalar, /
+    ):
+        """
+        usage.dask: 63
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: pandas.core.frame.DataFrame, _1: dask.dataframe.core.Scalar, /
+    ):
+        """
+        usage.dask: 63
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.int64, _1: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 20
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: dask.dataframe.core.Scalar, _1: dask.dataframe.core.DataFrame, /
+    ):
+        """
+        usage.dask: 60
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: dask.dataframe.core.Scalar, _1: pandas.core.frame.DataFrame, /
+    ):
+        """
+        usage.dask: 40
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: pandas.core.series.Series, _1: numpy.ndarray, /):
+        """
+        usage.dask: 21
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.ndarray, _1: dask.dataframe.core.Series, /):
+        """
+        usage.dask: 21
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.ndarray, _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 22
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: dask.dataframe.core.Series, _1: dask.array.core.Array, /):
+        """
+        usage.dask: 42
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: dask.array.core.Array, _1: dask.dataframe.core.Series, /):
+        """
+        usage.dask: 42
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: pandas.core.frame.DataFrame, _1: numpy.ndarray, /):
+        """
+        usage.dask: 21
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.ndarray, _1: dask.dataframe.core.DataFrame, /):
+        """
+        usage.dask: 21
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.ndarray, _1: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 22
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: dask.dataframe.core.DataFrame, _1: dask.array.core.Array, /):
+        """
+        usage.dask: 42
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: dask.array.core.Array, _1: dask.dataframe.core.DataFrame, /):
+        """
+        usage.dask: 42
         """
         ...
 
@@ -77960,13 +90074,6 @@ class ufunc:
     def __call__(self, _0: List[int], _1: int, /):
         """
         usage.sklearn: 4
-        """
-        ...
-
-    @overload
-    def __call__(self, _0: float, _1: int, /):
-        """
-        usage.sklearn: 8
         """
         ...
 
@@ -78035,13 +90142,6 @@ class ufunc:
         ...
 
     @overload
-    def __call__(self, _0: numpy.ndarray, _1: numpy.int64, /):
-        """
-        usage.sklearn: 3
-        """
-        ...
-
-    @overload
     def __call__(self, _0: scipy.sparse.csr.csr_matrix, /):
         """
         usage.sklearn: 4
@@ -78089,7 +90189,7 @@ class ufunc:
         output_dtypes: Union[Tuple[Type[float], Type[float]], Type[float]] = ...,
     ):
         """
-        usage.dask: 4505
+        usage.dask: 4506
         usage.matplotlib: 781
         usage.pandas: 1228
         usage.sample-usage: 3
@@ -78176,16 +90276,50 @@ class ufunc:
     @overload
     def outer(self, _0: numpy.ndarray, _1: numpy.ndarray, /):
         """
+        usage.dask: 7
         usage.scipy: 2
         """
         ...
 
     @overload
-    def outer(
-        self, _0: object, _1: Union[numpy.ndarray, dask.array.core.Array, int], /
-    ):
+    def outer(self, _0: numpy.ndarray, _1: int, /):
         """
-        usage.dask: 14
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def outer(self, _0: int, _1: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def outer(self, _0: float, _1: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def outer(self, _0: List[int], _1: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def outer(self, _0: numpy.int64, _1: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def outer(self, _0: dask.array.core.Array, _1: dask.array.core.Array, /):
+        """
+        usage.dask: 2
         """
         ...
 
@@ -79911,6 +92045,20 @@ class uint8:
         """
         ...
 
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None, None], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __getitem__(self, _0: Tuple[Union[None, ellipsis], ...], /):
         """
         usage.dask: 2
@@ -80442,9 +92590,16 @@ class void:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[Union[None, ellipsis], ...], /):
+    def __getitem__(self, _0: Tuple[ellipsis, None, None], /):
         """
-        usage.dask: 2
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, None], /):
+        """
+        usage.dask: 1
         """
         ...
 

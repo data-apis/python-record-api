@@ -60,14 +60,81 @@ def to_datetime(arg: List[Literal["2002", "2000", "2001"]]):
 
 
 @overload
-def to_datetime(
-    arg: object,
-    infer_datetime_format: bool = ...,
-    unit: Literal["ns"] = ...,
-    utc: bool = ...,
-):
+def to_datetime(arg: pandas.core.frame.DataFrame):
     """
-    usage.dask: 21
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: dask.dataframe.core.DataFrame):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: pandas.core.series.Series, infer_datetime_format: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: dask.dataframe.core.Series, infer_datetime_format: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: pandas.core.indexes.base.Index, infer_datetime_format: bool):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: dask.dataframe.core.Index, infer_datetime_format: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: str):
+    """
+    usage.dask: 6
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: numpy.ndarray, unit: Literal["ns"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: int, unit: Literal["ns"]):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: pandas.core.series.Series, utc: bool):
+    """
+    usage.dask: 1
     """
     ...
 

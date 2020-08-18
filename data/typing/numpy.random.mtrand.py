@@ -185,6 +185,7 @@ class RandomState:
     @overload
     def choice(self, _0: numpy.ndarray, /, *, replace: bool, size: int):
         """
+        usage.dask: 1
         usage.skimage: 1
         usage.sklearn: 5
         """
@@ -282,24 +283,140 @@ class RandomState:
         ...
 
     @overload
+    def choice(self, _0: int, /, *, size: Tuple[None, ...]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def choice(self, _0: int, /, *, p: None, size: Tuple[None, ...]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def choice(self, _0: int, /, *, p: numpy.ndarray, size: Tuple[None, ...]):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def choice(self, _0: List[str], /, *, size: int):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
     def choice(
-        self,
-        _0: Union[
-            pandas.core.indexes.numeric.Int64Index,
-            pandas.core.indexes.base.Index,
-            int,
-            numpy.ndarray,
-            List[Union[bool, int, float, str]],
-        ],
-        _1: int = ...,
-        /,
-        *,
-        p: Union[numpy.ndarray, None] = ...,
-        replace: bool = ...,
-        size: Union[int, Tuple[Union[None, int], ...]] = ...,
+        self, _0: pandas.core.indexes.base.Index, /, *, replace: bool, size: int
     ):
         """
-        usage.dask: 32
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def choice(self, _0: List[bool], /, *, size: Tuple[int, int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def choice(self, _0: List[bool], /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def choice(self, _0: List[Union[float, int]], _1: int, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def choice(self, _0: List[Union[float, Literal["b", "a"]]], _1: int, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def choice(self, _0: List[int], _1: int, /):
+        """
+        usage.dask: 2
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def choice(self, _0: List[Literal["c", "b", "a"]], _1: int, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def choice(self, _0: List[int], /, *, size: int):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def choice(self, _0: List[Union[float, int]], /, *, size: int):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def choice(self, _0: List[float], /, *, size: int):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def choice(self, _0: List[Literal["b", "a"]], /, *, size: int):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def choice(self, _0: List[Literal["c", "b", "a"]], /, *, size: int):
+        """
+        usage.dask: 7
+        """
+        ...
+
+    @overload
+    def choice(self, _0: List[str], _1: int, /, *, replace: bool):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def choice(self, _0: List[Literal["Z", "Y", "X"]], /, *, size: int):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def choice(
+        self, _0: pandas.core.indexes.numeric.Int64Index, /, *, replace: bool, size: int
+    ):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -321,13 +438,6 @@ class RandomState:
     def choice(
         self, _0: numpy.ndarray, /, *, p: numpy.ndarray, replace: bool, size: int
     ):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def choice(self, _0: List[int], _1: int, /):
         """
         usage.sklearn: 1
         """
@@ -478,9 +588,16 @@ class RandomState:
         ...
 
     @overload
-    def exponential(self, _0: int, /, *, size: Tuple[int, ...]):
+    def exponential(self, _0: int, /, *, size: Tuple[int, int]):
         """
-        usage.dask: 2
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def exponential(self, _0: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -837,11 +954,23 @@ class RandomState:
         ...
 
     @overload
-    def multinomial(
-        self, _0: int, _1: List[float], /, *, size: Union[Tuple[int, ...], int]
-    ):
+    def multinomial(self, _0: int, _1: List[float], /, *, size: Tuple[int]):
         """
-        usage.dask: 4
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def multinomial(self, _0: int, _1: List[float], /, *, size: int):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def multinomial(self, _0: int, _1: List[float], /, *, size: Tuple[int, int]):
+        """
+        usage.dask: 2
         """
         ...
 
@@ -1019,6 +1148,7 @@ class RandomState:
     @overload
     def normal(self, /, *, size: Tuple[int, int]):
         """
+        usage.dask: 3
         usage.skimage: 16
         usage.sklearn: 66
         usage.xarray: 2
@@ -1103,6 +1233,7 @@ class RandomState:
     @overload
     def normal(self, /, *, size: int):
         """
+        usage.dask: 3
         usage.matplotlib: 21
         usage.sklearn: 39
         """
@@ -1117,16 +1248,124 @@ class RandomState:
         ...
 
     @overload
+    def normal(self, _0: float, _1: float, /, *, size: Tuple[int, int, int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def normal(self, _0: float, _1: float, /, *, size: Tuple[int, int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def normal(self, _0: float, _1: float, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def normal(self, _0: int, _1: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def normal(self, _0: int, _1: int, /, *, size: Tuple[int, int]):
+        """
+        usage.dask: 3
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def normal(self, _0: numpy.int64, _1: int, /, *, size: Tuple[int, int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
     def normal(
-        self,
-        _0: Union[int, dask.array.core.Array, float, numpy.int64, numpy.float64] = ...,
-        _1: Union[int, float, numpy.float64, dask.array.core.Array] = ...,
-        /,
-        *,
-        size: Union[int, Tuple[Union[None, int], ...]],
+        self, _0: dask.array.core.Array, _1: int, /, *, size: Tuple[int, int, int]
     ):
         """
-        usage.dask: 23
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def normal(
+        self,
+        _0: numpy.float64,
+        _1: dask.array.core.Array,
+        /,
+        *,
+        size: Tuple[int, int, int],
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def normal(
+        self,
+        _0: dask.array.core.Array,
+        _1: numpy.float64,
+        /,
+        *,
+        size: Tuple[int, int, int, int],
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def normal(self, _0: numpy.float64, _1: float, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def normal(self, _0: dask.array.core.Array, _1: float, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def normal(self, _0: int, _1: float, /, *, size: Tuple[None, ...]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def normal(self, _0: int, _1: float, /, *, size: Tuple[int, int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def normal(self, _0: int, _1: int, /, *, size: Tuple[int, int, int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def normal(self, _0: int, _1: int, /, *, size: int):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -1206,13 +1445,6 @@ class RandomState:
     def normal(self, _0: int, _1: int, _2: Tuple[int, int], /):
         """
         usage.sklearn: 3
-        """
-        ...
-
-    @overload
-    def normal(self, _0: int, _1: int, /, *, size: Tuple[int, int]):
-        """
-        usage.sklearn: 2
         """
         ...
 
@@ -1305,6 +1537,7 @@ class RandomState:
     @overload
     def permutation(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 2
         usage.skimage: 1
         usage.sklearn: 3
         """
@@ -1325,15 +1558,9 @@ class RandomState:
         ...
 
     @overload
-    def permutation(self, _0: Union[numpy.ndarray, int], /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
     def permutation(self, _0: int, /):
         """
+        usage.dask: 2
         usage.sklearn: 19
         """
         ...
@@ -1389,15 +1616,23 @@ class RandomState:
         ...
 
     @overload
-    def poisson(
-        self,
-        _0: Union[int, float, numpy.int64],
-        /,
-        *,
-        size: Union[int, Tuple[int, ...]],
-    ):
+    def poisson(self, _0: float, /, *, size: Tuple[int]):
         """
-        usage.dask: 3
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def poisson(self, _0: numpy.int64, /, *, size: Tuple[int, int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def poisson(self, _0: int, /, *, size: int):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -1448,6 +1683,7 @@ class RandomState:
     @overload
     def rand(self, _0: int, _1: int, _2: int, /):
         """
+        usage.dask: 6
         usage.matplotlib: 1
         usage.skimage: 12
         usage.xarray: 6
@@ -1457,6 +1693,7 @@ class RandomState:
     @overload
     def rand(self, _0: int, /):
         """
+        usage.dask: 6
         usage.matplotlib: 18
         usage.skimage: 9
         usage.sklearn: 93
@@ -1467,6 +1704,7 @@ class RandomState:
     @overload
     def rand(self, _0: int, _1: int, /):
         """
+        usage.dask: 17
         usage.matplotlib: 20
         usage.skimage: 53
         usage.sklearn: 168
@@ -1477,6 +1715,7 @@ class RandomState:
     @overload
     def rand(self, _0: int, _1: int, _2: int, _3: int, /):
         """
+        usage.dask: 1
         usage.skimage: 5
         """
         ...
@@ -1523,13 +1762,6 @@ class RandomState:
         ...
 
     @overload
-    def rand(self, _0: int, _1: int = ..., _2: int = ..., _3: int = ..., /):
-        """
-        usage.dask: 30
-        """
-        ...
-
-    @overload
     def rand(self, _0: numpy.int64, /):
         """
         usage.sklearn: 1
@@ -1560,6 +1792,7 @@ class RandomState:
     @overload
     def randint(self, _0: int, _1: int, /, *, size: Tuple[int, int]):
         """
+        usage.dask: 23
         usage.skimage: 8
         usage.sklearn: 19
         usage.xarray: 2
@@ -1577,6 +1810,7 @@ class RandomState:
     @overload
     def randint(self, _0: int, _1: int, /, *, size: int):
         """
+        usage.dask: 6
         usage.matplotlib: 2
         usage.skimage: 3
         usage.sklearn: 34
@@ -1602,6 +1836,7 @@ class RandomState:
     @overload
     def randint(self, _0: int, _1: int, _2: Tuple[int, int], /):
         """
+        usage.dask: 21
         usage.skimage: 1
         usage.sklearn: 6
         """
@@ -1610,6 +1845,7 @@ class RandomState:
     @overload
     def randint(self, _0: int, /, *, size: int):
         """
+        usage.dask: 15
         usage.skimage: 2
         usage.sklearn: 23
         """
@@ -1633,6 +1869,7 @@ class RandomState:
     @overload
     def randint(self, _0: int, _1: int, _2: Tuple[int, int, int], /):
         """
+        usage.dask: 9
         usage.xarray: 1
         """
         ...
@@ -1647,6 +1884,7 @@ class RandomState:
     @overload
     def randint(self, _0: int, _1: int, _2: int, /):
         """
+        usage.dask: 7
         usage.sklearn: 30
         usage.xarray: 4
         """
@@ -1692,25 +1930,116 @@ class RandomState:
     @overload
     def randint(self, _0: int, /, *, size: Tuple[int, int]):
         """
+        usage.dask: 26
         usage.matplotlib: 1
         usage.sklearn: 23
         """
         ...
 
     @overload
+    def randint(self, _0: int, /, *, size: Tuple[int, int, int]):
+        """
+        usage.dask: 6
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def randint(self, _0: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 6
+        usage.sklearn: 3
+        """
+        ...
+
+    @overload
+    def randint(self, _0: int, /, *, size: Tuple[int, int, int, int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def randint(self, _0: int, /, *, size: Tuple[None, ...]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def randint(self, _0: int, _1: int, _2: List[int], /):
+        """
+        usage.dask: 1
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def randint(self, _0: int, _1: int, _2: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def randint(self, _0: int, _1: int, _2: Tuple[int, int, int, int], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
     def randint(
-        self,
-        _0: Union[int, numpy.int64],
-        _1: int = ...,
-        _2: Union[Tuple[int, ...], List[int], numpy.ndarray, int] = ...,
-        /,
-        *,
-        size: Union[int, Tuple[Union[None, int], ...]] = ...,
-        dtype: Literal["l", "uint8"] = ...,
-        high: int = ...,
+        self, _0: int, _1: int, /, *, dtype: Literal["uint8"], size: Tuple[int]
     ):
         """
-        usage.dask: 133
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def randint(self, _0: int, _1: int, _2: Tuple[int], /):
+        """
+        usage.dask: 1
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def randint(self, _0: int, _1: int, /, *, size: Tuple[int]):
+        """
+        usage.dask: 3
+        usage.sklearn: 28
+        """
+        ...
+
+    @overload
+    def randint(self, _0: numpy.int64, /, *, size: int):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def randint(
+        self, _0: int, _1: int, /, *, dtype: Literal["l"], size: Tuple[int, int]
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def randint(self, _0: int, _1: int, /, *, dtype: Literal["l"], size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def randint(self, _0: int, /, *, high: int, size: int):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -1766,13 +2095,6 @@ class RandomState:
         ...
 
     @overload
-    def randint(self, _0: int, /, *, size: Tuple[int]):
-        """
-        usage.sklearn: 3
-        """
-        ...
-
-    @overload
     def randint(self, /, *, high: int, low: int, size: Tuple[int, int]):
         """
         usage.sklearn: 2
@@ -1787,37 +2109,9 @@ class RandomState:
         ...
 
     @overload
-    def randint(self, _0: int, _1: int, _2: List[int], /):
-        """
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
     def randint(self, _0: int, _1: int, _2: numpy.int64, /):
         """
         usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def randint(self, _0: int, _1: int, /, *, size: Tuple[int]):
-        """
-        usage.sklearn: 28
-        """
-        ...
-
-    @overload
-    def randint(self, _0: int, _1: int, _2: Tuple[int], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def randint(self, _0: int, /, *, size: Tuple[int, int, int]):
-        """
-        usage.sklearn: 1
         """
         ...
 
@@ -1846,6 +2140,7 @@ class RandomState:
     @overload
     def randn(self, _0: int, /):
         """
+        usage.dask: 43
         usage.matplotlib: 13
         usage.skimage: 7
         usage.sklearn: 67
@@ -1856,6 +2151,7 @@ class RandomState:
     @overload
     def randn(self, _0: int, _1: int, _2: int, /):
         """
+        usage.dask: 5
         usage.skimage: 14
         usage.sklearn: 1
         usage.xarray: 19
@@ -1865,6 +2161,7 @@ class RandomState:
     @overload
     def randn(self, _0: int, _1: int, /):
         """
+        usage.dask: 39
         usage.matplotlib: 4
         usage.skimage: 18
         usage.sklearn: 345
@@ -1910,13 +2207,6 @@ class RandomState:
         ...
 
     @overload
-    def randn(self, _0: int, _1: int = ..., _2: int = ..., /):
-        """
-        usage.dask: 88
-        """
-        ...
-
-    @overload
     def randn(self, _0: int, _1: numpy.int64, /):
         """
         usage.sklearn: 1
@@ -1939,7 +2229,7 @@ class RandomState:
 
     def randn(self, /, *_args: Union[int, numpy.int64]):
         """
-        usage.dask: 88
+        usage.dask: 87
         usage.matplotlib: 17
         usage.pandas: 749
         usage.scipy: 330
@@ -1952,6 +2242,7 @@ class RandomState:
     @overload
     def random(self, _0: int, /):
         """
+        usage.dask: 31
         usage.matplotlib: 7
         usage.skimage: 4
         usage.sklearn: 1
@@ -1962,6 +2253,7 @@ class RandomState:
     @overload
     def random(self, _0: Tuple[int, int, int], /):
         """
+        usage.dask: 26
         usage.matplotlib: 1
         usage.skimage: 7
         usage.sklearn: 8
@@ -1972,6 +2264,7 @@ class RandomState:
     @overload
     def random(self, _0: Tuple[int, int], /):
         """
+        usage.dask: 42
         usage.matplotlib: 6
         usage.skimage: 11
         usage.sklearn: 17
@@ -1982,6 +2275,7 @@ class RandomState:
     @overload
     def random(self, _0: Tuple[int, int, int, int], /):
         """
+        usage.dask: 10
         usage.skimage: 2
         """
         ...
@@ -1989,6 +2283,7 @@ class RandomState:
     @overload
     def random(self, _0: Tuple[int], /):
         """
+        usage.dask: 22
         usage.matplotlib: 1
         usage.skimage: 4
         usage.xarray: 3
@@ -2005,6 +2300,7 @@ class RandomState:
     @overload
     def random(self, /, *, size: Tuple[int, int]):
         """
+        usage.dask: 8
         usage.xarray: 3
         """
         ...
@@ -2058,15 +2354,37 @@ class RandomState:
         ...
 
     @overload
-    def random(
-        self,
-        _0: Union[Tuple[Union[int, None], ...], int] = ...,
-        /,
-        *,
-        size: Union[Tuple[int, ...], int] = ...,
-    ):
+    def random(self, _0: Tuple[None, ...], /):
         """
-        usage.dask: 157
+        usage.dask: 9
+        """
+        ...
+
+    @overload
+    def random(self, /, *, size: int):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def random(self, _0: Tuple[int, int, int, int, int, int], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def random(self, _0: Tuple[int, int, int, int, int], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def random(self, /, *, size: Tuple[int]):
+        """
+        usage.dask: 2
         """
         ...
 
@@ -2101,6 +2419,7 @@ class RandomState:
     @overload
     def random_sample(self, /, *, size: Tuple[int, int]):
         """
+        usage.dask: 1
         usage.sklearn: 7
         usage.xarray: 1
         """
@@ -2121,23 +2440,25 @@ class RandomState:
         ...
 
     @overload
-    def random_sample(self, _0: int = ..., /, *, size: Tuple[int, ...] = ...):
+    def random_sample(self, /, *, size: Tuple[int]):
         """
-        usage.dask: 5
+        usage.dask: 1
+        usage.sklearn: 4
+        """
+        ...
+
+    @overload
+    def random_sample(self, /, *, size: Tuple[int, int, int]):
+        """
+        usage.dask: 1
         """
         ...
 
     @overload
     def random_sample(self, _0: int, /):
         """
+        usage.dask: 2
         usage.sklearn: 21
-        """
-        ...
-
-    @overload
-    def random_sample(self, /, *, size: Tuple[int]):
-        """
-        usage.sklearn: 4
         """
         ...
 
@@ -2213,6 +2534,7 @@ class RandomState:
     @overload
     def seed(self, _0: int, /):
         """
+        usage.dask: 14
         usage.matplotlib: 81
         usage.pandas: 21
         usage.scipy: 489
@@ -2223,6 +2545,7 @@ class RandomState:
     @overload
     def seed(self, /, *, seed: int):
         """
+        usage.dask: 1
         usage.matplotlib: 1
         usage.skimage: 4
         """
@@ -2232,13 +2555,6 @@ class RandomState:
     def seed(self, _0: List[int], /):
         """
         usage.matplotlib: 1
-        """
-        ...
-
-    @overload
-    def seed(self, _0: int = ..., /, *, seed: int = ...):
-        """
-        usage.dask: 15
         """
         ...
 
@@ -2263,6 +2579,7 @@ class RandomState:
     @overload
     def shuffle(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 7
         usage.matplotlib: 1
         usage.pandas: 3
         usage.sklearn: 26
@@ -2278,9 +2595,16 @@ class RandomState:
         ...
 
     @overload
-    def shuffle(self, _0: Union[numpy.ndarray, List[int]], /):
+    def shuffle(self, _0: list, /):
         """
-        usage.dask: 10
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def shuffle(self, _0: List[int], /):
+        """
+        usage.dask: 2
         """
         ...
 
@@ -2421,11 +2745,23 @@ class RandomState:
         ...
 
     @overload
-    def standard_normal(
-        self, /, *, size: Tuple[int, ...], dtype: Literal["float64"] = ...
-    ):
+    def standard_normal(self, /, *, size: Tuple[int, int]):
         """
-        usage.dask: 3
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def standard_normal(self, /, *, size: Tuple[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def standard_normal(self, /, *, dtype: Literal["float64"], size: Tuple[int]):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -2555,6 +2891,7 @@ class RandomState:
     @overload
     def uniform(self, _0: int, _1: int, _2: int, /):
         """
+        usage.dask: 7
         usage.skimage: 2
         usage.sklearn: 4
         """
@@ -2602,23 +2939,16 @@ class RandomState:
     @overload
     def uniform(self, /, *, size: int):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         usage.sklearn: 10
         """
         ...
 
     @overload
-    def uniform(
-        self,
-        _0: Union[int, float] = ...,
-        _1: Union[int, float] = ...,
-        _2: int = ...,
-        /,
-        *,
-        size: Union[int, Tuple[int]] = ...,
-    ):
+    def uniform(self, _0: float, _1: float, /, *, size: Tuple[int]):
         """
-        usage.dask: 9
+        usage.dask: 1
         """
         ...
 

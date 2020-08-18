@@ -6,6 +6,27 @@ class DatetimeIndexResampler:
     # usage.dask: 1
     agg: object
 
+    @overload
+    def aggregate(self, /, func: Literal["mean"]):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def aggregate(self, /, func: List[Literal["min", "mean"]]):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def aggregate(self, /, func: Callable):
+        """
+        usage.dask: 3
+        """
+        ...
+
     def aggregate(
         self, /, func: Union[Callable, Literal["mean"], List[Literal["min", "mean"]]]
     ):

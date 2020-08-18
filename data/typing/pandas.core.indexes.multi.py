@@ -45,6 +45,7 @@ class MultiIndex:
         names: pandas.core.indexes.frozen.FrozenList,
     ):
         """
+        usage.dask: 1
         usage.xarray: 1
         """
         ...
@@ -94,6 +95,7 @@ class MultiIndex:
         names: pandas.core.indexes.frozen.FrozenList,
     ):
         """
+        usage.dask: 1
         usage.xarray: 1
         """
         ...
@@ -107,13 +109,28 @@ class MultiIndex:
             Union[
                 pandas.core.indexes.numeric.Int64Index,
                 pandas.core.indexes.category.CategoricalIndex,
-                pandas.core.indexes.base.Index,
             ]
         ],
-        names: pandas.core.indexes.frozen.FrozenList = ...,
+        names: pandas.core.indexes.frozen.FrozenList,
     ):
         """
-        usage.dask: 7
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_arrays(cls, /, arrays: List[pandas.core.indexes.numeric.Int64Index]):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_arrays(cls, /, arrays: List[pandas.core.indexes.base.Index]):
+        """
+        usage.dask: 2
         """
         ...
 
@@ -463,6 +480,7 @@ class MultiIndex:
     @classmethod
     def from_product(cls, /, iterables: List[List[Union[Literal["b", "a"], int]]]):
         """
+        usage.dask: 1
         usage.xarray: 1
         """
         ...
@@ -482,19 +500,19 @@ class MultiIndex:
 
     @overload
     @classmethod
+    def from_product(cls, /, iterables: List[pandas.core.indexes.base.Index]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
     def from_product(
-        cls,
-        /,
-        iterables: List[
-            Union[
-                List[Union[Literal["e", "d", "c", "b", "a"], int]],
-                pandas.core.indexes.base.Index,
-                range,
-            ]
-        ],
+        cls, /, iterables: List[Union[List[Literal["e", "d", "c", "b", "a"]], range]]
     ):
         """
-        usage.dask: 3
+        usage.dask: 1
         """
         ...
 
@@ -627,6 +645,34 @@ class MultiIndex:
     # usage.xarray: 6
     values: object
 
+    @overload
+    def __contains__(self, _0: Literal["divisions"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["columns"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["_meta"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["dtype"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __contains__(self, _0: Literal["dtype", "_meta", "columns", "divisions"], /):
         """
         usage.dask: 4
@@ -642,6 +688,7 @@ class MultiIndex:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.dask: 2
         usage.xarray: 2
         """
         ...
@@ -670,6 +717,7 @@ class MultiIndex:
     @overload
     def __getitem__(self, _0: slice[int, int, int], /):
         """
+        usage.dask: 1
         usage.xarray: 1
         """
         ...
@@ -685,13 +733,6 @@ class MultiIndex:
     def __getitem__(self, _0: slice[None, None, None], /):
         """
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Union[int, slice[int, int, int]], /):
-        """
-        usage.dask: 3
         """
         ...
 
@@ -711,12 +752,6 @@ class MultiIndex:
         ...
 
     def __iter__(self, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def _get_level_values(self, /, level: int):
         """
         usage.dask: 1
         """
@@ -742,7 +777,7 @@ class MultiIndex:
 
     def get_level_values(self, /, level: int):
         """
-        usage.dask: 5
+        usage.dask: 4
         """
         ...
 
@@ -861,6 +896,93 @@ class MultiIndex:
         """
         ...
 
+    @overload
+    def set_levels(self, /, levels: List[Literal["d", "c"]], level: int, inplace: bool):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_levels(self, /, levels: List[Literal["c", "b"]], level: int, inplace: bool):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_levels(self, /, levels: List[Literal["b"]], level: int, inplace: bool):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_levels(self, /, levels: List[Literal["d"]], level: int, inplace: bool):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_levels(self, /, levels: List[Literal["a"]], level: int, inplace: bool):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_levels(
+        self, /, levels: List[Literal["d", "b", "c"]], level: int, inplace: bool
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_levels(
+        self, /, levels: List[Literal["d", "a", "b", "c"]], level: int, inplace: bool
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_levels(
+        self, /, levels: List[Literal["c", "b", "a"]], level: int, inplace: bool
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_levels(self, /, levels: List[float], level: int, inplace: bool):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_levels(
+        self, /, levels: List[Literal["3", "2", "1"]], level: int, inplace: bool
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_levels(
+        self, /, levels: List[Literal["b", "a", ""]], level: int, inplace: bool
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def set_levels(self, /, levels: List[Union[str, float]], level: int, inplace: bool):
         """
         usage.dask: 11
@@ -875,9 +997,16 @@ class MultiIndex:
         ...
 
     @overload
-    def set_names(self, /, names: List[Literal["b", "a", "c"]], inplace: bool):
+    def set_names(self, /, names: List[Literal["b", "a"]], inplace: bool):
         """
-        usage.dask: 2
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_names(self, /, names: List[Literal["c", "b", "a"]], inplace: bool):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -890,11 +1019,5 @@ class MultiIndex:
         """
         usage.dask: 2
         usage.xarray: 1
-        """
-        ...
-
-    def union(self, /, other: pandas.core.indexes.multi.MultiIndex):
-        """
-        usage.dask: 1
         """
         ...

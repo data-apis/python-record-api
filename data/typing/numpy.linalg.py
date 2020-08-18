@@ -18,6 +18,7 @@ def cond(x: numpy.ndarray, p: int = ...):
 @overload
 def det(a: numpy.ndarray):
     """
+    usage.dask: 1
     usage.matplotlib: 1
     usage.scipy: 18
     usage.skimage: 5
@@ -27,9 +28,9 @@ def det(a: numpy.ndarray):
 
 
 @overload
-def det(a: Union[numpy.ndarray, dask.array.core.Array]):
+def det(a: dask.array.core.Array):
     """
-    usage.dask: 2
+    usage.dask: 1
     """
     ...
 
@@ -64,15 +65,16 @@ def eigh(a: numpy.ndarray):
 @overload
 def eigvals(a: numpy.ndarray):
     """
+    usage.dask: 1
     usage.scipy: 2
     """
     ...
 
 
 @overload
-def eigvals(a: Union[numpy.ndarray, dask.array.core.Array]):
+def eigvals(a: dask.array.core.Array):
     """
-    usage.dask: 2
+    usage.dask: 1
     """
     ...
 
@@ -105,15 +107,16 @@ def inv(a: numpy.ndarray):
 @overload
 def lstsq(a: numpy.ndarray, b: numpy.ndarray, rcond: int):
     """
+    usage.dask: 2
     usage.scipy: 9
     """
     ...
 
 
 @overload
-def lstsq(a: numpy.ndarray, b: numpy.ndarray, rcond: Union[numpy.float64, int]):
+def lstsq(a: numpy.ndarray, b: numpy.ndarray, rcond: numpy.float64):
     """
-    usage.dask: 3
+    usage.dask: 1
     """
     ...
 
@@ -179,6 +182,7 @@ def matrix_rank(M: numpy.ndarray, tol: Union[float, numpy.float64] = ...):
 @overload
 def norm(x: numpy.ndarray):
     """
+    usage.dask: 1
     usage.matplotlib: 3
     usage.skimage: 8
     usage.sklearn: 30
@@ -209,14 +213,129 @@ def norm(x: numpy.ndarray, axis: int):
 
 
 @overload
-def norm(
-    x: object,
-    ord: Union[int, float, None, Literal["nuc", "fro"]] = ...,
-    axis: Union[Tuple[int, ...], None, int] = ...,
-    keepdims: bool = ...,
-):
+def norm(x: dask.array.core.Array):
     """
-    usage.dask: 25
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def norm(x: object):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: None, axis: None, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: None, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: None, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: int, axis: None, keepdims: bool):
+    """
+    usage.dask: 3
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: int, axis: int, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: int, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: float, axis: None, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: float, axis: int, keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: float, axis: Tuple[int], keepdims: bool):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: Literal["fro"], axis: None, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: Literal["fro"], axis: Tuple[int, int], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: Literal["nuc"], axis: None, keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: Literal["nuc"], axis: Tuple[int, int], keepdims: bool):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: int, axis: Tuple[int, int], keepdims: bool):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -328,6 +447,7 @@ def solve(a: Union[numpy.ndarray, numpy.matrix], b: numpy.ndarray):
 @overload
 def svd(a: numpy.ndarray):
     """
+    usage.dask: 3
     usage.skimage: 6
     usage.sklearn: 3
     """
@@ -352,9 +472,9 @@ def svd(a: numpy.ndarray, full_matrices: bool = ..., compute_uv: bool = ...):
 
 
 @overload
-def svd(a: numpy.ndarray, full_matrices: int = ...):
+def svd(a: numpy.ndarray, full_matrices: int):
     """
-    usage.dask: 4
+    usage.dask: 1
     """
     ...
 

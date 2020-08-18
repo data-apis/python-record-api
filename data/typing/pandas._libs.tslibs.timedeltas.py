@@ -51,7 +51,7 @@ class Timedelta:
     @overload
     def __eq__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
         """
-        usage.dask: 6
+        usage.dask: 4
         """
         ...
 
@@ -67,7 +67,7 @@ class Timedelta:
         /,
     ):
         """
-        usage.dask: 6
+        usage.dask: 4
         usage.pandas: 58
         """
         ...
@@ -98,15 +98,30 @@ class Timedelta:
         ...
 
     @overload
+    def __gt__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
     def __gt__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 2
         """
         ...
 
-    def __gt__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
+    def __gt__(
+        self,
+        _0: Union[
+            pandas._libs.tslibs.timedeltas.Timedelta,
+            pandas.core.series.Series,
+            numpy.ndarray,
+        ],
+        /,
+    ):
         """
-        usage.dask: 2
+        usage.dask: 3
         usage.pandas: 1
         """
         ...
@@ -114,6 +129,12 @@ class Timedelta:
     def __le__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
         """
         usage.dask: 3
+        """
+        ...
+
+    def __lt__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.dask: 1
         """
         ...
 

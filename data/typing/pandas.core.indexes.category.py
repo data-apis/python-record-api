@@ -42,6 +42,20 @@ class CategoricalIndex:
     # usage.xarray: 1
     values: object
 
+    @overload
+    def __contains__(self, _0: Literal["divisions"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["dtype"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __contains__(self, _0: Literal["dtype", "divisions"], /):
         """
         usage.dask: 2
@@ -88,6 +102,7 @@ class CategoricalIndex:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.dask: 4
         usage.xarray: 1
         """
         ...
@@ -100,9 +115,9 @@ class CategoricalIndex:
         ...
 
     @overload
-    def __getitem__(self, _0: Union[int, slice[int, int, int]], /):
+    def __getitem__(self, _0: slice[int, int, int], /):
         """
-        usage.dask: 5
+        usage.dask: 1
         """
         ...
 
@@ -145,21 +160,9 @@ class CategoricalIndex:
         """
         ...
 
-    def equals(self, /, other: pandas.core.indexes.category.CategoricalIndex):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def get_indexer(self, /, target: numpy.ndarray, method: None, tolerance: None):
         """
         usage.xarray: 1
-        """
-        ...
-
-    def reindex(self, /, target: pandas.core.indexes.base.Index):
-        """
-        usage.dask: 1
         """
         ...
 
@@ -178,6 +181,20 @@ class CategoricalIndex:
     def reorder_categories(self, /):
         """
         usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_categories(self, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_categories(self, /, *args: Literal["v", "t"]):
+        """
+        usage.dask: 2
         """
         ...
 

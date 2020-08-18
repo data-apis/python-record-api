@@ -3483,6 +3483,7 @@ def assert_array_equal(x: List[int], y: List[int]):
 @overload
 def assert_array_equal(x: numpy.ndarray, y: numpy.ndarray):
     """
+    usage.dask: 22
     usage.matplotlib: 106
     usage.skimage: 321
     usage.sklearn: 919
@@ -4103,6 +4104,7 @@ def assert_array_equal(x: numpy.ndarray, y: xarray.core.dataarray.DataArray):
 @overload
 def assert_array_equal(x: dask.array.core.Array, y: numpy.ndarray):
     """
+    usage.dask: 12
     usage.xarray: 4
     """
     ...
@@ -4569,12 +4571,9 @@ def assert_array_equal(x: numpy.ndarray, y: bool):
 
 
 @overload
-def assert_array_equal(
-    x: Union[numpy.ndarray, dask.array.core.Array, dask.dataframe.core.Index],
-    y: Union[numpy.ndarray, List[int]],
-):
+def assert_array_equal(x: dask.dataframe.core.Index, y: List[int]):
     """
-    usage.dask: 36
+    usage.dask: 2
     """
     ...
 
@@ -5462,6 +5461,7 @@ def assert_equal(actual: str, desired: str):
 @overload
 def assert_equal(actual: numpy.ndarray, desired: numpy.ndarray):
     """
+    usage.dask: 7
     usage.matplotlib: 3
     usage.skimage: 241
     usage.sklearn: 2
@@ -5489,6 +5489,7 @@ def assert_equal(actual: numpy.dtype, desired: numpy.dtype):
 @overload
 def assert_equal(actual: numpy.ndarray, desired: List[int]):
     """
+    usage.dask: 2
     usage.skimage: 21
     """
     ...
@@ -6156,74 +6157,235 @@ def assert_equal(actual: List[float], desired: numpy.ndarray):
 
 @overload
 def assert_equal(
-    actual: Union[
-        numpy.ndarray,
-        numpy.bool_,
-        Dict[
-            Tuple[Union[int, Literal["y"]], ...],
+    actual: Tuple[List[Tuple[Literal["x"]]], Tuple[None, ...]],
+    desired: Tuple[List[Tuple[Literal["x"]]], Tuple[None, ...]],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Tuple[List[Tuple[Literal["x"], Literal["y"]]], Tuple[None, ...]],
+    desired: Tuple[List[Tuple[Literal["x"], Literal["y"]]], Tuple[None, ...]],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Tuple[List[Tuple[Literal["x", "y"]]], Tuple[None, ...]],
+    desired: Tuple[List[Tuple[Literal["x", "y"]]], Tuple[None, ...]],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Tuple[List[Tuple[Literal["x"]]], Tuple[Literal["y"]]],
+    desired: Tuple[List[Tuple[Literal["x"]]], Tuple[Literal["y"]]],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Tuple[
+        List[Tuple[Literal["x"]]], List[Tuple[Union[Literal["y"], None], ...]]
+    ],
+    desired: Tuple[
+        List[Tuple[Literal["x"]]], List[Tuple[Union[Literal["y"], None], ...]]
+    ],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Tuple[
+        List[Tuple[Union[None, Literal["c", "b", "a", "d"]], ...]],
+        Tuple[Literal["d"], Literal["e"]],
+    ],
+    desired: Tuple[
+        List[Tuple[Union[None, Literal["c", "b", "a", "d"]], ...]],
+        Tuple[Literal["d"], Literal["e"]],
+    ],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.bool_, desired: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.bool_, desired: numpy.bool_):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: numpy.bool_):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[
+        Tuple[
+            Tuple[Literal["y"], int],
+            Tuple[Callable, Tuple[Literal["x"], numpy.int64], Tuple[numpy.ndarray]],
+        ]
+    ],
+    desired: List[
+        Tuple[
+            Tuple[Literal["y"], int],
+            Tuple[Callable, Tuple[Literal["x"], int], Tuple[numpy.ndarray]],
+        ]
+    ],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[
+        Tuple[
+            Tuple[Literal["y"], int, int],
             Tuple[
                 Callable,
-                Tuple[Union[Literal["x"], int, numpy.int64], ...],
-                Tuple[Union[slice[None, None, None], numpy.ndarray], ...],
+                Tuple[Literal["x"], numpy.int64, int],
+                Tuple[numpy.ndarray, slice[None, None, None]],
             ],
-        ],
-        List[
-            Tuple[
-                Tuple[Union[Literal["y"], int], ...],
-                Tuple[
-                    Callable,
-                    Tuple[Union[Literal["x"], numpy.int64, int], ...],
-                    Tuple[Union[numpy.ndarray, slice[None, None, None]], ...],
-                ],
-            ]
-        ],
+        ]
+    ],
+    desired: List[
         Tuple[
-            Union[
-                Tuple[Union[None, Literal["e", "d", "y"]], ...],
-                List[Tuple[Union[None, str], ...]],
-                float,
-                int,
+            Tuple[Literal["y"], int, int],
+            Tuple[
+                Callable,
+                Tuple[Literal["x"], int, int],
+                Tuple[numpy.ndarray, slice[None, None, None]],
             ],
-            ...,
+        ]
+    ],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        Tuple[Literal["y"], int],
+        Tuple[Callable, Tuple[Literal["x"], numpy.int64], Tuple[numpy.ndarray]],
+    ],
+    desired: Dict[
+        Tuple[Literal["y"], int],
+        Tuple[Callable, Tuple[Literal["x"], int], Tuple[List[int]]],
+    ],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        Tuple[Literal["y"], int, int],
+        Tuple[
+            Callable,
+            Tuple[Literal["x"], int, numpy.int64],
+            Tuple[slice[None, None, None], numpy.ndarray],
         ],
     ],
-    desired: Union[
-        numpy.ndarray,
-        numpy.bool_,
-        Dict[
-            Tuple[Union[int, Literal["y"]], ...],
-            Tuple[
-                Callable,
-                Tuple[Union[Literal["x"], int, numpy.int64], ...],
-                Tuple[Union[slice[None, None, None], List[int], numpy.ndarray], ...],
-            ],
-        ],
-        List[
-            Union[
-                int,
-                Tuple[
-                    Tuple[Union[Literal["y"], int], ...],
-                    Tuple[
-                        Callable,
-                        Tuple[Union[Literal["x"], int], ...],
-                        Tuple[Union[numpy.ndarray, slice[None, None, None]], ...],
-                    ],
-                ],
-            ]
-        ],
+    desired: Dict[
+        Tuple[Literal["y"], int, int],
         Tuple[
-            Union[
-                Tuple[Union[None, Literal["e", "d", "y"]], ...],
-                List[Tuple[Union[None, str], ...]],
-                float,
-                int,
-            ],
-            ...,
+            Callable,
+            Tuple[Literal["x"], int, int],
+            Tuple[slice[None, None, None], List[int]],
         ],
     ],
 ):
     """
-    usage.dask: 26
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        Tuple[Literal["y"], int, int],
+        Tuple[
+            Callable,
+            Tuple[Literal["x"], numpy.int64, int],
+            Tuple[numpy.ndarray, slice[None, None, None]],
+        ],
+    ],
+    desired: Dict[
+        Tuple[Literal["y"], int, int],
+        Tuple[
+            Callable,
+            Tuple[Literal["x"], numpy.int64, int],
+            Tuple[numpy.ndarray, slice[None, None, None]],
+        ],
+    ],
+):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Tuple[int, float, float], desired: Tuple[int, float, float]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Tuple[int, int, float, float], desired: Tuple[int, int, float, float]
+):
+    """
+    usage.dask: 1
     """
     ...
 

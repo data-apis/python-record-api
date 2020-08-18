@@ -1,6 +1,22 @@
 from typing import *
 
 
+@overload
+def _check_fill_value(fill_value: int, ndtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def _check_fill_value(fill_value: float, ndtype: numpy.dtype):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
 def _check_fill_value(fill_value: Union[float, int], ndtype: numpy.dtype):
     """
     usage.dask: 2
@@ -414,18 +430,36 @@ def concatenate(arrays: Tuple[numpy.ma.core.MaskedArray, numpy.ndarray], axis: i
 
 
 @overload
+def concatenate(arrays: List[numpy.ma.core.MaskedArray], axis: int):
+    """
+    usage.dask: 16
+    """
+    ...
+
+
+@overload
+def concatenate(
+    arrays: List[Union[numpy.ma.core.MaskedArray, numpy.ndarray]], axis: int
+):
+    """
+    usage.dask: 12
+    """
+    ...
+
+
+@overload
 def concatenate(
     arrays: List[Union[numpy.ndarray, numpy.ma.core.MaskedArray]], axis: int
 ):
     """
-    usage.dask: 36
+    usage.dask: 9
     """
     ...
 
 
 def concatenate(
     arrays: Union[
-        List[Union[numpy.ma.core.MaskedArray, numpy.ndarray]],
+        List[Union[numpy.ndarray, numpy.ma.core.MaskedArray]],
         Tuple[
             Union[numpy.ndarray, numpy.ma.core.MaskedArray],
             Union[numpy.ndarray, numpy.ma.core.MaskedArray],
@@ -434,7 +468,7 @@ def concatenate(
     axis: int,
 ):
     """
-    usage.dask: 36
+    usage.dask: 37
     usage.matplotlib: 2
     usage.xarray: 3
     """
@@ -444,17 +478,16 @@ def concatenate(
 @overload
 def dot(a: numpy.ma.core.MaskedArray, b: numpy.ma.core.MaskedArray):
     """
+    usage.dask: 1
     usage.scipy: 1
     """
     ...
 
 
 @overload
-def dot(
-    a: numpy.ma.core.MaskedArray, b: Union[numpy.ma.core.MaskedArray, numpy.ndarray]
-):
+def dot(a: numpy.ma.core.MaskedArray, b: numpy.ndarray):
     """
-    usage.dask: 3
+    usage.dask: 2
     """
     ...
 
@@ -490,6 +523,7 @@ def filled(a: numpy.ndarray, fill_value: float):
 @overload
 def filled(a: numpy.ma.core.MaskedArray):
     """
+    usage.dask: 4
     usage.matplotlib: 18
     """
     ...
@@ -498,6 +532,7 @@ def filled(a: numpy.ma.core.MaskedArray):
 @overload
 def filled(a: numpy.ma.core.MaskedArray, fill_value: float):
     """
+    usage.dask: 1
     usage.matplotlib: 2
     """
     ...
@@ -520,12 +555,41 @@ def filled(a: numpy.ma.core.MaskedArray, fill_value: bool):
 
 
 @overload
-def filled(
-    a: Union[numpy.ma.core.MaskedArray, numpy.float64, numpy.ndarray],
-    fill_value: Union[float, int, None] = ...,
-):
+def filled(a: numpy.ndarray, fill_value: int):
     """
-    usage.dask: 31
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def filled(a: numpy.ma.core.MaskedArray, fill_value: int):
+    """
+    usage.dask: 9
+    """
+    ...
+
+
+@overload
+def filled(a: numpy.float64, fill_value: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def filled(a: numpy.ndarray, fill_value: None):
+    """
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def filled(a: numpy.ma.core.MaskedArray, fill_value: None):
+    """
+    usage.dask: 6
     """
     ...
 
@@ -558,9 +622,17 @@ def fix_invalid(
 
 
 @overload
-def fix_invalid(a: Union[numpy.ma.core.MaskedArray, numpy.ndarray], fill_value: int):
+def fix_invalid(a: numpy.ndarray, fill_value: int):
     """
-    usage.dask: 4
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def fix_invalid(a: numpy.ma.core.MaskedArray, fill_value: int):
+    """
+    usage.dask: 3
     """
     ...
 
@@ -584,6 +656,7 @@ def fix_invalid(
 @overload
 def getdata(a: numpy.ndarray):
     """
+    usage.dask: 5
     usage.matplotlib: 16
     usage.skimage: 2
     """
@@ -593,6 +666,7 @@ def getdata(a: numpy.ndarray):
 @overload
 def getdata(a: numpy.ma.core.MaskedArray):
     """
+    usage.dask: 4
     usage.matplotlib: 4
     usage.skimage: 1
     usage.sklearn: 2
@@ -604,14 +678,6 @@ def getdata(a: numpy.ma.core.MaskedArray):
 def getdata(a: numpy.ma.mrecords.MaskedRecords):
     """
     usage.pandas: 1
-    """
-    ...
-
-
-@overload
-def getdata(a: Union[numpy.ma.core.MaskedArray, numpy.ndarray]):
-    """
-    usage.dask: 9
     """
     ...
 
@@ -778,6 +844,7 @@ def getmask(a: object):
 @overload
 def getmaskarray(arr: numpy.ma.core.MaskedArray):
     """
+    usage.dask: 5
     usage.matplotlib: 8
     usage.pandas: 7
     usage.skimage: 1
@@ -790,8 +857,15 @@ def getmaskarray(arr: numpy.ma.core.MaskedArray):
 @overload
 def getmaskarray(arr: Union[numpy.ma.core.MaskedArray, numpy.ndarray]):
     """
-    usage.dask: 9
     usage.scipy: 5
+    """
+    ...
+
+
+@overload
+def getmaskarray(arr: numpy.ndarray):
+    """
+    usage.dask: 4
     """
     ...
 
@@ -1027,6 +1101,7 @@ def masked_greater(
 @overload
 def masked_greater(x: numpy.ndarray, value: float):
     """
+    usage.dask: 3
     usage.matplotlib: 2
     """
     ...
@@ -1035,18 +1110,56 @@ def masked_greater(x: numpy.ndarray, value: float):
 @overload
 def masked_greater(x: numpy.ndarray, value: int):
     """
+    usage.dask: 5
     usage.matplotlib: 1
     """
     ...
 
 
 @overload
-def masked_greater(
-    x: Union[numpy.ndarray, dask.array.core.Array],
-    value: Union[numpy.ndarray, int, dask.array.core.Array, float],
-):
+def masked_greater(x: numpy.ndarray, value: numpy.ndarray):
     """
-    usage.dask: 23
+    usage.dask: 5
+    """
+    ...
+
+
+@overload
+def masked_greater(x: dask.array.core.Array, value: dask.array.core.Array):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def masked_greater(x: dask.array.core.Array, value: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def masked_greater(x: numpy.ndarray, value: dask.array.core.Array):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def masked_greater(x: dask.array.core.Array, value: int):
+    """
+    usage.dask: 4
+    """
+    ...
+
+
+@overload
+def masked_greater(x: dask.array.core.Array, value: float):
+    """
+    usage.dask: 3
     """
     ...
 
@@ -1072,11 +1185,25 @@ def masked_greater_equal(x: numpy.ma.core.MaskedArray, value: int):
 
 
 @overload
-def masked_greater_equal(
-    x: Union[numpy.ndarray, dask.array.core.Array], value: Union[int, numpy.ndarray]
-):
+def masked_greater_equal(x: dask.array.core.Array, value: int):
     """
-    usage.dask: 3
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def masked_greater_equal(x: numpy.ndarray, value: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def masked_greater_equal(x: numpy.ndarray, value: int):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -1234,11 +1361,25 @@ def masked_less(x: numpy.ma.core.MaskedArray, value: Union[int, float]):
 
 
 @overload
-def masked_less(
-    x: Union[numpy.ndarray, dask.array.core.Array], value: Union[int, numpy.ndarray]
-):
+def masked_less(x: dask.array.core.Array, value: int):
     """
-    usage.dask: 3
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def masked_less(x: numpy.ndarray, value: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def masked_less(x: numpy.ndarray, value: int):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -1279,11 +1420,25 @@ def masked_less_equal(x: numpy.ma.core.MaskedArray, value: int, copy: bool):
 
 
 @overload
-def masked_less_equal(
-    x: Union[numpy.ndarray, dask.array.core.Array], value: Union[int, numpy.ndarray]
-):
+def masked_less_equal(x: dask.array.core.Array, value: int):
     """
-    usage.dask: 3
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def masked_less_equal(x: numpy.ndarray, value: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def masked_less_equal(x: numpy.ndarray, value: int):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -1297,6 +1452,30 @@ def masked_less_equal(
     usage.dask: 3
     usage.matplotlib: 7
     usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def masked_not_equal(x: dask.array.core.Array, value: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def masked_not_equal(x: numpy.ndarray, value: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def masked_not_equal(x: numpy.ndarray, value: int):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -1320,21 +1499,16 @@ def masked_outside(x: numpy.ndarray, v1: int, v2: int):
 @overload
 def masked_values(x: numpy.ndarray, value: int):
     """
+    usage.dask: 1
     usage.scipy: 1
     """
     ...
 
 
 @overload
-def masked_values(
-    x: numpy.ndarray,
-    value: int,
-    rtol: float = ...,
-    atol: float = ...,
-    shrink: bool = ...,
-):
+def masked_values(x: numpy.ndarray, value: int, rtol: float, atol: float, shrink: bool):
     """
-    usage.dask: 4
+    usage.dask: 3
     """
     ...
 
@@ -1356,6 +1530,7 @@ def masked_values(
 @overload
 def masked_where(condition: numpy.ndarray, a: numpy.ndarray):
     """
+    usage.dask: 2
     usage.matplotlib: 2
     usage.xarray: 1
     """
@@ -1375,9 +1550,9 @@ def masked_where(
 
 
 @overload
-def masked_where(condition: Union[bool, numpy.ndarray], a: numpy.ndarray):
+def masked_where(condition: bool, a: numpy.ndarray):
     """
-    usage.dask: 3
+    usage.dask: 1
     """
     ...
 
@@ -1478,6 +1653,30 @@ def power(
 def reshape(a: numpy.ndarray, new_shape: Tuple[int, int]):
     """
     usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def set_fill_value(a: numpy.ma.core.MaskedArray, fill_value: numpy.ndarray):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def set_fill_value(a: numpy.ma.core.MaskedArray, fill_value: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def set_fill_value(a: numpy.ndarray, fill_value: int):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -1815,6 +2014,7 @@ class MaskedArray:
     @overload
     def __getitem__(self, _0: Tuple[ellipsis, int], /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
         """
         ...
@@ -1836,6 +2036,7 @@ class MaskedArray:
     @overload
     def __getitem__(self, _0: Tuple[ellipsis, None], /):
         """
+        usage.dask: 1
         usage.matplotlib: 1
         """
         ...
@@ -1869,21 +2070,125 @@ class MaskedArray:
         ...
 
     @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int]], /):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[int, int, int], slice[int, int, int], slice[int, int, int]],
+        /,
+    ):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
     def __getitem__(
         self,
         _0: Tuple[
-            Union[
-                slice[Union[int, None], Union[int, None], Union[int, None]],
-                None,
-                ellipsis,
-                int,
-            ],
-            ...,
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
+            slice[int, int, int],
         ],
         /,
     ):
         """
-        usage.dask: 25
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, None, None], None], /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[None, None, None],
+            None,
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[None, None, slice[None, None, None]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[None, None, None],
+            None,
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            None,
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], None, None, slice[None, None, None]], /
+    ):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[None, ...], /):
+        """
+        usage.dask: 3
         """
         ...
 
@@ -2087,7 +2392,6 @@ class MaskedArray:
     @overload
     def __le__(self, _0: int, /):
         """
-        usage.dask: 1
         usage.matplotlib: 1
         """
         ...
@@ -2101,7 +2405,6 @@ class MaskedArray:
 
     def __le__(self, _0: object, /):
         """
-        usage.dask: 1
         usage.matplotlib: 3
         usage.scipy: 8
         usage.sklearn: 2
@@ -2122,8 +2425,16 @@ class MaskedArray:
         """
         ...
 
-    def __lt__(self, _0: Union[float, numpy.float64], /):
+    @overload
+    def __lt__(self, _0: int, /):
         """
+        usage.dask: 1
+        """
+        ...
+
+    def __lt__(self, _0: Union[int, numpy.float64, float], /):
+        """
+        usage.dask: 1
         usage.matplotlib: 2
         """
         ...
@@ -2159,6 +2470,7 @@ class MaskedArray:
     @overload
     def __mul__(self, _0: numpy.ma.core.MaskedArray, /):
         """
+        usage.dask: 2
         usage.matplotlib: 3
         """
         ...
@@ -2173,14 +2485,8 @@ class MaskedArray:
     @overload
     def __mul__(self, _0: int, /):
         """
+        usage.dask: 1
         usage.matplotlib: 2
-        """
-        ...
-
-    @overload
-    def __mul__(self, _0: Union[numpy.ma.core.MaskedArray, int], /):
-        """
-        usage.dask: 3
         """
         ...
 
@@ -2268,6 +2574,7 @@ class MaskedArray:
     @overload
     def __radd__(self, _0: numpy.ma.core.MaskedArray, /):
         """
+        usage.dask: 1
         usage.matplotlib: 4
         """
         ...
@@ -2280,13 +2587,16 @@ class MaskedArray:
         ...
 
     @overload
-    def __radd__(
-        self,
-        _0: Union[numpy.ndarray, numpy.ma.core.MaskedArray, dask.array.core.Array],
-        /,
-    ):
+    def __radd__(self, _0: dask.array.core.Array, /):
         """
-        usage.dask: 3
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: numpy.ndarray, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -2782,6 +3092,7 @@ class MaskedArray:
     @overload
     def __sub__(self, _0: numpy.ma.core.MaskedArray, /):
         """
+        usage.dask: 4
         usage.matplotlib: 2
         usage.skimage: 2
         usage.sklearn: 1
@@ -2820,9 +3131,9 @@ class MaskedArray:
         ...
 
     @overload
-    def __sub__(self, _0: Union[int, numpy.ma.core.MaskedArray], /):
+    def __sub__(self, _0: int, /):
         """
-        usage.dask: 5
+        usage.dask: 1
         """
         ...
 
@@ -2903,6 +3214,7 @@ class MaskedArray:
     @overload
     def astype(self, _0: numpy.dtype, /):
         """
+        usage.dask: 7
         usage.pandas: 2
         """
         ...
@@ -2929,9 +3241,16 @@ class MaskedArray:
         ...
 
     @overload
-    def astype(self, _0: Union[numpy.dtype, Type[numpy.int64], Literal["bool"]], /):
+    def astype(self, _0: Type[numpy.int64], /):
         """
-        usage.dask: 10
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["bool"], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -3059,7 +3378,7 @@ class MaskedArray:
 
     def reshape(self, /, *s: Literal["v", "t"]):
         """
-        usage.dask: 9
+        usage.dask: 1
         usage.scipy: 16
         """
         ...
@@ -3090,15 +3409,44 @@ class MaskedArray:
         ...
 
     @overload
-    def sum(
-        self,
-        /,
-        axis: Tuple[int, ...] = ...,
-        dtype: Union[Literal["f8"], numpy.dtype] = ...,
-        keepdims: bool = ...,
-    ):
+    def sum(self, /, axis: Tuple[int, int], keepdims: bool):
         """
-        usage.dask: 27
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def sum(self, /, axis: Tuple[int, int], dtype: numpy.dtype, keepdims: bool):
+        """
+        usage.dask: 6
+        """
+        ...
+
+    @overload
+    def sum(self, /, axis: Tuple[int], dtype: numpy.dtype, keepdims: bool):
+        """
+        usage.dask: 6
+        """
+        ...
+
+    @overload
+    def sum(self, /, axis: Tuple[int], keepdims: bool):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def sum(self, /, axis: Tuple[int, int], dtype: Literal["f8"], keepdims: bool):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def sum(self, /, axis: Tuple[int], dtype: Literal["f8"], keepdims: bool):
+        """
+        usage.dask: 4
         """
         ...
 
@@ -3110,14 +3458,10 @@ class MaskedArray:
         ...
 
     def sum(
-        self,
-        /,
-        axis: Union[int, None, Tuple[int, ...]] = ...,
-        dtype: Union[Literal["f8"], numpy.dtype] = ...,
-        keepdims: bool = ...,
+        self, /, axis: Union[int, None, Tuple[int, ...]] = ..., keepdims: bool = ...
     ):
         """
-        usage.dask: 27
+        usage.dask: 26
         usage.scipy: 13
         usage.sklearn: 1
         """
@@ -3357,6 +3701,20 @@ class MaskedConstant:
     ):
         """
         usage.scipy: 6
+        """
+        ...
+
+    @overload
+    def astype(self, _0: numpy.dtype, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["bool"], /):
+        """
+        usage.dask: 1
         """
         ...
 

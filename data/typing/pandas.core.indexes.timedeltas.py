@@ -10,20 +10,95 @@ def timedelta_range(start: int, periods: int):
 
 
 @overload
+def timedelta_range(start: Literal["1 days"], periods: int, freq: Literal["D"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def timedelta_range(start: Literal["1 day"], periods: int, freq: Literal["T"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
 def timedelta_range(
-    start: Union[numpy.timedelta64, Literal["1 day", "1 days"]],
+    start: numpy.timedelta64,
     periods: int,
-    freq: Union[
-        None,
-        Literal["H", "D", "T"],
-        pandas.tseries.offsets.Hour,
-        pandas.tseries.offsets.Minute,
-        pandas.tseries.offsets.Day,
-    ],
-    name: Union[Literal["timedelta", "foo"], None] = ...,
+    freq: pandas._libs.tslibs.offsets.Minute,
+    name: None,
 ):
     """
-    usage.dask: 9
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def timedelta_range(start: Literal["1 day"], periods: int, freq: Literal["D"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def timedelta_range(
+    start: numpy.timedelta64,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.Day,
+    name: None,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def timedelta_range(start: Literal["1 day"], periods: int, freq: Literal["H"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def timedelta_range(
+    start: numpy.timedelta64,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.Hour,
+    name: None,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def timedelta_range(
+    start: numpy.timedelta64,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.Day,
+    name: Literal["foo"],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def timedelta_range(
+    start: numpy.timedelta64, periods: int, freq: None, name: Literal["timedelta"]
+):
+    """
+    usage.dask: 1
     """
     ...
 
@@ -34,9 +109,9 @@ def timedelta_range(
     freq: Union[
         None,
         Literal["H", "D", "T"],
-        pandas.tseries.offsets.Hour,
-        pandas.tseries.offsets.Minute,
-        pandas.tseries.offsets.Day,
+        pandas._libs.tslibs.offsets.Hour,
+        pandas._libs.tslibs.offsets.Minute,
+        pandas._libs.tslibs.offsets.Day,
     ] = ...,
     name: Union[Literal["timedelta", "foo"], None] = ...,
 ):
@@ -134,6 +209,7 @@ class TimedeltaIndex:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.dask: 4
         usage.xarray: 2
         """
         ...
@@ -141,6 +217,7 @@ class TimedeltaIndex:
     @overload
     def __getitem__(self, _0: slice[int, int, int], /):
         """
+        usage.dask: 1
         usage.xarray: 1
         """
         ...
@@ -149,13 +226,6 @@ class TimedeltaIndex:
     def __getitem__(self, _0: numpy.ndarray, /):
         """
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Union[slice[int, int, int], int], /):
-        """
-        usage.dask: 5
         """
         ...
 
@@ -376,6 +446,27 @@ class TimedeltaIndex:
     ):
         """
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def shift(self, /, periods: int, freq: Literal["S"]):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def shift(self, /, periods: int, freq: pandas._libs.tslibs.timedeltas.Timedelta):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def shift(self, /, periods: int, freq: None):
+        """
+        usage.dask: 2
         """
         ...
 

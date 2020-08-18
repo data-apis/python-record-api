@@ -282,13 +282,119 @@ def to_timedelta(arg: Literal["1s"]):
 
 
 @overload
+def to_timedelta(arg: List[Union[int, float]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def to_timedelta(arg: List[Union[float, int]]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def to_timedelta(arg: numpy.float64):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def to_timedelta(arg: numpy.int64):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def to_timedelta(arg: float):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def to_timedelta(arg: pandas.core.series.Series):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def to_timedelta(arg: dask.dataframe.core.Series):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
 def to_timedelta(
-    arg: object,
-    unit: Literal["ns", "h"] = ...,
-    errors: Literal["coerce", "raise"] = ...,
+    arg: pandas.core.series.Series, unit: Literal["ns"], errors: Literal["raise"]
 ):
     """
-    usage.dask: 16
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def to_timedelta(arg: pandas.core.series.Series, unit: Literal["h"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def to_timedelta(arg: dask.dataframe.core.Series, unit: Literal["h"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def to_timedelta(
+    arg: pandas.core.series.Series, unit: Literal["h"], errors: Literal["raise"]
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def to_timedelta(arg: pandas.core.series.Series, errors: Literal["coerce"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def to_timedelta(arg: dask.dataframe.core.Series, errors: Literal["coerce"]):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def to_timedelta(
+    arg: pandas.core.series.Series, unit: Literal["ns"], errors: Literal["coerce"]
+):
+    """
+    usage.dask: 1
     """
     ...
 
