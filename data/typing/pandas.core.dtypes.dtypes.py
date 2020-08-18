@@ -34,23 +34,23 @@ class CategoricalDtype:
         ...
 
     @overload
-    def __eq__(
-        self,
-        _0: Union[
-            pandas.core.dtypes.dtypes.CategoricalDtype,
-            Literal["category"],
-            Type[object],
-        ],
-        /,
-    ):
+    def __eq__(self, _0: Literal["category"], /):
         """
-        usage.dask: 19
+        usage.dask: 10
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Type[object], /):
+        """
+        usage.dask: 3
         """
         ...
 
     @overload
     def __eq__(self, _0: pandas.core.dtypes.dtypes.CategoricalDtype, /):
         """
+        usage.dask: 4
         usage.sklearn: 6
         """
         ...
@@ -66,7 +66,7 @@ class CategoricalDtype:
         /,
     ):
         """
-        usage.dask: 19
+        usage.dask: 17
         usage.pandas: 19
         usage.sklearn: 6
         usage.xarray: 1
@@ -81,13 +81,16 @@ class CategoricalDtype:
         ...
 
     @overload
-    def __ne__(
-        self,
-        _0: Union[pandas.core.dtypes.dtypes.CategoricalDtype, Literal["category"]],
-        /,
-    ):
+    def __ne__(self, _0: Literal["category"], /):
         """
-        usage.dask: 5
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: pandas.core.dtypes.dtypes.CategoricalDtype, /):
+        """
+        usage.dask: 4
         """
         ...
 
@@ -134,11 +137,16 @@ class DatetimeTZDtype:
         ...
 
     @overload
-    def __eq__(
-        self, _0: Union[pandas.core.dtypes.dtypes.DatetimeTZDtype, Type[object]], /
-    ):
+    def __eq__(self, _0: Type[object], /):
         """
-        usage.dask: 3
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas.core.dtypes.dtypes.DatetimeTZDtype, /):
+        """
+        usage.dask: 2
         """
         ...
 

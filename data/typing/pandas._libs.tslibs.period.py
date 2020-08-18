@@ -65,9 +65,21 @@ class Period:
         """
         ...
 
+    def __gt__(self, _0: pandas._libs.tslibs.period.Period, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __le__(self, _0: pandas._libs.tslibs.period.Period, /):
         """
         usage.dask: 3
+        """
+        ...
+
+    def __lt__(self, _0: pandas._libs.tslibs.period.Period, /):
+        """
+        usage.dask: 1
         """
         ...
 

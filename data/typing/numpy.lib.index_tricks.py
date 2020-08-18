@@ -427,6 +427,7 @@ class OGridClass:
     @overload
     def __getitem__(self, _0: Tuple[slice[None, int, None], slice[None, int, None]], /):
         """
+        usage.dask: 1
         usage.skimage: 2
         """
         ...
@@ -476,9 +477,9 @@ class OGridClass:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[slice[None, int, None], ...], /):
+    def __getitem__(self, _0: Tuple[slice[None, int, None]], /):
         """
-        usage.dask: 2
+        usage.dask: 1
         """
         ...
 

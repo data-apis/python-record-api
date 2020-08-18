@@ -11,6 +11,6 @@ class DatetimeProperties:
 
     def to_pydatetime(self, /):
         """
-        usage.dask: 2
+        usage.dask: 1
         """
         ...

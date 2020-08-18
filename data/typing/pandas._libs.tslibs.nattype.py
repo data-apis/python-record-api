@@ -31,11 +31,25 @@ class NaTType:
 
     def __ge__(self, _0: pandas._libs.tslibs.nattype.NaTType, /):
         """
-        usage.dask: 2
+        usage.dask: 1
         """
         ...
 
     def __gt__(self, _0: pandas._libs.tslibs.nattype.NaTType, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: pandas._libs.tslibs.nattype.NaTType, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 1
         """
@@ -47,13 +61,13 @@ class NaTType:
         /,
     ):
         """
-        usage.dask: 3
+        usage.dask: 2
         """
         ...
 
     def __lt__(self, _0: pandas._libs.tslibs.nattype.NaTType, /):
         """
-        usage.dask: 1
+        usage.dask: 2
         """
         ...
 

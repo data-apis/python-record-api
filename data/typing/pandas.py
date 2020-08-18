@@ -14,7 +14,7 @@ CategoricalDtype: object
 # usage.xarray: 6
 CategoricalIndex: object
 
-# usage.dask: 310
+# usage.dask: 309
 # usage.sklearn: 54
 # usage.xarray: 10
 DataFrame: object
@@ -82,7 +82,7 @@ RangeIndex: object
 # usage.xarray: 20
 Series: object
 
-# usage.dask: 5
+# usage.dask: 4
 # usage.xarray: 1
 Timedelta: object
 
@@ -90,7 +90,7 @@ Timedelta: object
 # usage.xarray: 9
 TimedeltaIndex: object
 
-# usage.dask: 16
+# usage.dask: 12
 # usage.xarray: 2
 Timestamp: object
 
@@ -109,7 +109,6 @@ UInt64Index: object
 # usage.dask: 1
 UInt8Dtype: object
 
-# usage.dask: 1
 # usage.sklearn: 3
 # usage.xarray: 6
 __version__: object
@@ -124,7 +123,7 @@ concat: object
 # usage.xarray: 1
 cut: object
 
-# usage.dask: 51
+# usage.dask: 50
 # usage.xarray: 106
 date_range: object
 

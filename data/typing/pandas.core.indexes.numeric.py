@@ -49,6 +49,27 @@ class Float64Index:
         """
         ...
 
+    @overload
+    def __contains__(self, _0: str, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["divisions"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["dtype"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __contains__(self, _0: str, /):
         """
         usage.dask: 4
@@ -98,6 +119,7 @@ class Float64Index:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.dask: 4
         usage.xarray: 2
         """
         ...
@@ -105,6 +127,7 @@ class Float64Index:
     @overload
     def __getitem__(self, _0: slice[int, int, int], /):
         """
+        usage.dask: 1
         usage.xarray: 1
         """
         ...
@@ -134,13 +157,6 @@ class Float64Index:
     def __getitem__(self, _0: slice[None, int, None], /):
         """
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Union[slice[int, int, int], int], /):
-        """
-        usage.dask: 5
         """
         ...
 
@@ -219,23 +235,15 @@ class Float64Index:
         """
         ...
 
-    def astype(
-        self, /, dtype: Union[numpy.dtype, pandas.core.dtypes.dtypes.CategoricalDtype]
-    ):
+    def astype(self, /, dtype: pandas.core.dtypes.dtypes.CategoricalDtype):
         """
-        usage.dask: 2
+        usage.dask: 1
         """
         ...
 
     def copy(self, /, deep: bool):
         """
         usage.xarray: 1
-        """
-        ...
-
-    def equals(self, /, other: pandas.core.indexes.numeric.Float64Index):
-        """
-        usage.dask: 1
         """
         ...
 
@@ -402,6 +410,41 @@ class Int64Index:
         """
         ...
 
+    @overload
+    def __contains__(self, _0: Literal["divisions"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["dtype"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: str, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: int, /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: None, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __contains__(self, _0: Union[None, str, int], /):
         """
         usage.dask: 8
@@ -419,6 +462,20 @@ class Int64Index:
     ):
         """
         usage.pandas: 11
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: int, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: float, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -445,6 +502,7 @@ class Int64Index:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.dask: 8
         usage.xarray: 3
         """
         ...
@@ -452,6 +510,7 @@ class Int64Index:
     @overload
     def __getitem__(self, _0: slice[None, int, None], /):
         """
+        usage.dask: 2
         usage.xarray: 3
         """
         ...
@@ -459,6 +518,7 @@ class Int64Index:
     @overload
     def __getitem__(self, _0: slice[int, int, int], /):
         """
+        usage.dask: 1
         usage.xarray: 1
         """
         ...
@@ -477,15 +537,6 @@ class Int64Index:
         """
         ...
 
-    @overload
-    def __getitem__(
-        self, _0: Union[slice[Union[int, None], int, Union[int, None]], int], /
-    ):
-        """
-        usage.dask: 11
-        """
-        ...
-
     def __getitem__(
         self,
         _0: Union[
@@ -498,6 +549,20 @@ class Int64Index:
         """
         usage.dask: 11
         usage.xarray: 16
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: int, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: float, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -514,7 +579,41 @@ class Int64Index:
         """
         ...
 
+    @overload
+    def __le__(self, _0: int, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: float, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __le__(self, _0: Union[float, int], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __lt__(self, _0: int, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __lt__(self, _0: float, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def __lt__(self, _0: Union[float, int], /):
         """
         usage.dask: 3
         """
@@ -722,6 +821,34 @@ class Int64Index:
         """
         ...
 
+    @overload
+    def isin(self, /, values: dask.delayed.Delayed):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def isin(self, /, values: List[int]):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def isin(self, /, values: dask.delayed.DelayedLeaf):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def isin(self, /, values: pandas.core.series.Series):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def isin(
         self,
         /,
@@ -749,9 +876,44 @@ class Int64Index:
         """
         ...
 
+    @overload
+    def set_names(self, /, names: List[Literal["a"]], inplace: bool):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_names(self, /, names: List[Literal["b"]], inplace: bool):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_names(self, /, names: List[Literal["key"]], inplace: bool):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def set_names(self, /, names: List[Literal["a", "b", "key"]], inplace: bool):
         """
         usage.dask: 3
+        """
+        ...
+
+    @overload
+    def to_frame(self, /, index: bool, name: None):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def to_frame(self, /, index: bool, name: Literal["bar"]):
+        """
+        usage.dask: 1
         """
         ...
 

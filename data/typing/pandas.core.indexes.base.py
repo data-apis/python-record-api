@@ -49,9 +49,450 @@ class Index:
     # usage.xarray: 6
     values: object
 
+    @overload
+    def __contains__(self, _0: Literal["divisions"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["dtype"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["x"], /):
+        """
+        usage.dask: 6
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["amount"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["path"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["filename"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["name"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
     def __contains__(self, _0: str, /):
         """
-        usage.dask: 131
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["fruit"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["A"], /):
+        """
+        usage.dask: 7
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["B"], /):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["b"], /):
+        """
+        usage.dask: 8
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["a"], /):
+        """
+        usage.dask: 8
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["numbers"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["C"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["A_B"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["B_"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["dt_col"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["str_col"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["string_col"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["int_col"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["y"], /):
+        """
+        usage.dask: 8
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["X"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["c"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["w"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["y_"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["v"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["_meta"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["_index"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["dask"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["_name"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["foo"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["tz"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["columns"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["z"], /):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["col2"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["col1"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["Name"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["index"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["D"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["AA"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["AB"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["_typ"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["idx"], /):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["group"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["2011-01-02"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["2011-01"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["2011"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["k"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["d"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["e"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["F"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["H"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["cluster"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["a_a"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["A_a"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["value"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["imag"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["__array_struct__"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["__array_interface__"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["_computed"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["real"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["__array_priority__"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    def __contains__(self, _0: str, /):
+        """
+        usage.dask: 130
         """
         ...
 
@@ -63,13 +504,23 @@ class Index:
         ...
 
     @overload
-    def __eq__(
-        self,
-        _0: Union[List[Literal["x", "b", "c", "a"]], pandas.core.indexes.base.Index],
-        /,
-    ):
+    def __eq__(self, _0: pandas.core.indexes.base.Index, /):
         """
-        usage.dask: 14
+        usage.dask: 12
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: List[Literal["x"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: List[Literal["b", "c", "a"]], /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -118,6 +569,7 @@ class Index:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.dask: 17
         usage.xarray: 3
         """
         ...
@@ -125,6 +577,7 @@ class Index:
     @overload
     def __getitem__(self, _0: numpy.ndarray, /):
         """
+        usage.dask: 1
         usage.sklearn: 2
         usage.xarray: 2
         """
@@ -133,6 +586,7 @@ class Index:
     @overload
     def __getitem__(self, _0: slice[None, int, None], /):
         """
+        usage.dask: 1
         usage.sklearn: 1
         usage.xarray: 2
         """
@@ -141,6 +595,7 @@ class Index:
     @overload
     def __getitem__(self, _0: slice[int, int, int], /):
         """
+        usage.dask: 1
         usage.xarray: 2
         """
         ...
@@ -148,6 +603,7 @@ class Index:
     @overload
     def __getitem__(self, _0: slice[int, None, int], /):
         """
+        usage.dask: 2
         usage.xarray: 1
         """
         ...
@@ -162,6 +618,7 @@ class Index:
     @overload
     def __getitem__(self, _0: slice[int, int, int], /):
         """
+        usage.dask: 2
         usage.sklearn: 1
         usage.xarray: 2
         """
@@ -175,25 +632,17 @@ class Index:
         ...
 
     @overload
-    def __getitem__(
-        self,
-        _0: Union[
-            slice[Union[None, int], Union[int, None], Union[None, int]],
-            numpy.ndarray,
-            int,
-            List[Union[bool, int]],
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: List[int], /):
         """
-        usage.dask: 27
+        usage.dask: 2
+        usage.sklearn: 2
         """
         ...
 
     @overload
-    def __getitem__(self, _0: List[int], /):
+    def __getitem__(self, _0: List[bool], /):
         """
-        usage.sklearn: 2
+        usage.dask: 1
         """
         ...
 
@@ -263,43 +712,15 @@ class Index:
         """
         ...
 
-    def _get_level_values(self, /, level: int):
+    def astype(self, /, dtype: pandas.core.dtypes.dtypes.CategoricalDtype):
         """
-        usage.dask: 7
-        """
-        ...
-
-    def append(
-        self, /, other: Union[list, pandas.core.indexes.category.CategoricalIndex]
-    ):
-        """
-        usage.dask: 16
-        """
-        ...
-
-    def astype(
-        self,
-        /,
-        dtype: Union[
-            Literal["int64"], pandas.core.dtypes.dtypes.CategoricalDtype, numpy.dtype
-        ],
-    ):
-        """
-        usage.dask: 12
+        usage.dask: 1
         """
         ...
 
     def copy(self, /, deep: bool):
         """
         usage.xarray: 1
-        """
-        ...
-
-    def difference(
-        self, /, other: Union[List[Literal["A"]], pandas.core.indexes.base.Index]
-    ):
-        """
-        usage.dask: 6
         """
         ...
 
@@ -317,23 +738,9 @@ class Index:
         """
         ...
 
-    @overload
-    def drop(self, /, labels: numpy.ndarray):
+    def drop(self, /, labels: numpy.ndarray, errors: Literal["ignore", "raise"]):
         """
-        usage.dask: 1
-        """
-        ...
-
-    def drop(self, /, labels: numpy.ndarray, errors: Literal["ignore", "raise"] = ...):
-        """
-        usage.dask: 1
         usage.xarray: 2
-        """
-        ...
-
-    def drop_duplicates(self, /):
-        """
-        usage.dask: 1
         """
         ...
 
@@ -343,35 +750,8 @@ class Index:
         """
         ...
 
-    @overload
     def equals(self, /, other: pandas.core.indexes.base.Index):
         """
-        usage.xarray: 7
-        """
-        ...
-
-    @overload
-    def equals(
-        self,
-        /,
-        other: Union[
-            pandas.core.indexes.numeric.Int64Index, pandas.core.indexes.base.Index
-        ],
-    ):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    def equals(
-        self,
-        /,
-        other: Union[
-            pandas.core.indexes.base.Index, pandas.core.indexes.numeric.Int64Index
-        ],
-    ):
-        """
-        usage.dask: 3
         usage.xarray: 7
         """
         ...
@@ -564,35 +944,9 @@ class Index:
         """
         ...
 
-    def get_slice_bound(
-        self, /, label: object, side: Literal["left", "right"], kind: Literal["loc"]
-    ):
-        """
-        usage.dask: 30
-        """
-        ...
-
-    def intersection(self, /, other: pandas.core.indexes.base.Index):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    def isin(self, /, values: Union[pandas.core.series.Series, List[int]]):
-        """
-        usage.dask: 4
-        """
-        ...
-
     def max(self, /):
         """
         usage.dask: 1
-        """
-        ...
-
-    def memory_usage(self, /):
-        """
-        usage.dask: 3
         """
         ...
 
@@ -602,47 +956,8 @@ class Index:
         """
         ...
 
-    def rename(self, /, name: Literal["renamed"]):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def shift(self, /, periods: int, freq: None):
         """
         usage.dask: 1
-        """
-        ...
-
-    def to_frame(
-        self, /, index: bool = ..., name: Union[Literal["bar", "foo"], None] = ...
-    ):
-        """
-        usage.dask: 6
-        """
-        ...
-
-    def to_series(self, /):
-        """
-        usage.dask: 11
-        """
-        ...
-
-    def union(
-        self,
-        /,
-        other: Union[
-            pandas.core.indexes.datetimes.DatetimeIndex,
-            pandas.core.indexes.numeric.Int64Index,
-        ],
-    ):
-        """
-        usage.dask: 6
-        """
-        ...
-
-    def unique(self, /):
-        """
-        usage.dask: 3
         """
         ...

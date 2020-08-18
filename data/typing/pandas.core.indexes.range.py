@@ -64,6 +64,27 @@ class RangeIndex:
         """
         ...
 
+    @overload
+    def __contains__(self, _0: Literal["divisions"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["dtype"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: int, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __contains__(self, _0: Union[int, Literal["dtype", "divisions"]], /):
         """
         usage.dask: 3
@@ -92,6 +113,7 @@ class RangeIndex:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.dask: 4
         usage.xarray: 1
         """
         ...
@@ -113,14 +135,8 @@ class RangeIndex:
     @overload
     def __getitem__(self, _0: slice[int, int, int], /):
         """
+        usage.dask: 1
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Union[slice[int, int, int], int], /):
-        """
-        usage.dask: 5
         """
         ...
 
@@ -247,29 +263,8 @@ class RangeIndex:
         """
         ...
 
-    @overload
     def equals(self, /, other: pandas.core.indexes.numeric.Int64Index):
         """
-        usage.xarray: 3
-        """
-        ...
-
-    @overload
-    def equals(self, /, other: pandas.core.indexes.range.RangeIndex):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    def equals(
-        self,
-        /,
-        other: Union[
-            pandas.core.indexes.range.RangeIndex, pandas.core.indexes.numeric.Int64Index
-        ],
-    ):
-        """
-        usage.dask: 2
         usage.xarray: 3
         """
         ...
@@ -292,21 +287,24 @@ class RangeIndex:
         """
         ...
 
-    def max(self, /):
-        """
-        usage.dask: 5
-        """
-        ...
-
-    def memory_usage(self, /):
+    @overload
+    def to_frame(self, /, index: bool, name: None):
         """
         usage.dask: 1
         """
         ...
 
-    def min(self, /):
+    @overload
+    def to_frame(self, /, name: Literal["bar"]):
         """
-        usage.dask: 5
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def to_frame(self, /, index: bool, name: Literal["bar"]):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -317,12 +315,6 @@ class RangeIndex:
         ...
 
     def to_series(self, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def tolist(self, /):
         """
         usage.dask: 1
         """
