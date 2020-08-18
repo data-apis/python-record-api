@@ -89,7 +89,6 @@ class NpzFile:
     @overload
     def __getitem__(self, _0: str, /):
         """
-        usage.scipy: 256
         usage.skimage: 1
         """
         ...
@@ -312,6 +311,979 @@ class NpzFile:
         ...
 
     @overload
+    def __getitem__(self, _0: Literal["x0"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["x1"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["x2"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["x3"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["x4"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["x5"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["x6"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["x7"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["y0"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["y1"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["y2"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["y3"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["y4"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["y5"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["y6"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["y7"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["sizes"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_1_2"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_2_2"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_3_2"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_4_2"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_1_3"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_2_3"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_3_3"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_4_3"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_1_4"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_2_4"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_3_4"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_4_4"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_1_8"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_2_8"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_3_8"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_4_8"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_1_12"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_2_12"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_3_12"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_4_12"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_1_15"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_2_15"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_3_15"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_4_15"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_1_16"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_2_16"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_3_16"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_4_16"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_1_17"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_2_17"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_3_17"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_4_17"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_1_32"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_2_32"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_3_32"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_4_32"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_1_64"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_2_64"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_3_64"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_4_64"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_1_128"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_2_128"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_3_128"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_4_128"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_1_256"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_2_256"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_3_256"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_4_256"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_1_512"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_2_512"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_3_512"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_4_512"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_1_1024"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_2_1024"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_3_1024"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dct_4_1024"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_1_2"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_2_2"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_3_2"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_4_2"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_1_3"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_2_3"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_3_3"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_4_3"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_1_4"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_2_4"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_3_4"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_4_4"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_1_8"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_2_8"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_3_8"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_4_8"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_1_12"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_2_12"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_3_12"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_4_12"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_1_15"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_2_15"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_3_15"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_4_15"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_1_16"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_2_16"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_3_16"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_4_16"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_1_17"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_2_17"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_3_17"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_4_17"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_1_32"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_2_32"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_3_32"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_4_32"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_1_64"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_2_64"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_3_64"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_4_64"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_1_128"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_2_128"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_3_128"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_4_128"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_1_256"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_2_256"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_3_256"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_4_256"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_1_512"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_2_512"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_3_512"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_4_512"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_1_1024"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_2_1024"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_3_1024"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["dst_4_1024"], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["data"], /):
+        """
+        usage.scipy: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["ecg"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["format"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["indices"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["indptr"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["shape"], /):
+        """
+        usage.scipy: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["offsets"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["row"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["c"], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: Literal["elevation"], /):
         """
         usage.matplotlib: 1
@@ -344,11 +1316,5 @@ class NpzFile:
         usage.matplotlib: 4
         usage.scipy: 256
         usage.skimage: 55
-        """
-        ...
-
-    def close(self, /):
-        """
-        usage.scipy: 1
         """
         ...

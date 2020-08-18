@@ -1,6 +1,27 @@
 from typing import *
 
 
+@overload
+def apply_along_axis(
+    func1d: Callable,
+    axis: int,
+    arr: numpy.ma.core.MaskedArray,
+    *args: Literal["v", "t"],
+):
+    """
+    usage.scipy: 6
+    """
+    ...
+
+
+@overload
+def apply_along_axis(func1d: Callable, axis: int, arr: numpy.ma.core.MaskedArray):
+    """
+    usage.scipy: 3
+    """
+    ...
+
+
 def apply_along_axis(
     func1d: Callable,
     axis: int,

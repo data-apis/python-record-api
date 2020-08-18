@@ -13,18 +13,9 @@ def fft(a: pandas.core.series.Series):
 
 
 @overload
-def fft(a: Union[numpy.ndarray, List[float]], n: int = ..., axis: int = ...):
+def fft(a: List[float]):
     """
-    usage.scipy: 34
-    """
-    ...
-
-
-@overload
-def fft(a: numpy.ndarray, n: int, axis: int):
-    """
-    usage.dask: 8
-    usage.matplotlib: 5
+    usage.scipy: 3
     """
     ...
 
@@ -34,6 +25,35 @@ def fft(a: numpy.ndarray):
     """
     usage.dask: 11
     usage.matplotlib: 3
+    usage.scipy: 6
+    """
+    ...
+
+
+@overload
+def fft(a: numpy.ndarray, axis: int):
+    """
+    usage.dask: 8
+    usage.scipy: 6
+    """
+    ...
+
+
+@overload
+def fft(a: numpy.ndarray, n: int, axis: int):
+    """
+    usage.dask: 8
+    usage.matplotlib: 5
+    usage.scipy: 16
+    """
+    ...
+
+
+@overload
+def fft(a: numpy.ndarray, n: int):
+    """
+    usage.dask: 6
+    usage.scipy: 3
     """
     ...
 
@@ -58,22 +78,6 @@ def fft(_0: numpy.ndarray, /, *, axes: Tuple[int]):
 def fft(a: numpy.ndarray, n: None, axis: int):
     """
     usage.dask: 3
-    """
-    ...
-
-
-@overload
-def fft(a: numpy.ndarray, n: int):
-    """
-    usage.dask: 6
-    """
-    ...
-
-
-@overload
-def fft(a: numpy.ndarray, axis: int):
-    """
-    usage.dask: 8
     """
     ...
 
@@ -184,15 +188,8 @@ def fftfreq(n: int, d: numpy.ndarray):
 @overload
 def fftfreq(n: int):
     """
+    usage.scipy: 7
     usage.skimage: 1
-    """
-    ...
-
-
-@overload
-def fftfreq(n: int, d: float = ...):
-    """
-    usage.scipy: 29
     """
     ...
 
@@ -202,6 +199,7 @@ def fftfreq(n: int, d: float):
     """
     usage.dask: 1
     usage.matplotlib: 1
+    usage.scipy: 22
     """
     ...
 
@@ -286,15 +284,16 @@ def fftn(
 @overload
 def fftshift(x: numpy.ndarray):
     """
+    usage.scipy: 1
     usage.skimage: 3
     """
     ...
 
 
 @overload
-def fftshift(x: Union[numpy.ndarray, List[int]]):
+def fftshift(x: List[int]):
     """
-    usage.scipy: 3
+    usage.scipy: 2
     """
     ...
 
@@ -406,9 +405,36 @@ def hfft(
 
 
 @overload
-def ifft(a: Union[numpy.ndarray, List[float]], n: int = ..., axis: int = ...):
+def ifft(a: List[float]):
     """
-    usage.scipy: 23
+    usage.scipy: 3
+    """
+    ...
+
+
+@overload
+def ifft(a: numpy.ndarray):
+    """
+    usage.dask: 10
+    usage.scipy: 7
+    """
+    ...
+
+
+@overload
+def ifft(a: numpy.ndarray, axis: int):
+    """
+    usage.dask: 6
+    usage.scipy: 1
+    """
+    ...
+
+
+@overload
+def ifft(a: numpy.ndarray, n: int, axis: int):
+    """
+    usage.dask: 8
+    usage.scipy: 12
     """
     ...
 
@@ -422,14 +448,6 @@ def ifft(_0: numpy.ndarray, /, *, axes: Tuple[int]):
 
 
 @overload
-def ifft(a: numpy.ndarray):
-    """
-    usage.dask: 10
-    """
-    ...
-
-
-@overload
 def ifft(a: numpy.ndarray, n: None, axis: int):
     """
     usage.dask: 3
@@ -438,23 +456,7 @@ def ifft(a: numpy.ndarray, n: None, axis: int):
 
 
 @overload
-def ifft(a: numpy.ndarray, n: int, axis: int):
-    """
-    usage.dask: 8
-    """
-    ...
-
-
-@overload
 def ifft(a: numpy.ndarray, n: int):
-    """
-    usage.dask: 6
-    """
-    ...
-
-
-@overload
-def ifft(a: numpy.ndarray, axis: int):
     """
     usage.dask: 6
     """
@@ -608,9 +610,17 @@ def ifftn(
 
 
 @overload
-def ifftshift(x: Union[numpy.ndarray, List[int]]):
+def ifftshift(x: List[int]):
     """
-    usage.scipy: 4
+    usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def ifftshift(x: numpy.ndarray):
+    """
+    usage.scipy: 2
     """
     ...
 
@@ -721,9 +731,19 @@ def ihfft(
 
 
 @overload
-def irfft(a: numpy.ndarray, n: int = ..., axis: int = ...):
+def irfft(a: numpy.ndarray):
     """
-    usage.scipy: 6
+    usage.dask: 10
+    usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def irfft(a: numpy.ndarray, n: int, axis: int):
+    """
+    usage.dask: 8
+    usage.scipy: 4
     """
     ...
 
@@ -737,25 +757,9 @@ def irfft(_0: numpy.ndarray, /, *, axes: Tuple[int]):
 
 
 @overload
-def irfft(a: numpy.ndarray):
-    """
-    usage.dask: 10
-    """
-    ...
-
-
-@overload
 def irfft(a: numpy.ndarray, n: None, axis: int):
     """
     usage.dask: 3
-    """
-    ...
-
-
-@overload
-def irfft(a: numpy.ndarray, n: int, axis: int):
-    """
-    usage.dask: 8
     """
     ...
 
@@ -931,9 +935,19 @@ def rfft(a: pandas.core.series.Series):
 
 
 @overload
-def rfft(a: numpy.ndarray, n: int = ..., axis: int = ...):
+def rfft(a: numpy.ndarray):
     """
-    usage.scipy: 9
+    usage.dask: 10
+    usage.scipy: 1
+    """
+    ...
+
+
+@overload
+def rfft(a: numpy.ndarray, n: int, axis: int):
+    """
+    usage.dask: 8
+    usage.scipy: 8
     """
     ...
 
@@ -947,25 +961,9 @@ def rfft(_0: numpy.ndarray, /, *, axes: Tuple[int]):
 
 
 @overload
-def rfft(a: numpy.ndarray):
-    """
-    usage.dask: 10
-    """
-    ...
-
-
-@overload
 def rfft(a: numpy.ndarray, n: None, axis: int):
     """
     usage.dask: 3
-    """
-    ...
-
-
-@overload
-def rfft(a: numpy.ndarray, n: int, axis: int):
-    """
-    usage.dask: 8
     """
     ...
 
