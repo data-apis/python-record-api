@@ -37,11 +37,19 @@ def assert_array_almost_equal(
 
 
 @overload
+def assert_array_almost_equal(x: numpy.ma.core.MaskedArray, y: numpy.ndarray):
+    """
+    usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
 def assert_array_almost_equal(
-    x: numpy.ma.core.MaskedArray, y: Union[numpy.ma.core.MaskedArray, numpy.ndarray]
+    x: numpy.ma.core.MaskedArray, y: numpy.ma.core.MaskedArray
 ):
     """
-    usage.matplotlib: 3
+    usage.matplotlib: 2
     """
     ...
 

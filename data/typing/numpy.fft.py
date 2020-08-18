@@ -21,9 +21,17 @@ def fft(a: Union[numpy.ndarray, List[float]], n: int = ..., axis: int = ...):
 
 
 @overload
-def fft(a: numpy.ndarray, n: int = ..., axis: int = ...):
+def fft(a: numpy.ndarray, n: int, axis: int):
     """
-    usage.matplotlib: 8
+    usage.matplotlib: 5
+    """
+    ...
+
+
+@overload
+def fft(a: numpy.ndarray):
+    """
+    usage.matplotlib: 3
     """
     ...
 

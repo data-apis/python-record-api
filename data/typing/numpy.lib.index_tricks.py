@@ -74,7 +74,14 @@ class IndexExpression:
     @overload
     def __getitem__(self, _0: slice[int, int, int], /):
         """
-        usage.matplotlib: 2
+        usage.matplotlib: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.matplotlib: 1
         """
         ...
 
@@ -115,6 +122,7 @@ class MGridClass:
     @overload
     def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
         """
+        usage.matplotlib: 1
         usage.skimage: 35
         """
         ...
@@ -143,6 +151,7 @@ class MGridClass:
     @overload
     def __getitem__(self, _0: Tuple[slice[None, int, None], slice[None, int, None]], /):
         """
+        usage.matplotlib: 1
         usage.skimage: 2
         usage.sklearn: 1
         """
@@ -307,16 +316,39 @@ class MGridClass:
         ...
 
     @overload
+    def __getitem__(self, _0: Tuple[slice[int, float, int], slice[int, float, int]], /):
+        """
+        usage.matplotlib: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
+        """
+        usage.matplotlib: 2
+        """
+        ...
+
+    @overload
     def __getitem__(
-        self,
-        _0: Tuple[
-            slice[Union[int, float, None], Union[float, int], Union[int, float, None]],
-            slice[Union[int, float, None], Union[float, int], Union[int, float, None]],
-        ],
-        /,
+        self, _0: Tuple[slice[float, float, float], slice[float, float, float]], /
     ):
         """
-        usage.matplotlib: 12
+        usage.matplotlib: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[None, int, None]], /):
+        """
+        usage.matplotlib: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, float, int], slice[int, float, int]], /):
+        """
+        usage.matplotlib: 1
         """
         ...
 
@@ -417,7 +449,14 @@ class OGridClass:
     @overload
     def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
         """
-        usage.matplotlib: 4
+        usage.matplotlib: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
+        """
+        usage.matplotlib: 3
         """
         ...
 
@@ -559,9 +598,16 @@ class RClass:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[numpy.ndarray, ...], /):
+    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray], /):
         """
-        usage.matplotlib: 6
+        usage.matplotlib: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray], /):
+        """
+        usage.matplotlib: 4
         """
         ...
 

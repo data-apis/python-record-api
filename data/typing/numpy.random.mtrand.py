@@ -861,6 +861,7 @@ class RandomState:
     @overload
     def normal(self, /, *, size: Tuple[int, int, int]):
         """
+        usage.matplotlib: 1
         usage.skimage: 9
         """
         ...
@@ -933,17 +934,16 @@ class RandomState:
         ...
 
     @overload
-    def normal(
-        self,
-        _0: int = ...,
-        _1: int = ...,
-        _2: int = ...,
-        /,
-        *,
-        size: Union[Tuple[int, int, int], int] = ...,
-    ):
+    def normal(self, /, *, size: int):
         """
-        usage.matplotlib: 25
+        usage.matplotlib: 21
+        """
+        ...
+
+    @overload
+    def normal(self, _0: int, _1: int, _2: int, /):
+        """
+        usage.matplotlib: 3
         """
         ...
 
@@ -1144,6 +1144,7 @@ class RandomState:
     @overload
     def rand(self, _0: int, _1: int, _2: int, /):
         """
+        usage.matplotlib: 1
         usage.skimage: 12
         usage.xarray: 6
         """
@@ -1152,6 +1153,7 @@ class RandomState:
     @overload
     def rand(self, _0: int, /):
         """
+        usage.matplotlib: 18
         usage.skimage: 9
         usage.xarray: 1
         """
@@ -1160,6 +1162,7 @@ class RandomState:
     @overload
     def rand(self, _0: int, _1: int, /):
         """
+        usage.matplotlib: 20
         usage.skimage: 53
         usage.xarray: 11
         """
@@ -1209,13 +1212,6 @@ class RandomState:
     ):
         """
         usage.scipy: 488
-        """
-        ...
-
-    @overload
-    def rand(self, _0: int, _1: int = ..., _2: int = ..., /):
-        """
-        usage.matplotlib: 39
         """
         ...
 
@@ -1272,6 +1268,7 @@ class RandomState:
     @overload
     def randint(self, _0: int, _1: int, /, *, size: int):
         """
+        usage.matplotlib: 2
         usage.skimage: 3
         """
         ...
@@ -1379,9 +1376,9 @@ class RandomState:
         ...
 
     @overload
-    def randint(self, _0: int, _1: int = ..., /, *, size: Union[int, Tuple[int, int]]):
+    def randint(self, _0: int, /, *, size: Tuple[int, int]):
         """
-        usage.matplotlib: 3
+        usage.matplotlib: 1
         """
         ...
 
@@ -1445,6 +1442,7 @@ class RandomState:
     @overload
     def randn(self, _0: int, /):
         """
+        usage.matplotlib: 13
         usage.skimage: 7
         usage.xarray: 90
         """
@@ -1461,6 +1459,7 @@ class RandomState:
     @overload
     def randn(self, _0: int, _1: int, /):
         """
+        usage.matplotlib: 4
         usage.skimage: 18
         usage.xarray: 97
         """
@@ -1504,13 +1503,6 @@ class RandomState:
         ...
 
     @overload
-    def randn(self, _0: int, _1: int = ..., /):
-        """
-        usage.matplotlib: 17
-        """
-        ...
-
-    @overload
     def randn(self, _0: int, _1: int = ..., _2: int = ..., /):
         """
         usage.dask: 88
@@ -1545,6 +1537,7 @@ class RandomState:
     @overload
     def random(self, _0: int, /):
         """
+        usage.matplotlib: 7
         usage.skimage: 4
         usage.xarray: 1
         """
@@ -1553,6 +1546,7 @@ class RandomState:
     @overload
     def random(self, _0: Tuple[int, int, int], /):
         """
+        usage.matplotlib: 1
         usage.skimage: 7
         usage.xarray: 2
         """
@@ -1561,6 +1555,7 @@ class RandomState:
     @overload
     def random(self, _0: Tuple[int, int], /):
         """
+        usage.matplotlib: 6
         usage.skimage: 11
         usage.xarray: 16
         """
@@ -1576,6 +1571,7 @@ class RandomState:
     @overload
     def random(self, _0: Tuple[int], /):
         """
+        usage.matplotlib: 1
         usage.skimage: 4
         usage.xarray: 3
         """
@@ -1629,16 +1625,17 @@ class RandomState:
         ...
 
     @overload
-    def random(self, _0: Union[Tuple[int, ...], List[int], int] = ..., /):
+    def random(self, /):
         """
-        usage.matplotlib: 24
+        usage.matplotlib: 3
+        usage.sample-usage: 1
         """
         ...
 
     @overload
-    def random(self, /):
+    def random(self, _0: List[int], /):
         """
-        usage.sample-usage: 1
+        usage.matplotlib: 6
         """
         ...
 
@@ -1770,6 +1767,7 @@ class RandomState:
     @overload
     def seed(self, _0: int, /):
         """
+        usage.matplotlib: 81
         usage.pandas: 21
         usage.scipy: 489
         usage.skimage: 21
@@ -1779,14 +1777,15 @@ class RandomState:
     @overload
     def seed(self, /, *, seed: int):
         """
+        usage.matplotlib: 1
         usage.skimage: 4
         """
         ...
 
     @overload
-    def seed(self, _0: Union[List[int], int] = ..., /, *, seed: int = ...):
+    def seed(self, _0: List[int], /):
         """
-        usage.matplotlib: 83
+        usage.matplotlib: 1
         """
         ...
 
@@ -1962,9 +1961,16 @@ class RandomState:
         ...
 
     @overload
-    def standard_normal(self, _0: Union[List[int], int], /):
+    def standard_normal(self, _0: int, /):
         """
-        usage.matplotlib: 20
+        usage.matplotlib: 12
+        """
+        ...
+
+    @overload
+    def standard_normal(self, _0: List[int], /):
+        """
+        usage.matplotlib: 8
         """
         ...
 
@@ -2136,11 +2142,16 @@ class RandomState:
         ...
 
     @overload
-    def uniform(
-        self, /, *, size: Union[int, Tuple[int, int]], high: int = ..., low: int = ...
-    ):
+    def uniform(self, /, *, high: int, low: int, size: Tuple[int, int]):
         """
-        usage.matplotlib: 3
+        usage.matplotlib: 1
+        """
+        ...
+
+    @overload
+    def uniform(self, /, *, size: int):
+        """
+        usage.matplotlib: 2
         """
         ...
 
