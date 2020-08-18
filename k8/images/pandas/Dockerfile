@@ -26,6 +26,7 @@ RUN git clone \
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
     pytest \
+    hypothesis \
     setuptools \
     numpy \
     python-dateutil \
