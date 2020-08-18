@@ -5,6 +5,7 @@ class CClass:
     @overload
     def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray], /):
         """
+        usage.scipy: 9
         usage.skimage: 1
         usage.sklearn: 1
         """
@@ -15,14 +16,24 @@ class CClass:
         """
         usage.matplotlib: 1
         usage.pandas: 3
+        usage.scipy: 12
         usage.sklearn: 38
         """
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[Union[numpy.ndarray, List[complex]], ...], /):
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray], /
+    ):
         """
-        usage.scipy: 23
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, List[complex]], /):
+        """
+        usage.scipy: 1
         """
         ...
 
@@ -64,32 +75,54 @@ class IndexExpression:
         ...
 
     @overload
-    def __getitem__(
-        self, _0: slice[Union[None, int], Union[int, None], Union[None, int]], /
-    ):
-        """
-        usage.scipy: 21
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[int, int, int], /):
-        """
-        usage.matplotlib: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[int, int, int], /):
-        """
-        usage.matplotlib: 1
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: slice[None, None, None], /):
         """
+        usage.scipy: 3
         usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.scipy: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.matplotlib: 1
+        usage.scipy: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.scipy: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.matplotlib: 1
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.scipy: 2
         """
         ...
 
@@ -138,6 +171,7 @@ class MGridClass:
     def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
         """
         usage.matplotlib: 1
+        usage.scipy: 1
         usage.skimage: 35
         """
         ...
@@ -314,19 +348,23 @@ class MGridClass:
         ...
 
     @overload
-    def __getitem__(
-        self,
-        _0: Union[
-            Tuple[
-                slice[int, Union[float, int], int], slice[int, Union[float, int], int]
-            ],
-            slice[int, int, int],
-            List[slice[int, int, int]],
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, float, int]], /):
         """
-        usage.scipy: 6
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[slice[int, int, int]], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.scipy: 1
         """
         ...
 
@@ -334,6 +372,7 @@ class MGridClass:
     def __getitem__(self, _0: Tuple[slice[int, float, int], slice[int, float, int]], /):
         """
         usage.matplotlib: 3
+        usage.scipy: 1
         """
         ...
 
@@ -428,6 +467,7 @@ class OGridClass:
     def __getitem__(self, _0: Tuple[slice[None, int, None], slice[None, int, None]], /):
         """
         usage.dask: 1
+        usage.scipy: 2
         usage.skimage: 2
         """
         ...
@@ -446,19 +486,16 @@ class OGridClass:
         ...
 
     @overload
-    def __getitem__(
-        self,
-        _0: Union[
-            List[slice[int, int, int]],
-            Tuple[
-                slice[Union[int, None], int, Union[int, None]],
-                slice[Union[int, None], Union[float, int], Union[int, None]],
-            ],
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, float, int]], /):
         """
-        usage.scipy: 4
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[slice[int, int, int]], /):
+        """
+        usage.scipy: 1
         """
         ...
 
@@ -532,6 +569,7 @@ class RClass:
     @overload
     def __getitem__(self, _0: Tuple[int, int, int], /):
         """
+        usage.scipy: 2
         usage.skimage: 3
         """
         ...
@@ -539,6 +577,7 @@ class RClass:
     @overload
     def __getitem__(self, _0: Tuple[float, float, float], /):
         """
+        usage.scipy: 2
         usage.skimage: 2
         """
         ...
@@ -553,6 +592,7 @@ class RClass:
     @overload
     def __getitem__(self, _0: numpy.ndarray, /):
         """
+        usage.scipy: 6
         usage.skimage: 3
         """
         ...
@@ -567,6 +607,7 @@ class RClass:
     @overload
     def __getitem__(self, _0: Tuple[int, numpy.ndarray], /):
         """
+        usage.scipy: 5
         usage.sklearn: 3
         usage.xarray: 1
         """
@@ -594,30 +635,31 @@ class RClass:
         ...
 
     @overload
-    def __getitem__(
-        self,
-        _0: Union[
-            List[numpy.ndarray],
-            tuple,
-            slice[
-                Union[int, numpy.int64],
-                Union[numpy.int64, int],
-                Union[int, numpy.int64],
-            ],
-            numpy.ndarray,
-            int,
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: Tuple[List[int], numpy.ndarray], /):
         """
-        usage.scipy: 187
+        usage.scipy: 2
         """
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray], /):
+    def __getitem__(self, _0: Tuple[numpy.ndarray, List[int]], /):
         """
-        usage.matplotlib: 2
+        usage.scipy: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, int], /):
+        """
+        usage.scipy: 6
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, int, int], /):
+        """
+        usage.scipy: 1
         """
         ...
 
@@ -625,7 +667,469 @@ class RClass:
     def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray], /):
         """
         usage.matplotlib: 4
+        usage.scipy: 38
         usage.sklearn: 16
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int, numpy.ndarray, int, int], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Tuple[numpy.float64, numpy.float64],
+            numpy.ndarray,
+            Tuple[numpy.float64, numpy.float64],
+        ],
+        /,
+    ):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Tuple[numpy.float64, numpy.float64, numpy.float64],
+            numpy.ndarray,
+            Tuple[numpy.float64, numpy.float64, numpy.float64],
+        ],
+        /,
+    ):
+        """
+        usage.scipy: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.ndarray, List[numpy.float64]], /
+    ):
+        """
+        usage.scipy: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.float64, numpy.ndarray, numpy.float64], /):
+        """
+        usage.scipy: 3
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.ndarray, List[numpy.ndarray]], /
+    ):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[Tuple[numpy.float64], numpy.ndarray, Tuple[numpy.float64]], /
+    ):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+            numpy.ndarray,
+            Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+        ],
+        /,
+    ):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.float64], /):
+        """
+        usage.scipy: 1
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Tuple[
+                numpy.float64,
+                numpy.float64,
+                numpy.float64,
+                numpy.float64,
+                numpy.float64,
+                numpy.float64,
+            ],
+            numpy.ndarray,
+            Tuple[
+                numpy.float64,
+                numpy.float64,
+                numpy.float64,
+                numpy.float64,
+                numpy.float64,
+                numpy.float64,
+            ],
+        ],
+        /,
+    ):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Tuple[
+                numpy.float64,
+                numpy.float64,
+                numpy.float64,
+                numpy.float64,
+                numpy.float64,
+            ],
+            numpy.ndarray,
+            Tuple[
+                numpy.float64,
+                numpy.float64,
+                numpy.float64,
+                numpy.float64,
+                numpy.float64,
+            ],
+        ],
+        /,
+    ):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[Tuple[numpy.int64], numpy.ndarray, Tuple[numpy.int64]], /
+    ):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, numpy.ndarray], /):
+        """
+        usage.scipy: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, numpy.ndarray, int], /):
+        """
+        usage.scipy: 10
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, float, float, float], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["-1"], numpy.ndarray, numpy.ndarray], /):
+        """
+        usage.scipy: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray], /):
+        """
+        usage.matplotlib: 2
+        usage.scipy: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[int, slice[int, int, int], slice[int, int, int]], /
+    ):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.scipy: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, numpy.ndarray, float], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.bool_, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.int32, numpy.ndarray], /):
+        """
+        usage.scipy: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.float32, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.float64, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.complex64, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.complex128, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.int64, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.uint8, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.int8, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.uint32, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ulonglong, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.longlong, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.uint16, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.int16, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.complex256, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.float128, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.uint64, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, List[Tuple[int, complex]]], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, int, numpy.ndarray], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, numpy.int64, int], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[numpy.int64, numpy.int64, numpy.int64], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, float], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[bool, numpy.ndarray], /):
+        """
+        usage.scipy: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, List[int], int], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, numpy.ndarray, int], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[bool, List[bool], bool], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[bool, numpy.ndarray, bool], /):
+        """
+        usage.scipy: 2
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[list, List[int]], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], List[int]], /):
+        """
+        usage.scipy: 19
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], list], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: int, /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int], /):
+        """
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[numpy.ndarray], /):
+        """
+        usage.scipy: 2
         """
         ...
 
@@ -677,55 +1181,6 @@ class RClass:
         ],
         /,
     ):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[numpy.ndarray, int], /):
-        """
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[bool, numpy.ndarray, bool], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[numpy.float64, numpy.ndarray], /):
-        """
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[List[int], List[int]], /):
-        """
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.float64], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[numpy.int64, numpy.ndarray], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[numpy.float64, numpy.ndarray, numpy.float64], /):
         """
         usage.sklearn: 1
         """

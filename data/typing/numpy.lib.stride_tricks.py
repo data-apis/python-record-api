@@ -5,6 +5,7 @@ from typing import *
 def as_strided(x: numpy.ndarray, shape: Tuple[int, int], strides: Tuple[int, int]):
     """
     usage.matplotlib: 5
+    usage.scipy: 13
     usage.skimage: 1
     """
     ...
@@ -161,13 +162,29 @@ def as_strided(x: numpy.ndarray, shape: Tuple[int, ...], strides: Tuple[int, ...
 
 
 @overload
+def as_strided(x: numpy.ndarray, shape: Tuple[int]):
+    """
+    usage.scipy: 1
+    """
+    ...
+
+
+@overload
+def as_strided(x: numpy.ndarray, shape: Tuple[int, int, int], strides: List[int]):
+    """
+    usage.scipy: 7
+    """
+    ...
+
+
+@overload
 def as_strided(
     x: numpy.ndarray,
-    shape: Tuple[int, ...],
-    strides: Union[Tuple[int, ...], List[int]] = ...,
+    shape: Tuple[int, int, int, int],
+    strides: Tuple[int, int, int, int],
 ):
     """
-    usage.scipy: 22
+    usage.scipy: 1
     """
     ...
 
