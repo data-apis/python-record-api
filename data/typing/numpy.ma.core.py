@@ -2557,6 +2557,7 @@ class MaskedArray:
     def __setitem__(self, _0: int, _1: numpy.float64, /):
         """
         usage.matplotlib: 4
+        usage.sklearn: 1
         """
         ...
 
@@ -2591,9 +2592,170 @@ class MaskedArray:
         ...
 
     @overload
-    def __setitem__(self, _0: int, _1: object, /):
+    def __setitem__(self, _0: int, _1: numpy.int64, /):
         """
-        usage.sklearn: 25
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: int, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: float, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["soft"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: List[float], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["hard"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["SAMME"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["SAMME.R"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["hinge"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Tuple[int, int], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["squared_hinge"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["l1"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["l2"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["mean"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["median"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["most_frequent"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: sklearn.linear_model._base.LinearRegression, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: sklearn.linear_model._ridge.Ridge, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["rbf"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["poly"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: None, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["log"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: bool, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["modified_huber"], /):
+        """
+        usage.sklearn: 1
         """
         ...
 
@@ -2824,24 +2986,9 @@ class MaskedArray:
         """
         ...
 
-    @overload
     def filled(self, /, fill_value: Union[float, bool, int]):
         """
         usage.scipy: 7
-        """
-        ...
-
-    @overload
-    def filled(self, /, fill_value: int):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    def filled(self, /, fill_value: Union[int, bool, float]):
-        """
-        usage.scipy: 7
-        usage.sklearn: 1
         """
         ...
 
@@ -2863,24 +3010,9 @@ class MaskedArray:
         """
         ...
 
-    @overload
     def mean(self, /, axis: Union[None, int] = ..., keepdims: bool = ...):
         """
         usage.scipy: 32
-        """
-        ...
-
-    @overload
-    def mean(self, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    def mean(self, /, axis: Union[None, int] = ..., keepdims: bool = ...):
-        """
-        usage.scipy: 32
-        usage.sklearn: 1
         """
         ...
 
@@ -2929,7 +3061,6 @@ class MaskedArray:
         """
         usage.dask: 9
         usage.scipy: 16
-        usage.sklearn: 2
         """
         ...
 

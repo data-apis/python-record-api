@@ -74,9 +74,34 @@ class Index:
         ...
 
     @overload
+    def __eq__(
+        self,
+        _0: List[Literal["petalwidth", "petallength", "sepalwidth", "sepallength"]],
+        /,
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: List[Literal["class", "sepalwidth", "sepallength"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: List[Literal["petallength", "petalwidth"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
     def __eq__(self, _0: List[str], /):
         """
-        usage.sklearn: 6
+        usage.sklearn: 3
         """
         ...
 
@@ -100,6 +125,7 @@ class Index:
     @overload
     def __getitem__(self, _0: numpy.ndarray, /):
         """
+        usage.sklearn: 2
         usage.xarray: 2
         """
         ...
@@ -107,6 +133,7 @@ class Index:
     @overload
     def __getitem__(self, _0: slice[None, int, None], /):
         """
+        usage.sklearn: 1
         usage.xarray: 2
         """
         ...
@@ -135,6 +162,7 @@ class Index:
     @overload
     def __getitem__(self, _0: slice[int, int, int], /):
         """
+        usage.sklearn: 1
         usage.xarray: 2
         """
         ...
@@ -163,15 +191,9 @@ class Index:
         ...
 
     @overload
-    def __getitem__(
-        self,
-        _0: Union[
-            slice[Union[None, int], int, Union[None, int]], List[int], numpy.ndarray
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: List[int], /):
         """
-        usage.sklearn: 6
+        usage.sklearn: 2
         """
         ...
 
@@ -536,22 +558,8 @@ class Index:
         """
         ...
 
-    @overload
-    def get_loc(self, /, key: Union[str, numpy.str_]):
+    def get_loc(self, /, key: Union[str, bool], method: None, tolerance: None):
         """
-        usage.sklearn: 20
-        """
-        ...
-
-    def get_loc(
-        self,
-        /,
-        key: Union[numpy.str_, bool, str],
-        method: None = ...,
-        tolerance: None = ...,
-    ):
-        """
-        usage.sklearn: 20
         usage.xarray: 22
         """
         ...

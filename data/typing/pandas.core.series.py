@@ -185,16 +185,51 @@ class Series:
         ...
 
     @overload
+    def __eq__(self, _0: Type[numpy.float64], /):
+        """
+        usage.sklearn: 3
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: List[Type[numpy.float64]], /):
+        """
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
     def __eq__(
         self,
-        _0: Union[
-            List[Union[type, pandas.core.dtypes.dtypes.CategoricalDtype]],
-            Type[numpy.float64],
+        _0: List[
+            Union[pandas.core.dtypes.dtypes.CategoricalDtype, Type[numpy.float64]]
         ],
         /,
     ):
         """
-        usage.sklearn: 10
+        usage.sklearn: 3
+        """
+        ...
+
+    @overload
+    def __eq__(
+        self,
+        _0: List[
+            Union[Type[numpy.float64], pandas.core.dtypes.dtypes.CategoricalDtype]
+        ],
+        /,
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(
+        self, _0: List[Union[type, pandas.core.dtypes.dtypes.CategoricalDtype]], /
+    ):
+        """
+        usage.sklearn: 1
         """
         ...
 
@@ -738,9 +773,16 @@ class Series:
         ...
 
     @overload
-    def __rmul__(self, _0: Union[int, float], /):
+    def __rmul__(self, _0: float, /):
         """
-        usage.sklearn: 2
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: int, /):
+        """
+        usage.sklearn: 1
         """
         ...
 
@@ -1028,18 +1070,58 @@ class Series:
         ...
 
     @overload
-    def astype(
-        self,
-        /,
-        dtype: Union[
-            type,
-            Literal["float", "int", "category"],
-            pandas.core.dtypes.dtypes.CategoricalDtype,
-        ],
-        copy: bool = ...,
-    ):
+    def astype(self, /, dtype: Literal["category"]):
         """
-        usage.sklearn: 10
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[numpy.float64], copy: bool):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: pandas.core.dtypes.dtypes.CategoricalDtype, copy: bool):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[object], copy: bool):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Literal["int"]):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Literal["float"]):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[numpy.float16]):
+        """
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[numpy.int16]):
+        """
+        usage.sklearn: 1
         """
         ...
 

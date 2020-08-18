@@ -5,7 +5,6 @@ class matrix:
     def A1(self, /):
         """
         usage.scipy: 3
-        usage.sklearn: 1
         """
         ...
 
@@ -18,7 +17,6 @@ class matrix:
     def mean(self, /):
         """
         usage.scipy: 30
-        usage.sklearn: 2
         """
         ...
 

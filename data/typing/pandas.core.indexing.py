@@ -219,6 +219,7 @@ class _LocIndexer:
     @overload
     def __getitem__(self, _0: numpy.ndarray, /):
         """
+        usage.sklearn: 1
         usage.xarray: 2
         """
         ...
@@ -231,29 +232,245 @@ class _LocIndexer:
         ...
 
     @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["first"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], List[Literal["first"]]], /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], List[Literal["second", "first"]]], /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
     def __getitem__(
         self,
-        _0: Union[
-            Tuple[
-                slice[None, None, None],
-                Union[
-                    numpy.ndarray,
-                    Literal["first", "col1", "second", "col_2"],
-                    List[Union[str, bool]],
-                    slice[
-                        Union[None, Literal["col_1", "first"]],
-                        Literal["col_2", "first", "second"],
-                        Union[None, Literal["col_1", "first"]],
-                    ],
-                ],
-            ],
-            List[bool],
-            numpy.ndarray,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[Literal["first"], Literal["second"], Literal["first"]],
         ],
         /,
     ):
         """
-        usage.sklearn: 30
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], numpy.ndarray], /):
+        """
+        usage.sklearn: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], List[Literal["second"]]], /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["col1"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], List[Literal["col1", "col0"]]], /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], List[Literal["col1"]]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, Literal["first"], None]], /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[Literal["first"], Literal["first"], Literal["first"]],
+        ],
+        /,
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["second"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], List[Literal["b", "a"]]], /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], List[Literal["a"]]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], List[Literal["col_str", "col_cat"]]], /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[None, None, None], List[Literal["col_float", "col_int"]]],
+        /,
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[None, None, None], List[Literal["col_int", "col_float"]]],
+        /,
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], List[Literal["col2", "col1"]]], /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            List[Literal["petal length (cm)", "sepal length (cm)"]],
+        ],
+        /,
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            List[Literal["petal width (cm)", "sepal width (cm)"]],
+        ],
+        /,
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], List[Literal["col2"]]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], List[Literal["col_2", "col_1"]]], /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[Literal["col_1"], Literal["col_2"], Literal["col_1"]],
+        ],
+        /,
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[bool], /):
+        """
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], List[bool]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["col_2"]], /):
+        """
+        usage.sklearn: 1
         """
         ...
 
@@ -270,6 +487,7 @@ class _iLocIndexer:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.sklearn: 1
         usage.xarray: 2
         """
         ...
@@ -277,6 +495,7 @@ class _iLocIndexer:
     @overload
     def __getitem__(self, _0: slice[None, int, None], /):
         """
+        usage.sklearn: 1
         usage.xarray: 3
         """
         ...
@@ -305,27 +524,81 @@ class _iLocIndexer:
         ...
 
     @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], int], /):
+        """
+        usage.sklearn: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], List[int]], /):
+        """
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], numpy.ndarray], /):
+        """
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], slice[int, int, int]], /):
+        """
+        usage.sklearn: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], slice[int, int, int]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, int], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
     def __getitem__(
-        self,
-        _0: Union[
-            int,
-            numpy.ndarray,
-            List[int],
-            Tuple[
-                Union[int, numpy.ndarray, slice[None, Union[int, None], None]],
-                Union[
-                    List[int],
-                    numpy.ndarray,
-                    int,
-                    slice[Union[None, int], Union[None, int], Union[None, int]],
-                ],
-            ],
-            slice[Union[int, None], int, Union[int, None]],
-        ],
-        /,
+        self, _0: Tuple[slice[None, int, None], slice[None, None, None]], /
     ):
         """
-        usage.sklearn: 24
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[int], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.sklearn: 1
         """
         ...
 
@@ -377,13 +650,19 @@ class _iLocIndexer:
 
     @overload
     def __setitem__(
-        self,
-        _0: Tuple[slice[None, None, None], Union[numpy.int32, int]],
-        _1: Union[pandas.core.series.Series, numpy.float64],
-        /,
+        self, _0: Tuple[slice[None, None, None], numpy.int32], _1: numpy.float64, /
     ):
         """
-        usage.sklearn: 5
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], int], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 4
         """
         ...
 

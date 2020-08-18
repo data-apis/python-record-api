@@ -18,11 +18,17 @@ def concat(
 
 
 @overload
-def concat(
-    objs: List[pandas.core.frame.DataFrame], ignore_index: bool = ..., axis: int = ...
-):
+def concat(objs: List[pandas.core.frame.DataFrame], axis: int):
     """
-    usage.sklearn: 3
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def concat(objs: List[pandas.core.frame.DataFrame], ignore_index: bool):
+    """
+    usage.sklearn: 2
     """
     ...
 

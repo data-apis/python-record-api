@@ -305,6 +305,7 @@ class DataFrame:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.sklearn: 1
         usage.xarray: 1
         """
         ...
@@ -324,9 +325,1332 @@ class DataFrame:
         ...
 
     @overload
-    def __getitem__(self, _0: Union[str, List[str], numpy.ndarray, int], /):
+    def __getitem__(self, _0: Literal["first"], /):
         """
-        usage.sklearn: 213
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["second"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["col1"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col_str"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["target"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[str], /):
+        """
+        usage.sklearn: 22
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: List[
+            Literal[
+                "petal width (cm)",
+                "petal length (cm)",
+                "sepal width (cm)",
+                "sepal length (cm)",
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["Jumps", "Situps", "Chins"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["Pulse", "Waist", "Weight"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: List[
+            Literal["class", "petalwidth", "petallength", "sepalwidth", "sepallength"]
+        ],
+        /,
+    ):
+        """
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["sepallength"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["sepalwidth"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["petallength"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["petalwidth"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["class"], /):
+        """
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: List[Literal["petalwidth", "petallength", "sepalwidth", "sepallength"]],
+        /,
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["class", "sepalwidth", "sepallength"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["petallength", "petalwidth"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["family"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["product-type"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["steel"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["carbon"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["hardness"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["temper_rolling"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["condition"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["formability"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["strength"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["non-ageing"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["surface-finish"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["surface-quality"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["enamelability"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["bc"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["bf"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["bt"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["bw%2Fme"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["bl"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["m"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["chrom"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["phos"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["cbond"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["marvi"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["exptl"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["ferro"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["corr"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: str, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["lustre"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["jurofm"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["s"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["p"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["shape"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["thick"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["width"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["len"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["oil"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["bore"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["packing"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["vendor"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["MYCT"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["MMIN"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["MMAX"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["CACH"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["CHMIN"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["CHMAX"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["age"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["workclass"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["fnlwgt:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["education:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["education-num:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["marital-status:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["occupation:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["relationship:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["race:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["sex:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["capital-gain:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["capital-loss:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["hours-per-week:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["native-country:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["DYRK1A_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["ITSN1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["BDNF_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["NR1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["NR2A_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pAKT_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pBRAF_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pCAMKII_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pCREB_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pELK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pERK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pJNK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["PKCA_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pMEK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pNR1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pNR2A_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pNR2B_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pPKCAB_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pRSK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["AKT_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["BRAF_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["CAMKII_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["CREB_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["ELK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["ERK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["GSK3B_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["JNK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["MEK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["TRKA_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["RSK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["APP_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["Bcatenin_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["SOD1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["MTOR_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["P38_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pMTOR_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["DSCR1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["AMPKA_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["NR2B_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pNUMB_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["RAPTOR_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["TIAM1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pP70S6_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["NUMB_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["P70S6_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pGSK3B_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pPKCG_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["CDK5_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["S6_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["ADARB1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["AcetylH3K9_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["RRP1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["BAX_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["ARC_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["ERBB4_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["nNOS_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["Tau_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["GFAP_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["GluR3_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["GluR4_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["IL1B_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["P3525_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pCASP9_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["PSD95_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["SNCA_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["Ubiquitin_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pGSK3B_Tyr216_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["SHH_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["BAD_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["BCL2_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pS6_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pCFOS_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["SYP_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["H3AcK18_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["EGR1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["H3MeK4_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["CaNA_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["BH_LowPeakAmp"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["BH_LowPeakBPM"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["BH_HighPeakAmp"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["BH_HighPeakBPM"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["BH_HighLowRatio"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["BHSUM1"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["BHSUM2"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["BHSUM3"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["amazed.suprised"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["happy.pleased"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["relaxing.calm"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["quiet.still"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["sad.lonely"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["angry.aggresive"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["pclass"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["survived"], /):
+        """
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["name"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["sex"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["sibsp"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["parch"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["ticket"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["fare"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["cabin"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["embarked"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["boat"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["body"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["home.dest"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["0"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["c"], /):
+        """
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["A"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["B"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["C"], /):
+        """
+        usage.sklearn: 1
         """
         ...
 
@@ -409,9 +1733,16 @@ class DataFrame:
         ...
 
     @overload
-    def __mul__(self, _0: Union[int, float], /):
+    def __mul__(self, _0: float, /):
         """
-        usage.sklearn: 4
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: int, /):
+        """
+        usage.sklearn: 2
         """
         ...
 
@@ -599,20 +1930,1295 @@ class DataFrame:
         ...
 
     @overload
+    def __setitem__(self, _0: Literal["third"], _1: List[int], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col_str"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["sepallength"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["sepalwidth"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["petallength"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["petalwidth"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["class"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["family"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
     def __setitem__(
-        self,
-        _0: Union[str, int],
-        _1: Union[
-            pandas.core.series.Series,
-            numpy.ndarray,
-            pandas.core.arrays.categorical.Categorical,
-            pandas.core.arrays.sparse.array.SparseArray,
-            List[int],
-        ],
-        /,
+        self, _0: Literal["product-type"], _1: pandas.core.series.Series, /
     ):
         """
-        usage.sklearn: 178
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["steel"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["carbon"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["hardness"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["temper_rolling"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["condition"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["formability"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["strength"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["non-ageing"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["surface-finish"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["surface-quality"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["enamelability"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["bc"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["bf"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["bt"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["bw%2Fme"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["bl"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["m"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["chrom"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["phos"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["cbond"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["marvi"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["exptl"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["ferro"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["corr"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: str, _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["lustre"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["jurofm"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["s"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["p"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["shape"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["thick"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["width"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["len"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["oil"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["bore"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["packing"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["vendor"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["MYCT"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["MMIN"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["MMAX"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["CACH"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["CHMIN"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["CHMAX"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["age"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["workclass"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["fnlwgt:"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["education:"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["education-num:"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["marital-status:"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["occupation:"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["relationship:"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["race:"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["sex:"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["capital-gain:"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["capital-loss:"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["hours-per-week:"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["native-country:"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["DYRK1A_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["ITSN1_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["BDNF_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["NR1_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["NR2A_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pAKT_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pBRAF_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pCAMKII_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pCREB_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pELK_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pERK_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pJNK_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["PKCA_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pMEK_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pNR1_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pNR2A_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pNR2B_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pPKCAB_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pRSK_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["AKT_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["BRAF_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["CAMKII_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["CREB_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["ELK_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["ERK_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["GSK3B_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["JNK_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["MEK_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["TRKA_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["RSK_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["APP_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Bcatenin_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["SOD1_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["MTOR_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["P38_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pMTOR_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["DSCR1_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["AMPKA_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["NR2B_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pNUMB_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["RAPTOR_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["TIAM1_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pP70S6_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["NUMB_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["P70S6_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pGSK3B_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pPKCG_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["CDK5_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["S6_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["ADARB1_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["AcetylH3K9_N"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["RRP1_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["BAX_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["ARC_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["ERBB4_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["nNOS_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Tau_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["GFAP_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["GluR3_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["GluR4_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["IL1B_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["P3525_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pCASP9_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["PSD95_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["SNCA_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Ubiquitin_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["pGSK3B_Tyr216_N"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["SHH_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["BAD_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["BCL2_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pS6_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pCFOS_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["SYP_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["H3AcK18_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["EGR1_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["H3MeK4_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["CaNA_N"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["BH_LowPeakAmp"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["BH_LowPeakBPM"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["BH_HighPeakAmp"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["BH_HighPeakBPM"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["BH_HighLowRatio"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["BHSUM1"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["BHSUM2"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["BHSUM3"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["amazed.suprised"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["happy.pleased"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["relaxing.calm"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["quiet.still"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["sad.lonely"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["angry.aggresive"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pclass"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["survived"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["name"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["sex"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["sibsp"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["parch"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["ticket"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["fare"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["cabin"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["embarked"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["boat"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["body"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["home.dest"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["correlated_feature"], _1: numpy.ndarray, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: pandas.core.arrays.categorical.Categorical, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["1"], _1: pandas.core.arrays.sparse.array.SparseArray, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["2"], _1: pandas.core.arrays.sparse.array.SparseArray, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["3"], _1: pandas.core.arrays.sparse.array.SparseArray, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["0"], _1: pandas.core.arrays.sparse.array.SparseArray, /
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["c"], _1: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 2
         """
         ...
 
@@ -806,9 +3412,30 @@ class DataFrame:
         ...
 
     @overload
-    def astype(self, /, dtype: Union[type, None]):
+    def astype(self, /, dtype: None):
         """
-        usage.sklearn: 4
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[numpy.float64]):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[numpy.float32]):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[numpy.int16]):
+        """
+        usage.sklearn: 1
         """
         ...
 
@@ -1731,14 +4358,74 @@ class DataFrame:
         ...
 
     @overload
+    def select_dtypes(self, /, include: Type[numpy.number], exclude: None):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def select_dtypes(self, /, include: None, exclude: Type[object]):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def select_dtypes(self, /, include: List[type], exclude: None):
+        """
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def select_dtypes(self, /, include: List[Type[object]], exclude: None):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def select_dtypes(self, /, include: Type[object], exclude: None):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def select_dtypes(self, /, include: Type[float], exclude: None):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def select_dtypes(self, /, include: List[Type[numpy.number]], exclude: None):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def select_dtypes(self, /, include: List[Type[int]], exclude: None):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def select_dtypes(self, /, include: None, exclude: List[Type[int]]):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
     def select_dtypes(
-        self,
-        /,
-        include: Union[List[Union[type, Literal["category"]]], None, type],
-        exclude: Union[None, List[Type[int]], Type[object]],
+        self, /, include: List[Union[Type[object], Literal["category"]]], exclude: None
     ):
         """
-        usage.sklearn: 11
+        usage.sklearn: 1
         """
         ...
 
