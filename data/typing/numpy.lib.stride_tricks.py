@@ -175,11 +175,33 @@ def as_strided(
 @overload
 def as_strided(
     x: numpy.ndarray,
-    shape: Tuple[Union[int, numpy.int64], ...],
-    strides: Tuple[int, ...],
+    shape: Tuple[numpy.int64, numpy.int64, numpy.int64, int, int, int],
+    strides: Tuple[int, int, int, int, int, int],
 ):
     """
-    usage.sklearn: 6
+    usage.sklearn: 3
+    """
+    ...
+
+
+@overload
+def as_strided(
+    x: numpy.ndarray, shape: Tuple[numpy.int64, int], strides: Tuple[int, int]
+):
+    """
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def as_strided(
+    x: numpy.ndarray,
+    shape: Tuple[numpy.int64, numpy.int64, int, int],
+    strides: Tuple[int, int, int, int],
+):
+    """
+    usage.sklearn: 2
     """
     ...
 

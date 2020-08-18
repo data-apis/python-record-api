@@ -8,9 +8,3 @@ class SparseFrameAccessor:
         usage.sklearn: 1
         """
         ...
-
-    def to_coo(self, /):
-        """
-        usage.sklearn: 1
-        """
-        ...

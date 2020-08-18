@@ -119,9 +119,17 @@ def lstsq(a: numpy.ndarray, b: numpy.ndarray, rcond: Union[numpy.float64, int]):
 
 
 @overload
-def lstsq(a: numpy.ndarray, b: numpy.ndarray, rcond: None = ...):
+def lstsq(a: numpy.ndarray, b: numpy.ndarray, rcond: None):
     """
-    usage.sklearn: 2
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def lstsq(a: numpy.ndarray, b: numpy.ndarray):
+    """
+    usage.sklearn: 1
     """
     ...
 
@@ -173,6 +181,7 @@ def norm(x: numpy.ndarray):
     """
     usage.matplotlib: 3
     usage.skimage: 8
+    usage.sklearn: 30
     """
     ...
 
@@ -194,6 +203,7 @@ def norm(
 def norm(x: numpy.ndarray, axis: int):
     """
     usage.matplotlib: 1
+    usage.sklearn: 3
     """
     ...
 
@@ -212,13 +222,41 @@ def norm(
 
 
 @overload
-def norm(
-    x: numpy.ndarray,
-    ord: Union[float, int, Literal["fro"]] = ...,
-    axis: Union[None, int] = ...,
-):
+def norm(x: numpy.ndarray, ord: Literal["fro"]):
     """
-    usage.sklearn: 45
+    usage.sklearn: 4
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: int):
+    """
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: int, axis: int):
+    """
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: float, axis: int):
+    """
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: float, axis: None):
+    """
+    usage.sklearn: 2
     """
     ...
 
@@ -291,6 +329,7 @@ def solve(a: Union[numpy.ndarray, numpy.matrix], b: numpy.ndarray):
 def svd(a: numpy.ndarray):
     """
     usage.skimage: 6
+    usage.sklearn: 3
     """
     ...
 
@@ -299,6 +338,7 @@ def svd(a: numpy.ndarray):
 def svd(a: numpy.ndarray, full_matrices: bool):
     """
     usage.skimage: 1
+    usage.sklearn: 3
     """
     ...
 
@@ -315,14 +355,6 @@ def svd(a: numpy.ndarray, full_matrices: bool = ..., compute_uv: bool = ...):
 def svd(a: numpy.ndarray, full_matrices: int = ...):
     """
     usage.dask: 4
-    """
-    ...
-
-
-@overload
-def svd(a: numpy.ndarray, full_matrices: bool = ...):
-    """
-    usage.sklearn: 6
     """
     ...
 

@@ -17,16 +17,23 @@ def apply_along_axis(
 def average(a: numpy.ma.core.MaskedArray, axis: int, weights: numpy.ndarray):
     """
     usage.dask: 1
+    usage.sklearn: 1
     """
     ...
 
 
 @overload
-def average(
-    a: numpy.ma.core.MaskedArray, weights: Union[numpy.ndarray, None], axis: int = ...
-):
+def average(a: numpy.ma.core.MaskedArray, axis: int, weights: None):
     """
-    usage.sklearn: 8
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def average(a: numpy.ma.core.MaskedArray, weights: numpy.ndarray):
+    """
+    usage.sklearn: 6
     """
     ...
 

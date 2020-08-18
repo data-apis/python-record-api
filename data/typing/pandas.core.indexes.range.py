@@ -280,29 +280,8 @@ class RangeIndex:
         """
         ...
 
-    @overload
     def get_loc(self, /, key: int, method: None, tolerance: None):
         """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def get_loc(self, /, key: Literal["random"]):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    def get_loc(
-        self,
-        /,
-        key: Union[Literal["random"], int],
-        method: None = ...,
-        tolerance: None = ...,
-    ):
-        """
-        usage.sklearn: 1
         usage.xarray: 1
         """
         ...

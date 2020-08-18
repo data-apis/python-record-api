@@ -39,14 +39,37 @@ class StringMethods:
         ...
 
     @overload
-    def contains(
-        self,
-        /,
-        pat: Literal["str$", "^col_s", "float|str", "^col_int", "at$"],
-        regex: bool,
-    ):
+    def contains(self, /, pat: Literal["at$"], regex: bool):
         """
-        usage.sklearn: 5
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def contains(self, /, pat: Literal["^col_int"], regex: bool):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def contains(self, /, pat: Literal["float|str"], regex: bool):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def contains(self, /, pat: Literal["^col_s"], regex: bool):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def contains(self, /, pat: Literal["str$"], regex: bool):
+        """
+        usage.sklearn: 1
         """
         ...
 

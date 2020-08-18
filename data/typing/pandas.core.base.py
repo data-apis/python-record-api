@@ -29,6 +29,5 @@ class IndexOpsMixin:
     def tolist(self, /):
         """
         usage.dask: 14
-        usage.sklearn: 1
         """
         ...
