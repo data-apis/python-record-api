@@ -70,7 +70,7 @@ def _encode_slice(s: slice):
     }
 
 
-# # cache this b/c its expesnive
+# # cache this b/c its expensive
 # @functools.lru_cache(None, False)
 # def find_root_module(o: object):
 #     """
@@ -204,7 +204,7 @@ def default(o: object) -> object:
     return {"t": t}
 
 
-# cache this b/c its expesnive
+# cache this b/c its expensive
 @functools.lru_cache(None, False)
 def signature(fn):
     return inspect.signature(fn)
