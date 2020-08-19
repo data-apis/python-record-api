@@ -2,7 +2,7 @@
 
 ![.github/workflows/workflow.yml](https://github.com/data-apis/python-record-api/workflows/.github/workflows/workflow.yml/badge.svg?branch=master)
 
-This module is mean to help you understand how a Python module is being used by other modules. Currently, this logs all function calls from running a module, or when running pytest, from a specified module to another module. Then it builds hypothetical API for the target module, given all the calls it has taken.
+This module is meant to help you understand how a Python module is being used by other modules. Currently, this logs all function calls from running a module, or when running pytest, from a specified module to another module. Then it builds hypothetical API for the target module, given all the calls it has taken.
 
 
 *Sample generated function, from [`data/typing/numpy.py`](./data/typing/numpy.py)*
@@ -121,7 +121,7 @@ Also it doesn't currently record calls from Cython compiled code. This could be 
 
 The goal is to give us a sense of how different APIs are used in Python data science libraries, in order to have some data to back up decisions about creating future APIs.
 
-This let's us understand not only what exact functions are called, but the ways in which they are called, including the type and values of their arguments.
+This lets us understand not only what exact functions are called, but the ways in which they are called, including the type and values of their arguments.
 
 ## Tests
 
