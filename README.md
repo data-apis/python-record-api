@@ -123,6 +123,11 @@ The goal is to give us a sense of how different APIs are used in Python data sci
 
 This lets us understand not only what exact functions are called, but the ways in which they are called, including the type and values of their arguments.
 
+## Relationship to MonkeyType
+
+The most similar existing tool, is probably the [MonkeyType](https://github.com/Instagram/MonkeyType) library, created by Instagram, to generate type definitions from usage of Python code. However, they do not stop at every bytecode execution, instead only tracing function calls, leaving out some of the dunder methods. It would likely be useful to explore at some point how the functionality we needed could be added to that existing library.
+
+
 ## Tests
 
 There are some tests in the `record_api_test.py` which you can run with `python -m unittest record_api_test`. Unfortunately, we can't run coverage on our module, because it also uses `sys.settrace`.
