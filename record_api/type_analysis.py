@@ -311,8 +311,8 @@ class DictInput(InputTypeBase):
         if self.v:
             key, value = map(unify_inputs, zip(*self.v))
         else:
-            key = BottomOutput()
-            value = BottomOutput()
+            key = ObjectOutput()
+            value = ObjectOutput()
         return DictOutput(key=key, value=value)
 
 
