@@ -26,6 +26,8 @@ spec:
         value: "..."
       - name: image
         value: "..."
+      - name: to_modules
+        value: "..."
   templates:
     - name: all
       steps:
@@ -48,7 +50,7 @@ spec:
           - name: PYTHON_RECORD_API_OUTPUT_FILE
             value: /tmp/vol/raw.jsonl
           - name: PYTHON_RECORD_API_TO_MODULES
-            value: numpy,pandas
+            value: "{{workflow.parameters.to_modules}}"
         # https://github.com/argoproj/argo/blob/master/docs/resource-duration.md#request-defaults
         # Must override or get defaults which are too low
         resources:

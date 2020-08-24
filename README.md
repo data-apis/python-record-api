@@ -28,11 +28,6 @@ def argmax(
 
 Contributions are very welcome! Please feel free to open an issue, or reach out directly, if there is anything you would like to discuss or explore! You can also check out the [issue tracker](https://github.com/data-apis/python-record-api/issues) for some possible next steps that we could use help on.
 
-## Hosted Usage
-
-We have this repository set up with Kubernetes and Github Actions to automatically analyze a number of libraries. The ones we have added are in [`k8/images`](./k8/images). Do you have a library that you would also like to see analyzed? Please open a PR adding that image to the folder there. Make sure to test it locally first, to see that it runs.
-
-Once it's added to the repo, it will be run and the data will be added to `data/api/<library_name>.json` and from there, it will be used to generate the NumPy and Pandas APIs. Those are present in [`data/api.json`](./data/api.json), in machine readable form, as well as in [`data/typing`](data/typing) in human readable form.
 
 ## Usage
 
@@ -82,6 +77,57 @@ env PYTHON_RECORD_API_OUTPUT=typing/ \
     PYTHON_RECORD_API_INPUT=all_api.json \
     python -m record_api.write_api
 ```
+
+
+## Hosted Usage
+
+We have this repository set up with Kubernetes and Github Actions to automatically analyze a number of libraries. The ones we have added are in [`k8/images`](./k8/images).
+
+Once it's added to the repo, it will be run and the data will be added to `data/api/<library_name>.json` and from there, it will be used to generate the NumPy and Pandas APIs. Those are present in [`data/api.json`](./data/api.json), in machine readable form, as well as in [`data/typing`](data/typing) in human readable form.
+
+### Adding more libraries
+
+Do you have a library that you would also like to see analyzed? We welcome PRs!
+
+You can add a new backend just from the Github editor UX, but you probably want to test it locally first.
+
+
+First install Docker >= v18.06 and Python.
+
+Then [fork the library](https://github.com/data-apis/python-record-api/fork), clone your fork, and check out a new branch:
+
+```bash
+git clone git@github.com:<FORK_NAME>/python-record-api.git
+cd python-record-api
+
+git checout -b <CHANGES_NAME>
+```
+
+And install the python package locally:
+
+```bash
+pip install flit
+flit install
+```
+
+Now either:
+
+1. Edit an existing library, by editing a `Dockerfile` in any of the directories in `./k8/images`. If you make any changes, also increment number in the corresponding `version` file.
+2. Add a new library, by creating a new directory with the name of the module in the `./k8/images` directory. The name cannot contain any underscores. It should have at least a `Dockerfile` and a `versions` file, with the contents of `0`. You should copy an existing `Dockerfile` and modify it to download some downstream library and run some command as the entrypoint which produces a trace.
+3. Add a new module to trace calls against, by modifying the `TO_MODULES` constant in `./k8/Makefile` to add another Python module and also incrementing the `./k8/argo/version` file.
+
+Then you can test an image locally, to make sure the Dockerfile builds correctly and the tracing works:
+
+```bash
+cd k8
+make test-local-<LIBRARY NAME>
+```
+
+This should output a number of lines of traces.
+
+Now, commit your changes, push your branch, and open a PR. This will then build the image in CI and attempt to kick off build of it.
+
+Once the PR is merged, every time we update the core library, this tracing will be re-run and the updated data will be added to the repo.
 
 
 ## Development

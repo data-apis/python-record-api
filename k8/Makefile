@@ -1,4 +1,5 @@
 
+TO_MODULES := pandas,numpy
 PYTHON_PACKAGE_VERSION := $(shell python -c 'import record_api; print(record_api.__version__)')
 
 $(info Python package version = ${PYTHON_PACKAGE_VERSION})
@@ -86,6 +87,7 @@ argo-submit-%:
 		-p label="$(*F)" \
 		-p base-image="$(BASE_IMAGE)" \
 		-p image="$(call sub_image,$(*F))" \
+		-p to_modules="$(TO_MODULES)" \
 		--name "$(call workflow_name,$(*F))"
 
 
@@ -93,15 +95,26 @@ push-images: docker-bake.json
 	docker buildx bake base --push
 	docker buildx bake --push
 
+test-local-%:
+	env DOCKER_BUILDKIT=1 docker build \
+		--tag $(call sub_image,$(*F)) \
+		--build-arg "FROM=${BASE_IMAGE}" \
+		images/$(*F)
+	docker run \
+		--rm \
+		-it \
+		-e PYTHON_RECORD_API_TO_MODULES=$(TO_MODULES) \
+		-e PYTHON_RECORD_API_OUTPUT_FILE=/dev/stdout \
+		$(call sub_image,$(*F))
 
-test-%: docker-bake.json
-	# docker buildx bake --push $(*F)
+test-remote-%: docker-bake.json
+	docker buildx bake --push $(*F)
 	kubectl run \
 		$(*F) \
 		--rm \
 		-it \
 		--restart='Never' \
-		--env=PYTHON_RECORD_API_TO_MODULES=numpy,pandas \
+		--env=PYTHON_RECORD_API_TO_MODULES=$(TO_MODULES) \
 		--env=PYTHON_RECORD_API_OUTPUT_FILE=/dev/stdout \
 		--image=$(call sub_image,$(*F))
 
