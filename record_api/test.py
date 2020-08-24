@@ -1,6 +1,5 @@
 import operator as op
 import unittest
-import typing
 from unittest.mock import call, patch, ANY
 
 import numpy as np
@@ -121,19 +120,19 @@ class TestMockNumPyMethod(BaseTest):
     def test_arange(self):
         self.trace("np.arange(10)")
         self.mock.assert_called_once_with(
-            ANY, np.arange, (10,),
+            ANY, np.arange, (10,), return_type=np.ndarray
         )
 
     def test_arange_in_fn(self):
         self.trace("(lambda: np.arange(10))()")
         self.mock.assert_called_once_with(
-            ANY, np.arange, (10,),
+            ANY, np.arange, (10,), return_type=np.ndarray
         )
 
     def test_power(self):
         self.trace("np.power(100, 10)")
         self.mock.assert_called_once_with(
-            ANY, np.power, (100, 10),
+            ANY, np.power, (100, 10), return_type=np.int64
         )
 
     def test_sort(self):
@@ -158,7 +157,7 @@ class TestMockNumPyMethod(BaseTest):
 
     def test_reshape(self):
         self.trace("self.a.reshape((5, 2))")
-        self.assertCalls(call(ANY, np.ndarray.reshape, (self.a, (5, 2),),))
+        self.assertCalls(call(ANY, np.ndarray.reshape, (self.a, (5, 2),), return_type=np.ndarray))
 
     def test_transpose(self):
         self.trace("self.a.T")
@@ -176,18 +175,18 @@ class TestMockNumPyMethod(BaseTest):
         from numeric function to test array dispatch
         """
         self.trace("np.ravel([1, 2, 3])")
-        self.assertCalls(call(ANY, np.ravel, ([1, 2, 3],)))
+        self.assertCalls(call(ANY, np.ravel, ([1, 2, 3],), return_type=np.ndarray))
 
     def test_ravel_array(self):
         """
         from numeric function to test array dispatch
         """
         self.trace("np.ravel(self.a,)")
-        self.assertCalls(call(ANY, np.ravel, (self.a,)))
+        self.assertCalls(call(ANY, np.ravel, (self.a,), return_type=np.ndarray),)
 
     def test_std(self):
         self.trace("np.std(self.a,)")
-        self.assertCalls(call(ANY, np.std, (self.a,)))
+        self.assertCalls(call(ANY, np.std, (self.a,), return_type=np.float64))
 
     def test_builtin_types_no_call(self):
         self.trace("10 + 10\n12323.234 - 2342.40")
@@ -208,17 +207,18 @@ class TestMockNumPyMethod(BaseTest):
         self.trace("np.add.reduce(self.a,)")
         self.assertCalls(
             call(ANY, getattr, (np, "add")),
-            call(ANY, np.ufunc.reduce, (np.add, self.a)),
+            call(ANY, np.ufunc.reduce, (np.add, self.a), return_type=np.int64),
         )
 
     def test_method(self):
         self.trace("self.a.sum()")
-        self.assertCalls(call(ANY, np.ndarray.sum, (self.a,)))
+        self.assertCalls(call(ANY, np.ndarray.sum, (self.a,), return_type=np.int64))
 
     def test_method_unbound(self):
         self.trace("np.ndarray.sum(self.a,)")
         self.assertCalls(
-            call(ANY, getattr, (np, "ndarray")), call(ANY, np.ndarray.sum, (self.a,))
+            call(ANY, getattr, (np, "ndarray")),
+            call(ANY, np.ndarray.sum, (self.a,), return_type=np.int64)
         )
 
     def test_contains(self):
@@ -239,7 +239,7 @@ class TestMockPandasMethod(BaseTest):
         self.trace("pd.DataFrame.from_records([{'hi': 1}])")
         self.assertCalls(
             call(ANY, getattr, (pd, "DataFrame")),
-            call(ANY, pd.DataFrame.from_records, ([{"hi": 1}],)),
+            call(ANY, pd.DataFrame.from_records, ([{"hi": 1}],), return_type=pd.DataFrame),
         )
 
 
