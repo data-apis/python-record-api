@@ -305,6 +305,9 @@ class Stack:
         self.op_stack = get_stack.OpStack(self.frame)
         self.opcode = self.frame.f_code.co_code[self.frame.f_lasti]
 
+        if self.previous_stack and self.previous_stack.previous_stack:
+            del self.previous_stack.previous_stack
+
     @property
     def oparg(self):
         # sort of replicates logic in dis._unpack_opargs but doesn't account for extended
