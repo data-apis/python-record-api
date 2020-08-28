@@ -139,20 +139,20 @@ class TestMockNumPyMethod(BaseTest):
         self.trace("self.a.sort(axis=0)")
         self.assertCalls(
             call(ANY, getattr, (self.a, "sort")),
-            call(ANY, self.a.sort, (), {"axis": 0}),
+            call(ANY, self.a.sort, (), {"axis": 0}, return_type=type(None)),
         )
 
     def test_eye(self):
         self.trace("np.eye(10, order='F')")
         self.assertCalls(
-            call(ANY, getattr, (np, "eye")), call(ANY, np.eye, (10,), {"order": "F"}),
+            call(ANY, getattr, (np, "eye")), call(ANY, np.eye, (10,), {"order": "F"}, return_type=np.ndarray),
         )
 
     def test_linspace(self):
         self.trace("np.linspace(3, 4, endpoint=False)")
         self.assertCalls(
             call(ANY, getattr, (np, "linspace",)),
-            call(ANY, np.linspace, (3, 4,), {"endpoint": False}),
+            call(ANY, np.linspace, (3, 4,), {"endpoint": False}, return_type=np.ndarray),
         )
 
     def test_reshape(self):
@@ -167,7 +167,7 @@ class TestMockNumPyMethod(BaseTest):
         self.trace("np.concatenate((self.a, self.a), axis=0)")
         self.assertCalls(
             call(ANY, getattr, (np, "concatenate",)),
-            call(ANY, np.concatenate, ((self.a, self.a),), {"axis": 0}),
+            call(ANY, np.concatenate, ((self.a, self.a),), {"axis": 0}, return_type=np.ndarray),
         )
 
     def test_ravel_list(self):
@@ -196,7 +196,7 @@ class TestMockNumPyMethod(BaseTest):
         self.trace("np.ndarray(dtype='int64', shape=tuple())")
         self.assertCalls(
             call(ANY, getattr, (np, "ndarray")),
-            call(ANY, np.ndarray, (), {"dtype": "int64", "shape": tuple()}),
+            call(ANY, np.ndarray, (), {"dtype": "int64", "shape": tuple()}, return_type=np.ndarray),
         )
 
     def test_not_contains(self):

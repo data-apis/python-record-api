@@ -29,6 +29,13 @@ TRACER = None
 context_manager: Optional[ContextManager] = None
 write_line: Optional[Callable[[dict], None]] = None
 
+FUNCTION_CALL_OP_NAMES = {
+    "CALL_METHOD",
+    "CALL_FUNCTION",
+    "CALL_FUNCTION_KW",
+    "CALL_FUNCTION_EX",
+}
+
 
 def get_tracer() -> Tracer:
     global TRACER
@@ -400,7 +407,8 @@ class Stack:
             return self.process(
                 (self.TOS, self.TOS1), BINARY_OPS[opname], (self.TOS1, self.TOS)
             )
-        if self.previous_stack and self.previous_stack.opname == "CALL_METHOD":
+
+        if self.previous_stack and self.previous_stack.opname in FUNCTION_CALL_OP_NAMES:
             self.log_called_method()
 
         method_name = f"op_{opname}"
@@ -409,15 +417,16 @@ class Stack:
         return None
 
     def log_called_method(self):
-        filename, line, fn, args, *kwargs = self.previous_stack.log_call_args
-        kwargs = kwargs[0] if kwargs else {}
-        log_call(
-            f"{filename}:{line}",
-            fn,
-            tuple(args),
-            *((kwargs,) if kwargs else ()),
-            return_type=type(self.TOS),
-        )
+        if self.previous_stack.log_call_args:
+            filename, line, fn, args, *kwargs = self.previous_stack.log_call_args
+            kwargs = kwargs[0] if kwargs else {}
+            log_call(
+                f"{filename}:{line}",
+                fn,
+                tuple(args),
+                *((kwargs,) if kwargs else ()),
+                return_type=type(self.TOS),
+            )
 
     # special case subscr b/c we only check first arg, not both
     def op_BINARY_SUBSCR(self):
@@ -489,7 +498,7 @@ class Stack:
     def op_CALL_FUNCTION(self):
         args = self.pop_n(self.oparg)
         fn = self.pop()
-        self.process((fn,), fn, args)
+        self.process((fn,), fn, args, delay=True)
 
     def op_CALL_FUNCTION_KW(self):
         kwargs_keys = self.pop()
@@ -499,7 +508,7 @@ class Stack:
         args = self.pop_n(self.oparg - n_kwargs)
         fn = self.pop()
 
-        self.process((fn,), fn, args, kwargs)
+        self.process((fn,), fn, args, kwargs, delay=True)
 
     def op_CALL_FUNCTION_EX(self):
         has_kwarg = self.oparg & int("01", 2)
@@ -513,7 +522,7 @@ class Stack:
             fn = self.pop()
         if inspect.isgenerator(args):
             return
-        self.process((fn,), fn, args, kwargs)
+        self.process((fn,), fn, args, kwargs, delay=True)
 
     def op_CALL_METHOD(self):
         args = self.pop_n(self.oparg)
