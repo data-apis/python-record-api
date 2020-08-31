@@ -418,6 +418,10 @@ class Stack:
 
     def log_called_method(self):
         if self.previous_stack.log_call_args:
+            tos = self.TOS
+            if type(tos) is type and issubclass(tos, Exception):
+                # Don't record exception
+                return
             filename, line, fn, args, *kwargs = self.previous_stack.log_call_args
             kwargs = kwargs[0] if kwargs else {}
             log_call(
@@ -425,7 +429,7 @@ class Stack:
                 fn,
                 tuple(args),
                 *((kwargs,) if kwargs else ()),
-                return_type=type(self.TOS),
+                return_type=type(tos),
             )
 
     # special case subscr b/c we only check first arg, not both
