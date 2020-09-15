@@ -34,6 +34,8 @@ FUNCTION_CALL_OP_NAMES = {
     "CALL_FUNCTION",
     "CALL_FUNCTION_KW",
     "CALL_FUNCTION_EX",
+    "LOAD_ATTR",
+    "BINARY_SUBSCR",
 }
 
 
@@ -422,6 +424,7 @@ class Stack:
             if type(tos) is type and issubclass(tos, Exception):
                 # Don't record exception
                 return
+            return_type = type(tos) if type(tos) != type else tos
             filename, line, fn, args, *kwargs = self.previous_stack.log_call_args
             kwargs = kwargs[0] if kwargs else {}
             log_call(
@@ -429,12 +432,12 @@ class Stack:
                 fn,
                 tuple(args),
                 *((kwargs,) if kwargs else ()),
-                return_type=type(tos),
+                return_type=return_type,
             )
 
     # special case subscr b/c we only check first arg, not both
     def op_BINARY_SUBSCR(self):
-        self.process((self.TOS1,), op.getitem, (self.TOS1, self.TOS))
+        self.process((self.TOS1,), op.getitem, (self.TOS1, self.TOS), delay=True)
 
     def op_STORE_SUBSCR(self):
         self.process((self.TOS1,), op.setitem, (self.TOS1, self.TOS, self.TOS2))
@@ -443,7 +446,7 @@ class Stack:
         self.process((self.TOS1,), op.delitem, (self.TOS1, self.TOS))
 
     def op_LOAD_ATTR(self):
-        self.process((self.TOS,), getattr, (self.TOS, self.opvalname))
+        self.process((self.TOS,), getattr, (self.TOS, self.opvalname), delay=True)
 
     def op_STORE_ATTR(self):
         self.process((self.TOS,), setattr, (self.TOS, self.opvalname, self.TOS1))

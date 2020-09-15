@@ -45,9 +45,9 @@ def parse_line(
     n: int, function: object, params=None, bound_params=None, return_type=None
 ) -> typing.Optional[API]:
     if bound_params is not None:
-        signature = Signature.from_bound_params(**bound_params)
+        signature = Signature.from_bound_params(**bound_params, return_type=return_type)
     else:
-        signature = Signature.from_params(**params)
+        signature = Signature.from_params(**params, return_type=return_type)
     signature.metadata[f"usage.{LABEL}"] = n
     return process_function(create_type(function), s=signature)
 
