@@ -523,7 +523,7 @@ class Signature(BaseModel):
         cls,
         args: typing.List[object] = [],
         kwargs: typing.Dict[str, object] = {},
-        return_type: typing.Optional[Type] = type(None),
+        return_type: typing.Optional[typing.Dict[str, typing.Union[str, typing.Dict]]] = {},
     ) -> Signature:
         # If we don't know what the args/kwargs are, assume the args are positional only
         # and the kwargs and keyword only
@@ -541,7 +541,7 @@ class Signature(BaseModel):
         var_pos: typing.Optional[typing.Tuple[str, typing.List[object]]] = None,
         kw_only: typing.Dict[str, object] = {},
         var_kw: typing.Optional[typing.Tuple[str, typing.Dict[str, object]]] = None,
-        return_type: typing.Optional[Type] = None,
+        return_type: typing.Optional[typing.Dict[str, typing.Union[str, typing.Dict]]] = {},
     ) -> Signature:
         return cls(
             pos_only_required={k: create_type(v) for k, v in pos_only},

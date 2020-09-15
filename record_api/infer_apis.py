@@ -42,7 +42,11 @@ def __main__():
 
 
 def parse_line(
-    n: int, function: object, params=None, bound_params=None, return_type=None
+    n: int,
+    function: object,
+    params=None,
+    bound_params=None,
+    return_type: typing.Optional[typing.Dict[str, typing.Union[str, typing.Dict]]] = None
 ) -> typing.Optional[API]:
     if bound_params is not None:
         signature = Signature.from_bound_params(**bound_params, return_type=return_type)
