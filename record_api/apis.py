@@ -375,7 +375,7 @@ class Signature(BaseModel):
 
     metadata: typing.Dict[str, int] = pydantic.Field(default_factory=dict)
     return_type: typing.Optional[typing.Dict[str, typing.Union[str, typing.Dict]]] = pydantic.Field(
-        default_factory=type(None)
+        default_factory=dict
     )
 
     @pydantic.validator("pos_only_required")
