@@ -632,7 +632,7 @@ class Tracer:
                 previous_stack=self.previous_stack,
             )
             stack()
-            self.previous_stack = stack
+            self.previous_stack = stack if stack.log_call_args else None
         return None
 
     def should_trace_frame(self, frame) -> bool:
