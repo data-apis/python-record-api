@@ -374,9 +374,7 @@ class Signature(BaseModel):
     var_kw: typing.Optional[typing.Tuple[str, Type]] = None
 
     metadata: typing.Dict[str, int] = pydantic.Field(default_factory=dict)
-    return_type: typing.Optional[typing.Dict[str, typing.Union[str, typing.Dict]]] = pydantic.Field(
-        default_factory=dict
-    )
+    return_type: OutputType = pydantic.Field()
 
     @pydantic.validator("pos_only_required")
     @classmethod
@@ -415,8 +413,7 @@ class Signature(BaseModel):
     def return_type_annotation(self) -> typing.Optional[cst.Annotation]:
         return_type_annotation = None
         if self.return_type:
-            return_type = create_type(self.return_type)
-            return_type_annotation = cst.Annotation(return_type.annotation)
+            return_type_annotation = cst.Annotation(self.return_type.annotation)
         return return_type_annotation
 
     def function_def(
@@ -530,7 +527,7 @@ class Signature(BaseModel):
         return cls(
             pos_only_required={f"_{i}": create_type(v) for i, v in enumerate(args)},
             kw_only_required={k: create_type(v) for k, v in kwargs.items()},
-            return_type=return_type
+            return_type=create_type(return_type) if return_type else None
         )
 
     @classmethod
@@ -555,7 +552,7 @@ class Signature(BaseModel):
                 if var_kw
                 else None
             ),
-            return_type=return_type
+            return_type=create_type(return_type) if return_type else None
         )
 
     def content_equal(self, other: Signature) -> bool:
