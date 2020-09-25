@@ -532,11 +532,11 @@ class TypeOutput(OutputTypeBase):
         )
 
     @classmethod
-    def unify(cls, tps: typing.Iterable[TypeOutput]) -> TypeOutput:
+    def unify(cls, tps: typing.Iterable[TypeOutput]) -> typing.Union[TypeOutput, UnionOutput]:
         names = set(tp.name for tp in tps)
         if len(names) == 1:
             return TypeOutput(name=names.pop())
-        return TypeOutput()
+        return UnionOutput(options=tuple(tps))
 
     @property
     def module(self) -> typing.Optional[str]:

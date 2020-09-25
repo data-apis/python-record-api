@@ -374,7 +374,7 @@ class Signature(BaseModel):
     var_kw: typing.Optional[typing.Tuple[str, Type]] = None
 
     metadata: typing.Dict[str, int] = pydantic.Field(default_factory=dict)
-    return_type: OutputType = pydantic.Field()
+    return_type: OutputType = None
 
     @pydantic.validator("pos_only_required")
     @classmethod
@@ -572,6 +572,7 @@ class Signature(BaseModel):
         self._copy_var_pos(other)
         self._copy_kw_only(other)
         self._copy_var_kw(other)
+        self._copy_return_type(other)
 
         update_add(self.metadata, other.metadata)
         self._trim_positional_only_args()
@@ -731,6 +732,13 @@ class Signature(BaseModel):
             unify_named_types((self.var_kw, other.var_kw,))
             if self.var_kw and other.var_kw
             else (self.var_kw or other.var_kw)
+        )
+
+    def _copy_return_type(self, other: Signature) -> None:
+        self.return_type = (
+            unify((self.return_type, other.return_type,))
+            if self.return_type and other.return_type
+            else (self.return_type or other.return_type)
         )
 
 
