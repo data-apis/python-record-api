@@ -2674,7 +2674,13 @@ class RandomState:
         self,
         /,
         *_args: object,
-        dtype: Union[Literal["u8", "l", "uint8", "int64"], type, numpy.dtype] = ...,
+        dtype: Union[
+            Literal["u8", "l", "uint8", "int64"],
+            type,
+            Type[numpy.uint32],
+            Type[numpy.uint8],
+            numpy.dtype,
+        ] = ...,
         size: Union[
             numpy.int64, int, Tuple[Union[None, numpy.int64, int], ...], None, List[int]
         ] = ...,

@@ -395,7 +395,7 @@ def array(data: List[Union[int, None]], dtype: Type[float], mask: List[bool]):
 
 def array(
     data: Union[numpy.ndarray, numpy.ma.core.MaskedArray, list],
-    dtype: Union[numpy.dtype, type] = ...,
+    dtype: Union[numpy.dtype, Type[float], Type[numpy.float64]] = ...,
     copy: Union[bool, numpy.bool_] = ...,
     subok: bool = ...,
     ndmin: int = ...,
@@ -4147,7 +4147,9 @@ class MaskedArray:
         """
         ...
 
-    def astype(self, _0: Union[Literal["bool", "d"], type, numpy.dtype], /):
+    def astype(
+        self, _0: Union[Literal["bool", "d"], Type[numpy.int64], type, numpy.dtype], /
+    ):
         """
         usage.dask: 10
         usage.matplotlib: 7

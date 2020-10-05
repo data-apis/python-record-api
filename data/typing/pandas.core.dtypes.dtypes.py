@@ -62,6 +62,7 @@ class CategoricalDtype:
             numpy.dtype,
             Literal["category", "O"],
             type,
+            Type[object],
         ],
         /,
     ):
@@ -153,7 +154,11 @@ class DatetimeTZDtype:
     def __eq__(
         self,
         _0: Union[
-            type, pandas.core.dtypes.dtypes.DatetimeTZDtype, numpy.dtype, Literal["O"]
+            Type[object],
+            type,
+            pandas.core.dtypes.dtypes.DatetimeTZDtype,
+            numpy.dtype,
+            Literal["O"],
         ],
         /,
     ):

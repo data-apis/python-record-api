@@ -13479,7 +13479,9 @@ class DataFrame:
             ],
         ],
         exclude: Union[
-            Type[object], List[Union[type, Literal["object", "number"]]], None
+            Type[object],
+            List[Union[type, Type[int], Literal["object", "number"]]],
+            None,
         ] = ...,
     ):
         """
