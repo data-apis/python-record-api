@@ -374,6 +374,7 @@ class Signature(BaseModel):
     var_kw: typing.Optional[typing.Tuple[str, Type]] = None
 
     metadata: typing.Dict[str, int] = pydantic.Field(default_factory=dict)
+    return_type: OutputType = None
 
     @pydantic.validator("pos_only_required")
     @classmethod
@@ -408,6 +409,13 @@ class Signature(BaseModel):
             raise ValueError(repr(all_keys))
         return values
 
+    @property
+    def return_type_annotation(self) -> typing.Optional[cst.Annotation]:
+        return_type_annotation = None
+        if self.return_type:
+            return_type_annotation = cst.Annotation(self.return_type.annotation)
+        return return_type_annotation
+
     def function_def(
         self,
         name: str,
@@ -427,6 +435,7 @@ class Signature(BaseModel):
                 [cst.SimpleStatementLine([s]) for s in self.body(indent)]
             ),
             decorators,
+            self.return_type_annotation
         )
 
     def body(self, indent: int) -> typing.Iterable[cst.BaseSmallStatement]:
@@ -508,13 +517,17 @@ class Signature(BaseModel):
 
     @classmethod
     def from_params(
-        cls, args: typing.List[object] = [], kwargs: typing.Dict[str, object] = {}
+        cls,
+        args: typing.List[object] = [],
+        kwargs: typing.Dict[str, object] = {},
+        return_type: typing.Optional[typing.Dict[str, typing.Union[str, typing.Dict]]] = {},
     ) -> Signature:
         # If we don't know what the args/kwargs are, assume the args are positional only
         # and the kwargs and keyword only
         return cls(
             pos_only_required={f"_{i}": create_type(v) for i, v in enumerate(args)},
             kw_only_required={k: create_type(v) for k, v in kwargs.items()},
+            return_type=create_type(return_type) if return_type else None
         )
 
     @classmethod
@@ -525,6 +538,7 @@ class Signature(BaseModel):
         var_pos: typing.Optional[typing.Tuple[str, typing.List[object]]] = None,
         kw_only: typing.Dict[str, object] = {},
         var_kw: typing.Optional[typing.Tuple[str, typing.Dict[str, object]]] = None,
+        return_type: typing.Optional[typing.Dict[str, typing.Union[str, typing.Dict]]] = {},
     ) -> Signature:
         return cls(
             pos_only_required={k: create_type(v) for k, v in pos_only},
@@ -538,6 +552,7 @@ class Signature(BaseModel):
                 if var_kw
                 else None
             ),
+            return_type=create_type(return_type) if return_type else None
         )
 
     def content_equal(self, other: Signature) -> bool:
@@ -557,6 +572,7 @@ class Signature(BaseModel):
         self._copy_var_pos(other)
         self._copy_kw_only(other)
         self._copy_var_kw(other)
+        self._copy_return_type(other)
 
         update_add(self.metadata, other.metadata)
         self._trim_positional_only_args()
@@ -716,6 +732,13 @@ class Signature(BaseModel):
             unify_named_types((self.var_kw, other.var_kw,))
             if self.var_kw and other.var_kw
             else (self.var_kw or other.var_kw)
+        )
+
+    def _copy_return_type(self, other: Signature) -> None:
+        self.return_type = (
+            unify((self.return_type, other.return_type,))
+            if self.return_type and other.return_type
+            else (self.return_type or other.return_type)
         )
 
 
