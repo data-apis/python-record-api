@@ -2032,7 +2032,11 @@ class Series:
         self,
         /,
         dtype: Union[
-            pandas.core.dtypes.dtypes.CategoricalDtype, numpy.dtype, str, type
+            pandas.core.dtypes.dtypes.CategoricalDtype,
+            numpy.dtype,
+            str,
+            type,
+            Type[int],
         ],
         copy: bool = ...,
     ):

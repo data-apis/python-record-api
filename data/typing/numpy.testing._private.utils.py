@@ -23133,7 +23133,10 @@ def assert_warns(
     ...
 
 
-def assert_warns(warning_class: type, *args: Literal["v", "t"]):
+def assert_warns(
+    warning_class: Union[Type[sklearn.exceptions.ConvergenceWarning], type],
+    *args: Literal["v", "t"],
+):
     """
     usage.scipy: 39
     usage.skimage: 5

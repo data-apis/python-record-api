@@ -20016,12 +20016,7 @@ def array(_0: Tuple[int, complex], /):
 
 def array(
     _0: object,
-    _1: Union[
-        type,
-        numpy.dtype,
-        str,
-        List[Tuple[str, Union[type, Tuple[Type[numpy.bytes_], int], Literal["i"]]]],
-    ] = ...,
+    _1: object = ...,
     /,
     *,
     dtype: object = ...,
@@ -21748,7 +21743,12 @@ def asanyarray(a: List[Literal["3", "2", "1"]]):
     ...
 
 
-def asanyarray(a: object, dtype: Union[type, Literal["int64"]] = ...):
+def asanyarray(
+    a: object,
+    dtype: Union[
+        Type[float], type, Type[bool], Type[numpy.int64], Literal["int64"]
+    ] = ...,
+):
     """
     usage.dask: 45
     usage.matplotlib: 135
@@ -34066,7 +34066,8 @@ def asfortranarray(a: numpy.ndarray, dtype: Type[numpy.float32]):
 
 
 def asfortranarray(
-    a: Union[List[List[int]], numpy.ndarray], dtype: Union[numpy.dtype, type] = ...
+    a: Union[List[List[int]], numpy.ndarray],
+    dtype: Union[numpy.dtype, type, Type[float]] = ...,
 ):
     """
     usage.dask: 2
@@ -35429,7 +35430,7 @@ def can_cast(_0: numpy.dtype, _1: numpy.dtype, /, *, casting: Literal["safe"]):
 
 def can_cast(
     _0: object,
-    _1: Union[numpy.dtype, Literal["intp"], type],
+    _1: Union[numpy.dtype, Literal["intp"], Type[bool], type],
     _2: Literal["equiv", "same_kind", "safe"] = ...,
     /,
     *,
@@ -37862,7 +37863,7 @@ def cumsum(
         dask.dataframe.core.DataFrame,
         dask.array.core.Array,
     ] = ...,
-    dtype: Union[type, None, numpy.dtype] = ...,
+    dtype: Union[Type[numpy.float64], Type[numpy.int64], None, numpy.dtype] = ...,
 ):
     """
     usage.dask: 41
@@ -40764,15 +40765,7 @@ def empty(*, shape: int):
 
 def empty(
     _0: object = ...,
-    _1: Union[
-        numpy.dtype,
-        int,
-        type,
-        str,
-        List[
-            Tuple[Literal["mopt", "mrows", "ncols", "imagf", "namlen"], Literal["i4"]]
-        ],
-    ] = ...,
+    _1: object = ...,
     /,
     *,
     dtype: Union[
@@ -40780,7 +40773,12 @@ def empty(
         type,
         numpy.dtype,
         None,
-        List[Tuple[Union[Tuple[int], str, numpy.dtype, type], ...]],
+        List[
+            Tuple[
+                Union[Tuple[int], str, numpy.dtype, Type[object], Type[numpy.int64]],
+                ...,
+            ]
+        ],
     ] = ...,
     order: Literal["C", "F", "c"] = ...,
     shape: Union[Tuple[int, ...], int] = ...,
@@ -41118,7 +41116,9 @@ def empty_like(
     _1: Type[numpy.float64] = ...,
     /,
     *,
-    dtype: Union[type, numpy.dtype, Literal["float", "f8", "i8", "object"]] = ...,
+    dtype: Union[
+        Type[numpy.float32], type, numpy.dtype, Literal["float", "f8", "i8", "object"]
+    ] = ...,
     order: Literal["F", "C"] = ...,
     subok: bool = ...,
     shape: Union[Tuple[int, ...], None, int] = ...,
@@ -42235,13 +42235,11 @@ def frombuffer(_0: array.array, _1: Type[numpy.float32], /):
 
 def frombuffer(
     _0: object,
-    _1: Union[type, Literal[">q", ">i", ">b"]] = ...,
+    _1: Union[type, Type[numpy.uint8], Literal[">q", ">i", ">b"]] = ...,
     /,
     *,
     count: int = ...,
-    dtype: Union[
-        type, str, numpy.dtype, Dict[Literal["formats", "names"], List[str]]
-    ] = ...,
+    dtype: object = ...,
     offset: int = ...,
 ):
     """
@@ -42390,7 +42388,7 @@ def fromiter(
     _0: Union[itertools.chain, generator, dict_values, List[numpy.float64]],
     /,
     *,
-    dtype: Union[Literal["float64", "i8"], type, numpy.dtype],
+    dtype: Union[Literal["float64", "i8"], Type[numpy.float64], type, numpy.dtype],
     count: int = ...,
 ):
     """
@@ -43258,7 +43256,7 @@ def full(
         Tuple[Union[None, int], ...], numpy.int64, int, numpy.ndarray, List[int]
     ] = ...,
     fill_value: object = ...,
-    dtype: Union[type, numpy.dtype, str, None] = ...,
+    dtype: Union[type, Type[object], numpy.dtype, str, None] = ...,
     order: Literal["F", "C"] = ...,
 ):
     """
@@ -43830,7 +43828,7 @@ def full_like(a: List[Literal["b", "c", "a"]], fill_value: Literal["a"]):
 def full_like(
     a: object,
     fill_value: object,
-    dtype: Union[type, None, Literal["i8", "f8", "i4", "f4"], numpy.dtype] = ...,
+    dtype: object = ...,
     shape: Union[Tuple[int, ...], None, int] = ...,
 ):
     """
@@ -45586,7 +45584,7 @@ def indices(dimensions: generator):
 
 def indices(
     dimensions: Union[Tuple[Union[None, int, numpy.int64], ...], generator, List[int]],
-    dtype: Union[type, numpy.dtype] = ...,
+    dtype: Union[Type[float], Type[numpy.float64], type, numpy.dtype] = ...,
 ):
     """
     usage.dask: 8
@@ -49888,7 +49886,8 @@ def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.object_]):
 
 
 def issubdtype(
-    arg1: Union[numpy.dtype, numpy.int64, None, type], arg2: Union[type, numpy.dtype]
+    arg1: Union[numpy.dtype, numpy.int64, None, type, Type[int]],
+    arg2: Union[type, numpy.dtype],
 ):
     """
     usage.dask: 48
@@ -53872,7 +53871,7 @@ def mean(
         dask.dataframe.core.Series, dask.dataframe.core.Scalar, numpy.float64
     ] = ...,
     keepdims: bool = ...,
-    dtype: Union[type, None, Literal["float32", "i8", "f8"]] = ...,
+    dtype: object = ...,
 ):
     """
     usage.dask: 78
@@ -56329,7 +56328,7 @@ def nanvar(
     a: object,
     axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
     keepdims: bool = ...,
-    dtype: Union[type, None] = ...,
+    dtype: Union[Type[numpy.float64], Type[float], None] = ...,
     ddof: int = ...,
 ):
     """
@@ -58315,7 +58314,7 @@ def ones_like(a: numpy.ndarray, dtype: Type[numpy.float32]):
 
 def ones_like(
     a: object,
-    dtype: type = ...,
+    dtype: Union[type, Type[numpy.float32]] = ...,
     order: Literal["F", "C"] = ...,
     shape: Union[Tuple[int, ...], int, None] = ...,
 ):
@@ -60477,7 +60476,7 @@ def prod(a: List[numpy.ndarray], axis: int, dtype: Type[numpy.float64]):
 def prod(
     a: object,
     axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
-    dtype: Union[type, Literal["i8", "f8", "i4", "f4"]] = ...,
+    dtype: Union[Type[numpy.float64], Type[int], Literal["i8", "f8", "i4", "f4"]] = ...,
     out: Union[dask.dataframe.core.Scalar, dask.dataframe.core.Series] = ...,
     keepdims: bool = ...,
 ):
@@ -60537,7 +60536,11 @@ def promote_types(_0: numpy.dtype, _1: Type[float], /):
     ...
 
 
-def promote_types(_0: numpy.dtype, _1: Union[type, numpy.dtype, Literal["float64"]], /):
+def promote_types(
+    _0: numpy.dtype,
+    _1: Union[Type[float], Type[numpy.float32], numpy.dtype, Literal["float64"]],
+    /,
+):
     """
     usage.dask: 7
     usage.matplotlib: 9
@@ -69328,7 +69331,7 @@ def sum(
         dask.array.core.Array,
         dask.dataframe.core.Series,
     ] = ...,
-    dtype: Union[type, None, numpy.dtype, Literal["f8", "i8", "i4", "f4", "u4"]] = ...,
+    dtype: object = ...,
     keepdims: bool = ...,
 ):
     """
@@ -70420,7 +70423,12 @@ def tri(N: int, M: int, k: int, dtype: Type[numpy.bool_]):
     ...
 
 
-def tri(N: int, M: int = ..., k: int = ..., dtype: type = ...):
+def tri(
+    N: int,
+    M: int = ...,
+    k: int = ...,
+    dtype: Union[Type[numpy.bool_], Type[numpy.int32]] = ...,
+):
     """
     usage.scipy: 1
     usage.skimage: 9
@@ -75624,7 +75632,7 @@ def zeros_like(a: numpy.ndarray, dtype: Type[numpy.int64]):
 
 def zeros_like(
     a: object,
-    dtype: Union[type, Literal["int64"], numpy.dtype] = ...,
+    dtype: Union[type, Type[bool], Literal["int64"], numpy.dtype] = ...,
     shape: Union[int, Tuple[int, ...], None] = ...,
     order: Literal["F", "C"] = ...,
 ):
@@ -78877,7 +78885,7 @@ class datetime64:
         """
         ...
 
-    def astype(self, _0: Union[numpy.dtype, str, type], /):
+    def astype(self, _0: Union[numpy.dtype, str, type, Type[numpy.int64]], /):
         """
         usage.dask: 3
         usage.matplotlib: 4
@@ -85638,7 +85646,13 @@ class float64:
 
     def astype(
         self,
-        _0: Union[type, numpy.dtype, Literal["i8", "f8", "l", "d", "timedelta64[ns]"]],
+        _0: Union[
+            type,
+            Type[int],
+            Type[numpy.int64],
+            numpy.dtype,
+            Literal["i8", "f8", "l", "d", "timedelta64[ns]"],
+        ],
         /,
     ):
         """
@@ -90031,7 +90045,13 @@ class int64:
         """
         ...
 
-    def astype(self, _0: Union[numpy.dtype, Literal["int64", "d"], type], /):
+    def astype(
+        self,
+        _0: Union[
+            numpy.dtype, Literal["int64", "d"], Type[float], Type[numpy.int64], type
+        ],
+        /,
+    ):
         """
         usage.dask: 2
         usage.matplotlib: 3
@@ -118212,7 +118232,7 @@ class ndarray:
         /,
         *,
         axis: Union[int, None, Tuple[Union[int, None], ...]] = ...,
-        dtype: Union[type, str, numpy.dtype] = ...,
+        dtype: Union[Type[numpy.float64], type, str, numpy.dtype] = ...,
         keepdims: bool = ...,
         out: numpy.ndarray = ...,
     ):
@@ -118954,7 +118974,11 @@ class ndarray:
         /,
         *,
         dtype: Union[
-            str, numpy.dtype, type, Dict[Literal["formats", "names"], List[str]]
+            str,
+            numpy.dtype,
+            type,
+            Type[numpy.uint8],
+            Dict[Literal["formats", "names"], List[str]],
         ] = ...,
         type: Type[numpy.ndarray] = ...,
     ):
@@ -120271,6 +120295,7 @@ class timedelta64:
         _0: Union[
             numpy.dtype,
             type,
+            Type[numpy.float64],
             Literal["timedelta64[ns]", "timedelta64[us]", "m8[ns]", "int64"],
         ],
         /,
@@ -123380,7 +123405,9 @@ class ufunc:
         _0: object,
         /,
         *_args: object,
-        dtype: Union[type, Literal["float64", "float32"], numpy.dtype] = ...,
+        dtype: Union[
+            Type[numpy.float64], type, Literal["float64", "float32"], numpy.dtype
+        ] = ...,
         out: object = ...,
         casting: Literal["no", "unsafe"] = ...,
         where: Union[numpy.ndarray, bool] = ...,
@@ -124168,7 +124195,7 @@ class uint16:
         """
         ...
 
-    def astype(self, _0: Union[type, numpy.dtype], /):
+    def astype(self, _0: Union[Type[numpy.float64], Type[numpy.int64], numpy.dtype], /):
         """
         usage.matplotlib: 1
         usage.pandas: 1
