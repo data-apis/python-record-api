@@ -100,7 +100,7 @@ Then [fork the library](https://github.com/data-apis/python-record-api/fork), cl
 git clone git@github.com:<FORK_NAME>/python-record-api.git
 cd python-record-api
 
-git checout -b <CHANGES_NAME>
+git checkout -b <CHANGES_NAME>
 ```
 
 And install the python package locally:
