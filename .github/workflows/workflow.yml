@@ -8,7 +8,7 @@ jobs:
     name: Build, test and push Docker images
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout master
+      - name: Checkout repo
         uses: actions/checkout@master
 
       - name: Set up Python
@@ -61,12 +61,12 @@ jobs:
         if: steps.cache-buildx.outputs.cache-hit != 'true'
         with:
           repository: docker/buildx
-          path: /tmp/buildx-source
+          path: ./buildx-source
           ref: fd6de6b6aeac780c59e5079a96b068076b676d73
 
       - name: Install buildx
         if: steps.cache-buildx.outputs.cache-hit != 'true'
-        working-directory: /tmp/buildx-source
+        working-directory: ./buildx-source
         run: make install
 
       - name: Install doctl
