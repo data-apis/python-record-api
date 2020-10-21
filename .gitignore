@@ -19,3 +19,4 @@ data/raw/*
 dist/
 data/groupby_location/
 **/.DS_Store
+buildx-source
