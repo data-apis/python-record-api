@@ -1,3 +1,30 @@
+# Kubernetes Support
+
+## Goals
+
+The intent of this sub directory is to add support for tracing libraries and produces results in a reproducible manner on cloud hardware. Previously I had been running everything locally, but this becomes time prohibitive when the runs last many hours and also requires a lot of human intervention whenever the software changes.
+
+The goal is to make it entirely source code driven, where all interactions are automated as source code changes.
+
+## Events and Tasks
+
+There are a number of moving parts here, so I think I will start with an overview of the tasks that need to be done. Then we can go over how they are automated.
+
+1. Run a test suite or some notebook or script with tracing enabled, to output a trace file that is often very large, since it has a line for every invocation of every function in the namespace we are testing.
+2. Do some post processing on that file to summerize the findings and reduce the size.
+3. Combine this with other results and generate typings files that show APIs generated.
+
+So if we think of this repository as some narrative over time, there are a number of events that can happen that can cause some of these steps to be need to be re-run.
+
+1. Any change in the code that affects how libraries are traced, or how the typing is generated. Depending on what part of the code it changes, it may need some or all steps to be executed for all libraries.
+2. A new library wants to be added to be tested against, or an existing one needs to be updated. In this case, just that library needs all steps re-run, along with the last step of consolidating all the results.
+
+
+---
+
+Old notes:
+
+
 This directory adds the ability to do runs in a distributed manner through kubernetes and Argo.
 
 It doesn't put everything in one giant workflow, but instead we run different workflows for each library.
