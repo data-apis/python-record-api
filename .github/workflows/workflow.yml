@@ -74,8 +74,8 @@ jobs:
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 
-      - name: Login DigitalOcean container registry
-        run: doctl registry login
+      - name: Login to Github Container Registry
+        run: docker login ghcr.io -u saulshanabrook -p "${{ secrets.CR_PAT }}"
 
       - name: Save DigitalOcean kubeconfig
         run: doctl kubernetes cluster kubeconfig save python-record-api

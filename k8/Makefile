@@ -4,7 +4,7 @@ PYTHON_PACKAGE_VERSION := $(shell python -c 'import record_api; print(record_api
 
 $(info Python package version = ${PYTHON_PACKAGE_VERSION})
 
-IMAGE := registry.digitalocean.com/python-record-api
+IMAGE := ghcr.io/data-apis
 
 # The tag for base image is base-{python version}-{version-increment}
 # The tag for other versions are {name}-{python version}-{base version increment}-{version increment}
