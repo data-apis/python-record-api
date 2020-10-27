@@ -121,6 +121,9 @@ Then you can test an image locally, to make sure the Dockerfile builds correctly
 ```bash
 cd k8
 make test-local-<LIBRARY NAME>
+
+# to test against the local python package, instead of the released one
+make PYTHON_PACKAGE=. test-local-<LIBRARY NAME>
 ```
 
 This should output a number of lines of traces.
