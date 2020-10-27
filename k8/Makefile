@@ -144,6 +144,9 @@ define JQ_DOCKER_BAKE
 		{
 			"base-base": {
 				dockerfile: "Dockerfile",
+				labels: {
+					"org.opencontainers.image.source": "https://github.com/data-apis/python-record-api"
+				}
 			},
 			base: {
 				context: "images/base",
