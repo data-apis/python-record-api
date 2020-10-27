@@ -1,8 +1,9 @@
 
 TO_MODULES := pandas,numpy
 PYTHON_PACKAGE_VERSION := $(shell python -c 'import record_api; print(record_api.__version__)')
+PYTHON_PACKAGE ?= record_api==${PYTHON_PACKAGE_VERSION}
 
-$(info Python package version = ${PYTHON_PACKAGE_VERSION})
+$(info Python package = ${PYTHON_PACKAGE})
 
 IMAGE := registry.digitalocean.com/python-record-api
 
@@ -97,6 +98,12 @@ push-images: docker-bake.json
 
 test-local-%:
 	env DOCKER_BUILDKIT=1 docker build \
+		--tag ${BASE_IMAGE} \
+		--file images/base/Dockerfile \
+		--build-arg "PYTHON_PACKAGE=${PYTHON_PACKAGE}" \
+		..
+	
+	env DOCKER_BUILDKIT=1 docker build \
 		--tag $(call sub_image,$(*F)) \
 		--build-arg "FROM=${BASE_IMAGE}" \
 		images/$(*F)
@@ -119,13 +126,6 @@ test-remote-%: docker-bake.json
 		--image=$(call sub_image,$(*F))
 
 
-# push-images:  $(addprefix push-image-,$(IMAGES))
-
-# push-image-%:
-# 	docker push saulshanabrook/python-record-api:$(*F)-$(TAG)
-
-# build-images: docker-bake.json
-# 	docker buildx bake
 
 
 # Generate docker bake file with default group
@@ -151,7 +151,7 @@ define JQ_DOCKER_BAKE
 				"cache-to": ["type=registry,ref=${BASE_CACHE_IMAGE},mode=max"],
 				"cache-from": ["type=registry,ref=${BASE_CACHE_IMAGE}"],
 				args: {
-					PYTHON_PACKAGE_VERSION: "${PYTHON_PACKAGE_VERSION}"
+					PYTHON_PACKAGE: "${PYTHON_PACKAGE}"
 				},
 				tags: [
 					"${BASE_IMAGE}"
