@@ -13,9 +13,10 @@ RUN git clone \
     .
 
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install -r requirements.txt
+    pip install -r requirements.txt \
+    pytest-custom_exit_code
 
 RUN python -c "import modin"
 
 ENV PYTHON_RECORD_API_FROM_MODULES=modin
-CMD [ "pytest", "modin/pandas/test", "--verbose"]
+CMD [ "pytest", "modin/pandas/test", "--verbose", "--suppress-tests-failed-exit-code"]
