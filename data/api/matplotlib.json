@@ -19012,7 +19012,7 @@
               "y": {
                 "type": "str",
                 "options": [
-                  "2020-08-17T22:40:05.392444"
+                  "2020-10-28T21:35:06.067917"
                 ]
               }
             },
@@ -19025,7 +19025,7 @@
               "y": {
                 "type": "str",
                 "options": [
-                  "2020-08-17T22:40:06.879974"
+                  "2020-10-28T21:35:07.425962"
                 ]
               }
             },
@@ -32839,85 +32839,11 @@
               ]
             }
           },
-          "pos_only_optional": {
-            "_1": {
-              "type": "union",
-              "options": [
-                {
-                  "type": "str",
-                  "options": [
-                    "2005-03",
-                    "2018-11-06"
-                  ]
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "int64"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "float"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                }
-              ]
-            },
-            "_2": {
-              "type": "union",
-              "options": [
-                {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "int64"
-                  }
-                },
-                {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                },
-                {
-                  "type": {
-                    "name": "float"
-                  }
-                }
-              ]
-            },
-            "_3": {
-              "type": "type",
-              "name": {
-                "module": "numpy",
-                "name": "float64"
-              }
+          "var_pos": [
+            "_args",
+            {
+              "type": "object"
             }
-          },
-          "pos_only_optional_ordering": [
-            [
-              "_1",
-              "_2"
-            ],
-            [
-              "_2",
-              "_3"
-            ]
           ],
           "kw_only_optional": {
             "dtype": {
@@ -64987,32 +64913,13 @@
               }
             },
             "normal": {
-              "pos_only_optional": {
-                "_0": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_1": {
-                  "type": {
-                    "name": "int"
-                  }
-                },
-                "_2": {
+              "var_pos": [
+                "_args",
+                {
                   "type": {
                     "name": "int"
                   }
                 }
-              },
-              "pos_only_optional_ordering": [
-                [
-                  "_0",
-                  "_1"
-                ],
-                [
-                  "_1",
-                  "_2"
-                ]
               ],
               "kw_only_optional": {
                 "size": {
