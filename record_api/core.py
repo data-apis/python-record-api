@@ -29,15 +29,6 @@ TRACER = None
 context_manager: Optional[ContextManager] = None
 write_line: Optional[Callable[[dict], None]] = None
 
-FUNCTION_CALL_OP_NAMES = {
-    "CALL_METHOD",
-    "CALL_FUNCTION",
-    "CALL_FUNCTION_KW",
-    "CALL_FUNCTION_EX",
-    "LOAD_ATTR",
-    "BINARY_SUBSCR",
-}
-
 
 def get_tracer() -> Tracer:
     global TRACER
@@ -282,7 +273,6 @@ def log_call(
     fn: Callable,
     args: Iterable = (),
     kwargs: Mapping[str, Any] = {},
-    return_type: Any = None,
 ) -> None:
     bound = Bound.create(fn, args, kwargs)
     line: Dict = {"location": location, "function": preprocess(fn)}
@@ -294,8 +284,6 @@ def log_call(
             line["params"]["kwargs"] = {k: preprocess(v) for k, v in kwargs.items()}
     else:
         line["bound_params"] = bound.as_dict()
-    if return_type:
-        line['return_type'] = return_type
     assert write_line
     write_line(line)
 
@@ -307,15 +295,10 @@ class Stack:
     NULL: ClassVar[object] = object()
     current_i: int = dataclasses.field(init=False, default=0)
     opcode: int = dataclasses.field(init=False)
-    previous_stack: Optional[Stack] = None
-    log_call_args: Tuple = ()
 
     def __post_init__(self):
         self.op_stack = get_stack.OpStack(self.frame)
         self.opcode = self.frame.f_code.co_code[self.frame.f_lasti]
-
-        if self.previous_stack and self.previous_stack.previous_stack:
-            del self.previous_stack.previous_stack
 
     @property
     def oparg(self):
@@ -377,24 +360,14 @@ class Stack:
         return l
 
     def process(
-        self,
-        keyed_args: Tuple,
-        fn: Callable,
-        args: Iterable,
-        kwargs: Mapping = {},
-        delay: bool = False
+        self, keyed_args: Tuple, fn: Callable, args: Iterable, kwargs: Mapping = {}
     ) -> None:
-
-        # Note: This take args as an iterable, instead of as a varargs, so that if
-        # we don't trace we don't have to expand the iterable
+        # Note: This take args as an iterable, instead of as a varargs, so that if we don't trace we don't have to expand the iterable
         if self.tracer.should_trace(*keyed_args):
             filename = self.frame.f_code.co_filename
             line = self.frame.f_lineno
             # Don't pass kwargs if not used, so we can more easily test mock calls
-            if not delay:
-                log_call(f"{filename}:{line}", fn, tuple(args), *((kwargs,) if kwargs else ()))
-            else:
-                self.log_call_args = (filename, line, fn, tuple(args), kwargs)
+            log_call(f"{filename}:{line}", fn, tuple(args), *((kwargs,) if kwargs else ()))
 
     def __call__(self) -> None:
         """
@@ -410,34 +383,14 @@ class Stack:
                 (self.TOS, self.TOS1), BINARY_OPS[opname], (self.TOS1, self.TOS)
             )
 
-        if self.previous_stack and self.previous_stack.opname in FUNCTION_CALL_OP_NAMES:
-            self.log_called_method()
-
         method_name = f"op_{opname}"
         if hasattr(self, method_name):
             getattr(self, method_name)()
         return None
 
-    def log_called_method(self):
-        if self.previous_stack.log_call_args:
-            tos = self.TOS
-            if type(tos) is type and issubclass(tos, Exception):
-                # Don't record exception
-                return
-            return_type = type(tos) if type(tos) != type else tos
-            filename, line, fn, args, *kwargs = self.previous_stack.log_call_args
-            kwargs = kwargs[0] if kwargs else {}
-            log_call(
-                f"{filename}:{line}",
-                fn,
-                tuple(args),
-                *((kwargs,) if kwargs else ()),
-                return_type=return_type,
-            )
-
     # special case subscr b/c we only check first arg, not both
     def op_BINARY_SUBSCR(self):
-        self.process((self.TOS1,), op.getitem, (self.TOS1, self.TOS), delay=True)
+        self.process((self.TOS1,), op.getitem, (self.TOS1, self.TOS))
 
     def op_STORE_SUBSCR(self):
         self.process((self.TOS1,), op.setitem, (self.TOS1, self.TOS, self.TOS2))
@@ -446,7 +399,7 @@ class Stack:
         self.process((self.TOS1,), op.delitem, (self.TOS1, self.TOS))
 
     def op_LOAD_ATTR(self):
-        self.process((self.TOS,), getattr, (self.TOS, self.opvalname), delay=True)
+        self.process((self.TOS,), getattr, (self.TOS, self.opvalname))
 
     def op_STORE_ATTR(self):
         self.process((self.TOS,), setattr, (self.TOS, self.opvalname, self.TOS1))
@@ -505,7 +458,7 @@ class Stack:
     def op_CALL_FUNCTION(self):
         args = self.pop_n(self.oparg)
         fn = self.pop()
-        self.process((fn,), fn, args, delay=True)
+        self.process((fn,), fn, args)
 
     def op_CALL_FUNCTION_KW(self):
         kwargs_keys = self.pop()
@@ -515,7 +468,7 @@ class Stack:
         args = self.pop_n(self.oparg - n_kwargs)
         fn = self.pop()
 
-        self.process((fn,), fn, args, kwargs, delay=True)
+        self.process((fn,), fn, args, kwargs)
 
     def op_CALL_FUNCTION_EX(self):
         has_kwarg = self.oparg & int("01", 2)
@@ -529,7 +482,7 @@ class Stack:
             fn = self.pop()
         if inspect.isgenerator(args):
             return
-        self.process((fn,), fn, args, kwargs, delay=True)
+        self.process((fn,), fn, args, kwargs)
 
     def op_CALL_METHOD(self):
         args = self.pop_n(self.oparg)
@@ -537,13 +490,12 @@ class Stack:
         null_or_method = self.pop()
         if null_or_method is self.NULL:
             function = function_or_self
-            self.process((function,), function, args, delay=True)
+            self.process((function,), function, args)
         else:
             self_ = function_or_self
             method = null_or_method
             self.process(
                 (self_,), method, itertools.chain((self_,), args),
-                delay=True
             )
 
 
@@ -596,7 +548,6 @@ class Tracer:
     calls_to_modules: List[str]
     # the modules we should trace calls from
     calls_from_modules: List[str]
-    previous_stack: Optional[Stack] = None
 
     def __enter__(self):
         sys.settrace(self)
@@ -626,13 +577,7 @@ class Tracer:
             return None
 
         if self.should_trace_frame(frame):
-            stack = Stack(
-                self,
-                frame,
-                previous_stack=self.previous_stack,
-            )
-            stack()
-            self.previous_stack = stack if stack.log_call_args else None
+            Stack(self, frame)()
         return None
 
     def should_trace_frame(self, frame) -> bool:
