@@ -4144,10 +4144,10 @@
                 "data": {
                   "type": "dict",
                   "key": {
-                    "type": "bottom"
+                    "type": "object"
                   },
                   "value": {
-                    "type": "bottom"
+                    "type": "object"
                   }
                 }
               },
@@ -4160,10 +4160,10 @@
                 "data": {
                   "type": "dict",
                   "key": {
-                    "type": "bottom"
+                    "type": "object"
                   },
                   "value": {
-                    "type": "bottom"
+                    "type": "object"
                   }
                 },
                 "index": {
@@ -9232,10 +9232,10 @@
               "obj": {
                 "type": "dict",
                 "key": {
-                  "type": "bottom"
+                  "type": "object"
                 },
                 "value": {
-                  "type": "bottom"
+                  "type": "object"
                 }
               }
             },
