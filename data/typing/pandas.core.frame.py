@@ -48,6 +48,29 @@ class DataFrame:
         ...
 
     @classmethod
+    def _get_axis_number(cls, /, axis: int):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_dict(
+        cls,
+        /,
+        data: Dict[Literal["a"], List[str]],
+        orient: Literal["columns"],
+        dtype: None,
+        columns: None,
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
     def from_dict(
         cls,
         /,
@@ -55,6 +78,24 @@ class DataFrame:
     ):
         """
         usage.dask: 1
+        """
+        ...
+
+    @classmethod
+    def from_dict(
+        cls,
+        /,
+        data: Union[
+            List[Dict[Literal["y", "x"], Union[int, Literal["a", "b", "c", "d"]]]],
+            Dict[Literal["a"], List[str]],
+        ],
+        orient: Literal["columns"] = ...,
+        dtype: None = ...,
+        columns: None = ...,
+    ):
+        """
+        usage.dask: 1
+        usage.modin: 1
         """
         ...
 
@@ -107,6 +148,9 @@ class DataFrame:
     # usage.dask: 1
     amount: object
 
+    # usage.modin: 3
+    axes: object
+
     # usage.dask: 63
     b: object
 
@@ -120,6 +164,7 @@ class DataFrame:
     col2: object
 
     # usage.dask: 142
+    # usage.modin: 17
     # usage.sklearn: 19
     # usage.xarray: 9
     columns: object
@@ -137,6 +182,7 @@ class DataFrame:
     dt_col: object
 
     # usage.dask: 25
+    # usage.modin: 1
     # usage.sklearn: 24
     dtypes: object
 
@@ -144,6 +190,7 @@ class DataFrame:
     e: object
 
     # usage.dask: 4
+    # usage.modin: 2
     empty: object
 
     # usage.dask: 3
@@ -162,11 +209,13 @@ class DataFrame:
     id: object
 
     # usage.dask: 46
+    # usage.modin: 3
     # usage.sklearn: 14
     # usage.xarray: 2
     iloc: object
 
     # usage.dask: 197
+    # usage.modin: 8
     # usage.sklearn: 3
     # usage.xarray: 12
     index: object
@@ -203,6 +252,7 @@ class DataFrame:
     value: object
 
     # usage.dask: 33
+    # usage.modin: 1
     # usage.sklearn: 1
     # usage.xarray: 7
     values: object
@@ -347,6 +397,7 @@ class DataFrame:
     def __getitem__(self, _0: int, /):
         """
         usage.dask: 11
+        usage.modin: 2
         usage.sklearn: 1
         usage.xarray: 1
         """
@@ -357,6 +408,103 @@ class DataFrame:
         """
         usage.dask: 13
         usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col0"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col2"], /):
+        """
+        usage.dask: 1
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col4"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col6"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col8"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col10"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col12"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col14"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["a"], /):
+        """
+        usage.dask: 40
+        usage.modin: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["b"], /):
+        """
+        usage.dask: 23
+        usage.modin: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["c"], /):
+        """
+        usage.dask: 14
+        usage.modin: 2
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["__reduced__"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.dask: 1
+        usage.modin: 2
         """
         ...
 
@@ -451,20 +599,6 @@ class DataFrame:
         """
         usage.dask: 7
         usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["b"], /):
-        """
-        usage.dask: 23
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["a"], /):
-        """
-        usage.dask: 40
         """
         ...
 
@@ -585,14 +719,6 @@ class DataFrame:
     def __getitem__(self, _0: Literal["X"], /):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["c"], /):
-        """
-        usage.dask: 14
-        usage.sklearn: 2
         """
         ...
 
@@ -839,13 +965,6 @@ class DataFrame:
     def __getitem__(self, _0: List[Literal["d", "b", "a"]], /):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["col2"], /):
-        """
-        usage.dask: 1
         """
         ...
 
@@ -1245,13 +1364,6 @@ class DataFrame:
 
     @overload
     def __getitem__(self, _0: slice[int, None, int], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, int, None], /):
         """
         usage.dask: 1
         """
@@ -2752,6 +2864,7 @@ class DataFrame:
     def __getitem__(self, _0: object, /):
         """
         usage.dask: 471
+        usage.modin: 19
         usage.sklearn: 213
         usage.xarray: 8
         """
@@ -2795,6 +2908,7 @@ class DataFrame:
     def __iter__(self, /):
         """
         usage.dask: 1
+        usage.modin: 1
         """
         ...
 
@@ -3052,6 +3166,62 @@ class DataFrame:
     def __setitem__(self, _0: Literal["C"], _1: List[int], /):
         """
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col0"], _1: List[str], /):
+        """
+        usage.modin: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col2"], _1: List[str], /):
+        """
+        usage.modin: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col4"], _1: List[str], /):
+        """
+        usage.modin: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col6"], _1: List[str], /):
+        """
+        usage.modin: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col8"], _1: List[str], /):
+        """
+        usage.modin: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col10"], _1: List[str], /):
+        """
+        usage.modin: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col12"], _1: List[str], /):
+        """
+        usage.modin: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col14"], _1: List[str], /):
+        """
+        usage.modin: 2
         """
         ...
 
@@ -5011,6 +5181,7 @@ class DataFrame:
     def __setitem__(self, _0: object, _1: object, /):
         """
         usage.dask: 129
+        usage.modin: 16
         usage.sklearn: 178
         usage.xarray: 1
         """
@@ -5160,6 +5331,12 @@ class DataFrame:
     ):
         """
         usage.dask: 11
+        """
+        ...
+
+    def add_prefix(self, /, prefix: Literal["col"]):
+        """
+        usage.modin: 1
         """
         ...
 
@@ -5829,6 +6006,7 @@ class DataFrame:
     def apply(self, /, func: Callable, axis: int):
         """
         usage.dask: 5
+        usage.modin: 1
         """
         ...
 
@@ -5864,6 +6042,7 @@ class DataFrame:
     ):
         """
         usage.dask: 10
+        usage.modin: 1
         usage.xarray: 1
         """
         ...
@@ -5877,6 +6056,13 @@ class DataFrame:
     def assign(self, /):
         """
         usage.dask: 16
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Dict[Literal["col1"], Literal["category"]]):
+        """
+        usage.modin: 1
         """
         ...
 
@@ -6029,22 +6215,23 @@ class DataFrame:
         dtype: Union[
             None,
             type,
-            Literal["float", "float64"],
-            pandas.core.series.Series,
             Dict[
-                Union[str, int],
+                Union[int, str],
                 Union[
-                    Type[float],
-                    pandas.core.dtypes.dtypes.CategoricalDtype,
                     numpy.dtype,
+                    pandas.core.dtypes.dtypes.CategoricalDtype,
+                    Type[float],
                     Literal["category", "f8"],
                 ],
             ],
+            pandas.core.series.Series,
+            Literal["float", "float64"],
         ],
         copy: bool = ...,
     ):
         """
         usage.dask: 32
+        usage.modin: 1
         usage.sklearn: 4
         """
         ...
@@ -6248,23 +6435,25 @@ class DataFrame:
         ...
 
     @overload
+    def copy(self, /):
+        """
+        usage.dask: 13
+        usage.modin: 4
+        usage.sklearn: 4
+        """
+        ...
+
+    @overload
     def copy(self, /, deep: bool):
         """
         usage.dask: 3
         """
         ...
 
-    @overload
-    def copy(self, /):
-        """
-        usage.dask: 13
-        usage.sklearn: 4
-        """
-        ...
-
     def copy(self, /, deep: bool = ...):
         """
         usage.dask: 16
+        usage.modin: 4
         usage.sklearn: 4
         """
         ...
@@ -7187,6 +7376,20 @@ class DataFrame:
         ...
 
     @overload
+    def fillna(self, /, value: Dict[int, Literal["foo"]]):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: int, downcast: Literal["infer"]):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
     def fillna(self, /, value: Literal["-"]):
         """
         usage.dask: 1
@@ -7338,13 +7541,20 @@ class DataFrame:
     def fillna(
         self,
         /,
-        value: Union[pandas.core.series.Series, int, None, Literal["-"]] = ...,
+        value: Union[
+            Literal["-"],
+            None,
+            int,
+            pandas.core.series.Series,
+            Dict[int, Literal["foo"]],
+        ] = ...,
         method: Union[None, Literal["ffill", "pad", "bfill"]] = ...,
         axis: int = ...,
         limit: Union[None, int] = ...,
     ):
         """
         usage.dask: 31
+        usage.modin: 2
         """
         ...
 
@@ -7555,6 +7765,44 @@ class DataFrame:
         ...
 
     @overload
+    def groupby(self, /, by: List[Literal["c", "b", "a"]]):
+        """
+        usage.dask: 2
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["b", "a"]]):
+        """
+        usage.dask: 9
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[pandas.core.series.Series]):
+        """
+        usage.dask: 15
+        usage.modin: 4
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Union[pandas.core.series.Series, Literal["b", "a"]]]):
+        """
+        usage.modin: 2
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Union[pandas.core.series.Series, Literal["a"]]]):
+        """
+        usage.modin: 2
+        """
+        ...
+
+    @overload
     def groupby(self, /, by: Literal["_partitions"]):
         """
         usage.dask: 1
@@ -7709,23 +7957,9 @@ class DataFrame:
         ...
 
     @overload
-    def groupby(self, /, by: List[Literal["b", "a"]]):
-        """
-        usage.dask: 9
-        """
-        ...
-
-    @overload
     def groupby(self, /, by: List[Literal["b", "a"]], group_keys: bool):
         """
         usage.dask: 3
-        """
-        ...
-
-    @overload
-    def groupby(self, /, by: List[pandas.core.series.Series]):
-        """
-        usage.dask: 15
         """
         ...
 
@@ -7766,13 +8000,6 @@ class DataFrame:
 
     @overload
     def groupby(self, /, by: List[Literal["c", "b", "a"]], group_keys: bool):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def groupby(self, /, by: List[Literal["c", "b", "a"]]):
         """
         usage.dask: 2
         """
@@ -8358,6 +8585,7 @@ class DataFrame:
     ):
         """
         usage.dask: 449
+        usage.modin: 10
         """
         ...
 
@@ -11736,6 +11964,13 @@ class DataFrame:
         ...
 
     @overload
+    def reindex(self, /, labels: pandas.core.indexes.range.RangeIndex):
+        """
+        usage.modin: 2
+        """
+        ...
+
+    @overload
     def reindex(self, /, columns: pandas.core.indexes.base.Index):
         """
         usage.dask: 1
@@ -11783,20 +12018,10 @@ class DataFrame:
         """
         ...
 
-    def reindex(
-        self,
-        /,
-        labels: Union[
-            List[str],
-            pandas.core.indexes.numeric.Int64Index,
-            pandas.core.indexes.multi.MultiIndex,
-            pandas.core.indexes.datetimes.DatetimeIndex,
-            reversed,
-        ] = ...,
-        fill_value: Union[int, float] = ...,
-    ):
+    def reindex(self, /, labels: object = ..., fill_value: Union[int, float] = ...):
         """
         usage.dask: 12
+        usage.modin: 2
         usage.xarray: 2
         """
         ...
@@ -13291,6 +13516,13 @@ class DataFrame:
         ...
 
     @overload
+    def select_dtypes(self, /, include: Literal["category"]):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
     def select_dtypes(self, /, include: List[Literal["category"]]):
         """
         usage.dask: 2
@@ -13475,8 +13707,9 @@ class DataFrame:
             type,
             None,
             List[
-                Union[Literal["category", "bool", "number", "object", "datetime"], type]
+                Union[type, Literal["category", "bool", "number", "object", "datetime"]]
             ],
+            Literal["category"],
         ],
         exclude: Union[
             Type[object],
@@ -13486,6 +13719,7 @@ class DataFrame:
     ):
         """
         usage.dask: 20
+        usage.modin: 1
         usage.sklearn: 11
         """
         ...
@@ -13666,6 +13900,14 @@ class DataFrame:
         ...
 
     @overload
+    def set_index(self, /, keys: Literal["idx"]):
+        """
+        usage.dask: 11
+        usage.modin: 2
+        """
+        ...
+
+    @overload
     def set_index(self, /, keys: Literal["amount"], drop: bool):
         """
         usage.dask: 1
@@ -13739,13 +13981,6 @@ class DataFrame:
     def set_index(self, /, keys: Literal["index"], drop: bool):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    def set_index(self, /, keys: Literal["idx"]):
-        """
-        usage.dask: 11
         """
         ...
 
@@ -13990,6 +14225,7 @@ class DataFrame:
     def set_index(self, /, keys: object, drop: bool = ...):
         """
         usage.dask: 119
+        usage.modin: 2
         usage.xarray: 15
         """
         ...
@@ -15105,6 +15341,7 @@ class DataFrame:
     def squeeze(self, /):
         """
         usage.dask: 3
+        usage.modin: 2
         """
         ...
 
@@ -15370,6 +15607,174 @@ class DataFrame:
     def to_csv(
         self,
         /,
+        path_or_buf: Literal["test.csv"],
+        sep: Literal[","],
+        encoding: None,
+        compression: Literal["infer"],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: Literal["test.csv.gz"],
+        sep: Literal[","],
+        encoding: None,
+        compression: Literal["gzip"],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: Literal["test.csv.bz2"],
+        sep: Literal[","],
+        encoding: None,
+        compression: Literal["bz2"],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: Literal["test.csv.xz"],
+        sep: Literal[","],
+        encoding: None,
+        compression: Literal["xz"],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: Literal["test.csv.zip"],
+        sep: Literal[","],
+        encoding: None,
+        compression: Literal["zip"],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: Literal["test.csv"],
+        sep: Literal["\t"],
+        encoding: None,
+        compression: Literal["infer"],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: Literal["test.csv"],
+        sep: Literal[","],
+        encoding: Literal["latin8"],
+        compression: Literal["infer"],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: Literal["test.csv"],
+        sep: Literal[","],
+        encoding: Literal["ISO-8859-1"],
+        compression: Literal["infer"],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: Literal["test.csv"],
+        sep: Literal[","],
+        encoding: Literal["latin1"],
+        compression: Literal["infer"],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: Literal["test.csv"],
+        sep: Literal[","],
+        encoding: Literal["iso-8859-1"],
+        compression: Literal["infer"],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: Literal["test.csv"],
+        sep: Literal[","],
+        encoding: Literal["cp1252"],
+        compression: Literal["infer"],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: Literal["test.csv"],
+        sep: Literal[","],
+        encoding: Literal["utf8"],
+        compression: Literal["infer"],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
         path_or_buf: Literal["/tmp/tmp12pxwjdr.csv"],
         index: bool,
         encoding: Literal["utf-16"],
@@ -15422,18 +15827,41 @@ class DataFrame:
     def to_csv(
         self,
         /,
-        path_or_buf: Union[
-            _io.TextIOWrapper,
-            Literal[
-                "/tmp/tmpd3mrm6x7.csv", "/tmp/tmpigl0owvd.csv", "/tmp/tmp12pxwjdr.csv"
-            ],
-        ],
-        index: bool,
-        encoding: Literal["utf-16-be", "utf-16-le", "utf-16"] = ...,
-        header: bool = ...,
+        path_or_buf: Union[str, _io.TextIOWrapper],
+        sep: Literal[",", "\t"] = ...,
+        encoding: Union[str, None] = ...,
+        compression: Literal["infer", "zip", "xz", "bz2", "gzip"] = ...,
     ):
         """
         usage.dask: 5
+        usage.modin: 12
+        """
+        ...
+
+    def to_excel(self, /, excel_writer: Literal["test.xlsx"]):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    def to_feather(self, /, path: Literal["test.feather"]):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    def to_hdf(
+        self, /, path_or_buf: Literal["test.hdf"], key: Literal["df"], format: None
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_html(self, /, buf: Literal["test.html"]):
+        """
+        usage.modin: 1
         """
         ...
 
@@ -15451,9 +15879,17 @@ class DataFrame:
         """
         ...
 
-    def to_html(self, /, max_rows: int, show_dimensions: bool, notebook: bool = ...):
+    def to_html(self, /, max_rows: int = ..., show_dimensions: bool = ...):
         """
         usage.dask: 2
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_json(self, /, path_or_buf: Literal["test.json"]):
+        """
+        usage.modin: 1
         """
         ...
 
@@ -15496,11 +15932,61 @@ class DataFrame:
         self,
         /,
         path_or_buf: str,
-        orient: Literal["values", "columns", "index", "records", "split"],
-        lines: bool,
+        orient: Literal["values", "columns", "index", "records", "split"] = ...,
+        lines: bool = ...,
     ):
         """
         usage.dask: 24
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_parquet(self, /, path: Literal["test.parquet"]):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_parquet(
+        self, /, path: Literal["test.parquet"], partition_cols: List[Literal["col1"]]
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_parquet(self, /, path: Literal["tmp.parquet"]):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_parquet(
+        self, /, path: Literal["tmp_folder.parquet"], partition_cols: List[Literal["A"]]
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    def to_parquet(
+        self,
+        /,
+        path: Literal["tmp_folder.parquet", "tmp.parquet", "test.parquet"],
+        partition_cols: List[Literal["col1", "A"]] = ...,
+    ):
+        """
+        usage.modin: 4
+        """
+        ...
+
+    def to_pickle(self, /, path: Literal["test.pkl"]):
+        """
+        usage.modin: 1
         """
         ...
 
@@ -15521,6 +16007,18 @@ class DataFrame:
     def to_records(self, /, index: bool = ...):
         """
         usage.dask: 4
+        """
+        ...
+
+    def to_sql(self, /, name: Literal["test_from_sql"], con: str):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    def to_stata(self, /, path: Literal["test.dta"]):
+        """
+        usage.modin: 1
         """
         ...
 

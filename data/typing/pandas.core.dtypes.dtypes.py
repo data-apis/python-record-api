@@ -82,16 +82,17 @@ class CategoricalDtype:
         ...
 
     @overload
-    def __ne__(self, _0: Literal["category"], /):
+    def __ne__(self, _0: pandas.core.dtypes.dtypes.CategoricalDtype, /):
         """
-        usage.dask: 1
+        usage.dask: 4
+        usage.modin: 2
         """
         ...
 
     @overload
-    def __ne__(self, _0: pandas.core.dtypes.dtypes.CategoricalDtype, /):
+    def __ne__(self, _0: Literal["category"], /):
         """
-        usage.dask: 4
+        usage.dask: 1
         """
         ...
 
@@ -104,6 +105,7 @@ class CategoricalDtype:
     ):
         """
         usage.dask: 5
+        usage.modin: 2
         usage.pandas: 1
         """
         ...

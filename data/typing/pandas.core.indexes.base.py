@@ -1,10 +1,92 @@
 from typing import *
 
 
+@overload
+def ensure_index(index_like: pandas.core.indexes.range.RangeIndex):
+    """
+    usage.modin: 2
+    """
+    ...
+
+
+@overload
+def ensure_index(index_like: pandas.core.indexes.base.Index):
+    """
+    usage.modin: 2
+    """
+    ...
+
+
+@overload
+def ensure_index(index_like: List[Literal["col2", "col1"]]):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def ensure_index(index_like: List[Literal["col1"]]):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def ensure_index(index_like: pandas.core.indexes.numeric.Int64Index):
+    """
+    usage.modin: 3
+    """
+    ...
+
+
+@overload
+def ensure_index(index_like: List[Literal["C", "B", "A"]]):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def ensure_index(index_like: pandas.core.indexes.multi.MultiIndex):
+    """
+    usage.modin: 2
+    """
+    ...
+
+
+@overload
+def ensure_index(index_like: pandas.core.indexes.numeric.Float64Index):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def ensure_index(index_like: pandas.core.indexes.datetimes.DatetimeIndex):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+def ensure_index(index_like: object):
+    """
+    usage.modin: 14
+    """
+    ...
+
+
 class Index:
 
     # usage.dask: 2
     __name__: ClassVar[object]
+
+    # usage.modin: 2
+    __new__: ClassVar[object]
 
     # usage.xarray: 2
     get_loc: ClassVar[object]
@@ -26,8 +108,9 @@ class Index:
     is_unique: object
 
     # usage.dask: 16
+    # usage.modin: 3
     # usage.xarray: 13
-    name: Union[None, Literal["A", "a"]]
+    name: Union[None, Literal["A", "a", "id"], int]
 
     # usage.dask: 3
     names: List[str]
@@ -46,6 +129,7 @@ class Index:
     str: object
 
     # usage.dask: 1
+    # usage.modin: 1
     # usage.xarray: 6
     values: object
 
@@ -570,6 +654,7 @@ class Index:
     def __getitem__(self, _0: int, /):
         """
         usage.dask: 17
+        usage.modin: 3
         usage.xarray: 3
         """
         ...
@@ -652,12 +737,13 @@ class Index:
             numpy.ndarray,
             int,
             List[Union[bool, int]],
-            slice[Union[None, int], Union[None, int], Union[None, int]],
+            slice[Union[int, None], Union[int, None], Union[int, None]],
         ],
         /,
     ):
         """
         usage.dask: 27
+        usage.modin: 3
         usage.sklearn: 6
         usage.xarray: 15
         """
@@ -666,6 +752,7 @@ class Index:
     def __iter__(self, /):
         """
         usage.dask: 22
+        usage.modin: 1
         usage.sklearn: 1
         usage.xarray: 4
         """

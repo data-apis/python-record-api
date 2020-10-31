@@ -428,6 +428,7 @@ class RandomState:
     def choice(self, _0: List[int], _1: int, /):
         """
         usage.dask: 2
+        usage.modin: 4
         usage.scipy: 1
         usage.sklearn: 1
         """
@@ -746,6 +747,7 @@ class RandomState:
     ):
         """
         usage.dask: 32
+        usage.modin: 4
         usage.pandas: 36
         usage.scipy: 12
         usage.skimage: 8
@@ -2251,6 +2253,7 @@ class RandomState:
     def randint(self, _0: int, _1: int, /, *, size: Tuple[int, int]):
         """
         usage.dask: 23
+        usage.modin: 12
         usage.scipy: 5
         usage.skimage: 8
         usage.sklearn: 19
@@ -2272,6 +2275,7 @@ class RandomState:
         """
         usage.dask: 6
         usage.matplotlib: 2
+        usage.modin: 22
         usage.scipy: 6
         usage.skimage: 3
         usage.sklearn: 34
@@ -2349,6 +2353,7 @@ class RandomState:
     def randint(self, _0: int, _1: int, _2: int, /):
         """
         usage.dask: 7
+        usage.modin: 4
         usage.scipy: 8
         usage.sklearn: 30
         usage.xarray: 4
@@ -2682,7 +2687,7 @@ class RandomState:
             numpy.dtype,
         ] = ...,
         size: Union[
-            numpy.int64, int, Tuple[Union[None, numpy.int64, int], ...], None, List[int]
+            numpy.int64, int, Tuple[Union[int, numpy.int64, None], ...], List[int], None
         ] = ...,
         high: Union[int, numpy.ndarray, None] = ...,
         low: int = ...,
@@ -2690,6 +2695,7 @@ class RandomState:
         """
         usage.dask: 133
         usage.matplotlib: 3
+        usage.modin: 38
         usage.pandas: 160
         usage.scipy: 66
         usage.skimage: 24
@@ -2703,6 +2709,7 @@ class RandomState:
         """
         usage.dask: 43
         usage.matplotlib: 13
+        usage.modin: 3
         usage.scipy: 159
         usage.skimage: 7
         usage.sklearn: 67
@@ -2726,6 +2733,7 @@ class RandomState:
         """
         usage.dask: 39
         usage.matplotlib: 4
+        usage.modin: 2
         usage.scipy: 140
         usage.skimage: 18
         usage.sklearn: 345
@@ -2789,6 +2797,7 @@ class RandomState:
         """
         usage.dask: 87
         usage.matplotlib: 17
+        usage.modin: 5
         usage.pandas: 749
         usage.scipy: 330
         usage.skimage: 46

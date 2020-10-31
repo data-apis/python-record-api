@@ -40,6 +40,7 @@ class RangeIndex:
     # usage.xarray: 3
     size: object
 
+    # usage.modin: 1
     # usage.xarray: 3
     values: object
 
@@ -128,6 +129,7 @@ class RangeIndex:
     @overload
     def __getitem__(self, _0: numpy.ndarray, /):
         """
+        usage.modin: 1
         usage.xarray: 1
         """
         ...
@@ -140,17 +142,44 @@ class RangeIndex:
         """
         ...
 
+    @overload
+    def __getitem__(self, _0: slice[numpy.int64, numpy.int64, numpy.int64], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[numpy.int64], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
     def __getitem__(
         self,
         _0: Union[
             int,
             numpy.ndarray,
-            slice[Union[int, None], Union[None, int], Union[int, None]],
+            slice[
+                Union[None, numpy.int64, int],
+                Union[numpy.int64, int, None],
+                Union[None, numpy.int64, int],
+            ],
+            List[numpy.int64],
         ],
         /,
     ):
         """
         usage.dask: 5
+        usage.modin: 4
         usage.xarray: 7
         """
         ...

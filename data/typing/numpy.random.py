@@ -50,6 +50,7 @@ rand: object
 
 # usage.dask: 70
 # usage.matplotlib: 3
+# usage.modin: 32
 # usage.pandas: 84
 # usage.scipy: 18
 # usage.skimage: 14

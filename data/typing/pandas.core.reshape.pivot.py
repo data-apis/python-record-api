@@ -1,6 +1,24 @@
 from typing import *
 
 
+def crosstab(
+    index: numpy.ndarray,
+    columns: List[numpy.ndarray],
+    values: None,
+    rownames: List[Literal["a"]],
+    colnames: List[Literal["c", "b"]],
+    aggfunc: None,
+    margins: bool,
+    margins_name: Literal["All"],
+    dropna: bool,
+    normalize: bool,
+):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
 @overload
 def pivot_table(
     data: pandas.core.frame.DataFrame,

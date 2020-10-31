@@ -1856,6 +1856,29 @@ class _iLocIndexer:
         ...
 
     @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], List[int]], /):
+        """
+        usage.dask: 6
+        usage.modin: 1
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, int, None], slice[None, int, None]], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: slice[int, int, int], /):
         """
         usage.dask: 8
@@ -1918,14 +1941,6 @@ class _iLocIndexer:
     def __getitem__(self, _0: slice[numpy.int64, None, numpy.int64], /):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], List[int]], /):
-        """
-        usage.dask: 6
-        usage.sklearn: 2
         """
         ...
 
@@ -2003,10 +2018,10 @@ class _iLocIndexer:
                     int,
                 ],
                 Union[
-                    List[Union[int, bool]],
                     int,
                     numpy.ndarray,
                     slice[Union[int, None], Union[int, None], Union[int, None]],
+                    List[Union[int, bool]],
                 ],
             ],
             List[int],
@@ -2017,6 +2032,7 @@ class _iLocIndexer:
     ):
         """
         usage.dask: 71
+        usage.modin: 3
         usage.sklearn: 24
         usage.xarray: 5
         """

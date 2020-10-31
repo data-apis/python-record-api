@@ -84,6 +84,7 @@ class Series:
     iloc: object
 
     # usage.dask: 83
+    # usage.modin: 7
     # usage.sklearn: 3
     # usage.xarray: 23
     index: object
@@ -94,6 +95,7 @@ class Series:
     loc: object
 
     # usage.dask: 48
+    # usage.modin: 1
     # usage.sklearn: 6
     # usage.xarray: 5
     name: Union[str, None]
@@ -119,6 +121,7 @@ class Series:
     str: object
 
     # usage.dask: 40
+    # usage.modin: 1
     # usage.xarray: 16
     values: object
 
@@ -126,6 +129,14 @@ class Series:
     def __add__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /):
         """
         usage.pandas: 39
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: int, /):
+        """
+        usage.dask: 34
+        usage.modin: 1
         """
         ...
 
@@ -140,13 +151,6 @@ class Series:
     def __add__(self, _0: dask.dataframe.core.Scalar, /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __add__(self, _0: int, /):
-        """
-        usage.dask: 34
         """
         ...
 
@@ -181,6 +185,7 @@ class Series:
     def __add__(self, _0: object, /):
         """
         usage.dask: 55
+        usage.modin: 1
         usage.pandas: 39
         """
         ...
@@ -688,6 +693,50 @@ class Series:
         ...
 
     @overload
+    def __getitem__(self, _0: Literal["col2"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["col1"], /):
+        """
+        usage.modin: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["B"], /):
+        """
+        usage.dask: 1
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["C"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["idx"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["A"], /):
+        """
+        usage.dask: 4
+        usage.modin: 4
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: Literal["amount"], /):
         """
         usage.dask: 2
@@ -738,20 +787,6 @@ class Series:
 
     @overload
     def __getitem__(self, _0: Literal["-500"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["A"], /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["B"], /):
         """
         usage.dask: 1
         """
@@ -907,6 +942,7 @@ class Series:
     def __getitem__(self, _0: object, /):
         """
         usage.dask: 72
+        usage.modin: 12
         usage.xarray: 23
         """
         ...
@@ -982,6 +1018,7 @@ class Series:
     def __iter__(self, /):
         """
         usage.dask: 4
+        usage.modin: 2
         usage.sklearn: 12
         """
         ...
@@ -1391,6 +1428,20 @@ class Series:
         ...
 
     @overload
+    def __setitem__(self, _0: slice[None, int, None], _1: float, /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, None, int], _1: float, /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
     def __setitem__(self, _0: pandas.core.series.Series, _1: int, /):
         """
         usage.dask: 2
@@ -1405,10 +1456,18 @@ class Series:
         ...
 
     def __setitem__(
-        self, _0: Union[pandas.core.series.Series, int], _1: Union[int, float], /
+        self,
+        _0: Union[
+            pandas.core.series.Series,
+            int,
+            slice[Union[None, int], Union[int, None], Union[None, int]],
+        ],
+        _1: Union[int, float],
+        /,
     ):
         """
         usage.dask: 3
+        usage.modin: 2
         usage.xarray: 2
         """
         ...
@@ -2202,6 +2261,7 @@ class Series:
     def copy(self, /):
         """
         usage.dask: 3
+        usage.modin: 1
         """
         ...
 
@@ -4858,9 +4918,24 @@ class Series:
         """
         ...
 
+    @overload
+    def squeeze(self, /, axis: int):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
     def squeeze(self, /):
         """
         usage.dask: 1
+        """
+        ...
+
+    def squeeze(self, /, axis: int = ...):
+        """
+        usage.dask: 1
+        usage.modin: 1
         """
         ...
 
