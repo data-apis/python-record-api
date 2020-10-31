@@ -7146,6 +7146,22 @@
                 "type": "list",
                 "item": {
                   "type": {
+                    "module": "numpy",
+                    "name": "float64"
+                  }
+                }
+              }
+            },
+            "metadata": {
+              "usage.skimage": 15
+            }
+          },
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": "list",
+                "item": {
+                  "type": {
                     "name": "int"
                   }
                 }
@@ -7165,22 +7181,6 @@
             },
             "metadata": {
               "usage.skimage": 1
-            }
-          },
-          {
-            "pos_only_required": {
-              "_0": {
-                "type": "list",
-                "item": {
-                  "type": {
-                    "module": "numpy",
-                    "name": "float64"
-                  }
-                }
-              }
-            },
-            "metadata": {
-              "usage.skimage": 15
             }
           },
           {
@@ -68368,47 +68368,6 @@
           {
             "pos_or_kw_required": {
               "actual": {
-                "type": "tuple",
-                "items": [
-                  {
-                    "type": {
-                      "module": "numpy",
-                      "name": "float64"
-                    }
-                  },
-                  {
-                    "type": {
-                      "module": "numpy",
-                      "name": "float64"
-                    }
-                  }
-                ]
-              },
-              "desired": {
-                "type": "tuple",
-                "items": [
-                  {
-                    "type": {
-                      "module": "numpy",
-                      "name": "float64"
-                    }
-                  },
-                  {
-                    "type": {
-                      "module": "numpy",
-                      "name": "float64"
-                    }
-                  }
-                ]
-              }
-            },
-            "metadata": {
-              "usage.skimage": 1
-            }
-          },
-          {
-            "pos_or_kw_required": {
-              "actual": {
                 "type": {
                   "module": "numpy",
                   "name": "int64"
@@ -68444,6 +68403,47 @@
                     "name": "float64"
                   }
                 }
+              }
+            },
+            "metadata": {
+              "usage.skimage": 1
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "actual": {
+                "type": "tuple",
+                "items": [
+                  {
+                    "type": {
+                      "module": "numpy",
+                      "name": "float64"
+                    }
+                  },
+                  {
+                    "type": {
+                      "module": "numpy",
+                      "name": "float64"
+                    }
+                  }
+                ]
+              },
+              "desired": {
+                "type": "tuple",
+                "items": [
+                  {
+                    "type": {
+                      "module": "numpy",
+                      "name": "float64"
+                    }
+                  },
+                  {
+                    "type": {
+                      "module": "numpy",
+                      "name": "float64"
+                    }
+                  }
+                ]
               }
             },
             "metadata": {
