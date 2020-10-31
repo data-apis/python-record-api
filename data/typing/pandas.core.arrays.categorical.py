@@ -114,6 +114,12 @@ class Categorical:
         """
         ...
 
+    def __iter__(self, /):
+        """
+        usage.modin: 1
+        """
+        ...
+
 
 class CategoricalAccessor:
 

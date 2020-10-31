@@ -243,3 +243,10 @@ def assert_series_equal(
     usage.dask: 19
     """
     ...
+
+
+def getSeriesData():
+    """
+    usage.modin: 4
+    """
+    ...

@@ -7,6 +7,7 @@ BooleanDtype: object
 # usage.xarray: 1
 Categorical: object
 
+# usage.modin: 3
 # usage.xarray: 2
 CategoricalDtype: object
 
@@ -15,6 +16,7 @@ CategoricalDtype: object
 CategoricalIndex: object
 
 # usage.dask: 309
+# usage.modin: 27
 # usage.sklearn: 54
 # usage.xarray: 10
 DataFrame: object
@@ -57,6 +59,7 @@ Int8Dtype: object
 Interval: object
 
 # usage.dask: 19
+# usage.modin: 3
 # usage.xarray: 70
 MultiIndex: object
 
@@ -78,6 +81,7 @@ PeriodIndex: object
 RangeIndex: object
 
 # usage.dask: 102
+# usage.modin: 16
 # usage.sklearn: 11
 # usage.xarray: 20
 Series: object
@@ -117,6 +121,7 @@ __version__: object
 array: object
 
 # usage.dask: 31
+# usage.modin: 3
 # usage.sklearn: 2
 concat: object
 
@@ -124,6 +129,7 @@ concat: object
 cut: object
 
 # usage.dask: 50
+# usage.modin: 10
 # usage.xarray: 106
 date_range: object
 
@@ -162,11 +168,28 @@ pivot_table: object
 plotting: object
 
 # usage.dask: 16
+# usage.modin: 15
 # usage.sklearn: 2
 read_csv: object
 
+# usage.modin: 4
+read_excel: object
+
+# usage.modin: 10
+read_fwf: object
+
+# usage.modin: 3
+read_hdf: object
+
 # usage.dask: 3
+# usage.modin: 4
 read_json: object
+
+# usage.modin: 4
+read_parquet: object
+
+# usage.modin: 3
+read_sql: object
 
 # usage.dask: 3
 # usage.xarray: 1

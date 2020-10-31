@@ -2,9 +2,10 @@ from typing import *
 
 
 @overload
-def concat(objs: List[pandas.core.frame.DataFrame], join: Literal["outer"], sort: bool):
+def concat(objs: List[pandas.core.frame.DataFrame]):
     """
-    usage.dask: 12
+    usage.dask: 18
+    usage.modin: 3
     """
     ...
 
@@ -13,14 +14,25 @@ def concat(objs: List[pandas.core.frame.DataFrame], join: Literal["outer"], sort
 def concat(objs: List[pandas.core.series.Series], axis: int):
     """
     usage.dask: 7
+    usage.modin: 6
     """
     ...
 
 
 @overload
-def concat(objs: List[pandas.core.frame.DataFrame]):
+def concat(objs: List[pandas.core.frame.DataFrame], axis: int):
     """
-    usage.dask: 18
+    usage.dask: 6
+    usage.modin: 1
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def concat(objs: List[pandas.core.frame.DataFrame], join: Literal["outer"], sort: bool):
+    """
+    usage.dask: 12
     """
     ...
 
@@ -77,15 +89,6 @@ def concat(objs: List[pandas.core.series.Series], join: Literal["outer"], sort: 
 def concat(objs: List[pandas.core.frame.DataFrame], axis: int, join: Literal["outer"]):
     """
     usage.dask: 2
-    """
-    ...
-
-
-@overload
-def concat(objs: List[pandas.core.frame.DataFrame], axis: int):
-    """
-    usage.dask: 6
-    usage.sklearn: 1
     """
     ...
 
@@ -329,6 +332,7 @@ def concat(
 ):
     """
     usage.dask: 148
+    usage.modin: 10
     usage.sklearn: 3
     """
     ...

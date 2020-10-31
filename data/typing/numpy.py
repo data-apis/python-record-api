@@ -24,6 +24,7 @@ NINF: object
 
 # usage.dask: 5
 # usage.matplotlib: 4
+# usage.modin: 3
 # usage.pandas: 75
 # usage.scipy: 3
 # usage.skimage: 1
@@ -1179,6 +1180,7 @@ multiply: numpy.ufunc
 
 # usage.dask: 125
 # usage.matplotlib: 61
+# usage.modin: 21
 # usage.pandas: 2265
 # usage.scipy: 629
 # usage.skimage: 16
@@ -1547,6 +1549,7 @@ string_: object
 struve: numpy.ufunc
 
 # usage.dask: 21
+# usage.modin: 1
 # usage.pandas: 38
 # usage.scipy: 14
 # usage.skimage: 14
@@ -1660,6 +1663,7 @@ def all(a: numpy.ndarray):
     """
     usage.dask: 18
     usage.matplotlib: 27
+    usage.modin: 1
     usage.scipy: 257
     usage.skimage: 93
     usage.sklearn: 139
@@ -2020,6 +2024,7 @@ def all(
     """
     usage.dask: 92
     usage.matplotlib: 28
+    usage.modin: 1
     usage.pandas: 81
     usage.scipy: 276
     usage.skimage: 96
@@ -4622,6 +4627,7 @@ def append(arr: bool, values: numpy.ndarray):
 @overload
 def append(arr: numpy.ndarray, values: int):
     """
+    usage.modin: 1
     usage.scipy: 3
     usage.sklearn: 1
     """
@@ -4744,6 +4750,7 @@ def append(arr: object, values: object, axis: int = ...):
     """
     usage.dask: 1
     usage.matplotlib: 6
+    usage.modin: 1
     usage.pandas: 8
     usage.scipy: 63
     usage.sklearn: 29
@@ -4963,6 +4970,7 @@ def arange(_0: int, /):
     """
     usage.dask: 241
     usage.matplotlib: 188
+    usage.modin: 11
     usage.sample-usage: 4
     usage.scipy: 504
     usage.skimage: 95
@@ -5006,6 +5014,7 @@ def arange(_0: int, _1: int, /):
     """
     usage.dask: 15
     usage.matplotlib: 21
+    usage.modin: 3
     usage.scipy: 160
     usage.skimage: 20
     usage.sklearn: 35
@@ -5368,6 +5377,7 @@ def arange(_0: numpy.int64, _1: numpy.int64, _2: None, /):
 @overload
 def arange(_0: float, _1: float, /, *, dtype: Literal["float64"]):
     """
+    usage.modin: 1
     usage.xarray: 1
     """
     ...
@@ -6228,6 +6238,7 @@ def arange(
     """
     usage.dask: 347
     usage.matplotlib: 359
+    usage.modin: 15
     usage.pandas: 894
     usage.sample-usage: 4
     usage.scipy: 1173
@@ -6987,6 +6998,7 @@ def array(_0: List[int], /):
     """
     usage.dask: 126
     usage.matplotlib: 41
+    usage.modin: 1
     usage.sample-usage: 1
     usage.scipy: 774
     usage.skimage: 101
@@ -7156,6 +7168,7 @@ def array(_0: List[numpy.int64], /):
     """
     usage.dask: 3
     usage.matplotlib: 3
+    usage.modin: 1
     usage.scipy: 16
     usage.skimage: 10
     usage.sklearn: 17
@@ -7270,6 +7283,7 @@ def array(_0: list, /):
     """
     usage.dask: 5
     usage.matplotlib: 8
+    usage.modin: 2
     usage.scipy: 65
     usage.skimage: 11
     usage.sklearn: 13
@@ -7293,6 +7307,7 @@ def array(_0: List[Union[float, int]], /):
     """
     usage.dask: 5
     usage.matplotlib: 14
+    usage.modin: 1
     usage.scipy: 85
     usage.skimage: 9
     usage.sklearn: 21
@@ -10173,6 +10188,7 @@ def array(_0: numpy.ndarray, /, *, dtype: numpy.dtype):
 @overload
 def array(_0: List[numpy.ndarray], /, *, dtype: numpy.dtype):
     """
+    usage.modin: 3
     usage.scipy: 2
     """
     ...
@@ -11108,6 +11124,7 @@ def array(_0: List[Literal[""]], /, *, dtype: Literal["U1"]):
 def array(_0: List[list], /):
     """
     usage.matplotlib: 1
+    usage.modin: 1
     usage.scipy: 7
     usage.sklearn: 3
     """
@@ -15436,6 +15453,69 @@ def array(_0: List[List[int]], /, *, dtype: None):
 
 
 @overload
+def array(
+    _0: List[
+        List[modin.engines.ray.pandas_on_ray.frame.partition.PandasOnRayFramePartition]
+    ],
+    /,
+):
+    """
+    usage.modin: 30
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[ray._raylet.ObjectRef]], /):
+    """
+    usage.modin: 3
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["foo", "bar"]], /, *, dtype: Type[object]):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["two", "one"]], /, *, dtype: Type[object]):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["shiny", "dull"]], /, *, dtype: Type[object]):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.int64], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.float32], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
 def array(_0: Tuple[int, int, int, float], /, *, dtype: Type[float]):
     """
     usage.matplotlib: 1
@@ -17643,14 +17723,6 @@ def array(_0: Literal["df"], /):
 
 
 @overload
-def array(_0: List[numpy.int64], /, *, dtype: numpy.dtype):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
 def array(_0: List[Literal["cc", "bb", "aa"]], /):
     """
     usage.dask: 1
@@ -18264,14 +18336,6 @@ def array(_0: List[float], /, *, dtype: Literal["f4"]):
 
 @overload
 def array(_0: List[Literal["B", "A", "C"]], /):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[numpy.float32], /, *, dtype: numpy.dtype):
     """
     usage.dask: 1
     """
@@ -20028,6 +20092,7 @@ def array(
     """
     usage.dask: 495
     usage.matplotlib: 812
+    usage.modin: 47
     usage.pandas: 6865
     usage.sample-usage: 3
     usage.scipy: 7120
@@ -37603,6 +37668,7 @@ def cumsum(a: List[int]):
     """
     usage.dask: 6
     usage.matplotlib: 5
+    usage.modin: 4
     usage.scipy: 4
     usage.sklearn: 7
     usage.xarray: 10
@@ -37868,6 +37934,7 @@ def cumsum(
     """
     usage.dask: 41
     usage.matplotlib: 33
+    usage.modin: 4
     usage.pandas: 26
     usage.scipy: 30
     usage.skimage: 29
@@ -38441,6 +38508,7 @@ def diff(
 @overload
 def digitize(x: numpy.ndarray, bins: numpy.ndarray):
     """
+    usage.modin: 1
     usage.scipy: 2
     usage.sklearn: 3
     """
@@ -38468,6 +38536,7 @@ def digitize(
 ):
     """
     usage.dask: 8
+    usage.modin: 1
     usage.scipy: 2
     usage.sklearn: 3
     """
@@ -66258,6 +66327,13 @@ def save(file: str, arr: Union[numpy.ndarray, numpy.memmap]):
     ...
 
 
+def savetxt(fname: Literal["200kx99.csv"], X: numpy.ndarray, delimiter: Literal[","]):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
 def savez(file: Literal["/tmp/tmpdhsm8ld3.npz"]):
     """
     usage.scipy: 1
@@ -67441,6 +67517,7 @@ def sort(a: numpy.ndarray):
     """
     usage.dask: 6
     usage.matplotlib: 4
+    usage.modin: 1
     usage.pandas: 33
     usage.scipy: 163
     usage.skimage: 13
@@ -67561,6 +67638,14 @@ def sort(a: list):
 
 
 @overload
+def sort(a: List[numpy.int64]):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
 def sort(a: dask.array.core.Array):
     """
     usage.dask: 1
@@ -67577,17 +67662,13 @@ def sort(a: List[Union[int, float]]):
 
 
 def sort(
-    a: Union[
-        List[Union[numpy.complex128, float, complex, int, numpy.float64]],
-        numpy.ndarray,
-        numpy.ma.core.MaskedArray,
-        dask.array.core.Array,
-    ],
+    a: Union[list, numpy.ndarray, numpy.ma.core.MaskedArray, dask.array.core.Array],
     axis: Union[int, None] = ...,
 ):
     """
     usage.dask: 14
     usage.matplotlib: 4
+    usage.modin: 2
     usage.pandas: 33
     usage.scipy: 217
     usage.skimage: 14
@@ -85779,6 +85860,7 @@ class float64:
 class iinfo:
 
     # usage.dask: 2
+    # usage.modin: 1
     # usage.pandas: 25
     # usage.scipy: 12
     # usage.skimage: 7
@@ -88200,6 +88282,7 @@ class int64:
         """
         usage.dask: 8
         usage.matplotlib: 6
+        usage.modin: 1
         usage.scipy: 17
         usage.skimage: 3
         usage.sklearn: 13
@@ -88284,6 +88367,7 @@ class int64:
         """
         usage.dask: 21
         usage.matplotlib: 10
+        usage.modin: 1
         usage.pandas: 19
         usage.scipy: 34
         usage.skimage: 11
@@ -88392,6 +88476,7 @@ class int64:
         """
         usage.dask: 19
         usage.matplotlib: 7
+        usage.modin: 1
         usage.scipy: 49
         usage.skimage: 12
         usage.sklearn: 37
@@ -88403,6 +88488,7 @@ class int64:
         """
         usage.dask: 15
         usage.matplotlib: 16
+        usage.modin: 1
         usage.scipy: 15
         usage.skimage: 5
         usage.sklearn: 13
@@ -88472,6 +88558,7 @@ class int64:
         """
         usage.dask: 43
         usage.matplotlib: 26
+        usage.modin: 2
         usage.pandas: 24
         usage.scipy: 81
         usage.skimage: 22
@@ -88714,6 +88801,7 @@ class int64:
         """
         usage.dask: 15
         usage.matplotlib: 16
+        usage.modin: 1
         usage.scipy: 15
         usage.skimage: 5
         usage.sklearn: 13
@@ -88809,6 +88897,7 @@ class int64:
         """
         usage.dask: 39
         usage.matplotlib: 34
+        usage.modin: 1
         usage.pandas: 10
         usage.scipy: 82
         usage.skimage: 24
@@ -89911,6 +90000,7 @@ class int64:
         """
         usage.dask: 3
         usage.matplotlib: 5
+        usage.modin: 1
         usage.scipy: 10
         usage.skimage: 7
         usage.sklearn: 10
@@ -89967,6 +90057,7 @@ class int64:
         """
         usage.dask: 6
         usage.matplotlib: 9
+        usage.modin: 1
         usage.pandas: 22
         usage.scipy: 50
         usage.skimage: 14
@@ -95299,6 +95390,7 @@ class ndarray:
 
     # usage.dask: 28
     # usage.matplotlib: 93
+    # usage.modin: 3
     # usage.pandas: 211
     # usage.sample-usage: 1
     # usage.scipy: 1342
@@ -95347,6 +95439,7 @@ class ndarray:
 
     # usage.dask: 451
     # usage.matplotlib: 79
+    # usage.modin: 1
     # usage.pandas: 3135
     # usage.sample-usage: 1
     # usage.scipy: 2777
@@ -95421,16 +95514,18 @@ class ndarray:
 
     # usage.dask: 445
     # usage.matplotlib: 323
+    # usage.modin: 4
     # usage.pandas: 695
     # usage.sample-usage: 2
     # usage.scipy: 4734
     # usage.skimage: 1138
     # usage.sklearn: 3271
     # usage.xarray: 350
-    shape: Union[Tuple[Union[int, None], ...], List[int], numpy.ndarray]
+    shape: Union[Tuple[Union[None, int], ...], numpy.ndarray, List[int]]
 
     # usage.dask: 16
     # usage.matplotlib: 84
+    # usage.modin: 1
     # usage.pandas: 147
     # usage.sample-usage: 1
     # usage.scipy: 975
@@ -96399,6 +96494,7 @@ class ndarray:
         """
         usage.dask: 47
         usage.matplotlib: 28
+        usage.modin: 1
         usage.scipy: 275
         usage.skimage: 111
         usage.sklearn: 269
@@ -96929,6 +97025,7 @@ class ndarray:
         """
         usage.dask: 192
         usage.matplotlib: 88
+        usage.modin: 1
         usage.pandas: 895
         usage.sample-usage: 2
         usage.scipy: 616
@@ -97043,6 +97140,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 2
+        usage.modin: 1
         usage.scipy: 183
         usage.skimage: 5
         usage.sklearn: 7
@@ -97087,6 +97185,7 @@ class ndarray:
         """
         usage.dask: 16
         usage.matplotlib: 39
+        usage.modin: 1
         usage.pandas: 90
         usage.scipy: 497
         usage.skimage: 50
@@ -97100,6 +97199,7 @@ class ndarray:
         """
         usage.dask: 32
         usage.matplotlib: 53
+        usage.modin: 3
         usage.scipy: 608
         usage.skimage: 64
         usage.sklearn: 412
@@ -97112,6 +97212,7 @@ class ndarray:
         """
         usage.dask: 17
         usage.matplotlib: 45
+        usage.modin: 1
         usage.scipy: 318
         usage.skimage: 25
         usage.sklearn: 184
@@ -97124,6 +97225,7 @@ class ndarray:
         """
         usage.dask: 46
         usage.matplotlib: 433
+        usage.modin: 20
         usage.sample-usage: 2
         usage.scipy: 2186
         usage.skimage: 360
@@ -97922,6 +98024,7 @@ class ndarray:
     def __getitem__(self, _0: slice[None, numpy.int64, None], /):
         """
         usage.matplotlib: 3
+        usage.modin: 1
         usage.scipy: 54
         usage.skimage: 2
         usage.sklearn: 15
@@ -98065,6 +98168,7 @@ class ndarray:
         """
         usage.dask: 4
         usage.matplotlib: 5
+        usage.modin: 1
         usage.scipy: 104
         usage.skimage: 1
         usage.sklearn: 13
@@ -103588,6 +103692,7 @@ class ndarray:
         """
         usage.dask: 654
         usage.matplotlib: 1402
+        usage.modin: 26
         usage.pandas: 2206
         usage.sample-usage: 5
         usage.scipy: 9038
@@ -104214,6 +104319,7 @@ class ndarray:
         """
         usage.dask: 9
         usage.matplotlib: 25
+        usage.modin: 1
         usage.pandas: 122
         usage.sample-usage: 1
         usage.scipy: 158
@@ -104499,6 +104605,7 @@ class ndarray:
         """
         usage.dask: 6
         usage.matplotlib: 363
+        usage.modin: 14
         usage.pandas: 181
         usage.sample-usage: 2
         usage.scipy: 302
@@ -104666,6 +104773,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 2
+        usage.modin: 1
         usage.scipy: 183
         usage.skimage: 5
         usage.sklearn: 7
@@ -104747,6 +104855,7 @@ class ndarray:
         """
         usage.dask: 5
         usage.matplotlib: 41
+        usage.modin: 1
         usage.pandas: 134
         usage.scipy: 436
         usage.skimage: 28
@@ -115446,6 +115555,7 @@ class ndarray:
     @overload
     def astype(self, _0: Literal["u1"], /):
         """
+        usage.modin: 1
         usage.scipy: 1
         usage.xarray: 1
         """
@@ -116191,6 +116301,7 @@ class ndarray:
         """
         usage.dask: 184
         usage.matplotlib: 77
+        usage.modin: 1
         usage.pandas: 1453
         usage.sample-usage: 1
         usage.scipy: 1950
@@ -116460,6 +116571,7 @@ class ndarray:
         """
         usage.dask: 3
         usage.matplotlib: 2
+        usage.modin: 2
         usage.scipy: 6
         usage.skimage: 1
         usage.sklearn: 6
@@ -116495,6 +116607,7 @@ class ndarray:
         """
         usage.dask: 7
         usage.matplotlib: 3
+        usage.modin: 2
         usage.pandas: 6
         usage.scipy: 8
         usage.skimage: 7
@@ -118068,6 +118181,7 @@ class ndarray:
         """
         usage.dask: 40
         usage.matplotlib: 14
+        usage.modin: 1
         usage.scipy: 169
         usage.skimage: 68
         usage.sklearn: 242
@@ -118239,6 +118353,7 @@ class ndarray:
         """
         usage.dask: 144
         usage.matplotlib: 16
+        usage.modin: 1
         usage.pandas: 101
         usage.scipy: 264
         usage.skimage: 100
@@ -122700,6 +122815,15 @@ class ufunc:
         ...
 
     @overload
+    def __call__(self, _0: numpy.ndarray, _1: numpy.int64, /):
+        """
+        usage.dask: 6
+        usage.modin: 1
+        usage.sklearn: 3
+        """
+        ...
+
+    @overload
     def __call__(self, _0: matplotlib.transforms.Bbox, /):
         """
         usage.matplotlib: 2
@@ -122781,14 +122905,6 @@ class ufunc:
     def __call__(self, _0: Tuple[int, int, int], /):
         """
         usage.dask: 7
-        """
-        ...
-
-    @overload
-    def __call__(self, _0: numpy.ndarray, _1: numpy.int64, /):
-        """
-        usage.dask: 6
-        usage.sklearn: 3
         """
         ...
 
@@ -123417,6 +123533,7 @@ class ufunc:
         """
         usage.dask: 4506
         usage.matplotlib: 781
+        usage.modin: 1
         usage.pandas: 1228
         usage.sample-usage: 3
         usage.scipy: 8006

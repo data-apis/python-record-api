@@ -102,6 +102,14 @@ class MultiIndex:
 
     @overload
     @classmethod
+    def from_arrays(cls, /, arrays: List[numpy.ndarray]):
+        """
+        usage.modin: 2
+        """
+        ...
+
+    @overload
+    @classmethod
     def from_arrays(
         cls,
         /,
@@ -147,6 +155,7 @@ class MultiIndex:
     ):
         """
         usage.dask: 7
+        usage.modin: 2
         usage.xarray: 8
         """
         ...
@@ -577,22 +586,105 @@ class MultiIndex:
         """
         ...
 
+    @overload
+    @classmethod
+    def from_tuples(
+        cls,
+        /,
+        tuples: List[Tuple[Literal["a"], numpy.int64]],
+        names: List[Literal["name2", "name1"]],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_tuples(
+        cls,
+        /,
+        tuples: List[
+            Tuple[Literal["a"], Literal["col1", "col2", "col3", "col4", "col5"]]
+        ],
+        names: List[Literal["name2", "name1"]],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_tuples(
+        cls,
+        /,
+        tuples: List[
+            Tuple[Literal["a"], Literal["col1", "col2", "col3", "col6", "col7"]]
+        ],
+        names: List[Literal["name2", "name1"]],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_tuples(
+        cls,
+        /,
+        tuples: List[Tuple[int, Literal["c", "a", "b"], Literal["Red", "Green"]]],
+        names: List[Literal["Color", "Letter", "Number"]],
+    ):
+        """
+        usage.modin: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_tuples(
+        cls,
+        /,
+        tuples: List[Tuple[Literal["foo1", "foo2"], Literal["bar1", "bar2"]]],
+        names: List[Literal["bar", "foo"]],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_tuples(
+        cls,
+        /,
+        tuples: List[Tuple[Literal["fizz1", "fizz2"], Literal["buzz1", "buzz2"]]],
+        names: List[Literal["buzz", "fizz"]],
+    ):
+        """
+        usage.modin: 1
+        """
+        ...
+
     @classmethod
     def from_tuples(
         cls,
         /,
         tuples: Union[
+            List[Union[List[int], Tuple[Union[numpy.int64, int, str], ...]]],
             Tuple[
                 Tuple[Literal["a", "b"], int],
                 Tuple[Literal["a", "b"], int],
                 Tuple[Literal["b", "a"], int],
                 Tuple[Literal["b", "a"], int],
             ],
-            List[List[int]],
         ],
-        names: List[Literal["level1", "level0", "two", "one"]],
+        names: List[str],
     ):
         """
+        usage.modin: 9
         usage.xarray: 3
         """
         ...
@@ -622,8 +714,9 @@ class MultiIndex:
     levels: object
 
     # usage.dask: 4
+    # usage.modin: 2
     # usage.xarray: 3
-    name: Literal["z"]
+    name: Union[Literal["z"], None]
 
     # usage.dask: 11
     # usage.xarray: 23

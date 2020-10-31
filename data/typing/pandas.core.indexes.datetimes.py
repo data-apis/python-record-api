@@ -313,6 +313,7 @@ def date_range(
 def date_range(start: Literal["20130101"], periods: int):
     """
     usage.dask: 2
+    usage.modin: 1
     usage.xarray: 5
     """
     ...
@@ -494,6 +495,130 @@ def date_range(
 ):
     """
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int, freq: Literal["h"]):
+    """
+    usage.modin: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["31/12/2000"], periods: int, freq: Literal["T"]):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1/1/2000"], periods: int, freq: Literal["T"]):
+    """
+    usage.modin: 3
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2008-01-01"], periods: int, freq: Literal["12H"]):
+    """
+    usage.modin: 4
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2016-12-31"],
+    periods: int,
+    freq: Literal["D"],
+    tz: Literal["Europe/Berlin"],
+):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2010-04-09"], periods: int, freq: Literal["2D"]):
+    """
+    usage.modin: 6
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2014-02-12"], end: Literal["2014-02-15"], freq: Literal["D"]
+):
+    """
+    usage.modin: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1/1/2000"], periods: int, freq: Literal["H"]):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1/1/2012"], periods: int, freq: Literal["M"]):
+    """
+    usage.modin: 5
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["1/1/2012"],
+    periods: int,
+    freq: Literal["2D"],
+    tz: Literal["America/Los_Angeles"],
+):
+    """
+    usage.modin: 4
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1/1/2012"], periods: int, freq: Literal["2D"]):
+    """
+    usage.modin: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["now"], periods: int):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2017/1/4"], periods: int):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["20130110"], periods: int):
+    """
+    usage.modin: 2
     """
     ...
 
@@ -1331,6 +1456,7 @@ def date_range(
 ):
     """
     usage.dask: 94
+    usage.modin: 36
     usage.xarray: 122
     """
     ...
@@ -1402,6 +1528,7 @@ class DatetimeIndex:
     # usage.dask: 2
     tz: object
 
+    # usage.modin: 1
     # usage.xarray: 16
     values: object
 
@@ -1499,6 +1626,7 @@ class DatetimeIndex:
     def __getitem__(self, _0: int, /):
         """
         usage.dask: 18
+        usage.modin: 2
         usage.xarray: 6
         """
         ...
@@ -1552,12 +1680,13 @@ class DatetimeIndex:
         _0: Union[
             int,
             numpy.ndarray,
-            slice[Union[None, int], Union[int, None], Union[None, int]],
+            slice[Union[int, None], Union[None, int], Union[int, None]],
         ],
         /,
     ):
         """
         usage.dask: 21
+        usage.modin: 2
         usage.xarray: 20
         """
         ...
@@ -1598,6 +1727,12 @@ class DatetimeIndex:
     def __isub__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
         """
         usage.pandas: 3
+        """
+        ...
+
+    def __iter__(self, /):
+        """
+        usage.modin: 2
         """
         ...
 

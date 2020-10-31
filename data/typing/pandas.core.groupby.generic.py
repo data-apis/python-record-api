@@ -872,6 +872,7 @@ class DataFrameGroupBy:
     def size(self, /):
         """
         usage.dask: 9
+        usage.modin: 2
         """
         ...
 

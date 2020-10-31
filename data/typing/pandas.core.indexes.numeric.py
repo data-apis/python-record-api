@@ -24,8 +24,9 @@ class Float64Index:
     is_unique: object
 
     # usage.dask: 9
+    # usage.modin: 1
     # usage.xarray: 1
-    name: Union[Literal["x"], None]
+    name: Union[Literal["x", "c"], None]
 
     # usage.dask: 4
     names: List[str]
@@ -537,17 +538,29 @@ class Int64Index:
         """
         ...
 
+    @overload
+    def __getitem__(self, _0: slice[numpy.int64, numpy.int64, numpy.int64], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
     def __getitem__(
         self,
         _0: Union[
             int,
             numpy.ndarray,
-            slice[Union[int, None], Union[None, int], Union[int, None]],
+            slice[
+                Union[None, numpy.int64, int],
+                Union[numpy.int64, int, None],
+                Union[None, numpy.int64, int],
+            ],
         ],
         /,
     ):
         """
         usage.dask: 11
+        usage.modin: 1
         usage.xarray: 16
         """
         ...

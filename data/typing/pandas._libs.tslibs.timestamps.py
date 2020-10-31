@@ -432,9 +432,21 @@ class Timestamp:
         """
         ...
 
+    def date(self, /):
+        """
+        usage.modin: 2
+        """
+        ...
+
     def round(self, /, freq: Literal["15s"]):
         """
         usage.dask: 1
+        """
+        ...
+
+    def time(self, /):
+        """
+        usage.modin: 2
         """
         ...
 
