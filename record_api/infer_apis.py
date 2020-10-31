@@ -193,6 +193,8 @@ def _setattr(
     properties = {attr: (metadata, value_type)}
     if isinstance(instance, OtherOutput):
         # getting an attribute on a instance
+        if not instance.type.module:
+            return None
         return API(
             modules={
                 instance.type.module: Module(
