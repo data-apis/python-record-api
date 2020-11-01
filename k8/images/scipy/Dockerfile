@@ -18,7 +18,7 @@ RUN git clone \
     .
 
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install pytest-custom_exit_code cython numpy pytest
+    pip install pytest-custom_exit_code cython numpy pytest==6.0.1
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     python setup.py build_ext --inplace

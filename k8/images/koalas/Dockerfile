@@ -26,10 +26,12 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     scikit-learn \
     openpyxl \
     xlrd \
+    pytest-custom_exit_code \
     'plotly>=4.8' && \
     echo $(python -c "import jdk; print(jdk.install('8'))") > /tmp/java_home
 
+ENV PYTHON_RECORD_API_FROM_MODULES=databricks
+
 RUN python -c "import databricks.koalas"
 
-ENV PYTHON_RECORD_API_FROM_MODULES=koalas
-CMD bash -c "JAVA_HOME=$(cat /tmp/java_home) SPARK_LOCAL_IP=127.0.0.1 ./dev/pytest --doctest-modules databricks -k 'not to_clipboard and not test_day_name and not test_month_name'"
+CMD bash -c "JAVA_HOME=$(cat /tmp/java_home) SPARK_LOCAL_IP=127.0.0.1 ./dev/pytest --doctest-modules databricks --suppress-tests-failed-exit-code -k 'not to_clipboard and not test_day_name and not test_month_name'"

@@ -5,7 +5,7 @@ from .core import *
 
 
 @pytest.hookimpl(hookwrapper=True)
-def pytest_pyfunc_call(pyfuncitem):
+def pytest_runtest_call(item):
     with get_tracer():
         yield
 
