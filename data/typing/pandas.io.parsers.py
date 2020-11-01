@@ -2152,7 +2152,7 @@ def read_csv(
 
 
 @overload
-def read_csv(filepath_or_buffer: Literal["/tmp/tmpaaqg3bt5."], sep: Literal[","]):
+def read_csv(filepath_or_buffer: Literal["/tmp/tmp4vq8g9jj."], sep: Literal[","]):
     """
     usage.dask: 1
     """
@@ -2173,7 +2173,7 @@ def read_csv(
 
 @overload
 def read_csv(
-    filepath_or_buffer: Literal["/tmp/tmp0cdg5he1."],
+    filepath_or_buffer: Literal["/tmp/tmpvx5igyqk."],
     names: List[Literal["amount", "name"]],
     skiprows: int,
 ):
@@ -2185,7 +2185,7 @@ def read_csv(
 
 @overload
 def read_csv(
-    filepath_or_buffer: Literal["/tmp/tmpa2131h2g."],
+    filepath_or_buffer: Literal["/tmp/tmp2i4lyzjn."],
     names: List[Literal["amount", "name"]],
     skiprows: int,
 ):
@@ -2216,7 +2216,7 @@ def read_csv(
 
 
 @overload
-def read_csv(filepath_or_buffer: Literal["/tmp/tmpmileug70."]):
+def read_csv(filepath_or_buffer: Literal["/tmp/tmpaeer2a5e."]):
     """
     usage.dask: 1
     """
@@ -2232,7 +2232,7 @@ def read_csv(filepath_or_buffer: _io.BytesIO, skiprows: range):
 
 
 @overload
-def read_csv(filepath_or_buffer: Literal["/tmp/tmpwjmrqbqz."], skiprows: range):
+def read_csv(filepath_or_buffer: Literal["/tmp/tmpbjftivtd."], skiprows: range):
     """
     usage.dask: 1
     """
@@ -2249,7 +2249,7 @@ def read_csv(filepath_or_buffer: _io.BytesIO, usecols: List[Literal["Low", "High
 
 @overload
 def read_csv(
-    filepath_or_buffer: Literal["/tmp/tmp8rcggz5q."],
+    filepath_or_buffer: Literal["/tmp/tmpik_2a1p4."],
     usecols: List[Literal["Low", "High"]],
 ):
     """
@@ -2335,7 +2335,7 @@ def read_csv(filepath_or_buffer: _io.BytesIO, skiprows: int, na_values: List[int
 
 
 @overload
-def read_csv(filepath_or_buffer: Literal["/tmp/tmpi92gaehf."]):
+def read_csv(filepath_or_buffer: Literal["/tmp/tmptmvmud8v."]):
     """
     usage.dask: 1
     """
@@ -2396,7 +2396,7 @@ def read_csv(
 
 
 @overload
-def read_csv(filepath_or_buffer: Literal["/tmp/tmpo0nml9pp."]):
+def read_csv(filepath_or_buffer: Literal["/tmp/tmpl_zgedi3."]):
     """
     usage.dask: 1
     """
@@ -2422,7 +2422,7 @@ def read_csv(filepath_or_buffer: _io.BytesIO, dtype: None):
 
 
 @overload
-def read_csv(filepath_or_buffer: Literal["/tmp/tmpayak2gmh."]):
+def read_csv(filepath_or_buffer: Literal["/tmp/tmp83cqpbze."]):
     """
     usage.dask: 1
     """
@@ -2439,7 +2439,7 @@ def read_csv(filepath_or_buffer: _io.BytesIO, dtype: Literal["int64"]):
 
 @overload
 def read_csv(
-    filepath_or_buffer: Literal["/tmp/tmp0____npy."],
+    filepath_or_buffer: Literal["/tmp/tmp1pr16xcl."],
     header: int,
     index_col: int,
     usecols: List[int],
@@ -2466,7 +2466,7 @@ def read_csv(
 
 @overload
 def read_csv(
-    filepath_or_buffer: Literal["/tmp/tmpa8vxszi_."],
+    filepath_or_buffer: Literal["/tmp/tmp3ojwelzj."],
     header: int,
     index_col: int,
     usecols: List[int],
@@ -2480,7 +2480,7 @@ def read_csv(
 
 @overload
 def read_csv(
-    filepath_or_buffer: Literal["/tmp/tmp12pxwjdr.csv"], encoding: Literal["utf-16"]
+    filepath_or_buffer: Literal["/tmp/tmptwszhbso.csv"], encoding: Literal["utf-16"]
 ):
     """
     usage.dask: 1
@@ -2498,7 +2498,7 @@ def read_csv(filepath_or_buffer: _io.BytesIO, encoding: Literal["utf-16"]):
 
 @overload
 def read_csv(
-    filepath_or_buffer: Literal["/tmp/tmpigl0owvd.csv"], encoding: Literal["utf-16-le"]
+    filepath_or_buffer: Literal["/tmp/tmpsu6hgqwx.csv"], encoding: Literal["utf-16-le"]
 ):
     """
     usage.dask: 1
@@ -2516,7 +2516,7 @@ def read_csv(filepath_or_buffer: _io.BytesIO, encoding: Literal["utf-16-le"]):
 
 @overload
 def read_csv(
-    filepath_or_buffer: Literal["/tmp/tmpd3mrm6x7.csv"], encoding: Literal["utf-16-be"]
+    filepath_or_buffer: Literal["/tmp/tmphbpetj19.csv"], encoding: Literal["utf-16-be"]
 ):
     """
     usage.dask: 1
@@ -2541,7 +2541,7 @@ def read_csv(filepath_or_buffer: _io.BytesIO, sep: Literal["\t"]):
 
 
 @overload
-def read_csv(filepath_or_buffer: Literal["/tmp/tmpdy3f365u."], sep: Literal["\t"]):
+def read_csv(filepath_or_buffer: Literal["/tmp/tmpim2gt4pg."], sep: Literal["\t"]):
     """
     usage.dask: 1
     """
@@ -2558,7 +2558,7 @@ def read_csv(filepath_or_buffer: _io.BytesIO, delimiter: Literal["\t"]):
 
 @overload
 def read_csv(
-    filepath_or_buffer: Literal["/tmp/tmpdy3f365u."], delimiter: Literal["\t"]
+    filepath_or_buffer: Literal["/tmp/tmpim2gt4pg."], delimiter: Literal["\t"]
 ):
     """
     usage.dask: 1
@@ -2575,7 +2575,7 @@ def read_csv(filepath_or_buffer: _io.BytesIO, usecols: None):
 
 
 @overload
-def read_csv(filepath_or_buffer: Literal["/tmp/tmp_hxghznl."], usecols: None):
+def read_csv(filepath_or_buffer: Literal["/tmp/tmp0zzt5eus."], usecols: None):
     """
     usage.dask: 1
     """
@@ -2594,7 +2594,7 @@ def read_csv(
 
 @overload
 def read_csv(
-    filepath_or_buffer: Literal["/tmp/tmp4u6hx8pe."],
+    filepath_or_buffer: Literal["/tmp/tmp7c7vg6tx."],
     parse_dates: List[List[Literal["time", "date"]]],
 ):
     """
@@ -2615,7 +2615,7 @@ def read_csv(
 
 @overload
 def read_csv(
-    filepath_or_buffer: Literal["/tmp/tmpeowek22_."],
+    filepath_or_buffer: Literal["/tmp/tmpn2eyivvm."],
     sep: Literal["###"],
     engine: Literal["python"],
 ):
@@ -2640,7 +2640,7 @@ def read_csv(
 
 
 @overload
-def read_csv(filepath_or_buffer: Literal["/tmp/tmpmv0cd4d8."], dtype: Type[float]):
+def read_csv(filepath_or_buffer: Literal["/tmp/tmprnk3u5_v."], dtype: Type[float]):
     """
     usage.dask: 1
     """
@@ -2664,7 +2664,7 @@ def read_csv(filepath_or_buffer: Literal["2014-01-01.csv"]):
 
 
 @overload
-def read_csv(filepath_or_buffer: Literal["/tmp/tmpcz1m0kuu."], header: None):
+def read_csv(filepath_or_buffer: Literal["/tmp/tmpfdqvmpl_."], header: None):
     """
     usage.dask: 1
     """
@@ -2681,7 +2681,7 @@ def read_csv(filepath_or_buffer: _io.BytesIO, header: None, skiprows: int):
 
 @overload
 def read_csv(
-    filepath_or_buffer: Literal["/tmp/tmpmfmeism0."], header: None, skiprows: int
+    filepath_or_buffer: Literal["/tmp/tmp4podujwu."], header: None, skiprows: int
 ):
     """
     usage.dask: 1
@@ -2699,7 +2699,7 @@ def read_csv(filepath_or_buffer: _io.BytesIO, names: List[Literal["amount", "nam
 
 @overload
 def read_csv(
-    filepath_or_buffer: Literal["/tmp/tmpejaftmnx."],
+    filepath_or_buffer: Literal["/tmp/tmpjct67blz."],
     names: List[Literal["amount", "name"]],
 ):
     """
@@ -2718,7 +2718,7 @@ def read_csv(filepath_or_buffer: str, compression: Literal["gzip"]):
 
 @overload
 def read_csv(
-    filepath_or_buffer: Literal["/tmp/tmpqpa91aoq.csv"],
+    filepath_or_buffer: Literal["/tmp/tmpa1kne80b.csv"],
     index_col: int,
     compression: Literal["gzip"],
 ):
@@ -3002,7 +3002,7 @@ def read_table(
 
 
 @overload
-def read_table(filepath_or_buffer: Literal["/tmp/tmp3bzhsdib."], sep: Literal["\t"]):
+def read_table(filepath_or_buffer: Literal["/tmp/tmp1_iex77n."], sep: Literal["\t"]):
     """
     usage.dask: 1
     """
@@ -3020,7 +3020,7 @@ def read_table(
 
 
 @overload
-def read_table(filepath_or_buffer: Literal["/tmp/tmprl0wgi_k."], sep: Literal["\\s+"]):
+def read_table(filepath_or_buffer: Literal["/tmp/tmpxx48veym."], sep: Literal["\\s+"]):
     """
     usage.dask: 1
     """
@@ -3041,7 +3041,7 @@ def read_table(
 
 @overload
 def read_table(
-    filepath_or_buffer: Literal["/tmp/tmpy5308jfo."],
+    filepath_or_buffer: Literal["/tmp/tmp52s3u4dg."],
     names: List[Literal["amount", "name"]],
     skiprows: List[int],
 ):
@@ -3053,7 +3053,7 @@ def read_table(
 
 @overload
 def read_table(
-    filepath_or_buffer: Literal["/tmp/tmpdxee0ld9."],
+    filepath_or_buffer: Literal["/tmp/tmp7jjvwm9p."],
     names: List[Literal["amount", "name"]],
     skiprows: List[int],
 ):

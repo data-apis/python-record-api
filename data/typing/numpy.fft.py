@@ -610,15 +610,16 @@ def ifftn(
 
 
 @overload
-def ifftshift(x: List[int]):
+def ifftshift(x: numpy.ndarray):
     """
     usage.scipy: 2
+    usage.skimage: 2
     """
     ...
 
 
 @overload
-def ifftshift(x: numpy.ndarray):
+def ifftshift(x: List[int]):
     """
     usage.scipy: 2
     """
@@ -663,6 +664,7 @@ def ifftshift(
     """
     usage.dask: 4
     usage.scipy: 4
+    usage.skimage: 2
     """
     ...
 

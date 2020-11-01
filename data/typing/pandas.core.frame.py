@@ -9,12 +9,7943 @@ class DataFrame:
     # usage.dask: 4
     __name__: ClassVar[object]
 
+    # usage.koalas: 1
+    info: ClassVar[object]
+
     # usage.dask: 6
+    # usage.koalas: 1
+    # usage.networkx: 1
     # usage.sklearn: 39
     shape: ClassVar[object]
 
     # usage.sklearn: 2
     sparse: ClassVar[object]
+
+    # usage.koalas: 1
+    to_dict: ClassVar[object]
+
+    # usage.koalas: 5
+    to_excel: ClassVar[object]
+
+    # usage.koalas: 2
+    to_html: ClassVar[object]
+
+    # usage.koalas: 1
+    to_latex: ClassVar[object]
+
+    # usage.koalas: 1
+    to_markdown: ClassVar[object]
+
+    # usage.koalas: 1
+    to_records: ClassVar[object]
+
+    # usage.koalas: 2
+    to_string: ClassVar[object]
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Type[float], Type[str]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["B", "A"]], /):
+        """
+        usage.dask: 4
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["c1", "c0"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["id", "x"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(id-x, id-y)", "(x, y)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["0"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: None, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["B"]], /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["B"], /):
+        """
+        usage.dask: 7
+        usage.koalas: 4
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["A"]], /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["A"], /):
+        """
+        usage.dask: 27
+        usage.koalas: 11
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: list, /):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["animal"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["animal"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Col1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Col1"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Col2"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Col2"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x"]], /):
+        """
+        usage.dask: 5
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["x"], /):
+        """
+        usage.dask: 13
+        usage.koalas: 9
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["koalas"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["koalas"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["dates"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["dates"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cats", "dogs"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["col2", "col1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a"]], /):
+        """
+        usage.dask: 4
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["age", "kids", "score"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["id"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["id"], /):
+        """
+        usage.dask: 2
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["degrees", "angles"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["col_B", "col_A"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["B_col", "A_col"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["C", "B", "A"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[str], /):
+        """
+        usage.koalas: 30
+        usage.sklearn: 22
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(B, max)", "(B, min)", "(A, min)", "(A, sum)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["1", "0"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["0"], /):
+        """
+        usage.dask: 4
+        usage.koalas: 6
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["1"], /):
+        """
+        usage.dask: 4
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["temp_c"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["temp_f", "temp_c"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["temp_idx", "temp_k", "temp_f", "temp_c"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["b", "a"]], /):
+        """
+        usage.dask: 3
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["None"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["w", "z", "y", "x"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Single", "Age", "Person"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["numeric2", "numeric1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(num, b)", "(num, a)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(num, b)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["num"], Literal["b"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["numeric1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["numeric1"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["c", "b", "a"]], /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["w", "z", "y"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["w", "x"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(b, w)", "(b, z)", "(a, y)", "(a, x)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(b, w)", "(b, z)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(d, f)", "(c, e)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["d", "c"]], /):
+        """
+        usage.dask: 4
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["born", "toy", "name"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["name"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["D", "C", "B", "A"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["three", "one"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["three", "two", "one"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["one"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["one"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["2", "1", "0"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["count"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["__0_bucket"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(c, z)", "(b, y)", "(a, x)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["float_col", "text_col", "int_col"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["num_wings", "num_legs"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["population", "species"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["species"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["species"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["A", "key"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["B", "key"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["B", "key_right", "A", "key_left"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["shield", "max_speed"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["value", "variable"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["value", "variable", "A"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["value", "variable", "B", "A"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["myValname", "myVarname", "A"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["value", "lkey"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["value", "rkey"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["value_y", "rkey", "value_x", "lkey"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Y", "X"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["IT", "GR", "FR"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["zoo", "baz", "bar", "foo"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["baz", "bar", "foo"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(b, baz)", "(a, foo)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["two", "one"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["E", "D", "C", "B", "A"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["small", "large"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(D, foo)", "(D, bar)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(E, foo)", "(E, bar)", "(D, foo)", "(D, bar)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["max_speed", "class", "name"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["class"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["class"], /):
+        """
+        usage.koalas: 1
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["max_speed", "name"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(b, max_speed)", "(a, class)", "(a, name)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["class", "name"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(b, max_speed)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["0.5"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["0.5"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["C C", "B", "A"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["response_time", "http_status"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["user_agent", "http_status"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["prices"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["c", "a"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(y, D)", "(y, C)", "(x, B)", "(x, A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["weapon", "name"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["max_speed", "class"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["max_speed", "class", "index"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(species, type)", "(speed, max)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(species, type)", "(speed, max)", "(class, )"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(species, type)", "(speed, max)", "(, class)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(species, type)", "(speed, max)", "(species, class)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(species, type)", "(speed, max)", "(genus, class)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["d", "c", "b", "a"]], /):
+        """
+        usage.dask: 3
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["b"]], /):
+        """
+        usage.dask: 3
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["c"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["d", "c", "b"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["sale", "year", "month"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["sale", "year"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["sale"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Col3", "Col2", "Col1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["col3", "col2", "col1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["height", "weight"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(weight, pounds)", "(weight, kg)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["weight"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(height, m)", "(weight, kg)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["code", "country", "date"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["col2"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["weapon", "mask", "name"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(X, B)", "(X, A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["C", "B"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["D", "C"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["z", "y", "x"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y", "x"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["int2", "int1", "str"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Max Speed", "Animal"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Max Speed"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["C"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["C"], /):
+        """
+        usage.dask: 2
+        usage.koalas: 8
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["b"], /):
+        """
+        usage.dask: 23
+        usage.koalas: 14
+        usage.modin: 2
+        usage.networkx: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["d", "b"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["shield"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["shield"], /):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["max_speed"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["max_speed"], /):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(y, b)", "(x, a)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["col4", "col3", "col2", "col1", "category"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["value"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["value"], /):
+        """
+        usage.dask: 1
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["a"], /):
+        """
+        usage.dask: 40
+        usage.koalas: 28
+        usage.modin: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["date"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["date"], /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["col 2", "col 1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["col 1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col 1"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["weight", "height", "age"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["rank", "max_speed", "name"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(B, max)", "(B, min)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(C, max)", "(C, min)", "(B, max)", "(B, min)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["b_max"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["b_min", "b_max"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["c_min", "b_max"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["C", "B", "A", "__groupkey_0__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["__groupkey_0__"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["B", "__groupkey_0__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["D", "C", "B"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["c", "b"]], /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["value2", "value1", "id"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["value1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["value1"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["C", "B", "__groupkey_0__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["__index_level_0__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["__index_level_1__", "__index_level_0__"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["color", "number"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["E", "D", "C", "B"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(Y, D)", "(Y, C)", "(X, B)", "(X, A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(b, z)", "(a, y)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x2", "x1"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["prediction", "x2", "x1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y", "z", "x2", "x1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["number", "letter"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["0", "number", "letter"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["animal", "number", "letter"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["number", "letter", "animal"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["name", "animal", "number", "letter"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["toy", "name", "born", "age"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["sales"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["val"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["val"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["lfence"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["ufence"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["mean"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["50%"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["25%"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["75%"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["mass"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["mass"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["species", "width", "length"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(0, max)", "(0, min)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["c"], /):
+        """
+        usage.dask: 14
+        usage.koalas: 8
+        usage.modin: 2
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["my_name"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["my_name"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["dogs"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["dogs"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["vals"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["exp", "sqrt"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(x, a)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["x"], Literal["a"]], /):
+        """
+        usage.koalas: 15
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["abc"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["abc'abc", 'abc"abc', "abc"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cond2", "cond1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["4", "3", "2", "1", "0"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(, __dummy__)", "(__dummy__, )", "(x, a)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["count", "a"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["amount", "name"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["name"], /):
+        """
+        usage.dask: 1
+        usage.koalas: 3
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["amount"], /):
+        """
+        usage.dask: 2
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: int, /):
+        """
+        usage.dask: 11
+        usage.koalas: 2
+        usage.modin: 2
+        usage.networkx: 3
+        usage.sklearn: 1
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a", "n"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["n"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["amount"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["bb", "aa"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["aa"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aa"], /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 13
+        usage.koalas: 9
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(col_X, col_B)", "(col_X, col_A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Bfirst_series", "Afirst_series"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(A, Y)", "(A, X)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(y, c)", "(x, b)", "(x, a)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["w", "b", "a"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(a, c)", "(y, w)", "(x, b)", "(x, a)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(Z, )", "(a, c)", "(y, w)", "(x, b)", "(x, a)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x", "b", "a"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["X", "B", "A"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["clip", "X", "B", "A"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(B, two)", "(B, one)", "(A, two)", "(A, one)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["A"], Literal["one"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["A"], Literal["two"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["B"], Literal["one"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["B"], Literal["two"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: pandas.core.indexes.base.Index, /):
+        """
+        usage.dask: 10
+        usage.koalas: 1
+        usage.networkx: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[Literal["(x, b, 4)", "(y.z, c.d, 3)", "(x, b, 2)", "(x, a, 1)"]],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(b, 4)", "(b, 2)", "(a, 1)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["y.z"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(c.d, 3)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["4", "2"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["2"], /):
+        """
+        usage.dask: 4
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["2"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["x"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["x"], Literal["a"], Literal["1"]], /):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(x, a, 1)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(Y, D, Z)", "(Y, C, Z)", "(X, B, Z)", "(X, A, Z)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["X"], /):
+        """
+        usage.dask: 2
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(B, Z)", "(A, Z)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Z"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["X"], Literal["A"]], /):
+        """
+        usage.koalas: 14
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["X"], Literal["A"], Literal["Z"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(X, A, Z)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(y, Col3)", "(x, Col2)", "(x, Col1)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a.b"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["a.b"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["z", "y"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(b, z)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(a, y)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["f", "e"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["0.5307682923411018", "0.31992251735325117"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[
+            Literal[
+                "0.9001395954082655",
+                "0.5307682923411018",
+                "0.2635517951467826",
+                "0.31992251735325117",
+                "0.9655187292975722",
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[
+            Literal[
+                "0.9001395954082655",
+                "0.5307682923411018",
+                "0.2635517951467826",
+                "0.31992251735325117",
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[
+            Literal["0.5307682923411018", "0.31992251735325117", "0.9655187292975722"]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[
+            Literal[
+                "0.5307682923411018",
+                "0.2635517951467826",
+                "0.31992251735325117",
+                "0.9655187292975722",
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["0.9655187292975722"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["0.9655187292975722"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(b, z)", "(a, y)", "(a, x)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["t"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["t"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(B, X)", "(A, Z)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["A"], Literal["Z"]], /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["B"], Literal["X"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Z"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["y"], /):
+        """
+        usage.dask: 13
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["z"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["z"], /):
+        """
+        usage.dask: 3
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(y, c)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["db", "cb", "ba"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["db", "ba"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cb"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["db", "cb"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(z, db)", "(y, cb)", "(x, ba)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(z, db)", "(x, ba)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(y, cb)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["population"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["B", "A", "key"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(Y, B)", "(x_right, key)", "(Y, A)", "(x_left, key)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(Y, B)", "(Y, A)", "(x, key)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["value", "variable_1", "variable_0"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["value", "variable_1", "variable_0", "(X, A)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["(X, A)"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["variable_0"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["variable_1"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["myValname", "myV2", "myV1", "(X, A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["myV1"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["myV2"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["myValname"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["value", "v1", "v0"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y", "rkey", "x", "value", "lkey"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y", "x", "value"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y", "value_y", "rkey", "x", "value_x"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y", "value_y", "x", "value_x", "lkey"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y", "value_y", "x", "value_x"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y", "value", "rkey", "x"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y", "x", "value", "lkey"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x", "value", "lkey"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x_right", "x_left", "value", "lkey"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[Literal["(c, y)", "(a, rkey)", "(b, x)", "(a, value)", "(a, lkey)"]],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(c, y)", "(b, x)", "(a, value)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(c, y)", "(a_y, value)", "(b, x)", "(a_x, value)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(d, )"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["d"], /):
+        """
+        usage.dask: 10
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["d"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["e"], /):
+        """
+        usage.dask: 8
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(g, , )", "(, f, )"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal[""], /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["f"], /):
+        """
+        usage.dask: 1
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["f"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["g"], /):
+        """
+        usage.dask: 2
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["g"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["h"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["h"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["i"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["i"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["e", "a"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(e, g, , )", "(e, , f, )", "(a, , , b)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a", "e"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(a, , , b)", "(e, g, , )", "(e, , f, )"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["a"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["e"], Literal["g"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(e, g)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["i"], Literal[""]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(i, )"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["8", "6", "4", "3", "2"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["3"], /):
+        """
+        usage.dask: 4
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["4"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["6"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["8"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(b, 8)", "(b, 6)", "(b, 4)", "(b, 3)", "(b, 2)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["b"], Literal["2"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["b"], int], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["b"], Literal["3"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["b"], Literal["4"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["b"], Literal["6"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["b"], Literal["8"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["e"], Literal["2"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["e"], int], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["e"], Literal["3"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["e"], Literal["4"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["e"], Literal["6"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["e"], Literal["8"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["d"], Literal["2"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["d"], int], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["d"], Literal["3"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["d"], Literal["4"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["d"], Literal["6"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["d"], Literal["8"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[
+            Literal["(x, b, 8)", "(x, b, 6)", "(x, b, 4)", "(x, b, 3)", "(x, b, 2)"]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["x"], Literal["b"], Literal["2"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["x"], Literal["b"], int], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["x"], Literal["b"], Literal["3"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["x"], Literal["b"], Literal["4"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["x"], Literal["b"], Literal["6"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["x"], Literal["b"], Literal["8"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["y"], Literal["e"], Literal["2"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["y"], Literal["e"], int], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["y"], Literal["e"], Literal["3"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["y"], Literal["e"], Literal["4"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["y"], Literal["e"], Literal["6"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["y"], Literal["e"], Literal["8"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["w"], Literal["d"], Literal["2"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["w"], Literal["d"], int], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["w"], Literal["d"], Literal["3"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["w"], Literal["d"], Literal["4"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["w"], Literal["d"], Literal["6"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["w"], Literal["d"], Literal["8"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(y, col2)", "(x, col1)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["3", "2", "numbers"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["numbers"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(Y, 3)", "(Y, 2)", "(X, numbers)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(B, 1)", "(A, 0)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(y, d)", "(y, c)", "(x, b)", "(x, a)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(Y, d)", "(Y, c)", "(X, b)", "(X, a)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(Y, C)", "(X, B)", "(X, A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a", "id"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["b", "a", "index"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[Literal["(species, type)", "(speed, max)", "(name, )", "(class, )"]],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[Literal["(species, type)", "(speed, max)", "(y, name)", "(x, class)"]],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["B", "A", "level_1", "level_0"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(A, Z)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["weight", "height"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["B", "C"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(C, C)", "(B, X)", "(A, Z)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(C, C)", "(B, X)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(B, X)", "(C, C)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["animal_2", "animal_1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["d", "id"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(cg3, d)", "(cg2, c)", "(cg1, b)", "(cg1, a)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(rg2, z)", "(rg1, y)", "(rg1, x)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(C, Z)", "(B, X)", "(A, Z)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(C, Z)", "(B, X)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["0"], Literal["x"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[int, Literal["x"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["0"], Literal["y"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[int, Literal["y"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["0"], Literal["z"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[int, Literal["z"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["1"], Literal["x"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["1"], Literal["y"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["1"], Literal["z"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["2"], Literal["x"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["2"], Literal["y"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["2"], Literal["z"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(mammal, dog, walks)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: Tuple[Literal["mammal"], Literal["dog"], Literal["walks"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["bhello", "f", "i64", "i32"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["i64", "i32"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["i32", "i64"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["bhello", "f", "i64", "i32", "index"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["bhello", "f", "i64", "i32", "Unnamed: 0"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(a, y)", "(a, x)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["visits", "signups", "sales"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["val", "lab"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["__a_bucket"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(C, sum)", "(B, max)", "(B, min)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(C, sum)", "(B, sum)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(C, sum)", "(B, sum)", "(A, sum)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(C, sum)", "(B, max)", "(B, min)", "(A, )"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(C, sum)", "(B, sum)", "(A, )"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(Y, C)", "(X, B)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(Y, C, sum)", "(X, B, max)", "(X, B, min)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[
+            Literal["(weight, max)", "(weight, min)", "(height, max)", "(height, min)"]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[Literal["(Y, C, max)", "(Y, C, min)", "(X, B, max)", "(X, B, min)"]],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["b_max", "a_max"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a_max"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a_min", "a_max"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(Y, B)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(Y, B)", "(X, A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["c", "b", "a", "__groupkey_0__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a", "__groupkey_0__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["c", "b", "a", "__groupkey_1__", "__groupkey_0__"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["__groupkey_1__"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["c", "__groupkey_0__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["0", "__groupkey_0__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(y, c)", "(x, b)", "(x, a)", "(__groupkey_0__, )"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["__groupkey_0__"], Literal[""]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[
+            Literal[
+                "(y, c)", "(x, b)", "(x, a)", "(__groupkey_1__, )", "(__groupkey_0__, )"
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["__groupkey_1__"], Literal[""]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["v", "d", "__groupkey_0__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["v", "d"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["car_id", "timestamp", "__groupkey_0__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["column"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["timestamp"], /):
+        """
+        usage.dask: 2
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["mean"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["v"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["v"], /):
+        """
+        usage.dask: 6
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(Z, D)", "(Y, C)", "(X, B)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(y, c)", "(x, a)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["y"], Literal["c"]], /):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(y, c)", "(x, b)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["d", "c", "a"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a", "b"]], /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["c", "a", "b"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["d", "c", "a", "b"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["c", "a", "__groupkey_0__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["c", "__groupkey_1__", "__groupkey_0__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(y, c)", "(x, a)", "(__groupkey_0__, )"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(y, c)", "(__groupkey_1__, )", "(__groupkey_0__, )"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(a, x)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(d, y)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["__index_level_2__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["__index_level_1__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["b", "__index_level_0__"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["b", "0"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Koalas"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["sale", "year", "month", "index"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["sale", "month"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sale"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["s", "month"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["min_speed", "shield", "max_speed"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["min_speed"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["x"], Literal["shield"]], /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[
+            Literal["(y, shield)", "(y, min_speed)", "(x, shield)", "(x, max_speed)"]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["x"], Literal["max_speed"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["y"], Literal["min_speed"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["y"], Literal["shield"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[
+            Literal[
+                "(z, )",
+                "(y, shield)",
+                "(y, min_speed)",
+                "(x, shield)",
+                "(x, max_speed)",
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["z"], Literal[""]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[Literal["a"], Literal["e"], Literal["a"]], /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[Literal["a"], Literal["b"], Literal["a"]], /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[Literal["f"], None, Literal["f"]], /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["3"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(baz, two)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["baz"], Literal["two"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(bar, one)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["bar"], Literal["one"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["A", "B"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(bar, two)", "(bar, one)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(bar, one)", "(bar, two)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(baz, two)", "(baz, one)", "(bar, two)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[None, int, None], /):
+        """
+        usage.dask: 1
+        usage.koalas: 4
+        usage.modin: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[int, None, int], /):
+        """
+        usage.dask: 1
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[int, int, int], /):
+        """
+        usage.dask: 1
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[None, Literal["2013-01-04T00:00:00"], None], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: slice[Literal["2013-01-02T00:00:00"], None, Literal["2013-01-02T00:00:00"]],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: slice[
+            Literal["2013-01-02T00:00:00"],
+            Literal["2013-01-04T00:00:00"],
+            Literal["2013-01-02T00:00:00"],
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(baz, one)", "(bar, two)", "(bar, one)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(baz, one)", "(bar, two)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(bar, two)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[Literal["(baz, two)", "(baz, one)", "(bar, one)", "(bar, two)"]],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(x, b)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["X"], Literal["C"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["X"], Literal["B"]], /):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["3", "2", "1", "0"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["C", "A"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["D", "C", "A"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(X, C)", "(X, A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(X, C)", "(X, B)", "(X, A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(X, D)", "(X, C)", "(X, A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(X, D)", "(X, C)", "(X, B)", "(X, A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["ABC", "(X, A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(X, B)", "ABC"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["B", "A", "C"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["A", "C"]], /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["index", "C", "B", "A"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["index"], /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["0", "C", "B", "A"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["C", "B", "A", "0"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["C", "B", "A", "index"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Tuple[Literal["Y", "X"], Literal["C", "A"]]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["(index, )", "(Y, C)", "(X, B)", "(X, A)"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(Y, C)", "(X, A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["day", "month", "year"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["year"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["year"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["x"], Literal["b"]], /):
+        """
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(x, b)", "(x, a)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(z, d)", "(y, c)", "(x, b)", "(x, a)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["c", "f", "e", "b", "a"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["NEW", "Koalas", "a"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["d", "b", "a"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["f", "e", "b", "a"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(z, f)", "(z, e)", "(x, b)", "(x, a)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["z"], Literal["e"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["z"], Literal["f"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["e", "c"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x", "c"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y", "x", "e", "c"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["c", "b", "__groupkey_1__", "__groupkey_0__"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["4", "3", "2", "1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["b_d", "b_c", "b_b", "b_a", "a"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["b_a"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["b_b"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["b_c"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["b_d"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["True", "False"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["False"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: bool, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["True"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["d_2019-01-02", "d_2019-01-01", "dt"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["2019-01-02", "2019-01-01"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["2019-01-01"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["2019-01-02"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["2019-01-01 00:00:01", "2019-01-01 00:00:00"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["2019-01-01 00:00:00"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["2019-01-01 00:00:01"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["d_2", "d_1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["2", "1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: decimal.Decimal, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["A_b", "A_a", "B"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["X-4", "X-3", "X-2", "X-1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["4", "3", "2"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["5.0", "3.0", "2.0", "1.0"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["1.0"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: float, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["2.0"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["3.0"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["5.0"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["nan", "5.0", "3.0", "2.0", "1.0"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["nan"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["(x, a, 1)"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["('x', 'b', '2')_a"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["('x', 'b', '2')_b"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["('x', 'b', '2')_c"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["('x', 'b', '2')_d"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["('y', 'c', '3')_a"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["('y', 'c', '3')_b"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["('y', 'c', '3')_c"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["('y', 'c', '3')_d"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["(x, b, 2)"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["('x', 'a', '1')_1"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["('x', 'a', '1')_2"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["('x', 'a', '1')_3"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["('x', 'a', '1')_4"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["(y, c, 3)"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["y"], Literal["c"], Literal["3"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["1_1"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["1_2"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["1_3"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["1_4"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["foo_c", "foo_b", "foo_a", "D", "A"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["foo_4", "foo_3", "foo_2", "foo_1"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["['foo']_4", "['foo']_3", "['foo']_2", "['foo']_1"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["left"], /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["right"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["left"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Koalas"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(X, A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["renamed"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["renamed"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["foo", "idx"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["values", "idx"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["foo"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["foo"], /):
+        """
+        usage.koalas: 1
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["0", "index"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(y, z)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["y"], Literal["z"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["0", "level_1", "level_0"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["z", "x", "v", "c"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["index"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["start_date"], /):
+        """
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["start_date"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["end_date"], /):
+        """
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["end_date"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sales"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["single"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["__single_bucket"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col1"], /):
+        """
+        usage.dask: 1
+        usage.koalas: 7
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col2"], /):
+        """
+        usage.dask: 1
+        usage.koalas: 4
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["col1"]], /):
+        """
+        usage.koalas: 1
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["(Z, D)", "(Y, C)", "(X, B)", "(X, A)"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Type[float], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: Tuple[
+            slice[Literal["a"], Type[float], Literal["a"]],
+            slice[Literal["b"], Type[str], Literal["b"]],
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: Tuple[
+            slice[Literal["a"], Type[float], Literal["a"]],
+            slice[Literal["b"], Type[int], Literal["b"]],
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: zip, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: Tuple[
+            slice[Literal["a"], Type[float], Literal["a"]],
+            slice[Literal["b"], Type[str], Literal["b"]],
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: type, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["foo", "C"]], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col0"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col4"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col6"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col8"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col10"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col12"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col14"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["__reduced__"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["id", "name"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["bb"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["path"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["filename"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["fruit"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["names"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["numbers"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["more_numbers"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["integers"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Date"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["date_time"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["A_B"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["B_"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["idx"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["dt_col"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["str_col"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["string_col"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["int_col"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["bool", "float", "int"]], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["float", "int"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["timedelta"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["w"], /):
+        """
+        usage.dask: 6
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["z", "x"]], /):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cat"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["y_"], /):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["_partitions"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["_index"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["tz"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: numpy.int64, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cint"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cdt", "clfoat", "cstr"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cstr", "cint"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cdt"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["bools"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["categorical_nans"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["categorical_binary"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["unique_id"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: str, /):
+        """
+        usage.dask: 6
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["A"], Literal["0"]], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Tuple[Literal["A", "B"], Literal["0", "1"]]], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: object, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: numpy.ndarray, /):
+        """
+        usage.dask: 8
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Name"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x", "y"]], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["D"], /):
+        """
+        usage.dask: 2
+        usage.networkx: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["__series__"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["2-count"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["22"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["3-count"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["23"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["33"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a", "c", "b"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["0-count"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["00"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["1-count"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["01"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["11"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["AA"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["AB", "AA"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["AA"], /):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["AB"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[int], /):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a", "d", "c"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["03"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["13"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["b", "a", "d", "c"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["02"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["12"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cc"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["g0"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["g1"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: pandas.core.indexes.numeric.Int64Index, /):
+        """
+        usage.dask: 1
+        usage.networkx: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["group"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["first_bit"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["X", "A"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["2011-01-02"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: slice[Literal["2011-01-02"], Literal["2011-01-10"], Literal["2011-01-02"]],
+        /,
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["2011-01"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["2011"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: slice[Literal["2011-01"], Literal["2012-05"], Literal["2011-01"]], /
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: slice[Literal["2011"], Literal["2015"], Literal["2011"]], /
+    ):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["k"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["e"]], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["e", "d"]], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["E"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["F"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["G"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["H"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["I"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cluster"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["a_a"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["A_a"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["i32"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["f32", "bool", "cat"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["notz"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["name", "id"]], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["e", "d", "b", "a"]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Time"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["first"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["second"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col_str"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["target"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[
+            Literal[
+                "petal width (cm)",
+                "petal length (cm)",
+                "sepal width (cm)",
+                "sepal length (cm)",
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Jumps", "Situps", "Chins"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Pulse", "Waist", "Weight"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[
+            Literal["class", "petalwidth", "petallength", "sepalwidth", "sepallength"]
+        ],
+        /,
+    ):
+        """
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sepallength"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sepalwidth"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["petallength"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["petalwidth"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[Literal["petalwidth", "petallength", "sepalwidth", "sepallength"]],
+        /,
+    ):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["class", "sepalwidth", "sepallength"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["petallength", "petalwidth"]], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["family"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["product-type"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["steel"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["carbon"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["hardness"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["temper_rolling"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["condition"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["formability"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["strength"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["non-ageing"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["surface-finish"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["surface-quality"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["enamelability"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["bc"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["bf"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["bt"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["bw%2Fme"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["bl"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["m"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["chrom"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["phos"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cbond"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["marvi"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["exptl"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["ferro"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["corr"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["lustre"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["jurofm"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["s"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["p"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["shape"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["thick"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["width"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["len"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["bore"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["packing"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["vendor"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["MYCT"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["MMIN"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["MMAX"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["CACH"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["CHMIN"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["CHMAX"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["age"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["workclass"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["fnlwgt:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["education:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["education-num:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["marital-status:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["occupation:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["relationship:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["race:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sex:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["capital-gain:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["capital-loss:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["hours-per-week:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["native-country:"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["DYRK1A_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["ITSN1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["BDNF_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["NR1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["NR2A_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pAKT_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pBRAF_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pCAMKII_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pCREB_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pELK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pERK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pJNK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["PKCA_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pMEK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pNR1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pNR2A_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pNR2B_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pPKCAB_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pRSK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["AKT_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["BRAF_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["CAMKII_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["CREB_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["ELK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["ERK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["GSK3B_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["JNK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["MEK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["TRKA_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["RSK_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["APP_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Bcatenin_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["SOD1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["MTOR_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["P38_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pMTOR_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["DSCR1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["AMPKA_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["NR2B_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pNUMB_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["RAPTOR_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["TIAM1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pP70S6_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["NUMB_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["P70S6_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pGSK3B_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pPKCG_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["CDK5_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["S6_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["ADARB1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["AcetylH3K9_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["RRP1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["BAX_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["ARC_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["ERBB4_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["nNOS_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Tau_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["GFAP_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["GluR3_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["GluR4_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["IL1B_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["P3525_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pCASP9_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["PSD95_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["SNCA_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Ubiquitin_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pGSK3B_Tyr216_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["SHH_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["BAD_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["BCL2_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pS6_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pCFOS_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["SYP_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["H3AcK18_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["EGR1_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["H3MeK4_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["CaNA_N"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["BH_LowPeakAmp"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["BH_LowPeakBPM"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["BH_HighPeakAmp"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["BH_HighPeakBPM"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["BH_HighLowRatio"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["BHSUM1"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["BHSUM2"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["BHSUM3"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["amazed.suprised"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["happy.pleased"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["relaxing.calm"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["quiet.still"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sad.lonely"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["angry.aggresive"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pclass"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["survived"], /):
+        """
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sex"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sibsp"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["parch"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["ticket"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["fare"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cabin"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["embarked"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["boat"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["body"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["home.dest"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: pandas.core.indexes.range.RangeIndex, /):
+        """
+        usage.networkx: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["source"], /):
+        """
+        usage.networkx: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["weight"], /):
+        """
+        usage.networkx: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cost"], /):
+        """
+        usage.networkx: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["St"], /):
+        """
+        usage.networkx: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Co"], /):
+        """
+        usage.networkx: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Mi"], /):
+        """
+        usage.networkx: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["O"], /):
+        """
+        usage.networkx: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["misspell"], /):
+        """
+        usage.networkx: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["target"], /):
+        """
+        usage.networkx: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["B", "C", "A"]], /):
+        """
+        usage.networkx: 1
+        """
+        ...
+
+    @classmethod
+    def __getitem__(cls, _0: object, /):
+        """
+        usage.dask: 471
+        usage.koalas: 1033
+        usage.modin: 19
+        usage.networkx: 22
+        usage.sklearn: 213
+        usage.xarray: 8
+        """
+        ...
 
     @overload
     @classmethod
@@ -39,9 +7970,34 @@ class DataFrame:
         """
         ...
 
+    @overload
     @classmethod
-    def __rmod__(cls, _0: Union[numpy.timedelta64, str], /):
+    def __rmod__(cls, _0: Literal["Unsupported type %s"], /):
         """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: numpy.timedelta64, /):
+        """
+        usage.pandas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: str, /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @classmethod
+    def __rmod__(cls, _0: Union[str, numpy.timedelta64], /):
+        """
+        usage.koalas: 1
         usage.pandas: 1
         usage.sklearn: 1
         """
@@ -81,13 +8037,23 @@ class DataFrame:
         """
         ...
 
+    @overload
+    @classmethod
+    def from_dict(
+        cls, /, data: Dict[Literal["Mi", "Co", "St", "D", "O"], List[Union[str, int]]]
+    ):
+        """
+        usage.networkx: 1
+        """
+        ...
+
     @classmethod
     def from_dict(
         cls,
         /,
         data: Union[
-            List[Dict[Literal["y", "x"], Union[int, Literal["a", "b", "c", "d"]]]],
-            Dict[Literal["a"], List[str]],
+            Dict[str, List[Union[int, str]]],
+            List[Dict[Literal["y", "x"], Union[Literal["a", "b", "c", "d"], int]]],
         ],
         orient: Literal["columns"] = ...,
         dtype: None = ...,
@@ -96,19 +8062,220 @@ class DataFrame:
         """
         usage.dask: 1
         usage.modin: 1
+        usage.networkx: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_records(
+        cls,
+        /,
+        data: Dict[Literal["A"], List[int]],
+        index: None,
+        exclude: None,
+        columns: None,
+        coerce_float: bool,
+        nrows: None,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_records(
+        cls,
+        /,
+        data: List[Tuple[int, int]],
+        index: None,
+        exclude: None,
+        columns: None,
+        coerce_float: bool,
+        nrows: None,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_records(
+        cls,
+        /,
+        data: numpy.ndarray,
+        index: None,
+        exclude: None,
+        columns: None,
+        coerce_float: bool,
+        nrows: None,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_records(cls, /, data: Dict[Literal["A"], List[int]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_records(cls, /, data: List[Tuple[int, int]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_records(cls, /, data: numpy.ndarray):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_records(
+        cls,
+        /,
+        data: List[Tuple[int, int]],
+        index: List[int],
+        exclude: None,
+        columns: None,
+        coerce_float: bool,
+        nrows: None,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_records(cls, /, data: List[Tuple[int, int]], index: List[int]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_records(
+        cls,
+        /,
+        data: Dict[Literal["B", "A"], List[int]],
+        index: None,
+        exclude: List[Literal["B"]],
+        columns: None,
+        coerce_float: bool,
+        nrows: None,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_records(
+        cls, /, data: Dict[Literal["B", "A"], List[int]], exclude: List[Literal["B"]]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_records(
+        cls,
+        /,
+        data: Dict[Literal["B", "A"], List[int]],
+        index: None,
+        exclude: None,
+        columns: List[Literal["A"]],
+        coerce_float: bool,
+        nrows: None,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_records(
+        cls, /, data: Dict[Literal["B", "A"], List[int]], columns: List[Literal["A"]]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_records(
+        cls,
+        /,
+        data: List[Tuple[int, int]],
+        index: None,
+        exclude: None,
+        columns: None,
+        coerce_float: bool,
+        nrows: int,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_records(cls, /, data: List[Tuple[int, int]], nrows: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @classmethod
+    def from_records(
+        cls,
+        /,
+        data: Union[
+            List[Tuple[int, int]], Dict[Literal["A", "B"], List[int]], numpy.ndarray
+        ],
+        index: Union[None, List[int]] = ...,
+        exclude: Union[None, List[Literal["B"]]] = ...,
+        columns: Union[None, List[Literal["A"]]] = ...,
+        coerce_float: bool = ...,
+        nrows: Union[int, None] = ...,
+    ):
+        """
+        usage.koalas: 14
         """
         ...
 
     # usage.dask: 40
+    # usage.koalas: 72
     A: object
 
     # usage.dask: 3
     A_a: object
 
     # usage.dask: 15
+    # usage.koalas: 20
     B: object
 
     # usage.dask: 4
+    # usage.koalas: 11
     C: object
 
     # usage.dask: 2
@@ -121,6 +8288,7 @@ class DataFrame:
     Name: object
 
     # usage.dask: 5
+    # usage.koalas: 1
     # usage.xarray: 1
     T: object
 
@@ -143,18 +8311,31 @@ class DataFrame:
     _partitions: object
 
     # usage.dask: 114
+    # usage.koalas: 132
     a: pandas.core.series.Series
+
+    # usage.koalas: 1
+    aa: object
 
     # usage.dask: 1
     amount: object
 
+    # usage.koalas: 1
+    animal: object
+
+    # usage.koalas: 11
+    at: object
+
+    # usage.koalas: 2
     # usage.modin: 3
     axes: object
 
     # usage.dask: 63
+    # usage.koalas: 99
     b: object
 
     # usage.dask: 1
+    # usage.koalas: 9
     c: object
 
     # usage.dask: 1
@@ -164,12 +8345,15 @@ class DataFrame:
     col2: object
 
     # usage.dask: 142
+    # usage.koalas: 676
     # usage.modin: 17
+    # usage.networkx: 3
     # usage.sklearn: 19
     # usage.xarray: 9
     columns: object
 
     # usage.dask: 4
+    # usage.koalas: 2
     d: object
 
     # usage.dask: 3
@@ -178,15 +8362,20 @@ class DataFrame:
     # usage.dask: 3
     divide: object
 
+    # usage.koalas: 1
+    dt: object
+
     # usage.dask: 2
     dt_col: object
 
     # usage.dask: 25
+    # usage.koalas: 19
     # usage.modin: 1
     # usage.sklearn: 24
     dtypes: object
 
     # usage.dask: 2
+    # usage.koalas: 4
     e: object
 
     # usage.dask: 4
@@ -199,31 +8388,51 @@ class DataFrame:
     # usage.sklearn: 1
     fit: object
 
+    # usage.koalas: 1
+    foo: object
+
     # usage.dask: 2
     fruit: object
 
     # usage.dask: 2
     i32: object
 
+    # usage.koalas: 3
+    iat: object
+
     # usage.dask: 2
+    # usage.koalas: 1
     id: object
 
     # usage.dask: 46
+    # usage.koalas: 23
     # usage.modin: 3
     # usage.sklearn: 14
     # usage.xarray: 2
     iloc: object
 
     # usage.dask: 197
+    # usage.koalas: 57
     # usage.modin: 8
+    # usage.networkx: 2
     # usage.sklearn: 3
     # usage.xarray: 12
     index: object
 
+    # usage.koalas: 2
+    kurtosis: object
+
     # usage.dask: 71
+    # usage.koalas: 103
     # usage.sklearn: 1
     # usage.xarray: 3
     loc: object
+
+    # usage.koalas: 11
+    max_speed: object
+
+    # usage.koalas: 1
+    name: object
 
     # usage.dask: 3
     # usage.sklearn: 4
@@ -232,8 +8441,20 @@ class DataFrame:
     # usage.dask: 2
     path: object
 
+    # usage.koalas: 12
+    plot: object
+
     # usage.dask: 3
     rdiv: object
+
+    # usage.koalas: 1
+    rep: object
+
+    # usage.koalas: 7
+    sale: object
+
+    # usage.koalas: 4
+    shield: object
 
     # usage.dask: 2
     # usage.sklearn: 2
@@ -245,6 +8466,9 @@ class DataFrame:
     # usage.dask: 4
     string_col: object
 
+    # usage.koalas: 1
+    style: object
+
     # usage.dask: 1
     tz: object
 
@@ -252,7 +8476,9 @@ class DataFrame:
     value: object
 
     # usage.dask: 33
+    # usage.koalas: 2
     # usage.modin: 1
+    # usage.networkx: 1
     # usage.sklearn: 1
     # usage.xarray: 7
     values: object
@@ -260,14 +8486,43 @@ class DataFrame:
     # usage.dask: 7
     w: pandas.core.series.Series
 
-    # usage.dask: 80
+    # usage.dask: 82
+    # usage.koalas: 25
     x: pandas.core.series.Series
 
-    # usage.dask: 37
+    # usage.dask: 39
+    # usage.koalas: 11
     y: pandas.core.series.Series
 
+    # usage.koalas: 1
+    year: object
+
     # usage.dask: 4
+    # usage.koalas: 1
     z: object
+
+    @overload
+    def __add__(self, _0: int, /):
+        """
+        usage.dask: 17
+        usage.koalas: 22
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.koalas: 48
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 1
+        usage.koalas: 8
+        """
+        ...
 
     @overload
     def __add__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /):
@@ -280,13 +8535,6 @@ class DataFrame:
     def __add__(self, _0: dask.dataframe.core.Scalar, /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __add__(self, _0: int, /):
-        """
-        usage.dask: 17
         """
         ...
 
@@ -304,16 +8552,10 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def __add__(self, _0: pandas.core.frame.DataFrame, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __add__(self, _0: object, /):
         """
         usage.dask: 24
+        usage.koalas: 78
         usage.pandas: 37
         """
         ...
@@ -380,2493 +8622,9 @@ class DataFrame:
         ...
 
     @overload
-    def __getitem__(self, _0: Literal["foo"], /):
+    def __gt__(self, _0: int, /):
         """
-        usage.xarray: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["foo", "C"]], /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: int, /):
-        """
-        usage.dask: 11
-        usage.modin: 2
-        usage.sklearn: 1
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["x"], /):
-        """
-        usage.dask: 13
-        usage.xarray: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["col0"], /):
-        """
-        usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["col2"], /):
-        """
-        usage.dask: 1
-        usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["col4"], /):
-        """
-        usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["col6"], /):
-        """
-        usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["col8"], /):
-        """
-        usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["col10"], /):
-        """
-        usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["col12"], /):
-        """
-        usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["col14"], /):
-        """
-        usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["a"], /):
-        """
-        usage.dask: 40
-        usage.modin: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["b"], /):
-        """
-        usage.dask: 23
-        usage.modin: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["c"], /):
-        """
-        usage.dask: 14
-        usage.modin: 2
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["__reduced__"], /):
-        """
-        usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, int, None], /):
-        """
-        usage.dask: 1
-        usage.modin: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["a"]], /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["amount"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["id"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["id", "name"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["bb"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["aa"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["path"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["filename"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: pandas.core.indexes.base.Index, /):
-        """
-        usage.dask: 10
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["name"], /):
-        """
-        usage.dask: 1
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["fruit"], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["A"], /):
-        """
-        usage.dask: 27
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["B"], /):
-        """
-        usage.dask: 7
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["names"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["numbers"], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["more_numbers"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["integers"], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["Date"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["date_time"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["C"], /):
-        """
-        usage.dask: 2
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["A_B"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["B_"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["date"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["idx"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["dt_col"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["str_col"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["string_col"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["int_col"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["y"], /):
-        """
-        usage.dask: 13
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["X"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["b", "a"]], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["y", "x"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["bool", "float", "int"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["float", "int"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["timedelta"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: list, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["c", "b", "a"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["w"], /):
-        """
-        usage.dask: 6
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["z", "x"]], /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["cat"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["y_"], /):
-        """
-        usage.dask: 5
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["v"], /):
-        """
-        usage.dask: 6
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["_partitions"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["_index"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 13
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["a", "b"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["tz"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["d", "c"]], /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["d"], /):
-        """
-        usage.dask: 10
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["f"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["e"], /):
-        """
-        usage.dask: 8
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["B", "A"]], /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["z"], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: numpy.int64, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["cint"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["cdt", "clfoat", "cstr"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["cstr", "cint"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["cdt"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["bools"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["categorical_nans"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["categorical_binary"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["unique_id"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: str, /):
-        """
-        usage.dask: 6
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["z", "y"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["d", "b", "a"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["col1"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[Literal["A"], Literal["0"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Tuple[Literal["A", "B"], Literal["0", "1"]]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: object, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["B", "A", "C"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: numpy.ndarray, /):
-        """
-        usage.dask: 8
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["Name"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["x", "y"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["D"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["x"]], /):
-        """
-        usage.dask: 5
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["b"]], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["__series__"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["c", "b"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["2"], /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["3"], /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["2-count"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["22"], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["3-count"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["23"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["33"], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["a", "c", "b"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["0"], /):
-        """
-        usage.dask: 4
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["1"], /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["0-count"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["00"], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["1-count"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["01"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["11"], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["A"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["AA"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["AB", "AA"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["AA"], /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["AB"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[int], /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["B"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["a", "d", "c"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["d", "c", "b"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["03"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["13"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["b", "a", "d", "c"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["d", "c", "b", "a"]], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["02"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["12"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["g"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["cc"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["g0"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["g1"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: pandas.core.indexes.numeric.Int64Index, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["group"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["value"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["first_bit"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["X", "A"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[Literal["a"], Literal["e"], Literal["a"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[Literal["a"], Literal["b"], Literal["a"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[Literal["f"], None, Literal["f"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[int, int, int], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[int, None, int], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["2011-01-02"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: slice[Literal["2011-01-02"], Literal["2011-01-10"], Literal["2011-01-02"]],
-        /,
-    ):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["2011-01"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["2011"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self, _0: slice[Literal["2011-01"], Literal["2012-05"], Literal["2011-01"]], /
-    ):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self, _0: slice[Literal["2011"], Literal["2015"], Literal["2011"]], /
-    ):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["k"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["y"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["z"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["d"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["e"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["e", "d"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["c"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["E"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["F"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["G"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["H"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["I"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["cluster"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["a_a"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["A_a"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["i32"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["f32", "bool", "cat"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["timestamp"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["notz"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["id"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["name"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["name", "id"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["e", "d", "b", "a"]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["Time"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["first"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["second"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["col1"]], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["col_str"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["target"]], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[str], /):
-        """
-        usage.sklearn: 22
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: List[
-            Literal[
-                "petal width (cm)",
-                "petal length (cm)",
-                "sepal width (cm)",
-                "sepal length (cm)",
-            ]
-        ],
-        /,
-    ):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["Jumps", "Situps", "Chins"]], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["Pulse", "Waist", "Weight"]], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: List[
-            Literal["class", "petalwidth", "petallength", "sepalwidth", "sepallength"]
-        ],
-        /,
-    ):
-        """
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["sepallength"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["sepalwidth"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["petallength"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["petalwidth"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["class"], /):
-        """
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: List[Literal["petalwidth", "petallength", "sepalwidth", "sepallength"]],
-        /,
-    ):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["class", "sepalwidth", "sepallength"]], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["petallength", "petalwidth"]], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["family"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["product-type"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["steel"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["carbon"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["hardness"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["temper_rolling"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["condition"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["formability"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["strength"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["non-ageing"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["surface-finish"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["surface-quality"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["enamelability"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["bc"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["bf"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["bt"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["bw%2Fme"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["bl"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["m"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["chrom"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["phos"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["cbond"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["marvi"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["exptl"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["ferro"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["corr"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["lustre"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["jurofm"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["s"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["p"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["shape"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["thick"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["width"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["len"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["oil"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["bore"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["packing"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["vendor"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["MYCT"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["MMIN"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["MMAX"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["CACH"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["CHMIN"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["CHMAX"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["age"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["workclass"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["fnlwgt:"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["education:"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["education-num:"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["marital-status:"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["occupation:"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["relationship:"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["race:"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["sex:"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["capital-gain:"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["capital-loss:"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["hours-per-week:"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["native-country:"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["DYRK1A_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["ITSN1_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["BDNF_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["NR1_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["NR2A_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pAKT_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pBRAF_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pCAMKII_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pCREB_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pELK_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pERK_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pJNK_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["PKCA_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pMEK_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pNR1_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pNR2A_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pNR2B_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pPKCAB_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pRSK_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["AKT_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["BRAF_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["CAMKII_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["CREB_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["ELK_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["ERK_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["GSK3B_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["JNK_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["MEK_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["TRKA_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["RSK_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["APP_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["Bcatenin_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["SOD1_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["MTOR_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["P38_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pMTOR_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["DSCR1_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["AMPKA_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["NR2B_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pNUMB_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["RAPTOR_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["TIAM1_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pP70S6_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["NUMB_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["P70S6_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pGSK3B_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pPKCG_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["CDK5_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["S6_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["ADARB1_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["AcetylH3K9_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["RRP1_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["BAX_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["ARC_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["ERBB4_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["nNOS_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["Tau_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["GFAP_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["GluR3_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["GluR4_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["IL1B_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["P3525_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pCASP9_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["PSD95_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["SNCA_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["Ubiquitin_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pGSK3B_Tyr216_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["SHH_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["BAD_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["BCL2_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pS6_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pCFOS_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["SYP_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["H3AcK18_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["EGR1_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["H3MeK4_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["CaNA_N"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["BH_LowPeakAmp"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["BH_LowPeakBPM"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["BH_HighPeakAmp"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["BH_HighPeakBPM"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["BH_HighLowRatio"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["BHSUM1"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["BHSUM2"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["BHSUM3"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["amazed.suprised"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["happy.pleased"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["relaxing.calm"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["quiet.still"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["sad.lonely"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["angry.aggresive"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["pclass"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["survived"], /):
-        """
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["sex"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["sibsp"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["parch"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["ticket"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["fare"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["cabin"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["embarked"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["boat"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["body"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["home.dest"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    def __getitem__(self, _0: object, /):
-        """
-        usage.dask: 471
-        usage.modin: 19
-        usage.sklearn: 213
-        usage.xarray: 8
+        usage.koalas: 5
         """
         ...
 
@@ -2885,10 +8643,13 @@ class DataFrame:
         ...
 
     def __gt__(
-        self, _0: Union[pandas.core.series.Series, numpy.timedelta64, numpy.ndarray], /
+        self,
+        _0: Union[pandas.core.series.Series, int, numpy.ndarray, numpy.timedelta64],
+        /,
     ):
         """
         usage.dask: 1
+        usage.koalas: 5
         usage.pandas: 4
         """
         ...
@@ -2953,22 +8714,24 @@ class DataFrame:
         ...
 
     @overload
+    def __lt__(self, _0: int, /):
+        """
+        usage.dask: 2
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
     def __lt__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 1
         """
         ...
 
-    @overload
-    def __lt__(self, _0: int, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    def __lt__(self, _0: Union[int, pandas.core.series.Series], /):
+    def __lt__(self, _0: Union[pandas.core.series.Series, int], /):
         """
         usage.dask: 3
+        usage.koalas: 5
         """
         ...
 
@@ -3042,6 +8805,14 @@ class DataFrame:
         ...
 
     @overload
+    def __radd__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 1
+        usage.koalas: 8
+        """
+        ...
+
+    @overload
     def __radd__(
         self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /
     ):
@@ -3057,27 +8828,27 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def __radd__(self, _0: pandas.core.frame.DataFrame, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __radd__(
         self,
         _0: Union[
             dask.dataframe.core.Scalar,
             pandas.core.frame.DataFrame,
-            numpy.datetime64,
-            numpy.timedelta64,
             numpy.ndarray,
+            numpy.timedelta64,
+            numpy.datetime64,
         ],
         /,
     ):
         """
         usage.dask: 2
+        usage.koalas: 8
         usage.pandas: 30
+        """
+        ...
+
+    def __repr__(self, /):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -3106,6 +8877,14 @@ class DataFrame:
         ...
 
     @overload
+    def __rsub__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
     def __rsub__(
         self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /
     ):
@@ -3114,25 +8893,19 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def __rsub__(self, _0: pandas.core.frame.DataFrame, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __rsub__(
         self,
         _0: Union[
             pandas.core.frame.DataFrame,
-            numpy.timedelta64,
-            numpy.datetime64,
             numpy.ndarray,
+            numpy.datetime64,
+            numpy.timedelta64,
         ],
         /,
     ):
         """
         usage.dask: 1
+        usage.koalas: 2
         usage.pandas: 26
         """
         ...
@@ -3159,6 +8932,1838 @@ class DataFrame:
         """
         usage.dask: 1
         usage.pandas: 20
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["__index_level_0__"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["A"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 4
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["B"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["x"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 2
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(x, y)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["0"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["dates"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["__index_level_1__"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["animal"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Col1"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Col2"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Col3"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["longitude"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["latitude"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["dogs"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["cats"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col1"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col2"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["a"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 2
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["b"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 3
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["c"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 2
+        usage.koalas: 4
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["d"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["e"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["score"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["kids"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["age"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["angles"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["degrees"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["C"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col3"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col4"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col5"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col6"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["1"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["temp_c"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["y"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 4
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["z"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 4
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["w"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Person"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Age"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Single"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["numeric1"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["numeric2"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["object"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["name"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["toy"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["born"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["id"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["D"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["one"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["two"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["three"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["2"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["lkey"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["value"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["rkey"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["int_col"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["text_col"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["float_col"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["num_legs"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["num_wings"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["species"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["population"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["int"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["float"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["key"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["max_speed"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["shield"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["X"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Y"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["FR"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["GR"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["IT"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["foo"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["bar"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["baz"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["zoo"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["E"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["class"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["0.5"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["C C"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["http_status"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["response_time"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["prices"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(X, A)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(X, B)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(Y, C)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(Y, D)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["weapon"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["(speed, max)"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["(species, type)"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["num_specimen_seen"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["month"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["year"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["sale"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["weight"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["height"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["(weight, kg)"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["(weight, pounds)"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(height, m)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["country"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["code"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["mask"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["locomotion"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["str"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["int1"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["int2"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Animal"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Max Speed"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["category"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col 1"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["col 2"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["animal_1"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["animal_2"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["rank"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["value1"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["value2"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["__index_level_2__"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(a, x)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(a, y)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(b, z)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["x1"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["x2"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["letter"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["number"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["day"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["sales"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["signups"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["visits"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["lab"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["val"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["mass"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["radius"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["length"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["width"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["s1"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["s2"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["vals"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(x, a)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["aa"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["bb"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(y, b)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(x, b)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(y, c)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["w"], _1: float, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["a"], Literal["c"]], _1: Literal["def"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["x"], _1: Literal["ghi"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["x"], _1: List[int], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["a b c"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["5"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["clip"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(A, one)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(A, two)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(B, one)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(B, two)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(x, a, 1)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(x, b, 2)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["(y.z, c.d, 3)"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(x, b, 4)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(X, A, Z)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(X, B, Z)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(Y, C, Z)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(Y, D, Z)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["a.b"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(c, e)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(d, f)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["0.9655187292975722"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["0.31992251735325117"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["0.2635517951467826"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["0.5307682923411018"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["0.7768594149024922"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["0.9001395954082655"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["ba"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["cb"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["db"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(x, ba)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(y, cb)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(z, db)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(b, y)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(c, z)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(a, , , b)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(c, , d, )"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(e, , f, )"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(e, g, , )"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(, , , h)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(i, , , )"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["numbers"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(A, 0)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(B, 1)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(A, Z)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(x, c)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(y, a)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(cg1, a)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(cg1, b)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(cg2, c)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(cg3, d)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(rg1, x)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(rg1, y)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(rg2, z)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["i32"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["i64"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["f"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["bhello"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Unnamed: 0"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["kind"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["group"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(y, A)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(y, B)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(x, group)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["v"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["timestamp"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["car_id"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["column"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["mean"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(z, d)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(d, y)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["3"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["4"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(bar, one)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(bar, two)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(baz, one)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(baz, two)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: List[Literal["b", "a"]], _1: pandas.core.frame.DataFrame, /
+    ):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: List[Literal["c", "b"]], _1: pandas.core.frame.DataFrame, /
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: List[Literal["d", "c"]], _1: pandas.core.frame.DataFrame, /
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: List[Tuple[Literal["y", "z"], Literal["c", "d"]]],
+        _1: pandas.core.frame.DataFrame,
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: List[Literal["f", "e"]], _1: pandas.core.frame.DataFrame, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["y"], Literal["c"]], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Koalas"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["NEW"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[Literal["c"]], _1: pandas.core.frame.DataFrame, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[Literal["x"]], _1: pandas.core.frame.DataFrame, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: List[Literal["y", "x"]], _1: pandas.core.frame.DataFrame, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["d"], Literal["x"]], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(1, 2)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["d"], Literal["y"]], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(1, 2, 3)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: List[Tuple[Literal["f"], Literal["x", "y"]]],
+        _1: pandas.core.frame.DataFrame,
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["rep"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(y, c, 3)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["left"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["right"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["outlier"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["categorical"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["single"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["(Z, D)"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["g"], _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["h"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["i"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["s"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        usage.sklearn: 1
         """
         ...
 
@@ -3233,20 +10838,6 @@ class DataFrame:
         ...
 
     @overload
-    def __setitem__(self, _0: Literal["id"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Literal["bb"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def __setitem__(
         self, _0: Literal["path"], _1: pandas.core.arrays.categorical.Categorical, /
     ):
@@ -3290,20 +10881,6 @@ class DataFrame:
         ...
 
     @overload
-    def __setitem__(self, _0: Literal["A"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Literal["numbers"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def __setitem__(
         self, _0: Literal["more_numbers"], _1: pandas.core.series.Series, /
     ):
@@ -3314,13 +10891,6 @@ class DataFrame:
 
     @overload
     def __setitem__(self, _0: Literal["integers"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Literal["a"], _1: pandas.core.series.Series, /):
         """
         usage.dask: 2
         """
@@ -3363,21 +10933,7 @@ class DataFrame:
         ...
 
     @overload
-    def __setitem__(self, _0: Literal["v"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Literal["y_"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Literal["w"], _1: pandas.core.series.Series, /):
         """
         usage.dask: 1
         """
@@ -3409,13 +10965,6 @@ class DataFrame:
         ...
 
     @overload
-    def __setitem__(self, _0: Literal["y"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Literal["c"], _1: int, /):
         """
         usage.dask: 1
@@ -3437,20 +10986,6 @@ class DataFrame:
         ...
 
     @overload
-    def __setitem__(self, _0: Literal["f"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Literal["g"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def __setitem__(
         self, _0: Literal["dt"], _1: pandas._libs.tslibs.timestamps.Timestamp, /
     ):
@@ -3460,24 +10995,9 @@ class DataFrame:
         ...
 
     @overload
-    def __setitem__(self, _0: Literal["c"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 2
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Literal["c"], _1: pandas.core.indexes.base.Index, /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Literal["B"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -3523,32 +11043,9 @@ class DataFrame:
         ...
 
     @overload
-    def __setitem__(self, _0: Literal["z"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Literal["z"], _1: numpy.ndarray, /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self, _0: List[Literal["b", "a"]], _1: pandas.core.frame.DataFrame, /
-    ):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Literal["b"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 3
         """
         ...
 
@@ -3865,27 +11362,6 @@ class DataFrame:
         ...
 
     @overload
-    def __setitem__(self, _0: Literal["e"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Literal["d"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Literal["x"], _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Literal["Time"], _1: pandas.core.series.Series, /):
         """
         usage.dask: 1
@@ -3929,13 +11405,6 @@ class DataFrame:
 
     @overload
     def __setitem__(self, _0: Literal["petalwidth"], _1: pandas.core.series.Series, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Literal["class"], _1: pandas.core.series.Series, /):
         """
         usage.sklearn: 1
         """
@@ -4155,13 +11624,6 @@ class DataFrame:
         ...
 
     @overload
-    def __setitem__(self, _0: Literal["s"], _1: pandas.core.series.Series, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Literal["p"], _1: pandas.core.series.Series, /):
         """
         usage.sklearn: 1
@@ -4177,13 +11639,6 @@ class DataFrame:
 
     @overload
     def __setitem__(self, _0: Literal["thick"], _1: pandas.core.series.Series, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Literal["width"], _1: pandas.core.series.Series, /):
         """
         usage.sklearn: 1
         """
@@ -4261,13 +11716,6 @@ class DataFrame:
 
     @overload
     def __setitem__(self, _0: Literal["CHMAX"], _1: pandas.core.series.Series, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Literal["age"], _1: pandas.core.series.Series, /):
         """
         usage.sklearn: 1
         """
@@ -5052,13 +12500,6 @@ class DataFrame:
         ...
 
     @overload
-    def __setitem__(self, _0: Literal["name"], _1: pandas.core.series.Series, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Literal["sex"], _1: pandas.core.series.Series, /):
         """
         usage.sklearn: 1
@@ -5181,9 +12622,18 @@ class DataFrame:
     def __setitem__(self, _0: object, _1: object, /):
         """
         usage.dask: 129
+        usage.koalas: 266
         usage.modin: 16
         usage.sklearn: 178
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 1
+        usage.koalas: 2
         """
         ...
 
@@ -5202,13 +12652,6 @@ class DataFrame:
         ...
 
     @overload
-    def __sub__(self, _0: pandas.core.frame.DataFrame, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def __sub__(self, _0: int, /):
         """
         usage.dask: 2
@@ -5218,6 +12661,7 @@ class DataFrame:
     def __sub__(self, _0: object, /):
         """
         usage.dask: 8
+        usage.koalas: 2
         usage.pandas: 30
         """
         ...
@@ -5253,9 +12697,16 @@ class DataFrame:
         """
         ...
 
+    def _repr_html_(self, /):
+        """
+        usage.koalas: 4
+        """
+        ...
+
     def abs(self, /):
         """
         usage.dask: 3
+        usage.koalas: 1
         """
         ...
 
@@ -5334,9 +12785,30 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def add_prefix(self, /, prefix: Literal["col_"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
     def add_prefix(self, /, prefix: Literal["col"]):
         """
         usage.modin: 1
+        """
+        ...
+
+    def add_prefix(self, /, prefix: Literal["col", "col_"]):
+        """
+        usage.koalas: 2
+        usage.modin: 1
+        """
+        ...
+
+    def add_suffix(self, /, suffix: Literal["first_series"]):
+        """
+        usage.koalas: 2
         """
         ...
 
@@ -5913,6 +13385,7 @@ class DataFrame:
     def all(self, /):
         """
         usage.dask: 5
+        usage.koalas: 3
         """
         ...
 
@@ -5933,6 +13406,7 @@ class DataFrame:
     def all(self, /, axis: int = ..., skipna: bool = ...):
         """
         usage.dask: 11
+        usage.koalas: 3
         """
         ...
 
@@ -5940,6 +13414,7 @@ class DataFrame:
     def any(self, /):
         """
         usage.dask: 3
+        usage.koalas: 3
         """
         ...
 
@@ -5960,13 +13435,7 @@ class DataFrame:
     def any(self, /, axis: int = ..., skipna: bool = ...):
         """
         usage.dask: 9
-        """
-        ...
-
-    @overload
-    def append(self, /, other: pandas.core.series.Series):
-        """
-        usage.dask: 1
+        usage.koalas: 3
         """
         ...
 
@@ -5974,6 +13443,41 @@ class DataFrame:
     def append(self, /, other: pandas.core.frame.DataFrame):
         """
         usage.dask: 3
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    def append(self, /, other: pandas.core.frame.DataFrame, ignore_index: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def append(self, /, other: pandas.core.frame.DataFrame, verify_integrity: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def append(
+        self,
+        /,
+        other: pandas.core.frame.DataFrame,
+        ignore_index: bool,
+        verify_integrity: bool,
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def append(self, /, other: pandas.core.series.Series):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -5987,18 +13491,48 @@ class DataFrame:
     def append(
         self,
         /,
-        other: Union[pandas.core.frame.DataFrame, pandas.core.series.Series],
-        sort: bool = ...,
+        other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame],
+        ignore_index: bool = ...,
+        verify_integrity: bool = ...,
     ):
         """
         usage.dask: 12
+        usage.koalas: 11
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, axis: int, args: Tuple[None, ...]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, axis: int, args: Tuple[None, ...]):
+        """
+        usage.koalas: 1
         """
         ...
 
     @overload
     def apply(self, /, func: Callable):
         """
-        usage.xarray: 1
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, axis: int, args: Tuple[int]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, args: Tuple[int]):
+        """
+        usage.koalas: 2
         """
         ...
 
@@ -6006,7 +13540,15 @@ class DataFrame:
     def apply(self, /, func: Callable, axis: int):
         """
         usage.dask: 5
+        usage.koalas: 6
         usage.modin: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable):
+        """
+        usage.xarray: 1
         """
         ...
 
@@ -6038,10 +13580,12 @@ class DataFrame:
         func: Callable,
         raw: bool = ...,
         result_type: None = ...,
-        args: Tuple[None, ...] = ...,
+        axis: Union[Literal["columns"], int] = ...,
+        args: Tuple[Union[None, int], ...] = ...,
     ):
         """
         usage.dask: 10
+        usage.koalas: 19
         usage.modin: 1
         usage.xarray: 1
         """
@@ -6055,7 +13599,204 @@ class DataFrame:
 
     def assign(self, /):
         """
-        usage.dask: 16
+        usage.dask: 17
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Dict[Literal["x", "__index_level_0__"], numpy.dtype]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Dict[Literal["0", "__index_level_0__"], numpy.dtype]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Dict[Literal["__index_level_0__"], numpy.dtype]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Dict[str, numpy.dtype]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(
+        self, /, dtype: Dict[Literal["z", "y", "x", "__index_level_0__"], numpy.dtype]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Dict[Literal["t", "__index_level_0__"], numpy.dtype]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(
+        self, /, dtype: Dict[Literal["b", "a", "__index_level_0__"], numpy.dtype]
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def astype(
+        self, /, dtype: Dict[Literal["C", "B", "A", "__index_level_0__"], numpy.dtype]
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def astype(
+        self,
+        /,
+        dtype: Dict[
+            Literal["(C, Z)", "(B, X)", "(A, Z)", "__index_level_0__"], numpy.dtype
+        ],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[float]):
+        """
+        usage.dask: 9
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(
+        self, /, dtype: Dict[Literal["c", "b", "a", "__index_level_0__"], numpy.dtype]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Dict[Literal["b", "__index_level_0__"], numpy.dtype]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(
+        self,
+        /,
+        dtype: Dict[
+            Literal["c", "b", "a", "__index_level_1__", "__index_level_0__"],
+            numpy.dtype,
+        ],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(
+        self,
+        /,
+        dtype: Dict[
+            Literal["b", "__index_level_1__", "__index_level_0__"], numpy.dtype
+        ],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(
+        self,
+        /,
+        dtype: Dict[
+            Literal[
+                "(y, c)", "(x, b)", "(x, a)", "__index_level_1__", "__index_level_0__"
+            ],
+            numpy.dtype,
+        ],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(
+        self,
+        /,
+        dtype: Dict[Literal["__index_level_1__", "__index_level_0__"], numpy.dtype],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Dict[Literal["a", "__index_level_0__"], numpy.dtype]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(
+        self, /, dtype: Dict[Literal["(bar, one)", "__index_level_0__"], numpy.dtype]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Dict[Literal["A", "__index_level_0__"], numpy.dtype]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def astype(
+        self,
+        /,
+        dtype: Dict[Literal["D", "C", "B", "A", "__index_level_0__"], numpy.dtype],
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def astype(
+        self, /, dtype: Dict[Literal["Koalas", "__index_level_0__"], numpy.dtype]
+    ):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -6105,13 +13846,6 @@ class DataFrame:
     def astype(self, /, dtype: Literal["float64"], copy: bool):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def astype(self, /, dtype: Type[float]):
-        """
-        usage.dask: 9
         """
         ...
 
@@ -6218,9 +13952,9 @@ class DataFrame:
             Dict[
                 Union[int, str],
                 Union[
-                    numpy.dtype,
-                    pandas.core.dtypes.dtypes.CategoricalDtype,
                     Type[float],
+                    pandas.core.dtypes.dtypes.CategoricalDtype,
+                    numpy.dtype,
                     Literal["category", "f8"],
                 ],
             ],
@@ -6231,6 +13965,7 @@ class DataFrame:
     ):
         """
         usage.dask: 32
+        usage.koalas: 29
         usage.modin: 1
         usage.sklearn: 4
         """
@@ -6240,6 +13975,21 @@ class DataFrame:
     def bfill(self, /):
         """
         usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def bfill(self, /, limit: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def bfill(self, /, inplace: bool):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -6250,9 +14000,39 @@ class DataFrame:
         """
         ...
 
-    def bfill(self, /, axis: int = ...):
+    def bfill(self, /, limit: int = ..., inplace: bool = ..., axis: int = ...):
         """
         usage.dask: 2
+        usage.koalas: 3
+        """
+        ...
+
+    def bool(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def clip(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def clip(self, /, lower: int):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def clip(self, /, upper: int):
+        """
+        usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
@@ -6260,6 +14040,7 @@ class DataFrame:
     def clip(self, /, lower: int, upper: int):
         """
         usage.dask: 2
+        usage.koalas: 1
         """
         ...
 
@@ -6271,21 +14052,7 @@ class DataFrame:
         ...
 
     @overload
-    def clip(self, /, lower: int):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def clip(self, /, lower: None, upper: int):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def clip(self, /, upper: int):
         """
         usage.dask: 1
         """
@@ -6329,11 +14096,12 @@ class DataFrame:
     def clip(
         self,
         /,
-        lower: Union[None, int, float] = ...,
-        upper: Union[float, int, None] = ...,
+        lower: Union[float, int, None] = ...,
+        upper: Union[None, int, float] = ...,
     ):
         """
         usage.dask: 12
+        usage.koalas: 4
         """
         ...
 
@@ -6438,6 +14206,7 @@ class DataFrame:
     def copy(self, /):
         """
         usage.dask: 13
+        usage.koalas: 21
         usage.modin: 4
         usage.sklearn: 4
         """
@@ -6453,6 +14222,7 @@ class DataFrame:
     def copy(self, /, deep: bool = ...):
         """
         usage.dask: 16
+        usage.koalas: 21
         usage.modin: 4
         usage.sklearn: 4
         """
@@ -6462,6 +14232,7 @@ class DataFrame:
     def corr(self, /):
         """
         usage.dask: 3
+        usage.koalas: 3
         """
         ...
 
@@ -6475,13 +14246,14 @@ class DataFrame:
     def corr(self, /, min_periods: int = ...):
         """
         usage.dask: 4
+        usage.koalas: 3
         """
         ...
 
     @overload
-    def count(self, /):
+    def count(self, /, axis: int, numeric_only: bool):
         """
-        usage.dask: 10
+        usage.koalas: 1
         """
         ...
 
@@ -6489,6 +14261,14 @@ class DataFrame:
     def count(self, /, axis: int):
         """
         usage.dask: 3
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def count(self, /):
+        """
+        usage.dask: 12
         """
         ...
 
@@ -6506,9 +14286,15 @@ class DataFrame:
         """
         ...
 
-    def count(self, /, axis: Union[Literal["columns", "index"], int] = ...):
+    def count(
+        self,
+        /,
+        numeric_only: bool = ...,
+        axis: Union[int, Literal["columns", "index"]] = ...,
+    ):
         """
-        usage.dask: 15
+        usage.dask: 17
+        usage.koalas: 2
         """
         ...
 
@@ -6536,6 +14322,15 @@ class DataFrame:
     def cummax(self, /):
         """
         usage.dask: 4
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def cummax(self, /, skipna: bool):
+        """
+        usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
@@ -6560,16 +14355,10 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def cummax(self, /, skipna: bool):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def cummax(self, /, axis: Union[int, None] = ..., skipna: bool = ...):
         """
         usage.dask: 11
+        usage.koalas: 3
         """
         ...
 
@@ -6577,6 +14366,15 @@ class DataFrame:
     def cummin(self, /):
         """
         usage.dask: 4
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def cummin(self, /, skipna: bool):
+        """
+        usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
@@ -6601,16 +14399,10 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def cummin(self, /, skipna: bool):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def cummin(self, /, axis: Union[int, None] = ..., skipna: bool = ...):
         """
         usage.dask: 11
+        usage.koalas: 3
         """
         ...
 
@@ -6618,6 +14410,15 @@ class DataFrame:
     def cumprod(self, /):
         """
         usage.dask: 4
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def cumprod(self, /, skipna: bool):
+        """
+        usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
@@ -6642,16 +14443,10 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def cumprod(self, /, skipna: bool):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def cumprod(self, /, axis: Union[int, None] = ..., skipna: bool = ...):
         """
         usage.dask: 11
+        usage.koalas: 3
         """
         ...
 
@@ -6659,6 +14454,15 @@ class DataFrame:
     def cumsum(self, /):
         """
         usage.dask: 4
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def cumsum(self, /, skipna: bool):
+        """
+        usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
@@ -6683,16 +14487,10 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def cumsum(self, /, skipna: bool):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def cumsum(self, /, axis: Union[int, None] = ..., skipna: bool = ...):
         """
         usage.dask: 11
+        usage.koalas: 3
         """
         ...
 
@@ -6799,16 +14597,17 @@ class DataFrame:
         ...
 
     @overload
-    def diff(self, /, periods: int):
+    def diff(self, /):
         """
-        usage.dask: 4
+        usage.dask: 1
+        usage.koalas: 2
         """
         ...
 
     @overload
-    def diff(self, /):
+    def diff(self, /, periods: int):
         """
-        usage.dask: 1
+        usage.dask: 5
         """
         ...
 
@@ -6821,7 +14620,112 @@ class DataFrame:
 
     def diff(self, /, periods: int = ..., axis: int = ...):
         """
-        usage.dask: 7
+        usage.dask: 8
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["__groupkey_0__"]], axis: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: Literal["b"], axis: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: Literal["x"], axis: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["z", "y"]], axis: int):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, columns: Literal["x"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, columns: List[Literal["z", "y"]]):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, columns: Literal["a"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, columns: Tuple[Literal["a"], Literal["x"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop(
+        self, /, columns: List[Union[Literal["b"], Tuple[Literal["a"], Literal["x"]]]]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop(
+        self, /, labels: List[Literal["__groupkey_1__", "__groupkey_0__"]], axis: int
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop(
+        self, /, labels: List[Tuple[Literal["__groupkey_0__"], Literal[""]]], axis: int
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop(
+        self,
+        /,
+        labels: List[Tuple[Literal["__groupkey_0__", "__groupkey_1__"], Literal[""]]],
+        axis: int,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, columns: List[Literal["75%", "50%", "25%"]], level: int):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -6905,13 +14809,6 @@ class DataFrame:
         ...
 
     @overload
-    def drop(self, /, labels: List[Literal["z", "y"]], axis: int):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def drop(
         self,
         /,
@@ -6941,13 +14838,6 @@ class DataFrame:
     def drop(
         self, /, labels: List[Literal["x", "a"]], axis: int, errors: Literal["ignore"]
     ):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def drop(self, /, columns: List[Literal["z", "y"]]):
         """
         usage.dask: 1
         """
@@ -7048,25 +14938,92 @@ class DataFrame:
     def drop(
         self,
         /,
-        columns: Union[List[str], Literal["category_2", "dt"]] = ...,
+        columns: Union[
+            Literal["category_2", "dt", "a", "x"],
+            List[Union[str, Tuple[Literal["a"], Literal["x"]]]],
+            Tuple[Literal["a"], Literal["x"]],
+        ] = ...,
         inplace: bool = ...,
+        level: int = ...,
         labels: Union[
-            Literal["a", "_index", "y", "timedelta", "_partitions"],
-            List[Union[int, Literal["z", "y", "x", "a"]]],
             int,
+            List[
+                Union[
+                    str,
+                    Tuple[Literal["__groupkey_0__", "__groupkey_1__"], Literal[""]],
+                    int,
+                ]
+            ],
+            str,
         ] = ...,
         axis: int = ...,
         errors: Literal["raise", "ignore"] = ...,
     ):
         """
         usage.dask: 33
+        usage.koalas: 15
         """
         ...
 
     @overload
-    def drop_duplicates(self, /):
+    def drop_duplicates(self, /, keep: Literal["first"]):
         """
-        usage.dask: 5
+        usage.dask: 2
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, subset: Literal["a"], keep: Literal["first"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(
+        self, /, subset: List[Literal["b", "a"]], keep: Literal["first"]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, subset: Literal["b"], keep: Literal["first"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, keep: Literal["last"]):
+        """
+        usage.dask: 2
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, subset: Literal["a"], keep: Literal["last"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(
+        self, /, subset: List[Literal["b", "a"]], keep: Literal["last"]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, subset: Literal["b"], keep: Literal["last"]):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -7074,6 +15031,135 @@ class DataFrame:
     def drop_duplicates(self, /, keep: bool):
         """
         usage.dask: 1
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, subset: Literal["a"], keep: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, subset: List[Literal["b", "a"]], keep: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, subset: Literal["b"], keep: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(
+        self, /, subset: Tuple[Literal["x"], Literal["a"]], keep: Literal["first"]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(
+        self,
+        /,
+        subset: List[Tuple[Literal["x", "y"], Literal["a", "b"]]],
+        keep: Literal["first"],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(
+        self, /, subset: Tuple[Literal["x"], Literal["a"]], keep: Literal["last"]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(
+        self,
+        /,
+        subset: List[Tuple[Literal["x", "y"], Literal["a", "b"]]],
+        keep: Literal["last"],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, subset: Tuple[Literal["x"], Literal["a"]], keep: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(
+        self, /, subset: List[Tuple[Literal["x", "y"], Literal["a", "b"]]], keep: bool
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, subset: None, inplace: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, subset: Literal["a"], inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, subset: List[Literal["b", "a"]], inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(
+        self, /, subset: Tuple[Literal["x"], Literal["a"]], inplace: bool
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(
+        self,
+        /,
+        subset: List[Tuple[Literal["x", "y"], Literal["a", "b"]]],
+        inplace: bool,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /):
+        """
+        usage.dask: 5
         """
         ...
 
@@ -7131,23 +15217,9 @@ class DataFrame:
         ...
 
     @overload
-    def drop_duplicates(self, /, keep: Literal["first"]):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
     def drop_duplicates(self, /, subset: None, keep: Literal["last"]):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def drop_duplicates(self, /, keep: Literal["last"]):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -7179,11 +15251,195 @@ class DataFrame:
     def drop_duplicates(
         self,
         /,
-        subset: Union[Literal["ticker", "y"], None, List[Literal["x", "y", "z"]]] = ...,
-        keep: Union[Literal["last", "first"], bool] = ...,
+        subset: Union[
+            List[
+                Union[
+                    Literal["b", "a", "x", "y", "z"],
+                    Tuple[Literal["x", "y"], Literal["a", "b"]],
+                ]
+            ],
+            None,
+            Literal["ticker", "y", "a", "b"],
+            Tuple[Literal["x"], Literal["a"]],
+        ] = ...,
+        keep: Union[bool, Literal["last", "first"]] = ...,
+        inplace: bool = ...,
     ):
         """
         usage.dask: 43
+        usage.koalas: 30
+        """
+        ...
+
+    @overload
+    def droplevel(self, /, level: Literal["a"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def droplevel(self, /, level: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def droplevel(self, /, level: Literal["level_1"], axis: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def droplevel(self, /, level: int, axis: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def droplevel(self, /, level: List[Tuple[Literal["a"], Literal["b"]]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def droplevel(
+        self,
+        /,
+        level: Union[
+            List[Tuple[Literal["a"], Literal["b"]]], Literal["level_1", "a"], int
+        ],
+        axis: int = ...,
+    ):
+        """
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def dropna(self, /, axis: int):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def dropna(self, /, axis: int, how: Literal["all"]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def dropna(self, /, axis: int, subset: List[Literal["x"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def dropna(self, /, axis: int, subset: List[Literal["z", "y"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def dropna(
+        self, /, axis: int, how: Literal["all"], subset: List[Literal["z", "y"]]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def dropna(self, /, axis: int, thresh: int):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def dropna(self, /, axis: int, thresh: int, subset: List[Literal["z", "y"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def dropna(self, /, inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def dropna(self, /, axis: int, subset: List[Tuple[Literal["a"], Literal["x"]]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def dropna(
+        self, /, axis: int, subset: List[Tuple[Literal["a", "b"], Literal["y", "z"]]]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def dropna(
+        self,
+        /,
+        axis: int,
+        how: Literal["all"],
+        subset: List[Tuple[Literal["a", "b"], Literal["y", "z"]]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def dropna(
+        self,
+        /,
+        axis: int,
+        thresh: int,
+        subset: List[Tuple[Literal["a", "b"], Literal["y", "z"]]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def dropna(self, /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def dropna(self, /, how: Literal["all"]):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def dropna(self, /, thresh: int):
+        """
+        usage.dask: 8
+        usage.koalas: 2
         """
         ...
 
@@ -7195,21 +15451,7 @@ class DataFrame:
         ...
 
     @overload
-    def dropna(self, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def dropna(self, /, how: Literal["all"], thresh: None, subset: None):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def dropna(self, /, how: Literal["all"]):
         """
         usage.dask: 1
         """
@@ -7269,13 +15511,6 @@ class DataFrame:
         ...
 
     @overload
-    def dropna(self, /, thresh: int):
-        """
-        usage.dask: 8
-        """
-        ...
-
-    @overload
     def dropna(self, /, how: Literal["any"], thresh: int, subset: None):
         """
         usage.dask: 1
@@ -7292,12 +15527,62 @@ class DataFrame:
     def dropna(
         self,
         /,
+        axis: int = ...,
         how: Literal["any", "all"] = ...,
-        thresh: Union[None, int] = ...,
-        subset: Union[List[str], None] = ...,
+        thresh: Union[int, None] = ...,
+        subset: Union[
+            None, List[Union[str, Tuple[Literal["a", "b"], Literal["y", "z", "x"]]]]
+        ] = ...,
     ):
         """
         usage.dask: 22
+        usage.koalas: 25
+        """
+        ...
+
+    @overload
+    def duplicated(self, /):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def duplicated(self, /, keep: Literal["last"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def duplicated(self, /, keep: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def duplicated(self, /, subset: List[Literal["b"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def duplicated(self, /, subset: List[Tuple[Literal["x"], Literal["b"]]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def duplicated(
+        self,
+        /,
+        keep: Union[bool, Literal["last"]] = ...,
+        subset: List[Union[Literal["b"], Tuple[Literal["x"], Literal["b"]]]] = ...,
+    ):
+        """
+        usage.koalas: 10
         """
         ...
 
@@ -7305,6 +15590,103 @@ class DataFrame:
         """
         usage.dask: 2
         usage.xarray: 10
+        """
+        ...
+
+    @overload
+    def eval(self, /, expr: Literal["A + B"], inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def eval(self, /, expr: Literal["C = A + B"], inplace: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def eval(self, /, expr: Literal["A + B"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def eval(self, /, expr: Literal["A + A"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def eval(self, /, expr: Literal["A + A"], inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def eval(self, /, expr: Literal["C = A + B"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def eval(self, /, expr: Literal["A = A + A"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def eval(self, /, expr: Literal["A = A + A"], inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def eval(self, /, expr: Literal["1 + 1"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def eval(self, /, expr: Literal["1 + 1"], inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def eval(self, /, expr: str):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def eval(self, /, expr: str, inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def eval(self, /, expr: Literal["A = B + C"], inplace: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    def eval(self, /, expr: str, inplace: bool = ...):
+        """
+        usage.koalas: 15
         """
         ...
 
@@ -7349,9 +15731,58 @@ class DataFrame:
         """
         ...
 
+    def expanding(self, /, min_periods: int):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
     def explode(self, /, column: Literal["A"]):
         """
         usage.dask: 2
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def explode(self, /, column: Literal["B"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def explode(self, /, column: Tuple[Literal["A"], Literal["Z"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def explode(self, /, column: Tuple[Literal["B"], Literal["X"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def explode(self, /, column: Literal["Z"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def explode(
+        self,
+        /,
+        column: Union[
+            Literal["A", "Z", "B"], Tuple[Literal["A", "B"], Literal["Z", "X"]]
+        ],
+    ):
+        """
+        usage.dask: 2
+        usage.koalas: 7
         """
         ...
 
@@ -7359,6 +15790,21 @@ class DataFrame:
     def ffill(self, /):
         """
         usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def ffill(self, /, limit: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def ffill(self, /, inplace: bool):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -7369,9 +15815,110 @@ class DataFrame:
         """
         ...
 
-    def ffill(self, /, axis: int = ...):
+    def ffill(self, /, limit: int = ..., inplace: bool = ..., axis: int = ...):
         """
         usage.dask: 2
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: int):
+        """
+        usage.dask: 2
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: Dict[Literal["z", "y", "x"], int]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def fillna(self, /, method: Literal["ffill"]):
+        """
+        usage.dask: 1
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def fillna(self, /, method: Literal["ffill"], limit: int):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def fillna(self, /, method: Literal["bfill"]):
+        """
+        usage.dask: 2
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def fillna(self, /, method: Literal["bfill"], limit: int):
+        """
+        usage.dask: 2
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: Dict[Literal["z", "y", "x"], int], inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: pandas.core.series.Series):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def fillna(
+        self, /, value: Dict[Tuple[Literal["x", "y"], Literal["a", "b", "c"]], int]
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: Dict[Literal["x"], int]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def fillna(
+        self,
+        /,
+        value: Dict[Union[Tuple[Literal["x"], Literal["b"]], Literal["x"]], int],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def fillna(
+        self,
+        /,
+        value: Dict[Union[Literal["x"], Tuple[Literal["x"], Literal["b"]]], int],
+    ):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -7404,13 +15951,6 @@ class DataFrame:
         ...
 
     @overload
-    def fillna(self, /, value: int):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
     def fillna(self, /, value: None, method: Literal["pad"], axis: int, limit: None):
         """
         usage.dask: 2
@@ -7425,13 +15965,6 @@ class DataFrame:
         ...
 
     @overload
-    def fillna(self, /, method: Literal["ffill"]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def fillna(self, /, method: Literal["ffill"], limit: None):
         """
         usage.dask: 1
@@ -7440,13 +15973,6 @@ class DataFrame:
 
     @overload
     def fillna(self, /, value: None, method: Literal["bfill"], axis: int, limit: None):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def fillna(self, /, method: Literal["bfill"]):
         """
         usage.dask: 2
         """
@@ -7474,23 +16000,9 @@ class DataFrame:
         ...
 
     @overload
-    def fillna(self, /, method: Literal["ffill"], limit: int):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def fillna(self, /, value: None, method: Literal["bfill"], axis: int, limit: int):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def fillna(self, /, method: Literal["bfill"], limit: int):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -7531,13 +16043,6 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def fillna(self, /, value: pandas.core.series.Series):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def fillna(
         self,
         /,
@@ -7546,15 +16051,114 @@ class DataFrame:
             None,
             int,
             pandas.core.series.Series,
-            Dict[int, Literal["foo"]],
+            Dict[
+                Union[
+                    int,
+                    Tuple[Literal["x", "y"], Literal["b", "a", "c"]],
+                    Literal["z", "y", "x"],
+                ],
+                Union[Literal["foo"], int],
+            ],
         ] = ...,
-        method: Union[None, Literal["ffill", "pad", "bfill"]] = ...,
+        method: Union[Literal["ffill", "pad", "bfill"], None] = ...,
         axis: int = ...,
-        limit: Union[None, int] = ...,
+        limit: Union[int, None] = ...,
+        inplace: bool = ...,
     ):
         """
         usage.dask: 31
+        usage.koalas: 24
         usage.modin: 2
+        """
+        ...
+
+    @overload
+    def filter(self, /, items: List[Literal["aa", "ab"]], axis: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def filter(self, /, items: List[Literal["db", "ba"]], axis: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def filter(self, /, like: Literal["b"], axis: Literal["index"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def filter(self, /, like: Literal["c"], axis: Literal["columns"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def filter(self, /, regex: Literal["b.*"], axis: Literal["index"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def filter(self, /, regex: Literal["b.*"], axis: Literal["columns"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def filter(self, /, items: List[Tuple[Literal["aa", "bd"], int]], axis: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def filter(self, /, like: Literal["b"], axis: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def filter(self, /, regex: Literal["b.*"], axis: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def filter(
+        self, /, items: List[Tuple[Literal["x", "z"], Literal["ba", "db"]]], axis: int
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def filter(
+        self,
+        /,
+        axis: Union[int, Literal["columns", "index"]],
+        like: Literal["b", "c"] = ...,
+        items: List[
+            Union[
+                Tuple[Literal["x", "z", "aa", "bd"], Union[Literal["ba", "db"], int]],
+                Literal["aa", "ab", "db", "ba"],
+            ]
+        ] = ...,
+        regex: Literal["b.*"] = ...,
+    ):
+        """
+        usage.koalas: 15
         """
         ...
 
@@ -7617,6 +16221,12 @@ class DataFrame:
     def first(self, /, offset: str):
         """
         usage.dask: 10
+        """
+        ...
+
+    def first_valid_index(self, /):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -7765,10 +16375,98 @@ class DataFrame:
         ...
 
     @overload
-    def groupby(self, /, by: List[Literal["c", "b", "a"]]):
+    def groupby(self, /, by: List[pandas.core.series.Series]):
         """
-        usage.dask: 2
-        usage.modin: 1
+        usage.dask: 15
+        usage.koalas: 3
+        usage.modin: 4
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["__groupkey_0__"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: pandas.core.series.Series):
+        """
+        usage.dask: 106
+        usage.koalas: 98
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Tuple[Literal["a"], Literal["x"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Tuple[Literal["a"], Literal["x", "y"]]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["A"], as_index: bool):
+        """
+        usage.koalas: 9
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: pandas.core.series.Series, as_index: bool):
+        """
+        usage.koalas: 28
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Tuple[Literal["X"], Literal["A"]], as_index: bool):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Tuple[Literal["X"], Literal["A"]]):
+        """
+        usage.koalas: 8
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["kind"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["group"]):
+        """
+        usage.dask: 12
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Tuple[Literal["x"], Literal["group"]]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["b"]):
+        """
+        usage.dask: 26
+        usage.koalas: 22
         """
         ...
 
@@ -7776,15 +16474,180 @@ class DataFrame:
     def groupby(self, /, by: List[Literal["b", "a"]]):
         """
         usage.dask: 9
+        usage.koalas: 11
         usage.modin: 1
         """
         ...
 
     @overload
-    def groupby(self, /, by: List[pandas.core.series.Series]):
+    def groupby(self, /, by: List[Literal["b"]]):
         """
-        usage.dask: 15
-        usage.modin: 4
+        usage.dask: 1
+        usage.koalas: 18
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Tuple[Literal["x"], Literal["b"]]):
+        """
+        usage.koalas: 11
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Tuple[Literal["x"], Literal["a", "b"]]]):
+        """
+        usage.koalas: 11
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["d"]):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["car_id"]):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["A"]):
+        """
+        usage.dask: 9
+        usage.koalas: 23
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["a"]):
+        """
+        usage.dask: 41
+        usage.koalas: 31
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Tuple[Literal["x"], Literal["a"]]):
+        """
+        usage.koalas: 12
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Tuple[Literal["x"], Literal["a"]], as_index: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["a"], as_index: bool):
+        """
+        usage.koalas: 7
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["a"], axis: int):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["a"], axis: Literal["index"]):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["a"]]):
+        """
+        usage.dask: 9
+        usage.koalas: 10
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["B", "A"]]):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Tuple[Literal["X", "Y"], Literal["A", "B"]]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["b"], as_index: bool):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["__groupkey_1__", "__groupkey_0__"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Tuple[Literal["__groupkey_0__"], Literal[""]]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def groupby(
+        self,
+        /,
+        by: List[Tuple[Literal["__groupkey_0__", "__groupkey_1__"], Literal[""]]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[pandas.core.series.Series], as_index: bool):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Union[pandas.core.series.Series, Literal["a"]]]):
+        """
+        usage.koalas: 3
+        usage.modin: 2
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Union[Literal["b"], pandas.core.series.Series]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["c", "b", "a"]]):
+        """
+        usage.dask: 2
+        usage.modin: 1
         """
         ...
 
@@ -7796,9 +16659,9 @@ class DataFrame:
         ...
 
     @overload
-    def groupby(self, /, by: List[Union[pandas.core.series.Series, Literal["a"]]]):
+    def groupby(self, /, level: int):
         """
-        usage.modin: 2
+        usage.dask: 6
         """
         ...
 
@@ -7813,13 +16676,6 @@ class DataFrame:
     def groupby(self, /, by: Literal["w"], group_keys: bool):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    def groupby(self, /, by: pandas.core.series.Series):
-        """
-        usage.dask: 106
         """
         ...
 
@@ -7841,13 +16697,6 @@ class DataFrame:
     def groupby(self, /, by: Literal["x"], group_keys: bool):
         """
         usage.dask: 3
-        """
-        ...
-
-    @overload
-    def groupby(self, /, level: int):
-        """
-        usage.dask: 5
         """
         ...
 
@@ -7876,13 +16725,6 @@ class DataFrame:
     def groupby(self, /, by: List[Literal["B", "A"]], group_keys: bool):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    def groupby(self, /, by: List[Literal["B", "A"]]):
-        """
-        usage.dask: 1
         """
         ...
 
@@ -7932,20 +16774,6 @@ class DataFrame:
     def groupby(self, /, by: Literal["a"], group_keys: bool):
         """
         usage.dask: 4
-        """
-        ...
-
-    @overload
-    def groupby(self, /, by: Literal["a"]):
-        """
-        usage.dask: 41
-        """
-        ...
-
-    @overload
-    def groupby(self, /, by: List[Literal["a"]]):
-        """
-        usage.dask: 9
         """
         ...
 
@@ -8062,20 +16890,6 @@ class DataFrame:
         ...
 
     @overload
-    def groupby(self, /, by: Literal["b"]):
-        """
-        usage.dask: 26
-        """
-        ...
-
-    @overload
-    def groupby(self, /, by: List[Literal["b"]]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def groupby(self, /, by: List[int]):
         """
         usage.dask: 4
@@ -8114,13 +16928,6 @@ class DataFrame:
     def groupby(self, /, by: List[Literal["x", "a"]], group_keys: bool):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def groupby(self, /, by: Literal["A"]):
-        """
-        usage.dask: 9
         """
         ...
 
@@ -8349,13 +17156,6 @@ class DataFrame:
         ...
 
     @overload
-    def groupby(self, /, by: Literal["group"]):
-        """
-        usage.dask: 12
-        """
-        ...
-
-    @overload
     def groupby(self, /, by: Literal["group"], group_keys: bool):
         """
         usage.dask: 3
@@ -8577,15 +17377,24 @@ class DataFrame:
     def groupby(
         self,
         /,
+        level: Union[List[int], int] = ...,
         by: object = ...,
+        sort: bool = ...,
         group_keys: bool = ...,
         dropna: bool = ...,
-        level: Union[List[int], int] = ...,
-        sort: bool = ...,
     ):
         """
-        usage.dask: 449
+        usage.dask: 450
+        usage.koalas: 352
         usage.modin: 10
+        """
+        ...
+
+    @overload
+    def head(self, /, n: int):
+        """
+        usage.dask: 13
+        usage.koalas: 6
         """
         ...
 
@@ -8596,16 +17405,18 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def head(self, /, n: int):
-        """
-        usage.dask: 13
-        """
-        ...
-
     def head(self, /, n: int = ...):
         """
         usage.dask: 18
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def idxmax(self, /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
@@ -8630,16 +17441,18 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def idxmax(self, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def idxmax(self, /, skipna: bool = ..., axis: int = ...):
         """
         usage.dask: 8
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def idxmin(self, /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
@@ -8657,16 +17470,10 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def idxmin(self, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def idxmin(self, /, axis: int = ..., skipna: bool = ...):
         """
         usage.dask: 8
+        usage.koalas: 1
         """
         ...
 
@@ -8753,6 +17560,24 @@ class DataFrame:
         ...
 
     @overload
+    def isin(self, /, values: List[Union[Literal["six"], int]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def isin(
+        self,
+        /,
+        values: Dict[Literal["c", "a"], List[Union[int, Literal["one", "three"]]]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def isin(self, /, values: List[int]):
         """
         usage.dask: 3
@@ -8766,9 +17591,17 @@ class DataFrame:
         """
         ...
 
-    def isin(self, /, values: Union[Dict[Literal["b", "a"], List[int]], List[int]]):
+    def isin(
+        self,
+        /,
+        values: Union[
+            List[Union[Literal["six"], int]],
+            Dict[Literal["c", "a", "b"], List[Union[int, Literal["one", "three"]]]],
+        ],
+    ):
         """
         usage.dask: 6
+        usage.koalas: 2
         """
         ...
 
@@ -8781,6 +17614,7 @@ class DataFrame:
     def isnull(self, /):
         """
         usage.dask: 6
+        usage.koalas: 1
         """
         ...
 
@@ -8793,6 +17627,7 @@ class DataFrame:
     def iteritems(self, /):
         """
         usage.dask: 2
+        usage.koalas: 3
         usage.xarray: 1
         """
         ...
@@ -8800,6 +17635,7 @@ class DataFrame:
     def iterrows(self, /):
         """
         usage.dask: 2
+        usage.koalas: 1
         """
         ...
 
@@ -8843,6 +17679,47 @@ class DataFrame:
     ):
         """
         usage.dask: 9
+        """
+        ...
+
+    @overload
+    def join(
+        self,
+        /,
+        other: pandas.core.frame.DataFrame,
+        lsuffix: Literal["_left"],
+        rsuffix: Literal["_right"],
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def join(
+        self,
+        /,
+        other: pandas.core.frame.DataFrame,
+        on: Literal["key"],
+        lsuffix: Literal["_left"],
+        rsuffix: Literal["_right"],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def join(
+        self,
+        /,
+        other: pandas.core.frame.DataFrame,
+        on: List[Tuple[Literal["x"], Literal["key"]]],
+        lsuffix: Literal["_left"],
+        rsuffix: Literal["_right"],
+    ):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -8956,11 +17833,45 @@ class DataFrame:
         /,
         other: pandas.core.frame.DataFrame,
         how: Literal["right", "left", "outer", "inner"] = ...,
-        lsuffix: Literal["l", "_l"] = ...,
-        rsuffix: Literal["r", "_r"] = ...,
+        lsuffix: Literal["l", "_l", "_left"] = ...,
+        rsuffix: Literal["r", "_r", "_right"] = ...,
     ):
         """
         usage.dask: 31
+        usage.koalas: 4
+        """
+        ...
+
+    def keys(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def kurt(self, /, axis: int, numeric_only: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def kurt(self, /, axis: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def kurt(self, /, numeric_only: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def kurt(self, /, numeric_only: bool = ..., axis: int = ...):
+        """
+        usage.koalas: 3
         """
         ...
 
@@ -9026,15 +17937,42 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def mask(self, /, cond: pandas.core.frame.DataFrame, other: float):
+    def last_valid_index(self, /):
         """
-        usage.dask: 1
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def mad(self, /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def mad(self, /, axis: int):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    def mad(self, /, axis: int = ...):
+        """
+        usage.koalas: 6
         """
         ...
 
     @overload
     def mask(self, /, cond: pandas.core.frame.DataFrame):
+        """
+        usage.dask: 1
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    def mask(self, /, cond: pandas.core.frame.DataFrame, other: float):
         """
         usage.dask: 1
         """
@@ -9061,25 +17999,19 @@ class DataFrame:
     def mask(
         self,
         /,
-        cond: Union[pandas.core.series.Series, pandas.core.frame.DataFrame],
+        cond: Union[pandas.core.frame.DataFrame, pandas.core.series.Series],
         other: Union[pandas.core.frame.DataFrame, float] = ...,
     ):
         """
         usage.dask: 6
+        usage.koalas: 5
         """
         ...
 
     @overload
-    def max(self, /, axis: int, skipna: bool):
+    def max(self, /, axis: int, numeric_only: None):
         """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def max(self, /):
-        """
-        usage.dask: 4
+        usage.koalas: 1
         """
         ...
 
@@ -9087,6 +18019,22 @@ class DataFrame:
     def max(self, /, axis: int):
         """
         usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def max(self, /):
+        """
+        usage.dask: 4
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def max(self, /, axis: int, skipna: bool):
+        """
+        usage.dask: 3
         """
         ...
 
@@ -9112,24 +18060,11 @@ class DataFrame:
         ...
 
     def max(
-        self, /, axis: Union[Literal["columns", "index"], int] = ..., skipna: bool = ...
+        self, /, axis: Union[int, Literal["columns", "index"]] = ..., skipna: bool = ...
     ):
         """
         usage.dask: 12
-        """
-        ...
-
-    @overload
-    def mean(self, /, axis: int, skipna: bool):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def mean(self, /):
-        """
-        usage.dask: 7
+        usage.koalas: 5
         """
         ...
 
@@ -9137,6 +18072,36 @@ class DataFrame:
     def mean(self, /, axis: int):
         """
         usage.dask: 1
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    def mean(self, /, axis: int, numeric_only: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def mean(self, /):
+        """
+        usage.dask: 7
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def mean(self, /, numeric_only: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def mean(self, /, axis: int, skipna: bool):
+        """
+        usage.dask: 3
         """
         ...
 
@@ -9162,10 +18127,107 @@ class DataFrame:
         ...
 
     def mean(
-        self, /, axis: Union[Literal["columns", "index"], int] = ..., skipna: bool = ...
+        self, /, axis: Union[int, Literal["columns", "index"]] = ..., skipna: bool = ...
     ):
         """
         usage.dask: 15
+        usage.koalas: 10
+        """
+        ...
+
+    def median(self, /, axis: int, numeric_only: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def melt(self, /):
+        """
+        usage.dask: 1
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def melt(self, /, id_vars: Literal["A"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def melt(self, /, id_vars: List[Literal["B", "A"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def melt(self, /, id_vars: Tuple[Literal["A"], Literal["B"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def melt(self, /, id_vars: List[Literal["A"]], value_vars: List[Literal["C"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def melt(
+        self,
+        /,
+        id_vars: List[Literal["A"]],
+        value_vars: List[Literal["B"]],
+        var_name: Literal["myVarname"],
+        value_name: Literal["myValname"],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def melt(self, /, value_vars: Tuple[Literal["A"], Literal["B"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def melt(self, /, id_vars: List[Tuple[Literal["X"], Literal["A"]]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def melt(
+        self,
+        /,
+        id_vars: List[Tuple[Literal["X"], Literal["A"]]],
+        value_vars: List[Tuple[Literal["Y"], Literal["C"]]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def melt(
+        self,
+        /,
+        id_vars: List[Tuple[Literal["X"], Literal["A"]]],
+        value_vars: List[Tuple[Literal["X"], Literal["B"]]],
+        var_name: List[Literal["myV2", "myV1"]],
+        value_name: Literal["myValname"],
+    ):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -9245,13 +18307,6 @@ class DataFrame:
         ...
 
     @overload
-    def melt(self, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def melt(self, /, id_vars: Literal["C"]):
         """
         usage.dask: 1
@@ -9288,14 +18343,31 @@ class DataFrame:
     def melt(
         self,
         /,
-        id_vars: Union[Literal["B", "C"], None] = ...,
-        value_vars: Union[List[Literal["C", "A"]], Literal["C"], None] = ...,
-        var_name: Union[Literal["myvar"], None] = ...,
-        value_name: Literal["myval", "value"] = ...,
+        id_vars: Union[
+            None,
+            Literal["B", "C", "A"],
+            Tuple[Literal["A"], Literal["B"]],
+            List[Union[Tuple[Literal["X"], Literal["A"]], Literal["B", "A"]]],
+        ] = ...,
+        value_vars: Union[
+            None,
+            Literal["C"],
+            List[
+                Union[
+                    Literal["C", "B", "A"], Tuple[Literal["X", "Y"], Literal["B", "C"]]
+                ]
+            ],
+            Tuple[Literal["A"], Literal["B"]],
+        ] = ...,
+        var_name: Union[
+            None, Literal["myvar", "myVarname"], List[Literal["myV2", "myV1"]]
+        ] = ...,
+        value_name: Literal["myval", "value", "myValname"] = ...,
         col_level: None = ...,
     ):
         """
         usage.dask: 10
+        usage.koalas: 12
         """
         ...
 
@@ -9332,42 +18404,25 @@ class DataFrame:
         self,
         /,
         right: pandas.core.frame.DataFrame,
-        how: Literal["inner"],
-        on: Literal["idx"],
-    ):
-        """
-        usage.dask: 6
-        """
-        ...
-
-    @overload
-    def merge(
-        self,
-        /,
-        right: pandas.core.frame.DataFrame,
-        how: Literal["inner"],
-        left_on: Literal["idx"],
-        right_on: Literal["idx"],
-        left_index: bool,
-        right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
-    ):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def merge(
-        self,
-        /,
-        right: pandas.core.frame.DataFrame,
         how: Literal["left"],
-        on: Literal["idx"],
+        on: List[Literal["__0_bucket"]],
     ):
         """
-        usage.dask: 5
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(self, /, right: pandas.core.frame.DataFrame):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def merge(self, /, right: pandas.core.frame.DataFrame, on: Literal["value"]):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -9376,16 +18431,46 @@ class DataFrame:
         self,
         /,
         right: pandas.core.frame.DataFrame,
-        how: Literal["left"],
-        left_on: Literal["idx"],
-        right_on: Literal["idx"],
+        left_on: Literal["lkey"],
+        right_on: Literal["rkey"],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        right_on: Literal["rkey"],
         left_index: bool,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        left_on: Literal["lkey"],
         right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
     ):
         """
-        usage.dask: 4
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(
+        self, /, right: pandas.core.frame.DataFrame, left_index: bool, right_index: bool
+    ):
+        """
+        usage.koalas: 4
         """
         ...
 
@@ -9394,11 +18479,11 @@ class DataFrame:
         self,
         /,
         right: pandas.core.frame.DataFrame,
-        how: Literal["right"],
-        on: Literal["idx"],
+        left_on: List[Literal["value", "lkey"]],
+        right_on: List[Literal["value", "rkey"]],
     ):
         """
-        usage.dask: 5
+        usage.koalas: 1
         """
         ...
 
@@ -9407,16 +18492,11 @@ class DataFrame:
         self,
         /,
         right: pandas.core.frame.DataFrame,
-        how: Literal["right"],
-        left_on: Literal["idx"],
-        right_on: Literal["idx"],
+        right_on: List[Literal["value", "rkey"]],
         left_index: bool,
-        right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
     ):
         """
-        usage.dask: 4
+        usage.koalas: 1
         """
         ...
 
@@ -9425,29 +18505,11 @@ class DataFrame:
         self,
         /,
         right: pandas.core.frame.DataFrame,
-        how: Literal["outer"],
-        on: Literal["idx"],
-    ):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def merge(
-        self,
-        /,
-        right: pandas.core.frame.DataFrame,
-        how: Literal["outer"],
-        left_on: Literal["idx"],
-        right_on: Literal["idx"],
-        left_index: bool,
+        left_on: List[Literal["value", "lkey"]],
         right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
     ):
         """
-        usage.dask: 3
+        usage.koalas: 1
         """
         ...
 
@@ -9457,10 +18519,10 @@ class DataFrame:
         /,
         right: pandas.core.frame.DataFrame,
         how: Literal["inner"],
-        on: List[Literal["idx"]],
+        on: Literal["value"],
     ):
         """
-        usage.dask: 6
+        usage.koalas: 1
         """
         ...
 
@@ -9470,15 +18532,11 @@ class DataFrame:
         /,
         right: pandas.core.frame.DataFrame,
         how: Literal["inner"],
-        left_on: List[Literal["idx"]],
-        right_on: List[Literal["idx"]],
-        left_index: bool,
-        right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
+        left_on: Literal["lkey"],
+        right_on: Literal["rkey"],
     ):
         """
-        usage.dask: 4
+        usage.koalas: 1
         """
         ...
 
@@ -9488,10 +18546,10 @@ class DataFrame:
         /,
         right: pandas.core.frame.DataFrame,
         how: Literal["left"],
-        on: List[Literal["idx"]],
+        on: Literal["value"],
     ):
         """
-        usage.dask: 5
+        usage.koalas: 1
         """
         ...
 
@@ -9501,15 +18559,11 @@ class DataFrame:
         /,
         right: pandas.core.frame.DataFrame,
         how: Literal["left"],
-        left_on: List[Literal["idx"]],
-        right_on: List[Literal["idx"]],
-        left_index: bool,
-        right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
+        left_on: Literal["lkey"],
+        right_on: Literal["rkey"],
     ):
         """
-        usage.dask: 4
+        usage.koalas: 1
         """
         ...
 
@@ -9519,10 +18573,10 @@ class DataFrame:
         /,
         right: pandas.core.frame.DataFrame,
         how: Literal["right"],
-        on: List[Literal["idx"]],
+        on: Literal["value"],
     ):
         """
-        usage.dask: 5
+        usage.koalas: 1
         """
         ...
 
@@ -9532,15 +18586,11 @@ class DataFrame:
         /,
         right: pandas.core.frame.DataFrame,
         how: Literal["right"],
-        left_on: List[Literal["idx"]],
-        right_on: List[Literal["idx"]],
-        left_index: bool,
-        right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
+        left_on: Literal["lkey"],
+        right_on: Literal["rkey"],
     ):
         """
-        usage.dask: 4
+        usage.koalas: 1
         """
         ...
 
@@ -9550,10 +18600,10 @@ class DataFrame:
         /,
         right: pandas.core.frame.DataFrame,
         how: Literal["outer"],
-        on: List[Literal["idx"]],
+        on: Literal["value"],
     ):
         """
-        usage.dask: 4
+        usage.koalas: 1
         """
         ...
 
@@ -9563,15 +18613,11 @@ class DataFrame:
         /,
         right: pandas.core.frame.DataFrame,
         how: Literal["outer"],
-        left_on: List[Literal["idx"]],
-        right_on: List[Literal["idx"]],
-        left_index: bool,
-        right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
+        left_on: Literal["lkey"],
+        right_on: Literal["rkey"],
     ):
         """
-        usage.dask: 3
+        usage.koalas: 1
         """
         ...
 
@@ -9580,11 +18626,73 @@ class DataFrame:
         self,
         /,
         right: pandas.core.frame.DataFrame,
+        left_on: Literal["lkey"],
+        right_on: Literal["rkey"],
+        suffixes: List[Literal["_right", "_left"]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(self, /, right: pandas.core.series.Series):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.series.Series,
+        left_on: Literal["x"],
+        right_on: Literal["x"],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.series.Series,
+        right_on: Literal["x"],
+        left_index: bool,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(self, /, right: pandas.core.series.Series, how: Literal["inner"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.series.Series,
         how: Literal["inner"],
-        on: List[Literal["k", "idx"]],
+        left_on: Literal["x"],
+        right_on: Literal["x"],
     ):
         """
-        usage.dask: 6
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(self, /, right: pandas.core.series.Series, how: Literal["left"]):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -9592,30 +18700,20 @@ class DataFrame:
     def merge(
         self,
         /,
-        right: pandas.core.frame.DataFrame,
-        how: Literal["inner"],
-        left_on: List[Literal["k", "idx"]],
-        right_on: List[Literal["k", "idx"]],
-        left_index: bool,
-        right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
-    ):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def merge(
-        self,
-        /,
-        right: pandas.core.frame.DataFrame,
+        right: pandas.core.series.Series,
         how: Literal["left"],
-        on: List[Literal["k", "idx"]],
+        left_on: Literal["x"],
+        right_on: Literal["x"],
     ):
         """
-        usage.dask: 5
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(self, /, right: pandas.core.series.Series, how: Literal["right"]):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -9623,30 +18721,20 @@ class DataFrame:
     def merge(
         self,
         /,
-        right: pandas.core.frame.DataFrame,
-        how: Literal["left"],
-        left_on: List[Literal["k", "idx"]],
-        right_on: List[Literal["k", "idx"]],
-        left_index: bool,
-        right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
-    ):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def merge(
-        self,
-        /,
-        right: pandas.core.frame.DataFrame,
+        right: pandas.core.series.Series,
         how: Literal["right"],
-        on: List[Literal["k", "idx"]],
+        left_on: Literal["x"],
+        right_on: Literal["x"],
     ):
         """
-        usage.dask: 5
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(self, /, right: pandas.core.series.Series, how: Literal["outer"]):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -9654,30 +18742,13 @@ class DataFrame:
     def merge(
         self,
         /,
-        right: pandas.core.frame.DataFrame,
-        how: Literal["right"],
-        left_on: List[Literal["k", "idx"]],
-        right_on: List[Literal["k", "idx"]],
-        left_index: bool,
-        right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
-    ):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def merge(
-        self,
-        /,
-        right: pandas.core.frame.DataFrame,
+        right: pandas.core.series.Series,
         how: Literal["outer"],
-        on: List[Literal["k", "idx"]],
+        left_on: Literal["x"],
+        right_on: Literal["x"],
     ):
         """
-        usage.dask: 4
+        usage.koalas: 1
         """
         ...
 
@@ -9685,17 +18756,14 @@ class DataFrame:
     def merge(
         self,
         /,
-        right: pandas.core.frame.DataFrame,
+        right: pandas.core.series.Series,
         how: Literal["outer"],
-        left_on: List[Literal["k", "idx"]],
-        right_on: List[Literal["k", "idx"]],
         left_index: bool,
         right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
+        suffixes: List[Literal["_right", "_left"]],
     ):
         """
-        usage.dask: 3
+        usage.koalas: 1
         """
         ...
 
@@ -9704,122 +18772,10 @@ class DataFrame:
         self,
         /,
         right: pandas.core.frame.DataFrame,
-        how: Literal["inner"],
-        on: List[Literal["idx", "k"]],
+        on: List[Tuple[Literal["a"], Literal["value"]]],
     ):
         """
-        usage.dask: 6
-        """
-        ...
-
-    @overload
-    def merge(
-        self,
-        /,
-        right: pandas.core.frame.DataFrame,
-        how: Literal["inner"],
-        left_on: List[Literal["idx", "k"]],
-        right_on: List[Literal["idx", "k"]],
-        left_index: bool,
-        right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
-    ):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def merge(
-        self,
-        /,
-        right: pandas.core.frame.DataFrame,
-        how: Literal["left"],
-        on: List[Literal["idx", "k"]],
-    ):
-        """
-        usage.dask: 5
-        """
-        ...
-
-    @overload
-    def merge(
-        self,
-        /,
-        right: pandas.core.frame.DataFrame,
-        how: Literal["left"],
-        left_on: List[Literal["idx", "k"]],
-        right_on: List[Literal["idx", "k"]],
-        left_index: bool,
-        right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
-    ):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def merge(
-        self,
-        /,
-        right: pandas.core.frame.DataFrame,
-        how: Literal["right"],
-        on: List[Literal["idx", "k"]],
-    ):
-        """
-        usage.dask: 5
-        """
-        ...
-
-    @overload
-    def merge(
-        self,
-        /,
-        right: pandas.core.frame.DataFrame,
-        how: Literal["right"],
-        left_on: List[Literal["idx", "k"]],
-        right_on: List[Literal["idx", "k"]],
-        left_index: bool,
-        right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
-    ):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def merge(
-        self,
-        /,
-        right: pandas.core.frame.DataFrame,
-        how: Literal["outer"],
-        on: List[Literal["idx", "k"]],
-    ):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def merge(
-        self,
-        /,
-        right: pandas.core.frame.DataFrame,
-        how: Literal["outer"],
-        left_on: List[Literal["idx", "k"]],
-        right_on: List[Literal["idx", "k"]],
-        left_index: bool,
-        right_index: bool,
-        suffixes: Tuple[Literal["_x"], Literal["_y"]],
-        indicator: bool,
-    ):
-        """
-        usage.dask: 3
+        usage.koalas: 1
         """
         ...
 
@@ -9834,6 +18790,7 @@ class DataFrame:
     ):
         """
         usage.dask: 3
+        usage.koalas: 1
         """
         ...
 
@@ -9848,20 +18805,7 @@ class DataFrame:
     ):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    def merge(
-        self,
-        /,
-        right: pandas.core.frame.DataFrame,
-        how: Literal["inner"],
-        left_index: bool,
-        right_index: bool,
-    ):
-        """
-        usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
@@ -9871,6 +18815,582 @@ class DataFrame:
         /,
         right: pandas.core.frame.DataFrame,
         how: Literal["outer"],
+        left_index: bool,
+        right_index: bool,
+    ):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        left_on: Literal["A"],
+        right_index: bool,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        right_on: Literal["B"],
+        left_index: bool,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        left_on: Literal["A"],
+        right_on: Literal["B"],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["left"],
+        on: List[Literal["__a_bucket"]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["left"],
+        on: List[Literal["__single_bucket"]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["inner"],
+        on: Literal["idx"],
+    ):
+        """
+        usage.dask: 6
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["inner"],
+        left_on: Literal["idx"],
+        right_on: Literal["idx"],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["left"],
+        on: Literal["idx"],
+    ):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["left"],
+        left_on: Literal["idx"],
+        right_on: Literal["idx"],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["right"],
+        on: Literal["idx"],
+    ):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["right"],
+        left_on: Literal["idx"],
+        right_on: Literal["idx"],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["outer"],
+        on: Literal["idx"],
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["outer"],
+        left_on: Literal["idx"],
+        right_on: Literal["idx"],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["inner"],
+        on: List[Literal["idx"]],
+    ):
+        """
+        usage.dask: 6
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["inner"],
+        left_on: List[Literal["idx"]],
+        right_on: List[Literal["idx"]],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["left"],
+        on: List[Literal["idx"]],
+    ):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["left"],
+        left_on: List[Literal["idx"]],
+        right_on: List[Literal["idx"]],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["right"],
+        on: List[Literal["idx"]],
+    ):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["right"],
+        left_on: List[Literal["idx"]],
+        right_on: List[Literal["idx"]],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["outer"],
+        on: List[Literal["idx"]],
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["outer"],
+        left_on: List[Literal["idx"]],
+        right_on: List[Literal["idx"]],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["inner"],
+        on: List[Literal["k", "idx"]],
+    ):
+        """
+        usage.dask: 6
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["inner"],
+        left_on: List[Literal["k", "idx"]],
+        right_on: List[Literal["k", "idx"]],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["left"],
+        on: List[Literal["k", "idx"]],
+    ):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["left"],
+        left_on: List[Literal["k", "idx"]],
+        right_on: List[Literal["k", "idx"]],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["right"],
+        on: List[Literal["k", "idx"]],
+    ):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["right"],
+        left_on: List[Literal["k", "idx"]],
+        right_on: List[Literal["k", "idx"]],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["outer"],
+        on: List[Literal["k", "idx"]],
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["outer"],
+        left_on: List[Literal["k", "idx"]],
+        right_on: List[Literal["k", "idx"]],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["inner"],
+        on: List[Literal["idx", "k"]],
+    ):
+        """
+        usage.dask: 6
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["inner"],
+        left_on: List[Literal["idx", "k"]],
+        right_on: List[Literal["idx", "k"]],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["left"],
+        on: List[Literal["idx", "k"]],
+    ):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["left"],
+        left_on: List[Literal["idx", "k"]],
+        right_on: List[Literal["idx", "k"]],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["right"],
+        on: List[Literal["idx", "k"]],
+    ):
+        """
+        usage.dask: 5
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["right"],
+        left_on: List[Literal["idx", "k"]],
+        right_on: List[Literal["idx", "k"]],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["outer"],
+        on: List[Literal["idx", "k"]],
+    ):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["outer"],
+        left_on: List[Literal["idx", "k"]],
+        right_on: List[Literal["idx", "k"]],
+        left_index: bool,
+        right_index: bool,
+        suffixes: Tuple[Literal["_x"], Literal["_y"]],
+        indicator: bool,
+    ):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    def merge(
+        self,
+        /,
+        right: pandas.core.frame.DataFrame,
+        how: Literal["inner"],
         left_index: bool,
         right_index: bool,
     ):
@@ -11364,28 +20884,35 @@ class DataFrame:
     def merge(
         self,
         /,
-        right: pandas.core.frame.DataFrame,
-        how: str,
-        on: Union[None, List[Literal["idx", "k"]], Literal["x", "emp_id", "idx"]] = ...,
-        left_on: Union[None, str, List[str]] = ...,
-        right_on: Union[None, List[str], str] = ...,
+        right: Union[pandas.core.frame.DataFrame, pandas.core.series.Series],
+        how: str = ...,
+        on: Union[
+            Literal["x", "emp_id", "idx", "value"],
+            List[
+                Union[
+                    Tuple[Literal["a"], Literal["value"]],
+                    Literal["__0_bucket", "__a_bucket", "__single_bucket", "idx", "k"],
+                ]
+            ],
+            None,
+        ] = ...,
+        left_on: Union[List[str], str, None] = ...,
+        right_on: Union[str, List[str], None] = ...,
         left_index: bool = ...,
         right_index: bool = ...,
-        suffixes: Union[
-            List[Literal["_r", "_l", "", "r", "l"]],
-            Tuple[Literal["_x", "1"], Literal["_y", "2"]],
-        ] = ...,
+        suffixes: Union[Tuple[Literal["_x", "1"], Literal["_y", "2"]], List[str]] = ...,
         indicator: bool = ...,
     ):
         """
         usage.dask: 306
+        usage.koalas: 46
         """
         ...
 
     @overload
-    def min(self, /, axis: int, skipna: bool):
+    def min(self, /, axis: int, numeric_only: None):
         """
-        usage.dask: 3
+        usage.koalas: 1
         """
         ...
 
@@ -11393,6 +20920,7 @@ class DataFrame:
     def min(self, /):
         """
         usage.dask: 4
+        usage.koalas: 51
         """
         ...
 
@@ -11400,6 +20928,14 @@ class DataFrame:
     def min(self, /, axis: int):
         """
         usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def min(self, /, axis: int, skipna: bool):
+        """
+        usage.dask: 3
         """
         ...
 
@@ -11425,10 +20961,15 @@ class DataFrame:
         ...
 
     def min(
-        self, /, axis: Union[Literal["columns", "index"], int] = ..., skipna: bool = ...
+        self,
+        /,
+        axis: Union[int, Literal["columns", "index"]] = ...,
+        skipna: bool = ...,
+        numeric_only: None = ...,
     ):
         """
         usage.dask: 12
+        usage.koalas: 53
         """
         ...
 
@@ -11585,6 +21126,14 @@ class DataFrame:
     def nlargest(self, /, n: int, columns: Literal["a"]):
         """
         usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def nlargest(self, /, n: int, columns: List[Literal["b", "a"]]):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -11596,16 +21145,18 @@ class DataFrame:
         ...
 
     def nlargest(
-        self, /, n: int, columns: Union[List[Literal["c", "a"]], Literal["a"]]
+        self, /, n: int, columns: Union[Literal["a"], List[Literal["b", "a", "c"]]]
     ):
         """
         usage.dask: 4
+        usage.koalas: 2
         """
         ...
 
     def notnull(self, /):
         """
         usage.dask: 2
+        usage.koalas: 1
         """
         ...
 
@@ -11613,6 +21164,14 @@ class DataFrame:
     def nsmallest(self, /, n: int, columns: Literal["a"]):
         """
         usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def nsmallest(self, /, n: int, columns: List[Literal["b", "a"]]):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -11624,10 +21183,246 @@ class DataFrame:
         ...
 
     def nsmallest(
-        self, /, n: int, columns: Union[List[Literal["c", "a"]], Literal["a"]]
+        self, /, n: int, columns: Union[Literal["a"], List[Literal["b", "a", "c"]]]
     ):
         """
         usage.dask: 4
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def nunique(self, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def nunique(self, /, dropna: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    def nunique(self, /, dropna: bool = ...):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    def pct_change(self, /, periods: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(self, /, values: Literal["b"], columns: Literal["a"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self, /, values: Literal["b"], index: List[Literal["c"]], columns: Literal["a"]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self,
+        /,
+        values: Literal["b"],
+        index: List[Literal["c"]],
+        columns: Literal["a"],
+        aggfunc: Literal["sum"],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self,
+        /,
+        values: List[Literal["b"]],
+        index: List[Literal["c"]],
+        columns: Literal["a"],
+        aggfunc: Literal["sum"],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self,
+        /,
+        values: List[Literal["e", "b"]],
+        index: List[Literal["c"]],
+        columns: Literal["a"],
+        aggfunc: Literal["sum"],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self,
+        /,
+        values: List[Literal["d", "e", "b"]],
+        index: List[Literal["c"]],
+        columns: Literal["a"],
+        aggfunc: Literal["sum"],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self,
+        /,
+        values: List[Literal["e", "b"]],
+        index: List[Literal["c"]],
+        columns: Literal["a"],
+        aggfunc: Dict[Literal["e", "b"], Literal["sum", "mean"]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self,
+        /,
+        values: Literal["b"],
+        index: List[Literal["c", "e"]],
+        columns: Literal["a"],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self,
+        /,
+        values: Literal["b"],
+        index: List[Literal["c", "e"]],
+        columns: Literal["a"],
+        fill_value: int,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self,
+        /,
+        values: List[Tuple[Literal["x"], Literal["b"]]],
+        columns: List[Tuple[Literal["x"], Literal["a"]]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self,
+        /,
+        values: List[Tuple[Literal["x"], Literal["b"]]],
+        index: List[Tuple[Literal["z"], Literal["c"]]],
+        columns: List[Tuple[Literal["x"], Literal["a"]]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self,
+        /,
+        values: List[Tuple[Literal["x", "y"], Literal["b", "e"]]],
+        index: List[Tuple[Literal["z"], Literal["c"]]],
+        columns: List[Tuple[Literal["x"], Literal["a"]]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self,
+        /,
+        values: List[Tuple[Literal["x", "y", "w"], Literal["b", "e", "d"]]],
+        index: List[Tuple[Literal["z"], Literal["c"]]],
+        columns: List[Tuple[Literal["x"], Literal["a"]]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self,
+        /,
+        values: List[Tuple[Literal["x", "y"], Literal["b", "e"]]],
+        index: List[Tuple[Literal["z"], Literal["c"]]],
+        columns: List[Tuple[Literal["x"], Literal["a"]]],
+        aggfunc: Dict[
+            Tuple[Literal["x", "y"], Literal["b", "e"]], Literal["sum", "mean"]
+        ],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self,
+        /,
+        values: Literal["D"],
+        index: List[Literal["B", "A"]],
+        columns: Literal["C"],
+        aggfunc: Literal["sum"],
+        fill_value: int,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pivot_table(
+        self,
+        /,
+        values: List[Literal["b"]],
+        index: List[Literal["c"]],
+        columns: Literal["a"],
+        aggfunc: Dict[Literal["b"], Literal["mean"]],
+    ):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -11676,13 +21471,32 @@ class DataFrame:
     def pivot_table(
         self,
         /,
-        values: Literal["B"],
-        index: Literal["A"],
-        columns: Literal["C"],
-        aggfunc: Literal["count", "sum", "mean"],
+        values: Union[
+            Literal["B", "D", "b"],
+            List[
+                Union[
+                    Tuple[Literal["x", "y", "w"], Literal["b", "e", "d"]],
+                    Literal["b", "e", "d"],
+                ]
+            ],
+        ],
+        columns: Union[Literal["C", "a"], List[Tuple[Literal["x"], Literal["a"]]]],
+        index: Union[
+            Literal["A"],
+            List[Union[Literal["c", "e", "B", "A"], Tuple[Literal["z"], Literal["c"]]]],
+        ] = ...,
+        aggfunc: Union[
+            Literal["count", "sum", "mean"],
+            Dict[
+                Union[Tuple[Literal["x", "y"], Literal["b", "e"]], Literal["e", "b"]],
+                Literal["sum", "mean"],
+            ],
+        ] = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 3
+        usage.koalas: 16
         """
         ...
 
@@ -11862,6 +21676,76 @@ class DataFrame:
         ...
 
     @overload
+    def query(self, /, expr: Literal["A == 1"]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def query(self, /, expr: Literal["A > @num"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def query(self, /, expr: Literal["A > B"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def query(self, /, expr: Literal["A < C"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def query(self, /, expr: Literal["C == B"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def query(self, /, expr: Literal["A > B"], inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def query(self, /, expr: Literal["A < C"], inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def query(self, /, expr: Literal["C == B"], inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def query(self, /, expr: Literal["not outlier"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def query(self, /, expr: Literal["outlier"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def query(self, /, expr: Literal["B != 0"]):
         """
         usage.dask: 2
@@ -11875,9 +21759,10 @@ class DataFrame:
         """
         ...
 
-    def query(self, /, expr: Literal["B != 9", "B != 0"]):
+    def query(self, /, expr: str, inplace: bool = ...):
         """
         usage.dask: 4
+        usage.koalas: 12
         """
         ...
 
@@ -11950,6 +21835,141 @@ class DataFrame:
         ...
 
     @overload
+    def rank(self, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def rank(self, /, ascending: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rank(self, /, method: Literal["min"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rank(self, /, method: Literal["max"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rank(self, /, method: Literal["first"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rank(self, /, method: Literal["dense"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def rank(
+        self,
+        /,
+        ascending: bool = ...,
+        method: Literal["dense", "first", "max", "min"] = ...,
+    ):
+        """
+        usage.koalas: 7
+        """
+        ...
+
+    @overload
+    def reindex(
+        self,
+        /,
+        labels: List[Literal["C", "B", "A"]],
+        columns: List[Literal["3", "2", "numbers"]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reindex(
+        self,
+        /,
+        labels: List[Literal["C", "B", "A"]],
+        index: List[Literal["3", "2", "numbers"]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reindex(self, /, index: List[Literal["B", "A"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reindex(self, /, index: List[Literal["3", "2", "B", "A"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reindex(self, /, index: List[Literal["3", "2", "E", "A"]], fill_value: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reindex(self, /, columns: List[Literal["numbers"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reindex(
+        self, /, columns: List[Literal["3", "2", "numbers"]], fill_value: float
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reindex(
+        self, /, columns: List[Tuple[Literal["X", "Y"], Literal["numbers", "2", "3"]]]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reindex(
+        self,
+        /,
+        columns: List[Tuple[Literal["X", "Y"], Literal["numbers", "2", "3"]]],
+        fill_value: float,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def reindex(self, /, labels: pandas.core.indexes.multi.MultiIndex):
         """
         usage.xarray: 1
@@ -12018,11 +22038,105 @@ class DataFrame:
         """
         ...
 
-    def reindex(self, /, labels: object = ..., fill_value: Union[int, float] = ...):
+    def reindex(
+        self,
+        /,
+        labels: object = ...,
+        columns: Union[
+            pandas.core.indexes.base.Index,
+            List[
+                Union[
+                    Literal["3", "2", "numbers"],
+                    Tuple[Literal["X", "Y"], Literal["numbers", "2", "3"]],
+                ]
+            ],
+        ] = ...,
+        index: List[str] = ...,
+        fill_value: Union[float, int] = ...,
+    ):
         """
         usage.dask: 12
+        usage.koalas: 9
         usage.modin: 2
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["B", "A"], Literal["b", "a"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Dict[int, int]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Dict[int, int], inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, mapper: Callable, axis: Literal["columns"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, mapper: Callable, axis: Literal["index"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Dict[int, int], columns: Callable):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Callable):
+        """
+        usage.dask: 6
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Callable, level: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Callable):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Callable, level: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Callable, level: int):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -12067,13 +22181,6 @@ class DataFrame:
     def rename(self, /, mapper: None, columns: Callable):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def rename(self, /, columns: Callable):
-        """
-        usage.dask: 6
         """
         ...
 
@@ -12127,11 +22234,25 @@ class DataFrame:
     def rename(
         self,
         /,
-        columns: Union[Dict[str, Union[int, str]], collections.OrderedDict, Callable],
-        mapper: None = ...,
+        mapper: Union[None, Callable] = ...,
+        axis: Literal["index", "columns"] = ...,
+        index: Union[Callable, Dict[int, int]] = ...,
+        columns: Union[
+            Callable, collections.OrderedDict, Dict[str, Union[str, int]], Callable
+        ] = ...,
+        level: int = ...,
+        inplace: bool = ...,
     ):
         """
         usage.dask: 18
+        usage.koalas: 15
+        """
+        ...
+
+    @overload
+    def rename_axis(self, /, mapper: List[Literal["b", "a"]]):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -12166,11 +22287,119 @@ class DataFrame:
     def rename_axis(
         self,
         /,
-        mapper: Union[Literal["myindex", "newindex"], List[None], None],
+        mapper: Union[
+            None, List[Union[Literal["b", "a"], None]], Literal["myindex", "newindex"]
+        ],
         copy: bool = ...,
     ):
         """
         usage.dask: 6
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def replace(self, /, to_replace: Literal["Ironman"], value: Literal["Spiderman"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def replace(
+        self,
+        /,
+        to_replace: List[Literal["Captain America", "Ironman"]],
+        value: List[Literal["Hawkeye", "Rescue"]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def replace(
+        self,
+        /,
+        to_replace: Literal["Ironman"],
+        value: Literal["Spiderman"],
+        inplace: bool,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def replace(self, /, to_replace: List[int], value: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def replace(self, /, to_replace: List[int], value: List[int]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def replace(self, /, to_replace: Dict[int, int]):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def replace(self, /, to_replace: Dict[Literal["B", "A"], int], value: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def replace(self, /, to_replace: Dict[Literal["A"], Dict[int, int]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def replace(self, /, to_replace: Dict[Literal["X"], Dict[int, int]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def replace(
+        self,
+        /,
+        to_replace: Dict[Tuple[Literal["X"], Literal["A", "B"]], int],
+        value: int,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def replace(
+        self, /, to_replace: Dict[Tuple[Literal["X"], Literal["A"]], Dict[int, int]]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def replace(
+        self, /, to_replace: Dict[Tuple[Literal["X"], Literal["B"]], Dict[int, int]]
+    ):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -12189,13 +22418,6 @@ class DataFrame:
         ...
 
     @overload
-    def replace(self, /, to_replace: Dict[int, int]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def replace(self, /, to_replace: Dict[int, int], value: None, regex: bool):
         """
         usage.dask: 1
@@ -12205,12 +22427,28 @@ class DataFrame:
     def replace(
         self,
         /,
-        to_replace: Union[Dict[int, int], int],
-        value: Union[None, int] = ...,
+        to_replace: Union[
+            int,
+            Dict[
+                Union[
+                    Tuple[Literal["X"], Literal["B", "A"]], int, Literal["B", "A", "X"]
+                ],
+                Union[Dict[int, int], int],
+            ],
+            List[Union[int, Literal["Captain America", "Ironman"]]],
+            Literal["Ironman"],
+        ],
+        value: Union[
+            int,
+            None,
+            Literal["Spiderman"],
+            List[Union[int, Literal["Hawkeye", "Rescue"]]],
+        ] = ...,
         regex: bool = ...,
     ):
         """
         usage.dask: 4
+        usage.koalas: 15
         """
         ...
 
@@ -12706,16 +22944,120 @@ class DataFrame:
         ...
 
     @overload
-    def reset_index(self, /, drop: bool):
+    def reset_index(self, /):
         """
-        usage.dask: 24
+        usage.dask: 3
+        usage.koalas: 17
         """
         ...
 
     @overload
-    def reset_index(self, /):
+    def reset_index(self, /, drop: bool):
         """
-        usage.dask: 3
+        usage.dask: 24
+        usage.koalas: 31
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, drop: bool, inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, level: Literal["class"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, level: Literal["class"], col_level: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reset_index(
+        self, /, level: Literal["class"], col_level: int, col_fill: Literal["species"]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reset_index(
+        self, /, level: Literal["class"], col_level: int, col_fill: Literal["genus"]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, level: int):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, level: List[int]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, level: Literal["month"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, level: Literal["year"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, level: List[Literal["year", "month"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, level: Literal["month"], drop: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, level: List[Literal["year", "month"]], drop: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, level: Literal["unknown"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, inplace: bool):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -12726,9 +23068,28 @@ class DataFrame:
         """
         ...
 
-    def reset_index(self, /, level: int = ..., drop: bool = ...):
+    def reset_index(
+        self,
+        /,
+        level: Union[
+            int,
+            List[Union[int, Literal["year", "month"]]],
+            Literal["unknown", "month", "year", "class"],
+        ] = ...,
+        drop: bool = ...,
+        inplace: bool = ...,
+        col_level: int = ...,
+        col_fill: Literal["genus", "species"] = ...,
+    ):
         """
         usage.dask: 29
+        usage.koalas: 66
+        """
+        ...
+
+    def rfloordiv(self, /, other: int):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -12869,6 +23230,14 @@ class DataFrame:
         ...
 
     @overload
+    def rolling(self, /, window: int):
+        """
+        usage.dask: 11
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
     def rolling(self, /, window: int, min_periods: None, center: bool):
         """
         usage.xarray: 1
@@ -12879,13 +23248,6 @@ class DataFrame:
     def rolling(self, /, window: int, min_periods: int, center: bool):
         """
         usage.xarray: 2
-        """
-        ...
-
-    @overload
-    def rolling(self, /, window: int):
-        """
-        usage.dask: 10
         """
         ...
 
@@ -13254,7 +23616,8 @@ class DataFrame:
         axis: Union[int, Literal["rows", "columns", "coulombs"]] = ...,
     ):
         """
-        usage.dask: 84
+        usage.dask: 85
+        usage.koalas: 3
         usage.xarray: 3
         """
         ...
@@ -13263,6 +23626,48 @@ class DataFrame:
     def round(self, /, decimals: int):
         """
         usage.dask: 2
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def round(self, /, decimals: Dict[Literal["C", "A"], int]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def round(self, /, decimals: Dict[Literal["D", "A"], int]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def round(self, /, decimals: pandas.core.series.Series):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def round(
+        self, /, decimals: Dict[Tuple[Literal["X", "Y"], Literal["A", "C"]], int]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def round(
+        self,
+        /,
+        decimals: Dict[Union[Literal["Y"], Tuple[Literal["X"], Literal["A"]]], int],
+    ):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -13273,9 +23678,24 @@ class DataFrame:
         """
         ...
 
-    def round(self, /, decimals: int = ...):
+    def round(
+        self,
+        /,
+        decimals: Union[
+            int,
+            pandas.core.series.Series,
+            Dict[
+                Union[
+                    Literal["C", "A", "D", "Y"],
+                    Tuple[Literal["X", "Y"], Literal["A", "C"]],
+                ],
+                int,
+            ],
+        ] = ...,
+    ):
         """
         usage.dask: 3
+        usage.koalas: 8
         """
         ...
 
@@ -13516,6 +23936,20 @@ class DataFrame:
         ...
 
     @overload
+    def select_dtypes(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def select_dtypes(self, /, include: Literal["a"], exclude: Literal["a"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def select_dtypes(self, /, include: Literal["category"]):
         """
         usage.modin: 1
@@ -13709,16 +24143,18 @@ class DataFrame:
             List[
                 Union[type, Literal["category", "bool", "number", "object", "datetime"]]
             ],
-            Literal["category"],
-        ],
+            Literal["category", "a"],
+        ] = ...,
         exclude: Union[
             Type[object],
-            List[Union[type, Type[int], Literal["object", "number"]]],
+            List[Union[Literal["object", "number"], type]],
             None,
+            Literal["a"],
         ] = ...,
     ):
         """
         usage.dask: 20
+        usage.koalas: 2
         usage.modin: 1
         usage.sklearn: 11
         """
@@ -13828,9 +24264,526 @@ class DataFrame:
         ...
 
     @overload
+    def set_index(
+        self, /, keys: Literal["__index_level_0__"], drop: bool, append: bool
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["summary"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(
+        self, /, keys: Literal["__index_level_1__"], drop: bool, append: bool
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["key"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["foo"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["index"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["(a, bar)"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["level_0"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["A"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["B"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["C"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["month"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["year"], drop: bool, append: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["col1"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(
+        self, /, keys: Literal["__index_level_2__"], drop: bool, append: bool
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["class"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["animal"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["locomotion"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["index1"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["index2"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["a"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["__groupkey_0__"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["(a, x)"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["index_1"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["index_2"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["name"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["name"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["a"], append: bool):
+        """
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: List[int]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def set_index(self, /, keys: List[Literal["y", "x"]]):
         """
+        usage.koalas: 1
         usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: List[Tuple[Literal["x"], Literal["a", "b"]]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["aa"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["ba"], append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Tuple[Literal["x"], Literal["aa"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["key"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Tuple[Literal["x"], Literal["key"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["lkey"]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["rkey"]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["lkey"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: List[Literal["value", "lkey"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: List[Literal["value", "rkey"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["x"]):
+        """
+        usage.dask: 11
+        usage.koalas: 1
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Tuple[Literal["a"], Literal["lkey"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Tuple[Literal["a"], Literal["rkey"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["(a, lkey)"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["c"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["e"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["(z, c)"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: List[Literal["locomotion", "animal", "class"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["index"], append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["lab"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["a"]):
+        """
+        usage.dask: 5
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["d"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["d"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Tuple[Literal["a"], Literal["x"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Tuple[Literal["d"], Literal["y"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["(d, y)"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: List[Literal["b", "a"]]):
+        """
+        usage.dask: 1
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def set_index(
+        self, /, keys: Tuple[Literal["a"], Literal["x"]], append: bool, inplace: bool
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["b"], append: bool):
+        """
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["b"], drop: bool, append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["month"]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: List[Literal["month", "year"]]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["month"], drop: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["month"], append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: List[Literal["month", "year"]], drop: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: List[Literal["month", "year"]], append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["year"], append: bool, inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["unknown"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: List[Literal["unknown", "month"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["a"], append: bool, inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["year"], append: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["Koalas"], drop: bool):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -13881,14 +24834,6 @@ class DataFrame:
     def set_index(self, /, keys: Literal["i1"]):
         """
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def set_index(self, /, keys: Literal["x"]):
-        """
-        usage.dask: 11
-        usage.xarray: 2
         """
         ...
 
@@ -14027,21 +24972,7 @@ class DataFrame:
         ...
 
     @overload
-    def set_index(self, /, keys: Literal["a"]):
-        """
-        usage.dask: 5
-        """
-        ...
-
-    @overload
     def set_index(self, /, keys: List[Literal["a"]]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def set_index(self, /, keys: List[Literal["b", "a"]]):
         """
         usage.dask: 1
         """
@@ -14222,9 +25153,12 @@ class DataFrame:
         """
         ...
 
-    def set_index(self, /, keys: object, drop: bool = ...):
+    def set_index(
+        self, /, keys: object, drop: bool = ..., append: bool = ..., inplace: bool = ...
+    ):
         """
         usage.dask: 119
+        usage.koalas: 95
         usage.modin: 2
         usage.xarray: 15
         """
@@ -14234,6 +25168,7 @@ class DataFrame:
     def shift(self, /, periods: int):
         """
         usage.dask: 6
+        usage.koalas: 2
         """
         ...
 
@@ -14313,6 +25248,34 @@ class DataFrame:
     ):
         """
         usage.dask: 29
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def skew(self, /, axis: int, numeric_only: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def skew(self, /, axis: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def skew(self, /, numeric_only: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def skew(self, /, numeric_only: bool = ..., axis: int = ...):
+        """
+        usage.koalas: 3
         """
         ...
 
@@ -14320,6 +25283,7 @@ class DataFrame:
     def sort_index(self, /):
         """
         usage.dask: 7
+        usage.koalas: 356
         """
         ...
 
@@ -14327,19 +25291,389 @@ class DataFrame:
     def sort_index(self, /, ascending: bool):
         """
         usage.dask: 1
-        """
-        ...
-
-    def sort_index(self, /, ascending: bool = ...):
-        """
-        usage.dask: 8
+        usage.koalas: 1
         """
         ...
 
     @overload
-    def sort_values(self, /, by: List[int]):
+    def sort_index(self, /, na_position: Literal["first"]):
         """
-        usage.dask: 6
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_index(self, /, inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_index(self, /, level: List[int]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def sort_index(
+        self,
+        /,
+        ascending: bool = ...,
+        na_position: Literal["first"] = ...,
+        inplace: bool = ...,
+        level: List[int] = ...,
+    ):
+        """
+        usage.dask: 8
+        usage.koalas: 360
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["__0_bucket"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self, /, by: List[Literal["B", "key_right", "A", "key_left"]], inplace: bool
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["B", "A", "key"]], inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self,
+        /,
+        by: List[Tuple[Literal["x_left", "Y", "x_right"], Literal["key", "A", "B"]]],
+        inplace: bool,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self,
+        /,
+        by: List[Tuple[Literal["x", "Y"], Literal["key", "A", "B"]]],
+        inplace: bool,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["value", "variable"]]):
+        """
+        usage.dask: 2
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["myValname", "myVarname"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["value", "variable_1", "variable_0"]]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["myValname", "myV2", "myV1"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["value", "v1", "v0"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["y", "rkey", "x", "value", "lkey"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[str]):
+        """
+        usage.dask: 29
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["y", "x", "value"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["y", "value_y", "rkey", "x", "value_x"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["y", "value_y", "x", "value_x", "lkey"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["y", "value_y", "x", "value_x"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["y", "value", "rkey", "x"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["y", "x", "value", "lkey"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["x", "value", "lkey"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["x_right", "x_left", "value", "lkey"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self,
+        /,
+        by: List[
+            Tuple[Literal["a", "b", "c"], Literal["lkey", "value", "x", "rkey", "y"]]
+        ],
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self, /, by: List[Tuple[Literal["a", "b", "c"], Literal["value", "x", "y"]]]
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self,
+        /,
+        by: List[Tuple[Literal["a_x", "b", "a_y", "c"], Literal["value", "x", "y"]]],
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["B", "A"]]):
+        """
+        usage.dask: 1
+        usage.koalas: 7
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["b"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["a", "b"]]):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["a", "b"]], ascending: List[bool]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self, /, by: List[Literal["a", "b"]], na_position: Literal["first"]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["b"], inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Tuple[Literal["X"], Literal["A", "B"]]]):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["__a_bucket"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["C", "B", "A"]]):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self,
+        /,
+        by: List[Tuple[Literal["A", "B", "C"], Literal["", "min", "max", "sum"]]],
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self, /, by: List[Tuple[Literal["A", "B", "C"], Literal["", "sum"]]]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["C", "B"]]):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self, /, by: List[Tuple[Literal["B", "C"], Literal["min", "max", "sum"]]]
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Tuple[Literal["A", "B", "C"], Literal["sum"]]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Tuple[Literal["X", "Y"], Literal["B", "C"]]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self,
+        /,
+        by: List[
+            Tuple[Literal["X", "Y"], Literal["B", "C"], Literal["min", "max", "sum"]]
+        ],
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["A"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Tuple[Literal["X"], Literal["A"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Tuple[Literal["x"], Literal["a"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["a"]):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -14347,6 +25681,14 @@ class DataFrame:
     def sort_values(self, /, by: List[Literal["b", "a"]]):
         """
         usage.dask: 3
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["c", "a", "b"]]):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -14354,6 +25696,146 @@ class DataFrame:
     def sort_values(self, /, by: List[Literal["a"]]):
         """
         usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["c", "b", "a"]]):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["d", "c", "a", "b"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["d", "c", "b", "a"]]):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[int]):
+        """
+        usage.dask: 6
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["C", "A"]]):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["D", "C", "A"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Tuple[Literal["X"], Literal["A", "C"]]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Tuple[Literal["X"], Literal["A", "B", "C"]]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Tuple[Literal["X"], Literal["A", "C", "D"]]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self, /, by: List[Tuple[Literal["X"], Literal["A", "B", "C", "D"]]]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self, /, by: List[Union[Literal["ABC"], Tuple[Literal["X"], Literal["A"]]]]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self, /, by: List[Union[Tuple[Literal["X"], Literal["B"]], Literal["ABC"]]]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["B", "A", "C"]]):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["B", "C"]]):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["c"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Tuple[Literal["y"], Literal["c"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["B"]]):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["__single_bucket"]):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -14393,13 +25875,6 @@ class DataFrame:
         ...
 
     @overload
-    def sort_values(self, /, by: List[Literal["B", "A"]]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def sort_values(
         self,
         /,
@@ -14421,13 +25896,6 @@ class DataFrame:
 
     @overload
     def sort_values(self, /, by: List[Literal["Close"]]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def sort_values(self, /, by: List[Literal["d", "c", "b", "a"]]):
         """
         usage.dask: 1
         """
@@ -14462,13 +25930,6 @@ class DataFrame:
         ...
 
     @overload
-    def sort_values(self, /, by: List[Literal["a", "b"]]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def sort_values(self, /, by: List[Literal["D", "C", "B", "A"]]):
         """
         usage.dask: 1
@@ -14486,13 +25947,6 @@ class DataFrame:
     def sort_values(self, /, by: List[Literal["X", "D", "C", "B", "A"]]):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def sort_values(self, /, by: List[str]):
-        """
-        usage.dask: 29
         """
         ...
 
@@ -14560,13 +26014,6 @@ class DataFrame:
         ...
 
     @overload
-    def sort_values(self, /, by: List[Literal["c", "b", "a"]]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def sort_values(self, /, by: List[Literal["z", "y", "x"]]):
         """
         usage.dask: 3
@@ -14574,21 +26021,7 @@ class DataFrame:
         ...
 
     @overload
-    def sort_values(self, /, by: List[Literal["C", "B", "A"]]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def sort_values(self, /, by: List[Literal["D", "C", "B"]]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def sort_values(self, /, by: List[Literal["C", "B"]]):
         """
         usage.dask: 1
         """
@@ -14701,13 +26134,6 @@ class DataFrame:
 
     @overload
     def sort_values(self, /, by: List[Tuple[Literal["A", "B"], Literal["0", "1"]]]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def sort_values(self, /, by: List[Literal["B", "A", "C"]]):
         """
         usage.dask: 1
         """
@@ -14987,23 +26413,9 @@ class DataFrame:
         ...
 
     @overload
-    def sort_values(self, /, by: List[Literal["B"]]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def sort_values(self, /, by: list):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def sort_values(self, /, by: List[Literal["C", "A"]]):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -15023,13 +26435,6 @@ class DataFrame:
 
     @overload
     def sort_values(self, /, by: List[Literal["A", "C"]]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def sort_values(self, /, by: List[Literal["B", "C"]]):
         """
         usage.dask: 1
         """
@@ -15081,13 +26486,6 @@ class DataFrame:
     def sort_values(self, /, by: List[Literal["b", "a", "d", "c"]]):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def sort_values(self, /, by: List[Literal["value", "variable"]]):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -15331,13 +26729,57 @@ class DataFrame:
     def sort_values(
         self,
         /,
-        by: List[Union[Tuple[Literal["a", "A", "B", "b"], str], str, int, float]],
+        by: Union[
+            List[Union[int, float, str, Tuple[str, ...]]],
+            Tuple[Literal["X", "x", "y"], Literal["A", "a", "c"]],
+            str,
+        ],
+        inplace: bool = ...,
+        ascending: List[bool] = ...,
+        na_position: Literal["first"] = ...,
     ):
         """
         usage.dask: 190
+        usage.koalas: 105
         """
         ...
 
+    @overload
+    def squeeze(self, /, axis: int):
+        """
+        usage.koalas: 7
+        """
+        ...
+
+    @overload
+    def squeeze(self, /, axis: None):
+        """
+        usage.koalas: 7
+        """
+        ...
+
+    @overload
+    def squeeze(self, /, axis: Literal["rows"]):
+        """
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def squeeze(self, /, axis: Literal["index"]):
+        """
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def squeeze(self, /, axis: Literal["columns"]):
+        """
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
     def squeeze(self, /):
         """
         usage.dask: 3
@@ -15345,9 +26787,20 @@ class DataFrame:
         """
         ...
 
+    def squeeze(
+        self, /, axis: Union[Literal["columns", "index", "rows"], int, None] = ...
+    ):
+        """
+        usage.dask: 3
+        usage.koalas: 32
+        usage.modin: 2
+        """
+        ...
+
     @overload
     def stack(self, /):
         """
+        usage.koalas: 6
         usage.xarray: 1
         """
         ...
@@ -15362,7 +26815,38 @@ class DataFrame:
     def stack(self, /, dropna: bool = ...):
         """
         usage.dask: 1
+        usage.koalas: 6
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def std(self, /, axis: int, numeric_only: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def std(self, /, axis: int):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def std(self, /):
+        """
+        usage.dask: 5
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def std(self, /, numeric_only: bool):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -15381,23 +26865,9 @@ class DataFrame:
         ...
 
     @overload
-    def std(self, /):
-        """
-        usage.dask: 5
-        """
-        ...
-
-    @overload
     def std(self, /, ddof: int):
         """
         usage.dask: 3
-        """
-        ...
-
-    @overload
-    def std(self, /, axis: int):
-        """
-        usage.dask: 1
         """
         ...
 
@@ -15453,12 +26923,13 @@ class DataFrame:
     def std(
         self,
         /,
-        axis: Union[Literal["columns", "index"], int] = ...,
+        axis: Union[int, Literal["columns", "index"]] = ...,
         skipna: bool = ...,
         ddof: int = ...,
     ):
         """
         usage.dask: 20
+        usage.koalas: 6
         """
         ...
 
@@ -15531,21 +27002,37 @@ class DataFrame:
         ...
 
     @overload
-    def sum(self, /, axis: int, skipna: bool):
+    def sum(self, /, axis: int, numeric_only: bool):
         """
-        usage.dask: 3
+        usage.koalas: 1
         """
         ...
 
     @overload
     def sum(self, /):
         """
-        usage.dask: 19
+        usage.dask: 22
+        usage.koalas: 15
         """
         ...
 
     @overload
     def sum(self, /, axis: int):
+        """
+        usage.dask: 3
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sum(self, /, numeric_only: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sum(self, /, axis: int, skipna: bool):
         """
         usage.dask: 3
         """
@@ -15582,24 +27069,184 @@ class DataFrame:
     def sum(
         self,
         /,
-        axis: Union[int, Literal["columns", "index"]] = ...,
+        axis: Union[Literal["columns", "index"], int] = ...,
         min_count: int = ...,
         skipna: bool = ...,
+        numeric_only: bool = ...,
     ):
         """
-        usage.dask: 29
+        usage.dask: 32
+        usage.koalas: 18
         """
         ...
 
+    @overload
+    def tail(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def tail(self, /, n: int):
         """
         usage.dask: 5
+        usage.koalas: 5
         """
         ...
 
+    def tail(self, /, n: int = ...):
+        """
+        usage.dask: 5
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def take(self, /, indices: List[int]):
+        """
+        usage.koalas: 8
+        """
+        ...
+
+    @overload
+    def take(self, /, indices: range):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def take(self, /, indices: List[int], axis: int):
+        """
+        usage.koalas: 8
+        """
+        ...
+
+    @overload
+    def take(self, /, indices: range, axis: int):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
     def take(self, /, indices: numpy.ndarray):
         """
         usage.dask: 1
+        """
+        ...
+
+    def take(self, /, indices: Union[numpy.ndarray, range, List[int]], axis: int = ...):
+        """
+        usage.dask: 1
+        usage.koalas: 24
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: None,
+        sep: Literal[","],
+        na_rep: Literal[""],
+        columns: None,
+        header: bool,
+        index: bool,
+        quotechar: Literal['"'],
+        date_format: None,
+        escapechar: None,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_csv(self, /, index: bool):
+        """
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: None,
+        sep: Literal[","],
+        na_rep: Literal[""],
+        columns: List[Literal["aa"]],
+        header: bool,
+        index: bool,
+        quotechar: Literal['"'],
+        date_format: None,
+        escapechar: None,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_csv(self, /, columns: List[Literal["aa"]], index: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: None,
+        sep: Literal[","],
+        na_rep: Literal["null"],
+        columns: None,
+        header: bool,
+        index: bool,
+        quotechar: Literal['"'],
+        date_format: None,
+        escapechar: None,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_csv(self, /, na_rep: Literal["null"], index: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def to_csv(self, /, header: bool, index: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        sep: Literal["|"],
+        columns: List[Literal["aa"]],
+        header: bool,
+        index: bool,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_csv(self, /, sep: Literal["|"], columns: List[Literal["a"]], index: bool):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -15775,7 +27422,7 @@ class DataFrame:
     def to_csv(
         self,
         /,
-        path_or_buf: Literal["/tmp/tmp12pxwjdr.csv"],
+        path_or_buf: Literal["/tmp/tmptwszhbso.csv"],
         index: bool,
         encoding: Literal["utf-16"],
     ):
@@ -15788,7 +27435,7 @@ class DataFrame:
     def to_csv(
         self,
         /,
-        path_or_buf: Literal["/tmp/tmpigl0owvd.csv"],
+        path_or_buf: Literal["/tmp/tmpsu6hgqwx.csv"],
         index: bool,
         encoding: Literal["utf-16-le"],
     ):
@@ -15801,7 +27448,7 @@ class DataFrame:
     def to_csv(
         self,
         /,
-        path_or_buf: Literal["/tmp/tmpd3mrm6x7.csv"],
+        path_or_buf: Literal["/tmp/tmphbpetj19.csv"],
         index: bool,
         encoding: Literal["utf-16-be"],
     ):
@@ -15827,19 +27474,77 @@ class DataFrame:
     def to_csv(
         self,
         /,
-        path_or_buf: Union[str, _io.TextIOWrapper],
-        sep: Literal[",", "\t"] = ...,
+        path_or_buf: Union[str, _io.TextIOWrapper, None] = ...,
+        index: bool = ...,
+        sep: Literal[",", "\t", "|"] = ...,
         encoding: Union[str, None] = ...,
         compression: Literal["infer", "zip", "xz", "bz2", "gzip"] = ...,
+        na_rep: Literal["null", ""] = ...,
+        columns: Union[List[Literal["aa", "a"]], None] = ...,
+        header: bool = ...,
+        quotechar: Literal['"'] = ...,
+        date_format: None = ...,
+        escapechar: None = ...,
     ):
         """
         usage.dask: 5
+        usage.koalas: 14
         usage.modin: 12
         """
         ...
 
+    def to_dict(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_excel(self, /, excel_writer: str):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def to_excel(
+        self,
+        /,
+        excel_writer: pandas.io.excel._openpyxl._OpenpyxlWriter,
+        sheet_name: Literal["Sheet_name_1"],
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def to_excel(
+        self,
+        /,
+        excel_writer: pandas.io.excel._openpyxl._OpenpyxlWriter,
+        sheet_name: Literal["Sheet_name_2"],
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
     def to_excel(self, /, excel_writer: Literal["test.xlsx"]):
         """
+        usage.modin: 1
+        """
+        ...
+
+    def to_excel(
+        self,
+        /,
+        excel_writer: Union[str, pandas.io.excel._openpyxl._OpenpyxlWriter],
+        sheet_name: Literal["Sheet_name_2", "Sheet_name_1"] = ...,
+    ):
+        """
+        usage.koalas: 6
         usage.modin: 1
         """
         ...
@@ -15855,6 +27560,20 @@ class DataFrame:
     ):
         """
         usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_html(self, /, bold_rows: bool, notebook: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def to_html(self, /, show_dimensions: bool, bold_rows: bool, notebook: bool):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -15879,10 +27598,25 @@ class DataFrame:
         """
         ...
 
-    def to_html(self, /, max_rows: int = ..., show_dimensions: bool = ...):
+    def to_html(
+        self,
+        /,
+        max_rows: int = ...,
+        show_dimensions: bool = ...,
+        bold_rows: bool = ...,
+        notebook: bool = ...,
+    ):
         """
         usage.dask: 2
+        usage.koalas: 3
         usage.modin: 1
+        """
+        ...
+
+    @overload
+    def to_json(self, /, orient: Literal["records"]):
+        """
+        usage.koalas: 4
         """
         ...
 
@@ -15931,13 +27665,27 @@ class DataFrame:
     def to_json(
         self,
         /,
-        path_or_buf: str,
+        path_or_buf: str = ...,
         orient: Literal["values", "columns", "index", "records", "split"] = ...,
         lines: bool = ...,
     ):
         """
         usage.dask: 24
+        usage.koalas: 4
         usage.modin: 1
+        """
+        ...
+
+    def to_markdown(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_parquet(self, /, path: str):
+        """
+        usage.koalas: 3
         """
         ...
 
@@ -15974,12 +27722,10 @@ class DataFrame:
         ...
 
     def to_parquet(
-        self,
-        /,
-        path: Literal["tmp_folder.parquet", "tmp.parquet", "test.parquet"],
-        partition_cols: List[Literal["col1", "A"]] = ...,
+        self, /, path: str, partition_cols: List[Literal["col1", "A"]] = ...
     ):
         """
+        usage.koalas: 3
         usage.modin: 4
         """
         ...
@@ -16022,9 +27768,31 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def to_string(self, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def to_string(self, /, show_dimensions: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def to_string(self, /, max_rows: int, show_dimensions: bool):
         """
         usage.dask: 2
+        """
+        ...
+
+    def to_string(self, /, max_rows: int = ..., show_dimensions: bool = ...):
+        """
+        usage.dask: 2
+        usage.koalas: 3
         """
         ...
 
@@ -16053,6 +27821,32 @@ class DataFrame:
     def to_xarray(self, /):
         """
         usage.xarray: 5
+        """
+        ...
+
+    @overload
+    def transform(self, /, func: Callable, axis: int):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def transform(self, /, func: Callable):
+        """
+        usage.koalas: 6
+        """
+        ...
+
+    def transform(self, /, func: Callable, axis: int = ...):
+        """
+        usage.koalas: 9
+        """
+        ...
+
+    def transpose(self, /):
+        """
+        usage.koalas: 7
         """
         ...
 
@@ -16125,9 +27919,156 @@ class DataFrame:
         ...
 
     @overload
-    def var(self, /, axis: int, skipna: bool):
+    def truncate(self, /):
         """
-        usage.dask: 2
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def truncate(self, /, before: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def truncate(self, /, after: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def truncate(self, /, copy: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def truncate(self, /, before: int, after: int, copy: bool):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def truncate(self, /, before: int, after: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def truncate(self, /, axis: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def truncate(self, /, before: Literal["B"], axis: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def truncate(self, /, after: Literal["A"], axis: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def truncate(self, /, axis: int, copy: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def truncate(self, /, before: Literal["B"], after: Literal["C"], axis: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def truncate(
+        self, /, before: Literal["B"], after: Literal["C"], axis: int, copy: bool
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    def truncate(
+        self,
+        /,
+        before: Union[Literal["B"], int] = ...,
+        after: Union[Literal["C", "A"], int] = ...,
+        axis: int = ...,
+        copy: bool = ...,
+    ):
+        """
+        usage.koalas: 26
+        """
+        ...
+
+    @overload
+    def unstack(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def unstack(self, /, level: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def unstack(self, /, level: int = ...):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def update(self, /, other: pandas.core.frame.DataFrame):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def update(self, /, other: pandas.core.frame.DataFrame, overwrite: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    def update(self, /, other: pandas.core.frame.DataFrame, overwrite: bool = ...):
+        """
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    def var(self, /, axis: int, numeric_only: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def var(self, /, axis: int):
+        """
+        usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
@@ -16135,6 +28076,21 @@ class DataFrame:
     def var(self, /):
         """
         usage.dask: 7
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def var(self, /, numeric_only: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def var(self, /, axis: int, skipna: bool):
+        """
+        usage.dask: 2
         """
         ...
 
@@ -16156,13 +28112,6 @@ class DataFrame:
     def var(self, /, ddof: int):
         """
         usage.dask: 4
-        """
-        ...
-
-    @overload
-    def var(self, /, axis: int):
-        """
-        usage.dask: 1
         """
         ...
 
@@ -16218,12 +28167,21 @@ class DataFrame:
     def var(
         self,
         /,
-        axis: Union[Literal["columns", "index"], int] = ...,
+        axis: Union[int, Literal["columns", "index"]] = ...,
         skipna: Union[bool, None] = ...,
         ddof: int = ...,
     ):
         """
         usage.dask: 26
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def where(self, /, cond: pandas.core.frame.DataFrame):
+        """
+        usage.dask: 1
+        usage.koalas: 5
         """
         ...
 
@@ -16242,13 +28200,6 @@ class DataFrame:
 
     @overload
     def where(self, /, cond: pandas.core.frame.DataFrame, other: float):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def where(self, /, cond: pandas.core.frame.DataFrame):
         """
         usage.dask: 1
         """
@@ -16275,7 +28226,7 @@ class DataFrame:
     def where(
         self,
         /,
-        cond: Union[pandas.core.series.Series, pandas.core.frame.DataFrame],
+        cond: Union[pandas.core.frame.DataFrame, pandas.core.series.Series],
         axis: int = ...,
         other: Union[
             pandas.core.frame.DataFrame, float, pandas.core.series.Series
@@ -16283,6 +28234,13 @@ class DataFrame:
     ):
         """
         usage.dask: 8
+        usage.koalas: 5
+        """
+        ...
+
+    def xs(self, /, key: Tuple[Literal["mammal"], Literal["dog"], Literal["walks"]]):
+        """
+        usage.koalas: 1
         """
         ...
 

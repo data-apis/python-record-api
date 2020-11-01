@@ -10,19 +10,31 @@ class DataFrameGroupBy:
     A: object
 
     # usage.dask: 1
+    # usage.koalas: 1
     B: object
 
     # usage.dask: 1
     _selected_obj: object
 
     # usage.dask: 24
+    # usage.koalas: 6
     a: object
 
+    # usage.koalas: 7
+    agg: object
+
     # usage.dask: 20
+    # usage.koalas: 1
     b: object
+
+    # usage.koalas: 1
+    c: object
 
     # usage.dask: 1
     e: object
+
+    # usage.koalas: 14
+    fillna: object
 
     # usage.dask: 1
     grouper: object
@@ -31,9 +43,11 @@ class DataFrameGroupBy:
     groups: object
 
     # usage.dask: 1
+    # usage.koalas: 2
     idxmax: object
 
     # usage.dask: 1
+    # usage.koalas: 2
     idxmin: object
 
     # usage.dask: 5
@@ -55,6 +69,127 @@ class DataFrameGroupBy:
         ...
 
     @overload
+    def __getitem__(self, _0: Literal["B"], /):
+        """
+        usage.dask: 12
+        usage.koalas: 9
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["b"], /):
+        """
+        usage.dask: 8
+        usage.koalas: 22
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["b"]], /):
+        """
+        usage.dask: 7
+        usage.koalas: 9
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["a"], /):
+        """
+        usage.dask: 8
+        usage.koalas: 36
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["a"]], /):
+        """
+        usage.dask: 5
+        usage.koalas: 20
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["c"], /):
+        """
+        usage.dask: 9
+        usage.koalas: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["0"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["v"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["B"]], /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["c", "a"]], /):
+        """
+        usage.koalas: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["b", "a"]], /):
+        """
+        usage.dask: 3
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["C"], /):
+        """
+        usage.dask: 1
+        usage.koalas: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["C"]], /):
+        """
+        usage.koalas: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Tuple[Literal["y"], Literal["c"]]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["c", "b"]], /):
+        """
+        usage.dask: 5
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: list, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: List[Literal["z", "x"]], /):
         """
         usage.dask: 1
@@ -72,13 +207,6 @@ class DataFrameGroupBy:
     def __getitem__(self, _0: List[Literal["y"]], /):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["C"], /):
-        """
-        usage.dask: 1
         """
         ...
 
@@ -125,37 +253,9 @@ class DataFrameGroupBy:
         ...
 
     @overload
-    def __getitem__(self, _0: Literal["b"], /):
-        """
-        usage.dask: 8
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: List[Literal["d", "c"]], /):
         """
         usage.dask: 5
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["c"], /):
-        """
-        usage.dask: 9
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["c", "b"]], /):
-        """
-        usage.dask: 5
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["b"]], /):
-        """
-        usage.dask: 7
         """
         ...
 
@@ -188,13 +288,6 @@ class DataFrameGroupBy:
         ...
 
     @overload
-    def __getitem__(self, _0: Literal["a"], /):
-        """
-        usage.dask: 8
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Literal["data"], /):
         """
         usage.dask: 4
@@ -216,20 +309,6 @@ class DataFrameGroupBy:
         ...
 
     @overload
-    def __getitem__(self, _0: List[Literal["a"]], /):
-        """
-        usage.dask: 5
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[Literal["b", "a"]], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[Literal["b"], Literal["x"]], /):
         """
         usage.dask: 1
@@ -240,13 +319,6 @@ class DataFrameGroupBy:
     def __getitem__(self, _0: List[Literal["x", "b"]], /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["B"], /):
-        """
-        usage.dask: 12
         """
         ...
 
@@ -303,13 +375,6 @@ class DataFrameGroupBy:
     def __getitem__(self, _0: int, /):
         """
         usage.dask: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: numpy.int64, /):
-        """
-        usage.dask: 1
         """
         ...
 
@@ -490,7 +555,8 @@ class DataFrameGroupBy:
 
     def __getitem__(self, _0: object, /):
         """
-        usage.dask: 167
+        usage.dask: 166
+        usage.koalas: 137
         """
         ...
 
@@ -498,20 +564,59 @@ class DataFrameGroupBy:
     def aggregate(self, /, func: Literal["sum"]):
         """
         usage.dask: 1
+        usage.koalas: 5
         """
         ...
 
     @overload
-    def aggregate(self, /, func: Literal["mean"]):
+    def aggregate(self, /, func: Dict[Literal["C", "B"], Literal["sum", "min"]]):
         """
-        usage.dask: 3
+        usage.koalas: 3
         """
         ...
 
     @overload
-    def aggregate(self, /, func: Literal["min"]):
+    def aggregate(
+        self,
+        /,
+        func: Dict[
+            Literal["C", "B"], Union[Literal["sum"], List[Literal["max", "min"]]]
+        ],
+    ):
         """
-        usage.dask: 1
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def aggregate(self, /, func: List[Literal["sum"]]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def aggregate(
+        self,
+        /,
+        func: Dict[Tuple[Literal["X", "Y"], Literal["B", "C"]], Literal["sum", "min"]],
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def aggregate(
+        self,
+        /,
+        func: Dict[
+            Tuple[Literal["X", "Y"], Literal["B", "C"]],
+            Union[Literal["sum"], List[Literal["max", "min"]]],
+        ],
+    ):
+        """
+        usage.koalas: 2
         """
         ...
 
@@ -519,6 +624,44 @@ class DataFrameGroupBy:
     def aggregate(self, /, func: Literal["max"]):
         """
         usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def aggregate(self, /, func: Literal["min"]):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def aggregate(self, /, func: List[Literal["max", "min"]]):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def aggregate(self, /):
+        """
+        usage.koalas: 7
+        """
+        ...
+
+    @overload
+    def aggregate(self, /, func: Dict[Literal["b"], Literal["nunique"]]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def aggregate(self, /, func: Literal["mean"]):
+        """
+        usage.dask: 3
         """
         ...
 
@@ -566,13 +709,6 @@ class DataFrameGroupBy:
 
     @overload
     def aggregate(self, /, func: Literal["prod"]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def aggregate(self, /, func: List[Literal["max", "min"]]):
         """
         usage.dask: 1
         """
@@ -638,18 +774,70 @@ class DataFrameGroupBy:
         self,
         /,
         func: Union[
-            Dict[
-                Literal["b", "c", "e"],
-                Union[
-                    Literal["mean", "sum", "count", "std"], List[Literal["sum", "mean"]]
-                ],
-            ],
+            List[Literal["sum", "max", "min", "mean"]],
             str,
-            List[Literal["max", "min", "sum", "mean"]],
-        ],
+            Dict[
+                Union[
+                    Literal["C", "B", "b", "c", "e"],
+                    Tuple[Literal["X", "Y"], Literal["B", "C"]],
+                ],
+                Union[str, List[Literal["sum", "mean", "max", "min"]]],
+            ],
+        ] = ...,
     ):
         """
         usage.dask: 22
+        usage.koalas: 33
+        """
+        ...
+
+    def all(self, /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    def any(self, /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable):
+        """
+        usage.dask: 36
+        usage.koalas: 14
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable):
+        """
+        usage.dask: 2
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: int, *args: Literal["v", "t"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, *args: Literal["v", "t"]):
+        """
+        usage.dask: 11
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable):
+        """
+        usage.koalas: 3
         """
         ...
 
@@ -664,20 +852,6 @@ class DataFrameGroupBy:
     def apply(self, /, func: Callable):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def apply(self, /, func: Callable):
-        """
-        usage.dask: 36
-        """
-        ...
-
-    @overload
-    def apply(self, /, func: Callable, *args: Literal["v", "t"]):
-        """
-        usage.dask: 11
         """
         ...
 
@@ -712,13 +886,6 @@ class DataFrameGroupBy:
     @overload
     def apply(self, /, func: Callable):
         """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def apply(self, /, func: Callable):
-        """
         usage.dask: 3
         """
         ...
@@ -747,23 +914,60 @@ class DataFrameGroupBy:
     def apply(
         self,
         /,
-        func: Union[Callable, Literal["sum"], numpy.int64, dask.utils.methodcaller],
+        func: Union[
+            dask.utils.methodcaller, numpy.int64, int, Literal["sum"], Callable
+        ],
         *args: Literal["v", "t"],
     ):
         """
         usage.dask: 64
+        usage.koalas: 24
+        """
+        ...
+
+    def backfill(self, /):
+        """
+        usage.koalas: 3
         """
         ...
 
     def count(self, /):
         """
         usage.dask: 12
+        usage.koalas: 6
         """
         ...
 
+    @overload
+    def cumcount(self, /, ascending: bool):
+        """
+        usage.koalas: 9
+        """
+        ...
+
+    @overload
     def cumcount(self, /):
         """
         usage.dask: 3
+        """
+        ...
+
+    def cumcount(self, /, ascending: bool = ...):
+        """
+        usage.dask: 3
+        usage.koalas: 9
+        """
+        ...
+
+    def cummax(self, /):
+        """
+        usage.koalas: 9
+        """
+        ...
+
+    def cummin(self, /):
+        """
+        usage.koalas: 9
         """
         ...
 
@@ -771,6 +975,7 @@ class DataFrameGroupBy:
     def cumprod(self, /):
         """
         usage.dask: 3
+        usage.koalas: 9
         """
         ...
 
@@ -784,6 +989,7 @@ class DataFrameGroupBy:
     def cumprod(self, /, axis: int = ...):
         """
         usage.dask: 4
+        usage.koalas: 9
         """
         ...
 
@@ -791,6 +997,7 @@ class DataFrameGroupBy:
     def cumsum(self, /):
         """
         usage.dask: 3
+        usage.koalas: 9
         """
         ...
 
@@ -804,12 +1011,32 @@ class DataFrameGroupBy:
     def cumsum(self, /, axis: int = ...):
         """
         usage.dask: 4
+        usage.koalas: 9
+        """
+        ...
+
+    def describe(self, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    def expanding(self, /, *args: Literal["v", "t"]):
+        """
+        usage.koalas: 8
+        """
+        ...
+
+    def filter(self, /, func: Callable):
+        """
+        usage.koalas: 10
         """
         ...
 
     def first(self, /):
         """
         usage.dask: 12
+        usage.koalas: 6
         """
         ...
 
@@ -819,33 +1046,65 @@ class DataFrameGroupBy:
         """
         ...
 
+    def head(self, /, n: int):
+        """
+        usage.koalas: 17
+        """
+        ...
+
     def last(self, /):
         """
         usage.dask: 10
+        usage.koalas: 6
         """
         ...
 
     def max(self, /):
         """
         usage.dask: 10
+        usage.koalas: 6
         """
         ...
 
     def mean(self, /):
         """
         usage.dask: 15
+        usage.koalas: 6
         """
         ...
 
     def min(self, /):
         """
         usage.dask: 9
+        usage.koalas: 6
         """
         ...
 
+    @overload
     def nunique(self, /):
         """
         usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def nunique(self, /, dropna: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    def nunique(self, /, dropna: bool = ...):
+        """
+        usage.dask: 1
+        usage.koalas: 4
+        """
+        ...
+
+    def pad(self, /):
+        """
+        usage.koalas: 3
         """
         ...
 
@@ -869,9 +1128,34 @@ class DataFrameGroupBy:
         """
         ...
 
+    def quantile(self, /, q: List[float], interpolation: Literal["nearest"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def rank(self, /):
+        """
+        usage.koalas: 8
+        """
+        ...
+
+    def rolling(self, /, *args: Literal["v", "t"]):
+        """
+        usage.koalas: 8
+        """
+        ...
+
+    def shift(self, /):
+        """
+        usage.koalas: 5
+        """
+        ...
+
     def size(self, /):
         """
         usage.dask: 9
+        usage.koalas: 5
         usage.modin: 2
         """
         ...
@@ -880,6 +1164,7 @@ class DataFrameGroupBy:
     def std(self, /):
         """
         usage.dask: 7
+        usage.koalas: 6
         """
         ...
 
@@ -893,13 +1178,15 @@ class DataFrameGroupBy:
     def std(self, /, ddof: int = ...):
         """
         usage.dask: 9
+        usage.koalas: 6
         """
         ...
 
     @overload
     def sum(self, /):
         """
-        usage.dask: 25
+        usage.dask: 26
+        usage.koalas: 31
         """
         ...
 
@@ -912,7 +1199,22 @@ class DataFrameGroupBy:
 
     def sum(self, /, min_count: int = ...):
         """
-        usage.dask: 26
+        usage.dask: 27
+        usage.koalas: 31
+        """
+        ...
+
+    @overload
+    def transform(self, /, func: Callable):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def transform(self, /, func: Callable):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -920,6 +1222,7 @@ class DataFrameGroupBy:
     def transform(self, /, func: Callable):
         """
         usage.dask: 13
+        usage.koalas: 12
         """
         ...
 
@@ -937,9 +1240,10 @@ class DataFrameGroupBy:
         """
         ...
 
-    def transform(self, /, func: Union[Callable, Literal["sum"]]):
+    def transform(self, /, func: Union[Literal["sum"], Callable]):
         """
         usage.dask: 19
+        usage.koalas: 14
         """
         ...
 
@@ -947,6 +1251,7 @@ class DataFrameGroupBy:
     def var(self, /):
         """
         usage.dask: 5
+        usage.koalas: 6
         """
         ...
 
@@ -960,14 +1265,22 @@ class DataFrameGroupBy:
     def var(self, /, ddof: int = ...):
         """
         usage.dask: 7
+        usage.koalas: 6
         """
         ...
+
+
+class NamedAgg:
+    pass
 
 
 class SeriesGroupBy:
 
     # usage.dask: 1
     __name__: ClassVar[object]
+
+    # usage.koalas: 6
+    fillna: object
 
     # usage.dask: 1
     idxmax: object
@@ -1038,10 +1351,44 @@ class SeriesGroupBy:
         """
         ...
 
+    def all(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def any(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: int, *args: Literal["v", "t"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, *args: Literal["v", "t"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
     @overload
     def apply(self, /, func: Callable):
         """
         usage.dask: 16
+        usage.koalas: 8
         """
         ...
 
@@ -1049,6 +1396,14 @@ class SeriesGroupBy:
     def apply(self, /, func: Callable):
         """
         usage.dask: 2
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -1066,39 +1421,91 @@ class SeriesGroupBy:
         """
         ...
 
-    def apply(self, /, func: Union[Callable, Literal["sum"]]):
+    def apply(
+        self, /, func: Union[Literal["sum"], Callable, int], *args: Literal["v", "t"]
+    ):
         """
         usage.dask: 20
+        usage.koalas: 15
+        """
+        ...
+
+    def backfill(self, /):
+        """
+        usage.koalas: 2
         """
         ...
 
     def count(self, /):
         """
         usage.dask: 15
+        usage.koalas: 7
         """
         ...
 
+    @overload
+    def cumcount(self, /, ascending: bool):
+        """
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
     def cumcount(self, /):
         """
         usage.dask: 2
         """
         ...
 
+    def cumcount(self, /, ascending: bool = ...):
+        """
+        usage.dask: 2
+        usage.koalas: 6
+        """
+        ...
+
+    def cummax(self, /):
+        """
+        usage.koalas: 6
+        """
+        ...
+
+    def cummin(self, /):
+        """
+        usage.koalas: 6
+        """
+        ...
+
     def cumprod(self, /):
         """
         usage.dask: 3
+        usage.koalas: 6
         """
         ...
 
     def cumsum(self, /):
         """
         usage.dask: 3
+        usage.koalas: 6
+        """
+        ...
+
+    def expanding(self, /, *args: Literal["v", "t"]):
+        """
+        usage.koalas: 7
+        """
+        ...
+
+    def filter(self, /, func: Callable):
+        """
+        usage.koalas: 6
         """
         ...
 
     def first(self, /):
         """
         usage.dask: 14
+        usage.koalas: 7
         usage.xarray: 1
         """
         ...
@@ -1109,33 +1516,65 @@ class SeriesGroupBy:
         """
         ...
 
+    def head(self, /, n: int):
+        """
+        usage.koalas: 11
+        """
+        ...
+
     def last(self, /):
         """
         usage.dask: 10
+        usage.koalas: 7
         """
         ...
 
     def max(self, /):
         """
         usage.dask: 11
+        usage.koalas: 7
         """
         ...
 
     def mean(self, /):
         """
         usage.dask: 13
+        usage.koalas: 7
         """
         ...
 
     def min(self, /):
         """
         usage.dask: 10
+        usage.koalas: 7
         """
         ...
 
+    @overload
     def nunique(self, /):
         """
         usage.dask: 14
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def nunique(self, /, dropna: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def nunique(self, /, dropna: bool = ...):
+        """
+        usage.dask: 14
+        usage.koalas: 2
+        """
+        ...
+
+    def pad(self, /):
+        """
+        usage.koalas: 2
         """
         ...
 
@@ -1145,9 +1584,28 @@ class SeriesGroupBy:
         """
         ...
 
+    def rank(self, /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    def rolling(self, /, *args: Literal["v", "t"]):
+        """
+        usage.koalas: 7
+        """
+        ...
+
+    def shift(self, /):
+        """
+        usage.koalas: 7
+        """
+        ...
+
     def size(self, /):
         """
         usage.dask: 10
+        usage.koalas: 1
         """
         ...
 
@@ -1155,6 +1613,7 @@ class SeriesGroupBy:
     def std(self, /):
         """
         usage.dask: 7
+        usage.koalas: 8
         """
         ...
 
@@ -1168,12 +1627,14 @@ class SeriesGroupBy:
     def std(self, /, ddof: int = ...):
         """
         usage.dask: 10
+        usage.koalas: 8
         """
         ...
 
     def sum(self, /):
         """
         usage.dask: 20
+        usage.koalas: 24
         """
         ...
 
@@ -1181,6 +1642,7 @@ class SeriesGroupBy:
     def transform(self, /, func: Callable):
         """
         usage.dask: 13
+        usage.koalas: 7
         """
         ...
 
@@ -1198,15 +1660,32 @@ class SeriesGroupBy:
         """
         ...
 
-    def transform(self, /, func: Union[Callable, Literal["sum"]]):
+    def transform(self, /, func: Union[Literal["sum"], Callable]):
         """
         usage.dask: 19
+        usage.koalas: 7
         """
         ...
 
+    @overload
     def value_counts(self, /):
         """
         usage.dask: 2
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def value_counts(self, /, sort: bool, ascending: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    def value_counts(self, /, sort: bool = ..., ascending: bool = ...):
+        """
+        usage.dask: 2
+        usage.koalas: 6
         """
         ...
 
@@ -1214,6 +1693,7 @@ class SeriesGroupBy:
     def var(self, /):
         """
         usage.dask: 5
+        usage.koalas: 7
         """
         ...
 
@@ -1227,5 +1707,6 @@ class SeriesGroupBy:
     def var(self, /, ddof: int = ...):
         """
         usage.dask: 8
+        usage.koalas: 7
         """
         ...

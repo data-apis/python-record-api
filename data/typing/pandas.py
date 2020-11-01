@@ -15,8 +15,10 @@ CategoricalDtype: object
 # usage.xarray: 6
 CategoricalIndex: object
 
-# usage.dask: 309
+# usage.dask: 311
+# usage.koalas: 270
 # usage.modin: 27
+# usage.networkx: 6
 # usage.sklearn: 54
 # usage.xarray: 10
 DataFrame: object
@@ -37,6 +39,7 @@ Float64Index: object
 Grouper: object
 
 # usage.dask: 32
+# usage.koalas: 21
 # usage.xarray: 40
 Index: object
 
@@ -59,6 +62,7 @@ Int8Dtype: object
 Interval: object
 
 # usage.dask: 19
+# usage.koalas: 202
 # usage.modin: 3
 # usage.xarray: 70
 MultiIndex: object
@@ -67,8 +71,12 @@ MultiIndex: object
 NA: object
 
 # usage.dask: 1
+# usage.koalas: 1
 # usage.xarray: 1
 NaT: object
+
+# usage.koalas: 3
+NamedAgg: object
 
 # usage.xarray: 1
 Period: object
@@ -80,7 +88,8 @@ PeriodIndex: object
 # usage.dask: 6
 RangeIndex: object
 
-# usage.dask: 102
+# usage.dask: 106
+# usage.koalas: 171
 # usage.modin: 16
 # usage.sklearn: 11
 # usage.xarray: 20
@@ -95,6 +104,7 @@ Timedelta: object
 TimedeltaIndex: object
 
 # usage.dask: 12
+# usage.koalas: 1
 # usage.xarray: 2
 Timestamp: object
 
@@ -113,6 +123,7 @@ UInt64Index: object
 # usage.dask: 1
 UInt8Dtype: object
 
+# usage.koalas: 44
 # usage.sklearn: 3
 # usage.xarray: 6
 __version__: object
@@ -121,6 +132,7 @@ __version__: object
 array: object
 
 # usage.dask: 31
+# usage.koalas: 4
 # usage.modin: 3
 # usage.sklearn: 2
 concat: object
@@ -128,7 +140,8 @@ concat: object
 # usage.xarray: 1
 cut: object
 
-# usage.dask: 50
+# usage.dask: 52
+# usage.koalas: 45
 # usage.modin: 10
 # usage.xarray: 106
 date_range: object
@@ -137,6 +150,7 @@ date_range: object
 factorize: object
 
 # usage.dask: 10
+# usage.koalas: 29
 get_dummies: object
 
 # usage.dask: 1
@@ -154,6 +168,9 @@ merge: object
 # usage.dask: 11
 merge_asof: object
 
+# usage.koalas: 1
+np: object
+
 # usage.dask: 1
 offsets: object
 
@@ -168,10 +185,12 @@ pivot_table: object
 plotting: object
 
 # usage.dask: 16
+# usage.koalas: 12
 # usage.modin: 15
 # usage.sklearn: 2
 read_csv: object
 
+# usage.koalas: 6
 # usage.modin: 4
 read_excel: object
 
@@ -185,6 +204,7 @@ read_hdf: object
 # usage.modin: 4
 read_json: object
 
+# usage.koalas: 1
 # usage.modin: 4
 read_parquet: object
 
@@ -196,6 +216,7 @@ read_sql: object
 timedelta_range: object
 
 # usage.dask: 8
+# usage.koalas: 5
 # usage.xarray: 1
 to_datetime: object
 

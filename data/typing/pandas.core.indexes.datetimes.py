@@ -2,6 +2,164 @@ from typing import *
 
 
 @overload
+def date_range(start: Literal["20130101"], periods: int):
+    """
+    usage.dask: 2
+    usage.koalas: 10
+    usage.modin: 1
+    usage.xarray: 5
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1/1/2018 11:59:00"], periods: int, freq: Literal["min"]):
+    """
+    usage.koalas: 3
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2018-01-01"], periods: int, freq: Literal["D"]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2016-12-31"], end: Literal["2017-01-08"], freq: Literal["D"]
+):
+    """
+    usage.koalas: 4
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2012-01-01"], end: Literal["2015-01-01"], freq: Literal["Y"]
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2018-02-27"], periods: int):
+    """
+    usage.koalas: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2017-03-30"], periods: int):
+    """
+    usage.koalas: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2017-12-30"], periods: int):
+    """
+    usage.koalas: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2018-01"], periods: int, freq: Literal["M"]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2012-1-1 12:45:31"], periods: int, freq: Literal["M"]):
+    """
+    usage.koalas: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp, periods: int, freq: Literal["s"]
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1/1/2010"], periods: int, freq: Literal["D"]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["12/29/2009"], periods: int, freq: Literal["D"]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2012-1-1 12:00:00"], periods: int, freq: Literal["M"]):
+    """
+    usage.koalas: 7
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int):
+    """
+    usage.dask: 1
+    usage.koalas: 1
+    usage.xarray: 5
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2018/01/01"], end: Literal["2018/07/01"], freq: Literal["M"]
+):
+    """
+    usage.koalas: 4
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2011-01-01"], periods: int, freq: Literal["D"]):
+    """
+    usage.dask: 3
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2013-3-11 21:45:00"], periods: int, freq: Literal["W"]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
 def date_range(start: Literal["2000-01-01"], periods: int):
     """
     usage.xarray: 27
@@ -53,15 +211,6 @@ def date_range(start: Literal["2000-02-01"], periods: int, freq: Literal["M"]):
 def date_range(start: Literal["2000-02-01"], periods: int, freq: Literal["D"]):
     """
     usage.xarray: 2
-    """
-    ...
-
-
-@overload
-def date_range(start: Literal["2000"], periods: int):
-    """
-    usage.dask: 1
-    usage.xarray: 5
     """
     ...
 
@@ -305,16 +454,6 @@ def date_range(
 ):
     """
     usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def date_range(start: Literal["20130101"], periods: int):
-    """
-    usage.dask: 2
-    usage.modin: 1
-    usage.xarray: 5
     """
     ...
 
@@ -625,6 +764,59 @@ def date_range(start: Literal["20130110"], periods: int):
 
 @overload
 def date_range(
+    start: Literal["2000-01-01"], end: Literal["2000-01-31"], freq: Literal["1d"]
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2000"],
+    end: Literal["2000"],
+    freq: Literal["1H"],
+    name: Literal["timestamp"],
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], end: Literal["2010"], freq: Literal["1D"]):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2017"], periods: int):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["1970-01-01"],
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.Day,
+    tz: None,
+    name: None,
+):
+    """
+    usage.dask: 1
+    """
+    ...
+
+
+@overload
+def date_range(
     start: Literal["1970-01-01"],
     periods: int,
     freq: None,
@@ -641,19 +833,6 @@ def date_range(
 def date_range(start: Literal["2000"], end: Literal["2015"], freq: Literal["6M"]):
     """
     usage.dask: 2
-    """
-    ...
-
-
-@overload
-def date_range(
-    start: Literal["2000"],
-    end: Literal["2000"],
-    freq: Literal["1H"],
-    name: Literal["timestamp"],
-):
-    """
-    usage.dask: 1
     """
     ...
 
@@ -742,28 +921,6 @@ def date_range(
     freq: None,
     tz: None,
     name: Literal["date"],
-):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
-def date_range(start: Literal["2011-01-01"], periods: int, freq: Literal["D"]):
-    """
-    usage.dask: 3
-    """
-    ...
-
-
-@overload
-def date_range(
-    start: Literal["1970-01-01"],
-    periods: int,
-    freq: pandas._libs.tslibs.offsets.Day,
-    tz: None,
-    name: None,
 ):
     """
     usage.dask: 1
@@ -899,16 +1056,6 @@ def date_range(
 
 @overload
 def date_range(start: Literal["01.01.2015"], end: Literal["05.05.2015"]):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
-def date_range(
-    start: Literal["2000-01-01"], end: Literal["2000-01-31"], freq: Literal["1d"]
-):
     """
     usage.dask: 1
     """
@@ -1425,8 +1572,8 @@ def date_range(
 
 @overload
 def date_range(
-    start: Literal["2020-08-17T23:31:00.596478"],
-    end: Literal["2020-09-06T23:31:00.596478"],
+    start: Literal["2020-10-31T19:34:06.573135"],
+    end: Literal["2020-11-20T19:34:06.573135"],
     freq: Literal["D"],
 ):
     """
@@ -1455,7 +1602,8 @@ def date_range(
     closed: Union[None, Literal["left"]] = ...,
 ):
     """
-    usage.dask: 94
+    usage.dask: 97
+    usage.koalas: 45
     usage.modin: 36
     usage.xarray: 122
     """
@@ -1511,7 +1659,8 @@ class DatetimeIndex:
     name: Union[None, Literal["timestamp", "index"]]
 
     # usage.dask: 1
-    names: object
+    # usage.koalas: 3
+    names: List[Union[None, Literal["__index_level_0__"]]]
 
     # usage.xarray: 1
     ndim: object
@@ -1623,18 +1772,19 @@ class DatetimeIndex:
         ...
 
     @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.koalas: 1
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: int, /):
         """
         usage.dask: 18
         usage.modin: 2
         usage.xarray: 6
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, int, None], /):
-        """
-        usage.xarray: 1
         """
         ...
 
@@ -1680,12 +1830,13 @@ class DatetimeIndex:
         _0: Union[
             int,
             numpy.ndarray,
-            slice[Union[int, None], Union[None, int], Union[int, None]],
+            slice[Union[None, int], Union[int, None], Union[None, int]],
         ],
         /,
     ):
         """
         usage.dask: 21
+        usage.koalas: 1
         usage.modin: 2
         usage.xarray: 20
         """

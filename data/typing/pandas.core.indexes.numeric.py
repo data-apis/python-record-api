@@ -13,6 +13,7 @@ class Float64Index:
     array: object
 
     # usage.dask: 7
+    # usage.koalas: 1
     # usage.xarray: 4
     dtype: object
 
@@ -24,12 +25,14 @@ class Float64Index:
     is_unique: object
 
     # usage.dask: 9
+    # usage.koalas: 2
     # usage.modin: 1
     # usage.xarray: 1
-    name: Union[Literal["x", "c"], None]
+    name: Union[Literal["x", "c", "a"], None]
 
     # usage.dask: 4
-    names: List[str]
+    # usage.koalas: 8
+    names: List[Union[None, str]]
 
     # usage.xarray: 1
     nlevels: object
@@ -44,8 +47,25 @@ class Float64Index:
     # usage.xarray: 3
     values: object
 
+    @overload
+    def __add__(self, _0: int, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def __add__(self, _0: Union[numpy.float64, numpy.timedelta64, numpy.datetime64], /):
         """
+        usage.pandas: 3
+        """
+        ...
+
+    def __add__(
+        self, _0: Union[numpy.datetime64, numpy.timedelta64, numpy.float64, int], /
+    ):
+        """
+        usage.koalas: 1
         usage.pandas: 3
         """
         ...
@@ -90,16 +110,17 @@ class Float64Index:
         ...
 
     @overload
-    def __getitem__(self, _0: numpy.ndarray, /):
+    def __getitem__(self, _0: slice[None, int, None], /):
         """
-        usage.xarray: 3
+        usage.koalas: 1
+        usage.xarray: 1
         """
         ...
 
     @overload
-    def __getitem__(self, _0: slice[None, int, None], /):
+    def __getitem__(self, _0: numpy.ndarray, /):
         """
-        usage.xarray: 1
+        usage.xarray: 3
         """
         ...
 
@@ -166,12 +187,13 @@ class Float64Index:
         _0: Union[
             int,
             numpy.ndarray,
-            slice[Union[None, int], Union[int, None], Union[None, int]],
+            slice[Union[int, None], Union[None, int], Union[int, None]],
         ],
         /,
     ):
         """
         usage.dask: 5
+        usage.koalas: 1
         usage.xarray: 15
         """
         ...
@@ -353,6 +375,42 @@ class Float64Index:
         """
         ...
 
+    @overload
+    def value_counts(self, /, normalize: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def value_counts(self, /, ascending: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def value_counts(self, /, normalize: bool, dropna: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def value_counts(self, /, ascending: bool, dropna: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    def value_counts(
+        self, /, ascending: bool = ..., normalize: bool = ..., dropna: bool = ...
+    ):
+        """
+        usage.koalas: 8
+        """
+        ...
+
 
 class Int64Index:
 
@@ -365,10 +423,14 @@ class Int64Index:
     # usage.dask: 1
     __class__: object
 
+    # usage.koalas: 1
+    _values: object
+
     # usage.dask: 1
     array: object
 
     # usage.dask: 11
+    # usage.koalas: 1
     # usage.xarray: 6
     dtype: object
 
@@ -381,11 +443,22 @@ class Int64Index:
     is_unique: object
 
     # usage.dask: 21
+    # usage.koalas: 14
     # usage.xarray: 13
-    name: Union[None, Literal["foo", "C", "b", "idx", "a"]]
+    name: Union[None, str, Tuple[Literal["x"], Literal["a"]]]
 
     # usage.dask: 6
-    names: Union[pandas.core.indexes.frozen.FrozenList, List[str]]
+    # usage.koalas: 37
+    names: Union[
+        List[
+            Union[
+                None,
+                str,
+                Tuple[Literal["x", "X", "z"], Literal["a", "b", "A", "c", "y"]],
+            ]
+        ],
+        pandas.core.indexes.frozen.FrozenList,
+    ]
 
     # usage.dask: 2
     nbytes: object
@@ -405,8 +478,25 @@ class Int64Index:
     # usage.xarray: 3
     values: object
 
+    @overload
+    def __add__(self, _0: int, /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
     def __add__(self, _0: Union[numpy.int64, numpy.timedelta64, numpy.datetime64], /):
         """
+        usage.pandas: 3
+        """
+        ...
+
+    def __add__(
+        self, _0: Union[numpy.datetime64, numpy.timedelta64, numpy.int64, int], /
+    ):
+        """
+        usage.koalas: 3
         usage.pandas: 3
         """
         ...
@@ -487,6 +577,15 @@ class Int64Index:
         ...
 
     @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: numpy.ndarray, /):
         """
         usage.xarray: 4
@@ -509,9 +608,8 @@ class Int64Index:
         ...
 
     @overload
-    def __getitem__(self, _0: slice[None, int, None], /):
+    def __getitem__(self, _0: slice[int, None, int], /):
         """
-        usage.dask: 2
         usage.xarray: 3
         """
         ...
@@ -521,13 +619,6 @@ class Int64Index:
         """
         usage.dask: 1
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[int, None, int], /):
-        """
-        usage.xarray: 3
         """
         ...
 
@@ -560,6 +651,7 @@ class Int64Index:
     ):
         """
         usage.dask: 11
+        usage.koalas: 1
         usage.modin: 1
         usage.xarray: 16
         """
@@ -588,6 +680,7 @@ class Int64Index:
     def __iter__(self, /):
         """
         usage.dask: 4
+        usage.koalas: 2
         usage.xarray: 2
         """
         ...
@@ -889,6 +982,12 @@ class Int64Index:
         """
         ...
 
+    def rename(self, /, name: Literal["z"], inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
     @overload
     def set_names(self, /, names: List[Literal["a"]], inplace: bool):
         """
@@ -916,6 +1015,33 @@ class Int64Index:
         """
         ...
 
+    def sort_values(self, /, ascending: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def to_frame(self, /, index: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def to_frame(self, /, name: Literal["x"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_frame(self, /, index: bool, name: Literal["x"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
     @overload
     def to_frame(self, /, index: bool, name: None):
         """
@@ -930,15 +1056,76 @@ class Int64Index:
         """
         ...
 
-    def to_frame(self, /, index: bool, name: Union[Literal["bar"], None]):
+    def to_frame(
+        self, /, index: bool = ..., name: Union[None, Literal["bar", "x"]] = ...
+    ):
         """
         usage.dask: 2
+        usage.koalas: 4
         """
         ...
 
+    @overload
+    def to_series(self, /, name: Literal["a"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def to_series(self, /, name: Tuple[Literal["x"], Literal["a"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def to_series(self, /):
         """
         usage.dask: 1
+        """
+        ...
+
+    def to_series(
+        self, /, name: Union[Tuple[Literal["x"], Literal["a"]], Literal["a"]] = ...
+    ):
+        """
+        usage.dask: 1
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def union(self, /, other: pandas.core.indexes.numeric.Int64Index, sort: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def union(self, /, other: List[int], sort: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def union(self, /, other: pandas.core.series.Series, sort: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    def union(
+        self,
+        /,
+        other: Union[
+            pandas.core.series.Series, pandas.core.indexes.numeric.Int64Index, List[int]
+        ],
+        sort: bool,
+    ):
+        """
+        usage.koalas: 6
         """
         ...
 

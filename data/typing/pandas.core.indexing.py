@@ -5,7 +5,666 @@ class IndexingError:
     pass
 
 
+class _AtIndexer:
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["b"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["b"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["ab"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Tuple[int, int], Literal["a"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Tuple[int], Literal["a"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[Literal["B"], Tuple[Literal["bar"], Literal["one"]]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def __getitem__(
+        self,
+        _0: Union[
+            Tuple[
+                Union[int, Tuple[int, ...], Literal["B"]],
+                Union[Literal["b", "a"], Tuple[Literal["bar"], Literal["one"]]],
+            ],
+            Literal["ab", "b"],
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 9
+        """
+        ...
+
+    def __setitem__(
+        self, _0: Tuple[Literal["C"], Tuple[Literal["A"], Literal["two"]]], _1: None, /
+    ):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+
 class _LocIndexer:
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["A_75%"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["A_25%"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["A_iqr"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[Literal["__corr_arg1__"], Literal["__corr_arg2__"]], /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: int, /):
+        """
+        usage.koalas: 10
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.dask: 16
+        usage.koalas: 16
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.dask: 4
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.dask: 5
+        usage.koalas: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[int], /):
+        """
+        usage.dask: 8
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.dask: 3
+        usage.koalas: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: list, /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.dask: 3
+        usage.koalas: 1
+        usage.sklearn: 1
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[Literal["a"], Literal["z"], Literal["a"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], Literal["a"]], /):
+        """
+        usage.dask: 3
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], Literal["a"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], List[Literal["a"]]], /):
+        """
+        usage.dask: 3
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], List[Literal["a"]]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, None, None]], /
+    ):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, int, None], Literal["a"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, None, int], Literal["a"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, int, None], List[Literal["a"]]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, None, int], List[Literal["a"]]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["a"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, List[Literal["a"]]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], slice[Literal["a"], Literal["a"], Literal["a"]]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], slice[Literal["a"], Literal["d"], Literal["a"]]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], slice[Literal["c"], Literal["d"], Literal["c"]]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["a"]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], slice[Literal["a"], Literal["c"], Literal["a"]]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], slice[Literal["b"], Literal["c"], Literal["b"]]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[Literal["B"], Literal["B"], Literal["B"]], Literal["bar"]],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[Literal["B"], Literal["B"], Literal["B"]], List[Literal["bar"]]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[Literal["bar"], Literal["bar"], Literal["bar"]],
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[
+                Literal["bar"], Tuple[Literal["baz"], Literal["one"]], Literal["bar"]
+            ],
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[
+                Tuple[Literal["bar"], Literal["two"]],
+                Tuple[Literal["baz"], Literal["one"]],
+                Tuple[Literal["bar"], Literal["two"]],
+            ],
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[
+                Tuple[Literal["bar"], Literal["two"]],
+                Literal["bar"],
+                Tuple[Literal["bar"], Literal["two"]],
+            ],
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], slice[Literal["a"], Literal["bax"], Literal["a"]]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[
+                Tuple[Literal["bar"], Literal["x"]],
+                Tuple[Literal["baz"], Literal["a"]],
+                Tuple[Literal["bar"], Literal["x"]],
+            ],
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[Literal["bar"], Literal["baz"], Literal["bar"]],
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["a"]], Literal["A"]], /):
+        """
+        usage.dask: 3
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["a"]], List[Literal["A"]]], /):
+        """
+        usage.dask: 3
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[Literal["a"], Literal["o"], Literal["a"]], Literal["A"]],
+        /,
+    ):
+        """
+        usage.dask: 4
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[Literal["a"], Literal["o"], Literal["a"]], List[Literal["A"]]],
+        /,
+    ):
+        """
+        usage.dask: 4
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["n"]], List[Literal["A"]]], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[Literal["n", "c", "a"]], List[Literal["A"]]], /
+    ):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[Literal["y"], None, Literal["y"]], /):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, Literal["y"], None], /):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            Tuple[Literal["x"], Literal["b"]], None, Tuple[Literal["x"], Literal["b"]]
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, Tuple[Literal["y"], Literal["c"]], None], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            Tuple[Literal["x"], Literal["b"]],
+            Tuple[Literal["y"], Literal["c"]],
+            Tuple[Literal["x"], Literal["b"]],
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[Literal["x"], Tuple[Literal["y"], Literal["c"]], Literal["x"]],
+        /,
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            Tuple[Literal["x"], Literal["b"]],
+            Literal["y"],
+            Tuple[Literal["x"], Literal["b"]],
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: slice[Literal["2014"], Literal["2015"], Literal["2014"]], /
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 5
+        usage.koalas: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, Literal["a"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, List[Literal["a"]]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["a_75%"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["a_25%"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["a_iqr"]], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
     @overload
     def __getitem__(self, _0: cftime._cftime.DatetimeNoLeap, /):
         """
@@ -217,32 +876,9 @@ class _LocIndexer:
         ...
 
     @overload
-    def __getitem__(self, _0: numpy.ndarray, /):
-        """
-        usage.dask: 3
-        usage.sklearn: 1
-        usage.xarray: 2
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: pandas.core.indexes.base.Index, /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, None, None], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, int, None], /):
-        """
-        usage.dask: 4
         """
         ...
 
@@ -366,13 +1002,6 @@ class _LocIndexer:
         ...
 
     @overload
-    def __getitem__(self, _0: slice[int, int, int], /):
-        """
-        usage.dask: 16
-        """
-        ...
-
-    @overload
     def __getitem__(
         self, _0: Tuple[slice[None, None, None], List[Literal["d", "c"]]], /
     ):
@@ -414,13 +1043,6 @@ class _LocIndexer:
     ):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[int], /):
-        """
-        usage.dask: 8
         """
         ...
 
@@ -599,36 +1221,6 @@ class _LocIndexer:
         ...
 
     @overload
-    def __getitem__(self, _0: slice[int, None, int], /):
-        """
-        usage.dask: 5
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: list, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 5
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self, _0: Tuple[slice[None, None, None], slice[None, None, None]], /
-    ):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[Callable, slice[None, None, None]], /):
         """
         usage.dask: 1
@@ -673,20 +1265,6 @@ class _LocIndexer:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["a"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[int, int, int], Literal["a"]], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[slice[None, None, None], List[Literal["a"]]], /):
         """
         usage.dask: 2
@@ -695,58 +1273,9 @@ class _LocIndexer:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[slice[int, int, int], List[Literal["a"]]], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[int, None, int], Literal["a"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[None, int, None], Literal["a"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[List[int], Literal["a"]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[int, None, int], List[Literal["a"]]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[None, int, None], List[Literal["a"]]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["A"]], /):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[List[Literal["a"]], Literal["A"]], /):
-        """
-        usage.dask: 3
         """
         ...
 
@@ -769,13 +1298,6 @@ class _LocIndexer:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[List[Literal["a"]], List[Literal["A"]]], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
     def __getitem__(
         self,
         _0: Tuple[slice[Literal["a"], Literal["a"], Literal["a"]], List[Literal["A"]]],
@@ -783,17 +1305,6 @@ class _LocIndexer:
     ):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: Tuple[slice[Literal["a"], Literal["o"], Literal["a"]], Literal["A"]],
-        /,
-    ):
-        """
-        usage.dask: 4
         """
         ...
 
@@ -815,17 +1326,6 @@ class _LocIndexer:
 
     @overload
     def __getitem__(
-        self,
-        _0: Tuple[slice[Literal["a"], Literal["o"], Literal["a"]], List[Literal["A"]]],
-        /,
-    ):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(
         self, _0: Tuple[slice[Literal["a"], None, Literal["a"]], List[Literal["A"]]], /
     ):
         """
@@ -836,22 +1336,6 @@ class _LocIndexer:
     @overload
     def __getitem__(
         self, _0: Tuple[slice[None, Literal["o"], None], List[Literal["A"]]], /
-    ):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[List[Literal["n"]], List[Literal["A"]]], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self, _0: Tuple[List[Literal["n", "c", "a"]], List[Literal["A"]]], /
     ):
         """
         usage.dask: 1
@@ -1830,28 +2314,520 @@ class _LocIndexer:
     def __getitem__(self, _0: object, /):
         """
         usage.dask: 250
+        usage.koalas: 137
         usage.sklearn: 30
         usage.xarray: 45
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["A_iqr"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["A_lfence"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["A_ufence"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            List[Literal["sidewinder", "viper"]], List[Literal["max_speed", "shield"]]
+        ],
+        _1: int,
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[List[Literal["sidewinder", "viper"]], Literal["shield"]],
+        _1: int,
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["cobra"], Literal["max_speed"]], _1: int, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[pandas.core.series.Series, Literal["max_speed"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], Literal["min_speed"]], _1: int, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Tuple[Literal["y"], Literal["shield"]]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None], Literal["z"]], _1: int, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["max_speed"]],
+        _1: pandas.core.frame.DataFrame,
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: pandas.core.series.Series, _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[Literal["sidewinder", "viper"]], _1: int, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["viper"], _1: int, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, None, None], _1: int, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, Literal["viper"], None], _1: int, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: slice[Literal["viper"], None, Literal["viper"]], _1: int, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["x"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["y"], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[List[Literal["sidewinder", "viper"]], List[Literal["shield"]]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[pandas.core.series.Series, List[Literal["shield"]]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: List[Literal["sidewinder", "viper"]], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: pandas.core.series.Series, _1: int, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: float, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["a_iqr"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["a_lfence"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["a_ufence"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def __setitem__(
+        self,
+        _0: object,
+        _1: Union[pandas.core.series.Series, int, pandas.core.frame.DataFrame, float],
+        /,
+    ):
+        """
+        usage.koalas: 33
+        """
+        ...
+
+
+class _iAtIndexer:
+    @overload
+    def __getitem__(self, _0: Tuple[int, int], /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: int, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def __getitem__(self, _0: Union[int, Tuple[int, int]], /):
+        """
+        usage.koalas: 4
         """
         ...
 
 
 class _iLocIndexer:
     @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.dask: 17
+        usage.koalas: 11
+        usage.sklearn: 1
+        usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int], /):
+        """
+        usage.koalas: 2
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], int], /):
+        """
+        usage.dask: 11
+        usage.koalas: 3
+        usage.sklearn: 8
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: int, /):
         """
         usage.dask: 9
+        usage.koalas: 6
         usage.sklearn: 1
         usage.xarray: 2
         """
         ...
 
     @overload
+    def __getitem__(self, _0: Tuple[slice[None, int, None], int], /):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], List[int]], /):
+        """
+        usage.dask: 6
+        usage.koalas: 4
+        usage.modin: 1
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, int, None], List[int]], /):
+        """
+        usage.koalas: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], List[bool]], /):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, int, None], List[bool]], /):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], slice[int, int, int]], /):
+        """
+        usage.koalas: 2
+        usage.sklearn: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, int, None], slice[int, int, int]], /):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: list, /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[list, slice[None, None, None]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[list, slice[None, int, None]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        usage.koalas: 3
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, slice[None, None, None]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, slice[None, int, None]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[int], /):
+        """
+        usage.koalas: 9
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], slice[None, None, None]], /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], slice[None, int, None]], /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.dask: 1
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.dask: 8
+        usage.koalas: 3
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.dask: 5
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: slice[None, int, None], /):
         """
-        usage.dask: 17
-        usage.sklearn: 1
-        usage.xarray: 3
+        usage.koalas: 3
         """
         ...
 
@@ -1863,34 +2839,9 @@ class _iLocIndexer:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], List[int]], /):
-        """
-        usage.dask: 6
-        usage.modin: 1
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[slice[None, int, None], slice[None, int, None]], /):
         """
         usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[int, int, int], /):
-        """
-        usage.dask: 8
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], int], /):
-        """
-        usage.dask: 11
-        usage.sklearn: 8
         """
         ...
 
@@ -1909,35 +2860,6 @@ class _iLocIndexer:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[slice[int, int, int], int], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, None, None], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[int, None, int], /):
-        """
-        usage.dask: 5
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: numpy.ndarray, /):
-        """
-        usage.dask: 1
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: slice[numpy.int64, None, numpy.int64], /):
         """
         usage.dask: 2
@@ -1945,7 +2867,7 @@ class _iLocIndexer:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], List[bool]], /):
+    def __getitem__(self, _0: Tuple[slice[int, int, int], int], /):
         """
         usage.dask: 1
         """
@@ -1967,13 +2889,6 @@ class _iLocIndexer:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], slice[int, int, int]], /):
-        """
-        usage.sklearn: 3
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[numpy.ndarray, int], /):
         """
         usage.sklearn: 1
@@ -1989,39 +2904,26 @@ class _iLocIndexer:
         """
         ...
 
-    @overload
-    def __getitem__(self, _0: Tuple[int, int], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: List[int], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
     def __getitem__(
         self,
         _0: Union[
             slice[
                 Union[numpy.int64, int, None],
-                Union[None, numpy.int64, int],
+                Union[numpy.int64, int, None],
                 Union[numpy.int64, int, None],
             ],
             Tuple[
                 Union[
-                    slice[Union[None, int], Union[None, int], Union[None, int]],
                     numpy.ndarray,
                     int,
+                    slice[Union[None, int], Union[None, int], Union[None, int]],
+                    List[int],
                 ],
                 Union[
-                    int,
-                    numpy.ndarray,
                     slice[Union[int, None], Union[int, None], Union[int, None]],
                     List[Union[int, bool]],
+                    int,
+                    numpy.ndarray,
                 ],
             ],
             List[int],
@@ -2032,9 +2934,94 @@ class _iLocIndexer:
     ):
         """
         usage.dask: 71
+        usage.koalas: 98
         usage.modin: 3
         usage.sklearn: 24
         usage.xarray: 5
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[List[int], List[int]], _1: int, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: int, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], int],
+        _1: pandas.core.frame.DataFrame,
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: int, /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: int, /):
+        """
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, None, None], _1: int, /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, int, None], _1: int, /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, None, int], _1: int, /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[List[int], List[int]], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[List[int], int], _1: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -2088,16 +3075,25 @@ class _iLocIndexer:
         self,
         _0: Union[
             Tuple[
-                Union[int, slice[None, Union[None, int], None], List[int]],
-                Union[int, numpy.int32],
+                Union[slice[None, Union[None, int], None], List[int], int],
+                Union[List[int], int, numpy.int32],
             ],
+            List[int],
+            slice[Union[None, int], Union[int, None], Union[None, int]],
             int,
         ],
-        _1: Union[numpy.float64, pandas.core.series.Series, float],
+        _1: Union[
+            numpy.float64,
+            pandas.core.series.Series,
+            int,
+            pandas.core.frame.DataFrame,
+            float,
+        ],
         /,
     ):
         """
         usage.dask: 5
+        usage.koalas: 28
         usage.sklearn: 5
         """
         ...

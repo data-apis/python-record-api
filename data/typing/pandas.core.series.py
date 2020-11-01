@@ -10,11 +10,683 @@ class Series:
     # usage.sklearn: 1
     __name__: ClassVar[object]
 
+    # usage.koalas: 1
+    to_dict: ClassVar[object]
+
+    # usage.koalas: 1
+    to_latex: ClassVar[object]
+
+    # usage.koalas: 1
+    to_markdown: ClassVar[object]
+
+    # usage.koalas: 1
+    to_string: ClassVar[object]
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Type[int], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: int, /):
+        """
+        usage.dask: 16
+        usage.koalas: 10
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["int"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["max", "min"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: numpy.float64, /):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[None, int, None], /):
+        """
+        usage.koalas: 11
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[int, None, int], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[int, int, int], /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["2013-01-04T00:00:00"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[None, Literal["2013-01-04T00:00:00"], None], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: slice[Literal["2013-01-02T00:00:00"], None, Literal["2013-01-02T00:00:00"]],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: slice[
+            Literal["2013-01-02T00:00:00"],
+            Literal["2013-01-04T00:00:00"],
+            Literal["2013-01-02T00:00:00"],
+        ],
+        /,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 6
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["A"], /):
+        """
+        usage.dask: 4
+        usage.koalas: 1
+        usage.modin: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["B"], /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["a"], /):
+        """
+        usage.dask: 3
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Literal["a"], Literal["lama"]], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Type[float], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: cftime._cftime.DatetimeNoLeap, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["0001"], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: slice[Literal["0001-01-01"], Literal["0001-12-30"], Literal["0001-01-01"]],
+        /,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[None, Literal["0001-12-30"], None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: slice[
+            cftime._cftime.DatetimeNoLeap,
+            cftime._cftime.DatetimeNoLeap,
+            cftime._cftime.DatetimeNoLeap,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[None, cftime._cftime.DatetimeNoLeap, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: cftime._cftime.Datetime360Day, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: slice[
+            cftime._cftime.Datetime360Day,
+            cftime._cftime.Datetime360Day,
+            cftime._cftime.Datetime360Day,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[None, cftime._cftime.Datetime360Day, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: cftime._cftime.DatetimeJulian, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: slice[
+            cftime._cftime.DatetimeJulian,
+            cftime._cftime.DatetimeJulian,
+            cftime._cftime.DatetimeJulian,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[None, cftime._cftime.DatetimeJulian, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: cftime._cftime.DatetimeAllLeap, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: slice[
+            cftime._cftime.DatetimeAllLeap,
+            cftime._cftime.DatetimeAllLeap,
+            cftime._cftime.DatetimeAllLeap,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[None, cftime._cftime.DatetimeAllLeap, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: cftime._cftime.DatetimeGregorian, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: slice[
+            cftime._cftime.DatetimeGregorian,
+            cftime._cftime.DatetimeGregorian,
+            cftime._cftime.DatetimeGregorian,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[None, cftime._cftime.DatetimeGregorian, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: cftime._cftime.DatetimeProlepticGregorian, /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: slice[
+            cftime._cftime.DatetimeProlepticGregorian,
+            cftime._cftime.DatetimeProlepticGregorian,
+            cftime._cftime.DatetimeProlepticGregorian,
+        ],
+        /,
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: slice[None, cftime._cftime.DatetimeProlepticGregorian, None], /
+    ):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[None, None, None], /):
+        """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col2"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col1"], /):
+        """
+        usage.modin: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["C"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["idx"], /):
+        """
+        usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["amount"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["name"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["id"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aa"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["bb"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Edith"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["-500"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["numbers"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["names"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["more_numbers"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["integers"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["dates"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Date"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Close"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["b"], /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["c-d"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["x"], /):
+        """
+        usage.dask: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["y"], /):
+        """
+        usage.dask: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[slice[int, int, int]], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["25%"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["50%"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["75%"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: pandas.core.indexes.base.Index, /):
+        """
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["z"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["d"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["e"], /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
+    @classmethod
+    def __getitem__(cls, _0: object, /):
+        """
+        usage.dask: 72
+        usage.koalas: 47
+        usage.modin: 12
+        usage.xarray: 23
+        """
+        ...
+
     @overload
     @classmethod
     def __ne__(cls, _0: Type[pandas.core.series.Series], /):
         """
         usage.dask: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __ne__(cls, _0: pandas.core.series.Series, /):
+        """
+        usage.koalas: 4
         """
         ...
 
@@ -27,9 +699,16 @@ class Series:
         ...
 
     @classmethod
-    def __ne__(cls, _0: Union[numpy.ndarray, Type[pandas.core.series.Series]], /):
+    def __ne__(
+        cls,
+        _0: Union[
+            pandas.core.series.Series, numpy.ndarray, Type[pandas.core.series.Series]
+        ],
+        /,
+    ):
         """
         usage.dask: 4
+        usage.koalas: 4
         usage.pandas: 6
         """
         ...
@@ -55,6 +734,12 @@ class Series:
     # usage.dask: 3
     _values: object
 
+    # usage.koalas: 2
+    at: object
+
+    # usage.koalas: 2
+    axes: object
+
     # usage.dask: 28
     cat: object
 
@@ -65,10 +750,12 @@ class Series:
     divide: object
 
     # usage.dask: 2
+    # usage.koalas: 33
     # usage.xarray: 2
     dt: object
 
     # usage.dask: 64
+    # usage.koalas: 7
     # usage.sklearn: 9
     dtype: object
 
@@ -78,27 +765,45 @@ class Series:
     # usage.dask: 1
     empty: object
 
+    # usage.koalas: 6
+    hasnans: object
+
+    # usage.koalas: 1
+    iat: object
+
     # usage.dask: 31
+    # usage.koalas: 27
     # usage.sklearn: 1
     # usage.xarray: 3
     iloc: object
 
     # usage.dask: 83
+    # usage.koalas: 42
     # usage.modin: 7
     # usage.sklearn: 3
     # usage.xarray: 23
     index: object
 
+    # usage.koalas: 4
+    is_unique: object
+
     # usage.dask: 19
+    # usage.koalas: 30
     # usage.sklearn: 1
     # usage.xarray: 3
     loc: object
 
     # usage.dask: 48
+    # usage.koalas: 16
     # usage.modin: 1
     # usage.sklearn: 6
     # usage.xarray: 5
-    name: Union[str, None]
+    name: Union[
+        Tuple[Literal["X", "Y", "x", "y"], Literal["A", "B", "a", "z"]], str, None
+    ]
+
+    # usage.koalas: 1
+    names: List[Literal["koalas", "hello"]]
 
     # usage.dask: 2
     nbytes: object
@@ -107,10 +812,14 @@ class Series:
     # usage.sklearn: 4
     ndim: object
 
+    # usage.koalas: 13
+    plot: object
+
     # usage.dask: 1
     rdiv: object
 
     # usage.dask: 7
+    # usage.koalas: 2
     # usage.sklearn: 12
     shape: object
 
@@ -118,25 +827,51 @@ class Series:
     size: object
 
     # usage.dask: 26
+    # usage.koalas: 103
     str: object
 
     # usage.dask: 40
+    # usage.koalas: 11
     # usage.modin: 1
     # usage.xarray: 16
     values: object
 
     @overload
-    def __add__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /):
+    def __add__(self, _0: int, /):
         """
-        usage.pandas: 39
+        usage.dask: 35
+        usage.koalas: 65
+        usage.modin: 1
         """
         ...
 
     @overload
-    def __add__(self, _0: int, /):
+    def __add__(self, _0: numpy.int64, /):
         """
-        usage.dask: 34
-        usage.modin: 1
+        usage.dask: 2
+        usage.koalas: 49
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 14
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Literal["_lit"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /):
+        """
+        usage.pandas: 39
         """
         ...
 
@@ -155,21 +890,7 @@ class Series:
         ...
 
     @overload
-    def __add__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 13
-        """
-        ...
-
-    @overload
     def __add__(self, _0: numpy.ndarray, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __add__(self, _0: numpy.int64, /):
         """
         usage.dask: 2
         """
@@ -184,9 +905,18 @@ class Series:
 
     def __add__(self, _0: object, /):
         """
-        usage.dask: 55
+        usage.dask: 57
+        usage.koalas: 121
         usage.modin: 1
         usage.pandas: 39
+        """
+        ...
+
+    @overload
+    def __and__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 5
+        usage.koalas: 3
         """
         ...
 
@@ -197,16 +927,10 @@ class Series:
         """
         ...
 
-    @overload
-    def __and__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 5
-        """
-        ...
-
     def __and__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
         """
         usage.dask: 5
+        usage.koalas: 3
         usage.pandas: 3
         """
         ...
@@ -220,6 +944,52 @@ class Series:
     def __contains__(self, _0: Literal["bool"], /):
         """
         usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["c"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["a"], /):
+        """
+        usage.dask: 1
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["b"], /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 24
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: int, /):
+        """
+        usage.dask: 5
+        usage.koalas: 32
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: numpy.int64, /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
@@ -238,35 +1008,7 @@ class Series:
         ...
 
     @overload
-    def __eq__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 24
-        """
-        ...
-
-    @overload
     def __eq__(self, _0: Literal["i8"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __eq__(self, _0: int, /):
-        """
-        usage.dask: 5
-        """
-        ...
-
-    @overload
-    def __eq__(self, _0: Literal["a"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __eq__(self, _0: numpy.int64, /):
         """
         usage.dask: 1
         """
@@ -345,8 +1087,24 @@ class Series:
     def __eq__(self, _0: object, /):
         """
         usage.dask: 39
+        usage.koalas: 43
         usage.pandas: 52
         usage.sklearn: 10
+        """
+        ...
+
+    @overload
+    def __floordiv__(self, _0: int, /):
+        """
+        usage.dask: 1
+        usage.koalas: 36
+        """
+        ...
+
+    @overload
+    def __floordiv__(self, _0: numpy.timedelta64, /):
+        """
+        usage.koalas: 3
         """
         ...
 
@@ -358,22 +1116,16 @@ class Series:
         ...
 
     @overload
-    def __floordiv__(self, _0: int, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def __floordiv__(self, _0: float, /):
         """
         usage.dask: 2
         """
         ...
 
-    def __floordiv__(self, _0: Union[int, float, numpy.ndarray, numpy.timedelta64], /):
+    def __floordiv__(self, _0: Union[int, float, numpy.timedelta64, numpy.ndarray], /):
         """
         usage.dask: 3
+        usage.koalas: 39
         usage.pandas: 6
         """
         ...
@@ -382,6 +1134,13 @@ class Series:
     def __ge__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 7
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: int, /):
+        """
+        usage.dask: 6
         """
         ...
 
@@ -403,13 +1162,6 @@ class Series:
     def __ge__(self, _0: Literal["c"], /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __ge__(self, _0: int, /):
-        """
-        usage.dask: 5
         """
         ...
 
@@ -471,486 +1223,8 @@ class Series:
 
     def __ge__(self, _0: object, /):
         """
-        usage.dask: 16
+        usage.dask: 17
         usage.pandas: 7
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: cftime._cftime.DatetimeNoLeap, /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["0001"], /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: slice[Literal["0001-01-01"], Literal["0001-12-30"], Literal["0001-01-01"]],
-        /,
-    ):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, Literal["0001-12-30"], None], /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: slice[
-            cftime._cftime.DatetimeNoLeap,
-            cftime._cftime.DatetimeNoLeap,
-            cftime._cftime.DatetimeNoLeap,
-        ],
-        /,
-    ):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, cftime._cftime.DatetimeNoLeap, None], /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: cftime._cftime.Datetime360Day, /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: slice[
-            cftime._cftime.Datetime360Day,
-            cftime._cftime.Datetime360Day,
-            cftime._cftime.Datetime360Day,
-        ],
-        /,
-    ):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, cftime._cftime.Datetime360Day, None], /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: cftime._cftime.DatetimeJulian, /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: slice[
-            cftime._cftime.DatetimeJulian,
-            cftime._cftime.DatetimeJulian,
-            cftime._cftime.DatetimeJulian,
-        ],
-        /,
-    ):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, cftime._cftime.DatetimeJulian, None], /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: cftime._cftime.DatetimeAllLeap, /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: slice[
-            cftime._cftime.DatetimeAllLeap,
-            cftime._cftime.DatetimeAllLeap,
-            cftime._cftime.DatetimeAllLeap,
-        ],
-        /,
-    ):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, cftime._cftime.DatetimeAllLeap, None], /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: cftime._cftime.DatetimeGregorian, /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: slice[
-            cftime._cftime.DatetimeGregorian,
-            cftime._cftime.DatetimeGregorian,
-            cftime._cftime.DatetimeGregorian,
-        ],
-        /,
-    ):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, cftime._cftime.DatetimeGregorian, None], /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: cftime._cftime.DatetimeProlepticGregorian, /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: slice[
-            cftime._cftime.DatetimeProlepticGregorian,
-            cftime._cftime.DatetimeProlepticGregorian,
-            cftime._cftime.DatetimeProlepticGregorian,
-        ],
-        /,
-    ):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self, _0: slice[None, cftime._cftime.DatetimeProlepticGregorian, None], /
-    ):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: int, /):
-        """
-        usage.dask: 16
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, None, None], /):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["col2"], /):
-        """
-        usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["col1"], /):
-        """
-        usage.modin: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["B"], /):
-        """
-        usage.dask: 1
-        usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["C"], /):
-        """
-        usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["idx"], /):
-        """
-        usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["A"], /):
-        """
-        usage.dask: 4
-        usage.modin: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["amount"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["name"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["id"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["aa"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["bb"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 6
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["Edith"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["-500"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["numbers"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["names"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["more_numbers"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["integers"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["dates"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["Date"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["Close"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["a"], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["b"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["c-d"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["x"], /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["y"], /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[int, int, int]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["25%"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["50%"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["75%"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: pandas.core.indexes.base.Index, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["z"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["d"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Literal["e"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: numpy.ndarray, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def __getitem__(self, _0: object, /):
-        """
-        usage.dask: 72
-        usage.modin: 12
-        usage.xarray: 23
-        """
-        ...
-
-    @overload
-    def __gt__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
-        """
-        usage.pandas: 5
         """
         ...
 
@@ -958,6 +1232,21 @@ class Series:
     def __gt__(self, _0: int, /):
         """
         usage.dask: 55
+        usage.koalas: 12
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: float, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
+        """
+        usage.pandas: 5
         """
         ...
 
@@ -992,12 +1281,30 @@ class Series:
     def __gt__(self, _0: object, /):
         """
         usage.dask: 61
+        usage.koalas: 13
         usage.pandas: 5
         """
         ...
 
+    @overload
+    def __iadd__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def __iadd__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
         """
+        usage.pandas: 2
+        """
+        ...
+
+    def __iadd__(
+        self, _0: Union[numpy.timedelta64, numpy.ndarray, pandas.core.series.Series], /
+    ):
+        """
+        usage.koalas: 1
         usage.pandas: 2
         """
         ...
@@ -1005,6 +1312,7 @@ class Series:
     def __invert__(self, /):
         """
         usage.dask: 1
+        usage.koalas: 1
         usage.xarray: 1
         """
         ...
@@ -1018,6 +1326,7 @@ class Series:
     def __iter__(self, /):
         """
         usage.dask: 4
+        usage.koalas: 2
         usage.modin: 2
         usage.sklearn: 12
         """
@@ -1074,9 +1383,24 @@ class Series:
         ...
 
     @overload
+    def __lt__(self, _0: int, /):
+        """
+        usage.dask: 9
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
     def __lt__(self, _0: Union[numpy.ndarray, numpy.int64, numpy.float64], /):
         """
         usage.pandas: 4
+        """
+        ...
+
+    @overload
+    def __lt__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.dask: 2
         """
         ...
 
@@ -1102,30 +1426,25 @@ class Series:
         ...
 
     @overload
-    def __lt__(self, _0: int, /):
-        """
-        usage.dask: 9
-        """
-        ...
-
-    @overload
     def __lt__(self, _0: float, /):
         """
         usage.dask: 1
         """
         ...
 
-    @overload
-    def __lt__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
     def __lt__(self, _0: object, /):
         """
         usage.dask: 16
+        usage.koalas: 4
         usage.pandas: 4
+        """
+        ...
+
+    @overload
+    def __mod__(self, _0: int, /):
+        """
+        usage.dask: 5
+        usage.koalas: 16
         """
         ...
 
@@ -1136,17 +1455,27 @@ class Series:
         """
         ...
 
-    @overload
-    def __mod__(self, _0: int, /):
+    def __mod__(self, _0: Union[int, numpy.timedelta64, numpy.ndarray], /):
         """
         usage.dask: 5
+        usage.koalas: 16
+        usage.pandas: 57
         """
         ...
 
-    def __mod__(self, _0: Union[int, numpy.ndarray, numpy.timedelta64], /):
+    @overload
+    def __mul__(self, _0: int, /):
         """
-        usage.dask: 5
-        usage.pandas: 57
+        usage.dask: 2
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 4
+        usage.koalas: 6
         """
         ...
 
@@ -1170,23 +1499,10 @@ class Series:
         """
         ...
 
-    @overload
-    def __mul__(self, _0: int, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __mul__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 3
-        """
-        ...
-
     def __mul__(self, _0: object, /):
         """
-        usage.dask: 6
+        usage.dask: 7
+        usage.koalas: 11
         usage.pandas: 29
         """
         ...
@@ -1194,6 +1510,15 @@ class Series:
     def __neg__(self, /):
         """
         usage.dask: 2
+        usage.koalas: 17
+        """
+        ...
+
+    @overload
+    def __or__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 3
+        usage.koalas: 3
         """
         ...
 
@@ -1204,17 +1529,19 @@ class Series:
         """
         ...
 
-    @overload
-    def __or__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 3
-        """
-        ...
-
     def __or__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
         """
         usage.dask: 3
+        usage.koalas: 3
         usage.pandas: 3
+        """
+        ...
+
+    @overload
+    def __pow__(self, _0: int, /):
+        """
+        usage.dask: 3
+        usage.koalas: 1
         """
         ...
 
@@ -1232,17 +1559,33 @@ class Series:
         """
         ...
 
-    @overload
-    def __pow__(self, _0: int, /):
-        """
-        usage.dask: 3
-        """
-        ...
-
     def __pow__(self, _0: Union[float, int, numpy.timedelta64], /):
         """
         usage.dask: 5
+        usage.koalas: 1
         usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.koalas: 48
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 14
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: Literal["_lit"], /):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -1257,13 +1600,6 @@ class Series:
     def __radd__(self, _0: dask.dataframe.core.Scalar, /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __radd__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 13
         """
         ...
 
@@ -1283,7 +1619,8 @@ class Series:
 
     def __radd__(self, _0: object, /):
         """
-        usage.dask: 17
+        usage.dask: 18
+        usage.koalas: 55
         usage.pandas: 46
         """
         ...
@@ -1291,6 +1628,7 @@ class Series:
     def __rand__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 5
+        usage.koalas: 3
         """
         ...
 
@@ -1303,38 +1641,50 @@ class Series:
         ...
 
     @overload
-    def __rmul__(self, _0: object, /):
+    def __rmul__(self, _0: float, /):
         """
-        usage.pandas: 30
+        usage.koalas: 2
+        usage.sklearn: 1
         """
         ...
 
     @overload
     def __rmul__(self, _0: pandas.core.series.Series, /):
         """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __rmul__(self, _0: float, /):
-        """
-        usage.sklearn: 1
+        usage.dask: 4
+        usage.koalas: 6
         """
         ...
 
     @overload
     def __rmul__(self, _0: int, /):
         """
+        usage.koalas: 3
         usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: object, /):
+        """
+        usage.pandas: 30
         """
         ...
 
     def __rmul__(self, _0: object, /):
         """
-        usage.dask: 3
+        usage.dask: 4
+        usage.koalas: 11
         usage.pandas: 30
         usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __ror__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 3
+        usage.koalas: 3
         """
         ...
 
@@ -1345,16 +1695,10 @@ class Series:
         """
         ...
 
-    @overload
-    def __ror__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 3
-        """
-        ...
-
     def __ror__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
         """
         usage.dask: 3
+        usage.koalas: 3
         usage.pandas: 1
         """
         ...
@@ -1362,6 +1706,28 @@ class Series:
     def __rpow__(self, _0: Union[numpy.float64, numpy.int64, numpy.timedelta64], /):
         """
         usage.pandas: 10
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 5
+        usage.koalas: 14
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: Literal["2013-03-11"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -1379,17 +1745,19 @@ class Series:
         """
         ...
 
-    @overload
-    def __rsub__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 5
-        """
-        ...
-
     def __rsub__(self, _0: object, /):
         """
         usage.dask: 10
+        usage.koalas: 16
         usage.pandas: 44
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 8
+        usage.koalas: 5
         """
         ...
 
@@ -1400,16 +1768,10 @@ class Series:
         """
         ...
 
-    @overload
-    def __rtruediv__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 8
-        """
-        ...
-
     def __rtruediv__(self, _0: object, /):
         """
         usage.dask: 8
+        usage.koalas: 5
         usage.pandas: 37
         """
         ...
@@ -1473,9 +1835,17 @@ class Series:
         ...
 
     @overload
-    def __sub__(self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /):
+    def __sub__(self, _0: pandas.core.series.Series, /):
         """
-        usage.pandas: 35
+        usage.dask: 5
+        usage.koalas: 14
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: Literal["2012-01-01"], /):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -1483,6 +1853,21 @@ class Series:
     def __sub__(self, _0: int, /):
         """
         usage.dask: 4
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /):
+        """
+        usage.pandas: 35
         """
         ...
 
@@ -1493,17 +1878,35 @@ class Series:
         """
         ...
 
-    @overload
-    def __sub__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 5
-        """
-        ...
-
     def __sub__(self, _0: object, /):
         """
         usage.dask: 18
+        usage.koalas: 19
         usage.pandas: 35
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 8
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: int, /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: float, /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
@@ -1516,30 +1919,10 @@ class Series:
         """
         ...
 
-    @overload
-    def __truediv__(self, _0: float, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __truediv__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 8
-        """
-        ...
-
-    @overload
-    def __truediv__(self, _0: int, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __truediv__(self, _0: object, /):
         """
         usage.dask: 10
+        usage.koalas: 7
         usage.pandas: 29
         """
         ...
@@ -1568,6 +1951,7 @@ class Series:
     def abs(self, /):
         """
         usage.dask: 3
+        usage.koalas: 2
         """
         ...
 
@@ -1607,6 +1991,18 @@ class Series:
     ):
         """
         usage.dask: 7
+        """
+        ...
+
+    def add_prefix(self, /, prefix: Literal["item_"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    def add_suffix(self, /, suffix: Literal["_item"]):
+        """
+        usage.koalas: 2
         """
         ...
 
@@ -1875,6 +2271,7 @@ class Series:
     def all(self, /):
         """
         usage.dask: 20
+        usage.koalas: 8
         """
         ...
 
@@ -1888,6 +2285,7 @@ class Series:
     def all(self, /, axis: int = ..., skipna: bool = ...):
         """
         usage.dask: 22
+        usage.koalas: 8
         """
         ...
 
@@ -1895,6 +2293,7 @@ class Series:
     def any(self, /):
         """
         usage.dask: 6
+        usage.koalas: 3
         usage.sklearn: 2
         usage.xarray: 1
         """
@@ -1910,14 +2309,31 @@ class Series:
     def any(self, /, axis: int = ..., skipna: bool = ...):
         """
         usage.dask: 8
+        usage.koalas: 3
         usage.sklearn: 2
         usage.xarray: 1
         """
         ...
 
+    @overload
     def append(self, /, to_append: pandas.core.series.Series):
         """
         usage.dask: 2
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def append(self, /, to_append: pandas.core.series.Series, ignore_index: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def append(self, /, to_append: pandas.core.series.Series, ignore_index: bool = ...):
+        """
+        usage.dask: 2
+        usage.koalas: 3
         """
         ...
 
@@ -1925,6 +2341,35 @@ class Series:
     def apply(self, /, func: Callable):
         """
         usage.dask: 6
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: numpy.ufunc):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: numpy.ufunc):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: numpy.ufunc):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Type[str]):
+        """
+        usage.koalas: 11
         """
         ...
 
@@ -1943,11 +2388,51 @@ class Series:
         ...
 
     def apply(
-        self, /, func: Callable, convert_dtype: bool = ..., args: Tuple[None, ...] = ...
+        self,
+        /,
+        func: Union[Callable, Type[str], numpy.ufunc],
+        convert_dtype: bool = ...,
+        args: Tuple[None, ...] = ...,
     ):
         """
         usage.dask: 9
+        usage.koalas: 15
         usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def asof(self, /, where: int):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def asof(self, /, where: List[int]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    def asof(self, /, where: Union[List[int], int]):
+        """
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[numpy.int32]):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[bool]):
+        """
+        usage.koalas: 5
         """
         ...
 
@@ -2039,13 +2524,6 @@ class Series:
         ...
 
     @overload
-    def astype(self, /, dtype: Type[numpy.int32]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def astype(self, /, dtype: Type[numpy.float64], copy: bool):
         """
         usage.sklearn: 1
@@ -2091,16 +2569,13 @@ class Series:
         self,
         /,
         dtype: Union[
-            pandas.core.dtypes.dtypes.CategoricalDtype,
-            numpy.dtype,
-            str,
-            type,
-            Type[int],
+            pandas.core.dtypes.dtypes.CategoricalDtype, numpy.dtype, str, type
         ],
         copy: bool = ...,
     ):
         """
         usage.dask: 53
+        usage.koalas: 6
         usage.sklearn: 10
         usage.xarray: 1
         """
@@ -2109,6 +2584,13 @@ class Series:
     def autocorr(self, /, lag: int):
         """
         usage.dask: 4
+        """
+        ...
+
+    @overload
+    def between(self, /, left: numpy.float64, right: numpy.float64):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -2126,9 +2608,36 @@ class Series:
         """
         ...
 
-    def between(self, /, left: int, right: int, inclusive: bool = ...):
+    def between(
+        self,
+        /,
+        left: Union[int, numpy.float64],
+        right: Union[int, numpy.float64],
+        inclusive: bool = ...,
+    ):
         """
         usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def bfill(self, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def bfill(self, /, inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def bfill(self, /, inplace: bool = ...):
+        """
+        usage.koalas: 3
         """
         ...
 
@@ -2136,6 +2645,30 @@ class Series:
     def clip(self, /, lower: int, upper: int):
         """
         usage.dask: 3
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def clip(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def clip(self, /, lower: int):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def clip(self, /, upper: int):
+        """
+        usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
@@ -2147,21 +2680,7 @@ class Series:
         ...
 
     @overload
-    def clip(self, /, lower: int):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def clip(self, /, lower: None, upper: int):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def clip(self, /, upper: int):
         """
         usage.dask: 1
         """
@@ -2205,11 +2724,12 @@ class Series:
     def clip(
         self,
         /,
-        lower: Union[None, int, float] = ...,
-        upper: Union[float, int, None] = ...,
+        lower: Union[float, int, None] = ...,
+        upper: Union[None, int, float] = ...,
     ):
         """
         usage.dask: 13
+        usage.koalas: 5
         """
         ...
 
@@ -2255,20 +2775,28 @@ class Series:
     def combine_first(self, /, other: pandas.core.series.Series):
         """
         usage.dask: 5
+        usage.koalas: 5
         """
         ...
 
     def copy(self, /):
         """
         usage.dask: 3
+        usage.koalas: 2
         usage.modin: 1
+        """
+        ...
+
+    def corr(self, /, other: pandas.core.series.Series):
+        """
+        usage.koalas: 2
         """
         ...
 
     @overload
     def count(self, /):
         """
-        usage.dask: 8
+        usage.dask: 9
         """
         ...
 
@@ -2288,7 +2816,7 @@ class Series:
 
     def count(self, /, *, axis: Union[Literal["columns"], int] = ...):
         """
-        usage.dask: 10
+        usage.dask: 11
         """
         ...
 
@@ -2316,6 +2844,14 @@ class Series:
     def cummax(self, /):
         """
         usage.dask: 3
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def cummax(self, /, skipna: bool):
+        """
+        usage.koalas: 2
         """
         ...
 
@@ -2329,6 +2865,7 @@ class Series:
     def cummax(self, /, axis: None = ..., skipna: bool = ...):
         """
         usage.dask: 4
+        usage.koalas: 5
         """
         ...
 
@@ -2336,6 +2873,14 @@ class Series:
     def cummin(self, /):
         """
         usage.dask: 3
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def cummin(self, /, skipna: bool):
+        """
+        usage.koalas: 2
         """
         ...
 
@@ -2349,6 +2894,7 @@ class Series:
     def cummin(self, /, axis: None = ..., skipna: bool = ...):
         """
         usage.dask: 4
+        usage.koalas: 5
         """
         ...
 
@@ -2356,6 +2902,14 @@ class Series:
     def cumprod(self, /):
         """
         usage.dask: 3
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def cumprod(self, /, skipna: bool):
+        """
+        usage.koalas: 2
         """
         ...
 
@@ -2369,6 +2923,7 @@ class Series:
     def cumprod(self, /, axis: None = ..., skipna: bool = ...):
         """
         usage.dask: 4
+        usage.koalas: 5
         """
         ...
 
@@ -2376,6 +2931,14 @@ class Series:
     def cumsum(self, /):
         """
         usage.dask: 4
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def cumsum(self, /, skipna: bool):
+        """
+        usage.koalas: 2
         """
         ...
 
@@ -2389,6 +2952,7 @@ class Series:
     def cumsum(self, /, axis: None = ..., skipna: bool = ...):
         """
         usage.dask: 5
+        usage.koalas: 5
         """
         ...
 
@@ -2434,16 +2998,16 @@ class Series:
         ...
 
     @overload
-    def diff(self, /, periods: int):
+    def diff(self, /):
         """
-        usage.dask: 4
+        usage.dask: 3
         """
         ...
 
     @overload
-    def diff(self, /):
+    def diff(self, /, periods: int):
         """
-        usage.dask: 3
+        usage.dask: 4
         """
         ...
 
@@ -2453,17 +3017,23 @@ class Series:
         """
         ...
 
-    @overload
-    def drop_duplicates(self, /):
+    def divmod(self, /, other: int):
         """
-        usage.dask: 6
+        usage.koalas: 2
+        """
+        ...
+
+    def dot(self, /, other: pandas.core.series.Series):
+        """
+        usage.koalas: 3
         """
         ...
 
     @overload
-    def drop_duplicates(self, /, keep: Literal["first"]):
+    def drop_duplicates(self, /):
         """
-        usage.dask: 3
+        usage.dask: 6
+        usage.koalas: 1
         """
         ...
 
@@ -2471,18 +3041,152 @@ class Series:
     def drop_duplicates(self, /, keep: Literal["last"]):
         """
         usage.dask: 3
+        usage.koalas: 2
         """
         ...
 
-    def drop_duplicates(self, /, keep: Literal["last", "first"] = ...):
+    @overload
+    def drop_duplicates(self, /, keep: bool, inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, keep: Literal["first"]):
+        """
+        usage.dask: 3
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, keep: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def drop_duplicates(
+        self, /, keep: Union[Literal["last", "first"], bool] = ..., inplace: bool = ...
+    ):
         """
         usage.dask: 12
+        usage.koalas: 6
         """
         ...
 
+    @overload
+    def droplevel(self, /, level: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def droplevel(self, /, level: Literal["level_1"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def droplevel(self, /, level: List[int]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def droplevel(self, /, level: List[Literal["level_1"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def droplevel(self, /, level: Tuple[int]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def droplevel(self, /, level: Tuple[Literal["level_1"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def droplevel(self, /, level: List[Literal["level_3", "level_1"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def droplevel(self, /, level: Tuple[int, int]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def droplevel(self, /, level: Tuple[Literal["level_2"], Literal["level_3"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def droplevel(self, /, level: List[Tuple[Literal["a", "c"], Literal["1", "3"]]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def droplevel(
+        self,
+        /,
+        level: Union[
+            List[
+                Union[
+                    Literal["level_1", "level_3"],
+                    int,
+                    Tuple[Literal["a", "c"], Literal["1", "3"]],
+                ]
+            ],
+            int,
+            Literal["level_1"],
+            Tuple[Union[Literal["level_1", "level_3", "level_2"], int], ...],
+        ],
+    ):
+        """
+        usage.koalas: 12
+        """
+        ...
+
+    @overload
     def dropna(self, /):
         """
         usage.dask: 7
+        usage.koalas: 3
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def dropna(self, /, inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def dropna(self, /, inplace: bool = ...):
+        """
+        usage.dask: 7
+        usage.koalas: 4
         usage.xarray: 2
         """
         ...
@@ -2506,6 +3210,12 @@ class Series:
         """
         ...
 
+    def expanding(self, /, min_periods: int):
+        """
+        usage.koalas: 3
+        """
+        ...
+
     def explode(self, /):
         """
         usage.dask: 5
@@ -2513,9 +3223,22 @@ class Series:
         ...
 
     @overload
-    def fillna(self, /, value: int, method: None, axis: int, limit: None):
+    def ffill(self, /):
         """
-        usage.dask: 2
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def ffill(self, /, inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def ffill(self, /, inplace: bool = ...):
+        """
+        usage.koalas: 3
         """
         ...
 
@@ -2523,6 +3246,44 @@ class Series:
     def fillna(self, /, value: int):
         """
         usage.dask: 1
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: float):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: int, inplace: bool):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def fillna(self, /, method: Literal["ffill"]):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def fillna(self, /, method: Literal["bfill"]):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: int, method: None, axis: int, limit: None):
+        """
+        usage.dask: 2
         """
         ...
 
@@ -2555,13 +3316,6 @@ class Series:
         ...
 
     @overload
-    def fillna(self, /, method: Literal["ffill"]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def fillna(self, /, method: Literal["ffill"], limit: None):
         """
         usage.dask: 1
@@ -2572,13 +3326,6 @@ class Series:
     def fillna(self, /, value: None, method: Literal["bfill"], axis: int, limit: None):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def fillna(self, /, method: Literal["bfill"]):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -2643,13 +3390,59 @@ class Series:
     def fillna(
         self,
         /,
-        value: Union[pandas.core.series.Series, numpy.float64, int, None] = ...,
-        method: Union[None, Literal["bfill", "ffill", "pad"]] = ...,
+        value: Union[None, int, numpy.float64, pandas.core.series.Series, float] = ...,
+        method: Union[Literal["bfill", "ffill", "pad"], None] = ...,
         axis: int = ...,
         limit: Union[None, int] = ...,
     ):
         """
         usage.dask: 23
+        usage.koalas: 9
+        """
+        ...
+
+    @overload
+    def filter(self, /, items: List[Literal["three", "one"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def filter(self, /, regex: Literal["e$"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def filter(self, /, like: Literal["hre"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def filter(self, /, items: List[Tuple[Literal["one", "three"], Literal["x", "z"]]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def filter(
+        self,
+        /,
+        regex: Literal["e$"] = ...,
+        items: List[
+            Union[
+                Literal["three", "one"],
+                Tuple[Literal["one", "three"], Literal["x", "z"]],
+            ]
+        ] = ...,
+        like: Literal["hre"] = ...,
+    ):
+        """
+        usage.koalas: 4
         """
         ...
 
@@ -2715,6 +3508,26 @@ class Series:
         """
         ...
 
+    def first_valid_index(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def floordiv(self, /, other: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def floordiv(self, /, other: float):
+        """
+        usage.koalas: 1
+        """
+        ...
+
     @overload
     def floordiv(self, /, other: pandas.core.series.Series, fill_value: int):
         """
@@ -2730,16 +3543,42 @@ class Series:
         ...
 
     def floordiv(
-        self, /, other: Union[int, pandas.core.series.Series], fill_value: int
+        self,
+        /,
+        other: Union[pandas.core.series.Series, int, float],
+        fill_value: int = ...,
     ):
         """
         usage.dask: 2
+        usage.koalas: 2
         """
         ...
 
     def ge(self, /, other: pandas.core.series.Series, fill_value: int):
         """
         usage.dask: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: pandas.core.series.Series):
+        """
+        usage.dask: 20
+        usage.koalas: 72
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: pandas.core.series.Series, axis: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: pandas.core.series.Series, axis: Literal["index"]):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -2761,13 +3600,6 @@ class Series:
     def groupby(self, /, by: pandas.core.series.Series, group_keys: bool):
         """
         usage.dask: 4
-        """
-        ...
-
-    @overload
-    def groupby(self, /, by: pandas.core.series.Series):
-        """
-        usage.dask: 20
         """
         ...
 
@@ -2929,6 +3761,7 @@ class Series:
     ):
         """
         usage.dask: 65
+        usage.koalas: 74
         usage.xarray: 1
         """
         ...
@@ -2939,9 +3772,33 @@ class Series:
         """
         ...
 
+    @overload
+    def head(self, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
     def head(self, /, n: int):
         """
         usage.dask: 7
+        usage.koalas: 4
+        """
+        ...
+
+    def head(self, /, n: int = ...):
+        """
+        usage.dask: 7
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def idxmax(self, /):
+        """
+        usage.dask: 2
+        usage.koalas: 3
         """
         ...
 
@@ -2949,6 +3806,7 @@ class Series:
     def idxmax(self, /, skipna: bool):
         """
         usage.dask: 4
+        usage.koalas: 3
         """
         ...
 
@@ -2966,22 +3824,46 @@ class Series:
         """
         ...
 
-    @overload
-    def idxmax(self, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    def idxmax(self, /, axis: int = ..., skipna: bool = ...):
+    def idxmax(self, /, skipna: bool = ..., axis: int = ...):
         """
         usage.dask: 8
+        usage.koalas: 6
         """
         ...
 
+    @overload
+    def idxmin(self, /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
     def idxmin(self, /, skipna: bool):
         """
         usage.dask: 4
+        usage.koalas: 3
+        """
+        ...
+
+    def idxmin(self, /, skipna: bool = ...):
+        """
+        usage.dask: 4
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def isin(self, /, values: List[Literal["lama", "cow"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def isin(self, /, values: set):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -2999,29 +3881,51 @@ class Series:
         """
         ...
 
-    def isin(self, /, values: Union[pandas.core.series.Series, List[int]]):
+    def isin(
+        self,
+        /,
+        values: Union[
+            List[Union[Literal["lama", "cow"], int]], pandas.core.series.Series, set
+        ],
+    ):
         """
         usage.dask: 6
+        usage.koalas: 2
         """
         ...
 
     def isnull(self, /):
         """
         usage.dask: 5
+        usage.koalas: 8
         usage.xarray: 1
+        """
+        ...
+
+    def item(self, /):
+        """
+        usage.koalas: 1
         """
         ...
 
     def items(self, /):
         """
         usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
     def iteritems(self, /):
         """
         usage.dask: 4
+        usage.koalas: 1
         usage.xarray: 1
+        """
+        ...
+
+    def keys(self, /):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -3087,6 +3991,12 @@ class Series:
         """
         ...
 
+    def last_valid_index(self, /):
+        """
+        usage.koalas: 3
+        """
+        ...
+
     def le(self, /, other: pandas.core.series.Series, fill_value: int):
         """
         usage.dask: 1
@@ -3099,10 +4009,23 @@ class Series:
         """
         ...
 
-    @overload
-    def map(self, /, arg: Callable, na_action: None):
+    def mad(self, /):
         """
-        usage.dask: 3
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def map(self, /, arg: dict):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def map(self, /, arg: collections.defaultdict):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -3110,6 +4033,14 @@ class Series:
     def map(self, /, arg: Callable):
         """
         usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def map(self, /, arg: Callable, na_action: None):
+        """
+        usage.dask: 3
         """
         ...
 
@@ -3144,23 +4075,25 @@ class Series:
     def map(
         self,
         /,
-        arg: Union[Callable, Dict[numpy.int64, numpy.int64], pandas.core.series.Series],
+        arg: Union[pandas.core.series.Series, collections.defaultdict, dict, Callable],
         na_action: None = ...,
     ):
         """
         usage.dask: 16
-        """
-        ...
-
-    @overload
-    def mask(self, /, cond: pandas.core.series.Series, other: float):
-        """
-        usage.dask: 1
+        usage.koalas: 3
         """
         ...
 
     @overload
     def mask(self, /, cond: pandas.core.series.Series):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def mask(self, /, cond: pandas.core.series.Series, other: float):
         """
         usage.dask: 1
         """
@@ -3183,6 +4116,15 @@ class Series:
     ):
         """
         usage.dask: 4
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def max(self, /):
+        """
+        usage.dask: 11
+        usage.koalas: 3
         """
         ...
 
@@ -3198,13 +4140,6 @@ class Series:
     def max(self, /, axis: int, skipna: bool):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    def max(self, /):
-        """
-        usage.dask: 11
         """
         ...
 
@@ -3225,7 +4160,16 @@ class Series:
     def max(self, /, axis: Union[Literal["columns"], int] = ..., skipna: bool = ...):
         """
         usage.dask: 19
+        usage.koalas: 3
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def mean(self, /):
+        """
+        usage.dask: 17
+        usage.koalas: 8
         """
         ...
 
@@ -3241,13 +4185,6 @@ class Series:
     def mean(self, /, axis: int, skipna: bool):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def mean(self, /):
-        """
-        usage.dask: 17
         """
         ...
 
@@ -3268,12 +4205,14 @@ class Series:
     def mean(self, /, axis: Union[Literal["columns"], int] = ..., skipna: bool = ...):
         """
         usage.dask: 22
+        usage.koalas: 8
         usage.xarray: 1
         """
         ...
 
     def median(self, /):
         """
+        usage.koalas: 1
         usage.xarray: 1
         """
         ...
@@ -3299,6 +4238,14 @@ class Series:
         ...
 
     @overload
+    def min(self, /):
+        """
+        usage.dask: 7
+        usage.koalas: 52
+        """
+        ...
+
+    @overload
     def min(self, /, skipna: bool):
         """
         usage.dask: 3
@@ -3310,13 +4257,6 @@ class Series:
     def min(self, /, axis: int, skipna: bool):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    def min(self, /):
-        """
-        usage.dask: 7
         """
         ...
 
@@ -3337,7 +4277,22 @@ class Series:
     def min(self, /, axis: Union[Literal["columns"], int] = ..., skipna: bool = ...):
         """
         usage.dask: 14
+        usage.koalas: 52
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def mod(self, /, other: pandas.core.series.Series):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def mod(self, /, other: int):
+        """
+        usage.koalas: 3
         """
         ...
 
@@ -3355,9 +4310,12 @@ class Series:
         """
         ...
 
-    def mod(self, /, other: Union[int, pandas.core.series.Series], fill_value: int):
+    def mod(
+        self, /, other: Union[pandas.core.series.Series, int], fill_value: int = ...
+    ):
         """
         usage.dask: 2
+        usage.koalas: 7
         """
         ...
 
@@ -3402,9 +4360,25 @@ class Series:
         """
         ...
 
+    @overload
     def nlargest(self, /, n: int):
         """
         usage.dask: 4
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def nlargest(self, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    def nlargest(self, /, n: int = ...):
+        """
+        usage.dask: 4
+        usage.koalas: 3
         """
         ...
 
@@ -3417,18 +4391,77 @@ class Series:
     def notnull(self, /):
         """
         usage.dask: 3
+        usage.koalas: 2
         """
         ...
 
+    @overload
     def nsmallest(self, /, n: int):
         """
         usage.dask: 2
+        usage.koalas: 1
         """
         ...
 
+    @overload
+    def nsmallest(self, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    def nsmallest(self, /, n: int = ...):
+        """
+        usage.dask: 2
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
     def nunique(self, /):
         """
         usage.dask: 5
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def nunique(self, /, dropna: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def nunique(self, /, dropna: bool = ...):
+        """
+        usage.dask: 5
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def pct_change(self, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def pct_change(self, /, periods: int):
+        """
+        usage.koalas: 8
+        """
+        ...
+
+    def pct_change(self, /, periods: int = ...):
+        """
+        usage.koalas: 10
+        """
+        ...
+
+    def pop(self, /, item: Tuple[Literal["lama"], Literal["speed"]]):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -3462,6 +4495,21 @@ class Series:
         ...
 
     @overload
+    def prod(self, /):
+        """
+        usage.dask: 2
+        usage.koalas: 7
+        """
+        ...
+
+    @overload
+    def prod(self, /, min_count: int):
+        """
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
     def prod(self, /, skipna: bool, min_count: int):
         """
         usage.xarray: 1
@@ -3470,13 +4518,6 @@ class Series:
 
     @overload
     def prod(self, /, axis: int, skipna: bool):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def prod(self, /):
         """
         usage.dask: 2
         """
@@ -3512,6 +4553,7 @@ class Series:
     ):
         """
         usage.dask: 7
+        usage.koalas: 13
         usage.xarray: 1
         """
         ...
@@ -3577,9 +4619,70 @@ class Series:
         """
         ...
 
+    @overload
+    def rank(self, /):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def rank(self, /, ascending: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rank(self, /, method: Literal["min"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rank(self, /, method: Literal["max"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rank(self, /, method: Literal["first"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rank(self, /, method: Literal["dense"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def rank(self, /, method: Literal["dense"], ascending: bool):
         """
         usage.xarray: 1
+        """
+        ...
+
+    def rank(
+        self,
+        /,
+        method: Literal["dense", "first", "max", "min"] = ...,
+        ascending: bool = ...,
+    ):
+        """
+        usage.koalas: 7
+        usage.xarray: 1
+        """
+        ...
+
+    def rdivmod(self, /, other: int):
+        """
+        usage.koalas: 2
         """
         ...
 
@@ -3627,6 +4730,140 @@ class Series:
         ...
 
     @overload
+    def rename(self, /, index: Literal["A"]):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["b"]):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["a"]):
+        """
+        usage.dask: 1
+        usage.koalas: 13
+        """
+        ...
+
+    @overload
+    def rename(self, /):
+        """
+        usage.dask: 1
+        usage.koalas: 54
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: None):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Tuple[Literal["x"], Literal["b"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Tuple[Literal["x"], Literal["a"]]):
+        """
+        usage.koalas: 5
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["d"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["car_id"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["B"]):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["ABC"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["c"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["left"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["y"]):
+        """
+        usage.dask: 2
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["z"], *, inplace: bool):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["end_date"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["col1"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["col2"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def rename(self, /, index: Literal["idx"]):
         """
         usage.dask: 1
@@ -3635,34 +4872,6 @@ class Series:
 
     @overload
     def rename(self, /, index: Literal["renamed"]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def rename(self, /, index: Literal["y"]):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def rename(self, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def rename(self, /, index: None):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def rename(self, /, index: Literal["z"], *, inplace: bool):
         """
         usage.dask: 1
         """
@@ -3697,13 +4906,6 @@ class Series:
         ...
 
     @overload
-    def rename(self, /, index: Literal["A"]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def rename(self, /, index: Literal["Name"]):
         """
         usage.dask: 1
@@ -3712,27 +4914,6 @@ class Series:
 
     @overload
     def rename(self, /, index: Literal["Num"]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def rename(self, /, index: Literal["a"]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def rename(self, /, index: Literal["b"]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def rename(self, /, index: Literal["B"]):
         """
         usage.dask: 1
         """
@@ -3748,12 +4929,60 @@ class Series:
     def rename(
         self,
         /,
-        index: Union[str, pandas.core.series.Series, None, Callable] = ...,
+        index: Union[
+            Callable,
+            None,
+            pandas.core.series.Series,
+            str,
+            Tuple[Literal["x"], Literal["b", "a"]],
+        ] = ...,
         *,
         inplace: bool = ...,
     ):
         """
         usage.dask: 25
+        usage.koalas: 93
+        """
+        ...
+
+    @overload
+    def repeat(self, /, repeats: pandas.core.series.Series):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def repeat(self, /, repeats: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    def repeat(self, /, repeats: Union[int, pandas.core.series.Series]):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def replace(self, /, to_replace: Dict[float, None]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def replace(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def replace(self, /, to_replace: dict):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -3792,15 +5021,10 @@ class Series:
         """
         ...
 
-    def replace(
-        self,
-        /,
-        to_replace: Union[Dict[int, int], int, Literal["c"]],
-        value: Union[None, float, int] = ...,
-        regex: bool = ...,
-    ):
+    def replace(self, /, value: Union[None, float, int] = ..., regex: bool = ...):
         """
         usage.dask: 5
+        usage.koalas: 4
         """
         ...
 
@@ -4422,22 +5646,94 @@ class Series:
         ...
 
     @overload
-    def reset_index(self, /, drop: bool):
+    def reset_index(self, /):
         """
-        usage.dask: 6
+        usage.dask: 1
+        usage.koalas: 8
         """
         ...
 
     @overload
-    def reset_index(self, /):
+    def reset_index(self, /, name: Literal["values"]):
         """
-        usage.dask: 1
+        usage.koalas: 2
         """
         ...
 
-    def reset_index(self, /, drop: bool = ...):
+    @overload
+    def reset_index(self, /, drop: bool):
+        """
+        usage.dask: 6
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, drop: bool, inplace: bool):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, level: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, level: List[int]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, name: Literal["s"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, drop: bool, name: Literal["s"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def reset_index(self, /, inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def reset_index(
+        self,
+        /,
+        drop: bool = ...,
+        name: Literal["s", "values"] = ...,
+        inplace: bool = ...,
+    ):
         """
         usage.dask: 7
+        usage.koalas: 24
+        """
+        ...
+
+    @overload
+    def rmod(self, /, other: pandas.core.series.Series):
+        """
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def rmod(self, /, other: int):
+        """
+        usage.koalas: 3
         """
         ...
 
@@ -4455,9 +5751,12 @@ class Series:
         """
         ...
 
-    def rmod(self, /, other: Union[int, pandas.core.series.Series], fill_value: int):
+    def rmod(
+        self, /, other: Union[pandas.core.series.Series, int], fill_value: int = ...
+    ):
         """
         usage.dask: 2
+        usage.koalas: 7
         """
         ...
 
@@ -4482,6 +5781,14 @@ class Series:
         ...
 
     @overload
+    def rolling(self, /, window: int):
+        """
+        usage.dask: 2
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
     def rolling(self, /, window: int, min_periods: None, center: bool):
         """
         usage.xarray: 1
@@ -4492,6 +5799,13 @@ class Series:
     def rolling(self, /, window: int, min_periods: int, center: bool):
         """
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def rolling(self, /, window: Literal["2D"]):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -4515,13 +5829,6 @@ class Series:
     def rolling(self, /, window: int, axis: int):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def rolling(self, /, window: int):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -4617,7 +5924,7 @@ class Series:
         self,
         /,
         window: Union[
-            Literal["3S", "2S", "1S"], int, pandas._libs.tslibs.offsets.Second
+            Literal["3S", "2S", "1S", "2D"], int, pandas._libs.tslibs.offsets.Second
         ],
         min_periods: Union[None, int] = ...,
         center: bool = ...,
@@ -4625,7 +5932,8 @@ class Series:
         axis: int = ...,
     ):
         """
-        usage.dask: 18
+        usage.dask: 19
+        usage.koalas: 3
         usage.xarray: 3
         """
         ...
@@ -4634,6 +5942,7 @@ class Series:
     def round(self, /, decimals: int):
         """
         usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
@@ -4647,6 +5956,7 @@ class Series:
     def round(self, /, decimals: int = ...):
         """
         usage.dask: 2
+        usage.koalas: 1
         """
         ...
 
@@ -4787,6 +6097,13 @@ class Series:
         ...
 
     @overload
+    def shift(self, /, periods: int, fill_value: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def shift(self, /, periods: int):
         """
         usage.dask: 6
@@ -4874,6 +6191,7 @@ class Series:
     def shift(self, /, periods: int = ..., freq: object = ...):
         """
         usage.dask: 32
+        usage.koalas: 1
         usage.xarray: 1
         """
         ...
@@ -4882,6 +6200,7 @@ class Series:
     def sort_index(self, /):
         """
         usage.dask: 3
+        usage.koalas: 247
         """
         ...
 
@@ -4889,12 +6208,42 @@ class Series:
     def sort_index(self, /, ascending: bool):
         """
         usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
-    def sort_index(self, /, ascending: bool = ...):
+    @overload
+    def sort_index(self, /, na_position: Literal["first"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_index(self, /, inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_index(self, /, level: List[int]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def sort_index(
+        self,
+        /,
+        ascending: bool = ...,
+        na_position: Literal["first"] = ...,
+        inplace: bool = ...,
+        level: List[int] = ...,
+    ):
         """
         usage.dask: 4
+        usage.koalas: 251
         """
         ...
 
@@ -4902,6 +6251,7 @@ class Series:
     def sort_values(self, /):
         """
         usage.dask: 4
+        usage.koalas: 11
         """
         ...
 
@@ -4909,12 +6259,42 @@ class Series:
     def sort_values(self, /, ascending: bool):
         """
         usage.dask: 1
+        usage.koalas: 1
         """
         ...
 
-    def sort_values(self, /, ascending: bool = ...):
+    @overload
+    def sort_values(self, /, na_position: Literal["first"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, inplace: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def sort_values(
+        self,
+        /,
+        ascending: bool = ...,
+        na_position: Literal["first"] = ...,
+        inplace: bool = ...,
+    ):
         """
         usage.dask: 5
+        usage.koalas: 14
+        """
+        ...
+
+    @overload
+    def squeeze(self, /):
+        """
+        usage.dask: 1
+        usage.koalas: 4
         """
         ...
 
@@ -4925,24 +6305,11 @@ class Series:
         """
         ...
 
-    @overload
-    def squeeze(self, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def squeeze(self, /, axis: int = ...):
         """
         usage.dask: 1
+        usage.koalas: 4
         usage.modin: 1
-        """
-        ...
-
-    @overload
-    def std(self, /, axis: int, skipna: bool):
-        """
-        usage.dask: 1
         """
         ...
 
@@ -4950,6 +6317,14 @@ class Series:
     def std(self, /):
         """
         usage.dask: 3
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def std(self, /, axis: int, skipna: bool):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -4997,6 +6372,7 @@ class Series:
     ):
         """
         usage.dask: 9
+        usage.koalas: 3
         """
         ...
 
@@ -5021,6 +6397,15 @@ class Series:
         ...
 
     @overload
+    def sum(self, /):
+        """
+        usage.dask: 35
+        usage.koalas: 11
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
     def sum(self, /, skipna: bool):
         """
         usage.dask: 1
@@ -5032,14 +6417,6 @@ class Series:
     def sum(self, /, skipna: bool, min_count: int):
         """
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def sum(self, /):
-        """
-        usage.dask: 32
-        usage.sklearn: 1
         """
         ...
 
@@ -5073,27 +6450,137 @@ class Series:
 
     def sum(self, /, axis: Union[Literal["columns"], int] = ..., skipna: bool = ...):
         """
-        usage.dask: 38
+        usage.dask: 41
+        usage.koalas: 11
         usage.sklearn: 1
         usage.xarray: 2
         """
         ...
 
-    def tail(self, /, n: int):
+    @overload
+    def tail(self, /):
         """
-        usage.dask: 4
+        usage.koalas: 1
         """
         ...
 
+    @overload
+    def tail(self, /, n: int):
+        """
+        usage.dask: 4
+        usage.koalas: 5
+        """
+        ...
+
+    def tail(self, /, n: int = ...):
+        """
+        usage.dask: 4
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def take(self, /, indices: List[int]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def take(self, /, indices: range):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
     def take(self, /, indices: numpy.ndarray):
         """
         usage.dask: 1
         """
         ...
 
+    def take(self, /, indices: Union[numpy.ndarray, range, List[int]]):
+        """
+        usage.dask: 1
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: None,
+        sep: Literal[","],
+        na_rep: Literal[""],
+        columns: None,
+        header: bool,
+        index: bool,
+        quotechar: Literal['"'],
+        date_format: None,
+        escapechar: None,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_csv(self, /, header: bool, index: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_csv(
+        self,
+        /,
+        path_or_buf: None,
+        sep: Literal[","],
+        na_rep: Literal["null"],
+        columns: None,
+        header: bool,
+        index: bool,
+        quotechar: Literal['"'],
+        date_format: None,
+        escapechar: None,
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_csv(self, /, na_rep: Literal["null"], header: bool, index: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def to_csv(
+        self,
+        /,
+        header: bool,
+        index: bool,
+        path_or_buf: None = ...,
+        sep: Literal[","] = ...,
+        na_rep: Literal["null", ""] = ...,
+        columns: None = ...,
+        quotechar: Literal['"'] = ...,
+        date_format: None = ...,
+        escapechar: None = ...,
+    ):
+        """
+        usage.koalas: 4
+        """
+        ...
+
     def to_dict(self, /):
         """
         usage.dask: 5
+        usage.koalas: 1
         """
         ...
 
@@ -5101,8 +6588,17 @@ class Series:
     def to_frame(self, /):
         """
         usage.dask: 12
+        usage.koalas: 5
         usage.sklearn: 2
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def to_frame(self, /, name: Literal["a"]):
+        """
+        usage.dask: 3
+        usage.koalas: 2
         """
         ...
 
@@ -5141,32 +6637,285 @@ class Series:
         """
         ...
 
-    @overload
-    def to_frame(self, /, name: Literal["a"]):
-        """
-        usage.dask: 3
-        """
-        ...
-
     def to_frame(
-        self, /, name: Union[Literal["a", "A", "__series__", "bar", "s"], None] = ...
+        self, /, name: Union[None, Literal["a", "A", "__series__", "bar", "s"]] = ...
     ):
         """
         usage.dask: 27
+        usage.koalas: 7
         usage.sklearn: 2
         usage.xarray: 2
         """
         ...
 
+    def to_markdown(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: None):
+        """
+        usage.koalas: 7
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["B"]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["A"]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["animal"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["Col1"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["Col2"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["x"]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["koalas"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["dates"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["id"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def to_string(
+        self, /, dtype: numpy.dtype, name: Tuple[Literal["num"], Literal["b"]]
+    ):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["numeric1"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["one"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["class"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["0.5"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["b"]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["shield"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["max_speed"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["value"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["a"]):
+        """
+        usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["1"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["C"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["value1"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["c"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["my_name"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["0"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Tuple[Literal["x"], Literal["a"]]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["species"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["population"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def to_string(self, /, dtype: numpy.dtype, name: Literal["Koalas"]):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def to_string(self, /, length: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def to_string(self, /, max_rows: int):
         """
         usage.dask: 1
         """
         ...
 
+    def to_string(
+        self,
+        /,
+        dtype: numpy.dtype = ...,
+        name: Union[str, Tuple[Literal["num", "x"], Literal["b", "a"]], None] = ...,
+    ):
+        """
+        usage.dask: 1
+        usage.koalas: 51
+        """
+        ...
+
     def tolist(self, /):
         """
         usage.dask: 4
+        usage.koalas: 2
+        """
+        ...
+
+    def transform(self, /, func: Callable):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def truediv(self, /, other: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def truediv(self, /, other: float):
+        """
+        usage.koalas: 2
         """
         ...
 
@@ -5184,9 +6933,63 @@ class Series:
         """
         ...
 
-    def truediv(self, /, other: Union[int, pandas.core.series.Series], fill_value: int):
+    def truediv(
+        self,
+        /,
+        other: Union[pandas.core.series.Series, int, float],
+        fill_value: int = ...,
+    ):
         """
         usage.dask: 6
+        usage.koalas: 4
+        """
+        ...
+
+    @overload
+    def truncate(self, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def truncate(self, /, before: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def truncate(self, /, after: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def truncate(self, /, copy: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def truncate(self, /, before: int, after: int, copy: bool):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def truncate(self, /, before: int, after: int):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def truncate(self, /, before: int = ..., after: int = ..., copy: bool = ...):
+        """
+        usage.koalas: 7
         """
         ...
 
@@ -5196,9 +6999,30 @@ class Series:
         """
         ...
 
+    @overload
+    def unstack(self, /, level: int):
+        """
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
     def unstack(self, /):
         """
         usage.xarray: 1
+        """
+        ...
+
+    def unstack(self, /, level: int = ...):
+        """
+        usage.koalas: 2
+        usage.xarray: 1
+        """
+        ...
+
+    def update(self, /, other: pandas.core.series.Series):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -5206,6 +7030,14 @@ class Series:
     def value_counts(self, /):
         """
         usage.dask: 8
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def value_counts(self, /, normalize: bool):
+        """
+        usage.koalas: 6
         """
         ...
 
@@ -5213,6 +7045,22 @@ class Series:
     def value_counts(self, /, ascending: bool):
         """
         usage.dask: 1
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def value_counts(self, /, normalize: bool, dropna: bool):
+        """
+        usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def value_counts(self, /, ascending: bool, dropna: bool):
+        """
+        usage.dask: 1
+        usage.koalas: 6
         """
         ...
 
@@ -5230,16 +7078,20 @@ class Series:
         """
         ...
 
-    @overload
-    def value_counts(self, /, ascending: bool, dropna: bool):
+    def value_counts(
+        self, /, ascending: bool = ..., normalize: bool = ..., dropna: bool = ...
+    ):
         """
-        usage.dask: 1
+        usage.dask: 13
+        usage.koalas: 26
         """
         ...
 
-    def value_counts(self, /, ascending: bool = ..., dropna: bool = ...):
+    @overload
+    def var(self, /):
         """
-        usage.dask: 13
+        usage.dask: 4
+        usage.koalas: 3
         """
         ...
 
@@ -5255,13 +7107,6 @@ class Series:
     def var(self, /, axis: int, skipna: bool):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def var(self, /):
-        """
-        usage.dask: 4
         """
         ...
 
@@ -5309,6 +7154,7 @@ class Series:
     ):
         """
         usage.dask: 11
+        usage.koalas: 3
         usage.xarray: 1
         """
         ...
@@ -5317,6 +7163,7 @@ class Series:
     def where(self, /, cond: pandas.core.series.Series):
         """
         usage.dask: 1
+        usage.koalas: 1
         usage.xarray: 1
         """
         ...
@@ -5368,6 +7215,13 @@ class Series:
     ):
         """
         usage.dask: 8
+        usage.koalas: 1
         usage.xarray: 1
+        """
+        ...
+
+    def xs(self, /, key: Tuple[Literal["a"], Literal["lama"], Literal["speed"]]):
+        """
+        usage.koalas: 1
         """
         ...

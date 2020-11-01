@@ -5,7 +5,190 @@ from typing import *
 def concat(objs: List[pandas.core.frame.DataFrame]):
     """
     usage.dask: 18
+    usage.koalas: 4
     usage.modin: 3
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[pandas.core.series.Series],
+    axis: int,
+    join: Literal["inner"],
+    ignore_index: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[Union[pandas.core.series.Series, pandas.core.frame.DataFrame]],
+    axis: int,
+    join: Literal["inner"],
+    ignore_index: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[Union[pandas.core.frame.DataFrame, pandas.core.series.Series]],
+    axis: int,
+    join: Literal["inner"],
+    ignore_index: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[pandas.core.frame.DataFrame],
+    axis: int,
+    join: Literal["inner"],
+    ignore_index: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[pandas.core.series.Series],
+    axis: int,
+    join: Literal["outer"],
+    ignore_index: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[Union[pandas.core.series.Series, pandas.core.frame.DataFrame]],
+    axis: int,
+    join: Literal["outer"],
+    ignore_index: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[Union[pandas.core.frame.DataFrame, pandas.core.series.Series]],
+    axis: int,
+    join: Literal["outer"],
+    ignore_index: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[pandas.core.frame.DataFrame],
+    axis: int,
+    join: Literal["outer"],
+    ignore_index: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[pandas.core.frame.DataFrame],
+    join: Literal["inner"],
+    ignore_index: bool,
+    sort: bool,
+):
+    """
+    usage.koalas: 2
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[Union[pandas.core.series.Series, pandas.core.frame.DataFrame]],
+    join: Literal["inner"],
+    ignore_index: bool,
+    sort: bool,
+):
+    """
+    usage.koalas: 3
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[Union[pandas.core.frame.DataFrame, pandas.core.series.Series]],
+    join: Literal["inner"],
+    ignore_index: bool,
+    sort: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[pandas.core.frame.DataFrame],
+    join: Literal["outer"],
+    ignore_index: bool,
+    sort: bool,
+):
+    """
+    usage.koalas: 2
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[Union[pandas.core.series.Series, pandas.core.frame.DataFrame]],
+    join: Literal["outer"],
+    ignore_index: bool,
+    sort: bool,
+):
+    """
+    usage.koalas: 3
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[Union[pandas.core.frame.DataFrame, pandas.core.series.Series]],
+    join: Literal["outer"],
+    ignore_index: bool,
+    sort: bool,
+):
+    """
+    usage.koalas: 1
     """
     ...
 
@@ -38,17 +221,17 @@ def concat(objs: List[pandas.core.frame.DataFrame], join: Literal["outer"], sort
 
 
 @overload
-def concat(objs: List[pandas.core.frame.DataFrame], join: Literal["outer"]):
+def concat(objs: List[pandas.core.series.Series], join: Literal["outer"]):
     """
-    usage.dask: 12
+    usage.dask: 9
     """
     ...
 
 
 @overload
-def concat(objs: List[pandas.core.series.Series], join: Literal["outer"]):
+def concat(objs: List[pandas.core.frame.DataFrame], join: Literal["outer"]):
     """
-    usage.dask: 9
+    usage.dask: 12
     """
     ...
 
@@ -323,15 +506,17 @@ def concat(objs: List[pandas.core.frame.DataFrame], ignore_index: bool):
 
 def concat(
     objs: Union[
-        List[Union[pandas.core.series.Series, pandas.core.frame.DataFrame]],
+        List[Union[pandas.core.frame.DataFrame, pandas.core.series.Series]],
         Dict[int, pandas.core.series.Series],
     ],
     axis: int = ...,
     join: Literal["outer", "inner"] = ...,
+    ignore_index: bool = ...,
     sort: bool = ...,
 ):
     """
     usage.dask: 148
+    usage.koalas: 24
     usage.modin: 10
     usage.sklearn: 3
     """

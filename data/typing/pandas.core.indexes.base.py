@@ -95,9 +95,13 @@ class Index:
     array: object
 
     # usage.dask: 13
+    # usage.koalas: 1
     # usage.sklearn: 2
     # usage.xarray: 6
     dtype: object
+
+    # usage.koalas: 2
+    hasnans: object
 
     # usage.dask: 1
     # usage.xarray: 2
@@ -108,12 +112,23 @@ class Index:
     is_unique: object
 
     # usage.dask: 16
+    # usage.koalas: 4
     # usage.modin: 3
     # usage.xarray: 13
-    name: Union[None, Literal["A", "a", "id"], int]
+    name: Union[None, Literal["A", "a", "id", "lvl_1", "columns"], int]
 
     # usage.dask: 3
-    names: List[str]
+    # usage.koalas: 56
+    names: Union[
+        List[
+            Union[
+                str,
+                None,
+                Tuple[Literal["b", "x", "a"], Literal["2", "group", "lkey", "aa"]],
+            ]
+        ],
+        pandas.core.indexes.frozen.FrozenList,
+    ]
 
     # usage.xarray: 1
     nlevels: object
@@ -133,6 +148,71 @@ class Index:
     # usage.xarray: 6
     values: object
 
+    def __add__(self, _0: Literal["x"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["a"], /):
+        """
+        usage.dask: 8
+        usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["bar"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["C"], /):
+        """
+        usage.dask: 2
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["A"], /):
+        """
+        usage.dask: 7
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["id"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["level_1"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["i32"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["i64"], /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
     @overload
     def __contains__(self, _0: Literal["divisions"], /):
         """
@@ -151,6 +231,13 @@ class Index:
     def __contains__(self, _0: Literal["x"], /):
         """
         usage.dask: 6
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: str, /):
+        """
+        usage.dask: 3
         """
         ...
 
@@ -183,23 +270,9 @@ class Index:
         ...
 
     @overload
-    def __contains__(self, _0: str, /):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
     def __contains__(self, _0: Literal["fruit"], /):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __contains__(self, _0: Literal["A"], /):
-        """
-        usage.dask: 7
         """
         ...
 
@@ -218,23 +291,9 @@ class Index:
         ...
 
     @overload
-    def __contains__(self, _0: Literal["a"], /):
-        """
-        usage.dask: 8
-        """
-        ...
-
-    @overload
     def __contains__(self, _0: Literal["numbers"], /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __contains__(self, _0: Literal["C"], /):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -577,6 +636,14 @@ class Index:
     def __contains__(self, _0: str, /):
         """
         usage.dask: 130
+        usage.koalas: 9
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: List[Literal["bhello", "f", "i64", "i32"]], /):
+        """
+        usage.koalas: 6
         """
         ...
 
@@ -645,6 +712,7 @@ class Index:
     ):
         """
         usage.dask: 14
+        usage.koalas: 6
         usage.pandas: 4
         usage.sklearn: 6
         """
@@ -654,17 +722,9 @@ class Index:
     def __getitem__(self, _0: int, /):
         """
         usage.dask: 17
+        usage.koalas: 7
         usage.modin: 3
         usage.xarray: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: numpy.ndarray, /):
-        """
-        usage.dask: 1
-        usage.sklearn: 2
-        usage.xarray: 2
         """
         ...
 
@@ -672,7 +732,18 @@ class Index:
     def __getitem__(self, _0: slice[None, int, None], /):
         """
         usage.dask: 1
+        usage.koalas: 3
         usage.sklearn: 1
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        usage.koalas: 1
+        usage.sklearn: 2
         usage.xarray: 2
         """
         ...
@@ -737,12 +808,13 @@ class Index:
             numpy.ndarray,
             int,
             List[Union[bool, int]],
-            slice[Union[int, None], Union[int, None], Union[int, None]],
+            slice[Union[int, None], Union[None, int], Union[int, None]],
         ],
         /,
     ):
         """
         usage.dask: 27
+        usage.koalas: 11
         usage.modin: 3
         usage.sklearn: 6
         usage.xarray: 15
@@ -752,7 +824,9 @@ class Index:
     def __iter__(self, /):
         """
         usage.dask: 22
+        usage.koalas: 5
         usage.modin: 1
+        usage.networkx: 1
         usage.sklearn: 1
         usage.xarray: 4
         """
@@ -1043,8 +1117,124 @@ class Index:
         """
         ...
 
+    def nunique(self, /, dropna: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
     def shift(self, /, periods: int, freq: None):
         """
         usage.dask: 1
+        """
+        ...
+
+    @overload
+    def slice_locs(self, /, start: Literal["A"], end: Literal["B"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def slice_locs(self, /, start: Literal["B"], end: None):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def slice_locs(self, /, start: None, end: Literal["A"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def slice_locs(self, /, start: Literal["B"], end: Literal["C"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def slice_locs(self, /, start: Literal["a"], end: Literal["a"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def slice_locs(self, /, start: Literal["a"], end: Literal["d"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def slice_locs(self, /, start: Literal["c"], end: Literal["d"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def slice_locs(self, /, start: Literal["a"], end: Literal["c"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def slice_locs(self, /, start: Literal["b"], end: Literal["c"]):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def slice_locs(
+        self,
+        /,
+        start: Union[Literal["b", "a", "c", "B", "A"], None],
+        end: Union[str, None],
+    ):
+        """
+        usage.koalas: 9
+        """
+        ...
+
+    @overload
+    def value_counts(self, /, normalize: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def value_counts(self, /, ascending: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def value_counts(self, /, normalize: bool, dropna: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def value_counts(self, /, ascending: bool, dropna: bool):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    def value_counts(
+        self, /, ascending: bool = ..., normalize: bool = ..., dropna: bool = ...
+    ):
+        """
+        usage.koalas: 4
         """
         ...

@@ -2,6 +2,55 @@ from typing import *
 
 
 @overload
+def pprint_thing(thing: Literal["0"]):
+    """
+    usage.koalas: 2
+    """
+    ...
+
+
+@overload
+def pprint_thing(thing: int):
+    """
+    usage.dask: 2
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def pprint_thing(thing: Literal["a"]):
+    """
+    usage.koalas: 2
+    """
+    ...
+
+
+@overload
+def pprint_thing(thing: Literal["float64"]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def pprint_thing(thing: Literal["int64"]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def pprint_thing(thing: Literal["single"]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
 def pprint_thing(thing: Literal["x"]):
     """
     usage.dask: 2
@@ -11,14 +60,6 @@ def pprint_thing(thing: Literal["x"]):
 
 @overload
 def pprint_thing(thing: Literal["y"]):
-    """
-    usage.dask: 2
-    """
-    ...
-
-
-@overload
-def pprint_thing(thing: int):
     """
     usage.dask: 2
     """
@@ -75,15 +116,16 @@ def pprint_thing(thing: pandas.core.dtypes.dtypes.CategoricalDtype):
 
 def pprint_thing(
     thing: Union[
-        numpy.dtype,
-        int,
-        pandas.core.dtypes.dtypes.CategoricalDtype,
-        Literal["z", "C", "y", "x"],
         Tuple[Literal["C"], Literal["count", "sum"]],
+        str,
+        pandas.core.dtypes.dtypes.CategoricalDtype,
+        int,
+        numpy.dtype,
     ]
 ):
     """
     usage.dask: 17
+    usage.koalas: 8
     """
     ...
 

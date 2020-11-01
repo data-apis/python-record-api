@@ -2,6 +2,38 @@ from typing import *
 
 
 @overload
+def is_dict_like(obj: Literal["float"]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def is_dict_like(obj: Literal["int64"]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def is_dict_like(obj: Dict[Literal["a"], Type[float]]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def is_dict_like(obj: Literal["float64"]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
 def is_dict_like(obj: pandas.core.frame.DataFrame):
     """
     usage.modin: 2
@@ -563,6 +595,57 @@ def is_dict_like(obj: dask.dataframe.core.Series):
 def is_dict_like(obj: object):
     """
     usage.dask: 3
+    usage.koalas: 4
     usage.modin: 119
+    """
+    ...
+
+
+@overload
+def is_hashable(obj: None):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def is_hashable(obj: Literal["a"]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def is_hashable(obj: Tuple[Literal["x"], Literal["a"]]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def is_hashable(obj: List[Literal["a", "x"]]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+def is_hashable(
+    obj: Union[
+        List[Literal["a", "x"]], Literal["a"], None, Tuple[Literal["x"], Literal["a"]]
+    ]
+):
+    """
+    usage.koalas: 4
+    """
+    ...
+
+
+def is_sequence(obj: int):
+    """
+    usage.koalas: 1
     """
     ...

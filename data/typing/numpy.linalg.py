@@ -78,8 +78,10 @@ def det(a: Union[numpy.ndarray, dask.array.core.Array]):
     ...
 
 
+@overload
 def eig(a: numpy.ndarray):
     """
+    usage.networkx: 1
     usage.scipy: 15
     usage.skimage: 3
     usage.sklearn: 2
@@ -87,8 +89,44 @@ def eig(a: numpy.ndarray):
     ...
 
 
+@overload
+def eig(a: numpy.matrix):
+    """
+    usage.networkx: 4
+    """
+    ...
+
+
+def eig(a: Union[numpy.matrix, numpy.ndarray]):
+    """
+    usage.networkx: 5
+    usage.scipy: 15
+    usage.skimage: 3
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
 def eigh(a: numpy.ndarray):
     """
+    usage.networkx: 2
+    usage.scipy: 1
+    """
+    ...
+
+
+@overload
+def eigh(a: numpy.matrix):
+    """
+    usage.networkx: 1
+    """
+    ...
+
+
+def eigh(a: Union[numpy.ndarray, numpy.matrix]):
+    """
+    usage.networkx: 3
     usage.scipy: 1
     """
     ...
@@ -111,9 +149,18 @@ def eigvals(a: dask.array.core.Array):
     ...
 
 
-def eigvals(a: Union[dask.array.core.Array, numpy.ndarray]):
+@overload
+def eigvals(a: numpy.matrix):
+    """
+    usage.networkx: 2
+    """
+    ...
+
+
+def eigvals(a: Union[numpy.matrix, numpy.ndarray, dask.array.core.Array]):
     """
     usage.dask: 2
+    usage.networkx: 2
     usage.scipy: 2
     """
     ...
@@ -126,10 +173,30 @@ def eigvalsh(a: numpy.ndarray):
     ...
 
 
+@overload
 def inv(a: numpy.ndarray):
     """
     usage.matplotlib: 2
-    usage.scipy: 12
+    usage.scipy: 13
+    usage.skimage: 7
+    usage.sklearn: 6
+    """
+    ...
+
+
+@overload
+def inv(a: numpy.matrix):
+    """
+    usage.networkx: 1
+    """
+    ...
+
+
+def inv(a: Union[numpy.matrix, numpy.ndarray]):
+    """
+    usage.matplotlib: 2
+    usage.networkx: 1
+    usage.scipy: 13
     usage.skimage: 7
     usage.sklearn: 6
     """
@@ -190,7 +257,7 @@ def matrix_power(a: numpy.ndarray, n: int):
 @overload
 def matrix_rank(M: numpy.ndarray):
     """
-    usage.scipy: 21
+    usage.scipy: 25
     usage.skimage: 1
     """
     ...
@@ -214,7 +281,7 @@ def matrix_rank(M: numpy.ndarray, tol: float):
 
 def matrix_rank(M: numpy.ndarray, tol: Union[float, numpy.float64] = ...):
     """
-    usage.scipy: 24
+    usage.scipy: 28
     usage.skimage: 1
     """
     ...
@@ -225,7 +292,8 @@ def norm(x: numpy.ndarray):
     """
     usage.dask: 1
     usage.matplotlib: 3
-    usage.scipy: 197
+    usage.networkx: 6
+    usage.scipy: 206
     usage.skimage: 8
     usage.sklearn: 30
     """
@@ -244,6 +312,7 @@ def norm(x: float):
 def norm(x: numpy.ndarray, axis: int):
     """
     usage.matplotlib: 1
+    usage.networkx: 3
     usage.scipy: 18
     usage.sklearn: 3
     """
@@ -261,6 +330,7 @@ def norm(x: numpy.ndarray, ord: None):
 @overload
 def norm(x: numpy.ndarray, ord: int):
     """
+    usage.networkx: 1
     usage.scipy: 35
     usage.sklearn: 2
     """
@@ -354,6 +424,22 @@ def norm(x: numpy.ndarray, ord: int, axis: Tuple[int, int], keepdims: bool):
 
 @overload
 def norm(x: List[numpy.complex128]):
+    """
+    usage.scipy: 1
+    """
+    ...
+
+
+@overload
+def norm(x: List[float]):
+    """
+    usage.scipy: 1
+    """
+    ...
+
+
+@overload
+def norm(x: List[int]):
     """
     usage.scipy: 1
     """
@@ -942,14 +1028,15 @@ def norm(x: numpy.ndarray, ord: Literal["nuc"], axis: Tuple[int, int], keepdims:
 
 def norm(
     x: object,
-    ord: Union[Literal["fro", "nuc", "f"], int, float, None] = ...,
-    axis: Union[int, None, Tuple[int, ...]] = ...,
+    ord: Union[int, float, None, Literal["fro", "nuc", "f"]] = ...,
+    axis: Union[int, Tuple[int, ...], None] = ...,
     keepdims: bool = ...,
 ):
     """
     usage.dask: 25
     usage.matplotlib: 4
-    usage.scipy: 394
+    usage.networkx: 10
+    usage.scipy: 405
     usage.skimage: 8
     usage.sklearn: 45
     """
@@ -964,9 +1051,27 @@ def pinv(a: numpy.ndarray):
     ...
 
 
+@overload
 def qr(a: numpy.ndarray):
     """
     usage.dask: 5
+    usage.scipy: 1
+    """
+    ...
+
+
+@overload
+def qr(a: numpy.matrix):
+    """
+    usage.networkx: 1
+    """
+    ...
+
+
+def qr(a: Union[numpy.matrix, numpy.ndarray]):
+    """
+    usage.dask: 5
+    usage.networkx: 1
     usage.scipy: 1
     """
     ...
@@ -992,13 +1097,15 @@ def solve(a: numpy.ndarray, b: numpy.ndarray):
 @overload
 def solve(a: numpy.matrix, b: numpy.ndarray):
     """
+    usage.networkx: 2
     usage.scipy: 2
     """
     ...
 
 
-def solve(a: Union[numpy.ndarray, numpy.matrix], b: numpy.ndarray):
+def solve(a: Union[numpy.matrix, numpy.ndarray], b: numpy.ndarray):
     """
+    usage.networkx: 2
     usage.scipy: 25
     usage.skimage: 2
     """

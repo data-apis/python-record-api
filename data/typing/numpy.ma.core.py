@@ -395,7 +395,7 @@ def array(data: List[Union[int, None]], dtype: Type[float], mask: List[bool]):
 
 def array(
     data: Union[numpy.ndarray, numpy.ma.core.MaskedArray, list],
-    dtype: Union[numpy.dtype, Type[float], Type[numpy.float64]] = ...,
+    dtype: Union[numpy.dtype, type] = ...,
     copy: Union[bool, numpy.bool_] = ...,
     subok: bool = ...,
     ndmin: int = ...,
@@ -687,7 +687,7 @@ def concatenate(
     arrays: List[Union[numpy.ma.core.MaskedArray, numpy.ndarray]], axis: int
 ):
     """
-    usage.dask: 12
+    usage.dask: 13
     """
     ...
 
@@ -704,7 +704,7 @@ def concatenate(
 
 def concatenate(
     arrays: Union[
-        List[Union[numpy.ndarray, numpy.ma.core.MaskedArray]],
+        List[Union[numpy.ma.core.MaskedArray, numpy.ndarray]],
         Tuple[
             Union[numpy.ndarray, numpy.ma.core.MaskedArray],
             Union[numpy.ndarray, numpy.ma.core.MaskedArray],
@@ -713,7 +713,7 @@ def concatenate(
     axis: int,
 ):
     """
-    usage.dask: 37
+    usage.dask: 38
     usage.matplotlib: 2
     usage.xarray: 3
     """
@@ -1203,7 +1203,7 @@ def isMaskedArray(x: List[float]):
 @overload
 def isMaskedArray(x: List[Union[int, float]]):
     """
-    usage.scipy: 1
+    usage.scipy: 2
     """
     ...
 
@@ -1227,7 +1227,7 @@ def isMaskedArray(x: int):
 @overload
 def isMaskedArray(x: List[int]):
     """
-    usage.scipy: 5
+    usage.scipy: 6
     """
     ...
 
@@ -1370,7 +1370,7 @@ def isMaskedArray(x: numpy.float64):
 
 def isMaskedArray(x: object):
     """
-    usage.scipy: 69
+    usage.scipy: 71
     usage.skimage: 18
     """
     ...
@@ -3887,6 +3887,20 @@ class MaskedArray:
         ...
 
     @overload
+    def __setitem__(self, _0: int, _1: Literal["linear"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["rbf"], /):
+        """
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
     def __setitem__(self, _0: int, _1: sklearn.linear_model._base.LinearRegression, /):
         """
         usage.sklearn: 1
@@ -3895,13 +3909,6 @@ class MaskedArray:
 
     @overload
     def __setitem__(self, _0: int, _1: sklearn.linear_model._ridge.Ridge, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: int, _1: Literal["rbf"], /):
         """
         usage.sklearn: 1
         """
@@ -3949,7 +3956,7 @@ class MaskedArray:
         usage.pandas: 18
         usage.scipy: 41
         usage.skimage: 6
-        usage.sklearn: 25
+        usage.sklearn: 26
         usage.xarray: 5
         """
         ...
@@ -4147,9 +4154,7 @@ class MaskedArray:
         """
         ...
 
-    def astype(
-        self, _0: Union[Literal["bool", "d"], Type[numpy.int64], type, numpy.dtype], /
-    ):
+    def astype(self, _0: Union[Literal["bool", "d"], type, numpy.dtype], /):
         """
         usage.dask: 10
         usage.matplotlib: 7
