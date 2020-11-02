@@ -28,11 +28,13 @@ class RangeIndex:
     is_unique: object
 
     # usage.dask: 16
+    # usage.koalas: 2
     # usage.xarray: 4
-    name: Union[Literal["ix", "renamed"], None]
+    name: Union[Literal["ix", "renamed", "index"], None]
 
     # usage.dask: 1
-    names: object
+    # usage.koalas: 3
+    names: List[Literal["__index_level_0__"]]
 
     # usage.xarray: 1
     shape: object
@@ -186,6 +188,8 @@ class RangeIndex:
 
     def __iter__(self, /):
         """
+        usage.koalas: 1
+        usage.networkx: 1
         usage.xarray: 1
         """
         ...

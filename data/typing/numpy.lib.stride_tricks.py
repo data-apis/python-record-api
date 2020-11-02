@@ -12,6 +12,14 @@ def as_strided(x: numpy.ndarray, shape: Tuple[int, int], strides: Tuple[int, int
 
 
 @overload
+def as_strided(x: numpy.ndarray, shape: Tuple[int], strides: Tuple[int]):
+    """
+    usage.skimage: 1
+    """
+    ...
+
+
+@overload
 def as_strided(
     x: numpy.ndarray, shape: Tuple[int, int, int], strides: Tuple[int, int, int]
 ):
@@ -22,7 +30,13 @@ def as_strided(
 
 
 @overload
-def as_strided(x: numpy.ndarray, shape: Tuple[int], strides: Tuple[int]):
+def as_strided(
+    x: numpy.ndarray,
+    shape: Tuple[
+        numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64
+    ],
+    strides: Tuple[numpy.int64, numpy.int64, numpy.int64, int, int, int],
+):
     """
     usage.skimage: 1
     """
@@ -57,21 +71,7 @@ def as_strided(
 def as_strided(
     x: numpy.ndarray,
     shape: Tuple[numpy.int64, numpy.int64],
-    strides: Tuple[numpy.int64, int],
-):
-    """
-    usage.skimage: 1
-    """
-    ...
-
-
-@overload
-def as_strided(
-    x: numpy.ndarray,
-    shape: Tuple[
-        numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64
-    ],
-    strides: Tuple[numpy.int64, numpy.int64, numpy.int64, int, int, int],
+    strides: Tuple[int, numpy.int64],
 ):
     """
     usage.skimage: 1
@@ -83,7 +83,7 @@ def as_strided(
 def as_strided(
     x: numpy.ndarray,
     shape: Tuple[numpy.int64, numpy.int64],
-    strides: Tuple[int, numpy.int64],
+    strides: Tuple[numpy.int64, int],
 ):
     """
     usage.skimage: 1

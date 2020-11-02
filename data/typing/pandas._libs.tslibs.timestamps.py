@@ -24,6 +24,13 @@ class Timestamp:
     value: object
 
     @overload
+    def __add__(self, _0: datetime.timedelta, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def __add__(self, _0: pandas.core.indexes.timedeltas.TimedeltaIndex, /):
         """
         usage.xarray: 1
@@ -61,6 +68,7 @@ class Timestamp:
     def __add__(self, _0: object, /):
         """
         usage.dask: 4
+        usage.koalas: 1
         usage.pandas: 23
         usage.xarray: 1
         """
@@ -321,6 +329,20 @@ class Timestamp:
         ...
 
     @overload
+    def __rsub__(self, _0: databricks.koalas.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
     def __rsub__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
         """
         usage.xarray: 3
@@ -334,19 +356,25 @@ class Timestamp:
         """
         ...
 
-    def __rsub__(
-        self,
-        _0: Union[
-            numpy.datetime64,
-            numpy.int64,
-            numpy.ndarray,
-            pandas.core.indexes.datetimes.DatetimeIndex,
-        ],
-        /,
-    ):
+    def __rsub__(self, _0: object, /):
         """
+        usage.koalas: 2
         usage.pandas: 8
         usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: databricks.koalas.series.Series, /):
+        """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.koalas: 1
         """
         ...
 
@@ -402,6 +430,7 @@ class Timestamp:
     def __sub__(self, _0: object, /):
         """
         usage.dask: 8
+        usage.koalas: 2
         usage.pandas: 14
         """
         ...

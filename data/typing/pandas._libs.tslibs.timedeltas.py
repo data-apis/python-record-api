@@ -98,24 +98,24 @@ class Timedelta:
         ...
 
     @overload
-    def __gt__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def __gt__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 2
         """
         ...
 
+    @overload
+    def __gt__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.dask: 1
+        """
+        ...
+
     def __gt__(
         self,
         _0: Union[
-            pandas._libs.tslibs.timedeltas.Timedelta,
             pandas.core.series.Series,
+            pandas._libs.tslibs.timedeltas.Timedelta,
             numpy.ndarray,
         ],
         /,

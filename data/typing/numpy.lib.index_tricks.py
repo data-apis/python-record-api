@@ -172,14 +172,7 @@ class MGridClass:
         """
         usage.matplotlib: 1
         usage.scipy: 1
-        usage.skimage: 35
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[None, int, None], slice[None, int, None]], /):
-        """
-        usage.skimage: 2
+        usage.skimage: 47
         """
         ...
 
@@ -194,6 +187,20 @@ class MGridClass:
     ):
         """
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[slice[int, float, int]], /):
+        """
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, int, None], slice[None, int, None]], /):
+        """
+        usage.skimage: 2
         """
         ...
 
@@ -242,6 +249,13 @@ class MGridClass:
         ...
 
     @overload
+    def __getitem__(self, _0: Tuple[slice[None, int, None], slice[None, int, None]], /):
+        """
+        usage.skimage: 1
+        """
+        ...
+
+    @overload
     def __getitem__(
         self,
         _0: Tuple[slice[int, int, int], slice[int, int, int], slice[int, int, int]],
@@ -256,6 +270,21 @@ class MGridClass:
     def __getitem__(self, _0: List[slice[None, int, None]], /):
         """
         usage.skimage: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, numpy.int64, None],
+            slice[None, numpy.int64, None],
+            slice[None, numpy.int64, None],
+        ],
+        /,
+    ):
+        """
+        usage.skimage: 1
         """
         ...
 
@@ -412,7 +441,7 @@ class MGridClass:
             Tuple[
                 slice[
                     Union[None, numpy.float64, int, float],
-                    Union[int, numpy.float64, float],
+                    Union[int, numpy.float64, numpy.int64, float],
                     Union[None, numpy.float64, int, float],
                 ],
                 ...,
@@ -420,7 +449,7 @@ class MGridClass:
             List[
                 slice[
                     Union[int, numpy.int64, None],
-                    Union[int, numpy.int64],
+                    Union[int, numpy.int64, float],
                     Union[int, numpy.int64, None],
                 ]
             ],
@@ -431,7 +460,7 @@ class MGridClass:
         """
         usage.matplotlib: 12
         usage.scipy: 6
-        usage.skimage: 57
+        usage.skimage: 72
         usage.sklearn: 1
         """
         ...
@@ -448,7 +477,7 @@ class OGridClass:
     @overload
     def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
         """
-        usage.skimage: 3
+        usage.skimage: 5
         """
         ...
 
@@ -459,6 +488,14 @@ class OGridClass:
         /,
     ):
         """
+        usage.skimage: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
+        """
+        usage.matplotlib: 3
         usage.skimage: 1
         """
         ...
@@ -507,13 +544,6 @@ class OGridClass:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
-        """
-        usage.matplotlib: 3
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[slice[None, int, None]], /):
         """
         usage.dask: 1
@@ -532,7 +562,7 @@ class OGridClass:
         usage.dask: 2
         usage.matplotlib: 4
         usage.scipy: 4
-        usage.skimage: 8
+        usage.skimage: 12
         """
         ...
 
@@ -943,20 +973,6 @@ class RClass:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[numpy.uint8, numpy.ndarray], /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[numpy.int8, numpy.ndarray], /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[numpy.uint32, numpy.ndarray], /):
         """
         usage.scipy: 1
@@ -1007,6 +1023,20 @@ class RClass:
 
     @overload
     def __getitem__(self, _0: Tuple[numpy.uint64, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.uint8, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.int8, numpy.ndarray], /):
         """
         usage.scipy: 1
         """

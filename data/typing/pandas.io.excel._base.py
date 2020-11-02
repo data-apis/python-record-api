@@ -2,6 +2,351 @@ from typing import *
 
 
 @overload
+def read_excel(
+    io: _io.BufferedReader,
+    sheet_name: int,
+    header: int,
+    names: None,
+    index_col: None,
+    usecols: None,
+    squeeze: bool,
+    dtype: None,
+    engine: None,
+    converters: None,
+    true_values: None,
+    false_values: None,
+    skiprows: None,
+    nrows: None,
+    na_values: None,
+    keep_default_na: bool,
+    verbose: bool,
+    parse_dates: bool,
+    date_parser: None,
+    thousands: None,
+    comment: None,
+    skipfooter: int,
+    convert_float: bool,
+    mangle_dupe_cols: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def read_excel(io: _io.BufferedReader):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def read_excel(
+    io: _io.BufferedReader,
+    sheet_name: int,
+    header: int,
+    names: None,
+    index_col: int,
+    usecols: None,
+    squeeze: bool,
+    dtype: None,
+    engine: None,
+    converters: None,
+    true_values: None,
+    false_values: None,
+    skiprows: None,
+    nrows: None,
+    na_values: None,
+    keep_default_na: bool,
+    verbose: bool,
+    parse_dates: bool,
+    date_parser: None,
+    thousands: None,
+    comment: None,
+    skipfooter: int,
+    convert_float: bool,
+    mangle_dupe_cols: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def read_excel(io: _io.BufferedReader, index_col: int):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def read_excel(
+    io: _io.BytesIO,
+    sheet_name: int,
+    header: int,
+    names: None,
+    index_col: None,
+    usecols: None,
+    squeeze: bool,
+    dtype: None,
+    engine: None,
+    converters: None,
+    true_values: None,
+    false_values: None,
+    skiprows: None,
+    nrows: None,
+    na_values: None,
+    keep_default_na: bool,
+    verbose: bool,
+    parse_dates: bool,
+    date_parser: None,
+    thousands: None,
+    comment: None,
+    skipfooter: int,
+    convert_float: bool,
+    mangle_dupe_cols: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def read_excel(io: str):
+    """
+    usage.koalas: 2
+    """
+    ...
+
+
+@overload
+def read_excel(
+    io: _io.BytesIO,
+    sheet_name: int,
+    header: int,
+    names: None,
+    index_col: int,
+    usecols: None,
+    squeeze: bool,
+    dtype: None,
+    engine: None,
+    converters: None,
+    true_values: None,
+    false_values: None,
+    skiprows: None,
+    nrows: None,
+    na_values: None,
+    keep_default_na: bool,
+    verbose: bool,
+    parse_dates: bool,
+    date_parser: None,
+    thousands: None,
+    comment: None,
+    skipfooter: int,
+    convert_float: bool,
+    mangle_dupe_cols: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def read_excel(io: str, index_col: int):
+    """
+    usage.koalas: 2
+    """
+    ...
+
+
+@overload
+def read_excel(io: _io.BufferedReader, sheet_name: None, index_col: int):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def read_excel(
+    io: _io.BufferedReader,
+    sheet_name: List[Literal["Sheet_name_2", "Sheet_name_1"]],
+    header: int,
+    names: None,
+    index_col: int,
+    usecols: None,
+    squeeze: bool,
+    dtype: None,
+    engine: None,
+    converters: None,
+    true_values: None,
+    false_values: None,
+    skiprows: None,
+    nrows: None,
+    na_values: None,
+    keep_default_na: bool,
+    verbose: bool,
+    parse_dates: bool,
+    date_parser: None,
+    thousands: None,
+    comment: None,
+    skipfooter: int,
+    convert_float: bool,
+    mangle_dupe_cols: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def read_excel(
+    io: _io.BufferedReader,
+    sheet_name: None,
+    header: int,
+    names: None,
+    index_col: int,
+    usecols: None,
+    squeeze: bool,
+    dtype: None,
+    engine: None,
+    converters: None,
+    true_values: None,
+    false_values: None,
+    skiprows: None,
+    nrows: None,
+    na_values: None,
+    keep_default_na: bool,
+    verbose: bool,
+    parse_dates: bool,
+    date_parser: None,
+    thousands: None,
+    comment: None,
+    skipfooter: int,
+    convert_float: bool,
+    mangle_dupe_cols: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def read_excel(
+    io: _io.BytesIO,
+    sheet_name: Literal["Sheet_name_2"],
+    header: int,
+    names: None,
+    index_col: int,
+    usecols: None,
+    squeeze: bool,
+    dtype: None,
+    engine: None,
+    converters: None,
+    true_values: None,
+    false_values: None,
+    skiprows: None,
+    nrows: None,
+    na_values: None,
+    keep_default_na: bool,
+    verbose: bool,
+    parse_dates: bool,
+    date_parser: None,
+    thousands: None,
+    comment: None,
+    skipfooter: int,
+    convert_float: bool,
+    mangle_dupe_cols: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def read_excel(
+    io: _io.BytesIO,
+    sheet_name: List[Literal["Sheet_name_2", "Sheet_name_1"]],
+    header: int,
+    names: None,
+    index_col: int,
+    usecols: None,
+    squeeze: bool,
+    dtype: None,
+    engine: None,
+    converters: None,
+    true_values: None,
+    false_values: None,
+    skiprows: None,
+    nrows: None,
+    na_values: None,
+    keep_default_na: bool,
+    verbose: bool,
+    parse_dates: bool,
+    date_parser: None,
+    thousands: None,
+    comment: None,
+    skipfooter: int,
+    convert_float: bool,
+    mangle_dupe_cols: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def read_excel(
+    io: _io.BytesIO,
+    sheet_name: None,
+    header: int,
+    names: None,
+    index_col: int,
+    usecols: None,
+    squeeze: bool,
+    dtype: None,
+    engine: None,
+    converters: None,
+    true_values: None,
+    false_values: None,
+    skiprows: None,
+    nrows: None,
+    na_values: None,
+    keep_default_na: bool,
+    verbose: bool,
+    parse_dates: bool,
+    date_parser: None,
+    thousands: None,
+    comment: None,
+    skipfooter: int,
+    convert_float: bool,
+    mangle_dupe_cols: bool,
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def read_excel(io: str, sheet_name: None, index_col: int):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
 def read_excel(io: Literal["test.xlsx"]):
     """
     usage.modin: 1
@@ -112,41 +457,53 @@ def read_excel(
 def read_excel(
     _0: Literal["test.xlsx"] = ...,
     /,
-    io: Literal["test.xlsx"] = ...,
-    sheet_name: Union[None, int] = ...,
-    index_col: Union[None, int] = ...,
+    io: Union[str, _io.BytesIO, _io.BufferedReader] = ...,
+    sheet_name: Union[
+        int,
+        None,
+        Literal["Sheet_name_2"],
+        List[Literal["Sheet_name_2", "Sheet_name_1"]],
+    ] = ...,
+    header: int = ...,
+    names: None = ...,
+    index_col: Union[int, None] = ...,
+    usecols: None = ...,
+    squeeze: bool = ...,
+    dtype: None = ...,
+    engine: Union[Literal["xlrd"], None] = ...,
+    converters: None = ...,
+    true_values: None = ...,
+    false_values: None = ...,
+    skiprows: None = ...,
+    nrows: None = ...,
+    na_values: None = ...,
+    keep_default_na: bool = ...,
+    verbose: bool = ...,
+    parse_dates: bool = ...,
+    date_parser: None = ...,
+    thousands: None = ...,
+    comment: None = ...,
+    skipfooter: int = ...,
+    convert_float: bool = ...,
+    mangle_dupe_cols: bool = ...,
     *,
     EngineDispatcher: Type[
         modin.data_management.factories.dispatcher.EngineDispatcher
     ] = ...,
     _: None = ...,
-    comment: None = ...,
-    convert_float: bool = ...,
-    converters: None = ...,
-    date_parser: None = ...,
-    dtype: None = ...,
-    false_values: None = ...,
-    header: int = ...,
-    keep_default_na: bool = ...,
     kwargs: Dict[str, Union[int, bool, Literal["xlrd", "test.xlsx"], None]] = ...,
-    mangle_dupe_cols: bool = ...,
     na_filter: bool = ...,
-    na_values: None = ...,
-    names: None = ...,
-    nrows: None = ...,
-    parse_dates: bool = ...,
-    skipfooter: int = ...,
-    squeeze: bool = ...,
-    thousands: None = ...,
-    true_values: None = ...,
-    usecols: None = ...,
-    verbose: bool = ...,
 ):
     """
+    usage.koalas: 17
     usage.modin: 6
     """
     ...
 
 
 class ExcelFile:
+    pass
+
+
+class ExcelWriter:
     pass

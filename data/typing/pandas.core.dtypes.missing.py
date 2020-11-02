@@ -2,6 +2,33 @@ from typing import *
 
 
 @overload
+def isna(obj: Literal["dog"]):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: float):
+    """
+    usage.dask: 2
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: numpy.ndarray):
+    """
+    usage.dask: 8
+    usage.koalas: 1
+    usage.xarray: 22
+    """
+    ...
+
+
+@overload
 def isna(obj: None):
     """
     usage.xarray: 1
@@ -14,15 +41,6 @@ def isna(obj: numpy.float64):
     """
     usage.dask: 3
     usage.xarray: 3
-    """
-    ...
-
-
-@overload
-def isna(obj: numpy.ndarray):
-    """
-    usage.dask: 8
-    usage.xarray: 22
     """
     ...
 
@@ -143,17 +161,17 @@ def isna(obj: Literal["A"]):
 
 
 @overload
-def isna(obj: List[int]):
+def isna(obj: int):
     """
-    usage.dask: 9
+    usage.dask: 2
     """
     ...
 
 
 @overload
-def isna(obj: float):
+def isna(obj: List[int]):
     """
-    usage.dask: 2
+    usage.dask: 9
     """
     ...
 
@@ -399,7 +417,7 @@ def isna(obj: List[pandas._libs.tslibs.nattype.NaTType]):
 
 
 @overload
-def isna(obj: List[Literal["a", "E", "Z"]]):
+def isna(obj: List[Literal["a", "C", "Z"]]):
     """
     usage.dask: 2
     """
@@ -407,7 +425,7 @@ def isna(obj: List[Literal["a", "E", "Z"]]):
 
 
 @overload
-def isna(obj: Literal["W"]):
+def isna(obj: Literal["Y"]):
     """
     usage.dask: 1
     """
@@ -415,7 +433,7 @@ def isna(obj: Literal["W"]):
 
 
 @overload
-def isna(obj: Literal["f"]):
+def isna(obj: Literal["g"]):
     """
     usage.dask: 1
     """
@@ -447,14 +465,6 @@ def isna(obj: Literal["2"]):
 
 
 @overload
-def isna(obj: int):
-    """
-    usage.dask: 2
-    """
-    ...
-
-
-@overload
 def isna(obj: numpy.datetime64):
     """
     usage.dask: 2
@@ -465,7 +475,16 @@ def isna(obj: numpy.datetime64):
 def isna(obj: object):
     """
     usage.dask: 117
+    usage.koalas: 3
     usage.xarray: 44
+    """
+    ...
+
+
+@overload
+def notna(obj: databricks.koalas.indexes.Index):
+    """
+    usage.koalas: 1
     """
     ...
 
@@ -486,9 +505,16 @@ def notna(obj: pandas.core.indexes.numeric.Int64Index):
     ...
 
 
-def notna(obj: Union[pandas.core.indexes.numeric.Int64Index, numpy.ndarray]):
+def notna(
+    obj: Union[
+        pandas.core.indexes.numeric.Int64Index,
+        databricks.koalas.indexes.Index,
+        numpy.ndarray,
+    ]
+):
     """
     usage.dask: 2
+    usage.koalas: 1
     usage.xarray: 3
     """
     ...

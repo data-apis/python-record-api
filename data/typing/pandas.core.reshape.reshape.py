@@ -2,9 +2,204 @@ from typing import *
 
 
 @overload
-def get_dummies(data: pandas.core.series.Series):
+def get_dummies(data: pandas.core.series.Series, dtype: Type[numpy.int8]):
     """
-    usage.dask: 2
+    usage.koalas: 7
+    """
+    ...
+
+
+@overload
+def get_dummies(data: pandas.core.frame.DataFrame, dtype: Type[numpy.int8]):
+    """
+    usage.koalas: 6
+    """
+    ...
+
+
+@overload
+def get_dummies(data: pandas.core.frame.DataFrame, dtype: Literal["float64"]):
+    """
+    usage.dask: 1
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.series.Series,
+    prefix: Literal["X"],
+    prefix_sep: Literal["-"],
+    dtype: Type[numpy.int8],
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.series.Series, drop_first: bool, dtype: Type[numpy.int8]
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.series.Series, dummy_na: bool, dtype: Type[numpy.int8]
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.frame.DataFrame,
+    columns: List[Tuple[Literal["y", "x"], Literal["c", "a"], Literal["3", "1"]]],
+    dtype: Type[numpy.int8],
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.frame.DataFrame,
+    columns: List[Literal["x"]],
+    dtype: Type[numpy.int8],
+):
+    """
+    usage.koalas: 2
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.frame.DataFrame,
+    columns: Tuple[Literal["x"], Literal["a"]],
+    dtype: Type[numpy.int8],
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.frame.DataFrame,
+    columns: List[Literal["c", "a"]],
+    dtype: Type[numpy.int8],
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.frame.DataFrame,
+    columns: List[Literal["b"]],
+    dtype: Type[numpy.int8],
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.frame.DataFrame,
+    prefix: List[Literal["bar", "foo"]],
+    dtype: Type[numpy.int8],
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.frame.DataFrame,
+    prefix: List[Literal["foo"]],
+    columns: List[Literal["B"]],
+    dtype: Type[numpy.int8],
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.frame.DataFrame,
+    prefix: Dict[Literal["B", "A"], Literal["bar", "foo"]],
+    dtype: Type[numpy.int8],
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.frame.DataFrame,
+    prefix: Dict[Literal["A", "B"], Literal["bar", "foo"]],
+    dtype: Type[numpy.int8],
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.frame.DataFrame,
+    prefix: Dict[Literal["B", "A"], Literal["bar", "foo"]],
+    columns: List[Literal["B", "A"]],
+    dtype: Type[numpy.int8],
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.series.Series, prefix: Literal["foo"], dtype: Type[numpy.int8]
+):
+    """
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(
+    data: pandas.core.series.Series,
+    prefix: List[Literal["foo"]],
+    columns: List[Literal["B"]],
+    dtype: Type[numpy.int8],
+):
+    """
+    usage.koalas: 1
     """
     ...
 
@@ -20,6 +215,14 @@ def get_dummies(
     drop_first: bool,
     dtype: Type[numpy.uint8],
 ):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def get_dummies(data: pandas.core.series.Series):
     """
     usage.dask: 2
     """
@@ -136,14 +339,6 @@ def get_dummies(data: pandas.core.frame.DataFrame, sparse: bool):
 
 
 @overload
-def get_dummies(data: pandas.core.frame.DataFrame, dtype: Literal["float64"]):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
 def get_dummies(
     data: pandas.core.frame.DataFrame,
     prefix: None,
@@ -178,16 +373,29 @@ def get_dummies(
 
 
 def get_dummies(
-    data: Union[pandas.core.frame.DataFrame, pandas.core.series.Series],
-    prefix: Union[None, Literal["X"]] = ...,
+    data: Union[pandas.core.series.Series, pandas.core.frame.DataFrame],
+    prefix: Union[
+        Literal["X", "foo"],
+        None,
+        Dict[Literal["B", "A"], Literal["bar", "foo"]],
+        List[Literal["bar", "foo"]],
+    ] = ...,
     prefix_sep: Literal["_", "-"] = ...,
     dummy_na: bool = ...,
-    columns: Union[None, List[Literal["c", "a"]], pandas.core.indexes.base.Index] = ...,
+    columns: Union[
+        pandas.core.indexes.base.Index,
+        List[
+            Union[str, Tuple[Literal["y", "x"], Literal["c", "a"], Literal["3", "1"]]]
+        ],
+        None,
+        Tuple[Literal["x"], Literal["a"]],
+    ] = ...,
     sparse: bool = ...,
     drop_first: bool = ...,
-    dtype: Union[Literal["float64"], Type[numpy.uint8]] = ...,
+    dtype: Union[type, Literal["float64"]] = ...,
 ):
     """
     usage.dask: 22
+    usage.koalas: 30
     """
     ...

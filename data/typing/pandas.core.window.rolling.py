@@ -109,6 +109,7 @@ class Rolling:
     def count(self, /):
         """
         usage.dask: 7
+        usage.koalas: 6
         """
         ...
 
@@ -127,12 +128,14 @@ class Rolling:
     def max(self, /):
         """
         usage.dask: 3
+        usage.koalas: 6
         """
         ...
 
     def mean(self, /):
         """
         usage.dask: 12
+        usage.koalas: 6
         usage.xarray: 4
         """
         ...
@@ -146,6 +149,7 @@ class Rolling:
     def min(self, /):
         """
         usage.dask: 3
+        usage.koalas: 6
         """
         ...
 
@@ -165,6 +169,7 @@ class Rolling:
     def std(self, /):
         """
         usage.dask: 3
+        usage.koalas: 6
         """
         ...
 
@@ -178,12 +183,14 @@ class Rolling:
     def std(self, /, ddof: int = ...):
         """
         usage.dask: 4
+        usage.koalas: 6
         """
         ...
 
     def sum(self, /):
         """
-        usage.dask: 7
+        usage.dask: 9
+        usage.koalas: 6
         """
         ...
 
@@ -191,6 +198,7 @@ class Rolling:
     def var(self, /):
         """
         usage.dask: 2
+        usage.koalas: 6
         """
         ...
 
@@ -204,5 +212,50 @@ class Rolling:
     def var(self, /, ddof: int = ...):
         """
         usage.dask: 3
+        usage.koalas: 6
+        """
+        ...
+
+
+class RollingGroupby:
+    def count(self, /):
+        """
+        usage.koalas: 15
+        """
+        ...
+
+    def max(self, /):
+        """
+        usage.koalas: 15
+        """
+        ...
+
+    def mean(self, /):
+        """
+        usage.koalas: 15
+        """
+        ...
+
+    def min(self, /):
+        """
+        usage.koalas: 15
+        """
+        ...
+
+    def std(self, /):
+        """
+        usage.koalas: 15
+        """
+        ...
+
+    def sum(self, /):
+        """
+        usage.koalas: 15
+        """
+        ...
+
+    def var(self, /):
+        """
+        usage.koalas: 15
         """
         ...

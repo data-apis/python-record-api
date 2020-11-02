@@ -505,11 +505,8 @@ class Generator:
 
     def uniform(
         self,
-        _0: Union[float, numpy.ndarray] = ...,
-        _1: Union[float, int, numpy.ndarray] = ...,
-        _2: Tuple[Union[int, numpy.int64]] = ...,
         /,
-        *,
+        *_args: Union[Tuple[Union[int, numpy.int64]], float, int, numpy.ndarray],
         size: Union[numpy.int64, int, Tuple[Union[numpy.int64, int], ...]] = ...,
     ):
         """
