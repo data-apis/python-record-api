@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 # Must build from source to be able to run tests
 # https://github.com/facebook/prophet
 RUN git clone \
-    --branch v0.6 \
+    --branch 0.6 \
     --depth 1 \
     https://github.com/facebook/prophet.git \
     .
