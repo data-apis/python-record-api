@@ -20,7 +20,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     python setup.py develop \
     pytest-custom_exit_code
 
-RUN python -c "import fbprophet"
+RUN python -c "from fbprophet import Prophet"
 
 ENV PYTHON_RECORD_API_FROM_MODULES=seaborn
 CMD [ "pytest", "fbprophet", "--verbose", "--suppress-tests-failed-exit-code"]
