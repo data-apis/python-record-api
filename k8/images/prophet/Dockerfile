@@ -22,7 +22,8 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 RUN cd python \
     python setup.py develop
 
-RUN python -c "from fbprophet import Prophet"
+RUN cd python \
+    python -c "from fbprophet import Prophet"
 
 ENV PYTHON_RECORD_API_FROM_MODULES=fbprophet
 CMD [ "pytest", "fbprophet", "--verbose", "--suppress-tests-failed-exit-code"]
