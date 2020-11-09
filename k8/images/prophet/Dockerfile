@@ -17,10 +17,11 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     pip install -r requirements.txt \
     pip install plotly \
     pip install pytest \
-    python setup.py develop \
     pytest-custom_exit_code
+
+RUN python setup.py develop
 
 RUN python -c "from fbprophet import Prophet"
 
-ENV PYTHON_RECORD_API_FROM_MODULES=seaborn
+ENV PYTHON_RECORD_API_FROM_MODULES=fbprophet
 CMD [ "pytest", "fbprophet", "--verbose", "--suppress-tests-failed-exit-code"]
