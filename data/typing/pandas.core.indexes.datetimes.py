@@ -763,6 +763,14 @@ def date_range(start: Literal["20130110"], periods: int):
 
 
 @overload
+def date_range(start: Literal["2010-01-01"], periods: int, freq: Literal["d"]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
 def date_range(
     start: Literal["2000-01-01"], end: Literal["2000-01-31"], freq: Literal["1d"]
 ):
@@ -1605,6 +1613,7 @@ def date_range(
     usage.dask: 97
     usage.koalas: 45
     usage.modin: 36
+    usage.seaborn: 1
     usage.xarray: 122
     """
     ...

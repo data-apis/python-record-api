@@ -29,6 +29,7 @@ class RangeIndex:
 
     # usage.dask: 16
     # usage.koalas: 2
+    # usage.seaborn: 2
     # usage.xarray: 4
     name: Union[Literal["ix", "renamed", "index"], None]
 
@@ -43,6 +44,7 @@ class RangeIndex:
     size: object
 
     # usage.modin: 1
+    # usage.seaborn: 1
     # usage.xarray: 3
     values: object
 

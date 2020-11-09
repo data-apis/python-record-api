@@ -6,6 +6,7 @@ class StringMethods:
     def __getitem__(self, _0: slice[None, int, None], /):
         """
         usage.dask: 2
+        usage.seaborn: 1
         """
         ...
 
@@ -16,9 +17,10 @@ class StringMethods:
         """
         ...
 
-    def __getitem__(self, _0: Union[int, slice[None, int, None]], /):
+    def __getitem__(self, _0: Union[slice[None, int, None], int], /):
         """
         usage.dask: 4
+        usage.seaborn: 1
         """
         ...
 

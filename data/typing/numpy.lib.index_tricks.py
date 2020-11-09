@@ -17,6 +17,7 @@ class CClass:
         usage.matplotlib: 1
         usage.pandas: 3
         usage.scipy: 12
+        usage.seaborn: 5
         usage.sklearn: 38
         """
         ...
@@ -38,21 +39,50 @@ class CClass:
         ...
 
     @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, pandas.core.series.Series], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: numpy.ndarray, /):
         """
+        usage.seaborn: 1
         usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[pandas.core.series.Series, pandas.core.series.Series], /
+    ):
+        """
+        usage.seaborn: 2
         """
         ...
 
     def __getitem__(
         self,
-        _0: Union[numpy.ndarray, Tuple[Union[numpy.ndarray, List[complex]], ...]],
+        _0: Union[
+            numpy.ndarray,
+            pandas.core.series.Series,
+            Tuple[Union[List[complex], pandas.core.series.Series, numpy.ndarray], ...],
+        ],
         /,
     ):
         """
         usage.matplotlib: 1
         usage.pandas: 3
         usage.scipy: 23
+        usage.seaborn: 11
         usage.skimage: 1
         usage.sklearn: 40
         """
@@ -638,6 +668,7 @@ class RClass:
     def __getitem__(self, _0: Tuple[int, numpy.ndarray], /):
         """
         usage.scipy: 5
+        usage.seaborn: 2
         usage.sklearn: 3
         usage.xarray: 1
         """
@@ -866,6 +897,7 @@ class RClass:
     def __getitem__(self, _0: Tuple[float, numpy.ndarray], /):
         """
         usage.scipy: 4
+        usage.seaborn: 2
         """
         ...
 
@@ -1164,6 +1196,13 @@ class RClass:
         ...
 
     @overload
+    def __getitem__(self, _0: Tuple[float, int], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
     def __getitem__(
         self,
         _0: Tuple[
@@ -1226,15 +1265,15 @@ class RClass:
     def __getitem__(
         self,
         _0: Union[
-            List[Union[List[Union[int, float]], numpy.ndarray, int]],
+            List[Union[numpy.ndarray, int, List[Union[float, int]]]],
             tuple,
-            int,
-            numpy.ndarray,
             slice[
-                Union[int, numpy.int64, None],
-                Union[int, numpy.int64],
-                Union[int, numpy.int64, None],
+                Union[None, numpy.int64, int],
+                Union[numpy.int64, int],
+                Union[None, numpy.int64, int],
             ],
+            numpy.ndarray,
+            int,
         ],
         /,
     ):
@@ -1242,6 +1281,7 @@ class RClass:
         usage.matplotlib: 6
         usage.pandas: 13
         usage.scipy: 187
+        usage.seaborn: 6
         usage.skimage: 16
         usage.sklearn: 37
         usage.xarray: 3

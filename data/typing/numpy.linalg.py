@@ -1046,6 +1046,7 @@ def norm(
 def pinv(a: numpy.ndarray):
     """
     usage.scipy: 3
+    usage.seaborn: 1
     usage.skimage: 1
     """
     ...

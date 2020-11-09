@@ -13,6 +13,7 @@ class CategoricalIndex:
     array: object
 
     # usage.dask: 11
+    # usage.seaborn: 1
     # usage.xarray: 1
     categories: object
 
@@ -34,6 +35,7 @@ class CategoricalIndex:
     names: List[str]
 
     # usage.dask: 7
+    # usage.seaborn: 1
     ordered: object
 
     # usage.xarray: 2

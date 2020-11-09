@@ -12168,6 +12168,7 @@ def assert_array_almost_equal(x: numpy.ndarray, y: numpy.ndarray):
     """
     usage.matplotlib: 29
     usage.scipy: 2007
+    usage.seaborn: 7
     usage.skimage: 64
     usage.sklearn: 886
     """
@@ -12889,6 +12890,7 @@ def assert_array_almost_equal(x: numpy.ndarray, y: List[Union[complex, int]]):
 def assert_array_almost_equal(x: numpy.ndarray, y: List[Union[float, int]]):
     """
     usage.scipy: 1
+    usage.seaborn: 1
     usage.sklearn: 4
     """
     ...
@@ -13753,6 +13755,7 @@ def assert_array_almost_equal(
 ):
     """
     usage.scipy: 1
+    usage.seaborn: 1
     """
     ...
 
@@ -14252,6 +14255,22 @@ def assert_array_almost_equal(x: List[List[float]], y: numpy.ndarray):
 
 
 @overload
+def assert_array_almost_equal(x: numpy.ndarray, y: pandas.core.series.Series):
+    """
+    usage.seaborn: 2
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: seaborn.palettes._ColorPalette, y: numpy.ndarray):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
 def assert_array_almost_equal(x: dask.array.core.Array, y: numpy.ndarray):
     """
     usage.dask: 1
@@ -14481,6 +14500,7 @@ def assert_array_almost_equal(
     usage.dask: 1
     usage.matplotlib: 86
     usage.scipy: 4018
+    usage.seaborn: 12
     usage.skimage: 109
     usage.sklearn: 1569
     """
@@ -14607,6 +14627,7 @@ def assert_array_equal(x: numpy.ndarray, y: numpy.ndarray):
     usage.koalas: 2
     usage.matplotlib: 106
     usage.scipy: 668
+    usage.seaborn: 63
     usage.skimage: 386
     usage.sklearn: 919
     usage.xarray: 164
@@ -14685,6 +14706,7 @@ def assert_array_equal(x: numpy.ndarray, y: List[int]):
     """
     usage.matplotlib: 10
     usage.scipy: 112
+    usage.seaborn: 13
     usage.skimage: 11
     usage.sklearn: 190
     usage.xarray: 7
@@ -14711,6 +14733,7 @@ def assert_array_equal(x: numpy.ndarray, y: Tuple[float, float]):
 @overload
 def assert_array_equal(x: numpy.ndarray, y: Tuple[int, int]):
     """
+    usage.seaborn: 6
     usage.skimage: 1
     usage.xarray: 2
     """
@@ -14739,6 +14762,7 @@ def assert_array_equal(x: numpy.ndarray, y: List[List[int]]):
     """
     usage.matplotlib: 12
     usage.scipy: 56
+    usage.seaborn: 1
     usage.skimage: 12
     usage.sklearn: 33
     """
@@ -14856,6 +14880,7 @@ def assert_array_equal(x: Tuple[int], y: Tuple[int]):
 def assert_array_equal(x: numpy.ma.core.MaskedArray, y: numpy.ma.core.MaskedArray):
     """
     usage.matplotlib: 3
+    usage.seaborn: 1
     usage.xarray: 2
     """
     ...
@@ -15156,6 +15181,7 @@ def assert_array_equal(x: Literal["foo"], y: Literal["foo"]):
 def assert_array_equal(x: numpy.ma.core.MaskedArray, y: numpy.ndarray):
     """
     usage.matplotlib: 2
+    usage.seaborn: 10
     usage.xarray: 1
     """
     ...
@@ -15518,6 +15544,7 @@ def assert_array_equal(x: numpy.ndarray, y: List[Union[int, float]]):
     """
     usage.matplotlib: 1
     usage.scipy: 6
+    usage.seaborn: 3
     usage.sklearn: 2
     """
     ...
@@ -15528,6 +15555,7 @@ def assert_array_equal(x: numpy.ndarray, y: List[float]):
     """
     usage.matplotlib: 1
     usage.scipy: 48
+    usage.seaborn: 10
     usage.sklearn: 11
     """
     ...
@@ -15545,6 +15573,7 @@ def assert_array_equal(x: Tuple[numpy.ndarray, numpy.ndarray], y: numpy.ndarray)
 def assert_array_equal(x: numpy.ndarray, y: List[Union[float, int]]):
     """
     usage.scipy: 7
+    usage.seaborn: 2
     usage.sklearn: 2
     """
     ...
@@ -15633,6 +15662,7 @@ def assert_array_equal(x: numpy.ndarray, y: List[numpy.float64]):
     """
     usage.matplotlib: 6
     usage.scipy: 6
+    usage.seaborn: 3
     usage.sklearn: 8
     """
     ...
@@ -16852,6 +16882,260 @@ def assert_array_equal(x: List[List[numpy.ndarray]], y: List[List[List[int]]]):
 
 
 @overload
+def assert_array_equal(x: numpy.flatiter, y: numpy.flatiter):
+    """
+    usage.seaborn: 5
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: pandas.core.series.Series):
+    """
+    usage.seaborn: 9
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: List[Literal["4h", "2h", "0h", "−2h", "−4h"]],
+    y: List[Literal["4h", "2h", "0h", "−2h", "−4h"]],
+):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: List[str], y: List[str]):
+    """
+    usage.seaborn: 1
+    usage.sklearn: 5
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: pandas.core.series.Series, y: numpy.ma.core.MaskedArray):
+    """
+    usage.seaborn: 12
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: pandas.core.series.Series, y: numpy.ndarray):
+    """
+    usage.seaborn: 8
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: numpy.ma.core.MaskedArray):
+    """
+    usage.seaborn: 4
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: List[numpy.float64], y: numpy.ndarray):
+    """
+    usage.seaborn: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: pandas.core.series.Series, y: pandas.core.series.Series):
+    """
+    usage.seaborn: 13
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: seaborn.palettes._ColorPalette, y: seaborn.palettes._ColorPalette
+):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: List[numpy.ndarray], y: numpy.ndarray):
+    """
+    usage.seaborn: 1
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: List[Literal["c", "b", "a"]], y: List[Literal["c", "b", "a"]]
+):
+    """
+    usage.seaborn: 5
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: List[Literal["n", "m"]], y: List[Literal["n", "m"]]):
+    """
+    usage.seaborn: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ma.core.MaskedArray, y: pandas.core.series.Series):
+    """
+    usage.seaborn: 6
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: numpy.ndarray, y: List[Tuple[Union[int, float, numpy.float64], int]]
+):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: List[Tuple[float, float, float]], y: List[Tuple[float, float, float]]
+):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: Tuple[float, float, float]):
+    """
+    usage.seaborn: 3
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: Literal["#33334c"], y: Literal["#33334c"]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: Tuple[float, float, float], y: Tuple[float, float, float]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: Literal["#e41a1c"], y: Literal["#e41a1c"]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: Literal["#377eb8"], y: Literal["#377eb8"]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: Literal["#4daf4a"], y: Literal["#4daf4a"]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: List[numpy.ndarray], y: List[numpy.ndarray]):
+    """
+    usage.seaborn: 4
+    usage.sklearn: 3
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: pandas.core.series.Series, y: pandas.core.indexes.numeric.Int64Index
+):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: pandas.core.series.Series, y: List[float]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: pandas.core.arrays.categorical.Categorical, y: List[Literal["c", "b", "a"]]
+):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: pandas.core.series.Series, y: List[int]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: numpy.flatiter):
+    """
+    usage.seaborn: 5
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: numpy.ndarray, y: List[Tuple[Union[int, float], int, int, Union[int, float]]]
+):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
 def assert_array_equal(x: dask.dataframe.core.Index, y: List[int]):
     """
     usage.dask: 2
@@ -16931,14 +17215,6 @@ def assert_array_equal(
 
 
 @overload
-def assert_array_equal(x: numpy.ndarray, y: pandas.core.series.Series):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def assert_array_equal(x: numpy.ndarray, y: int, err_msg: str):
     """
     usage.sklearn: 1
@@ -16989,14 +17265,6 @@ def assert_array_equal(x: numpy.ndarray, y: List[Union[int, Literal["foo"]]]):
 
 
 @overload
-def assert_array_equal(x: List[str], y: List[str]):
-    """
-    usage.sklearn: 5
-    """
-    ...
-
-
-@overload
 def assert_array_equal(
     x: List[Literal["e", "d", "c", "b", "a"]], y: List[Literal["e", "d", "c", "b", "a"]]
 ):
@@ -17034,14 +17302,6 @@ def assert_array_equal(x: List[numpy.int64], y: List[int]):
 def assert_array_equal(x: numpy.ndarray, y: List[Union[int, float]], err_msg: str):
     """
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def assert_array_equal(x: List[numpy.ndarray], y: numpy.ndarray):
-    """
-    usage.sklearn: 1
     """
     ...
 
@@ -17174,14 +17434,6 @@ def assert_array_equal(
 ):
     """
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def assert_array_equal(x: List[numpy.ndarray], y: List[numpy.ndarray]):
-    """
-    usage.sklearn: 3
     """
     ...
 
@@ -17360,14 +17612,6 @@ def assert_array_equal(x: numpy.ndarray, y: Tuple[List[int], List[int]]):
 
 
 @overload
-def assert_array_equal(x: numpy.ndarray, y: Tuple[float, float, float]):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def assert_array_equal(
     x: numpy.ndarray, y: numpy.ndarray, err_msg: Literal["solver svd"]
 ):
@@ -17518,6 +17762,7 @@ def assert_array_equal(x: object, y: object, err_msg: str = ...):
     usage.koalas: 2
     usage.matplotlib: 186
     usage.scipy: 1833
+    usage.seaborn: 206
     usage.skimage: 495
     usage.sklearn: 1475
     usage.xarray: 400
@@ -17539,6 +17784,7 @@ def assert_array_less(x: numpy.float64, y: numpy.float64):
 def assert_array_less(x: numpy.ndarray, y: numpy.ndarray):
     """
     usage.scipy: 4
+    usage.seaborn: 1
     usage.skimage: 2
     usage.sklearn: 4
     """
@@ -17660,6 +17906,7 @@ def assert_array_less(x: numpy.ndarray, y: numpy.float64):
 def assert_array_less(x: numpy.float64, y: numpy.ndarray):
     """
     usage.scipy: 3
+    usage.seaborn: 1
     """
     ...
 
@@ -17689,6 +17936,22 @@ def assert_array_less(x: numpy.ma.core.MaskedArray, y: float):
 
 
 @overload
+def assert_array_less(x: numpy.ndarray, y: numpy.ma.core.MaskedArray):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_less(x: numpy.ma.core.MaskedArray, y: numpy.ndarray):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
 def assert_array_less(x: numpy.float64, y: int, err_msg: str):
     """
     usage.sklearn: 3
@@ -17700,6 +17963,7 @@ def assert_array_less(x: object, y: object, err_msg: str = ...):
     """
     usage.matplotlib: 3
     usage.scipy: 95
+    usage.seaborn: 4
     usage.skimage: 20
     usage.sklearn: 18
     """
@@ -17714,6 +17978,7 @@ def assert_equal(actual: numpy.ndarray, desired: numpy.ndarray):
     usage.matplotlib: 3
     usage.networkx: 17
     usage.scipy: 544
+    usage.seaborn: 1
     usage.skimage: 264
     usage.sklearn: 2
     usage.xarray: 3
@@ -22720,6 +22985,22 @@ def assert_equal(actual: List[numpy.ndarray], desired: numpy.ndarray):
 
 
 @overload
+def assert_equal(actual: List[numpy.ndarray], desired: List[pandas.core.series.Series]):
+    """
+    usage.seaborn: 5
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: Tuple[float, float, float]):
+    """
+    usage.seaborn: 3
+    """
+    ...
+
+
+@overload
 def assert_equal(
     actual: Tuple[List[Tuple[Literal["x"]]], Tuple[None, ...]],
     desired: Tuple[List[Tuple[Literal["x"]]], Tuple[None, ...]],
@@ -23047,6 +23328,7 @@ def assert_equal(
     usage.matplotlib: 12
     usage.networkx: 74
     usage.scipy: 4653
+    usage.seaborn: 9
     usage.skimage: 663
     usage.sklearn: 27
     usage.xarray: 40
@@ -23098,6 +23380,7 @@ def assert_warns(warning_class: Type[RuntimeWarning], *args: Literal["v", "t"]):
 def assert_warns(warning_class: Type[UserWarning], *args: Literal["v", "t"]):
     """
     usage.scipy: 2
+    usage.seaborn: 1
     usage.skimage: 3
     """
     ...
@@ -23271,6 +23554,7 @@ def assert_warns(
 def assert_warns(warning_class: type, *args: Literal["v", "t"]):
     """
     usage.scipy: 39
+    usage.seaborn: 1
     usage.skimage: 6
     usage.sklearn: 1
     """

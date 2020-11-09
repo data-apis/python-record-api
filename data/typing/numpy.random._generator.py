@@ -204,18 +204,28 @@ class Generator:
         """
         ...
 
+    @overload
+    def integers(self, _0: int, _1: int, _2: int, /, *, dtype: Type[numpy.int64]):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
     def integers(
         self,
-        _0: Union[numpy.ndarray, int],
+        _0: Union[int, numpy.ndarray],
+        _1: int = ...,
+        _2: int = ...,
         /,
         *,
-        dtype: Literal["int64"],
-        endpoint: bool,
-        high: Union[numpy.ndarray, int, None],
-        size: Union[Tuple[numpy.int64], int],
+        dtype: Union[Type[numpy.int64], Literal["int64"]],
+        endpoint: bool = ...,
+        high: Union[numpy.ndarray, int, None] = ...,
+        size: Union[Tuple[numpy.int64], int] = ...,
     ):
         """
         usage.scipy: 3
+        usage.seaborn: 3
         """
         ...
 
@@ -444,6 +454,7 @@ class Generator:
     def uniform(self, /):
         """
         usage.scipy: 4
+        usage.seaborn: 1
         """
         ...
 
@@ -506,11 +517,12 @@ class Generator:
     def uniform(
         self,
         /,
-        *_args: Union[Tuple[Union[int, numpy.int64]], float, int, numpy.ndarray],
+        *_args: Union[numpy.ndarray, int, float, Tuple[Union[numpy.int64, int]]],
         size: Union[numpy.int64, int, Tuple[Union[numpy.int64, int], ...]] = ...,
     ):
         """
         usage.scipy: 23
+        usage.seaborn: 1
         """
         ...
 

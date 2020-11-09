@@ -146,17 +146,107 @@ def is_categorical_dtype(arr_or_dtype: numpy.dtype):
 
 
 @overload
-def is_categorical_dtype(arr_or_dtype: dask.dataframe.core.Series):
+def is_categorical_dtype(arr_or_dtype: pandas.core.series.Series):
     """
-    usage.dask: 5
+    usage.dask: 7
+    usage.seaborn: 1
     """
     ...
 
 
 @overload
-def is_categorical_dtype(arr_or_dtype: pandas.core.series.Series):
+def is_categorical_dtype(arr_or_dtype: numpy.ndarray):
     """
-    usage.dask: 7
+    usage.dask: 1
+    usage.seaborn: 3
+    """
+    ...
+
+
+@overload
+def is_categorical_dtype(arr_or_dtype: List[Literal["b", "a"]]):
+    """
+    usage.seaborn: 2
+    """
+    ...
+
+
+@overload
+def is_categorical_dtype(arr_or_dtype: List[Literal["m", "n"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_categorical_dtype(arr_or_dtype: List[Literal["d", "c", "b", "a"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_categorical_dtype(arr_or_dtype: List[Literal["y", "x"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_categorical_dtype(arr_or_dtype: List[pandas._libs.tslibs.timestamps.Timestamp]):
+    """
+    usage.seaborn: 2
+    """
+    ...
+
+
+@overload
+def is_categorical_dtype(arr_or_dtype: List[float]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_categorical_dtype(arr_or_dtype: List[Literal["3", "2", "1"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_categorical_dtype(arr_or_dtype: List[Literal["d", "a", "b", "c"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_categorical_dtype(arr_or_dtype: List[int]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_categorical_dtype(arr_or_dtype: List[Union[Literal["d", "a", "b", "c"], float]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_categorical_dtype(arr_or_dtype: dask.dataframe.core.Series):
+    """
+    usage.dask: 5
     """
     ...
 
@@ -337,14 +427,6 @@ def is_categorical_dtype(
 
 
 @overload
-def is_categorical_dtype(arr_or_dtype: numpy.ndarray):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
 def is_categorical_dtype(arr_or_dtype: Literal["-"]):
     """
     usage.dask: 1
@@ -356,6 +438,7 @@ def is_categorical_dtype(arr_or_dtype: object):
     """
     usage.dask: 113
     usage.koalas: 1
+    usage.seaborn: 16
     """
     ...
 
@@ -385,9 +468,121 @@ def is_datetime64_any_dtype(
     ...
 
 
+@overload
 def is_datetime64_dtype(arr_or_dtype: numpy.dtype):
     """
     usage.koalas: 17
+    """
+    ...
+
+
+@overload
+def is_datetime64_dtype(arr_or_dtype: pandas.core.series.Series):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_datetime64_dtype(arr_or_dtype: numpy.ndarray):
+    """
+    usage.seaborn: 3
+    """
+    ...
+
+
+@overload
+def is_datetime64_dtype(arr_or_dtype: List[Literal["b", "a"]]):
+    """
+    usage.seaborn: 2
+    """
+    ...
+
+
+@overload
+def is_datetime64_dtype(arr_or_dtype: List[Literal["m", "n"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_datetime64_dtype(arr_or_dtype: List[Literal["d", "c", "b", "a"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_datetime64_dtype(arr_or_dtype: List[Literal["y", "x"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_datetime64_dtype(arr_or_dtype: List[pandas._libs.tslibs.timestamps.Timestamp]):
+    """
+    usage.seaborn: 2
+    """
+    ...
+
+
+@overload
+def is_datetime64_dtype(arr_or_dtype: List[float]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_datetime64_dtype(arr_or_dtype: List[Literal["3", "2", "1"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_datetime64_dtype(arr_or_dtype: List[Literal["d", "a", "b", "c"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_datetime64_dtype(arr_or_dtype: List[int]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_datetime64_dtype(arr_or_dtype: List[Union[Literal["d", "a", "b", "c"], float]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+def is_datetime64_dtype(
+    arr_or_dtype: Union[
+        pandas.core.series.Series,
+        numpy.ndarray,
+        numpy.dtype,
+        List[Union[pandas._libs.tslibs.timestamps.Timestamp, float, int, str]],
+    ]
+):
+    """
+    usage.koalas: 17
+    usage.seaborn: 16
     """
     ...
 
@@ -567,14 +762,111 @@ def is_numeric_dtype(arr_or_dtype: numpy.dtype):
 def is_numeric_dtype(arr_or_dtype: pandas.core.series.Series):
     """
     usage.dask: 1
+    usage.seaborn: 1
     """
     ...
 
 
-def is_numeric_dtype(arr_or_dtype: Union[pandas.core.series.Series, numpy.dtype]):
+@overload
+def is_numeric_dtype(arr_or_dtype: numpy.ndarray):
+    """
+    usage.seaborn: 5
+    """
+    ...
+
+
+@overload
+def is_numeric_dtype(arr_or_dtype: List[Literal["b", "a"]]):
+    """
+    usage.seaborn: 2
+    """
+    ...
+
+
+@overload
+def is_numeric_dtype(arr_or_dtype: List[Literal["m", "n"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_numeric_dtype(arr_or_dtype: List[Literal["d", "c", "b", "a"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_numeric_dtype(arr_or_dtype: List[Literal["y", "x"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_numeric_dtype(arr_or_dtype: List[pandas._libs.tslibs.timestamps.Timestamp]):
+    """
+    usage.seaborn: 2
+    """
+    ...
+
+
+@overload
+def is_numeric_dtype(arr_or_dtype: List[float]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_numeric_dtype(arr_or_dtype: List[Literal["3", "2", "1"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_numeric_dtype(arr_or_dtype: List[Literal["d", "a", "b", "c"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_numeric_dtype(arr_or_dtype: List[int]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def is_numeric_dtype(arr_or_dtype: List[Union[Literal["d", "a", "b", "c"], float]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+def is_numeric_dtype(
+    arr_or_dtype: Union[
+        pandas.core.series.Series,
+        numpy.dtype,
+        numpy.ndarray,
+        List[Union[str, int, float, pandas._libs.tslibs.timestamps.Timestamp]],
+    ]
+):
     """
     usage.dask: 1
     usage.koalas: 1
+    usage.seaborn: 18
     """
     ...
 

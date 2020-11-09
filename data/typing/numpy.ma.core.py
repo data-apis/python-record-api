@@ -1430,6 +1430,7 @@ def is_masked(x: list):
 def is_masked(x: numpy.float64):
     """
     usage.matplotlib: 6
+    usage.seaborn: 2
     """
     ...
 
@@ -1486,6 +1487,7 @@ def is_masked(x: object):
     """
     usage.matplotlib: 32
     usage.scipy: 17
+    usage.seaborn: 2
     """
     ...
 
@@ -1948,6 +1950,23 @@ def masked_less_equal(x: numpy.ma.core.MaskedArray, value: int, copy: bool):
 
 
 @overload
+def masked_less_equal(x: numpy.ndarray, value: int):
+    """
+    usage.dask: 1
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def masked_less_equal(x: numpy.ndarray, value: numpy.float64):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
 def masked_less_equal(x: dask.array.core.Array, value: int):
     """
     usage.dask: 1
@@ -1963,23 +1982,16 @@ def masked_less_equal(x: numpy.ndarray, value: numpy.ndarray):
     ...
 
 
-@overload
-def masked_less_equal(x: numpy.ndarray, value: int):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
 def masked_less_equal(
     x: Union[dask.array.core.Array, numpy.ndarray, numpy.ma.core.MaskedArray],
-    value: Union[numpy.ndarray, int],
+    value: Union[numpy.ndarray, int, numpy.float64],
     copy: bool = ...,
 ):
     """
     usage.dask: 3
     usage.matplotlib: 7
     usage.scipy: 2
+    usage.seaborn: 2
     """
     ...
 
@@ -2061,6 +2073,7 @@ def masked_where(condition: numpy.ndarray, a: numpy.ndarray):
     usage.dask: 2
     usage.matplotlib: 2
     usage.scipy: 7
+    usage.seaborn: 2
     usage.xarray: 1
     """
     ...
@@ -2107,6 +2120,7 @@ def masked_where(
     usage.dask: 3
     usage.matplotlib: 2
     usage.scipy: 12
+    usage.seaborn: 2
     usage.xarray: 1
     """
     ...
@@ -2359,6 +2373,7 @@ class MaskedArray:
 
     # usage.matplotlib: 2
     # usage.scipy: 11
+    # usage.seaborn: 21
     T: object
 
     # usage.dask: 1
@@ -2379,6 +2394,7 @@ class MaskedArray:
     # usage.dask: 1
     # usage.matplotlib: 18
     # usage.scipy: 12
+    # usage.seaborn: 2
     # usage.sklearn: 2
     # usage.xarray: 3
     data: object
@@ -2400,6 +2416,7 @@ class MaskedArray:
     # usage.dask: 4
     # usage.matplotlib: 38
     # usage.scipy: 15
+    # usage.seaborn: 3
     # usage.skimage: 5
     # usage.sklearn: 2
     # usage.xarray: 6
@@ -2423,6 +2440,7 @@ class MaskedArray:
 
     # usage.matplotlib: 50
     # usage.scipy: 14
+    # usage.seaborn: 1
     size: object
 
     @overload
@@ -2562,6 +2580,7 @@ class MaskedArray:
         """
         usage.matplotlib: 12
         usage.scipy: 4
+        usage.seaborn: 1
         usage.skimage: 2
         usage.xarray: 1
         """
@@ -2572,6 +2591,7 @@ class MaskedArray:
         """
         usage.matplotlib: 6
         usage.scipy: 9
+        usage.seaborn: 5
         usage.skimage: 1
         """
         ...
@@ -2620,6 +2640,7 @@ class MaskedArray:
         """
         usage.matplotlib: 1
         usage.scipy: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -2628,6 +2649,7 @@ class MaskedArray:
         """
         usage.matplotlib: 24
         usage.scipy: 15
+        usage.seaborn: 1
         usage.sklearn: 21
         """
         ...
@@ -2704,6 +2726,7 @@ class MaskedArray:
     def __getitem__(self, _0: Tuple[slice[None, None, None], List[int]], /):
         """
         usage.scipy: 1
+        usage.seaborn: 1
         """
         ...
 
@@ -2913,6 +2936,7 @@ class MaskedArray:
         usage.dask: 25
         usage.matplotlib: 101
         usage.scipy: 66
+        usage.seaborn: 9
         usage.skimage: 6
         usage.sklearn: 21
         usage.xarray: 1
@@ -3071,6 +3095,7 @@ class MaskedArray:
         """
         usage.matplotlib: 17
         usage.scipy: 1
+        usage.seaborn: 24
         """
         ...
 
@@ -3212,6 +3237,7 @@ class MaskedArray:
         """
         usage.matplotlib: 3
         usage.scipy: 2
+        usage.seaborn: 1
         usage.xarray: 1
         """
         ...
@@ -3252,6 +3278,7 @@ class MaskedArray:
         """
         usage.dask: 1
         usage.matplotlib: 2
+        usage.seaborn: 1
         """
         ...
 
@@ -3260,6 +3287,7 @@ class MaskedArray:
         usage.dask: 3
         usage.matplotlib: 16
         usage.scipy: 18
+        usage.seaborn: 2
         usage.xarray: 1
         """
         ...
@@ -3319,6 +3347,7 @@ class MaskedArray:
     def __radd__(self, _0: numpy.float64, /):
         """
         usage.matplotlib: 1
+        usage.seaborn: 1
         usage.xarray: 1
         """
         ...
@@ -3328,6 +3357,7 @@ class MaskedArray:
         """
         usage.matplotlib: 1
         usage.scipy: 2
+        usage.seaborn: 1
         """
         ...
 
@@ -3366,6 +3396,7 @@ class MaskedArray:
         usage.dask: 3
         usage.matplotlib: 7
         usage.scipy: 8
+        usage.seaborn: 2
         usage.xarray: 1
         """
         ...
@@ -4123,6 +4154,7 @@ class MaskedArray:
     def astype(self, _0: Type[float], /):
         """
         usage.scipy: 3
+        usage.seaborn: 2
         """
         ...
 
@@ -4160,6 +4192,7 @@ class MaskedArray:
         usage.matplotlib: 7
         usage.pandas: 2
         usage.scipy: 8
+        usage.seaborn: 2
         """
         ...
 

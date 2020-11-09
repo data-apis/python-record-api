@@ -429,6 +429,9 @@ class Int64Index:
     # usage.dask: 1
     array: object
 
+    # usage.seaborn: 1
+    categories: object
+
     # usage.dask: 11
     # usage.koalas: 1
     # usage.xarray: 6
@@ -444,6 +447,7 @@ class Int64Index:
 
     # usage.dask: 21
     # usage.koalas: 14
+    # usage.seaborn: 3
     # usage.xarray: 13
     name: Union[None, str, Tuple[Literal["x"], Literal["a"]]]
 
@@ -475,6 +479,7 @@ class Int64Index:
     size: object
 
     # usage.dask: 3
+    # usage.seaborn: 2
     # usage.xarray: 3
     values: object
 

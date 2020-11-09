@@ -110,6 +110,7 @@ class _LocIndexer:
     def __getitem__(self, _0: int, /):
         """
         usage.koalas: 10
+        usage.seaborn: 1
         """
         ...
 
@@ -627,6 +628,7 @@ class _LocIndexer:
         """
         usage.dask: 5
         usage.koalas: 7
+        usage.seaborn: 2
         """
         ...
 
@@ -872,6 +874,51 @@ class _LocIndexer:
     ):
         """
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, Literal["x"]], /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, Literal["y"]], /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], pandas.core.series.Series], /
+    ):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], numpy.ndarray], /):
+        """
+        usage.seaborn: 1
+        usage.sklearn: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.float64, numpy.float64], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["c"]], /):
+        """
+        usage.seaborn: 1
         """
         ...
 
@@ -2115,13 +2162,6 @@ class _LocIndexer:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], numpy.ndarray], /):
-        """
-        usage.sklearn: 3
-        """
-        ...
-
-    @overload
     def __getitem__(
         self, _0: Tuple[slice[None, None, None], List[Literal["second"]]], /
     ):
@@ -2315,6 +2355,7 @@ class _LocIndexer:
         """
         usage.dask: 250
         usage.koalas: 137
+        usage.seaborn: 14
         usage.sklearn: 30
         usage.xarray: 45
         """
@@ -2586,14 +2627,38 @@ class _LocIndexer:
         """
         ...
 
+    @overload
+    def __setitem__(self, _0: pandas.core.series.Series, _1: float, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[numpy.ndarray, Literal["x"]], _1: float, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[pandas.core.series.Series, Literal["y"]], _1: float, /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
     def __setitem__(
         self,
         _0: object,
-        _1: Union[pandas.core.series.Series, int, pandas.core.frame.DataFrame, float],
+        _1: Union[float, pandas.core.frame.DataFrame, int, pandas.core.series.Series],
         /,
     ):
         """
         usage.koalas: 33
+        usage.seaborn: 3
         """
         ...
 
@@ -2653,6 +2718,7 @@ class _iLocIndexer:
         """
         usage.dask: 9
         usage.koalas: 6
+        usage.seaborn: 2
         usage.sklearn: 1
         usage.xarray: 2
         """
@@ -2671,6 +2737,7 @@ class _iLocIndexer:
         usage.dask: 6
         usage.koalas: 4
         usage.modin: 1
+        usage.seaborn: 4
         usage.sklearn: 2
         """
         ...
@@ -2846,6 +2913,36 @@ class _iLocIndexer:
         ...
 
     @overload
+    def __getitem__(self, _0: Tuple[List[int], List[int]], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, List[int]], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, None, None]], /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: slice[None, numpy.int64, None], /):
         """
         usage.dask: 2
@@ -2904,38 +3001,12 @@ class _iLocIndexer:
         """
         ...
 
-    def __getitem__(
-        self,
-        _0: Union[
-            slice[
-                Union[numpy.int64, int, None],
-                Union[numpy.int64, int, None],
-                Union[numpy.int64, int, None],
-            ],
-            Tuple[
-                Union[
-                    numpy.ndarray,
-                    int,
-                    slice[Union[None, int], Union[None, int], Union[None, int]],
-                    List[int],
-                ],
-                Union[
-                    slice[Union[int, None], Union[int, None], Union[int, None]],
-                    List[Union[int, bool]],
-                    int,
-                    numpy.ndarray,
-                ],
-            ],
-            List[int],
-            numpy.ndarray,
-            int,
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: object, /):
         """
         usage.dask: 71
         usage.koalas: 98
         usage.modin: 3
+        usage.seaborn: 12
         usage.sklearn: 24
         usage.xarray: 5
         """
@@ -3026,6 +3097,18 @@ class _iLocIndexer:
         ...
 
     @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], List[int]],
+        _1: pandas.core.frame.DataFrame,
+        /,
+    ):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
     def __setitem__(self, _0: Tuple[slice[None, int, None], int], _1: float, /):
         """
         usage.dask: 1
@@ -3075,18 +3158,18 @@ class _iLocIndexer:
         self,
         _0: Union[
             Tuple[
-                Union[slice[None, Union[None, int], None], List[int], int],
-                Union[List[int], int, numpy.int32],
+                Union[int, List[int], slice[None, Union[None, int], None]],
+                Union[int, numpy.int32, List[int]],
             ],
+            slice[Union[int, None], Union[None, int], Union[int, None]],
             List[int],
-            slice[Union[None, int], Union[int, None], Union[None, int]],
             int,
         ],
         _1: Union[
             numpy.float64,
             pandas.core.series.Series,
-            int,
             pandas.core.frame.DataFrame,
+            int,
             float,
         ],
         /,
@@ -3094,6 +3177,7 @@ class _iLocIndexer:
         """
         usage.dask: 5
         usage.koalas: 28
+        usage.seaborn: 3
         usage.sklearn: 5
         """
         ...

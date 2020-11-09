@@ -15,6 +15,7 @@ class DataFrame:
     # usage.dask: 6
     # usage.koalas: 1
     # usage.networkx: 1
+    # usage.seaborn: 9
     # usage.sklearn: 39
     shape: ClassVar[object]
 
@@ -200,6 +201,7 @@ class DataFrame:
         """
         usage.dask: 5
         usage.koalas: 1
+        usage.seaborn: 1
         """
         ...
 
@@ -209,6 +211,7 @@ class DataFrame:
         """
         usage.dask: 13
         usage.koalas: 9
+        usage.seaborn: 65
         usage.xarray: 3
         """
         ...
@@ -673,6 +676,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["species"], /):
         """
         usage.koalas: 2
+        usage.seaborn: 1
         """
         ...
 
@@ -867,6 +871,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["class"], /):
         """
         usage.koalas: 1
+        usage.seaborn: 5
         usage.sklearn: 2
         """
         ...
@@ -1211,6 +1216,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 1
+        usage.seaborn: 6
         """
         ...
 
@@ -1264,6 +1270,7 @@ class DataFrame:
         usage.koalas: 14
         usage.modin: 2
         usage.networkx: 3
+        usage.seaborn: 11
         """
         ...
 
@@ -1349,6 +1356,7 @@ class DataFrame:
         usage.dask: 40
         usage.koalas: 28
         usage.modin: 2
+        usage.seaborn: 33
         """
         ...
 
@@ -1588,6 +1596,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 2
+        usage.seaborn: 1
         """
         ...
 
@@ -1766,6 +1775,7 @@ class DataFrame:
         usage.dask: 14
         usage.koalas: 8
         usage.modin: 2
+        usage.seaborn: 9
         usage.sklearn: 2
         """
         ...
@@ -1979,6 +1989,7 @@ class DataFrame:
         """
         usage.dask: 13
         usage.koalas: 9
+        usage.seaborn: 7
         """
         ...
 
@@ -2217,6 +2228,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 6
+        usage.seaborn: 2
         """
         ...
 
@@ -2290,6 +2302,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 1
+        usage.seaborn: 1
         """
         ...
 
@@ -2428,6 +2441,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["t"], /):
         """
         usage.koalas: 2
+        usage.seaborn: 4
         """
         ...
 
@@ -2468,6 +2482,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["Z"], /):
         """
         usage.koalas: 2
+        usage.seaborn: 2
         """
         ...
 
@@ -2477,6 +2492,7 @@ class DataFrame:
         """
         usage.dask: 13
         usage.koalas: 1
+        usage.seaborn: 58
         """
         ...
 
@@ -2486,6 +2502,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 1
+        usage.seaborn: 1
         """
         ...
 
@@ -2495,6 +2512,7 @@ class DataFrame:
         """
         usage.dask: 3
         usage.koalas: 1
+        usage.seaborn: 17
         """
         ...
 
@@ -2794,6 +2812,7 @@ class DataFrame:
         """
         usage.dask: 10
         usage.koalas: 2
+        usage.seaborn: 4
         """
         ...
 
@@ -2837,6 +2856,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 4
+        usage.seaborn: 1
         """
         ...
 
@@ -2854,6 +2874,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 2
+        usage.seaborn: 2
         """
         ...
 
@@ -2878,6 +2899,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["h"], /):
         """
         usage.koalas: 2
+        usage.seaborn: 5
         """
         ...
 
@@ -5624,6 +5646,660 @@ class DataFrame:
 
     @overload
     @classmethod
+    def __getitem__(cls, _0: Literal["day"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sex"], /):
+        """
+        usage.seaborn: 2
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["time"], /):
+        """
+        usage.seaborn: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["smoker"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["total_bill"], /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sepal_length"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sepal_width"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["petal_length"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["petal_width"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[Literal["petal_width", "petal_length", "sepal_width", "sepal_length"]],
+        /,
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["kind"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["diet"], /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: numpy.ndarray, /):
+        """
+        usage.dask: 8
+        usage.seaborn: 1
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["deck"], /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["tip"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["size"], /):
+        """
+        usage.seaborn: 10
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["b_bool"], /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["hasna"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x", "b"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["hue"], /):
+        """
+        usage.seaborn: 13
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x", "y"]], /):
+        """
+        usage.dask: 2
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x", "z"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y", "z"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["z", "x"]], /):
+        """
+        usage.dask: 4
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["edges"], /):
+        """
+        usage.seaborn: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["heights"], /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["widths"], /):
+        """
+        usage.seaborn: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a", "y", "x"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a", "x", "y"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["hue", "y", "x"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a", "z", "x"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a", "z", "y"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a", "x", "z"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a", "y", "z"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Y"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["W"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Z", "Y", "X"]], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["X", "Z", "Y"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["u"], /):
+        """
+        usage.seaborn: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["@index"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["@values"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["@columns"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["style", "hue", "y", "x"]], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["style"], /):
+        """
+        usage.seaborn: 9
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["a_cat"], /):
+        """
+        usage.seaborn: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["s_cat"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["s"], /):
+        """
+        usage.seaborn: 5
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["s", "a"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["b", "s", "a"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["row"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["hue", "x"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Tuple[Literal["hue"], Literal["c"]]], /):
+        """
+        usage.seaborn: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Tuple[Literal["hue"], Literal["a"]]], /):
+        """
+        usage.seaborn: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Tuple[Tuple[Literal["hue"], Literal["b"]]], /):
+        """
+        usage.seaborn: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["weights"], /):
+        """
+        usage.seaborn: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["_"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: Tuple[
+            Tuple[Literal["hue"], Literal["c"]], Tuple[Literal["col"], Literal["_"]]
+        ],
+        /,
+    ):
+        """
+        usage.seaborn: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: Tuple[
+            Tuple[Literal["hue"], Literal["a"]], Tuple[Literal["col"], Literal["_"]]
+        ],
+        /,
+    ):
+        """
+        usage.seaborn: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: Tuple[
+            Tuple[Literal["hue"], Literal["b"]], Tuple[Literal["col"], Literal["_"]]
+        ],
+        /,
+    ):
+        """
+        usage.seaborn: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: Tuple[
+            Tuple[Literal["hue"], Literal["c"]], Tuple[Literal["col"], numpy.int64]
+        ],
+        /,
+    ):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: Tuple[
+            Tuple[Literal["hue"], Literal["b"]], Tuple[Literal["col"], numpy.int64]
+        ],
+        /,
+    ):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: Tuple[
+            Tuple[Literal["hue"], Literal["a"]], Tuple[Literal["col"], numpy.int64]
+        ],
+        /,
+    ):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["_col_"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["_row_"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["low"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["high"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["units"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["style", "y", "x"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["size", "y", "x"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["size", "style", "hue", "y", "x"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["size", "hue", "y", "x"]], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["color"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["clarity"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cut"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["month"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
     def __getitem__(cls, _0: List[Literal["id", "name"]], /):
         """
         usage.dask: 1
@@ -5800,14 +6476,6 @@ class DataFrame:
 
     @overload
     @classmethod
-    def __getitem__(cls, _0: List[Literal["z", "x"]], /):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
-    @classmethod
     def __getitem__(cls, _0: Literal["cat"], /):
         """
         usage.dask: 2
@@ -5953,26 +6621,9 @@ class DataFrame:
 
     @overload
     @classmethod
-    def __getitem__(cls, _0: numpy.ndarray, /):
-        """
-        usage.dask: 8
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    @classmethod
     def __getitem__(cls, _0: Literal["Name"], /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __getitem__(cls, _0: List[Literal["x", "y"]], /):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -6778,14 +7429,6 @@ class DataFrame:
     @overload
     @classmethod
     def __getitem__(cls, _0: Literal["jurofm"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __getitem__(cls, _0: Literal["s"], /):
         """
         usage.sklearn: 1
         """
@@ -7769,14 +8412,6 @@ class DataFrame:
 
     @overload
     @classmethod
-    def __getitem__(cls, _0: Literal["sex"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    @classmethod
     def __getitem__(cls, _0: Literal["sibsp"], /):
         """
         usage.sklearn: 1
@@ -7942,6 +8577,7 @@ class DataFrame:
         usage.koalas: 1033
         usage.modin: 19
         usage.networkx: 22
+        usage.seaborn: 406
         usage.sklearn: 213
         usage.xarray: 8
         """
@@ -8289,6 +8925,7 @@ class DataFrame:
 
     # usage.dask: 5
     # usage.koalas: 1
+    # usage.seaborn: 4
     # usage.xarray: 1
     T: object
 
@@ -8312,6 +8949,7 @@ class DataFrame:
 
     # usage.dask: 114
     # usage.koalas: 132
+    # usage.seaborn: 9
     a: pandas.core.series.Series
 
     # usage.koalas: 1
@@ -8332,10 +8970,15 @@ class DataFrame:
 
     # usage.dask: 63
     # usage.koalas: 99
+    # usage.seaborn: 2
     b: object
+
+    # usage.seaborn: 1
+    b_bool: object
 
     # usage.dask: 1
     # usage.koalas: 9
+    # usage.seaborn: 3
     c: object
 
     # usage.dask: 1
@@ -8348,15 +8991,24 @@ class DataFrame:
     # usage.koalas: 676
     # usage.modin: 17
     # usage.networkx: 3
+    # usage.seaborn: 18
     # usage.sklearn: 19
     # usage.xarray: 9
     columns: object
 
     # usage.dask: 4
     # usage.koalas: 2
+    # usage.seaborn: 3
     d: object
 
+    # usage.seaborn: 2
+    dataset: object
+
+    # usage.seaborn: 1
+    deck: object
+
     # usage.dask: 3
+    # usage.seaborn: 1
     div: object
 
     # usage.dask: 3
@@ -8378,8 +9030,12 @@ class DataFrame:
     # usage.koalas: 4
     e: object
 
+    # usage.seaborn: 1
+    embark_town: object
+
     # usage.dask: 4
     # usage.modin: 2
+    # usage.seaborn: 2
     empty: object
 
     # usage.dask: 3
@@ -8394,6 +9050,12 @@ class DataFrame:
     # usage.dask: 2
     fruit: object
 
+    # usage.seaborn: 17
+    g: pandas.core.series.Series
+
+    # usage.seaborn: 6
+    h: pandas.core.series.Series
+
     # usage.dask: 2
     i32: object
 
@@ -8407,6 +9069,7 @@ class DataFrame:
     # usage.dask: 46
     # usage.koalas: 23
     # usage.modin: 3
+    # usage.seaborn: 9
     # usage.sklearn: 14
     # usage.xarray: 2
     iloc: object
@@ -8415,6 +9078,7 @@ class DataFrame:
     # usage.koalas: 57
     # usage.modin: 8
     # usage.networkx: 2
+    # usage.seaborn: 12
     # usage.sklearn: 3
     # usage.xarray: 12
     index: object
@@ -8424,6 +9088,7 @@ class DataFrame:
 
     # usage.dask: 71
     # usage.koalas: 103
+    # usage.seaborn: 16
     # usage.sklearn: 1
     # usage.xarray: 3
     loc: object
@@ -8457,6 +9122,7 @@ class DataFrame:
     shield: object
 
     # usage.dask: 2
+    # usage.seaborn: 1
     # usage.sklearn: 2
     size: object
 
@@ -8479,6 +9145,7 @@ class DataFrame:
     # usage.koalas: 2
     # usage.modin: 1
     # usage.networkx: 1
+    # usage.seaborn: 8
     # usage.sklearn: 1
     # usage.xarray: 7
     values: object
@@ -8488,10 +9155,12 @@ class DataFrame:
 
     # usage.dask: 82
     # usage.koalas: 25
+    # usage.seaborn: 8
     x: pandas.core.series.Series
 
     # usage.dask: 39
     # usage.koalas: 11
+    # usage.seaborn: 7
     y: pandas.core.series.Series
 
     # usage.koalas: 1
@@ -8563,6 +9232,131 @@ class DataFrame:
     def __array_wrap__(self, /, result: numpy.ndarray):
         """
         usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["x"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["y"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["a"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["c"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["t"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["a_cat"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["s_cat"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["s"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["what"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["b"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["z"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["_"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["f"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["style"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["hue"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["size"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["u"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    def __contains__(self, _0: str, /):
+        """
+        usage.seaborn: 18
         """
         ...
 
@@ -8670,6 +9464,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.modin: 1
+        usage.seaborn: 4
         """
         ...
 
@@ -8780,6 +9575,7 @@ class DataFrame:
     def __or__(self, _0: pandas.core.frame.DataFrame, /):
         """
         usage.dask: 2
+        usage.seaborn: 1
         """
         ...
 
@@ -8867,6 +9663,7 @@ class DataFrame:
     def __ror__(self, _0: pandas.core.frame.DataFrame, /):
         """
         usage.dask: 2
+        usage.seaborn: 1
         """
         ...
 
@@ -8965,6 +9762,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 2
+        usage.seaborn: 1
         """
         ...
 
@@ -9199,6 +9997,7 @@ class DataFrame:
         """
         usage.dask: 4
         usage.koalas: 1
+        usage.seaborn: 1
         """
         ...
 
@@ -10827,6 +11626,196 @@ class DataFrame:
     def __setitem__(self, _0: Literal["col14"], _1: List[str], /):
         """
         usage.modin: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["day"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["sex"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["time"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["smoker"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["kind"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["diet"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["class"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["deck"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["b_bool"], _1: pandas.core.series.Series, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["hasna"], _1: pandas.core.series.Series, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["date"], _1: pandas.core.indexes.datetimes.DatetimeIndex, /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["@index"], _1: pandas.core.series.Series, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["hue"], _1: pandas.core.series.Series, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["style"], _1: pandas.core.series.Series, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["@columns"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["_"], _1: Literal["_"], /):
+        """
+        usage.seaborn: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["widths"], _1: pandas.core.series.Series, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["edges"], _1: pandas.core.series.Series, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["color"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["clarity"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["cut"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["month"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["sex"], _1: pandas.core.series.Series, /):
+        """
+        usage.seaborn: 1
+        usage.sklearn: 1
         """
         ...
 
@@ -12500,13 +13489,6 @@ class DataFrame:
         ...
 
     @overload
-    def __setitem__(self, _0: Literal["sex"], _1: pandas.core.series.Series, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Literal["sibsp"], _1: pandas.core.series.Series, /):
         """
         usage.sklearn: 1
@@ -12624,6 +13606,7 @@ class DataFrame:
         usage.dask: 129
         usage.koalas: 266
         usage.modin: 16
+        usage.seaborn: 29
         usage.sklearn: 178
         usage.xarray: 1
         """
@@ -12648,6 +13631,7 @@ class DataFrame:
     def __sub__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 5
+        usage.seaborn: 2
         """
         ...
 
@@ -12663,6 +13647,7 @@ class DataFrame:
         usage.dask: 8
         usage.koalas: 2
         usage.pandas: 30
+        usage.seaborn: 2
         """
         ...
 
@@ -12670,6 +13655,13 @@ class DataFrame:
     def __truediv__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
         """
         usage.pandas: 22
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.seaborn: 2
         """
         ...
 
@@ -12682,12 +13674,18 @@ class DataFrame:
 
     def __truediv__(
         self,
-        _0: Union[pandas.core.frame.DataFrame, numpy.timedelta64, numpy.ndarray],
+        _0: Union[
+            pandas.core.frame.DataFrame,
+            numpy.ndarray,
+            numpy.timedelta64,
+            pandas.core.series.Series,
+        ],
         /,
     ):
         """
         usage.dask: 1
         usage.pandas: 22
+        usage.seaborn: 2
         """
         ...
 
@@ -13386,6 +14384,7 @@ class DataFrame:
         """
         usage.dask: 5
         usage.koalas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -13407,6 +14406,7 @@ class DataFrame:
         """
         usage.dask: 11
         usage.koalas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -13415,6 +14415,7 @@ class DataFrame:
         """
         usage.dask: 3
         usage.koalas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -13436,6 +14437,7 @@ class DataFrame:
         """
         usage.dask: 9
         usage.koalas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -13553,6 +14555,13 @@ class DataFrame:
         ...
 
     @overload
+    def apply(self, /, func: Callable):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def apply(
         self,
         /,
@@ -13587,6 +14596,7 @@ class DataFrame:
         usage.dask: 10
         usage.koalas: 19
         usage.modin: 1
+        usage.seaborn: 1
         usage.xarray: 1
         """
         ...
@@ -14208,6 +15218,7 @@ class DataFrame:
         usage.dask: 13
         usage.koalas: 21
         usage.modin: 4
+        usage.seaborn: 11
         usage.sklearn: 4
         """
         ...
@@ -14216,6 +15227,7 @@ class DataFrame:
     def copy(self, /, deep: bool):
         """
         usage.dask: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -14224,6 +15236,7 @@ class DataFrame:
         usage.dask: 16
         usage.koalas: 21
         usage.modin: 4
+        usage.seaborn: 12
         usage.sklearn: 4
         """
         ...
@@ -14467,6 +15480,13 @@ class DataFrame:
         ...
 
     @overload
+    def cumsum(self, /, axis: Literal["columns"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def cumsum(self, /, axis: None, skipna: bool):
         """
         usage.dask: 1
@@ -14487,10 +15507,13 @@ class DataFrame:
         """
         ...
 
-    def cumsum(self, /, axis: Union[int, None] = ..., skipna: bool = ...):
+    def cumsum(
+        self, /, axis: Union[None, int, Literal["columns"]] = ..., skipna: bool = ...
+    ):
         """
         usage.dask: 11
         usage.koalas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -14730,6 +15753,22 @@ class DataFrame:
         ...
 
     @overload
+    def drop(self, /, labels: Literal["date"], axis: int):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def drop(
+        self, /, labels: List[Literal["y", "x"]], axis: int, errors: Literal["ignore"]
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def drop(self, /, labels: Literal["_partitions"], axis: int):
         """
         usage.dask: 2
@@ -14949,8 +15988,8 @@ class DataFrame:
             int,
             List[
                 Union[
-                    str,
                     Tuple[Literal["__groupkey_0__", "__groupkey_1__"], Literal[""]],
+                    str,
                     int,
                 ]
             ],
@@ -14962,6 +16001,7 @@ class DataFrame:
         """
         usage.dask: 33
         usage.koalas: 15
+        usage.seaborn: 2
         """
         ...
 
@@ -15424,6 +16464,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.seaborn: 14
         """
         ...
 
@@ -15537,6 +16578,7 @@ class DataFrame:
         """
         usage.dask: 22
         usage.koalas: 25
+        usage.seaborn: 14
         """
         ...
 
@@ -15827,6 +16869,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 6
+        usage.seaborn: 1
         """
         ...
 
@@ -16053,11 +17096,11 @@ class DataFrame:
             pandas.core.series.Series,
             Dict[
                 Union[
-                    int,
-                    Tuple[Literal["x", "y"], Literal["b", "a", "c"]],
                     Literal["z", "y", "x"],
+                    Tuple[Literal["x", "y"], Literal["b", "a", "c"]],
+                    int,
                 ],
-                Union[Literal["foo"], int],
+                Union[int, Literal["foo"]],
             ],
         ] = ...,
         method: Union[Literal["ffill", "pad", "bfill"], None] = ...,
@@ -16069,6 +17112,7 @@ class DataFrame:
         usage.dask: 31
         usage.koalas: 24
         usage.modin: 2
+        usage.seaborn: 1
         """
         ...
 
@@ -16299,6 +17343,244 @@ class DataFrame:
         ...
 
     @overload
+    def get(self, /, key: Literal["day"], default: Literal["day"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["total_bill"], default: Literal["total_bill"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get(self, /, key: None, default: None):
+        """
+        usage.seaborn: 4
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["smoker"], default: Literal["smoker"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["time"], default: Literal["time"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["tip"], default: Literal["tip"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["sex"], default: Literal["sex"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["pulse"], default: Literal["pulse"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["kind"], default: Literal["kind"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["alive"], default: Literal["alive"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["age"], default: Literal["age"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["embark_town"], default: Literal["embark_town"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["who"], default: Literal["who"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["survived"], default: Literal["survived"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["x"], default: Literal["x"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["y"], default: Literal["y"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["hue"], default: pandas.core.series.Series):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["size"], default: pandas.core.series.Series):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["style"], default: pandas.core.series.Series):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["x"], default: numpy.ndarray):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["y"], default: numpy.ndarray):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["a"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["weights"], default: None):
+        """
+        usage.seaborn: 5
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["x"], default: None):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["y"], default: None):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["hue"], default: None):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["g"], default: Literal["g"]):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["h"], default: Literal["h"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get(self, /, key: numpy.ndarray, default: numpy.ndarray):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["u"], default: Literal["u"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["bad_input"], default: Literal["bad_input"]):
+        """
+        usage.seaborn: 4
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["x"], default: pandas.core.series.Series):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["y"], default: pandas.core.series.Series):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["units"], default: pandas.core.series.Series):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def get(self, /, key: Literal["path"]):
         """
         usage.dask: 1
@@ -16368,9 +17650,15 @@ class DataFrame:
         """
         ...
 
-    def get(self, /, key: str):
+    def get(
+        self,
+        /,
+        key: Union[str, numpy.ndarray, None],
+        default: Union[pandas.core.series.Series, numpy.ndarray, None, str] = ...,
+    ):
         """
         usage.dask: 10
+        usage.seaborn: 55
         """
         ...
 
@@ -16395,6 +17683,7 @@ class DataFrame:
         """
         usage.dask: 106
         usage.koalas: 98
+        usage.seaborn: 1
         """
         ...
 
@@ -16659,6 +17948,86 @@ class DataFrame:
         ...
 
     @overload
+    def groupby(self, /, by: List[Literal["hue"]], as_index: bool, sort: bool):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["size"]], as_index: bool, sort: bool):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["style"]], as_index: bool, sort: bool):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["style", "hue"]], as_index: bool, sort: bool):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def groupby(
+        self, /, by: List[Literal["style", "size", "hue"]], as_index: bool, sort: bool
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["size", "hue"]], as_index: bool, sort: bool):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["col", "hue"]], as_index: bool, sort: bool):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["c"]):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["col"]], as_index: bool, sort: bool):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["row"]], as_index: bool, sort: bool):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["x"]):
+        """
+        usage.dask: 8
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def groupby(self, /, level: int):
         """
         usage.dask: 6
@@ -16914,13 +18283,6 @@ class DataFrame:
     def groupby(self, /, by: List[Literal["strings"]]):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def groupby(self, /, by: Literal["x"]):
-        """
-        usage.dask: 8
         """
         ...
 
@@ -17379,14 +18741,16 @@ class DataFrame:
         /,
         level: Union[List[int], int] = ...,
         by: object = ...,
-        sort: bool = ...,
         group_keys: bool = ...,
         dropna: bool = ...,
+        as_index: bool = ...,
+        sort: bool = ...,
     ):
         """
         usage.dask: 450
         usage.koalas: 352
         usage.modin: 10
+        usage.seaborn: 14
         """
         ...
 
@@ -17480,6 +18844,50 @@ class DataFrame:
     def info(self, /, buf: _io.StringIO, memory_usage: bool):
         """
         usage.dask: 1
+        """
+        ...
+
+    @overload
+    def insert(
+        self, /, loc: int, column: Literal["x"], value: pandas.core.series.Series
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def insert(
+        self, /, loc: int, column: Literal["y"], value: pandas.core.series.Series
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def insert(self, /, loc: int, column: Literal["y"], value: numpy.ndarray):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def insert(self, /, loc: int, column: Literal["x"], value: numpy.ndarray):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    def insert(
+        self,
+        /,
+        loc: int,
+        column: Literal["x", "y"],
+        value: Union[numpy.ndarray, pandas.core.series.Series],
+    ):
+        """
+        usage.seaborn: 4
         """
         ...
 
@@ -17615,11 +19023,13 @@ class DataFrame:
         """
         usage.dask: 6
         usage.koalas: 1
+        usage.seaborn: 1
         """
         ...
 
     def items(self, /):
         """
+        usage.seaborn: 1
         usage.xarray: 2
         """
         ...
@@ -17628,6 +19038,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 3
+        usage.seaborn: 2
         usage.xarray: 1
         """
         ...
@@ -18028,6 +19439,7 @@ class DataFrame:
         """
         usage.dask: 4
         usage.koalas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -18065,6 +19477,7 @@ class DataFrame:
         """
         usage.dask: 12
         usage.koalas: 5
+        usage.seaborn: 1
         """
         ...
 
@@ -18088,6 +19501,7 @@ class DataFrame:
         """
         usage.dask: 7
         usage.koalas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -18132,6 +19546,7 @@ class DataFrame:
         """
         usage.dask: 15
         usage.koalas: 10
+        usage.seaborn: 1
         """
         ...
 
@@ -18228,6 +19643,26 @@ class DataFrame:
     ):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def melt(
+        self,
+        /,
+        id_vars: Literal["@index"],
+        var_name: Literal["@columns"],
+        value_name: Literal["@values"],
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def melt(self, /, var_name: Literal["@columns"], value_name: Literal["@values"]):
+        """
+        usage.seaborn: 1
         """
         ...
 
@@ -18345,9 +19780,9 @@ class DataFrame:
         /,
         id_vars: Union[
             None,
-            Literal["B", "C", "A"],
+            Literal["B", "C", "@index", "A"],
+            List[Union[Literal["B", "A"], Tuple[Literal["X"], Literal["A"]]]],
             Tuple[Literal["A"], Literal["B"]],
-            List[Union[Tuple[Literal["X"], Literal["A"]], Literal["B", "A"]]],
         ] = ...,
         value_vars: Union[
             None,
@@ -18360,14 +19795,17 @@ class DataFrame:
             Tuple[Literal["A"], Literal["B"]],
         ] = ...,
         var_name: Union[
-            None, Literal["myvar", "myVarname"], List[Literal["myV2", "myV1"]]
+            None,
+            Literal["myvar", "@columns", "myVarname"],
+            List[Literal["myV2", "myV1"]],
         ] = ...,
-        value_name: Literal["myval", "value", "myValname"] = ...,
+        value_name: Literal["myval", "value", "@values", "myValname"] = ...,
         col_level: None = ...,
     ):
         """
         usage.dask: 10
         usage.koalas: 12
+        usage.seaborn: 2
         """
         ...
 
@@ -20921,6 +22359,7 @@ class DataFrame:
         """
         usage.dask: 4
         usage.koalas: 51
+        usage.seaborn: 2
         """
         ...
 
@@ -20970,6 +22409,7 @@ class DataFrame:
         """
         usage.dask: 12
         usage.koalas: 53
+        usage.seaborn: 2
         """
         ...
 
@@ -21150,6 +22590,12 @@ class DataFrame:
         """
         usage.dask: 4
         usage.koalas: 2
+        """
+        ...
+
+    def notna(self, /):
+        """
+        usage.seaborn: 1
         """
         ...
 
@@ -21497,6 +22943,12 @@ class DataFrame:
         """
         usage.dask: 3
         usage.koalas: 16
+        """
+        ...
+
+    def pop(self, /, item: Literal["species"]):
+        """
+        usage.seaborn: 1
         """
         ...
 
@@ -21991,6 +23443,27 @@ class DataFrame:
         ...
 
     @overload
+    def reindex(self, /, labels: pandas.core.indexes.numeric.Int64Index):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def reindex(self, /, labels: pandas.core.indexes.numeric.Float64Index):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def reindex(self, /, labels: pandas.core.indexes.category.CategoricalIndex):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def reindex(self, /, columns: pandas.core.indexes.base.Index):
         """
         usage.dask: 1
@@ -22058,6 +23531,7 @@ class DataFrame:
         usage.dask: 12
         usage.koalas: 9
         usage.modin: 2
+        usage.seaborn: 3
         usage.xarray: 2
         """
         ...
@@ -22137,6 +23611,198 @@ class DataFrame:
     def rename(self, /, columns: Callable, level: int):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["hue", "x"], None]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["x"], Literal["x"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["col", "x"], Literal["_", "x"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["x"], Literal["t"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["col", "x"], Literal["_", "t"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["x"], Literal["a"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["col", "x"], Literal["_", "a"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["x"], Literal["z"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["col", "x"], Literal["_", "z"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["weights", "x"], Literal["f", "x"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(
+        self, /, columns: Dict[Literal["weights", "col", "x"], Literal["f", "_", "x"]]
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["hue", "x"], Literal["a", "x"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(
+        self, /, columns: Dict[Literal["col", "hue", "x"], Literal["_", "a", "x"]]
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["hue", "x"], Literal["a", "y"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(
+        self, /, columns: Dict[Literal["col", "hue", "x"], Literal["_", "a", "y"]]
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["y", "x"], Literal["y", "x"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(
+        self, /, columns: Dict[Literal["col", "y", "x"], Literal["_", "y", "x"]]
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["y"], Literal["x"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["col", "y"], Literal["_", "x"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["col", "x"], Literal["a", "x"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["row", "x"], Literal["a", "x"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(
+        self, /, columns: Dict[Literal["col", "hue", "x"], Literal["c", "a", "x"]]
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["col", "x"], Literal["_col_", "x"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["row", "x"], Literal["_row_", "x"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: dict):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["col", "row"], None]):
+        """
+        usage.seaborn: 1
         """
         ...
 
@@ -22237,15 +23903,14 @@ class DataFrame:
         mapper: Union[None, Callable] = ...,
         axis: Literal["index", "columns"] = ...,
         index: Union[Callable, Dict[int, int]] = ...,
-        columns: Union[
-            Callable, collections.OrderedDict, Dict[str, Union[str, int]], Callable
-        ] = ...,
+        columns: Union[Callable, collections.OrderedDict, dict, Callable] = ...,
         level: int = ...,
         inplace: bool = ...,
     ):
         """
         usage.dask: 18
         usage.koalas: 15
+        usage.seaborn: 26
         """
         ...
 
@@ -24853,6 +26518,13 @@ class DataFrame:
         ...
 
     @overload
+    def set_index(self, /, keys: List[Literal["widths", "edges"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def set_index(self, /, keys: Literal["amount"], drop: bool):
         """
         usage.dask: 1
@@ -25160,6 +26832,7 @@ class DataFrame:
         usage.dask: 119
         usage.koalas: 95
         usage.modin: 2
+        usage.seaborn: 1
         usage.xarray: 15
         """
         ...
@@ -25173,6 +26846,14 @@ class DataFrame:
         ...
 
     @overload
+    def shift(self, /, periods: int, axis: int):
+        """
+        usage.dask: 1
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def shift(self, /):
         """
         usage.dask: 1
@@ -25181,13 +26862,6 @@ class DataFrame:
 
     @overload
     def shift(self, /, periods: int, freq: None, axis: int):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def shift(self, /, periods: int, axis: int):
         """
         usage.dask: 1
         """
@@ -25249,6 +26923,7 @@ class DataFrame:
         """
         usage.dask: 29
         usage.koalas: 2
+        usage.seaborn: 1
         """
         ...
 
@@ -25840,6 +27515,21 @@ class DataFrame:
         ...
 
     @overload
+    def sort_values(self, /, by: List[Literal["y", "x"]]):
+        """
+        usage.dask: 3
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["y", "x", "units"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def sort_values(self, /, by: List[Literal["id", "amount", "name"]]):
         """
         usage.dask: 1
@@ -25905,13 +27595,6 @@ class DataFrame:
     def sort_values(self, /, by: List[Literal["c-d", "b", "a"]]):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def sort_values(self, /, by: List[Literal["y", "x"]]):
-        """
-        usage.dask: 3
         """
         ...
 
@@ -26730,9 +28413,9 @@ class DataFrame:
         self,
         /,
         by: Union[
-            List[Union[int, float, str, Tuple[str, ...]]],
-            Tuple[Literal["X", "x", "y"], Literal["A", "a", "c"]],
+            List[Union[Tuple[str, ...], str, int, float]],
             str,
+            Tuple[Literal["X", "x", "y"], Literal["A", "a", "c"]],
         ],
         inplace: bool = ...,
         ascending: List[bool] = ...,
@@ -26741,6 +28424,7 @@ class DataFrame:
         """
         usage.dask: 190
         usage.koalas: 105
+        usage.seaborn: 3
         """
         ...
 
@@ -26801,6 +28485,7 @@ class DataFrame:
     def stack(self, /):
         """
         usage.koalas: 6
+        usage.seaborn: 1
         usage.xarray: 1
         """
         ...
@@ -26816,6 +28501,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 6
+        usage.seaborn: 1
         usage.xarray: 1
         """
         ...
@@ -26840,6 +28526,7 @@ class DataFrame:
         """
         usage.dask: 5
         usage.koalas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -26930,6 +28617,7 @@ class DataFrame:
         """
         usage.dask: 20
         usage.koalas: 6
+        usage.seaborn: 1
         """
         ...
 
@@ -27032,6 +28720,14 @@ class DataFrame:
         ...
 
     @overload
+    def sum(self, /, axis: Literal["columns"]):
+        """
+        usage.dask: 1
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def sum(self, /, axis: int, skipna: bool):
         """
         usage.dask: 3
@@ -27040,13 +28736,6 @@ class DataFrame:
 
     @overload
     def sum(self, /, axis: Literal["index"]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def sum(self, /, axis: Literal["columns"]):
         """
         usage.dask: 1
         """
@@ -27077,6 +28766,7 @@ class DataFrame:
         """
         usage.dask: 32
         usage.koalas: 18
+        usage.seaborn: 1
         """
         ...
 
@@ -27851,6 +29541,14 @@ class DataFrame:
         ...
 
     @overload
+    def truediv(self, /, other: pandas.core.series.Series, axis: Literal["index"]):
+        """
+        usage.dask: 3
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def truediv(self, /, other: pandas.core.frame.DataFrame, fill_value: int):
         """
         usage.dask: 3
@@ -27893,13 +29591,6 @@ class DataFrame:
         ...
 
     @overload
-    def truediv(self, /, other: pandas.core.series.Series, axis: Literal["index"]):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
     def truediv(self, /, other: pandas.core.series.Series, axis: Literal["columns"]):
         """
         usage.dask: 3
@@ -27909,12 +29600,13 @@ class DataFrame:
     def truediv(
         self,
         /,
-        other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
-        axis: Union[Literal["columns", "index"], int] = ...,
+        other: Union[int, pandas.core.frame.DataFrame, pandas.core.series.Series],
+        axis: Union[int, Literal["columns", "index"]] = ...,
         fill_value: int = ...,
     ):
         """
         usage.dask: 27
+        usage.seaborn: 1
         """
         ...
 
@@ -28077,6 +29769,7 @@ class DataFrame:
         """
         usage.dask: 7
         usage.koalas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -28174,6 +29867,7 @@ class DataFrame:
         """
         usage.dask: 26
         usage.koalas: 6
+        usage.seaborn: 1
         """
         ...
 

@@ -57,6 +57,7 @@ class DataFrameGroupBy:
     x: object
 
     # usage.dask: 3
+    # usage.seaborn: 1
     y: object
 
     # usage.dask: 2
@@ -560,6 +561,12 @@ class DataFrameGroupBy:
         """
         ...
 
+    def __iter__(self, /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
     @overload
     def aggregate(self, /, func: Literal["sum"]):
         """
@@ -1040,9 +1047,986 @@ class DataFrameGroupBy:
         """
         ...
 
+    @overload
+    def get_group(self, /, name: Literal["_nolegend_"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["a"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["b"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["c"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["d"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["e"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["b"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["a"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["c"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["b"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["a"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["c"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["b"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["a"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["c"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], numpy.int64]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], numpy.int64]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], numpy.int64]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], numpy.int64, Literal["b"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], numpy.int64, Literal["a"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], numpy.int64, Literal["c"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], numpy.int64, Literal["b"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], numpy.int64, Literal["a"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], numpy.int64, Literal["c"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], numpy.int64, Literal["b"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], numpy.int64, Literal["a"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], numpy.int64, Literal["c"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], numpy.int64, Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], numpy.int64, Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], numpy.int64, Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], numpy.int64, Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], numpy.int64, Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], numpy.int64, Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], numpy.int64, Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], numpy.int64, Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], numpy.int64, Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], numpy.int64, Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], numpy.int64, Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], numpy.int64, Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: numpy.int64):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["x"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["y"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["z"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["s"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["f"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["_"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["_"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["_"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["_"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["p"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["p"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["p"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["p"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["n"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["n"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["n"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["n"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["o"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["o"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["o"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["o"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["m"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["m"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["m"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["m"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["p"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["p"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["p"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["p"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["n"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["n"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["n"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["n"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["o"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["o"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["o"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["o"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["m"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["m"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["m"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["m"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["p"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["p"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["p"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["p"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["n"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["n"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["n"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["n"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["o"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["o"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["o"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["o"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["m"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["m"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["m"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["m"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[int, int]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["p"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["n"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["m"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], Literal["o"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["b"], numpy.float64]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["a"], numpy.float64]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[Literal["c"], numpy.float64]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: numpy.float64):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[int, float]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Tuple[numpy.float64, int]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["12"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["15"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["3"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["18"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["10"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["9"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["11"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["7"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["16"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["0"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["13"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["2"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["8"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["20"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["4"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["1"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["6"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["5"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["14"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["17"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["19"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def get_group(self, /, name: int):
         """
         usage.dask: 4
+        """
+        ...
+
+    def get_group(
+        self,
+        /,
+        name: Union[
+            int,
+            numpy.float64,
+            numpy.int64,
+            Tuple[Union[str, float, numpy.float64, numpy.int64, int], ...],
+            str,
+        ],
+    ):
+        """
+        usage.dask: 4
+        usage.seaborn: 140
         """
         ...
 
@@ -1298,14 +2282,15 @@ class SeriesGroupBy:
         ...
 
     @overload
-    def aggregate(self, /, func: List[Literal["max", "min"]]):
+    def aggregate(self, /, func: Literal["mean"]):
         """
         usage.dask: 3
+        usage.seaborn: 1
         """
         ...
 
     @overload
-    def aggregate(self, /, func: Literal["mean"]):
+    def aggregate(self, /, func: List[Literal["max", "min"]]):
         """
         usage.dask: 3
         """
@@ -1343,11 +2328,12 @@ class SeriesGroupBy:
         self,
         /,
         func: Union[
-            Literal["var", "sum", "mean"], List[Literal["max", "min", "mean", "sum"]]
+            List[Literal["max", "min", "mean", "sum"]], Literal["var", "sum", "mean"]
         ],
     ):
         """
         usage.dask: 10
+        usage.seaborn: 1
         """
         ...
 
@@ -1389,6 +2375,7 @@ class SeriesGroupBy:
         """
         usage.dask: 16
         usage.koalas: 8
+        usage.seaborn: 1
         """
         ...
 
@@ -1427,6 +2414,7 @@ class SeriesGroupBy:
         """
         usage.dask: 20
         usage.koalas: 15
+        usage.seaborn: 1
         """
         ...
 
@@ -1510,9 +2498,213 @@ class SeriesGroupBy:
         """
         ...
 
+    @overload
+    def get_group(self, /, name: Literal["Thur"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["Fri"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["Sat"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["Sun"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["Dinner"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["Lunch"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["Male"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["Female"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["1 min"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["15 min"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["30 min"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["yes"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["no"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["Southampton"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["Cherbourg"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["Queenstown"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["man"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["woman"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["child"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: numpy.int64):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["m"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["n"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["_nolegend_"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["a"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["b"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["c"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["d"]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: Literal["e"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def get_group(self, /, name: int):
         """
         usage.dask: 3
+        """
+        ...
+
+    def get_group(self, /, name: Union[int, numpy.int64, str]):
+        """
+        usage.dask: 3
+        usage.seaborn: 32
         """
         ...
 
@@ -1540,6 +2732,7 @@ class SeriesGroupBy:
         """
         usage.dask: 13
         usage.koalas: 7
+        usage.seaborn: 2
         """
         ...
 
@@ -1614,6 +2807,7 @@ class SeriesGroupBy:
         """
         usage.dask: 7
         usage.koalas: 8
+        usage.seaborn: 1
         """
         ...
 
@@ -1628,6 +2822,7 @@ class SeriesGroupBy:
         """
         usage.dask: 10
         usage.koalas: 8
+        usage.seaborn: 1
         """
         ...
 
