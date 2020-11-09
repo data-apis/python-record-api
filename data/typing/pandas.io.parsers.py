@@ -572,6 +572,7 @@ def read_csv(
 def read_csv(filepath_or_buffer: str):
     """
     usage.modin: 4
+    usage.seaborn: 1
     """
     ...
 
@@ -2813,6 +2814,7 @@ def read_csv(
     """
     usage.dask: 101
     usage.modin: 68
+    usage.seaborn: 1
     """
     ...
 

@@ -218,6 +218,23 @@ class MultiIndex:
 
     @overload
     @classmethod
+    def from_arrays(cls, /, arrays: List[pandas.core.indexes.numeric.Float64Index]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_arrays(cls, /, arrays: List[pandas.core.indexes.numeric.Int64Index]):
+        """
+        usage.dask: 2
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
     def from_arrays(
         cls,
         /,
@@ -231,14 +248,6 @@ class MultiIndex:
     ):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    @classmethod
-    def from_arrays(cls, /, arrays: List[pandas.core.indexes.numeric.Int64Index]):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -272,6 +281,7 @@ class MultiIndex:
         usage.dask: 7
         usage.koalas: 15
         usage.modin: 2
+        usage.seaborn: 2
         usage.xarray: 8
         """
         ...

@@ -65,6 +65,7 @@ class Categorical:
         ...
 
     # usage.dask: 1
+    # usage.seaborn: 2
     # usage.xarray: 6
     categories: object
 
@@ -108,6 +109,12 @@ class Categorical:
         """
         ...
 
+    def __getitem__(self, _0: List[int], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
     def __gt__(self, _0: numpy.int64, /):
         """
         usage.pandas: 10
@@ -124,6 +131,7 @@ class Categorical:
 class CategoricalAccessor:
 
     # usage.dask: 18
+    # usage.seaborn: 5
     categories: object
 
     # usage.dask: 2
@@ -172,6 +180,7 @@ class CategoricalAccessor:
     def set_categories(self, /, *args: Literal["v", "t"]):
         """
         usage.dask: 8
+        usage.seaborn: 1
         """
         ...
 
@@ -185,5 +194,6 @@ class CategoricalAccessor:
     def set_categories(self, /, *args: Literal["v", "t"]):
         """
         usage.dask: 9
+        usage.seaborn: 1
         """
         ...

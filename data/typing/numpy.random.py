@@ -1,12 +1,14 @@
 from typing import *
 
 # usage.scipy: 2
+# usage.seaborn: 7
 Generator: object
 
 # usage.dask: 5
 # usage.networkx: 7
 # usage.pandas: 4
 # usage.scipy: 9
+# usage.seaborn: 3
 # usage.skimage: 1
 # usage.sklearn: 22
 RandomState: object

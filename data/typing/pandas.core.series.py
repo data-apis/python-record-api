@@ -138,6 +138,7 @@ class Series:
         """
         usage.dask: 6
         usage.koalas: 4
+        usage.seaborn: 28
         """
         ...
 
@@ -412,6 +413,7 @@ class Series:
     @classmethod
     def __getitem__(cls, _0: slice[None, None, None], /):
         """
+        usage.seaborn: 1
         usage.xarray: 1
         """
         ...
@@ -445,6 +447,39 @@ class Series:
     def __getitem__(cls, _0: Literal["idx"], /):
         """
         usage.modin: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        usage.seaborn: 8
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["edges"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["widths"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["heights"], /):
+        """
+        usage.seaborn: 1
         """
         ...
 
@@ -656,20 +691,13 @@ class Series:
         """
         ...
 
-    @overload
-    @classmethod
-    def __getitem__(cls, _0: numpy.ndarray, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     @classmethod
     def __getitem__(cls, _0: object, /):
         """
         usage.dask: 72
         usage.koalas: 47
         usage.modin: 12
+        usage.seaborn: 40
         usage.xarray: 23
         """
         ...
@@ -741,6 +769,7 @@ class Series:
     axes: object
 
     # usage.dask: 28
+    # usage.seaborn: 10
     cat: object
 
     # usage.dask: 1
@@ -756,6 +785,7 @@ class Series:
 
     # usage.dask: 64
     # usage.koalas: 7
+    # usage.seaborn: 2
     # usage.sklearn: 9
     dtype: object
 
@@ -773,6 +803,7 @@ class Series:
 
     # usage.dask: 31
     # usage.koalas: 27
+    # usage.seaborn: 1
     # usage.sklearn: 1
     # usage.xarray: 3
     iloc: object
@@ -780,6 +811,7 @@ class Series:
     # usage.dask: 83
     # usage.koalas: 42
     # usage.modin: 7
+    # usage.seaborn: 12
     # usage.sklearn: 3
     # usage.xarray: 23
     index: object
@@ -789,6 +821,7 @@ class Series:
 
     # usage.dask: 19
     # usage.koalas: 30
+    # usage.seaborn: 1
     # usage.sklearn: 1
     # usage.xarray: 3
     loc: object
@@ -796,6 +829,7 @@ class Series:
     # usage.dask: 48
     # usage.koalas: 16
     # usage.modin: 1
+    # usage.seaborn: 9
     # usage.sklearn: 6
     # usage.xarray: 5
     name: Union[
@@ -820,19 +854,23 @@ class Series:
 
     # usage.dask: 7
     # usage.koalas: 2
+    # usage.seaborn: 1
     # usage.sklearn: 12
     shape: object
 
     # usage.dask: 2
+    # usage.seaborn: 25
     size: object
 
     # usage.dask: 26
     # usage.koalas: 103
+    # usage.seaborn: 2
     str: object
 
     # usage.dask: 40
     # usage.koalas: 11
     # usage.modin: 1
+    # usage.seaborn: 22
     # usage.xarray: 16
     values: object
 
@@ -858,6 +896,7 @@ class Series:
         """
         usage.dask: 14
         usage.koalas: 6
+        usage.seaborn: 1
         """
         ...
 
@@ -876,9 +915,18 @@ class Series:
         ...
 
     @overload
+    def __add__(self, _0: numpy.ndarray, /):
+        """
+        usage.dask: 2
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def __add__(self, _0: float, /):
         """
         usage.dask: 2
+        usage.seaborn: 1
         """
         ...
 
@@ -886,13 +934,6 @@ class Series:
     def __add__(self, _0: dask.dataframe.core.Scalar, /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __add__(self, _0: numpy.ndarray, /):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -909,6 +950,7 @@ class Series:
         usage.koalas: 121
         usage.modin: 1
         usage.pandas: 39
+        usage.seaborn: 3
         """
         ...
 
@@ -917,6 +959,7 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 3
+        usage.seaborn: 2
         """
         ...
 
@@ -924,6 +967,7 @@ class Series:
     def __and__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -932,6 +976,7 @@ class Series:
         usage.dask: 5
         usage.koalas: 3
         usage.pandas: 3
+        usage.seaborn: 3
         """
         ...
 
@@ -951,6 +996,7 @@ class Series:
     def __eq__(self, _0: Literal["c"], /):
         """
         usage.koalas: 2
+        usage.seaborn: 20
         """
         ...
 
@@ -959,6 +1005,7 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 2
+        usage.seaborn: 24
         """
         ...
 
@@ -966,6 +1013,7 @@ class Series:
     def __eq__(self, _0: Literal["b"], /):
         """
         usage.koalas: 2
+        usage.seaborn: 22
         """
         ...
 
@@ -982,6 +1030,7 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 32
+        usage.seaborn: 3
         """
         ...
 
@@ -990,6 +1039,7 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.seaborn: 3
         """
         ...
 
@@ -997,6 +1047,314 @@ class Series:
     def __eq__(self, _0: object, /):
         """
         usage.pandas: 52
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["Yes"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["No"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["Lunch"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["Dinner"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["rest"], /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["walking"], /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["running"], /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["no fat"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["low fat"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["A"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["B"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["C"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["D"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["E"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["F"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["G"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["First"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["Second"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["Third"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["male"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["female"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["Male"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["Female"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["II"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["III"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["j"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["d"], /):
+        """
+        usage.seaborn: 7
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["e"], /):
+        """
+        usage.seaborn: 7
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["f"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["g"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["h"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["i"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["k"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["l"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["m"], /):
+        """
+        usage.seaborn: 17
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: numpy.bool_, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["n"], /):
+        """
+        usage.seaborn: 13
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["t"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["u"], /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["v"], /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["x"], /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["y"], /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["o"], /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["numeric"], /):
+        """
+        usage.seaborn: 1
         """
         ...
 
@@ -1089,6 +1447,7 @@ class Series:
         usage.dask: 39
         usage.koalas: 43
         usage.pandas: 52
+        usage.seaborn: 180
         usage.sklearn: 10
         """
         ...
@@ -1138,6 +1497,14 @@ class Series:
         ...
 
     @overload
+    def __ge__(self, _0: numpy.float64, /):
+        """
+        usage.dask: 1
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def __ge__(self, _0: int, /):
         """
         usage.dask: 6
@@ -1160,13 +1527,6 @@ class Series:
 
     @overload
     def __ge__(self, _0: Literal["c"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __ge__(self, _0: numpy.float64, /):
         """
         usage.dask: 1
         """
@@ -1225,6 +1585,7 @@ class Series:
         """
         usage.dask: 17
         usage.pandas: 7
+        usage.seaborn: 1
         """
         ...
 
@@ -1290,6 +1651,7 @@ class Series:
     def __iadd__(self, _0: pandas.core.series.Series, /):
         """
         usage.koalas: 1
+        usage.seaborn: 1
         """
         ...
 
@@ -1300,12 +1662,34 @@ class Series:
         """
         ...
 
+    @overload
+    def __iadd__(self, _0: int, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
     def __iadd__(
-        self, _0: Union[numpy.timedelta64, numpy.ndarray, pandas.core.series.Series], /
+        self,
+        _0: Union[int, pandas.core.series.Series, numpy.ndarray, numpy.timedelta64],
+        /,
     ):
         """
         usage.koalas: 1
         usage.pandas: 2
+        usage.seaborn: 2
+        """
+        ...
+
+    def __iand__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    def __imul__(self, _0: numpy.float64, /):
+        """
+        usage.seaborn: 1
         """
         ...
 
@@ -1313,13 +1697,29 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.seaborn: 1
         usage.xarray: 1
         """
         ...
 
+    @overload
     def __isub__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
         """
         usage.pandas: 2
+        """
+        ...
+
+    @overload
+    def __isub__(self, _0: int, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    def __isub__(self, _0: Union[int, numpy.timedelta64, numpy.ndarray], /):
+        """
+        usage.pandas: 2
+        usage.seaborn: 1
         """
         ...
 
@@ -1328,13 +1728,29 @@ class Series:
         usage.dask: 4
         usage.koalas: 2
         usage.modin: 2
+        usage.seaborn: 7
         usage.sklearn: 12
         """
         ...
 
+    @overload
+    def __itruediv__(self, _0: int, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def __itruediv__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 1
+        """
+        ...
+
+    def __itruediv__(self, _0: Union[pandas.core.series.Series, int], /):
+        """
+        usage.dask: 1
+        usage.seaborn: 1
         """
         ...
 
@@ -1342,6 +1758,14 @@ class Series:
     def __le__(self, _0: Union[numpy.ndarray, numpy.float64], /):
         """
         usage.pandas: 7
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: numpy.float64, /):
+        """
+        usage.dask: 1
+        usage.seaborn: 1
         """
         ...
 
@@ -1366,19 +1790,13 @@ class Series:
         """
         ...
 
-    @overload
-    def __le__(self, _0: numpy.float64, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __le__(
         self, _0: Union[numpy.int64, int, float, numpy.float64, numpy.ndarray], /
     ):
         """
         usage.dask: 6
         usage.pandas: 7
+        usage.seaborn: 1
         """
         ...
 
@@ -1468,6 +1886,7 @@ class Series:
         """
         usage.dask: 2
         usage.koalas: 5
+        usage.seaborn: 2
         """
         ...
 
@@ -1476,6 +1895,7 @@ class Series:
         """
         usage.dask: 4
         usage.koalas: 6
+        usage.seaborn: 1
         """
         ...
 
@@ -1504,6 +1924,7 @@ class Series:
         usage.dask: 7
         usage.koalas: 11
         usage.pandas: 29
+        usage.seaborn: 3
         """
         ...
 
@@ -1526,6 +1947,7 @@ class Series:
     def __or__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -1534,6 +1956,7 @@ class Series:
         usage.dask: 3
         usage.koalas: 3
         usage.pandas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -1579,6 +2002,7 @@ class Series:
         """
         usage.dask: 14
         usage.koalas: 6
+        usage.seaborn: 1
         """
         ...
 
@@ -1622,13 +2046,31 @@ class Series:
         usage.dask: 18
         usage.koalas: 55
         usage.pandas: 46
+        usage.seaborn: 1
         """
         ...
 
+    @overload
     def __rand__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 5
         usage.koalas: 3
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def __rand__(self, _0: numpy.ndarray, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    def __rand__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
+        """
+        usage.dask: 5
+        usage.koalas: 3
+        usage.seaborn: 3
         """
         ...
 
@@ -1653,6 +2095,7 @@ class Series:
         """
         usage.dask: 4
         usage.koalas: 6
+        usage.seaborn: 1
         """
         ...
 
@@ -1660,6 +2103,7 @@ class Series:
     def __rmul__(self, _0: int, /):
         """
         usage.koalas: 3
+        usage.seaborn: 1
         usage.sklearn: 1
         """
         ...
@@ -1676,6 +2120,7 @@ class Series:
         usage.dask: 4
         usage.koalas: 11
         usage.pandas: 30
+        usage.seaborn: 2
         usage.sklearn: 2
         """
         ...
@@ -1714,6 +2159,7 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 14
+        usage.seaborn: 2
         """
         ...
 
@@ -1742,6 +2188,7 @@ class Series:
     def __rsub__(self, _0: pandas.core.frame.DataFrame, /):
         """
         usage.dask: 5
+        usage.seaborn: 2
         """
         ...
 
@@ -1750,6 +2197,7 @@ class Series:
         usage.dask: 10
         usage.koalas: 16
         usage.pandas: 44
+        usage.seaborn: 4
         """
         ...
 
@@ -1768,11 +2216,19 @@ class Series:
         """
         ...
 
+    @overload
+    def __rtruediv__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
     def __rtruediv__(self, _0: object, /):
         """
         usage.dask: 8
         usage.koalas: 5
         usage.pandas: 37
+        usage.seaborn: 2
         """
         ...
 
@@ -1804,9 +2260,17 @@ class Series:
         ...
 
     @overload
+    def __setitem__(self, _0: slice[None, None, None], _1: int, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def __setitem__(self, _0: pandas.core.series.Series, _1: int, /):
         """
         usage.dask: 2
+        usage.seaborn: 1
         """
         ...
 
@@ -1814,6 +2278,16 @@ class Series:
     def __setitem__(self, _0: pandas.core.series.Series, _1: float, /):
         """
         usage.dask: 1
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: pandas.core.series.Series, _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.seaborn: 2
         """
         ...
 
@@ -1822,14 +2296,15 @@ class Series:
         _0: Union[
             pandas.core.series.Series,
             int,
-            slice[Union[None, int], Union[int, None], Union[None, int]],
+            slice[Union[int, None], Union[None, int], Union[int, None]],
         ],
-        _1: Union[int, float],
+        _1: Union[int, float, pandas.core.series.Series],
         /,
     ):
         """
         usage.dask: 3
         usage.modin: 2
+        usage.seaborn: 5
         usage.xarray: 2
         """
         ...
@@ -1839,6 +2314,7 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 14
+        usage.seaborn: 2
         """
         ...
 
@@ -1872,6 +2348,13 @@ class Series:
         ...
 
     @overload
+    def __sub__(self, _0: numpy.ndarray, /):
+        """
+        usage.seaborn: 3
+        """
+        ...
+
+    @overload
     def __sub__(self, _0: numpy.float64, /):
         """
         usage.dask: 9
@@ -1883,6 +2366,7 @@ class Series:
         usage.dask: 18
         usage.koalas: 19
         usage.pandas: 35
+        usage.seaborn: 5
         """
         ...
 
@@ -2272,6 +2756,7 @@ class Series:
         """
         usage.dask: 20
         usage.koalas: 8
+        usage.seaborn: 13
         """
         ...
 
@@ -2286,6 +2771,7 @@ class Series:
         """
         usage.dask: 22
         usage.koalas: 8
+        usage.seaborn: 13
         """
         ...
 
@@ -2294,6 +2780,7 @@ class Series:
         """
         usage.dask: 6
         usage.koalas: 3
+        usage.seaborn: 6
         usage.sklearn: 2
         usage.xarray: 1
         """
@@ -2310,6 +2797,7 @@ class Series:
         """
         usage.dask: 8
         usage.koalas: 3
+        usage.seaborn: 6
         usage.sklearn: 2
         usage.xarray: 1
         """
@@ -2440,7 +2928,32 @@ class Series:
     def astype(self, /, dtype: Type[int]):
         """
         usage.dask: 3
+        usage.seaborn: 1
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Literal["category"]):
+        """
+        usage.dask: 17
+        usage.seaborn: 5
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[object]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[str]):
+        """
+        usage.dask: 3
+        usage.seaborn: 2
         """
         ...
 
@@ -2495,14 +3008,6 @@ class Series:
         ...
 
     @overload
-    def astype(self, /, dtype: Literal["category"]):
-        """
-        usage.dask: 17
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
     def astype(self, /, dtype: Literal["i8"]):
         """
         usage.dask: 3
@@ -2511,13 +3016,6 @@ class Series:
 
     @overload
     def astype(self, /, dtype: Literal["float32"]):
-        """
-        usage.dask: 3
-        """
-        ...
-
-    @overload
-    def astype(self, /, dtype: Type[str]):
         """
         usage.dask: 3
         """
@@ -2576,6 +3074,7 @@ class Series:
         """
         usage.dask: 53
         usage.koalas: 6
+        usage.seaborn: 10
         usage.sklearn: 10
         usage.xarray: 1
         """
@@ -2784,6 +3283,7 @@ class Series:
         usage.dask: 3
         usage.koalas: 2
         usage.modin: 1
+        usage.seaborn: 1
         """
         ...
 
@@ -3001,6 +3501,7 @@ class Series:
     def diff(self, /):
         """
         usage.dask: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -3014,6 +3515,7 @@ class Series:
     def diff(self, /, periods: int = ...):
         """
         usage.dask: 7
+        usage.seaborn: 1
         """
         ...
 
@@ -3172,6 +3674,7 @@ class Series:
         """
         usage.dask: 7
         usage.koalas: 3
+        usage.seaborn: 1
         usage.xarray: 2
         """
         ...
@@ -3187,6 +3690,7 @@ class Series:
         """
         usage.dask: 7
         usage.koalas: 4
+        usage.seaborn: 1
         usage.xarray: 2
         """
         ...
@@ -3277,6 +3781,13 @@ class Series:
         """
         usage.dask: 2
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: Literal["white"]):
+        """
+        usage.seaborn: 1
         """
         ...
 
@@ -3390,7 +3901,7 @@ class Series:
     def fillna(
         self,
         /,
-        value: Union[None, int, numpy.float64, pandas.core.series.Series, float] = ...,
+        value: object = ...,
         method: Union[Literal["bfill", "ffill", "pad"], None] = ...,
         axis: int = ...,
         limit: Union[None, int] = ...,
@@ -3398,6 +3909,7 @@ class Series:
         """
         usage.dask: 23
         usage.koalas: 9
+        usage.seaborn: 1
         """
         ...
 
@@ -3565,6 +4077,7 @@ class Series:
         """
         usage.dask: 20
         usage.koalas: 72
+        usage.seaborn: 14
         """
         ...
 
@@ -3586,6 +4099,34 @@ class Series:
     def groupby(self, /, by: pandas.core.resample.TimeGrouper):
         """
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["b", "a"]]):
+        """
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["d", "c", "b", "a"]]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: pandas.core.series.Series, sort: bool):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: pandas.core.arrays.categorical.Categorical, sort: bool):
+        """
+        usage.seaborn: 1
         """
         ...
 
@@ -3762,6 +4303,7 @@ class Series:
         """
         usage.dask: 65
         usage.koalas: 74
+        usage.seaborn: 19
         usage.xarray: 1
         """
         ...
@@ -3799,6 +4341,7 @@ class Series:
         """
         usage.dask: 2
         usage.koalas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -3828,6 +4371,7 @@ class Series:
         """
         usage.dask: 8
         usage.koalas: 6
+        usage.seaborn: 1
         """
         ...
 
@@ -3850,6 +4394,12 @@ class Series:
         """
         usage.dask: 4
         usage.koalas: 6
+        """
+        ...
+
+    def infer_objects(self, /):
+        """
+        usage.seaborn: 2
         """
         ...
 
@@ -3894,10 +4444,17 @@ class Series:
         """
         ...
 
+    def isna(self, /):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
     def isnull(self, /):
         """
         usage.dask: 5
         usage.koalas: 8
+        usage.seaborn: 3
         usage.xarray: 1
         """
         ...
@@ -4038,6 +4595,17 @@ class Series:
         ...
 
     @overload
+    def map(
+        self,
+        /,
+        arg: Dict[Literal["virginica", "versicolor", "setosa"], Literal["g", "b", "r"]],
+    ):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def map(self, /, arg: Callable, na_action: None):
         """
         usage.dask: 3
@@ -4081,6 +4649,7 @@ class Series:
         """
         usage.dask: 16
         usage.koalas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -4125,6 +4694,7 @@ class Series:
         """
         usage.dask: 11
         usage.koalas: 3
+        usage.seaborn: 8
         """
         ...
 
@@ -4161,6 +4731,7 @@ class Series:
         """
         usage.dask: 19
         usage.koalas: 3
+        usage.seaborn: 8
         usage.xarray: 1
         """
         ...
@@ -4170,6 +4741,7 @@ class Series:
         """
         usage.dask: 17
         usage.koalas: 8
+        usage.seaborn: 2
         """
         ...
 
@@ -4206,6 +4778,7 @@ class Series:
         """
         usage.dask: 22
         usage.koalas: 8
+        usage.seaborn: 2
         usage.xarray: 1
         """
         ...
@@ -4242,6 +4815,7 @@ class Series:
         """
         usage.dask: 7
         usage.koalas: 52
+        usage.seaborn: 11
         """
         ...
 
@@ -4278,6 +4852,7 @@ class Series:
         """
         usage.dask: 14
         usage.koalas: 52
+        usage.seaborn: 11
         usage.xarray: 1
         """
         ...
@@ -4385,6 +4960,7 @@ class Series:
     def notna(self, /):
         """
         usage.dask: 1
+        usage.seaborn: 5
         """
         ...
 
@@ -4392,6 +4968,7 @@ class Series:
         """
         usage.dask: 3
         usage.koalas: 2
+        usage.seaborn: 5
         """
         ...
 
@@ -4687,6 +5264,13 @@ class Series:
         ...
 
     @overload
+    def reindex(self, /, index: pandas.core.indexes.range.RangeIndex):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
     def reindex(self, /, index: pandas.core.indexes.numeric.Int64Index):
         """
         usage.dask: 3
@@ -4718,14 +5302,16 @@ class Series:
         self,
         /,
         index: Union[
-            pandas.core.indexes.datetimes.DatetimeIndex,
-            pandas.core.indexes.multi.MultiIndex,
-            pandas.core.indexes.numeric.Int64Index,
             numpy.ndarray,
+            pandas.core.indexes.numeric.Int64Index,
+            pandas.core.indexes.multi.MultiIndex,
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            pandas.core.indexes.range.RangeIndex,
         ],
     ):
         """
         usage.dask: 8
+        usage.seaborn: 1
         """
         ...
 
@@ -4750,6 +5336,7 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 13
+        usage.seaborn: 1
         """
         ...
 
@@ -4766,6 +5353,7 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.seaborn: 1
         """
         ...
 
@@ -4831,6 +5419,7 @@ class Series:
         """
         usage.dask: 2
         usage.koalas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -4860,6 +5449,20 @@ class Series:
     def rename(self, /, index: Literal["col2"]):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["heights"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["x"]):
+        """
+        usage.seaborn: 1
         """
         ...
 
@@ -4942,6 +5545,7 @@ class Series:
         """
         usage.dask: 25
         usage.koalas: 93
+        usage.seaborn: 5
         """
         ...
 
@@ -5650,6 +6254,7 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 8
+        usage.seaborn: 1
         """
         ...
 
@@ -5710,16 +6315,24 @@ class Series:
         """
         ...
 
+    @overload
+    def reset_index(self, /, name: Literal["heights"]):
+        """
+        usage.seaborn: 1
+        """
+        ...
+
     def reset_index(
         self,
         /,
         drop: bool = ...,
-        name: Literal["s", "values"] = ...,
+        name: Literal["heights", "s", "values"] = ...,
         inplace: bool = ...,
     ):
         """
         usage.dask: 7
         usage.koalas: 24
+        usage.seaborn: 2
         """
         ...
 
@@ -6201,6 +6814,7 @@ class Series:
         """
         usage.dask: 3
         usage.koalas: 247
+        usage.seaborn: 1
         """
         ...
 
@@ -6244,6 +6858,7 @@ class Series:
         """
         usage.dask: 4
         usage.koalas: 251
+        usage.seaborn: 1
         """
         ...
 
@@ -6322,14 +6937,15 @@ class Series:
         ...
 
     @overload
-    def std(self, /, axis: int, skipna: bool):
+    def std(self, /, ddof: int):
         """
         usage.dask: 1
+        usage.seaborn: 1
         """
         ...
 
     @overload
-    def std(self, /, ddof: int):
+    def std(self, /, axis: int, skipna: bool):
         """
         usage.dask: 1
         """
@@ -6373,6 +6989,7 @@ class Series:
         """
         usage.dask: 9
         usage.koalas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -6401,6 +7018,7 @@ class Series:
         """
         usage.dask: 35
         usage.koalas: 11
+        usage.seaborn: 3
         usage.sklearn: 1
         """
         ...
@@ -6452,6 +7070,7 @@ class Series:
         """
         usage.dask: 41
         usage.koalas: 11
+        usage.seaborn: 3
         usage.sklearn: 1
         usage.xarray: 2
         """
@@ -6896,6 +7515,7 @@ class Series:
         """
         usage.dask: 4
         usage.koalas: 2
+        usage.seaborn: 6
         """
         ...
 
@@ -6996,6 +7616,7 @@ class Series:
     def unique(self, /):
         """
         usage.dask: 9
+        usage.seaborn: 63
         """
         ...
 
@@ -7009,6 +7630,7 @@ class Series:
     @overload
     def unstack(self, /):
         """
+        usage.seaborn: 1
         usage.xarray: 1
         """
         ...
@@ -7016,6 +7638,7 @@ class Series:
     def unstack(self, /, level: int = ...):
         """
         usage.koalas: 2
+        usage.seaborn: 1
         usage.xarray: 1
         """
         ...
@@ -7092,6 +7715,7 @@ class Series:
         """
         usage.dask: 4
         usage.koalas: 3
+        usage.seaborn: 1
         """
         ...
 
@@ -7155,6 +7779,7 @@ class Series:
         """
         usage.dask: 11
         usage.koalas: 3
+        usage.seaborn: 1
         usage.xarray: 1
         """
         ...

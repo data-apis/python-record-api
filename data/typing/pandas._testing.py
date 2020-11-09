@@ -74,6 +74,7 @@ def assert_frame_equal(
     """
     usage.dask: 20
     usage.networkx: 2
+    usage.seaborn: 5
     """
     ...
 
@@ -125,6 +126,7 @@ def assert_frame_equal(
     usage.dask: 23
     usage.koalas: 4
     usage.networkx: 2
+    usage.seaborn: 5
     """
     ...
 
@@ -360,20 +362,21 @@ def assert_series_equal(
 
 @overload
 def assert_series_equal(
-    left: pandas.core.series.Series, right: pandas.core.series.Series, check_names: bool
+    left: pandas.core.series.Series, right: pandas.core.series.Series
 ):
     """
-    usage.dask: 1
+    usage.dask: 17
+    usage.seaborn: 1
     """
     ...
 
 
 @overload
 def assert_series_equal(
-    left: pandas.core.series.Series, right: pandas.core.series.Series
+    left: pandas.core.series.Series, right: pandas.core.series.Series, check_names: bool
 ):
     """
-    usage.dask: 17
+    usage.dask: 1
     """
     ...
 
@@ -394,14 +397,15 @@ def assert_series_equal(
 def assert_series_equal(
     left: pandas.core.series.Series,
     right: pandas.core.series.Series,
-    check_index_type: Union[bool, Literal["equiv"]] = ...,
-    check_exact: bool = ...,
     check_dtype: bool = ...,
     check_names: bool = ...,
+    check_index_type: Union[bool, Literal["equiv"]] = ...,
+    check_exact: bool = ...,
 ):
     """
     usage.dask: 19
     usage.koalas: 2
+    usage.seaborn: 1
     """
     ...
 

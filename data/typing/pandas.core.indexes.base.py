@@ -94,6 +94,9 @@ class Index:
     # usage.dask: 1
     array: object
 
+    # usage.seaborn: 1
+    categories: object
+
     # usage.dask: 13
     # usage.koalas: 1
     # usage.sklearn: 2
@@ -114,6 +117,7 @@ class Index:
     # usage.dask: 16
     # usage.koalas: 4
     # usage.modin: 3
+    # usage.seaborn: 2
     # usage.xarray: 13
     name: Union[None, Literal["A", "a", "id", "lvl_1", "columns"], int]
 
@@ -145,6 +149,7 @@ class Index:
 
     # usage.dask: 1
     # usage.modin: 1
+    # usage.seaborn: 1
     # usage.xarray: 6
     values: object
 
@@ -733,6 +738,7 @@ class Index:
         """
         usage.dask: 1
         usage.koalas: 3
+        usage.seaborn: 2
         usage.sklearn: 1
         usage.xarray: 2
         """
@@ -808,7 +814,7 @@ class Index:
             numpy.ndarray,
             int,
             List[Union[bool, int]],
-            slice[Union[int, None], Union[None, int], Union[int, None]],
+            slice[Union[None, int], Union[int, None], Union[None, int]],
         ],
         /,
     ):
@@ -816,6 +822,7 @@ class Index:
         usage.dask: 27
         usage.koalas: 11
         usage.modin: 3
+        usage.seaborn: 2
         usage.sklearn: 6
         usage.xarray: 15
         """
@@ -1200,6 +1207,12 @@ class Index:
     ):
         """
         usage.koalas: 9
+        """
+        ...
+
+    def tolist(self, /):
+        """
+        usage.seaborn: 4
         """
         ...
 

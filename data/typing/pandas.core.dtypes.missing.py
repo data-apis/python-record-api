@@ -23,6 +23,7 @@ def isna(obj: numpy.ndarray):
     """
     usage.dask: 8
     usage.koalas: 1
+    usage.seaborn: 5
     usage.xarray: 22
     """
     ...
@@ -161,17 +162,50 @@ def isna(obj: Literal["A"]):
 
 
 @overload
-def isna(obj: int):
+def isna(obj: pandas.core.series.Series):
     """
-    usage.dask: 2
+    usage.dask: 3
+    usage.seaborn: 1
     """
     ...
 
 
 @overload
-def isna(obj: List[int]):
+def isna(obj: pandas.core.frame.DataFrame):
     """
-    usage.dask: 9
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: List[Literal["b", "a"]]):
+    """
+    usage.seaborn: 2
+    """
+    ...
+
+
+@overload
+def isna(obj: List[Literal["m", "n"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: List[Literal["d", "c", "b", "a"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: List[Literal["y", "x"]]):
+    """
+    usage.seaborn: 1
     """
     ...
 
@@ -180,14 +214,7 @@ def isna(obj: List[int]):
 def isna(obj: List[pandas._libs.tslibs.timestamps.Timestamp]):
     """
     usage.dask: 6
-    """
-    ...
-
-
-@overload
-def isna(obj: pandas._libs.tslibs.timestamps.Timestamp):
-    """
-    usage.dask: 2
+    usage.seaborn: 2
     """
     ...
 
@@ -196,6 +223,57 @@ def isna(obj: pandas._libs.tslibs.timestamps.Timestamp):
 def isna(obj: List[float]):
     """
     usage.dask: 14
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: List[Literal["3", "2", "1"]]):
+    """
+    usage.dask: 2
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: List[Literal["d", "a", "b", "c"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: List[int]):
+    """
+    usage.dask: 9
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: List[Union[Literal["d", "a", "b", "c"], float]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: int):
+    """
+    usage.dask: 2
+    """
+    ...
+
+
+@overload
+def isna(obj: pandas._libs.tslibs.timestamps.Timestamp):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -305,14 +383,6 @@ def isna(obj: List[str]):
 
 
 @overload
-def isna(obj: pandas.core.series.Series):
-    """
-    usage.dask: 3
-    """
-    ...
-
-
-@overload
 def isna(obj: dask.dataframe.core.Series):
     """
     usage.dask: 1
@@ -364,14 +434,6 @@ def isna(obj: List[Literal["B", "A"]]):
 def isna(obj: Literal["B"]):
     """
     usage.dask: 1
-    """
-    ...
-
-
-@overload
-def isna(obj: List[Literal["3", "2", "1"]]):
-    """
-    usage.dask: 2
     """
     ...
 
@@ -476,6 +538,7 @@ def isna(obj: object):
     """
     usage.dask: 117
     usage.koalas: 3
+    usage.seaborn: 19
     usage.xarray: 44
     """
     ...
@@ -492,7 +555,16 @@ def notna(obj: databricks.koalas.indexes.Index):
 @overload
 def notna(obj: numpy.ndarray):
     """
+    usage.seaborn: 5
     usage.xarray: 3
+    """
+    ...
+
+
+@overload
+def notna(obj: pandas.core.series.Series):
+    """
+    usage.seaborn: 2
     """
     ...
 
@@ -510,11 +582,13 @@ def notna(
         pandas.core.indexes.numeric.Int64Index,
         databricks.koalas.indexes.Index,
         numpy.ndarray,
+        pandas.core.series.Series,
     ]
 ):
     """
     usage.dask: 2
     usage.koalas: 1
+    usage.seaborn: 7
     usage.xarray: 3
     """
     ...

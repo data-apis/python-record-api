@@ -91,6 +91,7 @@ def unique(values: List[Literal["t"]]):
 @overload
 def unique(values: List[Literal["y", "x"]]):
     """
+    usage.seaborn: 1
     usage.xarray: 4
     """
     ...
@@ -376,8 +377,78 @@ def unique(values: List[Literal["z", "quantile"]]):
     ...
 
 
-def unique(values: List[str]):
+@overload
+def unique(values: numpy.ndarray):
     """
+    usage.seaborn: 3
+    """
+    ...
+
+
+@overload
+def unique(values: List[Literal["b", "a"]]):
+    """
+    usage.seaborn: 2
+    """
+    ...
+
+
+@overload
+def unique(values: List[Literal["m", "n"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def unique(values: List[Literal["d", "c", "b", "a"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def unique(values: List[pandas._libs.tslibs.timestamps.Timestamp]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def unique(values: List[Literal["d", "a", "b", "c"]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def unique(values: List[int]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def unique(values: List[Union[Literal["d", "a", "b", "c"], float]]):
+    """
+    usage.seaborn: 1
+    """
+    ...
+
+
+def unique(
+    values: Union[
+        numpy.ndarray,
+        List[Union[str, float, int, pandas._libs.tslibs.timestamps.Timestamp]],
+    ]
+):
+    """
+    usage.seaborn: 12
     usage.xarray: 74
     """
     ...
