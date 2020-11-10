@@ -26,4 +26,4 @@ RUN cd python \
     python -c "from fbprophet import Prophet"
 
 ENV PYTHON_RECORD_API_FROM_MODULES=fbprophet
-CMD [ "pytest", "fbprophet", "--verbose", "--suppress-tests-failed-exit-code"]
+CMD [ "python", "-m", "pytest", "fbprophet", "--verbose", "--suppress-tests-failed-exit-code"]
