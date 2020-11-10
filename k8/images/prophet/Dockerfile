@@ -14,16 +14,19 @@ RUN git clone \
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     cd python \
-    pip install -r requirements.txt \
-    pip install plotly \
-    pip install pytest \
+    pip install -r requirements.txt
+
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install \
+    pytest \
     pytest-custom_exit_code
 
-RUN cd python \
+RUN --mount=type=cache,target=/root/.cache/pip \
+    cd python \
     pip install -e .
 
 RUN cd python \
     python -c "from fbprophet import Prophet"
 
 ENV PYTHON_RECORD_API_FROM_MODULES=fbprophet
-CMD [ "python", "-m", "pytest", "fbprophet", "--verbose", "--suppress-tests-failed-exit-code"]
+CMD ["pytest", "fbprophet", "--verbose", "--suppress-tests-failed-exit-code"]
