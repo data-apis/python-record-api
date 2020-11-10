@@ -4,7 +4,7 @@ FROM ${FROM}
 
 WORKDIR /usr/src/app
 
-RUN apt-get -y install libgeos-dev
+RUN yum install geos-devel
 
 # Must build from source to be able to run tests
 # https://github.com/geopandas/geopandas
