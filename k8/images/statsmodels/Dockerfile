@@ -15,6 +15,9 @@ RUN git clone \
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install -e .
 
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install pytest
+
 RUN python -c "import statsmodels"
 
 ENV PYTHON_RECORD_API_FROM_MODULES=statsmodels
