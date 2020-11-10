@@ -4,9 +4,6 @@ FROM ${FROM}
 
 WORKDIR /usr/src/app
 
-RUN cat /etc/os-release
-RUN apt-get install libgeos-dev
-
 # Must build from source to be able to run tests
 # https://github.com/geopandas/geopandas
 RUN git clone \
@@ -20,7 +17,6 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     cython \
     fiona \
     pyproj \
-    geos \
     pytest \
     pytest-cov \
     pytest-xdist \
@@ -32,7 +28,6 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     pandas \
     matplotlib \
     shapely \
-    pygeos \
     pytest-custom_exit_code
 
 RUN python -c "import geopandas"
