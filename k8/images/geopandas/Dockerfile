@@ -37,5 +37,5 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 RUN python -c "import geopandas"
 
-ENV PYTHON_RECORD_API_FROM_MODULES=seaborn
+ENV PYTHON_RECORD_API_FROM_MODULES=geopandas
 CMD [ "pytest", "geopandas", "--verbose", "--suppress-tests-failed-exit-code"]
