@@ -23,14 +23,13 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     pytest-xdist \
     fsspec \
     SQLalchemy \
-    libspatialite \
     pyarrow \
     geopy \
     mapclassify>=2.2.0 \
-    git+https://github.com/pydata/pandas.git@master \
-    git+https://github.com/matplotlib/matplotlib.git@master \
-    git+https://github.com/Toblerity/Shapely.git@master \
-    git+https://github.com/pygeos/pygeos.git@master \
+    pandas \
+    matplotlib \
+    shapely \
+    pygeos \
     pytest-custom_exit_code
 
 RUN python -c "import geopandas"
