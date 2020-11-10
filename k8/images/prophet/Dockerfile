@@ -20,7 +20,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     pytest-custom_exit_code
 
 RUN cd python \
-    python setup.py develop
+    pip install -e .
 
 RUN cd python \
     python -c "from fbprophet import Prophet"
