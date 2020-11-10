@@ -13,14 +13,14 @@ RUN git clone \
     .
 
 RUN --mount=type=cache,target=/root/.cache/pip \
-    cd python \
-    pip install -r requirements.txt
+    pip install -r python/requirements.txt
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
     pytest \
     numpy \
     pandas \
+    convertdate \
     pytest-custom_exit_code
 
 RUN --mount=type=cache,target=/root/.cache/pip \
