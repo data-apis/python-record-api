@@ -16,7 +16,8 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     pip install -e .
 
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install pytest
+    pip install pytest \
+    pytest-custom_exit_code
 
 RUN python -c "import statsmodels"
 
