@@ -1,0 +1,3171 @@
+{
+  "modules": {
+    "pandas.core.frame": {
+      "classes": {
+        "DataFrame": {
+          "constructor_overloads": [
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "holiday",
+                      "ds"
+                    ]
+                  },
+                  "value": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": "str",
+                          "options": [
+                            "x"
+                          ]
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "pandas.core.indexes.datetimes",
+                          "name": "DatetimeIndex"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "h",
+                      "x"
+                    ]
+                  },
+                  "value": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 4
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "x",
+                      "horizon"
+                    ]
+                  },
+                  "value": {
+                    "type": "list",
+                    "item": {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": {
+                            "module": "numpy",
+                            "name": "int64"
+                          }
+                        },
+                        {
+                          "type": {
+                            "name": "float"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "x",
+                      "horizon"
+                    ]
+                  },
+                  "value": {
+                    "type": "list",
+                    "item": {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": {
+                            "module": "numpy",
+                            "name": "int64"
+                          }
+                        },
+                        {
+                          "type": {
+                            "module": "numpy",
+                            "name": "float64"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 3
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "x",
+                      "horizon"
+                    ]
+                  },
+                  "value": {
+                    "type": "list",
+                    "item": {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": {
+                            "module": "numpy",
+                            "name": "float64"
+                          }
+                        },
+                        {
+                          "type": {
+                            "name": "float"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "x",
+                      "horizon"
+                    ]
+                  },
+                  "value": {
+                    "type": "list",
+                    "item": {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
+                      }
+                    }
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 3
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "prior_scale",
+                      "holiday",
+                      "ds"
+                    ]
+                  },
+                  "value": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": "union",
+                          "options": [
+                            {
+                              "type": "str",
+                              "options": [
+                                "special_day"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "name": "float"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "pandas.core.indexes.datetimes",
+                          "name": "DatetimeIndex"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "ds"
+                    ]
+                  },
+                  "value": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 3
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "upper_window",
+                      "lower_window",
+                      "holiday",
+                      "ds"
+                    ]
+                  },
+                  "value": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": "union",
+                          "options": [
+                            {
+                              "type": "str",
+                              "options": [
+                                "seans-bday"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "name": "int"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "pandas.core.indexes.datetimes",
+                          "name": "DatetimeIndex"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 2
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "upper_window",
+                      "lower_window",
+                      "holiday",
+                      "ds"
+                    ]
+                  },
+                  "value": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": "union",
+                          "options": [
+                            {
+                              "type": "str",
+                              "options": [
+                                "xmas"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "name": "int"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "pandas.core.indexes.datetimes",
+                          "name": "DatetimeIndex"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 2
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "holiday",
+                      "ds"
+                    ]
+                  },
+                  "value": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": "str",
+                          "options": [
+                            "special_day"
+                          ]
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "pandas.core.indexes.datetimes",
+                          "name": "DatetimeIndex"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            }
+          ],
+          "constructor": {
+            "pos_or_kw_required": {
+              "data": {
+                "type": "dict",
+                "key": {
+                  "type": "str",
+                  "options": [
+                    "holiday",
+                    "ds"
+                  ]
+                },
+                "value": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "list",
+                      "item": {
+                        "type": "str",
+                        "options": [
+                          "special_day"
+                        ]
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "pandas.core.indexes.datetimes",
+                        "name": "DatetimeIndex"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 1
+            }
+          },
+          "method_overloads": {
+            "copy": [
+              {
+                "metadata": {
+                  "usage.prophet": 8
+                }
+              }
+            ],
+            "__setitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "cap"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "name": "float"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "binary_feature"
+                    ]
+                  },
+                  "_1": {
+                    "type": "list",
+                    "item": {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "extra"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "name": "range"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "is_conditional_week"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "cap"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "ds"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "y"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "y"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "groupby": [
+              {
+                "pos_or_kw_required": {
+                  "by": {
+                    "type": "str",
+                    "options": [
+                      "h"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 2
+                }
+              }
+            ],
+            "reset_index": [
+              {
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "inplace": {
+                    "type": {
+                      "name": "bool"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 2
+                }
+              }
+            ],
+            "sort_values": [
+              {
+                "pos_or_kw_required": {
+                  "by": {
+                    "type": "str",
+                    "options": [
+                      "h"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 2
+                }
+              }
+            ],
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "x"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 10
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "mean"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "count"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "h"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "horizon"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 8
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "ds"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 7
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "holiday"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "y"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "lower_window"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "upper_window"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "head": [
+              {
+                "pos_or_kw_required": {
+                  "n": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 10
+                }
+              }
+            ],
+            "__contains__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "ds"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "holiday"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "lower_window"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "upper_window"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "tail": [
+              {
+                "pos_or_kw_required": {
+                  "n": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 5
+                }
+              }
+            ],
+            "append": [
+              {
+                "pos_or_kw_required": {
+                  "other": {
+                    "type": {
+                      "module": "pandas.core.frame",
+                      "name": "DataFrame"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "copy": {
+              "metadata": {
+                "usage.prophet": 8
+              }
+            },
+            "__setitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "str"
+                },
+                "_1": {
+                  "type": "object"
+                }
+              },
+              "metadata": {
+                "usage.prophet": 8
+              }
+            },
+            "groupby": {
+              "pos_or_kw_required": {
+                "by": {
+                  "type": "str",
+                  "options": [
+                    "h"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 2
+              }
+            },
+            "reset_index": {
+              "pos_or_kw_optional": {
+                "inplace": {
+                  "type": {
+                    "name": "bool"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 3
+              }
+            },
+            "sort_values": {
+              "pos_or_kw_required": {
+                "by": {
+                  "type": "str",
+                  "options": [
+                    "h"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 2
+              }
+            },
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "str"
+                    },
+                    {
+                      "type": {
+                        "module": "pandas.core.series",
+                        "name": "Series"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 34
+              }
+            },
+            "head": {
+              "pos_or_kw_required": {
+                "n": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 10
+              }
+            },
+            "__contains__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "str",
+                  "options": [
+                    "upper_window",
+                    "lower_window",
+                    "holiday",
+                    "ds"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 4
+              }
+            },
+            "tail": {
+              "pos_or_kw_required": {
+                "n": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 5
+              }
+            },
+            "append": {
+              "pos_or_kw_required": {
+                "other": {
+                  "type": {
+                    "module": "pandas.core.frame",
+                    "name": "DataFrame"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            }
+          },
+          "properties": {
+            "shape": [
+              {
+                "usage.prophet": 9
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "x": [
+              {
+                "usage.prophet": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "loc": [
+              {
+                "usage.prophet": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "index": [
+              {
+                "usage.prophet": 1
+              },
+              {
+                "type": {
+                  "module": "pandas.core.series",
+                  "name": "Series"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "pandas.core.tools.datetimes": {
+      "function_overloads": {
+        "to_datetime": [
+          {
+            "pos_or_kw_required": {
+              "arg": {
+                "type": "list",
+                "item": {
+                  "type": "str",
+                  "options": [
+                    "2016-12-25"
+                  ]
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 4
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "arg": {
+                "type": "None"
+              }
+            },
+            "metadata": {
+              "usage.prophet": 1
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "arg": {
+                "type": "list",
+                "item": {
+                  "type": "str",
+                  "options": [
+                    "2017-01-02"
+                  ]
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 2
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "arg": {
+                "type": {
+                  "module": "pandas.core.series",
+                  "name": "Series"
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 1
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "arg": {
+                "type": "list",
+                "item": {
+                  "type": "str",
+                  "options": [
+                    "2013-06-06"
+                  ]
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 1
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "arg": {
+                "type": "list",
+                "item": {
+                  "type": "str",
+                  "options": [
+                    "2013-06-06",
+                    "2012-06-06"
+                  ]
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 2
+            }
+          }
+        ]
+      },
+      "functions": {
+        "to_datetime": {
+          "pos_or_kw_required": {
+            "arg": {
+              "type": "union",
+              "options": [
+                {
+                  "type": "list",
+                  "item": {
+                    "type": "str",
+                    "options": [
+                      "2016-12-25",
+                      "2017-01-02",
+                      "2013-06-06",
+                      "2012-06-06"
+                    ]
+                  }
+                },
+                {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                },
+                {
+                  "type": "None"
+                }
+              ]
+            }
+          },
+          "metadata": {
+            "usage.prophet": 11
+          }
+        }
+      }
+    },
+    "numpy": {
+      "function_overloads": {
+        "arange": [
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": {
+                  "name": "int"
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 5
+            }
+          },
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": {
+                  "name": "int"
+                }
+              },
+              "_1": {
+                "type": {
+                  "name": "int"
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 2
+            }
+          }
+        ],
+        "array_equal": [
+          {
+            "pos_or_kw_required": {
+              "a1": {
+                "type": {
+                  "module": "numpy",
+                  "name": "ndarray"
+                }
+              },
+              "a2": {
+                "type": {
+                  "module": "numpy",
+                  "name": "ndarray"
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 8
+            }
+          }
+        ],
+        "allclose": [
+          {
+            "pos_or_kw_required": {
+              "a": {
+                "type": {
+                  "module": "numpy",
+                  "name": "ndarray"
+                }
+              },
+              "b": {
+                "type": {
+                  "module": "numpy",
+                  "name": "ndarray"
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 8
+            }
+          }
+        ],
+        "array": [
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": "list",
+                "item": {
+                  "type": {
+                    "name": "float"
+                  }
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 12
+            }
+          },
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": {
+                  "module": "numpy",
+                  "name": "ndarray"
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 1
+            }
+          },
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": {
+                  "module": "pandas.core.series",
+                  "name": "Series"
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 1
+            }
+          }
+        ],
+        "median": [
+          {
+            "pos_or_kw_required": {
+              "a": {
+                "type": "list",
+                "item": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 2
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "a": {
+                "type": "list",
+                "item": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 4
+            }
+          }
+        ],
+        "column_stack": [
+          {
+            "pos_or_kw_required": {
+              "tup": {
+                "type": "list",
+                "item": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 1
+            }
+          }
+        ],
+        "sum": [
+          {
+            "pos_or_kw_required": {
+              "a": {
+                "type": {
+                  "module": "numpy",
+                  "name": "ndarray"
+                }
+              }
+            },
+            "metadata": {
+              "usage.prophet": 2
+            }
+          }
+        ]
+      },
+      "functions": {
+        "arange": {
+          "pos_only_required": {
+            "_0": {
+              "type": {
+                "name": "int"
+              }
+            }
+          },
+          "pos_only_optional": {
+            "_1": {
+              "type": {
+                "name": "int"
+              }
+            }
+          },
+          "metadata": {
+            "usage.prophet": 7
+          }
+        },
+        "array_equal": {
+          "pos_or_kw_required": {
+            "a1": {
+              "type": {
+                "module": "numpy",
+                "name": "ndarray"
+              }
+            },
+            "a2": {
+              "type": {
+                "module": "numpy",
+                "name": "ndarray"
+              }
+            }
+          },
+          "metadata": {
+            "usage.prophet": 8
+          }
+        },
+        "allclose": {
+          "pos_or_kw_required": {
+            "a": {
+              "type": {
+                "module": "numpy",
+                "name": "ndarray"
+              }
+            },
+            "b": {
+              "type": {
+                "module": "numpy",
+                "name": "ndarray"
+              }
+            }
+          },
+          "metadata": {
+            "usage.prophet": 8
+          }
+        },
+        "array": {
+          "pos_only_required": {
+            "_0": {
+              "type": "union",
+              "options": [
+                {
+                  "type": "list",
+                  "item": {
+                    "type": {
+                      "name": "float"
+                    }
+                  }
+                },
+                {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                }
+              ]
+            }
+          },
+          "metadata": {
+            "usage.prophet": 14
+          }
+        },
+        "median": {
+          "pos_or_kw_required": {
+            "a": {
+              "type": "list",
+              "item": {
+                "type": "union",
+                "options": [
+                  {
+                    "type": {
+                      "name": "int"
+                    }
+                  },
+                  {
+                    "type": {
+                      "module": "numpy",
+                      "name": "int64"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "metadata": {
+            "usage.prophet": 6
+          }
+        },
+        "column_stack": {
+          "pos_or_kw_required": {
+            "tup": {
+              "type": "list",
+              "item": {
+                "type": {
+                  "module": "numpy",
+                  "name": "ndarray"
+                }
+              }
+            }
+          },
+          "metadata": {
+            "usage.prophet": 1
+          }
+        },
+        "sum": {
+          "pos_or_kw_required": {
+            "a": {
+              "type": {
+                "module": "numpy",
+                "name": "ndarray"
+              }
+            }
+          },
+          "metadata": {
+            "usage.prophet": 2
+          }
+        }
+      },
+      "classes": {
+        "ndarray": {
+          "method_overloads": {
+            "__floordiv__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__mod__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 10
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "slice",
+                    "start": {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    "stop": {
+                      "type": "None"
+                    },
+                    "step": {
+                      "type": "None"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "int64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__sub__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "float"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 2
+                }
+              }
+            ],
+            "__eq__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "int64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "float64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "argmax": [
+              {
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__iter__": [
+              {
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__truediv__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "float"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__rmul__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "float"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__rsub__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 2
+                }
+              }
+            ],
+            "__pow__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 2
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__floordiv__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__mod__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": "slice",
+                      "start": {
+                        "type": {
+                          "name": "int"
+                        }
+                      },
+                      "stop": {
+                        "type": "None"
+                      },
+                      "step": {
+                        "type": "None"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 13
+              }
+            },
+            "__sub__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "float"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 4
+              }
+            },
+            "__eq__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 2
+              }
+            },
+            "argmax": {
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__iter__": {
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__truediv__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "float"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 3
+              }
+            },
+            "__rmul__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "float"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__rsub__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 2
+              }
+            },
+            "__pow__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 2
+              }
+            }
+          }
+        },
+        "int64": {
+          "method_overloads": {
+            "__radd__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "int64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__rtruediv__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "int64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__truediv__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "int64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__mul__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "float64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__lt__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 3
+                }
+              }
+            ],
+            "__rsub__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__add__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "int64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__iadd__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "int64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__eq__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__sub__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__ge__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__isub__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__gt__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__radd__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 3
+              }
+            },
+            "__rtruediv__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 2
+              }
+            },
+            "__truediv__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "int64"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__mul__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "float64"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__lt__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 3
+              }
+            },
+            "__rsub__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__add__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "int64"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__iadd__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "int64"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__eq__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__sub__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__ge__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__isub__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__gt__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            }
+          }
+        },
+        "float64": {
+          "method_overloads": {
+            "__rmul__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "float"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "int64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "float64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__add__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "float64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__radd__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "float64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "float"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__mul__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "float64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "float"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__eq__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__rmul__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "float"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 3
+              }
+            },
+            "__add__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "float64"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__radd__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "float"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 2
+              }
+            },
+            "__mul__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "float"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 2
+              }
+            },
+            "__eq__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            }
+          }
+        },
+        "ufunc": {
+          "method_overloads": {
+            "__call__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 2
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__call__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 2
+              }
+            }
+          }
+        }
+      },
+      "properties": {
+        "float": [
+          {
+            "usage.prophet": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "sin": [
+          {
+            "usage.prophet": 2
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "sin"
+          }
+        ],
+        "cos": [
+          {
+            "usage.prophet": 2
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "cos"
+          }
+        ],
+        "pi": [
+          {
+            "usage.prophet": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ]
+      }
+    },
+    "pandas.core.groupby.generic": {
+      "classes": {
+        "DataFrameGroupBy": {
+          "method_overloads": {
+            "aggregate": [
+              {
+                "pos_or_kw_required": {
+                  "func": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "count",
+                        "mean"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "size": [
+              {
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "get_group": [
+              {
+                "pos_or_kw_required": {
+                  "name": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "int64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "name": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "float64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "aggregate": {
+              "pos_or_kw_required": {
+                "func": {
+                  "type": "list",
+                  "item": {
+                    "type": "str",
+                    "options": [
+                      "count",
+                      "mean"
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "size": {
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "get_group": {
+              "pos_or_kw_required": {
+                "name": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 2
+              }
+            }
+          }
+        }
+      }
+    },
+    "pandas.core.series": {
+      "classes": {
+        "Series": {
+          "method_overloads": {
+            "reset_index": [
+              {
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 2
+                }
+              }
+            ],
+            "tolist": [
+              {
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "unique": [
+              {
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__lt__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "2013-01-01"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__gt__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "2014-01-01"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__or__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__ror__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "tail": [
+              {
+                "pos_or_kw_required": {
+                  "n": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 2
+                }
+              }
+            ],
+            "__iadd__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "max": [
+              {
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "min": [
+              {
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "__sub__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "1970-01-01T00:00:00"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ],
+            "astype": [
+              {
+                "pos_or_kw_required": {
+                  "dtype": {
+                    "type": "type",
+                    "name": {
+                      "name": "float"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "reset_index": {
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 2
+              }
+            },
+            "tolist": {
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "unique": {
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__lt__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "str",
+                  "options": [
+                    "2013-01-01"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__gt__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "str",
+                  "options": [
+                    "2014-01-01"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__or__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__ror__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "tail": {
+              "pos_or_kw_required": {
+                "n": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 2
+              }
+            },
+            "__iadd__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "max": {
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "min": {
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "__sub__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "str",
+                  "options": [
+                    "1970-01-01T00:00:00"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            },
+            "astype": {
+              "pos_or_kw_required": {
+                "dtype": {
+                  "type": "type",
+                  "name": {
+                    "name": "float"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            }
+          },
+          "properties": {
+            "values": [
+              {
+                "usage.prophet": 19
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "dt": [
+              {
+                "usage.prophet": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "pandas": {
+      "properties": {
+        "DataFrame": [
+          {
+            "usage.prophet": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ]
+      }
+    },
+    "pandas.core.indexing": {
+      "classes": {
+        "_LocIndexer": {
+          "method_overloads": {
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": "slice",
+                        "start": {
+                          "type": "None"
+                        },
+                        "stop": {
+                          "type": "None"
+                        },
+                        "step": {
+                          "type": "None"
+                        }
+                      },
+                      {
+                        "type": "str",
+                        "options": [
+                          "ds"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.prophet": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "tuple",
+                  "items": [
+                    {
+                      "type": "slice",
+                      "start": {
+                        "type": "None"
+                      },
+                      "stop": {
+                        "type": "None"
+                      },
+                      "step": {
+                        "type": "None"
+                      }
+                    },
+                    {
+                      "type": "str",
+                      "options": [
+                        "ds"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.prophet": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
