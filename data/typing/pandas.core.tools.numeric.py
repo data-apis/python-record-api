@@ -38,6 +38,7 @@ def to_numeric(arg: Literal["1.0"]):
 def to_numeric(arg: pandas.core.series.Series):
     """
     usage.dask: 3
+    usage.prophet: 2
     usage.seaborn: 1
     """
     ...
@@ -47,14 +48,15 @@ def to_numeric(
     arg: Union[
         numpy.ndarray,
         pandas.core.series.Series,
-        Literal["1.0"],
-        Tuple[Literal["1.0"], Literal["2"], Literal["-3"]],
         List[Literal["-3", "2", "1.0"]],
+        Tuple[Literal["1.0"], Literal["2"], Literal["-3"]],
+        Literal["1.0"],
     ]
 ):
     """
     usage.dask: 4
     usage.koalas: 4
+    usage.prophet: 2
     usage.seaborn: 1
     """
     ...

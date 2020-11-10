@@ -639,6 +639,42 @@ def date_range(
 
 
 @overload
+def date_range(start: Literal["2012-06-15"], end: Literal["2012-09-15"]):
+    """
+    usage.prophet: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp, periods: int, freq: Literal["D"]
+):
+    """
+    usage.prophet: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2016-12-20"], end: Literal["2016-12-31"]):
+    """
+    usage.prophet: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp, periods: int, freq: Literal["M"]
+):
+    """
+    usage.prophet: 1
+    """
+    ...
+
+
+@overload
 def date_range(start: Literal["2000"], periods: int, freq: Literal["h"]):
     """
     usage.modin: 2
@@ -1613,6 +1649,7 @@ def date_range(
     usage.dask: 97
     usage.koalas: 45
     usage.modin: 36
+    usage.prophet: 4
     usage.seaborn: 1
     usage.xarray: 122
     """
@@ -1664,6 +1701,7 @@ class DatetimeIndex:
     month: object
 
     # usage.dask: 17
+    # usage.prophet: 2
     # usage.xarray: 5
     name: Union[None, Literal["timestamp", "index"]]
 
@@ -1768,9 +1806,30 @@ class DatetimeIndex:
         """
         ...
 
+    @overload
     def __eq__(self, _0: Union[numpy.ndarray, numpy.datetime64], /):
         """
         usage.pandas: 32
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    def __eq__(
+        self,
+        _0: Union[
+            pandas.core.indexes.datetimes.DatetimeIndex, numpy.datetime64, numpy.ndarray
+        ],
+        /,
+    ):
+        """
+        usage.pandas: 32
+        usage.prophet: 2
         """
         ...
 
@@ -1784,6 +1843,7 @@ class DatetimeIndex:
     def __getitem__(self, _0: slice[None, int, None], /):
         """
         usage.koalas: 1
+        usage.prophet: 1
         usage.xarray: 1
         """
         ...
@@ -1793,6 +1853,7 @@ class DatetimeIndex:
         """
         usage.dask: 18
         usage.modin: 2
+        usage.prophet: 2
         usage.xarray: 6
         """
         ...
@@ -1815,6 +1876,7 @@ class DatetimeIndex:
     @overload
     def __getitem__(self, _0: numpy.ndarray, /):
         """
+        usage.prophet: 3
         usage.xarray: 2
         """
         ...
@@ -1839,7 +1901,7 @@ class DatetimeIndex:
         _0: Union[
             int,
             numpy.ndarray,
-            slice[Union[None, int], Union[int, None], Union[None, int]],
+            slice[Union[int, None], Union[None, int], Union[int, None]],
         ],
         /,
     ):
@@ -1847,6 +1909,7 @@ class DatetimeIndex:
         usage.dask: 21
         usage.koalas: 1
         usage.modin: 2
+        usage.prophet: 6
         usage.xarray: 20
         """
         ...
@@ -1862,19 +1925,21 @@ class DatetimeIndex:
     def __gt__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
         usage.dask: 1
+        usage.prophet: 1
         """
         ...
 
     def __gt__(
         self,
         _0: Union[
-            pandas._libs.tslibs.timestamps.Timestamp, numpy.datetime64, numpy.ndarray
+            pandas._libs.tslibs.timestamps.Timestamp, numpy.ndarray, numpy.datetime64
         ],
         /,
     ):
         """
         usage.dask: 1
         usage.pandas: 2
+        usage.prophet: 1
         """
         ...
 
@@ -1896,9 +1961,30 @@ class DatetimeIndex:
         """
         ...
 
+    @overload
     def __le__(self, _0: Union[numpy.ndarray, numpy.datetime64], /):
         """
         usage.pandas: 5
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    def __le__(
+        self,
+        _0: Union[
+            pandas._libs.tslibs.timestamps.Timestamp, numpy.datetime64, numpy.ndarray
+        ],
+        /,
+    ):
+        """
+        usage.pandas: 5
+        usage.prophet: 2
         """
         ...
 
@@ -1950,6 +2036,7 @@ class DatetimeIndex:
     @overload
     def __sub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
+        usage.prophet: 1
         usage.xarray: 3
         """
         ...
@@ -1971,15 +2058,16 @@ class DatetimeIndex:
     def __sub__(
         self,
         _0: Union[
-            numpy.datetime64,
-            numpy.timedelta64,
-            numpy.ndarray,
             pandas._libs.tslibs.timestamps.Timestamp,
+            numpy.ndarray,
+            numpy.timedelta64,
+            numpy.datetime64,
         ],
         /,
     ):
         """
         usage.pandas: 75
+        usage.prophet: 1
         usage.xarray: 4
         """
         ...

@@ -666,6 +666,13 @@ class DataFrameGroupBy:
         ...
 
     @overload
+    def aggregate(self, /, func: List[Literal["count", "mean"]]):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def aggregate(self, /, func: Literal["mean"]):
         """
         usage.dask: 3
@@ -781,20 +788,21 @@ class DataFrameGroupBy:
         self,
         /,
         func: Union[
-            List[Literal["sum", "max", "min", "mean"]],
+            List[Literal["sum", "max", "min", "count", "mean"]],
             str,
             Dict[
                 Union[
-                    Literal["C", "B", "b", "c", "e"],
                     Tuple[Literal["X", "Y"], Literal["B", "C"]],
+                    Literal["C", "B", "b", "c", "e"],
                 ],
-                Union[str, List[Literal["sum", "mean", "max", "min"]]],
+                Union[List[Literal["sum", "mean", "max", "min"]], str],
             ],
         ] = ...,
     ):
         """
         usage.dask: 22
         usage.koalas: 33
+        usage.prophet: 1
         """
         ...
 
@@ -1044,6 +1052,29 @@ class DataFrameGroupBy:
         """
         usage.dask: 12
         usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: pandas._libs.tslibs.timedeltas.Timedelta):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: numpy.int64):
+        """
+        usage.prophet: 1
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def get_group(self, /, name: numpy.float64):
+        """
+        usage.prophet: 1
+        usage.seaborn: 1
         """
         ...
 
@@ -1315,13 +1346,6 @@ class DataFrameGroupBy:
 
     @overload
     def get_group(self, /, name: Tuple[Literal["c"], numpy.int64, Literal["m"]]):
-        """
-        usage.seaborn: 1
-        """
-        ...
-
-    @overload
-    def get_group(self, /, name: numpy.int64):
         """
         usage.seaborn: 1
         """
@@ -1839,13 +1863,6 @@ class DataFrameGroupBy:
         ...
 
     @overload
-    def get_group(self, /, name: numpy.float64):
-        """
-        usage.seaborn: 1
-        """
-        ...
-
-    @overload
     def get_group(self, /, name: Tuple[int, float]):
         """
         usage.seaborn: 1
@@ -2013,19 +2030,10 @@ class DataFrameGroupBy:
         """
         ...
 
-    def get_group(
-        self,
-        /,
-        name: Union[
-            int,
-            numpy.float64,
-            numpy.int64,
-            Tuple[Union[str, float, numpy.float64, numpy.int64, int], ...],
-            str,
-        ],
-    ):
+    def get_group(self, /, name: object):
         """
         usage.dask: 4
+        usage.prophet: 3
         usage.seaborn: 140
         """
         ...
@@ -2141,6 +2149,7 @@ class DataFrameGroupBy:
         usage.dask: 9
         usage.koalas: 5
         usage.modin: 2
+        usage.prophet: 1
         """
         ...
 

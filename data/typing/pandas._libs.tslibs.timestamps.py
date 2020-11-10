@@ -23,6 +23,9 @@ class Timestamp:
     # usage.xarray: 1
     value: object
 
+    # usage.prophet: 1
+    year: object
+
     @overload
     def __add__(self, _0: datetime.timedelta, /):
         """
@@ -45,16 +48,17 @@ class Timestamp:
         ...
 
     @overload
-    def __add__(self, _0: pandas._libs.tslibs.offsets.Day, /):
+    def __add__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
         """
-        usage.dask: 2
+        usage.dask: 1
+        usage.prophet: 4
         """
         ...
 
     @overload
-    def __add__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+    def __add__(self, _0: pandas._libs.tslibs.offsets.Day, /):
         """
-        usage.dask: 1
+        usage.dask: 2
         """
         ...
 
@@ -70,6 +74,7 @@ class Timestamp:
         usage.dask: 4
         usage.koalas: 1
         usage.pandas: 23
+        usage.prophet: 4
         usage.xarray: 1
         """
         ...
@@ -118,9 +123,24 @@ class Timestamp:
         ...
 
     @overload
+    def __ge__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
     def __ge__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
         usage.dask: 7
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 4
         """
         ...
 
@@ -134,13 +154,18 @@ class Timestamp:
     def __ge__(
         self,
         _0: Union[
-            pandas._libs.tslibs.timestamps.Timestamp, numpy.datetime64, numpy.ndarray
+            pandas._libs.tslibs.timestamps.Timestamp,
+            numpy.datetime64,
+            numpy.ndarray,
+            pandas.core.series.Series,
+            pandas.core.indexes.datetimes.DatetimeIndex,
         ],
         /,
     ):
         """
         usage.dask: 8
         usage.pandas: 2
+        usage.prophet: 8
         """
         ...
 
@@ -148,6 +173,7 @@ class Timestamp:
     def __gt__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
         usage.dask: 20
+        usage.prophet: 4
         """
         ...
 
@@ -161,13 +187,20 @@ class Timestamp:
     def __gt__(
         self,
         _0: Union[
-            pandas.core.indexes.datetimes.DatetimeIndex,
             pandas._libs.tslibs.timestamps.Timestamp,
+            pandas.core.indexes.datetimes.DatetimeIndex,
         ],
         /,
     ):
         """
         usage.dask: 21
+        usage.prophet: 4
+        """
+        ...
+
+    def __isub__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.prophet: 1
         """
         ...
 
@@ -175,6 +208,7 @@ class Timestamp:
     def __le__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
         usage.dask: 7
+        usage.prophet: 2
         """
         ...
 
@@ -195,14 +229,15 @@ class Timestamp:
     def __le__(
         self,
         _0: Union[
-            numpy.datetime64,
-            pandas._libs.tslibs.timestamps.Timestamp,
             pandas.core.series.Series,
+            pandas._libs.tslibs.timestamps.Timestamp,
+            numpy.datetime64,
         ],
         /,
     ):
         """
         usage.dask: 9
+        usage.prophet: 2
         """
         ...
 
@@ -217,6 +252,14 @@ class Timestamp:
     def __lt__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
         usage.dask: 20
+        usage.prophet: 4
+        """
+        ...
+
+    @overload
+    def __lt__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 2
         """
         ...
 
@@ -224,6 +267,7 @@ class Timestamp:
     def __lt__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
         """
         usage.dask: 1
+        usage.prophet: 1
         """
         ...
 
@@ -233,12 +277,14 @@ class Timestamp:
             pandas._libs.tslibs.timestamps.Timestamp,
             pandas.core.indexes.datetimes.DatetimeIndex,
             numpy.ndarray,
+            pandas.core.series.Series,
         ],
         /,
     ):
         """
         usage.dask: 21
         usage.pandas: 1
+        usage.prophet: 7
         """
         ...
 
@@ -339,12 +385,14 @@ class Timestamp:
     def __rsub__(self, _0: pandas.core.series.Series, /):
         """
         usage.koalas: 1
+        usage.prophet: 2
         """
         ...
 
     @overload
     def __rsub__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
         """
+        usage.prophet: 1
         usage.xarray: 3
         """
         ...
@@ -356,10 +404,18 @@ class Timestamp:
         """
         ...
 
+    @overload
+    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.prophet: 4
+        """
+        ...
+
     def __rsub__(self, _0: object, /):
         """
         usage.koalas: 2
         usage.pandas: 8
+        usage.prophet: 7
         usage.xarray: 3
         """
         ...
@@ -382,6 +438,21 @@ class Timestamp:
     def __sub__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.int64], /):
         """
         usage.pandas: 14
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.prophet: 4
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.dask: 3
+        usage.prophet: 2
         """
         ...
 
@@ -420,18 +491,12 @@ class Timestamp:
         """
         ...
 
-    @overload
-    def __sub__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
-        """
-        usage.dask: 3
-        """
-        ...
-
     def __sub__(self, _0: object, /):
         """
         usage.dask: 8
         usage.koalas: 2
         usage.pandas: 14
+        usage.prophet: 6
         """
         ...
 
@@ -464,6 +529,7 @@ class Timestamp:
     def date(self, /):
         """
         usage.modin: 2
+        usage.prophet: 2
         """
         ...
 

@@ -878,6 +878,13 @@ class _LocIndexer:
         ...
 
     @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["ds"]], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: Tuple[pandas.core.series.Series, Literal["x"]], /):
         """
         usage.seaborn: 3
@@ -2355,6 +2362,7 @@ class _LocIndexer:
         """
         usage.dask: 250
         usage.koalas: 137
+        usage.prophet: 1
         usage.seaborn: 14
         usage.sklearn: 30
         usage.xarray: 45
@@ -2628,6 +2636,13 @@ class _LocIndexer:
         ...
 
     @overload
+    def __setitem__(self, _0: Tuple[int, Literal["y"]], _1: float, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def __setitem__(self, _0: pandas.core.series.Series, _1: float, /):
         """
         usage.seaborn: 1
@@ -2653,11 +2668,12 @@ class _LocIndexer:
     def __setitem__(
         self,
         _0: object,
-        _1: Union[float, pandas.core.frame.DataFrame, int, pandas.core.series.Series],
+        _1: Union[float, pandas.core.series.Series, int, pandas.core.frame.DataFrame],
         /,
     ):
         """
         usage.koalas: 33
+        usage.prophet: 1
         usage.seaborn: 3
         """
         ...
@@ -2691,6 +2707,7 @@ class _iLocIndexer:
         """
         usage.dask: 17
         usage.koalas: 11
+        usage.prophet: 1
         usage.sklearn: 1
         usage.xarray: 3
         """
@@ -2718,6 +2735,7 @@ class _iLocIndexer:
         """
         usage.dask: 9
         usage.koalas: 6
+        usage.prophet: 10
         usage.seaborn: 2
         usage.sklearn: 1
         usage.xarray: 2
@@ -2805,6 +2823,7 @@ class _iLocIndexer:
         """
         usage.dask: 1
         usage.koalas: 3
+        usage.prophet: 2
         usage.sklearn: 1
         """
         ...
@@ -2895,6 +2914,15 @@ class _iLocIndexer:
     def __getitem__(self, _0: slice[None, int, None], /):
         """
         usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, None, None]], /
+    ):
+        """
+        usage.prophet: 1
         """
         ...
 
@@ -3006,6 +3034,7 @@ class _iLocIndexer:
         usage.dask: 71
         usage.koalas: 98
         usage.modin: 3
+        usage.prophet: 14
         usage.seaborn: 12
         usage.sklearn: 24
         usage.xarray: 5

@@ -203,6 +203,62 @@ def to_datetime(arg: List[Literal["2002", "2000", "2001"]]):
 
 
 @overload
+def to_datetime(arg: List[Literal["2016-12-25"]]):
+    """
+    usage.prophet: 4
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: None):
+    """
+    usage.prophet: 1
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: pandas.core.series.Series):
+    """
+    usage.prophet: 4
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: pandas.core.indexes.datetimes.DatetimeIndex):
+    """
+    usage.prophet: 1
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: List[Literal["2017-01-02"]]):
+    """
+    usage.prophet: 2
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: List[Literal["2013-06-06"]]):
+    """
+    usage.prophet: 1
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: List[Literal["2013-06-06", "2012-06-06"]]):
+    """
+    usage.prophet: 2
+    """
+    ...
+
+
+@overload
 def to_datetime(arg: dask.dataframe.core.DataFrame):
     """
     usage.dask: 1
@@ -269,6 +325,7 @@ def to_datetime(
     """
     usage.dask: 21
     usage.koalas: 13
+    usage.prophet: 15
     usage.xarray: 8
     """
     ...

@@ -15,6 +15,7 @@ class DataFrame:
     # usage.dask: 6
     # usage.koalas: 1
     # usage.networkx: 1
+    # usage.prophet: 35
     # usage.seaborn: 9
     # usage.sklearn: 39
     shape: ClassVar[object]
@@ -211,6 +212,7 @@ class DataFrame:
         """
         usage.dask: 13
         usage.koalas: 9
+        usage.prophet: 10
         usage.seaborn: 65
         usage.xarray: 3
         """
@@ -336,6 +338,7 @@ class DataFrame:
     def __getitem__(cls, _0: List[str], /):
         """
         usage.koalas: 30
+        usage.prophet: 1
         usage.sklearn: 22
         """
         ...
@@ -1596,6 +1599,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 2
+        usage.prophet: 1
         usage.seaborn: 1
         """
         ...
@@ -1709,6 +1713,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["mean"], /):
         """
         usage.koalas: 1
+        usage.prophet: 1
         """
         ...
 
@@ -1989,6 +1994,7 @@ class DataFrame:
         """
         usage.dask: 13
         usage.koalas: 9
+        usage.prophet: 7
         usage.seaborn: 7
         """
         ...
@@ -2124,6 +2130,7 @@ class DataFrame:
         usage.dask: 10
         usage.koalas: 1
         usage.networkx: 1
+        usage.prophet: 2
         """
         ...
 
@@ -2441,6 +2448,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["t"], /):
         """
         usage.koalas: 2
+        usage.prophet: 10
         usage.seaborn: 4
         """
         ...
@@ -2492,6 +2500,7 @@ class DataFrame:
         """
         usage.dask: 13
         usage.koalas: 1
+        usage.prophet: 18
         usage.seaborn: 58
         """
         ...
@@ -2899,6 +2908,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["h"], /):
         """
         usage.koalas: 2
+        usage.prophet: 2
         usage.seaborn: 5
         """
         ...
@@ -5582,6 +5592,501 @@ class DataFrame:
 
     @overload
     @classmethod
+    def __getitem__(cls, _0: Literal["ds"], /):
+        """
+        usage.prophet: 43
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["floor"], /):
+        """
+        usage.prophet: 8
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["holiday"], /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cap"], /):
+        """
+        usage.prophet: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["binary_feature"], /):
+        """
+        usage.prophet: 11
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["component"], /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["col"], /):
+        """
+        usage.prophet: 2
+        usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["additive_terms"], /):
+        """
+        usage.prophet: 9
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["multiplicative_terms"], /):
+        """
+        usage.prophet: 9
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["y_scaled"], /):
+        """
+        usage.prophet: 8
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["ds"]], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["weekly"], /):
+        """
+        usage.prophet: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["yhat"], /):
+        """
+        usage.prophet: 13
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["trend"], /):
+        """
+        usage.prophet: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["trend", "ds"]], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["yhat_upper", "yhat_lower", "yhat", "ds"]], /
+    ):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cutoff"], /):
+        """
+        usage.prophet: 12
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["y_x"], /):
+        """
+        usage.prophet: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["y_y"], /):
+        """
+        usage.prophet: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["extra"], /):
+        """
+        usage.prophet: 9
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["is_conditional_week"], /):
+        """
+        usage.prophet: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["is_conditional_week", "extra", "ds"]], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["conditional_weekly"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: str, /):
+        """
+        usage.dask: 6
+        usage.prophet: 5
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["monthly"], /):
+        """
+        usage.prophet: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cap_scaled"], /):
+        """
+        usage.prophet: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["floor", "cap", "ds"]], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["floor", "cap", "trend", "ds"]], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["yhat", "ds"]], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["horizon"], /):
+        """
+        usage.prophet: 21
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["count"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["mse"], /):
+        """
+        usage.prophet: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["rmse"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["mae"], /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["mape"], /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["mdape"], /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["yhat_lower"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["yhat_upper"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["coverage"], /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["numeric_feature"], /):
+        """
+        usage.prophet: 13
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["numeric_feature2"], /):
+        """
+        usage.prophet: 10
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["binary_feature2"], /):
+        """
+        usage.prophet: 12
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["yearly"], /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["constant_feature"], /):
+        """
+        usage.prophet: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["special_day_delim_+0"]], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["special_day"], /):
+        """
+        usage.prophet: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["lower_window"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["upper_window"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Christmas Day"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Columbus Day"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Independence Day"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Labor Day"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Memorial Day"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["New Year's Day"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Thanksgiving"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Veterans Day"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["holidays"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["seans-bday"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["seans-bday_delim_+1", "seans-bday_delim_+0"]], /
+    ):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["xmas_delim_-1", "xmas_delim_+0"]], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["daily"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    @classmethod
     def __getitem__(cls, _0: Literal["col0"], /):
         """
         usage.modin: 1
@@ -6043,14 +6548,6 @@ class DataFrame:
     def __getitem__(cls, _0: List[Literal["b", "s", "a"]], /):
         """
         usage.seaborn: 1
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __getitem__(cls, _0: Literal["col"], /):
-        """
-        usage.seaborn: 2
         """
         ...
 
@@ -6583,15 +7080,6 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["unique_id"], /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __getitem__(cls, _0: str, /):
-        """
-        usage.dask: 6
-        usage.sklearn: 1
         """
         ...
 
@@ -8577,6 +9065,7 @@ class DataFrame:
         usage.koalas: 1033
         usage.modin: 19
         usage.networkx: 22
+        usage.prophet: 319
         usage.seaborn: 406
         usage.sklearn: 213
         usage.xarray: 8
@@ -8599,10 +9088,19 @@ class DataFrame:
         """
         ...
 
+    @overload
     @classmethod
-    def __ne__(cls, _0: type, /):
+    def __ne__(cls, _0: int, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @classmethod
+    def __ne__(cls, _0: Union[int, type], /):
         """
         usage.dask: 3
+        usage.prophet: 1
         """
         ...
 
@@ -8991,6 +9489,7 @@ class DataFrame:
     # usage.koalas: 676
     # usage.modin: 17
     # usage.networkx: 3
+    # usage.prophet: 14
     # usage.seaborn: 18
     # usage.sklearn: 19
     # usage.xarray: 9
@@ -9056,6 +9555,9 @@ class DataFrame:
     # usage.seaborn: 6
     h: pandas.core.series.Series
 
+    # usage.prophet: 2
+    holiday: object
+
     # usage.dask: 2
     i32: object
 
@@ -9069,6 +9571,7 @@ class DataFrame:
     # usage.dask: 46
     # usage.koalas: 23
     # usage.modin: 3
+    # usage.prophet: 5
     # usage.seaborn: 9
     # usage.sklearn: 14
     # usage.xarray: 2
@@ -9078,6 +9581,7 @@ class DataFrame:
     # usage.koalas: 57
     # usage.modin: 8
     # usage.networkx: 2
+    # usage.prophet: 4
     # usage.seaborn: 12
     # usage.sklearn: 3
     # usage.xarray: 12
@@ -9088,6 +9592,7 @@ class DataFrame:
 
     # usage.dask: 71
     # usage.koalas: 103
+    # usage.prophet: 2
     # usage.seaborn: 16
     # usage.sklearn: 1
     # usage.xarray: 3
@@ -9145,6 +9650,7 @@ class DataFrame:
     # usage.koalas: 2
     # usage.modin: 1
     # usage.networkx: 1
+    # usage.prophet: 4
     # usage.seaborn: 8
     # usage.sklearn: 1
     # usage.xarray: 7
@@ -9155,6 +9661,7 @@ class DataFrame:
 
     # usage.dask: 82
     # usage.koalas: 25
+    # usage.prophet: 1
     # usage.seaborn: 8
     x: pandas.core.series.Series
 
@@ -9236,14 +9743,149 @@ class DataFrame:
         ...
 
     @overload
-    def __contains__(self, _0: Literal["x"], /):
+    def __contains__(self, _0: Literal["y"], /):
         """
+        usage.prophet: 3
         usage.seaborn: 1
         """
         ...
 
     @overload
-    def __contains__(self, _0: Literal["y"], /):
+    def __contains__(self, _0: Literal["ds"], /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["holiday"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["lower_window"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["upper_window"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["floor"], /):
+        """
+        usage.prophet: 3
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["cap"], /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["binary_feature"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["additive_terms"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["multiplicative_terms"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["extra"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["is_conditional_week"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["yhat_lower"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["yhat_upper"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["numeric_feature"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["numeric_feature2"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["binary_feature2"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["constant_feature"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["t"], /):
+        """
+        usage.prophet: 1
+        usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["y_scaled"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["x"], /):
         """
         usage.seaborn: 1
         """
@@ -9258,13 +9900,6 @@ class DataFrame:
 
     @overload
     def __contains__(self, _0: Literal["c"], /):
-        """
-        usage.seaborn: 1
-        """
-        ...
-
-    @overload
-    def __contains__(self, _0: Literal["t"], /):
         """
         usage.seaborn: 1
         """
@@ -9356,6 +9991,7 @@ class DataFrame:
 
     def __contains__(self, _0: str, /):
         """
+        usage.prophet: 26
         usage.seaborn: 18
         """
         ...
@@ -9371,6 +10007,7 @@ class DataFrame:
     def __eq__(self, _0: pandas.core.frame.DataFrame, /):
         """
         usage.dask: 8
+        usage.prophet: 2
         """
         ...
 
@@ -9385,6 +10022,7 @@ class DataFrame:
         """
         usage.dask: 9
         usage.pandas: 6
+        usage.prophet: 2
         """
         ...
 
@@ -9997,6 +10635,7 @@ class DataFrame:
         """
         usage.dask: 4
         usage.koalas: 1
+        usage.prophet: 3
         usage.seaborn: 1
         """
         ...
@@ -11570,6 +12209,305 @@ class DataFrame:
     def __setitem__(self, _0: Literal["C"], _1: List[int], /):
         """
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["cap"], _1: float, /):
+        """
+        usage.prophet: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["binary_feature"], _1: List[int], /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["ds"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["floor"], _1: int, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["t"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["y_scaled"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["cap_scaled"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["binary_feature"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["multiplicative_terms"], _1: int, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["trend"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["yhat"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["extra"], _1: range, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["is_conditional_week"], _1: numpy.ndarray, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["extra"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["is_conditional_week"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: pandas.core.series.Series, _1: int, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["cap"], _1: int, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["horizon"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["mse"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["rmse"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["mae"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["mape"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["mdape"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["coverage"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["binary_feature"], _1: List[Literal["0"]], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["numeric_feature"], _1: range, /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["numeric_feature2"], _1: range, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["numeric_feature"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["numeric_feature2"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["binary_feature2"], _1: List[int], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["binary_feature2"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["binary_feature2"], _1: int, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["constant_feature"], _1: int, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["constant_feature"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["additive_terms"], _1: int, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["is_conditional_week"], _1: List[int], /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["y"], _1: int, /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["cap"], _1: numpy.float64, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["floor"], _1: float, /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["floor"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["cap"], _1: pandas.core.series.Series, /):
+        """
+        usage.prophet: 2
         """
         ...
 
@@ -13606,6 +14544,7 @@ class DataFrame:
         usage.dask: 129
         usage.koalas: 266
         usage.modin: 16
+        usage.prophet: 63
         usage.seaborn: 29
         usage.sklearn: 178
         usage.xarray: 1
@@ -14420,16 +15359,17 @@ class DataFrame:
         ...
 
     @overload
-    def any(self, /, axis: int, skipna: bool):
+    def any(self, /, axis: int):
         """
-        usage.dask: 2
+        usage.dask: 4
+        usage.prophet: 1
         """
         ...
 
     @overload
-    def any(self, /, axis: int):
+    def any(self, /, axis: int, skipna: bool):
         """
-        usage.dask: 4
+        usage.dask: 2
         """
         ...
 
@@ -14437,6 +15377,7 @@ class DataFrame:
         """
         usage.dask: 9
         usage.koalas: 3
+        usage.prophet: 1
         usage.seaborn: 1
         """
         ...
@@ -14446,6 +15387,7 @@ class DataFrame:
         """
         usage.dask: 3
         usage.koalas: 5
+        usage.prophet: 2
         """
         ...
 
@@ -14500,6 +15442,7 @@ class DataFrame:
         """
         usage.dask: 12
         usage.koalas: 11
+        usage.prophet: 2
         """
         ...
 
@@ -15218,6 +16161,7 @@ class DataFrame:
         usage.dask: 13
         usage.koalas: 21
         usage.modin: 4
+        usage.prophet: 31
         usage.seaborn: 11
         usage.sklearn: 4
         """
@@ -15236,6 +16180,7 @@ class DataFrame:
         usage.dask: 16
         usage.koalas: 21
         usage.modin: 4
+        usage.prophet: 31
         usage.seaborn: 12
         usage.sklearn: 4
         """
@@ -15753,6 +16698,27 @@ class DataFrame:
         ...
 
     @overload
+    def drop(
+        self,
+        /,
+        labels: Literal["zeros"],
+        axis: int,
+        inplace: bool,
+        errors: Literal["ignore"],
+    ):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: pandas.core.indexes.numeric.Int64Index):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def drop(self, /, labels: Literal["date"], axis: int):
         """
         usage.seaborn: 1
@@ -15982,25 +16948,27 @@ class DataFrame:
             List[Union[str, Tuple[Literal["a"], Literal["x"]]]],
             Tuple[Literal["a"], Literal["x"]],
         ] = ...,
-        inplace: bool = ...,
         level: int = ...,
         labels: Union[
             int,
+            pandas.core.indexes.numeric.Int64Index,
             List[
                 Union[
-                    Tuple[Literal["__groupkey_0__", "__groupkey_1__"], Literal[""]],
                     str,
+                    Tuple[Literal["__groupkey_0__", "__groupkey_1__"], Literal[""]],
                     int,
                 ]
             ],
             str,
         ] = ...,
         axis: int = ...,
+        inplace: bool = ...,
         errors: Literal["raise", "ignore"] = ...,
     ):
         """
         usage.dask: 33
         usage.koalas: 15
+        usage.prophet: 2
         usage.seaborn: 2
         """
         ...
@@ -16631,6 +17599,7 @@ class DataFrame:
     def equals(self, /, other: pandas.core.frame.DataFrame):
         """
         usage.dask: 2
+        usage.prophet: 1
         usage.xarray: 10
         """
         ...
@@ -17933,6 +18902,13 @@ class DataFrame:
         ...
 
     @overload
+    def groupby(self, /, by: Literal["h"]):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
     def groupby(self, /, by: List[Literal["c", "b", "a"]]):
         """
         usage.dask: 2
@@ -18750,6 +19726,7 @@ class DataFrame:
         usage.dask: 450
         usage.koalas: 352
         usage.modin: 10
+        usage.prophet: 2
         usage.seaborn: 14
         """
         ...
@@ -18759,6 +19736,7 @@ class DataFrame:
         """
         usage.dask: 13
         usage.koalas: 6
+        usage.prophet: 20
         """
         ...
 
@@ -18773,6 +19751,7 @@ class DataFrame:
         """
         usage.dask: 18
         usage.koalas: 6
+        usage.prophet: 20
         """
         ...
 
@@ -19047,6 +20026,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 1
+        usage.prophet: 1
         """
         ...
 
@@ -19439,6 +20419,7 @@ class DataFrame:
         """
         usage.dask: 4
         usage.koalas: 3
+        usage.prophet: 1
         usage.seaborn: 1
         """
         ...
@@ -19477,6 +20458,7 @@ class DataFrame:
         """
         usage.dask: 12
         usage.koalas: 5
+        usage.prophet: 1
         usage.seaborn: 1
         """
         ...
@@ -23615,6 +24597,19 @@ class DataFrame:
         ...
 
     @overload
+    def rename(
+        self,
+        /,
+        mapper: Dict[Literal["mse"], Literal["rmse"]],
+        axis: Literal["columns"],
+        inplace: bool,
+    ):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def rename(self, /, columns: Dict[Literal["hue", "x"], None]):
         """
         usage.seaborn: 1
@@ -23900,8 +24895,8 @@ class DataFrame:
     def rename(
         self,
         /,
-        mapper: Union[None, Callable] = ...,
-        axis: Literal["index", "columns"] = ...,
+        mapper: Union[None, Callable, Dict[Literal["mse"], Literal["rmse"]]] = ...,
+        axis: Literal["columns", "index"] = ...,
         index: Union[Callable, Dict[int, int]] = ...,
         columns: Union[Callable, collections.OrderedDict, dict, Callable] = ...,
         level: int = ...,
@@ -23910,6 +24905,7 @@ class DataFrame:
         """
         usage.dask: 18
         usage.koalas: 15
+        usage.prophet: 1
         usage.seaborn: 26
         """
         ...
@@ -24613,6 +25609,7 @@ class DataFrame:
         """
         usage.dask: 3
         usage.koalas: 17
+        usage.prophet: 1
         """
         ...
 
@@ -24621,6 +25618,7 @@ class DataFrame:
         """
         usage.dask: 24
         usage.koalas: 31
+        usage.prophet: 4
         """
         ...
 
@@ -24628,6 +25626,7 @@ class DataFrame:
     def reset_index(self, /, drop: bool, inplace: bool):
         """
         usage.koalas: 1
+        usage.prophet: 3
         """
         ...
 
@@ -24723,6 +25722,7 @@ class DataFrame:
     def reset_index(self, /, inplace: bool):
         """
         usage.koalas: 1
+        usage.prophet: 2
         """
         ...
 
@@ -24749,6 +25749,7 @@ class DataFrame:
         """
         usage.dask: 29
         usage.koalas: 66
+        usage.prophet: 10
         """
         ...
 
@@ -26991,17 +27992,25 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def sort_index(self, /, level: Literal["col"]):
+        """
+        usage.prophet: 1
+        """
+        ...
+
     def sort_index(
         self,
         /,
         ascending: bool = ...,
         na_position: Literal["first"] = ...,
         inplace: bool = ...,
-        level: List[int] = ...,
+        level: Union[Literal["col"], List[int]] = ...,
     ):
         """
         usage.dask: 8
         usage.koalas: 360
+        usage.prophet: 1
         """
         ...
 
@@ -27511,6 +28520,27 @@ class DataFrame:
     def sort_values(self, /, by: Literal["__single_bucket"]):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["ds"]):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["horizon"], inplace: bool):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["h"]):
+        """
+        usage.prophet: 2
         """
         ...
 
@@ -28413,7 +29443,7 @@ class DataFrame:
         self,
         /,
         by: Union[
-            List[Union[Tuple[str, ...], str, int, float]],
+            List[Union[int, float, str, Tuple[str, ...]]],
             str,
             Tuple[Literal["X", "x", "y"], Literal["A", "a", "c"]],
         ],
@@ -28424,6 +29454,7 @@ class DataFrame:
         """
         usage.dask: 190
         usage.koalas: 105
+        usage.prophet: 4
         usage.seaborn: 3
         """
         ...
@@ -28709,6 +29740,7 @@ class DataFrame:
         """
         usage.dask: 3
         usage.koalas: 1
+        usage.prophet: 1
         """
         ...
 
@@ -28766,6 +29798,7 @@ class DataFrame:
         """
         usage.dask: 32
         usage.koalas: 18
+        usage.prophet: 1
         usage.seaborn: 1
         """
         ...
@@ -28782,6 +29815,7 @@ class DataFrame:
         """
         usage.dask: 5
         usage.koalas: 5
+        usage.prophet: 8
         """
         ...
 
@@ -28789,6 +29823,7 @@ class DataFrame:
         """
         usage.dask: 5
         usage.koalas: 6
+        usage.prophet: 8
         """
         ...
 
