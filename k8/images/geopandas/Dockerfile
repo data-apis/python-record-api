@@ -4,6 +4,8 @@ FROM ${FROM}
 
 WORKDIR /usr/src/app
 
+RUN apt-get install libgeos-dev
+
 # Must build from source to be able to run tests
 # https://github.com/geopandas/geopandas
 RUN git clone \
