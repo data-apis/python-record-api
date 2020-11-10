@@ -59,6 +59,9 @@ class DatetimeProperties:
     # usage.koalas: 1
     second: object
 
+    # usage.prophet: 1
+    tz: object
+
     # usage.koalas: 1
     week: object
 

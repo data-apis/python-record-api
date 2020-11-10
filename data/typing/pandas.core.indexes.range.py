@@ -29,6 +29,7 @@ class RangeIndex:
 
     # usage.dask: 16
     # usage.koalas: 2
+    # usage.prophet: 1
     # usage.seaborn: 2
     # usage.xarray: 4
     name: Union[Literal["ix", "renamed", "index"], None]
@@ -147,6 +148,13 @@ class RangeIndex:
         ...
 
     @overload
+    def __getitem__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: slice[numpy.int64, numpy.int64, numpy.int64], /):
         """
         usage.modin: 1
@@ -171,11 +179,12 @@ class RangeIndex:
         self,
         _0: Union[
             int,
+            pandas.core.series.Series,
             numpy.ndarray,
             slice[
-                Union[None, numpy.int64, int],
                 Union[numpy.int64, int, None],
                 Union[None, numpy.int64, int],
+                Union[numpy.int64, int, None],
             ],
             List[numpy.int64],
         ],
@@ -184,6 +193,7 @@ class RangeIndex:
         """
         usage.dask: 5
         usage.modin: 4
+        usage.prophet: 1
         usage.xarray: 7
         """
         ...

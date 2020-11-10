@@ -3,6 +3,19 @@ from typing import *
 
 @overload
 def merge(
+    left: pandas.core.frame.DataFrame,
+    right: pandas.core.frame.DataFrame,
+    how: Literal["left"],
+    on: Literal["ds"],
+):
+    """
+    usage.prophet: 3
+    """
+    ...
+
+
+@overload
+def merge(
     _0: dask.dataframe.core.DataFrame,
     _1: dask.dataframe.core.DataFrame,
     /,
@@ -4033,11 +4046,11 @@ def merge(
     _0: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame] = ...,
     _1: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame] = ...,
     /,
-    left: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame] = ...,
-    right: Union[dask.dataframe.core.DataFrame, pandas.core.frame.DataFrame] = ...,
+    left: Union[pandas.core.frame.DataFrame, dask.dataframe.core.DataFrame] = ...,
+    right: Union[pandas.core.frame.DataFrame, dask.dataframe.core.DataFrame] = ...,
     how: Literal["outer", "left", "inner", "right"] = ...,
     on: Union[
-        None, List[Literal["idx", "k", "A"]], Literal["B", "x", "y", "idx"]
+        Literal["B", "x", "y", "idx", "ds"], List[Literal["idx", "k", "A"]], None
     ] = ...,
     left_on: Union[
         None,
@@ -4061,6 +4074,7 @@ def merge(
 ):
     """
     usage.dask: 291
+    usage.prophet: 3
     """
     ...
 

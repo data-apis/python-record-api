@@ -447,6 +447,7 @@ class Int64Index:
 
     # usage.dask: 21
     # usage.koalas: 14
+    # usage.prophet: 1
     # usage.seaborn: 3
     # usage.xarray: 13
     name: Union[None, str, Tuple[Literal["x"], Literal["a"]]]

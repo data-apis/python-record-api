@@ -1209,6 +1209,13 @@ class RandomState:
         ...
 
     @overload
+    def laplace(self, _0: int, _1: numpy.float64, _2: int, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def laplace(self, _0: float, _1: float, /, *, size: Tuple[int]):
         """
         usage.dask: 1
@@ -1218,13 +1225,15 @@ class RandomState:
     def laplace(
         self,
         _0: Union[float, int],
-        _1: Union[float, int],
+        _1: Union[float, int, numpy.float64],
+        _2: int = ...,
         /,
         *,
-        size: Tuple[Union[None, numpy.int64, int], ...],
+        size: Tuple[Union[None, numpy.int64, int], ...] = ...,
     ):
         """
         usage.dask: 1
+        usage.prophet: 1
         usage.scipy: 3
         """
         ...
@@ -1786,6 +1795,20 @@ class RandomState:
         ...
 
     @overload
+    def normal(self, _0: int, _1: numpy.ndarray, _2: int, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def normal(self, _0: int, _1: numpy.float64, _2: int, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def normal(self, _0: int, _1: int, _2: Tuple[int, int], /):
         """
         usage.seaborn: 3
@@ -2067,6 +2090,7 @@ class RandomState:
         usage.matplotlib: 25
         usage.networkx: 4
         usage.pandas: 7
+        usage.prophet: 2
         usage.scipy: 55
         usage.seaborn: 14
         usage.skimage: 33
@@ -2242,6 +2266,13 @@ class RandomState:
         ...
 
     @overload
+    def poisson(self, _0: numpy.float64, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def poisson(self, _0: int, /, *, size: int):
         """
         usage.dask: 1
@@ -2285,7 +2316,7 @@ class RandomState:
 
     def poisson(
         self,
-        _0: Union[int, numpy.ndarray, numpy.int64, float] = ...,
+        _0: Union[int, numpy.float64, numpy.ndarray, numpy.int64, float] = ...,
         _1: Tuple[Union[int, numpy.int64, None], ...] = ...,
         /,
         *,
@@ -2294,6 +2325,7 @@ class RandomState:
     ):
         """
         usage.dask: 3
+        usage.prophet: 1
         usage.scipy: 8
         usage.skimage: 2
         usage.sklearn: 6
@@ -2313,6 +2345,7 @@ class RandomState:
         usage.koalas: 91
         usage.matplotlib: 18
         usage.networkx: 1
+        usage.prophet: 1
         usage.scipy: 219
         usage.seaborn: 4
         usage.skimage: 9
@@ -2419,6 +2452,7 @@ class RandomState:
         usage.matplotlib: 39
         usage.networkx: 12
         usage.pandas: 110
+        usage.prophet: 1
         usage.scipy: 488
         usage.seaborn: 4
         usage.skimage: 101
@@ -3342,6 +3376,7 @@ class RandomState:
         usage.matplotlib: 81
         usage.networkx: 14
         usage.pandas: 21
+        usage.prophet: 2
         usage.scipy: 491
         usage.seaborn: 1
         usage.skimage: 25
@@ -3371,6 +3406,7 @@ class RandomState:
         usage.matplotlib: 83
         usage.networkx: 14
         usage.pandas: 21
+        usage.prophet: 2
         usage.scipy: 491
         usage.seaborn: 1
         usage.skimage: 30

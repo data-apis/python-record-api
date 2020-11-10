@@ -144,6 +144,7 @@ class Index:
     size: object
 
     # usage.dask: 2
+    # usage.prophet: 1
     # usage.sklearn: 1
     str: object
 
@@ -215,6 +216,13 @@ class Index:
     def __contains__(self, _0: Literal["i64"], /):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["coverage"], /):
+        """
+        usage.prophet: 1
         """
         ...
 
@@ -642,6 +650,7 @@ class Index:
         """
         usage.dask: 130
         usage.koalas: 9
+        usage.prophet: 1
         """
         ...
 
@@ -729,6 +738,7 @@ class Index:
         usage.dask: 17
         usage.koalas: 7
         usage.modin: 3
+        usage.prophet: 1
         usage.xarray: 3
         """
         ...
@@ -749,6 +759,7 @@ class Index:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.prophet: 1
         usage.sklearn: 2
         usage.xarray: 2
         """
@@ -814,7 +825,7 @@ class Index:
             numpy.ndarray,
             int,
             List[Union[bool, int]],
-            slice[Union[None, int], Union[int, None], Union[None, int]],
+            slice[Union[int, None], Union[None, int], Union[int, None]],
         ],
         /,
     ):
@@ -822,6 +833,7 @@ class Index:
         usage.dask: 27
         usage.koalas: 11
         usage.modin: 3
+        usage.prophet: 2
         usage.seaborn: 2
         usage.sklearn: 6
         usage.xarray: 15
@@ -834,6 +846,7 @@ class Index:
         usage.koalas: 5
         usage.modin: 1
         usage.networkx: 1
+        usage.prophet: 3
         usage.sklearn: 1
         usage.xarray: 4
         """

@@ -1,6 +1,15 @@
 from typing import *
 
 
+@overload
+def crosstab(index: pandas.core.series.Series, columns: pandas.core.series.Series):
+    """
+    usage.prophet: 1
+    """
+    ...
+
+
+@overload
 def crosstab(
     index: numpy.ndarray,
     columns: List[numpy.ndarray],
@@ -15,6 +24,25 @@ def crosstab(
 ):
     """
     usage.modin: 1
+    """
+    ...
+
+
+def crosstab(
+    index: Union[numpy.ndarray, pandas.core.series.Series],
+    columns: Union[List[numpy.ndarray], pandas.core.series.Series],
+    values: None = ...,
+    rownames: List[Literal["a"]] = ...,
+    colnames: List[Literal["c", "b"]] = ...,
+    aggfunc: None = ...,
+    margins: bool = ...,
+    margins_name: Literal["All"] = ...,
+    dropna: bool = ...,
+    normalize: bool = ...,
+):
+    """
+    usage.modin: 1
+    usage.prophet: 1
     """
     ...
 

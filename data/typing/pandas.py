@@ -19,6 +19,7 @@ CategoricalIndex: object
 # usage.koalas: 270
 # usage.modin: 27
 # usage.networkx: 6
+# usage.prophet: 3
 # usage.seaborn: 16
 # usage.sklearn: 54
 # usage.xarray: 10
@@ -100,6 +101,7 @@ RangeIndex: object
 Series: object
 
 # usage.dask: 4
+# usage.prophet: 5
 # usage.xarray: 1
 Timedelta: object
 
@@ -138,6 +140,7 @@ array: object
 # usage.dask: 31
 # usage.koalas: 4
 # usage.modin: 3
+# usage.prophet: 6
 # usage.sklearn: 2
 concat: object
 
@@ -147,6 +150,7 @@ cut: object
 # usage.dask: 52
 # usage.koalas: 45
 # usage.modin: 10
+# usage.prophet: 1
 # usage.seaborn: 1
 # usage.xarray: 106
 date_range: object
@@ -168,6 +172,7 @@ isnull: object
 melt: object
 
 # usage.dask: 21
+# usage.prophet: 3
 merge: object
 
 # usage.dask: 11

@@ -129,6 +129,7 @@ abs: object
 # usage.matplotlib: 84
 # usage.networkx: 13
 # usage.pandas: 47
+# usage.prophet: 5
 # usage.scipy: 520
 # usage.seaborn: 4
 # usage.skimage: 113
@@ -335,6 +336,7 @@ cdouble: object
 # usage.matplotlib: 35
 # usage.networkx: 2
 # usage.pandas: 1
+# usage.prophet: 3
 # usage.scipy: 49
 # usage.seaborn: 2
 # usage.skimage: 31
@@ -407,6 +409,7 @@ copysign: numpy.ufunc
 # usage.matplotlib: 86
 # usage.networkx: 5
 # usage.pandas: 19
+# usage.prophet: 2
 # usage.scipy: 219
 # usage.seaborn: 2
 # usage.skimage: 52
@@ -578,6 +581,7 @@ eval_sh_legendre: numpy.ufunc
 # usage.matplotlib: 30
 # usage.networkx: 2
 # usage.pandas: 33
+# usage.prophet: 1
 # usage.sample-usage: 1
 # usage.scipy: 697
 # usage.skimage: 30
@@ -648,6 +652,7 @@ flexible: object
 # usage.matplotlib: 2
 # usage.networkx: 3
 # usage.pandas: 4
+# usage.prophet: 1
 # usage.skimage: 60
 # usage.sklearn: 29
 # usage.xarray: 4
@@ -678,6 +683,7 @@ floating: object
 # usage.koalas: 5
 # usage.matplotlib: 20
 # usage.pandas: 8
+# usage.prophet: 1
 # usage.scipy: 101
 # usage.skimage: 21
 # usage.sklearn: 3
@@ -849,6 +855,7 @@ infty: object
 # usage.dask: 1
 # usage.koalas: 10
 # usage.pandas: 5
+# usage.prophet: 1
 # usage.skimage: 31
 # usage.sklearn: 94
 # usage.xarray: 3
@@ -916,6 +923,7 @@ isfinite: numpy.ufunc
 # usage.koalas: 5
 # usage.matplotlib: 6
 # usage.pandas: 31
+# usage.prophet: 2
 # usage.scipy: 58
 # usage.skimage: 2
 # usage.sklearn: 12
@@ -927,6 +935,7 @@ isinf: numpy.ufunc
 # usage.matplotlib: 25
 # usage.networkx: 1
 # usage.pandas: 1228
+# usage.prophet: 2
 # usage.scipy: 388
 # usage.seaborn: 2
 # usage.skimage: 22
@@ -1052,6 +1061,7 @@ less_equal: numpy.ufunc
 # usage.matplotlib: 37
 # usage.networkx: 1
 # usage.pandas: 25
+# usage.prophet: 2
 # usage.sample-usage: 1
 # usage.scipy: 485
 # usage.skimage: 20
@@ -1119,6 +1129,7 @@ logical_and: numpy.ufunc
 # usage.koalas: 5
 # usage.matplotlib: 1
 # usage.pandas: 9
+# usage.prophet: 2
 # usage.scipy: 32
 # usage.skimage: 16
 # usage.sklearn: 25
@@ -1189,6 +1200,7 @@ mathieu_sem: numpy.ufunc
 
 # usage.dask: 15
 # usage.networkx: 2
+# usage.prophet: 3
 # usage.scipy: 25
 # usage.sklearn: 1
 matmul: numpy.ufunc
@@ -1426,6 +1438,7 @@ pdtrik: numpy.ufunc
 # usage.matplotlib: 129
 # usage.networkx: 2
 # usage.pandas: 3
+# usage.prophet: 1
 # usage.scipy: 426
 # usage.seaborn: 2
 # usage.skimage: 96
@@ -1589,6 +1602,7 @@ signedinteger: object
 # usage.matplotlib: 127
 # usage.networkx: 5
 # usage.pandas: 34
+# usage.prophet: 2
 # usage.scipy: 296
 # usage.seaborn: 1
 # usage.skimage: 51
@@ -1633,6 +1647,7 @@ sph_harm: numpy.ufunc
 # usage.matplotlib: 40
 # usage.networkx: 19
 # usage.pandas: 58
+# usage.prophet: 2
 # usage.scipy: 733
 # usage.seaborn: 8
 # usage.skimage: 122
@@ -2208,6 +2223,7 @@ def allclose(a: numpy.ndarray, b: numpy.ndarray):
     usage.dask: 12
     usage.matplotlib: 3
     usage.networkx: 1
+    usage.prophet: 8
     usage.scipy: 18
     usage.seaborn: 4
     usage.skimage: 23
@@ -2960,6 +2976,7 @@ def allclose(
     usage.matplotlib: 12
     usage.networkx: 2
     usage.pandas: 42
+    usage.prophet: 8
     usage.scipy: 139
     usage.seaborn: 6
     usage.skimage: 42
@@ -5187,6 +5204,7 @@ def arange(_0: int, _1: int, /):
     usage.matplotlib: 21
     usage.modin: 3
     usage.networkx: 1
+    usage.prophet: 3
     usage.scipy: 160
     usage.skimage: 22
     usage.sklearn: 35
@@ -5213,6 +5231,7 @@ def arange(_0: int, /):
     usage.matplotlib: 188
     usage.modin: 11
     usage.networkx: 3
+    usage.prophet: 6
     usage.sample-usage: 4
     usage.scipy: 504
     usage.seaborn: 30
@@ -5532,6 +5551,7 @@ def arange(_0: float, /):
     """
     usage.dask: 4
     usage.matplotlib: 1
+    usage.prophet: 2
     usage.scipy: 66
     usage.xarray: 21
     """
@@ -6475,6 +6495,7 @@ def arange(
     usage.modin: 15
     usage.networkx: 5
     usage.pandas: 894
+    usage.prophet: 11
     usage.sample-usage: 4
     usage.scipy: 1173
     usage.seaborn: 36
@@ -7212,6 +7233,7 @@ def array(_0: List[int], /):
     usage.matplotlib: 41
     usage.modin: 1
     usage.networkx: 15
+    usage.prophet: 3
     usage.sample-usage: 1
     usage.scipy: 803
     usage.seaborn: 9
@@ -7289,6 +7311,7 @@ def array(_0: List[float], /):
     usage.koalas: 1
     usage.matplotlib: 79
     usage.networkx: 6
+    usage.prophet: 19
     usage.scipy: 742
     usage.seaborn: 13
     usage.skimage: 49
@@ -7347,6 +7370,7 @@ def array(_0: numpy.ndarray, /):
     usage.dask: 8
     usage.matplotlib: 23
     usage.networkx: 1
+    usage.prophet: 1
     usage.scipy: 65
     usage.seaborn: 1
     usage.skimage: 14
@@ -7361,6 +7385,7 @@ def array(_0: List[numpy.ndarray], /):
     """
     usage.matplotlib: 13
     usage.networkx: 5
+    usage.prophet: 1
     usage.scipy: 90
     usage.seaborn: 19
     usage.skimage: 53
@@ -7582,6 +7607,7 @@ def array(_0: List[numpy.float64], /):
     usage.dask: 4
     usage.matplotlib: 32
     usage.networkx: 2
+    usage.prophet: 1
     usage.scipy: 118
     usage.seaborn: 10
     usage.skimage: 15
@@ -15894,6 +15920,23 @@ def array(_0: List[List[int]], /, *, dtype: None):
 
 
 @overload
+def array(_0: pandas.core.series.Series, /):
+    """
+    usage.dask: 1
+    usage.prophet: 5
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.indexes.numeric.Float64Index, /):
+    """
+    usage.prophet: 1
+    """
+    ...
+
+
+@overload
 def array(
     _0: List[
         List[modin.engines.ray.pandas_on_ray.frame.partition.PandasOnRayFramePartition]
@@ -19012,14 +19055,6 @@ def array(_0: List[Union[float, int, Literal["2", "1.0"]]], /):
 
 
 @overload
-def array(_0: pandas.core.series.Series, /):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
 def array(_0: pandas.core.frame.DataFrame, /):
     """
     usage.dask: 1
@@ -20756,6 +20791,7 @@ def array(
     usage.modin: 47
     usage.networkx: 137
     usage.pandas: 6865
+    usage.prophet: 31
     usage.sample-usage: 3
     usage.scipy: 7182
     usage.seaborn: 126
@@ -20786,6 +20822,7 @@ def array_equal(a1: numpy.ndarray, a2: numpy.ndarray):
     """
     usage.dask: 4
     usage.matplotlib: 1
+    usage.prophet: 10
     usage.scipy: 36
     usage.seaborn: 13
     usage.skimage: 2
@@ -21539,6 +21576,7 @@ def array_equal(a1: object, a2: object):
     usage.dask: 4
     usage.matplotlib: 2
     usage.pandas: 142
+    usage.prophet: 10
     usage.scipy: 145
     usage.seaborn: 18
     usage.skimage: 5
@@ -35198,6 +35236,7 @@ def atleast_1d(*arys: Literal["v", "t"]):
     usage.dask: 3
     usage.matplotlib: 116
     usage.pandas: 4
+    usage.prophet: 3
     usage.scipy: 695
     usage.seaborn: 9
     usage.skimage: 11
@@ -35220,6 +35259,7 @@ def atleast_1d(*arys: Literal["v", "t"]):
     usage.dask: 4
     usage.matplotlib: 116
     usage.pandas: 4
+    usage.prophet: 3
     usage.scipy: 695
     usage.seaborn: 9
     usage.skimage: 11
@@ -37018,6 +37058,7 @@ def column_stack(tup: List[numpy.ndarray]):
     """
     usage.matplotlib: 17
     usage.networkx: 6
+    usage.prophet: 4
     usage.sample-usage: 1
     usage.scipy: 28
     usage.seaborn: 1
@@ -37047,6 +37088,15 @@ def column_stack(tup: List[Union[List[float], numpy.ndarray]]):
 def column_stack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
     """
     usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def column_stack(tup: List[pandas.core.series.Series]):
+    """
+    usage.prophet: 1
+    usage.seaborn: 1
     """
     ...
 
@@ -37116,14 +37166,6 @@ def column_stack(tup: List[numpy.float64]):
 
 
 @overload
-def column_stack(tup: List[pandas.core.series.Series]):
-    """
-    usage.seaborn: 1
-    """
-    ...
-
-
-@overload
 def column_stack(tup: List[Union[numpy.ndarray, pandas.core.series.Series]]):
     """
     usage.seaborn: 1
@@ -37143,11 +37185,11 @@ def column_stack(
     tup: Union[
         List[
             Union[
-                List[Union[float, int, numpy.float64]],
                 pandas.core.series.Series,
                 numpy.ndarray,
                 numpy.ma.core.MaskedArray,
                 numpy.float64,
+                List[Union[float, int, numpy.float64]],
             ]
         ],
         Tuple[Union[numpy.ndarray, List[float]], ...],
@@ -37156,6 +37198,7 @@ def column_stack(
     """
     usage.matplotlib: 65
     usage.networkx: 6
+    usage.prophet: 5
     usage.sample-usage: 1
     usage.scipy: 43
     usage.seaborn: 4
@@ -37314,6 +37357,7 @@ def concatenate(_0: List[numpy.ndarray], /):
 def concatenate(_0: Tuple[numpy.ndarray, numpy.ndarray], /):
     """
     usage.matplotlib: 6
+    usage.prophet: 4
     usage.scipy: 126
     usage.seaborn: 2
     usage.skimage: 9
@@ -37633,6 +37677,14 @@ def concatenate(_0: List[Union[numpy.ma.core.MaskedArray, numpy.ndarray]], /):
 
 
 @overload
+def concatenate(_0: Tuple[numpy.ndarray, list], /):
+    """
+    usage.prophet: 2
+    """
+    ...
+
+
+@overload
 def concatenate(_0: List[Union[List[numpy.float64], numpy.ndarray]], /):
     """
     usage.matplotlib: 1
@@ -37933,6 +37985,7 @@ def concatenate(
     usage.matplotlib: 134
     usage.networkx: 2
     usage.pandas: 312
+    usage.prophet: 6
     usage.sample-usage: 1
     usage.scipy: 377
     usage.seaborn: 4
@@ -38699,6 +38752,7 @@ def cumsum(a: numpy.ndarray):
     """
     usage.dask: 8
     usage.matplotlib: 4
+    usage.prophet: 1
     usage.scipy: 11
     usage.seaborn: 1
     usage.skimage: 16
@@ -39018,6 +39072,7 @@ def cumsum(
     usage.matplotlib: 33
     usage.modin: 4
     usage.pandas: 26
+    usage.prophet: 1
     usage.scipy: 30
     usage.seaborn: 1
     usage.skimage: 30
@@ -53778,6 +53833,7 @@ def linspace(start: int, stop: int, num: int):
     usage.koalas: 2
     usage.matplotlib: 88
     usage.networkx: 7
+    usage.prophet: 1
     usage.sample-usage: 1
     usage.scipy: 289
     usage.seaborn: 17
@@ -54262,6 +54318,7 @@ def linspace(
     usage.matplotlib: 184
     usage.networkx: 7
     usage.pandas: 19
+    usage.prophet: 1
     usage.sample-usage: 1
     usage.scipy: 589
     usage.seaborn: 29
@@ -55053,6 +55110,7 @@ def mean(a: numpy.ndarray):
     """
     usage.dask: 21
     usage.matplotlib: 7
+    usage.prophet: 1
     usage.scipy: 26
     usage.seaborn: 3
     usage.skimage: 36
@@ -55438,6 +55496,7 @@ def mean(a: List[int]):
 def mean(a: pandas.core.series.Series):
     """
     usage.dask: 1
+    usage.prophet: 1
     usage.seaborn: 4
     """
     ...
@@ -55652,6 +55711,7 @@ def mean(
     usage.matplotlib: 12
     usage.networkx: 6
     usage.pandas: 26
+    usage.prophet: 2
     usage.scipy: 89
     usage.seaborn: 8
     usage.skimage: 62
@@ -55785,6 +55845,38 @@ def median(a: List[float], axis: int):
 
 
 @overload
+def median(a: List[float]):
+    """
+    usage.prophet: 2
+    """
+    ...
+
+
+@overload
+def median(a: List[Union[numpy.float64, float]]):
+    """
+    usage.prophet: 1
+    """
+    ...
+
+
+@overload
+def median(a: List[int]):
+    """
+    usage.prophet: 2
+    """
+    ...
+
+
+@overload
+def median(a: List[Union[numpy.int64, int]]):
+    """
+    usage.prophet: 4
+    """
+    ...
+
+
+@overload
 def median(a: numpy.ndarray, axis: int, overwrite_input: bool):
     """
     usage.matplotlib: 1
@@ -55866,6 +55958,7 @@ def median(
     usage.dask: 18
     usage.matplotlib: 3
     usage.pandas: 17
+    usage.prophet: 9
     usage.scipy: 28
     usage.seaborn: 3
     usage.skimage: 5
@@ -57017,6 +57110,7 @@ def nanmean(a: numpy.ndarray, axis: None, dtype: Type[numpy.float64]):
 def nanmean(a: numpy.ndarray, axis: int):
     """
     usage.dask: 5
+    usage.prophet: 2
     usage.sklearn: 4
     usage.xarray: 1
     """
@@ -57043,6 +57137,7 @@ def nanmean(a: numpy.ndarray, axis: Tuple[int], dtype: None):
 def nanmean(a: numpy.ndarray):
     """
     usage.dask: 1
+    usage.prophet: 2
     usage.xarray: 3
     """
     ...
@@ -57171,13 +57266,14 @@ def nanmean(a: numpy.ndarray, axis: Tuple[int, int]):
 
 def nanmean(
     a: object,
-    axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
+    axis: Union[int, None, Tuple[Union[int, None], ...]] = ...,
     keepdims: bool = ...,
     dtype: Union[None, type] = ...,
 ):
     """
     usage.dask: 11
     usage.pandas: 2
+    usage.prophet: 4
     usage.scipy: 1
     usage.sklearn: 4
     usage.xarray: 27
@@ -58840,6 +58936,7 @@ def ones(shape: int):
     usage.dask: 39
     usage.matplotlib: 40
     usage.networkx: 1
+    usage.prophet: 1
     usage.scipy: 206
     usage.seaborn: 16
     usage.skimage: 20
@@ -59998,6 +60095,7 @@ def ones(
     usage.matplotlib: 62
     usage.networkx: 6
     usage.pandas: 116
+    usage.prophet: 1
     usage.sample-usage: 1
     usage.scipy: 936
     usage.seaborn: 19
@@ -60013,6 +60111,7 @@ def ones_like(a: numpy.ndarray):
     """
     usage.dask: 2
     usage.matplotlib: 8
+    usage.prophet: 4
     usage.scipy: 39
     usage.seaborn: 2
     usage.skimage: 18
@@ -60227,6 +60326,7 @@ def ones_like(
     usage.dask: 11
     usage.matplotlib: 15
     usage.pandas: 6
+    usage.prophet: 4
     usage.scipy: 62
     usage.seaborn: 2
     usage.skimage: 27
@@ -61569,6 +61669,23 @@ def percentile(
 
 
 @overload
+def percentile(a: float, q: numpy.ndarray):
+    """
+    usage.prophet: 1
+    """
+    ...
+
+
+@overload
+def percentile(a: numpy.ndarray, q: float, axis: int):
+    """
+    usage.prophet: 1
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
 def percentile(a: numpy.ndarray, q: numpy.ndarray):
     """
     usage.matplotlib: 1
@@ -61699,14 +61816,6 @@ def percentile(a: numpy.ndarray, q: numpy.ndarray, interpolation: Literal["midpo
 
 
 @overload
-def percentile(a: numpy.ndarray, q: float, axis: int):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def percentile(a: numpy.ndarray, q: Tuple[int, int], axis: int):
     """
     usage.sklearn: 3
@@ -61725,15 +61834,9 @@ def percentile(a: numpy.ndarray, q: int, axis: int):
 def percentile(
     _0: pandas.core.series.Series = ...,
     /,
-    a: Union[
-        numpy.ndarray,
-        int,
-        pandas.core.series.Series,
-        pandas.core.frame.DataFrame,
-        List[Union[float, int, numpy.float64]],
-    ] = ...,
+    a: object = ...,
     q: object = ...,
-    axis: Union[int, Tuple[int, ...], List[int], None] = ...,
+    axis: Union[int, List[int], Tuple[int, ...], None] = ...,
     interpolation: str = ...,
     keepdims: bool = ...,
 ):
@@ -61742,6 +61845,7 @@ def percentile(
     usage.koalas: 2
     usage.matplotlib: 9
     usage.pandas: 54
+    usage.prophet: 2
     usage.scipy: 27
     usage.seaborn: 18
     usage.skimage: 11
@@ -69863,6 +69967,7 @@ def sort(a: numpy.ndarray):
     usage.modin: 1
     usage.networkx: 2
     usage.pandas: 33
+    usage.prophet: 1
     usage.scipy: 163
     usage.seaborn: 18
     usage.skimage: 13
@@ -70032,6 +70137,7 @@ def sort(
     usage.modin: 2
     usage.networkx: 2
     usage.pandas: 33
+    usage.prophet: 1
     usage.scipy: 217
     usage.seaborn: 25
     usage.skimage: 14
@@ -70723,6 +70829,7 @@ def sum(a: numpy.ndarray):
     usage.dask: 16
     usage.matplotlib: 13
     usage.networkx: 5
+    usage.prophet: 3
     usage.scipy: 182
     usage.skimage: 109
     usage.sklearn: 250
@@ -71303,6 +71410,15 @@ def sum(a: numpy.ndarray, dtype: Type[float]):
 
 
 @overload
+def sum(a: pandas.core.series.Series):
+    """
+    usage.dask: 3
+    usage.prophet: 3
+    """
+    ...
+
+
+@overload
 def sum(a: List[numpy.bool_]):
     """
     usage.seaborn: 3
@@ -71639,14 +71755,6 @@ def sum(a: Tuple[int, int, int, int, int]):
 
 
 @overload
-def sum(a: pandas.core.series.Series):
-    """
-    usage.dask: 3
-    """
-    ...
-
-
-@overload
 def sum(a: dask.dataframe.core.DataFrame, axis: int, out: dask.dataframe.core.Series):
     """
     usage.dask: 1
@@ -71817,6 +71925,7 @@ def sum(
     usage.matplotlib: 30
     usage.networkx: 8
     usage.pandas: 38
+    usage.prophet: 6
     usage.scipy: 443
     usage.seaborn: 3
     usage.skimage: 133
@@ -73296,6 +73405,17 @@ def unique(ar: numpy.ndarray, axis: int):
 
 
 @overload
+def unique(ar: pandas.core.series.Series):
+    """
+    usage.dask: 3
+    usage.prophet: 4
+    usage.seaborn: 4
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
 def unique(ar: numpy.ma.core.MaskedArray):
     """
     usage.matplotlib: 1
@@ -73308,16 +73428,6 @@ def unique(ar: numpy.ndarray, return_index: bool, return_inverse: bool):
     """
     usage.matplotlib: 1
     usage.sklearn: 6
-    """
-    ...
-
-
-@overload
-def unique(ar: pandas.core.series.Series):
-    """
-    usage.dask: 3
-    usage.seaborn: 4
-    usage.sklearn: 1
     """
     ...
 
@@ -73520,6 +73630,7 @@ def unique(
     usage.dask: 29
     usage.matplotlib: 8
     usage.pandas: 22
+    usage.prophet: 4
     usage.scipy: 66
     usage.seaborn: 11
     usage.skimage: 68
@@ -75169,6 +75280,7 @@ def zeros(_0: int, /):
     usage.koalas: 1
     usage.matplotlib: 38
     usage.networkx: 2
+    usage.prophet: 6
     usage.scipy: 263
     usage.seaborn: 5
     usage.skimage: 15
@@ -75213,6 +75325,7 @@ def zeros(_0: Tuple[int, int], /):
     usage.dask: 4
     usage.matplotlib: 25
     usage.networkx: 11
+    usage.prophet: 1
     usage.sample-usage: 1
     usage.scipy: 204
     usage.seaborn: 4
@@ -77967,6 +78080,7 @@ def zeros(
     usage.matplotlib: 124
     usage.networkx: 26
     usage.pandas: 125
+    usage.prophet: 7
     usage.sample-usage: 1
     usage.scipy: 2108
     usage.seaborn: 12
@@ -81772,6 +81886,7 @@ class dtype:
     def __eq__(self, _0: Type[numpy.int64], /):
         """
         usage.dask: 9
+        usage.prophet: 2
         usage.scipy: 6
         usage.skimage: 6
         usage.sklearn: 12
@@ -82082,6 +82197,7 @@ class dtype:
         usage.matplotlib: 9
         usage.networkx: 4
         usage.pandas: 2263
+        usage.prophet: 2
         usage.scipy: 341
         usage.skimage: 293
         usage.sklearn: 552
@@ -85386,6 +85502,7 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 180
         usage.networkx: 13
+        usage.prophet: 4
         usage.scipy: 507
         usage.seaborn: 14
         usage.skimage: 44
@@ -85401,6 +85518,7 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 95
         usage.networkx: 2
+        usage.prophet: 1
         usage.scipy: 120
         usage.seaborn: 10
         usage.skimage: 7
@@ -85601,6 +85719,7 @@ class float64:
         usage.matplotlib: 321
         usage.networkx: 23
         usage.pandas: 36
+        usage.prophet: 5
         usage.scipy: 880
         usage.seaborn: 28
         usage.skimage: 82
@@ -85642,6 +85761,7 @@ class float64:
         usage.dask: 12
         usage.matplotlib: 75
         usage.networkx: 99
+        usage.prophet: 1
         usage.scipy: 108
         usage.seaborn: 38
         usage.skimage: 48
@@ -85656,6 +85776,7 @@ class float64:
         usage.dask: 12
         usage.matplotlib: 74
         usage.networkx: 8
+        usage.prophet: 2
         usage.scipy: 88
         usage.seaborn: 18
         usage.skimage: 18
@@ -85669,6 +85790,7 @@ class float64:
         """
         usage.dask: 1
         usage.matplotlib: 3
+        usage.prophet: 1
         usage.scipy: 15
         usage.seaborn: 2
         usage.skimage: 9
@@ -85787,6 +85909,7 @@ class float64:
         usage.matplotlib: 187
         usage.networkx: 115
         usage.pandas: 381
+        usage.prophet: 4
         usage.scipy: 272
         usage.seaborn: 80
         usage.skimage: 103
@@ -85854,6 +85977,7 @@ class float64:
         usage.dask: 3
         usage.matplotlib: 18
         usage.networkx: 2
+        usage.prophet: 2
         usage.scipy: 116
         usage.seaborn: 2
         usage.skimage: 2
@@ -85957,6 +86081,7 @@ class float64:
         usage.matplotlib: 55
         usage.networkx: 2
         usage.pandas: 8
+        usage.prophet: 2
         usage.scipy: 220
         usage.seaborn: 16
         usage.skimage: 15
@@ -86095,6 +86220,7 @@ class float64:
         usage.dask: 6
         usage.matplotlib: 33
         usage.networkx: 5
+        usage.prophet: 4
         usage.scipy: 111
         usage.skimage: 20
         usage.sklearn: 34
@@ -86196,6 +86322,7 @@ class float64:
         usage.matplotlib: 174
         usage.networkx: 13
         usage.pandas: 15
+        usage.prophet: 4
         usage.scipy: 489
         usage.seaborn: 19
         usage.skimage: 127
@@ -86513,6 +86640,7 @@ class float64:
         usage.dask: 3
         usage.matplotlib: 18
         usage.networkx: 2
+        usage.prophet: 2
         usage.scipy: 116
         usage.seaborn: 2
         usage.skimage: 2
@@ -86525,6 +86653,7 @@ class float64:
         """
         usage.dask: 2
         usage.matplotlib: 16
+        usage.prophet: 2
         usage.scipy: 21
         usage.seaborn: 8
         usage.skimage: 4
@@ -86537,6 +86666,7 @@ class float64:
         """
         usage.dask: 1
         usage.matplotlib: 9
+        usage.prophet: 1
         usage.scipy: 72
         usage.seaborn: 2
         usage.skimage: 4
@@ -86580,6 +86710,7 @@ class float64:
         usage.matplotlib: 72
         usage.networkx: 2
         usage.pandas: 13
+        usage.prophet: 5
         usage.scipy: 263
         usage.seaborn: 16
         usage.skimage: 72
@@ -86593,6 +86724,7 @@ class float64:
         usage.dask: 8
         usage.matplotlib: 55
         usage.networkx: 6
+        usage.prophet: 1
         usage.scipy: 165
         usage.seaborn: 2
         usage.skimage: 59
@@ -86607,6 +86739,7 @@ class float64:
         usage.dask: 4
         usage.matplotlib: 45
         usage.networkx: 2
+        usage.prophet: 1
         usage.scipy: 83
         usage.skimage: 42
         usage.sklearn: 34
@@ -86744,6 +86877,7 @@ class float64:
         usage.matplotlib: 213
         usage.networkx: 15
         usage.pandas: 5
+        usage.prophet: 2
         usage.scipy: 507
         usage.seaborn: 18
         usage.skimage: 188
@@ -86799,6 +86933,7 @@ class float64:
         """
         usage.matplotlib: 30
         usage.networkx: 2
+        usage.prophet: 4
         usage.scipy: 447
         usage.skimage: 39
         usage.sklearn: 120
@@ -86812,6 +86947,7 @@ class float64:
         usage.dask: 3
         usage.matplotlib: 81
         usage.networkx: 10
+        usage.prophet: 5
         usage.scipy: 674
         usage.seaborn: 8
         usage.skimage: 31
@@ -86838,6 +86974,7 @@ class float64:
         """
         usage.matplotlib: 66
         usage.networkx: 8
+        usage.prophet: 1
         usage.scipy: 187
         usage.seaborn: 11
         usage.skimage: 7
@@ -86940,6 +87077,7 @@ class float64:
         usage.matplotlib: 214
         usage.networkx: 21
         usage.pandas: 71
+        usage.prophet: 10
         usage.scipy: 1505
         usage.seaborn: 29
         usage.skimage: 90
@@ -87034,6 +87172,7 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 180
         usage.networkx: 13
+        usage.prophet: 4
         usage.scipy: 507
         usage.seaborn: 14
         usage.skimage: 44
@@ -87047,6 +87186,7 @@ class float64:
         """
         usage.dask: 10
         usage.matplotlib: 10
+        usage.prophet: 1
         usage.scipy: 64
         usage.seaborn: 2
         usage.skimage: 24
@@ -87061,6 +87201,7 @@ class float64:
         usage.dask: 2
         usage.matplotlib: 42
         usage.networkx: 10
+        usage.prophet: 1
         usage.scipy: 120
         usage.seaborn: 1
         usage.skimage: 5
@@ -87074,6 +87215,7 @@ class float64:
         usage.dask: 2
         usage.matplotlib: 29
         usage.networkx: 11
+        usage.prophet: 1
         usage.scipy: 138
         usage.seaborn: 18
         usage.skimage: 13
@@ -87247,6 +87389,7 @@ class float64:
         usage.matplotlib: 282
         usage.networkx: 34
         usage.pandas: 36
+        usage.prophet: 7
         usage.scipy: 868
         usage.seaborn: 37
         usage.skimage: 90
@@ -87626,6 +87769,7 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 80
         usage.networkx: 13
+        usage.prophet: 3
         usage.scipy: 649
         usage.seaborn: 16
         usage.skimage: 73
@@ -87639,6 +87783,7 @@ class float64:
         usage.dask: 5
         usage.matplotlib: 42
         usage.networkx: 9
+        usage.prophet: 1
         usage.scipy: 613
         usage.seaborn: 4
         usage.skimage: 50
@@ -87651,6 +87796,7 @@ class float64:
         """
         usage.matplotlib: 26
         usage.networkx: 3
+        usage.prophet: 6
         usage.scipy: 167
         usage.seaborn: 5
         usage.skimage: 30
@@ -87664,6 +87810,7 @@ class float64:
         usage.dask: 3
         usage.matplotlib: 81
         usage.networkx: 10
+        usage.prophet: 5
         usage.scipy: 674
         usage.seaborn: 8
         usage.skimage: 31
@@ -87676,6 +87823,7 @@ class float64:
     def __rmul__(self, _0: numpy.int64, /):
         """
         usage.dask: 1
+        usage.prophet: 1
         usage.scipy: 23
         usage.skimage: 1
         usage.sklearn: 2
@@ -87750,6 +87898,13 @@ class float64:
         ...
 
     @overload
+    def __rmul__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
     def __rmul__(self, _0: kiwisolver.Variable, /):
         """
         usage.matplotlib: 14
@@ -87770,6 +87925,7 @@ class float64:
         usage.matplotlib: 249
         usage.networkx: 35
         usage.pandas: 22
+        usage.prophet: 18
         usage.scipy: 2169
         usage.seaborn: 34
         usage.skimage: 185
@@ -87847,6 +88003,7 @@ class float64:
         usage.koalas: 2
         usage.matplotlib: 222
         usage.networkx: 13
+        usage.prophet: 8
         usage.scipy: 596
         usage.seaborn: 26
         usage.skimage: 66
@@ -87861,6 +88018,7 @@ class float64:
         usage.dask: 2
         usage.matplotlib: 34
         usage.networkx: 2
+        usage.prophet: 1
         usage.scipy: 202
         usage.seaborn: 8
         usage.skimage: 8
@@ -87873,6 +88031,7 @@ class float64:
     def __rsub__(self, _0: numpy.ndarray, /):
         """
         usage.matplotlib: 11
+        usage.prophet: 1
         usage.scipy: 157
         usage.seaborn: 4
         usage.skimage: 35
@@ -87915,6 +88074,7 @@ class float64:
     def __rsub__(self, _0: numpy.int64, /):
         """
         usage.matplotlib: 5
+        usage.prophet: 1
         usage.scipy: 3
         usage.seaborn: 2
         usage.sklearn: 1
@@ -87959,6 +88119,14 @@ class float64:
         ...
 
     @overload
+    def __rsub__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 9
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def __rsub__(self, _0: kiwisolver.Variable, /):
         """
         usage.matplotlib: 1
@@ -87969,13 +88137,6 @@ class float64:
     def __rsub__(self, _0: numpy.ma.core.MaskedConstant, /):
         """
         usage.matplotlib: 1
-        """
-        ...
-
-    @overload
-    def __rsub__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 9
         """
         ...
 
@@ -88000,6 +88161,7 @@ class float64:
         usage.matplotlib: 314
         usage.networkx: 17
         usage.pandas: 26
+        usage.prophet: 12
         usage.scipy: 1116
         usage.seaborn: 42
         usage.skimage: 114
@@ -88026,6 +88188,7 @@ class float64:
         usage.dask: 8
         usage.matplotlib: 91
         usage.networkx: 7
+        usage.prophet: 6
         usage.scipy: 408
         usage.seaborn: 8
         usage.skimage: 59
@@ -88124,6 +88287,13 @@ class float64:
         ...
 
     @overload
+    def __rtruediv__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 3
+        """
+        ...
+
+    @overload
     def __rtruediv__(self, _0: kiwisolver.Term, /):
         """
         usage.matplotlib: 10
@@ -88164,6 +88334,7 @@ class float64:
         usage.matplotlib: 175
         usage.networkx: 34
         usage.pandas: 61
+        usage.prophet: 9
         usage.scipy: 876
         usage.seaborn: 15
         usage.skimage: 120
@@ -88185,6 +88356,7 @@ class float64:
         usage.koalas: 2
         usage.matplotlib: 222
         usage.networkx: 13
+        usage.prophet: 8
         usage.scipy: 596
         usage.seaborn: 26
         usage.skimage: 66
@@ -88214,6 +88386,7 @@ class float64:
         usage.dask: 5
         usage.matplotlib: 29
         usage.networkx: 4
+        usage.prophet: 4
         usage.scipy: 231
         usage.skimage: 80
         usage.sklearn: 18
@@ -88225,6 +88398,7 @@ class float64:
     def __sub__(self, _0: numpy.ndarray, /):
         """
         usage.matplotlib: 11
+        usage.prophet: 1
         usage.scipy: 68
         usage.seaborn: 1
         usage.skimage: 4
@@ -88306,6 +88480,7 @@ class float64:
         usage.matplotlib: 357
         usage.networkx: 22
         usage.pandas: 28
+        usage.prophet: 13
         usage.scipy: 1127
         usage.seaborn: 34
         usage.skimage: 159
@@ -88334,6 +88509,7 @@ class float64:
         usage.dask: 8
         usage.matplotlib: 91
         usage.networkx: 7
+        usage.prophet: 6
         usage.scipy: 408
         usage.seaborn: 8
         usage.skimage: 59
@@ -88461,6 +88637,7 @@ class float64:
         usage.matplotlib: 206
         usage.networkx: 22
         usage.pandas: 61
+        usage.prophet: 6
         usage.scipy: 881
         usage.seaborn: 16
         usage.skimage: 106
@@ -90831,6 +91008,7 @@ class int64:
         """
         usage.dask: 12
         usage.matplotlib: 10
+        usage.prophet: 1
         usage.scipy: 63
         usage.skimage: 6
         usage.sklearn: 11
@@ -90969,6 +91147,7 @@ class int64:
         usage.koalas: 2
         usage.matplotlib: 52
         usage.pandas: 63
+        usage.prophet: 1
         usage.scipy: 283
         usage.seaborn: 7
         usage.skimage: 41
@@ -91040,6 +91219,7 @@ class int64:
         """
         usage.dask: 2
         usage.matplotlib: 4
+        usage.prophet: 1
         usage.scipy: 24
         usage.seaborn: 1
         usage.skimage: 7
@@ -91067,6 +91247,7 @@ class int64:
         """
         usage.dask: 38
         usage.matplotlib: 22
+        usage.prophet: 2
         usage.scipy: 28
         usage.seaborn: 4
         usage.skimage: 16
@@ -91221,6 +91402,7 @@ class int64:
         usage.matplotlib: 54
         usage.networkx: 14
         usage.pandas: 513
+        usage.prophet: 3
         usage.scipy: 175
         usage.seaborn: 17
         usage.skimage: 90
@@ -91291,6 +91473,7 @@ class int64:
         usage.matplotlib: 6
         usage.modin: 1
         usage.networkx: 1
+        usage.prophet: 1
         usage.scipy: 17
         usage.seaborn: 2
         usage.skimage: 3
@@ -91381,6 +91564,7 @@ class int64:
         usage.modin: 1
         usage.networkx: 1
         usage.pandas: 19
+        usage.prophet: 1
         usage.scipy: 34
         usage.seaborn: 5
         usage.skimage: 13
@@ -91490,6 +91674,7 @@ class int64:
         usage.dask: 19
         usage.matplotlib: 7
         usage.modin: 1
+        usage.prophet: 1
         usage.scipy: 49
         usage.skimage: 15
         usage.sklearn: 37
@@ -91573,6 +91758,7 @@ class int64:
         usage.matplotlib: 26
         usage.modin: 2
         usage.pandas: 24
+        usage.prophet: 1
         usage.scipy: 81
         usage.skimage: 26
         usage.sklearn: 56
@@ -91585,6 +91771,7 @@ class int64:
         """
         usage.dask: 1
         usage.matplotlib: 1
+        usage.prophet: 1
         usage.scipy: 13
         usage.skimage: 1
         """
@@ -91622,11 +91809,12 @@ class int64:
         """
         ...
 
-    def __iadd__(self, _0: Union[int, numpy.longlong, numpy.float64, numpy.int64], /):
+    def __iadd__(self, _0: Union[int, numpy.float64, numpy.longlong, numpy.int64], /):
         """
         usage.dask: 1
         usage.matplotlib: 3
         usage.pandas: 3
+        usage.prophet: 1
         usage.scipy: 29
         usage.skimage: 1
         usage.sklearn: 4
@@ -91689,6 +91877,7 @@ class int64:
         """
         usage.dask: 1
         usage.matplotlib: 1
+        usage.prophet: 1
         usage.scipy: 1
         usage.skimage: 1
         usage.sklearn: 3
@@ -91707,6 +91896,7 @@ class int64:
         usage.dask: 1
         usage.matplotlib: 1
         usage.pandas: 6
+        usage.prophet: 1
         usage.scipy: 1
         usage.skimage: 2
         usage.sklearn: 4
@@ -91739,6 +91929,7 @@ class int64:
         """
         usage.matplotlib: 2
         usage.networkx: 1
+        usage.prophet: 2
         usage.scipy: 17
         usage.seaborn: 1
         usage.skimage: 1
@@ -91808,6 +91999,7 @@ class int64:
         usage.matplotlib: 8
         usage.networkx: 1
         usage.pandas: 27
+        usage.prophet: 2
         usage.scipy: 49
         usage.seaborn: 4
         usage.skimage: 7
@@ -91822,6 +92014,7 @@ class int64:
         usage.koalas: 2
         usage.matplotlib: 13
         usage.networkx: 13
+        usage.prophet: 3
         usage.scipy: 56
         usage.skimage: 14
         usage.sklearn: 35
@@ -91923,6 +92116,7 @@ class int64:
         usage.modin: 1
         usage.networkx: 13
         usage.pandas: 10
+        usage.prophet: 3
         usage.scipy: 83
         usage.skimage: 34
         usage.sklearn: 53
@@ -91999,6 +92193,7 @@ class int64:
     def __mul__(self, _0: numpy.float64, /):
         """
         usage.dask: 1
+        usage.prophet: 1
         usage.scipy: 23
         usage.skimage: 1
         usage.sklearn: 2
@@ -92063,6 +92258,7 @@ class int64:
         usage.matplotlib: 9
         usage.networkx: 1
         usage.pandas: 59
+        usage.prophet: 1
         usage.scipy: 105
         usage.skimage: 4
         usage.sklearn: 19
@@ -92169,6 +92365,7 @@ class int64:
         usage.dask: 6
         usage.matplotlib: 8
         usage.networkx: 4
+        usage.prophet: 2
         usage.scipy: 52
         usage.skimage: 6
         usage.sklearn: 8
@@ -92190,6 +92387,7 @@ class int64:
         """
         usage.dask: 12
         usage.matplotlib: 10
+        usage.prophet: 1
         usage.scipy: 63
         usage.skimage: 6
         usage.sklearn: 11
@@ -92333,6 +92531,7 @@ class int64:
         usage.matplotlib: 21
         usage.networkx: 4
         usage.pandas: 63
+        usage.prophet: 3
         usage.scipy: 145
         usage.skimage: 17
         usage.sklearn: 23
@@ -92649,6 +92848,7 @@ class int64:
         """
         usage.dask: 2
         usage.matplotlib: 2
+        usage.prophet: 1
         usage.scipy: 35
         usage.skimage: 10
         usage.sklearn: 8
@@ -92699,6 +92899,7 @@ class int64:
         usage.dask: 4
         usage.matplotlib: 15
         usage.pandas: 32
+        usage.prophet: 1
         usage.scipy: 94
         usage.seaborn: 1
         usage.skimage: 30
@@ -92724,6 +92925,7 @@ class int64:
     def __rtruediv__(self, _0: int, /):
         """
         usage.dask: 2
+        usage.prophet: 1
         usage.skimage: 2
         usage.sklearn: 2
         """
@@ -92733,6 +92935,7 @@ class int64:
     def __rtruediv__(self, _0: numpy.int64, /):
         """
         usage.dask: 2
+        usage.prophet: 1
         usage.scipy: 4
         usage.seaborn: 1
         usage.skimage: 2
@@ -92819,6 +93022,7 @@ class int64:
         usage.matplotlib: 7
         usage.networkx: 2
         usage.pandas: 5
+        usage.prophet: 2
         usage.scipy: 49
         usage.seaborn: 4
         usage.skimage: 11
@@ -92864,6 +93068,7 @@ class int64:
         """
         usage.dask: 6
         usage.matplotlib: 12
+        usage.prophet: 2
         usage.scipy: 83
         usage.seaborn: 1
         usage.skimage: 13
@@ -92889,6 +93094,7 @@ class int64:
     def __sub__(self, _0: numpy.float64, /):
         """
         usage.matplotlib: 5
+        usage.prophet: 1
         usage.scipy: 3
         usage.seaborn: 2
         usage.sklearn: 1
@@ -92932,6 +93138,7 @@ class int64:
         usage.koalas: 1
         usage.matplotlib: 33
         usage.pandas: 26
+        usage.prophet: 3
         usage.scipy: 154
         usage.seaborn: 8
         usage.skimage: 25
@@ -92944,6 +93151,7 @@ class int64:
     def __truediv__(self, _0: numpy.int64, /):
         """
         usage.dask: 2
+        usage.prophet: 1
         usage.scipy: 4
         usage.seaborn: 1
         usage.skimage: 2
@@ -93006,6 +93214,7 @@ class int64:
         usage.matplotlib: 9
         usage.modin: 1
         usage.pandas: 22
+        usage.prophet: 1
         usage.scipy: 52
         usage.seaborn: 2
         usage.skimage: 17
@@ -98806,13 +99015,14 @@ class ndarray:
     # usage.modin: 4
     # usage.networkx: 50
     # usage.pandas: 695
+    # usage.prophet: 10
     # usage.sample-usage: 2
     # usage.scipy: 4735
     # usage.seaborn: 35
     # usage.skimage: 1395
     # usage.sklearn: 3313
     # usage.xarray: 350
-    shape: Union[numpy.ndarray, List[int], Tuple[Union[None, int], ...]]
+    shape: Union[List[int], numpy.ndarray, Tuple[Union[int, None], ...]]
 
     # usage.dask: 21
     # usage.matplotlib: 84
@@ -98856,6 +99066,7 @@ class ndarray:
         usage.dask: 10
         usage.matplotlib: 54
         usage.networkx: 1
+        usage.prophet: 1
         usage.scipy: 196
         usage.seaborn: 5
         usage.skimage: 35
@@ -98870,6 +99081,7 @@ class ndarray:
         usage.dask: 68
         usage.matplotlib: 213
         usage.networkx: 25
+        usage.prophet: 3
         usage.sample-usage: 1
         usage.scipy: 1622
         usage.seaborn: 7
@@ -98884,6 +99096,7 @@ class ndarray:
         """
         usage.dask: 10
         usage.matplotlib: 10
+        usage.prophet: 1
         usage.scipy: 64
         usage.seaborn: 2
         usage.skimage: 24
@@ -99051,6 +99264,14 @@ class ndarray:
         ...
 
     @overload
+    def __add__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 2
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
     def __add__(self, _0: Tuple[numpy.float64, numpy.float64], /):
         """
         usage.matplotlib: 4
@@ -99169,19 +99390,13 @@ class ndarray:
         """
         ...
 
-    @overload
-    def __add__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
     def __add__(self, _0: object, /):
         """
         usage.dask: 201
         usage.matplotlib: 404
         usage.networkx: 29
         usage.pandas: 272
+        usage.prophet: 7
         usage.sample-usage: 2
         usage.scipy: 2303
         usage.seaborn: 18
@@ -99689,6 +99904,34 @@ class ndarray:
         ...
 
     @overload
+    def __contains__(self, _0: Literal["monthly"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["special_day"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["binary_feature"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["numeric_feature"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def __contains__(self, _0: float, /):
         """
         usage.matplotlib: 2
@@ -99761,6 +100004,7 @@ class ndarray:
         usage.matplotlib: 3
         usage.networkx: 1
         usage.pandas: 13
+        usage.prophet: 4
         usage.sample-usage: 1
         usage.scipy: 11
         usage.seaborn: 16
@@ -99801,6 +100045,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 4
+        usage.prophet: 1
         usage.scipy: 24
         usage.seaborn: 1
         usage.skimage: 7
@@ -99839,6 +100084,7 @@ class ndarray:
         """
         usage.dask: 1
         usage.matplotlib: 3
+        usage.prophet: 1
         usage.scipy: 15
         usage.seaborn: 2
         usage.skimage: 9
@@ -100374,6 +100620,7 @@ class ndarray:
         usage.modin: 1
         usage.networkx: 8
         usage.pandas: 895
+        usage.prophet: 2
         usage.sample-usage: 2
         usage.scipy: 617
         usage.seaborn: 16
@@ -100387,6 +100634,7 @@ class ndarray:
     def __floordiv__(self, _0: int, /):
         """
         usage.dask: 1
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 14
         usage.skimage: 11
@@ -100444,6 +100692,7 @@ class ndarray:
         """
         usage.dask: 5
         usage.pandas: 58
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 18
         usage.skimage: 14
@@ -100479,6 +100728,7 @@ class ndarray:
         """
         usage.matplotlib: 2
         usage.networkx: 1
+        usage.prophet: 2
         usage.scipy: 17
         usage.seaborn: 1
         usage.skimage: 1
@@ -100504,6 +100754,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 16
+        usage.prophet: 2
         usage.scipy: 21
         usage.seaborn: 8
         usage.skimage: 4
@@ -100562,6 +100813,7 @@ class ndarray:
         usage.modin: 1
         usage.networkx: 5
         usage.pandas: 90
+        usage.prophet: 4
         usage.scipy: 501
         usage.seaborn: 9
         usage.skimage: 88
@@ -100594,6 +100846,7 @@ class ndarray:
         usage.matplotlib: 433
         usage.modin: 20
         usage.networkx: 52
+        usage.prophet: 28
         usage.sample-usage: 2
         usage.scipy: 2217
         usage.seaborn: 74
@@ -100609,6 +100862,7 @@ class ndarray:
         usage.dask: 41
         usage.matplotlib: 182
         usage.networkx: 5
+        usage.prophet: 4
         usage.sample-usage: 1
         usage.scipy: 1104
         usage.seaborn: 45
@@ -100625,6 +100879,7 @@ class ndarray:
         usage.matplotlib: 45
         usage.modin: 1
         usage.networkx: 6
+        usage.prophet: 7
         usage.scipy: 322
         usage.seaborn: 10
         usage.skimage: 25
@@ -101083,6 +101338,7 @@ class ndarray:
         """
         usage.dask: 6
         usage.matplotlib: 13
+        usage.prophet: 2
         usage.scipy: 147
         usage.seaborn: 1
         usage.skimage: 26
@@ -107151,6 +107407,7 @@ class ndarray:
         usage.modin: 26
         usage.networkx: 215
         usage.pandas: 2206
+        usage.prophet: 41
         usage.sample-usage: 5
         usage.scipy: 9090
         usage.seaborn: 245
@@ -107347,6 +107604,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 4
+        usage.prophet: 4
         usage.scipy: 6
         usage.skimage: 3
         usage.sklearn: 29
@@ -107514,6 +107772,7 @@ class ndarray:
         usage.matplotlib: 70
         usage.networkx: 7
         usage.pandas: 13
+        usage.prophet: 4
         usage.sample-usage: 1
         usage.scipy: 368
         usage.seaborn: 3
@@ -107639,6 +107898,7 @@ class ndarray:
         """
         usage.matplotlib: 4
         usage.networkx: 3
+        usage.prophet: 1
         usage.scipy: 62
         usage.seaborn: 2
         usage.skimage: 5
@@ -107653,6 +107913,7 @@ class ndarray:
         usage.dask: 1
         usage.matplotlib: 9
         usage.networkx: 1
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 60
         usage.seaborn: 1
@@ -107783,6 +108044,7 @@ class ndarray:
         usage.matplotlib: 29
         usage.networkx: 4
         usage.pandas: 4
+        usage.prophet: 2
         usage.sample-usage: 1
         usage.scipy: 246
         usage.seaborn: 6
@@ -108095,6 +108357,7 @@ class ndarray:
         usage.modin: 14
         usage.networkx: 11
         usage.pandas: 181
+        usage.prophet: 1
         usage.sample-usage: 2
         usage.scipy: 302
         usage.seaborn: 102
@@ -108603,6 +108866,7 @@ class ndarray:
         usage.dask: 11
         usage.koalas: 2
         usage.matplotlib: 10
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 11
         usage.seaborn: 1
@@ -108649,6 +108913,7 @@ class ndarray:
         usage.koalas: 2
         usage.matplotlib: 12
         usage.pandas: 52
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 23
         usage.seaborn: 1
@@ -108664,6 +108929,7 @@ class ndarray:
         usage.dask: 27
         usage.matplotlib: 154
         usage.networkx: 9
+        usage.prophet: 11
         usage.scipy: 1535
         usage.seaborn: 9
         usage.skimage: 244
@@ -108692,6 +108958,7 @@ class ndarray:
         usage.dask: 37
         usage.matplotlib: 58
         usage.networkx: 3
+        usage.prophet: 5
         usage.sample-usage: 1
         usage.scipy: 177
         usage.seaborn: 13
@@ -108706,6 +108973,7 @@ class ndarray:
         """
         usage.matplotlib: 26
         usage.networkx: 3
+        usage.prophet: 6
         usage.scipy: 167
         usage.seaborn: 5
         usage.skimage: 30
@@ -108928,6 +109196,13 @@ class ndarray:
         ...
 
     @overload
+    def __mul__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def __mul__(self, _0: List[int], /):
         """
         usage.dask: 1
@@ -108963,6 +109238,7 @@ class ndarray:
         usage.matplotlib: 329
         usage.networkx: 23
         usage.pandas: 256
+        usage.prophet: 23
         usage.sample-usage: 1
         usage.scipy: 2349
         usage.seaborn: 35
@@ -108978,6 +109254,7 @@ class ndarray:
         usage.matplotlib: 68
         usage.networkx: 1
         usage.pandas: 25
+        usage.prophet: 3
         usage.sample-usage: 1
         usage.scipy: 803
         usage.skimage: 46
@@ -109069,6 +109346,7 @@ class ndarray:
         usage.koalas: 20
         usage.matplotlib: 69
         usage.networkx: 12
+        usage.prophet: 2
         usage.sample-usage: 1
         usage.scipy: 580
         usage.skimage: 177
@@ -109126,6 +109404,7 @@ class ndarray:
         usage.matplotlib: 85
         usage.networkx: 12
         usage.pandas: 63
+        usage.prophet: 2
         usage.sample-usage: 1
         usage.scipy: 882
         usage.seaborn: 2
@@ -109141,6 +109420,7 @@ class ndarray:
         usage.dask: 1
         usage.koalas: 2
         usage.matplotlib: 13
+        usage.prophet: 3
         usage.sample-usage: 1
         usage.scipy: 158
         usage.skimage: 40
@@ -109167,6 +109447,7 @@ class ndarray:
         usage.dask: 68
         usage.matplotlib: 213
         usage.networkx: 25
+        usage.prophet: 3
         usage.sample-usage: 1
         usage.scipy: 1622
         usage.seaborn: 7
@@ -109299,6 +109580,7 @@ class ndarray:
     def __radd__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 2
+        usage.prophet: 1
         usage.seaborn: 1
         """
         ...
@@ -109345,6 +109627,7 @@ class ndarray:
         usage.matplotlib: 256
         usage.networkx: 26
         usage.pandas: 289
+        usage.prophet: 7
         usage.sample-usage: 2
         usage.scipy: 2008
         usage.seaborn: 9
@@ -109622,6 +109905,7 @@ class ndarray:
         usage.dask: 27
         usage.matplotlib: 154
         usage.networkx: 9
+        usage.prophet: 11
         usage.scipy: 1535
         usage.seaborn: 9
         usage.skimage: 244
@@ -109636,6 +109920,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 177
         usage.networkx: 20
+        usage.prophet: 3
         usage.scipy: 982
         usage.seaborn: 5
         usage.skimage: 193
@@ -109650,6 +109935,7 @@ class ndarray:
         usage.dask: 36
         usage.matplotlib: 82
         usage.networkx: 1
+        usage.prophet: 2
         usage.sample-usage: 2
         usage.scipy: 698
         usage.seaborn: 1
@@ -109664,6 +109950,7 @@ class ndarray:
         """
         usage.matplotlib: 30
         usage.networkx: 2
+        usage.prophet: 4
         usage.scipy: 447
         usage.skimage: 39
         usage.sklearn: 120
@@ -109900,6 +110187,13 @@ class ndarray:
         ...
 
     @overload
+    def __rmul__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def __rmul__(self, _0: List[float], /):
         """
         usage.matplotlib: 1
@@ -109919,6 +110213,7 @@ class ndarray:
         usage.matplotlib: 451
         usage.networkx: 37
         usage.pandas: 243
+        usage.prophet: 21
         usage.sample-usage: 2
         usage.scipy: 4263
         usage.seaborn: 15
@@ -110145,6 +110440,7 @@ class ndarray:
         usage.dask: 19
         usage.matplotlib: 133
         usage.networkx: 18
+        usage.prophet: 7
         usage.scipy: 1452
         usage.seaborn: 6
         usage.skimage: 224
@@ -110157,6 +110453,7 @@ class ndarray:
     def __rsub__(self, _0: numpy.float64, /):
         """
         usage.matplotlib: 11
+        usage.prophet: 1
         usage.scipy: 68
         usage.seaborn: 1
         usage.skimage: 4
@@ -110351,6 +110648,7 @@ class ndarray:
     @overload
     def __rsub__(self, _0: pandas.core.series.Series, /):
         """
+        usage.prophet: 1
         usage.seaborn: 3
         """
         ...
@@ -110368,6 +110666,7 @@ class ndarray:
         usage.matplotlib: 192
         usage.networkx: 18
         usage.pandas: 273
+        usage.prophet: 9
         usage.sample-usage: 1
         usage.scipy: 2160
         usage.seaborn: 12
@@ -110383,6 +110682,7 @@ class ndarray:
         usage.dask: 11
         usage.matplotlib: 37
         usage.networkx: 3
+        usage.prophet: 1
         usage.scipy: 749
         usage.seaborn: 3
         usage.skimage: 85
@@ -110552,6 +110852,13 @@ class ndarray:
         ...
 
     @overload
+    def __rtruediv__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def __rtruediv__(self, _0: List[numpy.float64], /):
         """
         usage.matplotlib: 1
@@ -110571,6 +110878,7 @@ class ndarray:
         usage.matplotlib: 51
         usage.networkx: 20
         usage.pandas: 420
+        usage.prophet: 2
         usage.scipy: 1165
         usage.seaborn: 3
         usage.skimage: 102
@@ -110613,6 +110921,7 @@ class ndarray:
         usage.dask: 2
         usage.matplotlib: 45
         usage.networkx: 2
+        usage.prophet: 4
         usage.scipy: 331
         usage.skimage: 73
         usage.sklearn: 115
@@ -110827,6 +111136,7 @@ class ndarray:
         usage.dask: 1
         usage.matplotlib: 26
         usage.networkx: 2
+        usage.prophet: 1
         usage.scipy: 244
         usage.seaborn: 1
         usage.skimage: 15
@@ -111580,6 +111890,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 4
         usage.networkx: 2
+        usage.prophet: 1
         usage.scipy: 199
         usage.skimage: 32
         usage.sklearn: 101
@@ -118295,6 +118606,7 @@ class ndarray:
         usage.matplotlib: 542
         usage.networkx: 88
         usage.pandas: 5607
+        usage.prophet: 6
         usage.sample-usage: 1
         usage.scipy: 4013
         usage.seaborn: 25
@@ -118316,6 +118628,7 @@ class ndarray:
         usage.dask: 19
         usage.matplotlib: 133
         usage.networkx: 18
+        usage.prophet: 7
         usage.scipy: 1452
         usage.seaborn: 6
         usage.skimage: 224
@@ -118344,6 +118657,7 @@ class ndarray:
         usage.dask: 1
         usage.matplotlib: 34
         usage.networkx: 2
+        usage.prophet: 2
         usage.scipy: 270
         usage.seaborn: 5
         usage.skimage: 38
@@ -118356,6 +118670,7 @@ class ndarray:
     def __sub__(self, _0: numpy.float64, /):
         """
         usage.matplotlib: 11
+        usage.prophet: 1
         usage.scipy: 157
         usage.seaborn: 4
         usage.skimage: 35
@@ -118662,6 +118977,7 @@ class ndarray:
         usage.matplotlib: 216
         usage.networkx: 30
         usage.pandas: 228
+        usage.prophet: 10
         usage.sample-usage: 1
         usage.scipy: 2465
         usage.seaborn: 15
@@ -118677,6 +118993,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 48
         usage.networkx: 10
+        usage.prophet: 2
         usage.scipy: 392
         usage.seaborn: 1
         usage.skimage: 76
@@ -118690,6 +119007,7 @@ class ndarray:
         usage.dask: 11
         usage.matplotlib: 37
         usage.networkx: 3
+        usage.prophet: 1
         usage.scipy: 749
         usage.seaborn: 3
         usage.skimage: 85
@@ -118716,6 +119034,7 @@ class ndarray:
         usage.dask: 7
         usage.matplotlib: 53
         usage.networkx: 1
+        usage.prophet: 1
         usage.scipy: 273
         usage.seaborn: 1
         usage.skimage: 52
@@ -118837,6 +119156,7 @@ class ndarray:
         usage.matplotlib: 165
         usage.networkx: 30
         usage.pandas: 420
+        usage.prophet: 4
         usage.scipy: 1667
         usage.seaborn: 13
         usage.skimage: 258
@@ -118880,6 +119200,7 @@ class ndarray:
         usage.koalas: 6
         usage.matplotlib: 16
         usage.networkx: 3
+        usage.prophet: 2
         usage.scipy: 140
         usage.seaborn: 3
         usage.skimage: 30
@@ -118922,6 +119243,7 @@ class ndarray:
         usage.matplotlib: 17
         usage.networkx: 3
         usage.pandas: 248
+        usage.prophet: 2
         usage.scipy: 147
         usage.seaborn: 4
         usage.skimage: 30
@@ -118936,6 +119258,7 @@ class ndarray:
         usage.dask: 14
         usage.matplotlib: 21
         usage.networkx: 3
+        usage.prophet: 2
         usage.scipy: 101
         usage.seaborn: 3
         usage.skimage: 15
@@ -118966,6 +119289,7 @@ class ndarray:
         usage.matplotlib: 22
         usage.networkx: 3
         usage.pandas: 175
+        usage.prophet: 2
         usage.scipy: 105
         usage.seaborn: 3
         usage.skimage: 15
@@ -118988,6 +119312,7 @@ class ndarray:
         """
         usage.matplotlib: 2
         usage.networkx: 1
+        usage.prophet: 1
         usage.scipy: 2
         usage.skimage: 5
         usage.sklearn: 11
@@ -119015,6 +119340,7 @@ class ndarray:
         usage.matplotlib: 2
         usage.networkx: 1
         usage.pandas: 16
+        usage.prophet: 1
         usage.scipy: 3
         usage.skimage: 7
         usage.sklearn: 41
@@ -119236,6 +119562,7 @@ class ndarray:
         """
         usage.dask: 4
         usage.matplotlib: 17
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 35
         usage.seaborn: 1
@@ -120266,6 +120593,7 @@ class ndarray:
         usage.modin: 1
         usage.networkx: 13
         usage.pandas: 1453
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 1951
         usage.seaborn: 8
@@ -120868,6 +121196,7 @@ class ndarray:
         usage.dask: 10
         usage.matplotlib: 57
         usage.networkx: 4
+        usage.prophet: 3
         usage.scipy: 139
         usage.seaborn: 40
         usage.skimage: 125
@@ -120918,6 +121247,7 @@ class ndarray:
         usage.matplotlib: 58
         usage.networkx: 6
         usage.pandas: 48
+        usage.prophet: 3
         usage.scipy: 147
         usage.seaborn: 41
         usage.skimage: 129
@@ -121071,6 +121401,7 @@ class ndarray:
         usage.dask: 6
         usage.matplotlib: 50
         usage.networkx: 1
+        usage.prophet: 2
         usage.scipy: 78
         usage.seaborn: 20
         usage.skimage: 100
@@ -121130,6 +121461,7 @@ class ndarray:
         usage.matplotlib: 50
         usage.networkx: 3
         usage.pandas: 48
+        usage.prophet: 2
         usage.scipy: 84
         usage.seaborn: 20
         usage.skimage: 101
@@ -121166,6 +121498,7 @@ class ndarray:
         usage.matplotlib: 1
         usage.networkx: 6
         usage.pandas: 29
+        usage.prophet: 1
         usage.scipy: 31
         usage.skimage: 4
         usage.sklearn: 7
@@ -121384,6 +121717,7 @@ class ndarray:
         usage.dask: 100
         usage.matplotlib: 50
         usage.networkx: 2
+        usage.prophet: 2
         usage.sample-usage: 1
         usage.scipy: 133
         usage.seaborn: 2
@@ -121495,6 +121829,7 @@ class ndarray:
     def reshape(self, _0: int, /):
         """
         usage.matplotlib: 3
+        usage.prophet: 1
         usage.scipy: 47
         usage.skimage: 8
         usage.sklearn: 22
@@ -121660,10 +121995,10 @@ class ndarray:
         self,
         _0: Union[
             int,
-            numpy.int64,
             numpy.ndarray,
-            Tuple[Union[int, numpy.int64, None], ...],
-            List[Union[int, numpy.int32, numpy.int64]],
+            numpy.int64,
+            Tuple[Union[None, numpy.int64, int], ...],
+            List[Union[numpy.int64, numpy.int32, int]],
         ],
         /,
         *_args: int,
@@ -121674,6 +122009,7 @@ class ndarray:
         usage.matplotlib: 116
         usage.networkx: 12
         usage.pandas: 373
+        usage.prophet: 3
         usage.sample-usage: 2
         usage.scipy: 896
         usage.seaborn: 7
@@ -121692,6 +122028,7 @@ class ndarray:
     @overload
     def round(self, /):
         """
+        usage.prophet: 1
         usage.scipy: 2
         usage.sklearn: 6
         usage.xarray: 2
@@ -121739,6 +122076,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.pandas: 13
+        usage.prophet: 1
         usage.scipy: 2
         usage.sklearn: 12
         usage.xarray: 6
@@ -122025,6 +122363,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 4
         usage.pandas: 3
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 18
         usage.sklearn: 5
@@ -122058,6 +122397,7 @@ class ndarray:
         usage.dask: 4
         usage.matplotlib: 4
         usage.pandas: 3
+        usage.prophet: 1
         usage.sample-usage: 2
         usage.scipy: 20
         usage.skimage: 9
@@ -122218,6 +122558,7 @@ class ndarray:
         usage.matplotlib: 14
         usage.modin: 1
         usage.networkx: 45
+        usage.prophet: 4
         usage.scipy: 169
         usage.seaborn: 17
         usage.skimage: 79
@@ -122395,6 +122736,7 @@ class ndarray:
         usage.modin: 1
         usage.networkx: 53
         usage.pandas: 101
+        usage.prophet: 4
         usage.scipy: 264
         usage.seaborn: 18
         usage.skimage: 111
@@ -122634,6 +122976,7 @@ class ndarray:
     def transpose(self, /):
         """
         usage.matplotlib: 2
+        usage.prophet: 1
         usage.scipy: 39
         usage.skimage: 4
         usage.sklearn: 8
@@ -122716,12 +123059,13 @@ class ndarray:
         ...
 
     def transpose(
-        self, /, *_args: Union[List[int], Tuple[int, ...], numpy.ndarray, range, int]
+        self, /, *_args: Union[List[int], Tuple[int, ...], range, numpy.ndarray, int]
     ):
         """
         usage.dask: 10
         usage.matplotlib: 2
         usage.pandas: 33
+        usage.prophet: 1
         usage.scipy: 97
         usage.skimage: 5
         usage.sklearn: 12
@@ -124548,6 +124892,7 @@ class ufunc:
         """
         usage.dask: 295
         usage.koalas: 39
+        usage.prophet: 7
         usage.seaborn: 2
         """
         ...
@@ -124559,6 +124904,7 @@ class ufunc:
         usage.koalas: 1
         usage.matplotlib: 317
         usage.networkx: 25
+        usage.prophet: 7
         usage.sample-usage: 2
         usage.scipy: 2544
         usage.seaborn: 11
@@ -124737,6 +125083,7 @@ class ufunc:
         usage.dask: 12
         usage.matplotlib: 167
         usage.networkx: 8
+        usage.prophet: 3
         usage.scipy: 947
         usage.seaborn: 5
         usage.skimage: 88
@@ -124794,6 +125141,7 @@ class ufunc:
         usage.dask: 330
         usage.matplotlib: 42
         usage.networkx: 3
+        usage.prophet: 3
         usage.sample-usage: 1
         usage.scipy: 581
         usage.skimage: 41
@@ -124871,6 +125219,7 @@ class ufunc:
         usage.dask: 35
         usage.matplotlib: 102
         usage.networkx: 9
+        usage.prophet: 5
         usage.scipy: 943
         usage.seaborn: 11
         usage.skimage: 58
@@ -127751,6 +128100,7 @@ class ufunc:
         usage.modin: 1
         usage.networkx: 56
         usage.pandas: 1228
+        usage.prophet: 25
         usage.sample-usage: 3
         usage.scipy: 8018
         usage.seaborn: 43
