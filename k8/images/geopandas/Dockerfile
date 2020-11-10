@@ -13,7 +13,24 @@ RUN git clone \
     .
 
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install -r requirements-dev.txt \
+    pip install \
+    cython \
+    fiona \
+    pyproj \
+    geos \
+    pytest \
+    pytest-cov \
+    pytest-xdist \
+    fsspec \
+    SQLalchemy \
+    libspatialite \
+    pyarrow \
+    geopy \
+    mapclassify>=2.2.0 \
+    git+https://github.com/pydata/pandas.git@master \
+    git+https://github.com/matplotlib/matplotlib.git@master \
+    git+https://github.com/Toblerity/Shapely.git@master \
+    git+https://github.com/pygeos/pygeos.git@master \
     pytest-custom_exit_code
 
 RUN python -c "import geopandas"
