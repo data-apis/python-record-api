@@ -20,6 +20,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
     pytest \
     numpy \
+    pandas \
     pytest-custom_exit_code
 
 RUN --mount=type=cache,target=/root/.cache/pip \
