@@ -5,6 +5,15 @@ from typing import *
 def cholesky(a: numpy.ndarray):
     """
     usage.scipy: 3
+    usage.statsmodels: 46
+    """
+    ...
+
+
+@overload
+def cholesky(a: pandas.core.frame.DataFrame):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -17,9 +26,19 @@ def cholesky(a: List[List[float]]):
     ...
 
 
-def cholesky(a: Union[List[List[float]], numpy.ndarray]):
+def cholesky(a: Union[numpy.ndarray, pandas.core.frame.DataFrame, List[List[float]]]):
     """
     usage.scipy: 5
+    usage.statsmodels: 48
+    """
+    ...
+
+
+@overload
+def cond(x: numpy.ndarray):
+    """
+    usage.scipy: 4
+    usage.statsmodels: 1
     """
     ...
 
@@ -32,17 +51,10 @@ def cond(x: numpy.ndarray, p: int):
     ...
 
 
-@overload
-def cond(x: numpy.ndarray):
-    """
-    usage.scipy: 4
-    """
-    ...
-
-
 def cond(x: numpy.ndarray, p: int = ...):
     """
     usage.scipy: 8
+    usage.statsmodels: 1
     """
     ...
 
@@ -55,6 +67,7 @@ def det(a: numpy.ndarray):
     usage.scipy: 18
     usage.skimage: 5
     usage.sklearn: 1
+    usage.statsmodels: 7
     """
     ...
 
@@ -74,6 +87,7 @@ def det(a: Union[numpy.ndarray, dask.array.core.Array]):
     usage.scipy: 18
     usage.skimage: 5
     usage.sklearn: 1
+    usage.statsmodels: 7
     """
     ...
 
@@ -85,6 +99,15 @@ def eig(a: numpy.ndarray):
     usage.scipy: 15
     usage.skimage: 3
     usage.sklearn: 2
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def eig(a: patsy.design_info.DesignMatrix):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -97,12 +120,13 @@ def eig(a: numpy.matrix):
     ...
 
 
-def eig(a: Union[numpy.matrix, numpy.ndarray]):
+def eig(a: Union[numpy.matrix, numpy.ndarray, patsy.design_info.DesignMatrix]):
     """
     usage.networkx: 5
     usage.scipy: 15
     usage.skimage: 3
     usage.sklearn: 2
+    usage.statsmodels: 8
     """
     ...
 
@@ -112,6 +136,15 @@ def eigh(a: numpy.ndarray):
     """
     usage.networkx: 2
     usage.scipy: 1
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def eigh(a: numpy.ndarray, UPLO: Literal["U"]):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -124,10 +157,11 @@ def eigh(a: numpy.matrix):
     ...
 
 
-def eigh(a: Union[numpy.ndarray, numpy.matrix]):
+def eigh(a: Union[numpy.ndarray, numpy.matrix], UPLO: Literal["U"] = ...):
     """
     usage.networkx: 3
     usage.scipy: 1
+    usage.statsmodels: 10
     """
     ...
 
@@ -137,6 +171,7 @@ def eigvals(a: numpy.ndarray):
     """
     usage.dask: 1
     usage.scipy: 2
+    usage.statsmodels: 8
     """
     ...
 
@@ -162,6 +197,7 @@ def eigvals(a: Union[numpy.matrix, numpy.ndarray, dask.array.core.Array]):
     usage.dask: 2
     usage.networkx: 2
     usage.scipy: 2
+    usage.statsmodels: 8
     """
     ...
 
@@ -169,6 +205,7 @@ def eigvals(a: Union[numpy.matrix, numpy.ndarray, dask.array.core.Array]):
 def eigvalsh(a: numpy.ndarray):
     """
     usage.skimage: 2
+    usage.statsmodels: 8
     """
     ...
 
@@ -180,6 +217,15 @@ def inv(a: numpy.ndarray):
     usage.scipy: 13
     usage.skimage: 7
     usage.sklearn: 6
+    usage.statsmodels: 127
+    """
+    ...
+
+
+@overload
+def inv(a: pandas.core.frame.DataFrame):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -192,13 +238,14 @@ def inv(a: numpy.matrix):
     ...
 
 
-def inv(a: Union[numpy.matrix, numpy.ndarray]):
+def inv(a: Union[numpy.matrix, pandas.core.frame.DataFrame, numpy.ndarray]):
     """
     usage.matplotlib: 2
     usage.networkx: 1
     usage.scipy: 13
     usage.skimage: 7
     usage.sklearn: 6
+    usage.statsmodels: 129
     """
     ...
 
@@ -208,6 +255,32 @@ def lstsq(a: numpy.ndarray, b: numpy.ndarray, rcond: int):
     """
     usage.dask: 2
     usage.scipy: 9
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def lstsq(a: numpy.ndarray, b: numpy.ndarray, rcond: None):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def lstsq(a: numpy.ndarray, b: numpy.ndarray, rcond: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def lstsq(a: numpy.ndarray, b: pandas.core.series.Series, rcond: None):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -221,14 +294,6 @@ def lstsq(a: numpy.ndarray, b: numpy.ndarray, rcond: numpy.float64):
 
 
 @overload
-def lstsq(a: numpy.ndarray, b: numpy.ndarray, rcond: None):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def lstsq(a: numpy.ndarray, b: numpy.ndarray):
     """
     usage.sklearn: 1
@@ -237,12 +302,15 @@ def lstsq(a: numpy.ndarray, b: numpy.ndarray):
 
 
 def lstsq(
-    a: numpy.ndarray, b: numpy.ndarray, rcond: Union[None, numpy.float64, int] = ...
+    a: numpy.ndarray,
+    b: Union[numpy.ndarray, pandas.core.series.Series],
+    rcond: Union[None, float, numpy.float64, int] = ...,
 ):
     """
     usage.dask: 3
     usage.scipy: 9
     usage.sklearn: 2
+    usage.statsmodels: 11
     """
     ...
 
@@ -250,6 +318,7 @@ def lstsq(
 def matrix_power(a: numpy.ndarray, n: int):
     """
     usage.scipy: 16
+    usage.statsmodels: 2
     """
     ...
 
@@ -259,6 +328,16 @@ def matrix_rank(M: numpy.ndarray):
     """
     usage.scipy: 25
     usage.skimage: 1
+    usage.statsmodels: 49
+    """
+    ...
+
+
+@overload
+def matrix_rank(M: numpy.ndarray, tol: float):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -271,18 +350,11 @@ def matrix_rank(M: numpy.ndarray, tol: numpy.float64):
     ...
 
 
-@overload
-def matrix_rank(M: numpy.ndarray, tol: float):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-def matrix_rank(M: numpy.ndarray, tol: Union[float, numpy.float64] = ...):
+def matrix_rank(M: numpy.ndarray, tol: Union[numpy.float64, float] = ...):
     """
     usage.scipy: 28
     usage.skimage: 1
+    usage.statsmodels: 50
     """
     ...
 
@@ -296,6 +368,28 @@ def norm(x: numpy.ndarray):
     usage.scipy: 206
     usage.skimage: 8
     usage.sklearn: 30
+    usage.statsmodels: 10
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: int):
+    """
+    usage.networkx: 1
+    usage.scipy: 35
+    usage.sklearn: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: Literal["fro"]):
+    """
+    usage.scipy: 13
+    usage.sklearn: 4
+    usage.statsmodels: 5
     """
     ...
 
@@ -323,16 +417,6 @@ def norm(x: numpy.ndarray, axis: int):
 def norm(x: numpy.ndarray, ord: None):
     """
     usage.scipy: 13
-    """
-    ...
-
-
-@overload
-def norm(x: numpy.ndarray, ord: int):
-    """
-    usage.networkx: 1
-    usage.scipy: 35
-    usage.sklearn: 2
     """
     ...
 
@@ -368,15 +452,6 @@ def norm(x: numpy.ndarray, ord: int, axis: int, keepdims: bool):
     """
     usage.dask: 2
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def norm(x: numpy.ndarray, ord: Literal["fro"]):
-    """
-    usage.scipy: 13
-    usage.sklearn: 4
     """
     ...
 
@@ -1039,15 +1114,44 @@ def norm(
     usage.scipy: 405
     usage.skimage: 8
     usage.sklearn: 45
+    usage.statsmodels: 16
     """
     ...
 
 
+@overload
 def pinv(a: numpy.ndarray):
     """
     usage.scipy: 3
     usage.seaborn: 1
     usage.skimage: 1
+    usage.statsmodels: 76
+    """
+    ...
+
+
+@overload
+def pinv(a: numpy.ndarray, rcond: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+def pinv(a: numpy.ndarray, rcond: float = ...):
+    """
+    usage.scipy: 3
+    usage.seaborn: 1
+    usage.skimage: 1
+    usage.statsmodels: 77
+    """
+    ...
+
+
+@overload
+def qr(a: numpy.ndarray, mode: Literal["r"]):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -1057,6 +1161,7 @@ def qr(a: numpy.ndarray):
     """
     usage.dask: 5
     usage.scipy: 1
+    usage.statsmodels: 7
     """
     ...
 
@@ -1069,11 +1174,12 @@ def qr(a: numpy.matrix):
     ...
 
 
-def qr(a: Union[numpy.matrix, numpy.ndarray]):
+def qr(a: Union[numpy.matrix, numpy.ndarray], mode: Literal["r"] = ...):
     """
     usage.dask: 5
     usage.networkx: 1
     usage.scipy: 1
+    usage.statsmodels: 9
     """
     ...
 
@@ -1082,6 +1188,7 @@ def slogdet(a: numpy.ndarray):
     """
     usage.scipy: 4
     usage.sklearn: 1
+    usage.statsmodels: 18
     """
     ...
 
@@ -1091,6 +1198,15 @@ def solve(a: numpy.ndarray, b: numpy.ndarray):
     """
     usage.scipy: 23
     usage.skimage: 2
+    usage.statsmodels: 96
+    """
+    ...
+
+
+@overload
+def solve(a: numpy.ndarray, b: List[float]):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -1104,11 +1220,12 @@ def solve(a: numpy.matrix, b: numpy.ndarray):
     ...
 
 
-def solve(a: Union[numpy.matrix, numpy.ndarray], b: numpy.ndarray):
+def solve(a: Union[numpy.matrix, numpy.ndarray], b: Union[numpy.ndarray, List[float]]):
     """
     usage.networkx: 2
     usage.scipy: 25
     usage.skimage: 2
+    usage.statsmodels: 97
     """
     ...
 
@@ -1120,6 +1237,7 @@ def svd(a: numpy.ndarray):
     usage.scipy: 4
     usage.skimage: 6
     usage.sklearn: 3
+    usage.statsmodels: 4
     """
     ...
 
@@ -1130,6 +1248,24 @@ def svd(a: numpy.ndarray, full_matrices: bool):
     usage.scipy: 1
     usage.skimage: 1
     usage.sklearn: 3
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def svd(a: numpy.ndarray, full_matrices: int):
+    """
+    usage.dask: 1
+    usage.statsmodels: 19
+    """
+    ...
+
+
+@overload
+def svd(a: numpy.ndarray, full_matrices: int, compute_uv: int):
+    """
+    usage.statsmodels: 3
     """
     ...
 
@@ -1142,22 +1278,17 @@ def svd(a: numpy.ndarray, compute_uv: bool):
     ...
 
 
-@overload
-def svd(a: numpy.ndarray, full_matrices: int):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
 def svd(
-    a: numpy.ndarray, full_matrices: Union[bool, int] = ..., compute_uv: bool = ...
+    a: numpy.ndarray,
+    full_matrices: Union[bool, int] = ...,
+    compute_uv: Union[bool, int] = ...,
 ):
     """
     usage.dask: 4
     usage.scipy: 10
     usage.skimage: 7
     usage.sklearn: 6
+    usage.statsmodels: 33
     """
     ...
 

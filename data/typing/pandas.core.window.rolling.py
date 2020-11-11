@@ -136,6 +136,7 @@ class Rolling:
         """
         usage.dask: 12
         usage.koalas: 6
+        usage.statsmodels: 3
         usage.xarray: 4
         """
         ...

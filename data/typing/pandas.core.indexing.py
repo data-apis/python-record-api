@@ -111,6 +111,7 @@ class _LocIndexer:
         """
         usage.koalas: 10
         usage.seaborn: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -168,6 +169,7 @@ class _LocIndexer:
         usage.dask: 3
         usage.koalas: 1
         usage.sklearn: 1
+        usage.statsmodels: 7
         usage.xarray: 2
         """
         ...
@@ -310,6 +312,7 @@ class _LocIndexer:
         """
         usage.dask: 2
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -629,6 +632,7 @@ class _LocIndexer:
         usage.dask: 5
         usage.koalas: 7
         usage.seaborn: 2
+        usage.statsmodels: 4
         """
         ...
 
@@ -878,6 +882,2292 @@ class _LocIndexer:
         ...
 
     @overload
+    def __getitem__(self, _0: Tuple[List[int], Literal["y"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], List[Literal["X", "constant"]]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], List[Literal["NBELOW", "NABOVE"]]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["[0.025"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["0.975]"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[pandas.core.series.Series, slice[None, None, None]], /
+    ):
+        """
+        usage.dask: 1
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, Literal["conc"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, Literal["obs"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, Literal["res"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, Literal["final"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, Literal["value"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, Literal["Coef."]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: List[Literal["R-squared Adj.", "R-squared", "x1", "const"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: List[Literal["R-squared Adj.", "R-squared", "x2", "const", "x1"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: List[Literal["R-squared Adj.", "R-squared", "const", "b", "a"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, slice[None, None, None]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Wilks' lambda"], Literal["Value"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Pillai's trace"], Literal["Value"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[str, Literal["Value"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[Literal["Roy's greatest root"], Literal["Value"]], /
+    ):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Wilks' lambda"], Literal["F Value"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Pillai's trace"], Literal["F Value"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[str, Literal["F Value"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[Literal["Roy's greatest root"], Literal["F Value"]], /
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Wilks' lambda"], Literal["Num DF"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Pillai's trace"], Literal["Num DF"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[str, Literal["Num DF"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[Literal["Roy's greatest root"], Literal["Num DF"]], /
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Wilks' lambda"], Literal["Den DF"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Pillai's trace"], Literal["Den DF"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[str, Literal["Den DF"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[Literal["Roy's greatest root"], Literal["Den DF"]], /
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Wilks' lambda"], Literal["Pr > F"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Pillai's trace"], Literal["Pr > F"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[str, Literal["Pr > F"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[Literal["Roy's greatest root"], Literal["Pr > F"]], /
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["Wilks' lambda"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["F Value"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["Num DF"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["Den DF"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["Pr > F"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[pandas.core.indexes.numeric.Int64Index, slice[None, None, None]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Literal["Intercept", "income"]], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["homog_stat"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["homog_df"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["lbl_stat"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["lbl_expval"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["lbl_var"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["lbl_chi2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["lbl_pvalue"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["lbl2_stat"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["lbl2_expval"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["lbl2_var"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["lbl2_chi2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["lbl2_pvalue"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["bowker_stat"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["bowker_df"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["bowker_pvalue"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["homog_cont_p"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["homog_binom_p"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.indexes.numeric.Int64Index, int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, Literal["v1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, Literal["v2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[pandas.core.indexes.numeric.Int64Index, Literal["v1"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[pandas.core.indexes.numeric.Int64Index, Literal["v2"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], List[bool]], /):
+        """
+        usage.sklearn: 1
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[str], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["lb_stat"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["lb_pvalue"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["bp_stat"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["bp_pvalue"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["x"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["z"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[str, Literal["Estimate"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[bool], /):
+        """
+        usage.sklearn: 2
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[Literal["1960-04-01"], Literal["1978-10-01"], Literal["1960-04-01"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[Literal["1960-04-01"], Literal["1978-10-01"], Literal["1960-04-01"]],
+            List[Literal["dln_inc", "dln_inv"]],
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[Literal["1960-04-01"], Literal["1978-10-01"], Literal["1960-04-01"]],
+            List[Literal["dln_consump", "dln_inc", "dln_inv"]],
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[numpy.str_], Literal["count"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: pandas.core.indexes.base.Index, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[List[Literal["Q1", "Q0", "M1", "M0"]], pandas.core.series.Series],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Tuple[numpy.str_]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["M0"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["M1"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Q0"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Q1"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["1", "0"]], Literal["count"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], Tuple[Literal["0"], Literal["1"]]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["M0"], Literal["0"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["M0"], Literal["1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["M1"], Literal["0"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["M1"], Literal["1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Q0"], Literal["0"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Q0"], Literal["1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Q1"], Literal["0"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["Q1"], Literal["1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["b", "a"]], Literal["count"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["b"]], Literal["count"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], pandas.core.series.Series], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[Literal["y2", "y1"]], pandas.core.series.Series], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[Literal["global.2", "global.1"]], Literal["count"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], Tuple[Literal["global.1"], Literal["global.2"]]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["global.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["global.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["global.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["global.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[None, None, None], List[Literal["global.2", "global.1"]]],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Tuple[List[Literal["global.2", "global.1"]], slice[None, None, None]],
+            List[Literal["global.2", "global.1"]],
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["global"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["block"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], List[Literal["block", "global"]]], /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Tuple[List[Literal["block", "global"]], slice[None, None, None]],
+            List[Literal["block", "global"]],
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["0"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            List[Literal["yQ2_f1", "yQ1_f1", "yM2_f1", "yM1_f1"]],
+            pandas.core.series.Series,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yM1_f1"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yM2_f1"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yQ1_f1"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yQ2_f1"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["y"]], pandas.core.series.Series], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["y1"]], pandas.core.series.Series], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["y"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["y1"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["y2"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["f1"]], pandas.core.series.Series], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["f1"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[Literal["f2", "f1"]], pandas.core.series.Series], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["f2"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, Literal["1957-12"], None], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, Literal["1957Q4"], None], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[Literal["1958-01"], None, Literal["1958-01"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[Literal["1958Q1"], None, Literal["1958Q1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["b.2", "b.1"]], Literal["count"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[str], pandas.core.series.Series], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Tuple[Literal["b.1"], Literal["b.2"]]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["b.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["b.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yM1_f1"], Literal["b.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yM1_f1"], Literal["b.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yM2_f1"], Literal["b.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yM2_f1"], Literal["b.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["f1"], Literal["b.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["f1"], Literal["b.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["f2"], Literal["b.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["f2"], Literal["b.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yM1_f2"], Literal["b.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yM1_f2"], Literal["b.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yM1_f2"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yM2_f2"], Literal["b.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yM2_f2"], Literal["b.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yM2_f2"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yQ1_f1"], Literal["b.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yQ1_f1"], Literal["b.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yQ2_f1"], Literal["b.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yQ2_f1"], Literal["b.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yQ1_f2"], Literal["b.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yQ1_f2"], Literal["b.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yQ1_f2"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yQ2_f2"], Literal["b.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yQ2_f2"], Literal["b.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yQ2_f2"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            List[Literal["ULCNFB", "GDPC1", "PAYEMS", "UNRATE", "CPIAUCSL"]],
+            pandas.core.series.Series,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["CPIAUCSL"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["UNRATE"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["PAYEMS"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["GDPC1"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["ULCNFB"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["CPIAUCSL"], Literal["0"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["CPIAUCSL"], Literal["1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["UNRATE"], Literal["0"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["UNRATE"], Literal["1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["PAYEMS"], Literal["0"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["PAYEMS"], Literal["1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["GDPC1"], Literal["0"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["GDPC1"], Literal["1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["ULCNFB"], Literal["0"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["ULCNFB"], Literal["1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["global"]], Literal["count"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["test1"]], Literal["count"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["test2"]], Literal["count"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], Tuple[Literal["global"]]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], Tuple[Literal["test1"]]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], Tuple[Literal["test2"]]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["CPIAUCSL"], Literal["global"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["CPIAUCSL"], Literal["test1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["CPIAUCSL"], Literal["test2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["UNRATE"], Literal["global"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["UNRATE"], Literal["test1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["UNRATE"], Literal["test2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["PAYEMS"], Literal["global"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["PAYEMS"], Literal["test1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["PAYEMS"], Literal["test2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["RSAFS"], Literal["global"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["RSAFS"], Literal["test1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["RSAFS"], Literal["test2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TTLCONS"], Literal["global"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TTLCONS"], Literal["test1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TTLCONS"], Literal["test2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TCU"], Literal["global"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TCU"], Literal["test1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TCU"], Literal["test2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["GDPC1"], Literal["global"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["GDPC1"], Literal["test1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["GDPC1"], Literal["test2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["ULCNFB"], Literal["global"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["ULCNFB"], Literal["test1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["ULCNFB"], Literal["test2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[Literal["test1.2", "test1.1"]], Literal["count"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[Literal["test2.2", "test2.1"]], Literal["count"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], Tuple[Literal["test1.1"], Literal["test1.2"]]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], Tuple[Literal["test2.1"], Literal["test2.2"]]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["CPIAUCSL"], Literal["global.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["CPIAUCSL"], Literal["global.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["CPIAUCSL"], Literal["test1.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["CPIAUCSL"], Literal["test1.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["CPIAUCSL"], Literal["test2.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["CPIAUCSL"], Literal["test2.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["UNRATE"], Literal["global.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["UNRATE"], Literal["global.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["UNRATE"], Literal["test1.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["UNRATE"], Literal["test1.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["UNRATE"], Literal["test2.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["UNRATE"], Literal["test2.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["PAYEMS"], Literal["global.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["PAYEMS"], Literal["global.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["PAYEMS"], Literal["test1.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["PAYEMS"], Literal["test1.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["PAYEMS"], Literal["test2.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["PAYEMS"], Literal["test2.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["RSAFS"], Literal["global.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["RSAFS"], Literal["global.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["RSAFS"], Literal["test1.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["RSAFS"], Literal["test1.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["RSAFS"], Literal["test2.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["RSAFS"], Literal["test2.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TTLCONS"], Literal["global.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TTLCONS"], Literal["global.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TTLCONS"], Literal["test1.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TTLCONS"], Literal["test1.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TTLCONS"], Literal["test2.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TTLCONS"], Literal["test2.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TCU"], Literal["global.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TCU"], Literal["global.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TCU"], Literal["test1.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TCU"], Literal["test1.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TCU"], Literal["test2.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["TCU"], Literal["test2.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["GDPC1"], Literal["global.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["GDPC1"], Literal["global.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["GDPC1"], Literal["test1.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["GDPC1"], Literal["test1.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["GDPC1"], Literal["test2.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["GDPC1"], Literal["test2.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["ULCNFB"], Literal["global.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["ULCNFB"], Literal["global.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["ULCNFB"], Literal["test1.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["ULCNFB"], Literal["test1.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["ULCNFB"], Literal["test2.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["ULCNFB"], Literal["test2.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["test1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["test2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["test1.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["test1.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["test2.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["test2.2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["2", "1", "0"]], Literal["count"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], Tuple[Literal["0"], Literal["1"], Literal["2"]]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["2016-09"], Literal["GDPC1"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["2016-06"], Literal["CPIAUCSL"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["2016-06"], Literal["UNRATE"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["2016-06"], Literal["PAYEMS"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["2016-06"], Literal["GDPC1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["2016-06"], Literal["RSAFS"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["2016-05"], Literal["TTLCONS"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["2016-06"], Literal["TCU"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[Literal["yQ_f1", "yM_f1"]], pandas.core.series.Series], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yM_f1"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["yQ_f1"], numpy.str_], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], numpy.ndarray], /):
+        """
+        usage.seaborn: 1
+        usage.sklearn: 3
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, Literal["2009Q2"], None], /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, Literal["2009Q3"], None], /):
+        """
+        usage.statsmodels: 21
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["2009Q3"], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["2009Q2"], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], Literal["estimate (prev)"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], Literal["impact of revisions"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], Literal["impact of news"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], Literal["total impact"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], Literal["estimate (new)"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: slice[Literal["1960Q2"], Literal["1978"], Literal["1960Q2"]], /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: slice[Literal["1979Q1"], Literal["1981Q2"], Literal["1979Q1"]], /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], pandas.core.series.Series], /
+    ):
+        """
+        usage.seaborn: 2
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            pandas._libs.tslibs.timestamps.Timestamp,
+            pandas._libs.tslibs.timestamps.Timestamp,
+            pandas._libs.tslibs.timestamps.Timestamp,
+        ],
+        /,
+    ):
+        """
+        usage.dask: 2
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: slice[
+            pandas._libs.tslibs.period.Period,
+            pandas._libs.tslibs.period.Period,
+            pandas._libs.tslibs.period.Period,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: pandas.core.indexes.range.RangeIndex, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: pandas.core.indexes.numeric.Int64Index, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["baseline"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["short"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["nljump-1"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["ntjump-1"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["nljump-1-ntjump-1"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["ds"]], /):
         """
         usage.prophet: 1
@@ -899,23 +3189,6 @@ class _LocIndexer:
         ...
 
     @overload
-    def __getitem__(
-        self, _0: Tuple[slice[None, None, None], pandas.core.series.Series], /
-    ):
-        """
-        usage.seaborn: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], numpy.ndarray], /):
-        """
-        usage.seaborn: 1
-        usage.sklearn: 3
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[numpy.float64, numpy.float64], /):
         """
         usage.seaborn: 1
@@ -926,13 +3199,6 @@ class _LocIndexer:
     def __getitem__(self, _0: List[Literal["c"]], /):
         """
         usage.seaborn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: pandas.core.indexes.base.Index, /):
-        """
-        usage.dask: 1
         """
         ...
 
@@ -1164,21 +3430,6 @@ class _LocIndexer:
         ...
 
     @overload
-    def __getitem__(
-        self,
-        _0: slice[
-            pandas._libs.tslibs.timestamps.Timestamp,
-            pandas._libs.tslibs.timestamps.Timestamp,
-            pandas._libs.tslibs.timestamps.Timestamp,
-        ],
-        /,
-    ):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: slice[Literal["A"], Literal["b"], Literal["A"]], /):
         """
         usage.dask: 1
@@ -1276,15 +3527,6 @@ class _LocIndexer:
 
     @overload
     def __getitem__(self, _0: Tuple[Callable, slice[None, None, None]], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self, _0: Tuple[pandas.core.series.Series, slice[None, None, None]], /
-    ):
         """
         usage.dask: 1
         """
@@ -2338,20 +4580,6 @@ class _LocIndexer:
         ...
 
     @overload
-    def __getitem__(self, _0: List[bool], /):
-        """
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], List[bool]], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["col_2"]], /):
         """
         usage.sklearn: 1
@@ -2365,6 +4593,7 @@ class _LocIndexer:
         usage.prophet: 1
         usage.seaborn: 14
         usage.sklearn: 30
+        usage.statsmodels: 455
         usage.xarray: 45
         """
         ...
@@ -2498,6 +4727,7 @@ class _LocIndexer:
     ):
         """
         usage.koalas: 5
+        usage.statsmodels: 1
         """
         ...
 
@@ -2636,9 +4866,998 @@ class _LocIndexer:
         ...
 
     @overload
+    def __setitem__(self, _0: Tuple[int, Literal["Bar"]], _1: int, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["[0.025"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["0.975]"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: None, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[numpy.ndarray, Literal["SD"]], _1: Literal[""], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[numpy.ndarray, Literal["SD (LB)"]], _1: Literal[""], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[numpy.ndarray, Literal["SD (UB)"]], _1: Literal[""], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[pandas.core.series.Series, Literal["fake"]], _1: float, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[int, int, int], Literal["time"]], _1: float, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[int, int, int], Literal["status"]], _1: float, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[int, int, int], Literal["x1"]], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[int, int, int], Literal["x2"]], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["censored"]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["upper_dl"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["nuncen_above"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["nobs_below"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["ncen_equal"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["prob_exceedance"]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], Literal["rank"]], _1: int, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["estimated"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], Literal["final"]], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["conc"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["censored"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["det_limit_index"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["rank"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["plot_pos"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["Zprelim"]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["final"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["upper_dl"]],
+        _1: List[float],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[pandas.core.series.Series, Literal["final"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[pandas.core.series.Series, Literal["Coef."]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, str], _1: numpy.float64, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[int, Literal["Wilks' lambda"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["Num DF"]], _1: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["Den DF"]], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["F Value"]], _1: numpy.float64, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["Pr > F"]], _1: numpy.float64, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["Den DF"]], _1: numpy.float64, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Wilks' lambda"], Literal["Value"]],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Pillai's trace"], Literal["Value"]],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[str, Literal["Value"]], _1: numpy.float64, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Roy's greatest root"], Literal["Value"]],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["Wilks' lambda"], Literal["Num DF"]], _1: int, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Wilks' lambda"], Literal["Den DF"]],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Wilks' lambda"], Literal["F Value"]],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Wilks' lambda"], Literal["Pr > F"]],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Pillai's trace"], Literal["Num DF"]],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Pillai's trace"], Literal["Den DF"]],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Pillai's trace"], Literal["F Value"]],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Pillai's trace"], Literal["Pr > F"]],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[str, Literal["Num DF"]], _1: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[str, Literal["Den DF"]], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[str, Literal["F Value"]], _1: numpy.float64, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[str, Literal["Pr > F"]], _1: numpy.float64, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Roy's greatest root"], Literal["Num DF"]],
+        _1: numpy.int64,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Roy's greatest root"], Literal["Den DF"]],
+        _1: numpy.int64,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Roy's greatest root"], Literal["F Value"]],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Roy's greatest root"], Literal["Pr > F"]],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["Wilks' lambda"], Literal["Num DF"]], _1: numpy.int64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[str, Literal["Num DF"]], _1: numpy.int64, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[str, Literal["Den DF"]], _1: numpy.float64, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __setitem__(self, _0: Tuple[int, Literal["y"]], _1: float, /):
         """
         usage.prophet: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["g"]], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["x1"]], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["z1"]], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["c1"]], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["c2"]], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["firm"]], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[List[str], List[Literal["sum_sq", "df"]]], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Residual"], List[Literal["df", "sum_sq"]]],
+        _1: Tuple[numpy.float64, numpy.float64],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Residual"], List[Literal["PR(>F)", "F"]]],
+        _1: Tuple[float, float],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[pandas.core.indexes.range.RangeIndex, Literal["df_diff"]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["F"]], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["PR(>F)"]], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["df"]], _1: int, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["Residual"], List[Literal["PR(>F)", "F", "df", "sum_sq"]]],
+        _1: Tuple[numpy.float64, numpy.float64, float, float],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["B"], Literal["F Value"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["B"], Literal["Num DF"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["B"], Literal["Den DF"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["B"], Literal["Pr > F"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A"], Literal["F Value"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A"], Literal["Num DF"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A"], Literal["Den DF"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A"], Literal["Pr > F"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A:B"], Literal["F Value"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A:B"], Literal["Num DF"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A:B"], Literal["Den DF"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A:B"], Literal["Pr > F"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["D"], Literal["F Value"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["D"], Literal["Num DF"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["D"], Literal["Den DF"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["D"], Literal["Pr > F"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A:D"], Literal["F Value"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A:D"], Literal["Num DF"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A:D"], Literal["Den DF"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A:D"], Literal["Pr > F"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["B:D"], Literal["F Value"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["B:D"], Literal["Num DF"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["B:D"], Literal["Den DF"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["B:D"], Literal["Pr > F"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A:B:D"], Literal["F Value"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A:B:D"], Literal["Num DF"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A:B:D"], Literal["Den DF"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["A:B:D"], Literal["Pr > F"]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], int], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 3
         """
         ...
 
@@ -2646,6 +5865,820 @@ class _LocIndexer:
     def __setitem__(self, _0: pandas.core.series.Series, _1: float, /):
         """
         usage.seaborn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[pandas.core.indexes.range.RangeIndex, Literal["c"]],
+        _1: float,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[pandas.core.indexes.range.RangeIndex, Literal["d"]],
+        _1: pandas._libs.missing.NAType,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], Literal["treat"]], _1: int, /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], Literal["emo"]], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], Literal["age"]], _1: int, /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None], Literal["x"]], _1: int, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], Literal["med"]], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], Literal["exp"]], _1: int, /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], Literal["mtime"]], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["M0"], List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["M1"], List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["Q0"], List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["Q1"], List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["M0"], List[Literal["1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["M1"], List[Literal["1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["Q0"], List[Literal["1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["Q1"], List[Literal["1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["y1"], List[Literal["2", "1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["y2"], List[Literal["2", "1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["y1"], List[Literal["b", "a"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["y2"], List[Literal["b", "a"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["y1"], List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["y2"], List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[int, List[Literal["global.2", "global.1"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[int, List[Literal["block", "global"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, List[Literal["global"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["yM1_f1"], List[Literal["0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["yM2_f1"], List[Literal["0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["yQ1_f1"], List[Literal["0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["yQ2_f1"], List[Literal["0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["y"], List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["f1"], List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["f2"], List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["yM1_f1"], List[Literal["a"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["yM2_f1"], List[Literal["a"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["f1"], List[Literal["b.2", "b.1"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["f2"], List[Literal["b.2", "b.1"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["yM1_f2"], List[Literal["b.2", "b.1"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["yM2_f2"], List[Literal["b.2", "b.1"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["yQ1_f1"], List[Literal["a"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["yQ2_f1"], List[Literal["a"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["yQ1_f2"], List[Literal["b.2", "b.1"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["yQ2_f2"], List[Literal["b.2", "b.1"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["CPIAUCSL"], List[Literal["0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["UNRATE"], List[Literal["0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["PAYEMS"], List[Literal["0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["GDPC1"], List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["ULCNFB"], List[Literal["0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["CPIAUCSL"], List[Literal["1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["UNRATE"], List[Literal["1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["PAYEMS"], List[Literal["1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["GDPC1"], List[Literal["1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["ULCNFB"], List[Literal["1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["CPIAUCSL"], List[Literal["test1", "global"]]],
+        _1: bool,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["UNRATE"], List[Literal["test2", "global"]]],
+        _1: bool,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["PAYEMS"], List[Literal["test2", "global"]]],
+        _1: bool,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["RSAFS"], List[Literal["test2", "test1", "global"]]],
+        _1: bool,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["TTLCONS"], List[Literal["test1", "global"]]],
+        _1: bool,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["TCU"], List[Literal["test2", "global"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["GDPC1"], List[Literal["test2", "test1", "global"]]],
+        _1: bool,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["ULCNFB"], List[Literal["global"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            Literal["CPIAUCSL"],
+            List[Literal["test1.2", "test1.1", "global.2", "global.1"]],
+        ],
+        _1: bool,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            Literal["UNRATE"],
+            List[Literal["test2.2", "test2.1", "global.2", "global.1"]],
+        ],
+        _1: bool,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            Literal["PAYEMS"],
+            List[Literal["test2.2", "test2.1", "global.2", "global.1"]],
+        ],
+        _1: bool,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["RSAFS"], List[str]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            Literal["TTLCONS"],
+            List[Literal["test1.2", "test1.1", "global.2", "global.1"]],
+        ],
+        _1: bool,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            Literal["TCU"], List[Literal["test2.2", "test2.1", "global.2", "global.1"]]
+        ],
+        _1: bool,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["GDPC1"], List[str]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[Literal["ULCNFB"], List[Literal["global.2", "global.1"]]],
+        _1: bool,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["RSAFS"], List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["TTLCONS"], List[Literal["0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["TCU"], List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["CPIAUCSL"], List[Literal["2", "1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["UNRATE"], List[Literal["2", "1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["PAYEMS"], List[Literal["2", "1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["RSAFS"], List[Literal["2", "1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["TTLCONS"], List[Literal["2", "1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["TCU"], List[Literal["2", "1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["GDPC1"], List[Literal["2", "1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["ULCNFB"], List[Literal["2", "1", "0"]]], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["yM_f1"], List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[Literal["yQ_f1"], List[Literal["0"]]], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["2009Q2"]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["2009Q3"]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["2009Q4"]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["2010Q1"]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -2665,16 +6698,12 @@ class _LocIndexer:
         """
         ...
 
-    def __setitem__(
-        self,
-        _0: object,
-        _1: Union[float, pandas.core.series.Series, int, pandas.core.frame.DataFrame],
-        /,
-    ):
+    def __setitem__(self, _0: object, _1: object, /):
         """
         usage.koalas: 33
         usage.prophet: 1
         usage.seaborn: 3
+        usage.statsmodels: 210
         """
         ...
 
@@ -2709,6 +6738,7 @@ class _iLocIndexer:
         usage.koalas: 11
         usage.prophet: 1
         usage.sklearn: 1
+        usage.statsmodels: 72
         usage.xarray: 3
         """
         ...
@@ -2718,6 +6748,7 @@ class _iLocIndexer:
         """
         usage.koalas: 2
         usage.sklearn: 1
+        usage.statsmodels: 28
         """
         ...
 
@@ -2727,6 +6758,7 @@ class _iLocIndexer:
         usage.dask: 11
         usage.koalas: 3
         usage.sklearn: 8
+        usage.statsmodels: 71
         """
         ...
 
@@ -2738,6 +6770,7 @@ class _iLocIndexer:
         usage.prophet: 10
         usage.seaborn: 2
         usage.sklearn: 1
+        usage.statsmodels: 49
         usage.xarray: 2
         """
         ...
@@ -2757,6 +6790,7 @@ class _iLocIndexer:
         usage.modin: 1
         usage.seaborn: 4
         usage.sklearn: 2
+        usage.statsmodels: 16
         """
         ...
 
@@ -2787,6 +6821,7 @@ class _iLocIndexer:
         """
         usage.koalas: 2
         usage.sklearn: 3
+        usage.statsmodels: 13
         """
         ...
 
@@ -2825,6 +6860,7 @@ class _iLocIndexer:
         usage.koalas: 3
         usage.prophet: 2
         usage.sklearn: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -2832,6 +6868,7 @@ class _iLocIndexer:
     def __getitem__(self, _0: Tuple[numpy.ndarray, slice[None, None, None]], /):
         """
         usage.koalas: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -2878,6 +6915,7 @@ class _iLocIndexer:
         usage.dask: 8
         usage.koalas: 3
         usage.sklearn: 1
+        usage.statsmodels: 15
         """
         ...
 
@@ -2886,6 +6924,7 @@ class _iLocIndexer:
         """
         usage.dask: 5
         usage.koalas: 3
+        usage.statsmodels: 67
         """
         ...
 
@@ -2900,6 +6939,7 @@ class _iLocIndexer:
     def __getitem__(self, _0: slice[int, int, int], /):
         """
         usage.koalas: 3
+        usage.statsmodels: 9
         """
         ...
 
@@ -2914,6 +6954,75 @@ class _iLocIndexer:
     def __getitem__(self, _0: slice[None, int, None], /):
         """
         usage.koalas: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, int, None]], /
+    ):
+        """
+        usage.statsmodels: 31
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, int, None], slice[None, None, None]], /
+    ):
+        """
+        usage.sklearn: 1
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, slice[None, None, None]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], slice[int, None, int]], /):
+        """
+        usage.statsmodels: 19
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, int], /):
+        """
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[None, None, None]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, slice[None, int, None]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, None, int], slice[None, int, None]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, None, int], slice[int, None, int]], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -3013,22 +7122,6 @@ class _iLocIndexer:
         """
         ...
 
-    @overload
-    def __getitem__(self, _0: Tuple[numpy.ndarray, int], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self, _0: Tuple[slice[None, int, None], slice[None, None, None]], /
-    ):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
     def __getitem__(self, _0: object, /):
         """
         usage.dask: 71
@@ -3037,6 +7130,7 @@ class _iLocIndexer:
         usage.prophet: 14
         usage.seaborn: 12
         usage.sklearn: 24
+        usage.statsmodels: 407
         usage.xarray: 5
         """
         ...
@@ -3052,6 +7146,7 @@ class _iLocIndexer:
     def __setitem__(self, _0: Tuple[int, int], _1: int, /):
         """
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -3078,6 +7173,7 @@ class _iLocIndexer:
     def __setitem__(self, _0: int, _1: int, /):
         """
         usage.koalas: 5
+        usage.statsmodels: 3
         """
         ...
 
@@ -3126,6 +7222,262 @@ class _iLocIndexer:
         ...
 
     @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None], int], _1: List[str], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], int],
+        _1: List[Literal["Kurtosis:", "Skew:", "Prob(Omnibus):", "Omnibus:"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], int],
+        _1: List[Literal["Kurtosis: ", "Skew: ", "Prob(Omnibus): ", "Omnibus: "]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], int],
+        _1: List[Literal["Kurtosis:  ", "Skew:  ", "Prob(Omnibus):  ", "Omnibus:  "]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], int],
+        _1: List[
+            Literal[
+                "Df Model:",
+                "No. Observations:",
+                "Date:",
+                "Dependent Variable:",
+                "Model:",
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: float, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 14
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], int],
+        _1: List[
+            Literal[
+                "Num. events:", "Sample size:", "Ties:", "Dependent variable:", "Model:"
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], int],
+        _1: List[
+            Literal[
+                "Num. events: ",
+                "Sample size: ",
+                "Ties: ",
+                "Dependent variable: ",
+                "Model: ",
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], int],
+        _1: List[Literal["Ties:", "Dependent variable:", "Model:"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[numpy.ndarray, int], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[List[int], int], _1: float, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], int], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.sklearn: 4
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], int], _1: List[Literal[""]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], int], _1: List[Literal["  "]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None], int], _1: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: numpy.float64, /):
+        """
+        usage.statsmodels: 11
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[int, int, int], slice[None, None, None]], _1: float, /
+    ):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, None, int], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: float, /):
+        """
+        usage.dask: 2
+        usage.statsmodels: 20
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, slice[int, int, int]], _1: float, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: numpy.float64, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[int, None, int]],
+        _1: pandas.core.frame.DataFrame,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, list], _1: Literal["."], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, int, int], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, int, None], slice[None, None, None]], _1: float, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[int, int, int], int], _1: float, /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
     def __setitem__(
         self,
         _0: Tuple[slice[None, None, None], List[int]],
@@ -3145,27 +7497,6 @@ class _iLocIndexer:
         ...
 
     @overload
-    def __setitem__(self, _0: int, _1: float, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[List[int], int], _1: float, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[int, int], _1: float, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def __setitem__(
         self, _0: Tuple[slice[None, None, None], numpy.int32], _1: numpy.float64, /
     ):
@@ -3174,33 +7505,28 @@ class _iLocIndexer:
         """
         ...
 
-    @overload
-    def __setitem__(
-        self, _0: Tuple[slice[None, None, None], int], _1: pandas.core.series.Series, /
-    ):
-        """
-        usage.sklearn: 4
-        """
-        ...
-
     def __setitem__(
         self,
         _0: Union[
             Tuple[
-                Union[int, List[int], slice[None, Union[None, int], None]],
-                Union[int, numpy.int32, List[int]],
+                Union[
+                    slice[Union[None, int], Union[None, int], Union[None, int]],
+                    List[int],
+                    numpy.ndarray,
+                    int,
+                ],
+                Union[
+                    slice[Union[int, None], Union[int, None], Union[int, None]],
+                    List[int],
+                    int,
+                    numpy.int32,
+                ],
             ],
-            slice[Union[int, None], Union[None, int], Union[int, None]],
             List[int],
+            slice[Union[None, int], Union[int, None], Union[None, int]],
             int,
         ],
-        _1: Union[
-            numpy.float64,
-            pandas.core.series.Series,
-            pandas.core.frame.DataFrame,
-            int,
-            float,
-        ],
+        _1: object,
         /,
     ):
         """
@@ -3208,5 +7534,6 @@ class _iLocIndexer:
         usage.koalas: 28
         usage.seaborn: 3
         usage.sklearn: 5
+        usage.statsmodels: 88
         """
         ...

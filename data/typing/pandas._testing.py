@@ -75,6 +75,7 @@ def assert_frame_equal(
     usage.dask: 20
     usage.networkx: 2
     usage.seaborn: 5
+    usage.statsmodels: 88
     """
     ...
 
@@ -87,6 +88,7 @@ def assert_frame_equal(
 ):
     """
     usage.dask: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -127,6 +129,7 @@ def assert_frame_equal(
     usage.koalas: 4
     usage.networkx: 2
     usage.seaborn: 5
+    usage.statsmodels: 89
     """
     ...
 
@@ -209,6 +212,7 @@ def assert_index_equal(
 ):
     """
     usage.dask: 36
+    usage.statsmodels: 12
     usage.xarray: 2
     """
     ...
@@ -221,18 +225,8 @@ def assert_index_equal(
 ):
     """
     usage.dask: 3
+    usage.statsmodels: 4
     usage.xarray: 3
-    """
-    ...
-
-
-@overload
-def assert_index_equal(
-    left: pandas.core.indexes.range.RangeIndex,
-    right: pandas.core.indexes.numeric.Int64Index,
-):
-    """
-    usage.dask: 2
     """
     ...
 
@@ -244,6 +238,7 @@ def assert_index_equal(
 ):
     """
     usage.dask: 7
+    usage.statsmodels: 4
     """
     ...
 
@@ -255,6 +250,42 @@ def assert_index_equal(
 ):
     """
     usage.dask: 3
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_index_equal(
+    left: pandas.core.indexes.datetimes.DatetimeIndex,
+    right: pandas.core.indexes.datetimes.DatetimeIndex,
+):
+    """
+    usage.dask: 1
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def assert_index_equal(
+    left: pandas.core.indexes.period.PeriodIndex,
+    right: pandas.core.indexes.period.PeriodIndex,
+):
+    """
+    usage.dask: 1
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_index_equal(
+    left: pandas.core.indexes.range.RangeIndex,
+    right: pandas.core.indexes.numeric.Int64Index,
+):
+    """
+    usage.dask: 2
     """
     ...
 
@@ -283,33 +314,11 @@ def assert_index_equal(
 
 @overload
 def assert_index_equal(
-    left: pandas.core.indexes.datetimes.DatetimeIndex,
-    right: pandas.core.indexes.datetimes.DatetimeIndex,
-):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
-def assert_index_equal(
     left: pandas.core.indexes.numeric.Float64Index,
     right: pandas.core.indexes.numeric.Float64Index,
 ):
     """
     usage.dask: 5
-    """
-    ...
-
-
-@overload
-def assert_index_equal(
-    left: pandas.core.indexes.period.PeriodIndex,
-    right: pandas.core.indexes.period.PeriodIndex,
-):
-    """
-    usage.dask: 1
     """
     ...
 
@@ -329,6 +338,7 @@ def assert_index_equal(left: object, right: object, check_exact: bool = ...):
     """
     usage.dask: 68
     usage.koalas: 6
+    usage.statsmodels: 39
     usage.xarray: 5
     """
     ...
@@ -367,6 +377,7 @@ def assert_series_equal(
     """
     usage.dask: 17
     usage.seaborn: 1
+    usage.statsmodels: 48
     """
     ...
 
@@ -406,6 +417,7 @@ def assert_series_equal(
     usage.dask: 19
     usage.koalas: 2
     usage.seaborn: 1
+    usage.statsmodels: 48
     """
     ...
 
@@ -413,6 +425,13 @@ def assert_series_equal(
 def getSeriesData():
     """
     usage.modin: 4
+    """
+    ...
+
+
+def makeDataFrame():
+    """
+    usage.statsmodels: 5
     """
     ...
 

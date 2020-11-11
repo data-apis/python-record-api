@@ -43,6 +43,93 @@ def _validate_usecols_arg(
 
 
 @overload
+def read_csv(
+    filepath_or_buffer: str,
+    sep: Literal[","],
+    engine: Literal["c"],
+    float_precision: Literal["high"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def read_csv(filepath_or_buffer: str, sep: Literal["\\s"], engine: Literal["python"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def read_csv(filepath_or_buffer: str, sep: Literal[";"], engine: Literal["python"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def read_csv(filepath_or_buffer: _io.StringIO, index_col: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def read_csv(filepath_or_buffer: _io.StringIO):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def read_csv(filepath_or_buffer: str):
+    """
+    usage.modin: 4
+    usage.seaborn: 1
+    usage.statsmodels: 32
+    """
+    ...
+
+
+@overload
+def read_csv(filepath_or_buffer: str, index_col: Literal["Row.names"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def read_csv(filepath_or_buffer: str, index_col: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def read_csv(filepath_or_buffer: _io.StringIO, index_col: None):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def read_csv(filepath_or_buffer: str, delimiter: Literal["\\s+"], header: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def read_csv(filepath_or_buffer: Literal["test.csv"], nrows: int):
     """
     usage.modin: 2
@@ -564,15 +651,6 @@ def read_csv(
 ):
     """
     usage.modin: 1
-    """
-    ...
-
-
-@overload
-def read_csv(filepath_or_buffer: str):
-    """
-    usage.modin: 4
-    usage.seaborn: 1
     """
     ...
 
@@ -2740,11 +2818,13 @@ def read_csv(filepath_or_buffer: _io.BytesIO, header: None, names: List[Literal[
 def read_csv(
     _0: Union[str, _io.StringIO] = ...,
     /,
-    filepath_or_buffer: Union[str, _io.BytesIO] = ...,
+    filepath_or_buffer: Union[str, _io.BytesIO, _io.StringIO] = ...,
     skipfooter: int = ...,
     encoding: Union[str, None] = ...,
-    sep: Union[Literal[",", "###", "\t"], None] = ...,
-    header: Union[int, None, List[int], Literal["infer"]] = ...,
+    sep: Union[Literal[",", "###", "\t", ";", "\\s"], None] = ...,
+    engine: Union[Literal["python", "c"], None] = ...,
+    delimiter: Union[Literal["\t", "\\s+"], None] = ...,
+    header: Union[int, None, Literal["infer"], List[int]] = ...,
     names: Union[List[Union[str, int]], None] = ...,
     lineterminator: Union[None, Literal["\n"]] = ...,
     skiprows: Union[List[int], range, int, None] = ...,
@@ -2763,7 +2843,7 @@ def read_csv(
         Literal["int64", "category"],
         Type[float],
     ] = ...,
-    index_col: Union[int, Literal["col1"], None] = ...,
+    index_col: Union[int, None, Literal["col1", "Row.names"]] = ...,
     compression: Literal["infer", "zip", "xz", "bz2", "gzip"] = ...,
     usecols: Union[List[Union[int, str]], None] = ...,
     parse_dates: Union[
@@ -2776,7 +2856,6 @@ def read_csv(
     ] = ...,
     nrows: Union[int, None] = ...,
     quoting: int = ...,
-    engine: Union[None, Literal["python"]] = ...,
     *,
     _: None = ...,
     cache_dates: bool = ...,
@@ -2791,7 +2870,6 @@ def read_csv(
     error_bad_lines: bool = ...,
     escapechar: None = ...,
     false_values: None = ...,
-    float_precision: None = ...,
     infer_datetime_format: bool = ...,
     iterator: bool = ...,
     keep_date_col: bool = ...,
@@ -2815,6 +2893,7 @@ def read_csv(
     usage.dask: 101
     usage.modin: 68
     usage.seaborn: 1
+    usage.statsmodels: 44
     """
     ...
 

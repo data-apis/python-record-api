@@ -13,12 +13,16 @@ MaskedArray: object
 # usage.scipy: 1
 add: object
 
+# usage.statsmodels: 1
+allclose: object
+
 # usage.dask: 2
 # usage.matplotlib: 19
 # usage.pandas: 1
 # usage.scipy: 41
 # usage.skimage: 5
 # usage.sklearn: 4
+# usage.statsmodels: 1
 # usage.xarray: 1
 array: object
 

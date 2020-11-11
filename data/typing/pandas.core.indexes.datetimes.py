@@ -1,6 +1,13 @@
 from typing import *
 
 
+def bdate_range(start: Literal["2000-1-1"], periods: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
 @overload
 def date_range(start: Literal["20130101"], periods: int):
     """
@@ -162,6 +169,7 @@ def date_range(start: Literal["2013-3-11 21:45:00"], periods: int, freq: Literal
 @overload
 def date_range(start: Literal["2000-01-01"], periods: int):
     """
+    usage.statsmodels: 1
     usage.xarray: 27
     """
     ...
@@ -392,6 +400,7 @@ def date_range(start: Literal["2000-01-16"], periods: int):
 @overload
 def date_range(start: Literal["2000-01-01"], periods: int, freq: Literal["MS"]):
     """
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -485,6 +494,7 @@ def date_range(start: Literal["1/1/2011"], periods: int, freq: Literal["H"]):
 @overload
 def date_range(start: Literal["2000-01-01"], periods: int, freq: Literal["M"]):
     """
+    usage.statsmodels: 2
     usage.xarray: 1
     """
     ...
@@ -595,6 +605,7 @@ def date_range(start: Literal["2000-01-01"], end: Literal["2000-01-10"]):
 @overload
 def date_range(start: Literal["2000-1-1"], periods: int):
     """
+    usage.statsmodels: 2
     usage.xarray: 1
     """
     ...
@@ -639,6 +650,881 @@ def date_range(
 
 
 @overload
+def date_range(start: Literal["19580329"], periods: int, freq: Literal["W-SAT"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.QuarterBegin,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    end: pandas._libs.tslibs.timestamps.Timestamp,
+    freq: pandas._libs.tslibs.offsets.QuarterBegin,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["12-31-1999"], periods: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.YearBegin,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    end: pandas._libs.tslibs.timestamps.Timestamp,
+    freq: pandas._libs.tslibs.offsets.Nano,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.Nano,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["1972-4-30"], end: Literal["2006-4-30"], freq: Literal["A-APR"]
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    end: pandas._libs.tslibs.timestamps.Timestamp,
+    freq: pandas._libs.tslibs.offsets.YearEnd,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2006-4-30"], end: Literal["2016-4-30"], freq: Literal["A-APR"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["1970-01-01"], end: Literal["1990-01-01"], freq: Literal["AS"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    end: pandas._libs.tslibs.timestamps.Timestamp,
+    freq: pandas._libs.tslibs.offsets.YearBegin,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    end: pandas._libs.tslibs.timestamps.Timestamp,
+    freq: pandas._libs.tslibs.offsets.Day,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    end: pandas._libs.tslibs.timestamps.Timestamp,
+    freq: pandas._libs.tslibs.offsets.Week,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    end: pandas._libs.tslibs.timestamps.Timestamp,
+    freq: pandas._libs.tslibs.offsets.MonthEnd,
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    end: pandas._libs.tslibs.timestamps.Timestamp,
+    freq: pandas._libs.tslibs.offsets.QuarterEnd,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    end: pandas._libs.tslibs.timestamps.Timestamp,
+    freq: pandas._libs.tslibs.offsets.Second,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    end: pandas._libs.tslibs.timestamps.Timestamp,
+    freq: pandas._libs.tslibs.offsets.Minute,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.Day,
+):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1950-01-02"], periods: int, freq: Literal["D"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1950-01-01"], periods: int, freq: Literal["D"]):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.MonthEnd,
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1950-02"], periods: int, freq: Literal["M"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1950-01"], periods: int, freq: Literal["M"]):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1970-01-01"], periods: int, freq: Literal["N"]):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000Q1"], periods: int, freq: Literal["QS"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["1959-01-01"], end: Literal["2009-10-01"], freq: Literal["Q"]
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-1-1"], periods: int, freq: Literal["MS"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    end: pandas._libs.tslibs.timestamps.Timestamp,
+    freq: pandas._libs.tslibs.offsets.MonthBegin,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.MonthBegin,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-1-1"], periods: int, freq: Literal["M"]):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["1960-01-01"], end: Literal["1982-10-01"], freq: Literal["QS"]
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["1960-04-01"], end: Literal["1978-10-01"], freq: Literal["QS"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int, freq: Literal["W"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int, freq: Literal["M"]):
+    """
+    usage.statsmodels: 11
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int, freq: Literal["Q"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int, freq: Literal["Q-DEC"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int, freq: Literal["Q-JAN"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int, freq: Literal["QS"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int, freq: Literal["QS-DEC"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int, freq: Literal["QS-APR"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], periods: int, freq: Literal["MS"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1960-01-01"], periods: int, freq: Literal["MS"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["1980-01-01"], end: Literal["1981-01-01"], freq: Literal["AS"]
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["1980-01-01"], end: Literal["1984-01-01"], freq: Literal["AS"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["1871-01-01"], end: Literal["1970-01-01"], freq: Literal["AS"]
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp, periods: int, freq: Literal["MS"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp, periods: int, freq: Literal["M"]
+):
+    """
+    usage.prophet: 1
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.QuarterEnd,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1970-01-01"], periods: int, freq: Literal["QS"]):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["1947-01-01"], end: Literal["1995-07-01"], freq: Literal["QS"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1980-1-1"], periods: int, freq: Literal["MS"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-01"], periods: int, freq: Literal["M"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-03"], periods: int, freq: Literal["M"]):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["1959-01-01"], end: Literal["2009-7-01"], freq: Literal["QS"]
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp, periods: int, freq: Literal["QS"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1959-01-01"], periods: int, freq: Literal["AS"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1959-01-01"], periods: int, freq: Literal["QS"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1959-01-01"], periods: int, freq: Literal["MS"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1959-01-01"], periods: int, freq: Literal["T"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.Minute,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2000-01-01"], end: Literal["2009-01-01"], freq: Literal["AS"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1700"], periods: int, freq: Literal["A"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.YearEnd,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2005"], end: Literal["2016"], freq: Literal["A"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1/1/1990"], periods: int, freq: Literal["M"]):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["31-12-1999"], periods: int, freq: Literal["M"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["31-01-2000"], periods: int, freq: Literal["M"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1-1-1950"], periods: int, freq: Literal["M"]):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2020-1-1"], periods: int, freq: Literal["D"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1700"], end: Literal["2009"], freq: Literal["A"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000"], end: Literal["2015"], freq: Literal["A"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1990"], periods: int, freq: Literal["Q"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["31-12-2000"], periods: int):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2020-01-01"], periods: int, freq: Literal["A"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2020-01-01"], periods: int, freq: Literal["H"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2020-01-01"], periods: int, freq: Literal["B"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2020-01-01"], periods: int, freq: Literal["D"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2020-01-01"], periods: int, freq: Literal["M"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2020-01-01"], periods: int, freq: Literal["Q"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-1-1"], periods: int, freq: Literal["D"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.BusinessDay,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2020-01-01"], periods: int, freq: Literal["unknown"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-01-03"], periods: int, freq: Literal["H"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-01-03"], periods: int, freq: Literal["B"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2000-01-03"], periods: int, freq: Literal["D"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1/1/1951"], periods: int, freq: Literal["A"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["31-1-2000"], periods: int, freq: Literal["Q"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["31-1-2000"], periods: int, freq: Literal["M"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1/1/1951"], periods: int, freq: Literal["Q"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1-1-1959"], periods: int, freq: Literal["M"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.BQuarterEnd,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.BusinessMonthEnd,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1-1-1950"], periods: int, freq: Literal["MS"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def date_range(start: Literal["2012-06-15"], end: Literal["2012-09-15"]):
     """
     usage.prophet: 1
@@ -658,16 +1544,6 @@ def date_range(
 
 @overload
 def date_range(start: Literal["2016-12-20"], end: Literal["2016-12-31"]):
-    """
-    usage.prophet: 1
-    """
-    ...
-
-
-@overload
-def date_range(
-    start: pandas._libs.tslibs.timestamps.Timestamp, periods: int, freq: Literal["M"]
-):
     """
     usage.prophet: 1
     """
@@ -1651,6 +2527,7 @@ def date_range(
     usage.modin: 36
     usage.prophet: 4
     usage.seaborn: 1
+    usage.statsmodels: 181
     usage.xarray: 122
     """
     ...
@@ -1662,6 +2539,7 @@ class DatetimeIndex:
     __module__: ClassVar[object]
 
     # usage.dask: 2
+    # usage.statsmodels: 2
     __name__: ClassVar[object]
 
     # usage.dask: 1
@@ -1670,6 +2548,7 @@ class DatetimeIndex:
     # usage.dask: 1
     day: object
 
+    # usage.statsmodels: 4
     # usage.xarray: 1
     dayofweek: object
 
@@ -1681,15 +2560,25 @@ class DatetimeIndex:
     dtype: object
 
     # usage.dask: 4
+    # usage.statsmodels: 33
     freq: None
 
+    # usage.statsmodels: 3
+    freqstr: object
+
+    # usage.statsmodels: 2
     # usage.xarray: 1
     hour: object
 
+    # usage.statsmodels: 2
+    inferred_freq: object
+
     # usage.dask: 1
+    # usage.statsmodels: 2
     is_all_dates: object
 
     # usage.dask: 2
+    # usage.statsmodels: 1
     # usage.xarray: 2
     is_monotonic: object
 
@@ -1697,6 +2586,7 @@ class DatetimeIndex:
     is_unique: object
 
     # usage.dask: 4
+    # usage.statsmodels: 2
     # usage.xarray: 1
     month: object
 
@@ -1712,6 +2602,10 @@ class DatetimeIndex:
     # usage.xarray: 1
     ndim: object
 
+    # usage.statsmodels: 1
+    quarter: object
+
+    # usage.statsmodels: 28
     # usage.xarray: 1
     shape: object
 
@@ -1725,6 +2619,7 @@ class DatetimeIndex:
     tz: object
 
     # usage.modin: 1
+    # usage.statsmodels: 7
     # usage.xarray: 16
     values: object
 
@@ -1844,6 +2739,7 @@ class DatetimeIndex:
         """
         usage.koalas: 1
         usage.prophet: 1
+        usage.statsmodels: 15
         usage.xarray: 1
         """
         ...
@@ -1854,6 +2750,7 @@ class DatetimeIndex:
         usage.dask: 18
         usage.modin: 2
         usage.prophet: 2
+        usage.statsmodels: 101
         usage.xarray: 6
         """
         ...
@@ -1861,6 +2758,7 @@ class DatetimeIndex:
     @overload
     def __getitem__(self, _0: slice[int, None, int], /):
         """
+        usage.statsmodels: 12
         usage.xarray: 2
         """
         ...
@@ -1869,6 +2767,7 @@ class DatetimeIndex:
     def __getitem__(self, _0: slice[int, int, int], /):
         """
         usage.dask: 2
+        usage.statsmodels: 10
         usage.xarray: 1
         """
         ...
@@ -1877,6 +2776,7 @@ class DatetimeIndex:
     def __getitem__(self, _0: numpy.ndarray, /):
         """
         usage.prophet: 3
+        usage.statsmodels: 1
         usage.xarray: 2
         """
         ...
@@ -1896,21 +2796,86 @@ class DatetimeIndex:
         """
         ...
 
-    def __getitem__(
-        self,
-        _0: Union[
-            int,
-            numpy.ndarray,
-            slice[Union[int, None], Union[None, int], Union[int, None]],
-        ],
-        /,
-    ):
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, ellipsis], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, numpy.int64, None], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[numpy.int64, None, numpy.int64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[int], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.int64, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[numpy.int64, int, numpy.int64], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[numpy.int64, numpy.int64, numpy.int64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, numpy.int64, int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    def __getitem__(self, _0: object, /):
         """
         usage.dask: 21
         usage.koalas: 1
         usage.modin: 2
         usage.prophet: 6
+        usage.statsmodels: 151
         usage.xarray: 20
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 1
+        usage.prophet: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -1921,18 +2886,10 @@ class DatetimeIndex:
         """
         ...
 
-    @overload
-    def __gt__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        """
-        usage.dask: 1
-        usage.prophet: 1
-        """
-        ...
-
     def __gt__(
         self,
         _0: Union[
-            pandas._libs.tslibs.timestamps.Timestamp, numpy.ndarray, numpy.datetime64
+            pandas._libs.tslibs.timestamps.Timestamp, numpy.datetime64, numpy.ndarray
         ],
         /,
     ):
@@ -1940,6 +2897,7 @@ class DatetimeIndex:
         usage.dask: 1
         usage.pandas: 2
         usage.prophet: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -2025,11 +2983,35 @@ class DatetimeIndex:
         """
         ...
 
+    @overload
+    def __rsub__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
     def __rsub__(
         self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /
     ):
         """
         usage.pandas: 32
+        """
+        ...
+
+    def __rsub__(
+        self,
+        _0: Union[
+            numpy.datetime64,
+            numpy.timedelta64,
+            numpy.ndarray,
+            pandas.core.indexes.datetimes.DatetimeIndex,
+        ],
+        /,
+    ):
+        """
+        usage.pandas: 32
+        usage.statsmodels: 2
         """
         ...
 
@@ -2049,6 +3031,13 @@ class DatetimeIndex:
         ...
 
     @overload
+    def __sub__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
     def __sub__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /):
         """
         usage.pandas: 75
@@ -2059,6 +3048,7 @@ class DatetimeIndex:
         self,
         _0: Union[
             pandas._libs.tslibs.timestamps.Timestamp,
+            pandas.core.indexes.datetimes.DatetimeIndex,
             numpy.ndarray,
             numpy.timedelta64,
             numpy.datetime64,
@@ -2068,6 +3058,7 @@ class DatetimeIndex:
         """
         usage.pandas: 75
         usage.prophet: 1
+        usage.statsmodels: 2
         usage.xarray: 4
         """
         ...
@@ -2086,6 +3077,7 @@ class DatetimeIndex:
 
     def equals(self, /, other: pandas.core.indexes.datetimes.DatetimeIndex):
         """
+        usage.statsmodels: 7
         usage.xarray: 2
         """
         ...

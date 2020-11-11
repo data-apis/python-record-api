@@ -24,9 +24,30 @@ def _check_fill_value(fill_value: Union[float, int], ndtype: numpy.dtype):
     ...
 
 
+@overload
+def allclose(a: numpy.ma.core.MaskedArray, b: numpy.ndarray, atol: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def allclose(a: numpy.ma.core.MaskedArray, b: numpy.ma.core.MaskedArray):
     """
     usage.scipy: 1
+    """
+    ...
+
+
+def allclose(
+    a: numpy.ma.core.MaskedArray,
+    b: Union[numpy.ma.core.MaskedArray, numpy.ndarray],
+    atol: float = ...,
+):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -79,6 +100,24 @@ def array(data: numpy.ndarray, mask: numpy.ndarray):
 def array(data: List[Union[float, int]], mask: List[bool]):
     """
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def array(data: numpy.ndarray):
+    """
+    usage.matplotlib: 3
+    usage.scipy: 10
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(data: numpy.ndarray, mask: List[List[bool]]):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -177,15 +216,6 @@ def array(data: List[float], mask: List[bool]):
 def array(data: List[int], mask: List[bool]):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def array(data: numpy.ndarray):
-    """
-    usage.matplotlib: 3
-    usage.scipy: 10
     """
     ...
 
@@ -400,7 +430,7 @@ def array(
     subok: bool = ...,
     ndmin: int = ...,
     mask: Union[
-        numpy.ndarray, numpy.bool_, bool, List[Union[int, bool, List[int]]]
+        numpy.ndarray, numpy.bool_, bool, List[Union[List[Union[bool, int]], int, bool]]
     ] = ...,
 ):
     """
@@ -410,6 +440,7 @@ def array(
     usage.scipy: 92
     usage.skimage: 7
     usage.sklearn: 4
+    usage.statsmodels: 2
     usage.xarray: 1
     """
     ...
@@ -2396,6 +2427,7 @@ class MaskedArray:
     # usage.scipy: 12
     # usage.seaborn: 2
     # usage.sklearn: 2
+    # usage.statsmodels: 2
     # usage.xarray: 3
     data: object
 
@@ -2419,6 +2451,7 @@ class MaskedArray:
     # usage.seaborn: 3
     # usage.skimage: 5
     # usage.sklearn: 2
+    # usage.statsmodels: 1
     # usage.xarray: 6
     mask: numpy.ndarray
 
@@ -4063,6 +4096,14 @@ class MaskedArray:
         ...
 
     @overload
+    def __truediv__(self, _0: numpy.ndarray, /):
+        """
+        usage.scipy: 4
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __truediv__(self, _0: float, /):
         """
         usage.matplotlib: 2
@@ -4075,13 +4116,6 @@ class MaskedArray:
         """
         usage.matplotlib: 1
         usage.scipy: 7
-        """
-        ...
-
-    @overload
-    def __truediv__(self, _0: numpy.ndarray, /):
-        """
-        usage.scipy: 4
         """
         ...
 
@@ -4112,6 +4146,7 @@ class MaskedArray:
         usage.matplotlib: 8
         usage.scipy: 36
         usage.skimage: 1
+        usage.statsmodels: 1
         """
         ...
 

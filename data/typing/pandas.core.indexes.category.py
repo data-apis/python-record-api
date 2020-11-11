@@ -90,6 +90,7 @@ class CategoricalIndex:
     @overload
     def __getitem__(self, _0: slice[None, int, None], /):
         """
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -126,7 +127,7 @@ class CategoricalIndex:
     def __getitem__(
         self,
         _0: Union[
-            slice[Union[None, int], Union[int, None], Union[None, int]],
+            slice[Union[int, None], Union[None, int], Union[int, None]],
             int,
             numpy.ndarray,
         ],
@@ -134,6 +135,7 @@ class CategoricalIndex:
     ):
         """
         usage.dask: 5
+        usage.statsmodels: 1
         usage.xarray: 5
         """
         ...
