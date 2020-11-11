@@ -5,6 +5,27 @@ __name__: object
 
 
 @overload
+def fft(a: numpy.ndarray, n: int):
+    """
+    usage.dask: 6
+    usage.scipy: 3
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def fft(a: numpy.ndarray):
+    """
+    usage.dask: 11
+    usage.matplotlib: 3
+    usage.scipy: 6
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
 def fft(a: pandas.core.series.Series):
     """
     usage.pandas: 1
@@ -16,16 +37,6 @@ def fft(a: pandas.core.series.Series):
 def fft(a: List[float]):
     """
     usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def fft(a: numpy.ndarray):
-    """
-    usage.dask: 11
-    usage.matplotlib: 3
-    usage.scipy: 6
     """
     ...
 
@@ -45,15 +56,6 @@ def fft(a: numpy.ndarray, n: int, axis: int):
     usage.dask: 8
     usage.matplotlib: 5
     usage.scipy: 16
-    """
-    ...
-
-
-@overload
-def fft(a: numpy.ndarray, n: int):
-    """
-    usage.dask: 6
-    usage.scipy: 3
     """
     ...
 
@@ -98,6 +100,7 @@ def fft(
     usage.matplotlib: 8
     usage.pandas: 1
     usage.scipy: 34
+    usage.statsmodels: 4
     """
     ...
 
@@ -190,6 +193,7 @@ def fftfreq(n: int):
     """
     usage.scipy: 7
     usage.skimage: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -210,6 +214,7 @@ def fftfreq(n: int, d: Union[float, numpy.ndarray] = ...):
     usage.matplotlib: 1
     usage.scipy: 29
     usage.skimage: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -405,18 +410,19 @@ def hfft(
 
 
 @overload
-def ifft(a: List[float]):
+def ifft(a: numpy.ndarray):
     """
-    usage.scipy: 3
+    usage.dask: 10
+    usage.scipy: 7
+    usage.statsmodels: 2
     """
     ...
 
 
 @overload
-def ifft(a: numpy.ndarray):
+def ifft(a: List[float]):
     """
-    usage.dask: 10
-    usage.scipy: 7
+    usage.scipy: 3
     """
     ...
 
@@ -475,6 +481,7 @@ def ifft(
     """
     usage.dask: 36
     usage.scipy: 23
+    usage.statsmodels: 2
     """
     ...
 
@@ -737,6 +744,7 @@ def irfft(a: numpy.ndarray):
     """
     usage.dask: 10
     usage.scipy: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -794,6 +802,7 @@ def irfft(
     """
     usage.dask: 35
     usage.scipy: 6
+    usage.statsmodels: 1
     """
     ...
 
@@ -929,6 +938,15 @@ def irfftn(
 
 
 @overload
+def rfft(a: numpy.ndarray, n: int):
+    """
+    usage.dask: 6
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def rfft(a: pandas.core.series.Series):
     """
     usage.pandas: 1
@@ -971,14 +989,6 @@ def rfft(a: numpy.ndarray, n: None, axis: int):
 
 
 @overload
-def rfft(a: numpy.ndarray, n: int):
-    """
-    usage.dask: 6
-    """
-    ...
-
-
-@overload
 def rfft(a: numpy.ndarray, axis: int):
     """
     usage.dask: 5
@@ -999,6 +1009,7 @@ def rfft(
     usage.dask: 35
     usage.pandas: 1
     usage.scipy: 9
+    usage.statsmodels: 1
     """
     ...
 

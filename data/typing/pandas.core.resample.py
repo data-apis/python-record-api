@@ -91,6 +91,20 @@ class DatetimeIndexResampler:
         ...
 
 
+class PeriodIndexResampler:
+    def f(self, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    def g(self, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+
 class TimeGrouper:
 
     # usage.dask: 1

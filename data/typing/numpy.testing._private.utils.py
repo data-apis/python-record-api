@@ -6,6 +6,7 @@ def assert_(val: numpy.bool_):
     """
     usage.scipy: 503
     usage.skimage: 63
+    usage.statsmodels: 41
     """
     ...
 
@@ -24,6 +25,32 @@ def assert_(val: bool):
     """
     usage.scipy: 916
     usage.skimage: 18
+    usage.statsmodels: 351
+    """
+    ...
+
+
+@overload
+def assert_(val: bool, msg: str):
+    """
+    usage.scipy: 84
+    usage.statsmodels: 11
+    """
+    ...
+
+
+@overload
+def assert_(val: bool, msg: Literal["not equal [] and []"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_(val: numpy.ndarray, msg: Literal["array([nan])"]):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -40,14 +67,6 @@ def assert_(val: bool, msg: Literal["1.5.1"]):
 def assert_(val: bool, msg: Literal[""]):
     """
     usage.scipy: 15
-    """
-    ...
-
-
-@overload
-def assert_(val: bool, msg: str):
-    """
-    usage.scipy: 84
     """
     ...
 
@@ -675,6 +694,7 @@ def assert_(val: object, msg: object = ...):
     """
     usage.scipy: 1721
     usage.skimage: 83
+    usage.statsmodels: 405
     """
     ...
 
@@ -686,6 +706,7 @@ def assert_allclose(actual: numpy.float64, desired: int, atol: float):
     usage.scipy: 51
     usage.skimage: 1
     usage.sklearn: 2
+    usage.statsmodels: 3
     """
     ...
 
@@ -696,6 +717,7 @@ def assert_allclose(actual: numpy.ndarray, desired: int, atol: float):
     usage.scipy: 68
     usage.skimage: 15
     usage.sklearn: 2
+    usage.statsmodels: 12
     """
     ...
 
@@ -707,6 +729,7 @@ def assert_allclose(actual: numpy.ndarray, desired: numpy.ndarray, rtol: float):
     usage.scipy: 298
     usage.skimage: 11
     usage.sklearn: 70
+    usage.statsmodels: 352
     """
     ...
 
@@ -719,6 +742,7 @@ def assert_allclose(actual: numpy.ndarray, desired: numpy.ndarray):
     usage.scipy: 872
     usage.skimage: 67
     usage.sklearn: 264
+    usage.statsmodels: 960
     usage.xarray: 21
     """
     ...
@@ -730,6 +754,7 @@ def assert_allclose(actual: float, desired: float, atol: float):
     usage.networkx: 6
     usage.scipy: 27
     usage.skimage: 3
+    usage.statsmodels: 8
     """
     ...
 
@@ -740,6 +765,7 @@ def assert_allclose(actual: float, desired: numpy.float64, atol: float):
     usage.networkx: 1
     usage.scipy: 1
     usage.skimage: 3
+    usage.statsmodels: 1
     """
     ...
 
@@ -751,6 +777,7 @@ def assert_allclose(actual: numpy.ndarray, desired: List[float]):
     usage.scipy: 88
     usage.skimage: 6
     usage.sklearn: 6
+    usage.statsmodels: 39
     """
     ...
 
@@ -763,6 +790,7 @@ def assert_allclose(
     usage.scipy: 15
     usage.skimage: 1
     usage.sklearn: 2
+    usage.statsmodels: 36
     """
     ...
 
@@ -774,6 +802,7 @@ def assert_allclose(actual: numpy.ndarray, desired: int):
     usage.scipy: 16
     usage.skimage: 22
     usage.sklearn: 1
+    usage.statsmodels: 87
     """
     ...
 
@@ -784,6 +813,7 @@ def assert_allclose(actual: numpy.float64, desired: numpy.float64):
     usage.scipy: 102
     usage.skimage: 2
     usage.sklearn: 21
+    usage.statsmodels: 138
     """
     ...
 
@@ -796,6 +826,7 @@ def assert_allclose(actual: numpy.ndarray, desired: numpy.ndarray, atol: float):
     usage.scipy: 238
     usage.skimage: 31
     usage.sklearn: 27
+    usage.statsmodels: 206
     """
     ...
 
@@ -814,6 +845,7 @@ def assert_allclose(actual: numpy.float64, desired: float, rtol: float):
     usage.scipy: 128
     usage.skimage: 1
     usage.sklearn: 7
+    usage.statsmodels: 157
     """
     ...
 
@@ -835,6 +867,7 @@ def assert_allclose(actual: numpy.float64, desired: int):
     usage.scipy: 20
     usage.skimage: 1
     usage.sklearn: 1
+    usage.statsmodels: 31
     """
     ...
 
@@ -844,6 +877,7 @@ def assert_allclose(actual: numpy.float64, desired: int, rtol: float, atol: floa
     """
     usage.scipy: 2
     usage.skimage: 1
+    usage.statsmodels: 15
     """
     ...
 
@@ -865,6 +899,7 @@ def assert_allclose(
     usage.scipy: 211
     usage.skimage: 1
     usage.sklearn: 15
+    usage.statsmodels: 258
     """
     ...
 
@@ -874,6 +909,7 @@ def assert_allclose(actual: numpy.ndarray, desired: numpy.float64):
     """
     usage.scipy: 37
     usage.sklearn: 1
+    usage.statsmodels: 15
     usage.xarray: 3
     """
     ...
@@ -895,6 +931,7 @@ def assert_allclose(actual: numpy.float64, desired: float):
     """
     usage.scipy: 112
     usage.sklearn: 5
+    usage.statsmodels: 91
     usage.xarray: 3
     """
     ...
@@ -905,6 +942,7 @@ def assert_allclose(actual: numpy.ndarray, desired: float):
     """
     usage.scipy: 75
     usage.sklearn: 2
+    usage.statsmodels: 52
     usage.xarray: 1
     """
     ...
@@ -928,11 +966,140 @@ def assert_allclose(actual: numpy.int64, desired: numpy.int64):
 
 
 @overload
-def assert_allclose(actual: numpy.float64, desired: float, atol: float):
+def assert_allclose(
+    actual: numpy.ndarray, desired: numpy.ndarray, rtol: int, atol: float
+):
     """
-    usage.matplotlib: 1
-    usage.scipy: 67
+    usage.scipy: 15
     usage.sklearn: 3
+    usage.statsmodels: 36
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: numpy.float64, rtol: float):
+    """
+    usage.scipy: 8
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: List[numpy.ndarray], desired: numpy.ndarray, rtol: float, atol: float
+):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: int, rtol: float):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: numpy.ndarray):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 12
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: int, rtol: float):
+    """
+    usage.scipy: 12
+    usage.sklearn: 1
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: int, desired: int, rtol: float):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series, desired: numpy.float64, rtol: float
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: numpy.float64, rtol: float):
+    """
+    usage.scipy: 62
+    usage.sklearn: 10
+    usage.statsmodels: 70
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series, desired: pandas.core.series.Series, atol: float
+):
+    """
+    usage.statsmodels: 23
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: pandas.core.series.Series, rtol: float
+):
+    """
+    usage.statsmodels: 17
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: pandas.core.frame.DataFrame, rtol: float
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: pandas.core.series.Series):
+    """
+    usage.statsmodels: 53
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.frame.DataFrame,
+    desired: numpy.ndarray,
+    rtol: float,
+    atol: float,
+):
+    """
+    usage.statsmodels: 9
     """
     ...
 
@@ -943,6 +1110,2893 @@ def assert_allclose(
 ):
     """
     usage.scipy: 16
+    usage.statsmodels: 31
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: float, rtol: float, atol: float):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 70
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: List[List[float]], rtol: float, atol: float
+):
+    """
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series, desired: List[float], rtol: float, atol: float
+):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.frame.DataFrame,
+    desired: List[List[float]],
+    rtol: float,
+    atol: float,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: pandas.core.series.Series, desired: numpy.ndarray):
+    """
+    usage.statsmodels: 32
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series,
+    desired: pandas.core.series.Series,
+    rtol: float,
+    atol: float,
+):
+    """
+    usage.statsmodels: 10
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64, desired: numpy.float64, rtol: int, atol: numpy.float64
+):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64, desired: numpy.float64, rtol: float, atol: float
+):
+    """
+    usage.scipy: 11
+    usage.sklearn: 2
+    usage.statsmodels: 43
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: float, atol: float):
+    """
+    usage.scipy: 30
+    usage.statsmodels: 15
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: Tuple[numpy.float64, numpy.float64], rtol: float
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: numpy.float64, atol: float):
+    """
+    usage.scipy: 40
+    usage.sklearn: 3
+    usage.statsmodels: 13
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: Tuple[numpy.float64, numpy.float64],
+    rtol: float,
+):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64, int, numpy.int64],
+    desired: Tuple[float, float, int, int],
+    rtol: float,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[List[float]], rtol: float):
+    """
+    usage.scipy: 2
+    usage.sklearn: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.frame.DataFrame,
+    desired: pandas.core.frame.DataFrame,
+    rtol: float,
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.frame.DataFrame, desired: pandas.core.frame.DataFrame
+):
+    """
+    usage.statsmodels: 62
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[float], atol: float):
+    """
+    usage.scipy: 18
+    usage.statsmodels: 91
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: float, atol: float):
+    """
+    usage.matplotlib: 1
+    usage.scipy: 67
+    usage.sklearn: 3
+    usage.statsmodels: 107
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[List[float]], atol: float):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: List[Union[float, int]], rtol: float, atol: float
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: Tuple[float, float],
+    rtol: float,
+):
+    """
+    usage.scipy: 6
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[float], desired: List[float], rtol: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: List[numpy.ndarray],
+    desired: pandas.core.series.Series,
+    rtol: float,
+    atol: float,
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series, desired: numpy.ndarray, rtol: float
+):
+    """
+    usage.statsmodels: 37
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series, desired: numpy.ndarray, rtol: float, atol: float
+):
+    """
+    usage.statsmodels: 26
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series, desired: pandas.core.series.Series, rtol: float
+):
+    """
+    usage.statsmodels: 11
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: int, desired: float, rtol: float):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: int, desired: numpy.float64, rtol: float):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: float, desired: numpy.float64, rtol: float):
+    """
+    usage.scipy: 2
+    usage.sklearn: 7
+    usage.statsmodels: 12
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: float, desired: float, rtol: float, atol: float):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: List[numpy.float64], desired: List[Union[numpy.float64, float]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: int, desired: int):
+    """
+    usage.scipy: 2
+    usage.sklearn: 1
+    usage.statsmodels: 17
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: Tuple[int, int], desired: numpy.ndarray):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: patsy.design_info.DesignMatrix, desired: numpy.ndarray):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: patsy.design_info.DesignMatrix, desired: patsy.design_info.DesignMatrix
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[numpy.float64], desired: numpy.ndarray):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[float], desired: numpy.ndarray, rtol: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: pandas.core.series.Series, rtol: float, atol: float
+):
+    """
+    usage.statsmodels: 11
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[int], desired: numpy.ndarray):
+    """
+    usage.scipy: 4
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series, desired: pandas.core.series.Series
+):
+    """
+    usage.statsmodels: 89
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64], desired: Tuple[numpy.float64], rtol: float
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[List[float]]):
+    """
+    usage.scipy: 2
+    usage.sklearn: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: List[List[Union[int, float]]], desired: numpy.ndarray, atol: float
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: pandas.core.series.Series, rtol: int, atol: float
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[float], rtol: float):
+    """
+    usage.matplotlib: 3
+    usage.scipy: 49
+    usage.sklearn: 6
+    usage.statsmodels: 18
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64], desired: List[float], rtol: float
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: float, desired: int, rtol: float):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[numpy.float64], rtol: float):
+    """
+    usage.scipy: 6
+    usage.sklearn: 1
+    usage.statsmodels: 10
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: float, atol: float, err_msg: str):
+    """
+    usage.scipy: 4
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64, desired: numpy.float64, atol: float, err_msg: str
+):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: float, desired: float, atol: float, err_msg: str):
+    """
+    usage.scipy: 4
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: int, atol: float, err_msg: str):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.ndarray,
+    rtol: float,
+    atol: float,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    atol: float,
+    err_msg: str,
+):
+    """
+    usage.scipy: 7
+    usage.sklearn: 5
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: float, desired: numpy.ndarray, rtol: float, atol: float, err_msg: str
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.float64,
+    rtol: float,
+    atol: float,
+    err_msg: str,
+):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.float64,
+    rtol: float,
+    atol: float,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: float, desired: float, rtol: float):
+    """
+    usage.scipy: 19
+    usage.sklearn: 9
+    usage.statsmodels: 15
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.int64, desired: numpy.int64, rtol: float):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: numpy.ndarray, rtol: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: int, desired: numpy.float64):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64, desired: numpy.ndarray, rtol: float, atol: float
+):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: Tuple[
+        float, float, float, float, float, float, float, float, float, float
+    ],
+    rtol: float,
+    atol: float,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series,
+    desired: Tuple[float, float, float, float, float, float, float, float, float],
+    rtol: float,
+    atol: float,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: float, rtol: float):
+    """
+    usage.scipy: 17
+    usage.statsmodels: 18
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: Tuple[float, float], rtol: float):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: Tuple[float, float, float, float, float, float, float, float],
+    rtol: float,
+    atol: float,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: Tuple[float, float, float, float, float, float, float],
+    rtol: float,
+    atol: float,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: Tuple[float, float, float], rtol: float, atol: float
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: numpy.ndarray, rtol: float):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: pandas.core.frame.DataFrame,
+    rtol: float,
+    atol: float,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.frame.DataFrame,
+    desired: pandas.core.frame.DataFrame,
+    rtol: float,
+    atol: float,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[float],
+    rtol: float,
+    atol: float,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: numpy.ndarray, atol: int):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 13
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[int], rtol: float):
+    """
+    usage.scipy: 24
+    usage.sklearn: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: pandas.core.frame.DataFrame):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 58
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[float], desired: List[numpy.float64]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: List[float], rtol: float, atol: int
+):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: numpy.float64, rtol: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series, desired: List[float], rtol: float
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.frame.DataFrame, desired: List[List[float]], rtol: float
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: pandas.core.frame.DataFrame, desired: float, rtol: float):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.frame.DataFrame, desired: numpy.ndarray, rtol: float
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: pandas.core.series.Series, atol: float
+):
+    """
+    usage.statsmodels: 30
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: pandas.core.frame.DataFrame,
+    rtol: float,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.ndarray, numpy.ndarray], desired: numpy.ndarray
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: pandas.core.frame.DataFrame,
+    atol: float,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: pandas.core.series.Series, desired: List[float]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series, desired: List[float], atol: float
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series, desired: List[Union[int, float]], atol: float
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64, desired: float, rtol: float, err_msg: Literal["True"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series, desired: pandas.core.series.Series, rtol: int
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: numpy.ndarray, atol: float):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.int64, desired: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: int, desired: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.int64, desired: numpy.float64):
+    """
+    usage.scipy: 5
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    atol: float,
+    err_msg: Literal["attribute: params"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.float64,
+    rtol: float,
+    atol: float,
+    err_msg: Literal["attribute: rsquared"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.float64,
+    rtol: float,
+    atol: float,
+    err_msg: Literal["attribute: df_resid"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: float,
+    rtol: float,
+    atol: float,
+    err_msg: Literal["attribute: df_model"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.float64,
+    rtol: float,
+    atol: float,
+    err_msg: Literal["attribute: llf"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.float64,
+    rtol: float,
+    atol: float,
+    err_msg: Literal["attribute: aic"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.float64,
+    rtol: float,
+    atol: float,
+    err_msg: Literal["attribute: bic"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    atol: float,
+    err_msg: Literal["attribute: bse"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    atol: float,
+    err_msg: Literal["attribute: tvalues"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    atol: float,
+    err_msg: Literal["attribute: pvalues"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    atol: int,
+    err_msg: Literal["attribute: tvalues"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    atol: int,
+    err_msg: Literal["attribute: params"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.float64,
+    rtol: float,
+    atol: int,
+    err_msg: Literal["attribute: rsquared"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.float64,
+    rtol: float,
+    atol: int,
+    err_msg: Literal["attribute: df_resid"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: float,
+    rtol: float,
+    atol: int,
+    err_msg: Literal["attribute: df_model"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.float64,
+    rtol: float,
+    atol: int,
+    err_msg: Literal["attribute: llf"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.float64,
+    rtol: float,
+    atol: int,
+    err_msg: Literal["attribute: aic"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.float64,
+    rtol: float,
+    atol: int,
+    err_msg: Literal["attribute: bic"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    atol: int,
+    err_msg: Literal["attribute: bse"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: int, rtol: float, atol: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: List[Union[int, float]],
+    desired: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray],
+    rtol: float,
+    atol: float,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: List[Union[int, float]], desired: List[Union[int, float]], rtol: float
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64, float, float],
+    desired: Tuple[numpy.float64, numpy.float64, float, float],
+    rtol: float,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: float, desired: numpy.ndarray, rtol: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: float, rtol: float, atol: int):
+    """
+    usage.scipy: 13
+    usage.statsmodels: 18
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: float, rtol: float, atol: int):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: float, rtol: int, atol: int):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: float, rtol: int, atol: float):
+    """
+    usage.scipy: 20
+    usage.sklearn: 1
+    usage.statsmodels: 23
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64, desired: numpy.float64, rtol: float, atol: int
+):
+    """
+    usage.scipy: 4
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: int, desired: numpy.int64):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: numpy.int64):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: List[numpy.float64],
+    desired: numpy.ndarray,
+    rtol: float,
+    err_msg: Literal["rank=1, niter=1952"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    atol: float,
+    err_msg: Literal["rank=1, niter=1952"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: List[numpy.float64],
+    desired: numpy.ndarray,
+    rtol: float,
+    err_msg: Literal["rank=2, niter=1924"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    atol: float,
+    err_msg: Literal["rank=2, niter=1924"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.matrix, desired: numpy.ndarray, rtol: float, atol: float
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: Tuple[float, float, int, int], atol: float
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: Tuple[float],
+    rtol: float,
+    err_msg: Literal["ols R2"],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: Tuple[float],
+    rtol: float,
+    err_msg: Literal["score simple"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: Tuple[float],
+    rtol: float,
+    err_msg: Literal["score mle"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.int64],
+    desired: Tuple[float, float, int],
+    rtol: float,
+    err_msg: Literal["Newey"],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.int64],
+    desired: Tuple[float, float, int],
+    rtol: float,
+    err_msg: Literal["Tauchen"],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: Tuple[float, float],
+    rtol: float,
+    err_msg: Literal["Wooldridge"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: Tuple[float, float],
+    rtol: float,
+    err_msg: Literal["score subset QMLE"],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: Tuple[float],
+    rtol: float,
+    err_msg: Literal["scoreB QMLE"],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: Tuple[float],
+    rtol: float,
+    err_msg: Literal["scoreV QMLE"],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: Tuple[float, float],
+    rtol: float,
+    err_msg: Literal["cmt"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: Tuple[float, float],
+    rtol: float,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: Tuple[float, float],
+    rtol: float,
+    err_msg: Literal["score reparam QMLE"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.float64],
+    desired: Tuple[float, float, float],
+    rtol: float,
+    err_msg: Literal["comp_lm uc"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.int64],
+    desired: Tuple[float, float, float],
+    rtol: float,
+    err_msg: Literal["Newey"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.int64],
+    desired: Tuple[float, float, float],
+    rtol: float,
+    err_msg: Literal["Tauchen"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: Tuple[numpy.ndarray, numpy.ndarray],
+    rtol: float,
+):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: int, desired: int, atol: float):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: float, desired: int, rtol: float, atol: float):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray],
+    desired: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray],
+    rtol: float,
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[float, float], desired: Tuple[int, float], rtol: float
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[numpy.float64], desired: List[float], rtol: float):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 12
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: List[Tuple[numpy.float64, numpy.float64, numpy.float64]],
+    rtol: float,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: List[
+        Tuple[
+            Union[numpy.int64, numpy.float64],
+            Union[numpy.int64, numpy.float64],
+            Union[numpy.int64, numpy.float64],
+        ]
+    ],
+    rtol: float,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[numpy.float64], desired: List[float], atol: float):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[float, numpy.float64], desired: List[float], atol: float
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: List[Union[numpy.float64, int]], desired: List[Union[float, int]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: Tuple[float, numpy.float64], desired: List[int]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: Tuple[float, numpy.float64], desired: Tuple[float, float]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64], desired: Tuple[float, float]
+):
+    """
+    usage.matplotlib: 9
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: Tuple[int, numpy.float64], desired: Tuple[int, float]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[float, numpy.float64], desired: Tuple[float, numpy.float64]
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: Tuple[numpy.float64, numpy.float64],
+):
+    """
+    usage.matplotlib: 4
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    err_msg: Literal["confintfailed"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    err_msg: Literal["datafailed"],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.int64,
+    desired: numpy.int64,
+    rtol: float,
+    err_msg: Literal["df_totalfailed"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    err_msg: Literal["groupsfailed"],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    err_msg: Literal["groupsuniquefailed"],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    err_msg: Literal["meandiffsfailed"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.float64,
+    rtol: float,
+    err_msg: Literal["q_critfailed"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    err_msg: Literal["rejectfailed"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    err_msg: Literal["reject2failed"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    err_msg: Literal["std_pairsfailed"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.float64,
+    rtol: float,
+    err_msg: Literal["variancefailed"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: List[numpy.ndarray],
+    desired: List[numpy.ndarray],
+    rtol: float,
+    err_msg: Literal["datalifailed"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    err_msg: Literal["groupintlabfailed"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: int, desired: int, rtol: float, err_msg: Literal["ngroupsfailed"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: int, desired: int, rtol: float, err_msg: Literal["nobsfailed"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: Tuple[numpy.ndarray, numpy.ndarray],
+    rtol: float,
+    err_msg: Literal["pairindicesfailed"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: float, desired: int, rtol: float, err_msg: Literal["effect_size failed"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: float, desired: int, rtol: float, err_msg: Literal["nobs failed"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: float, desired: float, rtol: float, err_msg: Literal["alpha failed"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64, desired: float, rtol: float, err_msg: Literal["power failed"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: float, desired: float, rtol: float, err_msg: Literal["effect_size failed"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: float, desired: int, rtol: float, err_msg: Literal["nobs1 failed"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: float, desired: int, rtol: float, err_msg: Literal["ratio failed"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: float, desired: float, rtol: float, err_msg: Literal["ratio failed"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: float,
+    desired: numpy.float64,
+    rtol: float,
+    err_msg: Literal["effect_size failed"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: float, desired: int, rtol: float, err_msg: Literal["df_num failed"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: float, desired: int, rtol: float, err_msg: Literal["df_denom failed"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64], desired: List[float], atol: float
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: Tuple[float, float], desired: List[float], rtol: float):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[Union[int, float]],
+    rtol: float,
+):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[float, float], desired: Tuple[float, float], atol: float
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: Tuple[float, float],
+    atol: float,
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[float, float], desired: Tuple[float, float], rtol: float
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[float], atol: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[numpy.float64], desired: List[float], atol: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[numpy.float64], desired: numpy.ndarray, rtol: float):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[float, numpy.float64], desired: List[Union[float, int]], rtol: float
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[int, numpy.float64], desired: numpy.ndarray, rtol: float
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[float, numpy.float64], desired: numpy.ndarray, rtol: float
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: Tuple[numpy.float64, numpy.float64],
+    rtol: float,
+    atol: float,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64], desired: numpy.ndarray, rtol: float
+):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, float], desired: numpy.ndarray, rtol: float
+):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[int]):
+    """
+    usage.matplotlib: 4
+    usage.scipy: 68
+    usage.sklearn: 9
+    usage.statsmodels: 16
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: float, desired: float):
+    """
+    usage.scipy: 14
+    usage.sklearn: 3
+    usage.statsmodels: 10
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: float, desired: int, atol: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: float, desired: numpy.float64):
+    """
+    usage.scipy: 3
+    usage.sklearn: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series, desired: numpy.ndarray, atol: float
+):
+    """
+    usage.statsmodels: 10
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: bool, desired: bool):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.float64],
+    desired: Tuple[float, float, float],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: Tuple[numpy.float64, numpy.float64, numpy.float64]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: statsmodels.tsa.innovations._arma_innovations._memoryviewslice,
+    desired: numpy.ndarray,
+    atol: float,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[numpy.float64]):
+    """
+    usage.scipy: 4
+    usage.sklearn: 4
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[numpy.ndarray]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: int, desired: pandas.core.frame.DataFrame):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: numpy.int64):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: pandas.core.series.Series, desired: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: pandas.core.series.Series, desired: float):
+    """
+    usage.statsmodels: 11
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: pandas.core.frame.DataFrame, desired: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: float, atol: int):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.frame.DataFrame,
+    desired: pandas.core.frame.DataFrame,
+    atol: float,
+):
+    """
+    usage.statsmodels: 12
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: List[Union[int, float]], atol: float
+):
+    """
+    usage.scipy: 5
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: pandas.core.frame.DataFrame, desired: numpy.ndarray):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: Tuple[int], desired: Tuple[int]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: Tuple[int, int], desired: Tuple[int, int]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[Union[int, numpy.float64]]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.frame.DataFrame,
+    desired: pandas.core.frame.DataFrame,
+    rtol: float,
+    atol: int,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: List[Union[float, int]], atol: float
+):
+    """
+    usage.scipy: 3
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[Union[int, float]]):
+    """
+    usage.matplotlib: 2
+    usage.scipy: 10
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: List[float], atol: float):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 47
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: pandas.core.frame.DataFrame, atol: float
+):
+    """
+    usage.statsmodels: 40
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.int32, desired: int):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.frame.DataFrame, desired: numpy.ndarray, atol: float
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: pandas.core.series.Series, desired: List[numpy.float64], atol: float
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: pandas.core.frame.DataFrame, desired: int):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: float, rtol: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: numpy.float64, atol: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.float64, desired: numpy.float64, rtol: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[Union[numpy.float64, int]]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[Union[numpy.float64, float]], desired: numpy.ndarray):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[Union[float, numpy.float64]], desired: numpy.ndarray):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: List[Union[float, numpy.float64]],
+    desired: List[Union[int, float]],
+    atol: float,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: List[numpy.ndarray], desired: List[numpy.ndarray], atol: float
+):
+    """
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[numpy.ndarray], desired: List[numpy.ndarray]):
+    """
+    usage.scipy: 10
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: float, desired: int):
+    """
+    usage.scipy: 5
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: numpy.ndarray, atol: float, err_msg: str
+):
+    """
+    usage.scipy: 6
+    usage.sklearn: 7
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: List[float], rtol: int, atol: float
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: List[float], desired: List[float], rtol: int, atol: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: List[Union[numpy.int64, numpy.float64]],
+    desired: List[Union[int, float]],
+    rtol: float,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: List[Union[numpy.int64, int, numpy.float64]],
+    desired: List[Union[int, float]],
+    rtol: float,
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: Tuple[numpy.ndarray, numpy.ndarray],
+    rtol: float,
+    atol: float,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    atol: float,
+    equal_nan: bool,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 14
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: float,
+    rtol: float,
+    atol: float,
+    equal_nan: bool,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: numpy.float64,
+    rtol: float,
+    atol: int,
+    equal_nan: bool,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 20
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.int64,
+    desired: int,
+    rtol: float,
+    atol: float,
+    equal_nan: bool,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: float,
+    desired: float,
+    rtol: float,
+    atol: float,
+    equal_nan: bool,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: int,
+    atol: float,
+    equal_nan: bool,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 39
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: List[numpy.ndarray],
+    rtol: int,
+    atol: float,
+    equal_nan: bool,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.float64,
+    desired: float,
+    rtol: int,
+    atol: float,
+    equal_nan: bool,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    rtol: float,
+    atol: int,
+    equal_nan: bool,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: numpy.int64,
+    desired: int,
+    rtol: int,
+    atol: float,
+    equal_nan: bool,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_allclose(
+    actual: float, desired: float, rtol: int, atol: float, equal_nan: bool, err_msg: str
+):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -963,26 +4017,6 @@ def assert_allclose(
 ):
     """
     usage.scipy: 292
-    """
-    ...
-
-
-@overload
-def assert_allclose(
-    actual: numpy.ndarray, desired: numpy.ndarray, rtol: int, atol: float
-):
-    """
-    usage.scipy: 15
-    usage.sklearn: 3
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.float64, desired: float, rtol: int, atol: float):
-    """
-    usage.scipy: 20
-    usage.sklearn: 1
     """
     ...
 
@@ -1010,15 +4044,6 @@ def assert_allclose(
 def assert_allclose(actual: float, desired: float, rtol: int, atol: float):
     """
     usage.scipy: 19
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.ndarray, desired: List[int], rtol: float):
-    """
-    usage.scipy: 24
-    usage.sklearn: 1
     """
     ...
 
@@ -1070,36 +4095,9 @@ def assert_allclose(
 
 
 @overload
-def assert_allclose(actual: float, desired: float):
-    """
-    usage.scipy: 14
-    usage.sklearn: 3
-    """
-    ...
-
-
-@overload
 def assert_allclose(actual: float, desired: numpy.float64, rtol: int, atol: float):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.float64, desired: float, rtol: float, atol: int):
-    """
-    usage.scipy: 13
-    """
-    ...
-
-
-@overload
-def assert_allclose(
-    actual: numpy.float64, desired: numpy.float64, rtol: float, atol: int
-):
-    """
-    usage.scipy: 4
     """
     ...
 
@@ -1386,16 +4384,6 @@ def assert_allclose(
 
 @overload
 def assert_allclose(
-    actual: List[numpy.ndarray], desired: numpy.ndarray, rtol: float, atol: float
-):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_allclose(
     actual: List[List[numpy.ndarray]], desired: numpy.ndarray, rtol: float, atol: float
 ):
     """
@@ -1416,14 +4404,6 @@ def assert_allclose(actual: List[numpy.ndarray], desired: numpy.ndarray, atol: f
 def assert_allclose(actual: float, desired: numpy.ndarray, atol: float):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.ndarray, desired: float, atol: float):
-    """
-    usage.scipy: 30
     """
     ...
 
@@ -1484,15 +4464,6 @@ def assert_allclose(
 def assert_allclose(actual: numpy.ndarray, desired: int, rtol: float, atol: float):
     """
     usage.scipy: 8
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: float, desired: numpy.float64):
-    """
-    usage.scipy: 3
-    usage.sklearn: 1
     """
     ...
 
@@ -1571,21 +4542,6 @@ def assert_allclose(
 ):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_allclose(
-    actual: numpy.ndarray,
-    desired: numpy.ndarray,
-    rtol: float,
-    atol: float,
-    err_msg: str,
-):
-    """
-    usage.scipy: 7
-    usage.sklearn: 5
     """
     ...
 
@@ -1698,26 +4654,6 @@ def assert_allclose(
 ):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_allclose(
-    actual: numpy.ndarray, desired: numpy.ndarray, atol: float, err_msg: str
-):
-    """
-    usage.scipy: 6
-    usage.sklearn: 7
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.float64, desired: numpy.float64, rtol: float):
-    """
-    usage.scipy: 62
-    usage.sklearn: 10
     """
     ...
 
@@ -2416,38 +5352,9 @@ def assert_allclose(actual: numpy.ndarray, desired: int, atol: float, err_msg: s
 
 
 @overload
-def assert_allclose(actual: numpy.ndarray, desired: List[int]):
-    """
-    usage.matplotlib: 4
-    usage.scipy: 68
-    usage.sklearn: 9
-    """
-    ...
-
-
-@overload
-def assert_allclose(
-    actual: numpy.float64, desired: numpy.ndarray, rtol: float, atol: float
-):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def assert_allclose(actual: List[numpy.ndarray], desired: List[numpy.float64]):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.ndarray, desired: List[numpy.float64]):
-    """
-    usage.scipy: 4
-    usage.sklearn: 4
     """
     ...
 
@@ -2801,17 +5708,6 @@ def assert_allclose(
 ):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def assert_allclose(
-    actual: numpy.float64, desired: numpy.float64, rtol: float, atol: float
-):
-    """
-    usage.scipy: 11
-    usage.sklearn: 2
     """
     ...
 
@@ -3319,27 +6215,9 @@ def assert_allclose(actual: numpy.float128, desired: numpy.float64, rtol: float)
 
 
 @overload
-def assert_allclose(actual: numpy.ndarray, desired: List[List[float]]):
-    """
-    usage.scipy: 2
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def assert_allclose(actual: numpy.ndarray, desired: List[List[List[float]]]):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: int, desired: int):
-    """
-    usage.scipy: 2
-    usage.sklearn: 1
     """
     ...
 
@@ -3478,32 +6356,6 @@ def assert_allclose(
 def assert_allclose(actual: numpy.ndarray, desired: int, atol: numpy.float64):
     """
     usage.scipy: 12
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.ndarray, desired: List[float], atol: float):
-    """
-    usage.scipy: 18
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.ndarray, desired: float, rtol: float):
-    """
-    usage.scipy: 17
-    """
-    ...
-
-
-@overload
-def assert_allclose(
-    actual: numpy.ndarray, desired: List[Union[int, float]], atol: float
-):
-    """
-    usage.scipy: 5
     """
     ...
 
@@ -3810,14 +6662,6 @@ def assert_allclose(
 
 
 @overload
-def assert_allclose(actual: numpy.ndarray, desired: numpy.float64, rtol: float):
-    """
-    usage.scipy: 8
-    """
-    ...
-
-
-@overload
 def assert_allclose(
     actual: numpy.ndarray, desired: List[int], rtol: float, atol: float
 ):
@@ -3828,37 +6672,11 @@ def assert_allclose(
 
 
 @overload
-def assert_allclose(actual: numpy.float64, desired: List[float], atol: float):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.ndarray, desired: List[float], rtol: float):
-    """
-    usage.matplotlib: 3
-    usage.scipy: 49
-    usage.sklearn: 6
-    """
-    ...
-
-
-@overload
 def assert_allclose(
     actual: List[float], desired: List[float], rtol: float, atol: float
 ):
     """
     usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: float, desired: float, rtol: float, atol: float):
-    """
-    usage.scipy: 1
     """
     ...
 
@@ -3942,57 +6760,9 @@ def assert_allclose(
 
 
 @overload
-def assert_allclose(
-    actual: numpy.float64,
-    desired: numpy.float64,
-    rtol: float,
-    atol: float,
-    err_msg: str,
-):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.int64, desired: numpy.int64, rtol: float):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.ndarray, desired: List[Union[int, float]]):
-    """
-    usage.matplotlib: 2
-    usage.scipy: 10
-    """
-    ...
-
-
-@overload
 def assert_allclose(actual: numpy.ndarray, desired: numpy.complex128):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.float64, desired: numpy.float64, atol: float):
-    """
-    usage.scipy: 40
-    usage.sklearn: 3
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: int, desired: int, atol: float):
-    """
-    usage.scipy: 1
     """
     ...
 
@@ -4041,32 +6811,6 @@ def assert_allclose(actual: numpy.float64, desired: float, err_msg: str):
 def assert_allclose(actual: numpy.ndarray, desired: Tuple[int, int], atol: float):
     """
     usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: float, desired: float, atol: float, err_msg: str):
-    """
-    usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.float64, desired: float, atol: float, err_msg: str):
-    """
-    usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def assert_allclose(
-    actual: numpy.float64, desired: numpy.float64, atol: float, err_msg: str
-):
-    """
-    usage.scipy: 1
     """
     ...
 
@@ -4165,15 +6909,6 @@ def assert_allclose(actual: complex, desired: int, atol: float):
 
 
 @overload
-def assert_allclose(actual: float, desired: int):
-    """
-    usage.scipy: 5
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def assert_allclose(actual: float, desired: int, rtol: numpy.float64, atol: float):
     """
     usage.scipy: 4
@@ -4241,14 +6976,6 @@ def assert_allclose(
 
 
 @overload
-def assert_allclose(actual: List[int], desired: numpy.ndarray):
-    """
-    usage.scipy: 4
-    """
-    ...
-
-
-@overload
 def assert_allclose(actual: Tuple[int], desired: numpy.ndarray):
     """
     usage.scipy: 3
@@ -4271,24 +6998,6 @@ def assert_allclose(
     """
     usage.scipy: 14
     usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.float64, desired: int, rtol: float):
-    """
-    usage.scipy: 12
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: float, desired: float, rtol: float):
-    """
-    usage.scipy: 19
-    usage.sklearn: 9
     """
     ...
 
@@ -4357,23 +7066,6 @@ def assert_allclose(actual: numpy.ndarray, desired: Tuple[int, float], rtol: flo
 def assert_allclose(actual: numpy.ndarray, desired: Tuple[int, numpy.float64]):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: int, desired: numpy.float64, rtol: float):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: float, desired: numpy.float64, rtol: float):
-    """
-    usage.scipy: 2
-    usage.sklearn: 7
     """
     ...
 
@@ -4974,16 +7666,6 @@ def assert_allclose(
 
 @overload
 def assert_allclose(
-    actual: numpy.ndarray, desired: List[Union[float, int]], atol: float
-):
-    """
-    usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def assert_allclose(
     actual: numpy.ndarray,
     desired: List[List[float]],
     atol: float,
@@ -5158,14 +7840,6 @@ def assert_allclose(actual: numpy.ndarray, desired: List[List[Union[int, float]]
 
 
 @overload
-def assert_allclose(actual: numpy.int64, desired: numpy.float64):
-    """
-    usage.scipy: 5
-    """
-    ...
-
-
-@overload
 def assert_allclose(actual: numpy.matrix, desired: numpy.matrix, atol: numpy.float64):
     """
     usage.scipy: 13
@@ -5221,14 +7895,6 @@ def assert_allclose(actual: numpy.ndarray, desired: List[Union[numpy.float64, fl
 
 
 @overload
-def assert_allclose(actual: numpy.ndarray, desired: List[Union[int, numpy.float64]]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def assert_allclose(actual: float, desired: int, rtol: int, atol: float):
     """
     usage.scipy: 4
@@ -5261,34 +7927,10 @@ def assert_allclose(actual: numpy.ndarray, desired: List[Tuple[float, float]]):
 
 
 @overload
-def assert_allclose(actual: List[numpy.ndarray], desired: List[numpy.ndarray]):
-    """
-    usage.scipy: 10
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.ndarray, desired: int, rtol: float):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def assert_allclose(actual: numpy.ndarray, desired: List[List[int]]):
     """
     usage.scipy: 1
     usage.sklearn: 5
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.float64, desired: float, rtol: int, atol: int):
-    """
-    usage.scipy: 1
     """
     ...
 
@@ -5424,16 +8066,6 @@ def assert_allclose(
     desired: numpy.complex128,
     atol: numpy.float64,
     err_msg: Tuple[float, complex],
-):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_allclose(
-    actual: numpy.float64, desired: numpy.float64, rtol: int, atol: numpy.float64
 ):
     """
     usage.scipy: 1
@@ -6650,14 +9282,6 @@ def assert_allclose(actual: numpy.float128, desired: float, atol: float):
 
 
 @overload
-def assert_allclose(actual: numpy.float64, desired: float, rtol: float, atol: float):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def assert_allclose(
     actual: Tuple[numpy.float64, numpy.float64],
     desired: Tuple[float, float],
@@ -7085,14 +9709,6 @@ def assert_allclose(
 
 
 @overload
-def assert_allclose(actual: numpy.float64, desired: numpy.ndarray, atol: float):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def assert_allclose(
     actual: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray],
     desired: List[Union[float, numpy.float64]],
@@ -7154,22 +9770,6 @@ def assert_allclose(
 
 
 @overload
-def assert_allclose(actual: numpy.ndarray, desired: List[numpy.ndarray]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.ndarray, desired: List[List[float]], atol: float):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def assert_allclose(
     actual: List[numpy.float64], desired: List[Union[int, float]], atol: float
 ):
@@ -7183,16 +9783,6 @@ def assert_allclose(
 def assert_allclose(actual: List[numpy.float64], desired: List[int], atol: float):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def assert_allclose(
-    actual: numpy.ndarray, desired: List[float], rtol: float, atol: int
-):
-    """
-    usage.scipy: 1
     """
     ...
 
@@ -7275,18 +9865,6 @@ def assert_allclose(
 
 @overload
 def assert_allclose(
-    actual: Tuple[numpy.float64, numpy.float64],
-    desired: Tuple[float, float],
-    rtol: float,
-):
-    """
-    usage.scipy: 6
-    """
-    ...
-
-
-@overload
-def assert_allclose(
     actual: Tuple[numpy.float64, numpy.float64, numpy.float64], desired: List[float]
 ):
     """
@@ -7306,14 +9884,6 @@ def assert_allclose(
 
 
 @overload
-def assert_allclose(actual: List[numpy.float64], desired: List[float], rtol: float):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def assert_allclose(
     actual: Tuple[numpy.float64, numpy.float64, numpy.float64],
     desired: List[float],
@@ -7327,26 +9897,9 @@ def assert_allclose(
 
 
 @overload
-def assert_allclose(actual: List[numpy.float64], desired: numpy.ndarray, rtol: float):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def assert_allclose(actual: Tuple[float, float], desired: List[float]):
     """
     usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.ndarray, desired: List[numpy.float64], rtol: float):
-    """
-    usage.scipy: 6
-    usage.sklearn: 1
     """
     ...
 
@@ -7576,14 +10129,6 @@ def assert_allclose(
 
 
 @overload
-def assert_allclose(actual: numpy.float64, desired: numpy.ndarray):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def assert_allclose(
     actual: numpy.ndarray, desired: List[List[Union[float, int]]], rtol: float
 ):
@@ -7611,15 +10156,6 @@ def assert_allclose(
 ):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.ndarray, desired: List[List[float]], rtol: float):
-    """
-    usage.scipy: 2
-    usage.sklearn: 1
     """
     ...
 
@@ -7864,27 +10400,6 @@ def assert_allclose(
 
 @overload
 def assert_allclose(
-    actual: Tuple[numpy.float64, numpy.float64], desired: Tuple[float, float]
-):
-    """
-    usage.matplotlib: 9
-    """
-    ...
-
-
-@overload
-def assert_allclose(
-    actual: Tuple[numpy.float64, numpy.float64],
-    desired: Tuple[numpy.float64, numpy.float64],
-):
-    """
-    usage.matplotlib: 4
-    """
-    ...
-
-
-@overload
-def assert_allclose(
     actual: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
     desired: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
     atol: float,
@@ -8012,14 +10527,6 @@ def assert_allclose(
 ):
     """
     usage.sklearn: 7
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.ndarray, desired: pandas.core.frame.DataFrame):
-    """
-    usage.sklearn: 1
     """
     ...
 
@@ -9155,14 +11662,6 @@ def assert_allclose(
 
 
 @overload
-def assert_allclose(actual: numpy.ndarray, desired: numpy.ndarray, atol: int):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def assert_allclose(
     actual: Tuple[float, float, float, float],
     desired: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
@@ -9256,8 +11755,9 @@ def assert_allclose(
     desired: object,
     rtol: Union[int, float, numpy.float64, bool] = ...,
     atol: Union[float, numpy.float128, numpy.float32, numpy.float64, int] = ...,
+    equal_nan: bool = ...,
     err_msg: Union[
-        str, Tuple[Union[complex, int, float, numpy.float64], ...], float, numpy.ndarray
+        str, Tuple[Union[numpy.float64, float, int, complex], ...], float, numpy.ndarray
     ] = ...,
     verbose: bool = ...,
 ):
@@ -9267,6 +11767,7 @@ def assert_allclose(
     usage.scipy: 4709
     usage.skimage: 169
     usage.sklearn: 760
+    usage.statsmodels: 4278
     usage.xarray: 38
     """
     ...
@@ -9279,6 +11780,7 @@ def assert_almost_equal(actual: numpy.float64, desired: int):
     usage.scipy: 41
     usage.skimage: 7
     usage.sklearn: 141
+    usage.statsmodels: 1
     """
     ...
 
@@ -9290,6 +11792,7 @@ def assert_almost_equal(actual: numpy.float64, desired: float):
     usage.scipy: 173
     usage.skimage: 47
     usage.sklearn: 189
+    usage.statsmodels: 16
     """
     ...
 
@@ -9301,6 +11804,7 @@ def assert_almost_equal(actual: numpy.ndarray, desired: numpy.ndarray):
     usage.scipy: 205
     usage.skimage: 125
     usage.sklearn: 127
+    usage.statsmodels: 166
     """
     ...
 
@@ -9311,6 +11815,7 @@ def assert_almost_equal(actual: numpy.ndarray, desired: numpy.ndarray, decimal: 
     usage.scipy: 43
     usage.skimage: 18
     usage.sklearn: 77
+    usage.statsmodels: 563
     """
     ...
 
@@ -9323,6 +11828,7 @@ def assert_almost_equal(actual: numpy.float64, desired: float, decimal: int):
     usage.scipy: 164
     usage.skimage: 35
     usage.sklearn: 109
+    usage.statsmodels: 286
     """
     ...
 
@@ -9333,6 +11839,7 @@ def assert_almost_equal(actual: numpy.float64, desired: numpy.float64, decimal: 
     usage.scipy: 64
     usage.skimage: 6
     usage.sklearn: 47
+    usage.statsmodels: 124
     """
     ...
 
@@ -9359,6 +11866,7 @@ def assert_almost_equal(actual: numpy.ndarray, desired: List[int], decimal: int)
     """
     usage.scipy: 1
     usage.skimage: 1
+    usage.statsmodels: 7
     """
     ...
 
@@ -9369,6 +11877,7 @@ def assert_almost_equal(actual: numpy.ndarray, desired: numpy.float64, decimal: 
     usage.scipy: 3
     usage.skimage: 1
     usage.sklearn: 8
+    usage.statsmodels: 3
     """
     ...
 
@@ -9387,6 +11896,7 @@ def assert_almost_equal(actual: numpy.float64, desired: int, decimal: int):
     usage.scipy: 10
     usage.skimage: 5
     usage.sklearn: 10
+    usage.statsmodels: 21
     """
     ...
 
@@ -9397,6 +11907,7 @@ def assert_almost_equal(actual: numpy.ndarray, desired: List[float]):
     usage.scipy: 19
     usage.skimage: 2
     usage.sklearn: 3
+    usage.statsmodels: 6
     """
     ...
 
@@ -9407,6 +11918,7 @@ def assert_almost_equal(actual: numpy.ndarray, desired: List[int]):
     usage.scipy: 46
     usage.skimage: 1
     usage.sklearn: 6
+    usage.statsmodels: 5
     """
     ...
 
@@ -9418,6 +11930,7 @@ def assert_almost_equal(actual: numpy.float64, desired: numpy.float64):
     usage.scipy: 67
     usage.skimage: 21
     usage.sklearn: 131
+    usage.statsmodels: 18
     """
     ...
 
@@ -9440,6 +11953,7 @@ def assert_almost_equal(actual: numpy.ndarray, desired: int):
     usage.scipy: 6
     usage.skimage: 5
     usage.sklearn: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -9450,6 +11964,7 @@ def assert_almost_equal(actual: numpy.ndarray, desired: numpy.float64):
     usage.scipy: 5
     usage.skimage: 1
     usage.sklearn: 9
+    usage.statsmodels: 2
     """
     ...
 
@@ -9499,6 +12014,7 @@ def assert_almost_equal(actual: int, desired: int):
     usage.scipy: 1
     usage.skimage: 3
     usage.sklearn: 2
+    usage.statsmodels: 4
     """
     ...
 
@@ -9521,6 +12037,7 @@ def assert_almost_equal(actual: float, desired: float):
     usage.scipy: 42
     usage.skimage: 16
     usage.sklearn: 33
+    usage.statsmodels: 1
     """
     ...
 
@@ -9600,6 +12117,7 @@ def assert_almost_equal(actual: float, desired: numpy.float64, decimal: int):
     usage.scipy: 13
     usage.skimage: 3
     usage.sklearn: 4
+    usage.statsmodels: 11
     """
     ...
 
@@ -9610,6 +12128,7 @@ def assert_almost_equal(actual: float, desired: int):
     usage.scipy: 6
     usage.skimage: 8
     usage.sklearn: 10
+    usage.statsmodels: 1
     """
     ...
 
@@ -9639,6 +12158,1473 @@ def assert_almost_equal(actual: numpy.ndarray, desired: List[List[int]]):
     """
     usage.skimage: 4
     usage.sklearn: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.ndarray, desired: List[float], decimal: int):
+    """
+    usage.scipy: 21
+    usage.statsmodels: 211
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: List[List[float]], decimal: int
+):
+    """
+    usage.statsmodels: 19
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.int64, desired: int, decimal: int):
+    """
+    usage.statsmodels: 11
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: List[List[List[float]]], decimal: int
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: int, desired: numpy.ndarray, decimal: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: float, desired: numpy.float64):
+    """
+    usage.scipy: 9
+    usage.sklearn: 9
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: List[Union[int, float]], decimal: int
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.ndarray, desired: None, decimal: int):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.float64, desired: numpy.float64, decimal: int, err_msg: str
+):
+    """
+    usage.scipy: 3
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: List[float],
+    decimal: int,
+    err_msg: Literal[" - cdf-ppf roundtrip"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    decimal: int,
+    err_msg: Literal[" - sf+cdf == 1"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: Tuple[float, float],
+    decimal: int,
+):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 28
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: float, desired: numpy.ndarray, decimal: int):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[float, float], desired: Tuple[float, float], decimal: int
+):
+    """
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: List[List[Union[int, float]]], decimal: int
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: pandas.core.series.Series, decimal: int
+):
+    """
+    usage.statsmodels: 63
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: pandas.core.series.Series, desired: List[float], decimal: int
+):
+    """
+    usage.statsmodels: 28
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: pandas.core.series.Series, desired: numpy.ndarray, decimal: int
+):
+    """
+    usage.statsmodels: 19
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: List[numpy.float64], desired: List[float]):
+    """
+    usage.matplotlib: 1
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: Tuple[
+        float, float, float, float, float, float, float, float, float, float
+    ],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: float, desired: float, decimal: int):
+    """
+    usage.networkx: 3
+    usage.scipy: 31
+    usage.sklearn: 5
+    usage.statsmodels: 20
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: pandas.core.series.Series,
+    desired: Tuple[float, float, float, float, float, float, float, float, float],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: float, desired: int, decimal: int):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: pandas.core.series.Series, desired: numpy.ndarray):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: pandas.core.frame.DataFrame, desired: numpy.ndarray):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: Tuple[float, float, float, float, float, float, float, float],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: Tuple[float, float, float, float, float, float, float],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: Tuple[float, float, float], decimal: int
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: int, desired: int, decimal: int):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.ndarray, desired: float, decimal: int):
+    """
+    usage.scipy: 10
+    usage.statsmodels: 26
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64], desired: List[float], decimal: int
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.ndarray, desired: pandas.core.series.Series):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.float64, desired: numpy.ndarray, decimal: int):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: pandas.core.frame.DataFrame, desired: numpy.ndarray, decimal: int
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.float64, desired: float, decimal: int, err_msg: str
+):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: Tuple[float, float, float, float, float, float],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: List[Tuple[float, float]], decimal: int
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: Tuple[float, float, float, float], decimal: int
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: numpy.ndarray, decimal: int, err_msg: str
+):
+    """
+    usage.scipy: 7
+    usage.sklearn: 2
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: numpy.ndarray, err_msg: Literal["cdfsquarenorm"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    err_msg: Literal["pdf squarenormchi2"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: numpy.ndarray, err_msg: Literal["sf squarenormchi2"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    err_msg: Literal["ppq squarenormchi2"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    err_msg: Literal["isf squarenormchi2"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: float, desired: numpy.float64, decimal: int, err_msg: str
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: Tuple[numpy.ndarray, numpy.ndarray],
+    err_msg: Literal["stats squarenormchi2"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: Tuple[numpy.ndarray, numpy.ndarray],
+    decimal: int,
+    err_msg: Literal["stats squarenormchi2"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: numpy.ndarray, err_msg: Literal["cdfabsnorm"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    err_msg: Literal["pdf absnormhalfnorm"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    err_msg: Literal["sf absnormhalfnorm"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    err_msg: Literal["ppq absnormhalfnorm"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    err_msg: Literal["isf absnormhalfnorm"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: Tuple[numpy.ndarray, numpy.ndarray],
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: Tuple[numpy.ndarray, numpy.ndarray],
+    decimal: int,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    err_msg: Literal["pdf absnormfoldnorm"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    err_msg: Literal["sf absnormfoldnorm"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    err_msg: Literal["ppq absnormfoldnorm"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    err_msg: Literal["isf absnormfoldnorm"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: numpy.ndarray, err_msg: Literal["pdf squarenormf"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: numpy.ndarray, err_msg: Literal["sf squarenormf"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: numpy.ndarray, err_msg: Literal["ppq squarenormf"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: numpy.ndarray, err_msg: Literal["isf squarenormf"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: float,
+    desired: numpy.float64,
+    decimal: int,
+    err_msg: Literal["moment squarenormf"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: Tuple[numpy.ndarray, numpy.ndarray],
+    err_msg: Literal["stats squarenormf"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: Tuple[numpy.ndarray, numpy.ndarray],
+    decimal: int,
+    err_msg: Literal["stats squarenormf"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: numpy.ndarray, err_msg: Literal["cdfnegsquarenorm"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray],
+    desired: List[numpy.float64],
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: List[List[int]], desired: numpy.ndarray):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: List[int], desired: numpy.ndarray):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+    desired: Tuple[float, float, float, float],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+    desired: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64, float, float],
+    desired: List[float],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64, float, float],
+    desired: Tuple[numpy.float64, numpy.float64, float, float],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: List[numpy.float64], decimal: int
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: List[numpy.ndarray], decimal: int
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: pandas.core.frame.DataFrame, decimal: int
+):
+    """
+    usage.statsmodels: 23
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64, int],
+    desired: List[Union[int, float]],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.float64, desired: int, decimal: int, err_msg: str
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: List[numpy.float64], desired: List[float], decimal: int
+):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.float64, desired: float, decimal: int, err_msg: Literal["NoneNone"]
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.float64,
+    desired: float,
+    decimal: int,
+    err_msg: Literal["None'linear'"],
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.float64,
+    desired: float,
+    decimal: int,
+    err_msg: Literal["None'quadratic'"],
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: List[float], desired: List[Union[numpy.float64, float]], decimal: int
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: List[numpy.float64], desired: List[Union[float, int]], decimal: int
+):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64], desired: List[numpy.float64]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: Tuple[numpy.float64, numpy.float64],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[Union[int, numpy.float64]],
+    decimal: int,
+    err_msg: Literal["(18, 20)normal"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(18, 20)beta"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(18, 20)wilson"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(18, 20)jeffreys"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(4, 20)agresti_coull"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(4, 20)normal"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(4, 20)beta"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(4, 20)wilson"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(4, 20)jeffreys"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(4, 200)normal"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(4, 200)beta"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(4, 200)wilson"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(4, 200)jeffreys"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(190, 200)normal"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(190, 200)beta"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(190, 200)wilson"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[Union[numpy.float64, int]],
+    decimal: int,
+    err_msg: Literal["(1, 30)agresti_coull"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[Union[numpy.float64, int]],
+    decimal: int,
+    err_msg: Literal["(1, 30)normal"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(1, 30)beta"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(1, 30)wilson"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[Union[int, numpy.float64]],
+    decimal: int,
+    err_msg: str,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[Union[int, numpy.float64]],
+    decimal: int,
+    err_msg: Literal["(29, 30)normal"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(29, 30)beta"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(29, 30)wilson"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(0, 30)agresti_coull"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(0, 30)normal"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[int, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(0, 30)beta"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(0, 30)wilson"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(30, 30)normal"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, int],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(30, 30)beta"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: List[numpy.float64],
+    decimal: int,
+    err_msg: Literal["(30, 30)wilson"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: List[numpy.float64], desired: numpy.ndarray):
+    """
+    usage.matplotlib: 3
+    usage.networkx: 9
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: List[numpy.float64], desired: List[numpy.float64], decimal: int
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.float64],
+    desired: List[float],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: List[float], desired: numpy.ndarray, decimal: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: scipy.stats.stats.NormaltestResult, desired: numpy.ndarray, decimal: int
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: scipy.stats.stats.SkewtestResult, desired: numpy.ndarray, decimal: int
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: scipy.stats.stats.KurtosistestResult, desired: numpy.ndarray, decimal: int
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: scipy.stats.stats.NormaltestResult,
+    desired: scipy.stats.stats.NormaltestResult,
+    decimal: int,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[float, numpy.float64], desired: numpy.ndarray, decimal: int
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: scipy.stats.morestats.ShapiroResult, desired: numpy.ndarray, decimal: int
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64], desired: numpy.ndarray, decimal: int
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.ndarray, numpy.ndarray], desired: numpy.ndarray, decimal: int
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.float64, desired: numpy.ndarray):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 3
     """
     ...
 
@@ -9649,15 +13635,197 @@ def assert_almost_equal(actual: numpy.ndarray, desired: float):
     usage.matplotlib: 4
     usage.scipy: 17
     usage.sklearn: 5
+    usage.statsmodels: 6
     """
     ...
 
 
 @overload
-def assert_almost_equal(actual: float, desired: numpy.float64):
+def assert_almost_equal(
+    actual: Tuple[
+        Tuple[numpy.float64, numpy.float64, numpy.float64],
+        Tuple[numpy.float64, numpy.float64, numpy.float64],
+    ],
+    desired: Tuple[Tuple[float, float], Tuple[float, float]],
+    decimal: int,
+):
     """
-    usage.scipy: 9
-    usage.sklearn: 9
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: scipy.stats.stats.Ttest_indResult,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: scipy.stats.stats.Ttest_indResult,
+    decimal: int,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64],
+    desired: scipy.stats.stats.Ttest_1sampResult,
+    decimal: int,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: List[numpy.ndarray],
+    desired: scipy.stats.stats.Ttest_1sampResult,
+    decimal: int,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: scipy.stats.stats.Ttest_indResult,
+    decimal: int,
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: Tuple[numpy.ndarray, numpy.ndarray],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.ndarray, numpy.ndarray],
+    desired: scipy.stats.stats.Ttest_1sampResult,
+    decimal: int,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray],
+    desired: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: List[float], desired: List[float]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.complex128, desired: float, decimal: int):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.ndarray, desired: complex, decimal: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.ndarray, desired: List[complex], decimal: int):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: List[Union[float, int]], decimal: int
+):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: List[Union[int, float]],
+    desired: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.int64],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.float64, float],
+    desired: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.int64],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.int64],
+    desired: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.int64],
+    decimal: int,
+):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -9809,33 +13977,7 @@ def assert_almost_equal(actual: numpy.bool_, desired: float):
 
 
 @overload
-def assert_almost_equal(actual: numpy.ndarray, desired: float, decimal: int):
-    """
-    usage.scipy: 10
-    """
-    ...
-
-
-@overload
 def assert_almost_equal(actual: numpy.ndarray, desired: Tuple[float, float]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(actual: numpy.ndarray, desired: List[float], decimal: int):
-    """
-    usage.scipy: 21
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(
-    actual: numpy.ndarray, desired: List[Union[float, int]], decimal: int
-):
     """
     usage.scipy: 1
     """
@@ -9895,14 +14037,6 @@ def assert_almost_equal(
 ):
     """
     usage.scipy: 6
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(actual: numpy.ndarray, desired: List[complex], decimal: int):
-    """
-    usage.scipy: 1
     """
     ...
 
@@ -9995,27 +14129,6 @@ def assert_almost_equal(
 def assert_almost_equal(actual: numpy.float64, desired: int, err_msg: str):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(actual: float, desired: float, decimal: int):
-    """
-    usage.networkx: 3
-    usage.scipy: 31
-    usage.sklearn: 5
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(
-    actual: numpy.ndarray, desired: numpy.ndarray, decimal: int, err_msg: str
-):
-    """
-    usage.scipy: 7
-    usage.sklearn: 2
     """
     ...
 
@@ -10891,16 +15004,6 @@ def assert_almost_equal(
 
 @overload
 def assert_almost_equal(
-    actual: numpy.float64, desired: numpy.float64, decimal: int, err_msg: str
-):
-    """
-    usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(
     actual: numpy.ndarray,
     desired: List[numpy.float64],
     decimal: int,
@@ -11545,14 +15648,6 @@ def assert_almost_equal(
 
 
 @overload
-def assert_almost_equal(actual: float, desired: int, decimal: int):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def assert_almost_equal(
     actual: numpy.float64,
     desired: float,
@@ -11561,18 +15656,6 @@ def assert_almost_equal(
 ):
     """
     usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(
-    actual: Tuple[numpy.float64, numpy.float64],
-    desired: Tuple[float, float],
-    decimal: int,
-):
-    """
-    usage.scipy: 1
     """
     ...
 
@@ -11714,16 +15797,6 @@ def assert_almost_equal(
 
 @overload
 def assert_almost_equal(
-    actual: List[numpy.float64], desired: List[float], decimal: int
-):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(
     actual: List[numpy.float64], desired: numpy.ndarray, decimal: int
 ):
     """
@@ -11743,15 +15816,6 @@ def assert_almost_equal(
 
 
 @overload
-def assert_almost_equal(actual: List[numpy.float64], desired: numpy.ndarray):
-    """
-    usage.matplotlib: 3
-    usage.networkx: 9
-    """
-    ...
-
-
-@overload
 def assert_almost_equal(actual: list, desired: numpy.ndarray):
     """
     usage.matplotlib: 1
@@ -11761,14 +15825,6 @@ def assert_almost_equal(actual: list, desired: numpy.ndarray):
 
 @overload
 def assert_almost_equal(actual: Tuple[float, float], desired: Tuple[int, int]):
-    """
-    usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(actual: List[numpy.float64], desired: List[float]):
     """
     usage.matplotlib: 1
     """
@@ -11800,14 +15856,6 @@ def assert_almost_equal(
 def assert_almost_equal(actual: numpy.float64, desired: float, err_msg: str):
     """
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(actual: numpy.float64, desired: numpy.ndarray):
-    """
-    usage.sklearn: 1
     """
     ...
 
@@ -11889,6 +15937,7 @@ def assert_almost_equal(
     usage.scipy: 1344
     usage.skimage: 345
     usage.sklearn: 965
+    usage.statsmodels: 1955
     """
     ...
 
@@ -12171,6 +16220,7 @@ def assert_array_almost_equal(x: numpy.ndarray, y: numpy.ndarray):
     usage.seaborn: 7
     usage.skimage: 64
     usage.sklearn: 886
+    usage.statsmodels: 9
     """
     ...
 
@@ -12182,6 +16232,7 @@ def assert_array_almost_equal(x: numpy.ndarray, y: numpy.ndarray, decimal: int):
     usage.scipy: 260
     usage.skimage: 14
     usage.sklearn: 226
+    usage.statsmodels: 38
     """
     ...
 
@@ -12219,6 +16270,7 @@ def assert_array_almost_equal(x: numpy.ndarray, y: List[int]):
     usage.scipy: 193
     usage.skimage: 6
     usage.sklearn: 61
+    usage.statsmodels: 1
     """
     ...
 
@@ -12298,6 +16350,105 @@ def assert_array_almost_equal(
 ):
     """
     usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: pandas.core.series.Series, y: numpy.ndarray):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(
+    x: List[numpy.float64], y: List[numpy.float64], decimal: int
+):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(
+    x: numpy.ndarray, y: List[List[Union[int, float]]], decimal: int
+):
+    """
+    usage.scipy: 8
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ndarray, y: List[List[float]], decimal: int):
+    """
+    usage.scipy: 5
+    usage.sklearn: 4
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ndarray, y: List[List[int]], decimal: int):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.float64, y: numpy.float64, decimal: int):
+    """
+    usage.scipy: 3
+    usage.sklearn: 13
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ndarray, y: List[float], decimal: int):
+    """
+    usage.matplotlib: 4
+    usage.scipy: 37
+    usage.sklearn: 61
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ndarray, y: List[List[int]]):
+    """
+    usage.scipy: 298
+    usage.sklearn: 4
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ndarray, y: List[List[float]]):
+    """
+    usage.scipy: 2
+    usage.sklearn: 16
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ndarray, y: pandas.core.series.Series):
+    """
+    usage.seaborn: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -12550,15 +16701,6 @@ def assert_array_almost_equal(
 ):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def assert_array_almost_equal(x: numpy.ndarray, y: List[List[int]]):
-    """
-    usage.scipy: 298
-    usage.sklearn: 4
     """
     ...
 
@@ -13182,16 +17324,6 @@ def assert_array_almost_equal(x: numpy.float64, y: float):
 
 
 @overload
-def assert_array_almost_equal(x: numpy.ndarray, y: List[float], decimal: int):
-    """
-    usage.matplotlib: 4
-    usage.scipy: 37
-    usage.sklearn: 61
-    """
-    ...
-
-
-@overload
 def assert_array_almost_equal(x: numpy.ndarray, y: List[int], decimal: int):
     """
     usage.scipy: 35
@@ -13216,15 +17348,6 @@ def assert_array_almost_equal(
 ):
     """
     usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def assert_array_almost_equal(x: numpy.ndarray, y: List[List[float]], decimal: int):
-    """
-    usage.scipy: 5
-    usage.sklearn: 4
     """
     ...
 
@@ -13284,16 +17407,6 @@ def assert_array_almost_equal(x: List[complex], y: numpy.ndarray):
 def assert_array_almost_equal(x: numpy.complex128, y: float):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_array_almost_equal(
-    x: numpy.ndarray, y: List[List[Union[int, float]]], decimal: int
-):
-    """
-    usage.scipy: 8
     """
     ...
 
@@ -13630,15 +17743,6 @@ def assert_array_almost_equal(x: numpy.ndarray, y: numpy.matrix, decimal: int):
 
 
 @overload
-def assert_array_almost_equal(x: numpy.ndarray, y: List[List[float]]):
-    """
-    usage.scipy: 2
-    usage.sklearn: 16
-    """
-    ...
-
-
-@overload
 def assert_array_almost_equal(x: Tuple[numpy.float64, numpy.float64], y: numpy.ndarray):
     """
     usage.matplotlib: 1
@@ -13679,15 +17783,6 @@ def assert_array_almost_equal(
 ):
     """
     usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def assert_array_almost_equal(x: numpy.float64, y: numpy.float64, decimal: int):
-    """
-    usage.scipy: 3
-    usage.sklearn: 13
     """
     ...
 
@@ -14255,14 +18350,6 @@ def assert_array_almost_equal(x: List[List[float]], y: numpy.ndarray):
 
 
 @overload
-def assert_array_almost_equal(x: numpy.ndarray, y: pandas.core.series.Series):
-    """
-    usage.seaborn: 2
-    """
-    ...
-
-
-@overload
 def assert_array_almost_equal(x: seaborn.palettes._ColorPalette, y: numpy.ndarray):
     """
     usage.seaborn: 1
@@ -14387,14 +18474,6 @@ def assert_array_almost_equal(x: numpy.float32, y: numpy.float64, decimal: int):
 
 
 @overload
-def assert_array_almost_equal(x: numpy.ndarray, y: List[List[int]], decimal: int):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def assert_array_almost_equal(x: List[numpy.int64], y: List[numpy.int64]):
     """
     usage.sklearn: 3
@@ -14434,16 +18513,6 @@ def assert_array_almost_equal(
     y: numpy.ndarray,
     decimal: int,
     err_msg: Literal["with solver = lbfgs"],
-):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def assert_array_almost_equal(
-    x: List[numpy.float64], y: List[numpy.float64], decimal: int
 ):
     """
     usage.sklearn: 1
@@ -14503,6 +18572,7 @@ def assert_array_almost_equal(
     usage.seaborn: 12
     usage.skimage: 109
     usage.sklearn: 1569
+    usage.statsmodels: 75
     """
     ...
 
@@ -14630,6 +18700,7 @@ def assert_array_equal(x: numpy.ndarray, y: numpy.ndarray):
     usage.seaborn: 63
     usage.skimage: 386
     usage.sklearn: 919
+    usage.statsmodels: 70
     usage.xarray: 164
     """
     ...
@@ -14697,6 +18768,7 @@ def assert_array_equal(x: Tuple[int, int], y: Tuple[int, int]):
     usage.scipy: 38
     usage.skimage: 3
     usage.sklearn: 10
+    usage.statsmodels: 3
     """
     ...
 
@@ -14709,6 +18781,7 @@ def assert_array_equal(x: numpy.ndarray, y: List[int]):
     usage.seaborn: 13
     usage.skimage: 11
     usage.sklearn: 190
+    usage.statsmodels: 5
     usage.xarray: 7
     """
     ...
@@ -14765,6 +18838,7 @@ def assert_array_equal(x: numpy.ndarray, y: List[List[int]]):
     usage.seaborn: 1
     usage.skimage: 12
     usage.sklearn: 33
+    usage.statsmodels: 1
     """
     ...
 
@@ -14776,6 +18850,7 @@ def assert_array_equal(x: numpy.ndarray, y: List[List[float]]):
     usage.scipy: 8
     usage.skimage: 6
     usage.sklearn: 14
+    usage.statsmodels: 1
     """
     ...
 
@@ -14854,6 +18929,7 @@ def assert_array_equal(x: Tuple[int, int, int], y: Tuple[int, int, int]):
     usage.scipy: 29
     usage.skimage: 1
     usage.sklearn: 2
+    usage.statsmodels: 2
     """
     ...
 
@@ -14871,6 +18947,7 @@ def assert_array_equal(x: Tuple[int], y: Tuple[int]):
     """
     usage.scipy: 33
     usage.sklearn: 3
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -15138,6 +19215,7 @@ def assert_array_equal(
 ):
     """
     usage.sklearn: 1
+    usage.statsmodels: 3
     usage.xarray: 3
     """
     ...
@@ -15492,6 +19570,7 @@ def assert_array_equal(
 @overload
 def assert_array_equal(x: pandas.core.indexes.frozen.FrozenList, y: List[List[int]]):
     """
+    usage.statsmodels: 1
     usage.xarray: 2
     """
     ...
@@ -15535,6 +19614,236 @@ def assert_array_equal(x: xarray.core.variable.IndexVariable, y: numpy.int64):
 def assert_array_equal(x: numpy.ndarray, y: xarray.core.variable.IndexVariable):
     """
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: List[str]):
+    """
+    usage.sklearn: 3
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: pandas.core.frame.DataFrame, y: numpy.ndarray):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: List[str], y: List[str]):
+    """
+    usage.seaborn: 1
+    usage.sklearn: 5
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: bool):
+    """
+    usage.matplotlib: 1
+    usage.scipy: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.recarray, y: numpy.ndarray):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: Tuple[
+        Literal["2006-11-19T23:13:20"],
+        int,
+        Literal["2010-01-20T00:00:00"],
+        Literal["2010-01-08T00:00:00"],
+        Literal["2010-01-01T00:00:00"],
+        Literal["1974-07-01T00:00:00"],
+        Literal["2010-01-01T00:00:00"],
+        Literal["2010-01-01T00:00:00"],
+    ],
+    y: Tuple[
+        Literal["2006-11-19T23:13:20"],
+        int,
+        Literal["2010-01-20T00:00:00"],
+        Literal["2010-01-08T00:00:00"],
+        Literal["2010-01-01T00:00:00"],
+        Literal["1974-07-01T00:00:00"],
+        Literal["2010-01-01T00:00:00"],
+        Literal["2010-01-01T00:00:00"],
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: Tuple[
+        Literal["1959-12-31T20:03:20"],
+        int,
+        Literal["1953-10-02T00:00:00"],
+        Literal["1948-06-10T00:00:00"],
+        Literal["1955-01-01T00:00:00"],
+        Literal["1955-07-01T00:00:00"],
+        Literal["1955-01-01T00:00:00"],
+        Literal["2-01-01T00:00:00"],
+    ],
+    y: Tuple[
+        Literal["1959-12-31T20:03:20"],
+        int,
+        Literal["1953-10-02T00:00:00"],
+        Literal["1948-06-10T00:00:00"],
+        Literal["1955-01-01T00:00:00"],
+        Literal["1955-07-01T00:00:00"],
+        Literal["1955-01-01T00:00:00"],
+        Literal["2-01-01T00:00:00"],
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: List[Literal["id", "Max", "Occ", "Basal"]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.bool_, y: bool):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: pandas.core.indexes.frozen.FrozenList, y: List[Literal["year", "firm"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: pandas.core.indexes.frozen.FrozenList, y: List[Literal["year", "firms"]]
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: pandas.core.indexes.frozen.FrozenList,
+    y: List[Literal["TVnews", "income", "educ"]],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: pandas.core.indexes.frozen.FrozenList, y: List[Literal["firms"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: pandas.core.indexes.frozen.FrozenList, y: List[Literal["group0"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: Tuple[int], y: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: pandas.core.indexes.frozen.FrozenList,
+    y: List[Literal["group2", "group1", "group0"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.recarray, y: numpy.recarray):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: Literal["a"], y: Literal["a"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: Tuple[int, int, int, int]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: pandas.core.series.Series, y: Tuple[int, int, int, int]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: pandas.core.frame.DataFrame, y: pandas.core.frame.DataFrame):
+    """
+    usage.statsmodels: 5
     """
     ...
 
@@ -15756,14 +20065,6 @@ def assert_array_equal(
 ):
     """
     usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def assert_array_equal(x: numpy.bool_, y: bool):
-    """
-    usage.scipy: 1
     """
     ...
 
@@ -16543,15 +20844,6 @@ def assert_array_equal(x: Tuple[float, int], y: Tuple[float, int]):
 
 
 @overload
-def assert_array_equal(x: numpy.ndarray, y: bool):
-    """
-    usage.matplotlib: 1
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def assert_array_equal(x: numpy.ndarray, y: range):
     """
     usage.scipy: 1
@@ -16910,15 +21202,6 @@ def assert_array_equal(
 
 
 @overload
-def assert_array_equal(x: List[str], y: List[str]):
-    """
-    usage.seaborn: 1
-    usage.sklearn: 5
-    """
-    ...
-
-
-@overload
 def assert_array_equal(x: pandas.core.series.Series, y: numpy.ma.core.MaskedArray):
     """
     usage.seaborn: 12
@@ -17236,14 +21519,6 @@ def assert_array_equal(
 def assert_array_equal(x: List[numpy.ndarray], y: List[List[int]]):
     """
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def assert_array_equal(x: numpy.ndarray, y: List[str]):
-    """
-    usage.sklearn: 3
     """
     ...
 
@@ -17765,6 +22040,7 @@ def assert_array_equal(x: object, y: object, err_msg: str = ...):
     usage.seaborn: 206
     usage.skimage: 495
     usage.sklearn: 1475
+    usage.statsmodels: 124
     usage.xarray: 400
     """
     ...
@@ -17776,6 +22052,7 @@ def assert_array_less(x: numpy.float64, y: numpy.float64):
     usage.scipy: 2
     usage.skimage: 16
     usage.sklearn: 1
+    usage.statsmodels: 2
     """
     ...
 
@@ -17797,6 +22074,70 @@ def assert_array_less(x: numpy.float64, y: float):
     usage.scipy: 6
     usage.skimage: 2
     usage.sklearn: 1
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def assert_array_less(x: float, y: numpy.ndarray):
+    """
+    usage.scipy: 20
+    usage.sklearn: 3
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_array_less(x: numpy.int64, y: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_less(x: numpy.int64, y: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_array_less(x: numpy.ndarray, y: float):
+    """
+    usage.scipy: 33
+    usage.sklearn: 3
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_array_less(x: float, y: numpy.float64):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def assert_array_less(x: int, y: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_array_less(x: numpy.ndarray, y: int):
+    """
+    usage.scipy: 8
+    usage.sklearn: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -17843,45 +22184,10 @@ def assert_array_less(x: int, y: numpy.float64):
 
 
 @overload
-def assert_array_less(x: float, y: numpy.float64):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def assert_array_less(x: numpy.ndarray, y: float):
-    """
-    usage.scipy: 33
-    usage.sklearn: 3
-    """
-    ...
-
-
-@overload
-def assert_array_less(x: numpy.ndarray, y: int):
-    """
-    usage.scipy: 8
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def assert_array_less(x: int, y: numpy.ndarray):
     """
     usage.scipy: 4
     usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def assert_array_less(x: float, y: numpy.ndarray):
-    """
-    usage.scipy: 20
-    usage.sklearn: 3
     """
     ...
 
@@ -17966,6 +22272,7 @@ def assert_array_less(x: object, y: object, err_msg: str = ...):
     usage.seaborn: 4
     usage.skimage: 20
     usage.sklearn: 18
+    usage.statsmodels: 32
     """
     ...
 
@@ -17981,6 +22288,7 @@ def assert_equal(actual: numpy.ndarray, desired: numpy.ndarray):
     usage.seaborn: 1
     usage.skimage: 264
     usage.sklearn: 2
+    usage.statsmodels: 347
     usage.xarray: 3
     """
     ...
@@ -17991,6 +22299,7 @@ def assert_equal(actual: numpy.float64, desired: float):
     """
     usage.scipy: 324
     usage.skimage: 10
+    usage.statsmodels: 14
     usage.xarray: 1
     """
     ...
@@ -18001,6 +22310,7 @@ def assert_equal(actual: int, desired: int):
     """
     usage.scipy: 544
     usage.skimage: 68
+    usage.statsmodels: 568
     """
     ...
 
@@ -18010,6 +22320,7 @@ def assert_equal(actual: numpy.float64, desired: numpy.float64):
     """
     usage.scipy: 112
     usage.skimage: 7
+    usage.statsmodels: 16
     """
     ...
 
@@ -18019,6 +22330,7 @@ def assert_equal(actual: numpy.int64, desired: int):
     """
     usage.scipy: 67
     usage.skimage: 19
+    usage.statsmodels: 28
     usage.xarray: 1
     """
     ...
@@ -18029,6 +22341,7 @@ def assert_equal(actual: str, desired: str):
     """
     usage.scipy: 27
     usage.skimage: 5
+    usage.statsmodels: 56
     """
     ...
 
@@ -18038,6 +22351,7 @@ def assert_equal(actual: Tuple[int, int], desired: Tuple[int, int]):
     """
     usage.scipy: 179
     usage.skimage: 43
+    usage.statsmodels: 68
     """
     ...
 
@@ -18047,6 +22361,7 @@ def assert_equal(actual: Tuple[int, int, int], desired: Tuple[int, int, int]):
     """
     usage.scipy: 40
     usage.skimage: 21
+    usage.statsmodels: 15
     """
     ...
 
@@ -18056,6 +22371,7 @@ def assert_equal(actual: numpy.dtype, desired: numpy.dtype):
     """
     usage.scipy: 336
     usage.skimage: 4
+    usage.statsmodels: 1
     """
     ...
 
@@ -18066,6 +22382,7 @@ def assert_equal(actual: numpy.ndarray, desired: List[int]):
     usage.dask: 2
     usage.scipy: 107
     usage.skimage: 22
+    usage.statsmodels: 87
     """
     ...
 
@@ -18075,6 +22392,7 @@ def assert_equal(actual: numpy.float64, desired: int):
     """
     usage.scipy: 136
     usage.skimage: 27
+    usage.statsmodels: 29
     """
     ...
 
@@ -18092,6 +22410,7 @@ def assert_equal(actual: numpy.ndarray, desired: float):
     """
     usage.scipy: 50
     usage.skimage: 3
+    usage.statsmodels: 9
     usage.xarray: 2
     """
     ...
@@ -18102,6 +22421,7 @@ def assert_equal(actual: Tuple[int, int, int, int], desired: Tuple[int, int, int
     """
     usage.scipy: 14
     usage.skimage: 7
+    usage.statsmodels: 2
     """
     ...
 
@@ -18140,6 +22460,7 @@ def assert_equal(actual: Tuple[int], desired: Tuple[int]):
     """
     usage.scipy: 61
     usage.skimage: 4
+    usage.statsmodels: 31
     """
     ...
 
@@ -18149,6 +22470,7 @@ def assert_equal(actual: numpy.ndarray, desired: List[List[int]]):
     """
     usage.scipy: 41
     usage.skimage: 8
+    usage.statsmodels: 4
     """
     ...
 
@@ -18177,6 +22499,7 @@ def assert_equal(actual: Tuple[numpy.int64, numpy.int64], desired: Tuple[int, in
     """
     usage.scipy: 17
     usage.skimage: 1
+    usage.statsmodels: 5
     """
     ...
 
@@ -18186,6 +22509,7 @@ def assert_equal(actual: None, desired: None):
     """
     usage.scipy: 3
     usage.skimage: 6
+    usage.statsmodels: 60
     """
     ...
 
@@ -18206,6 +22530,7 @@ def assert_equal(actual: List[str], desired: List[str]):
     """
     usage.scipy: 1
     usage.skimage: 1
+    usage.statsmodels: 37
     """
     ...
 
@@ -18248,6 +22573,7 @@ def assert_equal(actual: numpy.ndarray, desired: int):
     """
     usage.scipy: 30
     usage.skimage: 56
+    usage.statsmodels: 19
     usage.xarray: 2
     """
     ...
@@ -18258,6 +22584,7 @@ def assert_equal(actual: float, desired: float):
     """
     usage.scipy: 125
     usage.skimage: 2
+    usage.statsmodels: 34
     """
     ...
 
@@ -18278,6 +22605,7 @@ def assert_equal(actual: numpy.int64, desired: numpy.int64):
     """
     usage.scipy: 26
     usage.skimage: 1
+    usage.statsmodels: 4
     """
     ...
 
@@ -18287,6 +22615,7 @@ def assert_equal(actual: List[numpy.float64], desired: List[numpy.float64]):
     """
     usage.matplotlib: 1
     usage.skimage: 1
+    usage.statsmodels: 2
     """
     ...
 
@@ -18299,6 +22628,7 @@ def assert_equal(
     """
     usage.scipy: 1
     usage.skimage: 1
+    usage.statsmodels: 2
     """
     ...
 
@@ -18404,6 +22734,7 @@ def assert_equal(actual: numpy.uint8, desired: numpy.ndarray):
 def assert_equal(actual: Tuple[int], desired: numpy.ndarray):
     """
     usage.skimage: 1
+    usage.statsmodels: 7
     """
     ...
 
@@ -18412,6 +22743,7 @@ def assert_equal(actual: Tuple[int], desired: numpy.ndarray):
 def assert_equal(actual: Tuple[int, int], desired: numpy.ndarray):
     """
     usage.skimage: 1
+    usage.statsmodels: 8
     """
     ...
 
@@ -18515,6 +22847,7 @@ def assert_equal(
 def assert_equal(actual: int, desired: numpy.float64):
     """
     usage.skimage: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -18579,6 +22912,7 @@ def assert_equal(actual: numpy.ndarray, desired: List[cftime._cftime.DatetimeNoL
 def assert_equal(actual: numpy.ndarray, desired: list):
     """
     usage.scipy: 7
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -18722,9 +23056,2959 @@ def assert_equal(actual: numpy.timedelta64, desired: numpy.timedelta64):
 
 
 @overload
+def assert_equal(
+    actual: List[Literal["x2", "x1", "const"]],
+    desired: List[Literal["x2", "x1", "const"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["y"], desired: Literal["y"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[Literal["x1"]], desired: List[Literal["x1"]]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["x_2", "x_1", "const"]],
+    desired: List[Literal["x_2", "x_1", "const"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["y_1"], desired: Literal["y_1"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: List[float]):
+    """
+    usage.matplotlib: 1
+    usage.scipy: 19
+    usage.sklearn: 1
+    usage.statsmodels: 29
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: List[List[float]]):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.recarray, desired: numpy.recarray):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[Literal["x_1"]], desired: List[Literal["x_1"]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["y4", "y3", "y2", "y1"]],
+    desired: List[Literal["y4", "y3", "y2", "y1"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["y_4", "y_3", "y_2", "y_1"]],
+    desired: List[Literal["y_4", "y_3", "y_2", "y_1"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: pandas.core.series.Series, desired: numpy.ndarray):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: pandas.core.frame.DataFrame, desired: numpy.ndarray):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["bfgs"], desired: Literal["bfgs"]):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["IRLS"], desired: Literal["IRLS"]):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["chi2"], desired: Literal["chi2"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["P>chi2"], desired: Literal["P>chi2"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["F"], desired: Literal["F"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["P>F"], desired: Literal["P>F"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: List[bool]):
+    """
+    usage.matplotlib: 2
+    usage.scipy: 5
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["HC0"], desired: Literal["HC0"]):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        Literal["scaling_factor", "description", "adjust_df", "use_t"],
+        Union[None, str, bool],
+    ],
+    desired: Dict[
+        Literal["scaling_factor", "use_t", "adjust_df", "description"],
+        Union[None, bool, str],
+    ],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        Literal["scaling_factor", "description", "adjust_df", "use_t"],
+        Union[None, str, bool],
+    ],
+    desired: Dict[
+        Literal["scaling_factor", "description", "adjust_df", "use_t"],
+        Union[None, str, bool],
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[float], desired: List[float]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 12
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas.core.indexes.numeric.Int64Index, desired: numpy.ndarray
+):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
 def assert_equal(actual: bool, desired: bool):
     """
     usage.scipy: 164
+    usage.statsmodels: 215
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: numpy.ndarray,
+    desired: List[Literal["var3_10", "var2_10", "var1_10", "var0_10"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: float, desired: int):
+    """
+    usage.scipy: 29
+    usage.statsmodels: 21
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: set, desired: set):
+    """
+    usage.scipy: 15
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["logit"], desired: Literal["logit"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["probit"], desired: Literal["probit"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: float, desired: numpy.int64):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["nm"], desired: Literal["nm"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[Literal["maxiter", "method"], Union[int, Literal["nm"]]],
+    desired: Dict[Literal["maxiter", "method"], Union[int, Literal["nm"]]],
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["cluster"], desired: Literal["cluster"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["nonrobust"], desired: Literal["nonrobust"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["HAC"], desired: Literal["HAC"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["hac-panel"], desired: Literal["hac-panel"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["hac-groupsum"], desired: Literal["hac-groupsum"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Tuple[int, int], desired: List[int]):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: int, desired: int, err_msg: Literal[""], verbose: bool):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["drive[T.rwd]", "drive[T.fwd]", "fuel[T.gas]", "Intercept"]],
+    desired: List[Literal["drive[T.rwd]", "drive[T.fwd]", "fuel[T.gas]", "Intercept"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: List[str]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.bool_, desired: bool):
+    """
+    usage.scipy: 19
+    usage.statsmodels: 24
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[int], desired: List[int]):
+    """
+    usage.scipy: 15
+    usage.statsmodels: 44
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.int64, desired: numpy.float64):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Type[
+        statsmodels.genmod.generalized_estimating_equations.OrdinalGEEResultsWrapper
+    ],
+    desired: Type[
+        statsmodels.genmod.generalized_estimating_equations.OrdinalGEEResultsWrapper
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Type[statsmodels.genmod.generalized_estimating_equations.OrdinalGEEResults],
+    desired: Type[
+        statsmodels.genmod.generalized_estimating_equations.OrdinalGEEResults
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Type[
+        statsmodels.genmod.generalized_estimating_equations.NominalGEEResultsWrapper
+    ],
+    desired: Type[
+        statsmodels.genmod.generalized_estimating_equations.NominalGEEResultsWrapper
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Type[statsmodels.genmod.generalized_estimating_equations.NominalGEEResults],
+    desired: Type[
+        statsmodels.genmod.generalized_estimating_equations.NominalGEEResults
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["robust"], desired: Literal["robust"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["naive"], desired: Literal["naive"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["bias_reduced"], desired: Literal["bias_reduced"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["lstsq"], desired: Literal["lstsq"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["pinv"], desired: Literal["pinv"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["qr"], desired: Literal["qr"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: numpy.ndarray, err_msg: str):
+    """
+    usage.scipy: 36
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[set], desired: List[set]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Literal["x1 ~ x3 + x4 + x3*x4"], desired: Literal["x1 ~ x3 + x4 + x3*x4"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: int, desired: float):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: int, desired: numpy.int64):
+    """
+    usage.scipy: 6
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Literal["normal_reference"], desired: Literal["normal_reference"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: bool):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["f"], desired: Literal["f"]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: numpy.ndarray, desired: List[Literal["Group Var", "x2", "x1", "const"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: numpy.ndarray,
+    desired: List[Literal["Group Var", "Weight", "Age", "Constant"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: numpy.ndarray, desired: List[Literal["Random Effects", "x2", "x1", "const"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: numpy.float64):
+    """
+    usage.scipy: 5
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: patsy.design_info.DesignMatrix):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: float, desired: numpy.ndarray):
+    """
+    usage.scipy: 3
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["p 3", "p 2", "p 1", "p 0"]],
+    desired: List[Literal["p 3", "p 2", "p 1", "p 0"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["phi", "psi", "gamma", "beta"]],
+    desired: List[Literal["phi", "psi", "gamma", "beta"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Callable, desired: Callable):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Tuple[int, float], desired: List[Union[float, int]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[Union[float, int]], desired: List[Union[float, int]]):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: List[Union[float, int]]):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.dtype, desired: Type[numpy.float64]):
+    """
+    usage.scipy: 35
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: List[List[Union[int, float]]]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["just something"], desired: Literal["just something"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Tuple[int, List[int]], desired: List[Union[List[int], int]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Union[List[int], int]], desired: List[Union[List[int], int]]
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["increasing"], desired: Literal["increasing"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["decreasing"], desired: Literal["decreasing"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["two-sided"], desired: Literal["two-sided"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[Literal["minister"]], desired: List[Literal["minister"]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[numpy.float64], desired: List[float]):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[numpy.float64], desired: List[Union[int, float]]):
+    """
+    usage.statsmodels: 12
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+    desired: List[Union[int, float]],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Tuple[float, numpy.int64], desired: List[int]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Tuple[float, numpy.float64], desired: List[int]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Tuple[float, numpy.float64], desired: Tuple[float, float]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: pandas.core.series.Series):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: int, desired: int, err_msg: str):
+    """
+    usage.scipy: 7
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Tuple[numpy.float64, numpy.float64], desired: Tuple[int, int]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["var2_1", "var1_1", "const"]],
+    desired: List[Literal["var2_1", "var1_1", "const"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["var3", "var2", "var1"]],
+    desired: Tuple[Literal["var1"], Literal["var2"], Literal["var3"]],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[Literal["a", "_cache"], Union[int, dict]],
+    desired: Dict[Literal["_cache", "a"], Union[dict, int]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[Literal["a", "_cache"], Union[int, Dict[Literal["b"], int]]],
+    desired: Dict[Literal["_cache", "a"], Union[Dict[Literal["b"], int], int]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Dict[Literal["b"], int], desired: Dict[Literal["b"], int]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: pandas.core.frame.DataFrame):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.matrix, desired: numpy.matrix):
+    """
+    usage.networkx: 25
+    usage.scipy: 154
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Tuple[int, int], desired: Tuple[float, float]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["converged"], desired: Literal["converged"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["a"], desired: Literal["a"]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Literal["innovations_mle"], desired: Literal["innovations_mle"]
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: statsmodels.tsa.arima.params.SARIMAXParams,
+    desired: statsmodels.tsa.arima.params.SARIMAXParams,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["yule_walker"], desired: Literal["yule_walker"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["burg"], desired: Literal["burg"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["innovations"], desired: Literal["innovations"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Literal["hannan_rissanen"], desired: Literal["hannan_rissanen"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["statespace"], desired: Literal["statespace"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: dict, desired: dict):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        Literal["minimize_kwargs"],
+        Dict[
+            Literal["options", "method"],
+            Union[Literal["L-BFGS-B"], Dict[Literal["maxiter"], int]],
+        ],
+    ],
+    desired: Dict[
+        Literal["minimize_kwargs"],
+        Dict[
+            Literal["options", "method"],
+            Union[Literal["L-BFGS-B"], Dict[Literal["maxiter"], int]],
+        ],
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: bytes, desired: bytes):
+    """
+    usage.scipy: 24
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: bool, desired: int):
+    """
+    usage.scipy: 3
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: statsmodels.tsa.arima.specification.SARIMAXSpecification,
+    desired: statsmodels.tsa.arima.specification.SARIMAXSpecification,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[Literal["a"]], desired: List[Literal["a"]]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[Literal["ar.L1"]], desired: List[Literal["ar.L1"]]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[Literal["ma.L1"]], desired: List[Literal["ma.L1"]]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[Literal["ar.S.L4"]], desired: List[Literal["ar.S.L4"]]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[Literal["ma.S.L4"]], desired: List[Literal["ma.S.L4"]]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[float, numpy.ndarray]],
+    desired: Dict[str, Union[float, List[float]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: list, desired: numpy.ndarray):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: list, desired: list):
+    """
+    usage.matplotlib: 2
+    usage.scipy: 6
+    usage.statsmodels: 10
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[Literal["sigma2"]], desired: List[Literal["sigma2"]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[float, numpy.ndarray]],
+    desired: Dict[str, Union[numpy.float64, numpy.ndarray, list]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[int], desired: numpy.ndarray):
+    """
+    usage.scipy: 13
+    usage.statsmodels: 11
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["sigma2", "ar.L1"]], desired: List[Literal["sigma2", "ar.L1"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["ar.L2", "ar.L1"]], desired: List[Literal["ar.L2", "ar.L1"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["sigma2", "ar.L2", "ar.L1"]],
+    desired: List[Literal["sigma2", "ar.L2", "ar.L1"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["sigma2", "ma.L1"]], desired: List[Literal["sigma2", "ma.L1"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["ma.L2", "ma.L1"]], desired: List[Literal["ma.L2", "ma.L1"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["sigma2", "ma.L2", "ma.L1"]],
+    desired: List[Literal["sigma2", "ma.L2", "ma.L1"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[float, numpy.ndarray]],
+    desired: Dict[str, Union[float, numpy.ndarray, list]],
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["sigma2", "ma.L1", "ar.L1"]],
+    desired: List[Literal["sigma2", "ma.L1", "ar.L1"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["sigma2", "ma.S.L4", "ar.S.L4"]],
+    desired: List[Literal["sigma2", "ma.S.L4", "ar.S.L4"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["sigma2", "ar.S.L4", "ar.L1"]],
+    desired: List[Literal["sigma2", "ar.S.L4", "ar.L1"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["sigma2", "ma.S.L4", "ar.S.L4", "ar.L1"]],
+    desired: List[Literal["sigma2", "ma.S.L4", "ar.S.L4", "ar.L1"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["ma.L3", "ma.L2", "ma.L1"]],
+    desired: List[Literal["ma.L3", "ma.L2", "ma.L1"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["ar.S.L48", "ar.S.L36", "ar.S.L24", "ar.S.L12"]],
+    desired: List[Literal["ar.S.L48", "ar.S.L36", "ar.S.L24", "ar.S.L12"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["ma.S.L36", "ma.S.L24", "ma.S.L12"]],
+    desired: List[Literal["ma.S.L36", "ma.S.L24", "ma.S.L12"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[float, numpy.ndarray]],
+    desired: Dict[str, Union[float, numpy.ndarray]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Tuple[List[int], int, int], desired: Tuple[List[int], int, int]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["ar.L3", "ar.L1"]], desired: List[Literal["ar.L3", "ar.L1"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["sigma2", "ar.S.L4", "ar.L3", "ar.L1"]],
+    desired: List[Literal["sigma2", "ar.S.L4", "ar.L3", "ar.L1"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Tuple[int, int, List[int], int], desired: Tuple[int, int, List[int], int]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["ma.S.L12", "ma.S.L4"]],
+    desired: List[Literal["ma.S.L12", "ma.S.L4"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["sigma2", "ma.S.L12", "ma.S.L4"]],
+    desired: List[Literal["sigma2", "ma.S.L12", "ma.S.L4"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Tuple[List[int], int, List[int]], desired: Tuple[List[int], int, List[int]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Tuple[List[int], int, List[int], int],
+    desired: Tuple[List[int], int, List[int], int],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[Literal["ar.L2"]], desired: List[Literal["ar.L2"]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["ma.L3", "ma.L1"]], desired: List[Literal["ma.L3", "ma.L1"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["ar.S.L12", "ar.S.L4"]],
+    desired: List[Literal["ar.S.L12", "ar.S.L4"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["ma.S.L16", "ma.S.L4"]],
+    desired: List[Literal["ma.S.L16", "ma.S.L4"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        Literal[
+            "seasonal_ma_params",
+            "seasonal_ar_params",
+            "ma_params",
+            "ar_params",
+            "exog_params",
+        ],
+        numpy.ndarray,
+    ],
+    desired: Dict[
+        Literal[
+            "seasonal_ma_params",
+            "seasonal_ar_params",
+            "ma_params",
+            "ar_params",
+            "exog_params",
+        ],
+        numpy.ndarray,
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[Literal["x2", "x1"]], desired: List[Literal["x2", "x1"]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: str, desired: str, err_msg: Literal[""], verbose: bool):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Literal["A-APR"],
+    desired: Literal["A-APR"],
+    err_msg: Literal[""],
+    verbose: bool,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Literal["M"], desired: Literal["M"], err_msg: Literal[""], verbose: bool
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Tuple[int, int, int],
+    desired: Tuple[int, int, int],
+    err_msg: Literal[""],
+    verbose: bool,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Literal["1999-04-30T00:00:00"], desired: Literal["1999-04-30T00:00:00"]
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Literal["1999-12-31T00:00:00"], desired: Literal["1999-12-31T00:00:00"]
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas._libs.tslibs.offsets.Day, desired: pandas._libs.tslibs.offsets.Day
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["D"], desired: Literal["D"]):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas._libs.tslibs.offsets.Week, desired: pandas._libs.tslibs.offsets.Week
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["W-SUN"], desired: Literal["W-SUN"]):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas._libs.tslibs.offsets.MonthEnd,
+    desired: pandas._libs.tslibs.offsets.MonthEnd,
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["M"], desired: Literal["M"]):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas._libs.tslibs.offsets.QuarterEnd,
+    desired: pandas._libs.tslibs.offsets.QuarterEnd,
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["Q-DEC"], desired: Literal["Q-DEC"]):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas._libs.tslibs.offsets.YearEnd,
+    desired: pandas._libs.tslibs.offsets.YearEnd,
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["A-DEC"], desired: Literal["A-DEC"]):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["2Q-DEC"], desired: Literal["2Q-DEC"]):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas._libs.tslibs.offsets.QuarterBegin,
+    desired: pandas._libs.tslibs.offsets.QuarterBegin,
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["2QS-JAN"], desired: Literal["2QS-JAN"]):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas._libs.tslibs.offsets.Second,
+    desired: pandas._libs.tslibs.offsets.Second,
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["5S"], desired: Literal["5S"]):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas._libs.tslibs.offsets.Minute,
+    desired: pandas._libs.tslibs.offsets.Minute,
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["1450T"], desired: Literal["1450T"]):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["W"], desired: Literal["W"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["Q"], desired: Literal["Q"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["A"], desired: Literal["A"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["2Q"], desired: Literal["2Q"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["2QS"], desired: Literal["2QS"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: slice[numpy.int64, numpy.int64, numpy.int64], desired: slice[int, int, int]
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas._libs.tslibs.timestamps.Timestamp,
+    desired: pandas._libs.tslibs.timestamps.Timestamp,
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas._libs.tslibs.timestamps.Timestamp,
+    desired: Literal["1962-03-31T00:00:00"],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas._libs.tslibs.timestamps.Timestamp,
+    desired: Literal["2006-09-30T00:00:00"],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["infl_cycle"], desired: Literal["infl_cycle"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: numpy.ndarray, desired: List[Literal["unemp_cycle", "infl_cycle"]]
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas._libs.tslibs.timestamps.Timestamp,
+    desired: Literal["1959-03-31T00:00:00"],
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas._libs.tslibs.timestamps.Timestamp,
+    desired: Literal["2009-09-30T00:00:00"],
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["realgdp_cycle"], desired: Literal["realgdp_cycle"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: slice[int, numpy.int64, int], desired: slice[int, int, int]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["diagonal"], desired: Literal["diagonal"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        str,
+        Union[
+            statsmodels.tsa.statespace.initialization.Initialization,
+            bool,
+            int,
+            Literal["diagonal"],
+        ],
+    ],
+    desired: Dict[
+        str,
+        Union[
+            statsmodels.tsa.statespace.initialization.Initialization,
+            bool,
+            int,
+            Literal["diagonal"],
+        ],
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["scalar"], desired: Literal["scalar"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        str,
+        Union[
+            statsmodels.tsa.statespace.initialization.Initialization,
+            bool,
+            int,
+            Literal["scalar"],
+        ],
+    ],
+    desired: Dict[
+        str,
+        Union[
+            statsmodels.tsa.statespace.initialization.Initialization,
+            bool,
+            int,
+            Literal["scalar"],
+        ],
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: statsmodels.tools.tools.Bunch, desired: statsmodels.tools.tools.Bunch
+):
+    """
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["Q1", "Q0", "M1", "M0"]],
+    desired: List[Literal["Q1", "Q0", "M1", "M0"]],
+):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, List[Literal["a", "b"]]],
+    desired: Dict[str, List[Literal["a", "b"]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["a", "b.2", "b.1"]], desired: List[Literal["a", "b.2", "b.1"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Dict[Literal["b"], float], desired: Dict[Literal["b"], float]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[numpy.int64], desired: List[int]):
+    """
+    usage.statsmodels: 50
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[Literal["ar.L1"], float], desired: Dict[Literal["ar.L1"], float]
+):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[Literal["ar.L2", "ar.L1"], float],
+    desired: Dict[Literal["ar.L2", "ar.L1"], float],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[Literal["loading.f1.cpi"], float],
+    desired: Dict[Literal["loading.f1.cpi"], float],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[Literal["L1.f1.f1"], float], desired: Dict[Literal["L1.f1.f1"], float]
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[Literal["L2.f1.f1", "L1.f1.f1"], float],
+    desired: Dict[Literal["L2.f1.f1", "L1.f1.f1"], float],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[Literal["L1.f2.f2", "L1.f1.f2", "L1.f2.f1", "L1.f1.f1"], float],
+    desired: Dict[Literal["L1.f2.f2", "L1.f1.f2", "L1.f2.f1", "L1.f1.f1"], float],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[Literal["sigma2.realinv", "sigma2.cpi"], Union[int, float]],
+    desired: Dict[Literal["sigma2.realinv", "sigma2.cpi"], Union[int, float]],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        Literal[
+            "cov.chol[2,1]", "cov.chol[1,1]", "loading.f1.realgdp", "loading.f1.cpi"
+        ],
+        float,
+    ],
+    desired: Dict[
+        Literal[
+            "cov.chol[2,1]", "cov.chol[1,1]", "loading.f1.realgdp", "loading.f1.cpi"
+        ],
+        float,
+    ],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Dict[str, float], desired: Dict[str, float]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[Literal["L1.cpi.cpi"], float],
+    desired: Dict[Literal["L1.cpi.cpi"], float],
+):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[Literal["L2.cpi.cpi", "L1.cpi.cpi"], float],
+    desired: Dict[Literal["L2.cpi.cpi", "L1.cpi.cpi"], float],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        Literal["L1.realgdp.realgdp", "L1.cpi.realgdp", "L1.realgdp.cpi", "L1.cpi.cpi"],
+        float,
+    ],
+    desired: Dict[
+        Literal["L1.realgdp.realgdp", "L1.cpi.realgdp", "L1.realgdp.cpi", "L1.cpi.cpi"],
+        float,
+    ],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["ar.L3", "ar.L2"]], desired: List[Literal["ar.L3", "ar.L2"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["sigma2.trend"]], desired: List[Literal["sigma2.trend"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["cov.chol[2,1]"]], desired: List[Literal["cov.chol[2,1]"]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Literal["approximate_diffuse"], desired: Literal["approximate_diffuse"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["known"], desired: Literal["known"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["stationary"], desired: Literal["stationary"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["approx"], desired: Literal["approx"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["oim"], desired: Literal["oim"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["opg"], desired: Literal["opg"]):
+    """
+    usage.statsmodels: 10
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["robust_oim"], desired: Literal["robust_oim"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["robust_approx"], desired: Literal["robust_approx"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[Literal["infl"]], desired: List[Literal["infl"]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["revised", "observed (prev)"]],
+    desired: List[Literal["revised", "observed (prev)"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas.core.indexes.frozen.FrozenList,
+    desired: List[Literal["revised variable", "revision date"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["forecast (prev)", "observed"]],
+    desired: List[Literal["forecast (prev)", "observed"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas.core.indexes.frozen.FrozenList,
+    desired: List[Literal["updated variable", "update date"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["impact", "weight", "news", "forecast (prev)", "observed"]],
+    desired: List[Literal["impact", "weight", "news", "forecast (prev)", "observed"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas.core.indexes.frozen.FrozenList,
+    desired: List[
+        Literal["updated variable", "update date", "impacted variable", "impact date"]
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["impact", "weight", "news"]],
+    desired: List[Literal["impact", "weight", "news"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: pandas.core.indexes.frozen.FrozenList, desired: List[str]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[
+        Literal[
+            "estimate (new)",
+            "total impact",
+            "impact of news",
+            "impact of revisions",
+            "estimate (prev)",
+        ]
+    ],
+    desired: List[
+        Literal[
+            "estimate (new)",
+            "total impact",
+            "impact of news",
+            "impact of revisions",
+            "estimate (prev)",
+        ]
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: pandas.core.indexes.frozen.FrozenList,
+    desired: List[Literal["impacted variable", "impact date"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["unemp", "realgdp"]],
+    desired: List[Literal["unemp", "realgdp"]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Union[float, numpy.float64]],
+    desired: List[Union[float, numpy.float64]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["s"], desired: Literal["s"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Type[numpy.float32], desired: Type[numpy.float32]):
+    """
+    usage.scipy: 15
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: statsmodels.tsa.statespace._kalman_filter.sKalmanFilter,
+    desired: statsmodels.tsa.statespace._kalman_filter.sKalmanFilter,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["d"], desired: Literal["d"]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Type[numpy.float64], desired: Type[numpy.float64]):
+    """
+    usage.scipy: 12
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: statsmodels.tsa.statespace._kalman_filter.dKalmanFilter,
+    desired: statsmodels.tsa.statespace._kalman_filter.dKalmanFilter,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["c"], desired: Literal["c"]):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Type[numpy.complex64], desired: Type[numpy.complex64]):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: statsmodels.tsa.statespace._kalman_filter.cKalmanFilter,
+    desired: statsmodels.tsa.statespace._kalman_filter.cKalmanFilter,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["z"], desired: Literal["z"]):
+    """
+    usage.scipy: 4
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Type[numpy.complex128], desired: Type[numpy.complex128]):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: statsmodels.tsa.statespace._kalman_filter.zKalmanFilter,
+    desired: statsmodels.tsa.statespace._kalman_filter.zKalmanFilter,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[bool, None, Tuple[int, ...]]],
+    desired: Dict[str, Union[bool, None, Tuple[int, ...]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["t"], desired: Literal["t"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[bool, Literal["t"], Tuple[int, ...]]],
+    desired: Dict[str, Union[bool, Literal["t"], Tuple[int, ...]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Tuple[float, float], desired: Tuple[float, float]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["irregular"], desired: Literal["irregular"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Literal["deterministic trend"], desired: Literal["deterministic trend"]
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[bool, int, list, Literal["irregular"]]],
+    desired: Dict[str, Union[bool, int, list, Literal["irregular"]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Literal["fixed intercept"], desired: Literal["fixed intercept"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[bool, int, list, Literal["fixed intercept"]]],
+    desired: Dict[str, Union[bool, int, list, Literal["fixed intercept"]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[bool, int, list, str]],
+    desired: Dict[str, Union[bool, int, list, str]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["local level"], desired: Literal["local level"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[bool, int, list, Literal["local level"]]],
+    desired: Dict[str, Union[bool, int, list, Literal["local level"]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["random walk"], desired: Literal["random walk"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[bool, int, list, Literal["random walk"]]],
+    desired: Dict[str, Union[bool, int, list, Literal["random walk"]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["fixed slope"], desired: Literal["fixed slope"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[bool, int, list, Literal["fixed slope"]]],
+    desired: Dict[str, Union[bool, int, list, Literal["fixed slope"]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[bool, int, list, Literal["deterministic trend"]]],
+    desired: Dict[str, Union[bool, int, list, Literal["deterministic trend"]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Literal["local linear trend"], desired: Literal["local linear trend"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[bool, int, list, Literal["local linear trend"]]],
+    desired: Dict[str, Union[bool, int, list, Literal["local linear trend"]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["smooth trend"], desired: Literal["smooth trend"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[bool, int, list, Literal["smooth trend"]]],
+    desired: Dict[str, Union[bool, int, list, Literal["smooth trend"]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["random trend"], desired: Literal["random trend"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[str, Union[bool, int, list, Literal["random trend"]]],
+    desired: Dict[str, Union[bool, int, list, Literal["random trend"]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        str,
+        Union[
+            int,
+            statsmodels.tsa.statespace.initialization.Initialization,
+            bool,
+            Literal["diagonal", "t"],
+            Tuple[int, int],
+        ],
+    ],
+    desired: Dict[
+        str,
+        Union[
+            int,
+            statsmodels.tsa.statespace.initialization.Initialization,
+            bool,
+            Literal["diagonal", "t"],
+            Tuple[int, int],
+        ],
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["unstructured"], desired: Literal["unstructured"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        str,
+        Union[
+            int,
+            statsmodels.tsa.statespace.initialization.Initialization,
+            bool,
+            Literal["unstructured", "t"],
+            Tuple[int, int],
+        ],
+    ],
+    desired: Dict[
+        str,
+        Union[
+            int,
+            statsmodels.tsa.statespace.initialization.Initialization,
+            bool,
+            Literal["unstructured", "t"],
+            Tuple[int, int],
+        ],
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: Literal["n"], desired: Literal["n"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        str,
+        Union[
+            int,
+            statsmodels.tsa.statespace.initialization.Initialization,
+            bool,
+            Literal["diagonal", "n"],
+            Tuple[int, int],
+        ],
+    ],
+    desired: Dict[
+        str,
+        Union[
+            int,
+            statsmodels.tsa.statespace.initialization.Initialization,
+            bool,
+            Literal["diagonal", "n"],
+            Tuple[int, int],
+        ],
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Dict[
+        str,
+        Union[
+            int,
+            statsmodels.tsa.statespace.initialization.Initialization,
+            bool,
+            Literal["unstructured", "n"],
+            Tuple[int, int],
+        ],
+    ],
+    desired: Dict[
+        str,
+        Union[
+            int,
+            statsmodels.tsa.statespace.initialization.Initialization,
+            bool,
+            Literal["unstructured", "n"],
+            Tuple[int, int],
+        ],
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Tuple[int, int],
+    desired: Tuple[int, int],
+    err_msg: Literal[""],
+    verbose: bool,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Literal["D.cpi"],
+    desired: Literal["D.cpi"],
+    err_msg: Literal[""],
+    verbose: bool,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["ma.L2.y", "ma.L1.y", "ar.L1.y", "const"]],
+    desired: List[Literal["ma.L2.y", "ma.L1.y", "ar.L1.y", "const"]],
+    err_msg: Literal[""],
+    verbose: bool,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["const"]],
+    desired: List[Literal["const"]],
+    err_msg: Literal[""],
+    verbose: bool,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: List[Literal["realinv", "realcons", "realgdp"]],
+    desired: Tuple[Literal["realgdp"], Literal["realcons"], Literal["realinv"]],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: numpy.ndarray, desired: numpy.ndarray, err_msg: Literal[""], verbose: bool
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: numpy.float64, desired: numpy.float64, err_msg: Literal[""], verbose: bool
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: numpy.int64, desired: numpy.int64, err_msg: Literal[""], verbose: bool
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: float, desired: float, err_msg: Literal[""], verbose: bool):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -18751,14 +26035,6 @@ def assert_equal(
 ):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: numpy.dtype, desired: Type[numpy.float64]):
-    """
-    usage.scipy: 35
     """
     ...
 
@@ -18812,46 +26088,6 @@ def assert_equal(actual: Literal["bad signature"], desired: Literal["bad signatu
 
 
 @overload
-def assert_equal(actual: float, desired: int):
-    """
-    usage.scipy: 29
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: List[float], desired: List[float]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: List[int], desired: numpy.ndarray):
-    """
-    usage.scipy: 13
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: List[int], desired: List[int]):
-    """
-    usage.scipy: 15
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: numpy.bool_, desired: bool):
-    """
-    usage.scipy: 19
-    """
-    ...
-
-
-@overload
 def assert_equal(
     actual: List[Literal["g", "m", "c"]], desired: List[Literal["g", "m", "c"]]
 ):
@@ -18873,30 +26109,11 @@ def assert_equal(
 
 
 @overload
-def assert_equal(actual: list, desired: list):
-    """
-    usage.matplotlib: 2
-    usage.scipy: 6
-    """
-    ...
-
-
-@overload
 def assert_equal(
     actual: Literal["299792458 m s^-1"], desired: Literal["299792458 m s^-1"]
 ):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: numpy.ndarray, desired: List[float]):
-    """
-    usage.matplotlib: 1
-    usage.scipy: 19
-    usage.sklearn: 1
     """
     ...
 
@@ -18929,14 +26146,6 @@ def assert_equal(actual: numpy.dtype, desired: Type[numpy.complex64]):
 def assert_equal(actual: numpy.dtype, desired: Type[numpy.float32]):
     """
     usage.scipy: 37
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: numpy.ndarray, desired: numpy.ndarray, err_msg: str):
-    """
-    usage.scipy: 36
     """
     ...
 
@@ -18992,14 +26201,6 @@ def assert_equal(actual: Tuple[None, ...], desired: Tuple[None, ...]):
 
 
 @overload
-def assert_equal(actual: Tuple[float, float], desired: Tuple[float, float]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def assert_equal(actual: numpy.dtype, desired: Type[numpy.float16]):
     """
     usage.scipy: 2
@@ -19011,14 +26212,6 @@ def assert_equal(actual: numpy.dtype, desired: Type[numpy.float16]):
 def assert_equal(actual: numpy.dtype, desired: Type[numpy.float128]):
     """
     usage.scipy: 15
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: numpy.ndarray, desired: List[List[Union[int, float]]]):
-    """
-    usage.scipy: 1
     """
     ...
 
@@ -19623,22 +26816,6 @@ def assert_equal(actual: List[Literal["avar"]], desired: List[Literal["avar"]]):
 
 
 @overload
-def assert_equal(actual: set, desired: set):
-    """
-    usage.scipy: 15
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: Type[numpy.float64], desired: Type[numpy.float64]):
-    """
-    usage.scipy: 12
-    """
-    ...
-
-
-@overload
 def assert_equal(actual: Type[numpy.str_], desired: Type[numpy.str_]):
     """
     usage.scipy: 1
@@ -19711,14 +26888,6 @@ def assert_equal(actual: Literal["u"], desired: Literal["u"]):
 
 
 @overload
-def assert_equal(actual: Literal["f"], desired: Literal["f"]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def assert_equal(actual: List[Literal["theta"]], desired: List[Literal["theta"]]):
     """
     usage.scipy: 1
@@ -19775,14 +26944,6 @@ def assert_equal(actual: numpy.ndarray, desired: Literal["� am broken"]):
 
 
 @overload
-def assert_equal(actual: bytes, desired: bytes):
-    """
-    usage.scipy: 24
-    """
-    ...
-
-
-@overload
 def assert_equal(actual: numpy.ndarray, desired: Literal[" "]):
     """
     usage.scipy: 2
@@ -19823,25 +26984,9 @@ def assert_equal(actual: Type[numpy.int32], desired: Type[numpy.int32]):
 
 
 @overload
-def assert_equal(actual: Type[numpy.float32], desired: Type[numpy.float32]):
-    """
-    usage.scipy: 15
-    """
-    ...
-
-
-@overload
 def assert_equal(actual: numpy.complex64, desired: numpy.complex64):
     """
     usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: Type[numpy.complex64], desired: Type[numpy.complex64]):
-    """
-    usage.scipy: 2
     """
     ...
 
@@ -19866,14 +27011,6 @@ def assert_equal(actual: Type[numpy.bytes_], desired: Type[numpy.bytes_]):
 def assert_equal(actual: numpy.complex128, desired: numpy.complex128):
     """
     usage.scipy: 7
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: Type[numpy.complex128], desired: Type[numpy.complex128]):
-    """
-    usage.scipy: 2
     """
     ...
 
@@ -20111,15 +27248,6 @@ def assert_equal(
 
 
 @overload
-def assert_equal(actual: numpy.matrix, desired: numpy.matrix):
-    """
-    usage.networkx: 25
-    usage.scipy: 154
-    """
-    ...
-
-
-@overload
 def assert_equal(
     actual: Tuple[
         int,
@@ -20331,15 +27459,6 @@ def assert_equal(actual: Literal["data"], desired: Literal["data"]):
 
 
 @overload
-def assert_equal(actual: numpy.ndarray, desired: List[bool]):
-    """
-    usage.matplotlib: 2
-    usage.scipy: 5
-    """
-    ...
-
-
-@overload
 def assert_equal(actual: numpy.ma.core.MaskedArray, desired: List[int]):
     """
     usage.scipy: 1
@@ -20376,30 +27495,6 @@ def assert_equal(
 
 
 @overload
-def assert_equal(actual: Literal["z"], desired: Literal["z"]):
-    """
-    usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: Literal["d"], desired: Literal["d"]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: Literal["c"], desired: Literal["c"]):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def assert_equal(actual: bool, desired: bool, err_msg: Literal["[[0, 1], [2, 3]]"]):
     """
     usage.scipy: 1
@@ -20428,14 +27523,6 @@ def assert_equal(actual: float, desired: numpy.float64):
 def assert_equal(actual: numpy.int32, desired: numpy.int64):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: int, desired: int, err_msg: str):
-    """
-    usage.scipy: 7
     """
     ...
 
@@ -20943,22 +28030,6 @@ def assert_equal(actual: List[Union[int, float]], desired: List[Union[int, float
 
 
 @overload
-def assert_equal(actual: float, desired: numpy.ndarray):
-    """
-    usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: numpy.ndarray, desired: bool):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def assert_equal(actual: numpy.ndarray, desired: List[Tuple[int, float]]):
     """
     usage.scipy: 7
@@ -20991,41 +28062,9 @@ def assert_equal(actual: numpy.ndarray, desired: List[Tuple[float, float]]):
 
 
 @overload
-def assert_equal(actual: int, desired: numpy.int64):
-    """
-    usage.scipy: 6
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: bool, desired: int):
-    """
-    usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: numpy.ndarray, desired: numpy.float64):
-    """
-    usage.scipy: 5
-    """
-    ...
-
-
-@overload
 def assert_equal(actual: numpy.float64, desired: numpy.ndarray):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: numpy.ndarray, desired: List[Union[float, int]]):
-    """
-    usage.scipy: 2
     """
     ...
 
@@ -21186,14 +28225,6 @@ def assert_equal(actual: numpy.ndarray, desired: numpy.complex128):
 
 @overload
 def assert_equal(actual: numpy.ndarray, desired: complex):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: Tuple[int, int], desired: List[int]):
     """
     usage.scipy: 2
     """
@@ -22280,14 +29311,6 @@ def assert_equal(actual: list, desired: list):
 
 
 @overload
-def assert_equal(actual: dict, desired: dict):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def assert_equal(actual: List[Tuple[int, int]], desired: List[Tuple[int, int]]):
     """
     usage.scipy: 4
@@ -22556,14 +29579,6 @@ def assert_equal(
 
 
 @overload
-def assert_equal(actual: Tuple[numpy.float64, numpy.float64], desired: Tuple[int, int]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def assert_equal(actual: Tuple[numpy.ndarray, numpy.ndarray], desired: Tuple[int, int]):
     """
     usage.scipy: 1
@@ -22614,14 +29629,6 @@ def assert_equal(
 def assert_equal(
     actual: Tuple[float, float], desired: Tuple[numpy.ndarray, numpy.ndarray]
 ):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: Literal["a"], desired: Literal["a"]):
     """
     usage.scipy: 1
     """
@@ -23331,6 +30338,7 @@ def assert_equal(
     usage.seaborn: 9
     usage.skimage: 663
     usage.sklearn: 27
+    usage.statsmodels: 2427
     usage.xarray: 40
     """
     ...
@@ -23360,9 +30368,64 @@ def assert_no_warnings(*args: Literal["v", "t"]):
     ...
 
 
+def assert_raises(*args: Literal["v", "t"]):
+    """
+    usage.statsmodels: 417
+    """
+    ...
+
+
+@overload
+def assert_raises_regex(
+    exception_class: Type[ValueError],
+    expected_regexp: Literal["exog_fc is None.*"],
+    *args: Literal["v", "t"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_raises_regex(
+    exception_class: Type[ValueError], expected_regexp: str, *args: Literal["v", "t"]
+):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+def assert_raises_regex(
+    exception_class: Type[ValueError], expected_regexp: str, *args: Literal["v", "t"]
+):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_string_equal(actual: Literal["const"], desired: Literal["const"]):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
 def assert_string_equal(actual: str, desired: str):
     """
     usage.scipy: 2
+    """
+    ...
+
+
+def assert_string_equal(actual: str, desired: str):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 4
     """
     ...
 
@@ -23382,6 +30445,7 @@ def assert_warns(warning_class: Type[UserWarning], *args: Literal["v", "t"]):
     usage.scipy: 2
     usage.seaborn: 1
     usage.skimage: 3
+    usage.statsmodels: 1
     """
     ...
 
@@ -23398,6 +30462,36 @@ def assert_warns(warning_class: Type[FutureWarning], *args: Literal["v", "t"]):
 def assert_warns(warning_class: Type[RuntimeWarning]):
     """
     usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def assert_warns(warning_class: Type[UserWarning]):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def assert_warns(
+    warning_class: Type[statsmodels.tools.sm_exceptions.ValueWarning],
+    *args: Literal["v", "t"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_warns(
+    warning_class: Type[statsmodels.tools.sm_exceptions.InvalidTestWarning],
+    *args: Literal["v", "t"],
+):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -23557,6 +30651,7 @@ def assert_warns(warning_class: type, *args: Literal["v", "t"]):
     usage.seaborn: 1
     usage.skimage: 6
     usage.sklearn: 1
+    usage.statsmodels: 9
     """
     ...
 

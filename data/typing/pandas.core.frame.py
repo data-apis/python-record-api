@@ -18,6 +18,7 @@ class DataFrame:
     # usage.prophet: 35
     # usage.seaborn: 9
     # usage.sklearn: 39
+    # usage.statsmodels: 135
     shape: ClassVar[object]
 
     # usage.sklearn: 2
@@ -117,6 +118,7 @@ class DataFrame:
         usage.dask: 7
         usage.koalas: 4
         usage.sklearn: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -136,6 +138,7 @@ class DataFrame:
         usage.dask: 27
         usage.koalas: 11
         usage.sklearn: 1
+        usage.statsmodels: 11
         """
         ...
 
@@ -214,6 +217,7 @@ class DataFrame:
         usage.koalas: 9
         usage.prophet: 10
         usage.seaborn: 65
+        usage.statsmodels: 2
         usage.xarray: 3
         """
         ...
@@ -298,6 +302,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 5
+        usage.statsmodels: 2
         """
         ...
 
@@ -340,6 +345,7 @@ class DataFrame:
         usage.koalas: 30
         usage.prophet: 1
         usage.sklearn: 22
+        usage.statsmodels: 13
         """
         ...
 
@@ -368,6 +374,7 @@ class DataFrame:
         usage.dask: 4
         usage.koalas: 6
         usage.sklearn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -876,6 +883,7 @@ class DataFrame:
         usage.koalas: 1
         usage.seaborn: 5
         usage.sklearn: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -1274,6 +1282,7 @@ class DataFrame:
         usage.modin: 2
         usage.networkx: 3
         usage.seaborn: 11
+        usage.statsmodels: 1
         """
         ...
 
@@ -1349,6 +1358,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 3
+        usage.statsmodels: 13
         """
         ...
 
@@ -1377,6 +1387,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -1590,6 +1601,7 @@ class DataFrame:
     def __getitem__(cls, _0: List[Literal["x2", "x1"]], /):
         """
         usage.koalas: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -1714,6 +1726,7 @@ class DataFrame:
         """
         usage.koalas: 1
         usage.prophet: 1
+        usage.statsmodels: 22
         """
         ...
 
@@ -1935,6 +1948,7 @@ class DataFrame:
         usage.modin: 2
         usage.networkx: 3
         usage.sklearn: 1
+        usage.statsmodels: 11
         usage.xarray: 1
         """
         ...
@@ -1996,6 +2010,7 @@ class DataFrame:
         usage.koalas: 9
         usage.prophet: 7
         usage.seaborn: 7
+        usage.statsmodels: 11
         """
         ...
 
@@ -2131,6 +2146,7 @@ class DataFrame:
         usage.koalas: 1
         usage.networkx: 1
         usage.prophet: 2
+        usage.statsmodels: 18
         """
         ...
 
@@ -2502,6 +2518,7 @@ class DataFrame:
         usage.koalas: 1
         usage.prophet: 18
         usage.seaborn: 58
+        usage.statsmodels: 12
         """
         ...
 
@@ -2522,6 +2539,7 @@ class DataFrame:
         usage.dask: 3
         usage.koalas: 1
         usage.seaborn: 17
+        usage.statsmodels: 1
         """
         ...
 
@@ -2884,6 +2902,7 @@ class DataFrame:
         usage.dask: 2
         usage.koalas: 2
         usage.seaborn: 2
+        usage.statsmodels: 2
         """
         ...
 
@@ -4427,6 +4446,7 @@ class DataFrame:
         usage.dask: 1
         usage.koalas: 4
         usage.modin: 2
+        usage.statsmodels: 5
         """
         ...
 
@@ -4436,6 +4456,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 4
+        usage.statsmodels: 7
         """
         ...
 
@@ -4714,6 +4735,7 @@ class DataFrame:
     def __getitem__(cls, _0: List[Literal["year"]], /):
         """
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -4722,6 +4744,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["year"], /):
         """
         usage.koalas: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -5592,6 +5615,2756 @@ class DataFrame:
 
     @overload
     @classmethod
+    def __getitem__(cls, _0: Literal["realinv"], /):
+        """
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["realgdp"], /):
+        """
+        usage.statsmodels: 26
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["realint"], /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["weights_missing"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["X", "constant"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["weights"], /):
+        """
+        usage.seaborn: 4
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["statistic"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pvalue"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["df_constraint"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["df_denom"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["offset"], /):
+        """
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oracle"], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["final"], /):
+        """
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["popul"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["PID"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cancer"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["AVGEXP"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["co2"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["BILLS104"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["WORLDCONSUMPTION"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["EXECUTIONS"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["income"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["affairs"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["invest"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["survival"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["TOTEMP"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["choice"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["volume"], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["mdvis"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["YES"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["GRADE"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["STACKLOSS"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["NABOVE"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["NBELOW"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["murder"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["duration"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Title"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["groups"], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["pyears"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["dy/dx"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["exposure"], /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Bar", "constant"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["pp"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["num"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["exog4", "exog3", "exog2", "exog1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["status"], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["entry"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["exog1:exog2", "exog2", "np.log(exog2)", "exog1"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["log HR"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Group"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["T"], /):
+        """
+        usage.statsmodels: 15
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Status"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["SOUTH"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["INCOME"], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x2", "x0"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y_est"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["s(x2)", "s(x0)"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["y_est"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["fit"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["se_fit"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Post. Mean"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Post. SD"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["SD (LB)"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["SD (UB)"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Year"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["subject"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["time"], /):
+        """
+        usage.seaborn: 4
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Id"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["TheGroups"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Time"], /):
+        """
+        usage.dask: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["X2", "X1"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["grps"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["fake", "constant"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["SOUTH", "INCOME"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["x1"], /):
+        """
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["x2"], /):
+        """
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["x3"], /):
+        """
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["x4"], /):
+        """
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["x5"], /):
+        """
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["intcol"], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["var1"], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["var2"], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["var3"], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["var4"], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["censored"], /):
+        """
+        usage.statsmodels: 12
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["conc"], /):
+        """
+        usage.statsmodels: 14
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["censored", "conc"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["lower_dl"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["nuncen_above"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["nobs_below"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["qual"], /):
+        """
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Zprelim"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["estimated"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["res"], /):
+        """
+        usage.statsmodels: 12
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["plot_pos"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cen"], /):
+        """
+        usage.statsmodels: 15
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["obs"], /):
+        """
+        usage.statsmodels: 14
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cen", "obs"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[
+            Literal["prob_exceedance", "ncen_equal", "nobs_below", "nuncen_above"]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cen", "res"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cen", "conc"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["qual", "value"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["quarter"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["datetime_c"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["datetime_big_c"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["weekly_date"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["monthly_date"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["quarterly_date"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["half_yearly_date"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["yearly_date"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Coef."], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Std.Err."], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Tuple[Literal["x"], Literal["sum"]]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["f2", "f1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["f2b", "f1b"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["f2o", "f1o"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["f2ob", "f1ob"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Loc"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Max", "Occ", "Basal"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Drug"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["P>|z|"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["[0.025"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["0.975]"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["batch"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Pig"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x1", "g", "y"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y", "x1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["c2", "c1", "x1", "g", "y"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["y", "x1", "c2", "c1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["z1", "x1", "g", "y"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["z1", "y", "x1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["z1", "y", "x1", "c2", "c1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["IDS"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["grp"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["std err"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["m1"], /):
+        """
+        usage.statsmodels: 11
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["m1", "unemp"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["beta2", "beta1"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["rec_resid"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["rr"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cusum"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["uw", "lw"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cusum2"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["uww", "lww"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["infl"], /):
+        """
+        usage.statsmodels: 44
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["unemp", "m1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cpi", "unemp", "m1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["fittedvalues"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sum_sq"], /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["df"], /):
+        """
+        usage.statsmodels: 18
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["F"], /):
+        """
+        usage.dask: 2
+        usage.statsmodels: 20
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["PR(>F)"], /):
+        """
+        usage.statsmodels: 13
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["df_resid"], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["ssr"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["ss_diff"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["df_diff"], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Pr(>F)"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["DV"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["D"], /):
+        """
+        usage.dask: 2
+        usage.networkx: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Pr > F", "Den DF", "Num DF", "F Value"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["v1"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["v2"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[int], /):
+        """
+        usage.dask: 4
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["strat", "v2", "v1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x1", "c"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x2", "c"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x2", "x1", "c"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["SUNACTIVITY"], /):
+        """
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x0"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["__index__"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["x5"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["constrict"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["log_volumne", "log_rate", "const"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[Literal["dffits_internal", "hat_diag", "standard_resid", "cooks_d"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cong_mesg"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["emo"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["ystatus"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["mtime", "exp"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["mstatus"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["exp"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["hs_grad", "murder"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["capital", "value"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["firm"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["const"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["GNP"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["UNEMP"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["string_var"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["apple"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["price"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cpi", "realinv"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["infl", "tbilrate"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["unemp", "infl"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["filtered_0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["smoothed_0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["duration1", "duration0"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["inv"], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["inc"], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["consump"], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["realint", "infl"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["count"], /):
+        """
+        usage.prophet: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["global.2", "global.1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["block"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["order"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["revision date"], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["revised variable"], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["update date"], /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["updated variable"], /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["news"], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["weight"], /):
+        """
+        usage.networkx: 1
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[Literal["impact", "weight", "news", "forecast (prev)", "observed"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["impact", "weight", "observed", "forecast (prev)"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_fpp1_mean"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_fpp1"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["lower y"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_fpp1_lower"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["upper y"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_fpp1_upper"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_fpp2_mean"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_fpp2"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_fpp2_lower"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_fpp2_upper"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_fpp3_mean"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_fpp3"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_fpp3_lower"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_fpp3_upper"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_ets_mean"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_ets"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_ets_lower"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["oil_ets_upper"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["air_fpp1_mean"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["air_fpp1"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["air_fpp2_mean"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["air_fpp2"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["air_fpp2_lower"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["air_fpp2_upper"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["air_ets_mean"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["air_ets"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["air_ets_lower"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["air_ets_upper"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aust_fpp1_mean"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aust_fpp1"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aust_fpp1_lower"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aust_fpp1_upper"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aust_ets1_mean"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aust_ets1"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aust_ets1_lower"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aust_ets1_upper"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aust_ets2_mean"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aust_ets2"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aust_ets2_lower"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aust_ets2_upper"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aust_ets3_mean"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["aust_ets3"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: str, /):
+        """
+        usage.dask: 6
+        usage.prophet: 5
+        usage.sklearn: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["realinv", "realgdp", "cpi"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["realgdp", "cpi"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["realinv"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cpi"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["dln_inv"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["r3", "r2", "r1"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["detN"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["m3", "m2", "m1"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["v3", "v2", "v1"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["F3", "F2", "F1"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["a3", "a2", "a1"]], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["detP"]], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["alphahat3", "alphahat2", "alphahat1"]], /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["detV"]], /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["muhat3", "muhat2", "muhat1"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["etahat3", "etahat2", "etahat1"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["detVeta"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["epshat3", "epshat2", "epshat1"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["Veps3", "Veps2", "Veps1"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["forecast (prev)"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["observed"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["impact"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[Literal["impact", "weight", "news", "observed", "forecast (prev)"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["impact date"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["impacted variable"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["impact of revisions"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["impact of news"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls,
+        _0: List[
+            Literal[
+                "estimate (new)",
+                "total impact",
+                "impact of news",
+                "impact of revisions",
+                "estimate (prev)",
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["impact of news", "impact of revisions"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["unemp", "realgdp"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["lgdp"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["V1"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["GDP"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["u1"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["u2"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["u3"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["u4"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["u5"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["u6"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["u7"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["u8"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["u9"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["u10"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["u11"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["u12"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["rstd"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["realcons", "realgdp"]], /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["state3", "state2", "state1"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["eps3", "eps2", "eps1"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["eta3", "eta2", "eta1"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["signal3", "signal2", "signal1"]], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["realinv", "realcons", "realgdp"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["dep1"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sr1"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["sp3", "sp2", "sp1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["sf3", "sf2", "sf1"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["sm3", "sm2", "sm1"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["eps"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["epsvar"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["eta"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["etavar"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["etahat"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["detVeta"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["F1"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["unemp"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["inc"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["inv", "inc"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cpi"], /):
+        """
+        usage.statsmodels: 14
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["realcons"], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["predict"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["realgdp", "m1", "realdpi"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["logcons", "loggdp"]], /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["loginv"], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sin(1,12)"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cos(1,12)"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sin(2,12)"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cos(2,12)"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sin(3,12)"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cos(3,12)"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["lncoins"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["invt"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["SUNACTIVITY"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["quarter", "year"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
     def __getitem__(cls, _0: Literal["ds"], /):
         """
         usage.prophet: 43
@@ -5779,16 +8552,6 @@ class DataFrame:
 
     @overload
     @classmethod
-    def __getitem__(cls, _0: str, /):
-        """
-        usage.dask: 6
-        usage.prophet: 5
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    @classmethod
     def __getitem__(cls, _0: Literal["monthly"], /):
         """
         usage.prophet: 3
@@ -5832,14 +8595,6 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["horizon"], /):
         """
         usage.prophet: 21
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __getitem__(cls, _0: Literal["count"], /):
-        """
-        usage.prophet: 1
         """
         ...
 
@@ -6163,14 +8918,6 @@ class DataFrame:
         """
         usage.seaborn: 2
         usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __getitem__(cls, _0: Literal["time"], /):
-        """
-        usage.seaborn: 4
         """
         ...
 
@@ -6586,14 +9333,6 @@ class DataFrame:
     @overload
     @classmethod
     def __getitem__(cls, _0: Tuple[Tuple[Literal["hue"], Literal["b"]]], /):
-        """
-        usage.seaborn: 4
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __getitem__(cls, _0: Literal["weights"], /):
         """
         usage.seaborn: 4
         """
@@ -7117,15 +9856,6 @@ class DataFrame:
 
     @overload
     @classmethod
-    def __getitem__(cls, _0: Literal["D"], /):
-        """
-        usage.dask: 2
-        usage.networkx: 1
-        """
-        ...
-
-    @overload
-    @classmethod
     def __getitem__(cls, _0: Literal["__series__"], /):
         """
         usage.dask: 1
@@ -7249,14 +9979,6 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["AB"], /):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __getitem__(cls, _0: List[int], /):
-        """
-        usage.dask: 4
         """
         ...
 
@@ -7455,14 +10177,6 @@ class DataFrame:
 
     @overload
     @classmethod
-    def __getitem__(cls, _0: Literal["F"], /):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
-    @classmethod
     def __getitem__(cls, _0: Literal["G"], /):
         """
         usage.dask: 2
@@ -7546,14 +10260,6 @@ class DataFrame:
     def __getitem__(cls, _0: List[Literal["e", "d", "b", "a"]], /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __getitem__(cls, _0: Literal["Time"], /):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -8988,14 +11694,6 @@ class DataFrame:
 
     @overload
     @classmethod
-    def __getitem__(cls, _0: Literal["weight"], /):
-        """
-        usage.networkx: 1
-        """
-        ...
-
-    @overload
-    @classmethod
     def __getitem__(cls, _0: Literal["cost"], /):
         """
         usage.networkx: 1
@@ -9068,6 +11766,7 @@ class DataFrame:
         usage.prophet: 319
         usage.seaborn: 406
         usage.sklearn: 213
+        usage.statsmodels: 1071
         usage.xarray: 8
         """
         ...
@@ -9090,6 +11789,14 @@ class DataFrame:
 
     @overload
     @classmethod
+    def __ne__(cls, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
     def __ne__(cls, _0: int, /):
         """
         usage.prophet: 1
@@ -9097,10 +11804,11 @@ class DataFrame:
         ...
 
     @classmethod
-    def __ne__(cls, _0: Union[int, type], /):
+    def __ne__(cls, _0: Union[pandas.core.frame.DataFrame, int, type], /):
         """
         usage.dask: 3
         usage.prophet: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -9146,6 +11854,14 @@ class DataFrame:
 
     @overload
     @classmethod
+    def from_dict(cls, /, data: Dict[str, numpy.ndarray]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
     def from_dict(
         cls,
         /,
@@ -9186,7 +11902,7 @@ class DataFrame:
         cls,
         /,
         data: Union[
-            Dict[str, List[Union[int, str]]],
+            Dict[str, Union[numpy.ndarray, List[Union[int, str]]]],
             List[Dict[Literal["y", "x"], Union[Literal["a", "b", "c", "d"], int]]],
         ],
         orient: Literal["columns"] = ...,
@@ -9197,6 +11913,7 @@ class DataFrame:
         usage.dask: 1
         usage.modin: 1
         usage.networkx: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -9272,6 +11989,7 @@ class DataFrame:
     def from_records(cls, /, data: numpy.ndarray):
         """
         usage.koalas: 1
+        usage.statsmodels: 5
         """
         ...
 
@@ -9379,12 +12097,23 @@ class DataFrame:
         """
         ...
 
+    @overload
+    @classmethod
+    def from_records(cls, /, data: numpy.recarray):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
     @classmethod
     def from_records(
         cls,
         /,
         data: Union[
-            List[Tuple[int, int]], Dict[Literal["A", "B"], List[int]], numpy.ndarray
+            numpy.ndarray,
+            numpy.recarray,
+            Dict[Literal["A", "B"], List[int]],
+            List[Tuple[int, int]],
         ],
         index: Union[None, List[int]] = ...,
         exclude: Union[None, List[Literal["B"]]] = ...,
@@ -9394,6 +12123,7 @@ class DataFrame:
     ):
         """
         usage.koalas: 14
+        usage.statsmodels: 9
         """
         ...
 
@@ -9418,19 +12148,54 @@ class DataFrame:
     # usage.dask: 1
     F: object
 
+    # usage.statsmodels: 2
+    Foo: object
+
+    # usage.statsmodels: 15
+    Group: object
+
+    # usage.statsmodels: 1
+    Item: object
+
     # usage.dask: 1
     Name: object
+
+    # usage.statsmodels: 1
+    Package: object
+
+    # usage.statsmodels: 1
+    SD: object
+
+    # usage.statsmodels: 2
+    SUNACTIVITY: object
+
+    # usage.statsmodels: 14
+    Status: object
 
     # usage.dask: 5
     # usage.koalas: 1
     # usage.seaborn: 4
+    # usage.statsmodels: 39
     # usage.xarray: 1
     T: object
+
+    # usage.statsmodels: 2
+    Variance: object
+
+    # usage.statsmodels: 4
+    Village: object
 
     # usage.dask: 2
     X: object
 
+    # usage.statsmodels: 1
+    YEAR: object
+
+    # usage.statsmodels: 1
+    Year: object
+
     # usage.dask: 7
+    # usage.statsmodels: 1
     __class__: object
 
     # usage.dask: 2
@@ -9448,6 +12213,7 @@ class DataFrame:
     # usage.dask: 114
     # usage.koalas: 132
     # usage.seaborn: 9
+    # usage.statsmodels: 3
     a: pandas.core.series.Series
 
     # usage.koalas: 1
@@ -9469,6 +12235,7 @@ class DataFrame:
     # usage.dask: 63
     # usage.koalas: 99
     # usage.seaborn: 2
+    # usage.statsmodels: 1
     b: object
 
     # usage.seaborn: 1
@@ -9477,7 +12244,17 @@ class DataFrame:
     # usage.dask: 1
     # usage.koalas: 9
     # usage.seaborn: 3
+    # usage.statsmodels: 3
     c: object
+
+    # usage.statsmodels: 1
+    c1: object
+
+    # usage.statsmodels: 1
+    c2: object
+
+    # usage.statsmodels: 3
+    coef: object
 
     # usage.dask: 1
     col1: object
@@ -9492,12 +12269,14 @@ class DataFrame:
     # usage.prophet: 14
     # usage.seaborn: 18
     # usage.sklearn: 19
+    # usage.statsmodels: 235
     # usage.xarray: 9
     columns: object
 
     # usage.dask: 4
     # usage.koalas: 2
     # usage.seaborn: 3
+    # usage.statsmodels: 1
     d: object
 
     # usage.seaborn: 2
@@ -9506,11 +12285,15 @@ class DataFrame:
     # usage.seaborn: 1
     deck: object
 
+    # usage.statsmodels: 2
+    design_info: object
+
     # usage.dask: 3
     # usage.seaborn: 1
     div: object
 
     # usage.dask: 3
+    # usage.statsmodels: 1
     divide: object
 
     # usage.koalas: 1
@@ -9523,6 +12306,7 @@ class DataFrame:
     # usage.koalas: 19
     # usage.modin: 1
     # usage.sklearn: 24
+    # usage.statsmodels: 4
     dtypes: object
 
     # usage.dask: 2
@@ -9537,8 +12321,17 @@ class DataFrame:
     # usage.seaborn: 2
     empty: object
 
+    # usage.statsmodels: 1
+    entry: object
+
+    # usage.statsmodels: 1
+    exposure: object
+
     # usage.dask: 3
     f: object
+
+    # usage.statsmodels: 1
+    fake: object
 
     # usage.sklearn: 1
     fit: object
@@ -9551,6 +12344,9 @@ class DataFrame:
 
     # usage.seaborn: 17
     g: pandas.core.series.Series
+
+    # usage.statsmodels: 1
+    grps: object
 
     # usage.seaborn: 6
     h: pandas.core.series.Series
@@ -9574,6 +12370,7 @@ class DataFrame:
     # usage.prophet: 5
     # usage.seaborn: 9
     # usage.sklearn: 14
+    # usage.statsmodels: 366
     # usage.xarray: 2
     iloc: object
 
@@ -9584,8 +12381,15 @@ class DataFrame:
     # usage.prophet: 4
     # usage.seaborn: 12
     # usage.sklearn: 3
+    # usage.statsmodels: 358
     # usage.xarray: 12
     index: object
+
+    # usage.statsmodels: 2
+    infl: object
+
+    # usage.statsmodels: 1
+    intcol: object
 
     # usage.koalas: 2
     kurtosis: object
@@ -9595,18 +12399,35 @@ class DataFrame:
     # usage.prophet: 2
     # usage.seaborn: 16
     # usage.sklearn: 1
+    # usage.statsmodels: 291
     # usage.xarray: 3
     loc: object
 
     # usage.koalas: 11
     max_speed: object
 
+    # usage.statsmodels: 1
+    mean_ci_lower: object
+
+    # usage.statsmodels: 1
+    mean_ci_upper: object
+
+    # usage.statsmodels: 1
+    mean_se: object
+
+    # usage.statsmodels: 4
+    multiply: object
+
     # usage.koalas: 1
     name: object
 
     # usage.dask: 3
     # usage.sklearn: 4
+    # usage.statsmodels: 26
     ndim: object
+
+    # usage.statsmodels: 7
+    offset: object
 
     # usage.dask: 2
     path: object
@@ -9620,8 +12441,26 @@ class DataFrame:
     # usage.koalas: 1
     rep: object
 
+    # usage.statsmodels: 5
+    rw: object
+
+    # usage.statsmodels: 1
+    s: object
+
     # usage.koalas: 7
     sale: object
+
+    # usage.statsmodels: 1
+    se: object
+
+    # usage.statsmodels: 6
+    season: object
+
+    # usage.statsmodels: 1
+    seasonal: object
+
+    # usage.statsmodels: 1
+    ses: object
 
     # usage.koalas: 4
     shield: object
@@ -9629,16 +12468,32 @@ class DataFrame:
     # usage.dask: 2
     # usage.seaborn: 1
     # usage.sklearn: 2
+    # usage.statsmodels: 8
     size: object
+
+    # usage.statsmodels: 2
+    status: object
 
     # usage.dask: 12
     str_col: object
+
+    # usage.statsmodels: 7
+    strata: object
 
     # usage.dask: 4
     string_col: object
 
     # usage.koalas: 1
     style: object
+
+    # usage.statsmodels: 1
+    t: object
+
+    # usage.statsmodels: 7
+    trend: object
+
+    # usage.statsmodels: 1
+    tvalues: object
 
     # usage.dask: 1
     tz: object
@@ -9653,8 +12508,12 @@ class DataFrame:
     # usage.prophet: 4
     # usage.seaborn: 8
     # usage.sklearn: 1
+    # usage.statsmodels: 209
     # usage.xarray: 7
     values: object
+
+    # usage.statsmodels: 1
+    violent: object
 
     # usage.dask: 7
     w: pandas.core.series.Series
@@ -9663,19 +12522,58 @@ class DataFrame:
     # usage.koalas: 25
     # usage.prophet: 1
     # usage.seaborn: 8
+    # usage.statsmodels: 13
     x: pandas.core.series.Series
+
+    # usage.statsmodels: 1
+    x1: object
+
+    # usage.statsmodels: 1
+    x2: object
+
+    # usage.statsmodels: 2
+    x3: object
+
+    # usage.statsmodels: 1
+    x4: object
+
+    # usage.statsmodels: 1
+    x5: object
 
     # usage.dask: 39
     # usage.koalas: 11
     # usage.seaborn: 7
+    # usage.statsmodels: 16
     y: pandas.core.series.Series
 
+    # usage.statsmodels: 2
+    y_est: object
+
+    # usage.statsmodels: 2
+    y_est_se: object
+
+    # usage.statsmodels: 2
+    y_mgcv_gcv: object
+
+    # usage.statsmodels: 1
+    ybin: object
+
+    # usage.statsmodels: 1
+    ybin_est: object
+
     # usage.koalas: 1
-    year: object
+    # usage.statsmodels: 2
+    year: pandas.core.series.Series
+
+    # usage.statsmodels: 2
+    year_cen: object
 
     # usage.dask: 4
     # usage.koalas: 1
     z: object
+
+    # usage.statsmodels: 1
+    z1: object
 
     @overload
     def __add__(self, _0: int, /):
@@ -9689,6 +12587,7 @@ class DataFrame:
     def __add__(self, _0: pandas.core.series.Series, /):
         """
         usage.koalas: 48
+        usage.statsmodels: 2
         """
         ...
 
@@ -9697,6 +12596,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 8
+        usage.statsmodels: 4
         """
         ...
 
@@ -9733,12 +12633,76 @@ class DataFrame:
         usage.dask: 24
         usage.koalas: 78
         usage.pandas: 37
+        usage.statsmodels: 6
         """
         ...
 
     def __array_wrap__(self, /, result: numpy.ndarray):
         """
         usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["__index__"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["unknown"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["abcde"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["fghij"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["klmno"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["pqrst"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["uvwxy"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["string_var"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["apple"], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -9993,6 +12957,38 @@ class DataFrame:
         """
         usage.prophet: 26
         usage.seaborn: 18
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: int, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 8
+        usage.prophet: 2
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: numpy.float64, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -10003,26 +12999,22 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def __eq__(self, _0: pandas.core.frame.DataFrame, /):
-        """
-        usage.dask: 8
-        usage.prophet: 2
-        """
-        ...
-
-    @overload
-    def __eq__(self, _0: int, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def __eq__(self, _0: Union[pandas.core.frame.DataFrame, int, numpy.ndarray], /):
+    def __eq__(
+        self,
+        _0: Union[
+            pandas.core.frame.DataFrame,
+            int,
+            numpy.ndarray,
+            pandas.core.series.Series,
+            numpy.float64,
+        ],
+        /,
+    ):
         """
         usage.dask: 9
         usage.pandas: 6
         usage.prophet: 2
+        usage.statsmodels: 7
         """
         ...
 
@@ -10061,6 +13053,13 @@ class DataFrame:
         ...
 
     @overload
+    def __gt__(self, _0: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __gt__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
         """
         usage.pandas: 4
@@ -10076,13 +13075,16 @@ class DataFrame:
 
     def __gt__(
         self,
-        _0: Union[pandas.core.series.Series, int, numpy.ndarray, numpy.timedelta64],
+        _0: Union[
+            pandas.core.series.Series, float, int, numpy.ndarray, numpy.timedelta64
+        ],
         /,
     ):
         """
         usage.dask: 1
         usage.koalas: 5
         usage.pandas: 4
+        usage.statsmodels: 1
         """
         ...
 
@@ -10103,6 +13105,7 @@ class DataFrame:
         usage.dask: 1
         usage.modin: 1
         usage.seaborn: 4
+        usage.statsmodels: 11
         """
         ...
 
@@ -10155,22 +13158,58 @@ class DataFrame:
         ...
 
     @overload
+    def __lt__(self, _0: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __lt__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 1
         """
         ...
 
-    def __lt__(self, _0: Union[pandas.core.series.Series, int], /):
+    def __lt__(self, _0: Union[pandas.core.series.Series, int, float], /):
         """
         usage.dask: 3
         usage.koalas: 5
+        usage.statsmodels: 1
+        """
+        ...
+
+    def __matmul__(self, _0: numpy.ndarray, /):
+        """
+        usage.statsmodels: 3
         """
         ...
 
     def __mod__(self, _0: numpy.timedelta64, /):
         """
         usage.pandas: 1
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: int, /):
+        """
+        usage.sklearn: 2
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: numpy.float64, /):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -10188,19 +13227,11 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def __mul__(self, _0: int, /):
-        """
-        usage.sklearn: 2
-        """
-        ...
-
-    def __mul__(
-        self, _0: Union[float, int, numpy.int64, numpy.timedelta64, numpy.ndarray], /
-    ):
+    def __mul__(self, _0: object, /):
         """
         usage.pandas: 20
         usage.sklearn: 4
+        usage.statsmodels: 9
         """
         ...
 
@@ -10218,16 +13249,17 @@ class DataFrame:
         ...
 
     @overload
-    def __pow__(self, _0: numpy.timedelta64, /):
+    def __pow__(self, _0: int, /):
         """
-        usage.pandas: 1
+        usage.dask: 2
+        usage.statsmodels: 1
         """
         ...
 
     @overload
-    def __pow__(self, _0: int, /):
+    def __pow__(self, _0: numpy.timedelta64, /):
         """
-        usage.dask: 2
+        usage.pandas: 1
         """
         ...
 
@@ -10235,6 +13267,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.pandas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -10243,6 +13276,14 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 8
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: int, /):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -10262,21 +13303,12 @@ class DataFrame:
         """
         ...
 
-    def __radd__(
-        self,
-        _0: Union[
-            dask.dataframe.core.Scalar,
-            pandas.core.frame.DataFrame,
-            numpy.ndarray,
-            numpy.timedelta64,
-            numpy.datetime64,
-        ],
-        /,
-    ):
+    def __radd__(self, _0: object, /):
         """
         usage.dask: 2
         usage.koalas: 8
         usage.pandas: 30
+        usage.statsmodels: 6
         """
         ...
 
@@ -10292,9 +13324,26 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def __rmul__(self, _0: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __rmul__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.int64], /):
         """
         usage.pandas: 16
+        """
+        ...
+
+    def __rmul__(
+        self, _0: Union[numpy.int64, numpy.timedelta64, numpy.ndarray, int], /
+    ):
+        """
+        usage.pandas: 16
+        usage.statsmodels: 1
         """
         ...
 
@@ -10316,6 +13365,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 2
+        usage.statsmodels: 6
         """
         ...
 
@@ -10342,6 +13392,15 @@ class DataFrame:
         usage.dask: 1
         usage.koalas: 2
         usage.pandas: 26
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -10352,21 +13411,15 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def __rtruediv__(self, _0: pandas.core.frame.DataFrame, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __rtruediv__(
         self,
-        _0: Union[pandas.core.frame.DataFrame, numpy.timedelta64, numpy.ndarray],
+        _0: Union[pandas.core.frame.DataFrame, numpy.ndarray, numpy.timedelta64],
         /,
     ):
         """
         usage.dask: 1
         usage.pandas: 20
+        usage.statsmodels: 1
         """
         ...
 
@@ -10415,6 +13468,7 @@ class DataFrame:
     def __setitem__(self, _0: Literal["0"], _1: pandas.core.series.Series, /):
         """
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -10526,6 +13580,7 @@ class DataFrame:
         usage.dask: 2
         usage.koalas: 4
         usage.sklearn: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -10534,6 +13589,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -10637,6 +13693,7 @@ class DataFrame:
         usage.koalas: 1
         usage.prophet: 3
         usage.seaborn: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -10935,6 +13992,7 @@ class DataFrame:
     def __setitem__(self, _0: Literal["E"], _1: pandas.core.series.Series, /):
         """
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -10943,6 +14001,7 @@ class DataFrame:
         """
         usage.koalas: 1
         usage.sklearn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -11056,6 +14115,7 @@ class DataFrame:
     def __setitem__(self, _0: Literal["year"], _1: pandas.core.series.Series, /):
         """
         usage.koalas: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -12209,6 +15269,1641 @@ class DataFrame:
     def __setitem__(self, _0: Literal["C"], _1: List[int], /):
         """
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["const"], _1: int, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["constant"], _1: int, /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pvalue-hs"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["reject-hs"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["pvalue-hommel"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["reject-hommel"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["offset"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["oracle"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["final"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["logpopul"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["NABOVE"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["NBELOW"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["x3"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["y = 0"], _1: pandas.core.indexes.base.Index, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["y = 1"], _1: pandas.core.indexes.base.Index, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["y = 2"], _1: pandas.core.indexes.base.Index, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["y = 3"], _1: pandas.core.indexes.base.Index, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["y = 4"], _1: pandas.core.indexes.base.Index, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["y = 5"], _1: pandas.core.indexes.base.Index, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["strata"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Type"], _1: List[Literal["V", "M"]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Post. Mean"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Post. SD"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["SD"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["SD (LB)"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["SD (UB)"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD"], _1: List[Literal["0.088", "0.092", "0.719"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (LB)"], _1: List[Literal["0.030", "0.042"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (UB)"], _1: List[Literal["0.257", "0.286", "12.265"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD"], _1: List[Literal["0.083", "0.488", "2.124"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (LB)"], _1: List[Literal["0.030", "0.319", "1.358"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (UB)"], _1: List[Literal["0.227", "0.749", "3.322"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD"], _1: List[Literal["0.527", "0.468", "2.211"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (LB)"], _1: List[Literal["0.332", "0.304", "1.406"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (UB)"], _1: List[Literal["0.834", "0.720", "3.476"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD"], _1: List[Literal["0.624", "0.935", "0.930"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (LB)"], _1: List[Literal["0.352", "0.761", "0.779"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (UB)"], _1: List[Literal["1.105", "1.148", "1.111"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD"], _1: List[Literal["0.796", "0.938", "0.932"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (LB)"], _1: List[Literal["0.521", "0.774", "0.784"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (UB)"], _1: List[Literal["1.218", "1.137", "1.107"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD"], _1: List[Literal["0.094", "0.085", "0.581"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (LB)"], _1: List[Literal["0.029", "0.030", "0.387"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (UB)"], _1: List[Literal["0.300", "0.241", "0.872"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD"], _1: List[Literal["1.211", "0.700", "0.492"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (LB)"], _1: List[Literal["0.815", "0.453", "0.312"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (UB)"], _1: List[Literal["1.799", "1.081", "0.777"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD"], _1: List[Literal["1.955", "1.357", "0.766"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (LB)"], _1: List[Literal["1.352", "0.920", "0.431"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (UB)"], _1: List[Literal["2.828", "2.002", "1.362"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD"], _1: List[Literal["0.503", "1.110", "0.578"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (LB)"], _1: List[Literal["0.298", "0.696", "0.476"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (UB)"], _1: List[Literal["0.847", "1.771", "0.702"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD"], _1: List[Literal["0.591", "1.250", "0.579"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (LB)"], _1: List[Literal["0.377", "0.843", "0.502"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["SD (UB)"], _1: List[Literal["0.926", "1.853", "0.668"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["z1"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["z2"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["year_cen"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["y"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["offset"], _1: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["time"], _1: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["EXECUTIONS"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["FMI"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["intcol"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["intcol"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["qual"], _1: bool, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["quarter"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["datetime_c"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["datetime_big_c"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["date"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["weekly_date"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["monthly_date"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["quarterly_date"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["half_yearly_date"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["yearly_date"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["var2"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Coef."], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Std.Err."], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["high"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["largest"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: pandas.core.frame.DataFrame, _1: Literal[""], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["dup"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["Coef."], _1: List[Literal["4.966", "0.592", "1.154"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["Std.Err."], _1: List[Literal["0.892", "0.177", "0.069"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["z"], _1: List[Literal["", "16.652"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["P>|z|"], _1: List[Literal["", "0.000"]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["[0.025"], _1: List[Literal["", "1.018"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["0.975]"], _1: List[Literal["", "1.290"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["groups"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["x1"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["x2"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["v1"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["v2"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Coef."], _1: List[Literal["0.703", "0.009"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["Std.Err."], _1: List[Literal["0.172", "0.055"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["z"], _1: List[Literal["", "0.166"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["P>|z|"], _1: List[Literal["", "0.868"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["[0.025"], _1: List[Literal["", "-0.099"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["0.975]"], _1: List[Literal["", "0.117"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["re1"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["re2"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["vc1"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["vc2"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["vc3"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["vc4"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["exog0"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["exog1"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["exog2"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["exog3"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["exog_re"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Coef."], _1: List[str], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["Std.Err."],
+        _1: List[Literal["0.159", "0.057", "0.058", "0.060", "0.055"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["z"], _1: List[str], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["P>|z|"],
+        _1: List[Literal["", "0.964", "0.666", "0.000", "0.779"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["[0.025"], _1: List[str], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["0.975]"], _1: List[str], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Std.Err."], _1: List[str], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["z"],
+        _1: List[Literal["", "-0.207", "-16.463", "-0.091", "15.301"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["P>|z|"], _1: List[Literal["", "0.836", "0.000", "0.928"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["[0.025"],
+        _1: List[Literal["", "-0.126", "-1.091", "-0.113", "0.764"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["0.975]"],
+        _1: List[Literal["", "0.102", "-0.859", "0.103", "0.989"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["P>|z|"],
+        _1: List[Literal["", "0.936", "0.644", "0.000", "0.759"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["Coef."],
+        _1: List[Literal["0.892", "0.004", "-0.027", "-0.993", "-0.017"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["P>|z|"],
+        _1: List[Literal["", "0.937", "0.641", "0.000", "0.753"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["Coef."],
+        _1: List[Literal["12.550", "-0.222", "0.307", "3.676"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["Std.Err."],
+        _1: List[Literal["17.608", "0.170", "0.143", "2.708"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["z"], _1: List[Literal["", "-1.306", "2.144", "1.358"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["P>|z|"], _1: List[Literal["", "0.192", "0.032", "0.175"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["[0.025"],
+        _1: List[Literal["", "-0.554", "0.026", "-1.631"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["0.975]"], _1: List[Literal["", "0.111", "0.589", "8.983"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["z"],
+        _1: List[Literal["", "14.992", "15.204", "16.166", "15.884"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["[0.025"],
+        _1: List[Literal["", "0.882", "0.898", "0.883", "0.913"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["0.975]"],
+        _1: List[Literal["", "1.147", "1.163", "1.127", "1.170"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["g"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Coef."], _1: List[Literal["0.000", "0.108"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["Std.Err."], _1: List[Literal["", "0.123", "6221529.393"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["z"], _1: List[Literal["", "0.876", "0.000"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["P>|z|"], _1: List[Literal["", "0.381", "1.000"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["[0.025"], _1: List[Literal["", "-0.134", "-12193973.540"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["0.975]"], _1: List[Literal["", "0.350", "12193973.540"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["z3"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["z4"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["z5"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["Type"], _1: List[Literal["SD", "Smooth", "Scale", "Mean"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["coef"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["std err"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["tvalues"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["P>|t|"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["[0.025"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["0.975]"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["F"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["PR(>F)"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["mean_sq"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["ssr"], _1: List[numpy.float64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["df_resid"], _1: List[numpy.float64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["ss_diff"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Pr(>F)"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["sum_sq"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["strat"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["c"], _1: float, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["__index__"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Stat"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["FDR+"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["FDR"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["weights"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["vec"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["UNEMP"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["dln_inv"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["dln_inc"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["dln_consump"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["block"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: List[Literal["order"]], _1: pandas.core.frame.DataFrame, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["var."], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["   error variance"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: str, _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["forecast (prev)"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["observed"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["news"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["impact"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["revision date"], _1: List[int], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["revised variable"], _1: List[int], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["update date"], _1: List[int], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["updated variable"], _1: List[int], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["observed (prev)"], _1: List[numpy.float64], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["revised"], _1: List[numpy.float64], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["impact of revisions"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["impact of news"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["total impact"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["observed (prev)"], _1: list, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["revised"], _1: list, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["forecast (prev)"], _1: list, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["observed"], _1: list, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["news"], _1: list, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["impact"], _1: list, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["realgdp"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["lgdp"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["loginv"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["loggdp"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["logcons"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["cpi"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["cpi.L.1"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["cpi.L.2"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["cpi.L.3"], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["const"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["trend"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["trend_squared"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["exovar1"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -14547,6 +19242,7 @@ class DataFrame:
         usage.prophet: 63
         usage.seaborn: 29
         usage.sklearn: 178
+        usage.statsmodels: 307
         usage.xarray: 1
         """
         ...
@@ -14556,13 +19252,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 2
-        """
-        ...
-
-    @overload
-    def __sub__(self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /):
-        """
-        usage.pandas: 30
+        usage.statsmodels: 6
         """
         ...
 
@@ -14571,6 +19261,21 @@ class DataFrame:
         """
         usage.dask: 5
         usage.seaborn: 2
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: Union[numpy.ndarray, numpy.datetime64, numpy.timedelta64], /):
+        """
+        usage.pandas: 30
         """
         ...
 
@@ -14587,6 +19292,30 @@ class DataFrame:
         usage.koalas: 2
         usage.pandas: 30
         usage.seaborn: 2
+        usage.statsmodels: 15
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.seaborn: 2
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: int, /):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -14597,26 +19326,13 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def __truediv__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.seaborn: 2
-        """
-        ...
-
-    @overload
-    def __truediv__(self, _0: pandas.core.frame.DataFrame, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __truediv__(
         self,
         _0: Union[
             pandas.core.frame.DataFrame,
-            numpy.ndarray,
             numpy.timedelta64,
+            numpy.ndarray,
+            int,
             pandas.core.series.Series,
         ],
         /,
@@ -14625,6 +19341,7 @@ class DataFrame:
         usage.dask: 1
         usage.pandas: 22
         usage.seaborn: 2
+        usage.statsmodels: 8
         """
         ...
 
@@ -14644,6 +19361,21 @@ class DataFrame:
         """
         usage.dask: 3
         usage.koalas: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def add(self, /, other: pandas.core.series.Series, axis: int, level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def add(self, /, other: pandas.core.series.Series, level: int):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -14713,12 +19445,14 @@ class DataFrame:
     def add(
         self,
         /,
-        other: Union[pandas.core.frame.DataFrame, int, pandas.core.series.Series],
-        axis: Union[Literal["columns", "index"], int] = ...,
+        other: Union[pandas.core.series.Series, int, pandas.core.frame.DataFrame],
+        axis: Union[int, Literal["columns", "index"]] = ...,
+        level: int = ...,
         fill_value: int = ...,
     ):
         """
         usage.dask: 11
+        usage.statsmodels: 2
         """
         ...
 
@@ -15324,6 +20058,15 @@ class DataFrame:
         usage.dask: 5
         usage.koalas: 3
         usage.seaborn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def all(self, /, axis: int):
+        """
+        usage.dask: 4
+        usage.statsmodels: 1
         """
         ...
 
@@ -15334,18 +20077,12 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def all(self, /, axis: int):
-        """
-        usage.dask: 4
-        """
-        ...
-
     def all(self, /, axis: int = ..., skipna: bool = ...):
         """
         usage.dask: 11
         usage.koalas: 3
         usage.seaborn: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -15363,6 +20100,7 @@ class DataFrame:
         """
         usage.dask: 4
         usage.prophet: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -15379,6 +20117,7 @@ class DataFrame:
         usage.koalas: 3
         usage.prophet: 1
         usage.seaborn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -15388,6 +20127,7 @@ class DataFrame:
         usage.dask: 3
         usage.koalas: 5
         usage.prophet: 2
+        usage.statsmodels: 9
         """
         ...
 
@@ -15443,6 +20183,7 @@ class DataFrame:
         usage.dask: 12
         usage.koalas: 11
         usage.prophet: 2
+        usage.statsmodels: 9
         """
         ...
 
@@ -15464,6 +20205,7 @@ class DataFrame:
     def apply(self, /, func: Callable):
         """
         usage.koalas: 6
+        usage.statsmodels: 1
         """
         ...
 
@@ -15487,6 +20229,7 @@ class DataFrame:
         usage.dask: 5
         usage.koalas: 6
         usage.modin: 1
+        usage.statsmodels: 5
         """
         ...
 
@@ -15494,6 +20237,20 @@ class DataFrame:
     def apply(self, /, func: Callable):
         """
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, result_type: Literal["expand"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -15531,7 +20288,7 @@ class DataFrame:
         /,
         func: Callable,
         raw: bool = ...,
-        result_type: None = ...,
+        result_type: Union[None, Literal["expand"]] = ...,
         axis: Union[Literal["columns"], int] = ...,
         args: Tuple[Union[None, int], ...] = ...,
     ):
@@ -15540,13 +20297,30 @@ class DataFrame:
         usage.koalas: 19
         usage.modin: 1
         usage.seaborn: 1
+        usage.statsmodels: 8
         usage.xarray: 1
         """
         ...
 
+    @overload
     def applymap(self, /, func: Callable):
         """
         usage.dask: 3
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def applymap(self, /, func: Type[str]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    def applymap(self, /, func: Union[Callable, Type[str]]):
+        """
+        usage.dask: 3
+        usage.statsmodels: 6
         """
         ...
 
@@ -15637,6 +20411,7 @@ class DataFrame:
         """
         usage.dask: 9
         usage.koalas: 1
+        usage.statsmodels: 20
         """
         ...
 
@@ -15750,6 +20525,27 @@ class DataFrame:
     ):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[str]):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[object]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[int]):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -15921,6 +20717,7 @@ class DataFrame:
         usage.koalas: 29
         usage.modin: 1
         usage.sklearn: 4
+        usage.statsmodels: 24
         """
         ...
 
@@ -16164,6 +20961,7 @@ class DataFrame:
         usage.prophet: 31
         usage.seaborn: 11
         usage.sklearn: 4
+        usage.statsmodels: 88
         """
         ...
 
@@ -16183,6 +20981,7 @@ class DataFrame:
         usage.prophet: 31
         usage.seaborn: 12
         usage.sklearn: 4
+        usage.statsmodels: 88
         """
         ...
 
@@ -16227,6 +21026,7 @@ class DataFrame:
     def count(self, /):
         """
         usage.dask: 12
+        usage.statsmodels: 2
         """
         ...
 
@@ -16253,6 +21053,7 @@ class DataFrame:
         """
         usage.dask: 17
         usage.koalas: 2
+        usage.statsmodels: 2
         """
         ...
 
@@ -16260,6 +21061,7 @@ class DataFrame:
     def cov(self, /):
         """
         usage.dask: 4
+        usage.statsmodels: 1
         """
         ...
 
@@ -16273,6 +21075,7 @@ class DataFrame:
     def cov(self, /, min_periods: int = ...):
         """
         usage.dask: 5
+        usage.statsmodels: 1
         """
         ...
 
@@ -16369,6 +21172,7 @@ class DataFrame:
         """
         usage.dask: 4
         usage.koalas: 2
+        usage.statsmodels: 2
         """
         ...
 
@@ -16405,6 +21209,7 @@ class DataFrame:
         """
         usage.dask: 11
         usage.koalas: 3
+        usage.statsmodels: 2
         """
         ...
 
@@ -16569,6 +21374,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 2
+        usage.statsmodels: 21
         """
         ...
 
@@ -16576,6 +21382,7 @@ class DataFrame:
     def diff(self, /, periods: int):
         """
         usage.dask: 5
+        usage.statsmodels: 1
         """
         ...
 
@@ -16590,6 +21397,7 @@ class DataFrame:
         """
         usage.dask: 8
         usage.koalas: 2
+        usage.statsmodels: 22
         """
         ...
 
@@ -16694,6 +21502,179 @@ class DataFrame:
     def drop(self, /, columns: List[Literal["75%", "50%", "25%"]], level: int):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["cancer"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["AVGEXP"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["BILLS104"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["WORLDCONSUMPTION"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["EXECUTIONS"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["income"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["affairs"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["invest"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["survival"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["TOTEMP"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["mdvis"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["YES"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["GRADE"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["STACKLOSS"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["NBELOW", "NABOVE"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["duration"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: Literal["index"], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["largest", "high"]], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[int]):
+        """
+        usage.dask: 2
+        usage.statsmodels: 11
+        """
+        ...
+
+    @overload
+    def drop(
+        self, /, labels: List[Literal["revised variable", "revision date"]], axis: int
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(
+        self, /, labels: List[Literal["updated variable", "update date"]], axis: int
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[str], axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: pandas.core.indexes.base.Index, axis: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: List[Literal["cpi"]], axis: int):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -16865,13 +21846,6 @@ class DataFrame:
         ...
 
     @overload
-    def drop(self, /, labels: List[int]):
-        """
-        usage.dask: 2
-        """
-        ...
-
-    @overload
     def drop(
         self,
         /,
@@ -16952,11 +21926,12 @@ class DataFrame:
         labels: Union[
             int,
             pandas.core.indexes.numeric.Int64Index,
+            pandas.core.indexes.base.Index,
             List[
                 Union[
-                    str,
-                    Tuple[Literal["__groupkey_0__", "__groupkey_1__"], Literal[""]],
                     int,
+                    Tuple[Literal["__groupkey_0__", "__groupkey_1__"], Literal[""]],
+                    str,
                 ]
             ],
             str,
@@ -16970,6 +21945,7 @@ class DataFrame:
         usage.koalas: 15
         usage.prophet: 2
         usage.seaborn: 2
+        usage.statsmodels: 34
         """
         ...
 
@@ -17165,6 +22141,34 @@ class DataFrame:
         ...
 
     @overload
+    def drop_duplicates(self, /, subset: List[Literal["B", "id"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, subset: List[Literal["B", "A", "id"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, subset: List[Literal["D", "B", "A", "id"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def drop_duplicates(self, /, subset: List[Literal["E", "A", "id"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def drop_duplicates(self, /):
         """
         usage.dask: 5
@@ -17260,12 +22264,7 @@ class DataFrame:
         self,
         /,
         subset: Union[
-            List[
-                Union[
-                    Literal["b", "a", "x", "y", "z"],
-                    Tuple[Literal["x", "y"], Literal["a", "b"]],
-                ]
-            ],
+            List[Union[Tuple[Literal["x", "y"], Literal["a", "b"]], str]],
             None,
             Literal["ticker", "y", "a", "b"],
             Tuple[Literal["x"], Literal["a"]],
@@ -17276,6 +22275,7 @@ class DataFrame:
         """
         usage.dask: 43
         usage.koalas: 30
+        usage.statsmodels: 4
         """
         ...
 
@@ -17433,6 +22433,7 @@ class DataFrame:
         usage.dask: 1
         usage.koalas: 1
         usage.seaborn: 14
+        usage.statsmodels: 13
         """
         ...
 
@@ -17441,6 +22442,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -17547,6 +22549,7 @@ class DataFrame:
         usage.dask: 22
         usage.koalas: 25
         usage.seaborn: 14
+        usage.statsmodels: 14
         """
         ...
 
@@ -17600,6 +22603,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.prophet: 1
+        usage.statsmodels: 6
         usage.xarray: 10
         """
         ...
@@ -17839,6 +22843,7 @@ class DataFrame:
         usage.dask: 2
         usage.koalas: 6
         usage.seaborn: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -17931,6 +22936,27 @@ class DataFrame:
     ):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: Literal[""]):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def fillna(self, /, method: Literal["backfill"]):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: float):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -18058,21 +23084,8 @@ class DataFrame:
     def fillna(
         self,
         /,
-        value: Union[
-            Literal["-"],
-            None,
-            int,
-            pandas.core.series.Series,
-            Dict[
-                Union[
-                    Literal["z", "y", "x"],
-                    Tuple[Literal["x", "y"], Literal["b", "a", "c"]],
-                    int,
-                ],
-                Union[int, Literal["foo"]],
-            ],
-        ] = ...,
-        method: Union[Literal["ffill", "pad", "bfill"], None] = ...,
+        value: object = ...,
+        method: Union[Literal["ffill", "pad", "bfill", "backfill"], None] = ...,
         axis: int = ...,
         limit: Union[int, None] = ...,
         inplace: bool = ...,
@@ -18082,6 +23095,7 @@ class DataFrame:
         usage.koalas: 24
         usage.modin: 2
         usage.seaborn: 1
+        usage.statsmodels: 10
         """
         ...
 
@@ -18902,6 +23916,106 @@ class DataFrame:
         ...
 
     @overload
+    def groupby(self, /, by: List[Literal["labels", "groups"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["params", "dl_idx"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["censored", "det_limit_index"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["cen", "det_limit_index"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["i"]):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: pandas.core.indexes.numeric.Float64Index):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: numpy.ndarray):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["D", "B", "A", "id"]], as_index: bool):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: int):
+        """
+        usage.dask: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["strat"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["vec"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, level: int):
+        """
+        usage.dask: 6
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["firm"]):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["year"]):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
     def groupby(self, /, by: Literal["h"]):
         """
         usage.prophet: 2
@@ -19000,13 +24114,6 @@ class DataFrame:
         """
         usage.dask: 8
         usage.seaborn: 1
-        """
-        ...
-
-    @overload
-    def groupby(self, /, level: int):
-        """
-        usage.dask: 6
         """
         ...
 
@@ -19301,13 +24408,6 @@ class DataFrame:
     def groupby(self, /, by: int, group_keys: bool):
         """
         usage.dask: 3
-        """
-        ...
-
-    @overload
-    def groupby(self, /, by: int):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -19715,7 +24815,7 @@ class DataFrame:
     def groupby(
         self,
         /,
-        level: Union[List[int], int] = ...,
+        level: Union[int, List[int]] = ...,
         by: object = ...,
         group_keys: bool = ...,
         dropna: bool = ...,
@@ -19728,6 +24828,7 @@ class DataFrame:
         usage.modin: 10
         usage.prophet: 2
         usage.seaborn: 14
+        usage.statsmodels: 21
         """
         ...
 
@@ -19828,6 +24929,22 @@ class DataFrame:
 
     @overload
     def insert(
+        self, /, loc: int, column: Literal["HR"], value: pandas.core.series.Series
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def insert(self, /, loc: int, column: Literal["const"], value: numpy.ndarray):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def insert(
         self, /, loc: int, column: Literal["x"], value: pandas.core.series.Series
     ):
         """
@@ -19862,11 +24979,12 @@ class DataFrame:
         self,
         /,
         loc: int,
-        column: Literal["x", "y"],
-        value: Union[numpy.ndarray, pandas.core.series.Series],
+        column: Literal["x", "y", "const", "HR"],
+        value: Union[pandas.core.series.Series, numpy.ndarray],
     ):
         """
         usage.seaborn: 4
+        usage.statsmodels: 7
         """
         ...
 
@@ -19940,8 +25058,16 @@ class DataFrame:
         """
         ...
 
-    def interpolate(self, /, method: str, axis: int):
+    @overload
+    def interpolate(self, /):
         """
+        usage.statsmodels: 3
+        """
+        ...
+
+    def interpolate(self, /, method: str = ..., axis: int = ...):
+        """
+        usage.statsmodels: 3
         usage.xarray: 10
         """
         ...
@@ -20003,6 +25129,7 @@ class DataFrame:
         usage.dask: 6
         usage.koalas: 1
         usage.seaborn: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -20018,6 +25145,7 @@ class DataFrame:
         usage.dask: 2
         usage.koalas: 3
         usage.seaborn: 2
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -20027,6 +25155,7 @@ class DataFrame:
         usage.dask: 2
         usage.koalas: 1
         usage.prophet: 1
+        usage.statsmodels: 5
         """
         ...
 
@@ -20115,9 +25244,24 @@ class DataFrame:
         ...
 
     @overload
+    def join(self, /, other: pandas.core.series.Series, how: Literal["outer"]):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def join(self, /, other: pandas.core.series.Series):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
     def join(self, /, other: pandas.core.frame.DataFrame):
         """
         usage.dask: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -20222,7 +25366,7 @@ class DataFrame:
     def join(
         self,
         /,
-        other: pandas.core.frame.DataFrame,
+        other: Union[pandas.core.frame.DataFrame, pandas.core.series.Series],
         how: Literal["right", "left", "outer", "inner"] = ...,
         lsuffix: Literal["l", "_l", "_left"] = ...,
         rsuffix: Literal["r", "_r", "_right"] = ...,
@@ -20230,6 +25374,7 @@ class DataFrame:
         """
         usage.dask: 31
         usage.koalas: 4
+        usage.statsmodels: 8
         """
         ...
 
@@ -20411,6 +25556,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -20421,6 +25567,7 @@ class DataFrame:
         usage.koalas: 3
         usage.prophet: 1
         usage.seaborn: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -20460,6 +25607,7 @@ class DataFrame:
         usage.koalas: 5
         usage.prophet: 1
         usage.seaborn: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -20468,6 +25616,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 5
+        usage.statsmodels: 2
         """
         ...
 
@@ -20484,6 +25633,7 @@ class DataFrame:
         usage.dask: 7
         usage.koalas: 3
         usage.seaborn: 1
+        usage.statsmodels: 17
         """
         ...
 
@@ -20529,12 +25679,28 @@ class DataFrame:
         usage.dask: 15
         usage.koalas: 10
         usage.seaborn: 1
+        usage.statsmodels: 19
         """
         ...
 
+    @overload
     def median(self, /, axis: int, numeric_only: bool):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def median(self, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    def median(self, /, axis: int = ..., numeric_only: bool = ...):
+        """
+        usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -21241,6 +26407,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -23326,6 +28493,7 @@ class DataFrame:
         """
         usage.dask: 306
         usage.koalas: 46
+        usage.statsmodels: 2
         """
         ...
 
@@ -23342,6 +28510,7 @@ class DataFrame:
         usage.dask: 4
         usage.koalas: 51
         usage.seaborn: 2
+        usage.statsmodels: 3
         """
         ...
 
@@ -23350,6 +28519,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -23392,6 +28562,7 @@ class DataFrame:
         usage.dask: 12
         usage.koalas: 53
         usage.seaborn: 2
+        usage.statsmodels: 4
         """
         ...
 
@@ -23470,6 +28641,20 @@ class DataFrame:
         ...
 
     @overload
+    def mul(self, /, other: pandas.core.series.Series, axis: int, level: int):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def mul(self, /, other: pandas.core.series.Series, level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def mul(self, /, other: pandas.core.frame.DataFrame, fill_value: int):
         """
         usage.dask: 2
@@ -23535,12 +28720,14 @@ class DataFrame:
     def mul(
         self,
         /,
-        other: Union[pandas.core.frame.DataFrame, int, pandas.core.series.Series],
-        axis: Union[Literal["columns", "index"], int] = ...,
+        other: Union[pandas.core.series.Series, int, pandas.core.frame.DataFrame],
+        axis: Union[int, Literal["columns", "index"]] = ...,
+        level: int = ...,
         fill_value: int = ...,
     ):
         """
         usage.dask: 11
+        usage.statsmodels: 4
         """
         ...
 
@@ -23928,9 +29115,24 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def pop(self, /, item: Literal["realdpi"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def pop(self, /, item: Literal["species"]):
         """
         usage.seaborn: 1
+        """
+        ...
+
+    def pop(self, /, item: Literal["species", "realdpi"]):
+        """
+        usage.seaborn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -24064,6 +29266,20 @@ class DataFrame:
         ...
 
     @overload
+    def quantile(self, /, q: float):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def quantile(self, /, q: numpy.ndarray):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def quantile(self, /, q: List[float], axis: int):
         """
         usage.dask: 2
@@ -24101,11 +29317,12 @@ class DataFrame:
     def quantile(
         self,
         /,
-        q: Union[List[Union[float, numpy.float64]], float] = ...,
+        q: Union[float, numpy.ndarray, List[Union[numpy.float64, float]]] = ...,
         axis: int = ...,
     ):
         """
         usage.dask: 7
+        usage.statsmodels: 2
         """
         ...
 
@@ -24406,6 +29623,7 @@ class DataFrame:
     @overload
     def reindex(self, /, labels: pandas.core.indexes.multi.MultiIndex):
         """
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -24418,16 +29636,53 @@ class DataFrame:
         ...
 
     @overload
-    def reindex(self, /, labels: pandas.core.indexes.range.RangeIndex):
+    def reindex(self, /, labels: pandas.core.indexes.numeric.Int64Index):
         """
-        usage.modin: 2
+        usage.seaborn: 1
+        usage.statsmodels: 2
         """
         ...
 
     @overload
-    def reindex(self, /, labels: pandas.core.indexes.numeric.Int64Index):
+    def reindex(self, /, labels: pandas.core.indexes.base.Index):
         """
-        usage.seaborn: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def reindex(self, /, labels: pandas.core.indexes.range.RangeIndex):
+        """
+        usage.modin: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def reindex(self, /, labels: range):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def reindex(self, /, index: List[int], columns: List[int], fill_value: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def reindex(self, /, labels: pandas.core.indexes.period.PeriodIndex):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def reindex(self, /, labels: pandas.core.indexes.datetimes.DatetimeIndex):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -24497,16 +29752,17 @@ class DataFrame:
         self,
         /,
         labels: object = ...,
+        index: List[Union[str, int]] = ...,
         columns: Union[
             pandas.core.indexes.base.Index,
             List[
                 Union[
-                    Literal["3", "2", "numbers"],
+                    int,
                     Tuple[Literal["X", "Y"], Literal["numbers", "2", "3"]],
+                    Literal["3", "2", "numbers"],
                 ]
             ],
         ] = ...,
-        index: List[str] = ...,
         fill_value: Union[float, int] = ...,
     ):
         """
@@ -24514,6 +29770,7 @@ class DataFrame:
         usage.koalas: 9
         usage.modin: 2
         usage.seaborn: 3
+        usage.statsmodels: 10
         usage.xarray: 2
         """
         ...
@@ -24593,6 +29850,61 @@ class DataFrame:
     def rename(self, /, columns: Callable, level: int):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def rename(
+        self,
+        /,
+        columns: Dict[
+            Literal["df_constraint", "pvalue", "statistic"],
+            Literal["df constraint", "P>chi2", "chi2"],
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def rename(
+        self,
+        /,
+        columns: Dict[
+            Literal["df_denom", "df_constraint", "pvalue", "statistic"],
+            Literal["df denom", "df constraint", "P>F", "F"],
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def rename(
+        self,
+        /,
+        columns: Dict[Literal["Std.Err.", "Coef."], Literal["log HR SE", "log HR"]],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["cpi"], Literal["CPI_"]], inplace: bool):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def rename(
+        self, /, columns: Dict[Literal["D", "C", "B", "A"], Literal["H", "G", "F", "E"]]
+    ):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -24907,6 +30219,7 @@ class DataFrame:
         usage.koalas: 15
         usage.prophet: 1
         usage.seaborn: 26
+        usage.statsmodels: 5
         """
         ...
 
@@ -24956,6 +30269,12 @@ class DataFrame:
         """
         usage.dask: 6
         usage.koalas: 1
+        """
+        ...
+
+    def reorder_levels(self, /, order: List[int]):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -25065,6 +30384,13 @@ class DataFrame:
         ...
 
     @overload
+    def replace(self, /, to_replace: Dict[bool, Literal["", "X"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def replace(self, /, to_replace: int, value: int):
         """
         usage.dask: 1
@@ -25092,12 +30418,15 @@ class DataFrame:
             int,
             Dict[
                 Union[
-                    Tuple[Literal["X"], Literal["B", "A"]], int, Literal["B", "A", "X"]
+                    Literal["B", "A", "X"],
+                    bool,
+                    int,
+                    Tuple[Literal["X"], Literal["B", "A"]],
                 ],
-                Union[Dict[int, int], int],
+                Union[Literal["", "X"], int, Dict[int, int]],
             ],
-            List[Union[int, Literal["Captain America", "Ironman"]]],
             Literal["Ironman"],
+            List[Union[Literal["Captain America", "Ironman"], int]],
         ],
         value: Union[
             int,
@@ -25110,6 +30439,21 @@ class DataFrame:
         """
         usage.dask: 4
         usage.koalas: 15
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def resample(self, /, rule: Literal["M"], convention: Literal["end"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def resample(self, /, rule: Literal["Q"], convention: Literal["e"]):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -25601,6 +30945,7 @@ class DataFrame:
     ):
         """
         usage.dask: 66
+        usage.statsmodels: 3
         """
         ...
 
@@ -25610,6 +30955,7 @@ class DataFrame:
         usage.dask: 3
         usage.koalas: 17
         usage.prophet: 1
+        usage.statsmodels: 15
         """
         ...
 
@@ -25619,6 +30965,7 @@ class DataFrame:
         usage.dask: 24
         usage.koalas: 31
         usage.prophet: 4
+        usage.statsmodels: 5
         """
         ...
 
@@ -25750,6 +31097,7 @@ class DataFrame:
         usage.dask: 29
         usage.koalas: 66
         usage.prophet: 10
+        usage.statsmodels: 20
         """
         ...
 
@@ -26293,6 +31641,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -26352,8 +31701,8 @@ class DataFrame:
             pandas.core.series.Series,
             Dict[
                 Union[
-                    Literal["C", "A", "D", "Y"],
                     Tuple[Literal["X", "Y"], Literal["A", "C"]],
+                    Literal["C", "A", "D", "Y"],
                 ],
                 int,
             ],
@@ -26362,6 +31711,7 @@ class DataFrame:
         """
         usage.dask: 3
         usage.koalas: 8
+        usage.statsmodels: 1
         """
         ...
 
@@ -26616,6 +31966,15 @@ class DataFrame:
         ...
 
     @overload
+    def select_dtypes(
+        self, /, include: List[Union[Literal["category"], Type[numpy.number]]]
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def select_dtypes(self, /, include: Literal["category"]):
         """
         usage.modin: 1
@@ -26807,7 +32166,7 @@ class DataFrame:
             type,
             None,
             List[
-                Union[type, Literal["category", "bool", "number", "object", "datetime"]]
+                Union[Literal["category", "bool", "number", "object", "datetime"], type]
             ],
             Literal["category", "a"],
         ] = ...,
@@ -26823,6 +32182,7 @@ class DataFrame:
         usage.koalas: 2
         usage.modin: 1
         usage.sklearn: 11
+        usage.statsmodels: 1
         """
         ...
 
@@ -27511,6 +32871,49 @@ class DataFrame:
         ...
 
     @overload
+    def set_index(self, /, keys: Literal["Location"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["state"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: pandas.core.series.Series):
+        """
+        usage.dask: 8
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: List[Literal["year", "firm"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: List[Literal["TVnews", "income", "educ"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["factor"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def set_index(self, /, keys: Literal["idx"]):
         """
         usage.dask: 11
@@ -27557,13 +32960,6 @@ class DataFrame:
     def set_index(self, /, keys: Literal["idx"], drop: bool):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def set_index(self, /, keys: pandas.core.series.Series):
-        """
-        usage.dask: 8
         """
         ...
 
@@ -27834,6 +33230,7 @@ class DataFrame:
         usage.koalas: 95
         usage.modin: 2
         usage.seaborn: 1
+        usage.statsmodels: 6
         usage.xarray: 15
         """
         ...
@@ -27960,6 +33357,7 @@ class DataFrame:
         """
         usage.dask: 7
         usage.koalas: 356
+        usage.statsmodels: 13
         """
         ...
 
@@ -27982,6 +33380,7 @@ class DataFrame:
     def sort_index(self, /, inplace: bool):
         """
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -28011,6 +33410,7 @@ class DataFrame:
         usage.dask: 8
         usage.koalas: 360
         usage.prophet: 1
+        usage.statsmodels: 14
         """
         ...
 
@@ -28520,6 +33920,79 @@ class DataFrame:
     def sort_values(self, /, by: Literal["__single_bucket"]):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["conc"], axis: int):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["obs"], axis: int):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["res"], axis: int):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self,
+        /,
+        by: List[Literal["largest", "high"]],
+        ascending: List[bool],
+        inplace: bool,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["unadj_p"]], ascending: bool):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["x0"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: List[Literal["x2", "x0"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self, /, by: List[Literal["factor", "count"]], ascending: List[bool]
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def sort_values(
+        self, /, by: List[Literal["block", "count"]], ascending: List[bool]
+    ):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -29443,19 +34916,19 @@ class DataFrame:
         self,
         /,
         by: Union[
-            List[Union[int, float, str, Tuple[str, ...]]],
+            List[Union[Tuple[str, ...], str, int, float]],
             str,
             Tuple[Literal["X", "x", "y"], Literal["A", "a", "c"]],
         ],
+        ascending: Union[bool, List[bool]] = ...,
         inplace: bool = ...,
-        ascending: List[bool] = ...,
-        na_position: Literal["first"] = ...,
     ):
         """
         usage.dask: 190
         usage.koalas: 105
         usage.prophet: 4
         usage.seaborn: 3
+        usage.statsmodels: 12
         """
         ...
 
@@ -29499,6 +34972,7 @@ class DataFrame:
         """
         usage.dask: 3
         usage.modin: 2
+        usage.statsmodels: 3
         """
         ...
 
@@ -29509,6 +34983,7 @@ class DataFrame:
         usage.dask: 3
         usage.koalas: 32
         usage.modin: 2
+        usage.statsmodels: 3
         """
         ...
 
@@ -29517,7 +34992,15 @@ class DataFrame:
         """
         usage.koalas: 6
         usage.seaborn: 1
+        usage.statsmodels: 6
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def stack(self, /, level: List[int]):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -29528,11 +35011,12 @@ class DataFrame:
         """
         ...
 
-    def stack(self, /, dropna: bool = ...):
+    def stack(self, /, level: List[int] = ..., dropna: bool = ...):
         """
         usage.dask: 1
         usage.koalas: 6
         usage.seaborn: 1
+        usage.statsmodels: 8
         usage.xarray: 1
         """
         ...
@@ -29549,6 +35033,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -29558,6 +35043,7 @@ class DataFrame:
         usage.dask: 5
         usage.koalas: 3
         usage.seaborn: 1
+        usage.statsmodels: 5
         """
         ...
 
@@ -29649,6 +35135,7 @@ class DataFrame:
         usage.dask: 20
         usage.koalas: 6
         usage.seaborn: 1
+        usage.statsmodels: 6
         """
         ...
 
@@ -29741,6 +35228,7 @@ class DataFrame:
         usage.dask: 3
         usage.koalas: 1
         usage.prophet: 1
+        usage.statsmodels: 13
         """
         ...
 
@@ -29800,6 +35288,7 @@ class DataFrame:
         usage.koalas: 18
         usage.prophet: 1
         usage.seaborn: 1
+        usage.statsmodels: 13
         """
         ...
 
@@ -30401,9 +35890,21 @@ class DataFrame:
         """
         ...
 
+    def to_latex(self, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
     def to_markdown(self, /):
         """
         usage.koalas: 1
+        """
+        ...
+
+    def to_numpy(self, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -30455,6 +35956,26 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def to_period(self, /, freq: Literal["M"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def to_period(self, /, freq: Literal["Q"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    def to_period(self, /, freq: Literal["Q", "M"]):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
     def to_pickle(self, /, path: Literal["test.pkl"]):
         """
         usage.modin: 1
@@ -30465,6 +35986,7 @@ class DataFrame:
     def to_records(self, /, index: bool):
         """
         usage.dask: 1
+        usage.statsmodels: 10
         """
         ...
 
@@ -30478,6 +36000,7 @@ class DataFrame:
     def to_records(self, /, index: bool = ...):
         """
         usage.dask: 4
+        usage.statsmodels: 10
         """
         ...
 
@@ -30576,6 +36099,13 @@ class DataFrame:
         ...
 
     @overload
+    def truediv(self, /, other: pandas.core.series.Series, axis: int, level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def truediv(self, /, other: pandas.core.series.Series, axis: Literal["index"]):
         """
         usage.dask: 3
@@ -30636,12 +36166,14 @@ class DataFrame:
         self,
         /,
         other: Union[int, pandas.core.frame.DataFrame, pandas.core.series.Series],
+        level: int = ...,
         axis: Union[int, Literal["columns", "index"]] = ...,
         fill_value: int = ...,
     ):
         """
         usage.dask: 27
         usage.seaborn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -30748,6 +36280,7 @@ class DataFrame:
     def unstack(self, /):
         """
         usage.koalas: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -30761,6 +36294,7 @@ class DataFrame:
     def unstack(self, /, level: int = ...):
         """
         usage.koalas: 2
+        usage.statsmodels: 4
         """
         ...
 
@@ -30796,6 +36330,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -30903,6 +36438,7 @@ class DataFrame:
         usage.dask: 26
         usage.koalas: 6
         usage.seaborn: 1
+        usage.statsmodels: 4
         """
         ...
 

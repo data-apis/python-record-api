@@ -14,6 +14,7 @@ def isna(obj: float):
     """
     usage.dask: 2
     usage.koalas: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -24,6 +25,7 @@ def isna(obj: numpy.ndarray):
     usage.dask: 8
     usage.koalas: 1
     usage.seaborn: 5
+    usage.statsmodels: 5
     usage.xarray: 22
     """
     ...
@@ -41,6 +43,7 @@ def isna(obj: None):
 def isna(obj: numpy.float64):
     """
     usage.dask: 3
+    usage.statsmodels: 2
     usage.xarray: 3
     """
     ...
@@ -49,6 +52,7 @@ def isna(obj: numpy.float64):
 @overload
 def isna(obj: numpy.float32):
     """
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -166,6 +170,16 @@ def isna(obj: pandas.core.series.Series):
     """
     usage.dask: 3
     usage.seaborn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: int):
+    """
+    usage.dask: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -258,14 +272,6 @@ def isna(obj: List[int]):
 def isna(obj: List[Union[Literal["d", "a", "b", "c"], float]]):
     """
     usage.seaborn: 1
-    """
-    ...
-
-
-@overload
-def isna(obj: int):
-    """
-    usage.dask: 2
     """
     ...
 
@@ -539,6 +545,7 @@ def isna(obj: object):
     usage.dask: 117
     usage.koalas: 3
     usage.seaborn: 19
+    usage.statsmodels: 11
     usage.xarray: 44
     """
     ...
@@ -556,7 +563,16 @@ def notna(obj: databricks.koalas.indexes.Index):
 def notna(obj: numpy.ndarray):
     """
     usage.seaborn: 5
+    usage.statsmodels: 1
     usage.xarray: 3
+    """
+    ...
+
+
+@overload
+def notna(obj: pandas.core.frame.DataFrame):
+    """
+    usage.statsmodels: 4
     """
     ...
 
@@ -580,6 +596,7 @@ def notna(obj: pandas.core.indexes.numeric.Int64Index):
 def notna(
     obj: Union[
         pandas.core.indexes.numeric.Int64Index,
+        pandas.core.frame.DataFrame,
         databricks.koalas.indexes.Index,
         numpy.ndarray,
         pandas.core.series.Series,
@@ -589,6 +606,7 @@ def notna(
     usage.dask: 2
     usage.koalas: 1
     usage.seaborn: 7
+    usage.statsmodels: 5
     usage.xarray: 3
     """
     ...

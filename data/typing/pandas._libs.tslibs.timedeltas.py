@@ -179,6 +179,15 @@ class Timedelta:
         ...
 
     @overload
+    def __radd__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 1
+        usage.prophet: 4
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
     def __radd__(
         self,
         _0: Union[
@@ -195,19 +204,12 @@ class Timedelta:
         """
         ...
 
-    @overload
-    def __radd__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        """
-        usage.dask: 1
-        usage.prophet: 4
-        """
-        ...
-
     def __radd__(self, _0: object, /):
         """
         usage.dask: 1
         usage.pandas: 8
         usage.prophet: 4
+        usage.statsmodels: 2
         """
         ...
 

@@ -91,3 +91,27 @@ def polyvalfromroots(
     usage.scipy: 11
     """
     ...
+
+
+class Polynomial:
+    @classmethod
+    def fromroots(cls, /, roots: numpy.ndarray):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    # usage.statsmodels: 57
+    coef: object
+
+    def __mul__(self, _0: numpy.polynomial.polynomial.Polynomial, /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    def __rmul__(self, _0: numpy.polynomial.polynomial.Polynomial, /):
+        """
+        usage.statsmodels: 6
+        """
+        ...

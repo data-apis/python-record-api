@@ -7,6 +7,7 @@ def as_strided(x: numpy.ndarray, shape: Tuple[int, int], strides: Tuple[int, int
     usage.matplotlib: 5
     usage.scipy: 13
     usage.skimage: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -225,9 +226,9 @@ def as_strided(
 
 def as_strided(
     x: object,
-    shape: Tuple[Union[int, numpy.int64], ...],
+    shape: Tuple[Union[numpy.int64, int], ...],
     writeable: bool = ...,
-    strides: Union[Tuple[Union[int, numpy.int64], ...], List[int]] = ...,
+    strides: Union[Tuple[Union[numpy.int64, int], ...], List[int]] = ...,
 ):
     """
     usage.matplotlib: 5
@@ -235,6 +236,7 @@ def as_strided(
     usage.scipy: 22
     usage.skimage: 11
     usage.sklearn: 6
+    usage.statsmodels: 1
     usage.xarray: 10
     """
     ...

@@ -8,6 +8,7 @@ class CClass:
         usage.scipy: 9
         usage.skimage: 1
         usage.sklearn: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -19,6 +20,74 @@ class CClass:
         usage.scipy: 12
         usage.seaborn: 5
         usage.sklearn: 38
+        usage.statsmodels: 107
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[pandas.core.series.Series, pandas.core.frame.DataFrame], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[float], List[float], numpy.ndarray], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.recarray, numpy.recarray], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], numpy.ndarray], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[numpy.float64], List[numpy.float64]], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[Tuple[numpy.ndarray, numpy.ndarray]], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[Union[float, int]], List[Union[float, int]]], /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[float], List[float]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Union[float, int]], List[float]], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -28,6 +97,40 @@ class CClass:
     ):
         """
         usage.scipy: 1
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[pandas.core.series.Series, pandas.core.series.Series], /
+    ):
+        """
+        usage.seaborn: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], List[int]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.float64, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.seaborn: 1
+        usage.sklearn: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -46,26 +149,9 @@ class CClass:
         ...
 
     @overload
-    def __getitem__(self, _0: numpy.ndarray, /):
-        """
-        usage.seaborn: 1
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: pandas.core.series.Series, /):
         """
         usage.seaborn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self, _0: Tuple[pandas.core.series.Series, pandas.core.series.Series], /
-    ):
-        """
-        usage.seaborn: 2
         """
         ...
 
@@ -73,8 +159,19 @@ class CClass:
         self,
         _0: Union[
             numpy.ndarray,
+            numpy.float64,
             pandas.core.series.Series,
-            Tuple[Union[List[complex], pandas.core.series.Series, numpy.ndarray], ...],
+            Tuple[
+                Union[
+                    List[Union[int, numpy.float64, float, complex]],
+                    numpy.recarray,
+                    pandas.core.series.Series,
+                    pandas.core.frame.DataFrame,
+                    numpy.ndarray,
+                ],
+                ...,
+            ],
+            List[Tuple[numpy.ndarray, numpy.ndarray]],
         ],
         /,
     ):
@@ -85,6 +182,7 @@ class CClass:
         usage.seaborn: 11
         usage.skimage: 1
         usage.sklearn: 40
+        usage.statsmodels: 145
         """
         ...
 
@@ -98,24 +196,41 @@ class IndexExpression:
         ...
 
     @overload
-    def __getitem__(self, _0: slice[None, None, None], /):
+    def __getitem__(
+        self, _0: Tuple[Literal["transition"], slice[int, int, int], int], /
+    ):
         """
-        usage.pandas: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, None, None], /):
-        """
-        usage.scipy: 3
-        usage.sklearn: 1
+        usage.statsmodels: 1
         """
         ...
 
     @overload
-    def __getitem__(self, _0: slice[None, int, None], /):
+    def __getitem__(
+        self, _0: Tuple[Literal["selection"], slice[int, int, int], int], /
+    ):
         """
-        usage.scipy: 3
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: ellipsis, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, numpy.int64, int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[numpy.int64, numpy.int64, numpy.int64], /):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -124,6 +239,63 @@ class IndexExpression:
         """
         usage.matplotlib: 1
         usage.scipy: 5
+        usage.statsmodels: 13
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[Literal["design"], slice[None, None, None], slice[None, int, None]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Literal["obs_intercept"], slice[None, int, None], slice[None, None, None]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Literal["transition"], slice[None, int, None], slice[None, int, None]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[Literal["transition"], slice[int, int, int], slice[int, int, int]],
+        /,
+    ):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.scipy: 3
+        usage.statsmodels: 2
         """
         ...
 
@@ -131,6 +303,165 @@ class IndexExpression:
     def __getitem__(self, _0: slice[int, None, int], /):
         """
         usage.scipy: 2
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Literal["state_intercept"], slice[None, int, None], slice[None, None, None]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Literal["transition"], slice[None, int, None], slice[None, None, None]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Literal["state_intercept"], slice[None, int, None], slice[None, int, None]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[Literal["obs_cov"], slice[None, None, None], slice[None, None, None]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[Literal["selection"], slice[int, int, int], slice[int, int, int]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[Literal["transition"], numpy.ndarray, numpy.ndarray], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.scipy: 3
+        usage.sklearn: 1
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, None, None]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[List[Literal["global.2", "global.1"]], slice[None, None, None]],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[Literal["block", "global"]], slice[None, None, None]], /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[Literal["transition"], int, slice[int, int, int]], /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[Literal["transition"], slice[None, int, None], slice[int, None, int]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: int, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["design"], int, slice[int, int, int]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.ndarray, slice[None, None, None]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, None, None], /):
+        """
+        usage.pandas: 2
         """
         ...
 
@@ -166,8 +497,23 @@ class IndexExpression:
     def __getitem__(
         self,
         _0: Union[
-            slice[Union[None, int], Union[None, int], Union[None, int]],
-            Tuple[slice[int, int, int], slice[int, int, int]],
+            slice[
+                Union[None, numpy.int64, int],
+                Union[numpy.int64, int, None],
+                Union[None, numpy.int64, int],
+            ],
+            ellipsis,
+            int,
+            Tuple[
+                Union[
+                    slice[Union[int, None], Union[int, None], Union[int, None]],
+                    List[Literal["block", "global", "global.2", "global.1"]],
+                    int,
+                    numpy.ndarray,
+                    str,
+                ],
+                ...,
+            ],
         ],
         /,
     ):
@@ -177,6 +523,7 @@ class IndexExpression:
         usage.scipy: 21
         usage.skimage: 1
         usage.sklearn: 2
+        usage.statsmodels: 51
         """
         ...
 
@@ -602,6 +949,7 @@ class RClass:
     def __getitem__(self, _0: Tuple[float, float], /):
         """
         usage.skimage: 2
+        usage.statsmodels: 31
         """
         ...
 
@@ -609,6 +957,7 @@ class RClass:
     def __getitem__(self, _0: Tuple[int, int, int, int, int], /):
         """
         usage.skimage: 1
+        usage.statsmodels: 6
         """
         ...
 
@@ -623,6 +972,7 @@ class RClass:
     def __getitem__(self, _0: List[List[int]], /):
         """
         usage.skimage: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -631,6 +981,7 @@ class RClass:
         """
         usage.scipy: 2
         usage.skimage: 3
+        usage.statsmodels: 18
         """
         ...
 
@@ -639,6 +990,7 @@ class RClass:
         """
         usage.scipy: 2
         usage.skimage: 2
+        usage.statsmodels: 7
         """
         ...
 
@@ -646,6 +998,7 @@ class RClass:
     def __getitem__(self, _0: Tuple[float, int, int], /):
         """
         usage.skimage: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -654,6 +1007,7 @@ class RClass:
         """
         usage.scipy: 6
         usage.skimage: 3
+        usage.statsmodels: 3
         """
         ...
 
@@ -670,6 +1024,7 @@ class RClass:
         usage.scipy: 5
         usage.seaborn: 2
         usage.sklearn: 3
+        usage.statsmodels: 69
         usage.xarray: 1
         """
         ...
@@ -678,6 +1033,2588 @@ class RClass:
     def __getitem__(self, _0: slice[None, int, None], /):
         """
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.float64, /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.float64], /):
+        """
+        usage.scipy: 1
+        usage.sklearn: 1
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[int, int, int, int, int, int, int, int, int, int], /
+    ):
+        """
+        usage.statsmodels: 57
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int], /):
+        """
+        usage.scipy: 2
+        usage.statsmodels: 48
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int], /):
+        """
+        usage.statsmodels: 13
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: float, /):
+        """
+        usage.statsmodels: 17
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, float], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int, int, int], /):
+        """
+        usage.statsmodels: 12
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int, float, int], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, numpy.ndarray], /):
+        """
+        usage.scipy: 4
+        usage.seaborn: 2
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int, int, int, int, int, int, int, int], /):
+        """
+        usage.statsmodels: 12
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, numpy.ndarray, float], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.float64, numpy.ndarray, numpy.float64], /):
+        """
+        usage.scipy: 3
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, float, float, float], /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 21
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.int64, numpy.int64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, float, float, float, float], /):
+        """
+        usage.statsmodels: 20
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[float, float, float, float, float, float, float, float], /
+    ):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int, int, int, int, int, int], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[float, float, float, float, float, float, float], /
+    ):
+        """
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int, int, int, int, int, int, int], /):
+        """
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray], /):
+        """
+        usage.matplotlib: 4
+        usage.scipy: 38
+        usage.sklearn: 16
+        usage.statsmodels: 47
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int, int, float], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.float64, numpy.ndarray], /):
+        """
+        usage.scipy: 1
+        usage.sklearn: 2
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, float, float], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], int, int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[float, float, float, float, float, float, float, float, int, float],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, float, float, float, float, float], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, numpy.ndarray, int], /):
+        """
+        usage.scipy: 10
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int, int, int, float], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: int, /):
+        """
+        usage.scipy: 2
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[list, list, List[int], List[int]], /):
+        """
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[list, List[int], List[int], list], /):
+        """
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[bool], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[int], /):
+        """
+        usage.sklearn: 1
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[numpy.float64], /):
+        """
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, float, int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[float], numpy.ndarray, List[float]], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.float64], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int, numpy.ndarray], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray, float],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, pandas.core.series.Series], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[list, list, List[int], list], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[list, List[int], list, list], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list, numpy.ndarray, numpy.ndarray, list, list, list, list, list, list
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], list, List[int], list], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], List[int], list, list], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            list,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list, numpy.ndarray, list, list, list, list, list, list, numpy.ndarray
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[list, numpy.ndarray, list, list, list, list, list, list, list],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], List[int], List[int], List[int]], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], List[int], List[int], list], /):
+        """
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, List[float]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int, int, int, int, int], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[list, numpy.ndarray, numpy.ndarray, list, list, numpy.float64],
+        /,
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[list, numpy.ndarray, numpy.ndarray, list, list, float], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[list, numpy.ndarray, numpy.ndarray, list, list, int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list, numpy.ndarray, numpy.ndarray, numpy.ndarray, list, numpy.float64
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list, numpy.ndarray, numpy.ndarray, list, numpy.ndarray, numpy.float64
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, list, list, list, list, float], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, list, list, list, list, int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, list, list, float],
+        /,
+    ):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray, list, float
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray, numpy.ndarray, numpy.ndarray, list, numpy.ndarray, float
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, list, list, int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.ndarray, list, list, list, float], /
+    ):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[numpy.ndarray, numpy.ndarray, list, numpy.ndarray, list, float],
+        /,
+    ):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.ndarray, list, list, list, int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[numpy.ndarray, list, list, numpy.ndarray, numpy.ndarray, float],
+        /,
+    ):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray, numpy.ndarray, list, numpy.ndarray, numpy.ndarray, float
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray, list, numpy.ndarray, numpy.ndarray, numpy.ndarray, float
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, list, list, numpy.ndarray, numpy.ndarray, int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.ndarray, list, numpy.ndarray, list, int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            float,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray, numpy.ndarray, list, numpy.ndarray, numpy.ndarray, int
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            int,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, list, list, list, numpy.ndarray, float], /
+    ):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[numpy.ndarray, list, numpy.ndarray, list, numpy.ndarray, float],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, list, list, list, numpy.ndarray, int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[Literal["1959"]], List[int]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, List[Literal["1962"]]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, List[Literal["1961"]]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, List[float]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[float], numpy.ndarray], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, List[List[float]]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[List[float]], numpy.ndarray], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], list, List[int], List[int]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            list,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.float64, pandas.core.series.Series], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray, int], /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray, float], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, float], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[list, list], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: list, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[bool], list], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            List[float], float, float, int, float, float, float, float, float, float
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[float, int, float, float, float, float, float, float, float, float],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[bool], List[bool]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            List[float], float, float, float, float, float, float, float, float, float
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], List[float], float], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], List[int]], /):
+        """
+        usage.scipy: 19
+        usage.sklearn: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list, list, numpy.ndarray, list, list, list, list, list, numpy.ndarray
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[list, list, numpy.ndarray, list, list, list, list, list, list],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, numpy.float64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[list, List[int], List[int], List[int]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            list,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[float], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], float, float, int, float, float], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[float], List[float], float], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[bool, pandas.core.series.Series], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[bool, pandas.core.series.Series, List[bool]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[bool, pandas.core.series.Series, list], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[float], float, float, List[float]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, numpy.ndarray, float], /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[float], float, float, List[int], List[float]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, List[int]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.complex128], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, float], /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.float64, int, int, pandas.core.series.Series], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[pandas.core.series.Series, pandas.core.series.Series, numpy.float64],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, int, numpy.ndarray], /):
+        """
+        usage.scipy: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, float, List[int]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, List[int]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, List[float], List[float]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, List[float], float], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, List[float], float], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[float], float], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[float], numpy.ndarray, numpy.ndarray], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[list, list, list, list], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[list, list, list, list, list, list, List[int], int, numpy.ndarray],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, int], /):
+        """
+        usage.seaborn: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.float64, numpy.float64], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[float, float, float, float, float, float, float, float, float],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, float, int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[float], List[float]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            list,
+            list,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list, list, list, numpy.ndarray, list, list, list, list, numpy.ndarray
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list, list, list, list, numpy.ndarray, list, list, list, numpy.ndarray
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            numpy.ndarray,
+            list,
+            list,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list, list, list, list, list, numpy.ndarray, list, list, numpy.ndarray
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            numpy.ndarray,
+            list,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            list,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[list, list, list, list, list, list, list, list, numpy.ndarray],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[list, List[int], list, List[int]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[list, list, numpy.ndarray, list, list, list, list, int, list], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, int], /):
+        """
+        usage.scipy: 6
+        usage.sklearn: 2
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray, list, numpy.ndarray, list, list, list, list, int, list
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray, list, numpy.ndarray, list, list, list, list, list, list
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            list,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            list,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list, list, numpy.ndarray, numpy.ndarray, list, list, list, int, list
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list, list, numpy.ndarray, numpy.ndarray, list, list, list, list, list
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[list, list, numpy.ndarray, list, list, list, List[int], int, list],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list, numpy.ndarray, numpy.ndarray, list, list, list, list, int, list
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[list, list, numpy.ndarray, list, list, list, List[int], list, list],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray, list, numpy.ndarray, list, list, list, List[int], int, list
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            list,
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray, list, numpy.ndarray, list, list, list, List[int], list, list
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            list,
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            list,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            List[int],
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            list,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            List[int],
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            List[int],
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            List[int],
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list, list, numpy.ndarray, numpy.ndarray, list, list, List[int], int, list
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list, list, numpy.ndarray, numpy.ndarray, list, list, List[int], list, list
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            List[int],
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            List[int],
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            List[int],
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            list,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            List[int],
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            List[int],
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            int,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            list,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            List[int],
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            list,
+            list,
+            list,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, float, int, float], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, float, int, float, float, float], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, int, int, float, int, float], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, List[int]], /):
+        """
+        usage.scipy: 4
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[float], List[float], List[float]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], float, float, int, int, int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[list, float, float, float, float, float, float, float], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[float], float, float, float, float, float, float, float], /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], numpy.float64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[List[float]], numpy.ndarray, List[List[float]]], /
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], numpy.ndarray], /):
+        """
+        usage.scipy: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -696,40 +3633,9 @@ class RClass:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[List[int], numpy.ndarray], /):
-        """
-        usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[numpy.ndarray, List[int]], /):
-        """
-        usage.scipy: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[numpy.ndarray, int], /):
-        """
-        usage.scipy: 6
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[numpy.ndarray, int, int], /):
         """
         usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray], /):
-        """
-        usage.matplotlib: 4
-        usage.scipy: 38
-        usage.sklearn: 16
         """
         ...
 
@@ -780,14 +3686,6 @@ class RClass:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[numpy.float64, numpy.ndarray, numpy.float64], /):
-        """
-        usage.scipy: 3
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __getitem__(
         self, _0: Tuple[numpy.ndarray, numpy.ndarray, List[numpy.ndarray]], /
     ):
@@ -817,14 +3715,6 @@ class RClass:
     ):
         """
         usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.float64], /):
-        """
-        usage.scipy: 1
-        usage.sklearn: 1
         """
         ...
 
@@ -894,28 +3784,6 @@ class RClass:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[float, numpy.ndarray], /):
-        """
-        usage.scipy: 4
-        usage.seaborn: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[int, numpy.ndarray, int], /):
-        """
-        usage.scipy: 10
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[float, float, float, float], /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[Literal["-1"], numpy.ndarray, numpy.ndarray], /):
         """
         usage.scipy: 3
@@ -947,13 +3815,6 @@ class RClass:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[int, numpy.ndarray, float], /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[numpy.bool_, numpy.ndarray], /):
         """
         usage.scipy: 1
@@ -971,14 +3832,6 @@ class RClass:
     def __getitem__(self, _0: Tuple[numpy.float32, numpy.ndarray], /):
         """
         usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[numpy.float64, numpy.ndarray], /):
-        """
-        usage.scipy: 1
-        usage.sklearn: 2
         """
         ...
 
@@ -1082,13 +3935,6 @@ class RClass:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[numpy.ndarray, int, numpy.ndarray], /):
-        """
-        usage.scipy: 2
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: slice[int, int, int], /):
         """
         usage.scipy: 1
@@ -1104,13 +3950,6 @@ class RClass:
 
     @overload
     def __getitem__(self, _0: slice[numpy.int64, numpy.int64, numpy.int64], /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[numpy.ndarray, float], /):
         """
         usage.scipy: 1
         """
@@ -1160,14 +3999,6 @@ class RClass:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[List[int], List[int]], /):
-        """
-        usage.scipy: 19
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[List[int], list], /):
         """
         usage.scipy: 1
@@ -1175,30 +4006,9 @@ class RClass:
         ...
 
     @overload
-    def __getitem__(self, _0: int, /):
-        """
-        usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[int, int], /):
-        """
-        usage.scipy: 2
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: List[numpy.ndarray], /):
         """
         usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[float, int], /):
-        """
-        usage.seaborn: 2
         """
         ...
 
@@ -1236,13 +4046,6 @@ class RClass:
         ...
 
     @overload
-    def __getitem__(self, _0: List[int], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __getitem__(
         self,
         _0: Tuple[
@@ -1262,21 +4065,7 @@ class RClass:
         """
         ...
 
-    def __getitem__(
-        self,
-        _0: Union[
-            List[Union[numpy.ndarray, int, List[Union[float, int]]]],
-            tuple,
-            slice[
-                Union[None, numpy.int64, int],
-                Union[numpy.int64, int],
-                Union[None, numpy.int64, int],
-            ],
-            numpy.ndarray,
-            int,
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: object, /):
         """
         usage.matplotlib: 6
         usage.pandas: 13
@@ -1284,6 +4073,7 @@ class RClass:
         usage.seaborn: 6
         usage.skimage: 16
         usage.sklearn: 37
+        usage.statsmodels: 802
         usage.xarray: 3
         """
         ...

@@ -378,6 +378,14 @@ def unique(values: List[Literal["z", "quantile"]]):
 
 
 @overload
+def unique(values: pandas.core.series.Series):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def unique(values: numpy.ndarray):
     """
     usage.seaborn: 3
@@ -444,11 +452,13 @@ def unique(values: List[Union[Literal["d", "a", "b", "c"], float]]):
 def unique(
     values: Union[
         numpy.ndarray,
+        pandas.core.series.Series,
         List[Union[str, float, int, pandas._libs.tslibs.timestamps.Timestamp]],
     ]
 ):
     """
     usage.seaborn: 12
+    usage.statsmodels: 1
     usage.xarray: 74
     """
     ...

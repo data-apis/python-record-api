@@ -7,6 +7,7 @@ class RangeIndex:
     __module__: ClassVar[object]
 
     # usage.dask: 2
+    # usage.statsmodels: 1
     __name__: ClassVar[object]
 
     # usage.dask: 1
@@ -17,6 +18,7 @@ class RangeIndex:
     dtype: object
 
     # usage.dask: 1
+    # usage.statsmodels: 2
     is_all_dates: object
 
     # usage.dask: 1
@@ -31,21 +33,33 @@ class RangeIndex:
     # usage.koalas: 2
     # usage.prophet: 1
     # usage.seaborn: 2
+    # usage.statsmodels: 2
     # usage.xarray: 4
-    name: Union[Literal["ix", "renamed", "index"], None]
+    name: Union[Literal["ix", "renamed", "ncomp", "index"], None]
 
     # usage.dask: 1
     # usage.koalas: 3
     names: List[Literal["__index_level_0__"]]
 
+    # usage.statsmodels: 21
     # usage.xarray: 1
     shape: object
 
     # usage.xarray: 3
     size: object
 
+    # usage.statsmodels: 2
+    start: object
+
+    # usage.statsmodels: 4
+    step: object
+
+    # usage.statsmodels: 2
+    stop: object
+
     # usage.modin: 1
     # usage.seaborn: 1
+    # usage.statsmodels: 5
     # usage.xarray: 3
     values: object
 
@@ -97,9 +111,24 @@ class RangeIndex:
         """
         ...
 
+    @overload
+    def __eq__(self, _0: pandas.core.indexes.range.RangeIndex, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
     def __eq__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 4
+        """
+        ...
+
+    def __eq__(self, _0: Union[numpy.ndarray, pandas.core.indexes.range.RangeIndex], /):
+        """
+        usage.pandas: 4
+        usage.statsmodels: 2
         """
         ...
 
@@ -112,6 +141,7 @@ class RangeIndex:
     @overload
     def __getitem__(self, _0: slice[None, int, None], /):
         """
+        usage.statsmodels: 8
         usage.xarray: 1
         """
         ...
@@ -120,6 +150,7 @@ class RangeIndex:
     def __getitem__(self, _0: int, /):
         """
         usage.dask: 4
+        usage.statsmodels: 26
         usage.xarray: 1
         """
         ...
@@ -127,6 +158,7 @@ class RangeIndex:
     @overload
     def __getitem__(self, _0: slice[None, None, None], /):
         """
+        usage.statsmodels: 2
         usage.xarray: 3
         """
         ...
@@ -135,6 +167,7 @@ class RangeIndex:
     def __getitem__(self, _0: numpy.ndarray, /):
         """
         usage.modin: 1
+        usage.statsmodels: 4
         usage.xarray: 1
         """
         ...
@@ -143,7 +176,44 @@ class RangeIndex:
     def __getitem__(self, _0: slice[int, int, int], /):
         """
         usage.dask: 1
+        usage.statsmodels: 10
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, None, int], /):
+        """
+        usage.modin: 1
+        usage.statsmodels: 12
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, ellipsis], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["c"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["aa"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["string"], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -151,18 +221,68 @@ class RangeIndex:
     def __getitem__(self, _0: pandas.core.series.Series, /):
         """
         usage.prophet: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[numpy.int64, int, numpy.int64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["2010-1-9"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["2010-1-4"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["2010-1-10"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["2010-1-7"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[numpy.int64, None, numpy.int64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["2010-1-6"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["2010-1-13"], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
     @overload
     def __getitem__(self, _0: slice[numpy.int64, numpy.int64, numpy.int64], /):
-        """
-        usage.modin: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[int, None, int], /):
         """
         usage.modin: 1
         """
@@ -175,25 +295,12 @@ class RangeIndex:
         """
         ...
 
-    def __getitem__(
-        self,
-        _0: Union[
-            int,
-            pandas.core.series.Series,
-            numpy.ndarray,
-            slice[
-                Union[numpy.int64, int, None],
-                Union[None, numpy.int64, int],
-                Union[numpy.int64, int, None],
-            ],
-            List[numpy.int64],
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: object, /):
         """
         usage.dask: 5
         usage.modin: 4
         usage.prophet: 1
+        usage.statsmodels: 75
         usage.xarray: 7
         """
         ...
@@ -202,7 +309,20 @@ class RangeIndex:
         """
         usage.koalas: 1
         usage.networkx: 1
+        usage.statsmodels: 3
         usage.xarray: 1
+        """
+        ...
+
+    def __le__(self, _0: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    def __lt__(self, _0: int, /):
+        """
+        usage.statsmodels: 3
         """
         ...
 
@@ -310,6 +430,7 @@ class RangeIndex:
 
     def equals(self, /, other: pandas.core.indexes.numeric.Int64Index):
         """
+        usage.statsmodels: 2
         usage.xarray: 3
         """
         ...
