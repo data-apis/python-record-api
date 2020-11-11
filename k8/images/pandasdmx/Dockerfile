@@ -21,4 +21,4 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 RUN python -c "import pandasdmx"
 
 ENV PYTHON_RECORD_API_FROM_MODULES=pandasdmx
-CMD [ "pytest", "-ra", "-m \"not experimental\"", "--verbose", "--suppress-tests-failed-exit-code"]
+CMD [ "pytest", "-ra", "--verbose", "--suppress-tests-failed-exit-code", "-m", "not experimental"]
