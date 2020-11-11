@@ -4,7 +4,7 @@ FROM ${FROM}
 
 WORKDIR /usr/src/app
 
-# Must build from source to be able to run tests
+# Instructions taken from:
 # https://github.com/dr-leo/pandaSDMX/blob/master/.travis.yml
 RUN git clone \
     --branch 1.0.0 \
