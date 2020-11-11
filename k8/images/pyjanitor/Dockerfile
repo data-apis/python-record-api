@@ -1,0 +1,22 @@
+# syntax = docker/dockerfile:1.1.7-experimental
+ARG FROM
+FROM ${FROM}
+
+WORKDIR /usr/src/app
+
+# Instructions taken from:
+# https://github.com/ericmjl/pyjanitor.git
+RUN git clone \
+    --branch 0.18.1 \
+    --depth 1 \
+    https://github.com/ericmjl/pyjanitor.git \
+    .
+
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install .[all] \
+    pytest-custom_exit_code
+
+RUN python -c "import pyjanitor"
+
+ENV PYTHON_RECORD_API_FROM_MODULES=pyjanitor
+CMD [ "pytest", "--verbose", "--suppress-tests-failed-exit-code"]
