@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 # Instructions taken from:
 # https://github.com/ericmjl/pyjanitor.git
 RUN git clone \
-    --branch 0.18.1 \
+    --branch v0.18.1 \
     --depth 1 \
     https://github.com/ericmjl/pyjanitor.git \
     .
