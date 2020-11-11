@@ -18,5 +18,5 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 RUN python -c "import janitor"
 
-ENV PYTHON_RECORD_API_FROM_MODULES=pyjanitor
+ENV PYTHON_RECORD_API_FROM_MODULES=janitor
 CMD [ "pytest", "--verbose", "--suppress-tests-failed-exit-code"]
