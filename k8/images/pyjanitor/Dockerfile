@@ -13,7 +13,7 @@ RUN git clone \
     .
 
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install .[all] \
+    pip install -e .[all] \
     pytest-custom_exit_code
 
 RUN python -c "import janitor"
