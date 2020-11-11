@@ -16,7 +16,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     pip install .[all] \
     pytest-custom_exit_code
 
-RUN python -c "import pyjanitor"
+RUN python -c "import janitor"
 
 ENV PYTHON_RECORD_API_FROM_MODULES=pyjanitor
 CMD [ "pytest", "--verbose", "--suppress-tests-failed-exit-code"]
