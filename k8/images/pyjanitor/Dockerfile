@@ -14,6 +14,7 @@ RUN git clone \
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install -e .[all] \
+    pytest-cov \
     pytest-custom_exit_code
 
 RUN python -c "import janitor"
