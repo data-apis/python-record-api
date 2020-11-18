@@ -14,7 +14,7 @@ RUN git clone \
 
 RUN apt-get update
 
-RUN apt-get install libgeos-dev
+RUN apt-get install -y libgeos-dev
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
