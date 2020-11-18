@@ -12,6 +12,10 @@ RUN git clone \
     https://github.com/geopandas/geopandas \
     .
 
+RUN apt-get update
+
+RUN apt-get install libgeos-dev
+
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
     cython \
