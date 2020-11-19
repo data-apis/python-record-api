@@ -194,20 +194,91 @@ def concat(
 
 
 @overload
-def concat(objs: List[pandas.core.series.Series], axis: int):
+def concat(objs: List[pandas.core.frame.DataFrame], axis: int):
     """
-    usage.dask: 7
-    usage.modin: 6
+    usage.dask: 6
+    usage.modin: 1
+    usage.prophet: 11
+    usage.sklearn: 1
+    usage.statsmodels: 24
     """
     ...
 
 
 @overload
-def concat(objs: List[pandas.core.frame.DataFrame], axis: int):
+def concat(objs: List[pandas.core.series.Series], axis: int):
     """
-    usage.dask: 6
-    usage.modin: 1
-    usage.sklearn: 1
+    usage.dask: 7
+    usage.modin: 6
+    usage.statsmodels: 10
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[Union[pandas.core.frame.DataFrame, pandas.core.series.Series]], axis: int
+):
+    """
+    usage.dask: 3
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[Union[pandas.core.series.Series, pandas.core.frame.DataFrame]], axis: int
+):
+    """
+    usage.dask: 3
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: Tuple[pandas.core.series.Series, pandas.core.series.Series], axis: int
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: Tuple[
+        pandas.core.frame.DataFrame,
+        pandas.core.frame.DataFrame,
+        pandas.core.frame.DataFrame,
+    ],
+    axis: int,
+):
+    """
+    usage.prophet: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: Tuple[pandas.core.frame.DataFrame, None, pandas.core.frame.DataFrame],
+    axis: int,
+):
+    """
+    usage.prophet: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame], sort: bool
+):
+    """
+    usage.prophet: 2
     """
     ...
 
@@ -404,16 +475,6 @@ def concat(
 
 @overload
 def concat(
-    objs: List[Union[pandas.core.series.Series, pandas.core.frame.DataFrame]], axis: int
-):
-    """
-    usage.dask: 3
-    """
-    ...
-
-
-@overload
-def concat(
     objs: List[Union[pandas.core.series.Series, pandas.core.frame.DataFrame]],
     axis: int,
     join: Literal["inner"],
@@ -460,16 +521,6 @@ def concat(
 
 @overload
 def concat(
-    objs: List[Union[pandas.core.frame.DataFrame, pandas.core.series.Series]], axis: int
-):
-    """
-    usage.dask: 3
-    """
-    ...
-
-
-@overload
-def concat(
     objs: List[Union[pandas.core.frame.DataFrame, pandas.core.series.Series]],
     axis: int,
     join: Literal["inner"],
@@ -507,6 +558,7 @@ def concat(objs: List[pandas.core.frame.DataFrame], ignore_index: bool):
 def concat(
     objs: Union[
         List[Union[pandas.core.frame.DataFrame, pandas.core.series.Series]],
+        Tuple[Union[None, pandas.core.frame.DataFrame, pandas.core.series.Series], ...],
         Dict[int, pandas.core.series.Series],
     ],
     axis: int = ...,
@@ -518,6 +570,8 @@ def concat(
     usage.dask: 148
     usage.koalas: 24
     usage.modin: 10
+    usage.prophet: 15
     usage.sklearn: 3
+    usage.statsmodels: 37
     """
     ...

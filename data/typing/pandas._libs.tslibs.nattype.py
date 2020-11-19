@@ -16,15 +16,26 @@ class NaTType:
         """
         ...
 
+    @overload
+    def __add__(self, _0: datetime.timedelta, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
     def __add__(
         self,
         _0: Union[
-            numpy.ndarray, numpy.timedelta64, pandas._libs.tslibs.timestamps.Timestamp
+            datetime.timedelta,
+            pandas._libs.tslibs.timestamps.Timestamp,
+            numpy.timedelta64,
+            numpy.ndarray,
         ],
         /,
     ):
         """
         usage.pandas: 9
+        usage.prophet: 1
         usage.xarray: 2
         """
         ...
@@ -104,5 +115,11 @@ class NaTType:
     def __truediv__(self, _0: object, /):
         """
         usage.pandas: 21
+        """
+        ...
+
+    def date(self, /):
+        """
+        usage.prophet: 1
         """
         ...

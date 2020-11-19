@@ -412,9 +412,23 @@ class TimedeltaIndex:
         """
         ...
 
-    def __truediv__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
+    @overload
+    def __truediv__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    def __truediv__(
+        self,
+        _0: Union[
+            pandas._libs.tslibs.timedeltas.Timedelta, numpy.ndarray, numpy.timedelta64
+        ],
+        /,
+    ):
         """
         usage.pandas: 21
+        usage.prophet: 1
         usage.xarray: 2
         """
         ...

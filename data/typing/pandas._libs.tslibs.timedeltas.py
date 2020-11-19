@@ -49,26 +49,24 @@ class Timedelta:
         ...
 
     @overload
+    def __eq__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def __eq__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
         """
         usage.dask: 4
         """
         ...
 
-    def __eq__(
-        self,
-        _0: Union[
-            pandas._libs.tslibs.timedeltas.Timedelta,
-            numpy.timedelta64,
-            numpy.int64,
-            numpy.float64,
-            numpy.ndarray,
-        ],
-        /,
-    ):
+    def __eq__(self, _0: object, /):
         """
         usage.dask: 4
         usage.pandas: 58
+        usage.prophet: 1
         """
         ...
 
@@ -87,6 +85,7 @@ class Timedelta:
     def __ge__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
         """
         usage.dask: 3
+        usage.prophet: 4
         """
         ...
 
@@ -98,16 +97,17 @@ class Timedelta:
         ...
 
     @overload
-    def __gt__(self, _0: pandas.core.series.Series, /):
+    def __gt__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
         """
-        usage.dask: 2
+        usage.dask: 1
+        usage.prophet: 4
         """
         ...
 
     @overload
-    def __gt__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+    def __gt__(self, _0: pandas.core.series.Series, /):
         """
-        usage.dask: 1
+        usage.dask: 2
         """
         ...
 
@@ -123,18 +123,40 @@ class Timedelta:
         """
         usage.dask: 3
         usage.pandas: 1
+        usage.prophet: 4
         """
         ...
 
     def __le__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
         """
         usage.dask: 3
+        usage.prophet: 4
         """
         ...
 
+    @overload
     def __lt__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
         """
         usage.dask: 1
+        usage.prophet: 4
+        """
+        ...
+
+    @overload
+    def __lt__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    def __lt__(
+        self,
+        _0: Union[pandas._libs.tslibs.timedeltas.Timedelta, pandas.core.series.Series],
+        /,
+    ):
+        """
+        usage.dask: 1
+        usage.prophet: 6
         """
         ...
 
@@ -157,6 +179,15 @@ class Timedelta:
         ...
 
     @overload
+    def __radd__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.dask: 1
+        usage.prophet: 4
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
     def __radd__(
         self,
         _0: Union[
@@ -173,17 +204,12 @@ class Timedelta:
         """
         ...
 
-    @overload
-    def __radd__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __radd__(self, _0: object, /):
         """
         usage.dask: 1
         usage.pandas: 8
+        usage.prophet: 4
+        usage.statsmodels: 2
         """
         ...
 
@@ -199,9 +225,26 @@ class Timedelta:
         """
         ...
 
+    @overload
     def __rmul__(self, _0: Union[numpy.float64, numpy.ndarray, numpy.timedelta64], /):
         """
         usage.pandas: 7
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: int, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    def __rmul__(
+        self, _0: Union[int, numpy.timedelta64, numpy.ndarray, numpy.float64], /
+    ):
+        """
+        usage.pandas: 7
+        usage.prophet: 1
         """
         ...
 
@@ -226,6 +269,7 @@ class Timedelta:
     def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
         usage.dask: 3
+        usage.prophet: 2
         """
         ...
 
@@ -233,12 +277,44 @@ class Timedelta:
         """
         usage.dask: 3
         usage.pandas: 10
+        usage.prophet: 2
         """
         ...
 
+    @overload
     def __rtruediv__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
         """
         usage.pandas: 3
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: pandas.core.indexes.timedeltas.TimedeltaIndex, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    def __rtruediv__(
+        self,
+        _0: Union[
+            pandas.core.series.Series,
+            pandas.core.indexes.timedeltas.TimedeltaIndex,
+            numpy.ndarray,
+            numpy.timedelta64,
+        ],
+        /,
+    ):
+        """
+        usage.pandas: 3
+        usage.prophet: 3
         """
         ...
 

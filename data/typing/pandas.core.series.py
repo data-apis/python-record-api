@@ -36,6 +36,8 @@ class Series:
         """
         usage.dask: 16
         usage.koalas: 10
+        usage.prophet: 20
+        usage.statsmodels: 32
         usage.xarray: 1
         """
         ...
@@ -69,6 +71,8 @@ class Series:
     def __getitem__(cls, _0: slice[None, int, None], /):
         """
         usage.koalas: 11
+        usage.prophet: 1
+        usage.statsmodels: 29
         """
         ...
 
@@ -77,6 +81,7 @@ class Series:
     def __getitem__(cls, _0: slice[int, None, int], /):
         """
         usage.koalas: 2
+        usage.statsmodels: 23
         """
         ...
 
@@ -85,6 +90,8 @@ class Series:
     def __getitem__(cls, _0: slice[int, int, int], /):
         """
         usage.koalas: 3
+        usage.prophet: 1
+        usage.statsmodels: 24
         """
         ...
 
@@ -138,7 +145,9 @@ class Series:
         """
         usage.dask: 6
         usage.koalas: 4
+        usage.prophet: 3
         usage.seaborn: 28
+        usage.statsmodels: 11
         """
         ...
 
@@ -415,6 +424,150 @@ class Series:
         """
         usage.seaborn: 1
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["lower_dl"], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["upper_dl"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["prob_exceedance"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["nuncen_above"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["ncen_equal"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["det_limit_index"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["rank"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["censored"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cen"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["L1.0->0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["fb(0).cov.chol[1,1]"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["llf"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["sse"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["mse"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: slice[None, Literal["initial_level"], None], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[numpy.int64], /):
+        """
+        usage.statsmodels: 12
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["ds"], /):
+        """
+        usage.prophet: 3
         """
         ...
 
@@ -697,7 +850,9 @@ class Series:
         usage.dask: 72
         usage.koalas: 47
         usage.modin: 12
+        usage.prophet: 28
         usage.seaborn: 40
+        usage.statsmodels: 155
         usage.xarray: 23
         """
         ...
@@ -715,6 +870,31 @@ class Series:
     def __ne__(cls, _0: pandas.core.series.Series, /):
         """
         usage.koalas: 4
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __ne__(cls, _0: Literal["ALL"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __ne__(cls, _0: int, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __ne__(cls, _0: float, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -727,17 +907,12 @@ class Series:
         ...
 
     @classmethod
-    def __ne__(
-        cls,
-        _0: Union[
-            pandas.core.series.Series, numpy.ndarray, Type[pandas.core.series.Series]
-        ],
-        /,
-    ):
+    def __ne__(cls, _0: object, /):
         """
         usage.dask: 4
         usage.koalas: 4
         usage.pandas: 6
+        usage.statsmodels: 7
         """
         ...
 
@@ -748,6 +923,9 @@ class Series:
         usage.sklearn: 1
         """
         ...
+
+    # usage.statsmodels: 3
+    T: object
 
     # usage.dask: 6
     # usage.sklearn: 1
@@ -778,15 +956,21 @@ class Series:
     # usage.dask: 1
     divide: object
 
+    # usage.prophet: 1
+    ds: object
+
     # usage.dask: 2
     # usage.koalas: 33
+    # usage.prophet: 2
     # usage.xarray: 2
     dt: object
 
     # usage.dask: 64
     # usage.koalas: 7
+    # usage.prophet: 1
     # usage.seaborn: 2
     # usage.sklearn: 9
+    # usage.statsmodels: 2
     dtype: object
 
     # usage.sklearn: 2
@@ -798,13 +982,18 @@ class Series:
     # usage.koalas: 6
     hasnans: object
 
+    # usage.prophet: 3
+    holiday: object
+
     # usage.koalas: 1
     iat: object
 
     # usage.dask: 31
     # usage.koalas: 27
+    # usage.prophet: 9
     # usage.seaborn: 1
     # usage.sklearn: 1
+    # usage.statsmodels: 102
     # usage.xarray: 3
     iloc: object
 
@@ -813,6 +1002,7 @@ class Series:
     # usage.modin: 7
     # usage.seaborn: 12
     # usage.sklearn: 3
+    # usage.statsmodels: 252
     # usage.xarray: 23
     index: object
 
@@ -823,17 +1013,25 @@ class Series:
     # usage.koalas: 30
     # usage.seaborn: 1
     # usage.sklearn: 1
+    # usage.statsmodels: 43
     # usage.xarray: 3
     loc: object
+
+    # usage.statsmodels: 1
+    lower_ci: object
+
+    # usage.statsmodels: 1
+    multiply: object
 
     # usage.dask: 48
     # usage.koalas: 16
     # usage.modin: 1
     # usage.seaborn: 9
     # usage.sklearn: 6
+    # usage.statsmodels: 31
     # usage.xarray: 5
     name: Union[
-        Tuple[Literal["X", "Y", "x", "y"], Literal["A", "B", "a", "z"]], str, None
+        int, Tuple[Literal["X", "Y", "x", "y"], Literal["A", "B", "a", "z"]], str, None
     ]
 
     # usage.koalas: 1
@@ -844,6 +1042,7 @@ class Series:
 
     # usage.dask: 6
     # usage.sklearn: 4
+    # usage.statsmodels: 19
     ndim: object
 
     # usage.koalas: 13
@@ -854,12 +1053,15 @@ class Series:
 
     # usage.dask: 7
     # usage.koalas: 2
+    # usage.prophet: 1
     # usage.seaborn: 1
     # usage.sklearn: 12
+    # usage.statsmodels: 53
     shape: object
 
     # usage.dask: 2
     # usage.seaborn: 25
+    # usage.statsmodels: 9
     size: object
 
     # usage.dask: 26
@@ -867,10 +1069,15 @@ class Series:
     # usage.seaborn: 2
     str: object
 
+    # usage.statsmodels: 1
+    upper_ci: object
+
     # usage.dask: 40
     # usage.koalas: 11
     # usage.modin: 1
+    # usage.prophet: 38
     # usage.seaborn: 22
+    # usage.statsmodels: 280
     # usage.xarray: 16
     values: object
 
@@ -880,6 +1087,7 @@ class Series:
         usage.dask: 35
         usage.koalas: 65
         usage.modin: 1
+        usage.statsmodels: 6
         """
         ...
 
@@ -888,6 +1096,7 @@ class Series:
         """
         usage.dask: 2
         usage.koalas: 49
+        usage.statsmodels: 1
         """
         ...
 
@@ -896,7 +1105,9 @@ class Series:
         """
         usage.dask: 14
         usage.koalas: 6
+        usage.prophet: 4
         usage.seaborn: 1
+        usage.statsmodels: 17
         """
         ...
 
@@ -908,17 +1119,12 @@ class Series:
         ...
 
     @overload
-    def __add__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /):
-        """
-        usage.pandas: 39
-        """
-        ...
-
-    @overload
     def __add__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 2
+        usage.prophet: 1
         usage.seaborn: 1
+        usage.statsmodels: 17
         """
         ...
 
@@ -927,18 +1133,55 @@ class Series:
         """
         usage.dask: 2
         usage.seaborn: 1
-        """
-        ...
-
-    @overload
-    def __add__(self, _0: dask.dataframe.core.Scalar, /):
-        """
-        usage.dask: 1
+        usage.statsmodels: 2
         """
         ...
 
     @overload
     def __add__(self, _0: numpy.float64, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Literal[")"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Literal["*"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Literal[""], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Literal["Q"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.datetime64], /):
+        """
+        usage.pandas: 39
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: dask.dataframe.core.Scalar, /):
         """
         usage.dask: 1
         """
@@ -950,7 +1193,9 @@ class Series:
         usage.koalas: 121
         usage.modin: 1
         usage.pandas: 39
+        usage.prophet: 5
         usage.seaborn: 3
+        usage.statsmodels: 50
         """
         ...
 
@@ -959,7 +1204,9 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 3
+        usage.prophet: 3
         usage.seaborn: 2
+        usage.statsmodels: 4
         """
         ...
 
@@ -976,7 +1223,9 @@ class Series:
         usage.dask: 5
         usage.koalas: 3
         usage.pandas: 3
+        usage.prophet: 3
         usage.seaborn: 3
+        usage.statsmodels: 4
         """
         ...
 
@@ -986,9 +1235,31 @@ class Series:
         """
         ...
 
+    @overload
+    def __contains__(self, _0: Literal["missing"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["nobs"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __contains__(self, _0: Literal["bool"], /):
         """
         usage.pandas: 1
+        """
+        ...
+
+    def __contains__(self, _0: Literal["bool", "nobs", "missing"], /):
+        """
+        usage.pandas: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -1022,6 +1293,7 @@ class Series:
         """
         usage.dask: 24
         usage.koalas: 4
+        usage.statsmodels: 2
         """
         ...
 
@@ -1030,7 +1302,9 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 32
+        usage.prophet: 1
         usage.seaborn: 3
+        usage.statsmodels: 4
         """
         ...
 
@@ -1044,9 +1318,109 @@ class Series:
         ...
 
     @overload
+    def __eq__(self, _0: Literal["Duncan"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["carData"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["Guerry"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["HistData"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["ALL"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: numpy.float64, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["ND"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: float, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["1"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["iris"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["datasets"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["quakes"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __eq__(self, _0: object, /):
         """
         usage.pandas: 52
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.prophet: 1
         """
         ...
 
@@ -1373,20 +1747,6 @@ class Series:
         ...
 
     @overload
-    def __eq__(self, _0: numpy.float64, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __eq__(self, _0: float, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def __eq__(self, _0: Literal["object"], /):
         """
         usage.dask: 1
@@ -1447,8 +1807,10 @@ class Series:
         usage.dask: 39
         usage.koalas: 43
         usage.pandas: 52
+        usage.prophet: 2
         usage.seaborn: 180
         usage.sklearn: 10
+        usage.statsmodels: 29
         """
         ...
 
@@ -1490,24 +1852,11 @@ class Series:
         ...
 
     @overload
-    def __ge__(self, _0: numpy.ndarray, /):
-        """
-        usage.pandas: 7
-        """
-        ...
-
-    @overload
     def __ge__(self, _0: numpy.float64, /):
         """
         usage.dask: 1
         usage.seaborn: 1
-        """
-        ...
-
-    @overload
-    def __ge__(self, _0: int, /):
-        """
-        usage.dask: 6
+        usage.statsmodels: 1
         """
         ...
 
@@ -1515,6 +1864,28 @@ class Series:
     def __ge__(self, _0: numpy.int64, /):
         """
         usage.dask: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: numpy.ndarray, /):
+        """
+        usage.pandas: 7
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 3
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: int, /):
+        """
+        usage.dask: 6
         """
         ...
 
@@ -1585,7 +1956,9 @@ class Series:
         """
         usage.dask: 17
         usage.pandas: 7
+        usage.prophet: 3
         usage.seaborn: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -1594,6 +1967,7 @@ class Series:
         """
         usage.dask: 55
         usage.koalas: 12
+        usage.statsmodels: 4
         """
         ...
 
@@ -1601,6 +1975,14 @@ class Series:
     def __gt__(self, _0: float, /):
         """
         usage.koalas: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -1612,9 +1994,16 @@ class Series:
         ...
 
     @overload
-    def __gt__(self, _0: pandas.core.frame.DataFrame, /):
+    def __gt__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
-        usage.dask: 1
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.prophet: 2
         """
         ...
 
@@ -1622,6 +2011,21 @@ class Series:
     def __gt__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 2
+        usage.prophet: 3
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: Literal["2014-01-01"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.dask: 1
         """
         ...
 
@@ -1644,6 +2048,8 @@ class Series:
         usage.dask: 61
         usage.koalas: 13
         usage.pandas: 5
+        usage.prophet: 8
+        usage.statsmodels: 7
         """
         ...
 
@@ -1652,6 +2058,21 @@ class Series:
         """
         usage.koalas: 1
         usage.seaborn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __iadd__(self, _0: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __iadd__(self, _0: List[float], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -1665,31 +2086,74 @@ class Series:
     @overload
     def __iadd__(self, _0: int, /):
         """
+        usage.prophet: 1
         usage.seaborn: 1
         """
         ...
 
-    def __iadd__(
-        self,
-        _0: Union[int, pandas.core.series.Series, numpy.ndarray, numpy.timedelta64],
-        /,
-    ):
+    @overload
+    def __iadd__(self, _0: float, /):
         """
-        usage.koalas: 1
-        usage.pandas: 2
-        usage.seaborn: 2
+        usage.prophet: 5
         """
         ...
 
+    def __iadd__(self, _0: object, /):
+        """
+        usage.koalas: 1
+        usage.pandas: 2
+        usage.prophet: 6
+        usage.seaborn: 2
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __iand__(self, _0: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __iand__(self, _0: pandas.core.series.Series, /):
         """
         usage.seaborn: 1
         """
         ...
 
+    def __iand__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
+        """
+        usage.seaborn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __imul__(self, _0: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __imul__(self, _0: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
     def __imul__(self, _0: numpy.float64, /):
         """
         usage.seaborn: 1
+        """
+        ...
+
+    def __imul__(self, _0: Union[numpy.float64, float, numpy.ndarray], /):
+        """
+        usage.seaborn: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -1697,8 +2161,37 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.prophet: 1
         usage.seaborn: 1
+        usage.statsmodels: 22
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __ior__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __ior__(self, _0: numpy.ndarray, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    def __ior__(self, _0: Union[numpy.ndarray, pandas.core.series.Series], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __isub__(self, _0: numpy.float64, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -1710,16 +2203,27 @@ class Series:
         ...
 
     @overload
+    def __isub__(self, _0: float, /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
     def __isub__(self, _0: int, /):
         """
         usage.seaborn: 1
         """
         ...
 
-    def __isub__(self, _0: Union[int, numpy.timedelta64, numpy.ndarray], /):
+    def __isub__(
+        self, _0: Union[int, numpy.timedelta64, numpy.ndarray, numpy.float64, float], /
+    ):
         """
         usage.pandas: 2
+        usage.prophet: 1
         usage.seaborn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -1728,8 +2232,25 @@ class Series:
         usage.dask: 4
         usage.koalas: 2
         usage.modin: 2
+        usage.prophet: 1
         usage.seaborn: 7
         usage.sklearn: 12
+        usage.statsmodels: 16
+        """
+        ...
+
+    @overload
+    def __itruediv__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __itruediv__(self, _0: numpy.float64, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -1740,17 +2261,36 @@ class Series:
         """
         ...
 
-    @overload
-    def __itruediv__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    def __itruediv__(self, _0: Union[pandas.core.series.Series, int], /):
+    def __itruediv__(self, _0: Union[pandas.core.series.Series, numpy.float64, int], /):
         """
         usage.dask: 1
         usage.seaborn: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: numpy.float64, /):
+        """
+        usage.dask: 1
+        usage.seaborn: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: float, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: int, /):
+        """
+        usage.dask: 3
+        usage.statsmodels: 1
         """
         ...
 
@@ -1762,24 +2302,16 @@ class Series:
         ...
 
     @overload
-    def __le__(self, _0: numpy.float64, /):
+    def __le__(self, _0: pandas.core.series.Series, /):
         """
-        usage.dask: 1
-        usage.seaborn: 1
-        """
-        ...
-
-    @overload
-    def __le__(self, _0: int, /):
-        """
-        usage.dask: 3
+        usage.prophet: 3
         """
         ...
 
     @overload
-    def __le__(self, _0: float, /):
+    def __le__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
-        usage.dask: 1
+        usage.prophet: 4
         """
         ...
 
@@ -1790,13 +2322,13 @@ class Series:
         """
         ...
 
-    def __le__(
-        self, _0: Union[numpy.int64, int, float, numpy.float64, numpy.ndarray], /
-    ):
+    def __le__(self, _0: object, /):
         """
         usage.dask: 6
         usage.pandas: 7
+        usage.prophet: 7
         usage.seaborn: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -1805,6 +2337,24 @@ class Series:
         """
         usage.dask: 9
         usage.koalas: 4
+        usage.prophet: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __lt__(self, _0: numpy.float64, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __lt__(self, _0: float, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -1816,14 +2366,22 @@ class Series:
         ...
 
     @overload
-    def __lt__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+    def __lt__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 2
+        usage.prophet: 3
         """
         ...
 
     @overload
-    def __lt__(self, _0: pandas.core.series.Series, /):
+    def __lt__(self, _0: Literal["2013-01-01"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __lt__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
         """
         usage.dask: 2
         """
@@ -1836,25 +2394,13 @@ class Series:
         """
         ...
 
-    @overload
-    def __lt__(self, _0: numpy.float64, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __lt__(self, _0: float, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __lt__(self, _0: object, /):
         """
         usage.dask: 16
         usage.koalas: 4
         usage.pandas: 4
+        usage.prophet: 5
+        usage.statsmodels: 7
         """
         ...
 
@@ -1887,6 +2433,7 @@ class Series:
         usage.dask: 2
         usage.koalas: 5
         usage.seaborn: 2
+        usage.statsmodels: 4
         """
         ...
 
@@ -1895,7 +2442,40 @@ class Series:
         """
         usage.dask: 4
         usage.koalas: 6
+        usage.prophet: 1
         usage.seaborn: 1
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: float, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: numpy.float64, /):
+        """
+        usage.prophet: 2
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: numpy.ndarray, /):
+        """
+        usage.prophet: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: numpy.int64, /):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -1912,19 +2492,14 @@ class Series:
         """
         ...
 
-    @overload
-    def __mul__(self, _0: float, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __mul__(self, _0: object, /):
         """
         usage.dask: 7
         usage.koalas: 11
         usage.pandas: 29
+        usage.prophet: 4
         usage.seaborn: 3
+        usage.statsmodels: 26
         """
         ...
 
@@ -1932,6 +2507,7 @@ class Series:
         """
         usage.dask: 2
         usage.koalas: 17
+        usage.statsmodels: 2
         """
         ...
 
@@ -1940,6 +2516,7 @@ class Series:
         """
         usage.dask: 3
         usage.koalas: 3
+        usage.prophet: 1
         """
         ...
 
@@ -1956,6 +2533,7 @@ class Series:
         usage.dask: 3
         usage.koalas: 3
         usage.pandas: 3
+        usage.prophet: 1
         usage.seaborn: 1
         """
         ...
@@ -1965,6 +2543,16 @@ class Series:
         """
         usage.dask: 3
         usage.koalas: 1
+        usage.prophet: 7
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __pow__(self, _0: float, /):
+        """
+        usage.dask: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -1975,18 +2563,13 @@ class Series:
         """
         ...
 
-    @overload
-    def __pow__(self, _0: float, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
     def __pow__(self, _0: Union[float, int, numpy.timedelta64], /):
         """
         usage.dask: 5
         usage.koalas: 1
         usage.pandas: 1
+        usage.prophet: 7
+        usage.statsmodels: 11
         """
         ...
 
@@ -1994,6 +2577,7 @@ class Series:
     def __radd__(self, _0: pandas.core.frame.DataFrame, /):
         """
         usage.koalas: 48
+        usage.statsmodels: 2
         """
         ...
 
@@ -2002,7 +2586,9 @@ class Series:
         """
         usage.dask: 14
         usage.koalas: 6
+        usage.prophet: 4
         usage.seaborn: 1
+        usage.statsmodels: 17
         """
         ...
 
@@ -2010,6 +2596,38 @@ class Series:
     def __radd__(self, _0: Literal["_lit"], /):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: numpy.ndarray, /):
+        """
+        usage.dask: 2
+        usage.prophet: 2
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: int, /):
+        """
+        usage.dask: 1
+        usage.prophet: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: Literal["("], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: numpy.float64, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -2027,26 +2645,14 @@ class Series:
         """
         ...
 
-    @overload
-    def __radd__(self, _0: int, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __radd__(self, _0: numpy.ndarray, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
     def __radd__(self, _0: object, /):
         """
         usage.dask: 18
         usage.koalas: 55
         usage.pandas: 46
+        usage.prophet: 7
         usage.seaborn: 1
+        usage.statsmodels: 24
         """
         ...
 
@@ -2055,7 +2661,9 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 3
+        usage.prophet: 3
         usage.seaborn: 2
+        usage.statsmodels: 4
         """
         ...
 
@@ -2070,7 +2678,9 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 3
+        usage.prophet: 3
         usage.seaborn: 3
+        usage.statsmodels: 4
         """
         ...
 
@@ -2082,11 +2692,18 @@ class Series:
         """
         ...
 
+    def __rmatmul__(self, _0: numpy.ndarray, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
     @overload
     def __rmul__(self, _0: float, /):
         """
         usage.koalas: 2
         usage.sklearn: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -2095,7 +2712,9 @@ class Series:
         """
         usage.dask: 4
         usage.koalas: 6
+        usage.prophet: 1
         usage.seaborn: 1
+        usage.statsmodels: 5
         """
         ...
 
@@ -2105,6 +2724,29 @@ class Series:
         usage.koalas: 3
         usage.seaborn: 1
         usage.sklearn: 1
+        usage.statsmodels: 11
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: numpy.ndarray, /):
+        """
+        usage.prophet: 1
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: numpy.float64, /):
+        """
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.statsmodels: 4
         """
         ...
 
@@ -2120,8 +2762,10 @@ class Series:
         usage.dask: 4
         usage.koalas: 11
         usage.pandas: 30
+        usage.prophet: 2
         usage.seaborn: 2
         usage.sklearn: 2
+        usage.statsmodels: 37
         """
         ...
 
@@ -2130,6 +2774,7 @@ class Series:
         """
         usage.dask: 3
         usage.koalas: 3
+        usage.prophet: 1
         """
         ...
 
@@ -2145,6 +2790,7 @@ class Series:
         usage.dask: 3
         usage.koalas: 3
         usage.pandas: 1
+        usage.prophet: 1
         """
         ...
 
@@ -2159,7 +2805,9 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 14
+        usage.prophet: 16
         usage.seaborn: 2
+        usage.statsmodels: 14
         """
         ...
 
@@ -2178,17 +2826,32 @@ class Series:
         ...
 
     @overload
-    def __rsub__(self, _0: object, /):
-        """
-        usage.pandas: 44
-        """
-        ...
-
-    @overload
     def __rsub__(self, _0: pandas.core.frame.DataFrame, /):
         """
         usage.dask: 5
         usage.seaborn: 2
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: numpy.ndarray, /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: int, /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: object, /):
+        """
+        usage.pandas: 44
         """
         ...
 
@@ -2197,7 +2860,9 @@ class Series:
         usage.dask: 10
         usage.koalas: 16
         usage.pandas: 44
+        usage.prophet: 16
         usage.seaborn: 4
+        usage.statsmodels: 35
         """
         ...
 
@@ -2206,13 +2871,8 @@ class Series:
         """
         usage.dask: 8
         usage.koalas: 5
-        """
-        ...
-
-    @overload
-    def __rtruediv__(self, _0: object, /):
-        """
-        usage.pandas: 37
+        usage.prophet: 2
+        usage.statsmodels: 10
         """
         ...
 
@@ -2220,6 +2880,28 @@ class Series:
     def __rtruediv__(self, _0: pandas.core.frame.DataFrame, /):
         """
         usage.seaborn: 2
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: numpy.ndarray, /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: object, /):
+        """
+        usage.pandas: 37
         """
         ...
 
@@ -2228,7 +2910,9 @@ class Series:
         usage.dask: 8
         usage.koalas: 5
         usage.pandas: 37
+        usage.prophet: 2
         usage.seaborn: 2
+        usage.statsmodels: 22
         """
         ...
 
@@ -2241,7 +2925,77 @@ class Series:
     @overload
     def __setitem__(self, _0: int, _1: float, /):
         """
+        usage.statsmodels: 8
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, None, None], _1: int, /):
+        """
+        usage.seaborn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, int, int], _1: float, /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, int, int], _1: float, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: pandas.core.series.Series, _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.seaborn: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: numpy.dtype, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: pandas.core.series.Series, _1: float, /):
+        """
+        usage.dask: 1
+        usage.seaborn: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["L1.0->0"], _1: numpy.float64, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["fb(0).cov.chol[1,1]"], _1: numpy.float64, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.ndarray, _1: bool, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -2260,13 +3014,6 @@ class Series:
         ...
 
     @overload
-    def __setitem__(self, _0: slice[None, None, None], _1: int, /):
-        """
-        usage.seaborn: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: pandas.core.series.Series, _1: int, /):
         """
         usage.dask: 2
@@ -2274,37 +3021,23 @@ class Series:
         """
         ...
 
-    @overload
-    def __setitem__(self, _0: pandas.core.series.Series, _1: float, /):
-        """
-        usage.dask: 1
-        usage.seaborn: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self, _0: pandas.core.series.Series, _1: pandas.core.series.Series, /
-    ):
-        """
-        usage.seaborn: 2
-        """
-        ...
-
     def __setitem__(
         self,
         _0: Union[
             pandas.core.series.Series,
+            numpy.ndarray,
             int,
-            slice[Union[int, None], Union[None, int], Union[int, None]],
+            Literal["fb(0).cov.chol[1,1]", "L1.0->0"],
+            slice[Union[int, None], Union[int, None], Union[int, None]],
         ],
-        _1: Union[int, float, pandas.core.series.Series],
+        _1: object,
         /,
     ):
         """
         usage.dask: 3
         usage.modin: 2
         usage.seaborn: 5
+        usage.statsmodels: 25
         usage.xarray: 2
         """
         ...
@@ -2314,7 +3047,9 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 14
+        usage.prophet: 16
         usage.seaborn: 2
+        usage.statsmodels: 14
         """
         ...
 
@@ -2330,6 +3065,7 @@ class Series:
         """
         usage.dask: 4
         usage.koalas: 3
+        usage.statsmodels: 2
         """
         ...
 
@@ -2337,6 +3073,25 @@ class Series:
     def __sub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
         usage.koalas: 1
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: numpy.float64, /):
+        """
+        usage.dask: 9
+        usage.prophet: 1
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: numpy.ndarray, /):
+        """
+        usage.prophet: 1
+        usage.seaborn: 3
+        usage.statsmodels: 4
         """
         ...
 
@@ -2348,16 +3103,16 @@ class Series:
         ...
 
     @overload
-    def __sub__(self, _0: numpy.ndarray, /):
+    def __sub__(self, _0: float, /):
         """
-        usage.seaborn: 3
+        usage.prophet: 2
         """
         ...
 
     @overload
-    def __sub__(self, _0: numpy.float64, /):
+    def __sub__(self, _0: Literal["1970-01-01T00:00:00"], /):
         """
-        usage.dask: 9
+        usage.prophet: 1
         """
         ...
 
@@ -2366,7 +3121,9 @@ class Series:
         usage.dask: 18
         usage.koalas: 19
         usage.pandas: 35
+        usage.prophet: 23
         usage.seaborn: 5
+        usage.statsmodels: 30
         """
         ...
 
@@ -2375,6 +3132,8 @@ class Series:
         """
         usage.dask: 8
         usage.koalas: 5
+        usage.prophet: 2
+        usage.statsmodels: 10
         """
         ...
 
@@ -2383,6 +3142,8 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.prophet: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -2391,6 +3152,24 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.prophet: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: numpy.float64, /):
+        """
+        usage.prophet: 3
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: numpy.ndarray, /):
+        """
+        usage.prophet: 1
+        usage.statsmodels: 5
         """
         ...
 
@@ -2403,11 +3182,20 @@ class Series:
         """
         ...
 
+    @overload
+    def __truediv__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.prophet: 2
+        """
+        ...
+
     def __truediv__(self, _0: object, /):
         """
         usage.dask: 10
         usage.koalas: 7
         usage.pandas: 29
+        usage.prophet: 10
+        usage.statsmodels: 30
         """
         ...
 
@@ -2436,6 +3224,14 @@ class Series:
         """
         usage.dask: 3
         usage.koalas: 2
+        usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def add(self, /, other: pandas.core.series.Series, level: int):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -2470,11 +3266,13 @@ class Series:
     def add(
         self,
         /,
-        other: Union[pandas.core.series.Series, int],
+        other: Union[int, pandas.core.series.Series],
+        level: int = ...,
         fill_value: Union[None, int] = ...,
     ):
         """
         usage.dask: 7
+        usage.statsmodels: 1
         """
         ...
 
@@ -2756,6 +3554,7 @@ class Series:
         """
         usage.dask: 20
         usage.koalas: 8
+        usage.prophet: 5
         usage.seaborn: 13
         """
         ...
@@ -2771,6 +3570,7 @@ class Series:
         """
         usage.dask: 22
         usage.koalas: 8
+        usage.prophet: 5
         usage.seaborn: 13
         """
         ...
@@ -2780,8 +3580,10 @@ class Series:
         """
         usage.dask: 6
         usage.koalas: 3
+        usage.prophet: 4
         usage.seaborn: 6
         usage.sklearn: 2
+        usage.statsmodels: 3
         usage.xarray: 1
         """
         ...
@@ -2797,8 +3599,10 @@ class Series:
         """
         usage.dask: 8
         usage.koalas: 3
+        usage.prophet: 4
         usage.seaborn: 6
         usage.sklearn: 2
+        usage.statsmodels: 3
         usage.xarray: 1
         """
         ...
@@ -2830,6 +3634,8 @@ class Series:
         """
         usage.dask: 6
         usage.koalas: 1
+        usage.prophet: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -2862,6 +3668,69 @@ class Series:
         ...
 
     @overload
+    def apply(self, /, func: Callable, args: Tuple[pandas.core.frame.DataFrame]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, args: Tuple[Literal["%tc"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, args: Tuple[Literal["%tC"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, args: Tuple[Literal["%td"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, args: Tuple[Literal["%tw"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, args: Tuple[Literal["%tm"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, args: Tuple[Literal["%tq"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, args: Tuple[Literal["%th"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, args: Tuple[Literal["%ty"]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def apply(self, /, func: Callable, convert_dtype: bool, args: Tuple[None, ...]):
         """
         usage.dask: 3
@@ -2880,12 +3749,14 @@ class Series:
         /,
         func: Union[Callable, Type[str], numpy.ufunc],
         convert_dtype: bool = ...,
-        args: Tuple[None, ...] = ...,
+        args: Tuple[Union[pandas.core.frame.DataFrame, str, None], ...] = ...,
     ):
         """
         usage.dask: 9
         usage.koalas: 15
+        usage.prophet: 1
         usage.sklearn: 1
+        usage.statsmodels: 11
         """
         ...
 
@@ -2914,6 +3785,7 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -2929,7 +3801,17 @@ class Series:
         """
         usage.dask: 3
         usage.seaborn: 1
+        usage.statsmodels: 4
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[float]):
+        """
+        usage.dask: 5
+        usage.prophet: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -2939,6 +3821,28 @@ class Series:
         usage.dask: 17
         usage.seaborn: 5
         usage.sklearn: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Literal["int32"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[numpy.int64]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Literal["bool"]):
+        """
+        usage.prophet: 1
         """
         ...
 
@@ -2969,13 +3873,6 @@ class Series:
     def astype(self, /, dtype: numpy.dtype):
         """
         usage.dask: 6
-        """
-        ...
-
-    @overload
-    def astype(self, /, dtype: Type[float]):
-        """
-        usage.dask: 5
         """
         ...
 
@@ -3074,8 +3971,10 @@ class Series:
         """
         usage.dask: 53
         usage.koalas: 6
+        usage.prophet: 2
         usage.seaborn: 10
         usage.sklearn: 10
+        usage.statsmodels: 9
         usage.xarray: 1
         """
         ...
@@ -3284,6 +4183,7 @@ class Series:
         usage.koalas: 2
         usage.modin: 1
         usage.seaborn: 1
+        usage.statsmodels: 94
         """
         ...
 
@@ -3432,6 +4332,7 @@ class Series:
         """
         usage.dask: 4
         usage.koalas: 3
+        usage.statsmodels: 1
         """
         ...
 
@@ -3453,6 +4354,7 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 5
+        usage.statsmodels: 1
         """
         ...
 
@@ -3501,7 +4403,9 @@ class Series:
     def diff(self, /):
         """
         usage.dask: 3
+        usage.prophet: 3
         usage.seaborn: 1
+        usage.statsmodels: 33
         """
         ...
 
@@ -3509,13 +4413,16 @@ class Series:
     def diff(self, /, periods: int):
         """
         usage.dask: 4
+        usage.statsmodels: 1
         """
         ...
 
     def diff(self, /, periods: int = ...):
         """
         usage.dask: 7
+        usage.prophet: 3
         usage.seaborn: 1
+        usage.statsmodels: 34
         """
         ...
 
@@ -3531,11 +4438,18 @@ class Series:
         """
         ...
 
+    def drop(self, /, labels: Literal["initial_level"]):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
     @overload
     def drop_duplicates(self, /):
         """
         usage.dask: 6
         usage.koalas: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -3575,6 +4489,7 @@ class Series:
         """
         usage.dask: 12
         usage.koalas: 6
+        usage.statsmodels: 4
         """
         ...
 
@@ -3675,6 +4590,7 @@ class Series:
         usage.dask: 7
         usage.koalas: 3
         usage.seaborn: 1
+        usage.statsmodels: 17
         usage.xarray: 2
         """
         ...
@@ -3691,12 +4607,28 @@ class Series:
         usage.dask: 7
         usage.koalas: 4
         usage.seaborn: 1
+        usage.statsmodels: 17
         usage.xarray: 2
         """
         ...
 
+    @overload
     def duplicated(self, /, keep: Literal["last"]):
         """
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def duplicated(self, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    def duplicated(self, /, keep: Literal["last"] = ...):
+        """
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -3710,6 +4642,7 @@ class Series:
     def equals(self, /, other: pandas.core.series.Series):
         """
         usage.dask: 3
+        usage.statsmodels: 1
         usage.xarray: 8
         """
         ...
@@ -3751,6 +4684,7 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 3
+        usage.statsmodels: 2
         """
         ...
 
@@ -3758,6 +4692,7 @@ class Series:
     def fillna(self, /, value: float):
         """
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -3781,6 +4716,20 @@ class Series:
         """
         usage.dask: 2
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: numpy.float64, inplace: bool):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: numpy.int32, inplace: bool):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -3910,6 +4859,7 @@ class Series:
         usage.dask: 23
         usage.koalas: 9
         usage.seaborn: 1
+        usage.statsmodels: 5
         """
         ...
 
@@ -4073,6 +5023,38 @@ class Series:
         ...
 
     @overload
+    def get(self, /, key: Literal["lower_window"], default: int):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["upper_window"], default: int):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def get(self, /, key: Literal["prior_scale"], default: float):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    def get(
+        self,
+        /,
+        key: Literal["prior_scale", "upper_window", "lower_window"],
+        default: Union[float, int],
+    ):
+        """
+        usage.prophet: 3
+        """
+        ...
+
+    @overload
     def groupby(self, /, by: pandas.core.series.Series):
         """
         usage.dask: 20
@@ -4099,6 +5081,13 @@ class Series:
     def groupby(self, /, by: pandas.core.resample.TimeGrouper):
         """
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: numpy.ndarray):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -4304,6 +5293,7 @@ class Series:
         usage.dask: 65
         usage.koalas: 74
         usage.seaborn: 19
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -4341,7 +5331,9 @@ class Series:
         """
         usage.dask: 2
         usage.koalas: 3
+        usage.prophet: 2
         usage.seaborn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -4371,7 +5363,9 @@ class Series:
         """
         usage.dask: 8
         usage.koalas: 6
+        usage.prophet: 2
         usage.seaborn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -4379,6 +5373,8 @@ class Series:
     def idxmin(self, /):
         """
         usage.koalas: 3
+        usage.prophet: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -4394,6 +5390,8 @@ class Series:
         """
         usage.dask: 4
         usage.koalas: 6
+        usage.prophet: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -4414,6 +5412,22 @@ class Series:
     def isin(self, /, values: set):
         """
         usage.koalas: 1
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def isin(self, /, values: List[bool]):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def isin(self, /, values: pandas.core.series.Series):
+        """
+        usage.dask: 3
+        usage.prophet: 2
         """
         ...
 
@@ -4424,23 +5438,19 @@ class Series:
         """
         ...
 
-    @overload
-    def isin(self, /, values: pandas.core.series.Series):
-        """
-        usage.dask: 3
-        """
-        ...
-
     def isin(
         self,
         /,
         values: Union[
-            List[Union[Literal["lama", "cow"], int]], pandas.core.series.Series, set
+            List[Union[bool, int, Literal["lama", "cow"]]],
+            pandas.core.series.Series,
+            set,
         ],
     ):
         """
         usage.dask: 6
         usage.koalas: 2
+        usage.prophet: 4
         """
         ...
 
@@ -4454,7 +5464,9 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 8
+        usage.prophet: 2
         usage.seaborn: 3
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -4469,6 +5481,7 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -4483,6 +5496,7 @@ class Series:
     def keys(self, /):
         """
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -4591,6 +5605,7 @@ class Series:
         """
         usage.dask: 2
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -4650,6 +5665,7 @@ class Series:
         usage.dask: 16
         usage.koalas: 3
         usage.seaborn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -4694,7 +5710,9 @@ class Series:
         """
         usage.dask: 11
         usage.koalas: 3
+        usage.prophet: 11
         usage.seaborn: 8
+        usage.statsmodels: 2
         """
         ...
 
@@ -4731,7 +5749,9 @@ class Series:
         """
         usage.dask: 19
         usage.koalas: 3
+        usage.prophet: 11
         usage.seaborn: 8
+        usage.statsmodels: 2
         usage.xarray: 1
         """
         ...
@@ -4741,7 +5761,9 @@ class Series:
         """
         usage.dask: 17
         usage.koalas: 8
+        usage.prophet: 2
         usage.seaborn: 2
+        usage.statsmodels: 12
         """
         ...
 
@@ -4754,14 +5776,15 @@ class Series:
         ...
 
     @overload
-    def mean(self, /, axis: int, skipna: bool):
+    def mean(self, /, axis: int):
         """
         usage.dask: 1
+        usage.statsmodels: 1
         """
         ...
 
     @overload
-    def mean(self, /, axis: int):
+    def mean(self, /, axis: int, skipna: bool):
         """
         usage.dask: 1
         """
@@ -4774,11 +5797,13 @@ class Series:
         """
         ...
 
-    def mean(self, /, axis: Union[Literal["columns"], int] = ..., skipna: bool = ...):
+    def mean(self, /, axis: Union[int, Literal["columns"]] = ..., skipna: bool = ...):
         """
         usage.dask: 22
         usage.koalas: 8
+        usage.prophet: 2
         usage.seaborn: 2
+        usage.statsmodels: 13
         usage.xarray: 1
         """
         ...
@@ -4786,6 +5811,7 @@ class Series:
     def median(self, /):
         """
         usage.koalas: 1
+        usage.prophet: 1
         usage.xarray: 1
         """
         ...
@@ -4815,7 +5841,9 @@ class Series:
         """
         usage.dask: 7
         usage.koalas: 52
+        usage.prophet: 12
         usage.seaborn: 11
+        usage.statsmodels: 5
         """
         ...
 
@@ -4852,7 +5880,9 @@ class Series:
         """
         usage.dask: 14
         usage.koalas: 52
+        usage.prophet: 12
         usage.seaborn: 11
+        usage.statsmodels: 5
         usage.xarray: 1
         """
         ...
@@ -4901,6 +5931,13 @@ class Series:
         ...
 
     @overload
+    def mul(self, /, other: pandas.core.series.Series, level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def mul(self, /, other: pandas.core.series.Series, fill_value: int):
         """
         usage.dask: 2
@@ -4922,10 +5959,15 @@ class Series:
         ...
 
     def mul(
-        self, /, other: Union[pandas.core.series.Series, int], fill_value: int = ...
+        self,
+        /,
+        other: Union[int, pandas.core.series.Series],
+        level: int = ...,
+        fill_value: int = ...,
     ):
         """
         usage.dask: 4
+        usage.statsmodels: 1
         """
         ...
 
@@ -4968,7 +6010,9 @@ class Series:
         """
         usage.dask: 3
         usage.koalas: 2
+        usage.prophet: 1
         usage.seaborn: 5
+        usage.statsmodels: 1
         """
         ...
 
@@ -5257,6 +6301,12 @@ class Series:
         """
         ...
 
+    def ravel(self, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
     def rdivmod(self, /, other: int):
         """
         usage.koalas: 2
@@ -5267,18 +6317,27 @@ class Series:
     def reindex(self, /, index: pandas.core.indexes.range.RangeIndex):
         """
         usage.seaborn: 1
-        """
-        ...
-
-    @overload
-    def reindex(self, /, index: pandas.core.indexes.numeric.Int64Index):
-        """
-        usage.dask: 3
+        usage.statsmodels: 1
         """
         ...
 
     @overload
     def reindex(self, /, index: pandas.core.indexes.multi.MultiIndex):
+        """
+        usage.dask: 3
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def reindex(self, /, index: pandas.core.indexes.base.Index):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def reindex(self, /, index: pandas.core.indexes.numeric.Int64Index):
         """
         usage.dask: 3
         """
@@ -5298,20 +6357,11 @@ class Series:
         """
         ...
 
-    def reindex(
-        self,
-        /,
-        index: Union[
-            numpy.ndarray,
-            pandas.core.indexes.numeric.Int64Index,
-            pandas.core.indexes.multi.MultiIndex,
-            pandas.core.indexes.datetimes.DatetimeIndex,
-            pandas.core.indexes.range.RangeIndex,
-        ],
-    ):
+    def reindex(self, /, index: object):
         """
         usage.dask: 8
         usage.seaborn: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -5453,6 +6503,48 @@ class Series:
         ...
 
     @overload
+    def rename(self, /, index: Literal["count"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["weight"]):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["estimate (prev)"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["impact of revisions"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["impact of news"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, index: Literal["estimate (new)"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def rename(self, /, index: Literal["heights"]):
         """
         usage.seaborn: 1
@@ -5546,6 +6638,7 @@ class Series:
         usage.dask: 25
         usage.koalas: 93
         usage.seaborn: 5
+        usage.statsmodels: 7
         """
         ...
 
@@ -5591,6 +6684,13 @@ class Series:
         ...
 
     @overload
+    def replace(self, /, to_replace: Dict[int, str]):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
     def replace(self, /, to_replace: Literal["c"], value: float):
         """
         usage.dask: 1
@@ -5629,6 +6729,7 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 4
+        usage.statsmodels: 2
         """
         ...
 
@@ -5657,6 +6758,13 @@ class Series:
     def resample(self, /, rule: Literal["1H"]):
         """
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def resample(self, /, rule: Literal["M"], convention: Literal["end"]):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -6245,6 +7353,7 @@ class Series:
     ):
         """
         usage.dask: 88
+        usage.statsmodels: 1
         usage.xarray: 14
         """
         ...
@@ -6254,7 +7363,9 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 8
+        usage.prophet: 1
         usage.seaborn: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -6291,6 +7402,7 @@ class Series:
     def reset_index(self, /, level: List[int]):
         """
         usage.koalas: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -6332,7 +7444,9 @@ class Series:
         """
         usage.dask: 7
         usage.koalas: 24
+        usage.prophet: 1
         usage.seaborn: 2
+        usage.statsmodels: 6
         """
         ...
 
@@ -6398,6 +7512,7 @@ class Series:
         """
         usage.dask: 2
         usage.koalas: 3
+        usage.statsmodels: 2
         """
         ...
 
@@ -6416,14 +7531,15 @@ class Series:
         ...
 
     @overload
-    def rolling(self, /, window: Literal["2D"]):
+    def rolling(self, /, window: int, center: bool):
         """
         usage.dask: 1
+        usage.statsmodels: 1
         """
         ...
 
     @overload
-    def rolling(self, /, window: int, center: bool):
+    def rolling(self, /, window: Literal["2D"]):
         """
         usage.dask: 1
         """
@@ -6547,6 +7663,7 @@ class Series:
         """
         usage.dask: 19
         usage.koalas: 3
+        usage.statsmodels: 3
         usage.xarray: 3
         """
         ...
@@ -6720,6 +7837,7 @@ class Series:
     def shift(self, /, periods: int):
         """
         usage.dask: 6
+        usage.statsmodels: 5
         usage.xarray: 1
         """
         ...
@@ -6805,6 +7923,7 @@ class Series:
         """
         usage.dask: 32
         usage.koalas: 1
+        usage.statsmodels: 5
         usage.xarray: 1
         """
         ...
@@ -6815,6 +7934,7 @@ class Series:
         usage.dask: 3
         usage.koalas: 247
         usage.seaborn: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -6859,6 +7979,7 @@ class Series:
         usage.dask: 4
         usage.koalas: 251
         usage.seaborn: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -6867,6 +7988,7 @@ class Series:
         """
         usage.dask: 4
         usage.koalas: 11
+        usage.prophet: 1
         """
         ...
 
@@ -6902,6 +8024,7 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 14
+        usage.prophet: 1
         """
         ...
 
@@ -6910,6 +8033,7 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 4
+        usage.statsmodels: 4
         """
         ...
 
@@ -6925,6 +8049,7 @@ class Series:
         usage.dask: 1
         usage.koalas: 4
         usage.modin: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -6933,6 +8058,8 @@ class Series:
         """
         usage.dask: 3
         usage.koalas: 3
+        usage.prophet: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -6989,7 +8116,9 @@ class Series:
         """
         usage.dask: 9
         usage.koalas: 3
+        usage.prophet: 1
         usage.seaborn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -7018,8 +8147,10 @@ class Series:
         """
         usage.dask: 35
         usage.koalas: 11
+        usage.prophet: 3
         usage.seaborn: 3
         usage.sklearn: 1
+        usage.statsmodels: 5
         """
         ...
 
@@ -7070,8 +8201,10 @@ class Series:
         """
         usage.dask: 41
         usage.koalas: 11
+        usage.prophet: 3
         usage.seaborn: 3
         usage.sklearn: 1
+        usage.statsmodels: 5
         usage.xarray: 2
         """
         ...
@@ -7088,6 +8221,7 @@ class Series:
         """
         usage.dask: 4
         usage.koalas: 5
+        usage.prophet: 4
         """
         ...
 
@@ -7095,6 +8229,7 @@ class Series:
         """
         usage.dask: 4
         usage.koalas: 6
+        usage.prophet: 4
         """
         ...
 
@@ -7200,6 +8335,7 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -7209,6 +8345,7 @@ class Series:
         usage.dask: 12
         usage.koalas: 5
         usage.sklearn: 2
+        usage.statsmodels: 6
         usage.xarray: 2
         """
         ...
@@ -7263,6 +8400,7 @@ class Series:
         usage.dask: 27
         usage.koalas: 7
         usage.sklearn: 2
+        usage.statsmodels: 6
         usage.xarray: 2
         """
         ...
@@ -7511,11 +8649,19 @@ class Series:
         """
         ...
 
+    def to_timestamp(self, /, freq: Literal["Q"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
     def tolist(self, /):
         """
         usage.dask: 4
         usage.koalas: 2
+        usage.prophet: 1
         usage.seaborn: 6
+        usage.statsmodels: 9
         """
         ...
 
@@ -7616,7 +8762,9 @@ class Series:
     def unique(self, /):
         """
         usage.dask: 9
+        usage.prophet: 8
         usage.seaborn: 63
+        usage.statsmodels: 1
         """
         ...
 
@@ -7624,6 +8772,7 @@ class Series:
     def unstack(self, /, level: int):
         """
         usage.koalas: 2
+        usage.statsmodels: 2
         """
         ...
 
@@ -7635,10 +8784,18 @@ class Series:
         """
         ...
 
-    def unstack(self, /, level: int = ...):
+    @overload
+    def unstack(self, /, level: List[int]):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    def unstack(self, /, level: Union[List[int], int] = ...):
         """
         usage.koalas: 2
         usage.seaborn: 1
+        usage.statsmodels: 6
         usage.xarray: 1
         """
         ...
@@ -7654,6 +8811,7 @@ class Series:
         """
         usage.dask: 8
         usage.koalas: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -7661,6 +8819,7 @@ class Series:
     def value_counts(self, /, normalize: bool):
         """
         usage.koalas: 6
+        usage.statsmodels: 1
         """
         ...
 
@@ -7707,6 +8866,7 @@ class Series:
         """
         usage.dask: 13
         usage.koalas: 26
+        usage.statsmodels: 2
         """
         ...
 

@@ -210,6 +210,70 @@ class MultiIndex:
 
     @overload
     @classmethod
+    def from_arrays(cls, /, arrays: List[pandas.core.series.Series]):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_arrays(
+        cls,
+        /,
+        arrays: List[
+            Union[List[Literal["infl"]], pandas.core.indexes.period.PeriodIndex]
+        ],
+        names: List[Literal["revised variable", "revision date"]],
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_arrays(
+        cls,
+        /,
+        arrays: List[
+            Union[List[Literal["infl"]], pandas.core.indexes.period.PeriodIndex]
+        ],
+        names: List[Literal["updated variable", "update date"]],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_arrays(
+        cls,
+        /,
+        arrays: List[list],
+        names: List[Literal["revised variable", "revision date"]],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_arrays(
+        cls,
+        /,
+        arrays: List[list],
+        names: List[Literal["updated variable", "update date"]],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
     def from_arrays(cls, /, arrays: List[numpy.ndarray]):
         """
         usage.modin: 2
@@ -269,12 +333,12 @@ class MultiIndex:
         sortorder: None = ...,
         names: Union[
             pandas.core.indexes.frozen.FrozenList,
-            None,
             Tuple[
                 Literal["first", "number", "level_str"],
                 Literal["second", "color", "level_date"],
             ],
-            List[Union[str, None]],
+            None,
+            List[Union[None, str]],
         ] = ...,
     ):
         """
@@ -282,6 +346,7 @@ class MultiIndex:
         usage.koalas: 15
         usage.modin: 2
         usage.seaborn: 2
+        usage.statsmodels: 9
         usage.xarray: 8
         """
         ...
@@ -667,6 +732,1355 @@ class MultiIndex:
 
     @overload
     @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[List[str], List[Literal["const"]]],
+        names: Tuple[Literal["y"], None],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls, /, iterables: Tuple[List[str], List[str]], names: Tuple[Literal["y"], None]
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[List[str], List[Literal["x4", "x3", "x2", "x1", "const"]]],
+        names: Tuple[Literal["y"], None],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[List[str], List[str]],
+        names: Tuple[Literal["PID"], None],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[List[Literal["1"]], List[Literal["const"]]],
+        names: Tuple[Literal["y"], None],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[List[Literal["1.1"]], List[Literal["B", "Intercept"]]],
+        names: Tuple[Literal["A"], None],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["state.0"]], pandas.core.indexes.datetimes.DatetimeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["state.2", "state.1", "state.0"]],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["state.1", "state.0"]],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["state.3", "state.2", "state.1", "state.0"]],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            List[Literal["x2", "x1", "x0", "const"]],
+            Tuple[Literal["lower"], Literal["upper"]],
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            pandas.core.indexes.datetimes.DatetimeIndex,
+            List[Literal["x2", "x1", "x0", "const"]],
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            List[Literal["x1", "const"]], Tuple[Literal["lower"], Literal["upper"]]
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            List[Literal["x2", "x1", "x0"]], Tuple[Literal["lower"], Literal["upper"]]
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            pandas.core.indexes.datetimes.DatetimeIndex, List[Literal["x2", "x1", "x0"]]
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            List[Literal["const"]], Tuple[Literal["lower"], Literal["upper"]]
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            pandas.core.indexes.datetimes.DatetimeIndex, List[Literal["const"]]
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["state.4", "state.3", "state.2", "state.1", "state.0"]],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[List[Literal["L1.y2", "L1.y1"]], List[Literal["y2", "y1"]]],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["f1"]], pandas.core.indexes.datetimes.DatetimeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["f1.L1", "f1"]],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["f2", "f1"]], pandas.core.indexes.datetimes.DatetimeIndex
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            List[Literal["L1.y3", "L1.y2", "L1.y1"]], List[Literal["y3", "y2", "y1"]]
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["e(dln_consump)", "e(dln_inc)", "e(dln_inv)", "f1"]],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[Union[List[str], pandas.core.indexes.datetimes.DatetimeIndex]],
+    ):
+        """
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["dummy"]], pandas.core.indexes.datetimes.DatetimeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["e(dln_inc)", "e(dln_inv)"]],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["f1"]], pandas.core.indexes.range.RangeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["global.2", "global.1"]],
+                pandas.core.indexes.period.PeriodIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["block", "global"]], pandas.core.indexes.period.PeriodIndex
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["0"]], pandas.core.indexes.period.PeriodIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["eps_M.1", "eps_M.0", "0"]],
+                pandas.core.indexes.period.PeriodIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[Union[List[str], pandas.core.indexes.period.PeriodIndex]],
+    ):
+        """
+        usage.statsmodels: 39
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[Union[numpy.ndarray, pandas.core.indexes.period.PeriodIndex]],
+    ):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["0"]], pandas.core.indexes.range.RangeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(cls, /, iterables: List[Union[numpy.ndarray, List[Literal["y"]]]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls, /, iterables: List[Union[numpy.ndarray, List[Literal["y2", "y1"]]]]
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["eps_M.f1", "0"]], pandas.core.indexes.period.PeriodIndex
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["eps_M.f2", "eps_M.f1", "0"]],
+                pandas.core.indexes.period.PeriodIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(cls, /, iterables: Tuple[List[str], List[Literal["y2", "y1"]]]):
+        """
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            List[Literal["L2.y2", "L2.y1", "L1.y2", "L1.y1"]], List[Literal["y2", "y1"]]
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls, /, iterables: Tuple[List[str], List[Literal["y3", "y2", "y1"]]]
+    ):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["level", "error"]], pandas.core.indexes.period.PeriodIndex
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["trend", "level", "error"]],
+                pandas.core.indexes.period.PeriodIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["state.0"]], pandas.core.indexes.range.RangeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["state.1", "state.0"]],
+                pandas.core.indexes.range.RangeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["f1.L1", "f1"]], pandas.core.indexes.range.RangeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["f2", "f1"]], pandas.core.indexes.range.RangeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["state.3", "state.2", "state.1", "state.0"]],
+                pandas.core.indexes.range.RangeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["level"]], pandas.core.indexes.range.RangeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["trend", "level"]], pandas.core.indexes.range.RangeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["state.0"]], pandas.core.indexes.period.PeriodIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["beta.0"]], pandas.core.indexes.datetimes.DatetimeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["state.1", "state.0"]],
+                pandas.core.indexes.period.PeriodIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                pandas.core.indexes.base.Index, pandas.core.indexes.period.PeriodIndex
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                pandas.core.indexes.base.Index,
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["state.1", "state.0"]],
+                pandas.core.indexes.numeric.Int64Index,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                pandas.core.indexes.base.Index, pandas.core.indexes.numeric.Int64Index
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[pandas.core.indexes.base.Index, pandas.core.indexes.range.RangeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["infl"]], pandas.core.indexes.period.PeriodIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[list],
+        names: List[Literal["updated variable", "update date"]],
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["level"]], pandas.core.indexes.period.PeriodIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["unemp", "realgdp"]],
+                pandas.core.indexes.period.PeriodIndex,
+            ]
+        ],
+        names: List[Literal["revised variable", "revision date"]],
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["unemp", "realgdp"]],
+                pandas.core.indexes.period.PeriodIndex,
+            ]
+        ],
+        names: List[Literal["updated variable", "update date"]],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["unemp", "realgdp"]],
+                pandas.core.indexes.period.PeriodIndex,
+            ]
+        ],
+        names: List[Literal["impacted variables", "impact dates"]],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["unemp", "realgdp"]],
+                pandas.core.indexes.period.PeriodIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[list],
+        names: List[Literal["revised variable", "revision date"]],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["f1.L1", "f1"]], pandas.core.indexes.period.PeriodIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[numpy.ndarray, pandas.core.indexes.datetimes.DatetimeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[Union[numpy.ndarray, pandas.core.indexes.range.RangeIndex]],
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["state.0"]], pandas.core.indexes.numeric.Int64Index]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[Union[numpy.ndarray, pandas.core.indexes.numeric.Int64Index]],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["level"]], pandas.core.indexes.datetimes.DatetimeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(cls, /, iterables: List[List[Union[Literal["y"], int]]]):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(cls, /, iterables: List[List[Union[Literal["y2", "y1"], int]]]):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["trend", "level"]],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["cycle.auxilliary", "cycle"]],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["seasonal.L2", "seasonal.L1", "seasonal"]],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[
+                    Literal[
+                        "freq_seasonal.3",
+                        "freq_seasonal.2",
+                        "freq_seasonal.1",
+                        "freq_seasonal.0",
+                    ]
+                ],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["beta.realgdp"]],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["beta.x1"]], pandas.core.indexes.datetimes.DatetimeIndex]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                List[Literal["ar.L1", "trend", "level"]],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            List[Literal["L1.realinv", "L1.realcons", "L1.realgdp", "const"]],
+            List[Literal["realinv", "realcons", "realgdp"]],
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            List[Literal["const"]], List[Literal["realinv", "realcons", "realgdp"]]
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls, /, iterables: Tuple[List[Literal["L1.1", "L1.0", "const"]], List[int]]
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            List[Literal["L2.y", "L2.x", "L1.y", "L1.x", "const"]],
+            List[Literal["y", "x"]],
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            Tuple[
+                Literal["const"],
+                Literal["L1.x"],
+                Literal["L1.y"],
+                Literal["L2.x"],
+                Literal["L2.y"],
+            ],
+            Tuple[Literal["x"], Literal["y"]],
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            List[Literal["exog_3", "exog_2", "exog_1", "exog_0", "const"]],
+            List[Literal["endog_1", "endog_0"]],
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls, /, iterables: Tuple[List[str], List[Literal["endog_1", "endog_0"]]]
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            List[Literal["L1.y2", "L1.y1", "const"]], List[Literal["y2", "y1"]]
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(cls, /, iterables: Tuple[List[str], List[str]]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            List[
+                Literal["L1.realinv", "L1.realcons", "L1.realgdp", "exovar1", "const"]
+            ],
+            List[Literal["realinv", "realcons", "realgdp"]],
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: Tuple[
+            List[Literal["L1.y3", "L1.y2", "L1.y1", "x1", "const"]],
+            List[Literal["y3", "y2", "y1"]],
+        ],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
     def from_product(cls, /, iterables: List[pandas.core.indexes.base.Index]):
         """
         usage.dask: 1
@@ -687,15 +2101,39 @@ class MultiIndex:
     def from_product(
         cls,
         /,
-        iterables: Union[list, pandas.core.indexes.frozen.FrozenList],
+        iterables: Union[
+            list,
+            pandas.core.indexes.frozen.FrozenList,
+            Tuple[
+                Union[
+                    pandas.core.indexes.datetimes.DatetimeIndex,
+                    List[str],
+                    Tuple[
+                        Literal["const"],
+                        Literal["L1.x"],
+                        Literal["L1.y"],
+                        Literal["L2.x"],
+                        Literal["L2.y"],
+                    ],
+                ],
+                Union[
+                    List[Union[str, int]],
+                    Tuple[Literal["x", "lower"], Literal["y", "upper"]],
+                ],
+            ],
+        ],
         sortorder: None = ...,
         names: Union[
-            pandas.core.indexes.frozen.FrozenList, Tuple[str, ...], List[str], None
+            Tuple[Union[str, None], ...],
+            List[str],
+            None,
+            pandas.core.indexes.frozen.FrozenList,
         ] = ...,
     ):
         """
         usage.dask: 3
         usage.koalas: 4
+        usage.statsmodels: 260
         usage.xarray: 38
         """
         ...
@@ -4775,6 +6213,53 @@ class MultiIndex:
     def from_tuples(
         cls,
         /,
+        tuples: List[Tuple[numpy.str_, numpy.str_]],
+        names: List[Literal["exog", "endog"]],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_tuples(
+        cls,
+        /,
+        tuples: List[Tuple[Literal["General Motors"], float]],
+        names: List[Literal["year", "firms"]],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_tuples(
+        cls,
+        /,
+        tuples: List[Tuple[float, float, float]],
+        names: List[Literal["TVnews", "income", "educ"]],
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_tuples(cls, /, tuples: List[Tuple[float, float, float]], names: None):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_tuples(
+        cls,
+        /,
         tuples: List[Tuple[Literal["a"], numpy.int64]],
         names: List[Literal["name2", "name1"]],
     ):
@@ -4857,25 +6342,24 @@ class MultiIndex:
         cls,
         /,
         tuples: Union[
-            List[
-                Union[List[int], Tuple[Union[numpy.int64, int, str, None], ...], None]
-            ],
-            Dict[Tuple[Literal["a"], Literal["x"], int], List[int]],
-            zip,
-            set,
+            List[Union[None, tuple, List[int]]],
             Tuple[
                 Tuple[Literal["a", "b"], int],
                 Tuple[Literal["a", "b"], int],
                 Tuple[Literal["b", "a"], int],
                 Tuple[Literal["b", "a"], int],
             ],
+            set,
+            zip,
+            Dict[Tuple[Literal["a"], Literal["x"], int], List[int]],
         ],
         sortorder: None = ...,
-        names: Union[List[str], None, Tuple[Literal["number"], Literal["color"]]] = ...,
+        names: Union[List[str], Tuple[Literal["number"], Literal["color"]], None] = ...,
     ):
         """
         usage.koalas: 568
         usage.modin: 9
+        usage.statsmodels: 4
         usage.xarray: 3
         """
         ...
@@ -4909,6 +6393,7 @@ class MultiIndex:
     levels: object
 
     # usage.koalas: 1
+    # usage.statsmodels: 1
     levshape: object
 
     # usage.dask: 4
@@ -4918,9 +6403,10 @@ class MultiIndex:
 
     # usage.dask: 11
     # usage.koalas: 106
+    # usage.statsmodels: 13
     # usage.xarray: 23
     names: Union[
-        List[Union[Tuple[str, str], str, None]], pandas.core.indexes.frozen.FrozenList
+        List[Union[None, str, Tuple[str, str]]], pandas.core.indexes.frozen.FrozenList
     ]
 
     # usage.dask: 3
@@ -5076,6 +6562,7 @@ class MultiIndex:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -5239,13 +6726,98 @@ class MultiIndex:
         """
         ...
 
+    @overload
+    def get_loc_level(self, /, key: Literal["American Steel"], level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def get_loc_level(self, /, key: Literal["Atlantic Refining"], level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def get_loc_level(self, /, key: Literal["Chrysler"], level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def get_loc_level(self, /, key: Literal["Diamond Match"], level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def get_loc_level(self, /, key: Literal["General Electric"], level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def get_loc_level(self, /, key: Literal["General Motors"], level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def get_loc_level(self, /, key: Literal["Goodyear"], level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def get_loc_level(self, /, key: Literal["IBM"], level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def get_loc_level(self, /, key: Literal["US Steel"], level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def get_loc_level(self, /, key: Literal["Union Oil"], level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def get_loc_level(self, /, key: Literal["Westinghouse"], level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def get_loc_level(self, /, key: numpy.float64, level: int):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
     def get_loc_level(
         self,
         /,
-        key: Union[Tuple[Union[int, Literal["a", "b"]], ...], Literal["a"], int],
-        level: Union[Tuple[str, ...], List[int], int],
+        key: Union[str, numpy.float64, int, Tuple[Union[Literal["a", "b"], int], ...]],
+        level: Union[int, List[int], Tuple[str, ...]],
     ):
         """
+        usage.statsmodels: 12
         usage.xarray: 12
         """
         ...
@@ -5407,6 +6979,29 @@ class MultiIndex:
         ...
 
     @overload
+    def set_names(self, /, names: pandas.core.indexes.frozen.FrozenList, inplace: bool):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def set_names(self, /, names: List[Literal["year", "firms"]], inplace: bool):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def set_names(
+        self, /, names: List[Literal["group2", "group1", "group0"]], inplace: bool
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def set_names(self, /, names: List[Literal["b", "a"]], inplace: bool):
         """
         usage.dask: 1
@@ -5423,13 +7018,18 @@ class MultiIndex:
     def set_names(
         self,
         /,
-        names: Union[List[str], Literal["third", "second", "first"]],
+        names: Union[
+            List[str],
+            Literal["third", "second", "first"],
+            pandas.core.indexes.frozen.FrozenList,
+        ],
         level: int = ...,
         inplace: bool = ...,
     ):
         """
         usage.dask: 2
         usage.koalas: 8
+        usage.statsmodels: 3
         usage.xarray: 1
         """
         ...

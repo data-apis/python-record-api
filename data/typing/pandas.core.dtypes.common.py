@@ -141,6 +141,25 @@ def is_categorical_dtype(arr_or_dtype: numpy.dtype):
     """
     usage.dask: 47
     usage.koalas: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def is_categorical_dtype(arr_or_dtype: pandas.core.dtypes.dtypes.CategoricalDtype):
+    """
+    usage.dask: 17
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def is_categorical_dtype(arr_or_dtype: pandas.core.arrays.integer.Int64Dtype):
+    """
+    usage.dask: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -260,14 +279,6 @@ def is_categorical_dtype(arr_or_dtype: pandas.core.indexes.range.RangeIndex):
 
 
 @overload
-def is_categorical_dtype(arr_or_dtype: pandas.core.dtypes.dtypes.CategoricalDtype):
-    """
-    usage.dask: 17
-    """
-    ...
-
-
-@overload
 def is_categorical_dtype(arr_or_dtype: pandas.core.arrays.string_.StringDtype):
     """
     usage.dask: 2
@@ -279,14 +290,6 @@ def is_categorical_dtype(arr_or_dtype: pandas.core.arrays.string_.StringDtype):
 def is_categorical_dtype(arr_or_dtype: pandas.core.arrays.boolean.BooleanDtype):
     """
     usage.dask: 2
-    """
-    ...
-
-
-@overload
-def is_categorical_dtype(arr_or_dtype: pandas.core.arrays.integer.Int64Dtype):
-    """
-    usage.dask: 1
     """
     ...
 
@@ -439,6 +442,7 @@ def is_categorical_dtype(arr_or_dtype: object):
     usage.dask: 113
     usage.koalas: 1
     usage.seaborn: 16
+    usage.statsmodels: 3
     """
     ...
 
@@ -754,6 +758,32 @@ def is_interval_dtype(
 def is_numeric_dtype(arr_or_dtype: numpy.dtype):
     """
     usage.koalas: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def is_numeric_dtype(arr_or_dtype: pandas.core.dtypes.dtypes.CategoricalDtype):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def is_numeric_dtype(arr_or_dtype: pandas.core.arrays.integer.Int64Dtype):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def is_numeric_dtype(arr_or_dtype: numpy.ndarray):
+    """
+    usage.seaborn: 5
+    usage.statsmodels: 6
     """
     ...
 
@@ -763,14 +793,6 @@ def is_numeric_dtype(arr_or_dtype: pandas.core.series.Series):
     """
     usage.dask: 1
     usage.seaborn: 1
-    """
-    ...
-
-
-@overload
-def is_numeric_dtype(arr_or_dtype: numpy.ndarray):
-    """
-    usage.seaborn: 5
     """
     ...
 
@@ -855,18 +877,12 @@ def is_numeric_dtype(arr_or_dtype: List[Union[Literal["d", "a", "b", "c"], float
     ...
 
 
-def is_numeric_dtype(
-    arr_or_dtype: Union[
-        pandas.core.series.Series,
-        numpy.dtype,
-        numpy.ndarray,
-        List[Union[str, int, float, pandas._libs.tslibs.timestamps.Timestamp]],
-    ]
-):
+def is_numeric_dtype(arr_or_dtype: object):
     """
     usage.dask: 1
     usage.koalas: 1
     usage.seaborn: 18
+    usage.statsmodels: 9
     """
     ...
 

@@ -11,6 +11,7 @@ False_: object
 # usage.pandas: 1
 # usage.scipy: 1
 # usage.sklearn: 4
+# usage.statsmodels: 2
 Inf: object
 
 # usage.pandas: 1
@@ -30,6 +31,7 @@ NINF: object
 # usage.scipy: 3
 # usage.skimage: 1
 # usage.sklearn: 7
+# usage.statsmodels: 9
 # usage.xarray: 7
 NaN: object
 
@@ -121,6 +123,7 @@ _zeta: numpy.ufunc
 # usage.seaborn: 2
 # usage.skimage: 5
 # usage.sklearn: 28
+# usage.statsmodels: 4
 # usage.xarray: 1
 abs: object
 
@@ -129,10 +132,12 @@ abs: object
 # usage.matplotlib: 84
 # usage.networkx: 13
 # usage.pandas: 47
+# usage.prophet: 5
 # usage.scipy: 520
 # usage.seaborn: 4
 # usage.skimage: 113
 # usage.sklearn: 266
+# usage.statsmodels: 301
 # usage.xarray: 1
 absolute: numpy.ufunc
 
@@ -144,6 +149,7 @@ absolute: numpy.ufunc
 # usage.scipy: 14
 # usage.skimage: 12
 # usage.sklearn: 4
+# usage.statsmodels: 21
 # usage.xarray: 17
 add: numpy.ufunc
 
@@ -160,6 +166,7 @@ airye: numpy.ufunc
 # usage.matplotlib: 1
 # usage.pandas: 15
 # usage.scipy: 8
+# usage.statsmodels: 1
 # usage.xarray: 2
 arccos: numpy.ufunc
 
@@ -177,6 +184,7 @@ arccosh: numpy.ufunc
 # usage.scipy: 18
 # usage.skimage: 1
 # usage.sklearn: 2
+# usage.statsmodels: 5
 # usage.xarray: 2
 arcsin: numpy.ufunc
 
@@ -194,6 +202,7 @@ arcsinh: numpy.ufunc
 # usage.scipy: 41
 # usage.skimage: 3
 # usage.sklearn: 2
+# usage.statsmodels: 1
 # usage.xarray: 2
 arctan: numpy.ufunc
 
@@ -203,6 +212,7 @@ arctan: numpy.ufunc
 # usage.pandas: 1
 # usage.scipy: 21
 # usage.skimage: 8
+# usage.statsmodels: 8
 # usage.xarray: 2
 arctan2: numpy.ufunc
 
@@ -210,6 +220,7 @@ arctan2: numpy.ufunc
 # usage.koalas: 5
 # usage.pandas: 15
 # usage.scipy: 19
+# usage.statsmodels: 1
 # usage.xarray: 2
 arctanh: numpy.ufunc
 
@@ -244,9 +255,11 @@ berp: numpy.ufunc
 besselpoly: numpy.ufunc
 
 # usage.scipy: 28
+# usage.statsmodels: 1
 beta: numpy.ufunc
 
 # usage.scipy: 23
+# usage.statsmodels: 1
 betainc: numpy.ufunc
 
 # usage.scipy: 6
@@ -289,6 +302,7 @@ bool: object
 
 # usage.dask: 1
 # usage.skimage: 1
+# usage.statsmodels: 1
 bool8: object
 
 # usage.scipy: 22
@@ -316,6 +330,7 @@ btdtrib: numpy.ufunc
 # usage.seaborn: 9
 # usage.skimage: 1
 # usage.sklearn: 40
+# usage.statsmodels: 124
 c_: object
 
 # usage.scipy: 1
@@ -335,10 +350,12 @@ cdouble: object
 # usage.matplotlib: 35
 # usage.networkx: 2
 # usage.pandas: 1
+# usage.prophet: 3
 # usage.scipy: 49
 # usage.seaborn: 2
 # usage.skimage: 31
 # usage.sklearn: 19
+# usage.statsmodels: 22
 # usage.xarray: 5
 ceil: numpy.ufunc
 
@@ -386,6 +403,7 @@ complex_: object
 # usage.dask: 1
 # usage.pandas: 6
 # usage.scipy: 59
+# usage.statsmodels: 1
 # usage.xarray: 3
 complexfloating: object
 
@@ -393,6 +411,7 @@ complexfloating: object
 # usage.matplotlib: 4
 # usage.scipy: 150
 # usage.skimage: 2
+# usage.statsmodels: 1
 # usage.xarray: 2
 conjugate: numpy.ufunc
 
@@ -407,10 +426,12 @@ copysign: numpy.ufunc
 # usage.matplotlib: 86
 # usage.networkx: 5
 # usage.pandas: 19
+# usage.prophet: 2
 # usage.scipy: 219
 # usage.seaborn: 2
 # usage.skimage: 52
 # usage.sklearn: 21
+# usage.statsmodels: 38
 # usage.xarray: 14
 cos: numpy.ufunc
 
@@ -454,6 +475,7 @@ degrees: numpy.ufunc
 # usage.scipy: 1
 # usage.skimage: 1
 # usage.sklearn: 3
+# usage.statsmodels: 1
 divide: object
 
 # usage.dask: 4
@@ -466,6 +488,7 @@ divmod: numpy.ufunc
 # usage.scipy: 138
 # usage.skimage: 98
 # usage.sklearn: 13
+# usage.statsmodels: 11
 double: object
 
 # usage.matplotlib: 12
@@ -503,10 +526,12 @@ entr: numpy.ufunc
 # usage.dask: 113
 # usage.scipy: 25
 # usage.sklearn: 1
+# usage.statsmodels: 5
 equal: numpy.ufunc
 
 # usage.scipy: 18
 # usage.sklearn: 1
+# usage.statsmodels: 3
 erf: numpy.ufunc
 
 # usage.scipy: 25
@@ -578,10 +603,12 @@ eval_sh_legendre: numpy.ufunc
 # usage.matplotlib: 30
 # usage.networkx: 2
 # usage.pandas: 33
+# usage.prophet: 1
 # usage.sample-usage: 1
 # usage.scipy: 697
 # usage.skimage: 30
 # usage.sklearn: 125
+# usage.statsmodels: 342
 # usage.xarray: 4
 exp: numpy.ufunc
 
@@ -622,6 +649,7 @@ exprel: numpy.ufunc
 # usage.pandas: 6
 # usage.scipy: 9
 # usage.sklearn: 2
+# usage.statsmodels: 4
 # usage.xarray: 5
 fabs: numpy.ufunc
 
@@ -648,6 +676,7 @@ flexible: object
 # usage.matplotlib: 2
 # usage.networkx: 3
 # usage.pandas: 4
+# usage.prophet: 1
 # usage.skimage: 60
 # usage.sklearn: 29
 # usage.xarray: 4
@@ -678,9 +707,11 @@ floating: object
 # usage.koalas: 5
 # usage.matplotlib: 20
 # usage.pandas: 8
+# usage.prophet: 1
 # usage.scipy: 101
 # usage.skimage: 21
 # usage.sklearn: 3
+# usage.statsmodels: 12
 # usage.xarray: 2
 floor: numpy.ufunc
 
@@ -719,6 +750,7 @@ frexp: numpy.ufunc
 
 # usage.scipy: 107
 # usage.sklearn: 2
+# usage.statsmodels: 2
 gamma: numpy.ufunc
 
 # usage.scipy: 35
@@ -736,6 +768,7 @@ gammaincinv: numpy.ufunc
 
 # usage.scipy: 95
 # usage.sklearn: 11
+# usage.statsmodels: 31
 gammaln: numpy.ufunc
 
 # usage.scipy: 3
@@ -769,6 +802,7 @@ generic: object
 # usage.pandas: 2
 # usage.scipy: 11
 # usage.sklearn: 12
+# usage.statsmodels: 2
 # usage.xarray: 1
 greater: numpy.ufunc
 
@@ -803,6 +837,7 @@ hyp0f1: numpy.ufunc
 hyp1f1: numpy.ufunc
 
 # usage.scipy: 13
+# usage.statsmodels: 1
 hyp2f1: numpy.ufunc
 
 # usage.scipy: 15
@@ -827,6 +862,7 @@ i1: numpy.ufunc
 i1e: numpy.ufunc
 
 # usage.scipy: 10
+# usage.statsmodels: 2
 # usage.xarray: 1
 inexact: object
 
@@ -839,6 +875,7 @@ inexact: object
 # usage.seaborn: 9
 # usage.skimage: 36
 # usage.sklearn: 115
+# usage.statsmodels: 90
 # usage.xarray: 11
 inf: object
 
@@ -849,6 +886,7 @@ infty: object
 # usage.dask: 1
 # usage.koalas: 10
 # usage.pandas: 5
+# usage.prophet: 1
 # usage.skimage: 31
 # usage.sklearn: 94
 # usage.xarray: 3
@@ -860,6 +898,7 @@ int0: object
 # usage.pandas: 8
 # usage.scipy: 31
 # usage.skimage: 3
+# usage.statsmodels: 1
 # usage.xarray: 1
 int_: object
 
@@ -873,6 +912,7 @@ intc: object
 # usage.scipy: 11
 # usage.skimage: 10
 # usage.sklearn: 2
+# usage.statsmodels: 22
 # usage.xarray: 14
 integer: object
 
@@ -889,6 +929,7 @@ intp: object
 inv: numpy.ufunc
 
 # usage.scipy: 4
+# usage.statsmodels: 3
 inv_boxcox: numpy.ufunc
 
 # usage.scipy: 6
@@ -909,6 +950,7 @@ invert: numpy.ufunc
 # usage.seaborn: 4
 # usage.skimage: 10
 # usage.sklearn: 53
+# usage.statsmodels: 50
 # usage.xarray: 6
 isfinite: numpy.ufunc
 
@@ -916,9 +958,11 @@ isfinite: numpy.ufunc
 # usage.koalas: 5
 # usage.matplotlib: 6
 # usage.pandas: 31
+# usage.prophet: 2
 # usage.scipy: 58
 # usage.skimage: 2
 # usage.sklearn: 12
+# usage.statsmodels: 9
 # usage.xarray: 2
 isinf: numpy.ufunc
 
@@ -927,10 +971,12 @@ isinf: numpy.ufunc
 # usage.matplotlib: 25
 # usage.networkx: 1
 # usage.pandas: 1228
+# usage.prophet: 2
 # usage.scipy: 388
 # usage.seaborn: 2
 # usage.skimage: 22
 # usage.sklearn: 121
+# usage.statsmodels: 163
 # usage.xarray: 33
 isnan: numpy.ufunc
 
@@ -1039,12 +1085,14 @@ ldexp: numpy.ufunc
 # usage.scipy: 27
 # usage.skimage: 3
 # usage.sklearn: 5
+# usage.statsmodels: 2
 # usage.xarray: 1
 less: numpy.ufunc
 
 # usage.dask: 109
 # usage.scipy: 7
 # usage.sklearn: 2
+# usage.statsmodels: 11
 less_equal: numpy.ufunc
 
 # usage.dask: 50
@@ -1052,10 +1100,12 @@ less_equal: numpy.ufunc
 # usage.matplotlib: 37
 # usage.networkx: 1
 # usage.pandas: 25
+# usage.prophet: 2
 # usage.sample-usage: 1
 # usage.scipy: 485
 # usage.skimage: 20
 # usage.sklearn: 193
+# usage.statsmodels: 502
 # usage.xarray: 3
 log: numpy.ufunc
 
@@ -1066,6 +1116,7 @@ log: numpy.ufunc
 # usage.seaborn: 2
 # usage.skimage: 4
 # usage.sklearn: 5
+# usage.statsmodels: 4
 # usage.xarray: 2
 log10: numpy.ufunc
 
@@ -1073,6 +1124,7 @@ log10: numpy.ufunc
 # usage.pandas: 15
 # usage.scipy: 147
 # usage.sklearn: 15
+# usage.statsmodels: 1
 # usage.xarray: 2
 log1p: numpy.ufunc
 
@@ -1084,6 +1136,7 @@ log1p: numpy.ufunc
 # usage.seaborn: 11
 # usage.skimage: 5
 # usage.sklearn: 26
+# usage.statsmodels: 1
 # usage.xarray: 2
 log2: numpy.ufunc
 
@@ -1103,6 +1156,7 @@ logaddexp: numpy.ufunc
 logaddexp2: numpy.ufunc
 
 # usage.scipy: 13
+# usage.statsmodels: 3
 loggamma: numpy.ufunc
 
 # usage.dask: 112
@@ -1112,6 +1166,7 @@ loggamma: numpy.ufunc
 # usage.scipy: 101
 # usage.skimage: 13
 # usage.sklearn: 2
+# usage.statsmodels: 7
 # usage.xarray: 3
 logical_and: numpy.ufunc
 
@@ -1119,9 +1174,11 @@ logical_and: numpy.ufunc
 # usage.koalas: 5
 # usage.matplotlib: 1
 # usage.pandas: 9
+# usage.prophet: 2
 # usage.scipy: 32
 # usage.skimage: 16
 # usage.sklearn: 25
+# usage.statsmodels: 7
 # usage.xarray: 12
 logical_not: numpy.ufunc
 
@@ -1132,6 +1189,7 @@ logical_not: numpy.ufunc
 # usage.scipy: 21
 # usage.skimage: 5
 # usage.sklearn: 14
+# usage.statsmodels: 6
 # usage.xarray: 3
 logical_or: numpy.ufunc
 
@@ -1189,8 +1247,10 @@ mathieu_sem: numpy.ufunc
 
 # usage.dask: 15
 # usage.networkx: 2
+# usage.prophet: 3
 # usage.scipy: 25
 # usage.sklearn: 1
+# usage.statsmodels: 8
 matmul: numpy.ufunc
 
 # usage.dask: 6
@@ -1199,6 +1259,7 @@ matmul: numpy.ufunc
 # usage.scipy: 21
 # usage.skimage: 30
 # usage.sklearn: 27
+# usage.statsmodels: 9
 # usage.xarray: 2
 max: object
 
@@ -1209,6 +1270,7 @@ max: object
 # usage.scipy: 125
 # usage.skimage: 18
 # usage.sklearn: 56
+# usage.statsmodels: 50
 # usage.xarray: 95
 maximum: numpy.ufunc
 
@@ -1225,6 +1287,7 @@ mgrid: object
 # usage.scipy: 16
 # usage.skimage: 6
 # usage.sklearn: 24
+# usage.statsmodels: 5
 # usage.xarray: 2
 min: object
 
@@ -1236,6 +1299,7 @@ min: object
 # usage.scipy: 95
 # usage.skimage: 9
 # usage.sklearn: 22
+# usage.statsmodels: 23
 # usage.xarray: 4
 minimum: numpy.ufunc
 
@@ -1260,6 +1324,7 @@ modstruve: numpy.ufunc
 # usage.scipy: 69
 # usage.skimage: 36
 # usage.sklearn: 7
+# usage.statsmodels: 70
 # usage.xarray: 2
 multiply: numpy.ufunc
 
@@ -1273,6 +1338,7 @@ multiply: numpy.ufunc
 # usage.seaborn: 25
 # usage.skimage: 16
 # usage.sklearn: 162
+# usage.statsmodels: 414
 # usage.xarray: 371
 nan: object
 
@@ -1304,6 +1370,7 @@ ncfdtridfd: numpy.ufunc
 ncfdtridfn: numpy.ufunc
 
 # usage.scipy: 4
+# usage.statsmodels: 2
 ncfdtrinc: numpy.ufunc
 
 # usage.scipy: 13
@@ -1319,6 +1386,7 @@ nctdtrinc: numpy.ufunc
 nctdtrit: numpy.ufunc
 
 # usage.scipy: 14
+# usage.statsmodels: 6
 ndtr: numpy.ufunc
 
 # usage.scipy: 21
@@ -1337,6 +1405,7 @@ negative: numpy.ufunc
 # usage.seaborn: 2
 # usage.skimage: 53
 # usage.sklearn: 241
+# usage.statsmodels: 37
 # usage.xarray: 22
 newaxis: object
 
@@ -1346,6 +1415,7 @@ newaxis: object
 # usage.pandas: 4
 # usage.scipy: 24
 # usage.sklearn: 2
+# usage.statsmodels: 3
 # usage.xarray: 2
 nextafter: numpy.ufunc
 
@@ -1364,6 +1434,7 @@ nrdtrisd: numpy.ufunc
 # usage.pandas: 21
 # usage.scipy: 3
 # usage.sklearn: 3
+# usage.statsmodels: 1
 # usage.xarray: 5
 number: object
 
@@ -1426,10 +1497,12 @@ pdtrik: numpy.ufunc
 # usage.matplotlib: 129
 # usage.networkx: 2
 # usage.pandas: 3
+# usage.prophet: 1
 # usage.scipy: 426
 # usage.seaborn: 2
 # usage.skimage: 96
 # usage.sklearn: 51
+# usage.statsmodels: 112
 # usage.xarray: 10
 pi: object
 
@@ -1446,6 +1519,7 @@ positive: numpy.ufunc
 # usage.seaborn: 3
 # usage.skimage: 11
 # usage.sklearn: 47
+# usage.statsmodels: 73
 power: numpy.ufunc
 
 # usage.scipy: 3
@@ -1474,6 +1548,7 @@ pseudo_huber: numpy.ufunc
 
 # usage.scipy: 39
 # usage.sklearn: 15
+# usage.statsmodels: 7
 psi: numpy.ufunc
 
 # usage.matplotlib: 6
@@ -1482,6 +1557,7 @@ psi: numpy.ufunc
 # usage.seaborn: 4
 # usage.skimage: 11
 # usage.sklearn: 33
+# usage.statsmodels: 573
 # usage.xarray: 3
 r_: object
 
@@ -1505,6 +1581,7 @@ radians: numpy.ufunc
 
 # usage.matplotlib: 1
 # usage.pandas: 1
+# usage.statsmodels: 4
 rec: object
 
 # usage.dask: 37
@@ -1549,6 +1626,7 @@ round: numpy.ufunc
 # usage.scipy: 4
 # usage.skimage: 1
 # usage.sklearn: 1
+# usage.statsmodels: 48
 s_: object
 
 # usage.scipy: 2
@@ -1568,6 +1646,7 @@ sici: numpy.ufunc
 # usage.scipy: 65
 # usage.skimage: 4
 # usage.sklearn: 35
+# usage.statsmodels: 13
 # usage.xarray: 3
 sign: numpy.ufunc
 
@@ -1589,10 +1668,12 @@ signedinteger: object
 # usage.matplotlib: 127
 # usage.networkx: 5
 # usage.pandas: 34
+# usage.prophet: 2
 # usage.scipy: 296
 # usage.seaborn: 1
 # usage.skimage: 51
 # usage.sklearn: 32
+# usage.statsmodels: 47
 # usage.xarray: 30
 sin: numpy.ufunc
 
@@ -1633,10 +1714,12 @@ sph_harm: numpy.ufunc
 # usage.matplotlib: 40
 # usage.networkx: 19
 # usage.pandas: 58
+# usage.prophet: 2
 # usage.scipy: 733
 # usage.seaborn: 8
 # usage.skimage: 122
 # usage.sklearn: 247
+# usage.statsmodels: 519
 # usage.xarray: 4
 sqrt: numpy.ufunc
 
@@ -1647,10 +1730,12 @@ sqrt: numpy.ufunc
 # usage.seaborn: 5
 # usage.skimage: 8
 # usage.sklearn: 4
+# usage.statsmodels: 5
 # usage.xarray: 2
 square: numpy.ufunc
 
 # usage.scipy: 9
+# usage.statsmodels: 2
 stdtr: numpy.ufunc
 
 # usage.scipy: 4
@@ -1663,6 +1748,7 @@ stdtrit: numpy.ufunc
 str: object
 
 # usage.scipy: 2
+# usage.statsmodels: 2
 # usage.xarray: 3
 string_: object
 
@@ -1675,6 +1761,7 @@ struve: numpy.ufunc
 # usage.scipy: 14
 # usage.skimage: 14
 # usage.sklearn: 2
+# usage.statsmodels: 44
 # usage.xarray: 2
 subtract: numpy.ufunc
 
@@ -1696,6 +1783,7 @@ tandg: numpy.ufunc
 # usage.scipy: 21
 # usage.skimage: 2
 # usage.sklearn: 9
+# usage.statsmodels: 4
 # usage.xarray: 2
 tanh: numpy.ufunc
 
@@ -1708,11 +1796,13 @@ tklmbda: numpy.ufunc
 # usage.scipy: 16
 # usage.skimage: 2
 # usage.sklearn: 3
+# usage.statsmodels: 16
 true_divide: numpy.ufunc
 
 # usage.dask: 40
 # usage.koalas: 5
 # usage.scipy: 3
+# usage.statsmodels: 3
 # usage.xarray: 2
 trunc: numpy.ufunc
 
@@ -1794,6 +1884,7 @@ def all(a: numpy.ndarray):
     usage.seaborn: 9
     usage.skimage: 111
     usage.sklearn: 139
+    usage.statsmodels: 53
     usage.xarray: 21
     """
     ...
@@ -1807,6 +1898,7 @@ def all(a: numpy.ndarray, axis: int):
     usage.seaborn: 1
     usage.skimage: 1
     usage.sklearn: 5
+    usage.statsmodels: 5
     usage.xarray: 3
     """
     ...
@@ -1913,6 +2005,64 @@ def all(a: object, axis: int):
 
 
 @overload
+def all(a: bool):
+    """
+    usage.dask: 1
+    usage.networkx: 1
+    usage.scipy: 7
+    usage.seaborn: 1
+    usage.sklearn: 5
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def all(a: numpy.bool_):
+    """
+    usage.networkx: 1
+    usage.scipy: 6
+    usage.sklearn: 3
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def all(a: List[numpy.bool_]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def all(a: pandas.core.series.Series):
+    """
+    usage.dask: 1
+    usage.sklearn: 10
+    usage.statsmodels: 20
+    """
+    ...
+
+
+@overload
+def all(a: pandas.core.frame.DataFrame, axis: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def all(a: pandas.core.frame.DataFrame):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
 def all(
     a: object,
     axis: Union[int, None] = ...,
@@ -1926,33 +2076,11 @@ def all(
 
 
 @overload
-def all(a: bool):
-    """
-    usage.dask: 1
-    usage.networkx: 1
-    usage.scipy: 7
-    usage.seaborn: 1
-    usage.sklearn: 5
-    """
-    ...
-
-
-@overload
 def all(
     a: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray], axis: int
 ):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def all(a: numpy.bool_):
-    """
-    usage.networkx: 1
-    usage.scipy: 6
-    usage.sklearn: 3
     """
     ...
 
@@ -2134,15 +2262,6 @@ def all(a: numpy.ndarray, axis: Tuple[int, int]):
     ...
 
 
-@overload
-def all(a: pandas.core.series.Series):
-    """
-    usage.dask: 1
-    usage.sklearn: 10
-    """
-    ...
-
-
 def all(
     _0: Union[numpy.ndarray, numpy.ma.core.MaskedArray] = ...,
     /,
@@ -2163,6 +2282,7 @@ def all(
     usage.seaborn: 11
     usage.skimage: 114
     usage.sklearn: 164
+    usage.statsmodels: 95
     usage.xarray: 38
     """
     ...
@@ -2190,6 +2310,7 @@ def allclose(a: numpy.float64, b: int):
     usage.scipy: 1
     usage.skimage: 3
     usage.sklearn: 2
+    usage.statsmodels: 6
     """
     ...
 
@@ -2208,10 +2329,12 @@ def allclose(a: numpy.ndarray, b: numpy.ndarray):
     usage.dask: 12
     usage.matplotlib: 3
     usage.networkx: 1
+    usage.prophet: 8
     usage.scipy: 18
     usage.seaborn: 4
     usage.skimage: 23
     usage.sklearn: 21
+    usage.statsmodels: 1
     usage.xarray: 6
     """
     ...
@@ -2224,6 +2347,7 @@ def allclose(a: numpy.float64, b: numpy.float64):
     usage.scipy: 5
     usage.skimage: 1
     usage.sklearn: 9
+    usage.statsmodels: 4
     """
     ...
 
@@ -2234,6 +2358,7 @@ def allclose(a: numpy.ndarray, b: int):
     usage.scipy: 12
     usage.skimage: 1
     usage.sklearn: 5
+    usage.statsmodels: 4
     usage.xarray: 4
     """
     ...
@@ -2244,6 +2369,7 @@ def allclose(a: numpy.ndarray, b: numpy.ndarray, rtol: int, atol: float):
     """
     usage.skimage: 1
     usage.sklearn: 3
+    usage.statsmodels: 4
     """
     ...
 
@@ -2263,6 +2389,7 @@ def allclose(a: numpy.ndarray, b: numpy.ndarray, rtol: float, atol: float):
     usage.scipy: 11
     usage.skimage: 1
     usage.sklearn: 4
+    usage.statsmodels: 6
     """
     ...
 
@@ -2282,6 +2409,7 @@ def allclose(a: numpy.ndarray, b: numpy.ndarray, atol: float):
     usage.scipy: 4
     usage.skimage: 1
     usage.sklearn: 3
+    usage.statsmodels: 26
     """
     ...
 
@@ -2351,6 +2479,7 @@ def allclose(
 def allclose(a: numpy.ndarray, b: numpy.ndarray, equal_nan: bool):
     """
     usage.dask: 27
+    usage.statsmodels: 1
     usage.xarray: 15
     """
     ...
@@ -2422,6 +2551,216 @@ def allclose(a: xarray.core.variable.Variable, b: numpy.ndarray):
 
 
 @overload
+def allclose(a: numpy.float64, b: numpy.float64, rtol: float, atol: float):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def allclose(a: float, b: numpy.float64, rtol: int, atol: float):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.float64, b: numpy.float64, rtol: int, atol: float):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.float64, b: numpy.float64, rtol: float, atol: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def allclose(a: float, b: numpy.float64, rtol: float, atol: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: float, b: numpy.float64, rtol: float, atol: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: float, b: numpy.ndarray, rtol: int, atol: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.ndarray, b: numpy.ndarray, rtol: float, atol: int):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def allclose(a: float, b: numpy.ndarray, rtol: float, atol: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: float, b: numpy.ndarray, rtol: float, atol: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: int, b: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: Tuple[numpy.float64, float, numpy.float64, float], b: Tuple[int, int, float, int]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: Tuple[numpy.float64, float, numpy.float64, float],
+    b: Tuple[float, int, float, int],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: Tuple[float, numpy.float64, float, numpy.float64],
+    b: Tuple[float, float, float, float],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.ndarray, b: List[float]):
+    """
+    usage.scipy: 4
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: List[Tuple[numpy.float64, float, numpy.float64, float]], b: List[float]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: List[Tuple[float, numpy.float64, float, numpy.float64]], b: List[float]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: List[Tuple[numpy.float64, float, numpy.float64, float]],
+    b: List[Tuple[float, float, float, float]],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: List[Tuple[float, numpy.float64, float, numpy.float64]],
+    b: List[Tuple[float, float, float, float]],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: List[Tuple[numpy.float64, float, numpy.float64, float]], b: List[List[float]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def allclose(
+    a: List[List[Union[numpy.float64, int, float]]], b: numpy.ndarray, atol: float
+):
+    """
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.float64, b: int, atol: float):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def allclose(a: float, b: float):
+    """
+    usage.dask: 1
+    usage.sklearn: 2
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
 def allclose(
     a: Union[numpy.ndarray, float, complex],
     b: Union[numpy.ndarray, numpy.float64, float, complex, numpy.float32],
@@ -2446,14 +2785,6 @@ def allclose(a: numpy.float64, b: numpy.ndarray, rtol: float, atol: float):
 def allclose(a: complex, b: numpy.ndarray, rtol: float, atol: float):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def allclose(a: numpy.float64, b: numpy.float64, rtol: float, atol: float):
-    """
-    usage.scipy: 2
     """
     ...
 
@@ -2503,14 +2834,6 @@ def allclose(a: numpy.ndarray, b: List[float], rtol: float):
 def allclose(a: numpy.ndarray, b: float, atol: numpy.float64):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def allclose(a: numpy.ndarray, b: List[float]):
-    """
-    usage.scipy: 4
     """
     ...
 
@@ -2884,15 +3207,6 @@ def allclose(a: float, b: int):
 
 
 @overload
-def allclose(a: float, b: float):
-    """
-    usage.dask: 1
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def allclose(a: numpy.ndarray, b: numpy.recarray, equal_nan: bool):
     """
     usage.dask: 1
@@ -2960,10 +3274,12 @@ def allclose(
     usage.matplotlib: 12
     usage.networkx: 2
     usage.pandas: 42
+    usage.prophet: 8
     usage.scipy: 139
     usage.seaborn: 6
     usage.skimage: 42
     usage.sklearn: 63
+    usage.statsmodels: 100
     usage.xarray: 50
     """
     ...
@@ -2973,6 +3289,7 @@ def alltrue(*args: Literal["v", "t"]):
     """
     usage.dask: 1
     usage.skimage: 3
+    usage.statsmodels: 3
     """
     ...
 
@@ -2986,6 +3303,7 @@ def amax(a: numpy.ndarray):
     usage.seaborn: 2
     usage.skimage: 81
     usage.sklearn: 52
+    usage.statsmodels: 29
     usage.xarray: 9
     """
     ...
@@ -2996,6 +3314,7 @@ def amax(a: List[numpy.int64]):
     """
     usage.scipy: 3
     usage.skimage: 4
+    usage.statsmodels: 1
     """
     ...
 
@@ -3007,6 +3326,7 @@ def amax(a: List[int]):
     usage.scipy: 10
     usage.skimage: 2
     usage.sklearn: 3
+    usage.statsmodels: 1
     """
     ...
 
@@ -3019,6 +3339,7 @@ def amax(a: numpy.ndarray, axis: int):
     usage.scipy: 11
     usage.skimage: 7
     usage.sklearn: 14
+    usage.statsmodels: 12
     usage.xarray: 6
     """
     ...
@@ -3119,6 +3440,7 @@ def amax(a: Tuple[int, int, int, int]):
 def amax(a: numpy.ndarray, axis: None):
     """
     usage.sklearn: 2
+    usage.statsmodels: 1
     usage.xarray: 7
     """
     ...
@@ -3189,25 +3511,9 @@ def amax(a: object, axis: int):
 
 
 @overload
-def amax(a: object, axis: Union[None, int] = ..., out: int = ..., keepdims: int = ...):
+def amax(a: Tuple[int, float]):
     """
-    usage.pandas: 41
-    """
-    ...
-
-
-@overload
-def amax(a: numpy.float64):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def amax(a: float):
-    """
-    usage.scipy: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -3217,6 +3523,143 @@ def amax(a: List[numpy.float64]):
     """
     usage.matplotlib: 20
     usage.scipy: 5
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amax(a: numpy.float64):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def amax(a: Tuple[numpy.ndarray]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amax(a: List[Tuple[numpy.int64, numpy.int64]]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def amax(a: List[Tuple[int, int]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amax(a: pandas.core.series.Series):
+    """
+    usage.dask: 1
+    usage.seaborn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amax(
+    a: Tuple[
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amax(
+    a: Tuple[
+        numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amax(a: Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64]):
+    """
+    usage.matplotlib: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amax(
+    a: Tuple[
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amax(a: Tuple[numpy.int64]):
+    """
+    usage.matplotlib: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amax(a: Tuple[numpy.int64, numpy.int64]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amax(a: object, axis: Union[None, int] = ..., out: int = ..., keepdims: int = ...):
+    """
+    usage.pandas: 41
+    """
+    ...
+
+
+@overload
+def amax(a: float):
+    """
+    usage.scipy: 1
     """
     ...
 
@@ -3360,34 +3803,9 @@ def amax(
 
 
 @overload
-def amax(a: Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64]):
-    """
-    usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def amax(a: Tuple[numpy.int64]):
-    """
-    usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
 def amax(a: Tuple[numpy.float64]):
     """
     usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def amax(a: pandas.core.series.Series):
-    """
-    usage.dask: 1
-    usage.seaborn: 1
     """
     ...
 
@@ -3626,6 +4044,7 @@ def amax(
     usage.seaborn: 4
     usage.skimage: 110
     usage.sklearn: 71
+    usage.statsmodels: 59
     usage.xarray: 31
     """
     ...
@@ -3640,6 +4059,7 @@ def amin(a: numpy.ndarray):
     usage.seaborn: 1
     usage.skimage: 54
     usage.sklearn: 46
+    usage.statsmodels: 15
     usage.xarray: 10
     """
     ...
@@ -3650,6 +4070,7 @@ def amin(a: List[numpy.int64]):
     """
     usage.scipy: 3
     usage.skimage: 4
+    usage.statsmodels: 1
     """
     ...
 
@@ -3661,6 +4082,7 @@ def amin(a: List[int]):
     usage.scipy: 1
     usage.skimage: 1
     usage.sklearn: 2
+    usage.statsmodels: 2
     """
     ...
 
@@ -3680,6 +4102,7 @@ def amin(a: Tuple[int, int]):
     usage.scipy: 1
     usage.skimage: 1
     usage.sklearn: 1
+    usage.statsmodels: 3
     """
     ...
 
@@ -3692,6 +4115,7 @@ def amin(a: numpy.ndarray, axis: int):
     usage.scipy: 12
     usage.skimage: 1
     usage.sklearn: 6
+    usage.statsmodels: 10
     usage.xarray: 6
     """
     ...
@@ -3780,6 +4204,92 @@ def amin(a: object, axis: int):
 
 
 @overload
+def amin(a: List[Union[int, numpy.int64]]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amin(
+    a: Tuple[
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amin(
+    a: Tuple[
+        numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amin(a: Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64]):
+    """
+    usage.matplotlib: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amin(
+    a: Tuple[
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+        numpy.int64,
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amin(a: Tuple[numpy.int64]):
+    """
+    usage.matplotlib: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def amin(a: Tuple[numpy.int64, numpy.int64]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def amin(a: object, axis: Union[None, int] = ..., out: int = ..., keepdims: int = ...):
     """
     usage.pandas: 53
@@ -3807,14 +4317,6 @@ def amin(a: List[Union[numpy.float64, int]]):
 def amin(a: List[Union[int, numpy.float64]]):
     """
     usage.scipy: 6
-    """
-    ...
-
-
-@overload
-def amin(a: List[Union[int, numpy.int64]]):
-    """
-    usage.scipy: 1
     """
     ...
 
@@ -3929,22 +4431,6 @@ def amin(
         numpy.float64,
     ]
 ):
-    """
-    usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def amin(a: Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64]):
-    """
-    usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def amin(a: Tuple[numpy.int64]):
     """
     usage.matplotlib: 1
     """
@@ -4252,6 +4738,7 @@ def amin(
     usage.seaborn: 2
     usage.skimage: 62
     usage.sklearn: 73
+    usage.statsmodels: 38
     usage.xarray: 32
     """
     ...
@@ -4397,6 +4884,7 @@ def any(a: numpy.ndarray):
     usage.scipy: 154
     usage.skimage: 36
     usage.sklearn: 62
+    usage.statsmodels: 74
     usage.xarray: 4
     """
     ...
@@ -4410,6 +4898,7 @@ def any(a: numpy.bool_):
     usage.scipy: 24
     usage.skimage: 2
     usage.sklearn: 4
+    usage.statsmodels: 13
     """
     ...
 
@@ -4420,6 +4909,7 @@ def any(a: List[bool]):
     usage.scipy: 1
     usage.skimage: 1
     usage.sklearn: 4
+    usage.statsmodels: 13
     """
     ...
 
@@ -4430,6 +4920,7 @@ def any(a: numpy.ndarray, axis: int):
     usage.dask: 4
     usage.scipy: 4
     usage.sklearn: 5
+    usage.statsmodels: 8
     usage.xarray: 4
     """
     ...
@@ -4516,6 +5007,34 @@ def any(a: object, axis: int):
 
 
 @overload
+def any(a: pandas.core.series.Series):
+    """
+    usage.dask: 1
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def any(a: None):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def any(a: bool):
+    """
+    usage.matplotlib: 3
+    usage.scipy: 3
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def any(
     a: object,
     axis: Union[int, None] = ...,
@@ -4540,16 +5059,6 @@ def any(a: List[numpy.ndarray]):
 def any(a: Tuple[None, ...]):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def any(a: bool):
-    """
-    usage.matplotlib: 3
-    usage.scipy: 3
-    usage.sklearn: 1
     """
     ...
 
@@ -4733,14 +5242,6 @@ def any(a: numpy.ndarray, axis: Tuple[int, int]):
 
 
 @overload
-def any(a: pandas.core.series.Series):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
 def any(a: List[numpy.bool_]):
     """
     usage.sklearn: 6
@@ -4781,7 +5282,60 @@ def any(
     usage.scipy: 206
     usage.skimage: 39
     usage.sklearn: 84
+    usage.statsmodels: 120
     usage.xarray: 21
+    """
+    ...
+
+
+@overload
+def append(arr: numpy.ndarray, values: numpy.ndarray):
+    """
+    usage.matplotlib: 1
+    usage.networkx: 1
+    usage.scipy: 14
+    usage.sklearn: 7
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def append(arr: numpy.ndarray, values: float):
+    """
+    usage.dask: 1
+    usage.matplotlib: 2
+    usage.scipy: 2
+    usage.sklearn: 3
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def append(arr: numpy.ndarray, values: numpy.float64):
+    """
+    usage.scipy: 2
+    usage.sklearn: 4
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def append(arr: numpy.ndarray, values: numpy.ndarray, axis: int):
+    """
+    usage.scipy: 32
+    usage.sklearn: 9
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def append(arr: List[float], values: List[float]):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -4817,31 +5371,9 @@ def append(arr: numpy.ndarray, values: int):
 
 
 @overload
-def append(arr: numpy.ndarray, values: numpy.ndarray):
-    """
-    usage.matplotlib: 1
-    usage.networkx: 1
-    usage.scipy: 14
-    usage.sklearn: 7
-    """
-    ...
-
-
-@overload
 def append(arr: int, values: numpy.ndarray):
     """
     usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def append(arr: numpy.ndarray, values: float):
-    """
-    usage.dask: 1
-    usage.matplotlib: 2
-    usage.scipy: 2
-    usage.sklearn: 3
     """
     ...
 
@@ -4859,24 +5391,6 @@ def append(arr: numpy.ndarray, values: numpy.int64):
     """
     usage.scipy: 1
     usage.seaborn: 1
-    """
-    ...
-
-
-@overload
-def append(arr: numpy.ndarray, values: numpy.float64):
-    """
-    usage.scipy: 2
-    usage.sklearn: 4
-    """
-    ...
-
-
-@overload
-def append(arr: numpy.ndarray, values: numpy.ndarray, axis: int):
-    """
-    usage.scipy: 32
-    usage.sklearn: 9
     """
     ...
 
@@ -4958,6 +5472,7 @@ def append(arr: object, values: object, axis: int = ...):
     usage.scipy: 63
     usage.seaborn: 5
     usage.sklearn: 29
+    usage.statsmodels: 16
     """
     ...
 
@@ -4993,6 +5508,33 @@ def apply_along_axis(func1d: Callable, axis: int, arr: numpy.ndarray):
     usage.scipy: 50
     usage.skimage: 6
     usage.sklearn: 3
+    usage.statsmodels: 11
+    """
+    ...
+
+
+@overload
+def apply_along_axis(func1d: Callable, axis: int, arr: numpy.ndarray):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def apply_along_axis(func1d: Callable, axis: int, arr: numpy.ndarray):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def apply_along_axis(
+    func1d: Callable, axis: int, arr: numpy.ndarray, *args: Literal["v", "t"]
+):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -5085,7 +5627,11 @@ def apply_along_axis(
 
 def apply_along_axis(
     func1d: Union[
-        Callable, sklearn.gaussian_process.kernels.PairwiseKernel, int, numpy.ufunc
+        Callable,
+        sklearn.gaussian_process.kernels.PairwiseKernel,
+        int,
+        numpy.ufunc,
+        Callable,
     ],
     axis: Union[int, Callable],
     arr: Union[numpy.ndarray, int],
@@ -5098,6 +5644,7 @@ def apply_along_axis(
     usage.scipy: 81
     usage.skimage: 9
     usage.sklearn: 5
+    usage.statsmodels: 14
     """
     ...
 
@@ -5106,6 +5653,14 @@ def apply_along_axis(
 def apply_over_axes(func: Callable, a: numpy.ndarray, axes: Tuple[int, int]):
     """
     usage.skimage: 10
+    """
+    ...
+
+
+@overload
+def apply_over_axes(func: Callable, a: numpy.ndarray, axes: int):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -5175,6 +5730,7 @@ def apply_over_axes(
     usage.dask: 5
     usage.scipy: 7
     usage.skimage: 10
+    usage.statsmodels: 1
     """
     ...
 
@@ -5187,9 +5743,11 @@ def arange(_0: int, _1: int, /):
     usage.matplotlib: 21
     usage.modin: 3
     usage.networkx: 1
+    usage.prophet: 3
     usage.scipy: 160
     usage.skimage: 22
     usage.sklearn: 35
+    usage.statsmodels: 183
     usage.xarray: 66
     """
     ...
@@ -5213,11 +5771,13 @@ def arange(_0: int, /):
     usage.matplotlib: 188
     usage.modin: 11
     usage.networkx: 3
+    usage.prophet: 6
     usage.sample-usage: 4
     usage.scipy: 504
     usage.seaborn: 30
     usage.skimage: 151
     usage.sklearn: 290
+    usage.statsmodels: 401
     usage.xarray: 518
     """
     ...
@@ -5232,6 +5792,7 @@ def arange(_0: int, /, *, dtype: Type[numpy.int32]):
     usage.scipy: 14
     usage.skimage: 1
     usage.sklearn: 1
+    usage.statsmodels: 3
     usage.xarray: 1
     """
     ...
@@ -5257,6 +5818,7 @@ def arange(_0: int, /, *, dtype: Type[numpy.float64]):
     usage.scipy: 43
     usage.skimage: 1
     usage.sklearn: 7
+    usage.statsmodels: 5
     usage.xarray: 1
     """
     ...
@@ -5278,6 +5840,7 @@ def arange(_0: numpy.int64, _1: numpy.int64, /):
     usage.seaborn: 1
     usage.skimage: 1
     usage.sklearn: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -5298,6 +5861,7 @@ def arange(_0: int, /, *, dtype: Type[float]):
     usage.matplotlib: 11
     usage.scipy: 20
     usage.skimage: 8
+    usage.statsmodels: 1
     """
     ...
 
@@ -5321,6 +5885,7 @@ def arange(_0: int, _1: int, _2: int, /):
     usage.seaborn: 1
     usage.skimage: 12
     usage.sklearn: 8
+    usage.statsmodels: 22
     usage.xarray: 20
     """
     ...
@@ -5350,6 +5915,7 @@ def arange(_0: numpy.int64, /):
     usage.scipy: 9
     usage.skimage: 6
     usage.sklearn: 6
+    usage.statsmodels: 6
     """
     ...
 
@@ -5432,6 +5998,7 @@ def arange(_0: numpy.float64, /):
     usage.matplotlib: 3
     usage.scipy: 1
     usage.skimage: 2
+    usage.statsmodels: 2
     """
     ...
 
@@ -5454,6 +6021,7 @@ def arange(_0: int, /, *, dtype: Type[int]):
     usage.scipy: 7
     usage.skimage: 1
     usage.sklearn: 3
+    usage.statsmodels: 5
     usage.xarray: 2
     """
     ...
@@ -5465,6 +6033,7 @@ def arange(_0: float, _1: float, /):
     usage.matplotlib: 10
     usage.scipy: 8
     usage.skimage: 1
+    usage.statsmodels: 2
     usage.xarray: 1
     """
     ...
@@ -5532,7 +6101,9 @@ def arange(_0: float, /):
     """
     usage.dask: 4
     usage.matplotlib: 1
+    usage.prophet: 2
     usage.scipy: 66
+    usage.statsmodels: 31
     usage.xarray: 21
     """
     ...
@@ -5650,6 +6221,7 @@ def arange(_0: int, _1: int, /, *, dtype: Type[int]):
     usage.dask: 1
     usage.matplotlib: 1
     usage.scipy: 3
+    usage.statsmodels: 3
     usage.xarray: 1
     """
     ...
@@ -5668,6 +6240,69 @@ def arange(_0: int, /, *, dtype: Literal["i8"]):
     """
     usage.dask: 1
     usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: float, /):
+    """
+    usage.matplotlib: 1
+    usage.scipy: 3
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: int, /, *, dtype: Type[numpy.float64]):
+    """
+    usage.scipy: 7
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: numpy.float64, /):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: int, _2: int, /, *, dtype: Type[numpy.int64]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: float, _1: int, /):
+    """
+    usage.scipy: 6
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def arange(_0: int, _1: numpy.int64, /):
+    """
+    usage.scipy: 7
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: numpy.int64, _1: int, /):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -5749,14 +6384,6 @@ def arange(_0: int, _1: int, /, *, dtype: Type[numpy.float32]):
     """
     usage.dask: 1
     usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def arange(_0: int, _1: int, /, *, dtype: Type[numpy.float64]):
-    """
-    usage.scipy: 7
     """
     ...
 
@@ -5876,14 +6503,6 @@ def arange(_0: int, /, *, dtype: Literal[">f4"]):
 
 
 @overload
-def arange(_0: int, _1: numpy.int64, /):
-    """
-    usage.scipy: 7
-    """
-    ...
-
-
-@overload
 def arange(_0: float, /, *, dtype: Literal["float64"]):
     """
     usage.scipy: 1
@@ -5958,14 +6577,6 @@ def arange(_0: int, _1: numpy.int64, _2: int, /):
 
 
 @overload
-def arange(_0: int, _1: numpy.float64, /):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def arange(_0: float, _1: float, _2: int, /):
     """
     usage.matplotlib: 1
@@ -5975,26 +6586,9 @@ def arange(_0: float, _1: float, _2: int, /):
 
 
 @overload
-def arange(_0: float, _1: int, /):
-    """
-    usage.scipy: 6
-    """
-    ...
-
-
-@overload
 def arange(_0: int, _1: int, /, *, dtype: numpy.dtype):
     """
     usage.scipy: 6
-    """
-    ...
-
-
-@overload
-def arange(_0: int, _1: float, /):
-    """
-    usage.matplotlib: 1
-    usage.scipy: 3
     """
     ...
 
@@ -6437,14 +7031,6 @@ def arange(_0: int, _1: int, /, *, dtype: Literal["f8"]):
 
 
 @overload
-def arange(_0: numpy.int64, _1: int, /):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def arange(_0: numpy.int32, _1: numpy.int64, /):
     """
     usage.sklearn: 1
@@ -6475,11 +7061,13 @@ def arange(
     usage.modin: 15
     usage.networkx: 5
     usage.pandas: 894
+    usage.prophet: 11
     usage.sample-usage: 4
     usage.scipy: 1173
     usage.seaborn: 36
     usage.skimage: 240
     usage.sklearn: 376
+    usage.statsmodels: 685
     usage.xarray: 666
     """
     ...
@@ -6493,6 +7081,7 @@ def argmax(a: numpy.ndarray):
     usage.scipy: 18
     usage.skimage: 13
     usage.sklearn: 17
+    usage.statsmodels: 2
     usage.xarray: 4
     """
     ...
@@ -6666,6 +7255,7 @@ def argmax(
     usage.scipy: 24
     usage.skimage: 19
     usage.sklearn: 77
+    usage.statsmodels: 2
     usage.xarray: 17
     """
     ...
@@ -6680,6 +7270,7 @@ def argmin(a: numpy.ndarray, axis: int):
     usage.seaborn: 1
     usage.skimage: 3
     usage.sklearn: 2
+    usage.statsmodels: 3
     usage.xarray: 5
     """
     ...
@@ -6694,6 +7285,7 @@ def argmin(a: numpy.ndarray):
     usage.seaborn: 1
     usage.skimage: 5
     usage.sklearn: 9
+    usage.statsmodels: 2
     """
     ...
 
@@ -6862,6 +7454,7 @@ def argmin(
     usage.seaborn: 2
     usage.skimage: 11
     usage.sklearn: 23
+    usage.statsmodels: 5
     usage.xarray: 11
     """
     ...
@@ -6902,6 +7495,7 @@ def argsort(a: numpy.ndarray):
     usage.seaborn: 3
     usage.skimage: 27
     usage.sklearn: 31
+    usage.statsmodels: 35
     """
     ...
 
@@ -6917,7 +7511,27 @@ def argsort(a: numpy.flatiter):
 @overload
 def argsort(a: List[int]):
     """
+    usage.statsmodels: 1
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def argsort(a: numpy.ndarray, axis: int):
+    """
+    usage.dask: 7
+    usage.scipy: 3
+    usage.sklearn: 7
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def argsort(a: List[Literal["b", "a"]]):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -6931,16 +7545,6 @@ def argsort(
 ):
     """
     usage.pandas: 62
-    """
-    ...
-
-
-@overload
-def argsort(a: numpy.ndarray, axis: int):
-    """
-    usage.dask: 7
-    usage.scipy: 3
-    usage.sklearn: 7
     """
     ...
 
@@ -7027,8 +7631,8 @@ def argsort(a: numpy.matrix):
 
 def argsort(
     a: object,
-    kind: Union[Literal["mergesort", "quicksort"], None] = ...,
     axis: int = ...,
+    kind: Union[Literal["mergesort", "quicksort"], None] = ...,
     order: Literal["C"] = ...,
 ):
     """
@@ -7040,6 +7644,7 @@ def argsort(
     usage.seaborn: 7
     usage.skimage: 29
     usage.sklearn: 57
+    usage.statsmodels: 41
     usage.xarray: 1
     """
     ...
@@ -7173,6 +7778,7 @@ def array(_0: List[List[Union[float, int]]], /):
     usage.seaborn: 1
     usage.skimage: 7
     usage.sklearn: 66
+    usage.statsmodels: 26
     usage.xarray: 4
     """
     ...
@@ -7212,11 +7818,13 @@ def array(_0: List[int], /):
     usage.matplotlib: 41
     usage.modin: 1
     usage.networkx: 15
+    usage.prophet: 3
     usage.sample-usage: 1
     usage.scipy: 803
     usage.seaborn: 9
     usage.skimage: 135
     usage.sklearn: 485
+    usage.statsmodels: 166
     usage.xarray: 79
     """
     ...
@@ -7242,6 +7850,7 @@ def array(_0: list, /):
     usage.seaborn: 7
     usage.skimage: 12
     usage.sklearn: 13
+    usage.statsmodels: 22
     usage.xarray: 1
     """
     ...
@@ -7289,10 +7898,12 @@ def array(_0: List[float], /):
     usage.koalas: 1
     usage.matplotlib: 79
     usage.networkx: 6
+    usage.prophet: 19
     usage.scipy: 742
     usage.seaborn: 13
     usage.skimage: 49
     usage.sklearn: 167
+    usage.statsmodels: 393
     usage.xarray: 39
     """
     ...
@@ -7307,6 +7918,7 @@ def array(_0: List[bool], /):
     usage.scipy: 13
     usage.skimage: 5
     usage.sklearn: 19
+    usage.statsmodels: 50
     usage.xarray: 5
     """
     ...
@@ -7347,10 +7959,12 @@ def array(_0: numpy.ndarray, /):
     usage.dask: 8
     usage.matplotlib: 23
     usage.networkx: 1
+    usage.prophet: 1
     usage.scipy: 65
     usage.seaborn: 1
     usage.skimage: 14
     usage.sklearn: 73
+    usage.statsmodels: 111
     usage.xarray: 30
     """
     ...
@@ -7361,10 +7975,12 @@ def array(_0: List[numpy.ndarray], /):
     """
     usage.matplotlib: 13
     usage.networkx: 5
+    usage.prophet: 1
     usage.scipy: 90
     usage.seaborn: 19
     usage.skimage: 53
     usage.sklearn: 109
+    usage.statsmodels: 97
     usage.xarray: 13
     """
     ...
@@ -7413,6 +8029,7 @@ def array(_0: List[List[List[float]]], /):
     usage.seaborn: 1
     usage.skimage: 10
     usage.sklearn: 3
+    usage.statsmodels: 1
     """
     ...
 
@@ -7424,6 +8041,7 @@ def array(_0: List[Tuple[numpy.float64, numpy.float64, numpy.float64]], /):
     usage.scipy: 10
     usage.skimage: 1
     usage.sklearn: 4
+    usage.statsmodels: 2
     """
     ...
 
@@ -7450,6 +8068,7 @@ def array(_0: List[Union[int, float]], /):
     usage.seaborn: 1
     usage.skimage: 6
     usage.sklearn: 14
+    usage.statsmodels: 21
     usage.xarray: 7
     """
     ...
@@ -7471,6 +8090,7 @@ def array(_0: List[List[Union[int, float]]], /):
     usage.scipy: 69
     usage.skimage: 6
     usage.sklearn: 59
+    usage.statsmodels: 25
     usage.xarray: 3
     """
     ...
@@ -7556,6 +8176,7 @@ def array(_0: List[List[float]], /):
     usage.seaborn: 2
     usage.skimage: 35
     usage.sklearn: 197
+    usage.statsmodels: 92
     usage.xarray: 9
     """
     ...
@@ -7571,6 +8192,7 @@ def array(_0: List[List[int]], /):
     usage.seaborn: 2
     usage.skimage: 193
     usage.sklearn: 479
+    usage.statsmodels: 64
     usage.xarray: 14
     """
     ...
@@ -7582,10 +8204,12 @@ def array(_0: List[numpy.float64], /):
     usage.dask: 4
     usage.matplotlib: 32
     usage.networkx: 2
+    usage.prophet: 1
     usage.scipy: 118
     usage.seaborn: 10
     usage.skimage: 15
     usage.sklearn: 61
+    usage.statsmodels: 96
     usage.xarray: 7
     """
     ...
@@ -7655,6 +8279,7 @@ def array(_0: Tuple[int, int], /):
     usage.scipy: 8
     usage.skimage: 34
     usage.sklearn: 7
+    usage.statsmodels: 3
     usage.xarray: 1
     """
     ...
@@ -7728,6 +8353,7 @@ def array(_0: List[float], /, *, dtype: Type[numpy.float64]):
     usage.scipy: 28
     usage.skimage: 2
     usage.sklearn: 3
+    usage.statsmodels: 3
     """
     ...
 
@@ -7825,6 +8451,7 @@ def array(_0: List[Union[float, int]], /):
     usage.scipy: 85
     usage.skimage: 9
     usage.sklearn: 23
+    usage.statsmodels: 137
     usage.xarray: 3
     """
     ...
@@ -7847,6 +8474,7 @@ def array(_0: List[List[Union[int, numpy.float64]]], /):
     usage.scipy: 3
     usage.skimage: 1
     usage.sklearn: 4
+    usage.statsmodels: 2
     """
     ...
 
@@ -7912,6 +8540,7 @@ def array(_0: Tuple[numpy.int64, numpy.int64], /):
     """
     usage.scipy: 2
     usage.skimage: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -7939,6 +8568,7 @@ def array(_0: range, /):
     usage.scipy: 4
     usage.skimage: 3
     usage.sklearn: 1
+    usage.statsmodels: 2
     """
     ...
 
@@ -7967,6 +8597,7 @@ def array(_0: numpy.ndarray, /, *, copy: bool):
     usage.scipy: 83
     usage.skimage: 6
     usage.sklearn: 1
+    usage.statsmodels: 5
     """
     ...
 
@@ -8006,6 +8637,7 @@ def array(_0: List[List[int]], /, *, dtype: Type[numpy.int64]):
     usage.scipy: 8
     usage.skimage: 4
     usage.sklearn: 1
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -8051,6 +8683,7 @@ def array(_0: List[List[numpy.float64]], /):
     usage.seaborn: 3
     usage.skimage: 2
     usage.sklearn: 6
+    usage.statsmodels: 11
     """
     ...
 
@@ -8073,6 +8706,7 @@ def array(_0: int, /):
     usage.scipy: 66
     usage.skimage: 1
     usage.sklearn: 8
+    usage.statsmodels: 12
     usage.xarray: 12
     """
     ...
@@ -8108,6 +8742,7 @@ def array(_0: Tuple[int, int, int, int], /):
     usage.dask: 2
     usage.matplotlib: 1
     usage.skimage: 3
+    usage.statsmodels: 1
     """
     ...
 
@@ -8132,6 +8767,7 @@ def array(_0: List[int], /, *, dtype: Type[numpy.float64]):
     usage.scipy: 25
     usage.skimage: 2
     usage.sklearn: 8
+    usage.statsmodels: 4
     usage.xarray: 10
     """
     ...
@@ -8196,6 +8832,7 @@ def array(_0: List[List[float]], /, *, dtype: Type[numpy.float64]):
     usage.scipy: 8
     usage.skimage: 1
     usage.sklearn: 5
+    usage.statsmodels: 2
     """
     ...
 
@@ -8259,6 +8896,7 @@ def array(_0: List[List[Union[numpy.float64, int]]], /):
     usage.scipy: 5
     usage.skimage: 4
     usage.sklearn: 3
+    usage.statsmodels: 2
     """
     ...
 
@@ -8267,6 +8905,7 @@ def array(_0: List[List[Union[numpy.float64, int]]], /):
 def array(_0: List[int], _1: Type[float], /):
     """
     usage.skimage: 6
+    usage.statsmodels: 4
     """
     ...
 
@@ -8349,6 +8988,7 @@ def array(_0: List[List[float]], /, *, dtype: Type[numpy.float32]):
     usage.scipy: 10
     usage.skimage: 6
     usage.sklearn: 12
+    usage.statsmodels: 2
     """
     ...
 
@@ -8404,6 +9044,7 @@ def array(_0: List[Union[int, float]], /, *, dtype: Type[numpy.float16]):
 def array(_0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray], /):
     """
     usage.skimage: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -8466,6 +9107,7 @@ def array(_0: List[int], /, *, dtype: Type[numpy.int64]):
     usage.scipy: 8
     usage.skimage: 9
     usage.sklearn: 17
+    usage.statsmodels: 2
     """
     ...
 
@@ -8492,6 +9134,7 @@ def array(_0: numpy.ndarray, /, *, dtype: Type[float]):
     usage.matplotlib: 1
     usage.scipy: 5
     usage.skimage: 4
+    usage.statsmodels: 2
     usage.xarray: 2
     """
     ...
@@ -8631,6 +9274,7 @@ def array(_0: List[int], /, *, dtype: Type[float]):
     usage.scipy: 22
     usage.skimage: 1
     usage.sklearn: 1
+    usage.statsmodels: 2
     usage.xarray: 2
     """
     ...
@@ -8709,6 +9353,7 @@ def array(_0: list, /, *, dtype: Type[int]):
     """
     usage.scipy: 6
     usage.skimage: 1
+    usage.statsmodels: 3
     """
     ...
 
@@ -9024,6 +9669,7 @@ def array(_0: float, /):
     usage.matplotlib: 1
     usage.scipy: 25
     usage.sklearn: 9
+    usage.statsmodels: 20
     usage.xarray: 11
     """
     ...
@@ -9121,6 +9767,7 @@ def array(_0: List[float], /, *, dtype: Literal["float64"]):
 def array(_0: Literal["a"], /):
     """
     usage.networkx: 1
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -9130,6 +9777,7 @@ def array(_0: Literal["a"], /):
 def array(_0: List[float], /, *, dtype: Type[numpy.float32]):
     """
     usage.scipy: 28
+    usage.statsmodels: 2
     usage.xarray: 4
     """
     ...
@@ -9281,6 +9929,7 @@ def array(_0: List[Union[numpy.float64, int]], /):
     usage.networkx: 19
     usage.scipy: 9
     usage.sklearn: 1
+    usage.statsmodels: 4
     usage.xarray: 1
     """
     ...
@@ -9530,6 +10179,7 @@ def array(_0: cftime._cftime.DatetimeProlepticGregorian, /):
 @overload
 def array(_0: pandas.core.indexes.base.Index, /):
     """
+    usage.statsmodels: 1
     usage.xarray: 2
     """
     ...
@@ -9578,6 +10228,7 @@ def array(
 @overload
 def array(_0: List[bytes], /):
     """
+    usage.statsmodels: 1
     usage.xarray: 7
     """
     ...
@@ -9670,6 +10321,7 @@ def array(_0: numpy.int64, /):
     """
     usage.dask: 6
     usage.scipy: 1
+    usage.statsmodels: 1
     usage.xarray: 2
     """
     ...
@@ -9678,6 +10330,7 @@ def array(_0: numpy.int64, /):
 @overload
 def array(_0: List[Union[float, int]], /, *, ndmin: int):
     """
+    usage.statsmodels: 15
     usage.xarray: 2
     """
     ...
@@ -9686,6 +10339,7 @@ def array(_0: List[Union[float, int]], /, *, ndmin: int):
 @overload
 def array(_0: List[Union[int, float]], /, *, ndmin: int):
     """
+    usage.statsmodels: 6
     usage.xarray: 2
     """
     ...
@@ -9695,6 +10349,7 @@ def array(_0: List[Union[int, float]], /, *, ndmin: int):
 def array(_0: List[int], /, *, ndmin: int):
     """
     usage.scipy: 4
+    usage.statsmodels: 7
     usage.xarray: 3
     """
     ...
@@ -9760,6 +10415,7 @@ def array(_0: List[str], /):
     usage.dask: 3
     usage.matplotlib: 6
     usage.sklearn: 10
+    usage.statsmodels: 41
     usage.xarray: 6
     """
     ...
@@ -10009,6 +10665,7 @@ def array(_0: numpy.float64, /):
     usage.matplotlib: 2
     usage.scipy: 7
     usage.sklearn: 5
+    usage.statsmodels: 7
     usage.xarray: 1
     """
     ...
@@ -10229,6 +10886,7 @@ def array(_0: Tuple[numpy.float64, numpy.float64], /):
     usage.matplotlib: 2
     usage.scipy: 9
     usage.sklearn: 1
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -10241,6 +10899,7 @@ def array(_0: Tuple[float, float], /):
     usage.networkx: 1
     usage.scipy: 13
     usage.sklearn: 2
+    usage.statsmodels: 2
     usage.xarray: 3
     """
     ...
@@ -10370,6 +11029,7 @@ def array(_0: List[Union[int, float]], /, *, dtype: Type[float]):
     """
     usage.matplotlib: 4
     usage.scipy: 1
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -10473,6 +11133,1706 @@ def array(_0: List[int], /, *, dtype: Literal["datetime64[ns]"]):
 
 
 @overload
+def array(_0: Literal["y_1"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["y"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["y_4", "y_3", "y_2", "y_1"]], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[str, str]], /):
+    """
+    usage.statsmodels: 128
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.frame.DataFrame, /):
+    """
+    usage.dask: 1
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def array(_0: List[int], /, *, copy: bool):
+    """
+    usage.dask: 4
+    usage.scipy: 6
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[Literal[""]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["C-B", "C-A", "B-A"]], /, *, dtype: Type[object]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[int, numpy.int64]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[float, ...]],
+    /,
+    *,
+    dtype: List[Tuple[str, Literal["i4", "i2", "f4"]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[Union[numpy.int32, numpy.int16, numpy.float32]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[
+        Tuple[
+            Literal[
+                "Model:", "Dependent variable:", "Ties:", "Sample size:", "Num. events:"
+            ],
+            Literal["PH Reg", "y", "Breslow", "200", "105"],
+        ]
+    ],
+    /,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["prestige"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["TOTEMP"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.series.Series, /):
+    """
+    usage.dask: 1
+    usage.prophet: 5
+    usage.statsmodels: 25
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["EXECUTIONS"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[int, numpy.int64, numpy.float64]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["accel"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["city_mpg"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[int], /, *, dtype: Type[int]):
+    """
+    usage.dask: 1
+    usage.scipy: 18
+    usage.sklearn: 4
+    usage.statsmodels: 16
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["Y"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["yendog"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["low"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["1", "0"]], _1: Type[int], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["affairs"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["fair"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[
+        Tuple[
+            Literal[
+                "Method:",
+                "Model:",
+                "Dependent variable:",
+                "Sample size:",
+                "Num. imputations",
+            ],
+            Literal["MI", "OLS", "y", "200", "20"],
+        ]
+    ],
+    /,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: list, /, *, dtype: Type[numpy.int64]):
+    """
+    usage.scipy: 3
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[float, float, Literal[""]]],
+    /,
+    *,
+    dtype: List[
+        Tuple[
+            Literal["double_miss", "float_miss", "string_miss"],
+            Union[type, Literal["a1"]],
+        ]
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[
+        Tuple[
+            int,
+            Literal[
+                "2010-01-01T00:00:00", "2010-02-01T00:00:00", "2010-03-01T00:00:00"
+            ],
+            int,
+        ]
+    ],
+    /,
+    *,
+    dtype: List[Tuple[Literal["var1", "var2", "var3"], type]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[pandas.core.series.Series], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: Tuple[float, float, float, float, float, float, float, float, float, float], /
+):
+    """
+    usage.scipy: 4
+    usage.sklearn: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[str]], /):
+    """
+    usage.statsmodels: 18
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[Literal["0", "1"]]], /):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[Literal[""], Literal["Eigenvalues"]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[Literal[""], Literal[""]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[Literal[""], Literal["Communality"]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[Literal[""], Literal["Pre-rotated loadings"]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[Literal[""], str]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.complex128], /):
+    """
+    usage.scipy: 14
+    usage.sklearn: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[Literal["test1"], Literal["contrast L="]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[Literal["test1"], Literal["transform M="]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[Literal["test1"], Literal["constant C="]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.ndarray, /, *, dtype: Type[numpy.float64]):
+    """
+    usage.scipy: 17
+    usage.sklearn: 5
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.ndarray, /, *, order: Literal["C"]):
+    """
+    usage.matplotlib: 2
+    usage.scipy: 1
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.ndarray, /, *, order: Literal["F"]):
+    """
+    usage.scipy: 1
+    usage.sklearn: 3
+    usage.statsmodels: 10
+    """
+    ...
+
+
+@overload
+def array(_0: List[None], /):
+    """
+    usage.matplotlib: 2
+    usage.scipy: 1
+    usage.sklearn: 1
+    usage.statsmodels: 10
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.ndarray, /, *, ndmin: int):
+    """
+    usage.statsmodels: 39
+    """
+    ...
+
+
+@overload
+def array(
+    _0: statsmodels.tsa.statespace._representation._memoryviewslice, /, *, copy: bool
+):
+    """
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def array(
+    _0: statsmodels.tsa.statespace._kalman_filter._memoryviewslice, /, *, copy: bool
+):
+    """
+    usage.statsmodels: 31
+    """
+    ...
+
+
+@overload
+def array(
+    _0: statsmodels.tsa.statespace._kalman_smoother._memoryviewslice, /, *, copy: bool
+):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.complex128, /):
+    """
+    usage.dask: 4
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["strength"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["foodexp"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[Union[int, float]]], /, *, dtype: Type[numpy.float64]):
+    """
+    usage.scipy: 2
+    usage.sklearn: 2
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def array(_0: list, /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: statsmodels.tsa.statespace._representation._memoryviewslice, /):
+    """
+    usage.statsmodels: 11
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.series.Series, /, *, order: Literal["C"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["cpi"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["infl"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.frame.DataFrame, /, *, order: Literal["C"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[int, float]], /, *, dtype: List[Tuple[Literal["nobs", "crit"], type]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["gs_l_realinv"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["realinv"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["SUNACTIVITY"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64], /):
+    """
+    usage.dask: 2
+    usage.matplotlib: 1
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def array(_0: Tuple[float, int, int, int], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[numpy.ndarray, numpy.ndarray]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["0", "1"]], _1: Type[int], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[Literal["F", "U"], Literal["F", "U"], Literal["F", "U"], int]],
+    _1: List[Tuple[Literal["A", "B", "C", "count"], Union[Literal["S1"], Type[int]]]],
+    /,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["violent"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[Union[numpy.bool_, numpy.float64, bytes], ...]],
+    /,
+    *,
+    dtype: List[Tuple[str, type]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[Union[numpy.bool_, numpy.float64, numpy.bytes_], ...]],
+    /,
+    *,
+    dtype: List[Tuple[str, type]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[Union[numpy.bool_, numpy.float64, numpy.int64], ...]],
+    /,
+    *,
+    dtype: List[Tuple[str, type]],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[Union[numpy.bool_, numpy.float64, numpy.str_], ...]],
+    /,
+    *,
+    dtype: List[Tuple[str, type]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Tuple[float, numpy.float64, numpy.float64, numpy.float64], /):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def array(_0: Tuple[float, float, float, float, float, float], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[str], _1: Type[float], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.indexes.numeric.Float64Index, /):
+    """
+    usage.prophet: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["sector1", "sector0"]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["region1", "region0"]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[
+        Literal[
+            "sector1.region1", "sector1.region0", "sector0.region1", "sector0.region0"
+        ]
+    ],
+    /,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[
+        Literal[
+            "sector0.region0", "sector0.region1", "sector1.region0", "sector1.region1"
+        ]
+    ],
+    /,
+    *,
+    dtype: Literal["|U15"],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[complex], /):
+    """
+    usage.scipy: 43
+    usage.sklearn: 4
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[int, Literal["abcd"], float, float]], _1: numpy.dtype, /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[float, float, float, float, float]],
+    /,
+    *,
+    dtype: List[
+        Tuple[
+            Literal["var_1.0", "var_2.0", "var_3.0", "var_4.0", "var_5.0"],
+            Literal["<f8"],
+        ]
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[float, float, float, float, float]],
+    /,
+    *,
+    dtype: List[
+        Tuple[
+            Literal["var1_1.0", "var1_2.0", "var1_3.0", "var1_4.0", "var1_5.0"],
+            Literal["<f8"],
+        ]
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[float, float, float, float, float]],
+    /,
+    *,
+    dtype: List[
+        Tuple[
+            Literal["var_abcde", "var_fghij", "var_klmno", "var_pqrst", "var_uvwxy"],
+            Literal["<f8"],
+        ]
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[float, float, float, float, float]],
+    /,
+    *,
+    dtype: List[
+        Tuple[
+            Literal[
+                "var1_abcde", "var1_fghij", "var1_klmno", "var1_pqrst", "var1_uvwxy"
+            ],
+            Literal["<f8"],
+        ]
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: statsmodels.tsa.innovations._arma_innovations._memoryviewslice, /):
+    """
+    usage.statsmodels: 11
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.series.Series, /, *, ndmin: int):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["a"]], /):
+    """
+    usage.sklearn: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[float, Literal["a"]]], /):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def array(_0: None, /):
+    """
+    usage.matplotlib: 1
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[complex, float]], /):
+    """
+    usage.scipy: 4
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[float, numpy.float64, float, float]], /):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[numpy.float64, float]], /):
+    """
+    usage.matplotlib: 15
+    usage.networkx: 2
+    usage.scipy: 10
+    usage.sklearn: 1
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[float, float]], /, *, dtype: Type[float]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[Union[int, float, None], Union[int, None]]], /, *, dtype: Type[float]
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[float, numpy.float64]], /):
+    """
+    usage.matplotlib: 4
+    usage.scipy: 5
+    usage.seaborn: 1
+    usage.sklearn: 1
+    usage.statsmodels: 13
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[Union[int, None], Union[int, None]]], /, *, dtype: Type[float]
+):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[Union[None, float], Union[None, float]]], /, *, dtype: Type[float]
+):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[Union[int, float], Union[int, float, None]]],
+    /,
+    *,
+    dtype: Type[float],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[Union[int, float], Union[int, None]]], /, *, dtype: Type[float]
+):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["HOUSTNSA"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[None, None]], /, *, dtype: Type[float]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[Union[int, float, None], Union[int, float, None]]],
+    /,
+    *,
+    dtype: Type[float],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[int], /, *, dtype: Type[bool], ndmin: int):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def array(_0: list, /, *, dtype: Type[bool], ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[bool], /, *, dtype: Type[bool], ndmin: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Union[int, Literal["p[1->0]", "p[0->0]"]]], /, *, dtype: Type[object]
+):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[
+        Union[int, Literal["sigma2", "const[1]", "const[0]", "p[1->0]", "p[0->0]"]]
+    ],
+    /,
+    *,
+    dtype: Type[object],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[
+        Union[
+            int,
+            Literal["p[1->0].tvtp1", "p[0->0].tvtp1", "p[1->0].tvtp0", "p[0->0].tvtp0"],
+        ]
+    ],
+    /,
+    *,
+    dtype: Type[object],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[int, str]], /, *, dtype: Type[object]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["sigma2", "const[1]", "const[0]", "p[1->0]", "p[0->0]"]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: float, /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Union[int, Literal["p[1->0].tvtp0", "p[0->0].tvtp0"]]],
+    /,
+    *,
+    dtype: Type[object],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[float], /, *, ndmin: int):
+    """
+    usage.statsmodels: 12
+    """
+    ...
+
+
+@overload
+def array(
+    _0: statsmodels.tsa.statespace._cfa_simulation_smoother._memoryviewslice,
+    /,
+    *,
+    copy: bool,
+):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["inv"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: int, /, *, dtype: numpy.dtype):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["dln_inc", "dln_inv"]], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: statsmodels.tsa.statespace._simulation_smoother._memoryviewslice,
+    /,
+    *,
+    copy: bool,
+):
+    """
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def array(_0: float, /, *, dtype: numpy.dtype):
+    """
+    usage.matplotlib: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(
+    _0: statsmodels.tsa.statespace._tools._memoryviewslice,
+    /,
+    *,
+    dtype: Type[numpy.float64],
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["dln_consump", "dln_inc", "dln_inv"]], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["y2", "y1"]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["global.2", "global.1"]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["block", "global"]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[numpy.float64, numpy.ndarray]], /):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["f1"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["f2", "f1"]], /, *, ndmin: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[str], /, *, ndmin: int):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Literal["ULCNFB", "GDPC1", "PAYEMS", "UNRATE", "CPIAUCSL"]],
+    /,
+    *,
+    ndmin: int,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[numpy.complex128, float]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Tuple[Literal["oil"], Literal["data"]], /, *, ndmin: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["realgdp", "cpi"]], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Tuple[numpy.int64, numpy.int64, numpy.int64], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: Tuple[
+        numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64
+    ],
+    /,
+):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64], /
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: statsmodels.tsa.statespace._kalman_filter._memoryviewslice, /):
+    """
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def array(_0: List[float], /, *, dtype: Type[numpy.complex64]):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[float], /, *, dtype: Type[numpy.complex128]):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[float]], /, *, dtype: Type[numpy.complex64]):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[float]], /, *, dtype: Type[numpy.complex128]):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["lgdp"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[float, numpy.float64]], /, *, ndmin: int):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def array(_0: int, /, *, ndmin: int):
+    """
+    usage.scipy: 5
+    usage.statsmodels: 10
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["D.y"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["D2.DS4.y"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: float, /, *, dtype: Type[numpy.float32], ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: float, /, *, dtype: Type[numpy.float64], ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: float, /, *, dtype: Type[numpy.complex64], ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: float, /, *, dtype: Type[numpy.complex128], ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.float64], /, *, ndmin: int):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[
+        Literal["L1.f1.f1", "sigma2.y2", "sigma2.y1", "loading.f1.y2", "loading.f1.y1"]
+    ],
+    /,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[numpy.float64, float]], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[numpy.complex128]], /):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[complex]], /):
+    """
+    usage.scipy: 23
+    usage.sklearn: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["dlnhours", "dlncaputil"]], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal[""], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["endog"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.ndarray, _1: Type[numpy.float64], /):
+    """
+    usage.matplotlib: 4
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["realcons"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["close"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["D2.cpi"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Literal["loginv"], /, *, ndmin: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[numpy.float64, numpy.float64]], /):
+    """
+    usage.networkx: 1
+    usage.scipy: 1
+    usage.seaborn: 1
+    usage.sklearn: 8
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[float, int, Literal["aaaa", "bbbb"]]], /, *, dtype: numpy.dtype
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Tuple[float, int, Literal["aaaa", "bbbb"], float, float]],
+    /,
+    *,
+    dtype: numpy.dtype,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[str]], /, *, dtype: Type[object]):
+    """
+    usage.sklearn: 8
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["ec1.y2", "ec1.y1"]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["beta.2.ec1", "beta.1.ec1"]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["const.ec1", "beta.2.ec1", "beta.1.ec1"]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Literal["exog_coint2.1", "exog_coint1.1", "beta.2.ec1", "beta.1.ec1"]], /
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Literal["lin_trend.ec1", "const.ec1", "beta.2.ec1", "beta.1.ec1"]], /
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def array(
     _0: object,
     _1: Union[type, Literal["timedelta64[ns]", "datetime64[ns]", "S1"]] = ...,
@@ -10485,16 +12845,6 @@ def array(
 ):
     """
     usage.pandas: 6865
-    """
-    ...
-
-
-@overload
-def array(_0: List[int], /, *, dtype: Type[int]):
-    """
-    usage.dask: 1
-    usage.scipy: 18
-    usage.sklearn: 4
     """
     ...
 
@@ -10669,15 +13019,6 @@ def array(_0: numpy.ndarray, /, *, dtype: Type[numpy.float128]):
 
 
 @overload
-def array(_0: numpy.ndarray, /, *, dtype: Type[numpy.float64]):
-    """
-    usage.scipy: 17
-    usage.sklearn: 5
-    """
-    ...
-
-
-@overload
 def array(_0: numpy.ndarray, /, *, dtype: Type[numpy.float32]):
     """
     usage.scipy: 12
@@ -10756,24 +13097,6 @@ def array(_0: numpy.ndarray, /, *, copy: bool, dtype: None):
 
 
 @overload
-def array(_0: List[complex], /):
-    """
-    usage.scipy: 43
-    usage.sklearn: 4
-    """
-    ...
-
-
-@overload
-def array(_0: List[numpy.complex128], /):
-    """
-    usage.scipy: 14
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def array(_0: list, /, *, dtype: Type[numpy.float64]):
     """
     usage.scipy: 8
@@ -10793,17 +13116,6 @@ def array(_0: list, _1: Type[float], /):
 def array(_0: list, _1: numpy.dtype, /):
     """
     usage.scipy: 20
-    """
-    ...
-
-
-@overload
-def array(_0: List[Tuple[numpy.float64, numpy.float64]], /):
-    """
-    usage.networkx: 1
-    usage.scipy: 1
-    usage.seaborn: 1
-    usage.sklearn: 8
     """
     ...
 
@@ -10903,14 +13215,6 @@ def array(_0: List[Union[complex, int]], /):
     usage.dask: 1
     usage.scipy: 9
     usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[Union[complex, float]], /):
-    """
-    usage.scipy: 4
     """
     ...
 
@@ -11694,16 +13998,6 @@ def array(_0: numpy.float32, /, *, dtype: Type[numpy.object_]):
 
 
 @overload
-def array(_0: List[None], /):
-    """
-    usage.matplotlib: 2
-    usage.scipy: 1
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def array(_0: List[List[int]], /, *, dtype: Literal["int"]):
     """
     usage.scipy: 6
@@ -11777,14 +14071,6 @@ def array(_0: bytes, /, *, dtype: numpy.dtype):
 
 
 @overload
-def array(_0: int, /, *, dtype: numpy.dtype):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def array(_0: int, /, *, copy: bool, dtype: Type[numpy.int32]):
     """
     usage.scipy: 1
@@ -11821,15 +14107,6 @@ def array(_0: List[List[Union[int, float]]], /, *, dtype: Type[numpy.float32]):
 def array(_0: List[List[Union[int, complex, float]]], /):
     """
     usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def array(_0: List[List[complex]], /):
-    """
-    usage.scipy: 23
-    usage.sklearn: 2
     """
     ...
 
@@ -12130,24 +14407,6 @@ def array(_0: List[List[Union[int, float]]], /, *, order: Literal["F"]):
 
 
 @overload
-def array(_0: numpy.ndarray, /, *, order: Literal["C"]):
-    """
-    usage.matplotlib: 2
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def array(_0: numpy.ndarray, /, *, order: Literal["F"]):
-    """
-    usage.scipy: 1
-    usage.sklearn: 3
-    """
-    ...
-
-
-@overload
 def array(_0: List[float], _1: Literal["F"], /):
     """
     usage.scipy: 1
@@ -12407,22 +14666,6 @@ def array(_0: List[complex], /, *, dtype: Type[numpy.complex128]):
 
 
 @overload
-def array(_0: List[float], /, *, dtype: Type[numpy.complex64]):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def array(_0: List[float], /, *, dtype: Type[numpy.complex128]):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def array(_0: List[List[Union[float, int]]], /, *, dtype: Type[numpy.float64]):
     """
     usage.matplotlib: 1
@@ -12481,22 +14724,6 @@ def array(_0: int, _1: Literal["D"], /):
 
 
 @overload
-def array(_0: List[List[float]], /, *, dtype: Type[numpy.complex64]):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def array(_0: List[List[float]], /, *, dtype: Type[numpy.complex128]):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def array(_0: List[numpy.float64], /, *, dtype: Type[numpy.float32]):
     """
     usage.scipy: 2
@@ -12548,14 +14775,6 @@ def array(_0: List[List[numpy.complex128]], /, *, dtype: Literal["D"]):
 def array(
     _0: Tuple[List[float], List[float], List[float], List[float], List[float]], /
 ):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[List[numpy.complex128]], /):
     """
     usage.scipy: 1
     """
@@ -12942,15 +15161,6 @@ def array(_0: numpy.ndarray, /, *, copy: bool, dtype: Type[numpy.int64]):
 
 
 @overload
-def array(_0: numpy.ndarray, _1: Type[numpy.float64], /):
-    """
-    usage.matplotlib: 4
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def array(_0: int, _1: Type[int], /):
     """
     usage.scipy: 10
@@ -13027,17 +15237,6 @@ def array(_0: List[Tuple[numpy.float64, numpy.float64]], /, *, dtype: Literal["f
 def array(_0: Tuple[float, float, float, float, float, float, float, float], /):
     """
     usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def array(
-    _0: Tuple[float, float, float, float, float, float, float, float, float, float], /
-):
-    """
-    usage.scipy: 4
-    usage.sklearn: 2
     """
     ...
 
@@ -13317,16 +15516,6 @@ def array(_0: List[Tuple[Union[None, float], None]], /, *, dtype: Type[float]):
 
 
 @overload
-def array(
-    _0: List[Tuple[Union[None, float], Union[None, float]]], /, *, dtype: Type[float]
-):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def array(_0: numpy.matrix, /):
     """
     usage.networkx: 6
@@ -13364,17 +15553,6 @@ def array(_0: List[List[numpy.float64]], _1: Type[float], /):
 def array(_0: List[Tuple[None, None]], _1: Type[float], /):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def array(_0: List[Union[numpy.float64, float]], /):
-    """
-    usage.matplotlib: 15
-    usage.networkx: 2
-    usage.scipy: 10
-    usage.sklearn: 1
     """
     ...
 
@@ -13542,19 +15720,6 @@ def array(_0: Tuple[int, int, int, int, int, numpy.int64], /, *, dtype: Type[flo
 
 @overload
 def array(_0: Tuple[int, int, int, int, int, int], /, *, dtype: Type[float]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def array(
-    _0: Tuple[
-        numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64
-    ],
-    /,
-):
     """
     usage.scipy: 1
     """
@@ -13754,16 +15919,6 @@ def array(_0: List[Tuple[int, Union[int, None]]], /, *, dtype: Type[float]):
 
 
 @overload
-def array(
-    _0: List[Tuple[Union[int, None], Union[int, None]]], /, *, dtype: Type[float]
-):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def array(_0: List[Union[float, numpy.float64]], /, *, copy: bool):
     """
     usage.scipy: 6
@@ -13799,14 +15954,6 @@ def array(
 
 @overload
 def array(_0: List[List[Union[float, int]]], /, *, copy: bool, dtype: Type[float]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[Tuple[None, None]], /, *, dtype: Type[float]):
     """
     usage.scipy: 1
     """
@@ -13994,17 +16141,6 @@ def array(
 
 
 @overload
-def array(_0: List[Union[float, numpy.float64]], /):
-    """
-    usage.matplotlib: 4
-    usage.scipy: 5
-    usage.seaborn: 1
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def array(_0: List[float], /, *, copy: bool):
     """
     usage.scipy: 5
@@ -14017,15 +16153,6 @@ def array(_0: List[Union[int, float]], /, *, copy: bool):
     """
     usage.matplotlib: 1
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[int], /, *, copy: bool):
-    """
-    usage.dask: 4
-    usage.scipy: 6
     """
     ...
 
@@ -14128,14 +16255,6 @@ def array(_0: List[List[int]], /, *, dtype: Type[object]):
 def array(_0: numpy.ndarray, /, *, dtype: Type[bool], order: Literal["c"]):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def array(_0: list, /, *, dtype: Type[numpy.int64]):
-    """
-    usage.scipy: 3
     """
     ...
 
@@ -14402,15 +16521,6 @@ def array(_0: List[decimal.Decimal], _1: Type[float], /):
 def array(_0: numpy.ndarray, _1: Type[numpy.complex128], /):
     """
     usage.scipy: 14
-    """
-    ...
-
-
-@overload
-def array(_0: numpy.complex128, /):
-    """
-    usage.dask: 4
-    usage.scipy: 1
     """
     ...
 
@@ -15318,15 +17428,6 @@ def array(_0: List[list], /, *, dtype: Type[object]):
 
 
 @overload
-def array(_0: List[List[Union[int, float]]], /, *, dtype: Type[numpy.float64]):
-    """
-    usage.scipy: 2
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def array(_0: List[List[Union[int, float]]], /, *, dtype: Type[numpy.int32]):
     """
     usage.scipy: 2
@@ -15708,14 +17809,6 @@ def array(_0: List[int], _1: Literal["d"], /):
 def array(_0: List[List[Union[int, float]]], _1: Literal["d"], /):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def array(_0: int, /, *, ndmin: int):
-    """
-    usage.scipy: 5
     """
     ...
 
@@ -16164,15 +18257,6 @@ def array(_0: Tuple[numpy.ndarray, numpy.ndarray], /, *, dtype: Type[float]):
 @overload
 def array(_0: List[Union[List[numpy.float64], numpy.ndarray]], /):
     """
-    usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def array(_0: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64], /):
-    """
-    usage.dask: 2
     usage.matplotlib: 1
     """
     ...
@@ -16687,14 +18771,6 @@ def array(_0: List[Union[numpy.int64, numpy.float64]], /):
 
 @overload
 def array(_0: Tuple[int, int, int, float], /):
-    """
-    usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def array(_0: None, /):
     """
     usage.matplotlib: 1
     """
@@ -17854,14 +19930,6 @@ def array(_0: List[List[Union[float, int, numpy.float64]]], _1: Type[float], /):
 
 
 @overload
-def array(_0: float, /, *, dtype: numpy.dtype):
-    """
-    usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
 def array(_0: Tuple[int, int, float, numpy.float64], /, *, dtype: Type[float]):
     """
     usage.matplotlib: 1
@@ -19012,22 +21080,6 @@ def array(_0: List[Union[float, int, Literal["2", "1.0"]]], /):
 
 
 @overload
-def array(_0: pandas.core.series.Series, /):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
-def array(_0: pandas.core.frame.DataFrame, /):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
 def array(_0: List[Literal["2000-01-01T12:00:00"]], /, *, dtype: Literal["M8[ns]"]):
     """
     usage.dask: 1
@@ -19685,14 +21737,6 @@ def array(_0: List[List[Union[float, str]]], /, *, dtype: numpy.dtype):
 def array(_0: List[List[Union[None, str]]], /, *, dtype: Type[object]):
     """
     usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[List[str]], /, *, dtype: Type[object]):
-    """
-    usage.sklearn: 8
     """
     ...
 
@@ -20517,14 +22561,6 @@ def array(_0: List[Literal["spam", "ham", "eggs"]], /):
 
 
 @overload
-def array(_0: List[Literal["a"]], /):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def array(_0: List[Literal["a", "b"]], /):
     """
     usage.sklearn: 1
@@ -20737,7 +22773,9 @@ def array(
     _0: object,
     _1: Union[
         type,
-        List[Tuple[str, Union[Literal["i"], Tuple[Type[numpy.bytes_], int], type]]],
+        List[
+            Tuple[str, Union[Literal["i", "S1"], Tuple[Type[numpy.bytes_], int], type]]
+        ],
         str,
         numpy.dtype,
     ] = ...,
@@ -20756,11 +22794,13 @@ def array(
     usage.modin: 47
     usage.networkx: 137
     usage.pandas: 6865
+    usage.prophet: 31
     usage.sample-usage: 3
     usage.scipy: 7182
     usage.seaborn: 126
     usage.skimage: 1167
     usage.sklearn: 2410
+    usage.statsmodels: 2120
     usage.xarray: 664
     """
     ...
@@ -20786,10 +22826,12 @@ def array_equal(a1: numpy.ndarray, a2: numpy.ndarray):
     """
     usage.dask: 4
     usage.matplotlib: 1
+    usage.prophet: 10
     usage.scipy: 36
     usage.seaborn: 13
     usage.skimage: 2
     usage.sklearn: 14
+    usage.statsmodels: 3
     usage.xarray: 1
     """
     ...
@@ -20816,6 +22858,15 @@ def array_equal(a1: numpy.ndarray, a2: Tuple[int, int, int]):
 def array_equal(a1: numpy.ndarray, a2: Tuple[int, int]):
     """
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def array_equal(a1: numpy.ndarray, a2: List[int]):
+    """
+    usage.sklearn: 11
+    usage.statsmodels: 2
     """
     ...
 
@@ -21519,14 +23570,6 @@ def array_equal(a1: numpy.ndarray, a2: List[numpy.float64]):
 
 
 @overload
-def array_equal(a1: numpy.ndarray, a2: List[int]):
-    """
-    usage.sklearn: 11
-    """
-    ...
-
-
-@overload
 def array_equal(a1: numpy.ndarray, a2: List[numpy.float32]):
     """
     usage.sklearn: 2
@@ -21539,10 +23582,12 @@ def array_equal(a1: object, a2: object):
     usage.dask: 4
     usage.matplotlib: 2
     usage.pandas: 142
+    usage.prophet: 10
     usage.scipy: 145
     usage.seaborn: 18
     usage.skimage: 5
     usage.sklearn: 34
+    usage.statsmodels: 5
     usage.xarray: 3
     """
     ...
@@ -21556,20 +23601,51 @@ def array_equiv(a1: numpy.ndarray, a2: numpy.ndarray):
 
 
 @overload
+def array_split(ary: numpy.ndarray, indices_or_sections: int):
+    """
+    usage.sklearn: 2
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def array_split(ary: List[str], indices_or_sections: numpy.ndarray):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def array_split(
+    ary: List[Literal["sqrt.var.cpi", "L2.cpi.cpi", "L1.cpi.cpi", "intercept.cpi"]],
+    indices_or_sections: numpy.ndarray,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array_split(
+    ary: List[Literal["sqrt.var.cpi", "L1.cpi.cpi", "intercept.cpi"]],
+    indices_or_sections: numpy.ndarray,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def array_split(
     ary: Union[pandas.core.series.Series, pandas.core.frame.DataFrame],
     indices_or_sections: int,
 ):
     """
     usage.pandas: 4
-    """
-    ...
-
-
-@overload
-def array_split(ary: numpy.ndarray, indices_or_sections: int):
-    """
-    usage.sklearn: 2
     """
     ...
 
@@ -21609,15 +23685,23 @@ def array_split(ary: List[Tuple[int, ...]], indices_or_sections: int):
 def array_split(
     ary: Union[
         numpy.ndarray,
-        pandas.core.frame.DataFrame,
         pandas.core.series.Series,
-        List[Union[numpy.ndarray, Tuple[int, ...]]],
+        pandas.core.frame.DataFrame,
+        List[Union[str, numpy.ndarray, Tuple[int, ...]]],
     ],
-    indices_or_sections: int,
+    indices_or_sections: Union[int, numpy.ndarray],
 ):
     """
     usage.pandas: 4
     usage.sklearn: 7
+    usage.statsmodels: 12
+    """
+    ...
+
+
+def array_str(a: numpy.ndarray):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -21630,6 +23714,7 @@ def asanyarray(a: numpy.ndarray):
     usage.scipy: 86
     usage.skimage: 36
     usage.sklearn: 28
+    usage.statsmodels: 44
     """
     ...
 
@@ -21642,6 +23727,7 @@ def asanyarray(a: List[int]):
     usage.scipy: 20
     usage.skimage: 4
     usage.sklearn: 1
+    usage.statsmodels: 15
     """
     ...
 
@@ -21652,6 +23738,7 @@ def asanyarray(a: List[Union[float, int]]):
     usage.dask: 2
     usage.scipy: 1
     usage.skimage: 4
+    usage.statsmodels: 3
     """
     ...
 
@@ -21664,6 +23751,7 @@ def asanyarray(a: List[float]):
     usage.seaborn: 1
     usage.skimage: 1
     usage.sklearn: 1
+    usage.statsmodels: 5
     """
     ...
 
@@ -21701,6 +23789,112 @@ def asanyarray(a: float):
     usage.matplotlib: 1
     usage.scipy: 1
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def asanyarray(a: List[numpy.float64]):
+    """
+    usage.matplotlib: 7
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asanyarray(a: None):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asanyarray(a: List[List[int]]):
+    """
+    usage.dask: 1
+    usage.scipy: 3
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def asanyarray(a: numpy.ma.core.MaskedArray):
+    """
+    usage.matplotlib: 14
+    usage.scipy: 5
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asanyarray(a: pandas.core.series.Series):
+    """
+    usage.dask: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def asanyarray(a: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def asanyarray(a: List[numpy.ndarray]):
+    """
+    usage.matplotlib: 2
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def asanyarray(a: numpy.ndarray, order: Literal["C"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def asanyarray(a: List[Union[numpy.float64, int]]):
+    """
+    usage.matplotlib: 2
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def asanyarray(a: List[List[int]], order: Literal["C"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asanyarray(a: List[Union[float, complex, int]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asanyarray(a: List[Union[numpy.int64, int]]):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -21867,15 +24061,6 @@ def asanyarray(a: numpy.int64):
 
 
 @overload
-def asanyarray(a: List[List[int]]):
-    """
-    usage.dask: 1
-    usage.scipy: 3
-    """
-    ...
-
-
-@overload
 def asanyarray(a: scipy.sparse.tests.test_base.BinopTester):
     """
     usage.scipy: 1
@@ -22013,16 +24198,6 @@ def asanyarray(a: numpy.float128):
 
 
 @overload
-def asanyarray(a: numpy.ma.core.MaskedArray):
-    """
-    usage.matplotlib: 14
-    usage.scipy: 5
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def asanyarray(
     a: Tuple[
         numpy.int64,
@@ -22063,14 +24238,6 @@ def asanyarray(a: Tuple[float, float]):
 def asanyarray(a: List[List[numpy.float64]]):
     """
     usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def asanyarray(a: List[numpy.float64]):
-    """
-    usage.matplotlib: 7
     """
     ...
 
@@ -22153,14 +24320,6 @@ def asanyarray(a: Tuple[int, float]):
 def asanyarray(a: numpy.ndarray, dtype: Type[float]):
     """
     usage.matplotlib: 6
-    """
-    ...
-
-
-@overload
-def asanyarray(a: List[numpy.ndarray]):
-    """
-    usage.matplotlib: 2
     """
     ...
 
@@ -22432,33 +24591,9 @@ def asanyarray(a: List[Union[float, numpy.float64]]):
 
 
 @overload
-def asanyarray(a: List[Union[numpy.float64, int]]):
-    """
-    usage.matplotlib: 2
-    """
-    ...
-
-
-@overload
 def asanyarray(a: List[Union[int, numpy.float64]]):
     """
     usage.matplotlib: 2
-    """
-    ...
-
-
-@overload
-def asanyarray(a: pandas.core.frame.DataFrame):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
-def asanyarray(a: pandas.core.series.Series):
-    """
-    usage.dask: 2
     """
     ...
 
@@ -22503,7 +24638,9 @@ def asanyarray(a: List[Literal["3", "2", "1"]]):
     ...
 
 
-def asanyarray(a: object, dtype: Union[type, Literal["int64"]] = ...):
+def asanyarray(
+    a: object, dtype: Union[type, Literal["int64"]] = ..., order: Literal["C"] = ...
+):
     """
     usage.dask: 52
     usage.matplotlib: 135
@@ -22512,6 +24649,7 @@ def asanyarray(a: object, dtype: Union[type, Literal["int64"]] = ...):
     usage.seaborn: 1
     usage.skimage: 51
     usage.sklearn: 35
+    usage.statsmodels: 92
     usage.xarray: 1
     """
     ...
@@ -22537,6 +24675,7 @@ def asarray(a: numpy.ndarray):
     usage.seaborn: 19
     usage.skimage: 46
     usage.sklearn: 269
+    usage.statsmodels: 371
     usage.xarray: 232
     """
     ...
@@ -22551,6 +24690,7 @@ def asarray(a: float):
     usage.seaborn: 1
     usage.skimage: 2
     usage.sklearn: 5
+    usage.statsmodels: 6
     usage.xarray: 5
     """
     ...
@@ -22563,6 +24703,7 @@ def asarray(a: List[Union[float, int]]):
     usage.scipy: 32
     usage.skimage: 4
     usage.sklearn: 5
+    usage.statsmodels: 9
     usage.xarray: 11
     """
     ...
@@ -22578,6 +24719,7 @@ def asarray(a: List[int]):
     usage.seaborn: 2
     usage.skimage: 13
     usage.sklearn: 91
+    usage.statsmodels: 53
     usage.xarray: 42
     """
     ...
@@ -22591,6 +24733,7 @@ def asarray(a: List[float]):
     usage.scipy: 161
     usage.skimage: 6
     usage.sklearn: 43
+    usage.statsmodels: 39
     usage.xarray: 17
     """
     ...
@@ -22603,6 +24746,7 @@ def asarray(a: Tuple[float, float]):
     usage.networkx: 1
     usage.scipy: 4
     usage.skimage: 1
+    usage.statsmodels: 1
     usage.xarray: 2
     """
     ...
@@ -22623,6 +24767,7 @@ def asarray(a: List[Union[int, float]]):
     usage.scipy: 37
     usage.skimage: 1
     usage.sklearn: 6
+    usage.statsmodels: 6
     usage.xarray: 19
     """
     ...
@@ -22643,6 +24788,7 @@ def asarray(a: numpy.ndarray, dtype: Type[numpy.float64]):
     usage.scipy: 50
     usage.skimage: 7
     usage.sklearn: 15
+    usage.statsmodels: 16
     usage.xarray: 1
     """
     ...
@@ -22673,6 +24819,7 @@ def asarray(a: int):
     usage.seaborn: 1
     usage.skimage: 3
     usage.sklearn: 4
+    usage.statsmodels: 9
     usage.xarray: 6
     """
     ...
@@ -22711,6 +24858,7 @@ def asarray(a: Tuple[float, float, float]):
     usage.scipy: 8
     usage.skimage: 8
     usage.sklearn: 2
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -22723,6 +24871,7 @@ def asarray(a: List[numpy.int64]):
     usage.scipy: 6
     usage.skimage: 2
     usage.sklearn: 4
+    usage.statsmodels: 4
     usage.xarray: 1
     """
     ...
@@ -22737,6 +24886,7 @@ def asarray(a: Tuple[int, int]):
     usage.scipy: 9
     usage.skimage: 16
     usage.sklearn: 2
+    usage.statsmodels: 5
     """
     ...
 
@@ -22758,6 +24908,7 @@ def asarray(a: Tuple[int, int, int]):
     usage.scipy: 8
     usage.skimage: 14
     usage.sklearn: 3
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -22793,6 +24944,7 @@ def asarray(a: numpy.ndarray, dtype: Type[numpy.uint16]):
 def asarray(a: List[Tuple[numpy.ndarray, numpy.ndarray]]):
     """
     usage.skimage: 3
+    usage.statsmodels: 6
     """
     ...
 
@@ -22804,6 +24956,7 @@ def asarray(a: numpy.ndarray, dtype: Type[float]):
     usage.scipy: 68
     usage.seaborn: 2
     usage.skimage: 4
+    usage.statsmodels: 13
     """
     ...
 
@@ -22830,6 +24983,7 @@ def asarray(a: List[Union[int, float]], dtype: Type[float]):
     """
     usage.scipy: 9
     usage.skimage: 2
+    usage.statsmodels: 2
     """
     ...
 
@@ -22840,6 +24994,7 @@ def asarray(a: List[int], dtype: Type[float]):
     usage.matplotlib: 5
     usage.scipy: 36
     usage.skimage: 4
+    usage.statsmodels: 6
     """
     ...
 
@@ -22849,6 +25004,7 @@ def asarray(a: List[Union[float, int]], dtype: Type[float]):
     """
     usage.scipy: 12
     usage.skimage: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -22861,6 +25017,7 @@ def asarray(a: List[List[int]]):
     usage.scipy: 180
     usage.skimage: 10
     usage.sklearn: 55
+    usage.statsmodels: 24
     usage.xarray: 21
     """
     ...
@@ -22881,6 +25038,7 @@ def asarray(a: Tuple[numpy.float64, numpy.float64]):
     usage.dask: 2
     usage.scipy: 2
     usage.skimage: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -22900,6 +25058,7 @@ def asarray(a: numpy.float64):
     usage.scipy: 44
     usage.skimage: 1
     usage.sklearn: 1
+    usage.statsmodels: 6
     usage.xarray: 2
     """
     ...
@@ -22923,6 +25082,7 @@ def asarray(a: Tuple[int, int, int, int]):
     usage.dask: 2
     usage.scipy: 4
     usage.skimage: 9
+    usage.statsmodels: 1
     """
     ...
 
@@ -22959,6 +25119,7 @@ def asarray(a: numpy.ndarray, dtype: numpy.dtype):
     usage.scipy: 142
     usage.skimage: 15
     usage.sklearn: 15
+    usage.statsmodels: 3
     usage.xarray: 45
     """
     ...
@@ -23018,6 +25179,7 @@ def asarray(a: numpy.ndarray, dtype: Type[numpy.float64], order: Literal["C"]):
     usage.scipy: 2
     usage.skimage: 2
     usage.sklearn: 17
+    usage.statsmodels: 2
     """
     ...
 
@@ -23030,6 +25192,7 @@ def asarray(a: List[numpy.float64]):
     usage.seaborn: 1
     usage.skimage: 1
     usage.sklearn: 22
+    usage.statsmodels: 24
     usage.xarray: 1
     """
     ...
@@ -23054,6 +25217,7 @@ def asarray(a: List[numpy.ndarray]):
     usage.seaborn: 1
     usage.skimage: 2
     usage.sklearn: 52
+    usage.statsmodels: 26
     usage.xarray: 5
     """
     ...
@@ -23218,6 +25382,7 @@ def asarray(a: List[bool]):
     usage.dask: 1
     usage.scipy: 1
     usage.sklearn: 5
+    usage.statsmodels: 3
     usage.xarray: 11
     """
     ...
@@ -23308,6 +25473,7 @@ def asarray(a: List[str]):
     """
     usage.matplotlib: 47
     usage.sklearn: 3
+    usage.statsmodels: 1
     usage.xarray: 14
     """
     ...
@@ -23930,6 +26096,7 @@ def asarray(a: pandas.core.series.Series):
     usage.dask: 3
     usage.seaborn: 26
     usage.sklearn: 7
+    usage.statsmodels: 88
     usage.xarray: 3
     """
     ...
@@ -24448,6 +26615,7 @@ def asarray(a: list):
     usage.matplotlib: 10
     usage.scipy: 63
     usage.sklearn: 6
+    usage.statsmodels: 5
     usage.xarray: 5
     """
     ...
@@ -24476,6 +26644,7 @@ def asarray(a: numpy.int64):
     usage.matplotlib: 1
     usage.scipy: 12
     usage.sklearn: 1
+    usage.statsmodels: 1
     usage.xarray: 4
     """
     ...
@@ -24760,6 +26929,7 @@ def asarray(a: List[List[Union[float, int]]]):
     """
     usage.scipy: 7
     usage.sklearn: 3
+    usage.statsmodels: 2
     usage.xarray: 11
     """
     ...
@@ -24779,6 +26949,7 @@ def asarray(a: List[List[Union[int, float]]]):
     """
     usage.scipy: 14
     usage.sklearn: 3
+    usage.statsmodels: 8
     usage.xarray: 11
     """
     ...
@@ -24796,6 +26967,7 @@ def asarray(a: Literal["b"], dtype: numpy.dtype):
 def asarray(a: List[Literal["a"]]):
     """
     usage.sklearn: 5
+    usage.statsmodels: 1
     usage.xarray: 4
     """
     ...
@@ -25031,6 +27203,7 @@ def asarray(a: List[List[float]]):
     usage.matplotlib: 6
     usage.scipy: 47
     usage.sklearn: 17
+    usage.statsmodels: 30
     usage.xarray: 6
     """
     ...
@@ -25050,6 +27223,7 @@ def asarray(a: pandas.core.indexes.numeric.Int64Index):
     """
     usage.seaborn: 1
     usage.sklearn: 2
+    usage.statsmodels: 3
     usage.xarray: 2
     """
     ...
@@ -25078,6 +27252,7 @@ def asarray(a: List[float], dtype: Type[numpy.float64]):
     usage.matplotlib: 12
     usage.scipy: 10
     usage.sklearn: 8
+    usage.statsmodels: 2
     usage.xarray: 5
     """
     ...
@@ -25105,6 +27280,7 @@ def asarray(a: Literal["c"], dtype: numpy.dtype):
 def asarray(a: List[List[List[int]]]):
     """
     usage.scipy: 8
+    usage.statsmodels: 2
     usage.xarray: 4
     """
     ...
@@ -25218,6 +27394,7 @@ def asarray(a: List[Literal["y", "x"]]):
 def asarray(a: List[List[bool]]):
     """
     usage.dask: 1
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -25253,6 +27430,7 @@ def asarray(a: None):
     """
     usage.scipy: 2
     usage.sklearn: 3
+    usage.statsmodels: 2
     usage.xarray: 1
     """
     ...
@@ -25324,6 +27502,7 @@ def asarray(a: pandas.core.indexes.base.Index):
     """
     usage.dask: 4
     usage.sklearn: 3
+    usage.statsmodels: 4
     usage.xarray: 1
     """
     ...
@@ -25631,6 +27810,7 @@ def asarray(a: List[Literal["var3", "var1"]]):
 def asarray(a: pandas.core.indexes.numeric.Float64Index):
     """
     usage.seaborn: 1
+    usage.statsmodels: 2
     usage.xarray: 2
     """
     ...
@@ -25945,6 +28125,7 @@ def asarray(a: pandas.core.frame.DataFrame):
     usage.dask: 3
     usage.seaborn: 1
     usage.sklearn: 1
+    usage.statsmodels: 71
     usage.xarray: 2
     """
     ...
@@ -25962,6 +28143,1081 @@ def asarray(a: xarray.core.indexing.DaskIndexingAdapter, dtype: None):
 def asarray(a: dask.array.core.Array, dtype: None):
     """
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.ndarray, dtype: Type[numpy.float64], order: None):
+    """
+    usage.sklearn: 9
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[numpy.ndarray]):
+    """
+    usage.sklearn: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[Tuple[numpy.float64, numpy.float64]]):
+    """
+    usage.matplotlib: 3
+    usage.statsmodels: 16
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.frame.DataFrame, dtype: Type[numpy.float64]):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.frame.DataFrame, dtype: Type[float]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[int], dtype: Type[numpy.int32]):
+    """
+    usage.scipy: 2
+    usage.sklearn: 20
+    usage.statsmodels: 23
+    """
+    ...
+
+
+@overload
+def asarray(a: List[numpy.int64], dtype: Type[numpy.int32]):
+    """
+    usage.statsmodels: 10
+    """
+    ...
+
+
+@overload
+def asarray(a: list, dtype: Type[numpy.int32]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: patsy.design_info.DesignMatrix):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def asarray(a: List[Literal["cdef", "bcde", "abcd"]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[numpy.ndarray, numpy.ndarray]):
+    """
+    usage.matplotlib: 2
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[float], dtype: Type[float]):
+    """
+    usage.matplotlib: 5
+    usage.scipy: 17
+    usage.seaborn: 1
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.recarray):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.frame.DataFrame, dtype: Type[numpy.float64], order: None):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[numpy.float64]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[numpy.float64, numpy.float64, numpy.float64]):
+    """
+    usage.dask: 2
+    usage.matplotlib: 3
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64]
+):
+    """
+    usage.dask: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+    ]
+):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+        numpy.float64,
+    ]
+):
+    """
+    usage.dask: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.ndarray, dtype: None, order: None):
+    """
+    usage.sklearn: 22
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.ndarray, order: Literal["F"]):
+    """
+    usage.sklearn: 20
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def asarray(a: List[List[numpy.float64]]):
+    """
+    usage.matplotlib: 1
+    usage.scipy: 1
+    usage.seaborn: 2
+    usage.sklearn: 2
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def asarray(a: List[pandas.core.series.Series]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.series.Series, dtype: Type[numpy.float64], order: None):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: pandas.core.frame.DataFrame, dtype: Type[numpy.float64], order: Literal["C"]
+):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: pandas.core.series.Series, dtype: Type[numpy.float64], order: Literal["C"]
+):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: statsmodels.stats.base.HolderTuple):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: List[Union[float, int]], dtype: None):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[Union[float, int]], dtype: numpy.dtype):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: statsmodels.stats.base.HolderTuple, dtype: Type[object]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[Union[List[int], int]], dtype: numpy.dtype):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[Union[List[int], int]], dtype: Type[object]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[List[int]], dtype: Type[numpy.float64]):
+    """
+    usage.scipy: 5
+    usage.sklearn: 2
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: List[List[Union[float, int]]], dtype: Type[numpy.float64]):
+    """
+    usage.scipy: 21
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.matrix):
+    """
+    usage.dask: 1
+    usage.networkx: 18
+    usage.scipy: 106
+    usage.sklearn: 15
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[int, int, int, int, int, int, int, int, int],
+    dtype: Literal["d"],
+    order: None,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[int], dtype: Literal["d"], order: None):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.series.Series, dtype: Type[float]):
+    """
+    usage.seaborn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.series.Series, dtype: Type[numpy.int64]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.ndarray, dtype: Literal["d"], order: None):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.ndarray, dtype: Literal["int"], order: None):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.indexes.range.RangeIndex):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[List[int]], dtype: Type[float]):
+    """
+    usage.matplotlib: 6
+    usage.scipy: 11
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[List[numpy.int64]]):
+    """
+    usage.matplotlib: 1
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
+    """
+    usage.scipy: 1
+    usage.sklearn: 1
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: List[List[numpy.bool_]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.frame.DataFrame, dtype: Literal["S20"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.series.Series, dtype: Type[numpy.float64]):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[int], dtype: Type[numpy.float64], order: None):
+    """
+    usage.sklearn: 7
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: List[List[float]], dtype: Type[numpy.float64], order: None):
+    """
+    usage.sklearn: 10
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.ndarray, dtype: Type[numpy.float32], order: None):
+    """
+    usage.sklearn: 7
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.ndarray, dtype: Type[numpy.uint8], order: None):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1950-01-05 00:00:00",
+            "1950-01-04 00:00:00",
+            "1950-01-03 00:00:00",
+            "1950-01-02 00:00:00",
+            "1950-01-01 00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1950-01-29 00:00:00",
+            "1950-01-22 00:00:00",
+            "1950-01-15 00:00:00",
+            "1950-01-08 00:00:00",
+            "1950-01-01 00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1950-05-31 00:00:00",
+            "1950-04-30 00:00:00",
+            "1950-03-31 00:00:00",
+            "1950-02-28 00:00:00",
+            "1950-01-31 00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1951-03-31 00:00:00",
+            "1950-12-31 00:00:00",
+            "1950-09-30 00:00:00",
+            "1950-06-30 00:00:00",
+            "1950-03-31 00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1954-12-31 00:00:00",
+            "1953-12-31 00:00:00",
+            "1952-12-31 00:00:00",
+            "1951-12-31 00:00:00",
+            "1950-12-31 00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1952-03-31 00:00:00",
+            "1951-09-30 00:00:00",
+            "1951-03-31 00:00:00",
+            "1950-09-30 00:00:00",
+            "1950-03-31 00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1952-01-01 00:00:00",
+            "1951-07-01 00:00:00",
+            "1951-01-01 00:00:00",
+            "1950-07-01 00:00:00",
+            "1950-01-01 00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1950-01-01 00:00:20",
+            "1950-01-01 00:00:15",
+            "1950-01-01 00:00:10",
+            "1950-01-01 00:00:05",
+            "1950-01-01 00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1950-01-05 00:40:00",
+            "1950-01-04 00:30:00",
+            "1950-01-03 00:20:00",
+            "1950-01-02 00:10:00",
+            "1950-01-01 00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1950-01-05T00:00:00",
+            "1950-01-04T00:00:00",
+            "1950-01-03T00:00:00",
+            "1950-01-02T00:00:00",
+            "1950-01-01T00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1950-01-29T00:00:00",
+            "1950-01-22T00:00:00",
+            "1950-01-15T00:00:00",
+            "1950-01-08T00:00:00",
+            "1950-01-01T00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1950-05-31T00:00:00",
+            "1950-04-30T00:00:00",
+            "1950-03-31T00:00:00",
+            "1950-02-28T00:00:00",
+            "1950-01-31T00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1951-03-31T00:00:00",
+            "1950-12-31T00:00:00",
+            "1950-09-30T00:00:00",
+            "1950-06-30T00:00:00",
+            "1950-03-31T00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1954-12-31T00:00:00",
+            "1953-12-31T00:00:00",
+            "1952-12-31T00:00:00",
+            "1951-12-31T00:00:00",
+            "1950-12-31T00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1952-03-31T00:00:00",
+            "1951-09-30T00:00:00",
+            "1951-03-31T00:00:00",
+            "1950-09-30T00:00:00",
+            "1950-03-31T00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1952-01-01T00:00:00",
+            "1951-07-01T00:00:00",
+            "1951-01-01T00:00:00",
+            "1950-07-01T00:00:00",
+            "1950-01-01T00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1950-01-01T00:00:20",
+            "1950-01-01T00:00:15",
+            "1950-01-01T00:00:10",
+            "1950-01-01T00:00:05",
+            "1950-01-01T00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[
+        Literal[
+            "1950-01-05T00:40:00",
+            "1950-01-04T00:30:00",
+            "1950-01-03T00:20:00",
+            "1950-01-02T00:10:00",
+            "1950-01-01T00:00:00",
+        ]
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[Literal["e", "d", "c", "b", "a"]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[Union[dict, float, int, Literal["a"], Type[str]]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[float], dtype: Type[numpy.float64], order: None):
+    """
+    usage.sklearn: 4
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def asarray(a: List[int], dtype: Literal["int"], order: None):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.ndarray, dtype: Type[complex]):
+    """
+    usage.scipy: 11
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[Union[int, float]], dtype: Type[numpy.float64], order: None):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.frame.DataFrame, dtype: None, order: None):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.frame.DataFrame, order: Literal["F"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[float], order: Literal["F"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: List[List[float]], order: Literal["F"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: List[int], order: Literal["F"]):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.series.Series, order: Literal["F"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: int, dtype: Type[numpy.float64], order: None):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[List[int]], order: Literal["F"]):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: Literal["a"], dtype: Type[numpy.float64], order: None):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[List[Union[int, float]]], order: Literal["F"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[Union[float, int]], dtype: Type[numpy.float64], order: None):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: List[Union[float, numpy.float64]], dtype: Type[numpy.float64], order: None
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[numpy.float64], dtype: Type[numpy.float64], order: None):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[Union[numpy.float64, float]]):
+    """
+    usage.matplotlib: 2
+    usage.scipy: 6
+    usage.sklearn: 3
+    usage.statsmodels: 18
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.ndarray, dtype: Type[int]):
+    """
+    usage.networkx: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: float, dtype: Type[int]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.series.Series, dtype: None, order: None):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -26018,14 +29274,6 @@ def asarray(a: List[int], order: Literal["c"]):
 def asarray(a: list, order: Literal["c"]):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def asarray(a: List[List[Union[float, int]]], dtype: Type[numpy.float64]):
-    """
-    usage.scipy: 21
     """
     ...
 
@@ -26095,29 +29343,11 @@ def asarray(a: scipy.fftpack.tests.test_basic.FakeArray2):
 
 
 @overload
-def asarray(a: numpy.ndarray, dtype: Type[complex]):
-    """
-    usage.scipy: 11
-    """
-    ...
-
-
-@overload
 def asarray(a: numpy.ndarray, dtype: Type[numpy.int32]):
     """
     usage.matplotlib: 5
     usage.scipy: 45
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def asarray(a: List[float], dtype: Type[float]):
-    """
-    usage.matplotlib: 5
-    usage.scipy: 17
-    usage.seaborn: 1
     """
     ...
 
@@ -26219,17 +29449,6 @@ def asarray(a: Tuple[float, float, float, float]):
 def asarray(a: List[Tuple[float, float, float, float]]):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def asarray(a: numpy.matrix):
-    """
-    usage.dask: 1
-    usage.networkx: 18
-    usage.scipy: 106
-    usage.sklearn: 15
     """
     ...
 
@@ -26563,15 +29782,6 @@ def asarray(a: List[List[int]], dtype: Type[bool]):
 
 
 @overload
-def asarray(a: List[List[int]], dtype: Type[numpy.float64]):
-    """
-    usage.scipy: 5
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def asarray(a: List[List[float]], dtype: Type[numpy.float64]):
     """
     usage.scipy: 1
@@ -26600,15 +29810,6 @@ def asarray(a: numpy.ndarray, dtype: Type[numpy.int8]):
 def asarray(a: numpy.bool_, dtype: Type[bool]):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def asarray(a: List[int], dtype: Type[numpy.int32]):
-    """
-    usage.scipy: 2
-    usage.sklearn: 20
     """
     ...
 
@@ -26789,25 +29990,6 @@ def asarray(
 def asarray(a: numpy.ndarray, dtype: Literal["D"]):
     """
     usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def asarray(a: List[List[int]], dtype: Type[float]):
-    """
-    usage.matplotlib: 6
-    usage.scipy: 11
-    """
-    ...
-
-
-@overload
-def asarray(a: List[Union[numpy.float64, float]]):
-    """
-    usage.matplotlib: 2
-    usage.scipy: 6
-    usage.sklearn: 3
     """
     ...
 
@@ -27061,17 +30243,6 @@ def asarray(a: numpy.ndarray, dtype: Literal["F"]):
 def asarray(a: Tuple[Tuple[int]]):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def asarray(a: List[List[numpy.float64]]):
-    """
-    usage.matplotlib: 1
-    usage.scipy: 1
-    usage.seaborn: 2
-    usage.sklearn: 2
     """
     ...
 
@@ -27602,24 +30773,6 @@ def asarray(
 
 
 @overload
-def asarray(a: Tuple[numpy.ndarray, numpy.ndarray]):
-    """
-    usage.matplotlib: 2
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def asarray(a: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
-    """
-    usage.scipy: 1
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def asarray(a: List[Union[int, numpy.float64, float]]):
     """
     usage.scipy: 2
@@ -27768,27 +30921,6 @@ def asarray(a: List[Tuple[int, Union[int, float], bool, float]]):
 
 
 @overload
-def asarray(
-    a: Tuple[
-        numpy.float64,
-        numpy.float64,
-        numpy.float64,
-        numpy.float64,
-        numpy.float64,
-        numpy.float64,
-        numpy.float64,
-        numpy.float64,
-        numpy.float64,
-        numpy.float64,
-    ]
-):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def asarray(a: Tuple[int, int, int, int, int, float]):
     """
     usage.scipy: 1
@@ -27884,14 +31016,6 @@ def asarray(a: List[numpy.ndarray], dtype: Type[float]):
 def asarray(a: List[Tuple[numpy.float64, numpy.float64]], dtype: Type[float]):
     """
     usage.matplotlib: 8
-    """
-    ...
-
-
-@overload
-def asarray(a: List[Tuple[numpy.float64, numpy.float64]]):
-    """
-    usage.matplotlib: 3
     """
     ...
 
@@ -28126,15 +31250,6 @@ def asarray(
 
 
 @overload
-def asarray(a: List[List[numpy.int64]]):
-    """
-    usage.matplotlib: 1
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def asarray(a: numpy.ma.core.MaskedArray, dtype: Type[bool]):
     """
     usage.matplotlib: 1
@@ -28320,15 +31435,6 @@ def asarray(
 ):
     """
     usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def asarray(a: Tuple[numpy.float64, numpy.float64, numpy.float64]):
-    """
-    usage.dask: 2
-    usage.matplotlib: 3
     """
     ...
 
@@ -28903,14 +32009,6 @@ def asarray(
 
 
 @overload
-def asarray(a: pandas.core.series.Series, dtype: Type[float]):
-    """
-    usage.seaborn: 1
-    """
-    ...
-
-
-@overload
 def asarray(a: seaborn.palettes._ColorPalette):
     """
     usage.seaborn: 2
@@ -29119,34 +32217,7 @@ def asarray(a: Tuple[None, None, None]):
 
 
 @overload
-def asarray(
-    a: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64]
-):
-    """
-    usage.dask: 2
-    """
-    ...
-
-
-@overload
 def asarray(a: Tuple[None, None, None, None, None]):
-    """
-    usage.dask: 2
-    """
-    ...
-
-
-@overload
-def asarray(
-    a: Tuple[
-        numpy.float64,
-        numpy.float64,
-        numpy.float64,
-        numpy.float64,
-        numpy.float64,
-        numpy.float64,
-    ]
-):
     """
     usage.dask: 2
     """
@@ -29304,25 +32375,9 @@ def asarray(a: Tuple[None, None, None, None, None, None, None, None, None, None]
 
 
 @overload
-def asarray(a: numpy.ndarray, dtype: Type[numpy.float64], order: None):
-    """
-    usage.sklearn: 9
-    """
-    ...
-
-
-@overload
 def asarray(a: List[List[Union[float, int]]], dtype: None, order: None):
     """
     usage.sklearn: 12
-    """
-    ...
-
-
-@overload
-def asarray(a: numpy.ndarray, dtype: None, order: None):
-    """
-    usage.sklearn: 22
     """
     ...
 
@@ -30592,14 +33647,6 @@ def asarray(a: List[Literal["1.8", "5.1", "3.0", "5.9"]], dtype: Type[numpy.floa
 
 
 @overload
-def asarray(a: numpy.ndarray, dtype: Type[numpy.float32], order: None):
-    """
-    usage.sklearn: 7
-    """
-    ...
-
-
-@overload
 def asarray(a: numpy.ndarray, order: None):
     """
     usage.sklearn: 6
@@ -30716,25 +33763,9 @@ def asarray(
 
 
 @overload
-def asarray(a: pandas.core.frame.DataFrame, dtype: None, order: None):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def asarray(a: List[List[int]], dtype: Type[object], order: None):
     """
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def asarray(a: pandas.core.series.Series, dtype: None, order: None):
-    """
-    usage.sklearn: 1
     """
     ...
 
@@ -30764,14 +33795,6 @@ def asarray(
 ):
     """
     usage.sklearn: 5
-    """
-    ...
-
-
-@overload
-def asarray(a: List[List[float]], dtype: Type[numpy.float64], order: None):
-    """
-    usage.sklearn: 10
     """
     ...
 
@@ -32791,14 +35814,6 @@ def asarray(
 
 
 @overload
-def asarray(a: Tuple[numpy.ndarray]):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def asarray(a: List[Literal["A", "C", "B"]], dtype: None, order: None):
     """
     usage.sklearn: 1
@@ -32859,16 +35874,6 @@ def asarray(a: List[Literal["1", "-1"]], dtype: None, order: None):
 
 
 @overload
-def asarray(
-    a: pandas.core.frame.DataFrame, dtype: Type[numpy.float64], order: Literal["C"]
-):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def asarray(a: pandas.core.series.Series, dtype: numpy.dtype, order: Literal["C"]):
     """
     usage.sklearn: 1
@@ -32878,16 +35883,6 @@ def asarray(a: pandas.core.series.Series, dtype: numpy.dtype, order: Literal["C"
 
 @overload
 def asarray(a: pandas.core.frame.DataFrame, dtype: Type[numpy.float32], order: None):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def asarray(
-    a: pandas.core.series.Series, dtype: Type[numpy.float64], order: Literal["C"]
-):
     """
     usage.sklearn: 1
     """
@@ -33019,14 +36014,6 @@ def asarray(a: List[List[Literal["I", "G", "E", "C", "A"]]], dtype: None, order:
 
 
 @overload
-def asarray(a: numpy.ndarray, order: Literal["F"]):
-    """
-    usage.sklearn: 20
-    """
-    ...
-
-
-@overload
 def asarray(a: List[bool], dtype: None, order: None):
     """
     usage.sklearn: 2
@@ -33098,14 +36085,6 @@ def asarray(
 def asarray(
     a: pandas.core.frame.DataFrame, dtype: Type[numpy.float64], order: Literal["F"]
 ):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def asarray(a: pandas.core.frame.DataFrame, dtype: Type[numpy.float64], order: None):
     """
     usage.sklearn: 1
     """
@@ -33276,30 +36255,6 @@ def asarray(a: List[Literal["cat", "ant"]]):
 def asarray(a: List[Literal["cat", "bird", "ant"]]):
     """
     usage.sklearn: 6
-    """
-    ...
-
-
-@overload
-def asarray(a: List[Union[int, float]], dtype: Type[numpy.float64], order: None):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def asarray(a: List[float], dtype: Type[numpy.float64], order: None):
-    """
-    usage.sklearn: 4
-    """
-    ...
-
-
-@overload
-def asarray(a: List[int], dtype: Type[numpy.float64], order: None):
-    """
-    usage.sklearn: 7
     """
     ...
 
@@ -33651,14 +36606,6 @@ def asarray(a: List[Literal["amsterdam", "tokyo", "paris"]]):
 
 @overload
 def asarray(a: List[Literal["paris", "tokyo"]]):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def asarray(a: int, dtype: Type[numpy.float64], order: None):
     """
     usage.sklearn: 1
     """
@@ -34126,14 +37073,6 @@ def asarray(
 
 
 @overload
-def asarray(a: pandas.core.series.Series, dtype: Type[numpy.float64]):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def asarray(a: sklearn.utils.estimator_checks._NotAnArray, dtype: Type[numpy.float64]):
     """
     usage.sklearn: 1
@@ -34453,14 +37392,6 @@ def asarray(a: Tuple[numpy.ndarray, numpy.ndarray], dtype: None, order: None):
     ...
 
 
-@overload
-def asarray(a: numpy.ndarray, dtype: Type[int]):
-    """
-    usage.networkx: 1
-    """
-    ...
-
-
 def asarray(
     a: object,
     dtype: Union[numpy.dtype, numpy.ndarray, None, type, str] = ...,
@@ -34476,6 +37407,7 @@ def asarray(
     usage.seaborn: 75
     usage.skimage: 254
     usage.sklearn: 3169
+    usage.statsmodels: 1072
     usage.xarray: 1083
     """
     ...
@@ -34727,6 +37659,7 @@ def ascontiguousarray(a: numpy.ndarray):
     usage.scipy: 34
     usage.skimage: 43
     usage.sklearn: 9
+    usage.statsmodels: 8
     """
     ...
 
@@ -34771,6 +37704,7 @@ def ascontiguousarray(a: numpy.ndarray, dtype: Type[numpy.float64]):
     usage.scipy: 28
     usage.skimage: 1
     usage.sklearn: 14
+    usage.statsmodels: 2
     """
     ...
 
@@ -34826,17 +37760,18 @@ def ascontiguousarray(a: numpy.ndarray, dtype: Type[bool]):
 
 
 @overload
-def ascontiguousarray(a: numpy.ndarray, dtype: Literal["double"]):
+def ascontiguousarray(a: numpy.ndarray, dtype: Type[numpy.complex128]):
     """
-    usage.scipy: 5
+    usage.scipy: 6
+    usage.statsmodels: 1
     """
     ...
 
 
 @overload
-def ascontiguousarray(a: numpy.ndarray, dtype: Type[numpy.complex128]):
+def ascontiguousarray(a: numpy.ndarray, dtype: Literal["double"]):
     """
-    usage.scipy: 6
+    usage.scipy: 5
     """
     ...
 
@@ -34946,7 +37881,7 @@ def ascontiguousarray(a: List[List[int]]):
 
 
 def ascontiguousarray(
-    a: Union[List[Union[int, float, complex, List[int]]], numpy.ndarray],
+    a: Union[List[Union[float, int, complex, List[int]]], numpy.ndarray],
     dtype: Union[
         numpy.dtype, type, Literal["bool", "double", "complex", "float", "intc"]
     ] = ...,
@@ -34956,6 +37891,7 @@ def ascontiguousarray(
     usage.scipy: 104
     usage.skimage: 73
     usage.sklearn: 29
+    usage.statsmodels: 11
     """
     ...
 
@@ -35046,6 +37982,23 @@ def asfortranarray(a: numpy.ndarray):
     usage.scipy: 25
     usage.skimage: 1
     usage.sklearn: 16
+    usage.statsmodels: 38
+    """
+    ...
+
+
+@overload
+def asfortranarray(a: numpy.ndarray, dtype: Type[numpy.float64]):
+    """
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def asfortranarray(a: numpy.ndarray, dtype: Type[numpy.complex128]):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -35106,6 +38059,7 @@ def asfortranarray(
     usage.scipy: 26
     usage.skimage: 1
     usage.sklearn: 28
+    usage.statsmodels: 49
     """
     ...
 
@@ -35198,10 +38152,12 @@ def atleast_1d(*arys: Literal["v", "t"]):
     usage.dask: 3
     usage.matplotlib: 116
     usage.pandas: 4
+    usage.prophet: 3
     usage.scipy: 695
     usage.seaborn: 9
     usage.skimage: 11
     usage.sklearn: 70
+    usage.statsmodels: 115
     usage.xarray: 41
     """
     ...
@@ -35220,10 +38176,12 @@ def atleast_1d(*arys: Literal["v", "t"]):
     usage.dask: 4
     usage.matplotlib: 116
     usage.pandas: 4
+    usage.prophet: 3
     usage.scipy: 695
     usage.seaborn: 9
     usage.skimage: 11
     usage.sklearn: 70
+    usage.statsmodels: 115
     usage.xarray: 41
     """
     ...
@@ -35239,6 +38197,7 @@ def atleast_2d(*arys: Literal["v", "t"]):
     usage.seaborn: 2
     usage.skimage: 7
     usage.sklearn: 45
+    usage.statsmodels: 35
     usage.xarray: 2
     """
     ...
@@ -35261,6 +38220,7 @@ def atleast_2d(*arys: Literal["v", "t"]):
     usage.seaborn: 2
     usage.skimage: 7
     usage.sklearn: 45
+    usage.statsmodels: 35
     usage.xarray: 2
     """
     ...
@@ -35302,6 +38262,7 @@ def average(a: numpy.ndarray, weights: numpy.ndarray):
     """
     usage.scipy: 9
     usage.sklearn: 67
+    usage.statsmodels: 4
     """
     ...
 
@@ -35423,6 +38384,7 @@ def average(
     usage.dask: 2
     usage.scipy: 15
     usage.sklearn: 195
+    usage.statsmodels: 4
     """
     ...
 
@@ -35435,6 +38397,7 @@ def bincount(_0: numpy.ndarray, /, *, minlength: int):
     usage.scipy: 6
     usage.skimage: 6
     usage.sklearn: 18
+    usage.statsmodels: 4
     """
     ...
 
@@ -35454,14 +38417,26 @@ def bincount(_0: numpy.ndarray, /):
     usage.scipy: 6
     usage.skimage: 5
     usage.sklearn: 40
+    usage.statsmodels: 7
     """
     ...
 
 
 @overload
-def bincount(_0: numpy.ndarray, /, *, minlength: int = ...):
+def bincount(_0: List[int], /):
     """
-    usage.pandas: 10
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def bincount(_0: numpy.ndarray, /, *, minlength: int, weights: numpy.ndarray):
+    """
+    usage.dask: 1
+    usage.matplotlib: 1
+    usage.sklearn: 13
+    usage.statsmodels: 12
     """
     ...
 
@@ -35472,6 +38447,15 @@ def bincount(_0: numpy.ndarray, /, *, weights: numpy.ndarray):
     usage.matplotlib: 5
     usage.scipy: 23
     usage.sklearn: 4
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def bincount(_0: numpy.ndarray, /, *, minlength: int = ...):
+    """
+    usage.pandas: 10
     """
     ...
 
@@ -35505,16 +38489,6 @@ def bincount(_0: List[int], /, *, minlength: int):
 def bincount(_0: list, /, *, minlength: int):
     """
     usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def bincount(_0: numpy.ndarray, /, *, minlength: int, weights: numpy.ndarray):
-    """
-    usage.dask: 1
-    usage.matplotlib: 1
-    usage.sklearn: 13
     """
     ...
 
@@ -35632,6 +38606,7 @@ def bincount(
     usage.scipy: 40
     usage.skimage: 12
     usage.sklearn: 97
+    usage.statsmodels: 32
     """
     ...
 
@@ -35724,6 +38699,7 @@ def block(
 def bmat(obj: List[List[numpy.ndarray]]):
     """
     usage.scipy: 12
+    usage.statsmodels: 1
     """
     ...
 
@@ -35734,6 +38710,7 @@ def broadcast_arrays(*args: Literal["v", "t"]):
     usage.dask: 9
     usage.matplotlib: 42
     usage.scipy: 286
+    usage.statsmodels: 11
     usage.xarray: 3
     """
     ...
@@ -35752,6 +38729,7 @@ def broadcast_arrays(*args: Literal["v", "t"]):
     usage.dask: 10
     usage.matplotlib: 42
     usage.scipy: 286
+    usage.statsmodels: 11
     usage.xarray: 3
     """
     ...
@@ -36554,6 +39532,7 @@ def clip(a: numpy.ndarray, a_min: float, a_max: float):
     usage.scipy: 5
     usage.skimage: 9
     usage.sklearn: 4
+    usage.statsmodels: 13
     """
     ...
 
@@ -36566,6 +39545,7 @@ def clip(a: numpy.ndarray, a_min: int, a_max: int):
     usage.scipy: 8
     usage.skimage: 21
     usage.sklearn: 1
+    usage.statsmodels: 4
     """
     ...
 
@@ -36602,6 +39582,7 @@ def clip(a: numpy.float64, a_min: int, a_max: int):
     """
     usage.scipy: 3
     usage.skimage: 2
+    usage.statsmodels: 2
     """
     ...
 
@@ -36675,6 +39656,7 @@ def clip(a: numpy.ndarray, a_min: numpy.float64, a_max: numpy.float64):
     """
     usage.skimage: 3
     usage.sklearn: 5
+    usage.statsmodels: 10
     """
     ...
 
@@ -36720,27 +39702,34 @@ def clip(a: numpy.ndarray, a_min: numpy.uint8, a_max: numpy.uint8):
 
 
 @overload
-def clip(a: pandas.core.series.Series, a_min: float, a_max: float):
+def clip(a: numpy.ndarray, a_min: numpy.float64, a_max: float):
     """
-    usage.pandas: 1
+    usage.matplotlib: 1
+    usage.statsmodels: 5
     """
     ...
 
 
 @overload
-def clip(a: numpy.ndarray, a_min: numpy.ndarray, a_max: numpy.ndarray):
+def clip(a: numpy.ndarray, a_min: numpy.float64, a_max: int):
     """
-    usage.matplotlib: 1
-    usage.scipy: 7
+    usage.statsmodels: 2
     """
     ...
 
 
 @overload
-def clip(a: numpy.float64, a_min: float, a_max: float):
+def clip(a: numpy.ndarray, a_min: int, a_max: float):
     """
-    usage.matplotlib: 1
-    usage.scipy: 6
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def clip(a: float, a_min: numpy.float64, a_max: numpy.float64):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -36750,20 +39739,82 @@ def clip(a: numpy.float64, a_min: numpy.float64, a_max: numpy.float64):
     """
     usage.scipy: 4
     usage.sklearn: 2
+    usage.statsmodels: 2
     """
     ...
 
 
 @overload
-def clip(a: numpy.ndarray, a_min: int, a_max: float, out: numpy.ndarray):
+def clip(a: float, a_min: numpy.float64, a_max: float):
     """
-    usage.scipy: 2
+    usage.statsmodels: 2
     """
     ...
 
 
 @overload
 def clip(a: numpy.float64, a_min: numpy.float64, a_max: float):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def clip(a: float, a_min: float, a_max: float):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def clip(a: numpy.float64, a_min: float, a_max: float):
+    """
+    usage.matplotlib: 1
+    usage.scipy: 6
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def clip(a: numpy.ndarray, a_min: numpy.ndarray, a_max: numpy.ndarray):
+    """
+    usage.matplotlib: 1
+    usage.scipy: 7
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def clip(a: numpy.float64, a_min: int, a_max: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def clip(a: float, a_min: float, a_max: numpy.float64):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def clip(a: pandas.core.series.Series, a_min: float, a_max: float):
+    """
+    usage.pandas: 1
+    """
+    ...
+
+
+@overload
+def clip(a: numpy.ndarray, a_min: int, a_max: float, out: numpy.ndarray):
     """
     usage.scipy: 2
     """
@@ -36784,14 +39835,6 @@ def clip(a: int, a_min: int, a_max: int):
     """
     usage.matplotlib: 3
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def clip(a: numpy.ndarray, a_min: numpy.float64, a_max: float):
-    """
-    usage.matplotlib: 1
     """
     ...
 
@@ -36998,6 +40041,7 @@ def clip(a: object, a_min: object, a_max: object, out: numpy.ndarray = ...):
     usage.seaborn: 2
     usage.skimage: 64
     usage.sklearn: 51
+    usage.statsmodels: 69
     """
     ...
 
@@ -37009,6 +40053,7 @@ def column_stack(tup: Tuple[numpy.ndarray, numpy.ndarray]):
     usage.scipy: 7
     usage.skimage: 4
     usage.sklearn: 1
+    usage.statsmodels: 91
     """
     ...
 
@@ -37018,11 +40063,144 @@ def column_stack(tup: List[numpy.ndarray]):
     """
     usage.matplotlib: 17
     usage.networkx: 6
+    usage.prophet: 4
     usage.sample-usage: 1
     usage.scipy: 28
     usage.seaborn: 1
     usage.skimage: 6
     usage.sklearn: 4
+    usage.statsmodels: 52
+    """
+    ...
+
+
+@overload
+def column_stack(
+    tup: Tuple[
+        numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray
+    ]
+):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def column_stack(
+    tup: Tuple[
+        pandas.core.series.Series,
+        pandas.core.series.Series,
+        pandas.core.series.Series,
+        pandas.core.series.Series,
+        pandas.core.frame.DataFrame,
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def column_stack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 13
+    """
+    ...
+
+
+@overload
+def column_stack(
+    tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray]
+):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def column_stack(
+    tup: Tuple[
+        pandas.core.series.Series,
+        pandas.core.series.Series,
+        pandas.core.series.Series,
+        pandas.core.series.Series,
+        pandas.core.series.Series,
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def column_stack(tup: Tuple[pandas.core.series.Series, pandas.core.series.Series]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def column_stack(tup: Tuple[numpy.ndarray, List[int]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def column_stack(tup: Tuple[pandas.core.series.Series, numpy.ndarray]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def column_stack(
+    tup: Tuple[
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def column_stack(tup: Tuple[List[float], List[List[float]]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def column_stack(tup: Tuple[numpy.int64, numpy.ndarray]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def column_stack(tup: Tuple[int, numpy.ndarray]):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -37044,9 +40222,10 @@ def column_stack(tup: List[Union[List[float], numpy.ndarray]]):
 
 
 @overload
-def column_stack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
+def column_stack(tup: List[pandas.core.series.Series]):
     """
-    usage.scipy: 2
+    usage.prophet: 1
+    usage.seaborn: 1
     """
     ...
 
@@ -37116,14 +40295,6 @@ def column_stack(tup: List[numpy.float64]):
 
 
 @overload
-def column_stack(tup: List[pandas.core.series.Series]):
-    """
-    usage.seaborn: 1
-    """
-    ...
-
-
-@overload
 def column_stack(tup: List[Union[numpy.ndarray, pandas.core.series.Series]]):
     """
     usage.seaborn: 1
@@ -37143,24 +40314,26 @@ def column_stack(
     tup: Union[
         List[
             Union[
-                List[Union[float, int, numpy.float64]],
                 pandas.core.series.Series,
                 numpy.ndarray,
                 numpy.ma.core.MaskedArray,
                 numpy.float64,
+                List[Union[float, int, numpy.float64]],
             ]
         ],
-        Tuple[Union[numpy.ndarray, List[float]], ...],
+        tuple,
     ]
 ):
     """
     usage.matplotlib: 65
     usage.networkx: 6
+    usage.prophet: 5
     usage.sample-usage: 1
     usage.scipy: 43
     usage.seaborn: 4
     usage.skimage: 10
     usage.sklearn: 5
+    usage.statsmodels: 177
     """
     ...
 
@@ -37168,6 +40341,7 @@ def column_stack(
 def common_type(*arrays: Literal["v", "t"]):
     """
     usage.scipy: 31
+    usage.statsmodels: 3
     """
     ...
 
@@ -37245,6 +40419,7 @@ def concatenate(_0: List[numpy.ndarray], /, *, axis: int):
     usage.scipy: 63
     usage.skimage: 14
     usage.sklearn: 15
+    usage.statsmodels: 31
     usage.xarray: 33
     """
     ...
@@ -37258,6 +40433,7 @@ def concatenate(
     usage.scipy: 13
     usage.skimage: 3
     usage.sklearn: 2
+    usage.statsmodels: 3
     """
     ...
 
@@ -37269,6 +40445,7 @@ def concatenate(_0: Tuple[numpy.ndarray, numpy.ndarray], /, *, axis: int):
     usage.scipy: 26
     usage.skimage: 3
     usage.sklearn: 8
+    usage.statsmodels: 37
     usage.xarray: 1
     """
     ...
@@ -37292,6 +40469,7 @@ def concatenate(_0: Tuple[numpy.ndarray], /):
     """
     usage.skimage: 3
     usage.sklearn: 7
+    usage.statsmodels: 1
     """
     ...
 
@@ -37305,6 +40483,7 @@ def concatenate(_0: List[numpy.ndarray], /):
     usage.scipy: 96
     usage.skimage: 9
     usage.sklearn: 68
+    usage.statsmodels: 63
     usage.xarray: 3
     """
     ...
@@ -37314,10 +40493,12 @@ def concatenate(_0: List[numpy.ndarray], /):
 def concatenate(_0: Tuple[numpy.ndarray, numpy.ndarray], /):
     """
     usage.matplotlib: 6
+    usage.prophet: 4
     usage.scipy: 126
     usage.seaborn: 2
     usage.skimage: 9
     usage.sklearn: 14
+    usage.statsmodels: 28
     """
     ...
 
@@ -37328,6 +40509,7 @@ def concatenate(_0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray], /):
     usage.scipy: 8
     usage.skimage: 4
     usage.sklearn: 3
+    usage.statsmodels: 11
     """
     ...
 
@@ -37365,6 +40547,7 @@ def concatenate(_0: List[List[int]], /):
     usage.matplotlib: 4
     usage.scipy: 1
     usage.sklearn: 2
+    usage.statsmodels: 17
     usage.xarray: 16
     """
     ...
@@ -37431,9 +40614,129 @@ def concatenate(_0: list, /, *, axis: int):
 
 
 @overload
-def concatenate(_0: Union[tuple, list], /, *, axis: int = ...):
+def concatenate(_0: Tuple[List[int], numpy.ndarray, List[int]], /):
     """
-    usage.pandas: 312
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: Tuple[List[numpy.float64], numpy.ndarray], /):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def concatenate(_0: Tuple[numpy.ndarray, List[numpy.float64]], /):
+    """
+    usage.matplotlib: 4
+    usage.scipy: 1
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: Tuple[numpy.ndarray, List[int]], /, *, axis: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: Tuple[pandas.core.series.Series, List[numpy.float64]], /):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def concatenate(_0: Tuple[List[float], List[float]], /):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def concatenate(_0: Tuple[List[float], List[int]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[numpy.ndarray], _1: int, /):
+    """
+    usage.dask: 14
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def concatenate(_0: Tuple[List[int], numpy.ndarray], /):
+    """
+    usage.scipy: 3
+    usage.sklearn: 1
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def concatenate(_0: Tuple[numpy.ndarray, numpy.flatiter], /):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[List[str]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(
+    _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray], /
+):
+    """
+    usage.matplotlib: 1
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def concatenate(_0: Tuple[List[Union[float, int]], List[float]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: Tuple[numpy.ndarray, numpy.ndarray], _1: int, /):
+    """
+    usage.matplotlib: 4
+    usage.scipy: 3
+    usage.sklearn: 1
+    usage.statsmodels: 2
     """
     ...
 
@@ -37443,6 +40746,244 @@ def concatenate(_0: List[List[numpy.ndarray]], /):
     """
     usage.scipy: 4
     usage.seaborn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[List[Literal["0"]]], /):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[Tuple[numpy.str_]], /):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[List[Literal["1", "0"]]], /):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[Tuple[Literal["0"], Literal["1"]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[List[Literal["2", "1", "0"]]], /):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[List[Literal["b", "a"]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[Tuple[Literal["b", "a"], ...]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[List[Literal["a"]]], /):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[List[Literal["global"]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[Tuple[Literal["global.1"], Literal["global.2"]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[List[Literal["block", "global"]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[List[Literal["a", "b"]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[Tuple[Union[Literal["b.2", "b.1"], numpy.str_], ...]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[List[Literal["test1", "global", "test2"]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[Tuple[Literal["global", "test1", "test2"]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(
+    _0: List[
+        Tuple[
+            Literal["global.1", "test1.1", "test2.1"],
+            Literal["global.2", "test1.2", "test2.2"],
+        ]
+    ],
+    /,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[Tuple[Literal["0"], Literal["1"], Literal["2"]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[List[Literal["test2", "test1", "global"]]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[Union[List[float], numpy.ndarray]], /, *, axis: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[Tuple[int, ...]], /, *, axis: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[Union[List[int], Tuple[int, int, int]]], /, *, axis: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: List[Union[numpy.ndarray, List[int]]], /, *, axis: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(
+    _0: List[Union[pandas.core.series.Series, numpy.ndarray]], /, *, axis: int
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(
+    _0: List[Union[numpy.ndarray, pandas.core.frame.DataFrame]], /, *, axis: int
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: Tuple[pandas.core.series.Series, List[int]], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: numpy.ndarray, /, *, axis: int):
+    """
+    usage.scipy: 3
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: numpy.ndarray, _1: int, /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: Union[tuple, list], /, *, axis: int = ...):
+    """
+    usage.pandas: 312
     """
     ...
 
@@ -37472,16 +41013,6 @@ def concatenate(_0: Tuple[List[numpy.int64], numpy.ndarray, List[numpy.int64]], 
 
 
 @overload
-def concatenate(_0: Tuple[numpy.ndarray, List[numpy.float64]], /):
-    """
-    usage.matplotlib: 4
-    usage.scipy: 1
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def concatenate(_0: Tuple[numpy.ndarray, Tuple[int]], /):
     """
     usage.matplotlib: 1
@@ -37491,41 +41022,7 @@ def concatenate(_0: Tuple[numpy.ndarray, Tuple[int]], /):
 
 
 @overload
-def concatenate(_0: numpy.ndarray, /, *, axis: int):
-    """
-    usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def concatenate(_0: Tuple[numpy.ndarray, numpy.flatiter], /):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def concatenate(_0: Tuple[numpy.ndarray, numpy.ndarray], _1: int, /):
-    """
-    usage.matplotlib: 4
-    usage.scipy: 3
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def concatenate(_0: Tuple[int, int, numpy.ndarray], /, *, axis: None):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def concatenate(_0: Tuple[List[int], numpy.ndarray, List[int]], /):
     """
     usage.scipy: 1
     """
@@ -37544,15 +41041,6 @@ def concatenate(_0: Tuple[numpy.ndarray, List[float]], /):
 def concatenate(_0: Tuple[List[complex], numpy.ndarray], /):
     """
     usage.scipy: 6
-    """
-    ...
-
-
-@overload
-def concatenate(_0: Tuple[List[int], numpy.ndarray], /):
-    """
-    usage.scipy: 3
-    usage.sklearn: 1
     """
     ...
 
@@ -37598,17 +41086,6 @@ def concatenate(_0: Tuple[List[int], List[int]], /):
 
 
 @overload
-def concatenate(
-    _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray], /
-):
-    """
-    usage.matplotlib: 1
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def concatenate(_0: Tuple[numpy.ndarray, List[List[int]]], /):
     """
     usage.scipy: 1
@@ -37628,6 +41105,14 @@ def concatenate(_0: Tuple[List[bool], numpy.ndarray], /):
 def concatenate(_0: List[Union[numpy.ma.core.MaskedArray, numpy.ndarray]], /):
     """
     usage.scipy: 1
+    """
+    ...
+
+
+@overload
+def concatenate(_0: Tuple[numpy.ndarray, list], /):
+    """
+    usage.prophet: 2
     """
     ...
 
@@ -37864,14 +41349,6 @@ def concatenate(_0: list, /):
 
 
 @overload
-def concatenate(_0: List[numpy.ndarray], _1: int, /):
-    """
-    usage.dask: 14
-    """
-    ...
-
-
-@overload
 def concatenate(_0: List[numpy.recarray], /, *, axis: int):
     """
     usage.dask: 1
@@ -37894,14 +41371,6 @@ def concatenate(
     ],
     /,
 ):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def concatenate(_0: Tuple[List[numpy.float64], numpy.ndarray], /):
     """
     usage.sklearn: 1
     """
@@ -37933,11 +41402,13 @@ def concatenate(
     usage.matplotlib: 134
     usage.networkx: 2
     usage.pandas: 312
+    usage.prophet: 6
     usage.sample-usage: 1
     usage.scipy: 377
     usage.seaborn: 4
     usage.skimage: 53
     usage.sklearn: 126
+    usage.statsmodels: 264
     usage.xarray: 69
     """
     ...
@@ -38024,6 +41495,7 @@ def copy(a: numpy.ndarray):
     usage.scipy: 57
     usage.skimage: 15
     usage.sklearn: 43
+    usage.statsmodels: 11
     """
     ...
 
@@ -38037,15 +41509,36 @@ def copy(a: numpy.float64):
 
 
 @overload
-def copy(a: numpy.int64):
+def copy(
+    a: statsmodels.tsa.statespace._kalman_filter._memoryviewslice, order: Literal["F"]
+):
     """
-    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def copy(
+    a: statsmodels.tsa.statespace._kalman_smoother._memoryviewslice, order: Literal["F"]
+):
+    """
+    usage.statsmodels: 2
     """
     ...
 
 
 @overload
 def copy(a: List[float]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def copy(a: numpy.int64):
     """
     usage.scipy: 1
     """
@@ -38068,10 +41561,7 @@ def copy(a: numpy.ndarray, order: Literal["C"]):
     ...
 
 
-def copy(
-    a: Union[numpy.ndarray, numpy.float64, float, numpy.int64, List[float]],
-    order: Literal["C"] = ...,
-):
+def copy(a: object, order: Literal["C", "F"] = ...):
     """
     usage.matplotlib: 7
     usage.networkx: 1
@@ -38079,6 +41569,7 @@ def copy(
     usage.scipy: 60
     usage.skimage: 16
     usage.sklearn: 44
+    usage.statsmodels: 16
     """
     ...
 
@@ -38109,21 +41600,20 @@ def copyto(
 
 
 @overload
-def corrcoef(
-    x: Union[numpy.ndarray, numpy.flatiter], y: Union[numpy.ndarray, numpy.flatiter]
-):
-    """
-    usage.pandas: 12
-    """
-    ...
-
-
-@overload
 def corrcoef(x: numpy.ndarray, y: numpy.ndarray):
     """
     usage.dask: 3
     usage.scipy: 2
     usage.sklearn: 1
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def corrcoef(x: pandas.core.frame.DataFrame, rowvar: int):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -38133,6 +41623,7 @@ def corrcoef(x: numpy.ndarray, rowvar: int):
     """
     usage.dask: 1
     usage.scipy: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -38142,6 +41633,17 @@ def corrcoef(x: numpy.ndarray):
     """
     usage.dask: 1
     usage.sklearn: 1
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def corrcoef(
+    x: Union[numpy.ndarray, numpy.flatiter], y: Union[numpy.ndarray, numpy.flatiter]
+):
+    """
+    usage.pandas: 12
     """
     ...
 
@@ -38155,15 +41657,16 @@ def corrcoef(x: numpy.ndarray, y: List[numpy.ndarray]):
 
 
 def corrcoef(
-    x: Union[numpy.ndarray, numpy.flatiter],
-    y: Union[List[numpy.ndarray], numpy.ndarray, numpy.flatiter] = ...,
+    x: Union[numpy.ndarray, pandas.core.frame.DataFrame, numpy.flatiter],
     rowvar: int = ...,
+    y: Union[List[numpy.ndarray], numpy.ndarray, numpy.flatiter] = ...,
 ):
     """
     usage.dask: 5
     usage.pandas: 12
     usage.scipy: 3
     usage.sklearn: 3
+    usage.statsmodels: 13
     """
     ...
 
@@ -38173,6 +41676,15 @@ def correlate(a: numpy.ndarray, v: numpy.ndarray, mode: Literal["full"]):
     """
     usage.matplotlib: 1
     usage.scipy: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def correlate(a: numpy.ndarray, v: numpy.ndarray):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -38194,11 +41706,12 @@ def correlate(a: numpy.ndarray, v: numpy.ndarray, mode: Literal["same"]):
 
 
 def correlate(
-    a: numpy.ndarray, v: numpy.ndarray, mode: Literal["full", "same", "valid"]
+    a: numpy.ndarray, v: numpy.ndarray, mode: Literal["full", "same", "valid"] = ...
 ):
     """
     usage.matplotlib: 1
     usage.scipy: 4
+    usage.statsmodels: 6
     """
     ...
 
@@ -38358,22 +41871,12 @@ def count_nonzero(
 
 
 @overload
-def cov(
-    m: Union[numpy.ndarray, numpy.flatiter],
-    y: Union[numpy.flatiter, numpy.ndarray] = ...,
-):
-    """
-    usage.pandas: 7
-    """
-    ...
-
-
-@overload
 def cov(m: numpy.ndarray):
     """
     usage.dask: 1
     usage.scipy: 7
     usage.sklearn: 14
+    usage.statsmodels: 9
     """
     ...
 
@@ -38383,6 +41886,7 @@ def cov(m: numpy.ndarray, rowvar: bool):
     """
     usage.scipy: 1
     usage.sklearn: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -38392,6 +41896,44 @@ def cov(m: numpy.ndarray, rowvar: int):
     """
     usage.dask: 1
     usage.scipy: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def cov(m: numpy.ndarray, rowvar: bool, ddof: int):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def cov(m: numpy.ndarray, bias: int):
+    """
+    usage.dask: 1
+    usage.sklearn: 8
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def cov(m: pandas.core.frame.DataFrame):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def cov(
+    m: Union[numpy.ndarray, numpy.flatiter],
+    y: Union[numpy.flatiter, numpy.ndarray] = ...,
+):
+    """
+    usage.pandas: 7
     """
     ...
 
@@ -38462,15 +42004,6 @@ def cov(m: numpy.ndarray, ddof: int):
 
 
 @overload
-def cov(m: numpy.ndarray, bias: int):
-    """
-    usage.dask: 1
-    usage.sklearn: 8
-    """
-    ...
-
-
-@overload
 def cov(m: numpy.ndarray, rowvar: float, bias: float):
     """
     usage.sklearn: 1
@@ -38484,6 +42017,7 @@ def cov(
     rowvar: Union[float, bool, int] = ...,
     bias: Union[float, int, bool] = ...,
     aweights: numpy.ndarray = ...,
+    ddof: int = ...,
 ):
     """
     usage.dask: 11
@@ -38491,6 +42025,7 @@ def cov(
     usage.pandas: 7
     usage.scipy: 21
     usage.sklearn: 24
+    usage.statsmodels: 19
     """
     ...
 
@@ -38604,6 +42139,16 @@ def cumprod(a: xarray.core.dataset.Dataset):
 
 
 @overload
+def cumprod(a: numpy.ndarray):
+    """
+    usage.dask: 2
+    usage.sklearn: 2
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
 def cumprod(a: Union[numpy.ndarray, pandas.core.series.Series], axis: int = ...):
     """
     usage.pandas: 9
@@ -38615,15 +42160,6 @@ def cumprod(a: Union[numpy.ndarray, pandas.core.series.Series], axis: int = ...)
 def cumprod(a: List[Union[numpy.int64, int]]):
     """
     usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def cumprod(a: numpy.ndarray):
-    """
-    usage.dask: 2
-    usage.sklearn: 2
     """
     ...
 
@@ -38682,6 +42218,7 @@ def cumprod(
     usage.scipy: 3
     usage.skimage: 5
     usage.sklearn: 2
+    usage.statsmodels: 5
     usage.xarray: 10
     """
     ...
@@ -38699,10 +42236,12 @@ def cumsum(a: numpy.ndarray):
     """
     usage.dask: 8
     usage.matplotlib: 4
+    usage.prophet: 1
     usage.scipy: 11
     usage.seaborn: 1
     usage.skimage: 16
     usage.sklearn: 16
+    usage.statsmodels: 77
     """
     ...
 
@@ -38714,6 +42253,7 @@ def cumsum(a: numpy.ndarray, axis: int):
     usage.scipy: 6
     usage.skimage: 4
     usage.sklearn: 3
+    usage.statsmodels: 15
     usage.xarray: 1
     """
     ...
@@ -38745,6 +42285,7 @@ def cumsum(a: List[int]):
     usage.modin: 4
     usage.scipy: 4
     usage.sklearn: 7
+    usage.statsmodels: 5
     usage.xarray: 10
     """
     ...
@@ -38802,6 +42343,38 @@ def cumsum(a: object, axis: int, dtype: None):
 def cumsum(a: xarray.core.dataset.Dataset):
     """
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def cumsum(a: List[float]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def cumsum(a: pandas.core.series.Series):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def cumsum(a: List[Union[int, numpy.int64]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def cumsum(a: numpy.float64):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -39018,10 +42591,12 @@ def cumsum(
     usage.matplotlib: 33
     usage.modin: 4
     usage.pandas: 26
+    usage.prophet: 1
     usage.scipy: 30
     usage.seaborn: 1
     usage.skimage: 30
     usage.sklearn: 33
+    usage.statsmodels: 103
     usage.xarray: 18
     """
     ...
@@ -39082,6 +42657,33 @@ def delete(
 
 
 @overload
+def delete(arr: numpy.ndarray, obj: List[int]):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def delete(arr: numpy.ndarray, obj: numpy.ndarray):
+    """
+    usage.scipy: 3
+    usage.sklearn: 3
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def delete(arr: numpy.ndarray, obj: int, axis: int):
+    """
+    usage.scipy: 54
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
 def delete(
     arr: numpy.ndarray,
     obj: Union[
@@ -39091,14 +42693,6 @@ def delete(
 ):
     """
     usage.pandas: 28
-    """
-    ...
-
-
-@overload
-def delete(arr: numpy.ndarray, obj: int, axis: int):
-    """
-    usage.scipy: 54
     """
     ...
 
@@ -39147,15 +42741,6 @@ def delete(arr: numpy.ndarray, obj: numpy.ndarray, axis: int):
 
 
 @overload
-def delete(arr: numpy.ndarray, obj: numpy.ndarray):
-    """
-    usage.scipy: 3
-    usage.sklearn: 3
-    """
-    ...
-
-
-@overload
 def delete(arr: numpy.ndarray, obj: Tuple[numpy.int64, numpy.int64], axis: int):
     """
     usage.scipy: 2
@@ -39170,6 +42755,7 @@ def delete(arr: numpy.ndarray, obj: object, axis: int = ...):
     usage.scipy: 145
     usage.skimage: 5
     usage.sklearn: 7
+    usage.statsmodels: 11
     """
     ...
 
@@ -39183,6 +42769,41 @@ def diag(v: numpy.ndarray):
     usage.seaborn: 3
     usage.skimage: 5
     usage.sklearn: 55
+    usage.statsmodels: 148
+    """
+    ...
+
+
+@overload
+def diag(v: pandas.core.frame.DataFrame):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def diag(v: numpy.ma.core.MaskedArray):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def diag(v: List[int]):
+    """
+    usage.scipy: 16
+    usage.statsmodels: 49
+    """
+    ...
+
+
+@overload
+def diag(v: List[Union[float, int]]):
+    """
+    usage.scipy: 8
+    usage.statsmodels: 8
     """
     ...
 
@@ -39191,6 +42812,32 @@ def diag(v: numpy.ndarray):
 def diag(v: List[float]):
     """
     usage.scipy: 3
+    usage.statsmodels: 13
+    """
+    ...
+
+
+@overload
+def diag(v: List[Union[int, float]]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def diag(v: List[Union[float, numpy.ndarray, int]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def diag(v: List[numpy.float64]):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -39220,22 +42867,6 @@ def diag(v: List[int], k: int):
 
 
 @overload
-def diag(v: List[int]):
-    """
-    usage.scipy: 16
-    """
-    ...
-
-
-@overload
-def diag(v: List[Union[float, int]]):
-    """
-    usage.scipy: 8
-    """
-    ...
-
-
-@overload
 def diag(v: List[Union[int, numpy.float64]]):
     """
     usage.scipy: 1
@@ -39253,14 +42884,6 @@ def diag(v: List[float], k: int):
 
 @overload
 def diag(v: range):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def diag(v: List[Union[int, float]]):
     """
     usage.scipy: 1
     """
@@ -39307,15 +42930,7 @@ def diag(v: dask.array.core.Array):
     ...
 
 
-def diag(
-    v: Union[
-        numpy.ndarray,
-        dask.array.core.Array,
-        range,
-        List[Union[int, float, complex, numpy.float64, List[int]]],
-    ],
-    k: Union[numpy.int64, int] = ...,
-):
+def diag(v: object, k: Union[numpy.int64, int] = ...):
     """
     usage.dask: 8
     usage.networkx: 2
@@ -39323,6 +42938,7 @@ def diag(
     usage.seaborn: 3
     usage.skimage: 5
     usage.sklearn: 55
+    usage.statsmodels: 226
     """
     ...
 
@@ -39332,6 +42948,7 @@ def diag_indices(n: int):
     usage.networkx: 1
     usage.scipy: 3
     usage.sklearn: 1
+    usage.statsmodels: 17
     """
     ...
 
@@ -39341,6 +42958,15 @@ def diag_indices_from(arr: numpy.ndarray):
     usage.scipy: 3
     usage.seaborn: 2
     usage.sklearn: 6
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def diagonal(a: statsmodels.tsa.statespace._kalman_filter._memoryviewslice):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -39350,6 +42976,16 @@ def diagonal(a: numpy.ndarray):
     """
     usage.scipy: 2
     usage.sklearn: 2
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def diagonal(a: numpy.ndarray, offset: int, axis1: int):
+    """
+    usage.dask: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -39410,16 +43046,12 @@ def diagonal(a: numpy.ndarray, offset: int, axis1: int, axis2: int):
     ...
 
 
-@overload
-def diagonal(a: numpy.ndarray, offset: int, axis1: int):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
 def diagonal(
-    a: Union[numpy.ndarray, dask.array.core.Array],
+    a: Union[
+        numpy.ndarray,
+        statsmodels.tsa.statespace._kalman_filter._memoryviewslice,
+        dask.array.core.Array,
+    ],
     offset: int = ...,
     axis1: int = ...,
     axis2: int = ...,
@@ -39428,6 +43060,7 @@ def diagonal(
     usage.dask: 23
     usage.scipy: 2
     usage.sklearn: 2
+    usage.statsmodels: 7
     """
     ...
 
@@ -39437,6 +43070,7 @@ def diff(a: numpy.ndarray, n: int, axis: int):
     """
     usage.dask: 1
     usage.skimage: 2
+    usage.statsmodels: 4
     usage.xarray: 2
     """
     ...
@@ -39452,6 +43086,7 @@ def diff(a: numpy.ndarray):
     usage.seaborn: 18
     usage.skimage: 9
     usage.sklearn: 39
+    usage.statsmodels: 32
     usage.xarray: 4
     """
     ...
@@ -39464,7 +43099,41 @@ def diff(a: numpy.ndarray, axis: int):
     usage.matplotlib: 5
     usage.scipy: 17
     usage.skimage: 5
+    usage.statsmodels: 7
     usage.xarray: 7
+    """
+    ...
+
+
+@overload
+def diff(a: numpy.ndarray, n: int):
+    """
+    usage.sklearn: 2
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def diff(a: pandas.core.series.Series):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def diff(a: pandas.core.frame.DataFrame, n: int):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def diff(a: pandas.core.indexes.numeric.Float64Index):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -39474,6 +43143,32 @@ def diff(a: List[int]):
     """
     usage.dask: 1
     usage.scipy: 5
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def diff(a: pandas.core.indexes.datetimes.DatetimeIndex):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def diff(a: List[float]):
+    """
+    usage.scipy: 6
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def diff(a: pandas.core.indexes.numeric.Int64Index):
+    """
+    usage.statsmodels: 7
     """
     ...
 
@@ -39535,14 +43230,6 @@ def diff(a: Tuple[float, float, float, float]):
 
 
 @overload
-def diff(a: List[float]):
-    """
-    usage.scipy: 6
-    """
-    ...
-
-
-@overload
 def diff(a: List[Union[float, int]]):
     """
     usage.scipy: 2
@@ -39591,24 +43278,7 @@ def diff(a: dask.array.core.Array):
     ...
 
 
-@overload
-def diff(a: numpy.ndarray, n: int):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-def diff(
-    a: Union[
-        List[Union[List[int], numpy.int64, int, numpy.float64, float]],
-        numpy.ndarray,
-        dask.array.core.Array,
-        Tuple[Union[Tuple[float, float, float], numpy.float64, float], ...],
-    ],
-    n: int = ...,
-    axis: int = ...,
-):
+def diff(a: object, n: int = ..., axis: int = ...):
     """
     usage.dask: 13
     usage.matplotlib: 25
@@ -39617,6 +43287,7 @@ def diff(
     usage.seaborn: 18
     usage.skimage: 16
     usage.sklearn: 49
+    usage.statsmodels: 68
     usage.xarray: 13
     """
     ...
@@ -39672,6 +43343,170 @@ def dot(_0: numpy.ndarray, _1: numpy.ndarray, /):
     usage.scipy: 1019
     usage.skimage: 1
     usage.sklearn: 544
+    usage.statsmodels: 903
+    """
+    ...
+
+
+@overload
+def dot(_0: numpy.flatiter, _1: numpy.ndarray, /):
+    """
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def dot(_0: numpy.ndarray, _1: List[numpy.float64], /):
+    """
+    usage.matplotlib: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def dot(_0: numpy.ndarray, _1: pandas.core.series.Series, /):
+    """
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def dot(_0: patsy.design_info.DesignMatrix, _1: numpy.ndarray, /):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def dot(_0: numpy.ndarray, _1: List[int], /):
+    """
+    usage.scipy: 2
+    usage.sklearn: 5
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def dot(_0: numpy.ndarray, _1: List[float], /):
+    """
+    usage.sklearn: 3
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def dot(_0: pandas.core.frame.DataFrame, _1: List[float], /):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def dot(_0: pandas.core.frame.DataFrame, _1: numpy.ndarray, /):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def dot(_0: pandas.core.frame.DataFrame, _1: pandas.core.frame.DataFrame, /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def dot(_0: numpy.ndarray, _1: pandas.core.frame.DataFrame, /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def dot(_0: pandas.core.series.Series, _1: pandas.core.series.Series, /):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def dot(
+    _0: statsmodels.tsa.innovations._arma_innovations._memoryviewslice,
+    _1: numpy.ndarray,
+    /,
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def dot(_0: numpy.ndarray, _1: List[Union[float, int]], /):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def dot(_0: List[int], _1: numpy.ndarray, /):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def dot(_0: list, _1: numpy.ndarray, /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def dot(_0: List[Union[float, int]], _1: numpy.ndarray, /):
+    """
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def dot(_0: List[float], _1: numpy.ndarray, /):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def dot(_0: List[numpy.float64], _1: numpy.ndarray, /):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def dot(_0: List[Union[numpy.float64, int]], _1: numpy.ndarray, /):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -39753,14 +43588,6 @@ def dot(_0: List[int], _1: List[int], /):
 
 
 @overload
-def dot(_0: List[int], _1: numpy.ndarray, /):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def dot(_0: int, _1: int, /):
     """
     usage.scipy: 1
@@ -39778,14 +43605,6 @@ def dot(_0: numpy.float64, _1: numpy.float64, /):
 
 @overload
 def dot(_0: int, _1: numpy.float64, /):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def dot(_0: List[float], _1: numpy.ndarray, /):
     """
     usage.scipy: 1
     """
@@ -39881,15 +43700,6 @@ def dot(_0: numpy.ndarray, _1: numpy.complex128, /):
 
 
 @overload
-def dot(_0: numpy.ndarray, _1: List[int], /):
-    """
-    usage.scipy: 2
-    usage.sklearn: 5
-    """
-    ...
-
-
-@overload
 def dot(_0: numpy.float64, _1: numpy.ndarray, /):
     """
     usage.scipy: 2
@@ -39907,14 +43717,6 @@ def dot(_0: numpy.ndarray, _1: matplotlib.transforms.Affine2D, /):
 
 @overload
 def dot(_0: numpy.ndarray, _1: List[List[numpy.float64]], /):
-    """
-    usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def dot(_0: numpy.ndarray, _1: List[numpy.float64], /):
     """
     usage.matplotlib: 1
     """
@@ -39954,14 +43756,6 @@ def dot(_0: numpy.ndarray, _1: numpy.ndarray, /, *, out: numpy.ndarray):
 
 
 @overload
-def dot(_0: numpy.ndarray, _1: List[float], /):
-    """
-    usage.sklearn: 3
-    """
-    ...
-
-
-@overload
 def dot(_0: numpy.memmap, _1: numpy.memmap, /):
     """
     usage.sklearn: 1
@@ -39971,14 +43765,6 @@ def dot(_0: numpy.memmap, _1: numpy.memmap, /):
 
 @overload
 def dot(_0: numpy.memmap, _1: numpy.ndarray, /):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def dot(_0: numpy.ndarray, _1: List[Union[float, int]], /):
     """
     usage.sklearn: 1
     """
@@ -40010,6 +43796,7 @@ def dot(_0: object, _1: object, /, *, out: numpy.ndarray = ...):
     usage.scipy: 1086
     usage.skimage: 1
     usage.sklearn: 574
+    usage.statsmodels: 974
     """
     ...
 
@@ -40049,6 +43836,23 @@ def dstack(tup: List[numpy.ndarray]):
     usage.scipy: 7
     usage.skimage: 4
     usage.sklearn: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def dstack(tup: List[List[List[int]]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def dstack(tup: List[pandas.core.frame.DataFrame]):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -40092,6 +43896,7 @@ def dstack(tup: object):
     usage.scipy: 13
     usage.skimage: 12
     usage.sklearn: 5
+    usage.statsmodels: 4
     """
     ...
 
@@ -40167,6 +43972,7 @@ def einsum(*operands: Literal["v", "t"]):
     usage.scipy: 33
     usage.skimage: 2
     usage.sklearn: 15
+    usage.statsmodels: 9
     usage.xarray: 83
     """
     ...
@@ -40221,6 +44027,7 @@ def einsum(
     usage.scipy: 33
     usage.skimage: 2
     usage.sklearn: 15
+    usage.statsmodels: 9
     usage.xarray: 83
     """
     ...
@@ -40342,6 +44149,7 @@ def empty(_0: Tuple[int, int], /):
     usage.scipy: 67
     usage.skimage: 17
     usage.sklearn: 30
+    usage.statsmodels: 68
     usage.xarray: 9
     """
     ...
@@ -40372,6 +44180,7 @@ def empty(_0: Tuple[int, int, int], /):
     usage.scipy: 47
     usage.skimage: 5
     usage.sklearn: 15
+    usage.statsmodels: 9
     """
     ...
 
@@ -40391,6 +44200,7 @@ def empty(_0: Tuple[int, int], _1: numpy.dtype, /):
     """
     usage.scipy: 2
     usage.skimage: 8
+    usage.statsmodels: 1
     """
     ...
 
@@ -40506,6 +44316,7 @@ def empty(_0: int, /):
     usage.scipy: 23
     usage.skimage: 3
     usage.sklearn: 33
+    usage.statsmodels: 55
     """
     ...
 
@@ -40559,6 +44370,7 @@ def empty(_0: int, /, *, dtype: numpy.dtype):
     usage.scipy: 30
     usage.skimage: 2
     usage.sklearn: 4
+    usage.statsmodels: 3
     """
     ...
 
@@ -40594,6 +44406,7 @@ def empty(_0: Tuple[int], _1: numpy.dtype, /):
     """
     usage.scipy: 10
     usage.skimage: 10
+    usage.statsmodels: 1
     usage.xarray: 2
     """
     ...
@@ -40696,6 +44509,7 @@ def empty(_0: Tuple[None, ...], /, *, dtype: Literal["M8[ns]"]):
 def empty(_0: int, /, *, dtype: Type[numpy.int64]):
     """
     usage.scipy: 26
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -40707,6 +44521,125 @@ def empty(_0: Tuple[int], /, *, dtype: Type[object]):
     usage.dask: 1
     usage.scipy: 5
     usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int], /):
+    """
+    usage.dask: 2
+    usage.matplotlib: 1
+    usage.scipy: 18
+    usage.sklearn: 2
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int, int], /, *, dtype: Type[float]):
+    """
+    usage.matplotlib: 1
+    usage.scipy: 4
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def empty(_0: int, /, *, dtype: Type[int]):
+    """
+    usage.dask: 2
+    usage.scipy: 2
+    usage.sklearn: 5
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: int, /, *, dtype: Literal["float64"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def empty(*, shape: Tuple[int]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int, int, int, int], /):
+    """
+    usage.dask: 1
+    usage.scipy: 4
+    usage.sklearn: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def empty(*, shape: Tuple[None, ...]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int, int], _1: Type[numpy.float64], /):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def empty(_0: int, _1: Type[int], /):
+    """
+    usage.scipy: 1
+    usage.seaborn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: numpy.ndarray, /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int, int, int, int, int, int], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int, int, int, int, int, int, int], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int, int, int, int, int, int, int, int], /):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -40757,14 +44690,6 @@ def empty(_0: int, /, *, dtype: Type[numpy.float64]):
 
 
 @overload
-def empty(_0: Tuple[int, int], _1: Type[numpy.float64], /):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def empty(_0: int, /, *, dtype: Type[numpy.int32]):
     """
     usage.scipy: 27
@@ -40791,17 +44716,6 @@ def empty(_0: Tuple[int], _1: Type[float], /):
 
 
 @overload
-def empty(_0: Tuple[int], /):
-    """
-    usage.dask: 2
-    usage.matplotlib: 1
-    usage.scipy: 18
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def empty(_0: Tuple[int, int, int], /, *, dtype: Type[complex]):
     """
     usage.scipy: 1
@@ -40822,16 +44736,6 @@ def empty(_0: List[int], /, *, dtype: numpy.dtype):
     """
     usage.matplotlib: 1
     usage.scipy: 1
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def empty(_0: Tuple[int, int, int, int], /):
-    """
-    usage.dask: 1
-    usage.scipy: 4
     usage.sklearn: 1
     """
     ...
@@ -41034,15 +44938,6 @@ def empty(_0: Tuple[int, int], /, *, dtype: Literal["float64"], order: Literal["
 
 
 @overload
-def empty(_0: Tuple[int, int], /, *, dtype: Type[float]):
-    """
-    usage.matplotlib: 1
-    usage.scipy: 4
-    """
-    ...
-
-
-@overload
 def empty(_0: Tuple[int, int], /, *, dtype: Type[numpy.int64]):
     """
     usage.scipy: 4
@@ -41204,16 +45099,6 @@ def empty(_0: List[int], _1: numpy.dtype, /):
     """
     usage.scipy: 27
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def empty(_0: int, /, *, dtype: Type[int]):
-    """
-    usage.dask: 2
-    usage.scipy: 2
-    usage.sklearn: 5
     """
     ...
 
@@ -41454,15 +45339,6 @@ def empty(*, shape: Tuple[int, int]):
     """
     usage.dask: 2
     usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def empty(_0: int, _1: Type[int], /):
-    """
-    usage.scipy: 1
-    usage.seaborn: 1
     """
     ...
 
@@ -42022,7 +45898,7 @@ def empty(
         List[Tuple[Union[Tuple[int], str, type, numpy.dtype], ...]],
     ] = ...,
     order: Literal["C", "F", "c"] = ...,
-    shape: Union[Tuple[int, ...], int] = ...,
+    shape: Union[Tuple[Union[None, int], ...], int] = ...,
 ):
     """
     usage.dask: 154
@@ -42033,6 +45909,7 @@ def empty(
     usage.seaborn: 3
     usage.skimage: 127
     usage.sklearn: 189
+    usage.statsmodels: 161
     usage.xarray: 23
     """
     ...
@@ -42046,6 +45923,7 @@ def empty_like(_0: numpy.ndarray, /):
     usage.scipy: 52
     usage.skimage: 36
     usage.sklearn: 19
+    usage.statsmodels: 12
     """
     ...
 
@@ -42073,6 +45951,7 @@ def empty_like(_0: numpy.ndarray, /, *, dtype: Type[float]):
     """
     usage.scipy: 1
     usage.skimage: 2
+    usage.statsmodels: 10
     """
     ...
 
@@ -42371,6 +46250,7 @@ def empty_like(
     usage.scipy: 103
     usage.skimage: 51
     usage.sklearn: 26
+    usage.statsmodels: 22
     usage.xarray: 2
     """
     ...
@@ -42383,15 +46263,8 @@ def expand_dims(a: numpy.ndarray, axis: int):
     usage.matplotlib: 12
     usage.scipy: 15
     usage.sklearn: 5
+    usage.statsmodels: 9
     usage.xarray: 5
-    """
-    ...
-
-
-@overload
-def expand_dims(a: Union[numpy.ndarray, numpy.float64], axis: int):
-    """
-    usage.pandas: 19
     """
     ...
 
@@ -42401,6 +46274,24 @@ def expand_dims(a: numpy.float64, axis: int):
     """
     usage.scipy: 3
     usage.sklearn: 1
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def expand_dims(a: numpy.int64, axis: int):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def expand_dims(a: Union[numpy.ndarray, numpy.float64], axis: int):
+    """
+    usage.pandas: 19
     """
     ...
 
@@ -42415,14 +46306,6 @@ def expand_dims(a: numpy.ma.core.MaskedArray, axis: int):
 
 @overload
 def expand_dims(a: numpy.ma.core.MaskedConstant, axis: int):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def expand_dims(a: numpy.int64, axis: int):
     """
     usage.scipy: 1
     """
@@ -42445,15 +46328,8 @@ def expand_dims(
     usage.pandas: 19
     usage.scipy: 21
     usage.sklearn: 6
+    usage.statsmodels: 18
     usage.xarray: 5
-    """
-    ...
-
-
-@overload
-def extract(condition: numpy.bool_, arr: numpy.ndarray):
-    """
-    usage.scipy: 6
     """
     ...
 
@@ -42463,6 +46339,15 @@ def extract(condition: numpy.ndarray, arr: numpy.ndarray):
     """
     usage.dask: 1
     usage.scipy: 51
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def extract(condition: numpy.bool_, arr: numpy.ndarray):
+    """
+    usage.scipy: 6
     """
     ...
 
@@ -42542,12 +46427,13 @@ def extract(condition: numpy.ma.core.MaskedArray, arr: numpy.ma.core.MaskedArray
 def extract(
     condition: object,
     arr: Union[
-        numpy.ndarray, numpy.float64, float, numpy.int64, numpy.ma.core.MaskedArray
+        numpy.ndarray, numpy.ma.core.MaskedArray, numpy.int64, float, numpy.float64
     ],
 ):
     """
     usage.dask: 1
     usage.scipy: 77
+    usage.statsmodels: 2
     """
     ...
 
@@ -42562,6 +46448,7 @@ def eye(N: int):
     usage.scipy: 322
     usage.skimage: 31
     usage.sklearn: 51
+    usage.statsmodels: 308
     """
     ...
 
@@ -42600,6 +46487,7 @@ def eye(N: int, dtype: Type[numpy.float64]):
     usage.networkx: 1
     usage.scipy: 19
     usage.skimage: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -42613,6 +46501,42 @@ def eye(N: int, M: int):
     usage.scipy: 9
     usage.skimage: 1
     usage.sklearn: 1
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def eye(N: int, M: int, k: int):
+    """
+    usage.dask: 4
+    usage.scipy: 4
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def eye(N: numpy.int64):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def eye(N: int, dtype: numpy.dtype):
+    """
+    usage.scipy: 18
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def eye(N: numpy.int64, M: numpy.int64):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -42666,14 +46590,6 @@ def eye(N: int, dtype: Type[numpy.complex128]):
 
 
 @overload
-def eye(N: int, dtype: numpy.dtype):
-    """
-    usage.scipy: 18
-    """
-    ...
-
-
-@overload
 def eye(N: int, M: int, dtype: Type[numpy.float32]):
     """
     usage.scipy: 2
@@ -42701,15 +46617,6 @@ def eye(N: int, M: int, dtype: Type[numpy.complex64]):
 def eye(N: int, M: int, dtype: Type[numpy.complex128]):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def eye(N: int, M: int, k: int):
-    """
-    usage.dask: 4
-    usage.scipy: 4
     """
     ...
 
@@ -42805,7 +46712,7 @@ def eye(N: int, order: Literal["F"]):
 
 def eye(
     N: Union[int, numpy.int64],
-    M: int = ...,
+    M: Union[int, numpy.int64] = ...,
     k: int = ...,
     dtype: Union[type, numpy.dtype, Literal["int64", "float64"]] = ...,
 ):
@@ -42819,6 +46726,7 @@ def eye(
     usage.scipy: 470
     usage.skimage: 40
     usage.sklearn: 52
+    usage.statsmodels: 325
     """
     ...
 
@@ -42829,6 +46737,7 @@ def fill_diagonal(a: numpy.ndarray, val: float):
     usage.networkx: 1
     usage.skimage: 1
     usage.sklearn: 7
+    usage.statsmodels: 2
     """
     ...
 
@@ -42838,6 +46747,7 @@ def fill_diagonal(a: numpy.ndarray, val: numpy.ndarray):
     """
     usage.scipy: 2
     usage.sklearn: 1
+    usage.statsmodels: 6
     """
     ...
 
@@ -42847,6 +46757,7 @@ def fill_diagonal(a: numpy.ndarray, val: int):
     """
     usage.scipy: 4
     usage.sklearn: 8
+    usage.statsmodels: 3
     """
     ...
 
@@ -42876,6 +46787,7 @@ def fill_diagonal(
     usage.scipy: 7
     usage.skimage: 1
     usage.sklearn: 16
+    usage.statsmodels: 11
     """
     ...
 
@@ -43103,6 +47015,7 @@ def fix(
     ...
 
 
+@overload
 def flatnonzero(a: numpy.ndarray):
     """
     usage.dask: 2
@@ -43110,6 +47023,28 @@ def flatnonzero(a: numpy.ndarray):
     usage.scipy: 5
     usage.skimage: 6
     usage.sklearn: 37
+    usage.statsmodels: 49
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def flatnonzero(a: pandas.core.series.Series):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+def flatnonzero(a: Union[numpy.ndarray, pandas.core.series.Series]):
+    """
+    usage.dask: 2
+    usage.pandas: 2
+    usage.scipy: 5
+    usage.skimage: 6
+    usage.sklearn: 37
+    usage.statsmodels: 51
     usage.xarray: 2
     """
     ...
@@ -43166,6 +47101,7 @@ def fliplr(m: numpy.ndarray):
     usage.dask: 1
     usage.matplotlib: 1
     usage.skimage: 5
+    usage.statsmodels: 3
     """
     ...
 
@@ -43177,6 +47113,7 @@ def flipud(m: numpy.ndarray):
     usage.networkx: 1
     usage.scipy: 4
     usage.skimage: 2
+    usage.statsmodels: 2
     usage.xarray: 2
     """
     ...
@@ -43810,6 +47747,7 @@ def full(shape: Tuple[int, int], fill_value: float):
     usage.scipy: 57
     usage.skimage: 6
     usage.sklearn: 9
+    usage.statsmodels: 2
     usage.xarray: 3
     """
     ...
@@ -44011,6 +47949,27 @@ def full(shape: Tuple[None, ...], fill_value: numpy.float64):
 
 
 @overload
+def full(shape: int, fill_value: float):
+    """
+    usage.matplotlib: 1
+    usage.scipy: 40
+    usage.seaborn: 3
+    usage.sklearn: 18
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def full(shape: Tuple[int, int, int], fill_value: float):
+    """
+    usage.scipy: 3
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
 def full(
     shape: Union[Tuple[int, ...], int],
     fill_value: object,
@@ -44105,17 +48064,6 @@ def full(shape: int, fill_value: int, dtype: Literal["D"]):
 
 
 @overload
-def full(shape: int, fill_value: float):
-    """
-    usage.matplotlib: 1
-    usage.scipy: 40
-    usage.seaborn: 3
-    usage.sklearn: 18
-    """
-    ...
-
-
-@overload
 def full(shape: int, fill_value: bool, dtype: Type[bool]):
     """
     usage.scipy: 1
@@ -44203,14 +48151,6 @@ def full(shape: Tuple[int], fill_value: float):
     """
     usage.scipy: 9
     usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def full(shape: Tuple[int, int, int], fill_value: float):
-    """
-    usage.scipy: 3
     """
     ...
 
@@ -44576,7 +48516,7 @@ def full(
     _0: Tuple[int, ...] = ...,
     /,
     shape: Union[
-        Tuple[Union[None, int], ...], List[int], numpy.ndarray, int, numpy.int64
+        Tuple[Union[int, None], ...], List[int], numpy.ndarray, int, numpy.int64
     ] = ...,
     fill_value: object = ...,
     dtype: Union[type, numpy.dtype, str, None] = ...,
@@ -44591,6 +48531,7 @@ def full(
     usage.seaborn: 7
     usage.skimage: 37
     usage.sklearn: 99
+    usage.statsmodels: 12
     usage.xarray: 20
     """
     ...
@@ -44602,6 +48543,7 @@ def full_like(a: numpy.ndarray, fill_value: int):
     usage.scipy: 5
     usage.skimage: 1
     usage.sklearn: 2
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -44727,6 +48669,32 @@ def full_like(a: numpy.ndarray, fill_value: float):
     usage.matplotlib: 4
     usage.scipy: 9
     usage.sklearn: 4
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def full_like(a: numpy.float64, fill_value: float):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def full_like(a: float, fill_value: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def full_like(a: pandas.core.series.Series, fill_value: float):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -44743,14 +48711,6 @@ def full_like(a: numpy.ndarray, fill_value: float, dtype: Type[numpy.float64]):
 def full_like(a: float, fill_value: float, dtype: Type[numpy.float64]):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def full_like(a: numpy.float64, fill_value: float):
-    """
-    usage.scipy: 1
     """
     ...
 
@@ -45162,14 +49122,95 @@ def full_like(
     usage.scipy: 29
     usage.skimage: 1
     usage.sklearn: 10
+    usage.statsmodels: 12
     usage.xarray: 17
     """
     ...
 
 
+@overload
+def genfromtxt(fname: str, delimiter: Literal[","], skip_header: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def genfromtxt(fname: str, delimiter: Literal[" "]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def genfromtxt(fname: str, delimiter: Literal[","]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def genfromtxt(fname: str, delimiter: Literal[","], names: bool):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def genfromtxt(fname: _io.BufferedReader, delimiter: Literal[","], names: bool):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def genfromtxt(
+    fname: str, skip_header: int, skip_footer: int, converters: Dict[int, Callable]
+):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
 def genfromtxt(fname: str):
     """
     usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def genfromtxt(
+    fname: _io.BufferedReader,
+    dtype: Type[float],
+    delimiter: Literal[","],
+    skip_header: int,
+):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+def genfromtxt(
+    fname: Union[str, _io.BufferedReader],
+    dtype: Type[float] = ...,
+    delimiter: Literal[",", " "] = ...,
+    skip_header: int = ...,
+    skip_footer: int = ...,
+    converters: Dict[int, Callable] = ...,
+):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 14
     """
     ...
 
@@ -45423,18 +49464,19 @@ def histogram(a: numpy.ndarray, bins: List[Union[int, float]]):
 
 
 @overload
-def histogram(a: numpy.ndarray, bins: int, range: None, weights: None):
+def histogram(a: numpy.ndarray, bins: numpy.ndarray):
     """
-    usage.matplotlib: 1
-    usage.pandas: 2
+    usage.scipy: 2
+    usage.statsmodels: 1
     """
     ...
 
 
 @overload
-def histogram(a: numpy.ndarray, bins: numpy.ndarray):
+def histogram(a: numpy.ndarray, bins: int, range: None, weights: None):
     """
-    usage.scipy: 2
+    usage.matplotlib: 1
+    usage.pandas: 2
     """
     ...
 
@@ -45787,6 +49829,15 @@ def histogram(
     usage.seaborn: 7
     usage.skimage: 8
     usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def histogram2d(x: numpy.ndarray, y: numpy.ndarray, bins: numpy.ndarray):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -45864,7 +49915,7 @@ def histogram2d(
 def histogram2d(
     x: Union[numpy.ndarray, pandas.core.series.Series],
     y: Union[numpy.ndarray, pandas.core.series.Series],
-    bins: Union[Tuple[numpy.ndarray, numpy.ndarray], int],
+    bins: Union[Tuple[numpy.ndarray, numpy.ndarray], int, numpy.ndarray],
     range: None = ...,
     normed: bool = ...,
     weights: Union[None, numpy.ndarray] = ...,
@@ -45875,6 +49926,7 @@ def histogram2d(
     usage.scipy: 2
     usage.seaborn: 3
     usage.sklearn: 1
+    usage.statsmodels: 2
     """
     ...
 
@@ -46066,6 +50118,50 @@ def histogram_bin_edges(
 
 
 @overload
+def histogramdd(sample: numpy.ndarray, bins: Tuple[List[int], List[int]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def histogramdd(sample: numpy.ndarray, bins: Tuple[numpy.ndarray, numpy.ndarray]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def histogramdd(sample: numpy.ndarray, bins: Tuple[List[float], List[float]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def histogramdd(
+    sample: numpy.ndarray, bins: Tuple[List[float], List[float], List[float]]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def histogramdd(
+    sample: numpy.ndarray, bins: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def histogramdd(sample: numpy.ndarray, bins: int):
     """
     usage.scipy: 1
@@ -46081,9 +50177,37 @@ def histogramdd(sample: numpy.ndarray, bins: int, weights: numpy.ndarray):
     ...
 
 
-def histogramdd(sample: numpy.ndarray, bins: int, weights: numpy.ndarray = ...):
+def histogramdd(
+    sample: numpy.ndarray,
+    bins: Union[int, Tuple[Union[List[Union[float, int]], numpy.ndarray], ...]],
+    weights: numpy.ndarray = ...,
+):
     """
     usage.scipy: 2
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def hsplit(ary: numpy.ndarray, indices_or_sections: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def hsplit(ary: numpy.ndarray, indices_or_sections: List[int]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+def hsplit(ary: numpy.ndarray, indices_or_sections: Union[List[int], int]):
+    """
+    usage.statsmodels: 3
     """
     ...
 
@@ -46095,6 +50219,7 @@ def hstack(tup: List[numpy.ndarray]):
     usage.scipy: 87
     usage.skimage: 28
     usage.sklearn: 79
+    usage.statsmodels: 52
     usage.xarray: 1
     """
     ...
@@ -46130,6 +50255,7 @@ def hstack(tup: List[numpy.float64]):
     """
     usage.skimage: 1
     usage.sklearn: 1
+    usage.statsmodels: 2
     """
     ...
 
@@ -46142,6 +50268,7 @@ def hstack(tup: Tuple[numpy.ndarray, numpy.ndarray]):
     usage.scipy: 88
     usage.skimage: 3
     usage.sklearn: 39
+    usage.statsmodels: 17
     """
     ...
 
@@ -46152,6 +50279,101 @@ def hstack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
     usage.scipy: 9
     usage.skimage: 1
     usage.sklearn: 10
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def hstack(tup: Tuple[int, List[float]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def hstack(tup: Tuple[int, List[int]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def hstack(tup: Tuple[int, numpy.ndarray]):
+    """
+    usage.scipy: 2
+    usage.sklearn: 4
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def hstack(tup: List[patsy.design_info.DesignMatrix]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def hstack(tup: Tuple[numpy.ndarray, numpy.ndarray, int]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def hstack(tup: List[Union[List[float], numpy.ndarray]]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def hstack(tup: Tuple[numpy.float64, numpy.float64, numpy.int64]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def hstack(tup: List[Union[numpy.ndarray, numpy.float64]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def hstack(tup: List[Union[pandas.core.frame.DataFrame, numpy.ndarray]]):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def hstack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray]):
+    """
+    usage.scipy: 6
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def hstack(tup: numpy.ndarray):
+    """
+    usage.dask: 1
+    usage.sklearn: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -46168,14 +50390,6 @@ def hstack(
 ):
     """
     usage.pandas: 9
-    """
-    ...
-
-
-@overload
-def hstack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray]):
-    """
-    usage.scipy: 6
     """
     ...
 
@@ -46295,15 +50509,6 @@ def hstack(tup: Tuple[List[int], List[float]]):
 def hstack(tup: Tuple[List[int], List[Union[float, numpy.float64]]]):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def hstack(tup: Tuple[int, numpy.ndarray]):
-    """
-    usage.scipy: 2
-    usage.sklearn: 4
     """
     ...
 
@@ -46466,15 +50671,6 @@ def hstack(tup: List[Union[numpy.ndarray, List[numpy.float64]]]):
 
 
 @overload
-def hstack(tup: numpy.ndarray):
-    """
-    usage.dask: 1
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def hstack(tup: dask.array.core.Array):
     """
     usage.dask: 2
@@ -46523,14 +50719,6 @@ def hstack(
 def hstack(tup: List[pandas.core.frame.DataFrame]):
     """
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def hstack(tup: List[Union[pandas.core.frame.DataFrame, numpy.ndarray]]):
-    """
-    usage.sklearn: 1
     """
     ...
 
@@ -46695,6 +50883,7 @@ def hstack(tup: object):
     usage.scipy: 243
     usage.skimage: 36
     usage.sklearn: 181
+    usage.statsmodels: 89
     usage.xarray: 1
     """
     ...
@@ -46762,6 +50951,7 @@ def identity(n: int):
     usage.networkx: 3
     usage.scipy: 58
     usage.sklearn: 1
+    usage.statsmodels: 16
     """
     ...
 
@@ -46797,6 +50987,7 @@ def identity(n: int, dtype: Union[numpy.dtype, type] = ...):
     usage.networkx: 4
     usage.scipy: 67
     usage.sklearn: 1
+    usage.statsmodels: 16
     """
     ...
 
@@ -46808,6 +50999,7 @@ def imag(val: numpy.ndarray):
     usage.scipy: 22
     usage.skimage: 1
     usage.sklearn: 1
+    usage.statsmodels: 2
     """
     ...
 
@@ -46816,6 +51008,15 @@ def imag(val: numpy.ndarray):
 def imag(val: xarray.core.dataarray.DataArray):
     """
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def imag(val: complex):
+    """
+    usage.scipy: 5
+    usage.statsmodels: 1
     """
     ...
 
@@ -46869,14 +51070,6 @@ def imag(val: numpy.float64):
 
 
 @overload
-def imag(val: complex):
-    """
-    usage.scipy: 5
-    """
-    ...
-
-
-@overload
 def imag(val: dask.array.core.Array):
     """
     usage.dask: 1
@@ -46923,6 +51116,7 @@ def imag(val: object):
     usage.scipy: 51
     usage.skimage: 1
     usage.sklearn: 1
+    usage.statsmodels: 3
     usage.xarray: 1
     """
     ...
@@ -47038,6 +51232,7 @@ def indices(dimensions: Tuple[int, int]):
     usage.seaborn: 1
     usage.skimage: 5
     usage.sklearn: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -47141,7 +51336,7 @@ def indices(dimensions: generator):
 
 
 def indices(
-    dimensions: Union[Tuple[Union[None, numpy.int64, int], ...], generator, List[int]],
+    dimensions: Union[Tuple[Union[None, int, numpy.int64], ...], generator, List[int]],
     dtype: Union[type, numpy.dtype] = ...,
 ):
     """
@@ -47151,6 +51346,7 @@ def indices(
     usage.seaborn: 1
     usage.skimage: 8
     usage.sklearn: 3
+    usage.statsmodels: 1
     """
     ...
 
@@ -47160,6 +51356,7 @@ def inner(_0: numpy.ndarray, _1: numpy.ndarray, /):
     usage.matplotlib: 1
     usage.scipy: 5
     usage.sklearn: 4
+    usage.statsmodels: 8
     """
     ...
 
@@ -47328,6 +51525,31 @@ def interp(
 
 
 @overload
+def interp(x: numpy.float64, xp: List[float], fp: List[float]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def interp(x: numpy.float64, xp: numpy.ndarray, fp: numpy.ndarray):
+    """
+    usage.matplotlib: 4
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def interp(x: List[float], xp: numpy.ndarray, fp: numpy.ndarray):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def interp(x: numpy.ndarray, xp: List[float], fp: List[float]):
     """
     usage.scipy: 4
@@ -47356,14 +51578,6 @@ def interp(x: numpy.ndarray, xp: numpy.ndarray, fp: Tuple[float, float, float, f
 def interp(x: int, xp: numpy.ndarray, fp: numpy.ndarray):
     """
     usage.matplotlib: 2
-    """
-    ...
-
-
-@overload
-def interp(x: numpy.float64, xp: numpy.ndarray, fp: numpy.ndarray):
-    """
-    usage.matplotlib: 4
     """
     ...
 
@@ -47506,6 +51720,7 @@ def interp(
     usage.scipy: 13
     usage.skimage: 6
     usage.sklearn: 8
+    usage.statsmodels: 3
     usage.xarray: 2
     """
     ...
@@ -47541,6 +51756,7 @@ def isclose(a: float, b: float):
     usage.matplotlib: 1
     usage.scipy: 4
     usage.skimage: 1
+    usage.statsmodels: 2
     """
     ...
 
@@ -47578,6 +51794,33 @@ def isclose(a: numpy.float64, b: numpy.float64):
 def isclose(a: numpy.float64, b: numpy.float64, rtol: float):
     """
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def isclose(a: numpy.float64, b: float):
+    """
+    usage.matplotlib: 1
+    usage.networkx: 1
+    usage.sklearn: 4
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def isclose(a: int, b: int):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def isclose(a: float, b: int):
+    """
+    usage.statsmodels: 4
     """
     ...
 
@@ -47959,16 +52202,6 @@ def isclose(a: numpy.int64, b: numpy.ndarray, rtol: int, atol: numpy.float64):
 
 
 @overload
-def isclose(a: numpy.float64, b: float):
-    """
-    usage.matplotlib: 1
-    usage.networkx: 1
-    usage.sklearn: 4
-    """
-    ...
-
-
-@overload
 def isclose(a: pandas.core.series.Series, b: int):
     """
     usage.seaborn: 1
@@ -48058,6 +52291,7 @@ def isclose(
     usage.seaborn: 2
     usage.skimage: 3
     usage.sklearn: 11
+    usage.statsmodels: 11
     usage.xarray: 13
     """
     ...
@@ -48076,6 +52310,24 @@ def iscomplex(x: numpy.ndarray):
     """
     usage.dask: 13
     usage.scipy: 3
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def iscomplex(x: numpy.float64):
+    """
+    usage.scipy: 4
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def iscomplex(x: numpy.complex128):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -48084,20 +52336,13 @@ def iscomplex(x: numpy.ndarray):
 def iscomplex(x: int):
     """
     usage.scipy: 1
+    usage.statsmodels: 1
     """
     ...
 
 
 @overload
 def iscomplex(x: float):
-    """
-    usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def iscomplex(x: numpy.float64):
     """
     usage.scipy: 4
     """
@@ -48148,6 +52393,7 @@ def iscomplex(x: object):
     """
     usage.dask: 28
     usage.scipy: 12
+    usage.statsmodels: 5
     usage.xarray: 1
     """
     ...
@@ -48160,6 +52406,7 @@ def iscomplexobj(x: numpy.ndarray):
     usage.pandas: 2
     usage.scipy: 303
     usage.skimage: 4
+    usage.statsmodels: 9
     """
     ...
 
@@ -48275,6 +52522,7 @@ def iscomplexobj(x: object):
     usage.pandas: 2
     usage.scipy: 324
     usage.skimage: 4
+    usage.statsmodels: 9
     """
     ...
 
@@ -48508,6 +52756,15 @@ def isneginf(x: numpy.ndarray):
     """
     usage.dask: 1
     usage.scipy: 7
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def isneginf(x: float):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -48528,18 +52785,13 @@ def isneginf(x: List[Union[numpy.float64, int]]):
     ...
 
 
-def isneginf(x: Union[numpy.ndarray, numpy.float64, List[Union[numpy.float64, int]]]):
+def isneginf(
+    x: Union[numpy.ndarray, float, numpy.float64, List[Union[int, numpy.float64]]]
+):
     """
     usage.dask: 1
     usage.scipy: 13
-    """
-    ...
-
-
-@overload
-def isposinf(x: numpy.float64):
-    """
-    usage.scipy: 2
+    usage.statsmodels: 4
     """
     ...
 
@@ -48549,6 +52801,15 @@ def isposinf(x: numpy.ndarray):
     """
     usage.dask: 1
     usage.scipy: 5
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def isposinf(x: numpy.float64):
+    """
+    usage.scipy: 2
     """
     ...
 
@@ -48579,12 +52840,13 @@ def isposinf(x: int):
 
 
 def isposinf(
-    x: Union[float, int, numpy.float64, numpy.ndarray, List[Union[numpy.float64, int]]]
+    x: Union[float, int, numpy.float64, numpy.ndarray, List[Union[int, numpy.float64]]]
 ):
     """
     usage.dask: 1
     usage.scipy: 9
     usage.sklearn: 2
+    usage.statsmodels: 2
     """
     ...
 
@@ -48723,6 +52985,7 @@ def isscalar(element: numpy.ndarray):
     usage.seaborn: 3
     usage.skimage: 7
     usage.sklearn: 5
+    usage.statsmodels: 16
     usage.xarray: 21
     """
     ...
@@ -48737,6 +53000,7 @@ def isscalar(element: int):
     usage.seaborn: 1
     usage.skimage: 15
     usage.sklearn: 3
+    usage.statsmodels: 12
     """
     ...
 
@@ -48749,6 +53013,7 @@ def isscalar(element: List[int]):
     usage.scipy: 18
     usage.skimage: 8
     usage.sklearn: 6
+    usage.statsmodels: 9
     usage.xarray: 1
     """
     ...
@@ -48772,6 +53037,7 @@ def isscalar(element: float):
     usage.seaborn: 1
     usage.skimage: 6
     usage.sklearn: 2
+    usage.statsmodels: 17
     usage.xarray: 1
     """
     ...
@@ -48818,6 +53084,7 @@ def isscalar(element: numpy.float64):
     usage.seaborn: 1
     usage.skimage: 2
     usage.sklearn: 2
+    usage.statsmodels: 4
     """
     ...
 
@@ -48842,6 +53109,7 @@ def isscalar(element: Tuple[float, float]):
 def isscalar(element: List[numpy.float64]):
     """
     usage.skimage: 1
+    usage.statsmodels: 8
     """
     ...
 
@@ -49120,20 +53388,41 @@ def isscalar(element: dask.array.core.Array):
 
 
 @overload
-def isscalar(element: numpy.matrix):
-    """
-    usage.dask: 3
-    usage.scipy: 18
-    """
-    ...
-
-
-@overload
 def isscalar(element: List[float]):
     """
     usage.matplotlib: 2
     usage.scipy: 6
     usage.seaborn: 1
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def isscalar(element: list):
+    """
+    usage.dask: 1
+    usage.matplotlib: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def isscalar(element: pandas.core.series.Series):
+    """
+    usage.dask: 4
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def isscalar(element: numpy.matrix):
+    """
+    usage.dask: 3
+    usage.scipy: 18
     """
     ...
 
@@ -49383,15 +53672,6 @@ def isscalar(element: Literal["wrongstring"]):
 def isscalar(element: Tuple[None, ...]):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def isscalar(element: list):
-    """
-    usage.dask: 1
-    usage.matplotlib: 1
     """
     ...
 
@@ -49984,15 +54264,6 @@ def isscalar(element: List[Literal["float", "int"]]):
 def isscalar(element: dask.dataframe.core.Series):
     """
     usage.dask: 7
-    """
-    ...
-
-
-@overload
-def isscalar(element: pandas.core.series.Series):
-    """
-    usage.dask: 4
-    usage.sklearn: 1
     """
     ...
 
@@ -50728,6 +54999,7 @@ def isscalar(element: object):
     usage.seaborn: 18
     usage.skimage: 72
     usage.sklearn: 26
+    usage.statsmodels: 77
     usage.xarray: 50
     """
     ...
@@ -50851,6 +55123,7 @@ def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.integer]):
     usage.scipy: 38
     usage.skimage: 35
     usage.sklearn: 4
+    usage.statsmodels: 5
     usage.xarray: 52
     """
     ...
@@ -51299,6 +55572,7 @@ def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.number]):
 def issubdtype(arg1: Type[int], arg2: Type[numpy.integer]):
     """
     usage.dask: 1
+    usage.statsmodels: 3
     usage.xarray: 1
     """
     ...
@@ -51364,6 +55638,63 @@ def issubdtype(arg1: Type[numpy.generic], arg2: Type[numpy.timedelta64]):
 def issubdtype(arg1: Type[numpy.generic], arg2: Type[numpy.datetime64]):
     """
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def issubdtype(arg1: numpy.dtype, arg2: numpy.dtype):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def issubdtype(arg1: Type[dict], arg2: Type[numpy.integer]):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def issubdtype(arg1: Type[bool], arg2: Type[numpy.integer]):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def issubdtype(arg1: Type[list], arg2: Type[numpy.integer]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def issubdtype(arg1: Type[numpy.uint8], arg2: Type[numpy.integer]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.float64]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.complex128]):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -51460,14 +55791,6 @@ def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.uint8]):
 def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.float32]):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.float64]):
-    """
-    usage.scipy: 1
     """
     ...
 
@@ -51618,6 +55941,7 @@ def issubdtype(
     usage.scipy: 466
     usage.skimage: 165
     usage.sklearn: 44
+    usage.statsmodels: 23
     usage.xarray: 311
     """
     ...
@@ -51626,6 +55950,106 @@ def issubdtype(
 def issubsctype(arg1: numpy.ndarray, arg2: Type[numpy.float32]):
     """
     usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def iterable(y: Tuple[Literal["m"], Literal["f"]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def iterable(y: int):
+    """
+    usage.matplotlib: 21
+    usage.sklearn: 3
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def iterable(y: List[int]):
+    """
+    usage.matplotlib: 70
+    usage.sklearn: 1
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def iterable(
+    y: Tuple[
+        Literal["m"],
+        Literal["m"],
+        Literal["m"],
+        Literal["f"],
+        Literal["f"],
+        Literal["f"],
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def iterable(
+    y: Tuple[
+        Literal["y"],
+        Literal["a"],
+        Literal["o"],
+        Literal["y"],
+        Literal["a"],
+        Literal["o"],
+    ]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def iterable(y: float):
+    """
+    usage.matplotlib: 13
+    usage.sklearn: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def iterable(y: List[Union[int, float]]):
+    """
+    usage.matplotlib: 23
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def iterable(y: List[Union[float, int]]):
+    """
+    usage.matplotlib: 11
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def iterable(y: List[float]):
+    """
+    usage.matplotlib: 25
+    usage.sklearn: 2
+    usage.statsmodels: 3
     """
     ...
 
@@ -51643,24 +56067,6 @@ def iterable(y: object):
 def iterable(y: matplotlib.gridspec.SubplotSpec):
     """
     usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def iterable(y: List[int]):
-    """
-    usage.matplotlib: 70
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def iterable(y: int):
-    """
-    usage.matplotlib: 21
-    usage.sklearn: 3
     """
     ...
 
@@ -51693,15 +56099,6 @@ def iterable(y: Tuple[int, float]):
 def iterable(y: Tuple[int, int]):
     """
     usage.matplotlib: 5
-    """
-    ...
-
-
-@overload
-def iterable(y: float):
-    """
-    usage.matplotlib: 13
-    usage.sklearn: 2
     """
     ...
 
@@ -51760,14 +56157,6 @@ def iterable(y: bool):
 def iterable(y: List[bool]):
     """
     usage.matplotlib: 6
-    """
-    ...
-
-
-@overload
-def iterable(y: List[Union[int, float]]):
-    """
-    usage.matplotlib: 23
     """
     ...
 
@@ -51840,15 +56229,6 @@ def iterable(y: matplotlib.testing.jpl_units.UnitDbl.UnitDbl):
 def iterable(y: List[decimal.Decimal]):
     """
     usage.matplotlib: 2
-    """
-    ...
-
-
-@overload
-def iterable(y: List[float]):
-    """
-    usage.matplotlib: 25
-    usage.sklearn: 2
     """
     ...
 
@@ -51961,14 +56341,6 @@ def iterable(y: Literal["2009-01-21T00:00:00"]):
 def iterable(y: List[matplotlib.testing.jpl_units.Epoch.Epoch]):
     """
     usage.matplotlib: 4
-    """
-    ...
-
-
-@overload
-def iterable(y: List[Union[float, int]]):
-    """
-    usage.matplotlib: 11
     """
     ...
 
@@ -53570,6 +57942,7 @@ def iterable(y: object):
     usage.matplotlib: 858
     usage.pandas: 32
     usage.sklearn: 10
+    usage.statsmodels: 15
     """
     ...
 
@@ -53582,6 +57955,7 @@ def ix_(*args: Literal["v", "t"]):
     usage.scipy: 1
     usage.skimage: 2
     usage.sklearn: 4
+    usage.statsmodels: 42
     usage.xarray: 3
     """
     ...
@@ -53602,6 +57976,7 @@ def ix_(*args: Literal["v", "t"]):
     usage.scipy: 1
     usage.skimage: 2
     usage.sklearn: 4
+    usage.statsmodels: 42
     usage.xarray: 4
     """
     ...
@@ -53611,6 +57986,47 @@ def ix_(*args: Literal["v", "t"]):
 def kron(a: numpy.ndarray, b: numpy.ndarray):
     """
     usage.scipy: 14
+    usage.statsmodels: 112
+    """
+    ...
+
+
+@overload
+def kron(a: range, b: numpy.ndarray):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def kron(a: List[int], b: numpy.ndarray):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def kron(a: numpy.ndarray, b: pandas.core.indexes.numeric.Int64Index):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def kron(a: pandas.core.indexes.numeric.Int64Index, b: numpy.ndarray):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def kron(a: numpy.ndarray, b: List[int]):
+    """
+    usage.statsmodels: 8
     """
     ...
 
@@ -53640,11 +58056,22 @@ def kron(a: numpy.matrix, b: List[List[int]]):
 
 
 def kron(
-    a: Union[List[Union[int, List[int]]], numpy.ndarray, numpy.matrix],
-    b: Union[List[List[int]], numpy.ndarray],
+    a: Union[
+        numpy.matrix,
+        numpy.ndarray,
+        pandas.core.indexes.numeric.Int64Index,
+        range,
+        List[Union[int, List[int]]],
+    ],
+    b: Union[
+        numpy.ndarray,
+        pandas.core.indexes.numeric.Int64Index,
+        List[Union[int, List[int]]],
+    ],
 ):
     """
     usage.scipy: 53
+    usage.statsmodels: 129
     """
     ...
 
@@ -53676,6 +58103,16 @@ def lexsort(
 
 
 @overload
+def lexsort(_0: Tuple[numpy.ndarray, numpy.ndarray], /):
+    """
+    usage.scipy: 6
+    usage.sklearn: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
 def lexsort(
     _0: Union[
         List[numpy.ndarray],
@@ -53696,15 +58133,6 @@ def lexsort(
 ):
     """
     usage.pandas: 11
-    """
-    ...
-
-
-@overload
-def lexsort(_0: Tuple[numpy.ndarray, numpy.ndarray], /):
-    """
-    usage.scipy: 6
-    usage.sklearn: 2
     """
     ...
 
@@ -53740,8 +58168,8 @@ def lexsort(
                 numpy.ma.core.MaskedArray,
                 pandas.core.indexes.numeric.Float64Index,
                 pandas.core.indexes.numeric.Int64Index,
-                numpy.ndarray,
                 xarray.core.dataarray.DataArray,
+                numpy.ndarray,
             ],
             ...,
         ],
@@ -53756,6 +58184,7 @@ def lexsort(
     usage.scipy: 9
     usage.skimage: 1
     usage.sklearn: 2
+    usage.statsmodels: 2
     usage.xarray: 2
     """
     ...
@@ -53778,11 +58207,13 @@ def linspace(start: int, stop: int, num: int):
     usage.koalas: 2
     usage.matplotlib: 88
     usage.networkx: 7
+    usage.prophet: 1
     usage.sample-usage: 1
     usage.scipy: 289
     usage.seaborn: 17
     usage.skimage: 25
     usage.sklearn: 44
+    usage.statsmodels: 31
     usage.xarray: 193
     """
     ...
@@ -53797,6 +58228,7 @@ def linspace(start: float, stop: float, num: int):
     usage.seaborn: 2
     usage.skimage: 6
     usage.sklearn: 27
+    usage.statsmodels: 9
     usage.xarray: 21
     """
     ...
@@ -53847,6 +58279,7 @@ def linspace(start: int, stop: float, num: int):
     usage.seaborn: 2
     usage.skimage: 22
     usage.sklearn: 9
+    usage.statsmodels: 6
     usage.xarray: 3
     """
     ...
@@ -53876,6 +58309,7 @@ def linspace(start: numpy.float64, stop: numpy.float64, num: int):
     usage.seaborn: 5
     usage.skimage: 4
     usage.sklearn: 4
+    usage.statsmodels: 11
     """
     ...
 
@@ -53914,6 +58348,7 @@ def linspace(start: float, stop: int, num: int):
     usage.seaborn: 1
     usage.skimage: 2
     usage.sklearn: 1
+    usage.statsmodels: 2
     """
     ...
 
@@ -53937,6 +58372,7 @@ def linspace(start: int, stop: float, num: int, endpoint: bool):
     usage.scipy: 29
     usage.skimage: 1
     usage.sklearn: 2
+    usage.statsmodels: 3
     """
     ...
 
@@ -53945,6 +58381,7 @@ def linspace(start: int, stop: float, num: int, endpoint: bool):
 def linspace(start: int, stop: int, num: numpy.int64):
     """
     usage.sklearn: 1
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -53979,6 +58416,24 @@ def linspace(start: int, stop: int, num: int, dtype: Type[float]):
 def linspace(start: int, stop: int, num: int, dtype: Type[int]):
     """
     usage.xarray: 5
+    """
+    ...
+
+
+@overload
+def linspace(start: numpy.float64, stop: numpy.float64, num: int, retstep: bool):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def linspace(start: numpy.float64, stop: numpy.float64, num: numpy.int64):
+    """
+    usage.scipy: 1
+    usage.sklearn: 2
+    usage.statsmodels: 2
     """
     ...
 
@@ -54127,15 +58582,6 @@ def linspace(start: float, stop: int, num: int, endpoint: bool):
 
 
 @overload
-def linspace(start: numpy.float64, stop: numpy.float64, num: numpy.int64):
-    """
-    usage.scipy: 1
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def linspace(start: float, stop: int):
     """
     usage.matplotlib: 1
@@ -54262,11 +58708,13 @@ def linspace(
     usage.matplotlib: 184
     usage.networkx: 7
     usage.pandas: 19
+    usage.prophet: 1
     usage.sample-usage: 1
     usage.scipy: 589
     usage.seaborn: 29
     usage.skimage: 78
     usage.sklearn: 95
+    usage.statsmodels: 66
     usage.xarray: 231
     """
     ...
@@ -54489,6 +58937,15 @@ def loadtxt(fname: str, dtype: List[Tuple[str, type]]):
 
 
 @overload
+def loadtxt(fname: str, delimiter: Literal[","]):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
 def loadtxt(fname: str):
     """
     usage.pandas: 2
@@ -54516,14 +58973,6 @@ def loadtxt(fname: str, skiprows: int):
 
 
 @overload
-def loadtxt(fname: str, delimiter: Literal[","]):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def loadtxt(fname: tarfile.ExFileObject, delimiter: Literal[","]):
     """
     usage.sklearn: 1
@@ -54533,15 +58982,16 @@ def loadtxt(fname: tarfile.ExFileObject, delimiter: Literal[","]):
 
 def loadtxt(
     fname: Union[str, tarfile.ExFileObject, _io.StringIO],
+    delimiter: Literal[","] = ...,
     dtype: List[Tuple[str, type]] = ...,
     skiprows: int = ...,
-    delimiter: Literal[","] = ...,
 ):
     """
     usage.pandas: 2
     usage.scipy: 6
     usage.skimage: 1
     usage.sklearn: 6
+    usage.statsmodels: 3
     """
     ...
 
@@ -54570,6 +59020,7 @@ def logspace(start: int, stop: int, num: int):
     usage.matplotlib: 1
     usage.scipy: 29
     usage.sklearn: 13
+    usage.statsmodels: 1
     """
     ...
 
@@ -54675,6 +59126,7 @@ def logspace(
     usage.scipy: 51
     usage.skimage: 2
     usage.sklearn: 17
+    usage.statsmodels: 1
     """
     ...
 
@@ -55053,10 +59505,12 @@ def mean(a: numpy.ndarray):
     """
     usage.dask: 21
     usage.matplotlib: 7
+    usage.prophet: 1
     usage.scipy: 26
     usage.seaborn: 3
     usage.skimage: 36
     usage.sklearn: 130
+    usage.statsmodels: 45
     usage.xarray: 1
     """
     ...
@@ -55070,6 +59524,7 @@ def mean(a: numpy.ndarray, axis: int):
     usage.scipy: 32
     usage.skimage: 14
     usage.sklearn: 73
+    usage.statsmodels: 26
     usage.xarray: 6
     """
     ...
@@ -55139,6 +59594,7 @@ def mean(a: List[numpy.float64]):
 def mean(a: numpy.ndarray, axis: None):
     """
     usage.scipy: 5
+    usage.statsmodels: 1
     usage.xarray: 3
     """
     ...
@@ -55301,6 +59757,56 @@ def mean(a: numpy.ndarray, axis: Tuple[int, int], keepdims: bool):
 
 
 @overload
+def mean(a: List[int]):
+    """
+    usage.dask: 1
+    usage.scipy: 2
+    usage.seaborn: 1
+    usage.sklearn: 3
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def mean(a: pandas.core.series.Series):
+    """
+    usage.dask: 1
+    usage.prophet: 1
+    usage.seaborn: 4
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def mean(a: List[float]):
+    """
+    usage.networkx: 6
+    usage.sklearn: 3
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def mean(a: Tuple[float, float]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def mean(a: List[numpy.ndarray], axis: int):
+    """
+    usage.sklearn: 3
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def mean(
     a: Union[
         numpy.ndarray,
@@ -55419,26 +59925,6 @@ def mean(a: list):
 def mean(a: List[float], axis: int):
     """
     usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def mean(a: List[int]):
-    """
-    usage.dask: 1
-    usage.scipy: 2
-    usage.seaborn: 1
-    usage.sklearn: 3
-    """
-    ...
-
-
-@overload
-def mean(a: pandas.core.series.Series):
-    """
-    usage.dask: 1
-    usage.seaborn: 4
     """
     ...
 
@@ -55598,15 +60084,6 @@ def mean(a: List[numpy.ndarray], axis: int, dtype: Type[numpy.float64]):
 
 
 @overload
-def mean(a: List[float]):
-    """
-    usage.networkx: 6
-    usage.sklearn: 3
-    """
-    ...
-
-
-@overload
 def mean(a: List[Union[float, numpy.float64]]):
     """
     usage.sklearn: 2
@@ -55618,14 +60095,6 @@ def mean(a: List[Union[float, numpy.float64]]):
 def mean(a: List[Union[numpy.float64, float]]):
     """
     usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def mean(a: List[numpy.ndarray], axis: int):
-    """
-    usage.sklearn: 3
     """
     ...
 
@@ -55652,10 +60121,12 @@ def mean(
     usage.matplotlib: 12
     usage.networkx: 6
     usage.pandas: 26
+    usage.prophet: 2
     usage.scipy: 89
     usage.seaborn: 8
     usage.skimage: 62
     usage.sklearn: 234
+    usage.statsmodels: 97
     usage.xarray: 42
     """
     ...
@@ -55677,6 +60148,7 @@ def median(a: numpy.ndarray):
     usage.seaborn: 2
     usage.skimage: 4
     usage.sklearn: 23
+    usage.statsmodels: 11
     """
     ...
 
@@ -55685,6 +60157,7 @@ def median(a: numpy.ndarray):
 def median(a: numpy.ndarray, axis: None):
     """
     usage.scipy: 1
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -55736,6 +60209,7 @@ def median(a: numpy.ndarray, axis: int):
     usage.dask: 2
     usage.scipy: 5
     usage.sklearn: 15
+    usage.statsmodels: 8
     usage.xarray: 1
     """
     ...
@@ -55780,6 +60254,38 @@ def median(a: list):
 def median(a: List[float], axis: int):
     """
     usage.scipy: 1
+    """
+    ...
+
+
+@overload
+def median(a: List[float]):
+    """
+    usage.prophet: 2
+    """
+    ...
+
+
+@overload
+def median(a: List[Union[numpy.float64, float]]):
+    """
+    usage.prophet: 1
+    """
+    ...
+
+
+@overload
+def median(a: List[int]):
+    """
+    usage.prophet: 2
+    """
+    ...
+
+
+@overload
+def median(a: List[Union[numpy.int64, int]]):
+    """
+    usage.prophet: 4
     """
     ...
 
@@ -55866,10 +60372,12 @@ def median(
     usage.dask: 18
     usage.matplotlib: 3
     usage.pandas: 17
+    usage.prophet: 9
     usage.scipy: 28
     usage.seaborn: 3
     usage.skimage: 5
     usage.sklearn: 38
+    usage.statsmodels: 20
     usage.xarray: 8
     """
     ...
@@ -55883,6 +60391,7 @@ def meshgrid(*xi: Literal["v", "t"]):
     usage.seaborn: 1
     usage.skimage: 9
     usage.sklearn: 4
+    usage.statsmodels: 5
     usage.xarray: 4
     """
     ...
@@ -55926,6 +60435,7 @@ def meshgrid(
     usage.seaborn: 1
     usage.skimage: 28
     usage.sklearn: 6
+    usage.statsmodels: 5
     usage.xarray: 6
     """
     ...
@@ -56108,6 +60618,34 @@ def min_scalar_type(_0: object, /):
 def mintypecode(typechars: List[Literal["d"]]):
     """
     usage.scipy: 11
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def mintypecode(typechars: List[Literal["d", "l"]]):
+    """
+    usage.scipy: 4
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def mintypecode(typechars: List[Literal["l"]]):
+    """
+    usage.scipy: 3
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def mintypecode(typechars: List[Literal["l", "d"]]):
+    """
+    usage.scipy: 5
+    usage.statsmodels: 2
     """
     ...
 
@@ -56124,14 +60662,6 @@ def mintypecode(typechars: Tuple[numpy.ndarray, numpy.ndarray]):
 def mintypecode(typechars: List[Literal["d", "D"]]):
     """
     usage.scipy: 5
-    """
-    ...
-
-
-@overload
-def mintypecode(typechars: List[Literal["d", "l"]]):
-    """
-    usage.scipy: 4
     """
     ...
 
@@ -56176,29 +60706,14 @@ def mintypecode(typechars: List[Literal["d", "l", "f"]]):
     ...
 
 
-@overload
-def mintypecode(typechars: List[Literal["l", "d"]]):
-    """
-    usage.scipy: 5
-    """
-    ...
-
-
-@overload
-def mintypecode(typechars: List[Literal["l"]]):
-    """
-    usage.scipy: 3
-    """
-    ...
-
-
 def mintypecode(
     typechars: Union[
-        List[Literal["d", "D", "l", "e", "f"]], Tuple[numpy.ndarray, numpy.ndarray]
+        Tuple[numpy.ndarray, numpy.ndarray], List[Literal["d", "l", "D", "e", "f"]]
     ]
 ):
     """
     usage.scipy: 37
+    usage.statsmodels: 11
     """
     ...
 
@@ -56316,6 +60831,7 @@ def nan_to_num(x: numpy.ndarray):
     usage.dask: 4
     usage.scipy: 4
     usage.sklearn: 7
+    usage.statsmodels: 2
     """
     ...
 
@@ -56398,6 +60914,7 @@ def nan_to_num(x: object):
     usage.scipy: 4
     usage.skimage: 1
     usage.sklearn: 7
+    usage.statsmodels: 2
     """
     ...
 
@@ -57017,7 +61534,9 @@ def nanmean(a: numpy.ndarray, axis: None, dtype: Type[numpy.float64]):
 def nanmean(a: numpy.ndarray, axis: int):
     """
     usage.dask: 5
+    usage.prophet: 2
     usage.sklearn: 4
+    usage.statsmodels: 10
     usage.xarray: 1
     """
     ...
@@ -57043,6 +61562,8 @@ def nanmean(a: numpy.ndarray, axis: Tuple[int], dtype: None):
 def nanmean(a: numpy.ndarray):
     """
     usage.dask: 1
+    usage.prophet: 2
+    usage.statsmodels: 1
     usage.xarray: 3
     """
     ...
@@ -57178,8 +61699,10 @@ def nanmean(
     """
     usage.dask: 11
     usage.pandas: 2
+    usage.prophet: 4
     usage.scipy: 1
     usage.sklearn: 4
+    usage.statsmodels: 11
     usage.xarray: 27
     """
     ...
@@ -57849,6 +62372,7 @@ def nansum(a: numpy.ndarray):
     usage.dask: 18
     usage.scipy: 1
     usage.sklearn: 4
+    usage.statsmodels: 2
     usage.xarray: 4
     """
     ...
@@ -58011,6 +62535,7 @@ def nansum(
     usage.pandas: 6
     usage.scipy: 1
     usage.sklearn: 9
+    usage.statsmodels: 2
     usage.xarray: 8
     """
     ...
@@ -58031,6 +62556,7 @@ def nanvar(a: numpy.ndarray):
     """
     usage.dask: 2
     usage.sklearn: 4
+    usage.statsmodels: 1
     usage.xarray: 4
     """
     ...
@@ -58159,6 +62685,7 @@ def nanvar(
     usage.dask: 11
     usage.scipy: 1
     usage.sklearn: 10
+    usage.statsmodels: 1
     usage.xarray: 13
     """
     ...
@@ -58173,6 +62700,90 @@ def ndim(a: numpy.ndarray):
     usage.seaborn: 2
     usage.skimage: 4
     usage.sklearn: 2
+    usage.statsmodels: 17
+    """
+    ...
+
+
+@overload
+def ndim(a: pandas.core.series.Series):
+    """
+    usage.seaborn: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def ndim(a: pandas.core.frame.DataFrame):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def ndim(a: numpy.float64):
+    """
+    usage.matplotlib: 2
+    usage.scipy: 1
+    usage.sklearn: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def ndim(a: List[float]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def ndim(a: Tuple[int, int, int]):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def ndim(a: Tuple[int]):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def ndim(a: List[int]):
+    """
+    usage.dask: 2
+    usage.scipy: 13
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def ndim(a: int):
+    """
+    usage.dask: 3
+    usage.scipy: 4
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def ndim(a: Tuple[int, int]):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 2
     """
     ...
 
@@ -58212,15 +62823,6 @@ def ndim(a: scipy.fftpack.tests.test_basic.FakeArray2):
 
 
 @overload
-def ndim(a: int):
-    """
-    usage.dask: 3
-    usage.scipy: 4
-    """
-    ...
-
-
-@overload
 def ndim(a: numpy.int32):
     """
     usage.scipy: 2
@@ -58241,15 +62843,6 @@ def ndim(a: numpy.int64):
     """
     usage.matplotlib: 2
     usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def ndim(a: List[int]):
-    """
-    usage.dask: 2
-    usage.scipy: 13
     """
     ...
 
@@ -58313,40 +62906,6 @@ def ndim(a: float):
 
 @overload
 def ndim(a: complex):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def ndim(a: numpy.float64):
-    """
-    usage.matplotlib: 2
-    usage.scipy: 1
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def ndim(a: Tuple[int]):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def ndim(a: Tuple[int, int, int]):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def ndim(a: Tuple[int, int]):
     """
     usage.scipy: 2
     """
@@ -58459,14 +63018,6 @@ def ndim(a: List[Tuple[float, float, float]]):
 
 
 @overload
-def ndim(a: pandas.core.series.Series):
-    """
-    usage.seaborn: 1
-    """
-    ...
-
-
-@overload
 def ndim(a: None):
     """
     usage.dask: 1
@@ -58516,6 +63067,7 @@ def ndim(a: object):
     usage.seaborn: 11
     usage.skimage: 4
     usage.sklearn: 4
+    usage.statsmodels: 31
     """
     ...
 
@@ -58530,6 +63082,7 @@ def nonzero(a: numpy.ndarray):
     usage.scipy: 73
     usage.skimage: 24
     usage.sklearn: 15
+    usage.statsmodels: 29
     usage.xarray: 4
     """
     ...
@@ -58601,6 +63154,7 @@ def nonzero(a: object):
     usage.scipy: 80
     usage.skimage: 24
     usage.sklearn: 15
+    usage.statsmodels: 29
     usage.xarray: 4
     """
     ...
@@ -58773,6 +63327,7 @@ def ones(shape: Tuple[int, int]):
     usage.seaborn: 1
     usage.skimage: 88
     usage.sklearn: 87
+    usage.statsmodels: 147
     usage.xarray: 21
     """
     ...
@@ -58785,6 +63340,7 @@ def ones(shape: Tuple[int, int, int]):
     usage.scipy: 9
     usage.skimage: 28
     usage.sklearn: 2
+    usage.statsmodels: 8
     usage.xarray: 6
     """
     ...
@@ -58821,6 +63377,7 @@ def ones(shape: Tuple[int, int], dtype: Type[bool]):
     usage.scipy: 4
     usage.skimage: 39
     usage.sklearn: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -58840,10 +63397,12 @@ def ones(shape: int):
     usage.dask: 39
     usage.matplotlib: 40
     usage.networkx: 1
+    usage.prophet: 1
     usage.scipy: 206
     usage.seaborn: 16
     usage.skimage: 20
     usage.sklearn: 214
+    usage.statsmodels: 332
     usage.xarray: 21
     """
     ...
@@ -58856,6 +63415,7 @@ def ones(shape: int, dtype: Type[numpy.int64]):
     usage.scipy: 1
     usage.skimage: 1
     usage.sklearn: 6
+    usage.statsmodels: 3
     """
     ...
 
@@ -58867,6 +63427,7 @@ def ones(shape: Tuple[int, int, int, int]):
     usage.scipy: 4
     usage.skimage: 8
     usage.sklearn: 1
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -58897,6 +63458,7 @@ def ones(shape: Tuple[int, int], dtype: Type[numpy.float64]):
     usage.scipy: 5
     usage.skimage: 3
     usage.sklearn: 4
+    usage.statsmodels: 4
     """
     ...
 
@@ -58909,6 +63471,7 @@ def ones(shape: Tuple[int]):
     usage.scipy: 6
     usage.skimage: 5
     usage.sklearn: 21
+    usage.statsmodels: 13
     usage.xarray: 4
     """
     ...
@@ -58960,6 +63523,7 @@ def ones(shape: int, dtype: Type[bool]):
     usage.seaborn: 2
     usage.skimage: 2
     usage.sklearn: 13
+    usage.statsmodels: 5
     """
     ...
 
@@ -58970,6 +63534,7 @@ def ones(shape: Tuple[int], dtype: Type[numpy.float64]):
     usage.scipy: 1
     usage.skimage: 1
     usage.sklearn: 5
+    usage.statsmodels: 3
     """
     ...
 
@@ -58982,6 +63547,7 @@ def ones(shape: int, dtype: Type[numpy.float64]):
     usage.scipy: 3
     usage.skimage: 1
     usage.sklearn: 11
+    usage.statsmodels: 8
     """
     ...
 
@@ -59044,6 +63610,7 @@ def ones(shape: Tuple[int], dtype: Type[bool]):
     usage.scipy: 6
     usage.skimage: 4
     usage.sklearn: 5
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -59118,6 +63685,7 @@ def ones(shape: numpy.int64):
     usage.scipy: 6
     usage.skimage: 2
     usage.sklearn: 2
+    usage.statsmodels: 3
     """
     ...
 
@@ -59148,12 +63716,27 @@ def ones(shape: int, dtype: Literal[">f4"]):
 
 
 @overload
-def ones(
-    shape: Union[int, Tuple[int, ...]],
-    dtype: Union[numpy.dtype, Literal["int64", "float64", "bool"], type] = ...,
-):
+def ones(shape: int, dtype: Type[numpy.bool_]):
     """
-    usage.pandas: 116
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def ones(shape: int, dtype: Type[numpy.int32]):
+    """
+    usage.matplotlib: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[None, ...]):
+    """
+    usage.dask: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -59162,6 +63745,44 @@ def ones(
 def ones(shape: int, dtype: Type[float]):
     """
     usage.scipy: 14
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[numpy.int64, numpy.int64]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: int, dtype: Type[numpy.int8]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: int, dtype: Type[int]):
+    """
+    usage.scipy: 16
+    usage.sklearn: 8
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def ones(
+    shape: Union[int, Tuple[int, ...]],
+    dtype: Union[numpy.dtype, Literal["int64", "float64", "bool"], type] = ...,
+):
+    """
+    usage.pandas: 116
     """
     ...
 
@@ -59433,15 +64054,6 @@ def ones(shape: List[int], dtype: Type[numpy.float32]):
 def ones(shape: List[int], dtype: Type[numpy.float64]):
     """
     usage.scipy: 28
-    """
-    ...
-
-
-@overload
-def ones(shape: int, dtype: Type[int]):
-    """
-    usage.scipy: 16
-    usage.sklearn: 8
     """
     ...
 
@@ -59721,22 +64333,6 @@ def ones(shape: Tuple[int, int], dtype: Type[numpy.uint16]):
 
 
 @overload
-def ones(shape: int, dtype: Type[numpy.int32]):
-    """
-    usage.matplotlib: 2
-    """
-    ...
-
-
-@overload
-def ones(shape: Tuple[None, ...]):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
 def ones(shape: Tuple[int, int, int], dtype: numpy.dtype):
     """
     usage.dask: 6
@@ -59998,11 +64594,13 @@ def ones(
     usage.matplotlib: 62
     usage.networkx: 6
     usage.pandas: 116
+    usage.prophet: 1
     usage.sample-usage: 1
     usage.scipy: 936
     usage.seaborn: 19
     usage.skimage: 294
     usage.sklearn: 441
+    usage.statsmodels: 537
     usage.xarray: 73
     """
     ...
@@ -60013,10 +64611,12 @@ def ones_like(a: numpy.ndarray):
     """
     usage.dask: 2
     usage.matplotlib: 8
+    usage.prophet: 4
     usage.scipy: 39
     usage.seaborn: 2
     usage.skimage: 18
     usage.sklearn: 29
+    usage.statsmodels: 42
     """
     ...
 
@@ -60027,6 +64627,7 @@ def ones_like(a: numpy.ndarray, dtype: Type[bool]):
     usage.scipy: 14
     usage.skimage: 3
     usage.sklearn: 2
+    usage.statsmodels: 2
     """
     ...
 
@@ -60059,6 +64660,40 @@ def ones_like(a: xarray.core.dataarray.DataArray):
 def ones_like(a: xarray.core.variable.Variable):
     """
     usage.xarray: 4
+    """
+    ...
+
+
+@overload
+def ones_like(a: pandas.core.series.Series):
+    """
+    usage.statsmodels: 22
+    """
+    ...
+
+
+@overload
+def ones_like(a: float):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def ones_like(a: numpy.float64):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def ones_like(a: List[float]):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -60097,14 +64732,6 @@ def ones_like(a: Tuple[int, int, int], dtype: Type[numpy.float64]):
 
 @overload
 def ones_like(a: List[float], dtype: Type[int]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def ones_like(a: float):
     """
     usage.scipy: 1
     """
@@ -60202,14 +64829,6 @@ def ones_like(a: numpy.ndarray, shape: Tuple[int, int, int, int, int]):
 
 
 @overload
-def ones_like(a: numpy.float64):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def ones_like(a: numpy.ndarray, dtype: Type[numpy.float32]):
     """
     usage.sklearn: 3
@@ -60227,10 +64846,12 @@ def ones_like(
     usage.dask: 11
     usage.matplotlib: 15
     usage.pandas: 6
+    usage.prophet: 4
     usage.scipy: 62
     usage.seaborn: 2
     usage.skimage: 27
     usage.sklearn: 37
+    usage.statsmodels: 71
     usage.xarray: 17
     """
     ...
@@ -60245,6 +64866,31 @@ def outer(a: numpy.ndarray, b: numpy.ndarray):
     usage.scipy: 65
     usage.seaborn: 3
     usage.sklearn: 14
+    usage.statsmodels: 58
+    """
+    ...
+
+
+@overload
+def outer(a: numpy.ndarray, b: numpy.float64):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def outer(a: patsy.design_info.DesignMatrix, b: patsy.design_info.DesignMatrix):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def outer(a: numpy.ma.core.MaskedArray, b: numpy.ma.core.MaskedArray):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -60266,8 +64912,19 @@ def outer(a: numpy.float64, b: numpy.float64):
 
 
 def outer(
-    a: Union[numpy.ndarray, numpy.float64],
-    b: Union[numpy.ndarray, numpy.float64, List[int]],
+    a: Union[
+        numpy.ndarray,
+        numpy.float64,
+        numpy.ma.core.MaskedArray,
+        patsy.design_info.DesignMatrix,
+    ],
+    b: Union[
+        numpy.ndarray,
+        numpy.float64,
+        numpy.ma.core.MaskedArray,
+        patsy.design_info.DesignMatrix,
+        List[int],
+    ],
 ):
     """
     usage.dask: 4
@@ -60276,6 +64933,7 @@ def outer(
     usage.scipy: 67
     usage.seaborn: 3
     usage.sklearn: 14
+    usage.statsmodels: 62
     """
     ...
 
@@ -60327,6 +64985,7 @@ def pad(
     usage.matplotlib: 1
     usage.scipy: 12
     usage.skimage: 9
+    usage.statsmodels: 2
     usage.xarray: 16
     """
     ...
@@ -60995,6 +65654,19 @@ def pad(
 
 
 @overload
+def pad(
+    array: numpy.ndarray,
+    pad_width: Tuple[Tuple[int, int], Tuple[int, int]],
+    mode: Literal["wrap"],
+):
+    """
+    usage.dask: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def pad(array: numpy.ndarray, pad_width: Tuple[int, int], mode: Literal["edge"]):
     """
     usage.dask: 4
@@ -61063,18 +65735,6 @@ def pad(
     array: numpy.ndarray,
     pad_width: Tuple[Tuple[int, int], Tuple[int, int]],
     mode: Literal["symmetric"],
-):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
-def pad(
-    array: numpy.ndarray,
-    pad_width: Tuple[Tuple[int, int], Tuple[int, int]],
-    mode: Literal["wrap"],
 ):
     """
     usage.dask: 1
@@ -61235,7 +65895,16 @@ def pad(array: object, pad_width: object, mode: Union[str, Callable] = ...):
     usage.scipy: 42
     usage.skimage: 127
     usage.sklearn: 2
+    usage.statsmodels: 3
     usage.xarray: 63
+    """
+    ...
+
+
+@overload
+def partition(a: numpy.ndarray, kth: int):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -61257,11 +65926,12 @@ def partition(a: numpy.ndarray, kth: int, axis: int):
     ...
 
 
-def partition(a: numpy.ndarray, kth: Union[int, Tuple[int, int]], axis: int):
+def partition(a: numpy.ndarray, kth: Union[int, Tuple[int, int]], axis: int = ...):
     """
     usage.dask: 1
     usage.scipy: 5
     usage.sklearn: 4
+    usage.statsmodels: 2
     """
     ...
 
@@ -61291,6 +65961,7 @@ def percentile(a: numpy.ndarray, q: float):
     """
     usage.skimage: 3
     usage.sklearn: 7
+    usage.statsmodels: 4
     usage.xarray: 2
     """
     ...
@@ -61351,6 +66022,59 @@ def percentile(a: numpy.ndarray, q: numpy.float64, axis: List[int]):
 def percentile(a: numpy.ndarray, q: numpy.ndarray, axis: List[int]):
     """
     usage.xarray: 4
+    """
+    ...
+
+
+@overload
+def percentile(a: numpy.ndarray, q: numpy.float64):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def percentile(a: numpy.ndarray, q: List[int], axis: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def percentile(a: numpy.ndarray, q: List[float], axis: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def percentile(
+    a: numpy.ndarray,
+    q: Tuple[float, float, float, float, float, float, float, float, float, float],
+    axis: int,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def percentile(a: numpy.ndarray, q: Tuple[float, float, float, float]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def percentile(a: numpy.ndarray, q: List[float]):
+    """
+    usage.matplotlib: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -61569,18 +66293,27 @@ def percentile(
 
 
 @overload
-def percentile(a: numpy.ndarray, q: numpy.ndarray):
+def percentile(a: float, q: numpy.ndarray):
     """
-    usage.matplotlib: 1
-    usage.sklearn: 5
+    usage.prophet: 1
     """
     ...
 
 
 @overload
-def percentile(a: numpy.ndarray, q: List[float]):
+def percentile(a: numpy.ndarray, q: float, axis: int):
     """
-    usage.matplotlib: 2
+    usage.prophet: 1
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def percentile(a: numpy.ndarray, q: numpy.ndarray):
+    """
+    usage.matplotlib: 1
+    usage.sklearn: 5
     """
     ...
 
@@ -61699,14 +66432,6 @@ def percentile(a: numpy.ndarray, q: numpy.ndarray, interpolation: Literal["midpo
 
 
 @overload
-def percentile(a: numpy.ndarray, q: float, axis: int):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def percentile(a: numpy.ndarray, q: Tuple[int, int], axis: int):
     """
     usage.sklearn: 3
@@ -61725,15 +66450,9 @@ def percentile(a: numpy.ndarray, q: int, axis: int):
 def percentile(
     _0: pandas.core.series.Series = ...,
     /,
-    a: Union[
-        numpy.ndarray,
-        int,
-        pandas.core.series.Series,
-        pandas.core.frame.DataFrame,
-        List[Union[float, int, numpy.float64]],
-    ] = ...,
+    a: object = ...,
     q: object = ...,
-    axis: Union[int, Tuple[int, ...], List[int], None] = ...,
+    axis: Union[int, List[int], Tuple[int, ...], None] = ...,
     interpolation: str = ...,
     keepdims: bool = ...,
 ):
@@ -61742,10 +66461,12 @@ def percentile(
     usage.koalas: 2
     usage.matplotlib: 9
     usage.pandas: 54
+    usage.prophet: 2
     usage.scipy: 27
     usage.seaborn: 18
     usage.skimage: 11
     usage.sklearn: 25
+    usage.statsmodels: 10
     usage.xarray: 20
     """
     ...
@@ -61826,6 +66547,15 @@ def piecewise(
 
 
 @overload
+def place(arr: numpy.ndarray, mask: numpy.ndarray, vals: numpy.ndarray):
+    """
+    usage.scipy: 100
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def place(arr: numpy.ndarray, mask: numpy.ndarray, vals: object):
     """
     usage.pandas: 19
@@ -61837,14 +66567,6 @@ def place(arr: numpy.ndarray, mask: numpy.ndarray, vals: object):
 def place(arr: numpy.ndarray, mask: numpy.bool_, vals: numpy.ndarray):
     """
     usage.scipy: 36
-    """
-    ...
-
-
-@overload
-def place(arr: numpy.ndarray, mask: numpy.ndarray, vals: numpy.ndarray):
-    """
-    usage.scipy: 100
     """
     ...
 
@@ -62003,6 +66725,7 @@ def place(
     """
     usage.pandas: 19
     usage.scipy: 269
+    usage.statsmodels: 1
     """
     ...
 
@@ -62130,17 +66853,18 @@ def polyint(p: Union[List[float], numpy.poly1d, numpy.ndarray]):
 
 
 @overload
-def polymul(a1: List[float], a2: numpy.ndarray):
+def polymul(a1: numpy.ndarray, a2: numpy.ndarray):
     """
-    usage.scipy: 2
+    usage.scipy: 23
+    usage.statsmodels: 10
     """
     ...
 
 
 @overload
-def polymul(a1: numpy.ndarray, a2: numpy.ndarray):
+def polymul(a1: List[float], a2: numpy.ndarray):
     """
-    usage.scipy: 23
+    usage.scipy: 2
     """
     ...
 
@@ -62154,11 +66878,12 @@ def polymul(a1: List[Union[float, int]], a2: List[Union[float, int]]):
 
 
 def polymul(
-    a1: Union[List[Union[float, int]], numpy.ndarray],
-    a2: Union[List[Union[int, float]], numpy.ndarray],
+    a1: Union[numpy.ndarray, List[Union[int, float]]],
+    a2: Union[numpy.ndarray, List[Union[float, int]]],
 ):
     """
     usage.scipy: 26
+    usage.statsmodels: 10
     """
     ...
 
@@ -62166,6 +66891,23 @@ def polymul(
 def polysub(a1: numpy.ndarray, a2: numpy.ndarray):
     """
     usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def polyval(p: numpy.ndarray, x: numpy.float64):
+    """
+    usage.scipy: 4
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def polyval(p: numpy.ndarray, x: float):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -62189,14 +66931,6 @@ def polyval(p: List[float], x: numpy.ndarray):
 
 @overload
 def polyval(p: List[int], x: numpy.ndarray):
-    """
-    usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def polyval(p: numpy.ndarray, x: numpy.float64):
     """
     usage.scipy: 4
     """
@@ -62268,12 +67002,13 @@ def polyval(p: List[float], x: float):
 
 
 def polyval(
-    p: Union[numpy.ndarray, numpy.poly1d, List[Union[int, float]]],
-    x: Union[numpy.ndarray, numpy.float64, numpy.complex128, float],
+    p: Union[numpy.ndarray, numpy.poly1d, List[Union[float, int]]],
+    x: Union[numpy.ndarray, float, numpy.complex128, numpy.float64],
 ):
     """
     usage.scipy: 36
     usage.seaborn: 1
+    usage.statsmodels: 2
     """
     ...
 
@@ -62321,6 +67056,7 @@ def prod(a: numpy.ndarray):
     usage.scipy: 15
     usage.skimage: 3
     usage.sklearn: 2
+    usage.statsmodels: 5
     """
     ...
 
@@ -62427,6 +67163,7 @@ def prod(a: numpy.ndarray, axis: int):
     """
     usage.dask: 4
     usage.scipy: 7
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -62714,6 +67451,7 @@ def prod(
     usage.scipy: 63
     usage.skimage: 9
     usage.sklearn: 10
+    usage.statsmodels: 6
     usage.xarray: 22
     """
     ...
@@ -62742,6 +67480,30 @@ def promote_types(_0: numpy.dtype, _1: numpy.dtype, /):
 
 
 @overload
+def promote_types(_0: numpy.dtype, _1: Type[numpy.float64], /):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def promote_types(_0: Type[float], _1: numpy.dtype, /):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def promote_types(_0: Type[numpy.float64], _1: numpy.dtype, /):
+    """
+    usage.statsmodels: 11
+    """
+    ...
+
+
+@overload
 def promote_types(_0: numpy.dtype, _1: Literal["float64"], /):
     """
     usage.scipy: 2
@@ -62765,13 +67527,16 @@ def promote_types(_0: numpy.dtype, _1: Type[float], /):
     ...
 
 
-def promote_types(_0: numpy.dtype, _1: Union[type, numpy.dtype, Literal["float64"]], /):
+def promote_types(
+    _0: Union[numpy.dtype, type], _1: Union[type, numpy.dtype, Literal["float64"]], /
+):
     """
     usage.dask: 7
     usage.matplotlib: 9
     usage.pandas: 55
     usage.scipy: 13
     usage.skimage: 1
+    usage.statsmodels: 17
     """
     ...
 
@@ -62782,14 +67547,15 @@ def ptp(a: numpy.ndarray):
     usage.matplotlib: 8
     usage.skimage: 10
     usage.sklearn: 1
+    usage.statsmodels: 6
     """
     ...
 
 
 @overload
-def ptp(a: Union[numpy.ndarray, pandas.core.series.Series]):
+def ptp(a: pandas.core.series.Series):
     """
-    usage.pandas: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -62800,6 +67566,15 @@ def ptp(a: numpy.ndarray, axis: int):
     usage.dask: 1
     usage.matplotlib: 1
     usage.sklearn: 1
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def ptp(a: Union[numpy.ndarray, pandas.core.series.Series]):
+    """
+    usage.pandas: 2
     """
     ...
 
@@ -62844,6 +67619,15 @@ def ptp(
     usage.seaborn: 1
     usage.skimage: 10
     usage.sklearn: 9
+    usage.statsmodels: 13
+    """
+    ...
+
+
+@overload
+def putmask(_0: numpy.ndarray, _1: numpy.ndarray, _2: int, /):
+    """
+    usage.statsmodels: 3
     """
     ...
 
@@ -62900,8 +67684,8 @@ def putmask(_0: numpy.ndarray, _1: numpy.ndarray, _2: numpy.ndarray, /):
 def putmask(
     _0: Union[
         numpy.ndarray,
-        pandas.core.arrays.interval.IntervalArray,
         pandas.core.arrays.categorical.Categorical,
+        pandas.core.arrays.interval.IntervalArray,
     ],
     _1: Union[
         numpy.ndarray, pandas.core.series.Series, numpy.int64, bool, Literal["foo"]
@@ -62913,10 +67697,12 @@ def putmask(
     usage.matplotlib: 4
     usage.pandas: 177
     usage.scipy: 12
+    usage.statsmodels: 3
     """
     ...
 
 
+@overload
 def quantile(
     a: numpy.ndarray,
     q: numpy.ndarray,
@@ -62924,6 +67710,27 @@ def quantile(
     interpolation: Literal["linear"],
 ):
     """
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def quantile(a: numpy.ndarray, q: List[float], axis: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+def quantile(
+    a: numpy.ndarray,
+    q: Union[List[float], numpy.ndarray],
+    axis: Union[int, numpy.ndarray],
+    interpolation: Literal["linear"] = ...,
+):
+    """
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -63006,6 +67813,7 @@ def ravel(a: numpy.ndarray):
     usage.seaborn: 1
     usage.skimage: 1
     usage.sklearn: 56
+    usage.statsmodels: 1
     usage.xarray: 27
     """
     ...
@@ -63204,6 +68012,41 @@ def ravel(a: xarray.core.variable.Variable):
 
 
 @overload
+def ravel(a: pandas.core.series.Series):
+    """
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def ravel(a: List[int]):
+    """
+    usage.matplotlib: 1
+    usage.scipy: 16
+    usage.sklearn: 3
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def ravel(a: numpy.ndarray, order: Literal["F"]):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def ravel(a: pandas.core.frame.DataFrame, order: Literal["F"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def ravel(a: Union[pandas.core.series.Series, pandas.core.frame.DataFrame]):
     """
     usage.pandas: 2
@@ -63223,16 +68066,6 @@ def ravel(a: List[None]):
 def ravel(a: List[float]):
     """
     usage.scipy: 10
-    """
-    ...
-
-
-@overload
-def ravel(a: List[int]):
-    """
-    usage.matplotlib: 1
-    usage.scipy: 16
-    usage.sklearn: 3
     """
     ...
 
@@ -63319,7 +68152,7 @@ def ravel(a: List[Literal["spam", "egg"]]):
     ...
 
 
-def ravel(a: object, order: Literal["K"] = ...):
+def ravel(a: object, order: Literal["K", "F"] = ...):
     """
     usage.dask: 1
     usage.koalas: 8
@@ -63330,6 +68163,7 @@ def ravel(a: object, order: Literal["K"] = ...):
     usage.seaborn: 5
     usage.skimage: 12
     usage.sklearn: 81
+    usage.statsmodels: 11
     usage.xarray: 49
     """
     ...
@@ -63599,6 +68433,31 @@ def real(val: xarray.core.dataarray.DataArray):
 
 
 @overload
+def real(val: List[numpy.float64]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def real(val: List[numpy.complex128]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def real(val: complex):
+    """
+    usage.scipy: 6
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def real(val: numpy.complex128):
     """
     usage.networkx: 1
@@ -63612,14 +68471,6 @@ def real(val: numpy.complex128):
 def real(val: List[complex]):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def real(val: complex):
-    """
-    usage.scipy: 6
     """
     ...
 
@@ -63696,7 +68547,31 @@ def real(val: object):
     usage.scipy: 106
     usage.skimage: 8
     usage.sklearn: 5
+    usage.statsmodels: 3
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def real_if_close(a: numpy.ndarray):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def real_if_close(a: numpy.ndarray, tol: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+def real_if_close(a: numpy.ndarray, tol: int = ...):
+    """
+    usage.statsmodels: 5
     """
     ...
 
@@ -63708,7 +68583,112 @@ def repeat(a: numpy.ndarray, repeats: int, axis: int):
     usage.matplotlib: 16
     usage.scipy: 1
     usage.sklearn: 3
+    usage.statsmodels: 6
     usage.xarray: 4
+    """
+    ...
+
+
+@overload
+def repeat(a: numpy.ndarray, repeats: int):
+    """
+    usage.matplotlib: 8
+    usage.scipy: 14
+    usage.seaborn: 1
+    usage.sklearn: 6
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def repeat(a: List[str], repeats: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def repeat(a: numpy.ndarray, repeats: numpy.ndarray):
+    """
+    usage.scipy: 2
+    usage.sklearn: 12
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def repeat(a: List[Union[int, float]], repeats: numpy.ndarray):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def repeat(a: numpy.ndarray, repeats: float):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def repeat(a: numpy.ndarray, repeats: numpy.ndarray, axis: int):
+    """
+    usage.sklearn: 13
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def repeat(a: List[int], repeats: int):
+    """
+    usage.matplotlib: 1
+    usage.scipy: 4
+    usage.sklearn: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def repeat(a: List[int], repeats: List[int]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def repeat(a: float, repeats: int):
+    """
+    usage.networkx: 4
+    usage.scipy: 1
+    usage.sklearn: 9
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def repeat(a: List[List[float]], repeats: int, axis: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def repeat(a: numpy.float64, repeats: int):
+    """
+    usage.scipy: 2
+    usage.sklearn: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -63726,17 +68706,6 @@ def repeat(
 ):
     """
     usage.pandas: 168
-    """
-    ...
-
-
-@overload
-def repeat(a: numpy.ndarray, repeats: int):
-    """
-    usage.matplotlib: 8
-    usage.scipy: 14
-    usage.seaborn: 1
-    usage.sklearn: 6
     """
     ...
 
@@ -63766,15 +68735,6 @@ def repeat(a: numpy.float32, repeats: int):
 
 
 @overload
-def repeat(a: numpy.float64, repeats: int):
-    """
-    usage.scipy: 2
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def repeat(a: bytes, repeats: int):
     """
     usage.scipy: 2
@@ -63791,36 +68751,9 @@ def repeat(a: numpy.complex64, repeats: int):
 
 
 @overload
-def repeat(a: List[int], repeats: List[int]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def repeat(a: numpy.ndarray, repeats: Tuple[int], axis: int):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def repeat(a: List[int], repeats: int):
-    """
-    usage.matplotlib: 1
-    usage.scipy: 4
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def repeat(a: numpy.ndarray, repeats: numpy.ndarray):
-    """
-    usage.scipy: 2
-    usage.sklearn: 12
     """
     ...
 
@@ -63831,16 +68764,6 @@ def repeat(a: int, repeats: int):
     usage.networkx: 3
     usage.scipy: 2
     usage.sklearn: 3
-    """
-    ...
-
-
-@overload
-def repeat(a: float, repeats: int):
-    """
-    usage.networkx: 4
-    usage.scipy: 1
-    usage.sklearn: 9
     """
     ...
 
@@ -63890,14 +68813,6 @@ def repeat(a: pandas.core.series.Series, repeats: int):
 def repeat(a: int, repeats: numpy.int64):
     """
     usage.sklearn: 4
-    """
-    ...
-
-
-@overload
-def repeat(a: numpy.ndarray, repeats: numpy.ndarray, axis: int):
-    """
-    usage.sklearn: 13
     """
     ...
 
@@ -63992,6 +68907,7 @@ def repeat(
     usage.scipy: 48
     usage.seaborn: 11
     usage.sklearn: 69
+    usage.statsmodels: 32
     usage.xarray: 4
     """
     ...
@@ -64051,6 +68967,7 @@ def reshape(a: numpy.ndarray, newshape: Tuple[int, int]):
     usage.scipy: 22
     usage.skimage: 21
     usage.sklearn: 51
+    usage.statsmodels: 66
     usage.xarray: 3
     """
     ...
@@ -64062,6 +68979,7 @@ def reshape(a: numpy.ndarray, newshape: Tuple[int, int, int]):
     usage.scipy: 9
     usage.skimage: 5
     usage.sklearn: 1
+    usage.statsmodels: 28
     usage.xarray: 1
     """
     ...
@@ -64090,6 +69008,7 @@ def reshape(a: numpy.ndarray, newshape: Tuple[int]):
     usage.scipy: 5
     usage.skimage: 3
     usage.sklearn: 1
+    usage.statsmodels: 6
     """
     ...
 
@@ -64099,6 +69018,7 @@ def reshape(a: numpy.ndarray, newshape: Tuple[int, int, int, int]):
     """
     usage.skimage: 4
     usage.sklearn: 1
+    usage.statsmodels: 2
     usage.xarray: 2
     """
     ...
@@ -64108,6 +69028,7 @@ def reshape(a: numpy.ndarray, newshape: Tuple[int, int, int, int]):
 def reshape(a: numpy.ndarray, newshape: Tuple[int, int, int, int, int]):
     """
     usage.skimage: 2
+    usage.statsmodels: 3
     """
     ...
 
@@ -64117,6 +69038,7 @@ def reshape(a: numpy.ndarray, newshape: Tuple[numpy.int64, numpy.int64]):
     """
     usage.scipy: 2
     usage.skimage: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -64150,6 +69072,22 @@ def reshape(a: List[float], newshape: Tuple[int]):
 def reshape(a: List[float], newshape: Tuple[None, ...]):
     """
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def reshape(a: numpy.float64, newshape: Tuple[int]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def reshape(a: numpy.ndarray, newshape: Tuple[None, ...]):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -64435,8 +69373,8 @@ def reshape(a: List[List[int]], newshape: Tuple[int, int]):
 
 
 def reshape(
-    a: Union[Tuple[numpy.ndarray, ...], list, numpy.ndarray],
-    newshape: Union[Tuple[Union[numpy.int64, int, None], ...], List[int], int],
+    a: Union[Tuple[numpy.ndarray, ...], list, numpy.ndarray, numpy.float64],
+    newshape: Union[Tuple[Union[None, int, numpy.int64], ...], List[int], int],
     order: Literal["F"] = ...,
 ):
     """
@@ -64445,6 +69383,7 @@ def reshape(
     usage.scipy: 50
     usage.skimage: 44
     usage.sklearn: 98
+    usage.statsmodels: 109
     usage.xarray: 16
     """
     ...
@@ -68186,6 +73125,7 @@ def roll(a: numpy.ndarray, shift: int):
     usage.matplotlib: 1
     usage.scipy: 2
     usage.skimage: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -68207,7 +73147,7 @@ def roll(a: numpy.ndarray, shift: int, axis: None):
 
 
 def roll(
-    a: Union[numpy.ndarray, List[Union[float, int]]],
+    a: Union[numpy.ndarray, List[Union[int, float]]],
     shift: Union[int, numpy.ndarray, Tuple[int, int]],
     axis: Union[int, None, Tuple[int, int]] = ...,
 ):
@@ -68217,6 +73157,7 @@ def roll(
     usage.pandas: 10
     usage.scipy: 8
     usage.skimage: 14
+    usage.statsmodels: 1
     usage.xarray: 1
     """
     ...
@@ -68229,6 +73170,7 @@ def rollaxis(a: numpy.ndarray, axis: int):
     usage.scipy: 47
     usage.skimage: 12
     usage.sklearn: 4
+    usage.statsmodels: 1
     """
     ...
 
@@ -68260,6 +73202,23 @@ def rollaxis(
     usage.scipy: 73
     usage.skimage: 14
     usage.sklearn: 5
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def roots(p: List[Union[int, numpy.float64]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def roots(p: List[numpy.float64]):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -68268,6 +73227,23 @@ def rollaxis(
 def roots(p: numpy.ndarray):
     """
     usage.scipy: 12
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def roots(p: statsmodels.tsa.innovations._arma_innovations._memoryviewslice):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def roots(p: List[Union[float, int]]):
+    """
+    usage.statsmodels: 5
     """
     ...
 
@@ -68288,9 +73264,16 @@ def roots(p: List[int]):
     ...
 
 
-def roots(p: Union[List[Union[float, int]], numpy.ndarray]):
+def roots(
+    p: Union[
+        numpy.ndarray,
+        statsmodels.tsa.innovations._arma_innovations._memoryviewslice,
+        List[Union[float, numpy.float64, int]],
+    ]
+):
     """
     usage.scipy: 23
+    usage.statsmodels: 17
     """
     ...
 
@@ -68326,6 +73309,7 @@ def round_(a: float):
     usage.matplotlib: 1
     usage.scipy: 6
     usage.skimage: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -68354,6 +73338,7 @@ def round_(a: numpy.ndarray):
     usage.scipy: 6
     usage.skimage: 11
     usage.sklearn: 4
+    usage.statsmodels: 5
     """
     ...
 
@@ -68390,6 +73375,7 @@ def round_(a: numpy.ndarray, decimals: int):
     usage.matplotlib: 2
     usage.scipy: 12
     usage.skimage: 13
+    usage.statsmodels: 9
     """
     ...
 
@@ -68466,6 +73452,7 @@ def round_(a: numpy.float64):
     usage.scipy: 7
     usage.skimage: 1
     usage.sklearn: 5
+    usage.statsmodels: 6
     """
     ...
 
@@ -68506,6 +73493,14 @@ def round_(a: object):
 def round_(a: xarray.core.dataarray.DataArray):
     """
     usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def round_(a: pandas.core.frame.DataFrame, decimals: int):
+    """
+    usage.statsmodels: 2
     """
     ...
 
@@ -68576,6 +73571,7 @@ def round_(
     usage.scipy: 50
     usage.skimage: 44
     usage.sklearn: 11
+    usage.statsmodels: 23
     usage.xarray: 3
     """
     ...
@@ -68790,6 +73786,7 @@ def searchsorted(a: numpy.ndarray, v: int):
     usage.scipy: 2
     usage.skimage: 3
     usage.sklearn: 3
+    usage.statsmodels: 1
     """
     ...
 
@@ -68802,6 +73799,7 @@ def searchsorted(a: numpy.ndarray, v: numpy.float64):
     usage.seaborn: 1
     usage.skimage: 1
     usage.sklearn: 3
+    usage.statsmodels: 2
     """
     ...
 
@@ -68838,7 +73836,69 @@ def searchsorted(a: numpy.ndarray, v: numpy.ndarray):
     usage.scipy: 9
     usage.seaborn: 1
     usage.sklearn: 54
+    usage.statsmodels: 3
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def searchsorted(a: numpy.ndarray, v: numpy.ndarray, side: Literal["left"]):
+    """
+    usage.dask: 3
+    usage.scipy: 3
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def searchsorted(a: numpy.ndarray, v: numpy.ndarray, side: Literal["right"]):
+    """
+    usage.dask: 3
+    usage.scipy: 11
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def searchsorted(a: numpy.ndarray, v: List[int], side: Literal["left"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def searchsorted(a: numpy.ndarray, v: List[int], side: Literal["right"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def searchsorted(a: numpy.ndarray, v: numpy.float64, side: Literal["right"]):
+    """
+    usage.sklearn: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def searchsorted(a: numpy.ndarray, v: numpy.int64, side: Literal["right"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def searchsorted(a: List[numpy.float64], v: numpy.float64):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -68876,24 +73936,6 @@ def searchsorted(
 ):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def searchsorted(a: numpy.ndarray, v: numpy.ndarray, side: Literal["left"]):
-    """
-    usage.dask: 3
-    usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def searchsorted(a: numpy.ndarray, v: numpy.ndarray, side: Literal["right"]):
-    """
-    usage.dask: 3
-    usage.scipy: 11
     """
     ...
 
@@ -69000,14 +74042,6 @@ def searchsorted(
 
 
 @overload
-def searchsorted(a: numpy.ndarray, v: numpy.float64, side: Literal["right"]):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def searchsorted(a: numpy.ndarray, v: Literal["bar"]):
     """
     usage.sklearn: 1
@@ -69058,6 +74092,7 @@ def searchsorted(
     usage.seaborn: 2
     usage.skimage: 4
     usage.sklearn: 69
+    usage.statsmodels: 21
     usage.xarray: 3
     """
     ...
@@ -69159,6 +74194,14 @@ def set_printoptions(threshold: int):
 
 
 @overload
+def set_printoptions(suppress: bool):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def set_printoptions(precision: int, threshold: int, edgeitems: int):
     """
     usage.sklearn: 1
@@ -69183,6 +74226,7 @@ def set_printoptions(
     """
     usage.skimage: 1
     usage.sklearn: 2
+    usage.statsmodels: 1
     usage.xarray: 3
     """
     ...
@@ -69408,6 +74452,7 @@ def shape(a: numpy.ndarray):
     usage.scipy: 184
     usage.skimage: 1
     usage.sklearn: 23
+    usage.statsmodels: 36
     usage.xarray: 9
     """
     ...
@@ -69586,6 +74631,7 @@ def shape(a: object):
     usage.seaborn: 1
     usage.skimage: 1
     usage.sklearn: 23
+    usage.statsmodels: 36
     usage.xarray: 12
     """
     ...
@@ -69664,9 +74710,10 @@ def sinc(x: object):
 
 
 @overload
-def size(a: Union[pandas.core.series.Series, numpy.ndarray]):
+def size(a: float):
     """
-    usage.pandas: 3
+    usage.scipy: 1
+    usage.statsmodels: 4
     """
     ...
 
@@ -69677,6 +74724,16 @@ def size(a: numpy.ndarray):
     usage.matplotlib: 6
     usage.scipy: 33
     usage.sklearn: 19
+    usage.statsmodels: 23
+    """
+    ...
+
+
+@overload
+def size(a: int):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 12
     """
     ...
 
@@ -69687,6 +74744,7 @@ def size(a: numpy.ndarray, axis: int):
     usage.matplotlib: 4
     usage.scipy: 7
     usage.sklearn: 1
+    usage.statsmodels: 8
     """
     ...
 
@@ -69695,22 +74753,55 @@ def size(a: numpy.ndarray, axis: int):
 def size(a: numpy.float64):
     """
     usage.scipy: 3
+    usage.statsmodels: 9
     """
     ...
 
 
 @overload
-def size(a: int):
+def size(a: pandas.core.series.Series):
     """
-    usage.scipy: 2
+    usage.statsmodels: 2
     """
     ...
 
 
 @overload
-def size(a: float):
+def size(a: pandas.core.frame.DataFrame):
     """
-    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def size(a: Tuple[numpy.float64, numpy.float64, numpy.int64]):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def size(a: Tuple[numpy.float64, numpy.float64]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def size(a: Tuple[numpy.float64, numpy.float64, numpy.float64]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def size(a: Union[pandas.core.series.Series, numpy.ndarray]):
+    """
+    usage.pandas: 3
     """
     ...
 
@@ -69851,6 +74942,7 @@ def size(a: object, axis: int = ...):
     usage.pandas: 3
     usage.scipy: 56
     usage.sklearn: 22
+    usage.statsmodels: 66
     """
     ...
 
@@ -69863,10 +74955,12 @@ def sort(a: numpy.ndarray):
     usage.modin: 1
     usage.networkx: 2
     usage.pandas: 33
+    usage.prophet: 1
     usage.scipy: 163
     usage.seaborn: 18
     usage.skimage: 13
     usage.sklearn: 39
+    usage.statsmodels: 23
     usage.xarray: 2
     """
     ...
@@ -69879,6 +74973,34 @@ def sort(a: numpy.ndarray, axis: int):
     usage.scipy: 1
     usage.skimage: 1
     usage.sklearn: 5
+    usage.statsmodels: 11
+    """
+    ...
+
+
+@overload
+def sort(a: List[int]):
+    """
+    usage.scipy: 5
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def sort(a: List[int], axis: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def sort(a: numpy.ndarray, axis: None):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -69941,27 +75063,10 @@ def sort(a: List[Union[float, complex]]):
 
 
 @overload
-def sort(a: numpy.ndarray, axis: None):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def sort(a: numpy.ma.core.MaskedArray):
     """
     usage.scipy: 2
     usage.seaborn: 3
-    """
-    ...
-
-
-@overload
-def sort(a: List[int]):
-    """
-    usage.scipy: 5
-    usage.sklearn: 1
     """
     ...
 
@@ -70032,10 +75137,12 @@ def sort(
     usage.modin: 2
     usage.networkx: 2
     usage.pandas: 33
+    usage.prophet: 1
     usage.scipy: 217
     usage.seaborn: 25
     usage.skimage: 14
     usage.sklearn: 50
+    usage.statsmodels: 37
     usage.xarray: 2
     """
     ...
@@ -70052,15 +75159,7 @@ def sort_complex(a: numpy.ndarray):
 def split(ary: numpy.ndarray, indices_or_sections: int):
     """
     usage.skimage: 1
-    """
-    ...
-
-
-@overload
-def split(ary: numpy.ndarray, indices_or_sections: List[int], axis: int):
-    """
-    usage.pandas: 4
-    usage.scipy: 8
+    usage.statsmodels: 9
     """
     ...
 
@@ -70070,6 +75169,16 @@ def split(ary: numpy.ndarray, indices_or_sections: numpy.ndarray):
     """
     usage.matplotlib: 2
     usage.sklearn: 7
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def split(ary: numpy.ndarray, indices_or_sections: List[int], axis: int):
+    """
+    usage.pandas: 4
+    usage.scipy: 8
     """
     ...
 
@@ -70085,6 +75194,7 @@ def split(
     usage.scipy: 8
     usage.skimage: 1
     usage.sklearn: 7
+    usage.statsmodels: 12
     """
     ...
 
@@ -70095,6 +75205,7 @@ def squeeze(a: numpy.ndarray, axis: int):
     usage.dask: 1
     usage.scipy: 1
     usage.skimage: 8
+    usage.statsmodels: 1
     """
     ...
 
@@ -70106,6 +75217,7 @@ def squeeze(a: numpy.ndarray):
     usage.seaborn: 1
     usage.skimage: 12
     usage.sklearn: 16
+    usage.statsmodels: 85
     """
     ...
 
@@ -70129,20 +75241,9 @@ def squeeze(a: numpy.ndarray, axis: Tuple[int, int]):
 
 
 @overload
-def squeeze(
-    a: Union[pandas.core.frame.DataFrame, numpy.ndarray, pandas.core.series.Series]
-):
+def squeeze(a: List[numpy.ndarray]):
     """
-    usage.pandas: 5
-    """
-    ...
-
-
-@overload
-def squeeze(a: numpy.float64):
-    """
-    usage.scipy: 6
-    usage.sklearn: 1
+    usage.statsmodels: 6
     """
     ...
 
@@ -70152,6 +75253,68 @@ def squeeze(a: float):
     """
     usage.scipy: 3
     usage.sklearn: 1
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def squeeze(a: List[numpy.float64]):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def squeeze(a: numpy.float64):
+    """
+    usage.scipy: 6
+    usage.sklearn: 1
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def squeeze(a: numpy.bool_):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def squeeze(a: numpy.recarray):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def squeeze(a: List[float]):
+    """
+    usage.sklearn: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def squeeze(a: List[List[Union[int, float]]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def squeeze(
+    a: Union[pandas.core.frame.DataFrame, numpy.ndarray, pandas.core.series.Series]
+):
+    """
+    usage.pandas: 5
     """
     ...
 
@@ -70182,14 +75345,6 @@ def squeeze(a: pandas.core.series.Series):
 
 
 @overload
-def squeeze(a: List[float]):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def squeeze(a: int):
     """
     usage.sklearn: 1
@@ -70213,6 +75368,7 @@ def squeeze(a: object, axis: Union[int, None, Tuple[int, ...]] = ...):
     usage.seaborn: 2
     usage.skimage: 20
     usage.sklearn: 23
+    usage.statsmodels: 111
     usage.xarray: 2
     """
     ...
@@ -70276,6 +75432,7 @@ def stack(arrays: List[numpy.ndarray]):
     usage.scipy: 1
     usage.seaborn: 5
     usage.skimage: 2
+    usage.statsmodels: 3
     usage.xarray: 2
     """
     ...
@@ -70372,7 +75529,7 @@ def stack(arrays: Tuple[numpy.ndarray]):
 
 
 def stack(
-    arrays: Union[list, Tuple[Union[numpy.ndarray, numpy.float64], ...]],
+    arrays: Union[list, Tuple[Union[numpy.float64, numpy.ndarray], ...]],
     axis: int = ...,
 ):
     """
@@ -70381,6 +75538,7 @@ def stack(
     usage.scipy: 3
     usage.seaborn: 5
     usage.skimage: 38
+    usage.statsmodels: 3
     usage.xarray: 34
     """
     ...
@@ -70394,6 +75552,7 @@ def std(a: numpy.ndarray):
     usage.seaborn: 1
     usage.skimage: 2
     usage.sklearn: 8
+    usage.statsmodels: 9
     usage.xarray: 1
     """
     ...
@@ -70420,6 +75579,7 @@ def std(a: numpy.ndarray, axis: int):
     """
     usage.dask: 12
     usage.sklearn: 6
+    usage.statsmodels: 6
     usage.xarray: 3
     """
     ...
@@ -70499,6 +75659,41 @@ def std(a: numpy.ndarray, axis: Tuple[int, int]):
 
 
 @overload
+def std(a: numpy.ndarray, ddof: int):
+    """
+    usage.dask: 2
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def std(a: numpy.ndarray, axis: int, ddof: int):
+    """
+    usage.scipy: 6
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def std(a: numpy.flatiter):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def std(a: pandas.core.series.Series, ddof: int):
+    """
+    usage.dask: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def std(
     a: Union[numpy.ndarray, pandas.core.series.Series],
     axis: Union[None, int] = ...,
@@ -70514,14 +75709,6 @@ def std(
 def std(a: list):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def std(a: numpy.ndarray, axis: int, ddof: int):
-    """
-    usage.scipy: 6
     """
     ...
 
@@ -70672,22 +75859,6 @@ def std(
     ...
 
 
-@overload
-def std(a: pandas.core.series.Series, ddof: int):
-    """
-    usage.dask: 2
-    """
-    ...
-
-
-@overload
-def std(a: numpy.ndarray, ddof: int):
-    """
-    usage.dask: 2
-    """
-    ...
-
-
 def std(
     a: object,
     axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
@@ -70703,6 +75874,7 @@ def std(
     usage.seaborn: 2
     usage.skimage: 2
     usage.sklearn: 14
+    usage.statsmodels: 26
     usage.xarray: 16
     """
     ...
@@ -70723,9 +75895,11 @@ def sum(a: numpy.ndarray):
     usage.dask: 16
     usage.matplotlib: 13
     usage.networkx: 5
+    usage.prophet: 3
     usage.scipy: 182
     usage.skimage: 109
     usage.sklearn: 250
+    usage.statsmodels: 276
     usage.xarray: 2
     """
     ...
@@ -70740,6 +75914,7 @@ def sum(a: numpy.ndarray, axis: int):
     usage.scipy: 128
     usage.skimage: 15
     usage.sklearn: 105
+    usage.statsmodels: 62
     usage.xarray: 9
     """
     ...
@@ -70874,6 +76049,7 @@ def sum(a: numpy.bool_, axis: None):
 @overload
 def sum(a: List[Tuple[int, int]], axis: int):
     """
+    usage.statsmodels: 2
     usage.xarray: 2
     """
     ...
@@ -71065,6 +76241,113 @@ def sum(a: numpy.ndarray, axis: Tuple[int, int, int]):
 
 
 @overload
+def sum(a: numpy.float64):
+    """
+    usage.scipy: 1
+    usage.sklearn: 2
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.flatiter):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def sum(a: List[float]):
+    """
+    usage.matplotlib: 2
+    usage.scipy: 5
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def sum(a: List[numpy.float64]):
+    """
+    usage.scipy: 23
+    usage.sklearn: 3
+    usage.statsmodels: 20
+    """
+    ...
+
+
+@overload
+def sum(a: statsmodels.tsa.statespace._kalman_filter._memoryviewslice):
+    """
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def sum(a: pandas.core.series.Series):
+    """
+    usage.dask: 3
+    usage.prophet: 3
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.int64):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def sum(a: List[int]):
+    """
+    usage.scipy: 3
+    usage.sklearn: 6
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def sum(a: List[Union[int, numpy.int64]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def sum(a: float):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def sum(a: pandas.core.series.Series, axis: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def sum(a: List[Union[float, int]]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def sum(
     a: object,
     axis: Union[int, None] = ...,
@@ -71083,24 +76366,6 @@ def sum(
 def sum(a: numpy.ndarray, dtype: Type[int]):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def sum(a: List[numpy.float64]):
-    """
-    usage.scipy: 23
-    usage.sklearn: 3
-    """
-    ...
-
-
-@overload
-def sum(a: List[float]):
-    """
-    usage.matplotlib: 2
-    usage.scipy: 5
     """
     ...
 
@@ -71186,15 +76451,6 @@ def sum(a: scipy.sparse.bsr.bsr_matrix):
 
 
 @overload
-def sum(a: List[int]):
-    """
-    usage.scipy: 3
-    usage.sklearn: 6
-    """
-    ...
-
-
-@overload
 def sum(a: numpy.ndarray, axis: None, keepdims: bool):
     """
     usage.scipy: 2
@@ -71223,15 +76479,6 @@ def sum(a: numpy.float64, axis: None, keepdims: bool):
 def sum(a: List[Union[int, float]]):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def sum(a: numpy.float64):
-    """
-    usage.scipy: 1
-    usage.sklearn: 2
     """
     ...
 
@@ -71639,14 +76886,6 @@ def sum(a: Tuple[int, int, int, int, int]):
 
 
 @overload
-def sum(a: pandas.core.series.Series):
-    """
-    usage.dask: 3
-    """
-    ...
-
-
-@overload
 def sum(a: dask.dataframe.core.DataFrame, axis: int, out: dask.dataframe.core.Series):
     """
     usage.dask: 1
@@ -71682,14 +76921,6 @@ def sum(a: dask.dataframe.core.DataFrame):
 def sum(a: numpy.ndarray, dtype: Type[numpy.float64]):
     """
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def sum(a: float):
-    """
-    usage.sklearn: 1
     """
     ...
 
@@ -71800,7 +77031,7 @@ def sum(a: List[int], axis: None, dtype: Type[numpy.float64]):
 
 def sum(
     a: object,
-    axis: Union[int, Tuple[Union[int, None], ...], None] = ...,
+    axis: Union[int, Tuple[Union[None, int], ...], None] = ...,
     out: Union[
         numpy.ndarray,
         numpy.float64,
@@ -71817,10 +77048,12 @@ def sum(
     usage.matplotlib: 30
     usage.networkx: 8
     usage.pandas: 38
+    usage.prophet: 6
     usage.scipy: 443
     usage.seaborn: 3
     usage.skimage: 133
     usage.sklearn: 397
+    usage.statsmodels: 392
     usage.xarray: 75
     """
     ...
@@ -71833,6 +77066,7 @@ def swapaxes(a: numpy.ndarray, axis1: int, axis2: int):
     usage.scipy: 48
     usage.skimage: 4
     usage.sklearn: 2
+    usage.statsmodels: 1
     usage.xarray: 8
     """
     ...
@@ -71852,6 +77086,7 @@ def swapaxes(a: object, axis1: int, axis2: int):
     usage.scipy: 48
     usage.skimage: 4
     usage.sklearn: 2
+    usage.statsmodels: 1
     usage.xarray: 9
     """
     ...
@@ -71863,6 +77098,7 @@ def take(a: numpy.ndarray, indices: numpy.ndarray):
     usage.scipy: 1
     usage.skimage: 1
     usage.sklearn: 3
+    usage.statsmodels: 3
     """
     ...
 
@@ -71872,6 +77108,7 @@ def take(a: numpy.ndarray, indices: int, axis: int):
     """
     usage.dask: 1
     usage.scipy: 22
+    usage.statsmodels: 4
     usage.xarray: 2
     """
     ...
@@ -71892,6 +77129,7 @@ def take(a: numpy.ndarray, indices: numpy.ndarray, axis: int):
     usage.dask: 1
     usage.scipy: 21
     usage.sklearn: 1
+    usage.statsmodels: 2
     usage.xarray: 1
     """
     ...
@@ -72074,6 +77312,7 @@ def take(
     usage.seaborn: 2
     usage.skimage: 1
     usage.sklearn: 10
+    usage.statsmodels: 9
     usage.xarray: 13
     """
     ...
@@ -72220,6 +77459,7 @@ def tile(A: numpy.ndarray, reps: Tuple[int, int]):
     usage.scipy: 6
     usage.skimage: 9
     usage.sklearn: 8
+    usage.statsmodels: 7
     usage.xarray: 1
     """
     ...
@@ -72230,6 +77470,7 @@ def tile(A: numpy.ndarray, reps: Tuple[int, int, int]):
     """
     usage.dask: 2
     usage.skimage: 2
+    usage.statsmodels: 3
     usage.xarray: 5
     """
     ...
@@ -72262,6 +77503,43 @@ def tile(A: Tuple[int, int], reps: List[int]):
 
 
 @overload
+def tile(A: numpy.ndarray, reps: int):
+    """
+    usage.dask: 4
+    usage.matplotlib: 9
+    usage.scipy: 12
+    usage.seaborn: 3
+    usage.sklearn: 3
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def tile(A: List[Literal["x5", "x4", "x3", "x2", "x1"]], reps: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def tile(A: Tuple[numpy.ndarray, numpy.ndarray], reps: int):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def tile(A: List[int], reps: int):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
 def tile(
     A: Union[
         numpy.ndarray,
@@ -72273,18 +77551,6 @@ def tile(
 ):
     """
     usage.pandas: 49
-    """
-    ...
-
-
-@overload
-def tile(A: numpy.ndarray, reps: int):
-    """
-    usage.dask: 4
-    usage.matplotlib: 9
-    usage.scipy: 12
-    usage.seaborn: 3
-    usage.sklearn: 3
     """
     ...
 
@@ -72518,6 +77784,7 @@ def tile(A: object, reps: Union[List[int], int, numpy.int64, Tuple[int, ...]]):
     usage.seaborn: 7
     usage.skimage: 16
     usage.sklearn: 31
+    usage.statsmodels: 24
     usage.xarray: 6
     """
     ...
@@ -72528,6 +77795,7 @@ def trace(a: numpy.ndarray):
     """
     usage.scipy: 2
     usage.sklearn: 7
+    usage.statsmodels: 17
     """
     ...
 
@@ -72552,6 +77820,7 @@ def trace(a: numpy.ndarray, axis1: int = ..., axis2: int = ...):
     """
     usage.scipy: 2
     usage.sklearn: 11
+    usage.statsmodels: 17
     """
     ...
 
@@ -72562,6 +77831,7 @@ def transpose(a: List[numpy.ndarray]):
     usage.matplotlib: 2
     usage.skimage: 2
     usage.sklearn: 18
+    usage.statsmodels: 6
     """
     ...
 
@@ -72582,6 +77852,7 @@ def transpose(a: numpy.ndarray):
     usage.seaborn: 1
     usage.skimage: 3
     usage.sklearn: 11
+    usage.statsmodels: 8
     """
     ...
 
@@ -72610,6 +77881,7 @@ def transpose(a: numpy.ndarray, axes: Tuple[int, int, int, int]):
     usage.scipy: 1
     usage.skimage: 2
     usage.sklearn: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -72639,6 +77911,7 @@ def transpose(a: numpy.ndarray, axes: Tuple[int, int, int]):
     usage.scipy: 8
     usage.skimage: 1
     usage.sklearn: 1
+    usage.statsmodels: 9
     usage.xarray: 3
     """
     ...
@@ -72858,6 +78131,7 @@ def transpose(
     usage.seaborn: 1
     usage.skimage: 21
     usage.sklearn: 37
+    usage.statsmodels: 24
     usage.xarray: 8
     """
     ...
@@ -72890,6 +78164,14 @@ def trapz(y: numpy.ndarray, x: numpy.ndarray, axis: int):
 
 
 @overload
+def trapz(y: numpy.ndarray, dx: numpy.float64):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def trapz(y: numpy.ndarray, x: numpy.ndarray):
     """
     usage.scipy: 1
@@ -72900,14 +78182,15 @@ def trapz(y: numpy.ndarray, x: numpy.ndarray):
 
 
 def trapz(
-    y: Union[numpy.ndarray, dask.array.core.Array, xarray.core.dataarray.DataArray],
-    x: Union[numpy.ndarray, xarray.core.dataarray.DataArray],
+    y: Union[numpy.ndarray, xarray.core.dataarray.DataArray, dask.array.core.Array],
+    x: Union[numpy.ndarray, xarray.core.dataarray.DataArray] = ...,
     axis: int = ...,
 ):
     """
     usage.scipy: 1
     usage.seaborn: 4
     usage.sklearn: 2
+    usage.statsmodels: 1
     usage.xarray: 4
     """
     ...
@@ -72962,6 +78245,7 @@ def tril(m: numpy.ndarray):
     usage.matplotlib: 1
     usage.scipy: 57
     usage.skimage: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -72983,14 +78267,7 @@ def tril(m: numpy.ndarray, k: int = ...):
     usage.scipy: 88
     usage.skimage: 1
     usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def tril_indices(n: int):
-    """
-    usage.scipy: 6
+    usage.statsmodels: 1
     """
     ...
 
@@ -73000,6 +78277,16 @@ def tril_indices(n: int, k: int):
     """
     usage.scipy: 9
     usage.sklearn: 1
+    usage.statsmodels: 9
+    """
+    ...
+
+
+@overload
+def tril_indices(n: int):
+    """
+    usage.scipy: 6
+    usage.statsmodels: 7
     """
     ...
 
@@ -73008,6 +78295,16 @@ def tril_indices(n: int, k: int = ...):
     """
     usage.scipy: 15
     usage.sklearn: 1
+    usage.statsmodels: 16
+    """
+    ...
+
+
+@overload
+def tril_indices_from(arr: numpy.ndarray):
+    """
+    usage.seaborn: 1
+    usage.statsmodels: 5
     """
     ...
 
@@ -73021,18 +78318,11 @@ def tril_indices_from(arr: numpy.ndarray, k: int):
     ...
 
 
-@overload
-def tril_indices_from(arr: numpy.ndarray):
-    """
-    usage.seaborn: 1
-    """
-    ...
-
-
 def tril_indices_from(arr: numpy.ndarray, k: int = ...):
     """
     usage.scipy: 3
     usage.seaborn: 4
+    usage.statsmodels: 5
     """
     ...
 
@@ -73066,6 +78356,7 @@ def triu(m: numpy.ndarray):
     usage.dask: 7
     usage.scipy: 182
     usage.skimage: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -73084,14 +78375,7 @@ def triu(m: numpy.ndarray, k: int = ...):
     usage.dask: 8
     usage.scipy: 205
     usage.skimage: 1
-    """
-    ...
-
-
-@overload
-def triu_indices(n: int):
-    """
-    usage.scipy: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -73101,6 +78385,16 @@ def triu_indices(n: int, k: int):
     """
     usage.scipy: 1
     usage.sklearn: 2
+    usage.statsmodels: 13
+    """
+    ...
+
+
+@overload
+def triu_indices(n: int):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 5
     """
     ...
 
@@ -73109,6 +78403,7 @@ def triu_indices(n: int, k: int = ...):
     """
     usage.scipy: 2
     usage.sklearn: 2
+    usage.statsmodels: 18
     """
     ...
 
@@ -73134,6 +78429,16 @@ def triu_indices_from(arr: numpy.ndarray, k: int = ...):
     """
     usage.scipy: 6
     usage.seaborn: 6
+    """
+    ...
+
+
+@overload
+def union1d(ar1: numpy.ndarray, ar2: numpy.ndarray):
+    """
+    usage.dask: 1
+    usage.sklearn: 12
+    usage.statsmodels: 1
     """
     ...
 
@@ -73178,23 +78483,15 @@ def union1d(ar1: dask.array.core.Array, ar2: dask.array.core.Array):
     ...
 
 
-@overload
-def union1d(ar1: numpy.ndarray, ar2: numpy.ndarray):
-    """
-    usage.dask: 1
-    usage.sklearn: 12
-    """
-    ...
-
-
 def union1d(
-    ar1: Union[numpy.ndarray, dask.array.core.Array, List[Union[int, float, complex]]],
+    ar1: Union[numpy.ndarray, dask.array.core.Array, List[Union[complex, float, int]]],
     ar2: Union[numpy.ndarray, dask.array.core.Array],
 ):
     """
     usage.dask: 2
     usage.scipy: 25
     usage.sklearn: 12
+    usage.statsmodels: 1
     """
     ...
 
@@ -73205,6 +78502,7 @@ def unique(ar: numpy.ndarray, return_inverse: bool):
     usage.scipy: 14
     usage.skimage: 5
     usage.sklearn: 125
+    usage.statsmodels: 18
     usage.xarray: 3
     """
     ...
@@ -73219,6 +78517,7 @@ def unique(ar: numpy.ndarray):
     usage.seaborn: 5
     usage.skimage: 48
     usage.sklearn: 385
+    usage.statsmodels: 45
     usage.xarray: 10
     """
     ...
@@ -73229,6 +78528,7 @@ def unique(ar: numpy.ndarray, return_inverse: bool, return_counts: bool):
     """
     usage.skimage: 3
     usage.sklearn: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -73239,6 +78539,7 @@ def unique(ar: numpy.ndarray, return_counts: bool):
     usage.scipy: 5
     usage.skimage: 8
     usage.sklearn: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -73249,6 +78550,7 @@ def unique(ar: numpy.ndarray, return_index: bool):
     usage.scipy: 5
     usage.skimage: 4
     usage.sklearn: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -73257,6 +78559,41 @@ def unique(ar: numpy.ndarray, return_index: bool):
 def unique(ar: xarray.core.dataarray.DataArray):
     """
     usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def unique(ar: List[numpy.int32]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def unique(ar: List[Literal["b", "a"]]):
+    """
+    usage.sklearn: 2
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def unique(ar: numpy.ndarray, return_index: bool, return_inverse: bool):
+    """
+    usage.matplotlib: 1
+    usage.sklearn: 6
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def unique(ar: List[Literal["4"]], return_inverse: bool):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -73296,28 +78633,20 @@ def unique(ar: numpy.ndarray, axis: int):
 
 
 @overload
-def unique(ar: numpy.ma.core.MaskedArray):
-    """
-    usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def unique(ar: numpy.ndarray, return_index: bool, return_inverse: bool):
-    """
-    usage.matplotlib: 1
-    usage.sklearn: 6
-    """
-    ...
-
-
-@overload
 def unique(ar: pandas.core.series.Series):
     """
     usage.dask: 3
+    usage.prophet: 4
     usage.seaborn: 4
     usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def unique(ar: numpy.ma.core.MaskedArray):
+    """
+    usage.matplotlib: 1
     """
     ...
 
@@ -73487,14 +78816,6 @@ def unique(ar: List[Union[float, int]], return_inverse: bool):
 
 
 @overload
-def unique(ar: List[Literal["b", "a"]]):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def unique(ar: List[Literal["b", "c", "a"]]):
     """
     usage.sklearn: 1
@@ -73520,10 +78841,12 @@ def unique(
     usage.dask: 29
     usage.matplotlib: 8
     usage.pandas: 22
+    usage.prophet: 4
     usage.scipy: 66
     usage.seaborn: 11
     usage.skimage: 68
     usage.sklearn: 574
+    usage.statsmodels: 72
     usage.xarray: 15
     """
     ...
@@ -73532,6 +78855,7 @@ def unique(
 def unpackbits(_0: numpy.ndarray, /):
     """
     usage.sklearn: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -73756,6 +79080,7 @@ def vander(x: numpy.ndarray, N: int):
     """
     usage.scipy: 1
     usage.sklearn: 1
+    usage.statsmodels: 6
     """
     ...
 
@@ -73772,6 +79097,7 @@ def vander(x: numpy.ndarray, N: int = ...):
     """
     usage.scipy: 2
     usage.sklearn: 1
+    usage.statsmodels: 6
     """
     ...
 
@@ -73825,6 +79151,7 @@ def var(a: numpy.ndarray, axis: int, ddof: int):
     """
     usage.scipy: 14
     usage.sklearn: 13
+    usage.statsmodels: 3
     usage.xarray: 3
     """
     ...
@@ -73912,6 +79239,42 @@ def var(a: object, axis: int):
 
 
 @overload
+def var(a: numpy.ndarray):
+    """
+    usage.dask: 20
+    usage.scipy: 3
+    usage.sklearn: 8
+    usage.statsmodels: 18
+    """
+    ...
+
+
+@overload
+def var(a: numpy.ndarray, ddof: int):
+    """
+    usage.sklearn: 4
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def var(a: pandas.core.series.Series):
+    """
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def var(a: List[float]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def var(
     a: Union[numpy.ndarray, pandas.core.series.Series],
     axis: Union[None, int] = ...,
@@ -73919,16 +79282,6 @@ def var(
 ):
     """
     usage.pandas: 13
-    """
-    ...
-
-
-@overload
-def var(a: numpy.ndarray):
-    """
-    usage.dask: 20
-    usage.scipy: 3
-    usage.sklearn: 8
     """
     ...
 
@@ -74055,14 +79408,6 @@ def var(
     ...
 
 
-@overload
-def var(a: numpy.ndarray, ddof: int):
-    """
-    usage.sklearn: 4
-    """
-    ...
-
-
 def var(
     a: object,
     axis: Union[int, None, Tuple[Union[int, None], ...]] = ...,
@@ -74076,6 +79421,7 @@ def var(
     usage.pandas: 13
     usage.scipy: 19
     usage.sklearn: 55
+    usage.statsmodels: 33
     usage.xarray: 31
     """
     ...
@@ -74089,9 +79435,26 @@ def vdot(_0: numpy.ndarray, _1: numpy.ndarray, /):
     ...
 
 
+@overload
+def vsplit(ary: numpy.ndarray, indices_or_sections: List[int]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def vsplit(ary: numpy.ndarray, indices_or_sections: int):
     """
     usage.sklearn: 2
+    """
+    ...
+
+
+def vsplit(ary: numpy.ndarray, indices_or_sections: Union[int, List[int]]):
+    """
+    usage.sklearn: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -74122,6 +79485,7 @@ def vstack(tup: Tuple[numpy.ndarray, numpy.ndarray]):
     usage.seaborn: 1
     usage.skimage: 6
     usage.sklearn: 35
+    usage.statsmodels: 15
     """
     ...
 
@@ -74143,6 +79507,7 @@ def vstack(tup: List[numpy.ndarray]):
     usage.scipy: 72
     usage.skimage: 28
     usage.sklearn: 107
+    usage.statsmodels: 43
     """
     ...
 
@@ -74154,14 +79519,15 @@ def vstack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
     usage.scipy: 6
     usage.skimage: 2
     usage.sklearn: 6
+    usage.statsmodels: 4
     """
     ...
 
 
 @overload
-def vstack(tup: Tuple[numpy.float64, numpy.float64, numpy.float64]):
+def vstack(tup: List[pandas.core.frame.DataFrame]):
     """
-    usage.scipy: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -74171,6 +79537,23 @@ def vstack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray
     """
     usage.scipy: 7
     usage.sklearn: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def vstack(tup: Tuple[pandas.core.series.Series, pandas.core.series.Series]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def vstack(tup: Tuple[numpy.float64, numpy.float64, numpy.float64]):
+    """
+    usage.scipy: 1
     """
     ...
 
@@ -74530,6 +79913,7 @@ def vstack(tup: object):
     usage.seaborn: 3
     usage.skimage: 39
     usage.sklearn: 170
+    usage.statsmodels: 66
     """
     ...
 
@@ -74561,6 +79945,7 @@ def where(_0: numpy.ndarray, _1: numpy.ndarray, _2: numpy.ndarray, /):
     usage.seaborn: 1
     usage.skimage: 1
     usage.sklearn: 1
+    usage.statsmodels: 9
     usage.xarray: 9
     """
     ...
@@ -74607,6 +79992,7 @@ def where(_0: numpy.ndarray, /):
     usage.seaborn: 2
     usage.skimage: 12
     usage.sklearn: 63
+    usage.statsmodels: 28
     """
     ...
 
@@ -74635,6 +80021,7 @@ def where(_0: numpy.ndarray, _1: int, _2: int, /):
     """
     usage.scipy: 18
     usage.skimage: 1
+    usage.statsmodels: 2
     """
     ...
 
@@ -74769,27 +80156,9 @@ def where(_0: numpy.ndarray, _1: numpy.ndarray, _2: object, /):
 
 
 @overload
-def where(_0: object, _1: object = ..., _2: object = ..., /):
+def where(_0: pandas.core.series.Series, /):
     """
-    usage.pandas: 175
-    """
-    ...
-
-
-@overload
-def where(_0: bool, _1: int, _2: int, /):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def where(_0: numpy.ndarray, _1: numpy.ndarray, _2: float, /):
-    """
-    usage.dask: 6
-    usage.matplotlib: 1
-    usage.scipy: 20
+    usage.statsmodels: 5
     """
     ...
 
@@ -74801,6 +80170,29 @@ def where(_0: numpy.ndarray, _1: int, _2: numpy.ndarray, /):
     usage.matplotlib: 1
     usage.scipy: 10
     usage.sklearn: 4
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def where(
+    _0: pandas.core.series.Series,
+    _1: pandas.core.series.Series,
+    _2: pandas.core.series.Series,
+    /,
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def where(_0: List[bool], /):
+    """
+    usage.sklearn: 2
+    usage.statsmodels: 7
     """
     ...
 
@@ -74809,6 +80201,52 @@ def where(_0: numpy.ndarray, _1: int, _2: numpy.ndarray, /):
 def where(_0: numpy.ndarray, _1: numpy.float64, _2: numpy.float64, /):
     """
     usage.scipy: 3
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def where(_0: numpy.bool_, _1: numpy.float64, _2: float, /):
+    """
+    usage.dask: 1
+    usage.scipy: 4
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def where(_0: numpy.ndarray, _1: numpy.ndarray, _2: float, /):
+    """
+    usage.dask: 6
+    usage.matplotlib: 1
+    usage.scipy: 20
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def where(_0: pandas.core.frame.DataFrame, /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def where(_0: object, _1: object = ..., _2: object = ..., /):
+    """
+    usage.pandas: 175
+    """
+    ...
+
+
+@overload
+def where(_0: bool, _1: int, _2: int, /):
+    """
+    usage.scipy: 2
     """
     ...
 
@@ -74858,15 +80296,6 @@ def where(_0: bool, _1: numpy.ndarray, _2: float, /):
 def where(_0: numpy.bool_, _1: int, _2: int, /):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def where(_0: numpy.bool_, _1: numpy.float64, _2: float, /):
-    """
-    usage.dask: 1
-    usage.scipy: 4
     """
     ...
 
@@ -75083,14 +80512,6 @@ def where(_0: dask.array.core.Array, _1: numpy.float64, _2: dask.array.core.Arra
 
 
 @overload
-def where(_0: List[bool], /):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def where(_0: numpy.matrix, /):
     """
     usage.networkx: 2
@@ -75157,6 +80578,7 @@ def where(_0: object, _1: object = ..., _2: object = ..., /):
     usage.seaborn: 3
     usage.skimage: 26
     usage.sklearn: 77
+    usage.statsmodels: 64
     usage.xarray: 39
     """
     ...
@@ -75169,10 +80591,12 @@ def zeros(_0: int, /):
     usage.koalas: 1
     usage.matplotlib: 38
     usage.networkx: 2
+    usage.prophet: 6
     usage.scipy: 263
     usage.seaborn: 5
     usage.skimage: 15
     usage.sklearn: 133
+    usage.statsmodels: 354
     usage.xarray: 10
     """
     ...
@@ -75185,6 +80609,7 @@ def zeros(_0: Tuple[int, int], /, *, dtype: Type[float]):
     usage.scipy: 12
     usage.skimage: 6
     usage.sklearn: 1
+    usage.statsmodels: 9
     """
     ...
 
@@ -75194,6 +80619,7 @@ def zeros(_0: Tuple[int, int, int], /, *, dtype: Type[numpy.float64]):
     """
     usage.scipy: 6
     usage.skimage: 11
+    usage.statsmodels: 1
     """
     ...
 
@@ -75203,6 +80629,7 @@ def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.int64]):
     """
     usage.scipy: 4
     usage.skimage: 3
+    usage.statsmodels: 1
     """
     ...
 
@@ -75213,11 +80640,13 @@ def zeros(_0: Tuple[int, int], /):
     usage.dask: 4
     usage.matplotlib: 25
     usage.networkx: 11
+    usage.prophet: 1
     usage.sample-usage: 1
     usage.scipy: 204
     usage.seaborn: 4
     usage.skimage: 259
     usage.sklearn: 165
+    usage.statsmodels: 360
     usage.xarray: 26
     """
     ...
@@ -75229,6 +80658,7 @@ def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.float64]):
     usage.scipy: 57
     usage.skimage: 55
     usage.sklearn: 11
+    usage.statsmodels: 25
     """
     ...
 
@@ -75242,6 +80672,7 @@ def zeros(_0: Tuple[int, int, int], /):
     usage.seaborn: 1
     usage.skimage: 76
     usage.sklearn: 12
+    usage.statsmodels: 53
     usage.xarray: 13
     """
     ...
@@ -75254,6 +80685,7 @@ def zeros(_0: Tuple[int, int], /, *, dtype: Type[bool]):
     usage.scipy: 7
     usage.skimage: 30
     usage.sklearn: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -75281,6 +80713,7 @@ def zeros(_0: Tuple[int, int], /, *, dtype: Type[int]):
     usage.scipy: 2
     usage.skimage: 45
     usage.sklearn: 10
+    usage.statsmodels: 1
     """
     ...
 
@@ -75308,6 +80741,7 @@ def zeros(_0: int, /, *, dtype: Type[int]):
     usage.scipy: 16
     usage.skimage: 3
     usage.sklearn: 15
+    usage.statsmodels: 12
     """
     ...
 
@@ -75337,6 +80771,7 @@ def zeros(_0: Tuple[int, int], _1: numpy.dtype, /):
     usage.matplotlib: 3
     usage.scipy: 24
     usage.skimage: 4
+    usage.statsmodels: 2
     """
     ...
 
@@ -75364,6 +80799,7 @@ def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.int32]):
     """
     usage.scipy: 14
     usage.skimage: 2
+    usage.statsmodels: 2
     """
     ...
 
@@ -75383,6 +80819,7 @@ def zeros(_0: List[int], /):
     usage.scipy: 31
     usage.skimage: 7
     usage.sklearn: 6
+    usage.statsmodels: 10
     """
     ...
 
@@ -75449,6 +80886,7 @@ def zeros(_0: int, /, *, dtype: Type[bool]):
     usage.scipy: 5
     usage.skimage: 2
     usage.sklearn: 24
+    usage.statsmodels: 7
     """
     ...
 
@@ -75485,6 +80923,7 @@ def zeros(_0: Tuple[int, int, int, int], /):
     usage.scipy: 5
     usage.skimage: 18
     usage.sklearn: 1
+    usage.statsmodels: 4
     usage.xarray: 1
     """
     ...
@@ -75496,6 +80935,7 @@ def zeros(_0: Tuple[int, int], /, *, dtype: numpy.dtype):
     usage.scipy: 96
     usage.skimage: 7
     usage.sklearn: 38
+    usage.statsmodels: 33
     """
     ...
 
@@ -75506,6 +80946,7 @@ def zeros(_0: Tuple[int], /, *, dtype: numpy.dtype):
     usage.scipy: 22
     usage.skimage: 6
     usage.sklearn: 3
+    usage.statsmodels: 8
     """
     ...
 
@@ -75532,6 +80973,7 @@ def zeros(_0: Tuple[numpy.int64], _1: numpy.dtype, /):
 def zeros(_0: Tuple[int, int], _1: Type[int], /):
     """
     usage.skimage: 13
+    usage.statsmodels: 1
     """
     ...
 
@@ -75567,6 +81009,7 @@ def zeros(_0: Tuple[int, int], /, *, dtype: Type[complex]):
     """
     usage.scipy: 4
     usage.skimage: 1
+    usage.statsmodels: 2
     """
     ...
 
@@ -75591,6 +81034,7 @@ def zeros(_0: Tuple[int, int, int, int], /, *, dtype: Type[numpy.float32]):
 def zeros(_0: numpy.ndarray, /):
     """
     usage.skimage: 2
+    usage.statsmodels: 1
     """
     ...
 
@@ -75617,6 +81061,7 @@ def zeros(_0: Tuple[int, int, int], /, *, dtype: Type[float]):
     """
     usage.scipy: 1
     usage.skimage: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -75628,6 +81073,7 @@ def zeros(_0: Tuple[int], /):
     usage.scipy: 38
     usage.skimage: 5
     usage.sklearn: 16
+    usage.statsmodels: 16
     usage.xarray: 4
     """
     ...
@@ -75678,6 +81124,7 @@ def zeros(_0: int, /, *, dtype: Type[float]):
     usage.scipy: 6
     usage.skimage: 1
     usage.sklearn: 2
+    usage.statsmodels: 4
     """
     ...
 
@@ -75689,6 +81136,7 @@ def zeros(_0: int, /, *, dtype: Type[numpy.float64]):
     usage.scipy: 17
     usage.skimage: 1
     usage.sklearn: 18
+    usage.statsmodels: 16
     """
     ...
 
@@ -75894,6 +81342,7 @@ def zeros(_0: Tuple[int, int, int], /, *, dtype: numpy.dtype):
     usage.networkx: 1
     usage.scipy: 24
     usage.skimage: 4
+    usage.statsmodels: 12
     usage.xarray: 1
     """
     ...
@@ -75904,6 +81353,7 @@ def zeros(_0: Tuple[int, int, int, int], /, *, dtype: numpy.dtype):
     """
     usage.scipy: 8
     usage.skimage: 4
+    usage.statsmodels: 7
     """
     ...
 
@@ -75977,6 +81427,7 @@ def zeros(_0: Tuple[int, numpy.int64], /):
     usage.scipy: 1
     usage.skimage: 1
     usage.sklearn: 1
+    usage.statsmodels: 3
     """
     ...
 
@@ -75986,6 +81437,7 @@ def zeros(_0: Tuple[int, int, int, int], /, *, dtype: Type[numpy.float64]):
     """
     usage.scipy: 1
     usage.skimage: 3
+    usage.statsmodels: 1
     """
     ...
 
@@ -76049,6 +81501,7 @@ def zeros(_0: numpy.int64, /):
     usage.scipy: 4
     usage.skimage: 2
     usage.sklearn: 2
+    usage.statsmodels: 5
     """
     ...
 
@@ -76113,6 +81566,358 @@ def zeros(*, dtype: Type[int], shape: Tuple[int, int]):
 
 
 @overload
+def zeros(_0: Tuple[int], _1: Type[float], /):
+    """
+    usage.scipy: 11
+    usage.sklearn: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def zeros(_0: int, /, *, dtype: Type[numpy.int32]):
+    """
+    usage.scipy: 11
+    usage.sklearn: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def zeros(*, shape: Tuple[int, int]):
+    """
+    usage.dask: 13
+    usage.sklearn: 11
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def zeros(*, shape: int):
+    """
+    usage.matplotlib: 1
+    usage.sklearn: 4
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def zeros(*, shape: Tuple[int]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: int, /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 7
+    usage.scipy: 61
+    usage.sklearn: 44
+    usage.statsmodels: 19
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[numpy.int64, int], /):
+    """
+    usage.scipy: 2
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[int], _1: Type[int], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: int, _1: Type[numpy.float64], /):
+    """
+    usage.dask: 1
+    usage.scipy: 10
+    usage.sklearn: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[int], /, *, dtype: Type[float]):
+    """
+    usage.networkx: 3
+    usage.scipy: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def zeros(
+    _0: Tuple[int, int, int], /, *, dtype: Type[numpy.float64], order: Literal["F"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.float64], order: Literal["F"]):
+    """
+    usage.scipy: 2
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[int], _1: numpy.dtype, /):
+    """
+    usage.scipy: 24
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def zeros(_0: numpy.int64, _1: Type[numpy.float64], /):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: int, /, *, dtype: Type[complex]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def zeros(_0: numpy.int64, /, *, dtype: Type[numpy.float64]):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def zeros(_0: numpy.int64, /, *, dtype: Type[object]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[int, int, int, int, int, int], /, *, dtype: numpy.dtype):
+    """
+    usage.scipy: 3
+    usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[numpy.int64, numpy.int64], /):
+    """
+    usage.matplotlib: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[numpy.int64, int, int], /):
+    """
+    usage.scipy: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def zeros(_0: int, /, *, dtype: Type[numpy.float32]):
+    """
+    usage.scipy: 8
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def zeros(_0: int, /, *, dtype: Type[numpy.complex64]):
+    """
+    usage.scipy: 10
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def zeros(_0: int, /, *, dtype: Type[numpy.complex128]):
+    """
+    usage.scipy: 19
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def zeros(
+    _0: Tuple[int, int, int], /, *, dtype: Type[numpy.float32], order: Literal["F"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.float32], order: Literal["F"]):
+    """
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(
+    _0: Tuple[int, int, int], /, *, dtype: Type[numpy.complex64], order: Literal["F"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.complex64], order: Literal["F"]):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(
+    _0: Tuple[int, int, int], /, *, dtype: Type[numpy.complex128], order: Literal["F"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(
+    _0: Tuple[int, int], /, *, dtype: Type[numpy.complex128], order: Literal["F"]
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[int, int], /, *, order: Literal["F"]):
+    """
+    usage.scipy: 4
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[int, int], /, *, dtype: numpy.dtype, order: Literal["F"]):
+    """
+    usage.dask: 1
+    usage.scipy: 11
+    usage.sklearn: 6
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def zeros(_0: int, /, *, dtype: numpy.dtype, order: Literal["F"]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[int, int, int], /, *, order: Literal["F"]):
+    """
+    usage.statsmodels: 10
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[int, int], _1: Literal["d"], /):
+    """
+    usage.scipy: 14
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: int, /, *, dtype: List[Tuple[Literal["variable"], Type[float]]]):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def zeros(
+    _0: int,
+    /,
+    *,
+    dtype: List[
+        Tuple[Literal["variable_L(1)", "variable_L(2)", "variable_L(3)"], numpy.dtype]
+    ],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(
+    _0: Tuple[int, int],
+    /,
+    *,
+    dtype: List[Tuple[Literal["lower", "upper"], Type[float]]],
+):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def zeros(
     _0: Union[int, numpy.int64, Tuple[int, ...]] = ...,
     _1: Union[numpy.dtype, Literal["float64", "float32"]] = ...,
@@ -76138,42 +81943,9 @@ def zeros(_0: Tuple[int], /, *, dtype: Literal["i"]):
 
 
 @overload
-def zeros(_0: int, /, *, dtype: Type[numpy.complex128]):
-    """
-    usage.scipy: 19
-    """
-    ...
-
-
-@overload
 def zeros(_0: int, /, *, dtype: Type[numpy.complex256]):
     """
     usage.scipy: 5
-    """
-    ...
-
-
-@overload
-def zeros(_0: int, /, *, dtype: Type[numpy.complex64]):
-    """
-    usage.scipy: 10
-    """
-    ...
-
-
-@overload
-def zeros(_0: Tuple[int], _1: Type[float], /):
-    """
-    usage.scipy: 11
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def zeros(_0: Tuple[int], _1: numpy.dtype, /):
-    """
-    usage.scipy: 24
     """
     ...
 
@@ -76203,26 +81975,9 @@ def zeros(_0: Tuple[int, int], /, *, dtype: numpy.dtype, order: Literal["f"]):
 
 
 @overload
-def zeros(_0: Tuple[int, int], /, *, order: Literal["F"]):
-    """
-    usage.scipy: 4
-    """
-    ...
-
-
-@overload
 def zeros(_0: int, _1: Literal["float"], /):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.float64], order: Literal["F"]):
-    """
-    usage.scipy: 2
-    usage.sklearn: 1
     """
     ...
 
@@ -76232,24 +81987,6 @@ def zeros(_0: int, _1: Type[float], /):
     """
     usage.networkx: 1
     usage.scipy: 9
-    """
-    ...
-
-
-@overload
-def zeros(_0: Tuple[int, int], /, *, dtype: numpy.dtype, order: Literal["F"]):
-    """
-    usage.dask: 1
-    usage.scipy: 11
-    usage.sklearn: 6
-    """
-    ...
-
-
-@overload
-def zeros(_0: Tuple[int, int, int, int, int, int], /, *, dtype: numpy.dtype):
-    """
-    usage.scipy: 3
     """
     ...
 
@@ -76283,15 +82020,6 @@ def zeros(_0: Tuple[int, numpy.int64], /, *, dtype: numpy.dtype):
     """
     usage.scipy: 21
     usage.sklearn: 1
-    """
-    ...
-
-
-@overload
-def zeros(_0: int, /, *, dtype: Type[numpy.int32]):
-    """
-    usage.scipy: 11
-    usage.sklearn: 2
     """
     ...
 
@@ -76402,16 +82130,6 @@ def zeros(
 def zeros(_0: Tuple[int, int], /, *, dtype: List[Tuple[Literal["f1"], Literal["f"]]]):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def zeros(_0: int, /, *, dtype: numpy.dtype):
-    """
-    usage.dask: 7
-    usage.scipy: 61
-    usage.sklearn: 44
     """
     ...
 
@@ -76553,14 +82271,6 @@ def zeros(_0: Tuple[int, int], _1: Literal["D"], _2: Literal["F"], /):
 
 
 @overload
-def zeros(_0: Tuple[int, int], _1: Literal["d"], /):
-    """
-    usage.scipy: 14
-    """
-    ...
-
-
-@overload
 def zeros(_0: Tuple[int, int], _1: Literal["l"], /):
     """
     usage.scipy: 1
@@ -76669,14 +82379,6 @@ def zeros(_0: Tuple[int, numpy.int64], /, *, dtype: Type[numpy.complex64]):
 def zeros(_0: Tuple[int, numpy.int64], /, *, dtype: Type[numpy.complex128]):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def zeros(_0: int, /, *, dtype: Type[numpy.float32]):
-    """
-    usage.scipy: 8
     """
     ...
 
@@ -77305,16 +83007,6 @@ def zeros(_0: list, _1: Type[numpy.float64], /):
 
 
 @overload
-def zeros(_0: int, _1: Type[numpy.float64], /):
-    """
-    usage.dask: 1
-    usage.scipy: 10
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def zeros(_0: Tuple[int], _1: Type[numpy.float64], /):
     """
     usage.scipy: 1
@@ -77339,14 +83031,6 @@ def zeros(_0: Tuple[int], _1: Type[numpy.int32], /):
 
 
 @overload
-def zeros(_0: Tuple[numpy.int64, int], /):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def zeros(_0: List[Union[int, numpy.int64]], /):
     """
     usage.scipy: 1
@@ -77364,14 +83048,6 @@ def zeros(_0: int, /, *, dtype: Literal["d"]):
 
 @overload
 def zeros(_0: Tuple[int, int], /, *, dtype: Literal["double"]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def zeros(_0: numpy.int64, /, *, dtype: Type[numpy.float64]):
     """
     usage.scipy: 1
     """
@@ -77559,14 +83235,6 @@ def zeros(_0: int, /, *, dtype: Literal["F"]):
 
 
 @overload
-def zeros(_0: int, /, *, dtype: Type[complex]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def zeros(_0: Tuple[int, numpy.int64], /, *, dtype: Type[int]):
     """
     usage.scipy: 1
@@ -77625,23 +83293,6 @@ def zeros(_0: Tuple[None, ...], _1: Literal["d"], /):
 
 
 @overload
-def zeros(_0: Tuple[int], /, *, dtype: Type[float]):
-    """
-    usage.networkx: 3
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def zeros(_0: Tuple[numpy.int64, int, int], /):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def zeros(_0: Tuple[None, ...], /, *, dtype: Type[numpy.bool_]):
     """
     usage.scipy: 2
@@ -77682,24 +83333,7 @@ def zeros(_0: int, /, *, dtype: Type[numpy.int8]):
 
 
 @overload
-def zeros(*, shape: int):
-    """
-    usage.matplotlib: 1
-    usage.sklearn: 4
-    """
-    ...
-
-
-@overload
 def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.float128]):
-    """
-    usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def zeros(_0: Tuple[numpy.int64, numpy.int64], /):
     """
     usage.matplotlib: 1
     """
@@ -77726,15 +83360,6 @@ def zeros(_0: int, /, *, dtype: Literal["<f4"]):
 def zeros(_0: int, /, *, dtype: Literal["<f8"]):
     """
     usage.dask: 1
-    """
-    ...
-
-
-@overload
-def zeros(*, shape: Tuple[int, int]):
-    """
-    usage.dask: 13
-    usage.sklearn: 11
     """
     ...
 
@@ -77884,14 +83509,6 @@ def zeros(_0: int, /, *, dtype: Type[numpy.int32], order: Literal["C"]):
 
 
 @overload
-def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.float32], order: Literal["F"]):
-    """
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def zeros(_0: Tuple[int], /, *, dtype: Type[numpy.float64], order: Literal["C"]):
     """
     usage.sklearn: 2
@@ -77967,11 +83584,13 @@ def zeros(
     usage.matplotlib: 124
     usage.networkx: 26
     usage.pandas: 125
+    usage.prophet: 7
     usage.sample-usage: 1
     usage.scipy: 2108
     usage.seaborn: 12
     usage.skimage: 865
     usage.sklearn: 598
+    usage.statsmodels: 1058
     usage.xarray: 77
     """
     ...
@@ -77985,6 +83604,7 @@ def zeros_like(a: numpy.ndarray):
     usage.scipy: 112
     usage.skimage: 52
     usage.sklearn: 64
+    usage.statsmodels: 51
     usage.xarray: 3
     """
     ...
@@ -78012,6 +83632,7 @@ def zeros_like(a: numpy.ndarray, dtype: Type[bool]):
     usage.scipy: 2
     usage.skimage: 6
     usage.sklearn: 3
+    usage.statsmodels: 1
     usage.xarray: 40
     """
     ...
@@ -78023,6 +83644,7 @@ def zeros_like(a: numpy.ndarray, dtype: Type[numpy.float64]):
     usage.scipy: 3
     usage.skimage: 8
     usage.sklearn: 1
+    usage.statsmodels: 5
     """
     ...
 
@@ -78101,6 +83723,39 @@ def zeros_like(a: xarray.core.dataarray.DataArray):
 
 
 @overload
+def zeros_like(a: numpy.float64):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros_like(a: list):
+    """
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def zeros_like(a: pandas.core.series.Series):
+    """
+    usage.seaborn: 3
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros_like(a: pandas.core.frame.DataFrame):
+    """
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
 def zeros_like(
     a: Union[pandas.core.indexes.datetimes.DatetimeIndex, numpy.ndarray],
     dtype: Literal["int64"] = ...,
@@ -78172,14 +83827,6 @@ def zeros_like(a: List[float], dtype: Type[int]):
 def zeros_like(a: numpy.ndarray, dtype: numpy.dtype):
     """
     usage.scipy: 4
-    """
-    ...
-
-
-@overload
-def zeros_like(a: pandas.core.series.Series):
-    """
-    usage.seaborn: 3
     """
     ...
 
@@ -78286,6 +83933,7 @@ def zeros_like(
     usage.seaborn: 3
     usage.skimage: 75
     usage.sklearn: 76
+    usage.statsmodels: 64
     usage.xarray: 49
     """
     ...
@@ -78535,6 +84183,7 @@ class bool_:
     def __and__(self, _0: numpy.bool_, /):
         """
         usage.scipy: 93
+        usage.statsmodels: 7
         usage.xarray: 1
         """
         ...
@@ -78583,6 +84232,7 @@ class bool_:
         """
         usage.pandas: 9
         usage.scipy: 135
+        usage.statsmodels: 7
         usage.xarray: 2
         """
         ...
@@ -78596,6 +84246,7 @@ class bool_:
         usage.scipy: 40
         usage.skimage: 18
         usage.sklearn: 67
+        usage.statsmodels: 18
         usage.xarray: 3
         """
         ...
@@ -78746,6 +84397,7 @@ class bool_:
         usage.pandas: 1
         usage.scipy: 12
         usage.skimage: 3
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -78815,6 +84467,14 @@ class bool_:
         ...
 
     @overload
+    def __mul__(self, _0: numpy.bool_, /):
+        """
+        usage.scipy: 4
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __mul__(
         self, _0: Union[numpy.ndarray, pandas.core.arrays.boolean.BooleanArray], /
     ):
@@ -78838,13 +84498,6 @@ class bool_:
         ...
 
     @overload
-    def __mul__(self, _0: numpy.bool_, /):
-        """
-        usage.scipy: 4
-        """
-        ...
-
-    @overload
     def __mul__(self, _0: bool, /):
         """
         usage.scipy: 2
@@ -78855,6 +84508,7 @@ class bool_:
         """
         usage.pandas: 2
         usage.scipy: 10
+        usage.statsmodels: 1
         """
         ...
 
@@ -79069,6 +84723,7 @@ class bool_:
     def __rand__(self, _0: numpy.bool_, /):
         """
         usage.scipy: 93
+        usage.statsmodels: 7
         usage.xarray: 1
         """
         ...
@@ -79077,6 +84732,7 @@ class bool_:
     def __rand__(self, _0: numpy.ndarray, /):
         """
         usage.scipy: 50
+        usage.statsmodels: 3
         usage.xarray: 1
         """
         ...
@@ -79124,7 +84780,16 @@ class bool_:
         usage.pandas: 9
         usage.scipy: 189
         usage.seaborn: 1
+        usage.statsmodels: 10
         usage.xarray: 3
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: numpy.bool_, /):
+        """
+        usage.scipy: 4
+        usage.statsmodels: 1
         """
         ...
 
@@ -79156,20 +84821,14 @@ class bool_:
         """
         ...
 
-    @overload
-    def __rmul__(self, _0: numpy.bool_, /):
-        """
-        usage.scipy: 4
-        """
-        ...
-
     def __rmul__(
         self,
-        _0: Union[numpy.bool_, numpy.int64, numpy.float64, float, numpy.ndarray],
+        _0: Union[numpy.ndarray, float, numpy.float64, numpy.int64, numpy.bool_],
         /,
     ):
         """
         usage.scipy: 11
+        usage.statsmodels: 1
         """
         ...
 
@@ -79244,6 +84903,7 @@ class bool_:
     def __rsub__(self, _0: int, /):
         """
         usage.scipy: 13
+        usage.statsmodels: 1
         """
         ...
 
@@ -79315,6 +84975,7 @@ class bool_:
         usage.pandas: 4
         usage.scipy: 3
         usage.sklearn: 1
+        usage.statsmodels: 1
         usage.xarray: 9
         """
         ...
@@ -79393,16 +85054,40 @@ class bytes_:
     # usage.dask: 1
     ndim: object
 
+    @overload
     def __add__(self, _0: float, /):
         """
         usage.matplotlib: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Literal[""], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    def __add__(self, _0: Union[float, Literal[""]], /):
+        """
+        usage.matplotlib: 1
+        usage.statsmodels: 2
         """
         ...
 
     @overload
     def __eq__(self, _0: numpy.ndarray, /):
         """
+        usage.statsmodels: 3
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: bytes, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -79413,9 +85098,10 @@ class bytes_:
         """
         ...
 
-    def __eq__(self, _0: Union[numpy.bytes_, numpy.ndarray], /):
+    def __eq__(self, _0: Union[numpy.bytes_, numpy.ndarray, bytes], /):
         """
         usage.pandas: 2
+        usage.statsmodels: 4
         usage.xarray: 1
         """
         ...
@@ -79553,6 +85239,7 @@ class complex128:
 
     # usage.scipy: 25
     # usage.skimage: 1
+    # usage.statsmodels: 2
     imag: object
 
     # usage.dask: 5
@@ -79562,6 +85249,7 @@ class complex128:
     # usage.matplotlib: 2
     # usage.scipy: 32
     # usage.skimage: 1
+    # usage.statsmodels: 1
     real: object
 
     # usage.dask: 5
@@ -79574,6 +85262,15 @@ class complex128:
     def __add__(self, _0: numpy.complex128, /):
         """
         usage.scipy: 21
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: int, /):
+        """
+        usage.scipy: 3
+        usage.statsmodels: 1
         """
         ...
 
@@ -79588,13 +85285,6 @@ class complex128:
     def __add__(self, _0: numpy.ndarray, /):
         """
         usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __add__(self, _0: int, /):
-        """
-        usage.scipy: 3
         """
         ...
 
@@ -79713,6 +85403,7 @@ class complex128:
     def __add__(self, _0: object, /):
         """
         usage.scipy: 46
+        usage.statsmodels: 3
         """
         ...
 
@@ -79814,6 +85505,15 @@ class complex128:
     def __iadd__(self, _0: numpy.float64, /):
         """
         usage.scipy: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __iadd__(self, _0: numpy.complex128, /):
+        """
+        usage.scipy: 4
+        usage.statsmodels: 2
         """
         ...
 
@@ -79825,13 +85525,6 @@ class complex128:
         ...
 
     @overload
-    def __iadd__(self, _0: numpy.complex128, /):
-        """
-        usage.scipy: 4
-        """
-        ...
-
-    @overload
     def __iadd__(self, _0: complex, /):
         """
         usage.scipy: 3
@@ -79839,16 +85532,18 @@ class complex128:
         ...
 
     def __iadd__(
-        self, _0: Union[complex, numpy.complex64, numpy.float64, numpy.complex128], /
+        self, _0: Union[numpy.complex128, numpy.float64, numpy.complex64, complex], /
     ):
         """
         usage.scipy: 10
+        usage.statsmodels: 3
         """
         ...
 
     def __isub__(self, _0: numpy.complex128, /):
         """
         usage.scipy: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -79905,13 +85600,7 @@ class complex128:
         """
         usage.scipy: 30
         usage.skimage: 2
-        """
-        ...
-
-    @overload
-    def __mul__(self, _0: numpy.float64, /):
-        """
-        usage.scipy: 10
+        usage.statsmodels: 3
         """
         ...
 
@@ -79919,6 +85608,14 @@ class complex128:
     def __mul__(self, _0: numpy.ndarray, /):
         """
         usage.scipy: 52
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: numpy.float64, /):
+        """
+        usage.scipy: 10
         """
         ...
 
@@ -79961,6 +85658,7 @@ class complex128:
         """
         usage.scipy: 106
         usage.skimage: 2
+        usage.statsmodels: 5
         """
         ...
 
@@ -80011,6 +85709,7 @@ class complex128:
     def __neg__(self, /):
         """
         usage.scipy: 17
+        usage.statsmodels: 1
         """
         ...
 
@@ -80042,16 +85741,10 @@ class complex128:
         ...
 
     @overload
-    def __radd__(self, _0: numpy.int64, /):
-        """
-        usage.scipy: 2
-        """
-        ...
-
-    @overload
     def __radd__(self, _0: numpy.complex128, /):
         """
         usage.scipy: 21
+        usage.statsmodels: 2
         """
         ...
 
@@ -80059,6 +85752,14 @@ class complex128:
     def __radd__(self, _0: numpy.float64, /):
         """
         usage.scipy: 9
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: numpy.int64, /):
+        """
+        usage.scipy: 2
         """
         ...
 
@@ -80184,6 +85885,7 @@ class complex128:
     def __radd__(self, _0: object, /):
         """
         usage.scipy: 64
+        usage.statsmodels: 3
         """
         ...
 
@@ -80192,13 +85894,7 @@ class complex128:
         """
         usage.scipy: 30
         usage.skimage: 2
-        """
-        ...
-
-    @overload
-    def __rmul__(self, _0: float, /):
-        """
-        usage.scipy: 17
+        usage.statsmodels: 3
         """
         ...
 
@@ -80206,6 +85902,7 @@ class complex128:
     def __rmul__(self, _0: numpy.ndarray, /):
         """
         usage.scipy: 14
+        usage.statsmodels: 2
         """
         ...
 
@@ -80213,20 +85910,15 @@ class complex128:
     def __rmul__(self, _0: numpy.float64, /):
         """
         usage.scipy: 19
+        usage.statsmodels: 1
         """
         ...
 
     @overload
-    def __rmul__(self, _0: int, /):
+    def __rmul__(self, _0: float, /):
         """
-        usage.scipy: 18
-        """
-        ...
-
-    @overload
-    def __rmul__(self, _0: scipy.signal.ltisys.StateSpaceContinuous, /):
-        """
-        usage.scipy: 1
+        usage.scipy: 17
+        usage.statsmodels: 4
         """
         ...
 
@@ -80234,6 +85926,22 @@ class complex128:
     def __rmul__(self, _0: complex, /):
         """
         usage.scipy: 6
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: int, /):
+        """
+        usage.scipy: 18
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: scipy.signal.ltisys.StateSpaceContinuous, /):
+        """
+        usage.scipy: 1
         """
         ...
 
@@ -80248,6 +85956,7 @@ class complex128:
         """
         usage.scipy: 106
         usage.skimage: 2
+        usage.statsmodels: 12
         """
         ...
 
@@ -80260,9 +85969,10 @@ class complex128:
         ...
 
     @overload
-    def __rsub__(self, _0: numpy.int64, /):
+    def __rsub__(self, _0: int, /):
         """
-        usage.scipy: 1
+        usage.scipy: 3
+        usage.statsmodels: 4
         """
         ...
 
@@ -80270,6 +85980,22 @@ class complex128:
     def __rsub__(self, _0: numpy.complex128, /):
         """
         usage.scipy: 28
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: numpy.ndarray, /):
+        """
+        usage.scipy: 7
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: numpy.int64, /):
+        """
+        usage.scipy: 1
         """
         ...
 
@@ -80281,23 +86007,9 @@ class complex128:
         ...
 
     @overload
-    def __rsub__(self, _0: numpy.ndarray, /):
-        """
-        usage.scipy: 7
-        """
-        ...
-
-    @overload
     def __rsub__(self, _0: numpy.float64, /):
         """
         usage.scipy: 4
-        """
-        ...
-
-    @overload
-    def __rsub__(self, _0: int, /):
-        """
-        usage.scipy: 3
         """
         ...
 
@@ -80305,6 +86017,7 @@ class complex128:
         """
         usage.scipy: 53
         usage.skimage: 1
+        usage.statsmodels: 9
         """
         ...
 
@@ -80313,20 +86026,7 @@ class complex128:
         """
         usage.scipy: 26
         usage.skimage: 1
-        """
-        ...
-
-    @overload
-    def __rtruediv__(self, _0: numpy.ndarray, /):
-        """
-        usage.scipy: 8
-        """
-        ...
-
-    @overload
-    def __rtruediv__(self, _0: numpy.float64, /):
-        """
-        usage.scipy: 4
+        usage.statsmodels: 2
         """
         ...
 
@@ -80334,6 +86034,22 @@ class complex128:
     def __rtruediv__(self, _0: int, /):
         """
         usage.scipy: 7
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: numpy.ndarray, /):
+        """
+        usage.scipy: 8
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: numpy.float64, /):
+        """
+        usage.scipy: 4
         """
         ...
 
@@ -80370,6 +86086,15 @@ class complex128:
         usage.networkx: 1
         usage.scipy: 50
         usage.skimage: 1
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: numpy.complex128, /):
+        """
+        usage.scipy: 28
+        usage.statsmodels: 2
         """
         ...
 
@@ -80388,13 +86113,6 @@ class complex128:
         ...
 
     @overload
-    def __sub__(self, _0: numpy.complex128, /):
-        """
-        usage.scipy: 28
-        """
-        ...
-
-    @overload
     def __sub__(self, _0: numpy.ndarray, /):
         """
         usage.scipy: 4
@@ -80409,11 +86127,12 @@ class complex128:
         ...
 
     def __sub__(
-        self, _0: Union[float, complex, int, numpy.complex128, numpy.ndarray], /
+        self, _0: Union[float, numpy.ndarray, numpy.complex128, int, complex], /
     ):
         """
         usage.networkx: 1
         usage.scipy: 48
+        usage.statsmodels: 2
         """
         ...
 
@@ -80430,6 +86149,7 @@ class complex128:
         """
         usage.scipy: 26
         usage.skimage: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -80442,9 +86162,17 @@ class complex128:
         ...
 
     @overload
+    def __truediv__(self, _0: numpy.int64, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
     def __truediv__(self, _0: int, /):
         """
         usage.scipy: 7
+        usage.statsmodels: 1
         """
         ...
 
@@ -80466,6 +86194,7 @@ class complex128:
         """
         usage.scipy: 46
         usage.skimage: 3
+        usage.statsmodels: 5
         """
         ...
 
@@ -81309,9 +87038,24 @@ class complex64:
         """
         ...
 
+    @overload
+    def __rsub__(self, _0: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __rsub__(self, _0: float, /):
         """
         usage.scipy: 1
+        """
+        ...
+
+    def __rsub__(self, _0: Union[float, int], /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -81618,17 +87362,20 @@ class dtype:
     # usage.scipy: 389
     # usage.skimage: 12
     # usage.sklearn: 2
+    # usage.statsmodels: 6
     # usage.xarray: 3
     char: object
 
     # usage.pandas: 6
     # usage.scipy: 5
+    # usage.statsmodels: 18
     descr: object
 
     # usage.dask: 15
     # usage.networkx: 1
     # usage.pandas: 48
     # usage.scipy: 43
+    # usage.statsmodels: 1
     fields: object
 
     # usage.dask: 33
@@ -81645,6 +87392,7 @@ class dtype:
     # usage.scipy: 61
     # usage.skimage: 41
     # usage.sklearn: 11
+    # usage.statsmodels: 4
     # usage.xarray: 38
     itemsize: object
 
@@ -81673,7 +87421,8 @@ class dtype:
     # usage.networkx: 3
     # usage.pandas: 125
     # usage.scipy: 4
-    names: object
+    # usage.statsmodels: 116
+    names: List[Literal["DFFITS", "influence", "leverage", "residual", "date"]]
 
     # usage.dask: 21
     # usage.pandas: 25
@@ -81681,6 +87430,7 @@ class dtype:
     shape: object
 
     # usage.scipy: 51
+    # usage.statsmodels: 1
     str: object
 
     # usage.dask: 9
@@ -81690,6 +87440,7 @@ class dtype:
     # usage.scipy: 195
     # usage.skimage: 65
     # usage.sklearn: 16
+    # usage.statsmodels: 15
     # usage.xarray: 75
     type: object
 
@@ -81701,6 +87452,7 @@ class dtype:
         usage.scipy: 140
         usage.skimage: 160
         usage.sklearn: 266
+        usage.statsmodels: 62
         usage.xarray: 192
         """
         ...
@@ -81712,6 +87464,7 @@ class dtype:
         usage.scipy: 15
         usage.skimage: 59
         usage.sklearn: 8
+        usage.statsmodels: 4
         usage.xarray: 24
         """
         ...
@@ -81723,6 +87476,7 @@ class dtype:
         usage.scipy: 1
         usage.skimage: 5
         usage.sklearn: 3
+        usage.statsmodels: 1
         """
         ...
 
@@ -81734,6 +87488,7 @@ class dtype:
         usage.scipy: 36
         usage.skimage: 13
         usage.sklearn: 86
+        usage.statsmodels: 7
         usage.xarray: 8
         """
         ...
@@ -81754,6 +87509,7 @@ class dtype:
         usage.scipy: 21
         usage.skimage: 3
         usage.sklearn: 89
+        usage.statsmodels: 5
         usage.xarray: 9
         """
         ...
@@ -81772,9 +87528,11 @@ class dtype:
     def __eq__(self, _0: Type[numpy.int64], /):
         """
         usage.dask: 9
+        usage.prophet: 2
         usage.scipy: 6
         usage.skimage: 6
         usage.sklearn: 12
+        usage.statsmodels: 2
         usage.xarray: 4
         """
         ...
@@ -81795,6 +87553,7 @@ class dtype:
         usage.scipy: 1
         usage.skimage: 6
         usage.sklearn: 8
+        usage.statsmodels: 2
         usage.xarray: 10
         """
         ...
@@ -81917,6 +87676,7 @@ class dtype:
         usage.dask: 22
         usage.scipy: 4
         usage.sklearn: 56
+        usage.statsmodels: 6
         usage.xarray: 6
         """
         ...
@@ -81976,6 +87736,7 @@ class dtype:
     def __eq__(self, _0: Type[numpy.complex128], /):
         """
         usage.scipy: 18
+        usage.statsmodels: 4
         usage.xarray: 1
         """
         ...
@@ -82082,9 +87843,11 @@ class dtype:
         usage.matplotlib: 9
         usage.networkx: 4
         usage.pandas: 2263
+        usage.prophet: 2
         usage.scipy: 341
         usage.skimage: 293
         usage.sklearn: 552
+        usage.statsmodels: 93
         usage.xarray: 321
         """
         ...
@@ -82092,6 +87855,13 @@ class dtype:
     def __ge__(self, _0: numpy.dtype, /):
         """
         usage.scipy: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: int, /):
+        """
+        usage.statsmodels: 6
         """
         ...
 
@@ -82158,10 +87928,11 @@ class dtype:
         """
         ...
 
-    def __getitem__(self, _0: str, /):
+    def __getitem__(self, _0: Union[str, int], /):
         """
         usage.dask: 17
         usage.pandas: 58
+        usage.statsmodels: 6
         """
         ...
 
@@ -82207,6 +87978,7 @@ class dtype:
         usage.scipy: 246
         usage.skimage: 22
         usage.sklearn: 30
+        usage.statsmodels: 4
         usage.xarray: 38
         """
         ...
@@ -82519,6 +88291,7 @@ class dtype:
         usage.scipy: 290
         usage.skimage: 27
         usage.sklearn: 71
+        usage.statsmodels: 4
         usage.xarray: 53
         """
         ...
@@ -82621,6 +88394,7 @@ class finfo:
     # usage.scipy: 119
     # usage.skimage: 11
     # usage.sklearn: 46
+    # usage.statsmodels: 12
     eps: object
 
     # usage.pandas: 7
@@ -82655,6 +88429,7 @@ class finfo:
     # usage.matplotlib: 1
     # usage.scipy: 4
     # usage.sklearn: 2
+    # usage.statsmodels: 1
     tiny: object
 
 
@@ -82662,6 +88437,7 @@ class flagsobj:
 
     # usage.scipy: 26
     # usage.skimage: 2
+    # usage.statsmodels: 1
     c_contiguous: object
 
     # usage.scipy: 20
@@ -82695,6 +88471,7 @@ class flagsobj:
         usage.scipy: 1
         usage.skimage: 2
         usage.sklearn: 11
+        usage.statsmodels: 9
         usage.xarray: 2
         """
         ...
@@ -82703,6 +88480,7 @@ class flagsobj:
     def __getitem__(self, _0: Literal["F_CONTIGUOUS"], /):
         """
         usage.sklearn: 8
+        usage.statsmodels: 7
         usage.xarray: 2
         """
         ...
@@ -82740,6 +88518,7 @@ class flagsobj:
         usage.scipy: 7
         usage.skimage: 2
         usage.sklearn: 21
+        usage.statsmodels: 16
         usage.xarray: 4
         """
         ...
@@ -82825,6 +88604,14 @@ class flatiter:
     def __getitem__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 1
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -82833,6 +88620,7 @@ class flatiter:
         """
         usage.scipy: 1
         usage.sklearn: 28
+        usage.statsmodels: 14
         """
         ...
 
@@ -82840,13 +88628,14 @@ class flatiter:
     def __getitem__(self, _0: slice[int, None, int], /):
         """
         usage.matplotlib: 1
+        usage.statsmodels: 2
         """
         ...
 
     def __getitem__(
         self,
         _0: Union[
-            slice[Union[None, int], Union[int, None], Union[None, int]],
+            slice[Union[int, None], Union[None, int], Union[int, None]],
             int,
             numpy.int64,
             numpy.ndarray,
@@ -82861,6 +88650,7 @@ class flatiter:
         usage.seaborn: 12
         usage.skimage: 5
         usage.sklearn: 33
+        usage.statsmodels: 25
         usage.xarray: 10
         """
         ...
@@ -82876,6 +88666,12 @@ class flatiter:
         """
         ...
 
+    def __ne__(self, _0: int, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
     @overload
     def __setitem__(self, _0: List[int], _1: numpy.ndarray, /):
         """
@@ -82887,6 +88683,7 @@ class flatiter:
     def __setitem__(self, _0: numpy.ndarray, _1: float, /):
         """
         usage.scipy: 1
+        usage.statsmodels: 3
         usage.xarray: 1
         """
         ...
@@ -82895,6 +88692,7 @@ class flatiter:
     def __setitem__(self, _0: numpy.ndarray, _1: numpy.ndarray, /):
         """
         usage.pandas: 11
+        usage.statsmodels: 3
         """
         ...
 
@@ -82903,6 +88701,22 @@ class flatiter:
         """
         usage.scipy: 7
         usage.sklearn: 37
+        usage.statsmodels: 12
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, None, int], _1: int, /):
+        """
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, None, int], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -82950,13 +88764,6 @@ class flatiter:
         ...
 
     @overload
-    def __setitem__(self, _0: slice[int, None, int], _1: int, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: slice[None, None, None], _1: float, /):
         """
         usage.sklearn: 1
@@ -82980,6 +88787,7 @@ class flatiter:
         usage.scipy: 9
         usage.skimage: 2
         usage.sklearn: 45
+        usage.statsmodels: 21
         usage.xarray: 1
         """
         ...
@@ -84129,6 +89937,7 @@ class float32:
     def __eq__(self, _0: float, /):
         """
         usage.skimage: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -84140,6 +89949,15 @@ class float32:
         usage.scipy: 3
         usage.skimage: 2
         usage.sklearn: 4
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: numpy.float64, /):
+        """
+        usage.matplotlib: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -84165,13 +89983,6 @@ class float32:
         ...
 
     @overload
-    def __eq__(self, _0: numpy.float64, /):
-        """
-        usage.matplotlib: 1
-        """
-        ...
-
-    @overload
     def __eq__(self, _0: numpy.flatiter, /):
         """
         usage.sklearn: 1
@@ -84186,7 +89997,14 @@ class float32:
         usage.scipy: 18
         usage.skimage: 6
         usage.sklearn: 14
+        usage.statsmodels: 3
         usage.xarray: 4
+        """
+        ...
+
+    def __floordiv__(self, _0: int, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -84886,17 +90704,18 @@ class float32:
         ...
 
     @overload
-    def __rsub__(self, _0: float, /):
+    def __rsub__(self, _0: int, /):
         """
-        usage.scipy: 1
-        usage.sklearn: 2
+        usage.sklearn: 4
+        usage.statsmodels: 1
         """
         ...
 
     @overload
-    def __rsub__(self, _0: int, /):
+    def __rsub__(self, _0: float, /):
         """
-        usage.sklearn: 4
+        usage.scipy: 1
+        usage.sklearn: 2
         """
         ...
 
@@ -84919,6 +90738,7 @@ class float32:
         usage.scipy: 3
         usage.skimage: 3
         usage.sklearn: 14
+        usage.statsmodels: 1
         """
         ...
 
@@ -85191,6 +91011,12 @@ class float32:
         """
         ...
 
+    def squeeze(self, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
 
 class float64:
 
@@ -85224,6 +91050,7 @@ class float64:
         usage.scipy: 10
         usage.skimage: 1
         usage.sklearn: 2
+        usage.statsmodels: 1
         usage.xarray: 2
         """
         ...
@@ -85251,6 +91078,7 @@ class float64:
         usage.scipy: 66
         usage.skimage: 6
         usage.sklearn: 7
+        usage.statsmodels: 23
         """
         ...
 
@@ -85332,9 +91160,13 @@ class float64:
         usage.scipy: 116
         usage.skimage: 9
         usage.sklearn: 44
+        usage.statsmodels: 24
         usage.xarray: 6
         """
         ...
+
+    # usage.statsmodels: 1
+    T: object
 
     # usage.scipy: 1
     __class__: object
@@ -85344,6 +91176,7 @@ class float64:
     # usage.pandas: 9
     # usage.scipy: 26
     # usage.sklearn: 10
+    # usage.statsmodels: 2
     # usage.xarray: 4
     dtype: object
 
@@ -85361,6 +91194,7 @@ class float64:
     # usage.pandas: 2
     # usage.scipy: 24
     # usage.skimage: 1
+    # usage.statsmodels: 1
     ndim: object
 
     # usage.scipy: 15
@@ -85370,10 +91204,12 @@ class float64:
     # usage.matplotlib: 1
     # usage.scipy: 10
     # usage.sklearn: 5
+    # usage.statsmodels: 2
     # usage.xarray: 1
     shape: object
 
     # usage.scipy: 5
+    # usage.statsmodels: 2
     size: object
 
     # usage.pandas: 1
@@ -85386,10 +91222,12 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 180
         usage.networkx: 13
+        usage.prophet: 4
         usage.scipy: 507
         usage.seaborn: 14
         usage.skimage: 44
         usage.sklearn: 92
+        usage.statsmodels: 271
         usage.xarray: 5
         """
         ...
@@ -85401,10 +91239,12 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 95
         usage.networkx: 2
+        usage.prophet: 1
         usage.scipy: 120
         usage.seaborn: 10
         usage.skimage: 7
         usage.sklearn: 43
+        usage.statsmodels: 56
         usage.xarray: 1
         """
         ...
@@ -85416,6 +91256,7 @@ class float64:
         usage.scipy: 83
         usage.skimage: 6
         usage.sklearn: 10
+        usage.statsmodels: 47
         """
         ...
 
@@ -85429,6 +91270,7 @@ class float64:
         usage.seaborn: 3
         usage.skimage: 21
         usage.sklearn: 18
+        usage.statsmodels: 59
         usage.xarray: 2
         """
         ...
@@ -85439,6 +91281,7 @@ class float64:
         usage.matplotlib: 1
         usage.scipy: 9
         usage.skimage: 3
+        usage.statsmodels: 11
         """
         ...
 
@@ -85460,9 +91303,16 @@ class float64:
         ...
 
     @overload
-    def __add__(self, _0: object, /):
+    def __add__(self, _0: pandas.core.series.Series, /):
         """
-        usage.pandas: 36
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Literal[""], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -85470,6 +91320,14 @@ class float64:
     def __add__(self, _0: numpy.complex128, /):
         """
         usage.scipy: 9
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: object, /):
+        """
+        usage.pandas: 36
         """
         ...
 
@@ -85601,10 +91459,12 @@ class float64:
         usage.matplotlib: 321
         usage.networkx: 23
         usage.pandas: 36
+        usage.prophet: 5
         usage.scipy: 880
         usage.seaborn: 28
         usage.skimage: 82
         usage.sklearn: 167
+        usage.statsmodels: 447
         usage.xarray: 9
         """
         ...
@@ -85632,6 +91492,7 @@ class float64:
         usage.seaborn: 1
         usage.skimage: 20
         usage.sklearn: 89
+        usage.statsmodels: 32
         usage.xarray: 17
         """
         ...
@@ -85642,10 +91503,12 @@ class float64:
         usage.dask: 12
         usage.matplotlib: 75
         usage.networkx: 99
+        usage.prophet: 1
         usage.scipy: 108
         usage.seaborn: 38
         usage.skimage: 48
         usage.sklearn: 106
+        usage.statsmodels: 27
         usage.xarray: 8
         """
         ...
@@ -85656,10 +91519,12 @@ class float64:
         usage.dask: 12
         usage.matplotlib: 74
         usage.networkx: 8
+        usage.prophet: 2
         usage.scipy: 88
         usage.seaborn: 18
         usage.skimage: 18
         usage.sklearn: 146
+        usage.statsmodels: 14
         usage.xarray: 24
         """
         ...
@@ -85669,10 +91534,12 @@ class float64:
         """
         usage.dask: 1
         usage.matplotlib: 3
+        usage.prophet: 1
         usage.scipy: 15
         usage.seaborn: 2
         usage.skimage: 9
         usage.sklearn: 42
+        usage.statsmodels: 12
         usage.xarray: 4
         """
         ...
@@ -85683,6 +91550,43 @@ class float64:
         usage.scipy: 2
         usage.skimage: 8
         usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["mean"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["median"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: numpy.float32, /):
+        """
+        usage.matplotlib: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -85746,20 +91650,6 @@ class float64:
         ...
 
     @overload
-    def __eq__(self, _0: numpy.float32, /):
-        """
-        usage.matplotlib: 1
-        """
-        ...
-
-    @overload
-    def __eq__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def __eq__(self, _0: Literal["auto"], /):
         """
         usage.sklearn: 1
@@ -85787,18 +91677,13 @@ class float64:
         usage.matplotlib: 187
         usage.networkx: 115
         usage.pandas: 381
+        usage.prophet: 4
         usage.scipy: 272
         usage.seaborn: 80
         usage.skimage: 103
         usage.sklearn: 430
+        usage.statsmodels: 90
         usage.xarray: 53
-        """
-        ...
-
-    @overload
-    def __floordiv__(self, _0: object, /):
-        """
-        usage.pandas: 7
         """
         ...
 
@@ -85808,6 +91693,14 @@ class float64:
         usage.dask: 1
         usage.matplotlib: 2
         usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __floordiv__(self, _0: object, /):
+        """
+        usage.pandas: 7
         """
         ...
 
@@ -85833,6 +91726,7 @@ class float64:
         usage.pandas: 7
         usage.scipy: 2
         usage.seaborn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -85845,6 +91739,7 @@ class float64:
         usage.seaborn: 2
         usage.skimage: 10
         usage.sklearn: 23
+        usage.statsmodels: 8
         """
         ...
 
@@ -85854,10 +91749,12 @@ class float64:
         usage.dask: 3
         usage.matplotlib: 18
         usage.networkx: 2
+        usage.prophet: 2
         usage.scipy: 116
         usage.seaborn: 2
         usage.skimage: 2
         usage.sklearn: 32
+        usage.statsmodels: 14
         """
         ...
 
@@ -85870,6 +91767,7 @@ class float64:
         usage.seaborn: 1
         usage.skimage: 3
         usage.sklearn: 20
+        usage.statsmodels: 14
         """
         ...
 
@@ -85877,6 +91775,26 @@ class float64:
     def __ge__(self, _0: xarray.core.dataarray.DataArray, /):
         """
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: numpy.ndarray, /):
+        """
+        usage.matplotlib: 15
+        usage.scipy: 21
+        usage.seaborn: 10
+        usage.sklearn: 11
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.seaborn: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -85892,16 +91810,6 @@ class float64:
         ...
 
     @overload
-    def __ge__(self, _0: numpy.ndarray, /):
-        """
-        usage.matplotlib: 15
-        usage.scipy: 21
-        usage.seaborn: 10
-        usage.sklearn: 11
-        """
-        ...
-
-    @overload
     def __ge__(self, _0: numpy.int64, /):
         """
         usage.scipy: 7
@@ -85912,14 +91820,6 @@ class float64:
     def __ge__(self, _0: numpy.ma.core.MaskedArray, /):
         """
         usage.matplotlib: 1
-        """
-        ...
-
-    @overload
-    def __ge__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        usage.seaborn: 1
         """
         ...
 
@@ -85957,10 +91857,12 @@ class float64:
         usage.matplotlib: 55
         usage.networkx: 2
         usage.pandas: 8
+        usage.prophet: 2
         usage.scipy: 220
         usage.seaborn: 16
         usage.skimage: 15
         usage.sklearn: 90
+        usage.statsmodels: 42
         usage.xarray: 1
         """
         ...
@@ -86059,6 +91961,7 @@ class float64:
         usage.seaborn: 3
         usage.skimage: 35
         usage.sklearn: 150
+        usage.statsmodels: 36
         usage.xarray: 3
         """
         ...
@@ -86072,6 +91975,7 @@ class float64:
         usage.seaborn: 3
         usage.skimage: 4
         usage.sklearn: 22
+        usage.statsmodels: 14
         """
         ...
 
@@ -86085,6 +91989,7 @@ class float64:
         usage.seaborn: 13
         usage.skimage: 65
         usage.sklearn: 93
+        usage.statsmodels: 48
         usage.xarray: 6
         """
         ...
@@ -86095,9 +92000,11 @@ class float64:
         usage.dask: 6
         usage.matplotlib: 33
         usage.networkx: 5
+        usage.prophet: 4
         usage.scipy: 111
         usage.skimage: 20
         usage.sklearn: 34
+        usage.statsmodels: 26
         usage.xarray: 2
         """
         ...
@@ -86134,6 +92041,14 @@ class float64:
     def __gt__(self, _0: xarray.core.dataarray.DataArray, /):
         """
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -86183,23 +92098,18 @@ class float64:
         """
         ...
 
-    @overload
-    def __gt__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __gt__(self, _0: object, /):
         """
         usage.dask: 28
         usage.matplotlib: 174
         usage.networkx: 13
         usage.pandas: 15
+        usage.prophet: 4
         usage.scipy: 489
         usage.seaborn: 19
         usage.skimage: 127
         usage.sklearn: 305
+        usage.statsmodels: 126
         usage.xarray: 14
         """
         ...
@@ -86210,6 +92120,7 @@ class float64:
         usage.scipy: 3
         usage.skimage: 1
         usage.sklearn: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -86223,6 +92134,7 @@ class float64:
         usage.seaborn: 1
         usage.skimage: 7
         usage.sklearn: 57
+        usage.statsmodels: 130
         usage.xarray: 1
         """
         ...
@@ -86236,6 +92148,7 @@ class float64:
         usage.scipy: 6
         usage.skimage: 1
         usage.sklearn: 2
+        usage.statsmodels: 5
         usage.xarray: 2
         """
         ...
@@ -86246,6 +92159,7 @@ class float64:
         usage.matplotlib: 8
         usage.scipy: 3
         usage.sklearn: 6
+        usage.statsmodels: 4
         usage.xarray: 2
         """
         ...
@@ -86254,6 +92168,14 @@ class float64:
     def __iadd__(self, _0: bool, /):
         """
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __iadd__(self, _0: numpy.int64, /):
+        """
+        usage.sklearn: 3
+        usage.statsmodels: 2
         """
         ...
 
@@ -86271,13 +92193,6 @@ class float64:
         """
         ...
 
-    @overload
-    def __iadd__(self, _0: numpy.int64, /):
-        """
-        usage.sklearn: 3
-        """
-        ...
-
     def __iadd__(self, _0: object, /):
         """
         usage.dask: 1
@@ -86288,6 +92203,7 @@ class float64:
         usage.seaborn: 1
         usage.skimage: 9
         usage.sklearn: 69
+        usage.statsmodels: 144
         usage.xarray: 7
         """
         ...
@@ -86325,6 +92241,7 @@ class float64:
         usage.scipy: 18
         usage.skimage: 1
         usage.sklearn: 6
+        usage.statsmodels: 14
         """
         ...
 
@@ -86337,6 +92254,7 @@ class float64:
         usage.scipy: 10
         usage.skimage: 4
         usage.sklearn: 3
+        usage.statsmodels: 7
         """
         ...
 
@@ -86346,6 +92264,7 @@ class float64:
         usage.matplotlib: 7
         usage.scipy: 12
         usage.sklearn: 3
+        usage.statsmodels: 14
         """
         ...
 
@@ -86374,6 +92293,7 @@ class float64:
         usage.scipy: 43
         usage.skimage: 5
         usage.sklearn: 13
+        usage.statsmodels: 35
         """
         ...
 
@@ -86385,6 +92305,16 @@ class float64:
         usage.scipy: 15
         usage.skimage: 1
         usage.sklearn: 17
+        usage.statsmodels: 59
+        """
+        ...
+
+    @overload
+    def __isub__(self, _0: numpy.ndarray, /):
+        """
+        usage.scipy: 3
+        usage.sklearn: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -86396,14 +92326,7 @@ class float64:
         usage.pandas: 2
         usage.scipy: 1
         usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __isub__(self, _0: numpy.ndarray, /):
-        """
-        usage.scipy: 3
-        usage.sklearn: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -86423,6 +92346,7 @@ class float64:
         usage.scipy: 19
         usage.skimage: 1
         usage.sklearn: 20
+        usage.statsmodels: 65
         """
         ...
 
@@ -86432,6 +92356,7 @@ class float64:
         usage.scipy: 19
         usage.skimage: 5
         usage.sklearn: 2
+        usage.statsmodels: 25
         """
         ...
 
@@ -86443,6 +92368,7 @@ class float64:
         usage.scipy: 15
         usage.skimage: 4
         usage.sklearn: 6
+        usage.statsmodels: 8
         """
         ...
 
@@ -86470,18 +92396,20 @@ class float64:
         ...
 
     @overload
-    def __itruediv__(self, _0: numpy.ndarray, /):
-        """
-        usage.scipy: 5
-        """
-        ...
-
-    @overload
     def __itruediv__(self, _0: int, /):
         """
         usage.matplotlib: 1
         usage.scipy: 4
         usage.sklearn: 7
+        usage.statsmodels: 12
+        """
+        ...
+
+    @overload
+    def __itruediv__(self, _0: numpy.ndarray, /):
+        """
+        usage.scipy: 5
+        usage.statsmodels: 2
         """
         ...
 
@@ -86492,6 +92420,7 @@ class float64:
         usage.scipy: 44
         usage.skimage: 12
         usage.sklearn: 16
+        usage.statsmodels: 47
         """
         ...
 
@@ -86504,6 +92433,7 @@ class float64:
         usage.seaborn: 3
         usage.skimage: 62
         usage.sklearn: 19
+        usage.statsmodels: 6
         """
         ...
 
@@ -86513,10 +92443,12 @@ class float64:
         usage.dask: 3
         usage.matplotlib: 18
         usage.networkx: 2
+        usage.prophet: 2
         usage.scipy: 116
         usage.seaborn: 2
         usage.skimage: 2
         usage.sklearn: 32
+        usage.statsmodels: 14
         """
         ...
 
@@ -86525,10 +92457,12 @@ class float64:
         """
         usage.dask: 2
         usage.matplotlib: 16
+        usage.prophet: 2
         usage.scipy: 21
         usage.seaborn: 8
         usage.skimage: 4
         usage.sklearn: 5
+        usage.statsmodels: 8
         """
         ...
 
@@ -86537,17 +92471,12 @@ class float64:
         """
         usage.dask: 1
         usage.matplotlib: 9
+        usage.prophet: 1
         usage.scipy: 72
         usage.seaborn: 2
         usage.skimage: 4
         usage.sklearn: 17
-        """
-        ...
-
-    @overload
-    def __le__(self, _0: Union[numpy.ndarray, float, numpy.float64, int], /):
-        """
-        usage.pandas: 13
+        usage.statsmodels: 6
         """
         ...
 
@@ -86556,6 +92485,7 @@ class float64:
         """
         usage.scipy: 4
         usage.sklearn: 4
+        usage.statsmodels: 1
         """
         ...
 
@@ -86564,6 +92494,14 @@ class float64:
         """
         usage.dask: 1
         usage.seaborn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: Union[numpy.ndarray, float, numpy.float64, int], /):
+        """
+        usage.pandas: 13
         """
         ...
 
@@ -86580,10 +92518,12 @@ class float64:
         usage.matplotlib: 72
         usage.networkx: 2
         usage.pandas: 13
+        usage.prophet: 5
         usage.scipy: 263
         usage.seaborn: 16
         usage.skimage: 72
         usage.sklearn: 79
+        usage.statsmodels: 36
         """
         ...
 
@@ -86593,10 +92533,12 @@ class float64:
         usage.dask: 8
         usage.matplotlib: 55
         usage.networkx: 6
+        usage.prophet: 1
         usage.scipy: 165
         usage.seaborn: 2
         usage.skimage: 59
         usage.sklearn: 92
+        usage.statsmodels: 55
         usage.xarray: 2
         """
         ...
@@ -86607,9 +92549,11 @@ class float64:
         usage.dask: 4
         usage.matplotlib: 45
         usage.networkx: 2
+        usage.prophet: 1
         usage.scipy: 83
         usage.skimage: 42
         usage.sklearn: 34
+        usage.statsmodels: 18
         usage.xarray: 5
         """
         ...
@@ -86622,6 +92566,7 @@ class float64:
         usage.seaborn: 3
         usage.skimage: 18
         usage.sklearn: 20
+        usage.statsmodels: 22
         """
         ...
 
@@ -86635,6 +92580,7 @@ class float64:
         usage.seaborn: 13
         usage.skimage: 65
         usage.sklearn: 93
+        usage.statsmodels: 48
         usage.xarray: 6
         """
         ...
@@ -86744,10 +92690,12 @@ class float64:
         usage.matplotlib: 213
         usage.networkx: 15
         usage.pandas: 5
+        usage.prophet: 2
         usage.scipy: 507
         usage.seaborn: 18
         usage.skimage: 188
         usage.sklearn: 242
+        usage.statsmodels: 143
         usage.xarray: 16
         """
         ...
@@ -86759,6 +92707,7 @@ class float64:
         usage.scipy: 1
         usage.skimage: 7
         usage.sklearn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -86791,6 +92740,7 @@ class float64:
         usage.scipy: 4
         usage.skimage: 9
         usage.sklearn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -86799,9 +92749,11 @@ class float64:
         """
         usage.matplotlib: 30
         usage.networkx: 2
+        usage.prophet: 4
         usage.scipy: 447
         usage.skimage: 39
         usage.sklearn: 120
+        usage.statsmodels: 253
         usage.xarray: 2
         """
         ...
@@ -86812,10 +92764,12 @@ class float64:
         usage.dask: 3
         usage.matplotlib: 81
         usage.networkx: 10
+        usage.prophet: 5
         usage.scipy: 674
         usage.seaborn: 8
         usage.skimage: 31
         usage.sklearn: 76
+        usage.statsmodels: 302
         usage.xarray: 2
         """
         ...
@@ -86829,6 +92783,7 @@ class float64:
         usage.seaborn: 10
         usage.skimage: 13
         usage.sklearn: 38
+        usage.statsmodels: 94
         usage.xarray: 1
         """
         ...
@@ -86838,10 +92793,12 @@ class float64:
         """
         usage.matplotlib: 66
         usage.networkx: 8
+        usage.prophet: 1
         usage.scipy: 187
         usage.seaborn: 11
         usage.skimage: 7
         usage.sklearn: 39
+        usage.statsmodels: 81
         """
         ...
 
@@ -86850,6 +92807,31 @@ class float64:
         """
         usage.pandas: 71
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: numpy.int64, /):
+        """
+        usage.matplotlib: 1
+        usage.scipy: 33
+        usage.sklearn: 6
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: numpy.complex128, /):
+        """
+        usage.scipy: 19
+        usage.statsmodels: 1
         """
         ...
 
@@ -86865,22 +92847,6 @@ class float64:
         """
         usage.scipy: 12
         usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def __mul__(self, _0: numpy.int64, /):
-        """
-        usage.matplotlib: 1
-        usage.scipy: 33
-        usage.sklearn: 6
-        """
-        ...
-
-    @overload
-    def __mul__(self, _0: numpy.complex128, /):
-        """
-        usage.scipy: 19
         """
         ...
 
@@ -86940,10 +92906,12 @@ class float64:
         usage.matplotlib: 214
         usage.networkx: 21
         usage.pandas: 71
+        usage.prophet: 10
         usage.scipy: 1505
         usage.seaborn: 29
         usage.skimage: 90
         usage.sklearn: 282
+        usage.statsmodels: 748
         usage.xarray: 7
         """
         ...
@@ -86957,6 +92925,7 @@ class float64:
         usage.seaborn: 1
         usage.skimage: 22
         usage.sklearn: 55
+        usage.statsmodels: 99
         usage.xarray: 2
         """
         ...
@@ -86977,6 +92946,7 @@ class float64:
         usage.seaborn: 3
         usage.skimage: 32
         usage.sklearn: 43
+        usage.statsmodels: 200
         """
         ...
 
@@ -86989,13 +92959,15 @@ class float64:
         usage.scipy: 76
         usage.skimage: 4
         usage.sklearn: 6
+        usage.statsmodels: 45
         """
         ...
 
     @overload
-    def __pow__(self, _0: object, /):
+    def __pow__(self, _0: numpy.ndarray, /):
         """
-        usage.pandas: 13
+        usage.scipy: 8
+        usage.statsmodels: 7
         """
         ...
 
@@ -87004,13 +92976,14 @@ class float64:
         """
         usage.scipy: 19
         usage.sklearn: 1
+        usage.statsmodels: 8
         """
         ...
 
     @overload
-    def __pow__(self, _0: numpy.ndarray, /):
+    def __pow__(self, _0: object, /):
         """
-        usage.scipy: 8
+        usage.pandas: 13
         """
         ...
 
@@ -87024,6 +92997,7 @@ class float64:
         usage.seaborn: 3
         usage.skimage: 36
         usage.sklearn: 50
+        usage.statsmodels: 260
         """
         ...
 
@@ -87034,10 +93008,12 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 180
         usage.networkx: 13
+        usage.prophet: 4
         usage.scipy: 507
         usage.seaborn: 14
         usage.skimage: 44
         usage.sklearn: 92
+        usage.statsmodels: 271
         usage.xarray: 5
         """
         ...
@@ -87047,10 +93023,12 @@ class float64:
         """
         usage.dask: 10
         usage.matplotlib: 10
+        usage.prophet: 1
         usage.scipy: 64
         usage.seaborn: 2
         usage.skimage: 24
         usage.sklearn: 53
+        usage.statsmodels: 43
         usage.xarray: 1
         """
         ...
@@ -87061,10 +93039,12 @@ class float64:
         usage.dask: 2
         usage.matplotlib: 42
         usage.networkx: 10
+        usage.prophet: 1
         usage.scipy: 120
         usage.seaborn: 1
         usage.skimage: 5
         usage.sklearn: 32
+        usage.statsmodels: 69
         """
         ...
 
@@ -87074,10 +93054,12 @@ class float64:
         usage.dask: 2
         usage.matplotlib: 29
         usage.networkx: 11
+        usage.prophet: 1
         usage.scipy: 138
         usage.seaborn: 18
         usage.skimage: 13
         usage.sklearn: 14
+        usage.statsmodels: 94
         usage.xarray: 1
         """
         ...
@@ -87090,6 +93072,7 @@ class float64:
         usage.seaborn: 2
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 3
         usage.xarray: 2
         """
         ...
@@ -87111,6 +93094,14 @@ class float64:
         usage.matplotlib: 1
         usage.scipy: 4
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -87233,13 +93224,6 @@ class float64:
         """
         ...
 
-    @overload
-    def __radd__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __radd__(self, _0: object, /):
         """
         usage.dask: 26
@@ -87247,10 +93231,12 @@ class float64:
         usage.matplotlib: 282
         usage.networkx: 34
         usage.pandas: 36
+        usage.prophet: 7
         usage.scipy: 868
         usage.seaborn: 37
         usage.skimage: 90
         usage.sklearn: 196
+        usage.statsmodels: 481
         usage.xarray: 9
         """
         ...
@@ -87300,6 +93286,202 @@ class float64:
         usage.pandas: 6
         usage.scipy: 1
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%10.4f"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%#6.3f"], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%9.3f"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%#8.3f"], /):
+        """
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%#8.4g"], /):
+        """
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%#6.3g"], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%#8.3g"], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%#6d"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%#8.5g"], /):
+        """
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%.3f"], /):
+        """
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%.0f"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%8.4f"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%#6.4g"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: str, /):
+        """
+        usage.dask: 2
+        usage.matplotlib: 1
+        usage.networkx: 2
+        usage.scipy: 6
+        usage.sklearn: 12
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%.1f"], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%10.4g"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%9.3g"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["I(y>%.1f)"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%.2f"], /):
+        """
+        usage.matplotlib: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%.4f"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%#8.2f"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%d"], /):
+        """
+        usage.matplotlib: 1
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%#5.3f"], /):
+        """
+        usage.statsmodels: 31
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%17.4f"], /):
+        """
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%+17.4fj"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%#8.6F"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%#10.4g"], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -87409,17 +93591,6 @@ class float64:
         ...
 
     @overload
-    def __rmod__(self, _0: str, /):
-        """
-        usage.dask: 2
-        usage.matplotlib: 1
-        usage.networkx: 2
-        usage.scipy: 6
-        usage.sklearn: 12
-        """
-        ...
-
-    @overload
     def __rmod__(self, _0: Literal["fail forp=%f"], /):
         """
         usage.scipy: 2
@@ -87470,13 +93641,6 @@ class float64:
 
     @overload
     def __rmod__(self, _0: Literal["%1.1f%%"], /):
-        """
-        usage.matplotlib: 1
-        """
-        ...
-
-    @overload
-    def __rmod__(self, _0: Literal["%.2f"], /):
         """
         usage.matplotlib: 1
         """
@@ -87560,13 +93724,6 @@ class float64:
         ...
 
     @overload
-    def __rmod__(self, _0: Literal["%d"], /):
-        """
-        usage.matplotlib: 1
-        """
-        ...
-
-    @overload
     def __rmod__(self, _0: Literal["%d B"], /):
         """
         usage.dask: 1
@@ -87616,6 +93773,7 @@ class float64:
         usage.pandas: 3
         usage.scipy: 29
         usage.sklearn: 25
+        usage.statsmodels: 130
         """
         ...
 
@@ -87626,10 +93784,12 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 80
         usage.networkx: 13
+        usage.prophet: 3
         usage.scipy: 649
         usage.seaborn: 16
         usage.skimage: 73
         usage.sklearn: 137
+        usage.statsmodels: 231
         """
         ...
 
@@ -87639,10 +93799,12 @@ class float64:
         usage.dask: 5
         usage.matplotlib: 42
         usage.networkx: 9
+        usage.prophet: 1
         usage.scipy: 613
         usage.seaborn: 4
         usage.skimage: 50
         usage.sklearn: 80
+        usage.statsmodels: 269
         """
         ...
 
@@ -87651,10 +93813,12 @@ class float64:
         """
         usage.matplotlib: 26
         usage.networkx: 3
+        usage.prophet: 6
         usage.scipy: 167
         usage.seaborn: 5
         usage.skimage: 30
         usage.sklearn: 38
+        usage.statsmodels: 106
         """
         ...
 
@@ -87664,10 +93828,12 @@ class float64:
         usage.dask: 3
         usage.matplotlib: 81
         usage.networkx: 10
+        usage.prophet: 5
         usage.scipy: 674
         usage.seaborn: 8
         usage.skimage: 31
         usage.sklearn: 76
+        usage.statsmodels: 302
         usage.xarray: 2
         """
         ...
@@ -87676,9 +93842,11 @@ class float64:
     def __rmul__(self, _0: numpy.int64, /):
         """
         usage.dask: 1
+        usage.prophet: 1
         usage.scipy: 23
         usage.skimage: 1
         usage.sklearn: 2
+        usage.statsmodels: 15
         """
         ...
 
@@ -87689,6 +93857,21 @@ class float64:
         usage.scipy: 2
         usage.seaborn: 1
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 2
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -87770,10 +93953,12 @@ class float64:
         usage.matplotlib: 249
         usage.networkx: 35
         usage.pandas: 22
+        usage.prophet: 18
         usage.scipy: 2169
         usage.seaborn: 34
         usage.skimage: 185
         usage.sklearn: 333
+        usage.statsmodels: 929
         usage.xarray: 3
         """
         ...
@@ -87784,6 +93969,7 @@ class float64:
         usage.matplotlib: 4
         usage.scipy: 3
         usage.skimage: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -87793,6 +93979,25 @@ class float64:
         usage.matplotlib: 26
         usage.scipy: 18
         usage.skimage: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rpow__(self, _0: numpy.ndarray, /):
+        """
+        usage.scipy: 27
+        usage.sklearn: 3
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __rpow__(self, _0: numpy.float64, /):
+        """
+        usage.scipy: 19
+        usage.sklearn: 1
+        usage.statsmodels: 8
         """
         ...
 
@@ -87814,22 +94019,6 @@ class float64:
         """
         ...
 
-    @overload
-    def __rpow__(self, _0: numpy.float64, /):
-        """
-        usage.scipy: 19
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __rpow__(self, _0: numpy.ndarray, /):
-        """
-        usage.scipy: 27
-        usage.sklearn: 3
-        """
-        ...
-
     def __rpow__(self, _0: object, /):
         """
         usage.matplotlib: 30
@@ -87837,6 +94026,7 @@ class float64:
         usage.scipy: 72
         usage.skimage: 3
         usage.sklearn: 4
+        usage.statsmodels: 13
         """
         ...
 
@@ -87847,10 +94037,12 @@ class float64:
         usage.koalas: 2
         usage.matplotlib: 222
         usage.networkx: 13
+        usage.prophet: 8
         usage.scipy: 596
         usage.seaborn: 26
         usage.skimage: 66
         usage.sklearn: 94
+        usage.statsmodels: 289
         usage.xarray: 6
         """
         ...
@@ -87861,10 +94053,12 @@ class float64:
         usage.dask: 2
         usage.matplotlib: 34
         usage.networkx: 2
+        usage.prophet: 1
         usage.scipy: 202
         usage.seaborn: 8
         usage.skimage: 8
         usage.sklearn: 55
+        usage.statsmodels: 180
         usage.xarray: 2
         """
         ...
@@ -87873,10 +94067,12 @@ class float64:
     def __rsub__(self, _0: numpy.ndarray, /):
         """
         usage.matplotlib: 11
+        usage.prophet: 1
         usage.scipy: 157
         usage.seaborn: 4
         usage.skimage: 35
         usage.sklearn: 51
+        usage.statsmodels: 132
         usage.xarray: 1
         """
         ...
@@ -87890,6 +94086,7 @@ class float64:
         usage.seaborn: 2
         usage.skimage: 1
         usage.sklearn: 29
+        usage.statsmodels: 47
         usage.xarray: 1
         """
         ...
@@ -87915,9 +94112,11 @@ class float64:
     def __rsub__(self, _0: numpy.int64, /):
         """
         usage.matplotlib: 5
+        usage.prophet: 1
         usage.scipy: 3
         usage.seaborn: 2
         usage.sklearn: 1
+        usage.statsmodels: 3
         usage.xarray: 2
         """
         ...
@@ -87926,6 +94125,158 @@ class float64:
     def __rsub__(self, _0: xarray.core.dataarray.DataArray, /):
         """
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 9
+        usage.prophet: 1
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: Tuple[numpy.float64, numpy.float64, numpy.float64], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rsub__(
+        self, _0: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64], /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rsub__(
+        self,
+        _0: Tuple[
+            numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rsub__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rsub__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rsub__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rsub__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rsub__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: Tuple[numpy.float64, numpy.float64], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: Tuple[numpy.float64], /):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -87973,13 +94324,6 @@ class float64:
         ...
 
     @overload
-    def __rsub__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 9
-        """
-        ...
-
-    @overload
     def __rsub__(self, _0: numpy.memmap, /):
         """
         usage.sklearn: 1
@@ -88000,10 +94344,12 @@ class float64:
         usage.matplotlib: 314
         usage.networkx: 17
         usage.pandas: 26
+        usage.prophet: 12
         usage.scipy: 1116
         usage.seaborn: 42
         usage.skimage: 114
         usage.sklearn: 233
+        usage.statsmodels: 681
         usage.xarray: 13
         """
         ...
@@ -88017,6 +94363,7 @@ class float64:
         usage.seaborn: 5
         usage.skimage: 39
         usage.sklearn: 89
+        usage.statsmodels: 221
         """
         ...
 
@@ -88026,10 +94373,12 @@ class float64:
         usage.dask: 8
         usage.matplotlib: 91
         usage.networkx: 7
+        usage.prophet: 6
         usage.scipy: 408
         usage.seaborn: 8
         usage.skimage: 59
         usage.sklearn: 94
+        usage.statsmodels: 311
         usage.xarray: 1
         """
         ...
@@ -88044,6 +94393,7 @@ class float64:
         usage.seaborn: 1
         usage.skimage: 13
         usage.sklearn: 24
+        usage.statsmodels: 49
         usage.xarray: 1
         """
         ...
@@ -88058,6 +94408,7 @@ class float64:
         usage.seaborn: 1
         usage.skimage: 5
         usage.sklearn: 43
+        usage.statsmodels: 68
         """
         ...
 
@@ -88084,6 +94435,7 @@ class float64:
         usage.scipy: 11
         usage.skimage: 2
         usage.sklearn: 3
+        usage.statsmodels: 3
         """
         ...
 
@@ -88091,6 +94443,28 @@ class float64:
     def __rtruediv__(self, _0: xarray.core.dataarray.DataArray, /):
         """
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 3
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: List[int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: List[numpy.float64], /):
+        """
+        usage.statsmodels: 10
         """
         ...
 
@@ -88164,10 +94538,12 @@ class float64:
         usage.matplotlib: 175
         usage.networkx: 34
         usage.pandas: 61
+        usage.prophet: 9
         usage.scipy: 876
         usage.seaborn: 15
         usage.skimage: 120
         usage.sklearn: 260
+        usage.statsmodels: 673
         usage.xarray: 3
         """
         ...
@@ -88185,10 +94561,12 @@ class float64:
         usage.koalas: 2
         usage.matplotlib: 222
         usage.networkx: 13
+        usage.prophet: 8
         usage.scipy: 596
         usage.seaborn: 26
         usage.skimage: 66
         usage.sklearn: 94
+        usage.statsmodels: 289
         usage.xarray: 6
         """
         ...
@@ -88204,6 +94582,7 @@ class float64:
         usage.seaborn: 7
         usage.skimage: 8
         usage.sklearn: 24
+        usage.statsmodels: 69
         usage.xarray: 2
         """
         ...
@@ -88214,9 +94593,11 @@ class float64:
         usage.dask: 5
         usage.matplotlib: 29
         usage.networkx: 4
+        usage.prophet: 4
         usage.scipy: 231
         usage.skimage: 80
         usage.sklearn: 18
+        usage.statsmodels: 85
         usage.xarray: 6
         """
         ...
@@ -88225,10 +94606,12 @@ class float64:
     def __sub__(self, _0: numpy.ndarray, /):
         """
         usage.matplotlib: 11
+        usage.prophet: 1
         usage.scipy: 68
         usage.seaborn: 1
         usage.skimage: 4
         usage.sklearn: 12
+        usage.statsmodels: 15
         """
         ...
 
@@ -88237,6 +94620,23 @@ class float64:
         """
         usage.matplotlib: 1
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: numpy.int64, /):
+        """
+        usage.matplotlib: 3
+        usage.scipy: 5
+        usage.sklearn: 3
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: List[float], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -88251,15 +94651,6 @@ class float64:
     def __sub__(self, _0: numpy.complex128, /):
         """
         usage.scipy: 4
-        """
-        ...
-
-    @overload
-    def __sub__(self, _0: numpy.int64, /):
-        """
-        usage.matplotlib: 3
-        usage.scipy: 5
-        usage.sklearn: 3
         """
         ...
 
@@ -88306,10 +94697,12 @@ class float64:
         usage.matplotlib: 357
         usage.networkx: 22
         usage.pandas: 28
+        usage.prophet: 13
         usage.scipy: 1127
         usage.seaborn: 34
         usage.skimage: 159
         usage.sklearn: 153
+        usage.statsmodels: 464
         usage.xarray: 14
         """
         ...
@@ -88324,6 +94717,7 @@ class float64:
         usage.seaborn: 2
         usage.skimage: 16
         usage.sklearn: 85
+        usage.statsmodels: 159
         usage.xarray: 3
         """
         ...
@@ -88334,10 +94728,12 @@ class float64:
         usage.dask: 8
         usage.matplotlib: 91
         usage.networkx: 7
+        usage.prophet: 6
         usage.scipy: 408
         usage.seaborn: 8
         usage.skimage: 59
         usage.sklearn: 94
+        usage.statsmodels: 311
         usage.xarray: 1
         """
         ...
@@ -88351,6 +94747,7 @@ class float64:
         usage.seaborn: 6
         usage.skimage: 25
         usage.sklearn: 21
+        usage.statsmodels: 103
         usage.xarray: 3
         """
         ...
@@ -88362,6 +94759,7 @@ class float64:
         usage.scipy: 45
         usage.skimage: 1
         usage.sklearn: 5
+        usage.statsmodels: 13
         """
         ...
 
@@ -88395,6 +94793,7 @@ class float64:
         usage.scipy: 10
         usage.skimage: 1
         usage.sklearn: 5
+        usage.statsmodels: 27
         usage.xarray: 1
         """
         ...
@@ -88461,10 +94860,12 @@ class float64:
         usage.matplotlib: 206
         usage.networkx: 22
         usage.pandas: 61
+        usage.prophet: 6
         usage.scipy: 881
         usage.seaborn: 16
         usage.skimage: 106
         usage.sklearn: 213
+        usage.statsmodels: 613
         usage.xarray: 8
         """
         ...
@@ -88497,6 +94898,16 @@ class float64:
         """
         usage.matplotlib: 2
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Type[int], /):
+        """
+        usage.matplotlib: 1
+        usage.scipy: 3
+        usage.sklearn: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -88544,15 +94955,6 @@ class float64:
         ...
 
     @overload
-    def astype(self, _0: Type[int], /):
-        """
-        usage.matplotlib: 1
-        usage.scipy: 3
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def astype(self, _0: Type[numpy.float32], /):
         """
         usage.matplotlib: 2
@@ -88585,6 +94987,7 @@ class float64:
         usage.scipy: 14
         usage.skimage: 1
         usage.sklearn: 2
+        usage.statsmodels: 3
         usage.xarray: 4
         """
         ...
@@ -88619,6 +95022,7 @@ class float64:
         usage.pandas: 1
         usage.scipy: 2
         usage.sklearn: 4
+        usage.statsmodels: 2
         usage.xarray: 3
         """
         ...
@@ -88632,6 +95036,7 @@ class float64:
     def mean(self, /):
         """
         usage.sklearn: 2
+        usage.statsmodels: 3
         """
         ...
 
@@ -88644,10 +95049,9 @@ class float64:
         ...
 
     @overload
-    def reshape(self, _0: Tuple[int, int], /):
+    def reshape(self, _0: int, /):
         """
-        usage.dask: 1
-        usage.scipy: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -88655,6 +95059,15 @@ class float64:
     def reshape(self, _0: List[int], /):
         """
         usage.scipy: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def reshape(self, _0: Tuple[int, int], /):
+        """
+        usage.dask: 1
+        usage.scipy: 1
         """
         ...
 
@@ -88672,29 +95085,52 @@ class float64:
         """
         ...
 
-    def reshape(self, _0: Union[Tuple[Union[None, int], ...], List[int]], /):
+    def reshape(self, _0: Union[Tuple[Union[int, None], ...], int, List[int]], /):
         """
         usage.dask: 2
         usage.scipy: 5
+        usage.statsmodels: 3
         """
         ...
 
     def squeeze(self, /):
         """
         usage.scipy: 3
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
 
+    @overload
+    def sum(self, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def sum(self, /, *, axis: None):
         """
         usage.scipy: 2
         """
         ...
 
+    def sum(self, /, *, axis: None = ...):
+        """
+        usage.scipy: 2
+        usage.statsmodels: 1
+        """
+        ...
+
     def tobytes(self, /):
         """
         usage.scipy: 1
+        """
+        ...
+
+    def tolist(self, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -88906,6 +95342,7 @@ class int16:
     def __eq__(self, _0: int, /):
         """
         usage.skimage: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -88936,6 +95373,7 @@ class int16:
         usage.pandas: 81
         usage.scipy: 2
         usage.skimage: 2
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -89385,6 +95823,7 @@ class int32:
         usage.scipy: 7
         usage.skimage: 3
         usage.sklearn: 6
+        usage.statsmodels: 1
         """
         ...
 
@@ -89428,6 +95867,7 @@ class int32:
         usage.scipy: 13
         usage.skimage: 3
         usage.sklearn: 7
+        usage.statsmodels: 1
         """
         ...
 
@@ -89702,6 +96142,7 @@ class int32:
         usage.scipy: 23
         usage.skimage: 2
         usage.sklearn: 5
+        usage.statsmodels: 1
         """
         ...
 
@@ -89728,6 +96169,13 @@ class int32:
         usage.scipy: 6
         usage.sklearn: 6
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: List[numpy.int32], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -89777,6 +96225,7 @@ class int32:
         usage.scipy: 34
         usage.skimage: 3
         usage.sklearn: 16
+        usage.statsmodels: 2
         usage.xarray: 3
         """
         ...
@@ -89874,6 +96323,7 @@ class int32:
         usage.pandas: 2
         usage.scipy: 13
         usage.sklearn: 2
+        usage.statsmodels: 3
         """
         ...
 
@@ -89906,6 +96356,7 @@ class int32:
         usage.pandas: 2
         usage.scipy: 17
         usage.sklearn: 2
+        usage.statsmodels: 3
         """
         ...
 
@@ -90466,6 +96917,7 @@ class int64:
         usage.scipy: 32
         usage.skimage: 4
         usage.sklearn: 25
+        usage.statsmodels: 20
         usage.xarray: 6
         """
         ...
@@ -90478,6 +96930,7 @@ class int64:
         usage.scipy: 24
         usage.skimage: 2
         usage.sklearn: 2
+        usage.statsmodels: 4
         """
         ...
 
@@ -90602,6 +97055,7 @@ class int64:
         usage.scipy: 71
         usage.skimage: 6
         usage.sklearn: 36
+        usage.statsmodels: 24
         usage.xarray: 6
         """
         ...
@@ -90611,6 +97065,137 @@ class int64:
     def __rmod__(cls, _0: Literal["Unsupported type %s"], /):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["%#6d"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["var%4d"], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["%.0f"], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: str, /):
+        """
+        usage.scipy: 6
+        usage.sklearn: 6
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["I(y>%.1f)"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["%10.4g"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["ar.L%d"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["ar.R.L%d"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["var1_%d"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["var2_%d"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["%s"], /):
+        """
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["ma.L%d"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["ma.R.L%d"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["ar.S.L%d"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["ma.S.L%d"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["trend.%d"], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -90635,15 +97220,6 @@ class int64:
     def __rmod__(cls, _0: Literal["%i\n"], /):
         """
         usage.scipy: 4
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __rmod__(cls, _0: str, /):
-        """
-        usage.scipy: 6
-        usage.sklearn: 6
         """
         ...
 
@@ -90706,14 +97282,6 @@ class int64:
 
     @overload
     @classmethod
-    def __rmod__(cls, _0: Literal["%s"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    @classmethod
     def __rmod__(cls, _0: Literal['%d [label="(...)"'], /):
         """
         usage.sklearn: 1
@@ -90738,6 +97306,7 @@ class int64:
         usage.pandas: 52
         usage.scipy: 14
         usage.sklearn: 13
+        usage.statsmodels: 28
         """
         ...
 
@@ -90765,6 +97334,7 @@ class int64:
     shape: object
 
     # usage.scipy: 1
+    # usage.statsmodels: 1
     size: object
 
     # usage.pandas: 1
@@ -90786,6 +97356,7 @@ class int64:
         usage.seaborn: 2
         usage.skimage: 29
         usage.sklearn: 35
+        usage.statsmodels: 72
         usage.xarray: 7
         """
         ...
@@ -90800,6 +97371,7 @@ class int64:
         usage.seaborn: 3
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 3
         usage.xarray: 3
         """
         ...
@@ -90812,6 +97384,7 @@ class int64:
         usage.seaborn: 2
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 3
         usage.xarray: 2
         """
         ...
@@ -90823,6 +97396,7 @@ class int64:
         usage.matplotlib: 1
         usage.scipy: 20
         usage.skimage: 2
+        usage.statsmodels: 2
         """
         ...
 
@@ -90831,9 +97405,26 @@ class int64:
         """
         usage.dask: 12
         usage.matplotlib: 10
+        usage.prophet: 1
         usage.scipy: 63
         usage.skimage: 6
         usage.sklearn: 11
+        usage.statsmodels: 20
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: bool, /):
+        """
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: Literal[""], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -90956,23 +97547,18 @@ class int64:
         """
         ...
 
-    @overload
-    def __add__(self, _0: bool, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
     def __add__(self, _0: object, /):
         """
         usage.dask: 20
         usage.koalas: 2
         usage.matplotlib: 52
         usage.pandas: 63
+        usage.prophet: 1
         usage.scipy: 283
         usage.seaborn: 7
         usage.skimage: 41
         usage.sklearn: 49
+        usage.statsmodels: 102
         usage.xarray: 12
         """
         ...
@@ -91040,10 +97626,12 @@ class int64:
         """
         usage.dask: 2
         usage.matplotlib: 4
+        usage.prophet: 1
         usage.scipy: 24
         usage.seaborn: 1
         usage.skimage: 7
         usage.sklearn: 38
+        usage.statsmodels: 10
         usage.xarray: 10
         """
         ...
@@ -91058,6 +97646,7 @@ class int64:
         usage.seaborn: 7
         usage.skimage: 47
         usage.sklearn: 138
+        usage.statsmodels: 47
         usage.xarray: 22
         """
         ...
@@ -91067,10 +97656,12 @@ class int64:
         """
         usage.dask: 38
         usage.matplotlib: 22
+        usage.prophet: 2
         usage.scipy: 28
         usage.seaborn: 4
         usage.skimage: 16
         usage.sklearn: 34
+        usage.statsmodels: 10
         usage.xarray: 4
         """
         ...
@@ -91170,19 +97761,20 @@ class int64:
         ...
 
     @overload
-    def __eq__(self, _0: object, /):
-        """
-        usage.pandas: 513
-        """
-        ...
-
-    @overload
     def __eq__(self, _0: float, /):
         """
         usage.dask: 3
         usage.matplotlib: 2
         usage.scipy: 4
         usage.sklearn: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: object, /):
+        """
+        usage.pandas: 513
         """
         ...
 
@@ -91221,10 +97813,12 @@ class int64:
         usage.matplotlib: 54
         usage.networkx: 14
         usage.pandas: 513
+        usage.prophet: 3
         usage.scipy: 175
         usage.seaborn: 17
         usage.skimage: 90
         usage.sklearn: 213
+        usage.statsmodels: 69
         usage.xarray: 41
         """
         ...
@@ -91237,6 +97831,7 @@ class int64:
         usage.scipy: 8
         usage.skimage: 5
         usage.sklearn: 2
+        usage.statsmodels: 3
         usage.xarray: 1
         """
         ...
@@ -91280,6 +97875,7 @@ class int64:
         usage.scipy: 12
         usage.skimage: 5
         usage.sklearn: 2
+        usage.statsmodels: 3
         usage.xarray: 1
         """
         ...
@@ -91291,10 +97887,12 @@ class int64:
         usage.matplotlib: 6
         usage.modin: 1
         usage.networkx: 1
+        usage.prophet: 1
         usage.scipy: 17
         usage.seaborn: 2
         usage.skimage: 3
         usage.sklearn: 13
+        usage.statsmodels: 9
         usage.xarray: 2
         """
         ...
@@ -91314,6 +97912,7 @@ class int64:
         """
         usage.skimage: 1
         usage.sklearn: 2
+        usage.statsmodels: 7
         """
         ...
 
@@ -91326,6 +97925,23 @@ class int64:
         usage.seaborn: 2
         usage.skimage: 1
         usage.sklearn: 3
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: numpy.float64, /):
+        """
+        usage.scipy: 4
+        usage.sklearn: 4
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: pandas.core.indexes.numeric.Int64Index, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -91335,14 +97951,6 @@ class int64:
     ):
         """
         usage.pandas: 19
-        """
-        ...
-
-    @overload
-    def __ge__(self, _0: numpy.float64, /):
-        """
-        usage.scipy: 4
-        usage.sklearn: 4
         """
         ...
 
@@ -91381,10 +97989,12 @@ class int64:
         usage.modin: 1
         usage.networkx: 1
         usage.pandas: 19
+        usage.prophet: 1
         usage.scipy: 34
         usage.seaborn: 5
         usage.skimage: 13
         usage.sklearn: 22
+        usage.statsmodels: 24
         usage.xarray: 2
         """
         ...
@@ -91490,9 +98100,11 @@ class int64:
         usage.dask: 19
         usage.matplotlib: 7
         usage.modin: 1
+        usage.prophet: 1
         usage.scipy: 49
         usage.skimage: 15
         usage.sklearn: 37
+        usage.statsmodels: 32
         """
         ...
 
@@ -91505,6 +98117,7 @@ class int64:
         usage.scipy: 15
         usage.skimage: 5
         usage.sklearn: 13
+        usage.statsmodels: 14
         usage.xarray: 2
         """
         ...
@@ -91573,9 +98186,11 @@ class int64:
         usage.matplotlib: 26
         usage.modin: 2
         usage.pandas: 24
+        usage.prophet: 1
         usage.scipy: 81
         usage.skimage: 26
         usage.sklearn: 56
+        usage.statsmodels: 46
         usage.xarray: 4
         """
         ...
@@ -91585,8 +98200,10 @@ class int64:
         """
         usage.dask: 1
         usage.matplotlib: 1
+        usage.prophet: 1
         usage.scipy: 13
         usage.skimage: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -91594,6 +98211,7 @@ class int64:
     def __iadd__(self, _0: numpy.float64, /):
         """
         usage.scipy: 3
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -91604,6 +98222,7 @@ class int64:
         usage.matplotlib: 2
         usage.scipy: 12
         usage.sklearn: 4
+        usage.statsmodels: 3
         usage.xarray: 2
         """
         ...
@@ -91622,14 +98241,16 @@ class int64:
         """
         ...
 
-    def __iadd__(self, _0: Union[int, numpy.longlong, numpy.float64, numpy.int64], /):
+    def __iadd__(self, _0: Union[int, numpy.float64, numpy.longlong, numpy.int64], /):
         """
         usage.dask: 1
         usage.matplotlib: 3
         usage.pandas: 3
+        usage.prophet: 1
         usage.scipy: 29
         usage.skimage: 1
         usage.sklearn: 4
+        usage.statsmodels: 7
         usage.xarray: 3
         """
         ...
@@ -91681,6 +98302,7 @@ class int64:
         """
         usage.skimage: 1
         usage.sklearn: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -91689,9 +98311,18 @@ class int64:
         """
         usage.dask: 1
         usage.matplotlib: 1
+        usage.prophet: 1
         usage.scipy: 1
         usage.skimage: 1
         usage.sklearn: 3
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __isub__(self, _0: numpy.float64, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -91702,14 +98333,16 @@ class int64:
         """
         ...
 
-    def __isub__(self, _0: Union[int, numpy.int64], /):
+    def __isub__(self, _0: Union[int, numpy.int64, numpy.float64], /):
         """
         usage.dask: 1
         usage.matplotlib: 1
         usage.pandas: 6
+        usage.prophet: 1
         usage.scipy: 1
         usage.skimage: 2
         usage.sklearn: 4
+        usage.statsmodels: 13
         """
         ...
 
@@ -91721,16 +98354,24 @@ class int64:
         ...
 
     @overload
+    def __itruediv__(self, _0: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __itruediv__(self, _0: float, /):
         """
         usage.pandas: 1
         """
         ...
 
-    def __itruediv__(self, _0: Union[float, numpy.float64], /):
+    def __itruediv__(self, _0: Union[float, numpy.float64, int], /):
         """
         usage.pandas: 1
         usage.skimage: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -91739,9 +98380,11 @@ class int64:
         """
         usage.matplotlib: 2
         usage.networkx: 1
+        usage.prophet: 2
         usage.scipy: 17
         usage.seaborn: 1
         usage.skimage: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -91754,6 +98397,7 @@ class int64:
         usage.seaborn: 1
         usage.skimage: 5
         usage.sklearn: 17
+        usage.statsmodels: 8
         """
         ...
 
@@ -91766,6 +98410,24 @@ class int64:
         usage.seaborn: 2
         usage.skimage: 1
         usage.sklearn: 3
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: float, /):
+        """
+        usage.scipy: 1
+        usage.sklearn: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -91787,31 +98449,18 @@ class int64:
         """
         ...
 
-    @overload
-    def __le__(self, _0: float, /):
-        """
-        usage.scipy: 1
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def __le__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __le__(self, _0: object, /):
         """
         usage.dask: 19
         usage.matplotlib: 8
         usage.networkx: 1
         usage.pandas: 27
+        usage.prophet: 2
         usage.scipy: 49
         usage.seaborn: 4
         usage.skimage: 7
         usage.sklearn: 22
+        usage.statsmodels: 17
         """
         ...
 
@@ -91822,9 +98471,11 @@ class int64:
         usage.koalas: 2
         usage.matplotlib: 13
         usage.networkx: 13
+        usage.prophet: 3
         usage.scipy: 56
         usage.skimage: 14
         usage.sklearn: 35
+        usage.statsmodels: 40
         usage.xarray: 3
         """
         ...
@@ -91838,6 +98489,7 @@ class int64:
         usage.scipy: 15
         usage.skimage: 5
         usage.sklearn: 13
+        usage.statsmodels: 14
         usage.xarray: 2
         """
         ...
@@ -91858,6 +98510,7 @@ class int64:
         usage.scipy: 4
         usage.skimage: 1
         usage.sklearn: 3
+        usage.statsmodels: 2
         """
         ...
 
@@ -91923,9 +98576,11 @@ class int64:
         usage.modin: 1
         usage.networkx: 13
         usage.pandas: 10
+        usage.prophet: 3
         usage.scipy: 83
         usage.skimage: 34
         usage.sklearn: 53
+        usage.statsmodels: 56
         usage.xarray: 7
         """
         ...
@@ -91938,6 +98593,7 @@ class int64:
         usage.scipy: 11
         usage.skimage: 1
         usage.sklearn: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -91982,6 +98638,7 @@ class int64:
         usage.scipy: 11
         usage.skimage: 1
         usage.sklearn: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -91992,6 +98649,7 @@ class int64:
         usage.scipy: 19
         usage.skimage: 2
         usage.sklearn: 2
+        usage.statsmodels: 2
         """
         ...
 
@@ -91999,9 +98657,11 @@ class int64:
     def __mul__(self, _0: numpy.float64, /):
         """
         usage.dask: 1
+        usage.prophet: 1
         usage.scipy: 23
         usage.skimage: 1
         usage.sklearn: 2
+        usage.statsmodels: 15
         """
         ...
 
@@ -92012,6 +98672,7 @@ class int64:
         usage.scipy: 37
         usage.skimage: 1
         usage.sklearn: 5
+        usage.statsmodels: 13
         """
         ...
 
@@ -92022,14 +98683,8 @@ class int64:
         usage.matplotlib: 6
         usage.scipy: 14
         usage.sklearn: 2
+        usage.statsmodels: 6
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __mul__(self, _0: object, /):
-        """
-        usage.pandas: 59
         """
         ...
 
@@ -92040,6 +98695,14 @@ class int64:
         usage.networkx: 1
         usage.scipy: 10
         usage.sklearn: 8
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: object, /):
+        """
+        usage.pandas: 59
         """
         ...
 
@@ -92063,9 +98726,11 @@ class int64:
         usage.matplotlib: 9
         usage.networkx: 1
         usage.pandas: 59
+        usage.prophet: 1
         usage.scipy: 105
         usage.skimage: 4
         usage.sklearn: 19
+        usage.statsmodels: 40
         usage.xarray: 1
         """
         ...
@@ -92078,6 +98743,7 @@ class int64:
         usage.scipy: 21
         usage.skimage: 7
         usage.sklearn: 8
+        usage.statsmodels: 5
         usage.xarray: 1
         """
         ...
@@ -92108,6 +98774,14 @@ class int64:
         usage.dask: 2
         usage.scipy: 13
         usage.skimage: 2
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __pow__(self, _0: float, /):
+        """
+        usage.statsmodels: 4
         """
         ...
 
@@ -92141,6 +98815,7 @@ class int64:
         usage.pandas: 10
         usage.scipy: 13
         usage.skimage: 2
+        usage.statsmodels: 9
         """
         ...
 
@@ -92149,6 +98824,7 @@ class int64:
         """
         usage.dask: 2
         usage.koalas: 49
+        usage.statsmodels: 1
         """
         ...
 
@@ -92160,6 +98836,7 @@ class int64:
         usage.scipy: 4
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 5
         """
         ...
 
@@ -92169,9 +98846,11 @@ class int64:
         usage.dask: 6
         usage.matplotlib: 8
         usage.networkx: 4
+        usage.prophet: 2
         usage.scipy: 52
         usage.skimage: 6
         usage.sklearn: 8
+        usage.statsmodels: 19
         usage.xarray: 1
         """
         ...
@@ -92182,6 +98861,7 @@ class int64:
         usage.matplotlib: 1
         usage.scipy: 9
         usage.skimage: 3
+        usage.statsmodels: 11
         """
         ...
 
@@ -92190,16 +98870,11 @@ class int64:
         """
         usage.dask: 12
         usage.matplotlib: 10
+        usage.prophet: 1
         usage.scipy: 63
         usage.skimage: 6
         usage.sklearn: 11
-        """
-        ...
-
-    @overload
-    def __radd__(self, _0: object, /):
-        """
-        usage.pandas: 63
+        usage.statsmodels: 20
         """
         ...
 
@@ -92208,6 +98883,14 @@ class int64:
         """
         usage.scipy: 2
         usage.sklearn: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: object, /):
+        """
+        usage.pandas: 63
         """
         ...
 
@@ -92333,9 +99016,11 @@ class int64:
         usage.matplotlib: 21
         usage.networkx: 4
         usage.pandas: 63
+        usage.prophet: 3
         usage.scipy: 145
         usage.skimage: 17
         usage.sklearn: 23
+        usage.statsmodels: 58
         usage.xarray: 1
         """
         ...
@@ -92383,6 +99068,7 @@ class int64:
         usage.scipy: 1
         usage.skimage: 1
         usage.sklearn: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -92427,6 +99113,7 @@ class int64:
         usage.scipy: 1
         usage.skimage: 1
         usage.sklearn: 3
+        usage.statsmodels: 1
         """
         ...
 
@@ -92438,6 +99125,7 @@ class int64:
         usage.scipy: 51
         usage.skimage: 2
         usage.sklearn: 6
+        usage.statsmodels: 10
         """
         ...
 
@@ -92448,6 +99136,7 @@ class int64:
         usage.matplotlib: 3
         usage.scipy: 53
         usage.skimage: 3
+        usage.statsmodels: 13
         """
         ...
 
@@ -92458,6 +99147,7 @@ class int64:
         usage.scipy: 14
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -92468,6 +99158,7 @@ class int64:
         usage.scipy: 37
         usage.skimage: 1
         usage.sklearn: 5
+        usage.statsmodels: 13
         """
         ...
 
@@ -92487,18 +99178,41 @@ class int64:
         ...
 
     @overload
-    def __rmul__(self, _0: object, /):
-        """
-        usage.pandas: 59
-        """
-        ...
-
-    @overload
     def __rmul__(self, _0: numpy.float64, /):
         """
         usage.matplotlib: 1
         usage.scipy: 33
         usage.sklearn: 6
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: List[numpy.float64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: List[int], /):
+        """
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: object, /):
+        """
+        usage.pandas: 59
         """
         ...
 
@@ -92551,13 +99265,6 @@ class int64:
         """
         ...
 
-    @overload
-    def __rmul__(self, _0: List[int], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
     def __rmul__(self, _0: object, /):
         """
         usage.dask: 4
@@ -92567,6 +99274,7 @@ class int64:
         usage.scipy: 198
         usage.skimage: 8
         usage.sklearn: 19
+        usage.statsmodels: 51
         usage.xarray: 2
         """
         ...
@@ -92592,6 +99300,22 @@ class int64:
         ...
 
     @overload
+    def __rpow__(self, _0: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rpow__(self, _0: float, /):
+        """
+        usage.matplotlib: 1
+        usage.scipy: 3
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __rpow__(self, _0: pandas._libs.missing.NAType, /):
         """
         usage.pandas: 1
@@ -92607,14 +99331,6 @@ class int64:
         ...
 
     @overload
-    def __rpow__(self, _0: float, /):
-        """
-        usage.matplotlib: 1
-        usage.scipy: 3
-        """
-        ...
-
-    @overload
     def __rpow__(self, _0: numpy.int64, /):
         """
         usage.dask: 1
@@ -92622,13 +99338,16 @@ class int64:
         ...
 
     def __rpow__(
-        self, _0: Union[numpy.int64, int, pandas._libs.missing.NAType, float], /
+        self,
+        _0: Union[numpy.int64, int, numpy.ndarray, pandas._libs.missing.NAType, float],
+        /,
     ):
         """
         usage.dask: 2
         usage.matplotlib: 1
         usage.pandas: 1
         usage.scipy: 11
+        usage.statsmodels: 3
         """
         ...
 
@@ -92640,6 +99359,7 @@ class int64:
         usage.scipy: 6
         usage.skimage: 9
         usage.sklearn: 1
+        usage.statsmodels: 4
         usage.xarray: 3
         """
         ...
@@ -92649,9 +99369,11 @@ class int64:
         """
         usage.dask: 2
         usage.matplotlib: 2
+        usage.prophet: 1
         usage.scipy: 35
         usage.skimage: 10
         usage.sklearn: 8
+        usage.statsmodels: 49
         usage.xarray: 3
         """
         ...
@@ -92665,14 +99387,8 @@ class int64:
         usage.seaborn: 1
         usage.skimage: 11
         usage.sklearn: 11
+        usage.statsmodels: 23
         usage.xarray: 4
-        """
-        ...
-
-    @overload
-    def __rsub__(self, _0: object, /):
-        """
-        usage.pandas: 32
         """
         ...
 
@@ -92682,6 +99398,7 @@ class int64:
         usage.matplotlib: 1
         usage.scipy: 2
         usage.sklearn: 2
+        usage.statsmodels: 4
         """
         ...
 
@@ -92691,6 +99408,91 @@ class int64:
         usage.matplotlib: 3
         usage.scipy: 5
         usage.sklearn: 3
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __rsub__(
+        self,
+        _0: Tuple[
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rsub__(
+        self,
+        _0: Tuple[
+            numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rsub__(
+        self, _0: Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rsub__(
+        self,
+        _0: Tuple[
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: Tuple[numpy.int64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: Tuple[numpy.int64, numpy.int64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: object, /):
+        """
+        usage.pandas: 32
         """
         ...
 
@@ -92699,10 +99501,12 @@ class int64:
         usage.dask: 4
         usage.matplotlib: 15
         usage.pandas: 32
+        usage.prophet: 1
         usage.scipy: 94
         usage.seaborn: 1
         usage.skimage: 30
         usage.sklearn: 25
+        usage.statsmodels: 91
         usage.xarray: 10
         """
         ...
@@ -92716,6 +99520,7 @@ class int64:
         usage.seaborn: 3
         usage.skimage: 6
         usage.sklearn: 15
+        usage.statsmodels: 17
         usage.xarray: 1
         """
         ...
@@ -92724,6 +99529,7 @@ class int64:
     def __rtruediv__(self, _0: int, /):
         """
         usage.dask: 2
+        usage.prophet: 1
         usage.skimage: 2
         usage.sklearn: 2
         """
@@ -92733,10 +99539,12 @@ class int64:
     def __rtruediv__(self, _0: numpy.int64, /):
         """
         usage.dask: 2
+        usage.prophet: 1
         usage.scipy: 4
         usage.seaborn: 1
         usage.skimage: 2
         usage.sklearn: 7
+        usage.statsmodels: 10
         """
         ...
 
@@ -92747,6 +99555,7 @@ class int64:
         usage.scipy: 10
         usage.skimage: 1
         usage.sklearn: 5
+        usage.statsmodels: 27
         usage.xarray: 1
         """
         ...
@@ -92759,7 +99568,15 @@ class int64:
         usage.networkx: 1
         usage.scipy: 8
         usage.sklearn: 6
+        usage.statsmodels: 4
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: numpy.complex128, /):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -92819,10 +99636,12 @@ class int64:
         usage.matplotlib: 7
         usage.networkx: 2
         usage.pandas: 5
+        usage.prophet: 2
         usage.scipy: 49
         usage.seaborn: 4
         usage.skimage: 11
         usage.sklearn: 35
+        usage.statsmodels: 60
         usage.xarray: 3
         """
         ...
@@ -92855,6 +99674,7 @@ class int64:
         usage.scipy: 16
         usage.seaborn: 4
         usage.skimage: 1
+        usage.statsmodels: 5
         usage.xarray: 2
         """
         ...
@@ -92864,10 +99684,12 @@ class int64:
         """
         usage.dask: 6
         usage.matplotlib: 12
+        usage.prophet: 2
         usage.scipy: 83
         usage.seaborn: 1
         usage.skimage: 13
         usage.sklearn: 32
+        usage.statsmodels: 64
         usage.xarray: 2
         """
         ...
@@ -92881,6 +99703,7 @@ class int64:
         usage.seaborn: 1
         usage.skimage: 11
         usage.sklearn: 11
+        usage.statsmodels: 23
         usage.xarray: 4
         """
         ...
@@ -92889,9 +99712,11 @@ class int64:
     def __sub__(self, _0: numpy.float64, /):
         """
         usage.matplotlib: 5
+        usage.prophet: 1
         usage.scipy: 3
         usage.seaborn: 2
         usage.sklearn: 1
+        usage.statsmodels: 3
         usage.xarray: 2
         """
         ...
@@ -92932,10 +99757,12 @@ class int64:
         usage.koalas: 1
         usage.matplotlib: 33
         usage.pandas: 26
+        usage.prophet: 3
         usage.scipy: 154
         usage.seaborn: 8
         usage.skimage: 25
         usage.sklearn: 46
+        usage.statsmodels: 95
         usage.xarray: 10
         """
         ...
@@ -92944,10 +99771,12 @@ class int64:
     def __truediv__(self, _0: numpy.int64, /):
         """
         usage.dask: 2
+        usage.prophet: 1
         usage.scipy: 4
         usage.seaborn: 1
         usage.skimage: 2
         usage.sklearn: 7
+        usage.statsmodels: 10
         """
         ...
 
@@ -92961,6 +99790,7 @@ class int64:
         usage.seaborn: 1
         usage.skimage: 7
         usage.sklearn: 10
+        usage.statsmodels: 15
         """
         ...
 
@@ -92972,6 +99802,7 @@ class int64:
         usage.scipy: 18
         usage.skimage: 6
         usage.sklearn: 5
+        usage.statsmodels: 4
         usage.xarray: 2
         """
         ...
@@ -92983,6 +99814,7 @@ class int64:
         usage.scipy: 11
         usage.skimage: 2
         usage.sklearn: 3
+        usage.statsmodels: 3
         """
         ...
 
@@ -93006,10 +99838,12 @@ class int64:
         usage.matplotlib: 9
         usage.modin: 1
         usage.pandas: 22
+        usage.prophet: 1
         usage.scipy: 52
         usage.seaborn: 2
         usage.skimage: 17
         usage.sklearn: 25
+        usage.statsmodels: 32
         usage.xarray: 2
         """
         ...
@@ -93108,6 +99942,13 @@ class int64:
         ...
 
     @overload
+    def reshape(self, _0: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def reshape(self, _0: List[int], /):
         """
         usage.scipy: 2
@@ -93121,10 +99962,23 @@ class int64:
         """
         ...
 
-    def reshape(self, _0: Union[Tuple[int], List[int]], /):
+    def reshape(self, _0: Union[Tuple[int], int, List[int]], /):
         """
         usage.dask: 1
         usage.scipy: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    def squeeze(self, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    def sum(self, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -93360,6 +100214,13 @@ class int8:
         ...
 
     @overload
+    def __eq__(self, _0: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __eq__(self, _0: object, /):
         """
         usage.pandas: 75
@@ -93387,6 +100248,7 @@ class int8:
         usage.scipy: 3
         usage.skimage: 2
         usage.sklearn: 2
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -94246,6 +101108,7 @@ class matrix:
     # usage.scipy: 43
     # usage.skimage: 2
     # usage.sklearn: 2
+    # usage.statsmodels: 1
     A: object
 
     # usage.networkx: 17
@@ -98426,6 +105289,7 @@ class ndarray:
         usage.scipy: 148
         usage.skimage: 14
         usage.sklearn: 82
+        usage.statsmodels: 40
         usage.xarray: 3
         """
         ...
@@ -98438,6 +105302,7 @@ class ndarray:
         usage.scipy: 9
         usage.skimage: 1
         usage.sklearn: 9
+        usage.statsmodels: 2
         usage.xarray: 2
         """
         ...
@@ -98451,6 +105316,7 @@ class ndarray:
         usage.scipy: 90
         usage.skimage: 40
         usage.sklearn: 74
+        usage.statsmodels: 14
         usage.xarray: 4
         """
         ...
@@ -98461,6 +105327,7 @@ class ndarray:
         """
         usage.scipy: 2
         usage.skimage: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -98477,6 +105344,14 @@ class ndarray:
     def __ne__(cls, _0: Literal["z"], /):
         """
         usage.xarray: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __ne__(cls, _0: Literal["str"], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -98604,6 +105479,7 @@ class ndarray:
         usage.scipy: 273
         usage.skimage: 58
         usage.sklearn: 182
+        usage.statsmodels: 58
         usage.xarray: 15
         """
         ...
@@ -98625,6 +105501,38 @@ class ndarray:
         usage.dask: 1
         usage.scipy: 8
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["%9.3f"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["PDF has zeros at %s "], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["%#6.3g"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __rmod__(cls, _0: Literal["%#8.4g"], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -98662,6 +105570,7 @@ class ndarray:
         usage.scipy: 12
         usage.skimage: 1
         usage.sklearn: 11
+        usage.statsmodels: 6
         usage.xarray: 1
         """
         ...
@@ -98676,6 +105585,7 @@ class ndarray:
     # usage.seaborn: 37
     # usage.skimage: 92
     # usage.sklearn: 766
+    # usage.statsmodels: 1032
     # usage.xarray: 34
     T: object
 
@@ -98690,6 +105600,7 @@ class ndarray:
     # usage.scipy: 5
     # usage.seaborn: 1
     # usage.sklearn: 19
+    # usage.statsmodels: 2
     __class__: object
 
     # usage.xarray: 1
@@ -98699,6 +105610,7 @@ class ndarray:
     # usage.pandas: 87
     # usage.scipy: 37
     # usage.sklearn: 2
+    # usage.statsmodels: 7
     # usage.xarray: 8
     base: object
 
@@ -98706,6 +105618,7 @@ class ndarray:
     cat: object
 
     # usage.sklearn: 1
+    # usage.statsmodels: 1
     columns: object
 
     # usage.xarray: 4
@@ -98730,6 +105643,7 @@ class ndarray:
     # usage.scipy: 2779
     # usage.skimage: 658
     # usage.sklearn: 1009
+    # usage.statsmodels: 266
     # usage.xarray: 848
     dtype: object
 
@@ -98738,6 +105652,7 @@ class ndarray:
     # usage.scipy: 237
     # usage.skimage: 15
     # usage.sklearn: 62
+    # usage.statsmodels: 33
     # usage.xarray: 21
     flags: object
 
@@ -98748,17 +105663,20 @@ class ndarray:
     # usage.seaborn: 50
     # usage.skimage: 21
     # usage.sklearn: 67
+    # usage.statsmodels: 45
     # usage.xarray: 49
     flat: numpy.ndarray
 
     # usage.dask: 1
     # usage.matplotlib: 2
     # usage.scipy: 144
+    # usage.statsmodels: 18
     # usage.xarray: 3
     imag: numpy.ndarray
 
     # usage.matplotlib: 2
     # usage.seaborn: 1
+    # usage.statsmodels: 2
     index: object
 
     # usage.pandas: 11
@@ -98790,6 +105708,7 @@ class ndarray:
     # usage.seaborn: 1
     # usage.skimage: 544
     # usage.sklearn: 468
+    # usage.statsmodels: 405
     # usage.xarray: 309
     ndim: object
 
@@ -98798,6 +105717,7 @@ class ndarray:
     # usage.networkx: 5
     # usage.pandas: 1
     # usage.scipy: 235
+    # usage.statsmodels: 35
     # usage.xarray: 3
     real: object
 
@@ -98806,13 +105726,15 @@ class ndarray:
     # usage.modin: 4
     # usage.networkx: 50
     # usage.pandas: 695
+    # usage.prophet: 10
     # usage.sample-usage: 2
     # usage.scipy: 4735
     # usage.seaborn: 35
     # usage.skimage: 1395
     # usage.sklearn: 3313
+    # usage.statsmodels: 1707
     # usage.xarray: 350
-    shape: Union[numpy.ndarray, List[int], Tuple[Union[None, int], ...]]
+    shape: Union[List[int], numpy.ndarray, Tuple[Union[int, None], ...]]
 
     # usage.dask: 21
     # usage.matplotlib: 84
@@ -98823,6 +105745,7 @@ class ndarray:
     # usage.seaborn: 62
     # usage.skimage: 113
     # usage.sklearn: 240
+    # usage.statsmodels: 114
     # usage.xarray: 64
     size: object
 
@@ -98856,10 +105779,12 @@ class ndarray:
         usage.dask: 10
         usage.matplotlib: 54
         usage.networkx: 1
+        usage.prophet: 1
         usage.scipy: 196
         usage.seaborn: 5
         usage.skimage: 35
         usage.sklearn: 61
+        usage.statsmodels: 67
         usage.xarray: 21
         """
         ...
@@ -98870,11 +105795,13 @@ class ndarray:
         usage.dask: 68
         usage.matplotlib: 213
         usage.networkx: 25
+        usage.prophet: 3
         usage.sample-usage: 1
         usage.scipy: 1622
         usage.seaborn: 7
         usage.skimage: 223
         usage.sklearn: 274
+        usage.statsmodels: 644
         usage.xarray: 26
         """
         ...
@@ -98884,10 +105811,12 @@ class ndarray:
         """
         usage.dask: 10
         usage.matplotlib: 10
+        usage.prophet: 1
         usage.scipy: 64
         usage.seaborn: 2
         usage.skimage: 24
         usage.sklearn: 53
+        usage.statsmodels: 43
         usage.xarray: 1
         """
         ...
@@ -98903,6 +105832,7 @@ class ndarray:
         usage.seaborn: 4
         usage.skimage: 56
         usage.sklearn: 95
+        usage.statsmodels: 141
         usage.xarray: 22
         """
         ...
@@ -98915,6 +105845,7 @@ class ndarray:
         usage.scipy: 4
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 5
         """
         ...
 
@@ -98976,6 +105907,25 @@ class ndarray:
         ...
 
     @overload
+    def __add__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 2
+        usage.prophet: 2
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: List[int], /):
+        """
+        usage.matplotlib: 2
+        usage.scipy: 8
+        usage.sklearn: 5
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
     def __add__(self, _0: object, /):
         """
         usage.pandas: 272
@@ -98995,15 +105945,6 @@ class ndarray:
         """
         usage.matplotlib: 8
         usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __add__(self, _0: List[int], /):
-        """
-        usage.matplotlib: 2
-        usage.scipy: 8
-        usage.sklearn: 5
         """
         ...
 
@@ -99169,24 +106110,19 @@ class ndarray:
         """
         ...
 
-    @overload
-    def __add__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 2
-        """
-        ...
-
     def __add__(self, _0: object, /):
         """
         usage.dask: 201
         usage.matplotlib: 404
         usage.networkx: 29
         usage.pandas: 272
+        usage.prophet: 7
         usage.sample-usage: 2
         usage.scipy: 2303
         usage.seaborn: 18
         usage.skimage: 343
         usage.sklearn: 497
+        usage.statsmodels: 904
         usage.xarray: 76
         """
         ...
@@ -99200,6 +106136,7 @@ class ndarray:
         usage.seaborn: 3
         usage.skimage: 32
         usage.sklearn: 11
+        usage.statsmodels: 29
         usage.xarray: 1
         """
         ...
@@ -99224,6 +106161,7 @@ class ndarray:
     def __and__(self, _0: numpy.bool_, /):
         """
         usage.scipy: 50
+        usage.statsmodels: 3
         usage.xarray: 1
         """
         ...
@@ -99282,6 +106220,7 @@ class ndarray:
         usage.seaborn: 4
         usage.skimage: 34
         usage.sklearn: 11
+        usage.statsmodels: 32
         usage.xarray: 4
         """
         ...
@@ -99651,6 +106590,7 @@ class ndarray:
         usage.scipy: 8
         usage.skimage: 5
         usage.sklearn: 26
+        usage.statsmodels: 3
         usage.xarray: 3
         """
         ...
@@ -99669,6 +106609,14 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: bytes, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -99685,6 +106633,34 @@ class ndarray:
     def __contains__(self, _0: numpy.complex128, /):
         """
         usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["monthly"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["special_day"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["binary_feature"], /):
+        """
+        usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["numeric_feature"], /):
+        """
+        usage.prophet: 1
         """
         ...
 
@@ -99761,11 +106737,13 @@ class ndarray:
         usage.matplotlib: 3
         usage.networkx: 1
         usage.pandas: 13
+        usage.prophet: 4
         usage.sample-usage: 1
         usage.scipy: 11
         usage.seaborn: 16
         usage.skimage: 13
         usage.sklearn: 41
+        usage.statsmodels: 5
         usage.xarray: 3
         """
         ...
@@ -99780,6 +106758,7 @@ class ndarray:
         usage.scipy: 178
         usage.skimage: 140
         usage.sklearn: 214
+        usage.statsmodels: 90
         usage.xarray: 258
         """
         ...
@@ -99792,6 +106771,7 @@ class ndarray:
         usage.seaborn: 4
         usage.skimage: 11
         usage.sklearn: 31
+        usage.statsmodels: 7
         usage.xarray: 3
         """
         ...
@@ -99801,10 +106781,12 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 4
+        usage.prophet: 1
         usage.scipy: 24
         usage.seaborn: 1
         usage.skimage: 7
         usage.sklearn: 38
+        usage.statsmodels: 10
         usage.xarray: 10
         """
         ...
@@ -99820,6 +106802,7 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 127
         usage.sklearn: 272
+        usage.statsmodels: 92
         usage.xarray: 11
         """
         ...
@@ -99839,10 +106822,12 @@ class ndarray:
         """
         usage.dask: 1
         usage.matplotlib: 3
+        usage.prophet: 1
         usage.scipy: 15
         usage.seaborn: 2
         usage.skimage: 9
         usage.sklearn: 42
+        usage.statsmodels: 12
         usage.xarray: 4
         """
         ...
@@ -99915,6 +106900,7 @@ class ndarray:
         usage.scipy: 3
         usage.skimage: 4
         usage.sklearn: 12
+        usage.statsmodels: 1
         usage.xarray: 2
         """
         ...
@@ -99946,6 +106932,7 @@ class ndarray:
     @overload
     def __eq__(self, _0: numpy.bytes_, /):
         """
+        usage.statsmodels: 3
         usage.xarray: 1
         """
         ...
@@ -100037,6 +107024,7 @@ class ndarray:
     def __eq__(self, _0: numpy.str_, /):
         """
         usage.sklearn: 23
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -100088,6 +107076,7 @@ class ndarray:
     def __eq__(self, _0: Literal["a"], /):
         """
         usage.sklearn: 2
+        usage.statsmodels: 1
         usage.xarray: 4
         """
         ...
@@ -100104,7 +107093,58 @@ class ndarray:
     def __eq__(self, _0: bytes, /):
         """
         usage.scipy: 1
+        usage.statsmodels: 1
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["AML-High Risk"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["AML-Low Risk"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["ALL"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["b"], /):
+        """
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: List[bool], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["E"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["e"], /):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -100326,13 +107366,6 @@ class ndarray:
         ...
 
     @overload
-    def __eq__(self, _0: Literal["b"], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __eq__(self, _0: Literal["def"], /):
         """
         usage.sklearn: 1
@@ -100374,11 +107407,13 @@ class ndarray:
         usage.modin: 1
         usage.networkx: 8
         usage.pandas: 895
+        usage.prophet: 2
         usage.sample-usage: 2
         usage.scipy: 617
         usage.seaborn: 16
         usage.skimage: 322
         usage.sklearn: 696
+        usage.statsmodels: 227
         usage.xarray: 368
         """
         ...
@@ -100387,10 +107422,12 @@ class ndarray:
     def __floordiv__(self, _0: int, /):
         """
         usage.dask: 1
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 14
         usage.skimage: 11
         usage.sklearn: 7
+        usage.statsmodels: 3
         usage.xarray: 1
         """
         ...
@@ -100444,10 +107481,12 @@ class ndarray:
         """
         usage.dask: 5
         usage.pandas: 58
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 18
         usage.skimage: 14
         usage.sklearn: 12
+        usage.statsmodels: 3
         usage.xarray: 1
         """
         ...
@@ -100459,6 +107498,7 @@ class ndarray:
         usage.scipy: 112
         usage.skimage: 7
         usage.sklearn: 17
+        usage.statsmodels: 17
         """
         ...
 
@@ -100470,6 +107510,7 @@ class ndarray:
         usage.scipy: 162
         usage.skimage: 52
         usage.sklearn: 47
+        usage.statsmodels: 21
         usage.xarray: 3
         """
         ...
@@ -100479,9 +107520,11 @@ class ndarray:
         """
         usage.matplotlib: 2
         usage.networkx: 1
+        usage.prophet: 2
         usage.scipy: 17
         usage.seaborn: 1
         usage.skimage: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -100495,6 +107538,7 @@ class ndarray:
         usage.scipy: 183
         usage.skimage: 22
         usage.sklearn: 7
+        usage.statsmodels: 14
         usage.xarray: 7
         """
         ...
@@ -100504,10 +107548,12 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 16
+        usage.prophet: 2
         usage.scipy: 21
         usage.seaborn: 8
         usage.skimage: 4
         usage.sklearn: 5
+        usage.statsmodels: 8
         """
         ...
 
@@ -100562,10 +107608,12 @@ class ndarray:
         usage.modin: 1
         usage.networkx: 5
         usage.pandas: 90
+        usage.prophet: 4
         usage.scipy: 501
         usage.seaborn: 9
         usage.skimage: 88
         usage.sklearn: 78
+        usage.statsmodels: 61
         usage.xarray: 10
         """
         ...
@@ -100582,6 +107630,7 @@ class ndarray:
         usage.seaborn: 14
         usage.skimage: 66
         usage.sklearn: 428
+        usage.statsmodels: 548
         usage.xarray: 22
         """
         ...
@@ -100594,11 +107643,13 @@ class ndarray:
         usage.matplotlib: 433
         usage.modin: 20
         usage.networkx: 52
+        usage.prophet: 28
         usage.sample-usage: 2
         usage.scipy: 2217
         usage.seaborn: 74
         usage.skimage: 379
         usage.sklearn: 1011
+        usage.statsmodels: 1259
         usage.xarray: 105
         """
         ...
@@ -100609,11 +107660,13 @@ class ndarray:
         usage.dask: 41
         usage.matplotlib: 182
         usage.networkx: 5
+        usage.prophet: 4
         usage.sample-usage: 1
         usage.scipy: 1104
         usage.seaborn: 45
         usage.skimage: 302
         usage.sklearn: 953
+        usage.statsmodels: 563
         usage.xarray: 22
         """
         ...
@@ -100625,10 +107678,12 @@ class ndarray:
         usage.matplotlib: 45
         usage.modin: 1
         usage.networkx: 6
+        usage.prophet: 7
         usage.scipy: 322
         usage.seaborn: 10
         usage.skimage: 25
         usage.sklearn: 186
+        usage.statsmodels: 603
         usage.xarray: 8
         """
         ...
@@ -100643,6 +107698,7 @@ class ndarray:
         usage.seaborn: 18
         usage.skimage: 115
         usage.sklearn: 484
+        usage.statsmodels: 555
         usage.xarray: 16
         """
         ...
@@ -100656,6 +107712,7 @@ class ndarray:
         usage.scipy: 21
         usage.skimage: 98
         usage.sklearn: 3
+        usage.statsmodels: 23
         """
         ...
 
@@ -100666,6 +107723,7 @@ class ndarray:
         usage.matplotlib: 16
         usage.scipy: 6
         usage.skimage: 115
+        usage.statsmodels: 79
         usage.xarray: 6
         """
         ...
@@ -100677,6 +107735,7 @@ class ndarray:
         usage.scipy: 7
         usage.skimage: 8
         usage.sklearn: 24
+        usage.statsmodels: 18
         """
         ...
 
@@ -100688,6 +107747,7 @@ class ndarray:
         usage.scipy: 5
         usage.skimage: 41
         usage.sklearn: 4
+        usage.statsmodels: 15
         usage.xarray: 2
         """
         ...
@@ -100698,6 +107758,7 @@ class ndarray:
         usage.dask: 2
         usage.scipy: 1
         usage.skimage: 12
+        usage.statsmodels: 5
         usage.xarray: 2
         """
         ...
@@ -100726,6 +107787,7 @@ class ndarray:
         usage.scipy: 32
         usage.skimage: 21
         usage.sklearn: 6
+        usage.statsmodels: 73
         usage.xarray: 1
         """
         ...
@@ -100744,6 +107806,7 @@ class ndarray:
         usage.scipy: 17
         usage.skimage: 7
         usage.sklearn: 3
+        usage.statsmodels: 2
         usage.xarray: 2
         """
         ...
@@ -100774,6 +107837,7 @@ class ndarray:
         usage.dask: 1
         usage.scipy: 2
         usage.skimage: 1
+        usage.statsmodels: 1
         usage.xarray: 2
         """
         ...
@@ -100784,6 +107848,7 @@ class ndarray:
         usage.dask: 1
         usage.scipy: 13
         usage.skimage: 8
+        usage.statsmodels: 52
         """
         ...
 
@@ -100805,6 +107870,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 6
         usage.sklearn: 24
+        usage.statsmodels: 48
         usage.xarray: 9
         """
         ...
@@ -100819,6 +107885,7 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 26
         usage.sklearn: 71
+        usage.statsmodels: 133
         usage.xarray: 6
         """
         ...
@@ -100836,6 +107903,7 @@ class ndarray:
     def __getitem__(self, _0: Tuple[int, int, int, slice[None, None, None]], /):
         """
         usage.skimage: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -100846,6 +107914,7 @@ class ndarray:
         usage.scipy: 9
         usage.skimage: 14
         usage.sklearn: 2
+        usage.statsmodels: 7
         usage.xarray: 4
         """
         ...
@@ -100859,6 +107928,7 @@ class ndarray:
         usage.scipy: 76
         usage.skimage: 50
         usage.sklearn: 16
+        usage.statsmodels: 31
         usage.xarray: 3
         """
         ...
@@ -100870,6 +107940,7 @@ class ndarray:
         usage.matplotlib: 1
         usage.scipy: 54
         usage.skimage: 32
+        usage.statsmodels: 18
         usage.xarray: 3
         """
         ...
@@ -100892,6 +107963,7 @@ class ndarray:
         usage.seaborn: 39
         usage.skimage: 139
         usage.sklearn: 62
+        usage.statsmodels: 151
         usage.xarray: 15
         """
         ...
@@ -100904,6 +107976,7 @@ class ndarray:
         usage.scipy: 29
         usage.skimage: 1
         usage.sklearn: 5
+        usage.statsmodels: 10
         """
         ...
 
@@ -100917,6 +107990,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 31
         usage.sklearn: 51
+        usage.statsmodels: 86
         usage.xarray: 25
         """
         ...
@@ -100981,6 +108055,7 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 10
         usage.sklearn: 106
+        usage.statsmodels: 576
         usage.xarray: 10
         """
         ...
@@ -100993,6 +108068,7 @@ class ndarray:
         usage.seaborn: 10
         usage.skimage: 11
         usage.sklearn: 4
+        usage.statsmodels: 5
         """
         ...
 
@@ -101004,6 +108080,7 @@ class ndarray:
         usage.scipy: 27
         usage.skimage: 5
         usage.sklearn: 16
+        usage.statsmodels: 18
         """
         ...
 
@@ -101016,6 +108093,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 12
         usage.sklearn: 266
+        usage.statsmodels: 392
         usage.xarray: 14
         """
         ...
@@ -101058,6 +108136,7 @@ class ndarray:
         usage.scipy: 38
         usage.skimage: 2
         usage.sklearn: 17
+        usage.statsmodels: 2
         usage.xarray: 2
         """
         ...
@@ -101083,10 +108162,12 @@ class ndarray:
         """
         usage.dask: 6
         usage.matplotlib: 13
+        usage.prophet: 2
         usage.scipy: 147
         usage.seaborn: 1
         usage.skimage: 26
         usage.sklearn: 158
+        usage.statsmodels: 12
         usage.xarray: 5
         """
         ...
@@ -101098,6 +108179,7 @@ class ndarray:
         usage.scipy: 32
         usage.skimage: 22
         usage.sklearn: 5
+        usage.statsmodels: 15
         usage.xarray: 1
         """
         ...
@@ -101112,6 +108194,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 37
         usage.sklearn: 46
+        usage.statsmodels: 19
         usage.xarray: 2
         """
         ...
@@ -101124,6 +108207,7 @@ class ndarray:
         usage.scipy: 49
         usage.skimage: 16
         usage.sklearn: 2
+        usage.statsmodels: 15
         usage.xarray: 3
         """
         ...
@@ -101136,6 +108220,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 29
         usage.sklearn: 43
+        usage.statsmodels: 106
         usage.xarray: 8
         """
         ...
@@ -101151,6 +108236,7 @@ class ndarray:
         usage.seaborn: 5
         usage.skimage: 27
         usage.sklearn: 106
+        usage.statsmodels: 119
         usage.xarray: 7
         """
         ...
@@ -101162,6 +108248,7 @@ class ndarray:
         usage.scipy: 24
         usage.skimage: 15
         usage.sklearn: 2
+        usage.statsmodels: 4
         """
         ...
 
@@ -101171,6 +108258,7 @@ class ndarray:
         usage.matplotlib: 3
         usage.scipy: 26
         usage.skimage: 15
+        usage.statsmodels: 17
         """
         ...
 
@@ -101182,6 +108270,7 @@ class ndarray:
         usage.scipy: 11
         usage.skimage: 12
         usage.sklearn: 6
+        usage.statsmodels: 3
         usage.xarray: 9
         """
         ...
@@ -101193,6 +108282,7 @@ class ndarray:
         usage.scipy: 43
         usage.skimage: 6
         usage.sklearn: 30
+        usage.statsmodels: 42
         usage.xarray: 4
         """
         ...
@@ -101205,6 +108295,7 @@ class ndarray:
         usage.scipy: 14
         usage.skimage: 1
         usage.sklearn: 18
+        usage.statsmodels: 28
         usage.xarray: 4
         """
         ...
@@ -101217,6 +108308,7 @@ class ndarray:
         usage.scipy: 33
         usage.skimage: 9
         usage.sklearn: 43
+        usage.statsmodels: 56
         usage.xarray: 6
         """
         ...
@@ -101226,6 +108318,7 @@ class ndarray:
         """
         usage.scipy: 14
         usage.skimage: 2
+        usage.statsmodels: 16
         """
         ...
 
@@ -101239,6 +108332,7 @@ class ndarray:
         usage.scipy: 4
         usage.skimage: 2
         usage.sklearn: 8
+        usage.statsmodels: 9
         usage.xarray: 2
         """
         ...
@@ -101253,6 +108347,7 @@ class ndarray:
         usage.seaborn: 6
         usage.skimage: 29
         usage.sklearn: 81
+        usage.statsmodels: 79
         usage.xarray: 8
         """
         ...
@@ -101266,6 +108361,7 @@ class ndarray:
         usage.seaborn: 3
         usage.skimage: 2
         usage.sklearn: 36
+        usage.statsmodels: 43
         usage.xarray: 3
         """
         ...
@@ -101278,6 +108374,7 @@ class ndarray:
         usage.seaborn: 5
         usage.skimage: 2
         usage.sklearn: 15
+        usage.statsmodels: 8
         """
         ...
 
@@ -101287,6 +108384,7 @@ class ndarray:
     ):
         """
         usage.skimage: 21
+        usage.statsmodels: 4
         """
         ...
 
@@ -101309,6 +108407,7 @@ class ndarray:
         usage.matplotlib: 20
         usage.scipy: 20
         usage.skimage: 8
+        usage.statsmodels: 5
         usage.xarray: 1
         """
         ...
@@ -101329,6 +108428,7 @@ class ndarray:
         """
         usage.scipy: 8
         usage.skimage: 3
+        usage.statsmodels: 14
         usage.xarray: 1
         """
         ...
@@ -101370,6 +108470,7 @@ class ndarray:
         usage.scipy: 9
         usage.skimage: 5
         usage.sklearn: 17
+        usage.statsmodels: 38
         usage.xarray: 4
         """
         ...
@@ -101386,6 +108487,7 @@ class ndarray:
         usage.matplotlib: 1
         usage.scipy: 13
         usage.skimage: 3
+        usage.statsmodels: 5
         """
         ...
 
@@ -101421,6 +108523,7 @@ class ndarray:
         usage.dask: 2
         usage.scipy: 20
         usage.skimage: 1
+        usage.statsmodels: 28
         usage.xarray: 2
         """
         ...
@@ -101432,6 +108535,7 @@ class ndarray:
         usage.scipy: 5
         usage.skimage: 2
         usage.sklearn: 8
+        usage.statsmodels: 3
         usage.xarray: 1
         """
         ...
@@ -101444,6 +108548,7 @@ class ndarray:
         usage.scipy: 5
         usage.skimage: 5
         usage.sklearn: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -101454,6 +108559,7 @@ class ndarray:
         usage.scipy: 3
         usage.skimage: 13
         usage.sklearn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -101465,6 +108571,7 @@ class ndarray:
         usage.scipy: 2
         usage.skimage: 11
         usage.sklearn: 2
+        usage.statsmodels: 6
         """
         ...
 
@@ -101503,6 +108610,7 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 1
         usage.sklearn: 13
+        usage.statsmodels: 216
         usage.xarray: 12
         """
         ...
@@ -101515,6 +108623,7 @@ class ndarray:
         usage.scipy: 54
         usage.skimage: 2
         usage.sklearn: 15
+        usage.statsmodels: 5
         """
         ...
 
@@ -101525,6 +108634,7 @@ class ndarray:
         usage.scipy: 29
         usage.skimage: 5
         usage.sklearn: 3
+        usage.statsmodels: 15
         """
         ...
 
@@ -101579,6 +108689,7 @@ class ndarray:
         usage.scipy: 142
         usage.skimage: 8
         usage.sklearn: 131
+        usage.statsmodels: 76
         usage.xarray: 5
         """
         ...
@@ -101604,6 +108715,7 @@ class ndarray:
         usage.scipy: 26
         usage.skimage: 4
         usage.sklearn: 17
+        usage.statsmodels: 14
         """
         ...
 
@@ -101613,6 +108725,7 @@ class ndarray:
         usage.scipy: 2
         usage.skimage: 2
         usage.sklearn: 2
+        usage.statsmodels: 3
         """
         ...
 
@@ -101633,6 +108746,7 @@ class ndarray:
         usage.scipy: 10
         usage.skimage: 1
         usage.sklearn: 7
+        usage.statsmodels: 20
         """
         ...
 
@@ -101660,6 +108774,7 @@ class ndarray:
         usage.scipy: 104
         usage.skimage: 1
         usage.sklearn: 13
+        usage.statsmodels: 23
         """
         ...
 
@@ -101679,6 +108794,7 @@ class ndarray:
         """
         usage.skimage: 1
         usage.sklearn: 2
+        usage.statsmodels: 3
         """
         ...
 
@@ -101736,6 +108852,7 @@ class ndarray:
         usage.scipy: 26
         usage.skimage: 3
         usage.sklearn: 15
+        usage.statsmodels: 4
         usage.xarray: 3
         """
         ...
@@ -101746,6 +108863,7 @@ class ndarray:
         usage.scipy: 19
         usage.skimage: 13
         usage.sklearn: 2
+        usage.statsmodels: 14
         """
         ...
 
@@ -101762,6 +108880,7 @@ class ndarray:
         usage.matplotlib: 6
         usage.scipy: 12
         usage.skimage: 3
+        usage.statsmodels: 6
         """
         ...
 
@@ -101789,6 +108908,7 @@ class ndarray:
         usage.scipy: 16
         usage.skimage: 6
         usage.sklearn: 3
+        usage.statsmodels: 3
         usage.xarray: 14
         """
         ...
@@ -101824,6 +108944,7 @@ class ndarray:
         usage.dask: 34
         usage.scipy: 34
         usage.skimage: 1
+        usage.statsmodels: 3
         usage.xarray: 5
         """
         ...
@@ -101835,6 +108956,7 @@ class ndarray:
         usage.scipy: 31
         usage.skimage: 1
         usage.sklearn: 1
+        usage.statsmodels: 5
         usage.xarray: 1
         """
         ...
@@ -101847,6 +108969,7 @@ class ndarray:
         usage.scipy: 63
         usage.skimage: 1
         usage.sklearn: 1
+        usage.statsmodels: 1
         usage.xarray: 2
         """
         ...
@@ -101915,6 +109038,7 @@ class ndarray:
         usage.scipy: 21
         usage.skimage: 4
         usage.sklearn: 5
+        usage.statsmodels: 6
         usage.xarray: 9
         """
         ...
@@ -102062,6 +109186,7 @@ class ndarray:
         usage.scipy: 14
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -102088,6 +109213,7 @@ class ndarray:
     ):
         """
         usage.skimage: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -102157,6 +109283,7 @@ class ndarray:
         """
         usage.scipy: 3
         usage.skimage: 5
+        usage.statsmodels: 1
         usage.xarray: 12
         """
         ...
@@ -102200,6 +109327,7 @@ class ndarray:
         usage.dask: 4
         usage.scipy: 44
         usage.skimage: 1
+        usage.statsmodels: 1
         usage.xarray: 9
         """
         ...
@@ -102368,6 +109496,7 @@ class ndarray:
         usage.dask: 2
         usage.scipy: 6
         usage.skimage: 5
+        usage.statsmodels: 4
         usage.xarray: 2
         """
         ...
@@ -102409,6 +109538,7 @@ class ndarray:
         usage.scipy: 5
         usage.skimage: 2
         usage.sklearn: 2
+        usage.statsmodels: 33
         """
         ...
 
@@ -102419,6 +109549,7 @@ class ndarray:
         usage.matplotlib: 1
         usage.scipy: 1
         usage.skimage: 10
+        usage.statsmodels: 11
         """
         ...
 
@@ -102427,6 +109558,7 @@ class ndarray:
         """
         usage.scipy: 5
         usage.skimage: 12
+        usage.statsmodels: 16
         """
         ...
 
@@ -102489,6 +109621,7 @@ class ndarray:
     ):
         """
         usage.skimage: 4
+        usage.statsmodels: 2
         """
         ...
 
@@ -102502,6 +109635,7 @@ class ndarray:
     ):
         """
         usage.skimage: 4
+        usage.statsmodels: 10
         """
         ...
 
@@ -102575,6 +109709,7 @@ class ndarray:
         usage.scipy: 5
         usage.skimage: 2
         usage.sklearn: 22
+        usage.statsmodels: 8
         """
         ...
 
@@ -102584,6 +109719,7 @@ class ndarray:
         usage.scipy: 7
         usage.skimage: 1
         usage.sklearn: 16
+        usage.statsmodels: 1
         """
         ...
 
@@ -102593,6 +109729,7 @@ class ndarray:
         usage.scipy: 1
         usage.skimage: 10
         usage.sklearn: 28
+        usage.statsmodels: 9
         """
         ...
 
@@ -102610,6 +109747,7 @@ class ndarray:
         usage.scipy: 20
         usage.skimage: 1
         usage.sklearn: 1
+        usage.statsmodels: 1
         usage.xarray: 4
         """
         ...
@@ -102619,6 +109757,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.scipy: 8
+        usage.statsmodels: 2
         usage.xarray: 15
         """
         ...
@@ -102708,6 +109847,7 @@ class ndarray:
     def __getitem__(self, _0: ellipsis, /):
         """
         usage.scipy: 13
+        usage.statsmodels: 1
         usage.xarray: 9
         """
         ...
@@ -102738,6 +109878,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[int, int, ellipsis], /):
         """
+        usage.statsmodels: 1
         usage.xarray: 7
         """
         ...
@@ -102749,6 +109890,7 @@ class ndarray:
         usage.scipy: 24
         usage.seaborn: 1
         usage.sklearn: 3
+        usage.statsmodels: 3
         usage.xarray: 5
         """
         ...
@@ -102915,6 +110057,7 @@ class ndarray:
         self, _0: Tuple[slice[None, None, None], numpy.ndarray, numpy.ndarray], /
     ):
         """
+        usage.statsmodels: 4
         usage.xarray: 2
         """
         ...
@@ -103071,6 +110214,7 @@ class ndarray:
         usage.networkx: 2
         usage.scipy: 5
         usage.sklearn: 8
+        usage.statsmodels: 5
         usage.xarray: 1
         """
         ...
@@ -103133,6 +110277,7 @@ class ndarray:
         self, _0: Tuple[numpy.ndarray, numpy.ndarray, slice[None, None, None]], /
     ):
         """
+        usage.statsmodels: 2
         usage.xarray: 2
         """
         ...
@@ -103420,6 +110565,7 @@ class ndarray:
     def __getitem__(self, _0: Tuple[slice[int, None, int], None], /):
         """
         usage.scipy: 1
+        usage.statsmodels: 2
         usage.xarray: 2
         """
         ...
@@ -103429,6 +110575,7 @@ class ndarray:
         """
         usage.scipy: 3
         usage.sklearn: 4
+        usage.statsmodels: 2
         usage.xarray: 2
         """
         ...
@@ -103468,6 +110615,7 @@ class ndarray:
         """
         usage.dask: 5
         usage.scipy: 19
+        usage.statsmodels: 6
         usage.xarray: 3
         """
         ...
@@ -103519,6 +110667,7 @@ class ndarray:
         """
         usage.dask: 1
         usage.scipy: 9
+        usage.statsmodels: 3
         usage.xarray: 1
         """
         ...
@@ -103536,6 +110685,7 @@ class ndarray:
         /,
     ):
         """
+        usage.statsmodels: 2
         usage.xarray: 1
         """
         ...
@@ -103690,6 +110840,7 @@ class ndarray:
         """
         usage.dask: 1
         usage.scipy: 12
+        usage.statsmodels: 5
         usage.xarray: 4
         """
         ...
@@ -104551,6 +111702,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[numpy.ndarray, slice[int, int, int]], /):
         """
+        usage.statsmodels: 8
         usage.xarray: 1
         """
         ...
@@ -104584,6 +111736,7 @@ class ndarray:
         self, _0: Tuple[slice[None, None, None], slice[None, int, None], int], /
     ):
         """
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -104599,6 +111752,7 @@ class ndarray:
         """
         usage.dask: 1
         usage.scipy: 2
+        usage.statsmodels: 8
         usage.xarray: 2
         """
         ...
@@ -104644,6 +111798,7 @@ class ndarray:
         self, _0: Tuple[slice[None, int, None], slice[None, None, None], int], /
     ):
         """
+        usage.statsmodels: 2
         usage.xarray: 1
         """
         ...
@@ -104668,6 +111823,7 @@ class ndarray:
         self, _0: Tuple[slice[None, int, None], int, slice[None, None, None]], /
     ):
         """
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -104695,6 +111851,7 @@ class ndarray:
         self, _0: Tuple[slice[None, int, None], slice[None, int, None], int], /
     ):
         """
+        usage.statsmodels: 2
         usage.xarray: 1
         """
         ...
@@ -104706,6 +111863,7 @@ class ndarray:
         usage.matplotlib: 1
         usage.scipy: 19
         usage.sklearn: 3
+        usage.statsmodels: 3
         usage.xarray: 4
         """
         ...
@@ -104928,6 +112086,7 @@ class ndarray:
         usage.networkx: 2
         usage.scipy: 3
         usage.sklearn: 4
+        usage.statsmodels: 5
         usage.xarray: 1
         """
         ...
@@ -104942,9 +112101,93 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: object, /):
+    def __getitem__(self, _0: Tuple[numpy.ndarray, slice[int, None, int]], /):
         """
-        usage.pandas: 2206
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, ellipsis], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.sklearn: 1
+        usage.statsmodels: 25
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], pandas.core.series.Series], /
+    ):
+        """
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64],
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], int], /):
+        """
+        usage.sklearn: 11
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], slice[int, int, int]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[numpy.int32], slice[None, None, None]], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[numpy.int32], /):
+        """
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, slice[None, None, None], None], /):
+        """
+        usage.scipy: 2
+        usage.sklearn: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, ellipsis], /):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -104954,6 +112197,1265 @@ class ndarray:
         usage.matplotlib: 1
         usage.scipy: 14
         usage.sklearn: 2
+        usage.statsmodels: 16
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], None], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["datetime_c"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["datetime_big_c"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["date"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["weekly_date"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["monthly_date"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["quarterly_date"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["half_yearly_date"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["yearly_date"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var2"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, numpy.int64, None]], /
+    ):
+        """
+        usage.scipy: 9
+        usage.sklearn: 4
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, numpy.int64, None], slice[None, None, None]], /
+    ):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], List[numpy.int64]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["gau_support"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["gau_cdf"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["gau_sf"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["gau_icdf"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["y"], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["x"], /):
+        """
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["out"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["out_0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["out_3"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["out_2_3"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["out_1_5"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["out_Rdef"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["out_1"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], int], /):
+        """
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["residual"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["DFFITS"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["leverage"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["influence"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Tuple[numpy.int64, numpy.int64, numpy.int64]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, None, int], numpy.ndarray], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Tuple[numpy.int64, numpy.int64]], /):
+        """
+        usage.sklearn: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Tuple[numpy.int64]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.flatiter, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["alpha"], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["beta"], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["gamma"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Literal["x0"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[int, int, int],
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[int, int, int],
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[int, int, int],
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.scipy: 3
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[int, int, int],
+        ],
+        /,
+    ):
+        """
+        usage.scipy: 3
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[None, slice[None, None, None], None], /):
+        """
+        usage.dask: 2
+        usage.scipy: 4
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["instrument"], /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["instrument_1.0"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["instrument_2.0"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["instrument_3.0"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["instrument_4.0"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["instrument_5.0"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var1"], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var1_1.0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var1_2.0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var1_3.0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var1_4.0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var1_5.0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["str_instr"], /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["str_instr_abcde"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["str_instr_fghij"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["str_instr_klmno"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["str_instr_pqrst"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["str_instr_uvwxy"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var1_abcde"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var1_fghij"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var1_klmno"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var1_pqrst"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var1_uvwxy"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Tuple[
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[int, slice[numpy.int64, numpy.int64, numpy.int64]], /
+    ):
+        """
+        usage.sklearn: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, slice[numpy.int64, None, numpy.int64]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], int, int], /):
+        """
+        usage.dask: 2
+        usage.matplotlib: 46
+        usage.scipy: 27
+        usage.seaborn: 3
+        usage.sklearn: 13
+        usage.statsmodels: 12
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            int,
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            int,
+            int,
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            int,
+            slice[None, None, None],
+            slice[None, None, None],
+            int,
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            int,
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+            int,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, int, int], /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Tuple[
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[None, int, None], slice[int, None, int], slice[int, int, int]],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[int, int, int], slice[int, int, int], int], /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Tuple[
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, int, None], slice[int, int, int], int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[int, None, int], slice[int, int, int], int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[int, int, int], slice[None, int, None], int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[int, None, int], int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, int, None], slice[int, None, int], int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[int, None, int], slice[None, int, None], int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[int, None, int], slice[int, None, int], int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], numpy.ndarray, int], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[None, int, None], slice[int, int, int], slice[int, int, int]],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[int, int, int], slice[int, int, int]],
+        /,
+    ):
+        """
+        usage.scipy: 13
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[int, None, int], slice[int, int, int], slice[int, int, int]],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[int, int, int], numpy.ndarray], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], slice[numpy.int64, numpy.int64, numpy.int64]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[int, numpy.int64, int]], /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, slice[int, numpy.int64, int]], /):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            Tuple[
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+            ],
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            Tuple[
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+            ],
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[ellipsis, slice[numpy.int64, numpy.int64, numpy.int64]], /
+    ):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[int, None, int], slice[int, None, int], slice[None, None, None]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[ellipsis, slice[numpy.int64, None, numpy.int64]], /
+    ):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, numpy.ndarray], /):
+        """
+        usage.scipy: 2
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray, Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            Tuple[
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+            ],
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Tuple[
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[numpy.int64, numpy.int64, numpy.int64], int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray, int], /):
+        """
+        usage.matplotlib: 1
+        usage.sklearn: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[numpy.int64, numpy.int64, numpy.int64], slice[None, None, None], int
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, slice[None, None, None]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, Tuple[numpy.int64]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, Tuple[numpy.int64, numpy.int64]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, slice[numpy.int64, int, numpy.int64]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            Tuple[
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+                numpy.int64,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], slice[None, int, None], slice[int, int, int]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], slice[int, int, int], slice[None, int, None]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[int, int, int], slice[int, int, int], slice[None, int, None]],
+        /,
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[int, slice[int, int, int], slice[None, int, None]], /
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, numpy.int64], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[int, slice[None, None, None], slice[None, None, None]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], slice[int, None, int]], /):
+        """
+        usage.matplotlib: 3
+        usage.scipy: 6
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, int, slice[None, int, None]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, None, int], List[int]], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, None, int], list], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["variable"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            int,
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        /,
+    ):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["causedby"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["lower"], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["upper"], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], slice[int, int, int]], /):
+        """
+        usage.scipy: 3
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: object, /):
+        """
+        usage.pandas: 2206
         """
         ...
 
@@ -104966,17 +113468,6 @@ class ndarray:
         """
         usage.dask: 1
         usage.scipy: 8
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: Tuple[slice[None, None, None], slice[int, int, int], slice[int, int, int]],
-        /,
-    ):
-        """
-        usage.scipy: 13
         """
         ...
 
@@ -105007,49 +113498,6 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], int, int], /):
-        """
-        usage.dask: 2
-        usage.matplotlib: 46
-        usage.scipy: 27
-        usage.seaborn: 3
-        usage.sklearn: 13
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: Tuple[
-            slice[None, None, None],
-            slice[None, None, None],
-            slice[None, None, None],
-            slice[int, int, int],
-        ],
-        /,
-    ):
-        """
-        usage.scipy: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: Tuple[
-            slice[None, None, None],
-            slice[None, None, None],
-            slice[int, int, int],
-            slice[None, None, None],
-        ],
-        /,
-    ):
-        """
-        usage.scipy: 3
-        """
-        ...
-
-    @overload
     def __getitem__(
         self,
         _0: Tuple[
@@ -105069,14 +113517,6 @@ class ndarray:
     def __getitem__(self, _0: Tuple[slice[int, None, int], slice[None, None, None]], /):
         """
         usage.scipy: 10
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], slice[int, None, int]], /):
-        """
-        usage.matplotlib: 3
-        usage.scipy: 6
         """
         ...
 
@@ -105215,14 +113655,6 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[None, slice[None, None, None], None], /):
-        """
-        usage.dask: 2
-        usage.scipy: 4
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[int, None, slice[None, None, None]], /):
         """
         usage.scipy: 4
@@ -105242,14 +113674,6 @@ class ndarray:
     ):
         """
         usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[int, slice[None, None, None], None], /):
-        """
-        usage.scipy: 2
-        usage.sklearn: 2
         """
         ...
 
@@ -105490,16 +113914,6 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(
-        self, _0: Tuple[slice[None, None, None], slice[None, numpy.int64, None]], /
-    ):
-        """
-        usage.scipy: 9
-        usage.sklearn: 4
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: List[Union[numpy.int64, int]], /):
         """
         usage.scipy: 3
@@ -105655,13 +114069,6 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], slice[int, int, int]], /):
-        """
-        usage.scipy: 3
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[slice[int, int, int], slice[None, None, None]], /):
         """
         usage.scipy: 3
@@ -105680,15 +114087,6 @@ class ndarray:
         self,
         _0: Tuple[slice[None, None, None], slice[numpy.int64, None, numpy.int64]],
         /,
-    ):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self, _0: Tuple[slice[None, numpy.int64, None], slice[None, None, None]], /
     ):
         """
         usage.scipy: 1
@@ -105964,14 +114362,6 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[ellipsis, numpy.ndarray], /):
-        """
-        usage.scipy: 2
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Literal["ii"], /):
         """
         usage.scipy: 2
@@ -106049,29 +114439,6 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[ellipsis, int, int], /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: Tuple[
-            int,
-            slice[None, None, None],
-            slice[None, None, None],
-            slice[None, None, None],
-        ],
-        /,
-    ):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def __getitem__(
         self, _0: Tuple[int, int, slice[None, None, None], slice[None, None, None]], /
     ):
@@ -106092,38 +114459,6 @@ class ndarray:
     @overload
     def __getitem__(
         self, _0: Tuple[int, slice[None, None, None], int, slice[None, None, None]], /
-    ):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: Tuple[
-            slice[int, int, int],
-            slice[None, None, None],
-            slice[None, None, None],
-            slice[None, None, None],
-        ],
-        /,
-    ):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self,
-        _0: Tuple[
-            slice[None, None, None],
-            slice[int, int, int],
-            slice[None, None, None],
-            slice[None, None, None],
-        ],
-        /,
     ):
         """
         usage.scipy: 1
@@ -106206,14 +114541,6 @@ class ndarray:
     def __getitem__(self, _0: Tuple[ellipsis, None, slice[None, None, None]], /):
         """
         usage.matplotlib: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray, int], /):
-        """
-        usage.matplotlib: 1
-        usage.sklearn: 2
         """
         ...
 
@@ -106844,20 +115171,6 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[Tuple[numpy.int64, numpy.int64]], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[slice[None, None, None], List[bool]], /):
         """
         usage.networkx: 20
@@ -106991,25 +115304,9 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(
-        self, _0: Tuple[int, slice[numpy.int64, numpy.int64, numpy.int64]], /
-    ):
-        """
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[List[int], slice[int, None, int]], /):
         """
         usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[List[int], int], /):
-        """
-        usage.sklearn: 11
         """
         ...
 
@@ -107114,23 +115411,7 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], int], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[range, int], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self, _0: Tuple[slice[None, None, None], pandas.core.series.Series], /
-    ):
         """
         usage.sklearn: 1
         """
@@ -107151,11 +115432,13 @@ class ndarray:
         usage.modin: 26
         usage.networkx: 215
         usage.pandas: 2206
+        usage.prophet: 41
         usage.sample-usage: 5
         usage.scipy: 9090
         usage.seaborn: 245
         usage.skimage: 2214
         usage.sklearn: 4916
+        usage.statsmodels: 6940
         usage.xarray: 890
         """
         ...
@@ -107170,6 +115453,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 109
         usage.sklearn: 77
+        usage.statsmodels: 54
         usage.xarray: 9
         """
         ...
@@ -107183,6 +115467,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 23
         usage.sklearn: 59
+        usage.statsmodels: 32
         usage.xarray: 1
         """
         ...
@@ -107195,6 +115480,7 @@ class ndarray:
         usage.seaborn: 3
         usage.skimage: 18
         usage.sklearn: 20
+        usage.statsmodels: 22
         """
         ...
 
@@ -107207,6 +115493,7 @@ class ndarray:
         usage.scipy: 164
         usage.skimage: 29
         usage.sklearn: 18
+        usage.statsmodels: 41
         usage.xarray: 1
         """
         ...
@@ -107289,6 +115576,7 @@ class ndarray:
         usage.seaborn: 5
         usage.skimage: 195
         usage.sklearn: 175
+        usage.statsmodels: 149
         usage.xarray: 11
         """
         ...
@@ -107302,6 +115590,7 @@ class ndarray:
         usage.scipy: 23
         usage.skimage: 30
         usage.sklearn: 35
+        usage.statsmodels: 18
         usage.xarray: 2
         """
         ...
@@ -107316,6 +115605,7 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 89
         usage.sklearn: 161
+        usage.statsmodels: 231
         usage.xarray: 3
         """
         ...
@@ -107328,6 +115618,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 9
         usage.sklearn: 28
+        usage.statsmodels: 10
         """
         ...
 
@@ -107347,9 +115638,11 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 4
+        usage.prophet: 4
         usage.scipy: 6
         usage.skimage: 3
         usage.sklearn: 29
+        usage.statsmodels: 5
         """
         ...
 
@@ -107397,6 +115690,28 @@ class ndarray:
         usage.scipy: 1
         usage.sklearn: 1
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __iadd__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __iadd__(self, _0: numpy.flatiter, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __iadd__(self, _0: List[Union[int, float]], /):
+        """
+        usage.matplotlib: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -107501,24 +115816,19 @@ class ndarray:
         """
         ...
 
-    @overload
-    def __iadd__(self, _0: List[Union[int, float]], /):
-        """
-        usage.matplotlib: 2
-        """
-        ...
-
     def __iadd__(self, _0: object, /):
         """
         usage.dask: 12
         usage.matplotlib: 70
         usage.networkx: 7
         usage.pandas: 13
+        usage.prophet: 4
         usage.sample-usage: 1
         usage.scipy: 368
         usage.seaborn: 3
         usage.skimage: 144
         usage.sklearn: 268
+        usage.statsmodels: 268
         usage.xarray: 7
         """
         ...
@@ -107529,6 +115839,7 @@ class ndarray:
         usage.scipy: 19
         usage.skimage: 4
         usage.sklearn: 4
+        usage.statsmodels: 5
         """
         ...
 
@@ -107564,6 +115875,7 @@ class ndarray:
         usage.scipy: 20
         usage.skimage: 4
         usage.sklearn: 4
+        usage.statsmodels: 5
         """
         ...
 
@@ -107620,6 +115932,7 @@ class ndarray:
         usage.seaborn: 3
         usage.skimage: 11
         usage.sklearn: 46
+        usage.statsmodels: 29
         usage.xarray: 1
         """
         ...
@@ -107631,6 +115944,7 @@ class ndarray:
         usage.scipy: 45
         usage.skimage: 17
         usage.sklearn: 77
+        usage.statsmodels: 48
         """
         ...
 
@@ -107639,10 +115953,12 @@ class ndarray:
         """
         usage.matplotlib: 4
         usage.networkx: 3
+        usage.prophet: 1
         usage.scipy: 62
         usage.seaborn: 2
         usage.skimage: 5
         usage.sklearn: 19
+        usage.statsmodels: 13
         usage.xarray: 1
         """
         ...
@@ -107653,11 +115969,13 @@ class ndarray:
         usage.dask: 1
         usage.matplotlib: 9
         usage.networkx: 1
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 60
         usage.seaborn: 1
         usage.skimage: 4
         usage.sklearn: 35
+        usage.statsmodels: 22
         usage.xarray: 1
         """
         ...
@@ -107687,6 +116005,14 @@ class ndarray:
         ...
 
     @overload
+    def __imul__(self, _0: numpy.complex128, /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __imul__(self, _0: Union[int, numpy.uint64], /):
         """
         usage.pandas: 4
@@ -107697,13 +116023,6 @@ class ndarray:
     def __imul__(self, _0: complex, /):
         """
         usage.scipy: 16
-        """
-        ...
-
-    @overload
-    def __imul__(self, _0: numpy.complex128, /):
-        """
-        usage.scipy: 1
         """
         ...
 
@@ -107783,11 +116102,13 @@ class ndarray:
         usage.matplotlib: 29
         usage.networkx: 4
         usage.pandas: 4
+        usage.prophet: 2
         usage.sample-usage: 1
         usage.scipy: 246
         usage.seaborn: 6
         usage.skimage: 42
         usage.sklearn: 178
+        usage.statsmodels: 113
         usage.xarray: 4
         """
         ...
@@ -107803,6 +116124,7 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 27
         usage.sklearn: 84
+        usage.statsmodels: 86
         usage.xarray: 9
         """
         ...
@@ -107813,7 +116135,15 @@ class ndarray:
         usage.matplotlib: 1
         usage.scipy: 4
         usage.skimage: 3
+        usage.statsmodels: 4
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __ior__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -107831,14 +116161,24 @@ class ndarray:
         """
         ...
 
-    def __ior__(self, _0: Union[int, bool, numpy.ndarray], /):
+    def __ior__(
+        self, _0: Union[int, pandas.core.series.Series, bool, numpy.ndarray], /
+    ):
         """
         usage.matplotlib: 1
         usage.pandas: 9
         usage.sample-usage: 1
         usage.scipy: 4
         usage.skimage: 3
+        usage.statsmodels: 5
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __ipow__(self, _0: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -107859,11 +116199,12 @@ class ndarray:
         """
         ...
 
-    def __ipow__(self, _0: Union[float, int], /):
+    def __ipow__(self, _0: Union[float, int, numpy.ndarray], /):
         """
         usage.sample-usage: 1
         usage.scipy: 6
         usage.sklearn: 30
+        usage.statsmodels: 1
         """
         ...
 
@@ -107898,6 +116239,7 @@ class ndarray:
         usage.scipy: 28
         usage.skimage: 17
         usage.sklearn: 3
+        usage.statsmodels: 9
         usage.xarray: 1
         """
         ...
@@ -107910,6 +116252,7 @@ class ndarray:
         usage.scipy: 10
         usage.skimage: 4
         usage.sklearn: 2
+        usage.statsmodels: 3
         """
         ...
 
@@ -107921,6 +116264,7 @@ class ndarray:
         usage.scipy: 56
         usage.skimage: 17
         usage.sklearn: 94
+        usage.statsmodels: 97
         """
         ...
 
@@ -107933,6 +116277,7 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 4
         usage.sklearn: 36
+        usage.statsmodels: 36
         """
         ...
 
@@ -108083,6 +116428,7 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 44
         usage.sklearn: 142
+        usage.statsmodels: 145
         usage.xarray: 1
         """
         ...
@@ -108095,11 +116441,13 @@ class ndarray:
         usage.modin: 14
         usage.networkx: 11
         usage.pandas: 181
+        usage.prophet: 1
         usage.sample-usage: 2
         usage.scipy: 302
         usage.seaborn: 102
         usage.skimage: 157
         usage.sklearn: 257
+        usage.statsmodels: 203
         usage.xarray: 95
         """
         ...
@@ -108112,6 +116460,7 @@ class ndarray:
         usage.scipy: 41
         usage.skimage: 6
         usage.sklearn: 10
+        usage.statsmodels: 10
         """
         ...
 
@@ -108124,6 +116473,7 @@ class ndarray:
         usage.seaborn: 6
         usage.skimage: 15
         usage.sklearn: 29
+        usage.statsmodels: 37
         """
         ...
 
@@ -108135,6 +116485,7 @@ class ndarray:
         usage.scipy: 54
         usage.skimage: 14
         usage.sklearn: 102
+        usage.statsmodels: 58
         usage.xarray: 1
         """
         ...
@@ -108163,6 +116514,7 @@ class ndarray:
         usage.scipy: 13
         usage.skimage: 1
         usage.sklearn: 11
+        usage.statsmodels: 31
         usage.xarray: 1
         """
         ...
@@ -108172,6 +116524,7 @@ class ndarray:
         """
         usage.matplotlib: 1
         usage.scipy: 8
+        usage.statsmodels: 2
         """
         ...
 
@@ -108179,6 +116532,7 @@ class ndarray:
     def __itruediv__(self, _0: numpy.complex128, /):
         """
         usage.scipy: 3
+        usage.statsmodels: 1
         """
         ...
 
@@ -108241,6 +116595,7 @@ class ndarray:
         usage.seaborn: 6
         usage.skimage: 39
         usage.sklearn: 153
+        usage.statsmodels: 139
         usage.xarray: 3
         """
         ...
@@ -108260,6 +116615,7 @@ class ndarray:
         usage.scipy: 120
         usage.skimage: 22
         usage.sklearn: 22
+        usage.statsmodels: 27
         """
         ...
 
@@ -108273,6 +116629,7 @@ class ndarray:
         usage.scipy: 183
         usage.skimage: 22
         usage.sklearn: 7
+        usage.statsmodels: 14
         usage.xarray: 7
         """
         ...
@@ -108296,6 +116653,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 1
         usage.sklearn: 24
+        usage.statsmodels: 17
         """
         ...
 
@@ -108307,19 +116665,20 @@ class ndarray:
         ...
 
     @overload
-    def __le__(self, _0: object, /):
-        """
-        usage.pandas: 134
-        """
-        ...
-
-    @overload
     def __le__(self, _0: numpy.float64, /):
         """
         usage.matplotlib: 15
         usage.scipy: 21
         usage.seaborn: 10
         usage.sklearn: 11
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: object, /):
+        """
+        usage.pandas: 134
         """
         ...
 
@@ -108369,6 +116728,7 @@ class ndarray:
         usage.seaborn: 12
         usage.skimage: 53
         usage.sklearn: 65
+        usage.statsmodels: 62
         usage.xarray: 22
         """
         ...
@@ -108404,6 +116764,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 20
         usage.sklearn: 80
+        usage.statsmodels: 47
         usage.xarray: 1
         """
         ...
@@ -108418,6 +116779,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 78
         usage.sklearn: 92
+        usage.statsmodels: 32
         usage.xarray: 12
         """
         ...
@@ -108441,6 +116803,7 @@ class ndarray:
         usage.seaborn: 3
         usage.skimage: 4
         usage.sklearn: 22
+        usage.statsmodels: 14
         """
         ...
 
@@ -108453,7 +116816,15 @@ class ndarray:
         usage.scipy: 164
         usage.skimage: 29
         usage.sklearn: 18
+        usage.statsmodels: 41
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __lt__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -108503,6 +116874,7 @@ class ndarray:
         usage.seaborn: 5
         usage.skimage: 135
         usage.sklearn: 213
+        usage.statsmodels: 135
         usage.xarray: 14
         """
         ...
@@ -108514,6 +116886,7 @@ class ndarray:
         usage.scipy: 403
         usage.skimage: 50
         usage.sklearn: 23
+        usage.statsmodels: 121
         """
         ...
 
@@ -108522,6 +116895,20 @@ class ndarray:
         """
         usage.scipy: 4
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __matmul__(self, _0: List[numpy.ndarray], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __matmul__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 3
         """
         ...
 
@@ -108594,6 +116981,7 @@ class ndarray:
         usage.scipy: 423
         usage.skimage: 51
         usage.sklearn: 35
+        usage.statsmodels: 126
         """
         ...
 
@@ -108603,11 +116991,13 @@ class ndarray:
         usage.dask: 11
         usage.koalas: 2
         usage.matplotlib: 10
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 11
         usage.seaborn: 1
         usage.skimage: 4
         usage.sklearn: 16
+        usage.statsmodels: 9
         usage.xarray: 3
         """
         ...
@@ -108617,6 +117007,7 @@ class ndarray:
         """
         usage.matplotlib: 2
         usage.skimage: 2
+        usage.statsmodels: 2
         """
         ...
 
@@ -108649,11 +117040,13 @@ class ndarray:
         usage.koalas: 2
         usage.matplotlib: 12
         usage.pandas: 52
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 23
         usage.seaborn: 1
         usage.skimage: 7
         usage.sklearn: 16
+        usage.statsmodels: 11
         usage.xarray: 3
         """
         ...
@@ -108664,10 +117057,12 @@ class ndarray:
         usage.dask: 27
         usage.matplotlib: 154
         usage.networkx: 9
+        usage.prophet: 11
         usage.scipy: 1535
         usage.seaborn: 9
         usage.skimage: 244
         usage.sklearn: 356
+        usage.statsmodels: 863
         usage.xarray: 17
         """
         ...
@@ -108682,6 +117077,7 @@ class ndarray:
         usage.seaborn: 8
         usage.skimage: 37
         usage.sklearn: 60
+        usage.statsmodels: 307
         usage.xarray: 16
         """
         ...
@@ -108692,11 +117088,13 @@ class ndarray:
         usage.dask: 37
         usage.matplotlib: 58
         usage.networkx: 3
+        usage.prophet: 5
         usage.sample-usage: 1
         usage.scipy: 177
         usage.seaborn: 13
         usage.skimage: 95
         usage.sklearn: 60
+        usage.statsmodels: 130
         usage.xarray: 148
         """
         ...
@@ -108706,10 +117104,12 @@ class ndarray:
         """
         usage.matplotlib: 26
         usage.networkx: 3
+        usage.prophet: 6
         usage.scipy: 167
         usage.seaborn: 5
         usage.skimage: 30
         usage.sklearn: 38
+        usage.statsmodels: 106
         """
         ...
 
@@ -108734,6 +117134,7 @@ class ndarray:
         usage.scipy: 14
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -108809,6 +117210,161 @@ class ndarray:
         usage.dask: 2
         usage.matplotlib: 3
         usage.scipy: 85
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: List[int], /):
+        """
+        usage.dask: 1
+        usage.matplotlib: 1
+        usage.sklearn: 5
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __mul__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __mul__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __mul__(
+        self, _0: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __mul__(
+        self,
+        _0: Tuple[
+            numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __mul__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __mul__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: Tuple[numpy.float64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __mul__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: Tuple[numpy.float64, numpy.float64], /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -108816,6 +117372,7 @@ class ndarray:
     def __mul__(self, _0: numpy.complex128, /):
         """
         usage.scipy: 14
+        usage.statsmodels: 2
         """
         ...
 
@@ -108928,15 +117485,6 @@ class ndarray:
         ...
 
     @overload
-    def __mul__(self, _0: List[int], /):
-        """
-        usage.dask: 1
-        usage.matplotlib: 1
-        usage.sklearn: 5
-        """
-        ...
-
-    @overload
     def __mul__(self, _0: Tuple[int, int, int], /):
         """
         usage.dask: 1
@@ -108963,11 +117511,13 @@ class ndarray:
         usage.matplotlib: 329
         usage.networkx: 23
         usage.pandas: 256
+        usage.prophet: 23
         usage.sample-usage: 1
         usage.scipy: 2349
         usage.seaborn: 35
         usage.skimage: 419
         usage.sklearn: 525
+        usage.statsmodels: 1434
         usage.xarray: 750
         """
         ...
@@ -108978,10 +117528,12 @@ class ndarray:
         usage.matplotlib: 68
         usage.networkx: 1
         usage.pandas: 25
+        usage.prophet: 3
         usage.sample-usage: 1
         usage.scipy: 803
         usage.skimage: 46
         usage.sklearn: 141
+        usage.statsmodels: 334
         usage.xarray: 24
         """
         ...
@@ -108994,6 +117546,7 @@ class ndarray:
         usage.scipy: 34
         usage.skimage: 9
         usage.sklearn: 7
+        usage.statsmodels: 7
         usage.xarray: 3
         """
         ...
@@ -109021,16 +117574,17 @@ class ndarray:
         ...
 
     @overload
-    def __or__(self, _0: Union[numpy.ndarray, bool, pandas.core.series.Series], /):
+    def __or__(self, _0: int, /):
         """
-        usage.pandas: 61
+        usage.sample-usage: 1
+        usage.statsmodels: 1
         """
         ...
 
     @overload
-    def __or__(self, _0: int, /):
+    def __or__(self, _0: Union[numpy.ndarray, bool, pandas.core.series.Series], /):
         """
-        usage.sample-usage: 1
+        usage.pandas: 61
         """
         ...
 
@@ -109050,6 +117604,7 @@ class ndarray:
         usage.scipy: 35
         usage.skimage: 9
         usage.sklearn: 7
+        usage.statsmodels: 8
         usage.xarray: 7
         """
         ...
@@ -109069,10 +117624,12 @@ class ndarray:
         usage.koalas: 20
         usage.matplotlib: 69
         usage.networkx: 12
+        usage.prophet: 2
         usage.sample-usage: 1
         usage.scipy: 580
         usage.skimage: 177
         usage.sklearn: 274
+        usage.statsmodels: 547
         usage.xarray: 11
         """
         ...
@@ -109083,6 +117640,7 @@ class ndarray:
         usage.dask: 1
         usage.scipy: 153
         usage.skimage: 2
+        usage.statsmodels: 10
         """
         ...
 
@@ -109094,6 +117652,37 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 11
         usage.sklearn: 25
+        usage.statsmodels: 114
+        """
+        ...
+
+    @overload
+    def __pow__(self, _0: List[float], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __pow__(self, _0: numpy.float64, /):
+        """
+        usage.scipy: 27
+        usage.sklearn: 3
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __pow__(self, _0: numpy.int64, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __pow__(self, _0: List[int], /):
+        """
+        usage.statsmodels: 3
         """
         ...
 
@@ -109111,14 +117700,6 @@ class ndarray:
         """
         ...
 
-    @overload
-    def __pow__(self, _0: numpy.float64, /):
-        """
-        usage.scipy: 27
-        usage.sklearn: 3
-        """
-        ...
-
     def __pow__(self, _0: object, /):
         """
         usage.dask: 14
@@ -109126,11 +117707,13 @@ class ndarray:
         usage.matplotlib: 85
         usage.networkx: 12
         usage.pandas: 63
+        usage.prophet: 2
         usage.sample-usage: 1
         usage.scipy: 882
         usage.seaborn: 2
         usage.skimage: 190
         usage.sklearn: 302
+        usage.statsmodels: 680
         usage.xarray: 11
         """
         ...
@@ -109141,10 +117724,12 @@ class ndarray:
         usage.dask: 1
         usage.koalas: 2
         usage.matplotlib: 13
+        usage.prophet: 3
         usage.sample-usage: 1
         usage.scipy: 158
         usage.skimage: 40
         usage.sklearn: 22
+        usage.statsmodels: 216
         usage.xarray: 13
         """
         ...
@@ -109157,6 +117742,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 20
         usage.sklearn: 33
+        usage.statsmodels: 87
         usage.xarray: 2
         """
         ...
@@ -109167,11 +117753,13 @@ class ndarray:
         usage.dask: 68
         usage.matplotlib: 213
         usage.networkx: 25
+        usage.prophet: 3
         usage.sample-usage: 1
         usage.scipy: 1622
         usage.seaborn: 7
         usage.skimage: 223
         usage.sklearn: 274
+        usage.statsmodels: 644
         usage.xarray: 26
         """
         ...
@@ -109183,6 +117771,7 @@ class ndarray:
         usage.scipy: 83
         usage.skimage: 6
         usage.sklearn: 10
+        usage.statsmodels: 47
         """
         ...
 
@@ -109193,6 +117782,7 @@ class ndarray:
         usage.matplotlib: 1
         usage.scipy: 20
         usage.skimage: 2
+        usage.statsmodels: 2
         """
         ...
 
@@ -109253,6 +117843,68 @@ class ndarray:
         ...
 
     @overload
+    def __radd__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.dask: 2
+        usage.prophet: 1
+        usage.seaborn: 1
+        usage.statsmodels: 17
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: scipy.sparse.csc.csc_matrix, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: scipy.sparse.csr.csr_matrix, /):
+        """
+        usage.scipy: 1
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: List[int], /):
+        """
+        usage.sklearn: 12
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: List[float], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: List[Union[float, int]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: List[List[float]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: List[List[Union[int, float]]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __radd__(self, _0: object, /):
         """
         usage.pandas: 289
@@ -109274,14 +117926,6 @@ class ndarray:
         ...
 
     @overload
-    def __radd__(self, _0: scipy.sparse.csr.csr_matrix, /):
-        """
-        usage.scipy: 1
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __radd__(self, _0: scipy.sparse.lil.lil_matrix, /):
         """
         usage.scipy: 2
@@ -109296,14 +117940,6 @@ class ndarray:
         ...
 
     @overload
-    def __radd__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 2
-        usage.seaborn: 1
-        """
-        ...
-
-    @overload
     def __radd__(self, _0: dask.array.core.Array, /):
         """
         usage.dask: 6
@@ -109314,13 +117950,6 @@ class ndarray:
     def __radd__(self, _0: pandas.core.frame.DataFrame, /):
         """
         usage.dask: 3
-        """
-        ...
-
-    @overload
-    def __radd__(self, _0: List[int], /):
-        """
-        usage.sklearn: 12
         """
         ...
 
@@ -109345,11 +117974,13 @@ class ndarray:
         usage.matplotlib: 256
         usage.networkx: 26
         usage.pandas: 289
+        usage.prophet: 7
         usage.sample-usage: 2
         usage.scipy: 2008
         usage.seaborn: 9
         usage.skimage: 295
         usage.sklearn: 353
+        usage.statsmodels: 1023
         usage.xarray: 52
         """
         ...
@@ -109363,6 +117994,7 @@ class ndarray:
         usage.seaborn: 3
         usage.skimage: 32
         usage.sklearn: 11
+        usage.statsmodels: 29
         usage.xarray: 1
         """
         ...
@@ -109446,6 +118078,7 @@ class ndarray:
         usage.seaborn: 4
         usage.skimage: 32
         usage.sklearn: 11
+        usage.statsmodels: 29
         usage.xarray: 4
         """
         ...
@@ -109523,6 +118156,7 @@ class ndarray:
         usage.scipy: 403
         usage.skimage: 50
         usage.sklearn: 23
+        usage.statsmodels: 121
         """
         ...
 
@@ -109539,6 +118173,13 @@ class ndarray:
         """
         usage.scipy: 9
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __rmatmul__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.statsmodels: 3
         """
         ...
 
@@ -109613,6 +118254,7 @@ class ndarray:
         usage.scipy: 432
         usage.skimage: 53
         usage.sklearn: 42
+        usage.statsmodels: 124
         """
         ...
 
@@ -109622,10 +118264,12 @@ class ndarray:
         usage.dask: 27
         usage.matplotlib: 154
         usage.networkx: 9
+        usage.prophet: 11
         usage.scipy: 1535
         usage.seaborn: 9
         usage.skimage: 244
         usage.sklearn: 356
+        usage.statsmodels: 863
         usage.xarray: 17
         """
         ...
@@ -109636,10 +118280,12 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 177
         usage.networkx: 20
+        usage.prophet: 3
         usage.scipy: 982
         usage.seaborn: 5
         usage.skimage: 193
         usage.sklearn: 270
+        usage.statsmodels: 401
         usage.xarray: 22
         """
         ...
@@ -109650,11 +118296,13 @@ class ndarray:
         usage.dask: 36
         usage.matplotlib: 82
         usage.networkx: 1
+        usage.prophet: 2
         usage.sample-usage: 2
         usage.scipy: 698
         usage.seaborn: 1
         usage.skimage: 131
         usage.sklearn: 180
+        usage.statsmodels: 356
         usage.xarray: 27
         """
         ...
@@ -109664,9 +118312,11 @@ class ndarray:
         """
         usage.matplotlib: 30
         usage.networkx: 2
+        usage.prophet: 4
         usage.scipy: 447
         usage.skimage: 39
         usage.sklearn: 120
+        usage.statsmodels: 253
         usage.xarray: 2
         """
         ...
@@ -109679,6 +118329,7 @@ class ndarray:
         usage.scipy: 288
         usage.skimage: 7
         usage.sklearn: 2
+        usage.statsmodels: 3
         usage.xarray: 4
         """
         ...
@@ -109690,6 +118341,7 @@ class ndarray:
         usage.scipy: 19
         usage.skimage: 2
         usage.sklearn: 2
+        usage.statsmodels: 2
         """
         ...
 
@@ -109737,6 +118389,58 @@ class ndarray:
         ...
 
     @overload
+    def __rmul__(self, _0: numpy.complex128, /):
+        """
+        usage.scipy: 52
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: bool, /):
+        """
+        usage.statsmodels: 13
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: patsy.design_info.DesignMatrix, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: List[Union[float, int]], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: List[float], /):
+        """
+        usage.matplotlib: 1
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: scipy.stats.morestats.ShapiroResult, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __rmul__(self, _0: object, /):
         """
         usage.pandas: 243
@@ -109756,13 +118460,6 @@ class ndarray:
     def __rmul__(self, _0: numpy.complex64, /):
         """
         usage.scipy: 22
-        """
-        ...
-
-    @overload
-    def __rmul__(self, _0: numpy.complex128, /):
-        """
-        usage.scipy: 52
         """
         ...
 
@@ -109900,13 +118597,6 @@ class ndarray:
         ...
 
     @overload
-    def __rmul__(self, _0: List[float], /):
-        """
-        usage.matplotlib: 1
-        """
-        ...
-
-    @overload
     def __rmul__(self, _0: numpy.matrix, /):
         """
         usage.networkx: 1
@@ -109919,11 +118609,13 @@ class ndarray:
         usage.matplotlib: 451
         usage.networkx: 37
         usage.pandas: 243
+        usage.prophet: 21
         usage.sample-usage: 2
         usage.scipy: 4263
         usage.seaborn: 15
         usage.skimage: 623
         usage.sklearn: 944
+        usage.statsmodels: 1910
         usage.xarray: 74
         """
         ...
@@ -109936,6 +118628,7 @@ class ndarray:
         usage.scipy: 34
         usage.skimage: 9
         usage.sklearn: 7
+        usage.statsmodels: 7
         usage.xarray: 3
         """
         ...
@@ -109945,6 +118638,7 @@ class ndarray:
         """
         usage.dask: 1
         usage.scipy: 1
+        usage.statsmodels: 1
         usage.xarray: 2
         """
         ...
@@ -110010,6 +118704,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 9
         usage.sklearn: 7
+        usage.statsmodels: 8
         usage.xarray: 7
         """
         ...
@@ -110020,6 +118715,7 @@ class ndarray:
         usage.dask: 1
         usage.scipy: 153
         usage.skimage: 2
+        usage.statsmodels: 10
         """
         ...
 
@@ -110032,13 +118728,7 @@ class ndarray:
         usage.scipy: 14
         usage.skimage: 1
         usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __rpow__(self, _0: object, /):
-        """
-        usage.pandas: 50
+        usage.statsmodels: 3
         """
         ...
 
@@ -110049,6 +118739,7 @@ class ndarray:
         usage.matplotlib: 7
         usage.scipy: 17
         usage.sklearn: 1
+        usage.statsmodels: 31
         """
         ...
 
@@ -110056,6 +118747,14 @@ class ndarray:
     def __rpow__(self, _0: numpy.float64, /):
         """
         usage.scipy: 8
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __rpow__(self, _0: object, /):
+        """
+        usage.pandas: 50
         """
         ...
 
@@ -110068,6 +118767,7 @@ class ndarray:
         usage.scipy: 192
         usage.skimage: 3
         usage.sklearn: 2
+        usage.statsmodels: 51
         """
         ...
 
@@ -110135,6 +118835,7 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 39
         usage.sklearn: 80
+        usage.statsmodels: 209
         usage.xarray: 2
         """
         ...
@@ -110145,10 +118846,12 @@ class ndarray:
         usage.dask: 19
         usage.matplotlib: 133
         usage.networkx: 18
+        usage.prophet: 7
         usage.scipy: 1452
         usage.seaborn: 6
         usage.skimage: 224
         usage.sklearn: 534
+        usage.statsmodels: 859
         usage.xarray: 35
         """
         ...
@@ -110157,10 +118860,12 @@ class ndarray:
     def __rsub__(self, _0: numpy.float64, /):
         """
         usage.matplotlib: 11
+        usage.prophet: 1
         usage.scipy: 68
         usage.seaborn: 1
         usage.skimage: 4
         usage.sklearn: 12
+        usage.statsmodels: 15
         """
         ...
 
@@ -110171,6 +118876,7 @@ class ndarray:
         usage.scipy: 165
         usage.skimage: 17
         usage.sklearn: 13
+        usage.statsmodels: 51
         """
         ...
 
@@ -110267,6 +118973,30 @@ class ndarray:
         ...
 
     @overload
+    def __rsub__(self, _0: List[float], /):
+        """
+        usage.scipy: 3
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        usage.seaborn: 3
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __rsub__(self, _0: object, /):
         """
         usage.pandas: 273
@@ -110278,13 +119008,6 @@ class ndarray:
         """
         usage.scipy: 199
         usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def __rsub__(self, _0: List[float], /):
-        """
-        usage.scipy: 3
         """
         ...
 
@@ -110349,13 +119072,6 @@ class ndarray:
         ...
 
     @overload
-    def __rsub__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.seaborn: 3
-        """
-        ...
-
-    @overload
     def __rsub__(self, _0: numpy.memmap, /):
         """
         usage.sklearn: 1
@@ -110368,11 +119084,13 @@ class ndarray:
         usage.matplotlib: 192
         usage.networkx: 18
         usage.pandas: 273
+        usage.prophet: 9
         usage.sample-usage: 1
         usage.scipy: 2160
         usage.seaborn: 12
         usage.skimage: 286
         usage.sklearn: 648
+        usage.statsmodels: 1140
         usage.xarray: 48
         """
         ...
@@ -110383,10 +119101,12 @@ class ndarray:
         usage.dask: 11
         usage.matplotlib: 37
         usage.networkx: 3
+        usage.prophet: 1
         usage.scipy: 749
         usage.seaborn: 3
         usage.skimage: 85
         usage.sklearn: 204
+        usage.statsmodels: 534
         usage.xarray: 1
         """
         ...
@@ -110400,6 +119120,7 @@ class ndarray:
         usage.scipy: 93
         usage.skimage: 7
         usage.sklearn: 40
+        usage.statsmodels: 88
         """
         ...
 
@@ -110411,6 +119132,7 @@ class ndarray:
         usage.scipy: 241
         usage.skimage: 8
         usage.sklearn: 41
+        usage.statsmodels: 67
         """
         ...
 
@@ -110429,6 +119151,23 @@ class ndarray:
         usage.scipy: 45
         usage.skimage: 1
         usage.sklearn: 5
+        usage.statsmodels: 13
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.prophet: 1
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: numpy.ma.core.MaskedArray, /):
+        """
+        usage.scipy: 4
+        usage.statsmodels: 1
         """
         ...
 
@@ -110545,13 +119284,6 @@ class ndarray:
         ...
 
     @overload
-    def __rtruediv__(self, _0: numpy.ma.core.MaskedArray, /):
-        """
-        usage.scipy: 4
-        """
-        ...
-
-    @overload
     def __rtruediv__(self, _0: List[numpy.float64], /):
         """
         usage.matplotlib: 1
@@ -110571,18 +119303,13 @@ class ndarray:
         usage.matplotlib: 51
         usage.networkx: 20
         usage.pandas: 420
+        usage.prophet: 2
         usage.scipy: 1165
         usage.seaborn: 3
         usage.skimage: 102
         usage.sklearn: 292
+        usage.statsmodels: 708
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __rxor__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
-        """
-        usage.pandas: 8
         """
         ...
 
@@ -110590,6 +119317,14 @@ class ndarray:
     def __rxor__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __rxor__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
+        """
+        usage.pandas: 8
         """
         ...
 
@@ -110604,6 +119339,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.pandas: 8
+        usage.statsmodels: 1
         """
         ...
 
@@ -110613,9 +119349,11 @@ class ndarray:
         usage.dask: 2
         usage.matplotlib: 45
         usage.networkx: 2
+        usage.prophet: 4
         usage.scipy: 331
         usage.skimage: 73
         usage.sklearn: 115
+        usage.statsmodels: 130
         usage.xarray: 4
         """
         ...
@@ -110629,6 +119367,7 @@ class ndarray:
         usage.scipy: 51
         usage.skimage: 18
         usage.sklearn: 65
+        usage.statsmodels: 32
         usage.xarray: 6
         """
         ...
@@ -110640,6 +119379,7 @@ class ndarray:
         usage.scipy: 14
         usage.skimage: 6
         usage.sklearn: 12
+        usage.statsmodels: 4
         """
         ...
 
@@ -110650,6 +119390,7 @@ class ndarray:
         usage.scipy: 1
         usage.skimage: 52
         usage.sklearn: 2
+        usage.statsmodels: 5
         """
         ...
 
@@ -110662,6 +119403,7 @@ class ndarray:
         usage.scipy: 91
         usage.skimage: 85
         usage.sklearn: 133
+        usage.statsmodels: 40
         usage.xarray: 1
         """
         ...
@@ -110678,6 +119420,7 @@ class ndarray:
         usage.scipy: 7
         usage.skimage: 13
         usage.sklearn: 1
+        usage.statsmodels: 29
         """
         ...
 
@@ -110691,6 +119434,7 @@ class ndarray:
         """
         usage.matplotlib: 5
         usage.skimage: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -110701,6 +119445,7 @@ class ndarray:
         usage.scipy: 35
         usage.skimage: 152
         usage.sklearn: 7
+        usage.statsmodels: 14
         usage.xarray: 1
         """
         ...
@@ -110731,6 +119476,7 @@ class ndarray:
         usage.matplotlib: 1
         usage.scipy: 1
         usage.skimage: 4
+        usage.statsmodels: 1
         """
         ...
 
@@ -110739,6 +119485,7 @@ class ndarray:
         """
         usage.matplotlib: 1
         usage.skimage: 4
+        usage.statsmodels: 5
         usage.xarray: 1
         """
         ...
@@ -110780,6 +119527,7 @@ class ndarray:
         usage.scipy: 109
         usage.skimage: 19
         usage.sklearn: 20
+        usage.statsmodels: 48
         usage.xarray: 3
         """
         ...
@@ -110805,6 +119553,7 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 35
         usage.sklearn: 147
+        usage.statsmodels: 123
         usage.xarray: 6
         """
         ...
@@ -110818,6 +119567,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 10
         usage.sklearn: 14
+        usage.statsmodels: 86
         """
         ...
 
@@ -110827,10 +119577,12 @@ class ndarray:
         usage.dask: 1
         usage.matplotlib: 26
         usage.networkx: 2
+        usage.prophet: 1
         usage.scipy: 244
         usage.seaborn: 1
         usage.skimage: 15
         usage.sklearn: 73
+        usage.statsmodels: 235
         """
         ...
 
@@ -110869,6 +119621,7 @@ class ndarray:
         usage.scipy: 7
         usage.skimage: 13
         usage.sklearn: 17
+        usage.statsmodels: 32
         usage.xarray: 1
         """
         ...
@@ -110886,6 +119639,7 @@ class ndarray:
     def __setitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray, int], _1: int, /):
         """
         usage.skimage: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -110896,6 +119650,7 @@ class ndarray:
         usage.scipy: 36
         usage.skimage: 9
         usage.sklearn: 9
+        usage.statsmodels: 19
         usage.xarray: 2
         """
         ...
@@ -110905,6 +119660,7 @@ class ndarray:
         """
         usage.skimage: 2
         usage.sklearn: 10
+        usage.statsmodels: 3
         """
         ...
 
@@ -110934,6 +119690,7 @@ class ndarray:
         usage.seaborn: 4
         usage.skimage: 55
         usage.sklearn: 59
+        usage.statsmodels: 50
         usage.xarray: 2
         """
         ...
@@ -110948,6 +119705,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 31
         usage.sklearn: 34
+        usage.statsmodels: 20
         usage.xarray: 7
         """
         ...
@@ -110961,6 +119719,7 @@ class ndarray:
         usage.scipy: 28
         usage.skimage: 6
         usage.sklearn: 2
+        usage.statsmodels: 37
         """
         ...
 
@@ -111002,6 +119761,7 @@ class ndarray:
         usage.scipy: 11
         usage.skimage: 8
         usage.sklearn: 28
+        usage.statsmodels: 5
         """
         ...
 
@@ -111015,6 +119775,7 @@ class ndarray:
         usage.seaborn: 7
         usage.skimage: 201
         usage.sklearn: 34
+        usage.statsmodels: 96
         usage.xarray: 1
         """
         ...
@@ -111076,6 +119837,7 @@ class ndarray:
         usage.scipy: 36
         usage.skimage: 33
         usage.sklearn: 3
+        usage.statsmodels: 28
         """
         ...
 
@@ -111086,6 +119848,7 @@ class ndarray:
         usage.scipy: 6
         usage.skimage: 8
         usage.sklearn: 3
+        usage.statsmodels: 5
         """
         ...
 
@@ -111094,6 +119857,7 @@ class ndarray:
         """
         usage.scipy: 1
         usage.skimage: 1
+        usage.statsmodels: 22
         """
         ...
 
@@ -111103,6 +119867,7 @@ class ndarray:
         usage.matplotlib: 10
         usage.scipy: 5
         usage.skimage: 6
+        usage.statsmodels: 8
         """
         ...
 
@@ -111126,6 +119891,7 @@ class ndarray:
         """
         usage.scipy: 2
         usage.skimage: 41
+        usage.statsmodels: 1
         """
         ...
 
@@ -111135,6 +119901,7 @@ class ndarray:
         usage.scipy: 4
         usage.skimage: 10
         usage.sklearn: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -111145,6 +119912,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 1
         usage.sklearn: 9
+        usage.statsmodels: 7
         usage.xarray: 2
         """
         ...
@@ -111187,6 +119955,7 @@ class ndarray:
         usage.scipy: 16
         usage.skimage: 5
         usage.sklearn: 15
+        usage.statsmodels: 7
         """
         ...
 
@@ -111201,6 +119970,7 @@ class ndarray:
         usage.scipy: 15
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -111214,6 +119984,7 @@ class ndarray:
         """
         usage.scipy: 3
         usage.skimage: 4
+        usage.statsmodels: 9
         """
         ...
 
@@ -111241,6 +120012,7 @@ class ndarray:
         """
         usage.scipy: 9
         usage.skimage: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -111285,6 +120057,7 @@ class ndarray:
         """
         usage.scipy: 8
         usage.skimage: 4
+        usage.statsmodels: 4
         """
         ...
 
@@ -111300,6 +120073,7 @@ class ndarray:
         usage.scipy: 15
         usage.skimage: 6
         usage.sklearn: 7
+        usage.statsmodels: 9
         """
         ...
 
@@ -111310,6 +120084,7 @@ class ndarray:
         """
         usage.dask: 4
         usage.skimage: 1
+        usage.statsmodels: 18
         """
         ...
 
@@ -111321,6 +120096,7 @@ class ndarray:
         usage.scipy: 3
         usage.skimage: 2
         usage.sklearn: 6
+        usage.statsmodels: 16
         """
         ...
 
@@ -111352,6 +120128,7 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 6
         usage.sklearn: 40
+        usage.statsmodels: 40
         usage.xarray: 5
         """
         ...
@@ -111363,6 +120140,7 @@ class ndarray:
         usage.scipy: 4
         usage.skimage: 1
         usage.sklearn: 8
+        usage.statsmodels: 5
         usage.xarray: 1
         """
         ...
@@ -111373,6 +120151,7 @@ class ndarray:
         usage.scipy: 7
         usage.skimage: 1
         usage.sklearn: 11
+        usage.statsmodels: 5
         usage.xarray: 1
         """
         ...
@@ -111450,6 +120229,7 @@ class ndarray:
         usage.scipy: 25
         usage.skimage: 4
         usage.sklearn: 17
+        usage.statsmodels: 6
         """
         ...
 
@@ -111529,6 +120309,7 @@ class ndarray:
         """
         usage.scipy: 5
         usage.skimage: 2
+        usage.statsmodels: 3
         """
         ...
 
@@ -111542,6 +120323,7 @@ class ndarray:
         """
         usage.scipy: 3
         usage.skimage: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -111571,6 +120353,7 @@ class ndarray:
         usage.scipy: 19
         usage.skimage: 8
         usage.sklearn: 1
+        usage.statsmodels: 14
         """
         ...
 
@@ -111580,9 +120363,11 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 4
         usage.networkx: 2
+        usage.prophet: 1
         usage.scipy: 199
         usage.skimage: 32
         usage.sklearn: 101
+        usage.statsmodels: 113
         """
         ...
 
@@ -111610,6 +120395,7 @@ class ndarray:
         usage.scipy: 13
         usage.skimage: 1
         usage.sklearn: 4
+        usage.statsmodels: 11
         """
         ...
 
@@ -111666,6 +120452,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 1
         usage.sklearn: 2
+        usage.statsmodels: 2
         """
         ...
 
@@ -111716,6 +120503,7 @@ class ndarray:
         usage.scipy: 4
         usage.skimage: 3
         usage.sklearn: 4
+        usage.statsmodels: 1
         """
         ...
 
@@ -111740,6 +120528,7 @@ class ndarray:
         """
         usage.matplotlib: 1
         usage.skimage: 2
+        usage.statsmodels: 10
         """
         ...
 
@@ -111773,6 +120562,7 @@ class ndarray:
         """
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -111795,6 +120585,7 @@ class ndarray:
         """
         usage.scipy: 3
         usage.skimage: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -111813,6 +120604,7 @@ class ndarray:
         usage.scipy: 4
         usage.skimage: 6
         usage.sklearn: 4
+        usage.statsmodels: 6
         """
         ...
 
@@ -111831,6 +120623,7 @@ class ndarray:
         usage.scipy: 12
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -111840,6 +120633,7 @@ class ndarray:
         usage.scipy: 38
         usage.skimage: 5
         usage.sklearn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -111849,6 +120643,7 @@ class ndarray:
     ):
         """
         usage.skimage: 2
+        usage.statsmodels: 2
         usage.xarray: 1
         """
         ...
@@ -111861,6 +120656,7 @@ class ndarray:
         usage.scipy: 1
         usage.skimage: 1
         usage.sklearn: 20
+        usage.statsmodels: 5
         usage.xarray: 1
         """
         ...
@@ -112416,6 +121212,7 @@ class ndarray:
         usage.scipy: 10
         usage.skimage: 1
         usage.sklearn: 1
+        usage.statsmodels: 11
         """
         ...
 
@@ -112430,6 +121227,7 @@ class ndarray:
         usage.matplotlib: 1
         usage.scipy: 16
         usage.skimage: 4
+        usage.statsmodels: 4
         """
         ...
 
@@ -112443,6 +121241,7 @@ class ndarray:
         """
         usage.scipy: 4
         usage.skimage: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -112457,6 +121256,7 @@ class ndarray:
         usage.scipy: 18
         usage.skimage: 4
         usage.sklearn: 8
+        usage.statsmodels: 14
         """
         ...
 
@@ -112471,6 +121271,7 @@ class ndarray:
         usage.dask: 1
         usage.skimage: 1
         usage.sklearn: 4
+        usage.statsmodels: 8
         """
         ...
 
@@ -112484,6 +121285,7 @@ class ndarray:
         """
         usage.scipy: 6
         usage.skimage: 1
+        usage.statsmodels: 6
         """
         ...
 
@@ -112495,6 +121297,7 @@ class ndarray:
         usage.scipy: 3
         usage.skimage: 4
         usage.sklearn: 22
+        usage.statsmodels: 12
         usage.xarray: 2
         """
         ...
@@ -112508,6 +121311,7 @@ class ndarray:
     ):
         """
         usage.skimage: 3
+        usage.statsmodels: 1
         """
         ...
 
@@ -112695,6 +121499,7 @@ class ndarray:
         """
         usage.scipy: 12
         usage.skimage: 1
+        usage.statsmodels: 4
         """
         ...
 
@@ -113012,6 +121817,7 @@ class ndarray:
         usage.scipy: 36
         usage.skimage: 2
         usage.sklearn: 18
+        usage.statsmodels: 31
         """
         ...
 
@@ -113040,6 +121846,7 @@ class ndarray:
     ):
         """
         usage.skimage: 1
+        usage.statsmodels: 5
         """
         ...
 
@@ -113477,6 +122284,7 @@ class ndarray:
         usage.matplotlib: 8
         usage.scipy: 9
         usage.skimage: 2
+        usage.statsmodels: 11
         """
         ...
 
@@ -113516,6 +122324,7 @@ class ndarray:
         usage.matplotlib: 1
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -113526,6 +122335,7 @@ class ndarray:
         """
         usage.skimage: 2
         usage.sklearn: 7
+        usage.statsmodels: 11
         usage.xarray: 3
         """
         ...
@@ -113536,6 +122346,7 @@ class ndarray:
         usage.scipy: 5
         usage.skimage: 1
         usage.sklearn: 4
+        usage.statsmodels: 3
         """
         ...
 
@@ -113547,6 +122358,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 1
         usage.sklearn: 13
+        usage.statsmodels: 7
         """
         ...
 
@@ -113592,6 +122404,7 @@ class ndarray:
     def __setitem__(self, _0: Tuple[int, int, slice[None, None, None]], _1: int, /):
         """
         usage.skimage: 2
+        usage.statsmodels: 3
         """
         ...
 
@@ -113707,6 +122520,7 @@ class ndarray:
         """
         usage.scipy: 50
         usage.sklearn: 1
+        usage.statsmodels: 1
         usage.xarray: 2
         """
         ...
@@ -113866,6 +122680,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: Tuple[int, int, ellipsis], _1: numpy.ndarray, /):
         """
+        usage.statsmodels: 2
         usage.xarray: 4
         """
         ...
@@ -114147,6 +122962,7 @@ class ndarray:
     def __setitem__(self, _0: ellipsis, _1: int, /):
         """
         usage.scipy: 4
+        usage.statsmodels: 2
         usage.xarray: 1
         """
         ...
@@ -114154,6 +122970,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: Tuple[int, slice[None, None, None], int], _1: int, /):
         """
+        usage.statsmodels: 15
         usage.xarray: 1
         """
         ...
@@ -114390,6 +123207,7 @@ class ndarray:
         usage.matplotlib: 2
         usage.scipy: 4
         usage.sklearn: 1
+        usage.statsmodels: 11
         usage.xarray: 1
         """
         ...
@@ -114435,6 +123253,7 @@ class ndarray:
         """
         usage.scipy: 1
         usage.sklearn: 1
+        usage.statsmodels: 16
         usage.xarray: 2
         """
         ...
@@ -114573,6 +123392,2453 @@ class ndarray:
         ...
 
     @overload
+    def __setitem__(self, _0: Tuple[List[int], List[int]], _1: float, /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: bool, /):
+        """
+        usage.matplotlib: 6
+        usage.scipy: 20
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, List[int]], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        usage.networkx: 18
+        usage.scipy: 6
+        usage.sklearn: 2
+        usage.statsmodels: 54
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, slice[None, int, None]], _1: numpy.ndarray, /):
+        """
+        usage.matplotlib: 2
+        usage.scipy: 4
+        usage.sklearn: 9
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, None, int], _1: bool, /):
+        """
+        usage.matplotlib: 1
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, int, None], _1: numpy.ndarray, /):
+        """
+        usage.dask: 3
+        usage.matplotlib: 4
+        usage.scipy: 56
+        usage.sklearn: 32
+        usage.statsmodels: 48
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[int, slice[None, None, None]], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, int, None], _1: bool, /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], numpy.int64], _1: numpy.ndarray, /
+    ):
+        """
+        usage.scipy: 18
+        usage.sklearn: 4
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, numpy.ndarray], _1: int, /):
+        """
+        usage.scipy: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None], numpy.int64], _1: int, /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[numpy.int64, slice[None, int, None]], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[numpy.int64, None, numpy.int64], slice[None, None, None]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[int, int, int], slice[None, None, None]], _1: float, /
+    ):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, int, int], _1: numpy.ndarray, /):
+        """
+        usage.matplotlib: 11
+        usage.scipy: 121
+        usage.sklearn: 10
+        usage.statsmodels: 116
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[numpy.ndarray, slice[None, None, None]], _1: float, /
+    ):
+        """
+        usage.scipy: 3
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, int, int], _1: int, /):
+        """
+        usage.dask: 1
+        usage.matplotlib: 2
+        usage.scipy: 5
+        usage.sklearn: 6
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.int64, _1: numpy.float64, /):
+        """
+        usage.scipy: 17
+        usage.sklearn: 8
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: List[int], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: List[float], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.ndarray, _1: list, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, int, int], _1: bool, /):
+        """
+        usage.matplotlib: 1
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None], int], _1: range, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, numpy.int64, int], _1: numpy.ndarray, /):
+        """
+        usage.scipy: 4
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            slice[numpy.int64, numpy.int64, numpy.int64],
+            slice[numpy.int64, numpy.int64, numpy.int64],
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.scipy: 7
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[int, int, int], int], _1: float, /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.ndarray, _1: List[int], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[numpy.ndarray, slice[int, numpy.int64, int]], _1: int, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.ndarray], _1: numpy.float64, /
+    ):
+        """
+        usage.scipy: 9
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[numpy.ndarray, int], _1: float, /):
+        """
+        usage.scipy: 4
+        usage.sklearn: 5
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[List[int], int], _1: float, /):
+        """
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: int,
+        _1: Tuple[int, int, float, float, float, float, float, float, float, float],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: int,
+        _1: Tuple[float, float, float, float, float, float, float, float, float, float],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Tuple[float, float, Literal[""]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Tuple[int, int, int, int, int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: int,
+        _1: Tuple[int, int, int, float, float, float, float, float, float, float],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: int, _1: Tuple[float, float, int, int, int, int, int, int], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["datetime_c"],
+        _1: List[Literal["1959-12-31T20:03:20", "2006-11-19T23:13:20"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["datetime_big_c"], _1: List[int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["date"],
+        _1: List[Literal["1953-10-02T00:00:00", "2010-01-20T00:00:00"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["weekly_date"],
+        _1: List[Literal["1948-06-10T00:00:00", "2010-01-08T00:00:00"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["monthly_date"],
+        _1: List[Literal["1955-01-01T00:00:00", "2010-01-01T00:00:00"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["quarterly_date"],
+        _1: List[Literal["1955-07-01T00:00:00", "1974-07-01T00:00:00"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["half_yearly_date"],
+        _1: List[Literal["1955-01-01T00:00:00", "2010-01-01T00:00:00"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["yearly_date"],
+        _1: List[Literal["2-01-01T00:00:00", "2010-01-01T00:00:00"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Tuple[float, float, float], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["var2"],
+        _1: List[
+            Literal["2010-03-01T00:00:00", "2010-02-01T00:00:00", "2010-01-01T00:00:00"]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Tuple[int, float, float, float], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["test1"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], List[int]], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: slice[numpy.int64, None, numpy.int64], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[int, slice[None, None, None]], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, None, None]], _1: float, /
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, None, None]], _1: float, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, slice[None, int, None]], _1: float, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, slice[int, None, int]], _1: numpy.ndarray, /):
+        """
+        usage.matplotlib: 2
+        usage.networkx: 1
+        usage.scipy: 16
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], numpy.ndarray], _1: int, /
+    ):
+        """
+        usage.sklearn: 3
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], numpy.ndarray], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, slice[int, int, int]], _1: List[int], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, int, int], _1: List[int], /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: list, _1: numpy.ndarray, /):
+        """
+        usage.networkx: 2
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[int, int, int], int, int], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int, int], _1: numpy.complex128, /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[int, None, int], slice[int, int, int]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.scipy: 6
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.ndarray], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int], _1: numpy.ndarray, /):
+        """
+        usage.scipy: 4
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: numpy.bool_, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[numpy.ndarray], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: statsmodels.stats.base.HolderTuple, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: pandas.core.series.Series, _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, numpy.int64, None], _1: bool, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[numpy.int64, None, numpy.int64], _1: bool, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            slice[None, numpy.int64, None], slice[numpy.int64, None, numpy.int64]
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, None, int], _1: bool, /):
+        """
+        usage.matplotlib: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, int, None],
+        _1: statsmodels.tsa.innovations._arma_innovations._memoryviewslice,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.int64, _1: Tuple[numpy.int64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, int, None], slice[int, int, int]], _1: List[int], /
+    ):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: numpy.int64,
+        _1: Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: numpy.int64,
+        _1: Tuple[
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: None, _1: bool, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.int64, _1: numpy.complex128, /):
+        """
+        usage.scipy: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[int, slice[int, None, int], slice[None, None, None]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, None, int], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, None, int], _1: range, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, int, int], _1: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.int64, _1: Tuple[numpy.int64, numpy.int64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[numpy.int64], _1: numpy.ndarray, /):
+        """
+        usage.sklearn: 10
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[numpy.int64], _1: List[float], /):
+        """
+        usage.statsmodels: 12
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: slice[None, int, None], _1: List[Union[float, numpy.float64]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, int, None],
+        _1: Tuple[numpy.float64, numpy.float64, numpy.float64],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, None, int], _1: numpy.float64, /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, None, int], _1: List[numpy.float64], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: None, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, int, None], _1: list, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: slice[None, int, None], _1: List[Union[float, numpy.float64, None]], /
+    ):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], int], _1: numpy.float64, /
+    ):
+        """
+        usage.scipy: 2
+        usage.sklearn: 1
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, int, None], _1: List[Union[float, None]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, int, None],
+        _1: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            float,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, int, None], _1: List[numpy.float64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: complex, /):
+        """
+        usage.scipy: 15
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: numpy.complex128, /):
+        """
+        usage.scipy: 30
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[int, slice[None, None, None], int], _1: numpy.ndarray, /
+    ):
+        """
+        usage.dask: 4
+        usage.scipy: 8
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[int, int, int, slice[None, None, None]], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, int, None], slice[None, None, None], int],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, numpy.int64, int], _1: float, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: slice[numpy.int64, numpy.int64, numpy.int64], _1: numpy.ndarray, /
+    ):
+        """
+        usage.scipy: 42
+        usage.statsmodels: 12
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: slice[numpy.int64, numpy.int64, numpy.int64], _1: numpy.float64, /
+    ):
+        """
+        usage.scipy: 2
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[int, numpy.int64, int],
+        _1: List[Literal["p[1->0]", "p[0->0]"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: List[Literal["const[0]"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: List[Literal["const[1]"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: slice[numpy.int64, numpy.int64, numpy.int64], _1: Literal["sigma2"], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[numpy.int64, numpy.int64, numpy.int64],
+        _1: List[Literal["ar.L2", "ar.L1"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: numpy.complex128, /):
+        """
+        usage.scipy: 33
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            int,
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            int,
+            int,
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            int,
+            slice[None, None, None],
+            int,
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            int,
+            slice[None, None, None],
+            slice[None, None, None],
+            int,
+            slice[None, None, None],
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            int,
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+            int,
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[numpy.int64, numpy.int64, numpy.int64],
+        _1: List[Literal["ar.L4", "ar.L3", "ar.L2", "ar.L1"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: List[Literal["ar.L2[0]", "ar.L1[0]"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: List[Literal["ar.L2[1]", "ar.L1[1]"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: List[Literal["ar.L1[0]"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: List[Literal["ar.L1[1]"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, int, None], int, slice[None, None, None]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[int, numpy.int64, int],
+        _1: List[
+            Literal["p[1->0].tvtp1", "p[0->0].tvtp1", "p[1->0].tvtp0", "p[0->0].tvtp0"]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None], int], _1: List[int], /):
+        """
+        usage.statsmodels: 11
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[None, int, None]],
+        _1: List[List[float]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[int, None, int]],
+        _1: List[List[int]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[ellipsis, int], _1: List[List[Union[int, float]]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None], int], _1: List[float], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], int], _1: List[Union[int, float]], /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], int], _1: List[Union[float, int]], /
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[int, int, int]],
+        _1: List[List[float]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[int, int, int]],
+        _1: List[List[int]],
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[int, int, int]],
+        _1: List[List[Union[int, float]]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: List[Literal["x1[0]", "const[0]"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: List[Literal["x1[1]", "const[1]"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: List[int], _1: List[Literal["x3[0]", "x2[0]", "x1[0]", "const[0]"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: List[int], _1: List[Literal["x3[1]", "x2[1]", "x1[1]", "const[1]"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, numpy.int64, int], _1: List[str], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: List[int], _1: List[Literal["x3[2]", "x2[2]", "x1[2]", "const[2]"]], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: Literal["sigma2[0]"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: Literal["sigma2[1]"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: List[Literal["x1[0]"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: List[Literal["x1[1]"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[int, numpy.int64, int],
+        _1: List[Literal["p[1->0].tvtp0", "p[0->0].tvtp0"]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, slice[None, None, None]], _1: float, /):
+        """
+        usage.scipy: 2
+        usage.sklearn: 11
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, slice[None, None, None], int], _1: float, /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int, ellipsis], _1: numpy.float64, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[int, int, int], slice[None, int, None], int],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, int, None], slice[None, int, None], int],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[None, int, None], int],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.ndarray, int], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[int, int, int], slice[int, int, int], int],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[int, slice[int, int, int], slice[None, None, None]],
+        _1: pandas.core.frame.DataFrame,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[numpy.ndarray, numpy.ndarray, int],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], slice[int, None, int]], _1: float, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: numpy.int64, _1: Tuple[numpy.int64, numpy.int64, numpy.int64], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, int, int], _1: numpy.float64, /):
+        """
+        usage.scipy: 2
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[int, int, int], int],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, int, None], slice[int, int, int], int],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[int, None, int], numpy.ndarray, int], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[numpy.ndarray, slice[int, int, int], int], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, numpy.ndarray, int], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[int, None, int], slice[int, None, int], int],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: numpy.int64,
+        _1: Tuple[
+            numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.ndarray, _1: List[Literal["12", "11"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.ndarray, _1: List[Literal["02", "01"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.ndarray, _1: List[float], /):
+        """
+        usage.statsmodels: 35
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.ndarray, _1: List[numpy.float64], /):
+        """
+        usage.statsmodels: 19
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[None, numpy.int64, None]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[numpy.int64, None, numpy.int64]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[int, None, int], slice[None, int, None], int],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int, int], _1: numpy.ndarray, /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, numpy.int64, None], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: slice[numpy.int64, None, numpy.int64], _1: numpy.ndarray, /
+    ):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, int, None], _1: float, /):
+        """
+        usage.scipy: 1
+        usage.sklearn: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: numpy.int64,
+        _1: Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None]], _1: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None]], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], slice[None, int, None], slice[None, None, None]
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.scipy: 7
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            slice[None, int, None], slice[None, int, None], slice[None, None, None]
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[int, int, int], int, int], _1: numpy.float64, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[int, int, int], int, int], _1: numpy.complex128, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, slice[int, None, int]], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[numpy.int64], _1: List[Union[int, float]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[numpy.int64], _1: List[int], /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[numpy.int64], _1: bool, /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+            int,
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[None, None, None], int, int],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[int, slice[int, int, int], int], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, int, None], slice[int, None, int], int],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[ellipsis, slice[None, int, None]], _1: float, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[ellipsis, slice[int, None, int]], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.int64, _1: None, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int, int], _1: None, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[ellipsis, slice[int, int, int]], _1: int, /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[ellipsis, slice[None, None, None]], _1: int, /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None]], _1: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.int64, _1: numpy.ndarray, /):
+        """
+        usage.scipy: 1
+        usage.sklearn: 16
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, int, None], int], _1: float, /):
+        """
+        usage.sklearn: 4
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[None, None, None], int],
+        _1: List[int],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[List[int], List[int], List[int]], _1: List[int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[List[int], List[int], List[int]], _1: List[numpy.float64], /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray],
+        _1: List[Union[numpy.float64, int]],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, slice[int, int, int], int], _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[None, None, None], int],
+        _1: float,
+        /,
+    ):
+        """
+        usage.matplotlib: 5
+        usage.scipy: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: numpy.int64,
+        _1: Tuple[
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: List[float], /):
+        """
+        usage.scipy: 19
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, int, None], slice[None, None, None], int],
+        _1: int,
+        /,
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None], int, int], _1: int, /):
+        """
+        usage.matplotlib: 3
+        usage.scipy: 1
+        usage.statsmodels: 15
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[None, int, None], int],
+        _1: int,
+        /,
+    ):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, int, None], slice[None, None, None], int],
+        _1: float,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], slice[None, int, None], int],
+        _1: float,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, int, None], slice[None, int, None], int],
+        _1: float,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None], int, int], _1: float, /):
+        """
+        usage.matplotlib: 2
+        usage.scipy: 1
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[ellipsis, slice[int, None, int]], _1: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[int, None, int], int], _1: int, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, numpy.int64, None], _1: numpy.ndarray, /):
+        """
+        usage.scipy: 3
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, int, None], _1: List[Union[float, int]], /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[int, None, int], int], _1: float, /):
+        """
+        usage.matplotlib: 4
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[numpy.ndarray, pandas.core.indexes.numeric.Int64Index],
+        _1: int,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, None, int], _1: int, /):
+        """
+        usage.scipy: 10
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.int64, _1: float, /):
+        """
+        usage.networkx: 2
+        usage.scipy: 1
+        usage.sklearn: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], int], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[int, None, int], int], _1: numpy.float64, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, None, None], _1: float, /):
+        """
+        usage.matplotlib: 1
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["variable"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["variable_L(1)"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["variable_L(2)"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["variable_L(3)"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, int, None], slice[int, int, int]],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.scipy: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[
+            int,
+            slice[None, None, None],
+            slice[None, None, None],
+            slice[None, None, None],
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[List[int], List[int]], _1: int, /):
+        """
+        usage.scipy: 7
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, numpy.int64], _1: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, slice[int, None, int]], _1: int, /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], numpy.ndarray], _1: bool, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.66*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.18*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal[" 1.070e-09*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.46*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.81*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal[" 9.165e-10*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.65*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.62*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.08*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal[" 1.116e-09*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.40*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.77*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.37*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal[" 9.561e-10*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.59*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.60*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.01*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal[" 1.136e-09*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.36*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.76*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.31*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal[" 9.681e-10*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["    -20.56*"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["lower"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["upper"], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __setitem__(self, _0: object, _1: object, /):
         """
         usage.pandas: 5607
@@ -114587,26 +125853,9 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: slice[None, int, None], _1: numpy.ndarray, /):
-        """
-        usage.dask: 3
-        usage.matplotlib: 4
-        usage.scipy: 56
-        usage.sklearn: 32
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: int, _1: numpy.complex256, /):
         """
         usage.scipy: 4
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: int, _1: numpy.complex128, /):
-        """
-        usage.scipy: 30
         """
         ...
 
@@ -114687,13 +125936,6 @@ class ndarray:
     ):
         """
         usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: int, _1: complex, /):
-        """
-        usage.scipy: 15
         """
         ...
 
@@ -114786,40 +126028,7 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: Tuple[int, slice[int, None, int]], _1: numpy.ndarray, /):
-        """
-        usage.matplotlib: 2
-        usage.networkx: 1
-        usage.scipy: 16
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[int, int, int], _1: numpy.ndarray, /):
-        """
-        usage.matplotlib: 11
-        usage.scipy: 121
-        usage.sklearn: 10
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[int, int, int], _1: numpy.float64, /):
-        """
-        usage.scipy: 2
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: slice[None, int, None], _1: numpy.float64, /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[int, None, int], _1: numpy.float64, /):
         """
         usage.scipy: 1
         """
@@ -114846,15 +126055,6 @@ class ndarray:
         """
         usage.scipy: 3
         usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self, _0: Tuple[numpy.ndarray, slice[None, None, None]], _1: float, /
-    ):
-        """
-        usage.scipy: 3
         """
         ...
 
@@ -114887,15 +126087,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: Tuple[int, slice[None, int, None]], _1: numpy.ndarray, /):
-        """
-        usage.matplotlib: 2
-        usage.scipy: 4
-        usage.sklearn: 9
-        """
-        ...
-
-    @overload
     def __setitem__(
         self,
         _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray],
@@ -114920,23 +126111,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(
-        self, _0: Tuple[int, slice[None, None, None], int], _1: numpy.ndarray, /
-    ):
-        """
-        usage.dask: 4
-        usage.scipy: 8
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[int, int, int], _1: List[int], /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: slice[int, None, int], _1: numpy.int32, /):
         """
         usage.scipy: 1
@@ -114947,13 +126121,6 @@ class ndarray:
     def __setitem__(self, _0: int, _1: list, /):
         """
         usage.scipy: 7
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: int, _1: List[float], /):
-        """
-        usage.scipy: 19
         """
         ...
 
@@ -115052,18 +126219,6 @@ class ndarray:
     def __setitem__(self, _0: Literal["imagf"], _1: int, /):
         """
         usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self,
-        _0: Tuple[slice[None, int, None], slice[int, int, int]],
-        _1: numpy.ndarray,
-        /,
-    ):
-        """
-        usage.scipy: 2
         """
         ...
 
@@ -115175,26 +126330,9 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: Tuple[int, int], _1: numpy.complex128, /):
-        """
-        usage.scipy: 33
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: slice[None, None, None], _1: List[Union[float, int]], /):
         """
         usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self, _0: Tuple[slice[None, None, None], numpy.int64], _1: numpy.ndarray, /
-    ):
-        """
-        usage.scipy: 18
-        usage.sklearn: 4
         """
         ...
 
@@ -115221,21 +126359,6 @@ class ndarray:
     ):
         """
         usage.scipy: 8
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self,
-        _0: Tuple[
-            slice[numpy.int64, numpy.int64, numpy.int64],
-            slice[numpy.int64, numpy.int64, numpy.int64],
-        ],
-        _1: numpy.ndarray,
-        /,
-    ):
-        """
-        usage.scipy: 7
         """
         ...
 
@@ -115318,15 +126441,6 @@ class ndarray:
     @overload
     def __setitem__(
         self, _0: Tuple[numpy.ndarray, numpy.ndarray], _1: numpy.float32, /
-    ):
-        """
-        usage.scipy: 9
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self, _0: Tuple[numpy.ndarray, numpy.ndarray], _1: numpy.float64, /
     ):
         """
         usage.scipy: 9
@@ -115521,25 +126635,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(
-        self,
-        _0: Tuple[slice[int, None, int], slice[int, int, int]],
-        _1: numpy.ndarray,
-        /,
-    ):
-        """
-        usage.scipy: 6
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[List[int], List[int]], _1: int, /):
-        """
-        usage.scipy: 7
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Tuple[range, range], _1: float, /):
         """
         usage.scipy: 2
@@ -115578,35 +126673,12 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: List[int], _1: numpy.ndarray, /):
-        """
-        usage.dask: 1
-        usage.networkx: 18
-        usage.scipy: 6
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
     def __setitem__(
         self, _0: Tuple[slice[None, None, None], slice[None, int, None]], _1: int, /
     ):
         """
         usage.scipy: 1
         usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self,
-        _0: Tuple[slice[None, None, None], slice[None, None, None], int],
-        _1: float,
-        /,
-    ):
-        """
-        usage.matplotlib: 5
-        usage.scipy: 2
         """
         ...
 
@@ -115726,24 +126798,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: Tuple[numpy.ndarray, int], _1: float, /):
-        """
-        usage.scipy: 4
-        usage.sklearn: 5
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self, _0: Tuple[slice[None, None, None], int], _1: numpy.float64, /
-    ):
-        """
-        usage.scipy: 2
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Tuple[int, slice[None, int, None]], _1: int, /):
         """
         usage.scipy: 3
@@ -115755,14 +126809,6 @@ class ndarray:
         self, _0: Tuple[slice[int, None, int], slice[None, None, None]], _1: int, /
     ):
         """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[slice[None, None, None], int, int], _1: int, /):
-        """
-        usage.matplotlib: 3
         usage.scipy: 1
         """
         ...
@@ -115780,23 +126826,6 @@ class ndarray:
     def __setitem__(self, _0: int, _1: numpy.uint64, /):
         """
         usage.scipy: 4
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[None, numpy.int64, None], _1: numpy.ndarray, /):
-        """
-        usage.scipy: 3
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self, _0: slice[numpy.int64, None, numpy.int64], _1: numpy.ndarray, /
-    ):
-        """
-        usage.scipy: 1
         """
         ...
 
@@ -115856,40 +126885,10 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: Tuple[int, numpy.ndarray], _1: int, /):
-        """
-        usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: numpy.int64, _1: numpy.float64, /):
-        """
-        usage.scipy: 17
-        usage.sklearn: 8
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: numpy.int64, _1: numpy.int64, /):
         """
         usage.scipy: 3
         usage.sklearn: 5
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: numpy.int64, _1: numpy.ndarray, /):
-        """
-        usage.scipy: 1
-        usage.sklearn: 16
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[int, slice[int, None, int]], _1: int, /):
-        """
-        usage.scipy: 1
         """
         ...
 
@@ -115982,14 +126981,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: Tuple[int, slice[None, None, None]], _1: float, /):
-        """
-        usage.scipy: 2
-        usage.sklearn: 11
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: int, _1: List[numpy.complex128], /):
         """
         usage.scipy: 4
@@ -116029,16 +127020,6 @@ class ndarray:
     def __setitem__(self, _0: int, _1: List[Union[int, numpy.float64]], /):
         """
         usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[int, int, int], _1: int, /):
-        """
-        usage.dask: 1
-        usage.matplotlib: 2
-        usage.scipy: 5
-        usage.sklearn: 6
         """
         ...
 
@@ -116147,20 +127128,6 @@ class ndarray:
     def __setitem__(
         self,
         _0: Tuple[
-            slice[None, None, None], slice[None, int, None], slice[None, None, None]
-        ],
-        _1: numpy.ndarray,
-        /,
-    ):
-        """
-        usage.scipy: 7
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self,
-        _0: Tuple[
             slice[None, None, None], slice[None, None, None], slice[None, int, None]
         ],
         _1: List[List[List[int]]],
@@ -116202,25 +127169,7 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: List[int], _1: bool, /):
-        """
-        usage.matplotlib: 6
-        usage.scipy: 20
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: slice[int, numpy.int64, int], _1: numpy.float64, /):
-        """
-        usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self, _0: slice[numpy.int64, numpy.int64, numpy.int64], _1: numpy.float64, /
-    ):
         """
         usage.scipy: 2
         """
@@ -116239,22 +127188,6 @@ class ndarray:
     ):
         """
         usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[int, numpy.int64, int], _1: numpy.ndarray, /):
-        """
-        usage.scipy: 4
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self, _0: slice[numpy.int64, numpy.int64, numpy.int64], _1: numpy.ndarray, /
-    ):
-        """
-        usage.scipy: 42
         """
         ...
 
@@ -116700,13 +127633,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: Tuple[int, int, int], _1: numpy.complex128, /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Tuple[int, int, int], _1: numpy.complex256, /):
         """
         usage.scipy: 1
@@ -116720,13 +127646,6 @@ class ndarray:
         """
         usage.scipy: 16
         usage.sklearn: 3
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[int, None, int], _1: int, /):
-        """
-        usage.scipy: 10
         """
         ...
 
@@ -116768,13 +127687,6 @@ class ndarray:
         """
         usage.scipy: 1
         usage.sklearn: 4
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: numpy.int64, _1: numpy.complex128, /):
-        """
-        usage.scipy: 2
         """
         ...
 
@@ -116864,14 +127776,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: Tuple[slice[None, None, None], int, int], _1: float, /):
-        """
-        usage.matplotlib: 2
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Tuple[numpy.ndarray, int, int], _1: int, /):
         """
         usage.scipy: 2
@@ -116909,13 +127813,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: Tuple[int, int, int], _1: numpy.ndarray, /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Tuple[int, int, int, int], _1: numpy.ndarray, /):
         """
         usage.scipy: 2
@@ -116923,26 +127820,9 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: numpy.int64, _1: float, /):
-        """
-        usage.networkx: 2
-        usage.scipy: 1
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: ellipsis, _1: numpy.float128, /):
         """
         usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[None, int, None], _1: float, /):
-        """
-        usage.scipy: 1
-        usage.sklearn: 2
         """
         ...
 
@@ -116962,13 +127842,6 @@ class ndarray:
     def __setitem__(self, _0: Tuple[int, numpy.ndarray], _1: numpy.float64, /):
         """
         usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[None, int, None], _1: bool, /):
-        """
-        usage.scipy: 1
         """
         ...
 
@@ -116997,20 +127870,6 @@ class ndarray:
     ):
         """
         usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[int], _1: numpy.ndarray, /):
-        """
-        usage.scipy: 4
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[slice[int, int, int], int], _1: float, /):
-        """
-        usage.scipy: 1
         """
         ...
 
@@ -117202,13 +128061,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: slice[int, None, int], _1: bool, /):
-        """
-        usage.matplotlib: 1
-        """
-        ...
-
-    @overload
     def __setitem__(
         self, _0: Tuple[int, int], _1: matplotlib.axes._subplots.AitoffAxesSubplot, /
     ):
@@ -117251,13 +128103,6 @@ class ndarray:
     def __setitem__(self, _0: Tuple[slice[None, int, None], int], _1: numpy.float64, /):
         """
         usage.matplotlib: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[slice[int, None, int], int], _1: float, /):
-        """
-        usage.matplotlib: 4
         """
         ...
 
@@ -117442,13 +128287,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: slice[int, int, int], _1: bool, /):
-        """
-        usage.matplotlib: 1
-        """
-        ...
-
-    @overload
     def __setitem__(
         self,
         _0: Tuple[slice[None, None, None], slice[None, None, None], int],
@@ -117483,14 +128321,6 @@ class ndarray:
     ):
         """
         usage.matplotlib: 5
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[None, None, None], _1: float, /):
-        """
-        usage.matplotlib: 1
-        usage.sklearn: 1
         """
         ...
 
@@ -117565,13 +128395,6 @@ class ndarray:
 
     @overload
     def __setitem__(self, _0: numpy.ma.core.MaskedArray, _1: int, /):
-        """
-        usage.matplotlib: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[int, None, int], _1: bool, /):
         """
         usage.matplotlib: 1
         """
@@ -117729,13 +128552,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: Tuple[slice[None, None, None]], _1: numpy.ndarray, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Tuple[int], _1: dask.array.core.Array, /):
         """
         usage.dask: 1
@@ -117841,25 +128657,9 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: List[numpy.int64], _1: numpy.ndarray, /):
-        """
-        usage.sklearn: 10
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: numpy.ndarray, _1: numpy.float32, /):
         """
         usage.sklearn: 12
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self, _0: Tuple[slice[None, None, None], numpy.ndarray], _1: int, /
-    ):
-        """
-        usage.sklearn: 3
         """
         ...
 
@@ -118001,13 +128801,6 @@ class ndarray:
     def __setitem__(self, _0: int, _1: Literal["b"], /):
         """
         usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[slice[None, int, None], int], _1: float, /):
-        """
-        usage.sklearn: 4
         """
         ...
 
@@ -118269,13 +129062,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: list, _1: numpy.ndarray, /):
-        """
-        usage.networkx: 2
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Tuple[int, int], _1: Tuple[float, int], /):
         """
         usage.networkx: 1
@@ -118295,11 +129081,13 @@ class ndarray:
         usage.matplotlib: 542
         usage.networkx: 88
         usage.pandas: 5607
+        usage.prophet: 6
         usage.sample-usage: 1
         usage.scipy: 4013
         usage.seaborn: 25
         usage.skimage: 1646
         usage.sklearn: 1449
+        usage.statsmodels: 2366
         usage.xarray: 178
         """
         ...
@@ -118316,10 +129104,12 @@ class ndarray:
         usage.dask: 19
         usage.matplotlib: 133
         usage.networkx: 18
+        usage.prophet: 7
         usage.scipy: 1452
         usage.seaborn: 6
         usage.skimage: 224
         usage.sklearn: 534
+        usage.statsmodels: 859
         usage.xarray: 35
         """
         ...
@@ -118334,6 +129124,7 @@ class ndarray:
         usage.scipy: 362
         usage.skimage: 78
         usage.sklearn: 85
+        usage.statsmodels: 144
         usage.xarray: 9
         """
         ...
@@ -118344,10 +129135,12 @@ class ndarray:
         usage.dask: 1
         usage.matplotlib: 34
         usage.networkx: 2
+        usage.prophet: 2
         usage.scipy: 270
         usage.seaborn: 5
         usage.skimage: 38
         usage.sklearn: 36
+        usage.statsmodels: 78
         usage.xarray: 3
         """
         ...
@@ -118356,10 +129149,12 @@ class ndarray:
     def __sub__(self, _0: numpy.float64, /):
         """
         usage.matplotlib: 11
+        usage.prophet: 1
         usage.scipy: 157
         usage.seaborn: 4
         usage.skimage: 35
         usage.sklearn: 51
+        usage.statsmodels: 132
         usage.xarray: 1
         """
         ...
@@ -118372,6 +129167,7 @@ class ndarray:
         usage.scipy: 6
         usage.skimage: 9
         usage.sklearn: 1
+        usage.statsmodels: 4
         usage.xarray: 3
         """
         ...
@@ -118563,9 +129359,34 @@ class ndarray:
         ...
 
     @overload
-    def __sub__(self, _0: object, /):
+    def __sub__(self, _0: pandas.core.series.Series, /):
         """
-        usage.pandas: 228
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: List[numpy.float64], /):
+        """
+        usage.matplotlib: 1
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: List[int], /):
+        """
+        usage.scipy: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: List[float], /):
+        """
+        usage.scipy: 2
+        usage.sklearn: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -118573,6 +129394,14 @@ class ndarray:
     def __sub__(self, _0: numpy.complex128, /):
         """
         usage.scipy: 7
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: object, /):
+        """
+        usage.pandas: 228
         """
         ...
 
@@ -118607,21 +129436,6 @@ class ndarray:
         ...
 
     @overload
-    def __sub__(self, _0: List[float], /):
-        """
-        usage.scipy: 2
-        usage.sklearn: 2
-        """
-        ...
-
-    @overload
-    def __sub__(self, _0: List[int], /):
-        """
-        usage.scipy: 2
-        """
-        ...
-
-    @overload
     def __sub__(self, _0: List[Union[numpy.float64, int]], /):
         """
         usage.scipy: 1
@@ -118643,13 +129457,6 @@ class ndarray:
         ...
 
     @overload
-    def __sub__(self, _0: List[numpy.float64], /):
-        """
-        usage.matplotlib: 1
-        """
-        ...
-
-    @overload
     def __sub__(self, _0: numpy.memmap, /):
         """
         usage.sklearn: 1
@@ -118662,11 +129469,13 @@ class ndarray:
         usage.matplotlib: 216
         usage.networkx: 30
         usage.pandas: 228
+        usage.prophet: 10
         usage.sample-usage: 1
         usage.scipy: 2465
         usage.seaborn: 15
         usage.skimage: 398
         usage.sklearn: 713
+        usage.statsmodels: 1232
         usage.xarray: 70
         """
         ...
@@ -118677,10 +129486,12 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 48
         usage.networkx: 10
+        usage.prophet: 2
         usage.scipy: 392
         usage.seaborn: 1
         usage.skimage: 76
         usage.sklearn: 73
+        usage.statsmodels: 143
         """
         ...
 
@@ -118690,10 +129501,12 @@ class ndarray:
         usage.dask: 11
         usage.matplotlib: 37
         usage.networkx: 3
+        usage.prophet: 1
         usage.scipy: 749
         usage.seaborn: 3
         usage.skimage: 85
         usage.sklearn: 204
+        usage.statsmodels: 534
         usage.xarray: 1
         """
         ...
@@ -118707,6 +129520,7 @@ class ndarray:
         usage.seaborn: 5
         usage.skimage: 39
         usage.sklearn: 89
+        usage.statsmodels: 221
         """
         ...
 
@@ -118716,10 +129530,12 @@ class ndarray:
         usage.dask: 7
         usage.matplotlib: 53
         usage.networkx: 1
+        usage.prophet: 1
         usage.scipy: 273
         usage.seaborn: 1
         usage.skimage: 52
         usage.sklearn: 89
+        usage.statsmodels: 197
         usage.xarray: 4
         """
         ...
@@ -118733,6 +129549,7 @@ class ndarray:
         usage.seaborn: 3
         usage.skimage: 6
         usage.sklearn: 15
+        usage.statsmodels: 17
         usage.xarray: 1
         """
         ...
@@ -118742,6 +129559,28 @@ class ndarray:
         """
         usage.dask: 1
         usage.xarray: 4
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: patsy.design_info.DesignMatrix, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: numpy.complex128, /):
+        """
+        usage.scipy: 8
+        usage.statsmodels: 4
         """
         ...
 
@@ -118758,13 +129597,6 @@ class ndarray:
         usage.matplotlib: 1
         usage.scipy: 11
         usage.sklearn: 4
-        """
-        ...
-
-    @overload
-    def __truediv__(self, _0: numpy.complex128, /):
-        """
-        usage.scipy: 8
         """
         ...
 
@@ -118837,18 +129669,13 @@ class ndarray:
         usage.matplotlib: 165
         usage.networkx: 30
         usage.pandas: 420
+        usage.prophet: 4
         usage.scipy: 1667
         usage.seaborn: 13
         usage.skimage: 258
         usage.sklearn: 476
+        usage.statsmodels: 1123
         usage.xarray: 10
-        """
-        ...
-
-    @overload
-    def __xor__(self, _0: Union[numpy.ndarray, bool], /):
-        """
-        usage.pandas: 8
         """
         ...
 
@@ -118856,6 +129683,14 @@ class ndarray:
     def __xor__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __xor__(self, _0: Union[numpy.ndarray, bool], /):
+        """
+        usage.pandas: 8
         """
         ...
 
@@ -118870,6 +129705,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.pandas: 8
+        usage.statsmodels: 1
         """
         ...
 
@@ -118880,18 +129716,20 @@ class ndarray:
         usage.koalas: 6
         usage.matplotlib: 16
         usage.networkx: 3
+        usage.prophet: 2
         usage.scipy: 140
         usage.seaborn: 3
         usage.skimage: 30
         usage.sklearn: 68
+        usage.statsmodels: 26
         usage.xarray: 45
         """
         ...
 
     @overload
-    def all(self, _0: Union[None, int] = ..., /, *, axis: int = ...):
+    def all(self, _0: int, /):
         """
-        usage.pandas: 248
+        usage.statsmodels: 3
         """
         ...
 
@@ -118903,6 +129741,14 @@ class ndarray:
         usage.scipy: 6
         usage.seaborn: 1
         usage.sklearn: 4
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def all(self, _0: Union[None, int] = ..., /, *, axis: int = ...):
+        """
+        usage.pandas: 248
         """
         ...
 
@@ -118914,7 +129760,7 @@ class ndarray:
         ...
 
     def all(
-        self, _0: Union[None, int] = ..., /, *, axis: int = ..., keepdims: bool = ...
+        self, _0: Union[int, None] = ..., /, *, axis: int = ..., keepdims: bool = ...
     ):
         """
         usage.dask: 90
@@ -118922,10 +129768,12 @@ class ndarray:
         usage.matplotlib: 17
         usage.networkx: 3
         usage.pandas: 248
+        usage.prophet: 2
         usage.scipy: 147
         usage.seaborn: 4
         usage.skimage: 30
         usage.sklearn: 72
+        usage.statsmodels: 30
         usage.xarray: 45
         """
         ...
@@ -118936,18 +129784,13 @@ class ndarray:
         usage.dask: 14
         usage.matplotlib: 21
         usage.networkx: 3
+        usage.prophet: 2
         usage.scipy: 101
         usage.seaborn: 3
         usage.skimage: 15
         usage.sklearn: 49
+        usage.statsmodels: 15
         usage.xarray: 10
-        """
-        ...
-
-    @overload
-    def any(self, _0: Union[None, int] = ..., /, *, axis: int = ...):
-        """
-        usage.pandas: 175
         """
         ...
 
@@ -118957,6 +129800,14 @@ class ndarray:
         usage.matplotlib: 1
         usage.scipy: 4
         usage.sklearn: 6
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def any(self, _0: Union[None, int] = ..., /, *, axis: int = ...):
+        """
+        usage.pandas: 175
         """
         ...
 
@@ -118966,10 +129817,12 @@ class ndarray:
         usage.matplotlib: 22
         usage.networkx: 3
         usage.pandas: 175
+        usage.prophet: 2
         usage.scipy: 105
         usage.seaborn: 3
         usage.skimage: 15
         usage.sklearn: 55
+        usage.statsmodels: 21
         usage.xarray: 10
         """
         ...
@@ -118988,9 +129841,11 @@ class ndarray:
         """
         usage.matplotlib: 2
         usage.networkx: 1
+        usage.prophet: 1
         usage.scipy: 2
         usage.skimage: 5
         usage.sklearn: 11
+        usage.statsmodels: 1
         usage.xarray: 2
         """
         ...
@@ -119000,6 +129855,7 @@ class ndarray:
         """
         usage.skimage: 1
         usage.sklearn: 1
+        usage.statsmodels: 7
         """
         ...
 
@@ -119015,9 +129871,11 @@ class ndarray:
         usage.matplotlib: 2
         usage.networkx: 1
         usage.pandas: 16
+        usage.prophet: 1
         usage.scipy: 3
         usage.skimage: 7
         usage.sklearn: 41
+        usage.statsmodels: 8
         usage.xarray: 2
         """
         ...
@@ -119028,6 +129886,7 @@ class ndarray:
         usage.matplotlib: 3
         usage.skimage: 1
         usage.sklearn: 4
+        usage.statsmodels: 3
         usage.xarray: 2
         """
         ...
@@ -119064,6 +129923,7 @@ class ndarray:
         usage.scipy: 1
         usage.skimage: 2
         usage.sklearn: 10
+        usage.statsmodels: 3
         usage.xarray: 2
         """
         ...
@@ -119077,6 +129937,7 @@ class ndarray:
         usage.seaborn: 4
         usage.skimage: 5
         usage.sklearn: 16
+        usage.statsmodels: 2
         usage.xarray: 4
         """
         ...
@@ -119119,6 +129980,7 @@ class ndarray:
         usage.seaborn: 4
         usage.skimage: 6
         usage.sklearn: 16
+        usage.statsmodels: 2
         usage.xarray: 4
         """
         ...
@@ -119159,6 +130021,7 @@ class ndarray:
         usage.scipy: 60
         usage.skimage: 17
         usage.sklearn: 21
+        usage.statsmodels: 3
         usage.xarray: 3
         """
         ...
@@ -119182,6 +130045,7 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 49
         usage.sklearn: 8
+        usage.statsmodels: 24
         usage.xarray: 14
         """
         ...
@@ -119215,6 +130079,7 @@ class ndarray:
         usage.seaborn: 5
         usage.skimage: 85
         usage.sklearn: 14
+        usage.statsmodels: 31
         usage.xarray: 160
         """
         ...
@@ -119227,6 +130092,7 @@ class ndarray:
         usage.scipy: 165
         usage.skimage: 42
         usage.sklearn: 89
+        usage.statsmodels: 7
         usage.xarray: 11
         """
         ...
@@ -119236,11 +130102,13 @@ class ndarray:
         """
         usage.dask: 4
         usage.matplotlib: 17
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 35
         usage.seaborn: 1
         usage.skimage: 39
         usage.sklearn: 54
+        usage.statsmodels: 45
         usage.xarray: 154
         """
         ...
@@ -119254,6 +130122,7 @@ class ndarray:
         usage.scipy: 10
         usage.skimage: 31
         usage.sklearn: 12
+        usage.statsmodels: 18
         """
         ...
 
@@ -119265,6 +130134,7 @@ class ndarray:
         usage.scipy: 204
         usage.skimage: 64
         usage.sklearn: 79
+        usage.statsmodels: 52
         usage.xarray: 12
         """
         ...
@@ -119276,6 +130146,7 @@ class ndarray:
         usage.scipy: 14
         usage.skimage: 15
         usage.sklearn: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -119286,6 +130157,7 @@ class ndarray:
         usage.scipy: 52
         usage.skimage: 24
         usage.sklearn: 17
+        usage.statsmodels: 22
         """
         ...
 
@@ -119343,6 +130215,7 @@ class ndarray:
         usage.scipy: 11
         usage.skimage: 24
         usage.sklearn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -119396,6 +130269,7 @@ class ndarray:
     def astype(self, _0: Literal["double"], /):
         """
         usage.skimage: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -119467,6 +130341,7 @@ class ndarray:
         usage.networkx: 1
         usage.scipy: 1
         usage.sklearn: 4
+        usage.statsmodels: 1
         usage.xarray: 4
         """
         ...
@@ -119606,6 +130481,129 @@ class ndarray:
         ...
 
     @overload
+    def astype(self, _0: Literal["object"], /):
+        """
+        usage.scipy: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["d"], /):
+        """
+        usage.scipy: 37
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def astype(self, _0: List[Tuple[str, Literal["<i4", "<i2", "<f4"]]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def astype(self, _0: List[Tuple[str, Literal["<i8", "<f8"]]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def astype(self, _0: List[Tuple[str, Literal["<f8"]]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def astype(
+        self,
+        _0: List[
+            Tuple[
+                Literal["double_miss", "float_miss", "string_miss"],
+                Literal["<f8", "<f4", "|S1"],
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def astype(
+        self,
+        _0: List[
+            Tuple[
+                Literal[
+                    "float_miss", "double_miss", "byte_miss", "int_miss", "long_miss"
+                ],
+                Literal["<f4", "<f8", "<i2", "<i4", "<i8"],
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def astype(self, _0: List[Tuple[str, Type[object]]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def astype(
+        self,
+        _0: List[
+            Tuple[Literal["var1", "var2", "var3"], Union[Literal["<f8"], Type[object]]]
+        ],
+        /,
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Type[numpy.complex128], /):
+        """
+        usage.scipy: 123
+        usage.statsmodels: 29
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["a2"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Type[numpy.complex64], /):
+        """
+        usage.scipy: 136
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Type[complex], /):
+        """
+        usage.networkx: 1
+        usage.scipy: 33
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def astype(
         self,
         _0: object,
@@ -119621,14 +130619,6 @@ class ndarray:
         ...
 
     @overload
-    def astype(self, _0: Type[complex], /):
-        """
-        usage.networkx: 1
-        usage.scipy: 33
-        """
-        ...
-
-    @overload
     def astype(self, _0: Type[numpy.complex256], /):
         """
         usage.scipy: 25
@@ -119639,20 +130629,6 @@ class ndarray:
     def astype(self, _0: Type[numpy.float128], /):
         """
         usage.scipy: 19
-        """
-        ...
-
-    @overload
-    def astype(self, _0: Type[numpy.complex128], /):
-        """
-        usage.scipy: 123
-        """
-        ...
-
-    @overload
-    def astype(self, _0: Type[numpy.complex64], /):
-        """
-        usage.scipy: 136
         """
         ...
 
@@ -119823,13 +130799,6 @@ class ndarray:
         """
         usage.scipy: 3
         usage.sklearn: 8
-        """
-        ...
-
-    @overload
-    def astype(self, _0: Literal["d"], /):
-        """
-        usage.scipy: 37
         """
         ...
 
@@ -120121,13 +131090,6 @@ class ndarray:
         ...
 
     @overload
-    def astype(self, _0: Literal["object"], /):
-        """
-        usage.scipy: 2
-        """
-        ...
-
-    @overload
     def astype(self, _0: Literal["datetime64"], /):
         """
         usage.matplotlib: 1
@@ -120266,11 +131228,13 @@ class ndarray:
         usage.modin: 1
         usage.networkx: 13
         usage.pandas: 1453
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 1951
         usage.seaborn: 8
         usage.skimage: 656
         usage.sklearn: 556
+        usage.statsmodels: 255
         usage.xarray: 481
         """
         ...
@@ -120435,6 +131399,7 @@ class ndarray:
         usage.dask: 2
         usage.scipy: 714
         usage.skimage: 4
+        usage.statsmodels: 7
         usage.xarray: 2
         """
         ...
@@ -120442,6 +131407,7 @@ class ndarray:
     def conjugate(self, /):
         """
         usage.scipy: 26
+        usage.statsmodels: 4
         usage.xarray: 2
         """
         ...
@@ -120456,6 +131422,7 @@ class ndarray:
         usage.scipy: 518
         usage.skimage: 138
         usage.sklearn: 214
+        usage.statsmodels: 231
         usage.xarray: 17
         """
         ...
@@ -120509,6 +131476,7 @@ class ndarray:
         usage.scipy: 850
         usage.skimage: 138
         usage.sklearn: 228
+        usage.statsmodels: 231
         usage.xarray: 17
         """
         ...
@@ -120543,6 +131511,7 @@ class ndarray:
         usage.seaborn: 7
         usage.skimage: 1
         usage.sklearn: 6
+        usage.statsmodels: 6
         """
         ...
 
@@ -120553,6 +131522,14 @@ class ndarray:
         usage.matplotlib: 1
         usage.seaborn: 4
         usage.skimage: 6
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def cumsum(self, _0: int, /):
+        """
+        usage.statsmodels: 3
         """
         ...
 
@@ -120582,6 +131559,7 @@ class ndarray:
         usage.seaborn: 11
         usage.skimage: 7
         usage.sklearn: 6
+        usage.statsmodels: 12
         """
         ...
 
@@ -120590,6 +131568,7 @@ class ndarray:
         """
         usage.networkx: 2
         usage.scipy: 15
+        usage.statsmodels: 77
         """
         ...
 
@@ -120604,6 +131583,7 @@ class ndarray:
         """
         usage.networkx: 2
         usage.scipy: 16
+        usage.statsmodels: 77
         """
         ...
 
@@ -120616,6 +131596,36 @@ class ndarray:
         usage.seaborn: 4
         usage.skimage: 1
         usage.sklearn: 82
+        usage.statsmodels: 303
+        """
+        ...
+
+    @overload
+    def dot(self, _0: List[Union[float, int]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def dot(self, _0: pandas.core.series.Series, /):
+        """
+        usage.seaborn: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def dot(self, _0: List[Union[int, float]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def dot(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -120635,13 +131645,6 @@ class ndarray:
         ...
 
     @overload
-    def dot(self, _0: pandas.core.series.Series, /):
-        """
-        usage.seaborn: 1
-        """
-        ...
-
-    @overload
     def dot(self, _0: dask.array.core.Array, /):
         """
         usage.dask: 1
@@ -120655,17 +131658,7 @@ class ndarray:
         """
         ...
 
-    def dot(
-        self,
-        _0: Union[
-            numpy.ndarray,
-            numpy.bool_,
-            pandas.core.series.Series,
-            dask.array.core.Array,
-            List[Union[float, int]],
-        ],
-        /,
-    ):
+    def dot(self, _0: object, /):
         """
         usage.dask: 8
         usage.matplotlib: 1
@@ -120673,6 +131666,7 @@ class ndarray:
         usage.seaborn: 6
         usage.skimage: 1
         usage.sklearn: 83
+        usage.statsmodels: 309
         """
         ...
 
@@ -120682,6 +131676,7 @@ class ndarray:
         usage.scipy: 18
         usage.skimage: 4
         usage.sklearn: 15
+        usage.statsmodels: 1
         """
         ...
 
@@ -120694,17 +131689,18 @@ class ndarray:
         ...
 
     @overload
-    def fill(self, _0: object, /):
-        """
-        usage.pandas: 107
-        """
-        ...
-
-    @overload
     def fill(self, _0: float, /):
         """
         usage.scipy: 35
         usage.sklearn: 10
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def fill(self, _0: object, /):
+        """
+        usage.pandas: 107
         """
         ...
 
@@ -120757,6 +131753,7 @@ class ndarray:
         usage.scipy: 60
         usage.skimage: 5
         usage.sklearn: 29
+        usage.statsmodels: 7
         """
         ...
 
@@ -120771,7 +131768,15 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 16
         usage.sklearn: 18
+        usage.statsmodels: 45
         usage.xarray: 5
+        """
+        ...
+
+    @overload
+    def flatten(self, /, *, order: Literal["F"]):
+        """
+        usage.statsmodels: 6
         """
         ...
 
@@ -120782,7 +131787,7 @@ class ndarray:
         """
         ...
 
-    def flatten(self, _0: Literal["F"] = ..., /):
+    def flatten(self, _0: Literal["F"] = ..., /, *, order: Literal["F"] = ...):
         """
         usage.dask: 6
         usage.matplotlib: 29
@@ -120792,6 +131797,7 @@ class ndarray:
         usage.seaborn: 2
         usage.skimage: 16
         usage.sklearn: 18
+        usage.statsmodels: 51
         usage.xarray: 5
         """
         ...
@@ -120811,6 +131817,7 @@ class ndarray:
         usage.scipy: 43
         usage.seaborn: 11
         usage.sklearn: 3
+        usage.statsmodels: 7
         usage.xarray: 22
         """
         ...
@@ -120838,6 +131845,7 @@ class ndarray:
         usage.scipy: 46
         usage.seaborn: 11
         usage.sklearn: 3
+        usage.statsmodels: 7
         usage.xarray: 24
         """
         ...
@@ -120868,10 +131876,12 @@ class ndarray:
         usage.dask: 10
         usage.matplotlib: 57
         usage.networkx: 4
+        usage.prophet: 3
         usage.scipy: 139
         usage.seaborn: 40
         usage.skimage: 125
         usage.sklearn: 72
+        usage.statsmodels: 29
         usage.xarray: 16
         """
         ...
@@ -120883,13 +131893,15 @@ class ndarray:
         usage.networkx: 2
         usage.scipy: 1
         usage.skimage: 4
+        usage.statsmodels: 1
         """
         ...
 
     @overload
-    def max(self, _0: Union[int, None] = ..., /, *, axis: int = ...):
+    def max(self, /, *, axis: int, keepdims: bool):
         """
-        usage.pandas: 48
+        usage.dask: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -120900,13 +131912,14 @@ class ndarray:
         usage.scipy: 7
         usage.seaborn: 1
         usage.sklearn: 17
+        usage.statsmodels: 3
         """
         ...
 
     @overload
-    def max(self, /, *, axis: int, keepdims: bool):
+    def max(self, _0: Union[int, None] = ..., /, *, axis: int = ...):
         """
-        usage.dask: 1
+        usage.pandas: 48
         """
         ...
 
@@ -120918,10 +131931,12 @@ class ndarray:
         usage.matplotlib: 58
         usage.networkx: 6
         usage.pandas: 48
+        usage.prophet: 3
         usage.scipy: 147
         usage.seaborn: 41
         usage.skimage: 129
         usage.sklearn: 89
+        usage.statsmodels: 34
         usage.xarray: 16
         """
         ...
@@ -120937,6 +131952,7 @@ class ndarray:
         usage.seaborn: 7
         usage.skimage: 29
         usage.sklearn: 93
+        usage.statsmodels: 154
         """
         ...
 
@@ -120948,6 +131964,7 @@ class ndarray:
         usage.scipy: 12
         usage.skimage: 17
         usage.sklearn: 115
+        usage.statsmodels: 4
         usage.xarray: 2
         """
         ...
@@ -120958,6 +131975,7 @@ class ndarray:
         usage.scipy: 3
         usage.skimage: 2
         usage.sklearn: 43
+        usage.statsmodels: 101
         usage.xarray: 1
         """
         ...
@@ -120974,6 +131992,7 @@ class ndarray:
         """
         usage.dask: 1
         usage.scipy: 9
+        usage.statsmodels: 4
         usage.xarray: 2
         """
         ...
@@ -121061,6 +132080,7 @@ class ndarray:
         usage.seaborn: 7
         usage.skimage: 51
         usage.sklearn: 251
+        usage.statsmodels: 263
         usage.xarray: 6
         """
         ...
@@ -121071,10 +132091,12 @@ class ndarray:
         usage.dask: 6
         usage.matplotlib: 50
         usage.networkx: 1
+        usage.prophet: 2
         usage.scipy: 78
         usage.seaborn: 20
         usage.skimage: 100
         usage.sklearn: 72
+        usage.statsmodels: 29
         usage.xarray: 18
         """
         ...
@@ -121084,13 +132106,7 @@ class ndarray:
         """
         usage.networkx: 2
         usage.skimage: 1
-        """
-        ...
-
-    @overload
-    def min(self, _0: Union[int, None] = ..., /, *, axis: int = ...):
-        """
-        usage.pandas: 48
+        usage.statsmodels: 1
         """
         ...
 
@@ -121099,6 +132115,14 @@ class ndarray:
         """
         usage.scipy: 6
         usage.sklearn: 11
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def min(self, _0: Union[int, None] = ..., /, *, axis: int = ...):
+        """
+        usage.pandas: 48
         """
         ...
 
@@ -121130,10 +132154,12 @@ class ndarray:
         usage.matplotlib: 50
         usage.networkx: 3
         usage.pandas: 48
+        usage.prophet: 2
         usage.scipy: 84
         usage.seaborn: 20
         usage.skimage: 101
         usage.sklearn: 83
+        usage.statsmodels: 33
         usage.xarray: 18
         """
         ...
@@ -121166,17 +132192,12 @@ class ndarray:
         usage.matplotlib: 1
         usage.networkx: 6
         usage.pandas: 29
+        usage.prophet: 1
         usage.scipy: 31
         usage.skimage: 4
         usage.sklearn: 7
+        usage.statsmodels: 16
         usage.xarray: 4
-        """
-        ...
-
-    @overload
-    def prod(self, _0: Union[None, int] = ..., /, *, axis: int = ...):
-        """
-        usage.pandas: 12
         """
         ...
 
@@ -121185,14 +132206,37 @@ class ndarray:
         """
         usage.dask: 4
         usage.scipy: 3
+        usage.statsmodels: 1
         """
         ...
 
+    @overload
+    def prod(self, /, *, axis: int):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def prod(self, _0: int, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
     def prod(self, _0: Union[None, int] = ..., /, *, axis: int = ...):
+        """
+        usage.pandas: 12
+        """
+        ...
+
+    def prod(self, _0: Union[int, None] = ..., /, *, axis: int = ...):
         """
         usage.dask: 4
         usage.pandas: 12
         usage.scipy: 3
+        usage.statsmodels: 6
         """
         ...
 
@@ -121244,6 +132288,7 @@ class ndarray:
         usage.seaborn: 7
         usage.skimage: 194
         usage.sklearn: 287
+        usage.statsmodels: 109
         usage.xarray: 46
         """
         ...
@@ -121259,6 +132304,7 @@ class ndarray:
     def ravel(self, _0: Literal["F"], /):
         """
         usage.skimage: 6
+        usage.statsmodels: 11
         """
         ...
 
@@ -121268,6 +132314,13 @@ class ndarray:
         usage.dask: 1
         usage.scipy: 4
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def ravel(self, /, *, order: Literal["C"]):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -121308,6 +132361,7 @@ class ndarray:
         usage.seaborn: 7
         usage.skimage: 210
         usage.sklearn: 287
+        usage.statsmodels: 121
         usage.xarray: 47
         """
         ...
@@ -121384,11 +132438,13 @@ class ndarray:
         usage.dask: 100
         usage.matplotlib: 50
         usage.networkx: 2
+        usage.prophet: 2
         usage.sample-usage: 1
         usage.scipy: 133
         usage.seaborn: 2
         usage.skimage: 41
         usage.sklearn: 87
+        usage.statsmodels: 24
         usage.xarray: 51
         """
         ...
@@ -121404,6 +132460,7 @@ class ndarray:
         usage.seaborn: 4
         usage.skimage: 75
         usage.sklearn: 233
+        usage.statsmodels: 162
         usage.xarray: 86
         """
         ...
@@ -121416,6 +132473,7 @@ class ndarray:
         usage.scipy: 38
         usage.skimage: 15
         usage.sklearn: 12
+        usage.statsmodels: 4
         usage.xarray: 27
         """
         ...
@@ -121428,6 +132486,7 @@ class ndarray:
         usage.scipy: 106
         usage.skimage: 14
         usage.sklearn: 10
+        usage.statsmodels: 17
         usage.xarray: 36
         """
         ...
@@ -121455,6 +132514,7 @@ class ndarray:
         usage.scipy: 17
         usage.skimage: 7
         usage.sklearn: 2
+        usage.statsmodels: 2
         usage.xarray: 13
         """
         ...
@@ -121476,6 +132536,7 @@ class ndarray:
         usage.scipy: 78
         usage.skimage: 3
         usage.sklearn: 7
+        usage.statsmodels: 1
         usage.xarray: 38
         """
         ...
@@ -121487,6 +132548,7 @@ class ndarray:
         usage.scipy: 45
         usage.seaborn: 1
         usage.skimage: 1
+        usage.statsmodels: 2
         usage.xarray: 13
         """
         ...
@@ -121495,9 +132557,11 @@ class ndarray:
     def reshape(self, _0: int, /):
         """
         usage.matplotlib: 3
+        usage.prophet: 1
         usage.scipy: 47
         usage.skimage: 8
         usage.sklearn: 22
+        usage.statsmodels: 5
         usage.xarray: 14
         """
         ...
@@ -121524,6 +132588,7 @@ class ndarray:
         """
         usage.scipy: 1
         usage.skimage: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -121534,6 +132599,7 @@ class ndarray:
         usage.scipy: 6
         usage.skimage: 2
         usage.sklearn: 5
+        usage.statsmodels: 1
         usage.xarray: 2
         """
         ...
@@ -121549,6 +132615,58 @@ class ndarray:
         ...
 
     @overload
+    def reshape(self, _0: Tuple[int, int], /, *, order: Literal["F"]):
+        """
+        usage.scipy: 26
+        usage.statsmodels: 14
+        """
+        ...
+
+    @overload
+    def reshape(self, _0: int, _1: int, /, *, order: Literal["F"]):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 20
+        """
+        ...
+
+    @overload
+    def reshape(self, _0: numpy.int64, _1: int, /, *, order: Literal["F"]):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def reshape(self, _0: Tuple[int], /, *, order: Literal["C"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def reshape(self, _0: Tuple[int, int], /, *, order: Literal["C"]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def reshape(self, _0: Tuple[numpy.int64, int, int], /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def reshape(self, _0: Tuple[numpy.int64, numpy.int64], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def reshape(
         self,
         _0: Union[Tuple[Union[numpy.int64, int, None], ...], List[int], int],
@@ -121560,13 +132678,6 @@ class ndarray:
     ):
         """
         usage.pandas: 373
-        """
-        ...
-
-    @overload
-    def reshape(self, _0: Tuple[int, int], /, *, order: Literal["F"]):
-        """
-        usage.scipy: 26
         """
         ...
 
@@ -121615,13 +132726,6 @@ class ndarray:
         ...
 
     @overload
-    def reshape(self, _0: Tuple[numpy.int64, int, int], /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def reshape(self, _0: List[numpy.int64], /):
         """
         usage.scipy: 3
@@ -121643,13 +132747,6 @@ class ndarray:
         ...
 
     @overload
-    def reshape(self, _0: int, _1: int, /, *, order: Literal["F"]):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def reshape(self, _0: Tuple[int, int, int, int, int, int, int, int], /):
         """
         usage.dask: 1
@@ -121660,25 +132757,27 @@ class ndarray:
         self,
         _0: Union[
             int,
-            numpy.int64,
             numpy.ndarray,
+            numpy.int64,
             Tuple[Union[int, numpy.int64, None], ...],
-            List[Union[int, numpy.int32, numpy.int64]],
+            List[Union[numpy.int64, numpy.int32, int]],
         ],
         /,
         *_args: int,
-        order: Literal["F"] = ...,
+        order: Literal["F", "C"] = ...,
     ):
         """
         usage.dask: 193
         usage.matplotlib: 116
         usage.networkx: 12
         usage.pandas: 373
+        usage.prophet: 3
         usage.sample-usage: 2
         usage.scipy: 896
         usage.seaborn: 7
         usage.skimage: 176
         usage.sklearn: 379
+        usage.statsmodels: 260
         usage.xarray: 297
         """
         ...
@@ -121692,6 +132791,7 @@ class ndarray:
     @overload
     def round(self, /):
         """
+        usage.prophet: 1
         usage.scipy: 2
         usage.sklearn: 6
         usage.xarray: 2
@@ -121739,6 +132839,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.pandas: 13
+        usage.prophet: 1
         usage.scipy: 2
         usage.sklearn: 12
         usage.xarray: 6
@@ -122025,9 +133126,18 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 4
         usage.pandas: 3
+        usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 18
         usage.sklearn: 5
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def sort(self, _0: int, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -122048,6 +133158,7 @@ class ndarray:
 
     def sort(
         self,
+        _0: int = ...,
         /,
         *,
         order: Literal["dd", "accumulator"] = ...,
@@ -122058,10 +133169,12 @@ class ndarray:
         usage.dask: 4
         usage.matplotlib: 4
         usage.pandas: 3
+        usage.prophet: 1
         usage.sample-usage: 2
         usage.scipy: 20
         usage.skimage: 9
         usage.sklearn: 7
+        usage.statsmodels: 7
         """
         ...
 
@@ -122080,6 +133193,7 @@ class ndarray:
         usage.scipy: 40
         usage.seaborn: 11
         usage.sklearn: 17
+        usage.statsmodels: 130
         usage.xarray: 3
         """
         ...
@@ -122116,6 +133230,7 @@ class ndarray:
         usage.scipy: 40
         usage.seaborn: 11
         usage.sklearn: 21
+        usage.statsmodels: 130
         usage.xarray: 9
         """
         ...
@@ -122128,6 +133243,7 @@ class ndarray:
         usage.seaborn: 3
         usage.skimage: 70
         usage.sklearn: 13
+        usage.statsmodels: 7
         usage.xarray: 2
         """
         ...
@@ -122137,6 +133253,7 @@ class ndarray:
         """
         usage.scipy: 6
         usage.sklearn: 18
+        usage.statsmodels: 2
         usage.xarray: 1
         """
         ...
@@ -122149,9 +133266,25 @@ class ndarray:
         ...
 
     @overload
-    def std(self, /, *, axis: int = ..., ddof: int = ...):
+    def std(self, _0: int, /):
         """
-        usage.pandas: 8
+        usage.scipy: 2
+        usage.statsmodels: 16
+        """
+        ...
+
+    @overload
+    def std(self, _0: int, /, *, ddof: int):
+        """
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def std(self, /, *, axis: int, ddof: int):
+        """
+        usage.sklearn: 5
+        usage.statsmodels: 1
         """
         ...
 
@@ -122160,6 +133293,14 @@ class ndarray:
         """
         usage.scipy: 4
         usage.seaborn: 2
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def std(self, /, *, axis: int = ..., ddof: int = ...):
+        """
+        usage.pandas: 8
         """
         ...
 
@@ -122171,23 +133312,9 @@ class ndarray:
         ...
 
     @overload
-    def std(self, _0: int, /):
-        """
-        usage.scipy: 2
-        """
-        ...
-
-    @overload
     def std(self, /, *, keepdims: bool):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def std(self, /, *, axis: int, ddof: int):
-        """
-        usage.sklearn: 5
         """
         ...
 
@@ -122207,6 +133334,7 @@ class ndarray:
         usage.seaborn: 5
         usage.skimage: 70
         usage.sklearn: 36
+        usage.statsmodels: 37
         usage.xarray: 4
         """
         ...
@@ -122218,10 +133346,12 @@ class ndarray:
         usage.matplotlib: 14
         usage.modin: 1
         usage.networkx: 45
+        usage.prophet: 4
         usage.scipy: 169
         usage.seaborn: 17
         usage.skimage: 79
         usage.sklearn: 243
+        usage.statsmodels: 276
         usage.xarray: 8
         """
         ...
@@ -122235,6 +133365,7 @@ class ndarray:
         usage.seaborn: 1
         usage.skimage: 15
         usage.sklearn: 166
+        usage.statsmodels: 49
         usage.xarray: 3
         """
         ...
@@ -122246,7 +133377,15 @@ class ndarray:
         usage.scipy: 2
         usage.skimage: 17
         usage.sklearn: 39
+        usage.statsmodels: 211
         usage.xarray: 4
+        """
+        ...
+
+    @overload
+    def sum(self, _0: int, _1: Type[float], /):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -122382,6 +133521,7 @@ class ndarray:
     def sum(
         self,
         _0: Union[int, None] = ...,
+        _1: Type[float] = ...,
         /,
         *,
         axis: Union[int, Tuple[Union[int, None], ...], None] = ...,
@@ -122395,10 +133535,12 @@ class ndarray:
         usage.modin: 1
         usage.networkx: 53
         usage.pandas: 101
+        usage.prophet: 4
         usage.scipy: 264
         usage.seaborn: 18
         usage.skimage: 111
         usage.sklearn: 461
+        usage.statsmodels: 538
         usage.xarray: 15
         """
         ...
@@ -122411,6 +133553,7 @@ class ndarray:
         usage.scipy: 10
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 6
         """
         ...
 
@@ -122419,7 +133562,18 @@ class ndarray:
         """
         usage.seaborn: 3
         usage.sklearn: 69
+        usage.statsmodels: 1
         usage.xarray: 6
+        """
+        ...
+
+    @overload
+    def take(self, _0: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        usage.scipy: 1
+        usage.sklearn: 29
+        usage.statsmodels: 2
         """
         ...
 
@@ -122435,15 +133589,6 @@ class ndarray:
     ):
         """
         usage.pandas: 287
-        """
-        ...
-
-    @overload
-    def take(self, _0: numpy.ndarray, /):
-        """
-        usage.dask: 1
-        usage.scipy: 1
-        usage.sklearn: 29
         """
         ...
 
@@ -122507,6 +133652,7 @@ class ndarray:
         usage.scipy: 26
         usage.seaborn: 3
         usage.sklearn: 123
+        usage.statsmodels: 3
         usage.xarray: 6
         """
         ...
@@ -122551,6 +133697,7 @@ class ndarray:
         usage.seaborn: 5
         usage.skimage: 8
         usage.sklearn: 54
+        usage.statsmodels: 83
         usage.xarray: 21
         """
         ...
@@ -122627,6 +133774,7 @@ class ndarray:
         usage.scipy: 4
         usage.skimage: 1
         usage.sklearn: 2
+        usage.statsmodels: 47
         """
         ...
 
@@ -122634,9 +133782,11 @@ class ndarray:
     def transpose(self, /):
         """
         usage.matplotlib: 2
+        usage.prophet: 1
         usage.scipy: 39
         usage.skimage: 4
         usage.sklearn: 8
+        usage.statsmodels: 14
         """
         ...
 
@@ -122662,6 +133812,7 @@ class ndarray:
         usage.dask: 2
         usage.scipy: 7
         usage.sklearn: 2
+        usage.statsmodels: 3
         usage.xarray: 3
         """
         ...
@@ -122669,6 +133820,7 @@ class ndarray:
     @overload
     def transpose(self, _0: Tuple[int, int, int, int], /):
         """
+        usage.statsmodels: 1
         usage.xarray: 2
         """
         ...
@@ -122716,15 +133868,17 @@ class ndarray:
         ...
 
     def transpose(
-        self, /, *_args: Union[List[int], Tuple[int, ...], numpy.ndarray, range, int]
+        self, /, *_args: Union[List[int], Tuple[int, ...], range, numpy.ndarray, int]
     ):
         """
         usage.dask: 10
         usage.matplotlib: 2
         usage.pandas: 33
+        usage.prophet: 1
         usage.scipy: 97
         usage.skimage: 5
         usage.sklearn: 12
+        usage.statsmodels: 65
         usage.xarray: 21
         """
         ...
@@ -122736,6 +133890,7 @@ class ndarray:
         usage.scipy: 1
         usage.skimage: 1
         usage.sklearn: 4
+        usage.statsmodels: 2
         """
         ...
 
@@ -122745,13 +133900,14 @@ class ndarray:
         usage.scipy: 5
         usage.skimage: 6
         usage.sklearn: 3
+        usage.statsmodels: 17
         """
         ...
 
     @overload
-    def var(self, /, *, axis: int = ...):
+    def var(self, _0: int, /):
         """
-        usage.pandas: 2
+        usage.statsmodels: 18
         """
         ...
 
@@ -122759,6 +133915,21 @@ class ndarray:
     def var(self, /, *, ddof: int):
         """
         usage.scipy: 3
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def var(self, _0: int, /, *, ddof: int):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def var(self, /, *, axis: int = ...):
+        """
+        usage.pandas: 2
         """
         ...
 
@@ -122776,13 +133947,14 @@ class ndarray:
         """
         ...
 
-    def var(self, /, *, axis: Union[int, None] = ..., ddof: int = ...):
+    def var(self, _0: int = ..., /, *, axis: Union[int, None] = ..., ddof: int = ...):
         """
         usage.dask: 3
         usage.pandas: 2
         usage.scipy: 11
         usage.skimage: 7
         usage.sklearn: 7
+        usage.statsmodels: 41
         """
         ...
 
@@ -122790,6 +133962,7 @@ class ndarray:
     def view(self, _0: Type[numpy.uint8], /):
         """
         usage.skimage: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -122837,6 +134010,7 @@ class ndarray:
         usage.dask: 6
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -122907,6 +134081,80 @@ class ndarray:
     def view(self, _0: Literal["S0"], /):
         """
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def view(self, _0: List[Tuple[Literal[""], numpy.dtype]], /):
+        """
+        usage.sklearn: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def view(self, _0: List[Tuple[Literal["var1", "var2", "var3"], Literal["f8"]]], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def view(self, _0: Tuple[Type[float], Tuple[int]], /, *, type: Type[numpy.ndarray]):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def view(self, _0: Tuple[Type[float], int], /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def view(self, _0: Type[numpy.recarray], /):
+        """
+        usage.networkx: 1
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def view(self, /, *, dtype: List[Tuple[Literal["var1"], Literal["f4"]]]):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def view(self, _0: Type[numpy.ndarray], /):
+        """
+        usage.matplotlib: 1
+        usage.scipy: 15
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def view(self, /, *, dtype: List[Tuple[Literal["var1"], Literal["a10"]]]):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def view(self, _0: Tuple[Type[float], int], /, *, type: Type[numpy.ndarray]):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def view(self, _0: numpy.dtype, /, *, type: Type[numpy.ndarray]):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -123037,14 +134285,6 @@ class ndarray:
         ...
 
     @overload
-    def view(self, _0: Type[numpy.ndarray], /):
-        """
-        usage.matplotlib: 1
-        usage.scipy: 15
-        """
-        ...
-
-    @overload
     def view(self, _0: Type[complex], /):
         """
         usage.scipy: 1
@@ -123095,13 +134335,6 @@ class ndarray:
         ...
 
     @overload
-    def view(self, _0: List[Tuple[Literal[""], numpy.dtype]], /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def view(self, /, *, dtype: Literal["|S16"]):
         """
         usage.sklearn: 1
@@ -123122,26 +134355,28 @@ class ndarray:
         """
         ...
 
-    @overload
-    def view(self, _0: Type[numpy.recarray], /):
-        """
-        usage.networkx: 1
-        """
-        ...
-
     def view(
         self,
         _0: Union[
             type,
-            Tuple[Type[numpy.str_], int],
+            Tuple[type, Union[int, Tuple[int]]],
             numpy.dtype,
             str,
-            List[Tuple[Literal[""], numpy.dtype]],
+            List[
+                Tuple[
+                    Literal["", "var1", "var2", "var3"],
+                    Union[Literal["f8"], numpy.dtype],
+                ]
+            ],
         ] = ...,
         /,
         *,
         dtype: Union[
-            str, numpy.dtype, type, Dict[Literal["formats", "names"], List[str]]
+            str,
+            numpy.dtype,
+            type,
+            List[Tuple[Literal["var1"], Literal["a10", "f4"]]],
+            Dict[Literal["formats", "names"], List[str]],
         ] = ...,
         type: Type[numpy.ndarray] = ...,
     ):
@@ -123153,6 +134388,7 @@ class ndarray:
         usage.scipy: 42
         usage.skimage: 27
         usage.sklearn: 7
+        usage.statsmodels: 35
         usage.xarray: 11
         """
         ...
@@ -123323,6 +134559,9 @@ class recarray:
         """
         ...
 
+    # usage.statsmodels: 2
+    __class__: object
+
     # usage.scipy: 11
     a: object
 
@@ -123342,6 +134581,7 @@ class recarray:
     # usage.matplotlib: 1
     # usage.networkx: 2
     # usage.pandas: 7
+    # usage.statsmodels: 50
     dtype: object
 
     # usage.scipy: 3
@@ -123357,6 +134597,7 @@ class recarray:
     h: object
 
     # usage.dask: 1
+    # usage.statsmodels: 3
     ndim: object
 
     # usage.scipy: 1
@@ -123377,6 +134618,321 @@ class recarray:
     def __eq__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["vote"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["s_epan2"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["se_epan2"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["s_gau"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["se_gau"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["s_rec"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["se_rec"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["s_tri"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["se_tri"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["s_cos"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["se_cos"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["s_bi"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["se_bi"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["realinv"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["realgdp"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["realint"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["const"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["f0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["f1"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["f2"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["f3"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["instrument"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["instrument_1.0"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["instrument_2.0"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["instrument_3.0"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["instrument_4.0"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["instrument_5.0"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: None, /):
+        """
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var_1.0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var_2.0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var_3.0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var_4.0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var_5.0"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["str_instr"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["str_instr_abcde"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["str_instr_fghij"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["str_instr_klmno"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["str_instr_pqrst"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["str_instr_uvwxy"], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var_abcde"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var_fghij"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var_klmno"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var_pqrst"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["var_uvwxy"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["group"], /):
+        """
+        usage.statsmodels: 6
         """
         ...
 
@@ -123480,12 +135036,13 @@ class recarray:
         """
         ...
 
-    def __getitem__(self, _0: Union[slice[None, int, None], int, str], /):
+    def __getitem__(self, _0: Union[slice[None, int, None], None, int, str], /):
         """
         usage.dask: 1
         usage.matplotlib: 1
         usage.pandas: 13
         usage.scipy: 19
+        usage.statsmodels: 93
         """
         ...
 
@@ -123501,9 +135058,48 @@ class recarray:
         """
         ...
 
+    def astype(self, _0: numpy.dtype, /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
     def reshape(self, _0: List[numpy.int32], /):
         """
         usage.scipy: 3
+        """
+        ...
+
+    @overload
+    def view(self, _0: Type[float], /, *, type: Type[numpy.ndarray]):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def view(self, _0: Tuple[Type[float], int], /, *, type: Type[numpy.ndarray]):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def view(self, _0: Tuple[Type[float], Tuple[int]], /, *, type: Type[numpy.ndarray]):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    def view(
+        self,
+        _0: Union[Tuple[Type[float], Union[int, Tuple[int]]], Type[float]],
+        /,
+        *,
+        type: Type[numpy.ndarray],
+    ):
+        """
+        usage.statsmodels: 7
         """
         ...
 
@@ -123614,6 +135210,7 @@ class str_:
     def __eq__(self, _0: numpy.ndarray, /):
         """
         usage.sklearn: 23
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -123643,6 +135240,7 @@ class str_:
         """
         usage.pandas: 33
         usage.sklearn: 26
+        usage.statsmodels: 1
         usage.xarray: 6
         """
         ...
@@ -124510,6 +136108,12 @@ class timedelta64:
         """
         ...
 
+    def squeeze(self, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
     def view(self, _0: Union[Type[numpy.int64], Literal["i8"]], /):
         """
         usage.pandas: 6
@@ -124539,6 +136143,7 @@ class ufunc:
         usage.scipy: 135
         usage.skimage: 1
         usage.sklearn: 3
+        usage.statsmodels: 10
         usage.xarray: 4
         """
         ...
@@ -124548,7 +136153,9 @@ class ufunc:
         """
         usage.dask: 295
         usage.koalas: 39
+        usage.prophet: 7
         usage.seaborn: 2
+        usage.statsmodels: 64
         """
         ...
 
@@ -124559,11 +136166,13 @@ class ufunc:
         usage.koalas: 1
         usage.matplotlib: 317
         usage.networkx: 25
+        usage.prophet: 7
         usage.sample-usage: 2
         usage.scipy: 2544
         usage.seaborn: 11
         usage.skimage: 296
         usage.sklearn: 812
+        usage.statsmodels: 1178
         usage.xarray: 79
         """
         ...
@@ -124587,6 +136196,7 @@ class ufunc:
         """
         usage.dask: 290
         usage.koalas: 38
+        usage.statsmodels: 19
         """
         ...
 
@@ -124646,6 +136256,7 @@ class ufunc:
         """
         usage.dask: 147
         usage.koalas: 29
+        usage.statsmodels: 2
         """
         ...
 
@@ -124716,6 +136327,7 @@ class ufunc:
         usage.seaborn: 10
         usage.skimage: 65
         usage.sklearn: 64
+        usage.statsmodels: 97
         usage.xarray: 4
         """
         ...
@@ -124728,6 +136340,7 @@ class ufunc:
         usage.scipy: 41
         usage.skimage: 3
         usage.sklearn: 7
+        usage.statsmodels: 7
         """
         ...
 
@@ -124737,10 +136350,12 @@ class ufunc:
         usage.dask: 12
         usage.matplotlib: 167
         usage.networkx: 8
+        usage.prophet: 3
         usage.scipy: 947
         usage.seaborn: 5
         usage.skimage: 88
         usage.sklearn: 140
+        usage.statsmodels: 404
         usage.xarray: 4
         """
         ...
@@ -124761,6 +136376,7 @@ class ufunc:
         usage.seaborn: 2
         usage.skimage: 2
         usage.sklearn: 12
+        usage.statsmodels: 2
         usage.xarray: 4
         """
         ...
@@ -124772,6 +136388,7 @@ class ufunc:
         usage.scipy: 21
         usage.skimage: 2
         usage.sklearn: 4
+        usage.statsmodels: 14
         """
         ...
 
@@ -124784,6 +136401,7 @@ class ufunc:
         usage.seaborn: 1
         usage.skimage: 13
         usage.sklearn: 28
+        usage.statsmodels: 49
         usage.xarray: 3
         """
         ...
@@ -124794,10 +136412,12 @@ class ufunc:
         usage.dask: 330
         usage.matplotlib: 42
         usage.networkx: 3
+        usage.prophet: 3
         usage.sample-usage: 1
         usage.scipy: 581
         usage.skimage: 41
         usage.sklearn: 75
+        usage.statsmodels: 61
         usage.xarray: 31
         """
         ...
@@ -124832,6 +136452,7 @@ class ufunc:
         usage.scipy: 77
         usage.skimage: 9
         usage.sklearn: 43
+        usage.statsmodels: 28
         usage.xarray: 6
         """
         ...
@@ -124845,6 +136466,7 @@ class ufunc:
         usage.scipy: 31
         usage.skimage: 5
         usage.sklearn: 6
+        usage.statsmodels: 37
         """
         ...
 
@@ -124853,6 +136475,7 @@ class ufunc:
         """
         usage.scipy: 14
         usage.skimage: 1
+        usage.statsmodels: 2
         """
         ...
 
@@ -124862,6 +136485,7 @@ class ufunc:
         usage.scipy: 15
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 7
         """
         ...
 
@@ -124871,10 +136495,12 @@ class ufunc:
         usage.dask: 35
         usage.matplotlib: 102
         usage.networkx: 9
+        usage.prophet: 5
         usage.scipy: 943
         usage.seaborn: 11
         usage.skimage: 58
         usage.sklearn: 83
+        usage.statsmodels: 236
         usage.xarray: 7
         """
         ...
@@ -124899,6 +136525,7 @@ class ufunc:
         usage.scipy: 31
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 26
         """
         ...
 
@@ -124931,6 +136558,7 @@ class ufunc:
         usage.scipy: 6
         usage.skimage: 2
         usage.sklearn: 10
+        usage.statsmodels: 5
         """
         ...
 
@@ -125016,6 +136644,7 @@ class ufunc:
         usage.dask: 1
         usage.scipy: 8
         usage.skimage: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -125026,6 +136655,7 @@ class ufunc:
         usage.scipy: 18
         usage.skimage: 1
         usage.sklearn: 14
+        usage.statsmodels: 15
         usage.xarray: 1
         """
         ...
@@ -125036,6 +136666,7 @@ class ufunc:
         usage.dask: 1
         usage.scipy: 57
         usage.skimage: 1
+        usage.statsmodels: 9
         """
         ...
 
@@ -125078,6 +136709,7 @@ class ufunc:
         usage.scipy: 9
         usage.skimage: 2
         usage.sklearn: 1
+        usage.statsmodels: 1
         """
         ...
 
@@ -125104,6 +136736,7 @@ class ufunc:
         usage.matplotlib: 6
         usage.scipy: 12
         usage.skimage: 3
+        usage.statsmodels: 4
         """
         ...
 
@@ -125355,6 +136988,7 @@ class ufunc:
         usage.dask: 3
         usage.scipy: 24
         usage.sklearn: 1
+        usage.statsmodels: 14
         usage.xarray: 1
         """
         ...
@@ -125450,6 +137084,7 @@ class ufunc:
         usage.matplotlib: 3
         usage.scipy: 42
         usage.sklearn: 4
+        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -125575,6 +137210,499 @@ class ufunc:
         ...
 
     @overload
+    def __call__(self, _0: numpy.flatiter, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: float, _1: numpy.float64, /):
+        """
+        usage.scipy: 10
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: float, _1: float, /):
+        """
+        usage.dask: 1
+        usage.matplotlib: 2
+        usage.scipy: 253
+        usage.sklearn: 9
+        usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: List[numpy.float64], /):
+        """
+        usage.matplotlib: 3
+        usage.scipy: 16
+        usage.sklearn: 1
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: patsy.design_info.DesignMatrix, /):
+        """
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: None, _1: None, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: None, _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: float, _1: float, _2: numpy.ndarray, /):
+        """
+        usage.scipy: 5
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: float, _1: float, _2: float, _3: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: Tuple[numpy.int64, numpy.int64, numpy.int64], _1: numpy.ndarray, /
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[
+            numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64, numpy.int64
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Tuple[numpy.int64, numpy.int64], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+            numpy.int64,
+        ],
+        _1: numpy.ndarray,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Tuple[numpy.int64], _1: numpy.ndarray, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[numpy.float64, numpy.float64, numpy.float64],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[
+            numpy.float64, numpy.float64, numpy.float64, numpy.float64, numpy.float64
+        ],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(
+        self,
+        _0: Tuple[
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+            numpy.float64,
+        ],
+        _1: numpy.float64,
+        /,
+    ):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.ndarray, _1: None, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: int, _1: numpy.float64, /):
+        """
+        usage.matplotlib: 1
+        usage.scipy: 8
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: float, _1: int, /):
+        """
+        usage.dask: 1
+        usage.scipy: 70
+        usage.sklearn: 8
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.ndarray, _1: patsy.design_info.DesignMatrix, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: pandas.core.indexes.numeric.Float64Index, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.int64, _1: numpy.float64, /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: int, _1: int, _2: List[float], _3: int, /):
+        """
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: int, _1: int, _2: List[float], _3: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(
+        self, _0: statsmodels.tsa.innovations._arma_innovations._memoryviewslice, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: List[Union[float, int]], /):
+        """
+        usage.matplotlib: 3
+        usage.scipy: 12
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: List[List[Union[int, float]]], /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: List[List[float]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: int, _1: numpy.int64, /):
+        """
+        usage.dask: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Tuple[float, float], /):
+        """
+        usage.dask: 11
+        usage.matplotlib: 1
+        usage.scipy: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: pandas.core.series.Series, _1: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: int, _1: float, /):
+        """
+        usage.dask: 1
+        usage.matplotlib: 2
+        usage.scipy: 157
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
     def __call__(
         self,
         _0: object,
@@ -125670,15 +137798,6 @@ class ufunc:
         ...
 
     @overload
-    def __call__(self, _0: int, _1: numpy.float64, /):
-        """
-        usage.matplotlib: 1
-        usage.scipy: 8
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __call__(self, _0: numpy.ndarray, _1: List[float], /):
         """
         usage.scipy: 4
@@ -125711,15 +137830,6 @@ class ufunc:
         ...
 
     @overload
-    def __call__(self, _0: Tuple[float, float], /):
-        """
-        usage.dask: 11
-        usage.matplotlib: 1
-        usage.scipy: 2
-        """
-        ...
-
-    @overload
     def __call__(self, _0: scipy.sparse.csc.csc_matrix, /):
         """
         usage.scipy: 11
@@ -125739,34 +137849,6 @@ class ufunc:
     def __call__(self, _0: int, _1: int, _2: float, /):
         """
         usage.scipy: 41
-        """
-        ...
-
-    @overload
-    def __call__(self, _0: List[numpy.float64], /):
-        """
-        usage.matplotlib: 3
-        usage.scipy: 16
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __call__(self, _0: float, _1: float, /):
-        """
-        usage.dask: 1
-        usage.matplotlib: 2
-        usage.scipy: 253
-        usage.sklearn: 9
-        """
-        ...
-
-    @overload
-    def __call__(self, _0: int, _1: float, /):
-        """
-        usage.dask: 1
-        usage.matplotlib: 2
-        usage.scipy: 157
         """
         ...
 
@@ -125862,15 +137944,6 @@ class ufunc:
     def __call__(self, _0: numpy.float128, /):
         """
         usage.scipy: 5
-        """
-        ...
-
-    @overload
-    def __call__(self, _0: float, _1: int, /):
-        """
-        usage.dask: 1
-        usage.scipy: 70
-        usage.sklearn: 8
         """
         ...
 
@@ -126132,13 +138205,6 @@ class ufunc:
         ...
 
     @overload
-    def __call__(self, _0: int, _1: int, _2: List[float], _3: int, /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def __call__(self, _0: int, _1: int, _2: numpy.ndarray, _3: int, /):
         """
         usage.scipy: 1
@@ -126203,13 +138269,6 @@ class ufunc:
     def __call__(self, _0: int, _1: int, _2: numpy.float64, /):
         """
         usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __call__(self, _0: float, _1: numpy.float64, /):
-        """
-        usage.scipy: 10
         """
         ...
 
@@ -126299,13 +138358,6 @@ class ufunc:
         ...
 
     @overload
-    def __call__(self, _0: numpy.int64, _1: numpy.float64, /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def __call__(self, _0: numpy.int32, _1: numpy.float64, /):
         """
         usage.scipy: 1
@@ -126353,14 +138405,6 @@ class ufunc:
     def __call__(self, _0: numpy.int64, _1: numpy.ndarray, _2: None, /):
         """
         usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __call__(self, _0: List[Union[float, int]], /):
-        """
-        usage.matplotlib: 3
-        usage.scipy: 12
         """
         ...
 
@@ -126869,13 +138913,6 @@ class ufunc:
         ...
 
     @overload
-    def __call__(self, _0: float, _1: float, _2: numpy.ndarray, /):
-        """
-        usage.scipy: 5
-        """
-        ...
-
-    @overload
     def __call__(self, _0: numpy.ndarray, _1: numpy.bool_, /):
         """
         usage.scipy: 2
@@ -127178,13 +139215,6 @@ class ufunc:
     def __call__(self, _0: Tuple[int, int, int], /):
         """
         usage.dask: 7
-        """
-        ...
-
-    @overload
-    def __call__(self, _0: int, _1: numpy.int64, /):
-        """
-        usage.dask: 1
         """
         ...
 
@@ -127751,12 +139781,22 @@ class ufunc:
         usage.modin: 1
         usage.networkx: 56
         usage.pandas: 1228
+        usage.prophet: 25
         usage.sample-usage: 3
         usage.scipy: 8018
         usage.seaborn: 43
         usage.skimage: 676
         usage.sklearn: 1400
+        usage.statsmodels: 2378
         usage.xarray: 321
+        """
+        ...
+
+    @overload
+    def accumulate(self, _0: numpy.ndarray, /):
+        """
+        usage.sklearn: 2
+        usage.statsmodels: 6
         """
         ...
 
@@ -127767,17 +139807,11 @@ class ufunc:
         """
         ...
 
-    @overload
-    def accumulate(self, _0: numpy.ndarray, /):
-        """
-        usage.sklearn: 2
-        """
-        ...
-
     def accumulate(self, _0: Union[numpy.ndarray, pandas.core.series.Series], /):
         """
         usage.pandas: 4
         usage.sklearn: 2
+        usage.statsmodels: 6
         """
         ...
 
@@ -127827,17 +139861,27 @@ class ufunc:
         ...
 
     @overload
-    def outer(self, _0: pandas.core.series.Series, _1: numpy.ndarray, /):
-        """
-        usage.pandas: 1
-        """
-        ...
-
-    @overload
     def outer(self, _0: numpy.ndarray, _1: numpy.ndarray, /):
         """
         usage.dask: 7
         usage.scipy: 2
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def outer(
+        self, _0: patsy.design_info.DesignMatrix, _1: patsy.design_info.DesignMatrix, /
+    ):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def outer(self, _0: pandas.core.series.Series, _1: numpy.ndarray, /):
+        """
+        usage.pandas: 1
         """
         ...
 
@@ -127884,12 +139928,18 @@ class ufunc:
         ...
 
     def outer(
-        self, _0: object, _1: Union[int, dask.array.core.Array, numpy.ndarray], /
+        self,
+        _0: object,
+        _1: Union[
+            int, dask.array.core.Array, numpy.ndarray, patsy.design_info.DesignMatrix
+        ],
+        /,
     ):
         """
         usage.dask: 14
         usage.pandas: 1
         usage.scipy: 2
+        usage.statsmodels: 11
         """
         ...
 
@@ -127916,6 +139966,24 @@ class ufunc:
         ...
 
     @overload
+    def reduce(self, _0: numpy.ndarray, /):
+        """
+        usage.sample-usage: 1
+        usage.scipy: 22
+        usage.sklearn: 8
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def reduce(self, _0: numpy.ndarray, _1: int, /):
+        """
+        usage.scipy: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def reduce(
         self,
         _0: Union[
@@ -127930,22 +139998,6 @@ class ufunc:
         """
         ...
 
-    @overload
-    def reduce(self, _0: numpy.ndarray, /):
-        """
-        usage.sample-usage: 1
-        usage.scipy: 22
-        usage.sklearn: 8
-        """
-        ...
-
-    @overload
-    def reduce(self, _0: numpy.ndarray, _1: int, /):
-        """
-        usage.scipy: 2
-        """
-        ...
-
     def reduce(self, _0: object, _1: int = ..., /):
         """
         usage.matplotlib: 8
@@ -127954,6 +140006,7 @@ class ufunc:
         usage.scipy: 24
         usage.skimage: 6
         usage.sklearn: 8
+        usage.statsmodels: 2
         usage.xarray: 1
         """
         ...
@@ -130332,6 +142385,7 @@ class uint8:
         usage.matplotlib: 1
         usage.skimage: 14
         usage.sklearn: 3
+        usage.statsmodels: 1
         """
         ...
 
@@ -130348,6 +142402,13 @@ class uint8:
     def __eq__(self, _0: numpy.int64, /):
         """
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: float, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -130375,6 +142436,7 @@ class uint8:
         usage.scipy: 2
         usage.skimage: 20
         usage.sklearn: 3
+        usage.statsmodels: 2
         usage.xarray: 3
         """
         ...
@@ -131334,6 +143396,15 @@ class void:
         """
         usage.scipy: 2
         usage.skimage: 33
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["f1"], /):
+        """
+        usage.scipy: 3
+        usage.statsmodels: 1
         """
         ...
 
@@ -131443,13 +143514,6 @@ class void:
         ...
 
     @overload
-    def __getitem__(self, _0: Literal["f1"], /):
-        """
-        usage.scipy: 3
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Literal["f2"], /):
         """
         usage.scipy: 3
@@ -131553,6 +143617,13 @@ class void:
         usage.scipy: 30
         usage.skimage: 33
         usage.sklearn: 21
+        usage.statsmodels: 5
+        """
+        ...
+
+    def __iter__(self, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -131712,5 +143783,11 @@ class void:
         """
         usage.scipy: 4
         usage.sklearn: 25
+        """
+        ...
+
+    def tolist(self, /):
+        """
+        usage.statsmodels: 2
         """
         ...

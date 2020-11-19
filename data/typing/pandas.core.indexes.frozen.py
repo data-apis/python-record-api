@@ -56,6 +56,7 @@ class FrozenList:
         """
         usage.dask: 1
         usage.koalas: 4
+        usage.statsmodels: 8
         usage.xarray: 10
         """
         ...
@@ -77,12 +78,13 @@ class FrozenList:
 
     def __getitem__(
         self,
-        _0: Union[int, slice[Union[int, None], Union[None, int], Union[int, None]]],
+        _0: Union[int, slice[Union[None, int], Union[int, None], Union[None, int]]],
         /,
     ):
         """
         usage.dask: 1
         usage.koalas: 7
+        usage.statsmodels: 8
         usage.xarray: 11
         """
         ...

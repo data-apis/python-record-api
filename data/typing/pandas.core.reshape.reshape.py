@@ -205,6 +205,57 @@ def get_dummies(
 
 
 @overload
+def get_dummies(data: pandas.core.frame.DataFrame):
+    """
+    usage.dask: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def get_dummies(data: numpy.ndarray, drop_first: bool):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def get_dummies(data: pandas.core.series.Series):
+    """
+    usage.dask: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def get_dummies(data: pandas.core.frame.DataFrame, drop_first: bool):
+    """
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def get_dummies(data: pandas.core.series.Series, drop_first: bool):
+    """
+    usage.dask: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def get_dummies(data: pandas.core.arrays.categorical.Categorical):
+    """
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
 def get_dummies(
     data: pandas.core.series.Series,
     prefix: None,
@@ -217,22 +268,6 @@ def get_dummies(
 ):
     """
     usage.dask: 2
-    """
-    ...
-
-
-@overload
-def get_dummies(data: pandas.core.series.Series):
-    """
-    usage.dask: 2
-    """
-    ...
-
-
-@overload
-def get_dummies(data: pandas.core.frame.DataFrame):
-    """
-    usage.dask: 1
     """
     ...
 
@@ -307,14 +342,6 @@ def get_dummies(
 
 
 @overload
-def get_dummies(data: pandas.core.series.Series, drop_first: bool):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
 def get_dummies(data: pandas.core.series.Series, dummy_na: bool):
     """
     usage.dask: 1
@@ -373,7 +400,12 @@ def get_dummies(
 
 
 def get_dummies(
-    data: Union[pandas.core.series.Series, pandas.core.frame.DataFrame],
+    data: Union[
+        pandas.core.series.Series,
+        pandas.core.frame.DataFrame,
+        pandas.core.arrays.categorical.Categorical,
+        numpy.ndarray,
+    ],
     prefix: Union[
         Literal["X", "foo"],
         None,
@@ -397,5 +429,6 @@ def get_dummies(
     """
     usage.dask: 22
     usage.koalas: 30
+    usage.statsmodels: 14
     """
     ...

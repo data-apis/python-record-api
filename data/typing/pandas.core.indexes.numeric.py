@@ -27,8 +27,9 @@ class Float64Index:
     # usage.dask: 9
     # usage.koalas: 2
     # usage.modin: 1
+    # usage.statsmodels: 1
     # usage.xarray: 1
-    name: Union[Literal["x", "c", "a"], None]
+    name: Union[Literal["x", "c", "p", "a"], None]
 
     # usage.dask: 4
     # usage.koalas: 8
@@ -44,6 +45,7 @@ class Float64Index:
     size: object
 
     # usage.dask: 2
+    # usage.statsmodels: 1
     # usage.xarray: 3
     values: object
 
@@ -97,9 +99,30 @@ class Float64Index:
         """
         ...
 
+    @overload
+    def __eq__(self, _0: pandas.core.indexes.numeric.Float64Index, /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
     def __eq__(self, _0: Union[numpy.ndarray, numpy.float64], /):
         """
         usage.pandas: 9
+        """
+        ...
+
+    def __eq__(
+        self,
+        _0: Union[
+            numpy.float64, numpy.ndarray, pandas.core.indexes.numeric.Float64Index
+        ],
+        /,
+    ):
+        """
+        usage.pandas: 9
+        usage.statsmodels: 2
         """
         ...
 
@@ -142,6 +165,7 @@ class Float64Index:
     def __getitem__(self, _0: int, /):
         """
         usage.dask: 4
+        usage.statsmodels: 1
         usage.xarray: 2
         """
         ...
@@ -187,14 +211,21 @@ class Float64Index:
         _0: Union[
             int,
             numpy.ndarray,
-            slice[Union[int, None], Union[None, int], Union[int, None]],
+            slice[Union[None, int], Union[int, None], Union[None, int]],
         ],
         /,
     ):
         """
         usage.dask: 5
         usage.koalas: 1
+        usage.statsmodels: 1
         usage.xarray: 15
+        """
+        ...
+
+    def __iter__(self, /):
+        """
+        usage.statsmodels: 2
         """
         ...
 
@@ -222,9 +253,24 @@ class Float64Index:
         """
         ...
 
+    @overload
+    def __rmul__(self, _0: int, /):
+        """
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
     def __rmul__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
         """
         usage.pandas: 2
+        """
+        ...
+
+    def __rmul__(self, _0: Union[numpy.ndarray, numpy.timedelta64, int], /):
+        """
+        usage.pandas: 2
+        usage.statsmodels: 3
         """
         ...
 
@@ -252,9 +298,24 @@ class Float64Index:
         """
         ...
 
+    @overload
+    def __truediv__(self, _0: float, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __truediv__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
         """
         usage.pandas: 5
+        """
+        ...
+
+    def __truediv__(self, _0: Union[numpy.timedelta64, numpy.ndarray, float], /):
+        """
+        usage.pandas: 5
+        usage.statsmodels: 1
         """
         ...
 
@@ -447,6 +508,7 @@ class Int64Index:
 
     # usage.dask: 21
     # usage.koalas: 14
+    # usage.prophet: 1
     # usage.seaborn: 3
     # usage.xarray: 13
     name: Union[None, str, Tuple[Literal["x"], Literal["a"]]]
@@ -471,6 +533,7 @@ class Int64Index:
     # usage.xarray: 1
     nlevels: object
 
+    # usage.statsmodels: 18
     # usage.xarray: 2
     shape: object
 
@@ -480,6 +543,7 @@ class Int64Index:
 
     # usage.dask: 3
     # usage.seaborn: 2
+    # usage.statsmodels: 6
     # usage.xarray: 3
     values: object
 
@@ -491,6 +555,13 @@ class Int64Index:
         ...
 
     @overload
+    def __add__(self, _0: pandas.core.indexes.numeric.Int64Index, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __add__(self, _0: Union[numpy.int64, numpy.timedelta64, numpy.datetime64], /):
         """
         usage.pandas: 3
@@ -498,11 +569,20 @@ class Int64Index:
         ...
 
     def __add__(
-        self, _0: Union[numpy.datetime64, numpy.timedelta64, numpy.int64, int], /
+        self,
+        _0: Union[
+            numpy.datetime64,
+            numpy.timedelta64,
+            numpy.int64,
+            int,
+            pandas.core.indexes.numeric.Int64Index,
+        ],
+        /,
     ):
         """
         usage.koalas: 3
         usage.pandas: 3
+        usage.statsmodels: 1
         """
         ...
 
@@ -586,6 +666,7 @@ class Int64Index:
         """
         usage.dask: 2
         usage.koalas: 1
+        usage.statsmodels: 5
         usage.xarray: 3
         """
         ...
@@ -593,6 +674,7 @@ class Int64Index:
     @overload
     def __getitem__(self, _0: numpy.ndarray, /):
         """
+        usage.statsmodels: 2
         usage.xarray: 4
         """
         ...
@@ -608,6 +690,7 @@ class Int64Index:
     def __getitem__(self, _0: int, /):
         """
         usage.dask: 8
+        usage.statsmodels: 16
         usage.xarray: 3
         """
         ...
@@ -615,6 +698,7 @@ class Int64Index:
     @overload
     def __getitem__(self, _0: slice[int, None, int], /):
         """
+        usage.statsmodels: 5
         usage.xarray: 3
         """
         ...
@@ -623,6 +707,7 @@ class Int64Index:
     def __getitem__(self, _0: slice[int, int, int], /):
         """
         usage.dask: 1
+        usage.statsmodels: 9
         usage.xarray: 1
         """
         ...
@@ -635,29 +720,54 @@ class Int64Index:
         ...
 
     @overload
-    def __getitem__(self, _0: slice[numpy.int64, numpy.int64, numpy.int64], /):
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, ellipsis], /):
         """
-        usage.modin: 1
+        usage.statsmodels: 1
         """
         ...
 
-    def __getitem__(
-        self,
-        _0: Union[
-            int,
-            numpy.ndarray,
-            slice[
-                Union[None, numpy.int64, int],
-                Union[numpy.int64, int, None],
-                Union[None, numpy.int64, int],
-            ],
-        ],
-        /,
-    ):
+    @overload
+    def __getitem__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.int64, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, numpy.int64, None], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, numpy.int64, int], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[numpy.int64, numpy.int64, numpy.int64], /):
+        """
+        usage.modin: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    def __getitem__(self, _0: object, /):
         """
         usage.dask: 11
         usage.koalas: 1
         usage.modin: 1
+        usage.statsmodels: 43
         usage.xarray: 16
         """
         ...
@@ -686,7 +796,15 @@ class Int64Index:
         """
         usage.dask: 4
         usage.koalas: 2
+        usage.statsmodels: 2
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: numpy.int64, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -704,9 +822,10 @@ class Int64Index:
         """
         ...
 
-    def __le__(self, _0: Union[float, int], /):
+    def __le__(self, _0: Union[int, float, numpy.int64], /):
         """
         usage.dask: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -730,9 +849,24 @@ class Int64Index:
         """
         ...
 
+    @overload
+    def __mod__(self, _0: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __mod__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 3
+        """
+        ...
+
+    def __mod__(self, _0: Union[numpy.ndarray, int], /):
+        """
+        usage.pandas: 3
+        usage.statsmodels: 1
         """
         ...
 
@@ -742,9 +876,30 @@ class Int64Index:
         """
         ...
 
+    @overload
+    def __radd__(self, _0: pandas.core.indexes.numeric.Int64Index, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __radd__(self, _0: Union[numpy.datetime64, numpy.timedelta64], /):
         """
         usage.pandas: 4
+        """
+        ...
+
+    def __radd__(
+        self,
+        _0: Union[
+            numpy.timedelta64, numpy.datetime64, pandas.core.indexes.numeric.Int64Index
+        ],
+        /,
+    ):
+        """
+        usage.pandas: 4
+        usage.statsmodels: 1
         """
         ...
 
@@ -754,9 +909,24 @@ class Int64Index:
         """
         ...
 
+    @overload
+    def __rmul__(self, _0: int, /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def __rmul__(self, _0: Union[numpy.timedelta64, numpy.ndarray], /):
         """
         usage.pandas: 5
+        """
+        ...
+
+    def __rmul__(self, _0: Union[numpy.ndarray, numpy.timedelta64, int], /):
+        """
+        usage.pandas: 5
+        usage.statsmodels: 1
         """
         ...
 
@@ -772,9 +942,26 @@ class Int64Index:
         """
         ...
 
+    @overload
+    def __sub__(self, _0: int, /):
+        """
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
     def __sub__(self, _0: Union[numpy.int64, numpy.timedelta64, numpy.datetime64], /):
         """
         usage.pandas: 3
+        """
+        ...
+
+    def __sub__(
+        self, _0: Union[numpy.datetime64, numpy.timedelta64, numpy.int64, int], /
+    ):
+        """
+        usage.pandas: 3
+        usage.statsmodels: 4
         """
         ...
 

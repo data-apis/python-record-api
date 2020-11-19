@@ -100,6 +100,7 @@ class Index:
     # usage.dask: 13
     # usage.koalas: 1
     # usage.sklearn: 2
+    # usage.statsmodels: 1
     # usage.xarray: 6
     dtype: object
 
@@ -118,17 +119,19 @@ class Index:
     # usage.koalas: 4
     # usage.modin: 3
     # usage.seaborn: 2
+    # usage.statsmodels: 18
     # usage.xarray: 13
-    name: Union[None, Literal["A", "a", "id", "lvl_1", "columns"], int]
+    name: Union[None, str, int]
 
     # usage.dask: 3
     # usage.koalas: 56
+    # usage.statsmodels: 6
     names: Union[
         List[
             Union[
-                str,
-                None,
                 Tuple[Literal["b", "x", "a"], Literal["2", "group", "lkey", "aa"]],
+                None,
+                str,
             ]
         ],
         pandas.core.indexes.frozen.FrozenList,
@@ -137,6 +140,7 @@ class Index:
     # usage.xarray: 1
     nlevels: object
 
+    # usage.statsmodels: 18
     # usage.xarray: 1
     shape: object
 
@@ -144,12 +148,15 @@ class Index:
     size: object
 
     # usage.dask: 2
+    # usage.prophet: 1
     # usage.sklearn: 1
+    # usage.statsmodels: 2
     str: object
 
     # usage.dask: 1
     # usage.modin: 1
     # usage.seaborn: 1
+    # usage.statsmodels: 11
     # usage.xarray: 6
     values: object
 
@@ -215,6 +222,391 @@ class Index:
     def __contains__(self, _0: Literal["i64"], /):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["nobs"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["missing"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["mean"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["std_err"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["upper_ci"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["lower_ci"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["std"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["iqr"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["iqr_normal"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["mad"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["mad_normal"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["coef_var"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["range"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["max"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["min"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["skew"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["kurtosis"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["jarque_bera"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["jarque_bera_pval"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["mode"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["mode_freq"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["median"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["percentiles"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["distinct"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_1"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_2"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_3"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_4"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_5"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_1"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_2"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_3"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_4"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_5"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_6"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_7"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_8"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_9"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_10"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_11"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_12"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_13"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_14"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["top_15"], /):
+        """
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_6"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_7"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_8"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_9"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_10"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_11"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_12"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_13"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_14"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["freq_15"], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["coverage"], /):
+        """
+        usage.prophet: 1
         """
         ...
 
@@ -642,6 +1034,8 @@ class Index:
         """
         usage.dask: 130
         usage.koalas: 9
+        usage.prophet: 1
+        usage.statsmodels: 71
         """
         ...
 
@@ -649,6 +1043,22 @@ class Index:
     def __eq__(self, _0: List[Literal["bhello", "f", "i64", "i32"]], /):
         """
         usage.koalas: 6
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: List[Literal["name"]], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __eq__(
+        self, _0: List[Literal["mean_ci_upper", "mean_ci_lower", "mean_se", "mean"]], /
+    ):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -720,6 +1130,7 @@ class Index:
         usage.koalas: 6
         usage.pandas: 4
         usage.sklearn: 6
+        usage.statsmodels: 2
         """
         ...
 
@@ -729,6 +1140,8 @@ class Index:
         usage.dask: 17
         usage.koalas: 7
         usage.modin: 3
+        usage.prophet: 1
+        usage.statsmodels: 31
         usage.xarray: 3
         """
         ...
@@ -740,6 +1153,7 @@ class Index:
         usage.koalas: 3
         usage.seaborn: 2
         usage.sklearn: 1
+        usage.statsmodels: 9
         usage.xarray: 2
         """
         ...
@@ -749,6 +1163,7 @@ class Index:
         """
         usage.dask: 1
         usage.koalas: 1
+        usage.prophet: 1
         usage.sklearn: 2
         usage.xarray: 2
         """
@@ -758,6 +1173,7 @@ class Index:
     def __getitem__(self, _0: slice[int, int, int], /):
         """
         usage.dask: 1
+        usage.statsmodels: 1
         usage.xarray: 2
         """
         ...
@@ -766,6 +1182,7 @@ class Index:
     def __getitem__(self, _0: slice[int, None, int], /):
         """
         usage.dask: 2
+        usage.statsmodels: 13
         usage.xarray: 1
         """
         ...
@@ -782,6 +1199,7 @@ class Index:
         """
         usage.dask: 2
         usage.sklearn: 1
+        usage.statsmodels: 1
         usage.xarray: 2
         """
         ...
@@ -798,6 +1216,21 @@ class Index:
         """
         usage.dask: 2
         usage.sklearn: 2
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[pandas.core.series.Series, ellipsis], /):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.int64, /):
+        """
+        usage.statsmodels: 1
         """
         ...
 
@@ -808,22 +1241,15 @@ class Index:
         """
         ...
 
-    def __getitem__(
-        self,
-        _0: Union[
-            numpy.ndarray,
-            int,
-            List[Union[bool, int]],
-            slice[Union[None, int], Union[int, None], Union[None, int]],
-        ],
-        /,
-    ):
+    def __getitem__(self, _0: object, /):
         """
         usage.dask: 27
         usage.koalas: 11
         usage.modin: 3
+        usage.prophet: 2
         usage.seaborn: 2
         usage.sklearn: 6
+        usage.statsmodels: 60
         usage.xarray: 15
         """
         ...
@@ -834,7 +1260,9 @@ class Index:
         usage.koalas: 5
         usage.modin: 1
         usage.networkx: 1
+        usage.prophet: 3
         usage.sklearn: 1
+        usage.statsmodels: 27
         usage.xarray: 4
         """
         ...
@@ -920,6 +1348,7 @@ class Index:
 
     def equals(self, /, other: pandas.core.indexes.base.Index):
         """
+        usage.statsmodels: 3
         usage.xarray: 7
         """
         ...
@@ -1127,6 +1556,31 @@ class Index:
     def nunique(self, /, dropna: bool):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def set_names(self, /, names: pandas.core.indexes.frozen.FrozenList, inplace: bool):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def set_names(self, /, names: List[Literal["group0"]], inplace: bool):
+        """
+        usage.statsmodels: 1
+        """
+        ...
+
+    def set_names(
+        self,
+        /,
+        names: Union[List[Literal["group0"]], pandas.core.indexes.frozen.FrozenList],
+        inplace: bool,
+    ):
+        """
+        usage.statsmodels: 2
         """
         ...
 

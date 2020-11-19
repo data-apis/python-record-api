@@ -19,8 +19,10 @@ CategoricalIndex: object
 # usage.koalas: 270
 # usage.modin: 27
 # usage.networkx: 6
+# usage.prophet: 3
 # usage.seaborn: 16
 # usage.sklearn: 54
+# usage.statsmodels: 304
 # usage.xarray: 10
 DataFrame: object
 
@@ -29,6 +31,7 @@ DataFrame: object
 DateOffset: object
 
 # usage.dask: 10
+# usage.statsmodels: 27
 # usage.xarray: 5
 DatetimeIndex: object
 
@@ -42,6 +45,7 @@ Grouper: object
 # usage.dask: 32
 # usage.koalas: 21
 # usage.seaborn: 2
+# usage.statsmodels: 12
 # usage.xarray: 40
 Index: object
 
@@ -55,6 +59,7 @@ Int32Dtype: object
 Int64Dtype: object
 
 # usage.dask: 8
+# usage.statsmodels: 16
 Int64Index: object
 
 # usage.dask: 1
@@ -67,10 +72,12 @@ Interval: object
 # usage.koalas: 202
 # usage.modin: 3
 # usage.seaborn: 3
+# usage.statsmodels: 36
 # usage.xarray: 70
 MultiIndex: object
 
 # usage.dask: 4
+# usage.statsmodels: 1
 NA: object
 
 # usage.dask: 1
@@ -85,10 +92,12 @@ NamedAgg: object
 Period: object
 
 # usage.dask: 6
+# usage.statsmodels: 26
 # usage.xarray: 5
 PeriodIndex: object
 
 # usage.dask: 6
+# usage.statsmodels: 34
 RangeIndex: object
 
 # usage.dask: 106
@@ -96,10 +105,13 @@ RangeIndex: object
 # usage.modin: 16
 # usage.seaborn: 22
 # usage.sklearn: 11
+# usage.statsmodels: 250
 # usage.xarray: 20
 Series: object
 
 # usage.dask: 4
+# usage.prophet: 5
+# usage.statsmodels: 1
 # usage.xarray: 1
 Timedelta: object
 
@@ -109,6 +121,7 @@ TimedeltaIndex: object
 
 # usage.dask: 12
 # usage.koalas: 1
+# usage.statsmodels: 6
 # usage.xarray: 2
 Timestamp: object
 
@@ -135,10 +148,15 @@ __version__: object
 # usage.dask: 15
 array: object
 
+# usage.statsmodels: 1
+bdate_range: object
+
 # usage.dask: 31
 # usage.koalas: 4
 # usage.modin: 3
+# usage.prophet: 6
 # usage.sklearn: 2
+# usage.statsmodels: 25
 concat: object
 
 # usage.xarray: 1
@@ -147,7 +165,9 @@ cut: object
 # usage.dask: 52
 # usage.koalas: 45
 # usage.modin: 10
+# usage.prophet: 1
 # usage.seaborn: 1
+# usage.statsmodels: 119
 # usage.xarray: 106
 date_range: object
 
@@ -156,6 +176,7 @@ factorize: object
 
 # usage.dask: 10
 # usage.koalas: 29
+# usage.statsmodels: 6
 get_dummies: object
 
 # usage.dask: 1
@@ -168,6 +189,7 @@ isnull: object
 melt: object
 
 # usage.dask: 21
+# usage.prophet: 3
 merge: object
 
 # usage.dask: 11
@@ -183,6 +205,7 @@ np: object
 offsets: object
 
 # usage.dask: 5
+# usage.statsmodels: 43
 # usage.xarray: 4
 period_range: object
 
@@ -197,6 +220,7 @@ plotting: object
 # usage.modin: 15
 # usage.seaborn: 1
 # usage.sklearn: 2
+# usage.statsmodels: 5
 read_csv: object
 
 # usage.koalas: 6
@@ -230,6 +254,7 @@ timedelta_range: object
 to_datetime: object
 
 # usage.dask: 3
+# usage.statsmodels: 1
 to_numeric: object
 
 # usage.dask: 3
