@@ -4,11 +4,15 @@ FROM ${FROM}
 
 WORKDIR /usr/src/app
 
+
 RUN git clone \
     --branch 3.27.1 \
     --depth 1 \
     https://github.com/biolab/orange3.git \
     .
+
+RUN apt update
+RUN apt install -y libqt5opengl5-desktop-dev
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install -e . \
