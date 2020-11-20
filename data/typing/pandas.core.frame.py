@@ -12,6 +12,9 @@ class DataFrame:
     # usage.koalas: 1
     info: ClassVar[object]
 
+    # usage.geopandas: 1
+    merge: ClassVar[object]
+
     # usage.dask: 6
     # usage.koalas: 1
     # usage.networkx: 1
@@ -214,6 +217,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["x"], /):
         """
         usage.dask: 13
+        usage.geopandas: 3
         usage.koalas: 9
         usage.prophet: 10
         usage.seaborn: 65
@@ -1367,6 +1371,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["a"], /):
         """
         usage.dask: 40
+        usage.geopandas: 1
         usage.koalas: 28
         usage.modin: 2
         usage.seaborn: 33
@@ -2515,6 +2520,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["y"], /):
         """
         usage.dask: 13
+        usage.geopandas: 3
         usage.koalas: 1
         usage.prophet: 18
         usage.seaborn: 58
@@ -2537,6 +2543,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["z"], /):
         """
         usage.dask: 3
+        usage.geopandas: 1
         usage.koalas: 1
         usage.seaborn: 17
         usage.statsmodels: 1
@@ -9536,6 +9543,54 @@ class DataFrame:
 
     @overload
     @classmethod
+    def __getitem__(cls, _0: Literal["geometry"], /):
+        """
+        usage.geopandas: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["geom2"], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["geom3"], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["lon"], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["lat"], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["geom_list"], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    @classmethod
     def __getitem__(cls, _0: List[Literal["id", "name"]], /):
         """
         usage.dask: 1
@@ -11760,6 +11815,7 @@ class DataFrame:
     def __getitem__(cls, _0: object, /):
         """
         usage.dask: 471
+        usage.geopandas: 21
         usage.koalas: 1033
         usage.modin: 19
         usage.networkx: 22
@@ -11877,6 +11933,14 @@ class DataFrame:
 
     @overload
     @classmethod
+    def from_dict(cls, /, data: List[Dict[Literal["b", "a"], Union[float, int]]]):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
     def from_dict(
         cls,
         /,
@@ -11902,8 +11966,13 @@ class DataFrame:
         cls,
         /,
         data: Union[
-            Dict[str, Union[numpy.ndarray, List[Union[int, str]]]],
-            List[Dict[Literal["y", "x"], Union[Literal["a", "b", "c", "d"], int]]],
+            Dict[str, Union[List[Union[int, str]], numpy.ndarray]],
+            List[
+                Dict[
+                    Literal["y", "x", "b", "a"],
+                    Union[Literal["a", "b", "c", "d"], float, int],
+                ]
+            ],
         ],
         orient: Literal["columns"] = ...,
         dtype: None = ...,
@@ -11911,6 +11980,7 @@ class DataFrame:
     ):
         """
         usage.dask: 1
+        usage.geopandas: 1
         usage.modin: 1
         usage.networkx: 1
         usage.statsmodels: 1
@@ -12263,6 +12333,7 @@ class DataFrame:
     col2: object
 
     # usage.dask: 142
+    # usage.geopandas: 3
     # usage.koalas: 676
     # usage.modin: 17
     # usage.networkx: 3
@@ -12303,6 +12374,7 @@ class DataFrame:
     dt_col: object
 
     # usage.dask: 25
+    # usage.geopandas: 1
     # usage.koalas: 19
     # usage.modin: 1
     # usage.sklearn: 24
@@ -12344,6 +12416,9 @@ class DataFrame:
 
     # usage.seaborn: 17
     g: pandas.core.series.Series
+
+    # usage.geopandas: 1
+    geometry: object
 
     # usage.statsmodels: 1
     grps: object
@@ -12395,6 +12470,7 @@ class DataFrame:
     kurtosis: object
 
     # usage.dask: 71
+    # usage.geopandas: 1
     # usage.koalas: 103
     # usage.prophet: 2
     # usage.seaborn: 16
@@ -12462,6 +12538,9 @@ class DataFrame:
     # usage.statsmodels: 1
     ses: object
 
+    # usage.geopandas: 3
+    set_geometry: object
+
     # usage.koalas: 4
     shield: object
 
@@ -12502,6 +12581,7 @@ class DataFrame:
     value: object
 
     # usage.dask: 33
+    # usage.geopandas: 2
     # usage.koalas: 2
     # usage.modin: 1
     # usage.networkx: 1
@@ -12953,8 +13033,16 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def __contains__(self, _0: Literal["location"], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
     def __contains__(self, _0: str, /):
         """
+        usage.geopandas: 1
         usage.prophet: 26
         usage.seaborn: 18
         usage.statsmodels: 9
@@ -17453,6 +17541,50 @@ class DataFrame:
         ...
 
     @overload
+    def __setitem__(self, _0: Literal["geometry"], _1: numpy.ndarray, /):
+        """
+        usage.geopandas: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["geometry"], _1: geopandas.array.GeometryArray, /
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["geom2"], _1: numpy.ndarray, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["geom2"], _1: geopandas.array.GeometryArray, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["geom3"], _1: numpy.ndarray, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["geom3"], _1: geopandas.array.GeometryArray, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
     def __setitem__(self, _0: Literal["amount"], _1: pandas.core.series.Series, /):
         """
         usage.dask: 1
@@ -19237,6 +19369,7 @@ class DataFrame:
     def __setitem__(self, _0: object, _1: object, /):
         """
         usage.dask: 129
+        usage.geopandas: 8
         usage.koalas: 266
         usage.modin: 16
         usage.prophet: 63
@@ -20538,6 +20671,7 @@ class DataFrame:
     @overload
     def astype(self, /, dtype: Type[object]):
         """
+        usage.geopandas: 1
         usage.statsmodels: 1
         """
         ...
@@ -20702,9 +20836,9 @@ class DataFrame:
                 Union[int, str],
                 Union[
                     Type[float],
+                    Literal["category", "f8"],
                     pandas.core.dtypes.dtypes.CategoricalDtype,
                     numpy.dtype,
-                    Literal["category", "f8"],
                 ],
             ],
             pandas.core.series.Series,
@@ -20714,6 +20848,7 @@ class DataFrame:
     ):
         """
         usage.dask: 32
+        usage.geopandas: 1
         usage.koalas: 29
         usage.modin: 1
         usage.sklearn: 4
@@ -32929,6 +33064,13 @@ class DataFrame:
         ...
 
     @overload
+    def set_index(self, /, keys: Literal["value2"]):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
     def set_index(self, /, keys: Literal["amount"], drop: bool):
         """
         usage.dask: 1
@@ -33227,6 +33369,7 @@ class DataFrame:
     ):
         """
         usage.dask: 119
+        usage.geopandas: 2
         usage.koalas: 95
         usage.modin: 2
         usage.seaborn: 1
@@ -35911,6 +36054,7 @@ class DataFrame:
     @overload
     def to_parquet(self, /, path: str):
         """
+        usage.geopandas: 3
         usage.koalas: 3
         """
         ...
@@ -35951,6 +36095,7 @@ class DataFrame:
         self, /, path: str, partition_cols: List[Literal["col1", "A"]] = ...
     ):
         """
+        usage.geopandas: 3
         usage.koalas: 3
         usage.modin: 4
         """

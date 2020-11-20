@@ -33,6 +33,12 @@ class DatetimeTZBlock:
 
 class ExtensionBlock:
 
+    # usage.geopandas: 1
+    dtype: object
+
+    # usage.geopandas: 1
+    ndim: object
+
     # usage.dask: 2
     values: object
 
@@ -50,6 +56,9 @@ class IntBlock:
 
 
 class ObjectBlock:
+
+    # usage.geopandas: 1
+    dtype: object
 
     # usage.dask: 2
     values: object

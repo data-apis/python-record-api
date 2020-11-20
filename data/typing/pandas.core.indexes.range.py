@@ -30,14 +30,16 @@ class RangeIndex:
     is_unique: object
 
     # usage.dask: 16
+    # usage.geopandas: 7
     # usage.koalas: 2
     # usage.prophet: 1
     # usage.seaborn: 2
     # usage.statsmodels: 2
     # usage.xarray: 4
-    name: Union[Literal["ix", "renamed", "ncomp", "index"], None]
+    name: Union[str, None]
 
     # usage.dask: 1
+    # usage.geopandas: 6
     # usage.koalas: 3
     names: List[Literal["__index_level_0__"]]
 
@@ -85,6 +87,13 @@ class RangeIndex:
         ...
 
     @overload
+    def __contains__(self, _0: Literal["geometry"], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
     def __contains__(self, _0: Literal["divisions"], /):
         """
         usage.dask: 1
@@ -105,9 +114,12 @@ class RangeIndex:
         """
         ...
 
-    def __contains__(self, _0: Union[int, Literal["dtype", "divisions"]], /):
+    def __contains__(
+        self, _0: Union[Literal["dtype", "divisions", "geometry"], int], /
+    ):
         """
         usage.dask: 3
+        usage.geopandas: 1
         """
         ...
 
@@ -302,6 +314,12 @@ class RangeIndex:
         usage.prophet: 1
         usage.statsmodels: 75
         usage.xarray: 7
+        """
+        ...
+
+    def __iadd__(self, _0: int, /):
+        """
+        usage.geopandas: 1
         """
         ...
 

@@ -6337,26 +6337,58 @@ class MultiIndex:
         """
         ...
 
+    @overload
+    @classmethod
+    def from_tuples(
+        cls,
+        /,
+        tuples: List[Tuple[int, int]],
+        names: List[Union[None, Literal["test_index_name"]]],
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_tuples(
+        cls,
+        /,
+        tuples: List[Tuple[int, int]],
+        names: pandas.core.indexes.frozen.FrozenList,
+    ):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
     @classmethod
     def from_tuples(
         cls,
         /,
         tuples: Union[
-            List[Union[None, tuple, List[int]]],
+            List[Union[List[int], tuple, None]],
+            Dict[Tuple[Literal["a"], Literal["x"], int], List[int]],
+            zip,
+            set,
             Tuple[
                 Tuple[Literal["a", "b"], int],
                 Tuple[Literal["a", "b"], int],
                 Tuple[Literal["b", "a"], int],
                 Tuple[Literal["b", "a"], int],
             ],
-            set,
-            zip,
-            Dict[Tuple[Literal["a"], Literal["x"], int], List[int]],
         ],
         sortorder: None = ...,
-        names: Union[List[str], Tuple[Literal["number"], Literal["color"]], None] = ...,
+        names: Union[
+            List[Union[str, None]],
+            pandas.core.indexes.frozen.FrozenList,
+            None,
+            Tuple[Literal["number"], Literal["color"]],
+        ] = ...,
     ):
         """
+        usage.geopandas: 3
         usage.koalas: 568
         usage.modin: 9
         usage.statsmodels: 4
@@ -6402,11 +6434,12 @@ class MultiIndex:
     name: Union[Literal["z"], None]
 
     # usage.dask: 11
+    # usage.geopandas: 6
     # usage.koalas: 106
     # usage.statsmodels: 13
     # usage.xarray: 23
     names: Union[
-        List[Union[None, str, Tuple[str, str]]], pandas.core.indexes.frozen.FrozenList
+        List[Union[Tuple[str, str], str, None]], pandas.core.indexes.frozen.FrozenList
     ]
 
     # usage.dask: 3

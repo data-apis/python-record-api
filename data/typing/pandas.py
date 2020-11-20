@@ -4,6 +4,7 @@ from typing import *
 BooleanDtype: object
 
 # usage.dask: 18
+# usage.geopandas: 3
 # usage.xarray: 1
 Categorical: object
 
@@ -16,6 +17,7 @@ CategoricalDtype: object
 CategoricalIndex: object
 
 # usage.dask: 311
+# usage.geopandas: 19
 # usage.koalas: 270
 # usage.modin: 27
 # usage.networkx: 6
@@ -31,6 +33,7 @@ DataFrame: object
 DateOffset: object
 
 # usage.dask: 10
+# usage.geopandas: 3
 # usage.statsmodels: 27
 # usage.xarray: 5
 DatetimeIndex: object
@@ -43,6 +46,7 @@ Float64Index: object
 Grouper: object
 
 # usage.dask: 32
+# usage.geopandas: 3
 # usage.koalas: 21
 # usage.seaborn: 2
 # usage.statsmodels: 12
@@ -59,6 +63,7 @@ Int32Dtype: object
 Int64Dtype: object
 
 # usage.dask: 8
+# usage.geopandas: 1
 # usage.statsmodels: 16
 Int64Index: object
 
@@ -77,6 +82,7 @@ Interval: object
 MultiIndex: object
 
 # usage.dask: 4
+# usage.geopandas: 2
 # usage.statsmodels: 1
 NA: object
 
@@ -97,10 +103,12 @@ Period: object
 PeriodIndex: object
 
 # usage.dask: 6
+# usage.geopandas: 1
 # usage.statsmodels: 34
 RangeIndex: object
 
 # usage.dask: 106
+# usage.geopandas: 26
 # usage.koalas: 171
 # usage.modin: 16
 # usage.seaborn: 22
@@ -108,6 +116,9 @@ RangeIndex: object
 # usage.statsmodels: 250
 # usage.xarray: 20
 Series: object
+
+# usage.geopandas: 1
+StringDtype: object
 
 # usage.dask: 4
 # usage.prophet: 5
@@ -140,18 +151,21 @@ UInt64Index: object
 # usage.dask: 1
 UInt8Dtype: object
 
+# usage.geopandas: 1
 # usage.koalas: 44
 # usage.sklearn: 3
 # usage.xarray: 6
 __version__: object
 
 # usage.dask: 15
+# usage.geopandas: 3
 array: object
 
 # usage.statsmodels: 1
 bdate_range: object
 
 # usage.dask: 31
+# usage.geopandas: 7
 # usage.koalas: 4
 # usage.modin: 3
 # usage.prophet: 6
@@ -163,6 +177,7 @@ concat: object
 cut: object
 
 # usage.dask: 52
+# usage.geopandas: 1
 # usage.koalas: 45
 # usage.modin: 10
 # usage.prophet: 1

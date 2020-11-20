@@ -140,6 +140,7 @@ def is_bool_dtype(arr_or_dtype: Union[pandas.core.series.Series, numpy.dtype]):
 def is_categorical_dtype(arr_or_dtype: numpy.dtype):
     """
     usage.dask: 47
+    usage.geopandas: 3
     usage.koalas: 1
     usage.statsmodels: 1
     """
@@ -150,6 +151,7 @@ def is_categorical_dtype(arr_or_dtype: numpy.dtype):
 def is_categorical_dtype(arr_or_dtype: pandas.core.dtypes.dtypes.CategoricalDtype):
     """
     usage.dask: 17
+    usage.geopandas: 1
     usage.statsmodels: 1
     """
     ...
@@ -440,6 +442,7 @@ def is_categorical_dtype(arr_or_dtype: Literal["-"]):
 def is_categorical_dtype(arr_or_dtype: object):
     """
     usage.dask: 113
+    usage.geopandas: 4
     usage.koalas: 1
     usage.seaborn: 16
     usage.statsmodels: 3
@@ -887,9 +890,46 @@ def is_numeric_dtype(arr_or_dtype: object):
     ...
 
 
+@overload
 def is_object_dtype(arr_or_dtype: numpy.dtype):
     """
     usage.dask: 2
+    usage.geopandas: 3
+    usage.koalas: 1
+    """
+    ...
+
+
+@overload
+def is_object_dtype(arr_or_dtype: Type[object]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def is_object_dtype(arr_or_dtype: Type[str]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def is_object_dtype(arr_or_dtype: pandas.core.arrays.string_.StringDtype):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+def is_object_dtype(
+    arr_or_dtype: Union[numpy.dtype, pandas.core.arrays.string_.StringDtype, type]
+):
+    """
+    usage.dask: 2
+    usage.geopandas: 6
     usage.koalas: 1
     """
     ...
@@ -996,8 +1036,82 @@ def is_sparse(
     ...
 
 
+@overload
+def is_string_dtype(arr_or_dtype: Type[object]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def is_string_dtype(arr_or_dtype: Type[str]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def is_string_dtype(arr_or_dtype: numpy.dtype):
+    """
+    usage.geopandas: 4
+    """
+    ...
+
+
+@overload
+def is_string_dtype(arr_or_dtype: pandas.core.arrays.string_.StringDtype):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+def is_string_dtype(
+    arr_or_dtype: Union[numpy.dtype, pandas.core.arrays.string_.StringDtype, type]
+):
+    """
+    usage.geopandas: 7
+    """
+    ...
+
+
 def is_timedelta64_dtype(arr_or_dtype: pandas.core.series.Series):
     """
     usage.dask: 2
+    """
+    ...
+
+
+@overload
+def pandas_dtype(dtype: Type[str]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def pandas_dtype(dtype: numpy.dtype):
+    """
+    usage.geopandas: 2
+    """
+    ...
+
+
+@overload
+def pandas_dtype(dtype: pandas.core.arrays.string_.StringDtype):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+def pandas_dtype(
+    dtype: Union[pandas.core.arrays.string_.StringDtype, numpy.dtype, Type[str]]
+):
+    """
+    usage.geopandas: 4
     """
     ...

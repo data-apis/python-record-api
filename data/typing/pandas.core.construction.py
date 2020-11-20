@@ -2,6 +2,22 @@ from typing import *
 
 
 @overload
+def array(data: List[Union[float, int]], dtype: pandas.core.arrays.integer.Int64Dtype):
+    """
+    usage.geopandas: 2
+    """
+    ...
+
+
+@overload
+def array(data: numpy.ndarray, dtype: Literal["string"]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
 def array(
     data: List[Union[pandas._libs.missing.NAType, Literal["a"]]],
     dtype: pandas.core.arrays.string_.StringDtype,
@@ -113,17 +129,9 @@ def array(data: List[Union[None, Literal["b", "a"]]], dtype: Literal["string"]):
     ...
 
 
-def array(
-    data: list,
-    dtype: Union[
-        str,
-        pandas.core.arrays.boolean.BooleanDtype,
-        pandas.core.arrays.integer.Int32Dtype,
-        pandas.core.arrays.string_.StringDtype,
-        pandas.core.dtypes.dtypes.CategoricalDtype,
-    ],
-):
+def array(data: Union[list, numpy.ndarray], dtype: object):
     """
     usage.dask: 15
+    usage.geopandas: 3
     """
     ...

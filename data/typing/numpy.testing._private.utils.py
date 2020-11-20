@@ -737,6 +737,7 @@ def assert_allclose(actual: numpy.ndarray, desired: numpy.ndarray, rtol: float):
 @overload
 def assert_allclose(actual: numpy.ndarray, desired: numpy.ndarray):
     """
+    usage.geopandas: 3
     usage.matplotlib: 22
     usage.networkx: 6
     usage.scipy: 872
@@ -773,6 +774,7 @@ def assert_allclose(actual: float, desired: numpy.float64, atol: float):
 @overload
 def assert_allclose(actual: numpy.ndarray, desired: List[float]):
     """
+    usage.geopandas: 7
     usage.matplotlib: 3
     usage.scipy: 88
     usage.skimage: 6
@@ -1511,6 +1513,7 @@ def assert_allclose(
     actual: pandas.core.series.Series, desired: pandas.core.series.Series
 ):
     """
+    usage.geopandas: 1
     usage.statsmodels: 89
     """
     ...
@@ -10510,6 +10513,16 @@ def assert_allclose(
 
 
 @overload
+def assert_allclose(
+    actual: numpy.ndarray, desired: List[Tuple[float, float, float, float]]
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
 def assert_allclose(actual: float, desired: numpy.float32, rtol: float):
     """
     usage.sklearn: 7
@@ -11762,6 +11775,7 @@ def assert_allclose(
     verbose: bool = ...,
 ):
     """
+    usage.geopandas: 12
     usage.matplotlib: 184
     usage.networkx: 19
     usage.scipy: 4709
@@ -18694,6 +18708,7 @@ def assert_array_almost_equal_nulp(
 def assert_array_equal(x: numpy.ndarray, y: numpy.ndarray):
     """
     usage.dask: 22
+    usage.geopandas: 20
     usage.koalas: 2
     usage.matplotlib: 106
     usage.scipy: 668
@@ -18806,6 +18821,7 @@ def assert_array_equal(x: numpy.ndarray, y: Tuple[float, float]):
 @overload
 def assert_array_equal(x: numpy.ndarray, y: Tuple[int, int]):
     """
+    usage.geopandas: 2
     usage.seaborn: 6
     usage.skimage: 1
     usage.xarray: 2
@@ -19044,6 +19060,7 @@ def assert_array_equal(x: int, y: numpy.int64):
 @overload
 def assert_array_equal(x: List[int], y: numpy.ndarray):
     """
+    usage.geopandas: 1
     usage.matplotlib: 1
     usage.scipy: 3
     usage.sklearn: 26
@@ -21419,6 +21436,62 @@ def assert_array_equal(
 
 
 @overload
+def assert_array_equal(x: pandas.core.series.Series, y: List[bool]):
+    """
+    usage.geopandas: 3
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: geopandas.array.GeometryArray, y: geopandas.array.GeometryArray
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: List[float], y: float):
+    """
+    usage.geopandas: 3
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: List[Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64]],
+    y: List[Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64]],
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: List[Tuple[Union[int, float], Union[None, List[float]]]],
+    y: List[Tuple[Union[numpy.int64, numpy.float64], Union[None, List[numpy.float64]]]],
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: List[Union[int, float]], y: List[numpy.float64]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
 def assert_array_equal(x: dask.dataframe.core.Index, y: List[int]):
     """
     usage.dask: 2
@@ -22034,6 +22107,7 @@ def assert_array_equal(
 def assert_array_equal(x: object, y: object, err_msg: str = ...):
     """
     usage.dask: 36
+    usage.geopandas: 33
     usage.koalas: 2
     usage.matplotlib: 186
     usage.scipy: 1833

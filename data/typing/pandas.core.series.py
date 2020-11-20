@@ -35,6 +35,7 @@ class Series:
     def __getitem__(cls, _0: int, /):
         """
         usage.dask: 16
+        usage.geopandas: 3
         usage.koalas: 10
         usage.prophet: 20
         usage.statsmodels: 32
@@ -144,6 +145,7 @@ class Series:
     def __getitem__(cls, _0: pandas.core.series.Series, /):
         """
         usage.dask: 6
+        usage.geopandas: 2
         usage.koalas: 4
         usage.prophet: 3
         usage.seaborn: 28
@@ -608,6 +610,7 @@ class Series:
     def __getitem__(cls, _0: numpy.ndarray, /):
         """
         usage.dask: 1
+        usage.geopandas: 5
         usage.seaborn: 8
         """
         ...
@@ -633,6 +636,22 @@ class Series:
     def __getitem__(cls, _0: Literal["heights"], /):
         """
         usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["geometry"], /):
+        """
+        usage.geopandas: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["address"], /):
+        """
+        usage.geopandas: 1
         """
         ...
 
@@ -848,6 +867,7 @@ class Series:
     def __getitem__(cls, _0: object, /):
         """
         usage.dask: 72
+        usage.geopandas: 16
         usage.koalas: 47
         usage.modin: 12
         usage.prophet: 28
@@ -928,8 +948,9 @@ class Series:
     T: object
 
     # usage.dask: 6
+    # usage.geopandas: 1
     # usage.sklearn: 1
-    __class__: object
+    __class__: Type[geopandas.geoseries.GeoSeries]
 
     # usage.dask: 2
     _constructor: object
@@ -939,6 +960,9 @@ class Series:
 
     # usage.dask: 3
     _values: object
+
+    # usage.geopandas: 1
+    array: object
 
     # usage.koalas: 2
     at: object
@@ -966,6 +990,7 @@ class Series:
     dt: object
 
     # usage.dask: 64
+    # usage.geopandas: 7
     # usage.koalas: 7
     # usage.prophet: 1
     # usage.seaborn: 2
@@ -977,6 +1002,7 @@ class Series:
     dtypes: object
 
     # usage.dask: 1
+    # usage.geopandas: 1
     empty: object
 
     # usage.koalas: 6
@@ -989,6 +1015,7 @@ class Series:
     iat: object
 
     # usage.dask: 31
+    # usage.geopandas: 1
     # usage.koalas: 27
     # usage.prophet: 9
     # usage.seaborn: 1
@@ -998,6 +1025,7 @@ class Series:
     iloc: object
 
     # usage.dask: 83
+    # usage.geopandas: 5
     # usage.koalas: 42
     # usage.modin: 7
     # usage.seaborn: 12
@@ -1024,6 +1052,7 @@ class Series:
     multiply: object
 
     # usage.dask: 48
+    # usage.geopandas: 3
     # usage.koalas: 16
     # usage.modin: 1
     # usage.seaborn: 9
@@ -1031,7 +1060,7 @@ class Series:
     # usage.statsmodels: 31
     # usage.xarray: 5
     name: Union[
-        int, Tuple[Literal["X", "Y", "x", "y"], Literal["A", "B", "a", "z"]], str, None
+        Tuple[Literal["X", "Y", "x", "y"], Literal["A", "B", "a", "z"]], int, str, None
     ]
 
     # usage.koalas: 1
@@ -1065,6 +1094,7 @@ class Series:
     size: object
 
     # usage.dask: 26
+    # usage.geopandas: 2
     # usage.koalas: 103
     # usage.seaborn: 2
     str: object
@@ -1073,6 +1103,7 @@ class Series:
     upper_ci: object
 
     # usage.dask: 40
+    # usage.geopandas: 15
     # usage.koalas: 11
     # usage.modin: 1
     # usage.prophet: 38
@@ -1203,6 +1234,7 @@ class Series:
     def __and__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 5
+        usage.geopandas: 4
         usage.koalas: 3
         usage.prophet: 3
         usage.seaborn: 2
@@ -1218,9 +1250,17 @@ class Series:
         """
         ...
 
-    def __and__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
+    @overload
+    def __and__(self, _0: bool, /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    def __and__(self, _0: Union[pandas.core.series.Series, numpy.ndarray, bool], /):
         """
         usage.dask: 5
+        usage.geopandas: 6
         usage.koalas: 3
         usage.pandas: 3
         usage.prophet: 3
@@ -1292,6 +1332,7 @@ class Series:
     def __eq__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 24
+        usage.geopandas: 2
         usage.koalas: 4
         usage.statsmodels: 2
         """
@@ -1733,6 +1774,90 @@ class Series:
         ...
 
     @overload
+    def __eq__(self, _0: Literal["geometry"], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: numpy.ndarray, /):
+        """
+        usage.geopandas: 5
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["Africa"], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["Queens"], /):
+        """
+        usage.geopandas: 3
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["Bronx"], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["Polygon"], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["MultiPolygon"], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["LineString"], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["MultiLineString"], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["LinearRing"], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["Point"], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["MultiPoint"], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
     def __eq__(self, _0: Literal["category"], /):
         """
         usage.dask: 4
@@ -1805,6 +1930,7 @@ class Series:
     def __eq__(self, _0: object, /):
         """
         usage.dask: 39
+        usage.geopandas: 29
         usage.koalas: 43
         usage.pandas: 52
         usage.prophet: 2
@@ -1966,6 +2092,7 @@ class Series:
     def __gt__(self, _0: int, /):
         """
         usage.dask: 55
+        usage.geopandas: 1
         usage.koalas: 12
         usage.statsmodels: 4
         """
@@ -2046,6 +2173,7 @@ class Series:
     def __gt__(self, _0: object, /):
         """
         usage.dask: 61
+        usage.geopandas: 1
         usage.koalas: 13
         usage.pandas: 5
         usage.prophet: 8
@@ -2160,6 +2288,7 @@ class Series:
     def __invert__(self, /):
         """
         usage.dask: 1
+        usage.geopandas: 5
         usage.koalas: 1
         usage.prophet: 1
         usage.seaborn: 1
@@ -2408,6 +2537,7 @@ class Series:
     def __mod__(self, _0: int, /):
         """
         usage.dask: 5
+        usage.geopandas: 2
         usage.koalas: 16
         """
         ...
@@ -2419,9 +2549,10 @@ class Series:
         """
         ...
 
-    def __mod__(self, _0: Union[int, numpy.timedelta64, numpy.ndarray], /):
+    def __mod__(self, _0: Union[int, numpy.ndarray, numpy.timedelta64], /):
         """
         usage.dask: 5
+        usage.geopandas: 2
         usage.koalas: 16
         usage.pandas: 57
         """
@@ -2515,6 +2646,7 @@ class Series:
     def __or__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 3
+        usage.geopandas: 8
         usage.koalas: 3
         usage.prophet: 1
         """
@@ -2531,6 +2663,7 @@ class Series:
     def __or__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
         """
         usage.dask: 3
+        usage.geopandas: 8
         usage.koalas: 3
         usage.pandas: 3
         usage.prophet: 1
@@ -2660,6 +2793,7 @@ class Series:
     def __rand__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 5
+        usage.geopandas: 4
         usage.koalas: 3
         usage.prophet: 3
         usage.seaborn: 2
@@ -2677,6 +2811,7 @@ class Series:
     def __rand__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
         """
         usage.dask: 5
+        usage.geopandas: 4
         usage.koalas: 3
         usage.prophet: 3
         usage.seaborn: 3
@@ -2773,6 +2908,7 @@ class Series:
     def __ror__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 3
+        usage.geopandas: 8
         usage.koalas: 3
         usage.prophet: 1
         """
@@ -2788,6 +2924,7 @@ class Series:
     def __ror__(self, _0: Union[pandas.core.series.Series, numpy.ndarray], /):
         """
         usage.dask: 3
+        usage.geopandas: 8
         usage.koalas: 3
         usage.pandas: 1
         usage.prophet: 1
@@ -2804,6 +2941,7 @@ class Series:
     def __rsub__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 5
+        usage.geopandas: 1
         usage.koalas: 14
         usage.prophet: 16
         usage.seaborn: 2
@@ -2858,6 +2996,7 @@ class Series:
     def __rsub__(self, _0: object, /):
         """
         usage.dask: 10
+        usage.geopandas: 1
         usage.koalas: 16
         usage.pandas: 44
         usage.prophet: 16
@@ -3046,6 +3185,7 @@ class Series:
     def __sub__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 5
+        usage.geopandas: 1
         usage.koalas: 14
         usage.prophet: 16
         usage.seaborn: 2
@@ -3119,6 +3259,7 @@ class Series:
     def __sub__(self, _0: object, /):
         """
         usage.dask: 18
+        usage.geopandas: 1
         usage.koalas: 19
         usage.pandas: 35
         usage.prophet: 23
@@ -3553,6 +3694,7 @@ class Series:
     def all(self, /):
         """
         usage.dask: 20
+        usage.geopandas: 7
         usage.koalas: 8
         usage.prophet: 5
         usage.seaborn: 13
@@ -3569,6 +3711,7 @@ class Series:
     def all(self, /, axis: int = ..., skipna: bool = ...):
         """
         usage.dask: 22
+        usage.geopandas: 7
         usage.koalas: 8
         usage.prophet: 5
         usage.seaborn: 13
@@ -3579,6 +3722,7 @@ class Series:
     def any(self, /):
         """
         usage.dask: 6
+        usage.geopandas: 5
         usage.koalas: 3
         usage.prophet: 4
         usage.seaborn: 6
@@ -3598,6 +3742,7 @@ class Series:
     def any(self, /, axis: int = ..., skipna: bool = ...):
         """
         usage.dask: 8
+        usage.geopandas: 5
         usage.koalas: 3
         usage.prophet: 4
         usage.seaborn: 6
@@ -3792,6 +3937,7 @@ class Series:
     @overload
     def astype(self, /, dtype: Type[bool]):
         """
+        usage.geopandas: 2
         usage.koalas: 5
         """
         ...
@@ -3849,6 +3995,7 @@ class Series:
     @overload
     def astype(self, /, dtype: Type[object]):
         """
+        usage.geopandas: 1
         usage.seaborn: 2
         """
         ...
@@ -3858,6 +4005,21 @@ class Series:
         """
         usage.dask: 3
         usage.seaborn: 2
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Literal["int64"]):
+        """
+        usage.dask: 2
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Literal["geometry"]):
+        """
+        usage.geopandas: 1
         """
         ...
 
@@ -3887,13 +4049,6 @@ class Series:
     def astype(self, /, dtype: Literal["f8"]):
         """
         usage.dask: 5
-        """
-        ...
-
-    @overload
-    def astype(self, /, dtype: Literal["int64"]):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -3970,6 +4125,7 @@ class Series:
     ):
         """
         usage.dask: 53
+        usage.geopandas: 5
         usage.koalas: 6
         usage.prophet: 2
         usage.seaborn: 10
@@ -4132,6 +4288,34 @@ class Series:
         ...
 
     @overload
+    def combine(self, /, other: shapely.geometry.point.Point, func: Callable):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def combine(self, /, other: shapely.geometry.point.Point, func: Callable):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def combine(self, /, other: pandas.core.series.Series, func: Callable):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def combine(self, /, other: pandas.core.series.Series, func: Callable):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
     def combine(
         self, /, other: pandas.core.series.Series, func: Callable, fill_value: None
     ):
@@ -4161,12 +4345,13 @@ class Series:
     def combine(
         self,
         /,
-        other: pandas.core.series.Series,
+        other: Union[pandas.core.series.Series, shapely.geometry.point.Point],
         func: Callable,
-        fill_value: Union[None, int],
+        fill_value: Union[None, int] = ...,
     ):
         """
         usage.dask: 6
+        usage.geopandas: 4
         """
         ...
 
@@ -4588,6 +4773,7 @@ class Series:
     def dropna(self, /):
         """
         usage.dask: 7
+        usage.geopandas: 1
         usage.koalas: 3
         usage.seaborn: 1
         usage.statsmodels: 17
@@ -4605,6 +4791,7 @@ class Series:
     def dropna(self, /, inplace: bool = ...):
         """
         usage.dask: 7
+        usage.geopandas: 1
         usage.koalas: 4
         usage.seaborn: 1
         usage.statsmodels: 17
@@ -4633,9 +4820,29 @@ class Series:
         """
         ...
 
+    @overload
+    def eq(self, /, other: Literal["MultiPolygon"]):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
     def eq(self, /, other: pandas.core.series.Series, fill_value: int):
         """
         usage.dask: 1
+        """
+        ...
+
+    def eq(
+        self,
+        /,
+        other: Union[pandas.core.series.Series, Literal["MultiPolygon"]],
+        fill_value: int = ...,
+    ):
+        """
+        usage.dask: 1
+        usage.geopandas: 1
         """
         ...
 
@@ -4737,6 +4944,13 @@ class Series:
     def fillna(self, /, value: Literal["white"]):
         """
         usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def fillna(self, /, value: shapely.geometry.point.Point):
+        """
+        usage.geopandas: 1
         """
         ...
 
@@ -4857,6 +5071,7 @@ class Series:
     ):
         """
         usage.dask: 23
+        usage.geopandas: 1
         usage.koalas: 9
         usage.seaborn: 1
         usage.statsmodels: 5
@@ -5480,6 +5695,7 @@ class Series:
     def items(self, /):
         """
         usage.dask: 1
+        usage.geopandas: 1
         usage.koalas: 1
         usage.statsmodels: 2
         """
@@ -5488,6 +5704,7 @@ class Series:
     def iteritems(self, /):
         """
         usage.dask: 4
+        usage.geopandas: 1
         usage.koalas: 1
         usage.xarray: 1
         """
@@ -5709,6 +5926,7 @@ class Series:
     def max(self, /):
         """
         usage.dask: 11
+        usage.geopandas: 2
         usage.koalas: 3
         usage.prophet: 11
         usage.seaborn: 8
@@ -5748,6 +5966,7 @@ class Series:
     def max(self, /, axis: Union[Literal["columns"], int] = ..., skipna: bool = ...):
         """
         usage.dask: 19
+        usage.geopandas: 2
         usage.koalas: 3
         usage.prophet: 11
         usage.seaborn: 8
@@ -5840,6 +6059,7 @@ class Series:
     def min(self, /):
         """
         usage.dask: 7
+        usage.geopandas: 2
         usage.koalas: 52
         usage.prophet: 12
         usage.seaborn: 11
@@ -5879,6 +6099,7 @@ class Series:
     def min(self, /, axis: Union[Literal["columns"], int] = ..., skipna: bool = ...):
         """
         usage.dask: 14
+        usage.geopandas: 2
         usage.koalas: 52
         usage.prophet: 12
         usage.seaborn: 11
@@ -8658,6 +8879,7 @@ class Series:
     def tolist(self, /):
         """
         usage.dask: 4
+        usage.geopandas: 5
         usage.koalas: 2
         usage.prophet: 1
         usage.seaborn: 6
@@ -8762,6 +8984,7 @@ class Series:
     def unique(self, /):
         """
         usage.dask: 9
+        usage.geopandas: 2
         usage.prophet: 8
         usage.seaborn: 63
         usage.statsmodels: 1

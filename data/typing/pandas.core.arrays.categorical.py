@@ -65,12 +65,14 @@ class Categorical:
         ...
 
     # usage.dask: 1
+    # usage.geopandas: 1
     # usage.seaborn: 2
     # usage.statsmodels: 2
     # usage.xarray: 6
     categories: object
 
     # usage.dask: 4
+    # usage.geopandas: 1
     # usage.statsmodels: 1
     # usage.xarray: 1
     codes: object

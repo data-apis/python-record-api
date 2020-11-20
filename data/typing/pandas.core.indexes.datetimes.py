@@ -1683,6 +1683,14 @@ def date_range(start: Literal["2010-01-01"], periods: int, freq: Literal["d"]):
 
 
 @overload
+def date_range(start: Literal["2012-01-01"], periods: int):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
 def date_range(
     start: Literal["2000-01-01"], end: Literal["2000-01-31"], freq: Literal["1d"]
 ):
@@ -2523,6 +2531,7 @@ def date_range(
 ):
     """
     usage.dask: 97
+    usage.geopandas: 1
     usage.koalas: 45
     usage.modin: 36
     usage.prophet: 4
@@ -2591,13 +2600,15 @@ class DatetimeIndex:
     month: object
 
     # usage.dask: 17
+    # usage.geopandas: 1
     # usage.prophet: 2
     # usage.xarray: 5
-    name: Union[None, Literal["timestamp", "index"]]
+    name: Union[None, Literal["timestamp", "index", "datetime"]]
 
     # usage.dask: 1
+    # usage.geopandas: 2
     # usage.koalas: 3
-    names: List[Union[None, Literal["__index_level_0__"]]]
+    names: List[Union[Literal["__index_level_0__"], None]]
 
     # usage.xarray: 1
     ndim: object
@@ -2975,10 +2986,34 @@ class DatetimeIndex:
         """
         ...
 
+    @overload
     def __radd__(
         self, _0: Union[numpy.datetime64, numpy.timedelta64, numpy.ndarray], /
     ):
         """
+        usage.pandas: 59
+        """
+        ...
+
+    @overload
+    def __radd__(self, _0: pandas.core.indexes.timedeltas.TimedeltaIndex, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    def __radd__(
+        self,
+        _0: Union[
+            pandas.core.indexes.timedeltas.TimedeltaIndex,
+            numpy.ndarray,
+            numpy.timedelta64,
+            numpy.datetime64,
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 1
         usage.pandas: 59
         """
         ...
