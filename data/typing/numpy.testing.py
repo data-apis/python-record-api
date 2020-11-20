@@ -2,6 +2,7 @@ from typing import *
 
 # usage.matplotlib: 6
 # usage.networkx: 9
+# usage.orange3: 1
 # usage.scipy: 30
 # usage.skimage: 10
 # usage.sklearn: 6
@@ -9,6 +10,7 @@ from typing import *
 assert_allclose: object
 
 # usage.networkx: 22
+# usage.orange3: 28
 # usage.scipy: 15
 # usage.skimage: 3
 # usage.sklearn: 3

@@ -5,6 +5,7 @@ class CClass:
     @overload
     def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray], /):
         """
+        usage.orange3: 2
         usage.scipy: 9
         usage.skimage: 1
         usage.sklearn: 1
@@ -13,14 +14,173 @@ class CClass:
         ...
 
     @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray], /
+    ):
+        """
+        usage.orange3: 1
+        usage.scipy: 1
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray
+        ],
+        /,
+    ):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: Tuple[numpy.ndarray, numpy.ndarray], /):
         """
         usage.matplotlib: 1
+        usage.orange3: 3
         usage.pandas: 3
         usage.scipy: 12
         usage.seaborn: 5
         usage.sklearn: 38
         usage.statsmodels: 107
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            List[float],
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.orange3: 2
+        usage.seaborn: 1
+        usage.sklearn: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            List[float],
+            List[float],
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[float]], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+            numpy.ndarray,
+        ],
+        /,
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[List[float], numpy.ndarray, numpy.ndarray, numpy.ndarray], /
+    ):
+        """
+        usage.orange3: 1
         """
         ...
 
@@ -93,16 +253,6 @@ class CClass:
 
     @overload
     def __getitem__(
-        self, _0: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray], /
-    ):
-        """
-        usage.scipy: 1
-        usage.statsmodels: 10
-        """
-        ...
-
-    @overload
-    def __getitem__(
         self, _0: Tuple[pandas.core.series.Series, pandas.core.series.Series], /
     ):
         """
@@ -121,15 +271,6 @@ class CClass:
     @overload
     def __getitem__(self, _0: numpy.float64, /):
         """
-        usage.statsmodels: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: numpy.ndarray, /):
-        """
-        usage.seaborn: 1
-        usage.sklearn: 1
         usage.statsmodels: 2
         """
         ...
@@ -163,11 +304,11 @@ class CClass:
             pandas.core.series.Series,
             Tuple[
                 Union[
-                    List[Union[int, numpy.float64, float, complex]],
                     numpy.recarray,
                     pandas.core.series.Series,
                     pandas.core.frame.DataFrame,
                     numpy.ndarray,
+                    List[Union[int, numpy.float64, float, complex]],
                 ],
                 ...,
             ],
@@ -177,6 +318,7 @@ class CClass:
     ):
         """
         usage.matplotlib: 1
+        usage.orange3: 20
         usage.pandas: 3
         usage.scipy: 23
         usage.seaborn: 11
@@ -1015,6 +1157,15 @@ class RClass:
     def __getitem__(self, _0: Tuple[Tuple[float, float], float], /):
         """
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[float, int], /):
+        """
+        usage.orange3: 1
+        usage.seaborn: 2
+        usage.statsmodels: 1
         """
         ...
 
@@ -2351,14 +2502,6 @@ class RClass:
         /,
     ):
         """
-        usage.statsmodels: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[float, int], /):
-        """
-        usage.seaborn: 2
         usage.statsmodels: 1
         """
         ...
@@ -4068,6 +4211,7 @@ class RClass:
     def __getitem__(self, _0: object, /):
         """
         usage.matplotlib: 6
+        usage.orange3: 1
         usage.pandas: 13
         usage.scipy: 187
         usage.seaborn: 6
