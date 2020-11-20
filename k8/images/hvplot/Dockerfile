@@ -16,5 +16,8 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 RUN python -c "import hvplot"
 
+COPY rename_tests.py .
+RUN python rename_tests.py
+
 ENV PYTHON_RECORD_API_FROM_MODULES=hvplot
-CMD [ "pytest", "hvplot/tests/*", "--verbose", "--suppress-tests-failed-exit-code"]
+CMD ["pytest", "--verbose", "hvplot/tests/", "--suppress-tests-failed-exit-code"]
