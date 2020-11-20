@@ -48,6 +48,7 @@ Grouper: object
 # usage.dask: 32
 # usage.geopandas: 3
 # usage.koalas: 21
+# usage.pyjanitor: 1
 # usage.seaborn: 2
 # usage.statsmodels: 12
 # usage.xarray: 40
@@ -127,6 +128,7 @@ StringDtype: object
 Timedelta: object
 
 # usage.dask: 4
+# usage.pyjanitor: 1
 # usage.xarray: 9
 TimedeltaIndex: object
 
@@ -169,10 +171,12 @@ bdate_range: object
 # usage.koalas: 4
 # usage.modin: 3
 # usage.prophet: 6
+# usage.pyjanitor: 2
 # usage.sklearn: 2
 # usage.statsmodels: 25
 concat: object
 
+# usage.pyjanitor: 1
 # usage.xarray: 1
 cut: object
 
@@ -195,6 +199,7 @@ factorize: object
 get_dummies: object
 
 # usage.dask: 1
+# usage.pyjanitor: 1
 isna: object
 
 # usage.xarray: 1
@@ -233,6 +238,7 @@ plotting: object
 # usage.dask: 16
 # usage.koalas: 12
 # usage.modin: 15
+# usage.pyjanitor: 2
 # usage.seaborn: 1
 # usage.sklearn: 2
 # usage.statsmodels: 5
@@ -265,6 +271,7 @@ timedelta_range: object
 
 # usage.dask: 8
 # usage.koalas: 5
+# usage.pyjanitor: 4
 # usage.xarray: 1
 to_datetime: object
 

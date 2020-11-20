@@ -993,6 +993,7 @@ class Series:
     # usage.geopandas: 7
     # usage.koalas: 7
     # usage.prophet: 1
+    # usage.pyjanitor: 1
     # usage.seaborn: 2
     # usage.sklearn: 9
     # usage.statsmodels: 2
@@ -1096,6 +1097,7 @@ class Series:
     # usage.dask: 26
     # usage.geopandas: 2
     # usage.koalas: 103
+    # usage.pyjanitor: 3
     # usage.seaborn: 2
     str: object
 
@@ -1107,6 +1109,7 @@ class Series:
     # usage.koalas: 11
     # usage.modin: 1
     # usage.prophet: 38
+    # usage.pyjanitor: 2
     # usage.seaborn: 22
     # usage.statsmodels: 280
     # usage.xarray: 16
@@ -1118,6 +1121,7 @@ class Series:
         usage.dask: 35
         usage.koalas: 65
         usage.modin: 1
+        usage.pyjanitor: 1
         usage.statsmodels: 6
         """
         ...
@@ -1137,6 +1141,7 @@ class Series:
         usage.dask: 14
         usage.koalas: 6
         usage.prophet: 4
+        usage.pyjanitor: 2
         usage.seaborn: 1
         usage.statsmodels: 17
         """
@@ -1212,6 +1217,13 @@ class Series:
         ...
 
     @overload
+    def __add__(self, _0: Literal["-"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def __add__(self, _0: dask.dataframe.core.Scalar, /):
         """
         usage.dask: 1
@@ -1225,6 +1237,7 @@ class Series:
         usage.modin: 1
         usage.pandas: 39
         usage.prophet: 5
+        usage.pyjanitor: 4
         usage.seaborn: 3
         usage.statsmodels: 50
         """
@@ -1858,6 +1871,13 @@ class Series:
         ...
 
     @overload
+    def __eq__(self, _0: bool, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def __eq__(self, _0: Literal["category"], /):
         """
         usage.dask: 4
@@ -1934,6 +1954,7 @@ class Series:
         usage.koalas: 43
         usage.pandas: 52
         usage.prophet: 2
+        usage.pyjanitor: 1
         usage.seaborn: 180
         usage.sklearn: 10
         usage.statsmodels: 29
@@ -2009,16 +2030,17 @@ class Series:
         ...
 
     @overload
-    def __ge__(self, _0: int, /):
+    def __ge__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
-        usage.dask: 6
+        usage.dask: 1
+        usage.pyjanitor: 1
         """
         ...
 
     @overload
-    def __ge__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+    def __ge__(self, _0: int, /):
         """
-        usage.dask: 1
+        usage.dask: 6
         """
         ...
 
@@ -2083,6 +2105,7 @@ class Series:
         usage.dask: 17
         usage.pandas: 7
         usage.prophet: 3
+        usage.pyjanitor: 1
         usage.seaborn: 1
         usage.statsmodels: 2
         """
@@ -2291,6 +2314,7 @@ class Series:
         usage.geopandas: 5
         usage.koalas: 1
         usage.prophet: 1
+        usage.pyjanitor: 1
         usage.seaborn: 1
         usage.statsmodels: 22
         usage.xarray: 1
@@ -2362,6 +2386,7 @@ class Series:
         usage.koalas: 2
         usage.modin: 2
         usage.prophet: 1
+        usage.pyjanitor: 2
         usage.seaborn: 7
         usage.sklearn: 12
         usage.statsmodels: 16
@@ -2441,6 +2466,7 @@ class Series:
     def __le__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
         usage.prophet: 4
+        usage.pyjanitor: 1
         """
         ...
 
@@ -2456,6 +2482,7 @@ class Series:
         usage.dask: 6
         usage.pandas: 7
         usage.prophet: 7
+        usage.pyjanitor: 1
         usage.seaborn: 1
         usage.statsmodels: 4
         """
@@ -2563,6 +2590,7 @@ class Series:
         """
         usage.dask: 2
         usage.koalas: 5
+        usage.pyjanitor: 1
         usage.seaborn: 2
         usage.statsmodels: 4
         """
@@ -2583,6 +2611,7 @@ class Series:
     def __mul__(self, _0: float, /):
         """
         usage.dask: 1
+        usage.pyjanitor: 3
         usage.statsmodels: 9
         """
         ...
@@ -2629,6 +2658,7 @@ class Series:
         usage.koalas: 11
         usage.pandas: 29
         usage.prophet: 4
+        usage.pyjanitor: 4
         usage.seaborn: 3
         usage.statsmodels: 26
         """
@@ -2720,6 +2750,7 @@ class Series:
         usage.dask: 14
         usage.koalas: 6
         usage.prophet: 4
+        usage.pyjanitor: 2
         usage.seaborn: 1
         usage.statsmodels: 17
         """
@@ -2784,6 +2815,7 @@ class Series:
         usage.koalas: 55
         usage.pandas: 46
         usage.prophet: 7
+        usage.pyjanitor: 2
         usage.seaborn: 1
         usage.statsmodels: 24
         """
@@ -2982,6 +3014,7 @@ class Series:
     @overload
     def __rsub__(self, _0: int, /):
         """
+        usage.pyjanitor: 1
         usage.statsmodels: 6
         """
         ...
@@ -3000,6 +3033,7 @@ class Series:
         usage.koalas: 16
         usage.pandas: 44
         usage.prophet: 16
+        usage.pyjanitor: 1
         usage.seaborn: 4
         usage.statsmodels: 35
         """
@@ -3256,6 +3290,20 @@ class Series:
         """
         ...
 
+    @overload
+    def __sub__(self, _0: datetime.timedelta, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: numpy.int64, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
     def __sub__(self, _0: object, /):
         """
         usage.dask: 18
@@ -3263,6 +3311,7 @@ class Series:
         usage.koalas: 19
         usage.pandas: 35
         usage.prophet: 23
+        usage.pyjanitor: 2
         usage.seaborn: 5
         usage.statsmodels: 30
         """
@@ -3284,6 +3333,7 @@ class Series:
         usage.dask: 1
         usage.koalas: 1
         usage.prophet: 1
+        usage.pyjanitor: 1
         usage.statsmodels: 4
         """
         ...
@@ -3330,12 +3380,20 @@ class Series:
         """
         ...
 
+    @overload
+    def __truediv__(self, _0: numpy.int64, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
     def __truediv__(self, _0: object, /):
         """
         usage.dask: 10
         usage.koalas: 7
         usage.pandas: 29
         usage.prophet: 10
+        usage.pyjanitor: 2
         usage.statsmodels: 30
         """
         ...
@@ -3780,6 +3838,7 @@ class Series:
         usage.dask: 6
         usage.koalas: 1
         usage.prophet: 1
+        usage.pyjanitor: 5
         usage.statsmodels: 2
         """
         ...
@@ -3876,6 +3935,27 @@ class Series:
         ...
 
     @overload
+    def apply(self, /, func: Callable):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: functools.partial):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: numpy.ufunc):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def apply(self, /, func: Callable, convert_dtype: bool, args: Tuple[None, ...]):
         """
         usage.dask: 3
@@ -3892,7 +3972,7 @@ class Series:
     def apply(
         self,
         /,
-        func: Union[Callable, Type[str], numpy.ufunc],
+        func: Union[Callable, functools.partial, Callable, numpy.ufunc, Type[str]],
         convert_dtype: bool = ...,
         args: Tuple[Union[pandas.core.frame.DataFrame, str, None], ...] = ...,
     ):
@@ -3900,6 +3980,7 @@ class Series:
         usage.dask: 9
         usage.koalas: 15
         usage.prophet: 1
+        usage.pyjanitor: 8
         usage.sklearn: 1
         usage.statsmodels: 11
         """
@@ -3946,6 +4027,7 @@ class Series:
     def astype(self, /, dtype: Type[int]):
         """
         usage.dask: 3
+        usage.pyjanitor: 3
         usage.seaborn: 1
         usage.statsmodels: 4
         usage.xarray: 1
@@ -3957,6 +4039,7 @@ class Series:
         """
         usage.dask: 5
         usage.prophet: 1
+        usage.pyjanitor: 1
         usage.statsmodels: 1
         """
         ...
@@ -4004,6 +4087,7 @@ class Series:
     def astype(self, /, dtype: Type[str]):
         """
         usage.dask: 3
+        usage.pyjanitor: 2
         usage.seaborn: 2
         """
         ...
@@ -4020,6 +4104,13 @@ class Series:
     def astype(self, /, dtype: Literal["geometry"]):
         """
         usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, dtype: Type[float], errors: Literal["ignore"]):
+        """
+        usage.pyjanitor: 1
         """
         ...
 
@@ -4121,6 +4212,7 @@ class Series:
         dtype: Union[
             pandas.core.dtypes.dtypes.CategoricalDtype, numpy.dtype, str, type
         ],
+        errors: Literal["ignore"] = ...,
         copy: bool = ...,
     ):
         """
@@ -4128,6 +4220,7 @@ class Series:
         usage.geopandas: 5
         usage.koalas: 6
         usage.prophet: 2
+        usage.pyjanitor: 7
         usage.seaborn: 10
         usage.sklearn: 10
         usage.statsmodels: 9
@@ -4359,6 +4452,7 @@ class Series:
         """
         usage.dask: 5
         usage.koalas: 5
+        usage.pyjanitor: 1
         """
         ...
 
@@ -4775,6 +4869,7 @@ class Series:
         usage.dask: 7
         usage.geopandas: 1
         usage.koalas: 3
+        usage.pyjanitor: 1
         usage.seaborn: 1
         usage.statsmodels: 17
         usage.xarray: 2
@@ -4793,6 +4888,7 @@ class Series:
         usage.dask: 7
         usage.geopandas: 1
         usage.koalas: 4
+        usage.pyjanitor: 1
         usage.seaborn: 1
         usage.statsmodels: 17
         usage.xarray: 2
@@ -4891,6 +4987,7 @@ class Series:
         """
         usage.dask: 1
         usage.koalas: 3
+        usage.pyjanitor: 3
         usage.statsmodels: 2
         """
         ...
@@ -4955,6 +5052,14 @@ class Series:
         ...
 
     @overload
+    def fillna(self, /, value: numpy.float64):
+        """
+        usage.dask: 1
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def fillna(self, /, value: int, method: None, axis: int, limit: None):
         """
         usage.dask: 2
@@ -4965,13 +5070,6 @@ class Series:
     def fillna(self, /, value: numpy.float64, method: None, axis: int, limit: None):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    def fillna(self, /, value: numpy.float64):
-        """
-        usage.dask: 1
         """
         ...
 
@@ -5073,6 +5171,7 @@ class Series:
         usage.dask: 23
         usage.geopandas: 1
         usage.koalas: 9
+        usage.pyjanitor: 4
         usage.seaborn: 1
         usage.statsmodels: 5
         """
@@ -5647,9 +5746,45 @@ class Series:
         ...
 
     @overload
+    def isin(self, /, values: List[Literal["Mary", "Mark"]]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def isin(self, /, values: List[Literal["Ruth", "John"]]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def isin(self, /, values: List[Literal["Esther", "Peter", "Eve", "Mary"]]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def isin(self, /, values: List[Literal["Ruth", "Esther"]]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def isin(self, /, values: List[int]):
         """
         usage.dask: 3
+        usage.pyjanitor: 2
+        """
+        ...
+
+    @overload
+    def isin(self, /, values: range):
+        """
+        usage.pyjanitor: 1
         """
         ...
 
@@ -5657,15 +5792,14 @@ class Series:
         self,
         /,
         values: Union[
-            List[Union[bool, int, Literal["lama", "cow"]]],
-            pandas.core.series.Series,
-            set,
+            List[Union[str, int, bool]], pandas.core.series.Series, set, range
         ],
     ):
         """
         usage.dask: 6
         usage.koalas: 2
         usage.prophet: 4
+        usage.pyjanitor: 7
         """
         ...
 
@@ -5929,6 +6063,7 @@ class Series:
         usage.geopandas: 2
         usage.koalas: 3
         usage.prophet: 11
+        usage.pyjanitor: 1
         usage.seaborn: 8
         usage.statsmodels: 2
         """
@@ -5969,6 +6104,7 @@ class Series:
         usage.geopandas: 2
         usage.koalas: 3
         usage.prophet: 11
+        usage.pyjanitor: 1
         usage.seaborn: 8
         usage.statsmodels: 2
         usage.xarray: 1
@@ -6062,6 +6198,7 @@ class Series:
         usage.geopandas: 2
         usage.koalas: 52
         usage.prophet: 12
+        usage.pyjanitor: 1
         usage.seaborn: 11
         usage.statsmodels: 5
         """
@@ -6102,6 +6239,7 @@ class Series:
         usage.geopandas: 2
         usage.koalas: 52
         usage.prophet: 12
+        usage.pyjanitor: 1
         usage.seaborn: 11
         usage.statsmodels: 5
         usage.xarray: 1
@@ -6780,6 +6918,13 @@ class Series:
         ...
 
     @overload
+    def rename(self, /, index: Literal["2a+b"]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def rename(self, /, index: Literal["idx"]):
         """
         usage.dask: 1
@@ -6858,6 +7003,7 @@ class Series:
         """
         usage.dask: 25
         usage.koalas: 93
+        usage.pyjanitor: 1
         usage.seaborn: 5
         usage.statsmodels: 7
         """
@@ -8882,6 +9028,7 @@ class Series:
         usage.geopandas: 5
         usage.koalas: 2
         usage.prophet: 1
+        usage.pyjanitor: 3
         usage.seaborn: 6
         usage.statsmodels: 9
         """

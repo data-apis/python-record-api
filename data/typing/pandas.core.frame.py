@@ -19,6 +19,7 @@ class DataFrame:
     # usage.koalas: 1
     # usage.networkx: 1
     # usage.prophet: 35
+    # usage.pyjanitor: 4
     # usage.seaborn: 9
     # usage.sklearn: 39
     # usage.statsmodels: 135
@@ -255,6 +256,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["dates"], /):
         """
         usage.koalas: 1
+        usage.pyjanitor: 3
         """
         ...
 
@@ -348,6 +350,7 @@ class DataFrame:
         """
         usage.koalas: 30
         usage.prophet: 1
+        usage.pyjanitor: 1
         usage.sklearn: 22
         usage.statsmodels: 13
         """
@@ -1285,6 +1288,7 @@ class DataFrame:
         usage.koalas: 14
         usage.modin: 2
         usage.networkx: 3
+        usage.pyjanitor: 1
         usage.seaborn: 11
         usage.statsmodels: 1
         """
@@ -1374,6 +1378,7 @@ class DataFrame:
         usage.geopandas: 1
         usage.koalas: 28
         usage.modin: 2
+        usage.pyjanitor: 19
         usage.seaborn: 33
         """
         ...
@@ -1798,6 +1803,7 @@ class DataFrame:
         usage.dask: 14
         usage.koalas: 8
         usage.modin: 2
+        usage.pyjanitor: 3
         usage.seaborn: 9
         usage.sklearn: 2
         """
@@ -2014,6 +2020,7 @@ class DataFrame:
         usage.dask: 13
         usage.koalas: 9
         usage.prophet: 7
+        usage.pyjanitor: 5
         usage.seaborn: 7
         usage.statsmodels: 11
         """
@@ -2205,6 +2212,7 @@ class DataFrame:
         """
         usage.dask: 4
         usage.koalas: 5
+        usage.pyjanitor: 2
         """
         ...
 
@@ -4676,6 +4684,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["index"], /):
         """
         usage.koalas: 3
+        usage.pyjanitor: 2
         """
         ...
 
@@ -5513,6 +5522,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 7
+        usage.pyjanitor: 4
         """
         ...
 
@@ -9591,6 +9601,157 @@ class DataFrame:
 
     @overload
     @classmethod
+    def __getitem__(cls, _0: Literal["sequence_accession"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["cities"], /):
+        """
+        usage.pyjanitor: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["decorated-elephant", "Bell__Chart", "a"]], /
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["decorated-elephant"], /):
+        """
+        usage.pyjanitor: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["hire_date"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["bell_chart"], /):
+        """
+        usage.pyjanitor: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["names"], /):
+        """
+        usage.dask: 2
+        usage.pyjanitor: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["animals@#$%^"], /):
+        """
+        usage.pyjanitor: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["Bell__Chart"], /):
+        """
+        usage.pyjanitor: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["cities", "animals@#$%^", "decorated_elephant", "a"]], /
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cities", "animals@#$%^"]], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["bell_chart", "a"]], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(
+        cls, _0: List[Literal["cities", "animals@#$%^", "decorated_elephant"]], /
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["cities", "Bell__Chart", "a"]], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["animals@#$%^", "a", "Bell__Chart"]], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["date1"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["another"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["column"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    @classmethod
     def __getitem__(cls, _0: List[Literal["id", "name"]], /):
         """
         usage.dask: 1
@@ -9626,14 +9787,6 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["fruit"], /):
         """
         usage.dask: 3
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __getitem__(cls, _0: Literal["names"], /):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -11820,6 +11973,7 @@ class DataFrame:
         usage.modin: 19
         usage.networkx: 22
         usage.prophet: 319
+        usage.pyjanitor: 67
         usage.seaborn: 406
         usage.sklearn: 213
         usage.statsmodels: 1071
@@ -12268,6 +12422,9 @@ class DataFrame:
     # usage.statsmodels: 1
     __class__: object
 
+    # usage.pyjanitor: 1
+    __dict__: object
+
     # usage.dask: 2
     _constructor: object
 
@@ -12288,6 +12445,9 @@ class DataFrame:
 
     # usage.koalas: 1
     aa: object
+
+    # usage.pyjanitor: 1
+    add_column: object
 
     # usage.dask: 1
     amount: object
@@ -12338,6 +12498,7 @@ class DataFrame:
     # usage.modin: 17
     # usage.networkx: 3
     # usage.prophet: 14
+    # usage.pyjanitor: 42
     # usage.seaborn: 18
     # usage.sklearn: 19
     # usage.statsmodels: 235
@@ -12377,6 +12538,7 @@ class DataFrame:
     # usage.geopandas: 1
     # usage.koalas: 19
     # usage.modin: 1
+    # usage.pyjanitor: 1
     # usage.sklearn: 24
     # usage.statsmodels: 4
     dtypes: object
@@ -12443,6 +12605,7 @@ class DataFrame:
     # usage.koalas: 23
     # usage.modin: 3
     # usage.prophet: 5
+    # usage.pyjanitor: 2
     # usage.seaborn: 9
     # usage.sklearn: 14
     # usage.statsmodels: 366
@@ -12454,6 +12617,7 @@ class DataFrame:
     # usage.modin: 8
     # usage.networkx: 2
     # usage.prophet: 4
+    # usage.pyjanitor: 4
     # usage.seaborn: 12
     # usage.sklearn: 3
     # usage.statsmodels: 358
@@ -12473,6 +12637,7 @@ class DataFrame:
     # usage.geopandas: 1
     # usage.koalas: 103
     # usage.prophet: 2
+    # usage.pyjanitor: 11
     # usage.seaborn: 16
     # usage.sklearn: 1
     # usage.statsmodels: 291
@@ -13192,6 +13357,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.modin: 1
+        usage.pyjanitor: 1
         usage.seaborn: 4
         usage.statsmodels: 11
         """
@@ -13564,6 +13730,7 @@ class DataFrame:
     def __setitem__(self, _0: Literal["dates"], _1: pandas.core.series.Series, /):
         """
         usage.koalas: 1
+        usage.pyjanitor: 2
         """
         ...
 
@@ -13636,6 +13803,7 @@ class DataFrame:
     def __setitem__(self, _0: Literal["col1"], _1: pandas.core.series.Series, /):
         """
         usage.koalas: 2
+        usage.pyjanitor: 2
         """
         ...
 
@@ -13651,6 +13819,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 6
+        usage.pyjanitor: 7
         """
         ...
 
@@ -13667,6 +13836,7 @@ class DataFrame:
         """
         usage.dask: 2
         usage.koalas: 4
+        usage.pyjanitor: 1
         usage.sklearn: 2
         usage.statsmodels: 1
         """
@@ -13677,6 +13847,7 @@ class DataFrame:
         """
         usage.dask: 1
         usage.koalas: 2
+        usage.pyjanitor: 1
         usage.statsmodels: 1
         """
         ...
@@ -13905,6 +14076,7 @@ class DataFrame:
     def __setitem__(self, _0: Literal["2"], _1: pandas.core.series.Series, /):
         """
         usage.koalas: 1
+        usage.pyjanitor: 2
         """
         ...
 
@@ -15062,6 +15234,7 @@ class DataFrame:
     def __setitem__(self, _0: Literal["column"], _1: pandas.core.series.Series, /):
         """
         usage.koalas: 1
+        usage.pyjanitor: 1
         """
         ...
 
@@ -17585,6 +17758,279 @@ class DataFrame:
         ...
 
     @overload
+    def __setitem__(self, _0: Literal["sequence"], _1: List[str], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["a_cm"], _1: numpy.ndarray, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["a_m"], _1: numpy.ndarray, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["a_kg"], _1: numpy.ndarray, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["a_m2"], _1: numpy.ndarray, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["a_m3"], _1: numpy.ndarray, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["a_USD"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["a_2018"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["a_2015"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["fortytwo"], _1: int, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["fortythousand"], _1: Literal["test string"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["fortythree"], _1: numpy.ndarray, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["fill_in_scalar"], _1: List[int], /):
+        """
+        usage.pyjanitor: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["city_pop"], _1: int, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["city_pop"], _1: List[int], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["city_pop"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["x"], _1: float, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["a_bin"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["index"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["hire_date"],
+        _1: pandas.core.indexes.datetimes.DatetimeIndex,
+        /,
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["names"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Literal["animals@#$%^"],
+        _1: pandas.core.arrays.categorical.Categorical,
+        /,
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["cities"], _1: pandas.core.arrays.categorical.Categorical, /
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["null_flag"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["flag"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["a_enc"], _1: numpy.ndarray, /):
+        """
+        usage.pyjanitor: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["c_enc"], _1: numpy.ndarray, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["Bell__Chart"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["date1"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["a_log10"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["another"], _1: int, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["column"], _1: int, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["another"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["another_log"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["column_log"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["hello"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["world"], _1: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def __setitem__(self, _0: Literal["amount"], _1: pandas.core.series.Series, /):
         """
         usage.dask: 1
@@ -19373,6 +19819,7 @@ class DataFrame:
         usage.koalas: 266
         usage.modin: 16
         usage.prophet: 63
+        usage.pyjanitor: 56
         usage.seaborn: 29
         usage.sklearn: 178
         usage.statsmodels: 307
@@ -20199,6 +20646,7 @@ class DataFrame:
     def all(self, /, axis: int):
         """
         usage.dask: 4
+        usage.pyjanitor: 2
         usage.statsmodels: 1
         """
         ...
@@ -20214,6 +20662,7 @@ class DataFrame:
         """
         usage.dask: 11
         usage.koalas: 3
+        usage.pyjanitor: 2
         usage.seaborn: 1
         usage.statsmodels: 2
         """
@@ -20362,6 +20811,7 @@ class DataFrame:
         usage.dask: 5
         usage.koalas: 6
         usage.modin: 1
+        usage.pyjanitor: 1
         usage.statsmodels: 5
         """
         ...
@@ -20429,6 +20879,7 @@ class DataFrame:
         usage.dask: 10
         usage.koalas: 19
         usage.modin: 1
+        usage.pyjanitor: 1
         usage.seaborn: 1
         usage.statsmodels: 8
         usage.xarray: 1
@@ -20461,6 +20912,7 @@ class DataFrame:
         """
         usage.dask: 17
         usage.koalas: 4
+        usage.pyjanitor: 1
         """
         ...
 
@@ -21094,6 +21546,7 @@ class DataFrame:
         usage.koalas: 21
         usage.modin: 4
         usage.prophet: 31
+        usage.pyjanitor: 4
         usage.seaborn: 11
         usage.sklearn: 4
         usage.statsmodels: 88
@@ -21114,6 +21567,7 @@ class DataFrame:
         usage.koalas: 21
         usage.modin: 4
         usage.prophet: 31
+        usage.pyjanitor: 4
         usage.seaborn: 12
         usage.sklearn: 4
         usage.statsmodels: 88
@@ -21161,6 +21615,7 @@ class DataFrame:
     def count(self, /):
         """
         usage.dask: 12
+        usage.pyjanitor: 2
         usage.statsmodels: 2
         """
         ...
@@ -21188,6 +21643,7 @@ class DataFrame:
         """
         usage.dask: 17
         usage.koalas: 2
+        usage.pyjanitor: 2
         usage.statsmodels: 2
         """
         ...
@@ -21831,6 +22287,7 @@ class DataFrame:
     def drop(self, /, labels: pandas.core.indexes.numeric.Int64Index):
         """
         usage.prophet: 1
+        usage.pyjanitor: 1
         """
         ...
 
@@ -21847,6 +22304,106 @@ class DataFrame:
     ):
         """
         usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, columns: List[Literal["c", "b", "a"]]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, columns: Literal["index"]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, columns: List[Literal["decorated-elephant", "a"]]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, columns: List[Literal["a"]]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, columns: List[Literal["Bell__Chart", "a"]]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, columns: list):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def drop(
+        self,
+        /,
+        columns: List[
+            Literal["cities", "animals@#$%^", "decorated-elephant", "Bell__Chart", "a"]
+        ],
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def drop(
+        self, /, columns: List[Tuple[Literal["bar", "baz"], Literal["one", "two"]]]
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, index: pandas.core.indexes.numeric.Int64Index):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, columns: pandas.core.indexes.base.Index):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, labels: int):
+        """
+        usage.dask: 4
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, columns: List[Literal["cities", "Bell__Chart", "a"]]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def drop(self, /, columns: List[Literal["animals@#$%^", "a", "Bell__Chart"]]):
+        """
+        usage.pyjanitor: 1
         """
         ...
 
@@ -21974,13 +22531,6 @@ class DataFrame:
         ...
 
     @overload
-    def drop(self, /, labels: int):
-        """
-        usage.dask: 4
-        """
-        ...
-
-    @overload
     def drop(
         self,
         /,
@@ -22053,20 +22603,25 @@ class DataFrame:
         self,
         /,
         columns: Union[
-            Literal["category_2", "dt", "a", "x"],
-            List[Union[str, Tuple[Literal["a"], Literal["x"]]]],
+            Literal["category_2", "dt", "index", "a", "x"],
+            List[
+                Union[
+                    Tuple[Literal["bar", "baz", "a"], Literal["one", "two", "x"]], str
+                ]
+            ],
             Tuple[Literal["a"], Literal["x"]],
+            pandas.core.indexes.base.Index,
         ] = ...,
         level: int = ...,
         labels: Union[
             int,
-            pandas.core.indexes.numeric.Int64Index,
             pandas.core.indexes.base.Index,
+            pandas.core.indexes.numeric.Int64Index,
             List[
                 Union[
-                    int,
-                    Tuple[Literal["__groupkey_0__", "__groupkey_1__"], Literal[""]],
                     str,
+                    Tuple[Literal["__groupkey_0__", "__groupkey_1__"], Literal[""]],
+                    int,
                 ]
             ],
             str,
@@ -22079,6 +22634,7 @@ class DataFrame:
         usage.dask: 33
         usage.koalas: 15
         usage.prophet: 2
+        usage.pyjanitor: 14
         usage.seaborn: 2
         usage.statsmodels: 34
         """
@@ -22096,6 +22652,7 @@ class DataFrame:
     def drop_duplicates(self, /, subset: Literal["a"], keep: Literal["first"]):
         """
         usage.koalas: 1
+        usage.pyjanitor: 1
         """
         ...
 
@@ -22399,7 +22956,7 @@ class DataFrame:
         self,
         /,
         subset: Union[
-            List[Union[Tuple[Literal["x", "y"], Literal["a", "b"]], str]],
+            List[Union[str, Tuple[Literal["x", "y"], Literal["a", "b"]]]],
             None,
             Literal["ticker", "y", "a", "b"],
             Tuple[Literal["x"], Literal["a"]],
@@ -22410,6 +22967,7 @@ class DataFrame:
         """
         usage.dask: 43
         usage.koalas: 30
+        usage.pyjanitor: 1
         usage.statsmodels: 4
         """
         ...
@@ -22723,14 +23281,24 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def duplicated(self, /, subset: None, keep: bool):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
     def duplicated(
         self,
         /,
+        subset: Union[
+            None, List[Union[Tuple[Literal["x"], Literal["b"]], Literal["b"]]]
+        ] = ...,
         keep: Union[bool, Literal["last"]] = ...,
-        subset: List[Union[Literal["b"], Tuple[Literal["x"], Literal["b"]]]] = ...,
     ):
         """
         usage.koalas: 10
+        usage.pyjanitor: 1
         """
         ...
 
@@ -24253,6 +24821,20 @@ class DataFrame:
         ...
 
     @overload
+    def groupby(self, /, by: Literal["date"]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["user_id", "date"]]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def groupby(self, /, by: Literal["_partitions"]):
         """
         usage.dask: 1
@@ -24962,6 +25544,7 @@ class DataFrame:
         usage.koalas: 352
         usage.modin: 10
         usage.prophet: 2
+        usage.pyjanitor: 2
         usage.seaborn: 14
         usage.statsmodels: 21
         """
@@ -25263,6 +25846,7 @@ class DataFrame:
         """
         usage.dask: 6
         usage.koalas: 1
+        usage.pyjanitor: 2
         usage.seaborn: 1
         usage.statsmodels: 3
         """
@@ -25388,6 +25972,7 @@ class DataFrame:
     @overload
     def join(self, /, other: pandas.core.series.Series):
         """
+        usage.pyjanitor: 1
         usage.statsmodels: 3
         """
         ...
@@ -25396,6 +25981,7 @@ class DataFrame:
     def join(self, /, other: pandas.core.frame.DataFrame):
         """
         usage.dask: 1
+        usage.pyjanitor: 1
         usage.statsmodels: 2
         """
         ...
@@ -25509,6 +26095,7 @@ class DataFrame:
         """
         usage.dask: 31
         usage.koalas: 4
+        usage.pyjanitor: 2
         usage.statsmodels: 8
         """
         ...
@@ -29532,6 +30119,20 @@ class DataFrame:
         ...
 
     @overload
+    def query(self, /, expr: Literal["not a == 3"]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def query(self, /, expr: Literal["a == 3"]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def query(self, /, expr: Literal["B != 0"]):
         """
         usage.dask: 2
@@ -29549,6 +30150,7 @@ class DataFrame:
         """
         usage.dask: 4
         usage.koalas: 12
+        usage.pyjanitor: 2
         """
         ...
 
@@ -29836,6 +30438,34 @@ class DataFrame:
         ...
 
     @overload
+    def reindex(
+        self,
+        /,
+        columns: List[
+            Literal["cities", "animals@#$%^", "decorated-elephant", "Bell__Chart", "a"]
+        ],
+        copy: bool,
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def reindex(
+        self,
+        /,
+        columns: List[
+            Literal["cities", "decorated-elephant", "a", "Bell__Chart", "animals@#$%^"]
+        ],
+        copy: bool,
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def reindex(self, /, columns: pandas.core.indexes.base.Index):
         """
         usage.dask: 1
@@ -29891,19 +30521,17 @@ class DataFrame:
         columns: Union[
             pandas.core.indexes.base.Index,
             List[
-                Union[
-                    int,
-                    Tuple[Literal["X", "Y"], Literal["numbers", "2", "3"]],
-                    Literal["3", "2", "numbers"],
-                ]
+                Union[str, Tuple[Literal["X", "Y"], Literal["numbers", "2", "3"]], int]
             ],
         ] = ...,
+        copy: bool = ...,
         fill_value: Union[float, int] = ...,
     ):
         """
         usage.dask: 12
         usage.koalas: 9
         usage.modin: 2
+        usage.pyjanitor: 2
         usage.seaborn: 3
         usage.statsmodels: 10
         usage.xarray: 2
@@ -29957,6 +30585,7 @@ class DataFrame:
         """
         usage.dask: 6
         usage.koalas: 2
+        usage.pyjanitor: 6
         """
         ...
 
@@ -30249,6 +30878,77 @@ class DataFrame:
         ...
 
     @overload
+    def rename(self, /, columns: Callable):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Callable):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Callable):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["a"], Literal["snakesOnAPlane"]]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def rename(
+        self, /, columns: Dict[Literal["Bell__Chart"], Literal["SnakesOnAPlane2"]]
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def rename(
+        self,
+        /,
+        columns: Dict[Literal["decorated-elephant"], Literal["snakes_on_a_plane3"]],
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Callable):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def rename(self, /, columns: Dict[Literal["a"], Literal["index"]]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def rename(
+        self, /, columns: Dict[Literal["bell_chart", "a"], Literal["chart", "index"]]
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def rename(self, /, columns: Dict[Literal["b", "a"], int]):
         """
         usage.dask: 1
@@ -30353,6 +31053,7 @@ class DataFrame:
         usage.dask: 18
         usage.koalas: 15
         usage.prophet: 1
+        usage.pyjanitor: 15
         usage.seaborn: 26
         usage.statsmodels: 5
         """
@@ -31100,6 +31801,7 @@ class DataFrame:
         usage.dask: 24
         usage.koalas: 31
         usage.prophet: 4
+        usage.pyjanitor: 1
         usage.statsmodels: 5
         """
         ...
@@ -31109,6 +31811,7 @@ class DataFrame:
         """
         usage.koalas: 1
         usage.prophet: 3
+        usage.pyjanitor: 1
         """
         ...
 
@@ -31205,6 +31908,7 @@ class DataFrame:
         """
         usage.koalas: 1
         usage.prophet: 2
+        usage.pyjanitor: 1
         """
         ...
 
@@ -31232,6 +31936,7 @@ class DataFrame:
         usage.dask: 29
         usage.koalas: 66
         usage.prophet: 10
+        usage.pyjanitor: 3
         usage.statsmodels: 20
         """
         ...
@@ -32055,6 +32760,13 @@ class DataFrame:
         ...
 
     @overload
+    def sample(self, /, frac: int, random_state: None):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def sample(self, /, frac: float, random_state: numpy.random.mtrand.RandomState):
         """
         usage.dask: 1
@@ -32077,12 +32789,13 @@ class DataFrame:
     def sample(
         self,
         /,
-        frac: float,
-        random_state: numpy.random.mtrand.RandomState,
+        frac: Union[float, int],
+        random_state: Union[numpy.random.mtrand.RandomState, None],
         replace: bool = ...,
     ):
         """
         usage.dask: 2
+        usage.pyjanitor: 1
         """
         ...
 
@@ -33071,6 +33784,13 @@ class DataFrame:
         ...
 
     @overload
+    def set_index(self, /, keys: Literal["column_name"]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def set_index(self, /, keys: Literal["amount"], drop: bool):
         """
         usage.dask: 1
@@ -33372,6 +34092,7 @@ class DataFrame:
         usage.geopandas: 2
         usage.koalas: 95
         usage.modin: 2
+        usage.pyjanitor: 1
         usage.seaborn: 1
         usage.statsmodels: 6
         usage.xarray: 15
@@ -34172,6 +34893,13 @@ class DataFrame:
     def sort_values(self, /, by: List[Literal["y", "x", "units"]]):
         """
         usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["b"], ascending: bool):
+        """
+        usage.pyjanitor: 1
         """
         ...
 
@@ -35059,9 +35787,9 @@ class DataFrame:
         self,
         /,
         by: Union[
-            List[Union[Tuple[str, ...], str, int, float]],
-            str,
+            List[Union[int, float, str, Tuple[str, ...]]],
             Tuple[Literal["X", "x", "y"], Literal["A", "a", "c"]],
+            str,
         ],
         ascending: Union[bool, List[bool]] = ...,
         inplace: bool = ...,
@@ -35070,6 +35798,7 @@ class DataFrame:
         usage.dask: 190
         usage.koalas: 105
         usage.prophet: 4
+        usage.pyjanitor: 1
         usage.seaborn: 3
         usage.statsmodels: 12
         """

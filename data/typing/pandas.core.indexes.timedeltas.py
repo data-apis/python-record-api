@@ -178,10 +178,18 @@ class TimedeltaIndex:
         """
         ...
 
+    @overload
+    def __add__(self, _0: Literal["1899-12-30T00:00:00"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
     def __add__(self, _0: object, /):
         """
         usage.geopandas: 1
         usage.pandas: 22
+        usage.pyjanitor: 1
         usage.xarray: 2
         """
         ...

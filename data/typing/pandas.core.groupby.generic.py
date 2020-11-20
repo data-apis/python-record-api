@@ -2296,6 +2296,20 @@ class DataFrameGroupBy:
     @overload
     def transform(self, /, func: Callable):
         """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def transform(self, /, func: Callable):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def transform(self, /, func: Callable):
+        """
         usage.dask: 3
         """
         ...
@@ -2311,6 +2325,7 @@ class DataFrameGroupBy:
         """
         usage.dask: 19
         usage.koalas: 14
+        usage.pyjanitor: 2
         """
         ...
 

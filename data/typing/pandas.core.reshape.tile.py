@@ -141,16 +141,18 @@ def cut(
     ...
 
 
+@overload
+def cut(x: pandas.core.series.Series, bins: int):
+    """
+    usage.pyjanitor: 1
+    """
+    ...
+
+
 def cut(
-    x: Union[
-        numpy.ndarray,
-        pandas.core.indexes.datetimes.DatetimeIndex,
-        xarray.core.dataarray.DataArray,
-        numpy.flatiter,
-        range,
-    ],
+    x: object,
     bins: Union[
-        int, range, pandas.core.indexes.datetimes.DatetimeIndex, List[Union[float, int]]
+        int, pandas.core.indexes.datetimes.DatetimeIndex, range, List[Union[int, float]]
     ],
     right: bool = ...,
     labels: None = ...,
@@ -158,6 +160,7 @@ def cut(
     include_lowest: bool = ...,
 ):
     """
+    usage.pyjanitor: 1
     usage.xarray: 14
     """
     ...
