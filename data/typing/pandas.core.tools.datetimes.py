@@ -591,6 +591,7 @@ def to_datetime(arg: None):
 def to_datetime(arg: pandas.core.series.Series):
     """
     usage.prophet: 4
+    usage.pyjanitor: 1
     """
     ...
 
@@ -623,6 +624,54 @@ def to_datetime(arg: List[Literal["2013-06-06"]]):
 def to_datetime(arg: List[Literal["2013-06-06", "2012-06-06"]]):
     """
     usage.prophet: 2
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: Literal["02/01/19"], format: None):
+    """
+    usage.pyjanitor: 1
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: Literal["02/02/19"], format: None):
+    """
+    usage.pyjanitor: 1
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: Literal["01@@@@29@@@@19"], format: Literal["%m@@@@%d@@@@%y"]):
+    """
+    usage.pyjanitor: 1
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: pandas.core.series.Series, dayfirst: bool):
+    """
+    usage.pyjanitor: 1
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: Literal["01/29/19"], format: None):
+    """
+    usage.pyjanitor: 1
+    """
+    ...
+
+
+@overload
+def to_datetime(arg: pandas.core.series.Series, format: Literal["%Y%m%d"]):
+    """
+    usage.pyjanitor: 1
     """
     ...
 
@@ -686,7 +735,7 @@ def to_datetime(arg: pandas.core.series.Series, utc: bool):
 def to_datetime(
     arg: object,
     errors: Literal["raise", "coerce", "ignore"] = ...,
-    format: Union[None, Literal["%Y%m%d"]] = ...,
+    format: Union[None, Literal["%Y%m%d", "%m@@@@%d@@@@%y"]] = ...,
     unit: Union[Literal["ns", "D", "s"], None] = ...,
     infer_datetime_format: bool = ...,
     origin: Union[pandas._libs.tslibs.timestamps.Timestamp, Literal["unix"]] = ...,
@@ -695,6 +744,7 @@ def to_datetime(
     usage.dask: 21
     usage.koalas: 13
     usage.prophet: 15
+    usage.pyjanitor: 7
     usage.statsmodels: 25
     usage.xarray: 8
     """

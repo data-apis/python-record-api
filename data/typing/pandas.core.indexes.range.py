@@ -162,6 +162,7 @@ class RangeIndex:
     def __getitem__(self, _0: int, /):
         """
         usage.dask: 4
+        usage.pyjanitor: 1
         usage.statsmodels: 26
         usage.xarray: 1
         """
@@ -233,6 +234,7 @@ class RangeIndex:
     def __getitem__(self, _0: pandas.core.series.Series, /):
         """
         usage.prophet: 1
+        usage.pyjanitor: 1
         usage.statsmodels: 1
         """
         ...
@@ -307,11 +309,19 @@ class RangeIndex:
         """
         ...
 
+    @overload
+    def __getitem__(self, _0: range, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
     def __getitem__(self, _0: object, /):
         """
         usage.dask: 5
         usage.modin: 4
         usage.prophet: 1
+        usage.pyjanitor: 3
         usage.statsmodels: 75
         usage.xarray: 7
         """

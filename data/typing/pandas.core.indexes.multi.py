@@ -6457,6 +6457,7 @@ class MultiIndex:
     # usage.xarray: 2
     size: object
 
+    # usage.pyjanitor: 2
     # usage.xarray: 6
     values: object
 

@@ -18,6 +18,7 @@ class Timestamp:
     # usage.dask: 1
     freq: object
 
+    # usage.pyjanitor: 1
     # usage.statsmodels: 5
     month: object
 
@@ -31,6 +32,7 @@ class Timestamp:
     value: object
 
     # usage.prophet: 1
+    # usage.pyjanitor: 1
     # usage.statsmodels: 5
     year: object
 
@@ -224,6 +226,7 @@ class Timestamp:
     def __ge__(self, _0: pandas.core.series.Series, /):
         """
         usage.prophet: 4
+        usage.pyjanitor: 1
         """
         ...
 
@@ -239,9 +242,9 @@ class Timestamp:
         _0: Union[
             pandas._libs.tslibs.timestamps.Timestamp,
             numpy.datetime64,
+            pandas.core.indexes.datetimes.DatetimeIndex,
             numpy.ndarray,
             pandas.core.series.Series,
-            pandas.core.indexes.datetimes.DatetimeIndex,
         ],
         /,
     ):
@@ -249,6 +252,7 @@ class Timestamp:
         usage.dask: 8
         usage.pandas: 2
         usage.prophet: 8
+        usage.pyjanitor: 1
         usage.statsmodels: 2
         """
         ...
@@ -258,6 +262,7 @@ class Timestamp:
         """
         usage.dask: 20
         usage.prophet: 4
+        usage.pyjanitor: 1
         usage.statsmodels: 2
         """
         ...
@@ -280,6 +285,7 @@ class Timestamp:
         """
         usage.dask: 21
         usage.prophet: 4
+        usage.pyjanitor: 1
         usage.statsmodels: 2
         """
         ...
@@ -303,6 +309,7 @@ class Timestamp:
     def __le__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 1
+        usage.pyjanitor: 1
         """
         ...
 
@@ -325,6 +332,7 @@ class Timestamp:
         """
         usage.dask: 9
         usage.prophet: 2
+        usage.pyjanitor: 1
         usage.statsmodels: 2
         """
         ...
@@ -334,6 +342,7 @@ class Timestamp:
         """
         usage.dask: 20
         usage.prophet: 4
+        usage.pyjanitor: 1
         usage.statsmodels: 2
         """
         ...
@@ -366,8 +375,8 @@ class Timestamp:
         _0: Union[
             pandas._libs.tslibs.timestamps.Timestamp,
             pandas.core.indexes.datetimes.DatetimeIndex,
-            numpy.ndarray,
             pandas.core.series.Series,
+            numpy.ndarray,
         ],
         /,
     ):
@@ -375,6 +384,7 @@ class Timestamp:
         usage.dask: 21
         usage.pandas: 1
         usage.prophet: 7
+        usage.pyjanitor: 1
         usage.statsmodels: 3
         """
         ...

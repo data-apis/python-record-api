@@ -238,6 +238,12 @@ class StringMethods:
         """
         ...
 
+    def get_dummies(self, /, sep: Literal[", "]):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
     def index(self, /, sub: Literal["ea"], start: int, end: int):
         """
         usage.koalas: 1
@@ -480,6 +486,13 @@ class StringMethods:
         ...
 
     @overload
+    def split(self, /, pat: Literal["-"], expand: bool):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def split(self, /, pat: None, n: int, expand: bool):
         """
         usage.dask: 2
@@ -494,11 +507,16 @@ class StringMethods:
         ...
 
     def split(
-        self, /, n: int, pat: Union[None, Literal[",", "-"]] = ..., expand: bool = ...
+        self,
+        /,
+        n: int = ...,
+        pat: Union[None, Literal[",", "-"]] = ...,
+        expand: bool = ...,
     ):
         """
         usage.dask: 8
         usage.koalas: 3
+        usage.pyjanitor: 1
         """
         ...
 

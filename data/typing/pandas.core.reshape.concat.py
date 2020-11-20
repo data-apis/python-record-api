@@ -199,6 +199,7 @@ def concat(objs: List[pandas.core.frame.DataFrame], axis: int):
     usage.dask: 6
     usage.modin: 1
     usage.prophet: 11
+    usage.pyjanitor: 1
     usage.sklearn: 1
     usage.statsmodels: 24
     """
@@ -322,6 +323,14 @@ def concat(
 ):
     """
     usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def concat(objs: List[pandas.core.frame.DataFrame], ignore_index: bool, sort: bool):
+    """
+    usage.pyjanitor: 2
     """
     ...
 
@@ -602,13 +611,13 @@ def concat(
     objs: Union[
         List[
             Union[
-                pandas.core.series.Series,
-                pandas.core.frame.DataFrame,
-                geopandas.geodataframe.GeoDataFrame,
                 geopandas.geoseries.GeoSeries,
+                geopandas.geodataframe.GeoDataFrame,
+                pandas.core.frame.DataFrame,
+                pandas.core.series.Series,
             ]
         ],
-        Tuple[Union[pandas.core.series.Series, pandas.core.frame.DataFrame, None], ...],
+        Tuple[Union[None, pandas.core.frame.DataFrame, pandas.core.series.Series], ...],
         Dict[int, pandas.core.series.Series],
     ],
     axis: int = ...,
@@ -622,6 +631,7 @@ def concat(
     usage.koalas: 24
     usage.modin: 10
     usage.prophet: 15
+    usage.pyjanitor: 3
     usage.sklearn: 3
     usage.statsmodels: 37
     """

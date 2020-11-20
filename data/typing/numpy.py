@@ -352,6 +352,7 @@ cdouble: object
 # usage.networkx: 2
 # usage.pandas: 1
 # usage.prophet: 3
+# usage.pyjanitor: 1
 # usage.scipy: 49
 # usage.seaborn: 2
 # usage.skimage: 31
@@ -874,6 +875,7 @@ inexact: object
 # usage.matplotlib: 38
 # usage.networkx: 1
 # usage.pandas: 77
+# usage.pyjanitor: 1
 # usage.scipy: 763
 # usage.seaborn: 9
 # usage.skimage: 36
@@ -965,6 +967,7 @@ isfinite: numpy.ufunc
 # usage.matplotlib: 6
 # usage.pandas: 31
 # usage.prophet: 2
+# usage.pyjanitor: 1
 # usage.scipy: 58
 # usage.skimage: 2
 # usage.sklearn: 12
@@ -1170,6 +1173,7 @@ loggamma: numpy.ufunc
 # usage.koalas: 10
 # usage.matplotlib: 1
 # usage.pandas: 16
+# usage.pyjanitor: 1
 # usage.scipy: 101
 # usage.skimage: 13
 # usage.sklearn: 2
@@ -1193,6 +1197,7 @@ logical_not: numpy.ufunc
 # usage.koalas: 10
 # usage.matplotlib: 3
 # usage.pandas: 14
+# usage.pyjanitor: 2
 # usage.scipy: 21
 # usage.skimage: 5
 # usage.sklearn: 14
@@ -1266,6 +1271,7 @@ matmul: numpy.ufunc
 # usage.dask: 6
 # usage.matplotlib: 7
 # usage.pandas: 12
+# usage.pyjanitor: 2
 # usage.scipy: 21
 # usage.skimage: 30
 # usage.sklearn: 27
@@ -1294,6 +1300,7 @@ mgrid: object
 # usage.matplotlib: 8
 # usage.networkx: 2
 # usage.pandas: 11
+# usage.pyjanitor: 2
 # usage.scipy: 16
 # usage.skimage: 6
 # usage.sklearn: 24
@@ -1444,6 +1451,7 @@ nrdtrisd: numpy.ufunc
 # usage.dask: 6
 # usage.geopandas: 1
 # usage.pandas: 21
+# usage.pyjanitor: 1
 # usage.scipy: 3
 # usage.sklearn: 3
 # usage.statsmodels: 1
@@ -3316,6 +3324,7 @@ def amax(a: numpy.ndarray):
     """
     usage.dask: 11
     usage.matplotlib: 35
+    usage.pyjanitor: 1
     usage.scipy: 132
     usage.seaborn: 2
     usage.skimage: 81
@@ -4057,6 +4066,7 @@ def amax(
     usage.dask: 149
     usage.matplotlib: 70
     usage.pandas: 41
+    usage.pyjanitor: 1
     usage.scipy: 188
     usage.seaborn: 4
     usage.skimage: 110
@@ -4072,6 +4082,7 @@ def amin(a: numpy.ndarray):
     """
     usage.dask: 14
     usage.matplotlib: 31
+    usage.pyjanitor: 1
     usage.scipy: 49
     usage.seaborn: 1
     usage.skimage: 54
@@ -4751,6 +4762,7 @@ def amin(
     usage.matplotlib: 65
     usage.networkx: 2
     usage.pandas: 53
+    usage.pyjanitor: 1
     usage.scipy: 98
     usage.seaborn: 2
     usage.skimage: 62
@@ -20862,6 +20874,14 @@ def array(
 
 
 @overload
+def array(_0: unyt.array.unyt_array, /):
+    """
+    usage.pyjanitor: 1
+    """
+    ...
+
+
+@overload
 def array(_0: List[Tuple[str, int]], /, *, dtype: Type[object]):
     """
     usage.dask: 4
@@ -23270,6 +23290,7 @@ def array(
     usage.networkx: 137
     usage.pandas: 6865
     usage.prophet: 31
+    usage.pyjanitor: 1
     usage.sample-usage: 3
     usage.scipy: 7182
     usage.seaborn: 126
@@ -56111,6 +56132,7 @@ def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.complexfloating]):
 def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.number]):
     """
     usage.dask: 16
+    usage.pyjanitor: 2
     usage.scipy: 8
     usage.xarray: 13
     """
@@ -56487,6 +56509,7 @@ def issubdtype(
     usage.dask: 49
     usage.matplotlib: 35
     usage.pandas: 83
+    usage.pyjanitor: 2
     usage.scipy: 466
     usage.skimage: 165
     usage.sklearn: 44
@@ -60055,6 +60078,7 @@ def mean(a: numpy.ndarray):
     usage.dask: 21
     usage.matplotlib: 7
     usage.prophet: 1
+    usage.pyjanitor: 1
     usage.scipy: 26
     usage.seaborn: 3
     usage.skimage: 36
@@ -60673,6 +60697,7 @@ def mean(
     usage.networkx: 6
     usage.pandas: 26
     usage.prophet: 2
+    usage.pyjanitor: 1
     usage.scipy: 89
     usage.seaborn: 8
     usage.skimage: 62
@@ -60695,6 +60720,7 @@ def median(a: numpy.ndarray, axis: Tuple[int, int]):
 def median(a: numpy.ndarray):
     """
     usage.matplotlib: 2
+    usage.pyjanitor: 1
     usage.scipy: 18
     usage.seaborn: 2
     usage.skimage: 4
@@ -60924,6 +60950,7 @@ def median(
     usage.matplotlib: 3
     usage.pandas: 17
     usage.prophet: 9
+    usage.pyjanitor: 1
     usage.scipy: 28
     usage.seaborn: 3
     usage.skimage: 5
@@ -81205,6 +81232,7 @@ def zeros(_0: int, /):
     usage.matplotlib: 38
     usage.networkx: 2
     usage.prophet: 6
+    usage.pyjanitor: 1
     usage.scipy: 263
     usage.seaborn: 5
     usage.skimage: 15
@@ -84200,6 +84228,7 @@ def zeros(
     usage.networkx: 26
     usage.pandas: 125
     usage.prophet: 7
+    usage.pyjanitor: 1
     usage.sample-usage: 1
     usage.scipy: 2108
     usage.seaborn: 12
@@ -100024,6 +100053,7 @@ class int64:
         """
         usage.dask: 1
         usage.matplotlib: 8
+        usage.pyjanitor: 1
         usage.scipy: 46
         usage.seaborn: 1
         usage.skimage: 11
@@ -100137,12 +100167,20 @@ class int64:
         """
         ...
 
+    @overload
+    def __rsub__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
     def __rsub__(self, _0: object, /):
         """
         usage.dask: 4
         usage.matplotlib: 15
         usage.pandas: 32
         usage.prophet: 1
+        usage.pyjanitor: 2
         usage.scipy: 94
         usage.seaborn: 1
         usage.skimage: 30
@@ -100258,6 +100296,13 @@ class int64:
         ...
 
     @overload
+    def __rtruediv__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def __rtruediv__(self, _0: decimal.Decimal, /):
         """
         usage.dask: 1
@@ -100278,6 +100323,7 @@ class int64:
         usage.networkx: 2
         usage.pandas: 5
         usage.prophet: 2
+        usage.pyjanitor: 1
         usage.scipy: 49
         usage.seaborn: 4
         usage.skimage: 11
@@ -100340,6 +100386,7 @@ class int64:
         """
         usage.dask: 1
         usage.matplotlib: 8
+        usage.pyjanitor: 1
         usage.scipy: 46
         usage.seaborn: 1
         usage.skimage: 11
@@ -100399,6 +100446,7 @@ class int64:
         usage.matplotlib: 33
         usage.pandas: 26
         usage.prophet: 3
+        usage.pyjanitor: 1
         usage.scipy: 154
         usage.seaborn: 8
         usage.skimage: 25
@@ -108332,6 +108380,7 @@ class ndarray:
         usage.modin: 20
         usage.networkx: 52
         usage.prophet: 28
+        usage.pyjanitor: 2
         usage.sample-usage: 2
         usage.scipy: 2217
         usage.seaborn: 74
@@ -116132,6 +116181,7 @@ class ndarray:
         usage.networkx: 215
         usage.pandas: 2206
         usage.prophet: 41
+        usage.pyjanitor: 2
         usage.sample-usage: 5
         usage.scipy: 9090
         usage.seaborn: 245
@@ -117145,6 +117195,7 @@ class ndarray:
         usage.networkx: 11
         usage.pandas: 181
         usage.prophet: 1
+        usage.pyjanitor: 1
         usage.sample-usage: 2
         usage.scipy: 302
         usage.seaborn: 102
@@ -118191,6 +118242,13 @@ class ndarray:
         ...
 
     @overload
+    def __mul__(self, _0: unyt.unit_object.Unit, /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def __mul__(self, _0: Tuple[int, int, int], /):
         """
         usage.dask: 1
@@ -118219,6 +118277,7 @@ class ndarray:
         usage.networkx: 23
         usage.pandas: 256
         usage.prophet: 23
+        usage.pyjanitor: 1
         usage.sample-usage: 1
         usage.scipy: 2349
         usage.seaborn: 35
@@ -137470,6 +137529,7 @@ class ufunc:
         """
         usage.dask: 147
         usage.koalas: 29
+        usage.pyjanitor: 1
         usage.statsmodels: 2
         """
         ...
@@ -137713,6 +137773,7 @@ class ufunc:
         usage.matplotlib: 102
         usage.networkx: 9
         usage.prophet: 5
+        usage.pyjanitor: 2
         usage.scipy: 943
         usage.seaborn: 11
         usage.skimage: 58
@@ -140402,6 +140463,14 @@ class ufunc:
         ...
 
     @overload
+    def __call__(self, _0: numpy.ndarray, _1: pandas.core.series.Series, /):
+        """
+        usage.dask: 22
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def __call__(self, _0: Tuple[int], /):
         """
         usage.dask: 5
@@ -140859,13 +140928,6 @@ class ufunc:
         ...
 
     @overload
-    def __call__(self, _0: numpy.ndarray, _1: pandas.core.series.Series, /):
-        """
-        usage.dask: 22
-        """
-        ...
-
-    @overload
     def __call__(self, _0: dask.dataframe.core.Series, _1: dask.array.core.Array, /):
         """
         usage.dask: 42
@@ -141000,6 +141062,7 @@ class ufunc:
         usage.networkx: 56
         usage.pandas: 1228
         usage.prophet: 25
+        usage.pyjanitor: 4
         usage.sample-usage: 3
         usage.scipy: 8018
         usage.seaborn: 43

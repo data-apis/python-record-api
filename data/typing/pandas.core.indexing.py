@@ -930,6 +930,7 @@ class _LocIndexer:
     ):
         """
         usage.dask: 1
+        usage.pyjanitor: 1
         usage.statsmodels: 3
         """
         ...
@@ -3258,6 +3259,85 @@ class _LocIndexer:
         ...
 
     @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], int], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], Literal["DATE"]], /):
+        """
+        usage.pyjanitor: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], slice[None, None, None]], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[List[Literal["lion", "leopard", "rabbit"]], slice[None, None, None]],
+        /,
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[List[Literal["leopard", "lion", "rabbit"]], slice[None, None, None]],
+        /,
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            List[
+                Literal[
+                    "cities", "animals@#$%^", "Bell__Chart", "decorated-elephant", "a"
+                ]
+            ],
+        ],
+        /,
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None],
+            List[
+                Literal[
+                    "cities", "Bell__Chart", "animals@#$%^", "decorated-elephant", "a"
+                ]
+            ],
+        ],
+        /,
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: slice[Literal["E"], Literal["g"], Literal["E"]], /):
         """
         usage.dask: 1
@@ -4647,6 +4727,7 @@ class _LocIndexer:
         usage.geopandas: 28
         usage.koalas: 137
         usage.prophet: 1
+        usage.pyjanitor: 13
         usage.seaborn: 14
         usage.sklearn: 30
         usage.statsmodels: 455
@@ -6830,11 +6911,36 @@ class _LocIndexer:
         """
         ...
 
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[slice[None, None, None], Literal["DATE"]],
+        _1: pandas.core.series.Series,
+        /,
+    ):
+        """
+        usage.pyjanitor: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: Tuple[pandas.core.series.Series, Literal["cities"]],
+        _1: Literal["Durham"],
+        /,
+    ):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
     def __setitem__(self, _0: object, _1: object, /):
         """
         usage.geopandas: 14
         usage.koalas: 33
         usage.prophet: 1
+        usage.pyjanitor: 3
         usage.seaborn: 3
         usage.statsmodels: 210
         """
@@ -6924,6 +7030,7 @@ class _iLocIndexer:
         usage.dask: 6
         usage.koalas: 4
         usage.modin: 1
+        usage.pyjanitor: 1
         usage.seaborn: 4
         usage.sklearn: 2
         usage.statsmodels: 16
@@ -7118,6 +7225,7 @@ class _iLocIndexer:
     @overload
     def __getitem__(self, _0: Tuple[int, slice[None, None, None]], /):
         """
+        usage.pyjanitor: 1
         usage.statsmodels: 1
         """
         ...
@@ -7275,6 +7383,7 @@ class _iLocIndexer:
         usage.koalas: 98
         usage.modin: 3
         usage.prophet: 14
+        usage.pyjanitor: 2
         usage.seaborn: 12
         usage.sklearn: 24
         usage.statsmodels: 407

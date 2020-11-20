@@ -122,6 +122,7 @@ class Index:
     # usage.geopandas: 1
     # usage.koalas: 4
     # usage.modin: 3
+    # usage.pyjanitor: 1
     # usage.seaborn: 2
     # usage.statsmodels: 18
     # usage.xarray: 13
@@ -160,6 +161,7 @@ class Index:
 
     # usage.dask: 1
     # usage.modin: 1
+    # usage.pyjanitor: 1
     # usage.seaborn: 1
     # usage.statsmodels: 11
     # usage.xarray: 6
@@ -176,6 +178,7 @@ class Index:
         """
         usage.dask: 8
         usage.koalas: 2
+        usage.pyjanitor: 6
         """
         ...
 
@@ -659,6 +662,193 @@ class Index:
         ...
 
     @overload
+    def __contains__(self, _0: Literal["toomany"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["fortytwo"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["fortythousand"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["fortythree"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["fill_in_iterable"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["fill_in_scalar"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["city_pop"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["cities"], /):
+        """
+        usage.pyjanitor: 4
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["x"], /):
+        """
+        usage.dask: 6
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["y"], /):
+        """
+        usage.dask: 8
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["Bell__Chart"], /):
+        """
+        usage.pyjanitor: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["decorated-elephant"], /):
+        """
+        usage.pyjanitor: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["index"], /):
+        """
+        usage.dask: 1
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["names"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["aloha"], /):
+        """
+        usage.pyjanitor: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["animals@#$%^"], /):
+        """
+        usage.pyjanitor: 3
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["2"], /):
+        """
+        usage.pyjanitor: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["null_flag"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["flag"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["c"], /):
+        """
+        usage.dask: 2
+        usage.pyjanitor: 3
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["bb"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["bell_chart"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["notpresent"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["another"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["column"], /):
+        """
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["b"], /):
+        """
+        usage.dask: 8
+        usage.pyjanitor: 2
+        """
+        ...
+
+    @overload
     def __contains__(self, _0: Literal["divisions"], /):
         """
         usage.dask: 1
@@ -669,13 +859,6 @@ class Index:
     def __contains__(self, _0: Literal["dtype"], /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __contains__(self, _0: Literal["x"], /):
-        """
-        usage.dask: 6
         """
         ...
 
@@ -729,13 +912,6 @@ class Index:
         ...
 
     @overload
-    def __contains__(self, _0: Literal["b"], /):
-        """
-        usage.dask: 8
-        """
-        ...
-
-    @overload
     def __contains__(self, _0: Literal["numbers"], /):
         """
         usage.dask: 1
@@ -785,23 +961,9 @@ class Index:
         ...
 
     @overload
-    def __contains__(self, _0: Literal["y"], /):
-        """
-        usage.dask: 8
-        """
-        ...
-
-    @overload
     def __contains__(self, _0: Literal["X"], /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __contains__(self, _0: Literal["c"], /):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -898,13 +1060,6 @@ class Index:
 
     @overload
     def __contains__(self, _0: Literal["Name"], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __contains__(self, _0: Literal["index"], /):
         """
         usage.dask: 1
         """
@@ -1084,6 +1239,7 @@ class Index:
         usage.geopandas: 9
         usage.koalas: 9
         usage.prophet: 1
+        usage.pyjanitor: 44
         usage.statsmodels: 71
         """
         ...
@@ -1145,6 +1301,7 @@ class Index:
     def __eq__(self, _0: pandas.core.indexes.base.Index, /):
         """
         usage.dask: 12
+        usage.pyjanitor: 2
         """
         ...
 
@@ -1202,6 +1359,7 @@ class Index:
         usage.geopandas: 4
         usage.koalas: 6
         usage.pandas: 4
+        usage.pyjanitor: 2
         usage.sklearn: 6
         usage.statsmodels: 2
         """
@@ -1313,6 +1471,7 @@ class Index:
     def __getitem__(self, _0: pandas.core.series.Series, /):
         """
         usage.geopandas: 2
+        usage.pyjanitor: 1
         """
         ...
 
@@ -1330,6 +1489,7 @@ class Index:
         usage.koalas: 11
         usage.modin: 3
         usage.prophet: 2
+        usage.pyjanitor: 1
         usage.seaborn: 2
         usage.sklearn: 6
         usage.statsmodels: 60
@@ -1345,6 +1505,7 @@ class Index:
         usage.modin: 1
         usage.networkx: 1
         usage.prophet: 3
+        usage.pyjanitor: 8
         usage.sklearn: 1
         usage.statsmodels: 27
         usage.xarray: 4

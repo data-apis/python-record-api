@@ -172,6 +172,7 @@ def isna(obj: pandas.core.series.Series):
     """
     usage.dask: 3
     usage.geopandas: 1
+    usage.pyjanitor: 2
     usage.seaborn: 1
     usage.statsmodels: 1
     """
@@ -606,6 +607,7 @@ def isna(obj: object):
     usage.dask: 117
     usage.geopandas: 13
     usage.koalas: 3
+    usage.pyjanitor: 2
     usage.seaborn: 19
     usage.statsmodels: 11
     usage.xarray: 44
