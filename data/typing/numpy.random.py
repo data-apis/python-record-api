@@ -6,6 +6,7 @@ Generator: object
 
 # usage.dask: 5
 # usage.networkx: 7
+# usage.orange3: 4
 # usage.pandas: 4
 # usage.scipy: 9
 # usage.seaborn: 3
@@ -22,6 +23,7 @@ binomial: object
 
 # usage.dask: 20
 # usage.koalas: 1
+# usage.orange3: 2
 # usage.pandas: 15
 # usage.scipy: 4
 # usage.skimage: 2
@@ -46,6 +48,7 @@ lognormal: object
 # usage.dask: 1
 multinomial: object
 
+# usage.orange3: 4
 # usage.scipy: 3
 # usage.sklearn: 3
 # usage.statsmodels: 8
@@ -53,6 +56,7 @@ multivariate_normal: object
 
 # usage.dask: 11
 # usage.matplotlib: 22
+# usage.orange3: 1
 # usage.pandas: 6
 # usage.scipy: 36
 # usage.skimage: 6
@@ -74,6 +78,7 @@ rand: object
 # usage.koalas: 5
 # usage.matplotlib: 3
 # usage.modin: 32
+# usage.orange3: 5
 # usage.pandas: 84
 # usage.scipy: 18
 # usage.skimage: 15
@@ -111,6 +116,7 @@ standard_normal: object
 
 # usage.dask: 1
 # usage.matplotlib: 3
+# usage.orange3: 5
 # usage.pandas: 2
 # usage.scipy: 28
 # usage.skimage: 24

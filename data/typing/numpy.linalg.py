@@ -214,6 +214,7 @@ def eigvalsh(a: numpy.ndarray):
 def inv(a: numpy.ndarray):
     """
     usage.matplotlib: 2
+    usage.orange3: 1
     usage.scipy: 13
     usage.skimage: 7
     usage.sklearn: 6
@@ -242,6 +243,7 @@ def inv(a: Union[numpy.matrix, pandas.core.frame.DataFrame, numpy.ndarray]):
     """
     usage.matplotlib: 2
     usage.networkx: 1
+    usage.orange3: 1
     usage.scipy: 13
     usage.skimage: 7
     usage.sklearn: 6
@@ -365,10 +367,34 @@ def norm(x: numpy.ndarray):
     usage.dask: 1
     usage.matplotlib: 3
     usage.networkx: 6
+    usage.orange3: 2
     usage.scipy: 206
     usage.skimage: 8
     usage.sklearn: 30
     usage.statsmodels: 10
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, ord: Literal["fro"]):
+    """
+    usage.orange3: 2
+    usage.scipy: 13
+    usage.sklearn: 4
+    usage.statsmodels: 5
+    """
+    ...
+
+
+@overload
+def norm(x: numpy.ndarray, axis: int):
+    """
+    usage.matplotlib: 1
+    usage.networkx: 3
+    usage.orange3: 4
+    usage.scipy: 18
+    usage.sklearn: 3
     """
     ...
 
@@ -385,30 +411,9 @@ def norm(x: numpy.ndarray, ord: int):
 
 
 @overload
-def norm(x: numpy.ndarray, ord: Literal["fro"]):
-    """
-    usage.scipy: 13
-    usage.sklearn: 4
-    usage.statsmodels: 5
-    """
-    ...
-
-
-@overload
 def norm(x: float):
     """
     usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def norm(x: numpy.ndarray, axis: int):
-    """
-    usage.matplotlib: 1
-    usage.networkx: 3
-    usage.scipy: 18
-    usage.sklearn: 3
     """
     ...
 
@@ -1111,6 +1116,7 @@ def norm(
     usage.dask: 25
     usage.matplotlib: 4
     usage.networkx: 10
+    usage.orange3: 8
     usage.scipy: 405
     usage.skimage: 8
     usage.sklearn: 45
@@ -1122,6 +1128,7 @@ def norm(
 @overload
 def pinv(a: numpy.ndarray):
     """
+    usage.orange3: 2
     usage.scipy: 3
     usage.seaborn: 1
     usage.skimage: 1
@@ -1140,6 +1147,7 @@ def pinv(a: numpy.ndarray, rcond: float):
 
 def pinv(a: numpy.ndarray, rcond: float = ...):
     """
+    usage.orange3: 2
     usage.scipy: 3
     usage.seaborn: 1
     usage.skimage: 1

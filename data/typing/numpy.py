@@ -27,6 +27,7 @@ NINF: object
 # usage.koalas: 8
 # usage.matplotlib: 4
 # usage.modin: 3
+# usage.orange3: 6
 # usage.pandas: 75
 # usage.scipy: 3
 # usage.skimage: 1
@@ -132,6 +133,7 @@ abs: object
 # usage.koalas: 11
 # usage.matplotlib: 84
 # usage.networkx: 13
+# usage.orange3: 11
 # usage.pandas: 47
 # usage.prophet: 5
 # usage.scipy: 520
@@ -210,6 +212,7 @@ arctan: numpy.ufunc
 # usage.dask: 112
 # usage.koalas: 15
 # usage.matplotlib: 16
+# usage.orange3: 1
 # usage.pandas: 1
 # usage.scipy: 21
 # usage.skimage: 8
@@ -295,6 +298,7 @@ bitwise_xor: numpy.ufunc
 # usage.dask: 1
 # usage.koalas: 1
 # usage.networkx: 2
+# usage.orange3: 3
 # usage.pandas: 62
 # usage.skimage: 84
 # usage.sklearn: 40
@@ -326,6 +330,7 @@ btdtria: numpy.ufunc
 btdtrib: numpy.ufunc
 
 # usage.matplotlib: 1
+# usage.orange3: 4
 # usage.pandas: 3
 # usage.scipy: 18
 # usage.seaborn: 9
@@ -350,6 +355,7 @@ cdouble: object
 # usage.koalas: 5
 # usage.matplotlib: 35
 # usage.networkx: 2
+# usage.orange3: 3
 # usage.pandas: 1
 # usage.prophet: 3
 # usage.pyjanitor: 1
@@ -428,6 +434,7 @@ copysign: numpy.ufunc
 # usage.koalas: 5
 # usage.matplotlib: 86
 # usage.networkx: 5
+# usage.orange3: 6
 # usage.pandas: 19
 # usage.prophet: 2
 # usage.scipy: 219
@@ -475,6 +482,7 @@ deg2rad: numpy.ufunc
 # usage.xarray: 2
 degrees: numpy.ufunc
 
+# usage.orange3: 1
 # usage.scipy: 1
 # usage.skimage: 1
 # usage.sklearn: 3
@@ -487,6 +495,7 @@ divide: object
 divmod: numpy.ufunc
 
 # usage.dask: 1
+# usage.orange3: 2
 # usage.pandas: 2
 # usage.scipy: 138
 # usage.skimage: 98
@@ -605,6 +614,7 @@ eval_sh_legendre: numpy.ufunc
 # usage.koalas: 1
 # usage.matplotlib: 30
 # usage.networkx: 2
+# usage.orange3: 10
 # usage.pandas: 33
 # usage.prophet: 1
 # usage.sample-usage: 1
@@ -679,6 +689,7 @@ flexible: object
 # usage.koalas: 8
 # usage.matplotlib: 2
 # usage.networkx: 3
+# usage.orange3: 1
 # usage.pandas: 4
 # usage.prophet: 1
 # usage.skimage: 60
@@ -687,6 +698,7 @@ flexible: object
 float: object
 
 # usage.dask: 6
+# usage.orange3: 1
 # usage.pandas: 15
 # usage.scipy: 38
 # usage.skimage: 6
@@ -710,6 +722,7 @@ floating: object
 # usage.dask: 41
 # usage.koalas: 5
 # usage.matplotlib: 20
+# usage.orange3: 1
 # usage.pandas: 8
 # usage.prophet: 1
 # usage.scipy: 101
@@ -875,6 +888,7 @@ inexact: object
 # usage.koalas: 8
 # usage.matplotlib: 38
 # usage.networkx: 1
+# usage.orange3: 13
 # usage.pandas: 77
 # usage.pyjanitor: 1
 # usage.scipy: 763
@@ -915,6 +929,7 @@ intc: object
 
 # usage.dask: 7
 # usage.matplotlib: 4
+# usage.orange3: 1
 # usage.pandas: 30
 # usage.scipy: 11
 # usage.skimage: 10
@@ -946,6 +961,7 @@ inv_boxcox1p: numpy.ufunc
 # usage.dask: 8
 # usage.geopandas: 7
 # usage.koalas: 5
+# usage.orange3: 1
 # usage.scipy: 1
 # usage.skimage: 11
 # usage.sklearn: 1
@@ -955,6 +971,7 @@ invert: numpy.ufunc
 # usage.dask: 31
 # usage.koalas: 5
 # usage.matplotlib: 66
+# usage.orange3: 16
 # usage.pandas: 27
 # usage.scipy: 231
 # usage.seaborn: 4
@@ -967,6 +984,7 @@ isfinite: numpy.ufunc
 # usage.dask: 31
 # usage.koalas: 5
 # usage.matplotlib: 6
+# usage.orange3: 8
 # usage.pandas: 31
 # usage.prophet: 2
 # usage.pyjanitor: 1
@@ -982,6 +1000,7 @@ isinf: numpy.ufunc
 # usage.koalas: 5
 # usage.matplotlib: 25
 # usage.networkx: 1
+# usage.orange3: 138
 # usage.pandas: 1228
 # usage.prophet: 2
 # usage.scipy: 388
@@ -1111,6 +1130,7 @@ less_equal: numpy.ufunc
 # usage.koalas: 2
 # usage.matplotlib: 37
 # usage.networkx: 1
+# usage.orange3: 13
 # usage.pandas: 25
 # usage.prophet: 2
 # usage.sample-usage: 1
@@ -1123,6 +1143,7 @@ log: numpy.ufunc
 
 # usage.dask: 40
 # usage.matplotlib: 37
+# usage.orange3: 5
 # usage.pandas: 19
 # usage.scipy: 39
 # usage.seaborn: 2
@@ -1143,6 +1164,7 @@ log1p: numpy.ufunc
 # usage.dask: 37
 # usage.koalas: 5
 # usage.matplotlib: 19
+# usage.orange3: 5
 # usage.pandas: 23
 # usage.scipy: 13
 # usage.seaborn: 11
@@ -1174,6 +1196,7 @@ loggamma: numpy.ufunc
 # usage.dask: 112
 # usage.koalas: 10
 # usage.matplotlib: 1
+# usage.orange3: 3
 # usage.pandas: 16
 # usage.pyjanitor: 1
 # usage.scipy: 101
@@ -1186,6 +1209,7 @@ logical_and: numpy.ufunc
 # usage.dask: 31
 # usage.koalas: 5
 # usage.matplotlib: 1
+# usage.orange3: 8
 # usage.pandas: 9
 # usage.prophet: 2
 # usage.scipy: 32
@@ -1198,6 +1222,7 @@ logical_not: numpy.ufunc
 # usage.dask: 112
 # usage.koalas: 10
 # usage.matplotlib: 3
+# usage.orange3: 2
 # usage.pandas: 14
 # usage.pyjanitor: 2
 # usage.scipy: 21
@@ -1272,6 +1297,7 @@ matmul: numpy.ufunc
 
 # usage.dask: 6
 # usage.matplotlib: 7
+# usage.orange3: 2
 # usage.pandas: 12
 # usage.pyjanitor: 2
 # usage.scipy: 21
@@ -1284,6 +1310,7 @@ max: object
 # usage.dask: 200
 # usage.koalas: 10
 # usage.matplotlib: 4
+# usage.orange3: 4
 # usage.pandas: 5
 # usage.scipy: 125
 # usage.skimage: 18
@@ -1314,6 +1341,7 @@ min: object
 # usage.koalas: 10
 # usage.matplotlib: 3
 # usage.networkx: 1
+# usage.orange3: 2
 # usage.pandas: 6
 # usage.scipy: 95
 # usage.skimage: 9
@@ -1339,6 +1367,7 @@ modfresnelp: numpy.ufunc
 modstruve: numpy.ufunc
 
 # usage.dask: 24
+# usage.orange3: 2
 # usage.pandas: 3
 # usage.scipy: 69
 # usage.skimage: 36
@@ -1354,6 +1383,7 @@ multiply: numpy.ufunc
 # usage.matplotlib: 61
 # usage.modin: 21
 # usage.networkx: 2
+# usage.orange3: 160
 # usage.pandas: 2265
 # usage.scipy: 629
 # usage.seaborn: 25
@@ -1421,6 +1451,7 @@ negative: numpy.ufunc
 # usage.dask: 10
 # usage.matplotlib: 41
 # usage.networkx: 2
+# usage.orange3: 17
 # usage.pandas: 5
 # usage.scipy: 134
 # usage.seaborn: 2
@@ -1441,6 +1472,7 @@ newaxis: object
 nextafter: numpy.ufunc
 
 # usage.dask: 109
+# usage.orange3: 2
 # usage.scipy: 4
 # usage.sklearn: 6
 not_equal: numpy.ufunc
@@ -1453,6 +1485,7 @@ nrdtrisd: numpy.ufunc
 
 # usage.dask: 6
 # usage.geopandas: 1
+# usage.orange3: 1
 # usage.pandas: 21
 # usage.pyjanitor: 1
 # usage.scipy: 3
@@ -1462,6 +1495,7 @@ nrdtrisd: numpy.ufunc
 number: object
 
 # usage.networkx: 2
+# usage.orange3: 1
 # usage.pandas: 46
 # usage.sklearn: 11
 object: object
@@ -1521,6 +1555,7 @@ pdtrik: numpy.ufunc
 # usage.hvplot: 1
 # usage.matplotlib: 129
 # usage.networkx: 2
+# usage.orange3: 3
 # usage.pandas: 3
 # usage.prophet: 1
 # usage.scipy: 426
@@ -1540,6 +1575,7 @@ positive: numpy.ufunc
 
 # usage.dask: 21
 # usage.matplotlib: 11
+# usage.orange3: 1
 # usage.scipy: 116
 # usage.seaborn: 3
 # usage.skimage: 11
@@ -1577,6 +1613,7 @@ pseudo_huber: numpy.ufunc
 psi: numpy.ufunc
 
 # usage.matplotlib: 6
+# usage.orange3: 1
 # usage.pandas: 13
 # usage.scipy: 103
 # usage.seaborn: 4
@@ -1693,6 +1730,7 @@ signedinteger: object
 # usage.koalas: 5
 # usage.matplotlib: 127
 # usage.networkx: 5
+# usage.orange3: 6
 # usage.pandas: 34
 # usage.prophet: 2
 # usage.scipy: 296
@@ -1742,6 +1780,7 @@ sph_harm: numpy.ufunc
 # usage.koalas: 11
 # usage.matplotlib: 40
 # usage.networkx: 19
+# usage.orange3: 16
 # usage.pandas: 58
 # usage.prophet: 2
 # usage.scipy: 733
@@ -1755,6 +1794,7 @@ sqrt: numpy.ufunc
 # usage.dask: 43
 # usage.koalas: 5
 # usage.matplotlib: 2
+# usage.orange3: 2
 # usage.scipy: 22
 # usage.seaborn: 5
 # usage.skimage: 8
@@ -1821,6 +1861,7 @@ tklmbda: numpy.ufunc
 
 # usage.dask: 32
 # usage.networkx: 1
+# usage.orange3: 1
 # usage.pandas: 5
 # usage.scipy: 16
 # usage.skimage: 2
@@ -1838,6 +1879,7 @@ trunc: numpy.ufunc
 # usage.scipy: 1
 typeDict: object
 
+# usage.orange3: 1
 # usage.pandas: 8
 # usage.scipy: 6
 # usage.skimage: 4
@@ -1909,6 +1951,7 @@ def all(a: numpy.ndarray):
     usage.matplotlib: 27
     usage.modin: 1
     usage.networkx: 2
+    usage.orange3: 67
     usage.scipy: 257
     usage.seaborn: 9
     usage.skimage: 111
@@ -1947,8 +1990,32 @@ def all(a: numpy.ma.core.MaskedArray):
 def all(a: List[bool]):
     """
     usage.matplotlib: 1
+    usage.orange3: 2
     usage.skimage: 1
     usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def all(a: numpy.matrix):
+    """
+    usage.orange3: 2
+    usage.scipy: 1
+    """
+    ...
+
+
+@overload
+def all(a: bool):
+    """
+    usage.dask: 1
+    usage.networkx: 1
+    usage.orange3: 2
+    usage.scipy: 7
+    usage.seaborn: 1
+    usage.sklearn: 5
+    usage.statsmodels: 5
     """
     ...
 
@@ -2034,19 +2101,6 @@ def all(a: object, axis: int):
 
 
 @overload
-def all(a: bool):
-    """
-    usage.dask: 1
-    usage.networkx: 1
-    usage.scipy: 7
-    usage.seaborn: 1
-    usage.sklearn: 5
-    usage.statsmodels: 5
-    """
-    ...
-
-
-@overload
 def all(a: numpy.bool_):
     """
     usage.networkx: 1
@@ -2109,14 +2163,6 @@ def all(
 def all(
     a: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray], axis: int
 ):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def all(a: numpy.matrix):
     """
     usage.scipy: 1
     """
@@ -2308,6 +2354,7 @@ def all(
     usage.matplotlib: 28
     usage.modin: 1
     usage.networkx: 4
+    usage.orange3: 73
     usage.pandas: 81
     usage.scipy: 276
     usage.seaborn: 11
@@ -2360,6 +2407,7 @@ def allclose(a: numpy.ndarray, b: numpy.ndarray):
     usage.dask: 12
     usage.matplotlib: 3
     usage.networkx: 1
+    usage.orange3: 3
     usage.prophet: 8
     usage.scipy: 18
     usage.seaborn: 4
@@ -2454,6 +2502,37 @@ def allclose(a: numpy.ndarray, b: numpy.float64, rtol: float):
 
 
 @overload
+def allclose(
+    a: Orange.misc.distmatrix.DistMatrix, b: Orange.misc.distmatrix.DistMatrix
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.ndarray, b: numpy.float64):
+    """
+    usage.matplotlib: 4
+    usage.orange3: 3
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def allclose(a: numpy.ndarray, b: numpy.ndarray, equal_nan: bool):
+    """
+    usage.dask: 27
+    usage.orange3: 3
+    usage.statsmodels: 1
+    usage.xarray: 15
+    """
+    ...
+
+
+@overload
 def allclose(a: xarray.core.dataarray.DataArray, b: List[int]):
     """
     usage.xarray: 1
@@ -2502,16 +2581,6 @@ def allclose(
 ):
     """
     usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def allclose(a: numpy.ndarray, b: numpy.ndarray, equal_nan: bool):
-    """
-    usage.dask: 27
-    usage.statsmodels: 1
-    usage.xarray: 15
     """
     ...
 
@@ -2961,15 +3030,6 @@ def allclose(a: numpy.float64, b: float):
 
 
 @overload
-def allclose(a: numpy.ndarray, b: numpy.float64):
-    """
-    usage.matplotlib: 4
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def allclose(a: numpy.ma.core.MaskedArray, b: numpy.ma.core.MaskedArray):
     """
     usage.seaborn: 2
@@ -3304,6 +3364,7 @@ def allclose(
     usage.dask: 84
     usage.matplotlib: 12
     usage.networkx: 2
+    usage.orange3: 10
     usage.pandas: 42
     usage.prophet: 8
     usage.scipy: 139
@@ -3331,6 +3392,7 @@ def amax(a: numpy.ndarray):
     """
     usage.dask: 11
     usage.matplotlib: 35
+    usage.orange3: 4
     usage.pyjanitor: 1
     usage.scipy: 132
     usage.seaborn: 2
@@ -3356,6 +3418,7 @@ def amax(a: List[numpy.int64]):
 def amax(a: List[int]):
     """
     usage.matplotlib: 2
+    usage.orange3: 1
     usage.scipy: 10
     usage.skimage: 2
     usage.sklearn: 3
@@ -3369,6 +3432,7 @@ def amax(a: numpy.ndarray, axis: int):
     """
     usage.dask: 6
     usage.matplotlib: 6
+    usage.orange3: 2
     usage.scipy: 11
     usage.skimage: 7
     usage.sklearn: 14
@@ -4072,6 +4136,7 @@ def amax(
     """
     usage.dask: 149
     usage.matplotlib: 70
+    usage.orange3: 7
     usage.pandas: 41
     usage.pyjanitor: 1
     usage.scipy: 188
@@ -4089,6 +4154,7 @@ def amin(a: numpy.ndarray):
     """
     usage.dask: 14
     usage.matplotlib: 31
+    usage.orange3: 2
     usage.pyjanitor: 1
     usage.scipy: 49
     usage.seaborn: 1
@@ -4768,6 +4834,7 @@ def amin(
     usage.dask: 150
     usage.matplotlib: 65
     usage.networkx: 2
+    usage.orange3: 2
     usage.pandas: 53
     usage.pyjanitor: 1
     usage.scipy: 98
@@ -4917,6 +4984,7 @@ def any(a: numpy.ndarray):
     """
     usage.dask: 10
     usage.matplotlib: 11
+    usage.orange3: 8
     usage.scipy: 154
     usage.skimage: 36
     usage.sklearn: 62
@@ -4954,6 +5022,7 @@ def any(a: List[bool]):
 def any(a: numpy.ndarray, axis: int):
     """
     usage.dask: 4
+    usage.orange3: 1
     usage.scipy: 4
     usage.sklearn: 5
     usage.statsmodels: 8
@@ -5316,12 +5385,42 @@ def any(
     usage.dask: 81
     usage.geopandas: 1
     usage.matplotlib: 16
+    usage.orange3: 9
     usage.pandas: 46
     usage.scipy: 206
     usage.skimage: 39
     usage.sklearn: 84
     usage.statsmodels: 120
     usage.xarray: 21
+    """
+    ...
+
+
+@overload
+def append(arr: numpy.ndarray, values: numpy.float64):
+    """
+    usage.orange3: 1
+    usage.scipy: 2
+    usage.sklearn: 4
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def append(arr: numpy.ndarray, values: numpy.int64):
+    """
+    usage.orange3: 1
+    usage.scipy: 1
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def append(arr: List[float], values: int):
+    """
+    usage.orange3: 1
     """
     ...
 
@@ -5345,16 +5444,6 @@ def append(arr: numpy.ndarray, values: float):
     usage.matplotlib: 2
     usage.scipy: 2
     usage.sklearn: 3
-    usage.statsmodels: 3
-    """
-    ...
-
-
-@overload
-def append(arr: numpy.ndarray, values: numpy.float64):
-    """
-    usage.scipy: 2
-    usage.sklearn: 4
     usage.statsmodels: 3
     """
     ...
@@ -5420,15 +5509,6 @@ def append(arr: int, values: numpy.ndarray):
 def append(arr: numpy.ndarray, values: numpy.int32):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def append(arr: numpy.ndarray, values: numpy.int64):
-    """
-    usage.scipy: 1
-    usage.seaborn: 1
     """
     ...
 
@@ -5506,6 +5586,7 @@ def append(arr: object, values: object, axis: int = ...):
     usage.matplotlib: 6
     usage.modin: 1
     usage.networkx: 3
+    usage.orange3: 3
     usage.pandas: 8
     usage.scipy: 63
     usage.seaborn: 5
@@ -5554,6 +5635,15 @@ def apply_along_axis(func1d: Callable, axis: int, arr: numpy.ndarray):
 @overload
 def apply_along_axis(func1d: Callable, axis: int, arr: numpy.ndarray):
     """
+    usage.orange3: 2
+    usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def apply_along_axis(func1d: Callable, axis: int, arr: numpy.ndarray):
+    """
     usage.statsmodels: 1
     """
     ...
@@ -5595,14 +5685,6 @@ def apply_along_axis(
 ):
     """
     usage.scipy: 25
-    """
-    ...
-
-
-@overload
-def apply_along_axis(func1d: Callable, axis: int, arr: numpy.ndarray):
-    """
-    usage.scipy: 2
     """
     ...
 
@@ -5678,6 +5760,7 @@ def apply_along_axis(
     """
     usage.dask: 4
     usage.matplotlib: 3
+    usage.orange3: 2
     usage.pandas: 7
     usage.scipy: 81
     usage.skimage: 9
@@ -5781,6 +5864,7 @@ def arange(_0: int, _1: int, /):
     usage.matplotlib: 21
     usage.modin: 3
     usage.networkx: 1
+    usage.orange3: 10
     usage.prophet: 3
     usage.scipy: 160
     usage.skimage: 22
@@ -5810,6 +5894,7 @@ def arange(_0: int, /):
     usage.matplotlib: 188
     usage.modin: 11
     usage.networkx: 3
+    usage.orange3: 71
     usage.prophet: 6
     usage.sample-usage: 4
     usage.scipy: 504
@@ -5901,6 +5986,7 @@ def arange(_0: int, /, *, dtype: Type[float]):
     """
     usage.dask: 3
     usage.matplotlib: 11
+    usage.orange3: 1
     usage.scipy: 20
     usage.skimage: 8
     usage.statsmodels: 1
@@ -5923,6 +6009,7 @@ def arange(_0: int, _1: int, _2: int, /):
     usage.dask: 5
     usage.matplotlib: 26
     usage.networkx: 1
+    usage.orange3: 2
     usage.scipy: 46
     usage.seaborn: 1
     usage.skimage: 12
@@ -5954,6 +6041,7 @@ def arange(_0: numpy.int64, /):
     """
     usage.dask: 4
     usage.matplotlib: 2
+    usage.orange3: 1
     usage.scipy: 9
     usage.skimage: 6
     usage.sklearn: 6
@@ -6016,6 +6104,7 @@ def arange(_0: int, _1: int, _2: float, /):
     """
     usage.dask: 6
     usage.matplotlib: 16
+    usage.orange3: 1
     usage.scipy: 8
     usage.skimage: 1
     usage.sklearn: 1
@@ -6061,6 +6150,7 @@ def arange(_0: float, _1: float, _2: float, /):
 def arange(_0: int, /, *, dtype: Type[int]):
     """
     usage.geopandas: 1
+    usage.orange3: 2
     usage.scipy: 7
     usage.skimage: 1
     usage.sklearn: 3
@@ -6102,6 +6192,15 @@ def arange(_0: float, _1: int, _2: int, /, *, dtype: Type[int]):
 def arange(_0: int, _1: int, _2: None, /):
     """
     usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def arange(_0: int, /, *, dtype: Literal["d"]):
+    """
+    usage.orange3: 1
+    usage.scipy: 6
     """
     ...
 
@@ -6387,14 +6486,6 @@ def arange(_0: int, /, *, dtype: Type[numpy.complex128]):
 def arange(_0: int, /, *, dtype: Type[numpy.complex256]):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def arange(_0: int, /, *, dtype: Literal["d"]):
-    """
-    usage.scipy: 6
     """
     ...
 
@@ -7110,6 +7201,7 @@ def arange(
     usage.matplotlib: 359
     usage.modin: 15
     usage.networkx: 5
+    usage.orange3: 89
     usage.pandas: 894
     usage.prophet: 11
     usage.sample-usage: 4
@@ -7128,6 +7220,7 @@ def argmax(a: numpy.ndarray):
     """
     usage.dask: 6
     usage.networkx: 2
+    usage.orange3: 15
     usage.scipy: 18
     usage.skimage: 13
     usage.sklearn: 17
@@ -7150,10 +7243,35 @@ def argmax(a: numpy.ndarray, axis: int):
     """
     usage.dask: 13
     usage.networkx: 1
+    usage.orange3: 24
     usage.scipy: 6
     usage.skimage: 3
     usage.sklearn: 57
     usage.xarray: 7
+    """
+    ...
+
+
+@overload
+def argmax(a: Orange.statistics.distribution.Discrete):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def argmax(a: Orange.statistics.distribution.Continuous):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def argmax(a: List[numpy.float64]):
+    """
+    usage.orange3: 3
     """
     ...
 
@@ -7301,6 +7419,7 @@ def argmax(
     """
     usage.dask: 36
     usage.networkx: 3
+    usage.orange3: 44
     usage.pandas: 23
     usage.scipy: 24
     usage.skimage: 19
@@ -7331,6 +7450,7 @@ def argmin(a: numpy.ndarray):
     """
     usage.dask: 6
     usage.matplotlib: 2
+    usage.orange3: 1
     usage.scipy: 23
     usage.seaborn: 1
     usage.skimage: 5
@@ -7499,6 +7619,7 @@ def argmin(
     """
     usage.dask: 35
     usage.matplotlib: 6
+    usage.orange3: 1
     usage.pandas: 23
     usage.scipy: 27
     usage.seaborn: 2
@@ -7541,6 +7662,7 @@ def argsort(a: numpy.ndarray):
     usage.dask: 5
     usage.matplotlib: 1
     usage.networkx: 3
+    usage.orange3: 8
     usage.scipy: 67
     usage.seaborn: 3
     usage.skimage: 27
@@ -7689,6 +7811,7 @@ def argsort(
     usage.dask: 12
     usage.matplotlib: 1
     usage.networkx: 3
+    usage.orange3: 8
     usage.pandas: 62
     usage.scipy: 96
     usage.seaborn: 7
@@ -7703,6 +7826,7 @@ def argsort(
 def argwhere(a: numpy.ndarray):
     """
     usage.dask: 3
+    usage.orange3: 1
     """
     ...
 
@@ -7824,6 +7948,7 @@ def array(_0: List[List[Union[float, int]]], /):
     usage.koalas: 1
     usage.matplotlib: 7
     usage.networkx: 2
+    usage.orange3: 23
     usage.scipy: 61
     usage.seaborn: 1
     usage.skimage: 7
@@ -7870,6 +7995,7 @@ def array(_0: List[int], /):
     usage.matplotlib: 41
     usage.modin: 1
     usage.networkx: 15
+    usage.orange3: 90
     usage.prophet: 3
     usage.sample-usage: 1
     usage.scipy: 803
@@ -7898,6 +8024,7 @@ def array(_0: list, /):
     usage.matplotlib: 8
     usage.modin: 2
     usage.networkx: 7
+    usage.orange3: 6
     usage.scipy: 65
     usage.seaborn: 7
     usage.skimage: 12
@@ -7951,6 +8078,7 @@ def array(_0: List[float], /):
     usage.koalas: 1
     usage.matplotlib: 79
     usage.networkx: 6
+    usage.orange3: 35
     usage.prophet: 19
     usage.scipy: 742
     usage.seaborn: 13
@@ -7969,6 +8097,7 @@ def array(_0: List[bool], /):
     usage.geopandas: 6
     usage.koalas: 1
     usage.matplotlib: 2
+    usage.orange3: 10
     usage.scipy: 13
     usage.skimage: 5
     usage.sklearn: 19
@@ -8015,6 +8144,7 @@ def array(_0: numpy.ndarray, /):
     usage.geopandas: 1
     usage.matplotlib: 23
     usage.networkx: 1
+    usage.orange3: 41
     usage.prophet: 1
     usage.scipy: 65
     usage.seaborn: 1
@@ -8031,6 +8161,7 @@ def array(_0: List[numpy.ndarray], /):
     """
     usage.matplotlib: 13
     usage.networkx: 5
+    usage.orange3: 13
     usage.prophet: 1
     usage.scipy: 90
     usage.seaborn: 19
@@ -8120,6 +8251,7 @@ def array(_0: List[Union[int, float]], /):
     usage.dask: 5
     usage.matplotlib: 8
     usage.networkx: 2
+    usage.orange3: 22
     usage.scipy: 185
     usage.seaborn: 1
     usage.skimage: 6
@@ -8143,6 +8275,7 @@ def array(_0: List[List[int]], /, *, dtype: Type[numpy.uint8]):
 def array(_0: List[List[Union[int, float]]], /):
     """
     usage.matplotlib: 5
+    usage.orange3: 15
     usage.scipy: 69
     usage.skimage: 6
     usage.sklearn: 59
@@ -8229,6 +8362,7 @@ def array(_0: List[List[float]], /):
     usage.geopandas: 1
     usage.matplotlib: 33
     usage.networkx: 12
+    usage.orange3: 132
     usage.scipy: 324
     usage.seaborn: 2
     usage.skimage: 35
@@ -8245,6 +8379,7 @@ def array(_0: List[List[int]], /):
     usage.dask: 42
     usage.matplotlib: 27
     usage.networkx: 27
+    usage.orange3: 68
     usage.scipy: 604
     usage.seaborn: 2
     usage.skimage: 193
@@ -8262,6 +8397,7 @@ def array(_0: List[numpy.float64], /):
     usage.geopandas: 1
     usage.matplotlib: 32
     usage.networkx: 2
+    usage.orange3: 13
     usage.prophet: 1
     usage.scipy: 118
     usage.seaborn: 10
@@ -8287,6 +8423,7 @@ def array(_0: List[numpy.int64], /):
     usage.dask: 3
     usage.matplotlib: 3
     usage.modin: 1
+    usage.orange3: 7
     usage.scipy: 16
     usage.skimage: 14
     usage.sklearn: 17
@@ -8377,6 +8514,7 @@ def array(_0: List[int], /, *, dtype: Type[numpy.int8]):
 def array(_0: List[int], /, *, dtype: Type[numpy.int32]):
     """
     usage.matplotlib: 2
+    usage.orange3: 10
     usage.scipy: 7
     usage.skimage: 4
     usage.sklearn: 5
@@ -8506,6 +8644,7 @@ def array(_0: List[Union[float, int]], /):
     usage.matplotlib: 14
     usage.modin: 1
     usage.networkx: 1
+    usage.orange3: 11
     usage.scipy: 85
     usage.skimage: 9
     usage.sklearn: 23
@@ -8529,6 +8668,7 @@ def array(_0: List[List[int]], /, *, dtype: Type[bool]):
 def array(_0: List[List[Union[int, numpy.float64]]], /):
     """
     usage.matplotlib: 1
+    usage.orange3: 1
     usage.scipy: 3
     usage.skimage: 1
     usage.sklearn: 4
@@ -8623,6 +8763,7 @@ def array(_0: List[List[int]], /, *, dtype: Type[numpy.uint32]):
 @overload
 def array(_0: range, /):
     """
+    usage.orange3: 1
     usage.scipy: 4
     usage.skimage: 3
     usage.sklearn: 1
@@ -8652,6 +8793,7 @@ def array(_0: numpy.ndarray, /, *, copy: bool):
     """
     usage.dask: 1
     usage.matplotlib: 4
+    usage.orange3: 3
     usage.scipy: 83
     usage.skimage: 6
     usage.sklearn: 1
@@ -8737,6 +8879,7 @@ def array(_0: List[List[numpy.float64]], /):
     """
     usage.matplotlib: 9
     usage.networkx: 2
+    usage.orange3: 14
     usage.scipy: 13
     usage.seaborn: 3
     usage.skimage: 2
@@ -8917,6 +9060,7 @@ def array(
     _0: Tuple[Tuple[int, int], Tuple[int, int], Tuple[int, int], Tuple[int, int]], /
 ):
     """
+    usage.orange3: 1
     usage.skimage: 2
     """
     ...
@@ -9084,6 +9228,7 @@ def array(_0: Tuple[numpy.ndarray], /):
 @overload
 def array(_0: List[int], /, *, dtype: Type[bool]):
     """
+    usage.orange3: 8
     usage.scipy: 28
     usage.skimage: 1
     """
@@ -9162,6 +9307,7 @@ def array(_0: List[int], /, *, dtype: Type[numpy.int64]):
     """
     usage.dask: 1
     usage.networkx: 2
+    usage.orange3: 2
     usage.scipy: 8
     usage.skimage: 9
     usage.sklearn: 17
@@ -9293,6 +9439,7 @@ def array(_0: List[int], /, *, dtype: Type[numpy.uint32]):
 def array(_0: List[int], /, *, dtype: Type[numpy.int16]):
     """
     usage.dask: 1
+    usage.orange3: 8
     usage.scipy: 8
     usage.skimage: 2
     """
@@ -9329,6 +9476,7 @@ def array(_0: List[int], /, *, dtype: Type[float]):
     """
     usage.matplotlib: 4
     usage.networkx: 3
+    usage.orange3: 7
     usage.scipy: 22
     usage.skimage: 1
     usage.sklearn: 1
@@ -9647,6 +9795,561 @@ def array(_0: pandas._libs.tslibs.timestamps.Timestamp, /):
 
 
 @overload
+def array(_0: List[List[str]], /, *, dtype: Type[object], order: Literal["F"]):
+    """
+    usage.orange3: 36
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[List[Literal["yes", "male", "adult", "first"]]],
+    /,
+    *,
+    dtype: Type[object],
+    order: Literal["F"],
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Orange.statistics.contingency.Discrete, /):
+    """
+    usage.orange3: 3
+    """
+    ...
+
+
+@overload
+def array(_0: Orange.statistics.distribution.Discrete, /):
+    """
+    usage.orange3: 4
+    """
+    ...
+
+
+@overload
+def array(_0: list, /, *, dtype: Type[numpy.int32]):
+    """
+    usage.orange3: 6
+    usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.ndarray, /, *, dtype: Type[int]):
+    """
+    usage.orange3: 3
+    usage.scipy: 11
+    usage.sklearn: 7
+    """
+    ...
+
+
+@overload
+def array(_0: list, /, *, dtype: Type[object]):
+    """
+    usage.geopandas: 1
+    usage.orange3: 4
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[float, int]], /):
+    """
+    usage.orange3: 3
+    """
+    ...
+
+
+@overload
+def array(_0: List[range], /):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[Literal[""], float]], /, *, dtype: Type[object]):
+    """
+    usage.orange3: 5
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[Literal["1234567"], int]], /, *, dtype: Type[object]):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[Literal["0"], int]], /, *, dtype: Type[object]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[unittest.mock.Mock]], /):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: Orange.statistics.distribution.Continuous, /):
+    """
+    usage.orange3: 5
+    """
+    ...
+
+
+@overload
+def array(_0: List[bool], /, *, dtype: Type[bool]):
+    """
+    usage.geopandas: 13
+    usage.matplotlib: 2
+    usage.orange3: 2
+    usage.scipy: 7
+    usage.xarray: 3
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[Literal["Foo"], float, int]], /, *, dtype: Type[object]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[Literal["Foo"], int]], /, *, dtype: Type[object]):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[float, numpy.float64]], /):
+    """
+    usage.geopandas: 3
+    usage.matplotlib: 4
+    usage.orange3: 1
+    usage.scipy: 5
+    usage.seaborn: 1
+    usage.sklearn: 1
+    usage.statsmodels: 13
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[numpy.float64, float, int]], /, *, dtype: Type[object]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[int, float]], /, *, dtype: Type[object]):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[numpy.int64, float]], /):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Union[Literal["Foo", "X", "B", "M"], int]], /, *, dtype: Type[object]
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[List[Literal["0", "1", "2"]]],
+    /,
+    *,
+    dtype: Type[object],
+    order: Literal["F"],
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[Union[float, int]]], /, *, dtype: Type[float]):
+    """
+    usage.orange3: 4
+    usage.scipy: 6
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Tuple[numpy.float64, numpy.float64]], /):
+    """
+    usage.networkx: 1
+    usage.orange3: 1
+    usage.scipy: 1
+    usage.seaborn: 1
+    usage.sklearn: 8
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[numpy.int64]], /, *, dtype: Type[int]):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.int64], /, *, dtype: Type[float]):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.float64], /, *, dtype: Type[float]):
+    """
+    usage.orange3: 2
+    usage.scipy: 9
+    """
+    ...
+
+
+@overload
+def array(
+    _0: Tuple[
+        Tuple[int, int, int, int],
+        Tuple[int, int, int, int],
+        Tuple[int, int, int, int],
+        Tuple[int, int, int, int],
+    ],
+    /,
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[List[Union[Literal["a", "", "b"], float, int]]], /, *, dtype: Type[object]
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[List[Literal["3.0", "2.0", "1.0"]]],
+    /,
+    *,
+    dtype: Type[object],
+    order: Literal["F"],
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[List[Literal["rich", "5", "M", "1.0"]]],
+    /,
+    *,
+    dtype: Type[object],
+    order: Literal["F"],
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[List[Literal["", "0"]]], /, *, dtype: Type[object], order: Literal["F"]
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: list, /, *, dtype: Type[object], order: Literal["F"]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[Literal["bar", "foo", "qux", "baz"]]], /):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[str]], /):
+    """
+    usage.orange3: 5
+    usage.statsmodels: 18
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal[""]], /, *, dtype: Type[object]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[List[Literal["0.0", "1.0", "2.0"]]],
+    /,
+    *,
+    dtype: Type[object],
+    order: Literal["F"],
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[List[Literal["0", "1"]]], /, *, dtype: Type[object], order: Literal["F"]
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: numpy.ndarray, /, *, dtype: Type[str]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[List[Literal["3", "2", "1", "4"]]],
+    /,
+    *,
+    dtype: Type[object],
+    order: Literal["F"],
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[List[Union[int, float, Literal["bb", "aa"]]]], /, *, dtype: Type[object]
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[float], /, *, dtype: Type[object]):
+    """
+    usage.orange3: 1
+    usage.xarray: 3
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[str]], /, *, dtype: Type[object]):
+    """
+    usage.orange3: 1
+    usage.sklearn: 8
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[Union[Literal["c1", "c2"], float]]], /, *, dtype: Type[object]):
+    """
+    usage.orange3: 4
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[Literal["c1", "c2"]]], /, *, dtype: Type[object]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["c2", "c1"]], /):
+    """
+    usage.orange3: 11
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[List[Literal["sepal length", "sepal width", "petal length"]]],
+    /,
+    *,
+    dtype: Type[object],
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["dd", "cc", "bb", "aa"]], /):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["dd", "", "bb", "aa"]], /):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["D", "C", "B", "A"]], /, *, dtype: Type[object]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[int, float]], /, *, dtype: Type[numpy.float64]):
+    """
+    usage.networkx: 1
+    usage.orange3: 2
+    usage.xarray: 6
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[List[Literal["1", "e", "g", "f"]]],
+    /,
+    *,
+    dtype: Type[object],
+    order: Literal["F"],
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[List[Literal["123123123"]]], /, *, dtype: Type[object], order: Literal["F"]
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[List[Literal["12.12", "10304851"]]],
+    /,
+    *,
+    dtype: Type[object],
+    order: Literal["F"],
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[str], /):
+    """
+    usage.dask: 3
+    usage.matplotlib: 6
+    usage.orange3: 1
+    usage.sklearn: 10
+    usage.statsmodels: 41
+    usage.xarray: 6
+    """
+    ...
+
+
+@overload
 def array(_0: List[int], /, *, dtype: Literal["int64"]):
     """
     usage.xarray: 10
@@ -9682,14 +10385,6 @@ def array(
 ):
     """
     usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[float], /, *, dtype: Type[object]):
-    """
-    usage.xarray: 3
     """
     ...
 
@@ -9939,17 +10634,6 @@ def array(
 ):
     """
     usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[bool], /, *, dtype: Type[bool]):
-    """
-    usage.geopandas: 13
-    usage.matplotlib: 2
-    usage.scipy: 7
-    usage.xarray: 3
     """
     ...
 
@@ -10320,15 +11004,6 @@ def array(_0: List[Literal["abc"]], /, *, dtype: Type[object]):
 
 
 @overload
-def array(_0: list, /, *, dtype: Type[object]):
-    """
-    usage.geopandas: 1
-    usage.xarray: 1
-    """
-    ...
-
-
-@overload
 def array(_0: List[Literal["ß∂µ∆", "abc"]], /, *, dtype: numpy.dtype):
     """
     usage.xarray: 1
@@ -10475,18 +11150,6 @@ def array(_0: List[int], /, *, dtype: Literal["uint64"]):
 def array(_0: List[int], /, *, dtype: Literal["uint32"]):
     """
     usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[str], /):
-    """
-    usage.dask: 3
-    usage.matplotlib: 6
-    usage.sklearn: 10
-    usage.statsmodels: 41
-    usage.xarray: 6
     """
     ...
 
@@ -10886,27 +11549,9 @@ def array(_0: Literal["2000-01-01T12:00"], /):
 
 
 @overload
-def array(_0: List[Union[int, float]], /, *, dtype: Type[numpy.float64]):
-    """
-    usage.networkx: 1
-    usage.xarray: 6
-    """
-    ...
-
-
-@overload
 def array(_0: List[Union[float, int]], /, *, dtype: Type[numpy.float64]):
     """
     usage.xarray: 2
-    """
-    ...
-
-
-@overload
-def array(_0: List[List[Union[float, int]]], /, *, dtype: Type[float]):
-    """
-    usage.scipy: 6
-    usage.xarray: 1
     """
     ...
 
@@ -11520,14 +12165,6 @@ def array(
     usage.scipy: 4
     usage.sklearn: 2
     usage.statsmodels: 2
-    """
-    ...
-
-
-@overload
-def array(_0: List[List[str]], /):
-    """
-    usage.statsmodels: 18
     """
     ...
 
@@ -12181,19 +12818,6 @@ def array(
 
 
 @overload
-def array(_0: List[Union[float, numpy.float64]], /):
-    """
-    usage.geopandas: 3
-    usage.matplotlib: 4
-    usage.scipy: 5
-    usage.seaborn: 1
-    usage.sklearn: 1
-    usage.statsmodels: 13
-    """
-    ...
-
-
-@overload
 def array(
     _0: List[Tuple[Union[int, None], Union[int, None]]], /, *, dtype: Type[float]
 ):
@@ -12818,18 +13442,6 @@ def array(_0: Literal["loginv"], /, *, ndmin: int):
 
 
 @overload
-def array(_0: List[Tuple[numpy.float64, numpy.float64]], /):
-    """
-    usage.networkx: 1
-    usage.scipy: 1
-    usage.seaborn: 1
-    usage.sklearn: 8
-    usage.statsmodels: 1
-    """
-    ...
-
-
-@overload
 def array(
     _0: List[Tuple[float, int, Literal["aaaa", "bbbb"]]], /, *, dtype: numpy.dtype
 ):
@@ -12848,15 +13460,6 @@ def array(
 ):
     """
     usage.statsmodels: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[List[str]], /, *, dtype: Type[object]):
-    """
-    usage.sklearn: 8
-    usage.statsmodels: 6
     """
     ...
 
@@ -13096,15 +13699,6 @@ def array(_0: numpy.ndarray, /, *, dtype: Type[numpy.float32]):
     """
     usage.scipy: 12
     usage.sklearn: 3
-    """
-    ...
-
-
-@overload
-def array(_0: numpy.ndarray, /, *, dtype: Type[int]):
-    """
-    usage.scipy: 11
-    usage.sklearn: 7
     """
     ...
 
@@ -14089,14 +14683,6 @@ def array(_0: List[List[int]], /, *, dtype: Literal["uint"]):
 
 @overload
 def array(_0: List[List[Union[int, float]]], _1: Literal["f"], /):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def array(_0: list, /, *, dtype: Type[numpy.int32]):
     """
     usage.scipy: 2
     """
@@ -17851,14 +18437,6 @@ def array(_0: List[Union[float, int]], /, *, copy: bool, ndmin: int):
 def array(_0: numpy.float64, /, *, copy: bool, ndmin: int):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[numpy.float64], /, *, dtype: Type[float]):
-    """
-    usage.scipy: 9
     """
     ...
 
@@ -23306,6 +23884,7 @@ def array(
     usage.matplotlib: 812
     usage.modin: 47
     usage.networkx: 137
+    usage.orange3: 685
     usage.pandas: 6865
     usage.prophet: 31
     usage.pyjanitor: 1
@@ -23340,6 +23919,7 @@ def array_equal(a1: numpy.ndarray, a2: numpy.ndarray):
     """
     usage.dask: 4
     usage.matplotlib: 1
+    usage.orange3: 7
     usage.prophet: 10
     usage.scipy: 36
     usage.seaborn: 13
@@ -23364,6 +23944,68 @@ def array_equal(a1: numpy.ndarray, a2: Tuple[int, int, int]):
     """
     usage.skimage: 1
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def array_equal(a1: Orange.statistics.distribution.Discrete, a2: List[float]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array_equal(a1: Orange.statistics.distribution.Discrete, a2: List[int]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array_equal(
+    a1: Orange.statistics.distribution.Discrete,
+    a2: Orange.statistics.distribution.Discrete,
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array_equal(
+    a1: Orange.statistics.distribution.Continuous,
+    a2: Orange.statistics.distribution.Continuous,
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array_equal(a1: Orange.statistics.contingency.Discrete, a2: int):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array_equal(a1: Orange.statistics.distribution.Discrete, a2: int):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def array_equal(a1: Orange.statistics.distribution.Continuous, a2: int):
+    """
+    usage.orange3: 1
     """
     ...
 
@@ -24097,6 +24739,7 @@ def array_equal(a1: object, a2: object):
     usage.dask: 4
     usage.geopandas: 1
     usage.matplotlib: 2
+    usage.orange3: 14
     usage.pandas: 142
     usage.prophet: 10
     usage.scipy: 145
@@ -24228,6 +24871,7 @@ def asanyarray(a: numpy.ndarray):
     usage.dask: 16
     usage.geopandas: 1
     usage.matplotlib: 18
+    usage.orange3: 1
     usage.scipy: 86
     usage.skimage: 36
     usage.sklearn: 28
@@ -24296,6 +24940,39 @@ def asanyarray(a: Tuple[int, int]):
     """
     usage.matplotlib: 1
     usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def asanyarray(a: numpy.ndarray, dtype: Type[float]):
+    """
+    usage.matplotlib: 6
+    usage.orange3: 3
+    """
+    ...
+
+
+@overload
+def asanyarray(a: numpy.ndarray, dtype: Type[int]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def asanyarray(a: List[int], dtype: Type[int]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def asanyarray(a: list, dtype: Type[int]):
+    """
+    usage.orange3: 1
     """
     ...
 
@@ -24837,14 +25514,6 @@ def asanyarray(a: Tuple[int, float]):
 
 
 @overload
-def asanyarray(a: numpy.ndarray, dtype: Type[float]):
-    """
-    usage.matplotlib: 6
-    """
-    ...
-
-
-@overload
 def asanyarray(a: List[Literal["lime", "b", "y", "r"]]):
     """
     usage.matplotlib: 1
@@ -25165,6 +25834,7 @@ def asanyarray(
     usage.dask: 52
     usage.geopandas: 6
     usage.matplotlib: 135
+    usage.orange3: 7
     usage.pandas: 42
     usage.scipy: 190
     usage.seaborn: 1
@@ -25193,6 +25863,7 @@ def asarray(a: numpy.ndarray):
     usage.geopandas: 1
     usage.matplotlib: 96
     usage.networkx: 11
+    usage.orange3: 30
     usage.scipy: 1356
     usage.seaborn: 19
     usage.skimage: 46
@@ -25237,6 +25908,7 @@ def asarray(a: List[int]):
     usage.dask: 14
     usage.matplotlib: 42
     usage.networkx: 2
+    usage.orange3: 10
     usage.scipy: 354
     usage.seaborn: 2
     usage.skimage: 13
@@ -25427,6 +26099,7 @@ def asarray(a: Tuple[int, int, int]):
     """
     usage.dask: 3
     usage.networkx: 1
+    usage.orange3: 1
     usage.scipy: 8
     usage.skimage: 14
     usage.sklearn: 3
@@ -25475,6 +26148,7 @@ def asarray(a: List[Tuple[numpy.ndarray, numpy.ndarray]]):
 def asarray(a: numpy.ndarray, dtype: Type[float]):
     """
     usage.matplotlib: 13
+    usage.orange3: 1
     usage.scipy: 68
     usage.seaborn: 2
     usage.skimage: 4
@@ -25536,6 +26210,7 @@ def asarray(a: List[List[int]]):
     """
     usage.dask: 3
     usage.matplotlib: 5
+    usage.orange3: 1
     usage.scipy: 180
     usage.skimage: 10
     usage.sklearn: 55
@@ -25577,6 +26252,7 @@ def asarray(a: List[List[int]], dtype: Type[numpy.uint8]):
 def asarray(a: numpy.float64):
     """
     usage.dask: 1
+    usage.orange3: 1
     usage.scipy: 44
     usage.skimage: 1
     usage.sklearn: 1
@@ -25639,6 +26315,7 @@ def asarray(a: numpy.ndarray, dtype: numpy.dtype):
     """
     usage.dask: 1
     usage.networkx: 3
+    usage.orange3: 1
     usage.scipy: 142
     usage.skimage: 15
     usage.sklearn: 15
@@ -25884,6 +26561,227 @@ def asarray(
 
 
 @overload
+def asarray(a: numpy.ndarray, dtype: Type[object]):
+    """
+    usage.orange3: 7
+    usage.seaborn: 1
+    usage.sklearn: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.ndarray, dtype: Literal["float64"]):
+    """
+    usage.geopandas: 5
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.matrix):
+    """
+    usage.dask: 1
+    usage.networkx: 18
+    usage.orange3: 6
+    usage.scipy: 106
+    usage.sklearn: 15
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Orange.statistics.distribution.Continuous):
+    """
+    usage.orange3: 4
+    """
+    ...
+
+
+@overload
+def asarray(a: Orange.misc.distmatrix.DistMatrix):
+    """
+    usage.orange3: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: Orange.statistics.contingency.Discrete):
+    """
+    usage.orange3: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: Orange.distance._distance._memoryviewslice):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Tuple[numpy.ndarray], dtype: Type[int]):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: Orange.statistics.distribution.Discrete):
+    """
+    usage.orange3: 4
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.matrix, dtype: None):
+    """
+    usage.orange3: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: List[float], dtype: numpy.dtype):
+    """
+    usage.orange3: 1
+    usage.xarray: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.ndarray, dtype: Type[str]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[List[int]], dtype: Literal["float64"]):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: List[int], dtype: Literal["float64"]):
+    """
+    usage.geopandas: 3
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: openTSNE.tsne.PartialTSNEEmbedding, dtype: Literal["float64"]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Orange.statistics.contingency.Discrete, dtype: Type[float]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Orange.preprocess._relieff._memoryviewslice):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.matrix, dtype: Type[numpy.int32]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.matrix, dtype: Type[numpy.float64]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[numpy.ndarray], dtype: Literal["float64"]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def asarray(
+    a: Tuple[
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+    ],
+    dtype: Literal["float64"],
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: List[bool]):
+    """
+    usage.dask: 1
+    usage.orange3: 1
+    usage.scipy: 1
+    usage.sklearn: 5
+    usage.statsmodels: 3
+    usage.xarray: 11
+    """
+    ...
+
+
+@overload
+def asarray(a: Literal["1"]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: Literal["g"]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
 def asarray(a: List[Literal["foooofooofommmfoo", "foofoo", "foo"]]):
     """
     usage.xarray: 1
@@ -25895,18 +26793,6 @@ def asarray(a: List[Literal["foooofooofommmfoo", "foofoo", "foo"]]):
 def asarray(a: List[Literal["MMM_", "fOOomMm__fOo", "xYz", "Foo"]]):
     """
     usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def asarray(a: List[bool]):
-    """
-    usage.dask: 1
-    usage.scipy: 1
-    usage.sklearn: 5
-    usage.statsmodels: 3
-    usage.xarray: 11
     """
     ...
 
@@ -27623,14 +28509,6 @@ def asarray(a: List[float], dtype: Literal["float32"]):
 
 
 @overload
-def asarray(a: List[float], dtype: numpy.dtype):
-    """
-    usage.xarray: 3
-    """
-    ...
-
-
-@overload
 def asarray(a: List[float], dtype: Literal["float16"]):
     """
     usage.xarray: 1
@@ -29058,18 +29936,6 @@ def asarray(a: List[List[int]], dtype: Type[numpy.float64]):
 def asarray(a: List[List[Union[float, int]]], dtype: Type[numpy.float64]):
     """
     usage.scipy: 21
-    usage.statsmodels: 1
-    """
-    ...
-
-
-@overload
-def asarray(a: numpy.matrix):
-    """
-    usage.dask: 1
-    usage.networkx: 18
-    usage.scipy: 106
-    usage.sklearn: 15
     usage.statsmodels: 1
     """
     ...
@@ -32583,15 +33449,6 @@ def asarray(a: pandas.core.series.Series, dtype: Type[object]):
 
 
 @overload
-def asarray(a: numpy.ndarray, dtype: Type[object]):
-    """
-    usage.seaborn: 1
-    usage.sklearn: 3
-    """
-    ...
-
-
-@overload
 def asarray(a: List[float], dtype: Type[object]):
     """
     usage.seaborn: 1
@@ -32632,23 +33489,7 @@ def asarray(a: List[Tuple[Union[int, float], int, int, Union[int, float]]]):
 
 
 @overload
-def asarray(a: numpy.ndarray, dtype: Literal["float64"]):
-    """
-    usage.geopandas: 5
-    """
-    ...
-
-
-@overload
 def asarray(a: pandas.core.series.Series, dtype: Literal["float64"]):
-    """
-    usage.geopandas: 3
-    """
-    ...
-
-
-@overload
-def asarray(a: List[int], dtype: Literal["float64"]):
     """
     usage.geopandas: 3
     """
@@ -37969,6 +38810,7 @@ def asarray(
     usage.koalas: 2
     usage.matplotlib: 675
     usage.networkx: 40
+    usage.orange3: 96
     usage.pandas: 3941
     usage.scipy: 3885
     usage.seaborn: 75
@@ -38223,6 +39065,7 @@ def asarray_chkfinite(a: object, dtype: type = ...):
 def ascontiguousarray(a: numpy.ndarray):
     """
     usage.dask: 4
+    usage.orange3: 10
     usage.scipy: 34
     usage.skimage: 43
     usage.sklearn: 9
@@ -38448,13 +39291,14 @@ def ascontiguousarray(a: List[List[int]]):
 
 
 def ascontiguousarray(
-    a: Union[List[Union[float, int, complex, List[int]]], numpy.ndarray],
+    a: Union[List[Union[int, float, complex, List[int]]], numpy.ndarray],
     dtype: Union[
         numpy.dtype, type, Literal["bool", "double", "complex", "float", "intc"]
     ] = ...,
 ):
     """
     usage.dask: 4
+    usage.orange3: 10
     usage.scipy: 104
     usage.skimage: 73
     usage.sklearn: 29
@@ -38759,6 +39603,7 @@ def atleast_2d(*arys: Literal["v", "t"]):
     """
     usage.dask: 2
     usage.matplotlib: 12
+    usage.orange3: 34
     usage.pandas: 18
     usage.scipy: 240
     usage.seaborn: 2
@@ -38782,6 +39627,7 @@ def atleast_2d(*arys: Literal["v", "t"]):
     """
     usage.dask: 3
     usage.matplotlib: 12
+    usage.orange3: 34
     usage.pandas: 18
     usage.scipy: 240
     usage.seaborn: 2
@@ -38827,9 +39673,19 @@ def atleast_3d(*arys: Literal["v", "t"]):
 @overload
 def average(a: numpy.ndarray, weights: numpy.ndarray):
     """
+    usage.orange3: 5
     usage.scipy: 9
     usage.sklearn: 67
     usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def average(a: numpy.ndarray):
+    """
+    usage.orange3: 1
+    usage.sklearn: 2
     """
     ...
 
@@ -38909,14 +39765,6 @@ def average(a: List[int], weights: List[numpy.float64]):
 
 
 @overload
-def average(a: numpy.ndarray):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def average(a: numpy.ndarray, weights: List[int]):
     """
     usage.sklearn: 12
@@ -38949,6 +39797,7 @@ def average(
 ):
     """
     usage.dask: 2
+    usage.orange3: 6
     usage.scipy: 15
     usage.sklearn: 195
     usage.statsmodels: 4
@@ -38961,6 +39810,7 @@ def bincount(_0: numpy.ndarray, /, *, minlength: int):
     """
     usage.dask: 1
     usage.matplotlib: 2
+    usage.orange3: 1
     usage.scipy: 6
     usage.skimage: 6
     usage.sklearn: 18
@@ -38981,6 +39831,7 @@ def bincount(_0: dask.array.core.Array, /, *, minlength: int):
 def bincount(_0: numpy.ndarray, /):
     """
     usage.dask: 2
+    usage.orange3: 1
     usage.scipy: 6
     usage.skimage: 5
     usage.sklearn: 40
@@ -38990,9 +39841,10 @@ def bincount(_0: numpy.ndarray, /):
 
 
 @overload
-def bincount(_0: List[int], /):
+def bincount(_0: numpy.ndarray, /, *, minlength: int, weights: None):
     """
-    usage.statsmodels: 1
+    usage.orange3: 2
+    usage.sklearn: 3
     """
     ...
 
@@ -39002,8 +39854,17 @@ def bincount(_0: numpy.ndarray, /, *, minlength: int, weights: numpy.ndarray):
     """
     usage.dask: 1
     usage.matplotlib: 1
+    usage.orange3: 3
     usage.sklearn: 13
     usage.statsmodels: 12
+    """
+    ...
+
+
+@overload
+def bincount(_0: List[int], /):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -39109,14 +39970,6 @@ def bincount(_0: numpy.ndarray, /, *, weights: List[Union[float, int]]):
 
 
 @overload
-def bincount(_0: numpy.ndarray, /, *, minlength: int, weights: None):
-    """
-    usage.sklearn: 3
-    """
-    ...
-
-
-@overload
 def bincount(_0: numpy.ndarray, _1: numpy.ndarray, /, *, minlength: int):
     """
     usage.sklearn: 2
@@ -39169,6 +40022,7 @@ def bincount(
     """
     usage.dask: 6
     usage.matplotlib: 16
+    usage.orange3: 7
     usage.pandas: 10
     usage.scipy: 40
     usage.skimage: 12
@@ -40214,6 +41068,7 @@ def clip(a: numpy.ndarray, a_min: int, a_max: int):
 def clip(a: numpy.ndarray, a_min: int, a_max: int, out: numpy.ndarray):
     """
     usage.matplotlib: 6
+    usage.orange3: 1
     usage.skimage: 14
     usage.sklearn: 4
     """
@@ -40223,6 +41078,7 @@ def clip(a: numpy.ndarray, a_min: int, a_max: int, out: numpy.ndarray):
 @overload
 def clip(a: numpy.float64, a_min: int, a_max: None):
     """
+    usage.orange3: 1
     usage.skimage: 1
     """
     ...
@@ -40357,6 +41213,30 @@ def clip(a: int, a_min: int, a_max: numpy.ndarray):
 def clip(a: numpy.ndarray, a_min: numpy.uint8, a_max: numpy.uint8):
     """
     usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def clip(a: List[int], a_min: int, a_max: int):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def clip(a: Orange.statistics.contingency.Discrete, a_min: float, a_max: int):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def clip(a: numpy.ndarray, a_min: float, a_max: int):
+    """
+    usage.orange3: 1
     """
     ...
 
@@ -40696,6 +41576,7 @@ def clip(a: object, a_min: object, a_max: object, out: numpy.ndarray = ...):
     usage.dask: 23
     usage.matplotlib: 34
     usage.networkx: 1
+    usage.orange3: 5
     usage.pandas: 1
     usage.scipy: 38
     usage.seaborn: 2
@@ -40710,6 +41591,7 @@ def clip(a: object, a_min: object, a_max: object, out: numpy.ndarray = ...):
 def column_stack(tup: Tuple[numpy.ndarray, numpy.ndarray]):
     """
     usage.matplotlib: 16
+    usage.orange3: 1
     usage.scipy: 7
     usage.skimage: 4
     usage.sklearn: 1
@@ -40723,6 +41605,7 @@ def column_stack(tup: List[numpy.ndarray]):
     """
     usage.matplotlib: 17
     usage.networkx: 6
+    usage.orange3: 1
     usage.prophet: 4
     usage.sample-usage: 1
     usage.scipy: 28
@@ -40730,6 +41613,33 @@ def column_stack(tup: List[numpy.ndarray]):
     usage.skimage: 6
     usage.sklearn: 4
     usage.statsmodels: 52
+    """
+    ...
+
+
+@overload
+def column_stack(
+    tup: Tuple[
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+        numpy.ndarray,
+    ]
+):
+    """
+    usage.orange3: 4
+    """
+    ...
+
+
+@overload
+def column_stack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
+    """
+    usage.orange3: 1
+    usage.scipy: 2
+    usage.statsmodels: 13
     """
     ...
 
@@ -40758,15 +41668,6 @@ def column_stack(
 ):
     """
     usage.statsmodels: 1
-    """
-    ...
-
-
-@overload
-def column_stack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
-    """
-    usage.scipy: 2
-    usage.statsmodels: 13
     """
     ...
 
@@ -40987,6 +41888,7 @@ def column_stack(
     """
     usage.matplotlib: 65
     usage.networkx: 6
+    usage.orange3: 7
     usage.prophet: 5
     usage.sample-usage: 1
     usage.scipy: 43
@@ -41007,6 +41909,28 @@ def common_type(*arrays: Literal["v", "t"]):
 
 
 @overload
+def compress(
+    condition: Orange.statistics.contingency.Discrete,
+    a: Orange.statistics.contingency.Discrete,
+    axis: int,
+):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def compress(condition: numpy.ndarray, a: numpy.ndarray, axis: int):
+    """
+    usage.dask: 1
+    usage.orange3: 1
+    usage.scipy: 4
+    """
+    ...
+
+
+@overload
 def compress(condition: numpy.ndarray, a: List[Literal["X", "A"]]):
     """
     usage.pandas: 1
@@ -41020,15 +41944,6 @@ def compress(condition: numpy.ndarray, a: numpy.ndarray):
     usage.scipy: 7
     usage.seaborn: 6
     usage.sklearn: 7
-    """
-    ...
-
-
-@overload
-def compress(condition: numpy.ndarray, a: numpy.ndarray, axis: int):
-    """
-    usage.dask: 1
-    usage.scipy: 4
     """
     ...
 
@@ -41058,12 +41973,15 @@ def compress(condition: List[bool], a: numpy.ndarray, axis: int):
 
 
 def compress(
-    condition: Union[numpy.ndarray, List[bool]],
-    a: Union[numpy.ndarray, List[Literal["X", "A"]]],
+    condition: Union[numpy.ndarray, Orange.statistics.contingency.Discrete, List[bool]],
+    a: Union[
+        numpy.ndarray, Orange.statistics.contingency.Discrete, List[Literal["X", "A"]]
+    ],
     axis: Union[None, int] = ...,
 ):
     """
     usage.dask: 4
+    usage.orange3: 3
     usage.pandas: 1
     usage.scipy: 11
     usage.seaborn: 6
@@ -41076,6 +41994,7 @@ def compress(
 def concatenate(_0: List[numpy.ndarray], /, *, axis: int):
     """
     usage.dask: 75
+    usage.orange3: 5
     usage.scipy: 63
     usage.skimage: 14
     usage.sklearn: 15
@@ -41101,6 +42020,7 @@ def concatenate(
 @overload
 def concatenate(_0: Tuple[numpy.ndarray, numpy.ndarray], /, *, axis: int):
     """
+    usage.orange3: 1
     usage.sample-usage: 1
     usage.scipy: 26
     usage.skimage: 3
@@ -41154,6 +42074,7 @@ def concatenate(_0: List[numpy.ndarray], /):
 def concatenate(_0: Tuple[numpy.ndarray, numpy.ndarray], /):
     """
     usage.matplotlib: 6
+    usage.orange3: 1
     usage.prophet: 4
     usage.scipy: 126
     usage.seaborn: 2
@@ -42072,6 +42993,7 @@ def concatenate(
     usage.geopandas: 2
     usage.matplotlib: 134
     usage.networkx: 2
+    usage.orange3: 7
     usage.pandas: 312
     usage.prophet: 6
     usage.sample-usage: 1
@@ -42162,6 +43084,7 @@ def copy(a: numpy.ndarray):
     """
     usage.matplotlib: 7
     usage.networkx: 1
+    usage.orange3: 1
     usage.pandas: 1
     usage.scipy: 57
     usage.skimage: 15
@@ -42236,11 +43159,27 @@ def copy(a: object, order: Literal["C", "F"] = ...):
     """
     usage.matplotlib: 7
     usage.networkx: 1
+    usage.orange3: 1
     usage.pandas: 1
     usage.scipy: 60
     usage.skimage: 16
     usage.sklearn: 44
     usage.statsmodels: 16
+    """
+    ...
+
+
+@overload
+def copyto(
+    _0: numpy.ndarray,
+    _1: numpy.ndarray,
+    /,
+    *,
+    casting: Literal["unsafe"],
+    where: numpy.ndarray,
+):
+    """
+    usage.orange3: 14
     """
     ...
 
@@ -42262,10 +43201,32 @@ def copyto(_0: numpy.ndarray, _1: numpy.ndarray, /, *, where: numpy.ndarray):
 
 
 def copyto(
-    _0: numpy.ndarray, _1: Union[numpy.ndarray, int], /, *, where: numpy.ndarray
+    _0: numpy.ndarray,
+    _1: Union[int, numpy.ndarray],
+    /,
+    *,
+    where: numpy.ndarray,
+    casting: Literal["unsafe"] = ...,
 ):
     """
     usage.matplotlib: 6
+    usage.orange3: 14
+    """
+    ...
+
+
+@overload
+def corrcoef(x: numpy.ndarray, rowvar: bool):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def corrcoef(x: numpy.ndarray, y: numpy.ndarray, rowvar: bool):
+    """
+    usage.orange3: 2
     """
     ...
 
@@ -42329,11 +43290,12 @@ def corrcoef(x: numpy.ndarray, y: List[numpy.ndarray]):
 
 def corrcoef(
     x: Union[numpy.ndarray, pandas.core.frame.DataFrame, numpy.flatiter],
-    rowvar: int = ...,
     y: Union[List[numpy.ndarray], numpy.ndarray, numpy.flatiter] = ...,
+    rowvar: Union[int, bool] = ...,
 ):
     """
     usage.dask: 5
+    usage.orange3: 3
     usage.pandas: 12
     usage.scipy: 3
     usage.sklearn: 3
@@ -42391,9 +43353,21 @@ def correlate(
 def count_nonzero(a: numpy.ndarray):
     """
     usage.dask: 4
+    usage.orange3: 4
     usage.scipy: 17
     usage.skimage: 9
     usage.sklearn: 12
+    """
+    ...
+
+
+@overload
+def count_nonzero(a: numpy.ndarray, axis: int):
+    """
+    usage.dask: 2
+    usage.orange3: 1
+    usage.scipy: 1
+    usage.sklearn: 1
     """
     ...
 
@@ -42410,16 +43384,6 @@ def count_nonzero(a: list):
 def count_nonzero(a: List[float]):
     """
     usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def count_nonzero(a: numpy.ndarray, axis: int):
-    """
-    usage.dask: 2
-    usage.scipy: 1
-    usage.sklearn: 1
     """
     ...
 
@@ -42534,6 +43498,7 @@ def count_nonzero(
 ):
     """
     usage.dask: 21
+    usage.orange3: 5
     usage.scipy: 22
     usage.skimage: 9
     usage.sklearn: 13
@@ -42545,6 +43510,7 @@ def count_nonzero(
 def cov(m: numpy.ndarray):
     """
     usage.dask: 1
+    usage.orange3: 2
     usage.scipy: 7
     usage.sklearn: 14
     usage.statsmodels: 9
@@ -42693,6 +43659,7 @@ def cov(
     """
     usage.dask: 11
     usage.matplotlib: 3
+    usage.orange3: 2
     usage.pandas: 7
     usage.scipy: 21
     usage.sklearn: 24
@@ -42907,6 +43874,7 @@ def cumsum(a: numpy.ndarray):
     """
     usage.dask: 8
     usage.matplotlib: 4
+    usage.orange3: 1
     usage.prophet: 1
     usage.scipy: 11
     usage.seaborn: 1
@@ -42921,6 +43889,7 @@ def cumsum(a: numpy.ndarray):
 def cumsum(a: numpy.ndarray, axis: int):
     """
     usage.dask: 8
+    usage.orange3: 2
     usage.scipy: 6
     usage.skimage: 4
     usage.sklearn: 3
@@ -43261,6 +44230,7 @@ def cumsum(
     usage.dask: 43
     usage.matplotlib: 33
     usage.modin: 4
+    usage.orange3: 3
     usage.pandas: 26
     usage.prophet: 1
     usage.scipy: 30
@@ -43436,11 +44406,20 @@ def diag(v: numpy.ndarray):
     """
     usage.dask: 5
     usage.networkx: 2
+    usage.orange3: 1
     usage.scipy: 237
     usage.seaborn: 3
     usage.skimage: 5
     usage.sklearn: 55
     usage.statsmodels: 148
+    """
+    ...
+
+
+@overload
+def diag(v: Orange.statistics.contingency.Discrete):
+    """
+    usage.orange3: 1
     """
     ...
 
@@ -43605,6 +44584,7 @@ def diag(v: object, k: Union[numpy.int64, int] = ...):
     """
     usage.dask: 8
     usage.networkx: 2
+    usage.orange3: 2
     usage.scipy: 390
     usage.seaborn: 3
     usage.skimage: 5
@@ -43626,6 +44606,7 @@ def diag_indices(n: int):
 
 def diag_indices_from(arr: numpy.ndarray):
     """
+    usage.orange3: 1
     usage.scipy: 3
     usage.seaborn: 2
     usage.sklearn: 6
@@ -43752,6 +44733,7 @@ def diff(a: numpy.ndarray):
     """
     usage.dask: 3
     usage.matplotlib: 18
+    usage.orange3: 4
     usage.pandas: 6
     usage.scipy: 87
     usage.seaborn: 18
@@ -43953,6 +44935,7 @@ def diff(a: object, n: int = ..., axis: int = ...):
     """
     usage.dask: 13
     usage.matplotlib: 25
+    usage.orange3: 4
     usage.pandas: 6
     usage.scipy: 127
     usage.seaborn: 18
@@ -43968,9 +44951,43 @@ def diff(a: object, n: int = ..., axis: int = ...):
 def digitize(x: numpy.ndarray, bins: numpy.ndarray):
     """
     usage.modin: 1
+    usage.orange3: 2
     usage.scipy: 2
     usage.skimage: 1
     usage.sklearn: 3
+    """
+    ...
+
+
+@overload
+def digitize(x: numpy.ndarray, bins: List[float]):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def digitize(x: numpy.ndarray, bins: List[numpy.float64]):
+    """
+    usage.orange3: 3
+    """
+    ...
+
+
+@overload
+def digitize(x: numpy.ndarray, bins: List[int]):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def digitize(x: numpy.ndarray, bins: numpy.ndarray, right: bool):
+    """
+    usage.dask: 6
+    usage.orange3: 4
     """
     ...
 
@@ -43983,20 +45000,15 @@ def digitize(x: List[int], bins: numpy.ndarray, right: bool):
     ...
 
 
-@overload
-def digitize(x: numpy.ndarray, bins: numpy.ndarray, right: bool):
-    """
-    usage.dask: 6
-    """
-    ...
-
-
 def digitize(
-    x: Union[numpy.ndarray, List[int]], bins: numpy.ndarray, right: bool = ...
+    x: Union[numpy.ndarray, List[int]],
+    bins: Union[numpy.ndarray, List[Union[int, float, numpy.float64]]],
+    right: bool = ...,
 ):
     """
     usage.dask: 8
     usage.modin: 1
+    usage.orange3: 13
     usage.scipy: 2
     usage.skimage: 1
     usage.sklearn: 3
@@ -44010,11 +45022,21 @@ def dot(_0: numpy.ndarray, _1: numpy.ndarray, /):
     usage.dask: 10
     usage.matplotlib: 21
     usage.networkx: 6
+    usage.orange3: 15
     usage.pandas: 15
     usage.scipy: 1019
     usage.skimage: 1
     usage.sklearn: 544
     usage.statsmodels: 903
+    """
+    ...
+
+
+@overload
+def dot(_0: numpy.ndarray, _1: List[List[numpy.float64]], /):
+    """
+    usage.matplotlib: 1
+    usage.orange3: 1
     """
     ...
 
@@ -44387,14 +45409,6 @@ def dot(_0: numpy.ndarray, _1: matplotlib.transforms.Affine2D, /):
 
 
 @overload
-def dot(_0: numpy.ndarray, _1: List[List[numpy.float64]], /):
-    """
-    usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
 def dot(_0: numpy.ma.core.MaskedArray, _1: numpy.ma.core.MaskedArray, /):
     """
     usage.matplotlib: 1
@@ -44463,6 +45477,7 @@ def dot(_0: object, _1: object, /, *, out: numpy.ndarray = ...):
     usage.dask: 13
     usage.matplotlib: 26
     usage.networkx: 13
+    usage.orange3: 16
     usage.pandas: 15
     usage.scipy: 1086
     usage.skimage: 1
@@ -44779,6 +45794,7 @@ def empty(_0: Tuple[int, int, int, int, int], /, *, dtype: numpy.dtype):
 def empty(_0: Tuple[int, int], /, *, dtype: numpy.dtype):
     """
     usage.dask: 12
+    usage.orange3: 1
     usage.scipy: 34
     usage.skimage: 4
     usage.sklearn: 41
@@ -44817,6 +45833,7 @@ def empty(_0: Tuple[int, int], /):
     usage.dask: 6
     usage.matplotlib: 3
     usage.networkx: 1
+    usage.orange3: 10
     usage.scipy: 67
     usage.skimage: 17
     usage.sklearn: 30
@@ -44848,6 +45865,7 @@ def empty(_0: Tuple[int, int, int], /):
     """
     usage.dask: 3
     usage.matplotlib: 3
+    usage.orange3: 2
     usage.scipy: 47
     usage.skimage: 5
     usage.sklearn: 15
@@ -44859,6 +45877,7 @@ def empty(_0: Tuple[int, int, int], /):
 @overload
 def empty(_0: Tuple[int, int], /, *, dtype: Type[numpy.float64]):
     """
+    usage.orange3: 2
     usage.scipy: 9
     usage.skimage: 2
     usage.sklearn: 5
@@ -44985,6 +46004,7 @@ def empty(_0: int, /):
     """
     usage.dask: 1
     usage.matplotlib: 1
+    usage.orange3: 3
     usage.scipy: 23
     usage.skimage: 3
     usage.sklearn: 33
@@ -45112,6 +46132,76 @@ def empty(_0: Tuple[int], _1: Type[numpy.uint32], /):
 
 
 @overload
+def empty(_0: Tuple[int, int], _1: Type[object], /):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def empty(_0: int, /, *, dtype: Type[float]):
+    """
+    usage.orange3: 1
+    usage.scipy: 5
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: int, _1: Type[numpy.int32], /):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: numpy.int64, /, *, dtype: Type[float]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int], /):
+    """
+    usage.dask: 2
+    usage.matplotlib: 1
+    usage.orange3: 1
+    usage.scipy: 18
+    usage.sklearn: 2
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int, int], /, *, dtype: Type[float]):
+    """
+    usage.matplotlib: 1
+    usage.orange3: 1
+    usage.scipy: 4
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def empty(_0: Tuple[int, int], /, *, dtype: Type[object]):
+    """
+    usage.dask: 2
+    usage.matplotlib: 1
+    usage.orange3: 2
+    usage.scipy: 6
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
 def empty(*, dtype: Literal["U"], shape: Tuple[int]):
     """
     usage.xarray: 1
@@ -45193,28 +46283,6 @@ def empty(_0: Tuple[int], /, *, dtype: Type[object]):
     usage.dask: 1
     usage.scipy: 5
     usage.xarray: 2
-    """
-    ...
-
-
-@overload
-def empty(_0: Tuple[int], /):
-    """
-    usage.dask: 2
-    usage.matplotlib: 1
-    usage.scipy: 18
-    usage.sklearn: 2
-    usage.statsmodels: 4
-    """
-    ...
-
-
-@overload
-def empty(_0: Tuple[int, int], /, *, dtype: Type[float]):
-    """
-    usage.matplotlib: 1
-    usage.scipy: 4
-    usage.statsmodels: 3
     """
     ...
 
@@ -45618,17 +46686,6 @@ def empty(_0: Tuple[int, int], /, *, dtype: Type[numpy.int64]):
 
 
 @overload
-def empty(_0: Tuple[int, int], /, *, dtype: Type[object]):
-    """
-    usage.dask: 2
-    usage.matplotlib: 1
-    usage.scipy: 6
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def empty(_0: Tuple[None, ...], _1: Type[numpy.int32], /):
     """
     usage.scipy: 1
@@ -45720,15 +46777,6 @@ def empty(_0: int, /, *, dtype: Type[numpy.float32]):
 def empty(_0: Tuple[int, int, int], _1: Type[numpy.int32], /):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def empty(_0: int, /, *, dtype: Type[float]):
-    """
-    usage.scipy: 5
-    usage.sklearn: 1
     """
     ...
 
@@ -46585,6 +47633,7 @@ def empty(
     usage.geopandas: 16
     usage.matplotlib: 30
     usage.networkx: 2
+    usage.orange3: 27
     usage.pandas: 423
     usage.scipy: 677
     usage.seaborn: 3
@@ -46630,6 +47679,7 @@ def empty_like(_0: numpy.ndarray, /, *, dtype: Type[numpy.uint16]):
 @overload
 def empty_like(_0: numpy.ndarray, /, *, dtype: Type[float]):
     """
+    usage.orange3: 26
     usage.scipy: 1
     usage.skimage: 2
     usage.statsmodels: 10
@@ -46680,6 +47730,15 @@ def empty_like(
 def empty_like(_0: numpy.ndarray, _1: Type[numpy.float64], /):
     """
     usage.skimage: 2
+    """
+    ...
+
+
+@overload
+def empty_like(_0: numpy.ndarray, /, *, dtype: Type[bool]):
+    """
+    usage.orange3: 4
+    usage.scipy: 8
     """
     ...
 
@@ -46758,14 +47817,6 @@ def empty_like(_0: numpy.ndarray, /, *, dtype: Type[numpy.float32]):
     """
     usage.scipy: 2
     usage.sklearn: 4
-    """
-    ...
-
-
-@overload
-def empty_like(_0: numpy.ndarray, /, *, dtype: Type[bool]):
-    """
-    usage.scipy: 8
     """
     ...
 
@@ -46927,6 +47978,7 @@ def empty_like(
     """
     usage.dask: 12
     usage.matplotlib: 10
+    usage.orange3: 30
     usage.pandas: 18
     usage.scipy: 103
     usage.skimage: 51
@@ -46942,6 +47994,7 @@ def expand_dims(a: numpy.ndarray, axis: int):
     """
     usage.dask: 2
     usage.matplotlib: 12
+    usage.orange3: 1
     usage.scipy: 15
     usage.sklearn: 5
     usage.statsmodels: 9
@@ -47006,6 +48059,7 @@ def expand_dims(
     """
     usage.dask: 2
     usage.matplotlib: 12
+    usage.orange3: 1
     usage.pandas: 19
     usage.scipy: 21
     usage.sklearn: 6
@@ -47125,6 +48179,7 @@ def eye(N: int):
     usage.dask: 10
     usage.koalas: 2
     usage.networkx: 2
+    usage.orange3: 6
     usage.sample-usage: 1
     usage.scipy: 322
     usage.skimage: 31
@@ -47138,6 +48193,7 @@ def eye(N: int):
 def eye(N: int, dtype: Type[int]):
     """
     usage.dask: 2
+    usage.orange3: 1
     usage.scipy: 1
     usage.skimage: 5
     """
@@ -47148,6 +48204,7 @@ def eye(N: int, dtype: Type[int]):
 def eye(N: int, dtype: Type[float]):
     """
     usage.dask: 1
+    usage.orange3: 1
     usage.scipy: 4
     usage.skimage: 1
     """
@@ -47402,6 +48459,7 @@ def eye(
     usage.koalas: 2
     usage.matplotlib: 2
     usage.networkx: 4
+    usage.orange3: 8
     usage.pandas: 9
     usage.sample-usage: 1
     usage.scipy: 470
@@ -47416,6 +48474,7 @@ def eye(
 def fill_diagonal(a: numpy.ndarray, val: float):
     """
     usage.networkx: 1
+    usage.orange3: 2
     usage.skimage: 1
     usage.sklearn: 7
     usage.statsmodels: 2
@@ -47465,6 +48524,7 @@ def fill_diagonal(
 ):
     """
     usage.networkx: 2
+    usage.orange3: 2
     usage.scipy: 7
     usage.skimage: 1
     usage.sklearn: 16
@@ -47700,6 +48760,7 @@ def fix(
 def flatnonzero(a: numpy.ndarray):
     """
     usage.dask: 2
+    usage.orange3: 2
     usage.pandas: 2
     usage.scipy: 5
     usage.skimage: 6
@@ -47721,6 +48782,7 @@ def flatnonzero(a: pandas.core.series.Series):
 def flatnonzero(a: Union[numpy.ndarray, pandas.core.series.Series]):
     """
     usage.dask: 2
+    usage.orange3: 2
     usage.pandas: 2
     usage.scipy: 5
     usage.skimage: 6
@@ -48219,6 +49281,73 @@ def fromfunction(
 
 
 @overload
+def fromiter(_0: generator, /, *, count: int, dtype: Type[numpy.float64]):
+    """
+    usage.orange3: 8
+    """
+    ...
+
+
+@overload
+def fromiter(_0: generator, /, *, count: int, dtype: Type[numpy.int32]):
+    """
+    usage.orange3: 1
+    usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def fromiter(
+    _0: Tuple[int, int, int, int, int, int, int, int, int, int], /, *, dtype: Type[int]
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def fromiter(_0: generator, _1: Type[int], /):
+    """
+    usage.orange3: 4
+    """
+    ...
+
+
+@overload
+def fromiter(_0: generator, _1: Type[bool], /, *, count: int):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def fromiter(_0: generator, /, *, count: int, dtype: Type[bool]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def fromiter(_0: generator, _1: Type[bool], _2: int, /):
+    """
+    usage.orange3: 5
+    """
+    ...
+
+
+@overload
+def fromiter(_0: generator, /, *, dtype: Type[bool]):
+    """
+    usage.orange3: 3
+    """
+    ...
+
+
+@overload
 def fromiter(_0: generator, /, *, dtype: Union[type, Literal["i8"]]):
     """
     usage.pandas: 3
@@ -48230,14 +49359,6 @@ def fromiter(_0: generator, /, *, dtype: Union[type, Literal["i8"]]):
 def fromiter(_0: dict_values, /, *, count: int, dtype: numpy.dtype):
     """
     usage.scipy: 15
-    """
-    ...
-
-
-@overload
-def fromiter(_0: generator, /, *, count: int, dtype: Type[numpy.int32]):
-    """
-    usage.scipy: 2
     """
     ...
 
@@ -48275,16 +49396,29 @@ def fromiter(_0: generator, /, *, dtype: Type[numpy.float64]):
 
 
 def fromiter(
-    _0: Union[itertools.chain, generator, dict_values, List[numpy.float64]],
+    _0: Union[
+        itertools.chain, generator, dict_values, Tuple[int, ...], List[numpy.float64]
+    ],
+    _1: type = ...,
+    _2: int = ...,
     /,
     *,
-    dtype: Union[Literal["float64", "i8"], type, numpy.dtype],
     count: int = ...,
+    dtype: Union[Literal["float64", "i8"], type, numpy.dtype] = ...,
 ):
     """
+    usage.orange3: 24
     usage.pandas: 3
     usage.scipy: 20
     usage.sklearn: 3
+    """
+    ...
+
+
+@overload
+def frompyfunc(_0: Callable, _1: int, _2: int, /):
+    """
+    usage.orange3: 1
     """
     ...
 
@@ -48305,9 +49439,10 @@ def frompyfunc(_0: Callable, _1: int, _2: int, /):
     ...
 
 
-def frompyfunc(_0: Callable, _1: int, _2: int, /):
+def frompyfunc(_0: Union[Callable, Callable], _1: int, _2: int, /):
     """
     usage.dask: 4
+    usage.orange3: 1
     """
     ...
 
@@ -48425,6 +49560,7 @@ def full(shape: Tuple[int, int], fill_value: float):
     """
     usage.dask: 3
     usage.matplotlib: 1
+    usage.orange3: 3
     usage.scipy: 57
     usage.skimage: 6
     usage.sklearn: 9
@@ -48537,6 +49673,68 @@ def full(shape: Tuple[int, int], fill_value: int):
 
 
 @overload
+def full(shape: int, fill_value: int, dtype: Type[int]):
+    """
+    usage.orange3: 2
+    usage.scipy: 1
+    usage.sklearn: 7
+    """
+    ...
+
+
+@overload
+def full(shape: int, fill_value: numpy.float64):
+    """
+    usage.orange3: 1
+    usage.seaborn: 2
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def full(shape: int, fill_value: float):
+    """
+    usage.matplotlib: 1
+    usage.orange3: 3
+    usage.scipy: 40
+    usage.seaborn: 3
+    usage.sklearn: 18
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def full(shape: Tuple[int], fill_value: float):
+    """
+    usage.orange3: 2
+    usage.scipy: 9
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def full(shape: int, fill_value: int):
+    """
+    usage.orange3: 1
+    usage.scipy: 12
+    usage.seaborn: 2
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def full(shape: Tuple[int, int], fill_value: Literal[""]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
 def full(shape: Tuple[None, ...], fill_value: float):
     """
     usage.scipy: 1
@@ -48625,18 +49823,6 @@ def full(shape: Tuple[None, ...], fill_value: numpy.int64):
 def full(shape: Tuple[None, ...], fill_value: numpy.float64):
     """
     usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def full(shape: int, fill_value: float):
-    """
-    usage.matplotlib: 1
-    usage.scipy: 40
-    usage.seaborn: 3
-    usage.sklearn: 18
-    usage.statsmodels: 8
     """
     ...
 
@@ -48769,16 +49955,6 @@ def full(shape: numpy.int64, fill_value: bool, dtype: Type[bool]):
 
 
 @overload
-def full(shape: int, fill_value: int):
-    """
-    usage.scipy: 12
-    usage.seaborn: 2
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def full(shape: int, fill_value: complex):
     """
     usage.scipy: 4
@@ -48803,15 +49979,6 @@ def full(shape: int, fill_value: float, dtype: Literal["f"]):
 
 
 @overload
-def full(shape: int, fill_value: int, dtype: Type[int]):
-    """
-    usage.scipy: 1
-    usage.sklearn: 7
-    """
-    ...
-
-
-@overload
 def full(shape: int, fill_value: complex, dtype: Type[complex]):
     """
     usage.scipy: 1
@@ -48823,15 +49990,6 @@ def full(shape: int, fill_value: complex, dtype: Type[complex]):
 def full(shape: int, fill_value: int, dtype: Literal["float64"]):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def full(shape: Tuple[int], fill_value: float):
-    """
-    usage.scipy: 9
-    usage.sklearn: 1
     """
     ...
 
@@ -48872,15 +50030,6 @@ def full(shape: int, fill_value: numpy.uint8, dtype: Type[numpy.uint8]):
 def full(shape: int, fill_value: numpy.int64, dtype: Type[numpy.float64]):
     """
     usage.matplotlib: 1
-    """
-    ...
-
-
-@overload
-def full(shape: int, fill_value: numpy.float64):
-    """
-    usage.seaborn: 2
-    usage.sklearn: 1
     """
     ...
 
@@ -49207,6 +50356,7 @@ def full(
     usage.dask: 20
     usage.matplotlib: 9
     usage.networkx: 2
+    usage.orange3: 13
     usage.pandas: 30
     usage.scipy: 185
     usage.seaborn: 7
@@ -50897,6 +52047,7 @@ def hsplit(ary: numpy.ndarray, indices_or_sections: Union[List[int], int]):
 def hstack(tup: List[numpy.ndarray]):
     """
     usage.matplotlib: 18
+    usage.orange3: 21
     usage.scipy: 87
     usage.skimage: 28
     usage.sklearn: 79
@@ -50946,6 +52097,7 @@ def hstack(tup: Tuple[numpy.ndarray, numpy.ndarray]):
     """
     usage.dask: 3
     usage.matplotlib: 1
+    usage.orange3: 28
     usage.scipy: 88
     usage.skimage: 3
     usage.sklearn: 39
@@ -50957,10 +52109,39 @@ def hstack(tup: Tuple[numpy.ndarray, numpy.ndarray]):
 @overload
 def hstack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
     """
+    usage.orange3: 4
     usage.scipy: 9
     usage.skimage: 1
     usage.sklearn: 10
     usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def hstack(tup: Tuple[numpy.ndarray, List[int]]):
+    """
+    usage.orange3: 3
+    usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def hstack(tup: Tuple[Orange.data.table.Table, Orange.data.table.Table]):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def hstack(tup: numpy.ndarray):
+    """
+    usage.dask: 1
+    usage.orange3: 1
+    usage.sklearn: 1
+    usage.statsmodels: 1
     """
     ...
 
@@ -51044,16 +52225,6 @@ def hstack(tup: List[Union[pandas.core.frame.DataFrame, numpy.ndarray]]):
 def hstack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray]):
     """
     usage.scipy: 6
-    usage.statsmodels: 1
-    """
-    ...
-
-
-@overload
-def hstack(tup: numpy.ndarray):
-    """
-    usage.dask: 1
-    usage.sklearn: 1
     usage.statsmodels: 1
     """
     ...
@@ -51217,14 +52388,6 @@ def hstack(tup: Tuple[numpy.ndarray, numpy.float64]):
     """
     usage.scipy: 1
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def hstack(tup: Tuple[numpy.ndarray, List[int]]):
-    """
-    usage.scipy: 2
     """
     ...
 
@@ -51560,6 +52723,7 @@ def hstack(tup: object):
     """
     usage.dask: 7
     usage.matplotlib: 37
+    usage.orange3: 59
     usage.pandas: 9
     usage.scipy: 243
     usage.skimage: 36
@@ -51630,6 +52794,7 @@ def identity(n: int):
     """
     usage.matplotlib: 1
     usage.networkx: 3
+    usage.orange3: 1
     usage.scipy: 58
     usage.sklearn: 1
     usage.statsmodels: 16
@@ -51666,6 +52831,7 @@ def identity(n: int, dtype: Union[numpy.dtype, type] = ...):
     """
     usage.matplotlib: 3
     usage.networkx: 4
+    usage.orange3: 1
     usage.scipy: 67
     usage.sklearn: 1
     usage.statsmodels: 16
@@ -52055,6 +53221,48 @@ def insert(arr: numpy.ndarray, obj: int, values: numpy.ndarray, axis: int):
 @overload
 def insert(
     arr: numpy.ndarray,
+    obj: numpy.int64,
+    values: List[Union[numpy.int64, int]],
+    axis: int,
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def insert(
+    arr: numpy.ndarray,
+    obj: numpy.int64,
+    values: List[Union[numpy.float64, int]],
+    axis: int,
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def insert(arr: numpy.ndarray, obj: numpy.int64, values: int):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def insert(arr: numpy.ndarray, obj: numpy.int64, values: numpy.int64):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def insert(
+    arr: numpy.ndarray,
     obj: Union[numpy.ndarray, int],
     values: Union[None, float, numpy.int64, int],
 ):
@@ -52155,6 +53363,7 @@ def insert(
     usage.dask: 11
     usage.geopandas: 1
     usage.matplotlib: 2
+    usage.orange3: 5
     usage.pandas: 15
     usage.scipy: 145
     usage.skimage: 3
@@ -52180,6 +53389,14 @@ def interp(x: numpy.ndarray, xp: numpy.ndarray, fp: numpy.ndarray):
     usage.scipy: 6
     usage.skimage: 4
     usage.sklearn: 5
+    """
+    ...
+
+
+@overload
+def interp(x: float, xp: numpy.ndarray, fp: numpy.ndarray):
+    """
+    usage.orange3: 1
     """
     ...
 
@@ -52406,6 +53623,7 @@ def interp(
     """
     usage.dask: 8
     usage.matplotlib: 20
+    usage.orange3: 1
     usage.pandas: 3
     usage.scipy: 13
     usage.skimage: 6
@@ -52464,8 +53682,17 @@ def isclose(
     a: numpy.ndarray, b: numpy.ndarray, rtol: float, atol: float, equal_nan: bool
 ):
     """
+    usage.orange3: 1
     usage.sklearn: 1
     usage.xarray: 11
+    """
+    ...
+
+
+@overload
+def isclose(a: numpy.ndarray, b: int, rtol: float, atol: float, equal_nan: bool):
+    """
+    usage.orange3: 1
     """
     ...
 
@@ -52976,6 +54203,7 @@ def isclose(
     usage.dask: 3
     usage.matplotlib: 10
     usage.networkx: 1
+    usage.orange3: 2
     usage.pandas: 4
     usage.scipy: 66
     usage.seaborn: 2
@@ -53671,6 +54899,7 @@ def isscalar(element: numpy.ndarray):
     """
     usage.dask: 145
     usage.matplotlib: 3
+    usage.orange3: 2
     usage.scipy: 61
     usage.seaborn: 3
     usage.skimage: 7
@@ -53770,6 +54999,7 @@ def isscalar(element: numpy.float64):
     """
     usage.dask: 9
     usage.matplotlib: 1
+    usage.orange3: 1
     usage.scipy: 19
     usage.seaborn: 1
     usage.skimage: 2
@@ -55685,6 +56915,7 @@ def isscalar(element: object):
     """
     usage.dask: 551
     usage.matplotlib: 30
+    usage.orange3: 3
     usage.scipy: 291
     usage.seaborn: 18
     usage.skimage: 72
@@ -56222,6 +57453,27 @@ def issubdtype(arg1: Type[numpy.bool_], arg2: Type[numpy.uint16]):
 
 
 @overload
+def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.number]):
+    """
+    usage.dask: 16
+    usage.orange3: 2
+    usage.pyjanitor: 2
+    usage.scipy: 8
+    usage.xarray: 13
+    """
+    ...
+
+
+@overload
+def issubdtype(arg1: numpy.dtype, arg2: numpy.dtype):
+    """
+    usage.orange3: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
 def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.datetime64]):
     """
     usage.dask: 14
@@ -56244,17 +57496,6 @@ def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.complexfloating]):
     """
     usage.scipy: 124
     usage.xarray: 18
-    """
-    ...
-
-
-@overload
-def issubdtype(arg1: numpy.dtype, arg2: Type[numpy.number]):
-    """
-    usage.dask: 16
-    usage.pyjanitor: 2
-    usage.scipy: 8
-    usage.xarray: 13
     """
     ...
 
@@ -56329,14 +57570,6 @@ def issubdtype(arg1: Type[numpy.generic], arg2: Type[numpy.timedelta64]):
 def issubdtype(arg1: Type[numpy.generic], arg2: Type[numpy.datetime64]):
     """
     usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def issubdtype(arg1: numpy.dtype, arg2: numpy.dtype):
-    """
-    usage.statsmodels: 2
     """
     ...
 
@@ -56628,6 +57861,7 @@ def issubdtype(
     """
     usage.dask: 49
     usage.matplotlib: 35
+    usage.orange3: 4
     usage.pandas: 83
     usage.pyjanitor: 2
     usage.scipy: 466
@@ -58644,6 +59878,7 @@ def ix_(*args: Literal["v", "t"]):
     """
     usage.matplotlib: 6
     usage.networkx: 3
+    usage.orange3: 4
     usage.scipy: 1
     usage.skimage: 2
     usage.sklearn: 4
@@ -58665,6 +59900,7 @@ def ix_(*args: Literal["v", "t"]):
     """
     usage.matplotlib: 6
     usage.networkx: 3
+    usage.orange3: 4
     usage.scipy: 1
     usage.skimage: 2
     usage.sklearn: 4
@@ -58917,6 +60153,7 @@ def linspace(start: float, stop: float, num: int):
     """
     usage.koalas: 2
     usage.matplotlib: 51
+    usage.orange3: 2
     usage.scipy: 66
     usage.seaborn: 2
     usage.skimage: 6
@@ -59064,6 +60301,7 @@ def linspace(start: float, stop: float, num: int, endpoint: bool):
 def linspace(start: int, stop: float, num: int, endpoint: bool):
     """
     usage.matplotlib: 3
+    usage.orange3: 1
     usage.scipy: 29
     usage.skimage: 1
     usage.sklearn: 2
@@ -59404,6 +60642,7 @@ def linspace(
     usage.koalas: 10
     usage.matplotlib: 184
     usage.networkx: 7
+    usage.orange3: 3
     usage.pandas: 19
     usage.prophet: 1
     usage.sample-usage: 1
@@ -60202,6 +61441,7 @@ def mean(a: numpy.ndarray):
     """
     usage.dask: 21
     usage.matplotlib: 7
+    usage.orange3: 2
     usage.prophet: 1
     usage.pyjanitor: 1
     usage.scipy: 26
@@ -60219,6 +61459,7 @@ def mean(a: numpy.ndarray, axis: int):
     """
     usage.dask: 15
     usage.matplotlib: 5
+    usage.orange3: 3
     usage.scipy: 32
     usage.skimage: 14
     usage.sklearn: 73
@@ -60285,6 +61526,46 @@ def mean(a: List[numpy.float64]):
     usage.geopandas: 2
     usage.skimage: 2
     usage.sklearn: 9
+    """
+    ...
+
+
+@overload
+def mean(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    usage.orange3: 2
+    usage.scipy: 2
+    usage.xarray: 3
+    """
+    ...
+
+
+@overload
+def mean(a: List[int]):
+    """
+    usage.dask: 1
+    usage.orange3: 1
+    usage.scipy: 2
+    usage.seaborn: 1
+    usage.sklearn: 3
+    usage.statsmodels: 8
+    """
+    ...
+
+
+@overload
+def mean(a: Orange.data.table.Table, axis: int):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def mean(a: List[Union[int, float]]):
+    """
+    usage.orange3: 1
     """
     ...
 
@@ -60438,31 +61719,9 @@ def mean(a: numpy.ndarray, keepdims: bool):
 
 
 @overload
-def mean(a: numpy.ndarray, axis: int, keepdims: bool):
-    """
-    usage.dask: 1
-    usage.scipy: 2
-    usage.xarray: 3
-    """
-    ...
-
-
-@overload
 def mean(a: numpy.ndarray, axis: Tuple[int, int], keepdims: bool):
     """
     usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def mean(a: List[int]):
-    """
-    usage.dask: 1
-    usage.scipy: 2
-    usage.seaborn: 1
-    usage.sklearn: 3
-    usage.statsmodels: 8
     """
     ...
 
@@ -60820,6 +62079,7 @@ def mean(
     usage.geopandas: 2
     usage.matplotlib: 12
     usage.networkx: 6
+    usage.orange3: 10
     usage.pandas: 26
     usage.prophet: 2
     usage.pyjanitor: 1
@@ -61532,9 +62792,18 @@ def nan_to_num(x: List[numpy.float64]):
 def nan_to_num(x: numpy.ndarray):
     """
     usage.dask: 4
+    usage.orange3: 3
     usage.scipy: 4
     usage.sklearn: 7
     usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def nan_to_num(x: numpy.ndarray, copy: bool):
+    """
+    usage.orange3: 4
     """
     ...
 
@@ -61611,9 +62880,10 @@ def nan_to_num(x: dask.dataframe.core.DataFrame):
     ...
 
 
-def nan_to_num(x: object):
+def nan_to_num(x: object, copy: bool = ...):
     """
     usage.dask: 23
+    usage.orange3: 7
     usage.scipy: 4
     usage.skimage: 1
     usage.sklearn: 7
@@ -61999,6 +63269,7 @@ def nancumsum(a: object, axis: Union[int, None] = ..., dtype: None = ...):
 def nanmax(a: numpy.ndarray, axis: int):
     """
     usage.dask: 6
+    usage.orange3: 4
     usage.sklearn: 6
     usage.xarray: 4
     """
@@ -62006,9 +63277,20 @@ def nanmax(a: numpy.ndarray, axis: int):
 
 
 @overload
-def nanmax(a: numpy.ndarray, axis: Tuple[int]):
+def nanmax(a: numpy.ndarray, axis: None):
     """
-    usage.xarray: 1
+    usage.orange3: 4
+    usage.sklearn: 2
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def nanmax(a: List[Union[numpy.float64, int]]):
+    """
+    usage.networkx: 1
+    usage.orange3: 2
     """
     ...
 
@@ -62019,6 +63301,7 @@ def nanmax(a: numpy.ndarray):
     usage.dask: 10
     usage.geopandas: 4
     usage.matplotlib: 2
+    usage.orange3: 1
     usage.seaborn: 1
     usage.xarray: 4
     """
@@ -62026,10 +63309,17 @@ def nanmax(a: numpy.ndarray):
 
 
 @overload
-def nanmax(a: numpy.ndarray, axis: None):
+def nanmax(a: List[Union[float, int]]):
     """
-    usage.sklearn: 2
-    usage.xarray: 2
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def nanmax(a: numpy.ndarray, axis: Tuple[int]):
+    """
+    usage.xarray: 1
     """
     ...
 
@@ -62165,14 +63455,6 @@ def nanmax(a: numpy.ndarray, axis: Tuple[int, int]):
     ...
 
 
-@overload
-def nanmax(a: List[Union[numpy.float64, int]]):
-    """
-    usage.networkx: 1
-    """
-    ...
-
-
 def nanmax(
     _0: numpy.ndarray = ...,
     /,
@@ -62187,10 +63469,44 @@ def nanmax(
     usage.geopandas: 4
     usage.matplotlib: 2
     usage.networkx: 1
+    usage.orange3: 13
     usage.pandas: 7
     usage.seaborn: 1
     usage.sklearn: 8
     usage.xarray: 14
+    """
+    ...
+
+
+@overload
+def nanmean(a: numpy.ndarray, axis: int):
+    """
+    usage.dask: 5
+    usage.orange3: 5
+    usage.prophet: 2
+    usage.sklearn: 4
+    usage.statsmodels: 10
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def nanmean(a: numpy.ndarray, axis: None):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def nanmean(a: numpy.ndarray):
+    """
+    usage.dask: 1
+    usage.orange3: 2
+    usage.prophet: 2
+    usage.statsmodels: 1
+    usage.xarray: 3
     """
     ...
 
@@ -62236,18 +63552,6 @@ def nanmean(a: numpy.ndarray, axis: None, dtype: Type[numpy.float64]):
 
 
 @overload
-def nanmean(a: numpy.ndarray, axis: int):
-    """
-    usage.dask: 5
-    usage.prophet: 2
-    usage.sklearn: 4
-    usage.statsmodels: 10
-    usage.xarray: 1
-    """
-    ...
-
-
-@overload
 def nanmean(a: numpy.ndarray, axis: Tuple[None, ...], dtype: None):
     """
     usage.xarray: 1
@@ -62259,17 +63563,6 @@ def nanmean(a: numpy.ndarray, axis: Tuple[None, ...], dtype: None):
 def nanmean(a: numpy.ndarray, axis: Tuple[int], dtype: None):
     """
     usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def nanmean(a: numpy.ndarray):
-    """
-    usage.dask: 1
-    usage.prophet: 2
-    usage.statsmodels: 1
-    usage.xarray: 3
     """
     ...
 
@@ -62397,12 +63690,13 @@ def nanmean(a: numpy.ndarray, axis: Tuple[int, int]):
 
 def nanmean(
     a: object,
-    axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
+    axis: Union[int, None, Tuple[Union[int, None], ...]] = ...,
     keepdims: bool = ...,
     dtype: Union[None, type] = ...,
 ):
     """
     usage.dask: 11
+    usage.orange3: 8
     usage.pandas: 2
     usage.prophet: 4
     usage.scipy: 1
@@ -62414,10 +63708,27 @@ def nanmean(
 
 
 @overload
+def nanmedian(a: numpy.ndarray):
+    """
+    usage.orange3: 5
+    """
+    ...
+
+
+@overload
 def nanmedian(a: numpy.ndarray, axis: int):
     """
+    usage.orange3: 2
     usage.sklearn: 2
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def nanmedian(a: numpy.ndarray, axis: None):
+    """
+    usage.orange3: 1
     """
     ...
 
@@ -62465,6 +63776,7 @@ def nanmedian(a: numpy.ndarray, axis: int, keepdims: bool):
 def nanmedian(a: object, axis: Union[int, None, List[int]] = ..., keepdims: bool = ...):
     """
     usage.dask: 8
+    usage.orange3: 8
     usage.pandas: 3
     usage.sklearn: 2
     usage.xarray: 3
@@ -62473,20 +63785,31 @@ def nanmedian(a: object, axis: Union[int, None, List[int]] = ..., keepdims: bool
 
 
 @overload
-def nanmin(a: numpy.ndarray, axis: Tuple[None, ...]):
+def nanmin(a: numpy.ndarray, axis: int):
     """
-    usage.dask: 4
-    usage.xarray: 1
+    usage.dask: 7
+    usage.orange3: 4
+    usage.sklearn: 5
+    usage.xarray: 3
     """
     ...
 
 
 @overload
-def nanmin(a: numpy.ndarray, axis: int):
+def nanmin(a: numpy.ndarray, axis: None):
     """
-    usage.dask: 7
-    usage.sklearn: 5
-    usage.xarray: 3
+    usage.orange3: 4
+    usage.sklearn: 2
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def nanmin(a: List[Union[numpy.float64, int]]):
+    """
+    usage.networkx: 1
+    usage.orange3: 2
     """
     ...
 
@@ -62497,6 +63820,7 @@ def nanmin(a: numpy.ndarray):
     usage.dask: 10
     usage.geopandas: 4
     usage.matplotlib: 2
+    usage.orange3: 1
     usage.seaborn: 1
     usage.sklearn: 2
     usage.xarray: 4
@@ -62505,10 +63829,18 @@ def nanmin(a: numpy.ndarray):
 
 
 @overload
-def nanmin(a: numpy.ndarray, axis: None):
+def nanmin(a: List[Union[float, int]]):
     """
-    usage.sklearn: 2
-    usage.xarray: 2
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def nanmin(a: numpy.ndarray, axis: Tuple[None, ...]):
+    """
+    usage.dask: 4
+    usage.xarray: 1
     """
     ...
 
@@ -62636,14 +63968,6 @@ def nanmin(a: numpy.ndarray, axis: Tuple[int, int]):
     ...
 
 
-@overload
-def nanmin(a: List[Union[numpy.float64, int]]):
-    """
-    usage.networkx: 1
-    """
-    ...
-
-
 def nanmin(
     _0: numpy.ndarray = ...,
     /,
@@ -62658,6 +63982,7 @@ def nanmin(
     usage.geopandas: 4
     usage.matplotlib: 2
     usage.networkx: 1
+    usage.orange3: 13
     usage.pandas: 6
     usage.seaborn: 1
     usage.sklearn: 9
@@ -62981,6 +64306,31 @@ def nanquantile(
 
 
 @overload
+def nanstd(a: numpy.ndarray):
+    """
+    usage.dask: 1
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def nanstd(a: numpy.ndarray, axis: None, ddof: int):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def nanstd(a: numpy.ndarray, axis: int, ddof: int):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
 def nanstd(a: numpy.ndarray, axis: int):
     """
     usage.dask: 5
@@ -63018,14 +64368,6 @@ def nanstd(a: object, axis: int, dtype: None, ddof: int):
 def nanstd(a: numpy.ndarray, axis: int, ddof: int, keepdims: bool):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def nanstd(a: numpy.ndarray):
-    """
-    usage.dask: 1
     """
     ...
 
@@ -63072,13 +64414,14 @@ def nanstd(a: numpy.ndarray, axis: Tuple[int, int]):
 
 def nanstd(
     a: object,
-    axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
     dtype: None = ...,
+    axis: Union[int, None, Tuple[Union[None, int], ...]] = ...,
     ddof: int = ...,
     keepdims: bool = ...,
 ):
     """
     usage.dask: 11
+    usage.orange3: 3
     usage.scipy: 1
     usage.sklearn: 1
     usage.xarray: 4
@@ -63087,19 +64430,10 @@ def nanstd(
 
 
 @overload
-def nansum(a: numpy.ndarray, axis: int):
-    """
-    usage.dask: 11
-    usage.sklearn: 2
-    usage.xarray: 3
-    """
-    ...
-
-
-@overload
 def nansum(a: numpy.ndarray):
     """
     usage.dask: 18
+    usage.orange3: 4
     usage.scipy: 1
     usage.sklearn: 4
     usage.statsmodels: 2
@@ -63111,7 +64445,19 @@ def nansum(a: numpy.ndarray):
 @overload
 def nansum(a: numpy.ndarray, axis: None):
     """
+    usage.orange3: 1
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def nansum(a: numpy.ndarray, axis: int):
+    """
+    usage.dask: 11
+    usage.orange3: 1
+    usage.sklearn: 2
+    usage.xarray: 3
     """
     ...
 
@@ -63262,6 +64608,7 @@ def nansum(
     """
     usage.dask: 82
     usage.networkx: 1
+    usage.orange3: 6
     usage.pandas: 6
     usage.scipy: 1
     usage.sklearn: 9
@@ -63272,9 +64619,19 @@ def nansum(
 
 
 @overload
+def nanvar(a: numpy.ndarray, axis: None):
+    """
+    usage.orange3: 1
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
 def nanvar(a: numpy.ndarray, axis: int):
     """
     usage.dask: 4
+    usage.orange3: 1
     usage.sklearn: 4
     usage.xarray: 2
     """
@@ -63285,6 +64642,7 @@ def nanvar(a: numpy.ndarray, axis: int):
 def nanvar(a: numpy.ndarray):
     """
     usage.dask: 2
+    usage.orange3: 1
     usage.sklearn: 4
     usage.statsmodels: 1
     usage.xarray: 4
@@ -63293,15 +64651,24 @@ def nanvar(a: numpy.ndarray):
 
 
 @overload
-def nanvar(a: numpy.ndarray, axis: None, dtype: Type[float], ddof: int):
+def nanvar(a: numpy.ndarray, axis: None, ddof: int):
     """
-    usage.xarray: 1
+    usage.orange3: 1
     """
     ...
 
 
 @overload
-def nanvar(a: numpy.ndarray, axis: None):
+def nanvar(a: numpy.ndarray, axis: int, ddof: int):
+    """
+    usage.orange3: 1
+    usage.scipy: 1
+    """
+    ...
+
+
+@overload
+def nanvar(a: numpy.ndarray, axis: None, dtype: Type[float], ddof: int):
     """
     usage.xarray: 1
     """
@@ -63344,14 +64711,6 @@ def nanvar(a: object, axis: None, dtype: None, ddof: int):
 def nanvar(a: object, axis: int, dtype: None, ddof: int):
     """
     usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def nanvar(a: numpy.ndarray, axis: int, ddof: int):
-    """
-    usage.scipy: 1
     """
     ...
 
@@ -63413,6 +64772,7 @@ def nanvar(
 ):
     """
     usage.dask: 11
+    usage.orange3: 5
     usage.scipy: 1
     usage.sklearn: 10
     usage.statsmodels: 1
@@ -63808,6 +65168,7 @@ def nonzero(a: numpy.ndarray):
     usage.dask: 2
     usage.matplotlib: 5
     usage.networkx: 1
+    usage.orange3: 5
     usage.pandas: 4
     usage.scipy: 73
     usage.skimage: 24
@@ -63880,6 +65241,7 @@ def nonzero(a: object):
     usage.dask: 2
     usage.matplotlib: 5
     usage.networkx: 2
+    usage.orange3: 5
     usage.pandas: 4
     usage.scipy: 80
     usage.skimage: 24
@@ -64052,6 +65414,7 @@ def ones(shape: Tuple[int, int]):
     usage.dask: 46
     usage.matplotlib: 4
     usage.networkx: 4
+    usage.orange3: 19
     usage.sample-usage: 1
     usage.scipy: 89
     usage.seaborn: 1
@@ -64067,6 +65430,7 @@ def ones(shape: Tuple[int, int]):
 def ones(shape: Tuple[int, int, int]):
     """
     usage.dask: 14
+    usage.orange3: 1
     usage.scipy: 9
     usage.skimage: 28
     usage.sklearn: 2
@@ -64127,6 +65491,7 @@ def ones(shape: int):
     usage.dask: 39
     usage.matplotlib: 40
     usage.networkx: 1
+    usage.orange3: 9
     usage.prophet: 1
     usage.scipy: 206
     usage.seaborn: 16
@@ -64249,6 +65614,7 @@ def ones(shape: Tuple[int], dtype: Type[float]):
 def ones(shape: int, dtype: Type[bool]):
     """
     usage.dask: 1
+    usage.orange3: 5
     usage.scipy: 9
     usage.seaborn: 2
     usage.skimage: 2
@@ -64416,6 +65782,23 @@ def ones(shape: numpy.int64):
     usage.skimage: 2
     usage.sklearn: 2
     usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[int], dtype: Literal["bool"]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def ones(shape: Tuple[int, int], dtype: Type[numpy.int64]):
+    """
+    usage.orange3: 1
+    usage.scipy: 5
     """
     ...
 
@@ -64784,14 +66167,6 @@ def ones(shape: List[int], dtype: Type[numpy.float32]):
 def ones(shape: List[int], dtype: Type[numpy.float64]):
     """
     usage.scipy: 28
-    """
-    ...
-
-
-@overload
-def ones(shape: Tuple[int, int], dtype: Type[numpy.int64]):
-    """
-    usage.scipy: 5
     """
     ...
 
@@ -65323,6 +66698,7 @@ def ones(
     usage.dask: 191
     usage.matplotlib: 62
     usage.networkx: 6
+    usage.orange3: 36
     usage.pandas: 116
     usage.prophet: 1
     usage.sample-usage: 1
@@ -65341,6 +66717,7 @@ def ones_like(a: numpy.ndarray):
     """
     usage.dask: 2
     usage.matplotlib: 8
+    usage.orange3: 1
     usage.prophet: 4
     usage.scipy: 39
     usage.seaborn: 2
@@ -65575,6 +66952,7 @@ def ones_like(
     """
     usage.dask: 11
     usage.matplotlib: 15
+    usage.orange3: 1
     usage.pandas: 6
     usage.prophet: 4
     usage.scipy: 62
@@ -67748,6 +69126,7 @@ def prod(a: Tuple[int, int]):
     """
     usage.dask: 2
     usage.matplotlib: 2
+    usage.orange3: 9
     usage.scipy: 9
     usage.skimage: 2
     usage.sklearn: 3
@@ -68177,6 +69556,7 @@ def prod(
     """
     usage.dask: 100
     usage.matplotlib: 4
+    usage.orange3: 9
     usage.pandas: 52
     usage.scipy: 63
     usage.skimage: 9
@@ -68283,6 +69663,14 @@ def ptp(a: numpy.ndarray):
 
 
 @overload
+def ptp(a: Orange.data.table.Table, axis: int):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
 def ptp(a: pandas.core.series.Series):
     """
     usage.statsmodels: 1
@@ -68337,6 +69725,7 @@ def ptp(
     a: Union[
         numpy.ndarray,
         pandas.core.series.Series,
+        Orange.data.table.Table,
         List[int],
         Tuple[numpy.float64, numpy.float64],
     ],
@@ -68345,6 +69734,7 @@ def ptp(
     """
     usage.dask: 2
     usage.matplotlib: 9
+    usage.orange3: 1
     usage.pandas: 2
     usage.seaborn: 1
     usage.skimage: 10
@@ -68590,6 +69980,7 @@ def ravel(a: List[numpy.float64]):
 def ravel(a: numpy.matrix):
     """
     usage.networkx: 2
+    usage.orange3: 1
     usage.scipy: 9
     usage.skimage: 3
     usage.sklearn: 8
@@ -68888,6 +70279,7 @@ def ravel(a: object, order: Literal["K", "F"] = ...):
     usage.koalas: 8
     usage.matplotlib: 25
     usage.networkx: 3
+    usage.orange3: 1
     usage.pandas: 2
     usage.scipy: 163
     usage.seaborn: 5
@@ -69307,10 +70699,23 @@ def real_if_close(a: numpy.ndarray, tol: int = ...):
 
 
 @overload
+def repeat(a: float, repeats: int):
+    """
+    usage.networkx: 4
+    usage.orange3: 3
+    usage.scipy: 1
+    usage.sklearn: 9
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
 def repeat(a: numpy.ndarray, repeats: int, axis: int):
     """
     usage.dask: 4
     usage.matplotlib: 16
+    usage.orange3: 1
     usage.scipy: 1
     usage.sklearn: 3
     usage.statsmodels: 6
@@ -69390,17 +70795,6 @@ def repeat(a: List[int], repeats: List[int]):
     """
     usage.scipy: 1
     usage.statsmodels: 1
-    """
-    ...
-
-
-@overload
-def repeat(a: float, repeats: int):
-    """
-    usage.networkx: 4
-    usage.scipy: 1
-    usage.sklearn: 9
-    usage.statsmodels: 3
     """
     ...
 
@@ -69633,6 +71027,7 @@ def repeat(
     usage.dask: 4
     usage.matplotlib: 25
     usage.networkx: 7
+    usage.orange3: 4
     usage.pandas: 168
     usage.scipy: 48
     usage.seaborn: 11
@@ -74037,6 +75432,7 @@ def rot90(m: numpy.ndarray, k: int = ...):
 def round_(a: float):
     """
     usage.matplotlib: 1
+    usage.orange3: 1
     usage.scipy: 6
     usage.skimage: 1
     usage.statsmodels: 1
@@ -74179,6 +75575,7 @@ def round_(a: Tuple[numpy.ndarray, numpy.ndarray], decimals: int):
 def round_(a: numpy.float64):
     """
     usage.matplotlib: 2
+    usage.orange3: 1
     usage.scipy: 7
     usage.skimage: 1
     usage.sklearn: 5
@@ -74297,6 +75694,7 @@ def round_(
     """
     usage.dask: 9
     usage.matplotlib: 9
+    usage.orange3: 2
     usage.pandas: 12
     usage.scipy: 50
     usage.skimage: 44
@@ -74513,6 +75911,7 @@ def sctype2char(sctype: numpy.dtype):
 @overload
 def searchsorted(a: numpy.ndarray, v: int):
     """
+    usage.orange3: 3
     usage.scipy: 2
     usage.skimage: 3
     usage.sklearn: 3
@@ -74530,6 +75929,22 @@ def searchsorted(a: numpy.ndarray, v: numpy.float64):
     usage.skimage: 1
     usage.sklearn: 3
     usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def searchsorted(a: numpy.ndarray, v: int, side: Literal["right"]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def searchsorted(a: numpy.ndarray, v: int, side: Literal["left"]):
+    """
+    usage.orange3: 1
     """
     ...
 
@@ -74817,6 +76232,7 @@ def searchsorted(
     """
     usage.dask: 18
     usage.matplotlib: 3
+    usage.orange3: 5
     usage.pandas: 24
     usage.scipy: 52
     usage.seaborn: 2
@@ -74965,6 +76381,7 @@ def set_printoptions(
 @overload
 def setdiff1d(ar1: numpy.ndarray, ar2: numpy.ndarray, assume_unique: bool):
     """
+    usage.orange3: 1
     usage.pandas: 3
     usage.scipy: 1
     usage.sklearn: 26
@@ -75114,6 +76531,7 @@ def setdiff1d(
     assume_unique: bool = ...,
 ):
     """
+    usage.orange3: 1
     usage.pandas: 3
     usage.scipy: 1
     usage.sklearn: 56
@@ -75700,6 +77118,7 @@ def sort(a: numpy.ndarray):
 def sort(a: numpy.ndarray, axis: int):
     """
     usage.dask: 8
+    usage.orange3: 7
     usage.scipy: 1
     usage.skimage: 1
     usage.sklearn: 5
@@ -75866,6 +77285,7 @@ def sort(
     usage.matplotlib: 4
     usage.modin: 2
     usage.networkx: 2
+    usage.orange3: 7
     usage.pandas: 33
     usage.prophet: 1
     usage.scipy: 217
@@ -75888,6 +77308,7 @@ def sort_complex(a: numpy.ndarray):
 @overload
 def split(ary: numpy.ndarray, indices_or_sections: int):
     """
+    usage.orange3: 4
     usage.skimage: 1
     usage.statsmodels: 9
     """
@@ -75920,6 +77341,7 @@ def split(
 ):
     """
     usage.matplotlib: 2
+    usage.orange3: 4
     usage.pandas: 4
     usage.scipy: 8
     usage.skimage: 1
@@ -75943,6 +77365,7 @@ def squeeze(a: numpy.ndarray, axis: int):
 @overload
 def squeeze(a: numpy.ndarray):
     """
+    usage.orange3: 1
     usage.scipy: 21
     usage.seaborn: 1
     usage.skimage: 12
@@ -76093,6 +77516,7 @@ def squeeze(a: List[int]):
 def squeeze(a: object, axis: Union[int, None, Tuple[int, ...]] = ...):
     """
     usage.dask: 3
+    usage.orange3: 1
     usage.pandas: 5
     usage.scipy: 35
     usage.seaborn: 2
@@ -76289,17 +77713,10 @@ def std(a: numpy.ndarray):
 
 
 @overload
-def std(a: numpy.ndarray, axis: None):
+def std(a: List[int]):
     """
-    usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def std(a: object, axis: None):
-    """
-    usage.xarray: 1
+    usage.dask: 1
+    usage.orange3: 1
     """
     ...
 
@@ -76308,9 +77725,54 @@ def std(a: object, axis: None):
 def std(a: numpy.ndarray, axis: int):
     """
     usage.dask: 12
+    usage.orange3: 2
     usage.sklearn: 6
     usage.statsmodels: 6
     usage.xarray: 3
+    """
+    ...
+
+
+@overload
+def std(a: Orange.data.table.Table, axis: int):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def std(a: numpy.ndarray, axis: None):
+    """
+    usage.orange3: 1
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def std(a: numpy.ndarray, axis: None, ddof: int):
+    """
+    usage.orange3: 1
+    usage.scipy: 1
+    """
+    ...
+
+
+@overload
+def std(a: numpy.ndarray, axis: int, ddof: int):
+    """
+    usage.orange3: 1
+    usage.scipy: 6
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def std(a: object, axis: None):
+    """
+    usage.xarray: 1
     """
     ...
 
@@ -76398,15 +77860,6 @@ def std(a: numpy.ndarray, ddof: int):
 
 
 @overload
-def std(a: numpy.ndarray, axis: int, ddof: int):
-    """
-    usage.scipy: 6
-    usage.statsmodels: 4
-    """
-    ...
-
-
-@overload
 def std(a: numpy.flatiter):
     """
     usage.statsmodels: 1
@@ -76437,14 +77890,6 @@ def std(
 
 @overload
 def std(a: list):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def std(a: numpy.ndarray, axis: None, ddof: int):
     """
     usage.scipy: 1
     """
@@ -76556,14 +78001,6 @@ def std(a: numpy.ndarray, axis: Tuple[None, ...], keepdims: bool):
 
 
 @overload
-def std(a: List[int]):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
 def std(
     a: dask.dataframe.core.DataFrame,
     axis: int,
@@ -76599,6 +78036,7 @@ def std(
 ):
     """
     usage.dask: 58
+    usage.orange3: 7
     usage.pandas: 20
     usage.scipy: 14
     usage.seaborn: 2
@@ -76625,6 +78063,7 @@ def sum(a: numpy.ndarray):
     usage.dask: 16
     usage.matplotlib: 13
     usage.networkx: 5
+    usage.orange3: 38
     usage.prophet: 3
     usage.scipy: 182
     usage.skimage: 109
@@ -76641,6 +78080,7 @@ def sum(a: numpy.ndarray, axis: int):
     usage.dask: 7
     usage.matplotlib: 14
     usage.networkx: 3
+    usage.orange3: 26
     usage.scipy: 128
     usage.skimage: 15
     usage.sklearn: 105
@@ -76684,6 +78124,104 @@ def sum(a: numpy.ndarray, axis: Tuple[int, int]):
     usage.scipy: 1
     usage.skimage: 1
     usage.xarray: 4
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: int, keepdims: bool):
+    """
+    usage.dask: 1
+    usage.orange3: 5
+    usage.scipy: 5
+    usage.sklearn: 1
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.ndarray, axis: None, keepdims: bool):
+    """
+    usage.orange3: 1
+    usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def sum(a: scipy.sparse.csr.csr_matrix):
+    """
+    usage.orange3: 2
+    usage.scipy: 1
+    """
+    ...
+
+
+@overload
+def sum(a: Orange.statistics.distribution.Discrete):
+    """
+    usage.orange3: 4
+    """
+    ...
+
+
+@overload
+def sum(a: Orange.statistics.distribution.Continuous):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def sum(a: numpy.float64):
+    """
+    usage.orange3: 4
+    usage.scipy: 1
+    usage.sklearn: 2
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def sum(a: Orange.statistics.contingency.Discrete, axis: int):
+    """
+    usage.orange3: 13
+    """
+    ...
+
+
+@overload
+def sum(a: Orange.statistics.contingency.Discrete):
+    """
+    usage.orange3: 5
+    """
+    ...
+
+
+@overload
+def sum(a: Orange.data.table.Table):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def sum(a: List[numpy.ndarray]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def sum(a: List[numpy.int64]):
+    """
+    usage.dask: 1
+    usage.orange3: 2
     """
     ...
 
@@ -76752,17 +78290,6 @@ def sum(a: numpy.ndarray, axis: int, dtype: None):
 def sum(a: numpy.ndarray, axis: Tuple[None, ...]):
     """
     usage.dask: 4
-    usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def sum(a: numpy.ndarray, axis: int, keepdims: bool):
-    """
-    usage.dask: 1
-    usage.scipy: 5
-    usage.sklearn: 1
     usage.xarray: 1
     """
     ...
@@ -76971,16 +78498,6 @@ def sum(a: numpy.ndarray, axis: Tuple[int, int, int]):
 
 
 @overload
-def sum(a: numpy.float64):
-    """
-    usage.scipy: 1
-    usage.sklearn: 2
-    usage.statsmodels: 3
-    """
-    ...
-
-
-@overload
 def sum(a: numpy.flatiter):
     """
     usage.statsmodels: 2
@@ -77125,14 +78642,6 @@ def sum(a: numpy.matrix):
 
 
 @overload
-def sum(a: scipy.sparse.csr.csr_matrix):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def sum(a: scipy.sparse.csc.csc_matrix):
     """
     usage.scipy: 1
@@ -77176,14 +78685,6 @@ def sum(a: scipy.sparse.dia.dia_matrix):
 def sum(a: scipy.sparse.bsr.bsr_matrix):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def sum(a: numpy.ndarray, axis: None, keepdims: bool):
-    """
-    usage.scipy: 2
     """
     ...
 
@@ -77297,14 +78798,6 @@ def sum(a: numpy.ndarray, axis: Tuple[int], dtype: numpy.dtype, keepdims: bool):
 
 @overload
 def sum(a: numpy.ndarray, axis: int, dtype: Literal["u4"]):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
-def sum(a: List[numpy.int64]):
     """
     usage.dask: 1
     """
@@ -77777,6 +79270,7 @@ def sum(
     usage.koalas: 1
     usage.matplotlib: 30
     usage.networkx: 8
+    usage.orange3: 104
     usage.pandas: 38
     usage.prophet: 6
     usage.scipy: 443
@@ -78240,6 +79734,7 @@ def tile(A: numpy.ndarray, reps: Tuple[int, int]):
     """
     usage.dask: 4
     usage.matplotlib: 15
+    usage.orange3: 3
     usage.scipy: 6
     usage.skimage: 9
     usage.sklearn: 8
@@ -78253,6 +79748,7 @@ def tile(A: numpy.ndarray, reps: Tuple[int, int]):
 def tile(A: numpy.ndarray, reps: Tuple[int, int, int]):
     """
     usage.dask: 2
+    usage.orange3: 1
     usage.skimage: 2
     usage.statsmodels: 3
     usage.xarray: 5
@@ -78282,6 +79778,56 @@ def tile(A: numpy.ndarray, reps: Tuple[int, int, int, int]):
 def tile(A: Tuple[int, int], reps: List[int]):
     """
     usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def tile(A: float, reps: int):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def tile(A: List[numpy.float64], reps: Tuple[int, int]):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def tile(A: numpy.float64, reps: int):
+    """
+    usage.orange3: 1
+    usage.sklearn: 2
+    """
+    ...
+
+
+@overload
+def tile(A: numpy.int64, reps: Tuple[int]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def tile(A: None, reps: Tuple[int, int]):
+    """
+    usage.orange3: 3
+    """
+    ...
+
+
+@overload
+def tile(A: range, reps: int):
+    """
+    usage.orange3: 1
+    usage.sklearn: 2
     """
     ...
 
@@ -78437,14 +79983,6 @@ def tile(A: List[numpy.int64], reps: List[int]):
 
 
 @overload
-def tile(A: numpy.float64, reps: int):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def tile(A: List[float], reps: Tuple[int, int]):
     """
     usage.sklearn: 1
@@ -78528,14 +80066,6 @@ def tile(A: int, reps: int):
 
 
 @overload
-def tile(A: range, reps: int):
-    """
-    usage.sklearn: 2
-    """
-    ...
-
-
-@overload
 def tile(A: List[numpy.str_], reps: List[int]):
     """
     usage.sklearn: 1
@@ -78563,6 +80093,7 @@ def tile(A: object, reps: Union[List[int], int, numpy.int64, Tuple[int, ...]]):
     """
     usage.dask: 18
     usage.matplotlib: 26
+    usage.orange3: 14
     usage.pandas: 49
     usage.scipy: 51
     usage.seaborn: 7
@@ -79059,6 +80590,7 @@ def tril(m: numpy.ndarray, k: int = ...):
 @overload
 def tril_indices(n: int, k: int):
     """
+    usage.orange3: 3
     usage.scipy: 9
     usage.sklearn: 1
     usage.statsmodels: 9
@@ -79077,6 +80609,7 @@ def tril_indices(n: int):
 
 def tril_indices(n: int, k: int = ...):
     """
+    usage.orange3: 3
     usage.scipy: 15
     usage.sklearn: 1
     usage.statsmodels: 16
@@ -79167,6 +80700,7 @@ def triu(m: numpy.ndarray, k: int = ...):
 @overload
 def triu_indices(n: int, k: int):
     """
+    usage.orange3: 3
     usage.scipy: 1
     usage.sklearn: 2
     usage.statsmodels: 13
@@ -79185,6 +80719,7 @@ def triu_indices(n: int):
 
 def triu_indices(n: int, k: int = ...):
     """
+    usage.orange3: 3
     usage.scipy: 2
     usage.sklearn: 2
     usage.statsmodels: 18
@@ -79297,6 +80832,7 @@ def unique(ar: numpy.ndarray):
     """
     usage.dask: 7
     usage.matplotlib: 6
+    usage.orange3: 16
     usage.scipy: 39
     usage.seaborn: 5
     usage.skimage: 48
@@ -79320,6 +80856,7 @@ def unique(ar: numpy.ndarray, return_inverse: bool, return_counts: bool):
 @overload
 def unique(ar: numpy.ndarray, return_counts: bool):
     """
+    usage.orange3: 3
     usage.scipy: 5
     usage.skimage: 8
     usage.sklearn: 1
@@ -79335,6 +80872,14 @@ def unique(ar: numpy.ndarray, return_index: bool):
     usage.skimage: 4
     usage.sklearn: 1
     usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def unique(ar: List[int], return_counts: bool):
+    """
+    usage.orange3: 1
     """
     ...
 
@@ -79626,6 +81171,7 @@ def unique(
     usage.dask: 29
     usage.geopandas: 1
     usage.matplotlib: 8
+    usage.orange3: 20
     usage.pandas: 22
     usage.prophet: 4
     usage.scipy: 66
@@ -79889,9 +81435,51 @@ def vander(x: numpy.ndarray, N: int = ...):
 
 
 @overload
+def var(a: List[int]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def var(a: numpy.ndarray):
+    """
+    usage.dask: 20
+    usage.orange3: 1
+    usage.scipy: 3
+    usage.sklearn: 8
+    usage.statsmodels: 18
+    """
+    ...
+
+
+@overload
+def var(a: numpy.ndarray, axis: int, ddof: int):
+    """
+    usage.orange3: 2
+    usage.scipy: 14
+    usage.sklearn: 13
+    usage.statsmodels: 3
+    usage.xarray: 3
+    """
+    ...
+
+
+@overload
+def var(a: numpy.ndarray, axis: None):
+    """
+    usage.orange3: 1
+    usage.xarray: 5
+    """
+    ...
+
+
+@overload
 def var(a: numpy.ndarray, axis: int):
     """
     usage.dask: 4
+    usage.orange3: 1
     usage.scipy: 1
     usage.sklearn: 30
     usage.xarray: 4
@@ -79900,9 +81488,10 @@ def var(a: numpy.ndarray, axis: int):
 
 
 @overload
-def var(a: numpy.ndarray, axis: None):
+def var(a: numpy.ndarray, axis: None, ddof: int):
     """
-    usage.xarray: 5
+    usage.orange3: 1
+    usage.xarray: 3
     """
     ...
 
@@ -79917,27 +81506,8 @@ def var(a: numpy.ndarray, axis: Tuple[None, ...]):
 
 
 @overload
-def var(a: numpy.ndarray, axis: None, ddof: int):
-    """
-    usage.xarray: 3
-    """
-    ...
-
-
-@overload
 def var(a: numpy.ndarray, axis: None, dtype: Type[float]):
     """
-    usage.xarray: 3
-    """
-    ...
-
-
-@overload
-def var(a: numpy.ndarray, axis: int, ddof: int):
-    """
-    usage.scipy: 14
-    usage.sklearn: 13
-    usage.statsmodels: 3
     usage.xarray: 3
     """
     ...
@@ -80020,17 +81590,6 @@ def var(a: numpy.ndarray, axis: int, dtype: None, ddof: int):
 def var(a: object, axis: int):
     """
     usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def var(a: numpy.ndarray):
-    """
-    usage.dask: 20
-    usage.scipy: 3
-    usage.sklearn: 8
-    usage.statsmodels: 18
     """
     ...
 
@@ -80204,6 +81763,7 @@ def var(
 ):
     """
     usage.dask: 59
+    usage.orange3: 7
     usage.pandas: 13
     usage.scipy: 19
     usage.sklearn: 55
@@ -80267,6 +81827,7 @@ def vstack(tup: Tuple[numpy.ndarray, numpy.ndarray]):
     """
     usage.dask: 3
     usage.matplotlib: 9
+    usage.orange3: 18
     usage.scipy: 88
     usage.seaborn: 1
     usage.skimage: 6
@@ -80289,6 +81850,7 @@ def vstack(tup: List[numpy.ndarray]):
     """
     usage.dask: 3
     usage.matplotlib: 70
+    usage.orange3: 5
     usage.pandas: 49
     usage.scipy: 72
     usage.skimage: 28
@@ -80302,6 +81864,7 @@ def vstack(tup: List[numpy.ndarray]):
 def vstack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
     """
     usage.matplotlib: 3
+    usage.orange3: 7
     usage.scipy: 6
     usage.skimage: 2
     usage.sklearn: 6
@@ -80311,9 +81874,10 @@ def vstack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]):
 
 
 @overload
-def vstack(tup: List[pandas.core.frame.DataFrame]):
+def vstack(tup: numpy.ndarray):
     """
-    usage.statsmodels: 1
+    usage.dask: 1
+    usage.orange3: 1
     """
     ...
 
@@ -80321,9 +81885,27 @@ def vstack(tup: List[pandas.core.frame.DataFrame]):
 @overload
 def vstack(tup: Tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray]):
     """
+    usage.orange3: 2
     usage.scipy: 7
     usage.sklearn: 2
     usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def vstack(tup: Tuple[numpy.ndarray, List[int]]):
+    """
+    usage.orange3: 2
+    usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def vstack(tup: List[pandas.core.frame.DataFrame]):
+    """
+    usage.statsmodels: 1
     """
     ...
 
@@ -80457,14 +82039,6 @@ def vstack(tup: List[Tuple[numpy.float64, numpy.float64]]):
 
 
 @overload
-def vstack(tup: Tuple[numpy.ndarray, List[int]]):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
 def vstack(tup: Tuple[numpy.ndarray, numpy.ndarray, List[float]]):
     """
     usage.matplotlib: 2
@@ -80589,14 +82163,6 @@ def vstack(tup: List[numpy.flatiter]):
 
 
 @overload
-def vstack(tup: numpy.ndarray):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
-@overload
 def vstack(tup: dask.array.core.Array):
     """
     usage.dask: 2
@@ -80694,6 +82260,7 @@ def vstack(tup: object):
     usage.dask: 10
     usage.matplotlib: 98
     usage.networkx: 1
+    usage.orange3: 35
     usage.pandas: 49
     usage.scipy: 201
     usage.seaborn: 3
@@ -80742,6 +82309,7 @@ def where(_0: numpy.ndarray, _1: float, _2: numpy.ndarray, /):
     """
     usage.dask: 3
     usage.networkx: 4
+    usage.orange3: 7
     usage.scipy: 17
     usage.skimage: 1
     usage.xarray: 7
@@ -80775,6 +82343,7 @@ def where(_0: numpy.ndarray, /):
     usage.geopandas: 1
     usage.matplotlib: 1
     usage.networkx: 1
+    usage.orange3: 2
     usage.scipy: 12
     usage.seaborn: 2
     usage.skimage: 12
@@ -80808,6 +82377,62 @@ def where(_0: numpy.ndarray, _1: int, _2: int, /):
     """
     usage.scipy: 18
     usage.skimage: 1
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def where(_0: numpy.ndarray, _1: numpy.float64, _2: numpy.ndarray, /):
+    """
+    usage.dask: 1
+    usage.orange3: 2
+    usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def where(_0: numpy.ndarray, _1: Literal[""], _2: numpy.ndarray, /):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def where(_0: numpy.ndarray, _1: Orange.data.variable.Value, _2: numpy.ndarray, /):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def where(_0: numpy.ndarray, _1: float, _2: List[int], /):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def where(_0: numpy.ndarray, _1: float, _2: float, /):
+    """
+    usage.orange3: 1
+    usage.scipy: 6
+    """
+    ...
+
+
+@overload
+def where(_0: numpy.ndarray, _1: int, _2: numpy.ndarray, /):
+    """
+    usage.dask: 7
+    usage.matplotlib: 1
+    usage.orange3: 3
+    usage.scipy: 10
+    usage.sklearn: 4
     usage.statsmodels: 2
     """
     ...
@@ -80951,18 +82576,6 @@ def where(_0: pandas.core.series.Series, /):
 
 
 @overload
-def where(_0: numpy.ndarray, _1: int, _2: numpy.ndarray, /):
-    """
-    usage.dask: 7
-    usage.matplotlib: 1
-    usage.scipy: 10
-    usage.sklearn: 4
-    usage.statsmodels: 2
-    """
-    ...
-
-
-@overload
 def where(
     _0: pandas.core.series.Series,
     _1: pandas.core.series.Series,
@@ -81042,23 +82655,6 @@ def where(_0: bool, _1: int, _2: int, /):
 def where(_0: numpy.ndarray, _1: bool, _2: bool, /):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def where(_0: numpy.ndarray, _1: float, _2: float, /):
-    """
-    usage.scipy: 6
-    """
-    ...
-
-
-@overload
-def where(_0: numpy.ndarray, _1: numpy.float64, _2: numpy.ndarray, /):
-    """
-    usage.dask: 1
-    usage.scipy: 2
     """
     ...
 
@@ -81361,6 +82957,7 @@ def where(_0: object, _1: object = ..., _2: object = ..., /):
     usage.geopandas: 1
     usage.matplotlib: 8
     usage.networkx: 8
+    usage.orange3: 20
     usage.pandas: 175
     usage.scipy: 193
     usage.seaborn: 3
@@ -81379,6 +82976,7 @@ def zeros(_0: int, /):
     usage.koalas: 1
     usage.matplotlib: 38
     usage.networkx: 2
+    usage.orange3: 23
     usage.prophet: 6
     usage.pyjanitor: 1
     usage.scipy: 263
@@ -81395,6 +82993,7 @@ def zeros(_0: int, /):
 def zeros(_0: Tuple[int, int], /, *, dtype: Type[float]):
     """
     usage.networkx: 2
+    usage.orange3: 2
     usage.scipy: 12
     usage.skimage: 6
     usage.sklearn: 1
@@ -81429,6 +83028,7 @@ def zeros(_0: Tuple[int, int], /):
     usage.dask: 4
     usage.matplotlib: 25
     usage.networkx: 11
+    usage.orange3: 46
     usage.prophet: 1
     usage.sample-usage: 1
     usage.scipy: 204
@@ -81457,6 +83057,7 @@ def zeros(_0: Tuple[int, int, int], /):
     """
     usage.dask: 1
     usage.matplotlib: 6
+    usage.orange3: 6
     usage.scipy: 38
     usage.seaborn: 1
     usage.skimage: 76
@@ -81499,6 +83100,7 @@ def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.uint8]):
 @overload
 def zeros(_0: Tuple[int, int], /, *, dtype: Type[int]):
     """
+    usage.orange3: 1
     usage.scipy: 2
     usage.skimage: 45
     usage.sklearn: 10
@@ -81527,6 +83129,7 @@ def zeros(_0: Tuple[int, int, int], _1: Literal["uint8"], /):
 def zeros(_0: int, /, *, dtype: Type[int]):
     """
     usage.dask: 2
+    usage.orange3: 1
     usage.scipy: 16
     usage.skimage: 3
     usage.sklearn: 15
@@ -81605,6 +83208,7 @@ def zeros(_0: Tuple[int, int], /, *, dtype: Type[bool], order: Literal["C"]):
 def zeros(_0: List[int], /):
     """
     usage.matplotlib: 2
+    usage.orange3: 2
     usage.scipy: 31
     usage.skimage: 7
     usage.sklearn: 6
@@ -81672,6 +83276,7 @@ def zeros(_0: Tuple[int, int], /, *, dtype: Literal["int"]):
 def zeros(_0: int, /, *, dtype: Type[bool]):
     """
     usage.matplotlib: 5
+    usage.orange3: 5
     usage.scipy: 5
     usage.skimage: 2
     usage.sklearn: 24
@@ -81721,6 +83326,7 @@ def zeros(_0: Tuple[int, int, int, int], /):
 @overload
 def zeros(_0: Tuple[int, int], /, *, dtype: numpy.dtype):
     """
+    usage.orange3: 4
     usage.scipy: 96
     usage.skimage: 7
     usage.sklearn: 38
@@ -81744,6 +83350,7 @@ def zeros(_0: Tuple[int], /, *, dtype: numpy.dtype):
 def zeros(_0: Tuple[int, int], _1: Type[float], /):
     """
     usage.matplotlib: 6
+    usage.orange3: 1
     usage.scipy: 5
     usage.skimage: 4
     """
@@ -81859,6 +83466,7 @@ def zeros(_0: Tuple[int, int, int], /, *, dtype: Type[float]):
 def zeros(_0: Tuple[int], /):
     """
     usage.networkx: 1
+    usage.orange3: 4
     usage.scipy: 38
     usage.skimage: 5
     usage.sklearn: 16
@@ -81910,6 +83518,7 @@ def zeros(_0: int, /, *, dtype: Type[float]):
     usage.dask: 1
     usage.matplotlib: 1
     usage.networkx: 2
+    usage.orange3: 3
     usage.scipy: 6
     usage.skimage: 1
     usage.sklearn: 2
@@ -82296,6 +83905,64 @@ def zeros(_0: numpy.int64, /):
 
 
 @overload
+def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.float64], order: Literal["F"]):
+    """
+    usage.orange3: 1
+    usage.scipy: 2
+    usage.sklearn: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[numpy.int64, numpy.int32], /, *, dtype: Type[float]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: numpy.int64, /, *, dtype: Type[float]):
+    """
+    usage.networkx: 1
+    usage.orange3: 3
+    """
+    ...
+
+
+@overload
+def zeros(_0: Tuple[int, int], /, *, dtype: Type[object], order: Literal["F"]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def zeros(_0: int, /, *, dtype: Type[numpy.int32]):
+    """
+    usage.orange3: 1
+    usage.scipy: 11
+    usage.sklearn: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def zeros(_0: int, _1: Type[bool], /):
+    """
+    usage.matplotlib: 1
+    usage.orange3: 1
+    usage.scipy: 1
+    usage.seaborn: 1
+    """
+    ...
+
+
+@overload
 def zeros(_0: int, /, *, dtype: Type[numpy.int64]):
     """
     usage.scipy: 18
@@ -82359,16 +84026,6 @@ def zeros(_0: Tuple[int], _1: Type[float], /):
     """
     usage.scipy: 11
     usage.sklearn: 1
-    usage.statsmodels: 2
-    """
-    ...
-
-
-@overload
-def zeros(_0: int, /, *, dtype: Type[numpy.int32]):
-    """
-    usage.scipy: 11
-    usage.sklearn: 2
     usage.statsmodels: 2
     """
     ...
@@ -82456,16 +84113,6 @@ def zeros(
     _0: Tuple[int, int, int], /, *, dtype: Type[numpy.float64], order: Literal["F"]
 ):
     """
-    usage.statsmodels: 1
-    """
-    ...
-
-
-@overload
-def zeros(_0: Tuple[int, int], /, *, dtype: Type[numpy.float64], order: Literal["F"]):
-    """
-    usage.scipy: 2
-    usage.sklearn: 1
     usage.statsmodels: 1
     """
     ...
@@ -83894,16 +85541,6 @@ def zeros(_0: int, _1: Literal["d"], /):
 
 
 @overload
-def zeros(_0: int, _1: Type[bool], /):
-    """
-    usage.matplotlib: 1
-    usage.scipy: 1
-    usage.seaborn: 1
-    """
-    ...
-
-
-@overload
 def zeros(_0: numpy.ndarray, /, *, dtype: numpy.dtype, order: Literal["C"]):
     """
     usage.dask: 1
@@ -84339,14 +85976,6 @@ def zeros(_0: Tuple[numpy.int64, int], /, *, dtype: Type[float]):
 
 
 @overload
-def zeros(_0: numpy.int64, /, *, dtype: Type[float]):
-    """
-    usage.networkx: 1
-    """
-    ...
-
-
-@overload
 def zeros(
     _0: Tuple[int, int],
     /,
@@ -84374,6 +86003,7 @@ def zeros(
     usage.koalas: 1
     usage.matplotlib: 124
     usage.networkx: 26
+    usage.orange3: 106
     usage.pandas: 125
     usage.prophet: 7
     usage.pyjanitor: 1
@@ -84393,6 +86023,7 @@ def zeros_like(a: numpy.ndarray):
     """
     usage.dask: 3
     usage.matplotlib: 20
+    usage.orange3: 1
     usage.scipy: 112
     usage.skimage: 52
     usage.sklearn: 64
@@ -84720,6 +86351,7 @@ def zeros_like(
     """
     usage.dask: 14
     usage.matplotlib: 20
+    usage.orange3: 1
     usage.pandas: 20
     usage.scipy: 138
     usage.seaborn: 3
@@ -85036,6 +86668,7 @@ class bool_:
         usage.hvplot: 2
         usage.matplotlib: 14
         usage.networkx: 3
+        usage.orange3: 4
         usage.pandas: 66
         usage.scipy: 40
         usage.skimage: 18
@@ -85050,6 +86683,7 @@ class bool_:
         """
         usage.dask: 2
         usage.matplotlib: 10
+        usage.orange3: 2
         usage.scipy: 22
         usage.xarray: 2
         """
@@ -85098,6 +86732,7 @@ class bool_:
         """
         usage.dask: 2
         usage.matplotlib: 11
+        usage.orange3: 2
         usage.pandas: 94
         usage.scipy: 26
         usage.seaborn: 1
@@ -88153,6 +89788,7 @@ class dtype:
     # usage.xarray: 14
     byteorder: object
 
+    # usage.orange3: 3
     # usage.pandas: 1
     # usage.scipy: 389
     # usage.skimage: 12
@@ -88195,6 +89831,7 @@ class dtype:
     # usage.hvplot: 3
     # usage.matplotlib: 42
     # usage.networkx: 11
+    # usage.orange3: 5
     # usage.pandas: 643
     # usage.scipy: 263
     # usage.skimage: 60
@@ -88260,6 +89897,7 @@ class dtype:
         """
         usage.dask: 17
         usage.geopandas: 2
+        usage.orange3: 1
         usage.scipy: 15
         usage.skimage: 59
         usage.sklearn: 8
@@ -88284,6 +89922,7 @@ class dtype:
         """
         usage.dask: 9
         usage.matplotlib: 1
+        usage.orange3: 1
         usage.scipy: 36
         usage.skimage: 13
         usage.sklearn: 86
@@ -88437,6 +90076,19 @@ class dtype:
         ...
 
     @overload
+    def __eq__(self, _0: Type[object], /):
+        """
+        usage.dask: 22
+        usage.geopandas: 15
+        usage.orange3: 3
+        usage.scipy: 4
+        usage.sklearn: 56
+        usage.statsmodels: 6
+        usage.xarray: 6
+        """
+        ...
+
+    @overload
     def __eq__(self, _0: Literal["O"], /):
         """
         usage.xarray: 5
@@ -88468,18 +90120,6 @@ class dtype:
     def __eq__(self, _0: Literal["f4"], /):
         """
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __eq__(self, _0: Type[object], /):
-        """
-        usage.dask: 22
-        usage.geopandas: 15
-        usage.scipy: 4
-        usage.sklearn: 56
-        usage.statsmodels: 6
-        usage.xarray: 6
         """
         ...
 
@@ -88645,6 +90285,7 @@ class dtype:
         usage.koalas: 20
         usage.matplotlib: 9
         usage.networkx: 4
+        usage.orange3: 5
         usage.pandas: 2263
         usage.prophet: 2
         usage.scipy: 341
@@ -88790,6 +90431,7 @@ class dtype:
     def __ne__(self, _0: Type[bool], /):
         """
         usage.dask: 1
+        usage.orange3: 2
         usage.skimage: 4
         usage.sklearn: 4
         """
@@ -88804,9 +90446,13 @@ class dtype:
         ...
 
     @overload
-    def __ne__(self, _0: Literal["S1"], /):
+    def __ne__(self, _0: Type[numpy.float64], /):
         """
-        usage.xarray: 2
+        usage.dask: 1
+        usage.matplotlib: 2
+        usage.orange3: 2
+        usage.scipy: 11
+        usage.sklearn: 13
         """
         ...
 
@@ -88815,8 +90461,16 @@ class dtype:
         """
         usage.dask: 3
         usage.geopandas: 3
+        usage.orange3: 3
         usage.sklearn: 7
         usage.xarray: 13
+        """
+        ...
+
+    @overload
+    def __ne__(self, _0: Literal["S1"], /):
+        """
+        usage.xarray: 2
         """
         ...
 
@@ -88824,16 +90478,6 @@ class dtype:
     def __ne__(self, _0: object, /):
         """
         usage.pandas: 457
-        """
-        ...
-
-    @overload
-    def __ne__(self, _0: Type[numpy.float64], /):
-        """
-        usage.dask: 1
-        usage.matplotlib: 2
-        usage.scipy: 11
-        usage.sklearn: 13
         """
         ...
 
@@ -89092,6 +90736,7 @@ class dtype:
         usage.dask: 272
         usage.geopandas: 3
         usage.matplotlib: 21
+        usage.orange3: 7
         usage.pandas: 457
         usage.scipy: 290
         usage.skimage: 27
@@ -89195,6 +90840,7 @@ class errstate:
 class finfo:
 
     # usage.dask: 1
+    # usage.orange3: 5
     # usage.pandas: 4
     # usage.scipy: 119
     # usage.skimage: 11
@@ -89211,6 +90857,7 @@ class finfo:
     # usage.scipy: 1
     maxexp: object
 
+    # usage.orange3: 1
     # usage.pandas: 3
     # usage.skimage: 2
     # usage.sklearn: 5
@@ -89258,6 +90905,7 @@ class flagsobj:
     # usage.scipy: 1
     fortran: object
 
+    # usage.orange3: 1
     # usage.scipy: 1
     # usage.xarray: 1
     owndata: object
@@ -89485,6 +91133,21 @@ class flatiter:
         ...
 
     @overload
+    def __setitem__(self, _0: slice[None, None, None], _1: float, /):
+        """
+        usage.orange3: 2
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, None, None], _1: float, /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
     def __setitem__(self, _0: numpy.ndarray, _1: float, /):
         """
         usage.scipy: 1
@@ -89568,13 +91231,6 @@ class flatiter:
         """
         ...
 
-    @overload
-    def __setitem__(self, _0: slice[None, None, None], _1: float, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
     def __setitem__(
         self,
         _0: Union[
@@ -89588,6 +91244,7 @@ class flatiter:
     ):
         """
         usage.dask: 6
+        usage.orange3: 4
         usage.pandas: 11
         usage.scipy: 9
         usage.skimage: 2
@@ -91839,9 +93496,28 @@ class float64:
 
     @overload
     @classmethod
-    def __ne__(cls, _0: object, /):
+    def __ne__(cls, _0: numpy.dtype, /):
         """
-        usage.pandas: 31
+        usage.dask: 1
+        usage.matplotlib: 2
+        usage.orange3: 2
+        usage.scipy: 11
+        usage.sklearn: 13
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __ne__(cls, _0: int, /):
+        """
+        usage.dask: 3
+        usage.matplotlib: 14
+        usage.networkx: 2
+        usage.orange3: 2
+        usage.scipy: 66
+        usage.skimage: 6
+        usage.sklearn: 7
+        usage.statsmodels: 23
         """
         ...
 
@@ -91875,26 +93551,9 @@ class float64:
 
     @overload
     @classmethod
-    def __ne__(cls, _0: int, /):
+    def __ne__(cls, _0: object, /):
         """
-        usage.dask: 3
-        usage.matplotlib: 14
-        usage.networkx: 2
-        usage.scipy: 66
-        usage.skimage: 6
-        usage.sklearn: 7
-        usage.statsmodels: 23
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __ne__(cls, _0: numpy.dtype, /):
-        """
-        usage.dask: 1
-        usage.matplotlib: 2
-        usage.scipy: 11
-        usage.sklearn: 13
+        usage.pandas: 31
         """
         ...
 
@@ -91961,6 +93620,7 @@ class float64:
         usage.dask: 13
         usage.matplotlib: 45
         usage.networkx: 4
+        usage.orange3: 4
         usage.pandas: 31
         usage.scipy: 116
         usage.skimage: 9
@@ -92017,6 +93677,9 @@ class float64:
     # usage.statsmodels: 2
     size: object
 
+    # usage.orange3: 1
+    strides: object
+
     # usage.pandas: 1
     values: object
 
@@ -92027,6 +93690,7 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 180
         usage.networkx: 13
+        usage.orange3: 7
         usage.prophet: 4
         usage.scipy: 507
         usage.seaborn: 14
@@ -92044,6 +93708,7 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 95
         usage.networkx: 2
+        usage.orange3: 4
         usage.prophet: 1
         usage.scipy: 120
         usage.seaborn: 10
@@ -92071,6 +93736,7 @@ class float64:
         usage.dask: 12
         usage.matplotlib: 36
         usage.networkx: 8
+        usage.orange3: 2
         usage.scipy: 124
         usage.seaborn: 3
         usage.skimage: 21
@@ -92084,6 +93750,7 @@ class float64:
     def __add__(self, _0: numpy.int64, /):
         """
         usage.matplotlib: 1
+        usage.orange3: 1
         usage.scipy: 9
         usage.skimage: 3
         usage.statsmodels: 11
@@ -92095,6 +93762,21 @@ class float64:
         """
         usage.scipy: 1
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: List[int], /):
+        """
+        usage.matplotlib: 1
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __add__(self, _0: List[float], /):
+        """
+        usage.orange3: 1
         """
         ...
 
@@ -92237,13 +93919,6 @@ class float64:
         ...
 
     @overload
-    def __add__(self, _0: List[int], /):
-        """
-        usage.matplotlib: 1
-        """
-        ...
-
-    @overload
     def __add__(self, _0: numpy.ma.core.MaskedConstant, /):
         """
         usage.matplotlib: 3
@@ -92263,6 +93938,7 @@ class float64:
         usage.koalas: 2
         usage.matplotlib: 321
         usage.networkx: 23
+        usage.orange3: 16
         usage.pandas: 36
         usage.prophet: 5
         usage.scipy: 880
@@ -92309,6 +93985,7 @@ class float64:
         usage.dask: 12
         usage.matplotlib: 75
         usage.networkx: 99
+        usage.orange3: 5
         usage.prophet: 1
         usage.scipy: 108
         usage.seaborn: 38
@@ -92325,6 +94002,7 @@ class float64:
         usage.dask: 12
         usage.matplotlib: 74
         usage.networkx: 8
+        usage.orange3: 4
         usage.prophet: 2
         usage.scipy: 88
         usage.seaborn: 18
@@ -92340,6 +94018,7 @@ class float64:
         """
         usage.dask: 1
         usage.matplotlib: 3
+        usage.orange3: 9
         usage.prophet: 1
         usage.scipy: 15
         usage.seaborn: 2
@@ -92483,6 +94162,7 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 187
         usage.networkx: 115
+        usage.orange3: 18
         usage.pandas: 381
         usage.prophet: 4
         usage.scipy: 272
@@ -92543,6 +94223,7 @@ class float64:
         usage.dask: 4
         usage.geopandas: 1
         usage.matplotlib: 16
+        usage.orange3: 3
         usage.scipy: 32
         usage.seaborn: 2
         usage.skimage: 10
@@ -92557,6 +94238,7 @@ class float64:
         usage.dask: 3
         usage.matplotlib: 18
         usage.networkx: 2
+        usage.orange3: 3
         usage.prophet: 2
         usage.scipy: 116
         usage.seaborn: 2
@@ -92571,6 +94253,7 @@ class float64:
         """
         usage.dask: 2
         usage.matplotlib: 5
+        usage.orange3: 1
         usage.scipy: 44
         usage.seaborn: 1
         usage.skimage: 3
@@ -92665,6 +94348,7 @@ class float64:
         usage.geopandas: 1
         usage.matplotlib: 55
         usage.networkx: 2
+        usage.orange3: 7
         usage.pandas: 8
         usage.prophet: 2
         usage.scipy: 220
@@ -92766,6 +94450,7 @@ class float64:
         usage.dask: 10
         usage.matplotlib: 24
         usage.networkx: 1
+        usage.orange3: 5
         usage.scipy: 124
         usage.seaborn: 3
         usage.skimage: 35
@@ -92780,6 +94465,7 @@ class float64:
         """
         usage.dask: 1
         usage.matplotlib: 5
+        usage.orange3: 1
         usage.scipy: 44
         usage.seaborn: 3
         usage.skimage: 4
@@ -92794,6 +94480,7 @@ class float64:
         usage.dask: 10
         usage.matplotlib: 102
         usage.networkx: 7
+        usage.orange3: 7
         usage.scipy: 201
         usage.seaborn: 13
         usage.skimage: 65
@@ -92810,6 +94497,7 @@ class float64:
         usage.hvplot: 1
         usage.matplotlib: 33
         usage.networkx: 5
+        usage.orange3: 6
         usage.prophet: 4
         usage.scipy: 111
         usage.skimage: 20
@@ -92914,6 +94602,7 @@ class float64:
         usage.hvplot: 1
         usage.matplotlib: 174
         usage.networkx: 13
+        usage.orange3: 19
         usage.pandas: 15
         usage.prophet: 4
         usage.scipy: 489
@@ -92941,6 +94630,7 @@ class float64:
         usage.dask: 1
         usage.matplotlib: 14
         usage.networkx: 14
+        usage.orange3: 5
         usage.scipy: 80
         usage.seaborn: 1
         usage.skimage: 7
@@ -92955,6 +94645,7 @@ class float64:
         """
         usage.matplotlib: 3
         usage.networkx: 1
+        usage.orange3: 2
         usage.pandas: 1
         usage.scipy: 6
         usage.skimage: 1
@@ -92968,6 +94659,7 @@ class float64:
     def __iadd__(self, _0: int, /):
         """
         usage.matplotlib: 8
+        usage.orange3: 6
         usage.scipy: 3
         usage.sklearn: 6
         usage.statsmodels: 4
@@ -92976,17 +94668,18 @@ class float64:
         ...
 
     @overload
-    def __iadd__(self, _0: bool, /):
+    def __iadd__(self, _0: numpy.int64, /):
         """
-        usage.xarray: 2
+        usage.orange3: 1
+        usage.sklearn: 3
+        usage.statsmodels: 2
         """
         ...
 
     @overload
-    def __iadd__(self, _0: numpy.int64, /):
+    def __iadd__(self, _0: bool, /):
         """
-        usage.sklearn: 3
-        usage.statsmodels: 2
+        usage.xarray: 2
         """
         ...
 
@@ -93009,6 +94702,7 @@ class float64:
         usage.dask: 1
         usage.matplotlib: 25
         usage.networkx: 15
+        usage.orange3: 14
         usage.pandas: 1
         usage.scipy: 99
         usage.seaborn: 1
@@ -93049,6 +94743,7 @@ class float64:
     @overload
     def __imul__(self, _0: numpy.float64, /):
         """
+        usage.orange3: 1
         usage.scipy: 18
         usage.skimage: 1
         usage.sklearn: 6
@@ -93101,6 +94796,7 @@ class float64:
         usage.dask: 1
         usage.matplotlib: 11
         usage.networkx: 4
+        usage.orange3: 1
         usage.scipy: 43
         usage.skimage: 5
         usage.sklearn: 13
@@ -93117,6 +94813,15 @@ class float64:
         usage.skimage: 1
         usage.sklearn: 17
         usage.statsmodels: 59
+        """
+        ...
+
+    @overload
+    def __isub__(self, _0: int, /):
+        """
+        usage.matplotlib: 2
+        usage.orange3: 2
+        usage.sklearn: 1
         """
         ...
 
@@ -93141,18 +94846,11 @@ class float64:
         """
         ...
 
-    @overload
-    def __isub__(self, _0: int, /):
-        """
-        usage.matplotlib: 2
-        usage.sklearn: 1
-        """
-        ...
-
     def __isub__(self, _0: Union[numpy.float64, float, int, numpy.ndarray], /):
         """
         usage.matplotlib: 13
         usage.networkx: 3
+        usage.orange3: 2
         usage.pandas: 2
         usage.scipy: 19
         usage.skimage: 1
@@ -93176,6 +94874,7 @@ class float64:
         """
         usage.matplotlib: 1
         usage.networkx: 2
+        usage.orange3: 1
         usage.scipy: 15
         usage.skimage: 4
         usage.sklearn: 6
@@ -93210,6 +94909,7 @@ class float64:
     def __itruediv__(self, _0: int, /):
         """
         usage.matplotlib: 1
+        usage.orange3: 2
         usage.scipy: 4
         usage.sklearn: 7
         usage.statsmodels: 12
@@ -93228,6 +94928,7 @@ class float64:
         """
         usage.matplotlib: 2
         usage.networkx: 2
+        usage.orange3: 3
         usage.scipy: 44
         usage.skimage: 12
         usage.sklearn: 16
@@ -93241,6 +94942,7 @@ class float64:
         usage.dask: 5
         usage.geopandas: 1
         usage.matplotlib: 29
+        usage.orange3: 1
         usage.scipy: 50
         usage.seaborn: 3
         usage.skimage: 62
@@ -93255,6 +94957,7 @@ class float64:
         usage.dask: 3
         usage.matplotlib: 18
         usage.networkx: 2
+        usage.orange3: 3
         usage.prophet: 2
         usage.scipy: 116
         usage.seaborn: 2
@@ -93283,6 +94986,7 @@ class float64:
         """
         usage.dask: 1
         usage.matplotlib: 9
+        usage.orange3: 1
         usage.prophet: 1
         usage.scipy: 72
         usage.seaborn: 2
@@ -93330,6 +95034,7 @@ class float64:
         usage.geopandas: 1
         usage.matplotlib: 72
         usage.networkx: 2
+        usage.orange3: 5
         usage.pandas: 13
         usage.prophet: 5
         usage.scipy: 263
@@ -93346,6 +95051,7 @@ class float64:
         usage.dask: 8
         usage.matplotlib: 55
         usage.networkx: 6
+        usage.orange3: 6
         usage.prophet: 1
         usage.scipy: 165
         usage.seaborn: 2
@@ -93363,6 +95069,7 @@ class float64:
         usage.hvplot: 1
         usage.matplotlib: 45
         usage.networkx: 2
+        usage.orange3: 4
         usage.prophet: 1
         usage.scipy: 83
         usage.skimage: 42
@@ -93376,6 +95083,7 @@ class float64:
     def __lt__(self, _0: numpy.ndarray, /):
         """
         usage.matplotlib: 4
+        usage.orange3: 4
         usage.scipy: 50
         usage.seaborn: 3
         usage.skimage: 18
@@ -93390,6 +95098,7 @@ class float64:
         usage.dask: 10
         usage.matplotlib: 102
         usage.networkx: 7
+        usage.orange3: 7
         usage.scipy: 201
         usage.seaborn: 13
         usage.skimage: 65
@@ -93504,6 +95213,7 @@ class float64:
         usage.hvplot: 1
         usage.matplotlib: 213
         usage.networkx: 15
+        usage.orange3: 21
         usage.pandas: 5
         usage.prophet: 2
         usage.scipy: 507
@@ -93564,6 +95274,7 @@ class float64:
         """
         usage.matplotlib: 30
         usage.networkx: 2
+        usage.orange3: 2
         usage.prophet: 4
         usage.scipy: 447
         usage.skimage: 39
@@ -93579,6 +95290,7 @@ class float64:
         usage.dask: 3
         usage.matplotlib: 81
         usage.networkx: 10
+        usage.orange3: 4
         usage.prophet: 5
         usage.scipy: 674
         usage.seaborn: 8
@@ -93595,6 +95307,7 @@ class float64:
         usage.alphalens: 2
         usage.dask: 5
         usage.matplotlib: 35
+        usage.orange3: 4
         usage.scipy: 109
         usage.seaborn: 10
         usage.skimage: 13
@@ -93610,6 +95323,7 @@ class float64:
         usage.geopandas: 2
         usage.matplotlib: 66
         usage.networkx: 8
+        usage.orange3: 2
         usage.prophet: 1
         usage.scipy: 187
         usage.seaborn: 11
@@ -93620,10 +95334,9 @@ class float64:
         ...
 
     @overload
-    def __mul__(self, _0: object, /):
+    def __mul__(self, _0: Orange.statistics.contingency.Discrete, /):
         """
-        usage.pandas: 71
-        usage.xarray: 2
+        usage.orange3: 3
         """
         ...
 
@@ -93631,9 +95344,18 @@ class float64:
     def __mul__(self, _0: numpy.int64, /):
         """
         usage.matplotlib: 1
+        usage.orange3: 1
         usage.scipy: 33
         usage.sklearn: 6
         usage.statsmodels: 8
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: object, /):
+        """
+        usage.pandas: 71
+        usage.xarray: 2
         """
         ...
 
@@ -93724,6 +95446,7 @@ class float64:
         usage.geopandas: 2
         usage.matplotlib: 214
         usage.networkx: 21
+        usage.orange3: 16
         usage.pandas: 71
         usage.prophet: 10
         usage.scipy: 1505
@@ -93740,6 +95463,7 @@ class float64:
         usage.alphalens: 1
         usage.matplotlib: 81
         usage.networkx: 1
+        usage.orange3: 9
         usage.pandas: 2
         usage.scipy: 311
         usage.seaborn: 1
@@ -93762,6 +95486,7 @@ class float64:
         usage.dask: 1
         usage.matplotlib: 9
         usage.networkx: 3
+        usage.orange3: 2
         usage.scipy: 339
         usage.seaborn: 3
         usage.skimage: 32
@@ -93814,6 +95539,7 @@ class float64:
         usage.dask: 3
         usage.matplotlib: 13
         usage.networkx: 4
+        usage.orange3: 2
         usage.pandas: 13
         usage.scipy: 442
         usage.seaborn: 3
@@ -93830,6 +95556,7 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 180
         usage.networkx: 13
+        usage.orange3: 7
         usage.prophet: 4
         usage.scipy: 507
         usage.seaborn: 14
@@ -93861,6 +95588,7 @@ class float64:
         usage.dask: 2
         usage.matplotlib: 42
         usage.networkx: 10
+        usage.orange3: 1
         usage.prophet: 1
         usage.scipy: 120
         usage.seaborn: 1
@@ -93878,6 +95606,7 @@ class float64:
         usage.geopandas: 2
         usage.matplotlib: 29
         usage.networkx: 11
+        usage.orange3: 1
         usage.prophet: 1
         usage.scipy: 138
         usage.seaborn: 18
@@ -94056,6 +95785,7 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 282
         usage.networkx: 34
+        usage.orange3: 9
         usage.pandas: 36
         usage.prophet: 7
         usage.scipy: 868
@@ -94123,6 +95853,37 @@ class float64:
         ...
 
     @overload
+    def __rmod__(self, _0: Literal["%g"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%.3f"], /):
+        """
+        usage.orange3: 1
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%.0f"], /):
+        """
+        usage.orange3: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["%.1f"], /):
+        """
+        usage.orange3: 1
+        usage.statsmodels: 6
+        """
+        ...
+
+    @overload
     def __rmod__(self, _0: Literal["%10.4f"], /):
         """
         usage.statsmodels: 1
@@ -94186,20 +95947,6 @@ class float64:
         ...
 
     @overload
-    def __rmod__(self, _0: Literal["%.3f"], /):
-        """
-        usage.statsmodels: 9
-        """
-        ...
-
-    @overload
-    def __rmod__(self, _0: Literal["%.0f"], /):
-        """
-        usage.statsmodels: 2
-        """
-        ...
-
-    @overload
     def __rmod__(self, _0: Literal["%8.4f"], /):
         """
         usage.statsmodels: 2
@@ -94222,13 +95969,6 @@ class float64:
         usage.scipy: 6
         usage.sklearn: 12
         usage.statsmodels: 8
-        """
-        ...
-
-    @overload
-    def __rmod__(self, _0: Literal["%.1f"], /):
-        """
-        usage.statsmodels: 6
         """
         ...
 
@@ -94604,6 +96344,7 @@ class float64:
         usage.dask: 5
         usage.matplotlib: 27
         usage.networkx: 2
+        usage.orange3: 4
         usage.pandas: 3
         usage.scipy: 29
         usage.sklearn: 25
@@ -94618,6 +96359,7 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 80
         usage.networkx: 13
+        usage.orange3: 10
         usage.prophet: 3
         usage.scipy: 649
         usage.seaborn: 16
@@ -94633,6 +96375,7 @@ class float64:
         usage.dask: 5
         usage.matplotlib: 42
         usage.networkx: 9
+        usage.orange3: 10
         usage.prophet: 1
         usage.scipy: 613
         usage.seaborn: 4
@@ -94647,6 +96390,7 @@ class float64:
         """
         usage.matplotlib: 26
         usage.networkx: 3
+        usage.orange3: 3
         usage.prophet: 6
         usage.scipy: 167
         usage.seaborn: 5
@@ -94662,6 +96406,7 @@ class float64:
         usage.dask: 3
         usage.matplotlib: 81
         usage.networkx: 10
+        usage.orange3: 4
         usage.prophet: 5
         usage.scipy: 674
         usage.seaborn: 8
@@ -94681,6 +96426,20 @@ class float64:
         usage.skimage: 1
         usage.sklearn: 2
         usage.statsmodels: 15
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: numpy.uint64, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: scipy.sparse.csc.csc_matrix, /):
+        """
+        usage.orange3: 1
         """
         ...
 
@@ -94786,6 +96545,7 @@ class float64:
         usage.koalas: 1
         usage.matplotlib: 249
         usage.networkx: 35
+        usage.orange3: 29
         usage.pandas: 22
         usage.prophet: 18
         usage.scipy: 2169
@@ -94871,6 +96631,7 @@ class float64:
         usage.koalas: 2
         usage.matplotlib: 222
         usage.networkx: 13
+        usage.orange3: 16
         usage.prophet: 8
         usage.scipy: 596
         usage.seaborn: 26
@@ -94887,6 +96648,7 @@ class float64:
         usage.dask: 2
         usage.matplotlib: 34
         usage.networkx: 2
+        usage.orange3: 4
         usage.prophet: 1
         usage.scipy: 202
         usage.seaborn: 8
@@ -94901,6 +96663,7 @@ class float64:
     def __rsub__(self, _0: numpy.ndarray, /):
         """
         usage.matplotlib: 11
+        usage.orange3: 4
         usage.prophet: 1
         usage.scipy: 157
         usage.seaborn: 4
@@ -94916,6 +96679,7 @@ class float64:
         """
         usage.matplotlib: 37
         usage.networkx: 1
+        usage.orange3: 5
         usage.scipy: 149
         usage.seaborn: 2
         usage.skimage: 1
@@ -94949,6 +96713,13 @@ class float64:
         usage.dask: 9
         usage.prophet: 1
         usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __rsub__(self, _0: Orange.statistics.distribution.Continuous, /):
+        """
+        usage.orange3: 1
         """
         ...
 
@@ -95179,6 +96950,7 @@ class float64:
         usage.koalas: 2
         usage.matplotlib: 314
         usage.networkx: 17
+        usage.orange3: 30
         usage.pandas: 26
         usage.prophet: 12
         usage.scipy: 1116
@@ -95195,6 +96967,7 @@ class float64:
         """
         usage.matplotlib: 24
         usage.networkx: 16
+        usage.orange3: 10
         usage.scipy: 192
         usage.seaborn: 5
         usage.skimage: 39
@@ -95209,6 +96982,7 @@ class float64:
         usage.dask: 8
         usage.matplotlib: 91
         usage.networkx: 7
+        usage.orange3: 12
         usage.prophet: 6
         usage.scipy: 408
         usage.seaborn: 8
@@ -95226,6 +97000,7 @@ class float64:
         usage.geopandas: 2
         usage.matplotlib: 9
         usage.networkx: 2
+        usage.orange3: 4
         usage.scipy: 102
         usage.seaborn: 1
         usage.skimage: 13
@@ -95282,6 +97057,14 @@ class float64:
         usage.alphalens: 2
         usage.prophet: 3
         usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: scipy.sparse.csr.csr_matrix, /):
+        """
+        usage.orange3: 1
+        usage.sklearn: 1
         """
         ...
 
@@ -95350,13 +97133,6 @@ class float64:
         ...
 
     @overload
-    def __rtruediv__(self, _0: scipy.sparse.csr.csr_matrix, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __rtruediv__(self, _0: numpy.memmap, /):
         """
         usage.sklearn: 2
@@ -95377,6 +97153,7 @@ class float64:
         usage.geopandas: 2
         usage.matplotlib: 175
         usage.networkx: 34
+        usage.orange3: 27
         usage.pandas: 61
         usage.prophet: 9
         usage.scipy: 876
@@ -95401,6 +97178,7 @@ class float64:
         usage.koalas: 2
         usage.matplotlib: 222
         usage.networkx: 13
+        usage.orange3: 16
         usage.prophet: 8
         usage.scipy: 596
         usage.seaborn: 26
@@ -95434,6 +97212,7 @@ class float64:
         usage.dask: 5
         usage.matplotlib: 29
         usage.networkx: 4
+        usage.orange3: 1
         usage.prophet: 4
         usage.scipy: 231
         usage.skimage: 80
@@ -95468,9 +97247,17 @@ class float64:
     def __sub__(self, _0: numpy.int64, /):
         """
         usage.matplotlib: 3
+        usage.orange3: 1
         usage.scipy: 5
         usage.sklearn: 3
         usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __sub__(self, _0: Orange.statistics.contingency.Discrete, /):
+        """
+        usage.orange3: 1
         """
         ...
 
@@ -95538,6 +97325,7 @@ class float64:
         usage.koalas: 3
         usage.matplotlib: 357
         usage.networkx: 22
+        usage.orange3: 19
         usage.pandas: 28
         usage.prophet: 13
         usage.scipy: 1127
@@ -95556,6 +97344,7 @@ class float64:
         usage.geopandas: 2
         usage.matplotlib: 40
         usage.networkx: 4
+        usage.orange3: 8
         usage.scipy: 206
         usage.seaborn: 2
         usage.skimage: 16
@@ -95571,6 +97360,7 @@ class float64:
         usage.dask: 8
         usage.matplotlib: 91
         usage.networkx: 7
+        usage.orange3: 12
         usage.prophet: 6
         usage.scipy: 408
         usage.seaborn: 8
@@ -95586,6 +97376,7 @@ class float64:
         """
         usage.matplotlib: 75
         usage.networkx: 7
+        usage.orange3: 3
         usage.scipy: 199
         usage.seaborn: 6
         usage.skimage: 25
@@ -95633,11 +97424,34 @@ class float64:
     def __truediv__(self, _0: numpy.int64, /):
         """
         usage.dask: 2
+        usage.orange3: 3
         usage.scipy: 10
         usage.skimage: 1
         usage.sklearn: 5
         usage.statsmodels: 27
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: numpy.uint64, /):
+        """
+        usage.orange3: 1
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: Orange.statistics.distribution.Discrete, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: Orange.statistics.contingency.Discrete, /):
+        """
+        usage.orange3: 2
         """
         ...
 
@@ -95652,13 +97466,6 @@ class float64:
     def __truediv__(self, _0: numpy.complex128, /):
         """
         usage.scipy: 4
-        """
-        ...
-
-    @overload
-    def __truediv__(self, _0: numpy.uint64, /):
-        """
-        usage.scipy: 1
         """
         ...
 
@@ -95703,6 +97510,7 @@ class float64:
         usage.geopandas: 2
         usage.matplotlib: 206
         usage.networkx: 22
+        usage.orange3: 30
         usage.pandas: 61
         usage.prophet: 6
         usage.scipy: 881
@@ -95719,6 +97527,17 @@ class float64:
         """
         usage.scipy: 5
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Type[int], /):
+        """
+        usage.matplotlib: 1
+        usage.orange3: 1
+        usage.scipy: 3
+        usage.sklearn: 1
+        usage.statsmodels: 3
         """
         ...
 
@@ -95742,16 +97561,6 @@ class float64:
         """
         usage.matplotlib: 2
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def astype(self, _0: Type[int], /):
-        """
-        usage.matplotlib: 1
-        usage.scipy: 3
-        usage.sklearn: 1
-        usage.statsmodels: 3
         """
         ...
 
@@ -95827,6 +97636,7 @@ class float64:
         """
         usage.dask: 5
         usage.matplotlib: 5
+        usage.orange3: 1
         usage.pandas: 8
         usage.scipy: 14
         usage.skimage: 1
@@ -96185,6 +97995,7 @@ class int16:
     @overload
     def __eq__(self, _0: int, /):
         """
+        usage.orange3: 2
         usage.skimage: 1
         usage.statsmodels: 1
         """
@@ -96214,6 +98025,7 @@ class int16:
 
     def __eq__(self, _0: object, /):
         """
+        usage.orange3: 2
         usage.pandas: 81
         usage.scipy: 2
         usage.skimage: 2
@@ -96800,6 +98612,17 @@ class int32:
     size: object
 
     @overload
+    def __add__(self, _0: int, /):
+        """
+        usage.dask: 1
+        usage.networkx: 1
+        usage.orange3: 3
+        usage.scipy: 8
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
     def __add__(
         self,
         _0: Union[
@@ -96813,16 +98636,6 @@ class int32:
     ):
         """
         usage.pandas: 8
-        """
-        ...
-
-    @overload
-    def __add__(self, _0: int, /):
-        """
-        usage.dask: 1
-        usage.networkx: 1
-        usage.scipy: 8
-        usage.sklearn: 1
         """
         ...
 
@@ -96960,6 +98773,7 @@ class int32:
         """
         usage.dask: 3
         usage.networkx: 1
+        usage.orange3: 3
         usage.pandas: 8
         usage.scipy: 25
         usage.sklearn: 6
@@ -96983,6 +98797,7 @@ class int32:
         """
         usage.dask: 1
         usage.matplotlib: 4
+        usage.orange3: 2
         usage.scipy: 23
         usage.skimage: 2
         usage.sklearn: 5
@@ -97065,6 +98880,7 @@ class int32:
         """
         usage.dask: 3
         usage.matplotlib: 4
+        usage.orange3: 2
         usage.pandas: 77
         usage.scipy: 34
         usage.skimage: 3
@@ -97758,6 +99574,7 @@ class int64:
         usage.dask: 7
         usage.matplotlib: 12
         usage.networkx: 4
+        usage.orange3: 2
         usage.scipy: 32
         usage.skimage: 4
         usage.sklearn: 25
@@ -97771,6 +99588,7 @@ class int64:
     def __ne__(cls, _0: numpy.int64, /):
         """
         usage.dask: 4
+        usage.orange3: 2
         usage.scipy: 24
         usage.skimage: 2
         usage.sklearn: 2
@@ -97895,6 +99713,7 @@ class int64:
         usage.dask: 14
         usage.matplotlib: 20
         usage.networkx: 5
+        usage.orange3: 4
         usage.pandas: 74
         usage.scipy: 71
         usage.skimage: 6
@@ -98173,6 +99992,7 @@ class int64:
     ndim: object
 
     # usage.dask: 10
+    # usage.orange3: 2
     # usage.scipy: 1
     # usage.xarray: 1
     shape: object
@@ -98196,6 +100016,7 @@ class int64:
         usage.dask: 6
         usage.koalas: 1
         usage.matplotlib: 25
+        usage.orange3: 9
         usage.scipy: 124
         usage.seaborn: 2
         usage.skimage: 29
@@ -98249,6 +100070,7 @@ class int64:
         """
         usage.dask: 12
         usage.matplotlib: 10
+        usage.orange3: 5
         usage.prophet: 1
         usage.scipy: 63
         usage.skimage: 6
@@ -98396,6 +100218,7 @@ class int64:
         usage.dask: 20
         usage.koalas: 2
         usage.matplotlib: 52
+        usage.orange3: 14
         usage.pandas: 63
         usage.prophet: 1
         usage.scipy: 283
@@ -98470,6 +100293,7 @@ class int64:
         """
         usage.dask: 2
         usage.matplotlib: 4
+        usage.orange3: 3
         usage.prophet: 1
         usage.scipy: 24
         usage.seaborn: 1
@@ -98487,6 +100311,7 @@ class int64:
         usage.geopandas: 2
         usage.matplotlib: 26
         usage.networkx: 14
+        usage.orange3: 11
         usage.scipy: 115
         usage.seaborn: 7
         usage.skimage: 47
@@ -98658,6 +100483,7 @@ class int64:
         usage.koalas: 1
         usage.matplotlib: 54
         usage.networkx: 14
+        usage.orange3: 14
         usage.pandas: 513
         usage.prophet: 3
         usage.scipy: 175
@@ -98733,6 +100559,7 @@ class int64:
         usage.matplotlib: 6
         usage.modin: 1
         usage.networkx: 1
+        usage.orange3: 13
         usage.prophet: 1
         usage.scipy: 17
         usage.seaborn: 2
@@ -98834,6 +100661,7 @@ class int64:
         usage.matplotlib: 10
         usage.modin: 1
         usage.networkx: 1
+        usage.orange3: 13
         usage.pandas: 19
         usage.prophet: 1
         usage.scipy: 34
@@ -98946,6 +100774,7 @@ class int64:
         usage.dask: 19
         usage.matplotlib: 7
         usage.modin: 1
+        usage.orange3: 5
         usage.prophet: 1
         usage.scipy: 49
         usage.skimage: 15
@@ -98960,6 +100789,7 @@ class int64:
         usage.dask: 15
         usage.matplotlib: 16
         usage.modin: 1
+        usage.orange3: 1
         usage.scipy: 15
         usage.skimage: 5
         usage.sklearn: 13
@@ -99031,6 +100861,7 @@ class int64:
         usage.dask: 43
         usage.matplotlib: 26
         usage.modin: 2
+        usage.orange3: 6
         usage.pandas: 24
         usage.prophet: 1
         usage.scipy: 81
@@ -99054,22 +100885,23 @@ class int64:
         ...
 
     @overload
+    def __iadd__(self, _0: int, /):
+        """
+        usage.matplotlib: 2
+        usage.orange3: 1
+        usage.scipy: 12
+        usage.sklearn: 4
+        usage.statsmodels: 3
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
     def __iadd__(self, _0: numpy.float64, /):
         """
         usage.scipy: 3
         usage.statsmodels: 1
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __iadd__(self, _0: int, /):
-        """
-        usage.matplotlib: 2
-        usage.scipy: 12
-        usage.sklearn: 4
-        usage.statsmodels: 3
-        usage.xarray: 2
         """
         ...
 
@@ -99091,6 +100923,7 @@ class int64:
         """
         usage.dask: 1
         usage.matplotlib: 3
+        usage.orange3: 1
         usage.pandas: 3
         usage.prophet: 1
         usage.scipy: 29
@@ -99200,6 +101033,20 @@ class int64:
         ...
 
     @overload
+    def __itruediv__(self, _0: Orange.statistics.distribution.Discrete, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __itruediv__(self, _0: Orange.statistics.distribution.Continuous, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
     def __itruediv__(self, _0: int, /):
         """
         usage.statsmodels: 1
@@ -99213,8 +101060,19 @@ class int64:
         """
         ...
 
-    def __itruediv__(self, _0: Union[float, numpy.float64, int], /):
+    def __itruediv__(
+        self,
+        _0: Union[
+            float,
+            Orange.statistics.distribution.Discrete,
+            Orange.statistics.distribution.Continuous,
+            numpy.float64,
+            int,
+        ],
+        /,
+    ):
         """
+        usage.orange3: 2
         usage.pandas: 1
         usage.skimage: 2
         usage.statsmodels: 1
@@ -99239,6 +101097,7 @@ class int64:
         """
         usage.dask: 9
         usage.matplotlib: 3
+        usage.orange3: 1
         usage.scipy: 16
         usage.seaborn: 1
         usage.skimage: 5
@@ -99261,18 +101120,19 @@ class int64:
         ...
 
     @overload
-    def __le__(self, _0: pandas.core.series.Series, /):
+    def __le__(self, _0: float, /):
         """
-        usage.dask: 1
+        usage.orange3: 1
+        usage.scipy: 1
+        usage.sklearn: 2
         usage.statsmodels: 1
         """
         ...
 
     @overload
-    def __le__(self, _0: float, /):
+    def __le__(self, _0: pandas.core.series.Series, /):
         """
-        usage.scipy: 1
-        usage.sklearn: 2
+        usage.dask: 1
         usage.statsmodels: 1
         """
         ...
@@ -99300,6 +101160,7 @@ class int64:
         usage.dask: 19
         usage.matplotlib: 8
         usage.networkx: 1
+        usage.orange3: 2
         usage.pandas: 27
         usage.prophet: 2
         usage.scipy: 49
@@ -99317,6 +101178,7 @@ class int64:
         usage.koalas: 2
         usage.matplotlib: 13
         usage.networkx: 13
+        usage.orange3: 12
         usage.prophet: 3
         usage.scipy: 56
         usage.skimage: 14
@@ -99332,6 +101194,7 @@ class int64:
         usage.dask: 15
         usage.matplotlib: 16
         usage.modin: 1
+        usage.orange3: 1
         usage.scipy: 15
         usage.skimage: 5
         usage.sklearn: 13
@@ -99421,6 +101284,7 @@ class int64:
         usage.matplotlib: 34
         usage.modin: 1
         usage.networkx: 13
+        usage.orange3: 13
         usage.pandas: 10
         usage.prophet: 3
         usage.scipy: 83
@@ -99492,6 +101356,7 @@ class int64:
     def __mul__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 2
+        usage.orange3: 1
         usage.scipy: 19
         usage.skimage: 2
         usage.sklearn: 2
@@ -99515,6 +101380,7 @@ class int64:
     def __mul__(self, _0: numpy.int64, /):
         """
         usage.dask: 1
+        usage.orange3: 1
         usage.scipy: 37
         usage.skimage: 1
         usage.sklearn: 5
@@ -99571,6 +101437,7 @@ class int64:
         usage.dask: 9
         usage.matplotlib: 9
         usage.networkx: 1
+        usage.orange3: 2
         usage.pandas: 59
         usage.prophet: 1
         usage.scipy: 105
@@ -99679,6 +101546,7 @@ class int64:
         """
         usage.dask: 2
         usage.matplotlib: 2
+        usage.orange3: 1
         usage.scipy: 4
         usage.skimage: 2
         usage.sklearn: 1
@@ -99705,6 +101573,7 @@ class int64:
     def __radd__(self, _0: numpy.float64, /):
         """
         usage.matplotlib: 1
+        usage.orange3: 1
         usage.scipy: 9
         usage.skimage: 3
         usage.statsmodels: 11
@@ -99716,6 +101585,7 @@ class int64:
         """
         usage.dask: 12
         usage.matplotlib: 10
+        usage.orange3: 5
         usage.prophet: 1
         usage.scipy: 63
         usage.skimage: 6
@@ -99861,6 +101731,7 @@ class int64:
         usage.koalas: 49
         usage.matplotlib: 21
         usage.networkx: 4
+        usage.orange3: 7
         usage.pandas: 63
         usage.prophet: 3
         usage.scipy: 145
@@ -99990,6 +101861,7 @@ class int64:
     def __rmul__(self, _0: numpy.ndarray, /):
         """
         usage.matplotlib: 3
+        usage.orange3: 1
         usage.scipy: 14
         usage.skimage: 2
         usage.sklearn: 1
@@ -100001,10 +101873,22 @@ class int64:
     def __rmul__(self, _0: numpy.int64, /):
         """
         usage.dask: 1
+        usage.orange3: 1
         usage.scipy: 37
         usage.skimage: 1
         usage.sklearn: 5
         usage.statsmodels: 13
+        """
+        ...
+
+    @overload
+    def __rmul__(self, _0: numpy.float64, /):
+        """
+        usage.matplotlib: 1
+        usage.orange3: 1
+        usage.scipy: 33
+        usage.sklearn: 6
+        usage.statsmodels: 8
         """
         ...
 
@@ -100020,16 +101904,6 @@ class int64:
     def __rmul__(self, _0: Tuple[slice[None, None, None]], /):
         """
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __rmul__(self, _0: numpy.float64, /):
-        """
-        usage.matplotlib: 1
-        usage.scipy: 33
-        usage.sklearn: 6
-        usage.statsmodels: 8
         """
         ...
 
@@ -100116,6 +101990,7 @@ class int64:
         usage.dask: 4
         usage.matplotlib: 8
         usage.networkx: 1
+        usage.orange3: 3
         usage.pandas: 59
         usage.scipy: 198
         usage.skimage: 8
@@ -100216,6 +102091,7 @@ class int64:
         usage.alphalens: 2
         usage.dask: 2
         usage.matplotlib: 2
+        usage.orange3: 9
         usage.prophet: 1
         usage.scipy: 35
         usage.skimage: 10
@@ -100230,6 +102106,7 @@ class int64:
         """
         usage.dask: 1
         usage.matplotlib: 8
+        usage.orange3: 4
         usage.pyjanitor: 1
         usage.scipy: 46
         usage.seaborn: 1
@@ -100241,22 +102118,23 @@ class int64:
         ...
 
     @overload
+    def __rsub__(self, _0: numpy.float64, /):
+        """
+        usage.matplotlib: 3
+        usage.orange3: 1
+        usage.scipy: 5
+        usage.sklearn: 3
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
     def __rsub__(self, _0: float, /):
         """
         usage.matplotlib: 1
         usage.scipy: 2
         usage.sklearn: 2
         usage.statsmodels: 4
-        """
-        ...
-
-    @overload
-    def __rsub__(self, _0: numpy.float64, /):
-        """
-        usage.matplotlib: 3
-        usage.scipy: 5
-        usage.sklearn: 3
-        usage.statsmodels: 5
         """
         ...
 
@@ -100356,6 +102234,7 @@ class int64:
         usage.alphalens: 2
         usage.dask: 4
         usage.matplotlib: 15
+        usage.orange3: 14
         usage.pandas: 32
         usage.prophet: 1
         usage.pyjanitor: 2
@@ -100373,6 +102252,7 @@ class int64:
         """
         usage.dask: 1
         usage.matplotlib: 2
+        usage.orange3: 4
         usage.scipy: 23
         usage.seaborn: 3
         usage.skimage: 6
@@ -100386,6 +102266,7 @@ class int64:
     def __rtruediv__(self, _0: int, /):
         """
         usage.dask: 2
+        usage.orange3: 1
         usage.prophet: 1
         usage.skimage: 2
         usage.sklearn: 2
@@ -100396,6 +102277,7 @@ class int64:
     def __rtruediv__(self, _0: numpy.int64, /):
         """
         usage.dask: 2
+        usage.orange3: 9
         usage.prophet: 1
         usage.scipy: 4
         usage.seaborn: 1
@@ -100409,6 +102291,7 @@ class int64:
     def __rtruediv__(self, _0: numpy.float64, /):
         """
         usage.dask: 2
+        usage.orange3: 3
         usage.scipy: 10
         usage.skimage: 1
         usage.sklearn: 5
@@ -100431,6 +102314,7 @@ class int64:
         usage.dask: 2
         usage.matplotlib: 5
         usage.networkx: 1
+        usage.orange3: 2
         usage.scipy: 8
         usage.sklearn: 6
         usage.statsmodels: 4
@@ -100501,6 +102385,7 @@ class int64:
         usage.dask: 10
         usage.matplotlib: 7
         usage.networkx: 2
+        usage.orange3: 19
         usage.pandas: 5
         usage.prophet: 2
         usage.pyjanitor: 1
@@ -100551,6 +102436,7 @@ class int64:
         """
         usage.dask: 6
         usage.matplotlib: 12
+        usage.orange3: 11
         usage.prophet: 2
         usage.scipy: 83
         usage.seaborn: 1
@@ -100566,6 +102452,7 @@ class int64:
         """
         usage.dask: 1
         usage.matplotlib: 8
+        usage.orange3: 4
         usage.pyjanitor: 1
         usage.scipy: 46
         usage.seaborn: 1
@@ -100624,6 +102511,7 @@ class int64:
         usage.dask: 7
         usage.koalas: 1
         usage.matplotlib: 33
+        usage.orange3: 15
         usage.pandas: 26
         usage.prophet: 3
         usage.pyjanitor: 1
@@ -100640,6 +102528,7 @@ class int64:
     def __truediv__(self, _0: numpy.int64, /):
         """
         usage.dask: 2
+        usage.orange3: 9
         usage.prophet: 1
         usage.scipy: 4
         usage.seaborn: 1
@@ -100655,6 +102544,7 @@ class int64:
         usage.dask: 3
         usage.matplotlib: 5
         usage.modin: 1
+        usage.orange3: 5
         usage.scipy: 10
         usage.seaborn: 1
         usage.skimage: 7
@@ -100706,6 +102596,7 @@ class int64:
         usage.dask: 6
         usage.matplotlib: 9
         usage.modin: 1
+        usage.orange3: 14
         usage.pandas: 22
         usage.prophet: 1
         usage.scipy: 52
@@ -102116,18 +104007,27 @@ class matrix:
         ...
 
     @overload
-    def __eq__(self, _0: int, /):
+    def __eq__(self, _0: numpy.ndarray, /):
         """
-        usage.networkx: 2
-        usage.scipy: 35
-        usage.sklearn: 2
+        usage.orange3: 1
+        usage.scipy: 1
         """
         ...
 
     @overload
     def __eq__(self, _0: numpy.matrix, /):
         """
+        usage.orange3: 2
         usage.scipy: 184
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: int, /):
+        """
+        usage.networkx: 2
+        usage.scipy: 35
+        usage.sklearn: 2
         """
         ...
 
@@ -102160,16 +104060,10 @@ class matrix:
         """
         ...
 
-    @overload
-    def __eq__(self, _0: numpy.ndarray, /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
     def __eq__(self, _0: object, /):
         """
         usage.networkx: 2
+        usage.orange3: 3
         usage.scipy: 325
         usage.sklearn: 3
         """
@@ -103654,6 +105548,7 @@ class matrix:
     def __rsub__(self, _0: numpy.matrix, /):
         """
         usage.networkx: 2
+        usage.orange3: 1
         usage.scipy: 222
         """
         ...
@@ -103719,6 +105614,7 @@ class matrix:
     def __rsub__(self, _0: object, /):
         """
         usage.networkx: 7
+        usage.orange3: 1
         usage.scipy: 598
         """
         ...
@@ -104853,18 +106749,19 @@ class matrix:
         ...
 
     @overload
-    def __sub__(self, _0: numpy.ndarray, /):
+    def __sub__(self, _0: numpy.matrix, /):
         """
-        usage.scipy: 199
-        usage.sklearn: 2
+        usage.networkx: 2
+        usage.orange3: 1
+        usage.scipy: 222
         """
         ...
 
     @overload
-    def __sub__(self, _0: numpy.matrix, /):
+    def __sub__(self, _0: numpy.ndarray, /):
         """
-        usage.networkx: 2
-        usage.scipy: 222
+        usage.scipy: 199
+        usage.sklearn: 2
         """
         ...
 
@@ -104927,6 +106824,7 @@ class matrix:
     def __sub__(self, _0: object, /):
         """
         usage.networkx: 3
+        usage.orange3: 1
         usage.scipy: 610
         usage.sklearn: 2
         """
@@ -106155,6 +108053,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 2
         usage.networkx: 1
+        usage.orange3: 5
         usage.scipy: 148
         usage.skimage: 14
         usage.sklearn: 82
@@ -106168,6 +108067,7 @@ class ndarray:
     def __ne__(cls, _0: float, /):
         """
         usage.networkx: 3
+        usage.orange3: 3
         usage.scipy: 9
         usage.skimage: 1
         usage.sklearn: 9
@@ -106182,6 +108082,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 18
+        usage.orange3: 16
         usage.scipy: 90
         usage.skimage: 40
         usage.sklearn: 74
@@ -106197,6 +108098,14 @@ class ndarray:
         usage.scipy: 2
         usage.skimage: 1
         usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __ne__(cls, _0: Literal["girl"], /):
+        """
+        usage.orange3: 1
         """
         ...
 
@@ -106344,12 +108253,20 @@ class ndarray:
         usage.dask: 5
         usage.matplotlib: 23
         usage.networkx: 4
+        usage.orange3: 25
         usage.pandas: 142
         usage.scipy: 273
         usage.skimage: 58
         usage.sklearn: 182
         usage.statsmodels: 58
         usage.xarray: 15
+        """
+        ...
+
+    @classmethod
+    def __new__(cls, /, *args: Literal["v", "t"]):
+        """
+        usage.orange3: 9
         """
         ...
 
@@ -106449,6 +108366,7 @@ class ndarray:
     # usage.matplotlib: 93
     # usage.modin: 3
     # usage.networkx: 9
+    # usage.orange3: 102
     # usage.pandas: 211
     # usage.sample-usage: 1
     # usage.scipy: 1349
@@ -106477,6 +108395,7 @@ class ndarray:
     attrs: object
 
     # usage.matplotlib: 2
+    # usage.orange3: 2
     # usage.pandas: 87
     # usage.scipy: 37
     # usage.sklearn: 2
@@ -106497,10 +108416,12 @@ class ndarray:
     # usage.geopandas: 1
     crs: object
 
+    # usage.orange3: 9
     # usage.scipy: 1
     ctypes: object
 
     # usage.geopandas: 1
+    # usage.orange3: 3
     # usage.scipy: 3
     # usage.sklearn: 6
     data: object
@@ -106513,6 +108434,7 @@ class ndarray:
     # usage.matplotlib: 79
     # usage.modin: 1
     # usage.networkx: 15
+    # usage.orange3: 41
     # usage.pandas: 3135
     # usage.sample-usage: 1
     # usage.scipy: 2779
@@ -106523,6 +108445,7 @@ class ndarray:
     dtype: object
 
     # usage.matplotlib: 2
+    # usage.orange3: 2
     # usage.pandas: 86
     # usage.scipy: 237
     # usage.skimage: 15
@@ -106533,6 +108456,7 @@ class ndarray:
 
     # usage.dask: 7
     # usage.matplotlib: 33
+    # usage.orange3: 4
     # usage.pandas: 14
     # usage.scipy: 31
     # usage.seaborn: 50
@@ -106579,6 +108503,7 @@ class ndarray:
     # usage.dask: 362
     # usage.geopandas: 3
     # usage.matplotlib: 141
+    # usage.orange3: 59
     # usage.pandas: 741
     # usage.sample-usage: 1
     # usage.scipy: 1936
@@ -106603,6 +108528,7 @@ class ndarray:
     # usage.matplotlib: 323
     # usage.modin: 4
     # usage.networkx: 50
+    # usage.orange3: 392
     # usage.pandas: 695
     # usage.prophet: 10
     # usage.sample-usage: 2
@@ -106618,6 +108544,7 @@ class ndarray:
     # usage.geopandas: 1
     # usage.matplotlib: 84
     # usage.modin: 1
+    # usage.orange3: 30
     # usage.pandas: 147
     # usage.sample-usage: 1
     # usage.scipy: 975
@@ -106658,6 +108585,7 @@ class ndarray:
         usage.dask: 10
         usage.matplotlib: 54
         usage.networkx: 1
+        usage.orange3: 5
         usage.prophet: 1
         usage.scipy: 196
         usage.seaborn: 5
@@ -106675,6 +108603,7 @@ class ndarray:
         usage.geopandas: 1
         usage.matplotlib: 213
         usage.networkx: 25
+        usage.orange3: 14
         usage.prophet: 3
         usage.sample-usage: 1
         usage.scipy: 1622
@@ -106707,6 +108636,7 @@ class ndarray:
         usage.dask: 81
         usage.matplotlib: 94
         usage.networkx: 3
+        usage.orange3: 11
         usage.sample-usage: 1
         usage.scipy: 356
         usage.seaborn: 4
@@ -106722,6 +108652,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 2
+        usage.orange3: 1
         usage.scipy: 4
         usage.skimage: 2
         usage.sklearn: 1
@@ -106998,6 +108929,7 @@ class ndarray:
         usage.geopandas: 1
         usage.matplotlib: 404
         usage.networkx: 29
+        usage.orange3: 31
         usage.pandas: 272
         usage.prophet: 7
         usage.sample-usage: 2
@@ -107016,6 +108948,7 @@ class ndarray:
         usage.dask: 4
         usage.geopandas: 8
         usage.matplotlib: 46
+        usage.orange3: 5
         usage.scipy: 230
         usage.seaborn: 3
         usage.skimage: 32
@@ -107099,6 +109032,7 @@ class ndarray:
         usage.dask: 5
         usage.geopandas: 8
         usage.matplotlib: 48
+        usage.orange3: 5
         usage.pandas: 88
         usage.sample-usage: 1
         usage.scipy: 296
@@ -107655,6 +109589,7 @@ class ndarray:
         usage.hvplot: 2
         usage.matplotlib: 46
         usage.networkx: 4
+        usage.orange3: 102
         usage.sample-usage: 2
         usage.scipy: 178
         usage.skimage: 140
@@ -107668,6 +109603,7 @@ class ndarray:
     def __eq__(self, _0: float, /):
         """
         usage.matplotlib: 4
+        usage.orange3: 19
         usage.scipy: 43
         usage.seaborn: 4
         usage.skimage: 11
@@ -107682,6 +109618,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 4
+        usage.orange3: 3
         usage.prophet: 1
         usage.scipy: 24
         usage.seaborn: 1
@@ -107699,6 +109636,7 @@ class ndarray:
         usage.matplotlib: 28
         usage.modin: 1
         usage.networkx: 4
+        usage.orange3: 38
         usage.scipy: 276
         usage.seaborn: 2
         usage.skimage: 127
@@ -107723,6 +109661,7 @@ class ndarray:
         """
         usage.dask: 1
         usage.matplotlib: 3
+        usage.orange3: 9
         usage.prophet: 1
         usage.scipy: 15
         usage.seaborn: 2
@@ -107828,6 +109767,115 @@ class ndarray:
         """
         usage.scipy: 2
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["nan"], /):
+        """
+        usage.orange3: 3
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal[""], /):
+        """
+        usage.orange3: 3
+        usage.scipy: 31
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["girl"], /):
+        """
+        usage.orange3: 4
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: List[float], /):
+        """
+        usage.orange3: 5
+        usage.scipy: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: numpy.matrix, /):
+        """
+        usage.orange3: 1
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["swan"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["tuna"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["wasp"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["WoRm"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["TOad"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["vOLe"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["worm"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["toad"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["vole"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["GIrl"], /):
+        """
+        usage.orange3: 1
         """
         ...
 
@@ -108058,24 +110106,9 @@ class ndarray:
         ...
 
     @overload
-    def __eq__(self, _0: Literal[""], /):
-        """
-        usage.scipy: 31
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __eq__(self, _0: object, /):
         """
         usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __eq__(self, _0: List[float], /):
-        """
-        usage.scipy: 2
         """
         ...
 
@@ -108111,13 +110144,6 @@ class ndarray:
 
     @overload
     def __eq__(self, _0: scipy.sparse.dok.dok_matrix, /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __eq__(self, _0: numpy.matrix, /):
         """
         usage.scipy: 1
         """
@@ -108324,6 +110350,7 @@ class ndarray:
         usage.matplotlib: 88
         usage.modin: 1
         usage.networkx: 8
+        usage.orange3: 200
         usage.pandas: 895
         usage.prophet: 2
         usage.sample-usage: 2
@@ -108340,6 +110367,7 @@ class ndarray:
     def __floordiv__(self, _0: int, /):
         """
         usage.dask: 1
+        usage.orange3: 8
         usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 14
@@ -108398,6 +110426,7 @@ class ndarray:
     def __floordiv__(self, _0: object, /):
         """
         usage.dask: 5
+        usage.orange3: 8
         usage.pandas: 58
         usage.prophet: 1
         usage.sample-usage: 1
@@ -108413,6 +110442,7 @@ class ndarray:
     def __ge__(self, _0: float, /):
         """
         usage.matplotlib: 9
+        usage.orange3: 6
         usage.scipy: 112
         usage.skimage: 7
         usage.sklearn: 17
@@ -108425,6 +110455,7 @@ class ndarray:
         """
         usage.dask: 12
         usage.matplotlib: 9
+        usage.orange3: 4
         usage.scipy: 162
         usage.skimage: 52
         usage.sklearn: 47
@@ -108483,6 +110514,27 @@ class ndarray:
         ...
 
     @overload
+    def __ge__(self, _0: Literal["15"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: Literal["chicken"], /):
+        """
+        usage.orange3: 4
+        """
+        ...
+
+    @overload
+    def __ge__(self, _0: Literal["girl"], /):
+        """
+        usage.orange3: 6
+        """
+        ...
+
+    @overload
     def __ge__(self, _0: object, /):
         """
         usage.pandas: 90
@@ -108525,6 +110577,7 @@ class ndarray:
         usage.matplotlib: 39
         usage.modin: 1
         usage.networkx: 5
+        usage.orange3: 21
         usage.pandas: 90
         usage.prophet: 4
         usage.scipy: 501
@@ -108546,6 +110599,7 @@ class ndarray:
         usage.matplotlib: 53
         usage.modin: 3
         usage.networkx: 5
+        usage.orange3: 50
         usage.scipy: 613
         usage.seaborn: 14
         usage.skimage: 66
@@ -108565,6 +110619,7 @@ class ndarray:
         usage.matplotlib: 433
         usage.modin: 20
         usage.networkx: 52
+        usage.orange3: 316
         usage.prophet: 28
         usage.pyjanitor: 2
         usage.sample-usage: 2
@@ -108584,6 +110639,7 @@ class ndarray:
         usage.geopandas: 13
         usage.matplotlib: 182
         usage.networkx: 5
+        usage.orange3: 125
         usage.prophet: 4
         usage.sample-usage: 1
         usage.scipy: 1104
@@ -108604,6 +110660,7 @@ class ndarray:
         usage.matplotlib: 45
         usage.modin: 1
         usage.networkx: 6
+        usage.orange3: 34
         usage.prophet: 7
         usage.scipy: 322
         usage.seaborn: 10
@@ -108621,6 +110678,7 @@ class ndarray:
         usage.geopandas: 8
         usage.matplotlib: 130
         usage.networkx: 21
+        usage.orange3: 99
         usage.scipy: 420
         usage.seaborn: 18
         usage.skimage: 115
@@ -108636,6 +110694,7 @@ class ndarray:
         usage.dask: 31
         usage.matplotlib: 4
         usage.networkx: 2
+        usage.orange3: 4
         usage.scipy: 21
         usage.skimage: 98
         usage.sklearn: 3
@@ -108648,6 +110707,7 @@ class ndarray:
         """
         usage.dask: 5
         usage.matplotlib: 16
+        usage.orange3: 5
         usage.scipy: 6
         usage.skimage: 115
         usage.statsmodels: 79
@@ -108671,6 +110731,7 @@ class ndarray:
         """
         usage.dask: 8
         usage.matplotlib: 8
+        usage.orange3: 1
         usage.scipy: 5
         usage.skimage: 41
         usage.sklearn: 4
@@ -108711,6 +110772,7 @@ class ndarray:
     ):
         """
         usage.matplotlib: 9
+        usage.orange3: 9
         usage.scipy: 32
         usage.skimage: 21
         usage.sklearn: 6
@@ -108793,6 +110855,7 @@ class ndarray:
         """
         usage.dask: 15
         usage.matplotlib: 10
+        usage.orange3: 6
         usage.scipy: 93
         usage.seaborn: 1
         usage.skimage: 6
@@ -108808,6 +110871,7 @@ class ndarray:
         usage.dask: 2
         usage.matplotlib: 11
         usage.networkx: 1
+        usage.orange3: 9
         usage.scipy: 100
         usage.seaborn: 2
         usage.skimage: 26
@@ -108838,6 +110902,7 @@ class ndarray:
     def __getitem__(self, _0: Tuple[ellipsis, slice[None, int, None]], /):
         """
         usage.matplotlib: 5
+        usage.orange3: 4
         usage.scipy: 9
         usage.skimage: 14
         usage.sklearn: 2
@@ -108852,6 +110917,7 @@ class ndarray:
         usage.dask: 1
         usage.matplotlib: 14
         usage.networkx: 1
+        usage.orange3: 2
         usage.scipy: 76
         usage.skimage: 50
         usage.sklearn: 16
@@ -108886,6 +110952,7 @@ class ndarray:
         usage.dask: 12
         usage.matplotlib: 82
         usage.networkx: 25
+        usage.orange3: 17
         usage.scipy: 426
         usage.seaborn: 39
         usage.skimage: 139
@@ -108913,6 +110980,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 10
         usage.networkx: 3
+        usage.orange3: 7
         usage.scipy: 114
         usage.seaborn: 1
         usage.skimage: 31
@@ -108978,6 +111046,7 @@ class ndarray:
         usage.geopandas: 1
         usage.matplotlib: 44
         usage.networkx: 2
+        usage.orange3: 18
         usage.sample-usage: 1
         usage.scipy: 288
         usage.seaborn: 2
@@ -109005,6 +111074,7 @@ class ndarray:
         """
         usage.dask: 1
         usage.matplotlib: 8
+        usage.orange3: 1
         usage.scipy: 27
         usage.skimage: 5
         usage.sklearn: 16
@@ -109017,6 +111087,7 @@ class ndarray:
         """
         usage.dask: 14
         usage.matplotlib: 42
+        usage.orange3: 48
         usage.scipy: 212
         usage.seaborn: 1
         usage.skimage: 12
@@ -109062,6 +111133,7 @@ class ndarray:
         usage.dask: 1
         usage.geopandas: 1
         usage.matplotlib: 6
+        usage.orange3: 6
         usage.scipy: 38
         usage.skimage: 2
         usage.sklearn: 17
@@ -109080,6 +111152,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
         """
+        usage.orange3: 1
         usage.scipy: 1
         usage.skimage: 1
         usage.xarray: 1
@@ -109091,6 +111164,7 @@ class ndarray:
         """
         usage.dask: 6
         usage.matplotlib: 13
+        usage.orange3: 18
         usage.prophet: 2
         usage.scipy: 147
         usage.seaborn: 1
@@ -109119,6 +111193,7 @@ class ndarray:
     ):
         """
         usage.matplotlib: 11
+        usage.orange3: 2
         usage.scipy: 28
         usage.seaborn: 1
         usage.skimage: 37
@@ -109145,6 +111220,7 @@ class ndarray:
     def __getitem__(self, _0: Tuple[slice[None, None, None], slice[int, None, int]], /):
         """
         usage.matplotlib: 4
+        usage.orange3: 2
         usage.scipy: 78
         usage.seaborn: 1
         usage.skimage: 29
@@ -109162,6 +111238,7 @@ class ndarray:
         usage.dask: 4
         usage.geopandas: 1
         usage.matplotlib: 3
+        usage.orange3: 7
         usage.scipy: 129
         usage.seaborn: 5
         usage.skimage: 27
@@ -109186,6 +111263,7 @@ class ndarray:
     def __getitem__(self, _0: Tuple[slice[int, None, int], slice[None, int, None]], /):
         """
         usage.matplotlib: 3
+        usage.orange3: 1
         usage.scipy: 26
         usage.skimage: 15
         usage.statsmodels: 17
@@ -109209,6 +111287,7 @@ class ndarray:
     def __getitem__(self, _0: Tuple[slice[None, None, None], slice[int, int, int]], /):
         """
         usage.matplotlib: 4
+        usage.orange3: 3
         usage.scipy: 43
         usage.skimage: 6
         usage.sklearn: 30
@@ -109223,6 +111302,7 @@ class ndarray:
         usage.dask: 1
         usage.geopandas: 1
         usage.matplotlib: 1
+        usage.orange3: 11
         usage.scipy: 14
         usage.skimage: 1
         usage.sklearn: 18
@@ -109236,6 +111316,7 @@ class ndarray:
         """
         usage.dask: 7
         usage.matplotlib: 5
+        usage.orange3: 2
         usage.scipy: 33
         usage.skimage: 9
         usage.sklearn: 43
@@ -109247,6 +111328,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[ellipsis, slice[int, int, int]], /):
         """
+        usage.orange3: 4
         usage.scipy: 14
         usage.skimage: 2
         usage.statsmodels: 16
@@ -109260,6 +111342,7 @@ class ndarray:
         """
         usage.dask: 3
         usage.networkx: 2
+        usage.orange3: 2
         usage.scipy: 4
         usage.skimage: 2
         usage.sklearn: 8
@@ -109275,6 +111358,7 @@ class ndarray:
         usage.geopandas: 1
         usage.matplotlib: 43
         usage.networkx: 3
+        usage.orange3: 22
         usage.scipy: 333
         usage.seaborn: 6
         usage.skimage: 29
@@ -109289,6 +111373,7 @@ class ndarray:
         """
         usage.dask: 1
         usage.matplotlib: 2
+        usage.orange3: 3
         usage.scipy: 15
         usage.seaborn: 3
         usage.skimage: 2
@@ -109337,6 +111422,7 @@ class ndarray:
     ):
         """
         usage.matplotlib: 20
+        usage.orange3: 2
         usage.scipy: 20
         usage.skimage: 8
         usage.statsmodels: 5
@@ -109399,6 +111485,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 1
+        usage.orange3: 1
         usage.scipy: 9
         usage.skimage: 5
         usage.sklearn: 17
@@ -109488,6 +111575,7 @@ class ndarray:
     def __getitem__(self, _0: Tuple[slice[int, int, int], slice[None, int, None]], /):
         """
         usage.dask: 1
+        usage.orange3: 4
         usage.scipy: 3
         usage.skimage: 13
         usage.sklearn: 1
@@ -109526,6 +111614,7 @@ class ndarray:
     def __getitem__(self, _0: Tuple[numpy.int64, int], /):
         """
         usage.networkx: 5
+        usage.orange3: 2
         usage.scipy: 1
         usage.skimage: 2
         usage.sklearn: 2
@@ -109538,6 +111627,7 @@ class ndarray:
         usage.dask: 6
         usage.matplotlib: 11
         usage.networkx: 18
+        usage.orange3: 20
         usage.scipy: 88
         usage.seaborn: 2
         usage.skimage: 1
@@ -109552,6 +111642,7 @@ class ndarray:
         """
         usage.matplotlib: 3
         usage.modin: 1
+        usage.orange3: 3
         usage.scipy: 54
         usage.skimage: 2
         usage.sklearn: 15
@@ -109563,6 +111654,7 @@ class ndarray:
     def __getitem__(self, _0: slice[numpy.int64, None, numpy.int64], /):
         """
         usage.matplotlib: 3
+        usage.orange3: 2
         usage.scipy: 29
         usage.skimage: 5
         usage.sklearn: 3
@@ -109618,6 +111710,7 @@ class ndarray:
         """
         usage.dask: 6
         usage.networkx: 2
+        usage.orange3: 5
         usage.scipy: 142
         usage.skimage: 8
         usage.sklearn: 131
@@ -109782,6 +111875,7 @@ class ndarray:
     ):
         """
         usage.matplotlib: 1
+        usage.orange3: 5
         usage.scipy: 26
         usage.skimage: 3
         usage.sklearn: 15
@@ -109793,6 +111887,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[None, int, None], int], /):
         """
+        usage.orange3: 1
         usage.scipy: 19
         usage.skimage: 13
         usage.sklearn: 2
@@ -109875,6 +111970,7 @@ class ndarray:
     def __getitem__(self, _0: Tuple[None, ...], /):
         """
         usage.dask: 34
+        usage.orange3: 3
         usage.scipy: 34
         usage.skimage: 1
         usage.statsmodels: 3
@@ -110480,6 +112576,7 @@ class ndarray:
         """
         usage.dask: 3
         usage.matplotlib: 1
+        usage.orange3: 1
         usage.scipy: 1
         usage.skimage: 10
         usage.statsmodels: 11
@@ -110489,6 +112586,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: Tuple[slice[None, int, None], slice[int, int, int]], /):
         """
+        usage.orange3: 1
         usage.scipy: 5
         usage.skimage: 12
         usage.statsmodels: 16
@@ -110686,6 +112784,461 @@ class ndarray:
         ...
 
     @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], slice[numpy.int64, numpy.int64, numpy.int64]
+        ],
+        /,
+    ):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: ellipsis, /):
+        """
+        usage.orange3: 9
+        usage.scipy: 13
+        usage.statsmodels: 1
+        usage.xarray: 9
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], int, int], /):
+        """
+        usage.dask: 2
+        usage.matplotlib: 46
+        usage.orange3: 1
+        usage.scipy: 27
+        usage.seaborn: 3
+        usage.sklearn: 13
+        usage.statsmodels: 12
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, numpy.int64, None], slice[None, None, None]], /
+    ):
+        """
+        usage.orange3: 1
+        usage.scipy: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[numpy.int64, None, numpy.int64], slice[None, None, None]],
+        /,
+    ):
+        """
+        usage.orange3: 1
+        usage.scipy: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[numpy.int32, numpy.int32, numpy.int32], /):
+        """
+        usage.orange3: 11
+        usage.scipy: 59
+        usage.sklearn: 42
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: range, /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, None, None], slice[numpy.int64, numpy.int64, numpy.int64]
+        ],
+        /,
+    ):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[None, numpy.int64, None], slice[numpy.int64, None, numpy.int64]
+        ],
+        /,
+    ):
+        """
+        usage.orange3: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], numpy.ndarray], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[Tuple[int], slice[None, None, None]], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[Tuple[int], slice[None, None, None], slice[None, None, None]], /
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[None, slice[None, None, None], slice[None, None, None]], /
+    ):
+        """
+        usage.dask: 1
+        usage.networkx: 2
+        usage.orange3: 1
+        usage.scipy: 5
+        usage.sklearn: 8
+        usage.statsmodels: 5
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[None, int, None], /):
+        """
+        usage.dask: 1
+        usage.orange3: 5
+        usage.scipy: 12
+        usage.statsmodels: 5
+        usage.xarray: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: numpy.int32, /):
+        """
+        usage.matplotlib: 2
+        usage.orange3: 5
+        usage.scipy: 34
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: slice[int, int, int], /):
+        """
+        usage.geopandas: 1
+        usage.matplotlib: 2
+        usage.orange3: 8
+        usage.scipy: 24
+        usage.seaborn: 1
+        usage.sklearn: 3
+        usage.statsmodels: 3
+        usage.xarray: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, int, None], numpy.ndarray], /):
+        """
+        usage.orange3: 1
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[None, int, None], slice[numpy.int64, numpy.int64, numpy.int64]],
+        /,
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, slice[None, int, None]], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[int, int, int], slice[numpy.int64, numpy.int64, numpy.int64]],
+        /,
+    ):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[None, int, None]], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, int, None], slice[None, int, None]], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[int, None, int], slice[numpy.int64, numpy.int64, numpy.int64]],
+        /,
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, None, int], slice[None, int, None]], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, int, None]], /
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, int, None]], /
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[None, None, None], slice[int, int, int]], /):
+        """
+        usage.orange3: 1
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, int, None]], /
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[slice[int, int, int], slice[numpy.int64, numpy.int64, numpy.int64]],
+        /,
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[None, int, None]], /):
+        """
+        usage.orange3: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
+        """
+        usage.orange3: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[None, int, None]], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], slice[None, int, None]], /):
+        """
+        usage.orange3: 5
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], slice[int, int, int]], /):
+        """
+        usage.orange3: 5
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], slice[None, int, None]], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, numpy.ndarray], /):
+        """
+        usage.orange3: 3
+        usage.scipy: 2
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, List[int]], /):
+        """
+        usage.orange3: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, numpy.int64], /):
+        """
+        usage.orange3: 1
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], int], /):
+        """
+        usage.orange3: 6
+        usage.sklearn: 11
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self,
+        _0: Tuple[
+            slice[numpy.int64, numpy.int64, numpy.int64],
+            slice[numpy.int64, numpy.int64, numpy.int64],
+        ],
+        /,
+    ):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[numpy.ndarray, slice[numpy.int64, numpy.int64, numpy.int64]], /
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[list, int], /):
+        """
+        usage.orange3: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: list, /):
+        """
+        usage.dask: 1
+        usage.networkx: 2
+        usage.orange3: 1
+        usage.scipy: 3
+        usage.sklearn: 4
+        usage.statsmodels: 5
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, None], /):
+        """
+        usage.orange3: 1
+        usage.scipy: 4
+        usage.sklearn: 6
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], slice[int, int, int]], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], List[int]], /):
+        """
+        usage.dask: 9
+        usage.orange3: 5
+        usage.xarray: 4
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], List[int]], /):
+        """
+        usage.orange3: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[slice[int, int, int], slice[int, int, int]], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[ellipsis, slice[int, int, int]], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: Tuple[slice[None, None, None]], /):
         """
         usage.dask: 2
@@ -110777,22 +113330,6 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: ellipsis, /):
-        """
-        usage.scipy: 13
-        usage.statsmodels: 1
-        usage.xarray: 9
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[None, int, None], numpy.ndarray], /):
-        """
-        usage.xarray: 2
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[int, slice[None, None, None], ellipsis], /):
         """
         usage.xarray: 4
@@ -110813,19 +113350,6 @@ class ndarray:
         """
         usage.statsmodels: 1
         usage.xarray: 7
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[int, int, int], /):
-        """
-        usage.geopandas: 1
-        usage.matplotlib: 2
-        usage.scipy: 24
-        usage.seaborn: 1
-        usage.sklearn: 3
-        usage.statsmodels: 3
-        usage.xarray: 5
         """
         ...
 
@@ -111141,20 +113665,6 @@ class ndarray:
 
     @overload
     def __getitem__(
-        self, _0: Tuple[None, slice[None, None, None], slice[None, None, None]], /
-    ):
-        """
-        usage.dask: 1
-        usage.networkx: 2
-        usage.scipy: 5
-        usage.sklearn: 8
-        usage.statsmodels: 5
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(
         self, _0: Tuple[slice[None, None, None], slice[int, None, int], ellipsis], /
     ):
         """
@@ -111384,13 +113894,6 @@ class ndarray:
     def __getitem__(
         self, _0: Tuple[slice[None, None, None], slice[int, int, int], ellipsis], /
     ):
-        """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], slice[int, int, int]], /):
         """
         usage.xarray: 1
         """
@@ -111766,16 +114269,6 @@ class ndarray:
         """
         usage.sklearn: 2
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: slice[None, int, None], /):
-        """
-        usage.dask: 1
-        usage.scipy: 12
-        usage.statsmodels: 5
-        usage.xarray: 4
         """
         ...
 
@@ -112835,14 +115328,6 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[List[int], List[int]], /):
-        """
-        usage.dask: 9
-        usage.xarray: 4
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Tuple[List[int], List[int], slice[None, None, None]], /):
         """
         usage.xarray: 1
@@ -113014,18 +115499,6 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: list, /):
-        """
-        usage.dask: 1
-        usage.networkx: 2
-        usage.scipy: 3
-        usage.sklearn: 4
-        usage.statsmodels: 5
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
     def __getitem__(
         self, _0: Tuple[xarray.core.variable.Variable, xarray.core.variable.Variable], /
     ):
@@ -113077,21 +115550,6 @@ class ndarray:
     ):
         """
         usage.statsmodels: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[List[int], int], /):
-        """
-        usage.sklearn: 11
-        usage.statsmodels: 10
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[List[int], slice[int, int, int]], /):
-        """
-        usage.statsmodels: 3
         """
         ...
 
@@ -113213,16 +115671,6 @@ class ndarray:
         usage.scipy: 9
         usage.sklearn: 4
         usage.statsmodels: 5
-        """
-        ...
-
-    @overload
-    def __getitem__(
-        self, _0: Tuple[slice[None, numpy.int64, None], slice[None, None, None]], /
-    ):
-        """
-        usage.scipy: 1
-        usage.statsmodels: 1
         """
         ...
 
@@ -113726,18 +116174,6 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[slice[None, None, None], int, int], /):
-        """
-        usage.dask: 2
-        usage.matplotlib: 46
-        usage.scipy: 27
-        usage.seaborn: 3
-        usage.sklearn: 13
-        usage.statsmodels: 12
-        """
-        ...
-
-    @overload
     def __getitem__(
         self,
         _0: Tuple[
@@ -114094,15 +116530,6 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[ellipsis, numpy.ndarray], /):
-        """
-        usage.scipy: 2
-        usage.sklearn: 1
-        usage.statsmodels: 1
-        """
-        ...
-
-    @overload
     def __getitem__(
         self,
         _0: Tuple[
@@ -114284,13 +116711,6 @@ class ndarray:
     ):
         """
         usage.statsmodels: 3
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: Tuple[ellipsis, numpy.int64], /):
-        """
-        usage.statsmodels: 2
         """
         ...
 
@@ -114519,14 +116939,6 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: Tuple[int, None], /):
-        """
-        usage.scipy: 4
-        usage.sklearn: 6
-        """
-        ...
-
-    @overload
     def __getitem__(
         self, _0: Tuple[None, slice[None, None, None], None, None, None], /
     ):
@@ -114706,14 +117118,6 @@ class ndarray:
         ...
 
     @overload
-    def __getitem__(self, _0: slice[numpy.int32, numpy.int32, numpy.int32], /):
-        """
-        usage.scipy: 59
-        usage.sklearn: 42
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: Literal["description"], /):
         """
         usage.scipy: 1
@@ -114870,17 +117274,6 @@ class ndarray:
 
     @overload
     def __getitem__(
-        self,
-        _0: Tuple[slice[numpy.int64, None, numpy.int64], slice[None, None, None]],
-        /,
-    ):
-        """
-        usage.scipy: 4
-        """
-        ...
-
-    @overload
-    def __getitem__(
         self, _0: Tuple[List[Union[numpy.int64, int]], slice[int, int, int]], /
     ):
         """
@@ -114960,15 +117353,6 @@ class ndarray:
     def __getitem__(self, _0: Tuple[slice[None, None, None], range, range], /):
         """
         usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: numpy.int32, /):
-        """
-        usage.matplotlib: 2
-        usage.scipy: 34
-        usage.sklearn: 1
         """
         ...
 
@@ -116368,6 +118752,7 @@ class ndarray:
         usage.matplotlib: 1402
         usage.modin: 26
         usage.networkx: 215
+        usage.orange3: 1013
         usage.pandas: 2206
         usage.prophet: 41
         usage.pyjanitor: 2
@@ -116386,6 +118771,7 @@ class ndarray:
         """
         usage.dask: 18
         usage.matplotlib: 26
+        usage.orange3: 12
         usage.sample-usage: 1
         usage.scipy: 273
         usage.seaborn: 1
@@ -116402,6 +118788,7 @@ class ndarray:
         usage.dask: 9
         usage.geopandas: 1
         usage.matplotlib: 10
+        usage.orange3: 9
         usage.scipy: 118
         usage.seaborn: 1
         usage.skimage: 23
@@ -116415,6 +118802,7 @@ class ndarray:
     def __gt__(self, _0: numpy.float64, /):
         """
         usage.matplotlib: 4
+        usage.orange3: 4
         usage.scipy: 50
         usage.seaborn: 3
         usage.skimage: 18
@@ -116429,6 +118817,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 9
         usage.networkx: 1
+        usage.orange3: 9
         usage.scipy: 164
         usage.skimage: 29
         usage.sklearn: 18
@@ -116459,6 +118848,34 @@ class ndarray:
         usage.matplotlib: 1
         usage.scipy: 2
         usage.skimage: 14
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: Literal["5"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: Literal["chicken"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: Literal["lion"], /):
+        """
+        usage.orange3: 5
+        """
+        ...
+
+    @overload
+    def __gt__(self, _0: Literal["girl"], /):
+        """
+        usage.orange3: 3
         """
         ...
 
@@ -116510,6 +118927,7 @@ class ndarray:
         usage.geopandas: 1
         usage.matplotlib: 50
         usage.networkx: 1
+        usage.orange3: 45
         usage.pandas: 82
         usage.sample-usage: 1
         usage.scipy: 617
@@ -116541,6 +118959,7 @@ class ndarray:
         usage.dask: 8
         usage.matplotlib: 38
         usage.networkx: 7
+        usage.orange3: 17
         usage.scipy: 306
         usage.seaborn: 2
         usage.skimage: 89
@@ -116566,6 +118985,7 @@ class ndarray:
     def __iadd__(self, _0: numpy.int64, /):
         """
         usage.matplotlib: 2
+        usage.orange3: 2
         usage.scipy: 2
         usage.skimage: 3
         usage.sklearn: 6
@@ -116578,6 +118998,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 4
+        usage.orange3: 2
         usage.prophet: 4
         usage.scipy: 6
         usage.skimage: 3
@@ -116761,6 +119182,7 @@ class ndarray:
         usage.dask: 12
         usage.matplotlib: 70
         usage.networkx: 7
+        usage.orange3: 21
         usage.pandas: 13
         usage.prophet: 4
         usage.sample-usage: 1
@@ -116776,6 +119198,7 @@ class ndarray:
     @overload
     def __iand__(self, _0: numpy.ndarray, /):
         """
+        usage.orange3: 5
         usage.scipy: 19
         usage.skimage: 4
         usage.sklearn: 4
@@ -116810,6 +119233,7 @@ class ndarray:
         /,
     ):
         """
+        usage.orange3: 5
         usage.pandas: 4
         usage.sample-usage: 1
         usage.scipy: 20
@@ -116868,6 +119292,7 @@ class ndarray:
     def __imul__(self, _0: float, /):
         """
         usage.matplotlib: 12
+        usage.orange3: 2
         usage.scipy: 52
         usage.seaborn: 3
         usage.skimage: 11
@@ -116881,6 +119306,7 @@ class ndarray:
     def __imul__(self, _0: numpy.ndarray, /):
         """
         usage.matplotlib: 2
+        usage.orange3: 3
         usage.scipy: 45
         usage.skimage: 17
         usage.sklearn: 77
@@ -116893,6 +119319,7 @@ class ndarray:
         """
         usage.matplotlib: 4
         usage.networkx: 3
+        usage.orange3: 2
         usage.prophet: 1
         usage.scipy: 62
         usage.seaborn: 2
@@ -116909,6 +119336,7 @@ class ndarray:
         usage.dask: 1
         usage.matplotlib: 9
         usage.networkx: 1
+        usage.orange3: 2
         usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 60
@@ -117041,6 +119469,7 @@ class ndarray:
         usage.dask: 1
         usage.matplotlib: 29
         usage.networkx: 4
+        usage.orange3: 9
         usage.pandas: 4
         usage.prophet: 2
         usage.sample-usage: 1
@@ -117059,6 +119488,7 @@ class ndarray:
         usage.geopandas: 8
         usage.matplotlib: 25
         usage.modin: 1
+        usage.orange3: 24
         usage.pandas: 122
         usage.sample-usage: 1
         usage.scipy: 158
@@ -117202,6 +119632,7 @@ class ndarray:
         """
         usage.matplotlib: 1
         usage.networkx: 2
+        usage.orange3: 4
         usage.scipy: 56
         usage.skimage: 17
         usage.sklearn: 94
@@ -117363,6 +119794,7 @@ class ndarray:
         usage.dask: 2
         usage.matplotlib: 36
         usage.networkx: 8
+        usage.orange3: 4
         usage.pandas: 8
         usage.sample-usage: 1
         usage.scipy: 109
@@ -117384,6 +119816,7 @@ class ndarray:
         usage.matplotlib: 363
         usage.modin: 14
         usage.networkx: 11
+        usage.orange3: 87
         usage.pandas: 181
         usage.prophet: 1
         usage.pyjanitor: 1
@@ -117414,6 +119847,7 @@ class ndarray:
         """
         usage.matplotlib: 15
         usage.networkx: 3
+        usage.orange3: 3
         usage.scipy: 29
         usage.seaborn: 6
         usage.skimage: 15
@@ -117427,6 +119861,7 @@ class ndarray:
         """
         usage.matplotlib: 2
         usage.networkx: 2
+        usage.orange3: 12
         usage.scipy: 54
         usage.skimage: 14
         usage.sklearn: 102
@@ -117456,6 +119891,7 @@ class ndarray:
     def __itruediv__(self, _0: int, /):
         """
         usage.matplotlib: 2
+        usage.orange3: 5
         usage.scipy: 13
         usage.skimage: 1
         usage.sklearn: 11
@@ -117536,6 +119972,7 @@ class ndarray:
         usage.dask: 1
         usage.matplotlib: 29
         usage.networkx: 5
+        usage.orange3: 20
         usage.scipy: 155
         usage.seaborn: 6
         usage.skimage: 39
@@ -117557,6 +119994,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 14
         usage.networkx: 1
+        usage.orange3: 4
         usage.scipy: 120
         usage.skimage: 22
         usage.sklearn: 22
@@ -117594,11 +120032,40 @@ class ndarray:
         """
         usage.matplotlib: 7
         usage.networkx: 1
+        usage.orange3: 6
         usage.scipy: 106
         usage.seaborn: 1
         usage.skimage: 1
         usage.sklearn: 24
         usage.statsmodels: 17
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: Literal["2"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: Literal["chicken"], /):
+        """
+        usage.orange3: 3
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: Literal["lion"], /):
+        """
+        usage.orange3: 4
+        """
+        ...
+
+    @overload
+    def __le__(self, _0: Literal["girl"], /):
+        """
+        usage.orange3: 3
         """
         ...
 
@@ -117668,6 +120135,7 @@ class ndarray:
         usage.matplotlib: 41
         usage.modin: 1
         usage.networkx: 6
+        usage.orange3: 21
         usage.pandas: 134
         usage.scipy: 441
         usage.seaborn: 12
@@ -117705,6 +120173,7 @@ class ndarray:
         usage.dask: 4
         usage.matplotlib: 17
         usage.networkx: 4
+        usage.orange3: 10
         usage.scipy: 133
         usage.seaborn: 1
         usage.skimage: 20
@@ -117719,6 +120188,7 @@ class ndarray:
         """
         usage.dask: 28
         usage.matplotlib: 29
+        usage.orange3: 7
         usage.sample-usage: 1
         usage.scipy: 200
         usage.seaborn: 1
@@ -117744,6 +120214,7 @@ class ndarray:
         """
         usage.dask: 1
         usage.matplotlib: 5
+        usage.orange3: 1
         usage.scipy: 44
         usage.seaborn: 3
         usage.skimage: 4
@@ -117758,11 +120229,26 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 9
         usage.networkx: 1
+        usage.orange3: 9
         usage.scipy: 164
         usage.skimage: 29
         usage.sklearn: 18
         usage.statsmodels: 41
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __lt__(self, _0: Literal["chicken"], /):
+        """
+        usage.orange3: 6
+        """
+        ...
+
+    @overload
+    def __lt__(self, _0: Literal["girl"], /):
+        """
+        usage.orange3: 6
         """
         ...
 
@@ -117813,6 +120299,7 @@ class ndarray:
         usage.dask: 36
         usage.matplotlib: 61
         usage.networkx: 5
+        usage.orange3: 39
         usage.pandas: 48
         usage.sample-usage: 1
         usage.scipy: 559
@@ -117937,6 +120424,7 @@ class ndarray:
         usage.geopandas: 1
         usage.koalas: 2
         usage.matplotlib: 10
+        usage.orange3: 3
         usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 11
@@ -117986,6 +120474,7 @@ class ndarray:
         usage.geopandas: 1
         usage.koalas: 2
         usage.matplotlib: 12
+        usage.orange3: 3
         usage.pandas: 52
         usage.prophet: 1
         usage.sample-usage: 1
@@ -118005,6 +120494,7 @@ class ndarray:
         usage.geopandas: 1
         usage.matplotlib: 154
         usage.networkx: 9
+        usage.orange3: 33
         usage.prophet: 11
         usage.scipy: 1535
         usage.seaborn: 9
@@ -118021,6 +120511,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 83
         usage.networkx: 5
+        usage.orange3: 8
         usage.scipy: 315
         usage.seaborn: 8
         usage.skimage: 37
@@ -118036,6 +120527,7 @@ class ndarray:
         usage.dask: 37
         usage.matplotlib: 58
         usage.networkx: 3
+        usage.orange3: 8
         usage.prophet: 5
         usage.sample-usage: 1
         usage.scipy: 177
@@ -118052,6 +120544,7 @@ class ndarray:
         """
         usage.matplotlib: 26
         usage.networkx: 3
+        usage.orange3: 3
         usage.prophet: 6
         usage.scipy: 167
         usage.seaborn: 5
@@ -118079,6 +120572,7 @@ class ndarray:
     def __mul__(self, _0: numpy.int64, /):
         """
         usage.matplotlib: 3
+        usage.orange3: 1
         usage.scipy: 14
         usage.skimage: 2
         usage.sklearn: 1
@@ -118106,6 +120600,13 @@ class ndarray:
     def __mul__(self, _0: List[bool], /):
         """
         usage.skimage: 2
+        """
+        ...
+
+    @overload
+    def __mul__(self, _0: Orange.statistics.contingency.Discrete, /):
+        """
+        usage.orange3: 1
         """
         ...
 
@@ -118466,6 +120967,7 @@ class ndarray:
         usage.geopandas: 1
         usage.matplotlib: 329
         usage.networkx: 23
+        usage.orange3: 54
         usage.pandas: 256
         usage.prophet: 23
         usage.pyjanitor: 1
@@ -118484,6 +120986,7 @@ class ndarray:
         usage.dask: 7
         usage.matplotlib: 68
         usage.networkx: 1
+        usage.orange3: 4
         usage.pandas: 25
         usage.prophet: 3
         usage.sample-usage: 1
@@ -118500,6 +121003,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 6
+        usage.orange3: 2
         usage.scipy: 34
         usage.skimage: 9
         usage.sklearn: 7
@@ -118556,6 +121060,7 @@ class ndarray:
         """
         usage.dask: 3
         usage.matplotlib: 6
+        usage.orange3: 2
         usage.pandas: 61
         usage.sample-usage: 1
         usage.scipy: 35
@@ -118582,6 +121087,7 @@ class ndarray:
         usage.koalas: 20
         usage.matplotlib: 69
         usage.networkx: 12
+        usage.orange3: 8
         usage.prophet: 2
         usage.sample-usage: 1
         usage.scipy: 580
@@ -118665,6 +121171,7 @@ class ndarray:
         usage.koalas: 20
         usage.matplotlib: 85
         usage.networkx: 12
+        usage.orange3: 8
         usage.pandas: 63
         usage.prophet: 2
         usage.sample-usage: 1
@@ -118683,6 +121190,7 @@ class ndarray:
         usage.dask: 1
         usage.koalas: 2
         usage.matplotlib: 13
+        usage.orange3: 2
         usage.prophet: 3
         usage.sample-usage: 1
         usage.scipy: 158
@@ -118713,6 +121221,7 @@ class ndarray:
         usage.geopandas: 1
         usage.matplotlib: 213
         usage.networkx: 25
+        usage.orange3: 14
         usage.prophet: 3
         usage.sample-usage: 1
         usage.scipy: 1622
@@ -118934,6 +121443,7 @@ class ndarray:
         usage.koalas: 2
         usage.matplotlib: 256
         usage.networkx: 26
+        usage.orange3: 16
         usage.pandas: 289
         usage.prophet: 7
         usage.sample-usage: 2
@@ -118952,6 +121462,7 @@ class ndarray:
         usage.dask: 4
         usage.geopandas: 8
         usage.matplotlib: 46
+        usage.orange3: 5
         usage.scipy: 230
         usage.seaborn: 3
         usage.skimage: 32
@@ -119035,6 +121546,7 @@ class ndarray:
         usage.dask: 5
         usage.geopandas: 8
         usage.matplotlib: 48
+        usage.orange3: 5
         usage.pandas: 88
         usage.sample-usage: 1
         usage.scipy: 293
@@ -119228,6 +121740,7 @@ class ndarray:
         usage.geopandas: 1
         usage.matplotlib: 154
         usage.networkx: 9
+        usage.orange3: 33
         usage.prophet: 11
         usage.scipy: 1535
         usage.seaborn: 9
@@ -119244,6 +121757,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 177
         usage.networkx: 20
+        usage.orange3: 3
         usage.prophet: 3
         usage.scipy: 982
         usage.seaborn: 5
@@ -119260,6 +121774,7 @@ class ndarray:
         usage.dask: 36
         usage.matplotlib: 82
         usage.networkx: 1
+        usage.orange3: 6
         usage.prophet: 2
         usage.sample-usage: 2
         usage.scipy: 698
@@ -119276,6 +121791,7 @@ class ndarray:
         """
         usage.matplotlib: 30
         usage.networkx: 2
+        usage.orange3: 2
         usage.prophet: 4
         usage.scipy: 447
         usage.skimage: 39
@@ -119302,6 +121818,7 @@ class ndarray:
     def __rmul__(self, _0: numpy.int64, /):
         """
         usage.dask: 2
+        usage.orange3: 1
         usage.scipy: 19
         usage.skimage: 2
         usage.sklearn: 2
@@ -119573,6 +122090,7 @@ class ndarray:
         usage.geopandas: 1
         usage.matplotlib: 451
         usage.networkx: 37
+        usage.orange3: 45
         usage.pandas: 243
         usage.prophet: 21
         usage.sample-usage: 2
@@ -119590,6 +122108,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 6
+        usage.orange3: 2
         usage.scipy: 34
         usage.skimage: 9
         usage.sklearn: 7
@@ -119663,6 +122182,7 @@ class ndarray:
         """
         usage.dask: 3
         usage.matplotlib: 7
+        usage.orange3: 2
         usage.pandas: 61
         usage.sample-usage: 1
         usage.scipy: 40
@@ -119795,6 +122315,7 @@ class ndarray:
         """
         usage.dask: 3
         usage.matplotlib: 25
+        usage.orange3: 15
         usage.sample-usage: 1
         usage.scipy: 246
         usage.seaborn: 2
@@ -119811,6 +122332,7 @@ class ndarray:
         usage.dask: 19
         usage.matplotlib: 133
         usage.networkx: 18
+        usage.orange3: 31
         usage.prophet: 7
         usage.scipy: 1452
         usage.seaborn: 6
@@ -119838,6 +122360,7 @@ class ndarray:
     def __rsub__(self, _0: float, /):
         """
         usage.matplotlib: 19
+        usage.orange3: 2
         usage.scipy: 165
         usage.skimage: 17
         usage.sklearn: 13
@@ -120048,6 +122571,7 @@ class ndarray:
         usage.dask: 22
         usage.matplotlib: 192
         usage.networkx: 18
+        usage.orange3: 48
         usage.pandas: 273
         usage.prophet: 9
         usage.sample-usage: 1
@@ -120066,6 +122590,7 @@ class ndarray:
         usage.dask: 11
         usage.matplotlib: 37
         usage.networkx: 3
+        usage.orange3: 9
         usage.prophet: 1
         usage.scipy: 749
         usage.seaborn: 3
@@ -120082,6 +122607,7 @@ class ndarray:
         usage.dask: 2
         usage.matplotlib: 7
         usage.networkx: 4
+        usage.orange3: 2
         usage.scipy: 93
         usage.skimage: 7
         usage.sklearn: 40
@@ -120267,6 +122793,7 @@ class ndarray:
         usage.dask: 13
         usage.matplotlib: 51
         usage.networkx: 20
+        usage.orange3: 11
         usage.pandas: 420
         usage.prophet: 2
         usage.scipy: 1165
@@ -120282,6 +122809,7 @@ class ndarray:
     def __rxor__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 1
+        usage.orange3: 1
         usage.statsmodels: 1
         """
         ...
@@ -120303,6 +122831,7 @@ class ndarray:
     def __rxor__(self, _0: Union[numpy.ndarray, bool, pandas.core.series.Series], /):
         """
         usage.dask: 2
+        usage.orange3: 1
         usage.pandas: 8
         usage.statsmodels: 1
         """
@@ -120315,6 +122844,7 @@ class ndarray:
         usage.geopandas: 5
         usage.matplotlib: 45
         usage.networkx: 2
+        usage.orange3: 20
         usage.prophet: 4
         usage.scipy: 331
         usage.skimage: 73
@@ -120330,6 +122860,7 @@ class ndarray:
         usage.dask: 7
         usage.matplotlib: 9
         usage.networkx: 2
+        usage.orange3: 9
         usage.scipy: 51
         usage.skimage: 18
         usage.sklearn: 65
@@ -120366,6 +122897,7 @@ class ndarray:
         usage.dask: 7
         usage.matplotlib: 20
         usage.networkx: 6
+        usage.orange3: 17
         usage.scipy: 91
         usage.skimage: 85
         usage.sklearn: 133
@@ -120428,6 +122960,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: int, _1: List[int], /):
         """
+        usage.orange3: 1
         usage.scipy: 22
         usage.skimage: 3
         usage.xarray: 1
@@ -120490,6 +123023,7 @@ class ndarray:
         """
         usage.matplotlib: 1
         usage.networkx: 1
+        usage.orange3: 5
         usage.scipy: 109
         usage.skimage: 19
         usage.sklearn: 20
@@ -120515,6 +123049,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 31
         usage.networkx: 10
+        usage.orange3: 16
         usage.scipy: 83
         usage.seaborn: 2
         usage.skimage: 35
@@ -120529,6 +123064,7 @@ class ndarray:
         """
         usage.matplotlib: 9
         usage.networkx: 3
+        usage.orange3: 1
         usage.scipy: 106
         usage.seaborn: 1
         usage.skimage: 10
@@ -120543,6 +123079,7 @@ class ndarray:
         usage.dask: 1
         usage.matplotlib: 26
         usage.networkx: 2
+        usage.orange3: 7
         usage.prophet: 1
         usage.scipy: 244
         usage.seaborn: 1
@@ -120584,6 +123121,7 @@ class ndarray:
     def __setitem__(self, _0: Tuple[slice[None, None, None], int], _1: int, /):
         """
         usage.networkx: 1
+        usage.orange3: 2
         usage.scipy: 7
         usage.skimage: 13
         usage.sklearn: 17
@@ -120613,6 +123151,7 @@ class ndarray:
     def __setitem__(self, _0: slice[None, None, None], _1: numpy.ndarray, /):
         """
         usage.matplotlib: 2
+        usage.orange3: 5
         usage.scipy: 36
         usage.skimage: 9
         usage.sklearn: 9
@@ -120651,6 +123190,7 @@ class ndarray:
         usage.dask: 7
         usage.matplotlib: 8
         usage.networkx: 7
+        usage.orange3: 21
         usage.sample-usage: 1
         usage.scipy: 420
         usage.seaborn: 4
@@ -120667,6 +123207,7 @@ class ndarray:
         usage.dask: 1
         usage.matplotlib: 15
         usage.networkx: 2
+        usage.orange3: 15
         usage.scipy: 111
         usage.seaborn: 1
         usage.skimage: 31
@@ -120682,6 +123223,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 9
         usage.networkx: 2
+        usage.orange3: 3
         usage.scipy: 28
         usage.skimage: 6
         usage.sklearn: 2
@@ -120737,6 +123279,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 9
         usage.networkx: 2
+        usage.orange3: 9
         usage.scipy: 114
         usage.seaborn: 7
         usage.skimage: 201
@@ -120821,6 +123364,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: Tuple[slice[None, int, None], int], _1: int, /):
         """
+        usage.orange3: 1
         usage.scipy: 1
         usage.skimage: 1
         usage.statsmodels: 22
@@ -120874,6 +123418,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: slice[None, None, None], _1: int, /):
         """
+        usage.orange3: 1
         usage.scipy: 3
         usage.seaborn: 1
         usage.skimage: 1
@@ -121021,6 +123566,7 @@ class ndarray:
         /,
     ):
         """
+        usage.orange3: 2
         usage.scipy: 8
         usage.skimage: 4
         usage.statsmodels: 4
@@ -121036,6 +123582,7 @@ class ndarray:
     ):
         """
         usage.matplotlib: 1
+        usage.orange3: 1
         usage.scipy: 15
         usage.skimage: 6
         usage.sklearn: 7
@@ -121049,6 +123596,7 @@ class ndarray:
     ):
         """
         usage.dask: 4
+        usage.orange3: 1
         usage.skimage: 1
         usage.statsmodels: 18
         """
@@ -121059,6 +123607,7 @@ class ndarray:
         """
         usage.dask: 1
         usage.matplotlib: 5
+        usage.orange3: 6
         usage.scipy: 3
         usage.skimage: 2
         usage.sklearn: 6
@@ -121090,6 +123639,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 13
+        usage.orange3: 17
         usage.scipy: 128
         usage.seaborn: 2
         usage.skimage: 6
@@ -121114,6 +123664,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: numpy.ndarray, _1: numpy.float64, /):
         """
+        usage.orange3: 1
         usage.scipy: 7
         usage.skimage: 1
         usage.sklearn: 11
@@ -121329,6 +123880,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 4
         usage.networkx: 2
+        usage.orange3: 15
         usage.prophet: 1
         usage.scipy: 199
         usage.skimage: 32
@@ -121433,6 +123985,7 @@ class ndarray:
     def __setitem__(self, _0: numpy.int64, _1: int, /):
         """
         usage.networkx: 2
+        usage.orange3: 2
         usage.scipy: 3
         usage.skimage: 4
         usage.sklearn: 9
@@ -121567,6 +124120,7 @@ class ndarray:
     def __setitem__(self, _0: int, _1: bool, /):
         """
         usage.matplotlib: 1
+        usage.orange3: 3
         usage.scipy: 4
         usage.skimage: 6
         usage.sklearn: 4
@@ -121619,6 +124173,7 @@ class ndarray:
         """
         usage.dask: 3
         usage.matplotlib: 1
+        usage.orange3: 3
         usage.scipy: 1
         usage.skimage: 1
         usage.sklearn: 20
@@ -122260,6 +124815,7 @@ class ndarray:
         self, _0: Tuple[slice[None, None, None], numpy.ndarray], _1: numpy.ndarray, /
     ):
         """
+        usage.orange3: 2
         usage.scipy: 3
         usage.skimage: 4
         usage.sklearn: 22
@@ -122780,6 +125336,7 @@ class ndarray:
         usage.dask: 2
         usage.matplotlib: 7
         usage.networkx: 2
+        usage.orange3: 4
         usage.scipy: 36
         usage.skimage: 2
         usage.sklearn: 18
@@ -122826,6 +125383,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: Tuple[slice[int, int, int], int], _1: int, /):
         """
+        usage.orange3: 1
         usage.scipy: 4
         usage.skimage: 2
         usage.sklearn: 1
@@ -123309,6 +125867,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: Tuple[int, numpy.ndarray], _1: numpy.ndarray, /):
         """
+        usage.orange3: 1
         usage.scipy: 5
         usage.skimage: 1
         usage.sklearn: 4
@@ -123320,6 +125879,7 @@ class ndarray:
     def __setitem__(self, _0: Tuple[slice[None, None, None], int], _1: float, /):
         """
         usage.matplotlib: 5
+        usage.orange3: 1
         usage.scipy: 2
         usage.seaborn: 1
         usage.skimage: 1
@@ -123478,6 +126038,1605 @@ class ndarray:
     def __setitem__(self, _0: Tuple[ellipsis, int], _1: numpy.float32, /):
         """
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, int, int], _1: numpy.ndarray, /):
+        """
+        usage.geopandas: 1
+        usage.matplotlib: 11
+        usage.orange3: 2
+        usage.scipy: 121
+        usage.sklearn: 10
+        usage.statsmodels: 116
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None], int], _1: None, /):
+        """
+        usage.orange3: 1
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], int, numpy.int64], _1: numpy.ndarray, /
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Orange.statistics.distribution.Discrete, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, None, None], _1: List[int], /):
+        """
+        usage.orange3: 8
+        usage.scipy: 2
+        usage.sklearn: 8
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, None, None], _1: float, /):
+        """
+        usage.dask: 1
+        usage.matplotlib: 2
+        usage.orange3: 1
+        usage.scipy: 4
+        usage.sklearn: 1
+        usage.statsmodels: 11
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], Tuple[int, int]], _1: float, /
+    ):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: int,
+        _1: Orange.classification.logistic_regression.LogisticRegressionClassifier,
+        /,
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], numpy.ndarray], _1: int, /
+    ):
+        """
+        usage.orange3: 2
+        usage.sklearn: 3
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: List[Union[int, float]], /):
+        """
+        usage.orange3: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: List[Union[int, numpy.float64]], /):
+        """
+        usage.orange3: 1
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, int, None], _1: numpy.ndarray, /):
+        """
+        usage.dask: 3
+        usage.geopandas: 2
+        usage.matplotlib: 4
+        usage.orange3: 2
+        usage.scipy: 56
+        usage.sklearn: 32
+        usage.statsmodels: 48
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: None, /):
+        """
+        usage.geopandas: 1
+        usage.orange3: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: None, /):
+        """
+        usage.matplotlib: 4
+        usage.orange3: 2
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["ann"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["bert"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["chad"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["danny"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["eve"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["frank"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["starič"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["aleš"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["anže"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["m1"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["m2"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, None, None], _1: float, /):
+        """
+        usage.matplotlib: 1
+        usage.orange3: 1
+        usage.sklearn: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, slice[None, None, None]], _1: float, /):
+        """
+        usage.orange3: 1
+        usage.scipy: 2
+        usage.sklearn: 11
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[int, int], _1: Orange.clustering.kmeans.KMeansModel, /
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[int, slice[None, None, None], int], _1: numpy.ndarray, /
+    ):
+        """
+        usage.dask: 4
+        usage.orange3: 2
+        usage.scipy: 8
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: int, _1: Orange.classification.naive_bayes.NaiveBayesModel, /
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Orange.classification.majority.ConstantModel, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["?"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["nan"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal[""], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, numpy.ndarray], _1: float, /):
+        """
+        usage.orange3: 3
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.ndarray, _1: List[numpy.float64], /):
+        """
+        usage.orange3: 5
+        usage.statsmodels: 19
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[int, int, int], int], _1: float, /):
+        """
+        usage.orange3: 2
+        usage.scipy: 1
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.ndarray, _1: numpy.int64, /):
+        """
+        usage.orange3: 1
+        usage.scipy: 2
+        usage.sklearn: 5
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["Bar"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["mongoose"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, slice[None, int, None]], _1: numpy.ndarray, /):
+        """
+        usage.matplotlib: 2
+        usage.orange3: 1
+        usage.scipy: 4
+        usage.sklearn: 9
+        usage.statsmodels: 9
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, int, None]], _1: float, /
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, None, None], Tuple[int, int]], _1: int, /
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[int, None, int], numpy.ndarray], _1: int, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[int, None, int], numpy.ndarray], _1: float, /
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.ndarray, _1: range, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, int, None], int], _1: float, /):
+        """
+        usage.orange3: 1
+        usage.sklearn: 4
+        usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: numpy.bool_, /):
+        """
+        usage.orange3: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[int, int, int], numpy.ndarray], _1: int, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[range, numpy.ndarray], _1: float, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, int, None], numpy.ndarray], _1: int, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[int, int, int], numpy.int64], _1: int, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, numpy.ndarray], _1: int, /):
+        """
+        usage.orange3: 1
+        usage.scipy: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["non-animal"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, numpy.int64], _1: Literal["non-animal"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: List[float], /):
+        """
+        usage.orange3: 3
+        usage.scipy: 19
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, int, None], _1: bool, /):
+        """
+        usage.orange3: 1
+        usage.scipy: 1
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, None, int], _1: bool, /):
+        """
+        usage.matplotlib: 1
+        usage.orange3: 1
+        usage.statsmodels: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["0"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["1"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["2"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["3"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["4"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["5"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["6"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["7"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["8"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["9"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["10"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["11"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["12"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["13"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["14"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["15"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["16"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["17"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["18"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["19"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["20"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[slice[None, int, None], numpy.ndarray], _1: float, /
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[slice[None, None, None], int], _1: List[int], /):
+        """
+        usage.orange3: 1
+        usage.statsmodels: 11
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, numpy.int64], _1: float, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.int64, _1: List[Union[int, float]], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.int64, _1: List[int], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.int64, _1: numpy.ndarray, /):
+        """
+        usage.orange3: 4
+        usage.scipy: 1
+        usage.sklearn: 16
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: list, /):
+        """
+        usage.orange3: 1
+        usage.scipy: 7
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.int64, _1: list, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["mmmapp"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, numpy.int64], _1: int, /):
+        """
+        usage.orange3: 3
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, None, None], _1: range, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: List[float], /):
+        """
+        usage.orange3: 2
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: List[int], _1: numpy.ndarray, /):
+        """
+        usage.dask: 1
+        usage.networkx: 18
+        usage.orange3: 1
+        usage.scipy: 6
+        usage.sklearn: 2
+        usage.statsmodels: 54
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[numpy.ndarray, numpy.int64], _1: Literal["GIrl"], /
+    ):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["bb"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["aa"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["aardvark"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["antelope"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["bass"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["bear"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["boar"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["buffalo"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["calf"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["carp"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["catfish"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["cavy"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["cheetah"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["chicken"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["chub"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["clam"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["crab"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["crayfish"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["crow"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["deer"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["dogfish"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["dolphin"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["dove"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["duck"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["elephant"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["flamingo"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["flea"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["frog"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["fruitbat"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["giraffe"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["girl"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["gnat"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["goat"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["gorilla"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["gull"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["haddock"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["hamster"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["hare"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["hawk"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["herring"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["honeybee"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["housefly"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["kiwi"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["ladybird"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["lark"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["leopard"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["lion"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["lobster"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["lynx"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["mink"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["mole"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["moth"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["newt"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["octopus"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["opossum"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["oryx"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["ostrich"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["parakeet"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["penguin"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["pheasant"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["pike"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["piranha"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["pitviper"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["platypus"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["polecat"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["pony"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["porpoise"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["puma"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["pussycat"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["raccoon"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["reindeer"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["rhea"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["scorpion"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["seahorse"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["seal"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["sealion"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["seasnake"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["seawasp"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["skimmer"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["skua"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["slowworm"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["slug"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["sole"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["sparrow"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["squirrel"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["starfish"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["stingray"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["swan"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["termite"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["toad"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["tortoise"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["tuatara"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["tuna"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["vampire"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["vole"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["vulture"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["wallaby"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["wasp"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["wolf"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["worm"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["wren"], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[int, int, int], _1: float, /):
+        """
+        usage.orange3: 1
+        usage.scipy: 1
+        usage.sklearn: 1
+        usage.statsmodels: 16
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: Literal["Foo"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["1.1"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["1.3"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["2.2"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["2.3"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["a"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["b"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal[""], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["aaa"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["bbb"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["cc"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["ccc"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["dd"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["ddd"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["a1"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["aa1"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["b1"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: Literal["bb1"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.ndarray, _1: List[float], /):
+        """
+        usage.orange3: 2
+        usage.statsmodels: 35
         """
         ...
 
@@ -124167,18 +128326,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: slice[None, None, None], _1: float, /):
-        """
-        usage.dask: 1
-        usage.matplotlib: 2
-        usage.scipy: 4
-        usage.sklearn: 1
-        usage.statsmodels: 11
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
     def __setitem__(
         self,
         _0: Tuple[List[int], List[int], slice[None, None, None]],
@@ -124211,16 +128358,6 @@ class ndarray:
     ):
         """
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[int, int, int], _1: float, /):
-        """
-        usage.scipy: 1
-        usage.sklearn: 1
-        usage.statsmodels: 16
-        usage.xarray: 2
         """
         ...
 
@@ -124382,60 +128519,11 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: List[int], _1: numpy.ndarray, /):
-        """
-        usage.dask: 1
-        usage.networkx: 18
-        usage.scipy: 6
-        usage.sklearn: 2
-        usage.statsmodels: 54
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[int, slice[None, int, None]], _1: numpy.ndarray, /):
-        """
-        usage.matplotlib: 2
-        usage.scipy: 4
-        usage.sklearn: 9
-        usage.statsmodels: 9
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[int, None, int], _1: bool, /):
-        """
-        usage.matplotlib: 1
-        usage.statsmodels: 3
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[None, int, None], _1: numpy.ndarray, /):
-        """
-        usage.dask: 3
-        usage.geopandas: 2
-        usage.matplotlib: 4
-        usage.scipy: 56
-        usage.sklearn: 32
-        usage.statsmodels: 48
-        """
-        ...
-
-    @overload
     def __setitem__(
         self, _0: Tuple[int, slice[None, None, None]], _1: numpy.float64, /
     ):
         """
         usage.statsmodels: 6
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[None, int, None], _1: bool, /):
-        """
-        usage.scipy: 1
-        usage.statsmodels: 4
         """
         ...
 
@@ -124447,14 +128535,6 @@ class ndarray:
         usage.scipy: 18
         usage.sklearn: 4
         usage.statsmodels: 8
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[int, numpy.ndarray], _1: int, /):
-        """
-        usage.scipy: 2
-        usage.statsmodels: 1
         """
         ...
 
@@ -124496,17 +128576,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: slice[int, int, int], _1: numpy.ndarray, /):
-        """
-        usage.geopandas: 1
-        usage.matplotlib: 11
-        usage.scipy: 121
-        usage.sklearn: 10
-        usage.statsmodels: 116
-        """
-        ...
-
-    @overload
     def __setitem__(
         self, _0: Tuple[numpy.ndarray, slice[None, None, None]], _1: float, /
     ):
@@ -124540,13 +128609,6 @@ class ndarray:
     def __setitem__(self, _0: List[int], _1: List[int], /):
         """
         usage.statsmodels: 2
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: List[int], _1: List[float], /):
-        """
-        usage.statsmodels: 4
         """
         ...
 
@@ -124593,14 +128655,6 @@ class ndarray:
         """
         usage.scipy: 7
         usage.statsmodels: 4
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[slice[int, int, int], int], _1: float, /):
-        """
-        usage.scipy: 1
-        usage.statsmodels: 9
         """
         ...
 
@@ -124895,16 +128949,6 @@ class ndarray:
 
     @overload
     def __setitem__(
-        self, _0: Tuple[slice[None, None, None], numpy.ndarray], _1: int, /
-    ):
-        """
-        usage.sklearn: 3
-        usage.statsmodels: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(
         self, _0: Tuple[slice[None, None, None], numpy.ndarray], _1: numpy.float64, /
     ):
         """
@@ -124979,13 +129023,6 @@ class ndarray:
         """
         usage.scipy: 4
         usage.statsmodels: 2
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: int, _1: numpy.bool_, /):
-        """
-        usage.statsmodels: 1
         """
         ...
 
@@ -125218,14 +129255,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: int, _1: None, /):
-        """
-        usage.geopandas: 1
-        usage.statsmodels: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: slice[None, int, None], _1: list, /):
         """
         usage.statsmodels: 1
@@ -125297,17 +129326,6 @@ class ndarray:
     def __setitem__(self, _0: int, _1: numpy.complex128, /):
         """
         usage.scipy: 30
-        usage.statsmodels: 4
-        """
-        ...
-
-    @overload
-    def __setitem__(
-        self, _0: Tuple[int, slice[None, None, None], int], _1: numpy.ndarray, /
-    ):
-        """
-        usage.dask: 4
-        usage.scipy: 8
         usage.statsmodels: 4
         """
         ...
@@ -125572,13 +129590,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: Tuple[slice[None, None, None], int], _1: List[int], /):
-        """
-        usage.statsmodels: 11
-        """
-        ...
-
-    @overload
     def __setitem__(
         self,
         _0: Tuple[slice[None, None, None], slice[None, int, None]],
@@ -125756,15 +129767,6 @@ class ndarray:
         /,
     ):
         """
-        usage.statsmodels: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[int, slice[None, None, None]], _1: float, /):
-        """
-        usage.scipy: 2
-        usage.sklearn: 11
         usage.statsmodels: 1
         """
         ...
@@ -125977,20 +129979,6 @@ class ndarray:
     def __setitem__(self, _0: numpy.ndarray, _1: List[Literal["02", "01"]], /):
         """
         usage.statsmodels: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: numpy.ndarray, _1: List[float], /):
-        """
-        usage.statsmodels: 35
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: numpy.ndarray, _1: List[numpy.float64], /):
-        """
-        usage.statsmodels: 19
         """
         ...
 
@@ -126266,23 +130254,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: numpy.int64, _1: numpy.ndarray, /):
-        """
-        usage.scipy: 1
-        usage.sklearn: 16
-        usage.statsmodels: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[slice[None, int, None], int], _1: float, /):
-        """
-        usage.sklearn: 4
-        usage.statsmodels: 5
-        """
-        ...
-
-    @overload
     def __setitem__(
         self,
         _0: Tuple[slice[None, None, None], slice[None, None, None], int],
@@ -126360,14 +130331,6 @@ class ndarray:
     ):
         """
         usage.statsmodels: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: int, _1: List[float], /):
-        """
-        usage.scipy: 19
-        usage.statsmodels: 4
         """
         ...
 
@@ -126534,15 +130497,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: slice[None, None, None], _1: float, /):
-        """
-        usage.matplotlib: 1
-        usage.sklearn: 1
-        usage.statsmodels: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Literal["variable"], _1: numpy.ndarray, /):
         """
         usage.statsmodels: 2
@@ -126605,13 +130559,6 @@ class ndarray:
         """
         usage.scipy: 7
         usage.statsmodels: 6
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[int, numpy.int64], _1: int, /):
-        """
-        usage.statsmodels: 1
         """
         ...
 
@@ -127083,13 +131030,6 @@ class ndarray:
     def __setitem__(self, _0: slice[int, None, int], _1: numpy.int32, /):
         """
         usage.scipy: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: int, _1: list, /):
-        """
-        usage.scipy: 7
         """
         ...
 
@@ -127627,14 +131567,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: numpy.ndarray, _1: numpy.int64, /):
-        """
-        usage.scipy: 2
-        usage.sklearn: 5
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: slice[None, None, None], _1: None, /):
         """
         usage.scipy: 1
@@ -127982,13 +131914,6 @@ class ndarray:
     def __setitem__(self, _0: int, _1: List[Union[int, numpy.complex128]], /):
         """
         usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: int, _1: List[Union[int, numpy.float64]], /):
-        """
-        usage.scipy: 1
         """
         ...
 
@@ -128815,13 +132740,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: Tuple[int, numpy.ndarray], _1: float, /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def __setitem__(
         self, _0: Tuple[slice[None, int, None], slice[None, None, None]], _1: bool, /
     ):
@@ -128839,14 +132757,6 @@ class ndarray:
     ):
         """
         usage.scipy: 2
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: slice[None, None, None], _1: List[int], /):
-        """
-        usage.scipy: 2
-        usage.sklearn: 8
         """
         ...
 
@@ -128995,14 +132905,6 @@ class ndarray:
     def __setitem__(self, _0: slice[int, None, int], _1: numpy.uint8, /):
         """
         usage.matplotlib: 8
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: Tuple[int, int], _1: None, /):
-        """
-        usage.matplotlib: 4
-        usage.sklearn: 2
         """
         ...
 
@@ -130338,13 +134240,6 @@ class ndarray:
         ...
 
     @overload
-    def __setitem__(self, _0: Tuple[slice[None, None, None], int], _1: None, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: Tuple[numpy.ndarray, int], _1: Literal["abc"], /):
         """
         usage.sklearn: 1
@@ -130502,6 +134397,7 @@ class ndarray:
         usage.geopandas: 149
         usage.matplotlib: 542
         usage.networkx: 88
+        usage.orange3: 543
         usage.pandas: 5607
         usage.prophet: 6
         usage.sample-usage: 1
@@ -130526,6 +134422,7 @@ class ndarray:
         usage.dask: 19
         usage.matplotlib: 133
         usage.networkx: 18
+        usage.orange3: 31
         usage.prophet: 7
         usage.scipy: 1452
         usage.seaborn: 6
@@ -130542,6 +134439,7 @@ class ndarray:
         usage.dask: 27
         usage.matplotlib: 34
         usage.networkx: 2
+        usage.orange3: 9
         usage.sample-usage: 1
         usage.scipy: 362
         usage.skimage: 78
@@ -130557,6 +134455,7 @@ class ndarray:
         usage.dask: 1
         usage.matplotlib: 34
         usage.networkx: 2
+        usage.orange3: 2
         usage.prophet: 2
         usage.scipy: 270
         usage.seaborn: 5
@@ -130571,6 +134470,7 @@ class ndarray:
     def __sub__(self, _0: numpy.float64, /):
         """
         usage.matplotlib: 11
+        usage.orange3: 4
         usage.prophet: 1
         usage.scipy: 157
         usage.seaborn: 4
@@ -130892,6 +134792,7 @@ class ndarray:
         usage.dask: 48
         usage.matplotlib: 216
         usage.networkx: 30
+        usage.orange3: 46
         usage.pandas: 228
         usage.prophet: 10
         usage.sample-usage: 1
@@ -130910,6 +134811,7 @@ class ndarray:
         usage.dask: 3
         usage.matplotlib: 48
         usage.networkx: 10
+        usage.orange3: 6
         usage.prophet: 2
         usage.scipy: 392
         usage.seaborn: 1
@@ -130925,6 +134827,7 @@ class ndarray:
         usage.dask: 11
         usage.matplotlib: 37
         usage.networkx: 3
+        usage.orange3: 9
         usage.prophet: 1
         usage.scipy: 749
         usage.seaborn: 3
@@ -130940,6 +134843,7 @@ class ndarray:
         """
         usage.matplotlib: 24
         usage.networkx: 16
+        usage.orange3: 10
         usage.scipy: 192
         usage.seaborn: 5
         usage.skimage: 39
@@ -130955,6 +134859,7 @@ class ndarray:
         usage.geopandas: 10
         usage.matplotlib: 53
         usage.networkx: 1
+        usage.orange3: 10
         usage.prophet: 1
         usage.scipy: 273
         usage.seaborn: 1
@@ -130970,6 +134875,7 @@ class ndarray:
         """
         usage.dask: 1
         usage.matplotlib: 2
+        usage.orange3: 4
         usage.scipy: 23
         usage.seaborn: 3
         usage.skimage: 6
@@ -131094,6 +135000,7 @@ class ndarray:
         usage.geopandas: 10
         usage.matplotlib: 165
         usage.networkx: 30
+        usage.orange3: 39
         usage.pandas: 420
         usage.prophet: 4
         usage.scipy: 1667
@@ -131109,6 +135016,7 @@ class ndarray:
     def __xor__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 1
+        usage.orange3: 1
         usage.statsmodels: 1
         """
         ...
@@ -131130,6 +135038,7 @@ class ndarray:
     def __xor__(self, _0: Union[numpy.ndarray, bool], /):
         """
         usage.dask: 2
+        usage.orange3: 1
         usage.pandas: 8
         usage.statsmodels: 1
         """
@@ -131143,6 +135052,7 @@ class ndarray:
         usage.koalas: 6
         usage.matplotlib: 16
         usage.networkx: 3
+        usage.orange3: 52
         usage.prophet: 2
         usage.scipy: 140
         usage.seaborn: 3
@@ -131154,9 +135064,9 @@ class ndarray:
         ...
 
     @overload
-    def all(self, _0: int, /):
+    def all(self, /, *, axis: None):
         """
-        usage.statsmodels: 3
+        usage.orange3: 1
         """
         ...
 
@@ -131165,10 +135075,18 @@ class ndarray:
         """
         usage.dask: 1
         usage.matplotlib: 1
+        usage.orange3: 1
         usage.scipy: 6
         usage.seaborn: 1
         usage.sklearn: 4
         usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def all(self, _0: int, /):
+        """
+        usage.statsmodels: 3
         """
         ...
 
@@ -131187,7 +135105,12 @@ class ndarray:
         ...
 
     def all(
-        self, _0: Union[int, None] = ..., /, *, axis: int = ..., keepdims: bool = ...
+        self,
+        _0: Union[int, None] = ...,
+        /,
+        *,
+        axis: Union[int, None] = ...,
+        keepdims: bool = ...,
     ):
         """
         usage.dask: 90
@@ -131195,6 +135118,7 @@ class ndarray:
         usage.koalas: 6
         usage.matplotlib: 17
         usage.networkx: 3
+        usage.orange3: 54
         usage.pandas: 248
         usage.prophet: 2
         usage.scipy: 147
@@ -131214,6 +135138,7 @@ class ndarray:
         usage.geopandas: 2
         usage.matplotlib: 21
         usage.networkx: 3
+        usage.orange3: 33
         usage.prophet: 2
         usage.scipy: 101
         usage.seaborn: 3
@@ -131228,9 +135153,17 @@ class ndarray:
     def any(self, /, *, axis: int):
         """
         usage.matplotlib: 1
+        usage.orange3: 1
         usage.scipy: 4
         usage.sklearn: 6
         usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def any(self, /, *, axis: None):
+        """
+        usage.orange3: 1
         """
         ...
 
@@ -131241,13 +135174,14 @@ class ndarray:
         """
         ...
 
-    def any(self, _0: Union[None, int] = ..., /, *, axis: int = ...):
+    def any(self, _0: Union[None, int] = ..., /, *, axis: Union[int, None] = ...):
         """
         usage.alphalens: 1
         usage.dask: 14
         usage.geopandas: 2
         usage.matplotlib: 22
         usage.networkx: 3
+        usage.orange3: 35
         usage.pandas: 175
         usage.prophet: 2
         usage.scipy: 105
@@ -131262,6 +135196,7 @@ class ndarray:
     @overload
     def argmax(self, /, *, axis: int):
         """
+        usage.orange3: 4
         usage.scipy: 1
         usage.skimage: 1
         usage.sklearn: 29
@@ -131302,6 +135237,7 @@ class ndarray:
         """
         usage.matplotlib: 2
         usage.networkx: 1
+        usage.orange3: 4
         usage.pandas: 16
         usage.prophet: 1
         usage.scipy: 3
@@ -131365,6 +135301,7 @@ class ndarray:
         """
         usage.matplotlib: 4
         usage.networkx: 4
+        usage.orange3: 5
         usage.scipy: 12
         usage.seaborn: 4
         usage.skimage: 5
@@ -131407,6 +135344,7 @@ class ndarray:
         """
         usage.matplotlib: 4
         usage.networkx: 4
+        usage.orange3: 5
         usage.pandas: 79
         usage.scipy: 12
         usage.seaborn: 4
@@ -131508,6 +135446,7 @@ class ndarray:
         usage.geopandas: 2
         usage.matplotlib: 13
         usage.networkx: 3
+        usage.orange3: 22
         usage.scipy: 83
         usage.seaborn: 5
         usage.skimage: 85
@@ -131535,6 +135474,7 @@ class ndarray:
         """
         usage.dask: 4
         usage.matplotlib: 17
+        usage.orange3: 15
         usage.prophet: 1
         usage.sample-usage: 1
         usage.scipy: 35
@@ -131552,6 +135492,7 @@ class ndarray:
         usage.dask: 6
         usage.matplotlib: 8
         usage.networkx: 1
+        usage.orange3: 1
         usage.scipy: 10
         usage.skimage: 31
         usage.sklearn: 12
@@ -131564,6 +135505,7 @@ class ndarray:
         """
         usage.matplotlib: 4
         usage.networkx: 1
+        usage.orange3: 6
         usage.scipy: 204
         usage.skimage: 64
         usage.sklearn: 79
@@ -131587,6 +135529,7 @@ class ndarray:
     def astype(self, _0: Type[numpy.int32], /):
         """
         usage.dask: 2
+        usage.orange3: 2
         usage.scipy: 52
         usage.skimage: 24
         usage.sklearn: 17
@@ -131645,6 +135588,7 @@ class ndarray:
         """
         usage.dask: 2
         usage.matplotlib: 3
+        usage.orange3: 2
         usage.scipy: 11
         usage.skimage: 24
         usage.sklearn: 1
@@ -131684,6 +135628,7 @@ class ndarray:
         """
         usage.dask: 5
         usage.geopandas: 2
+        usage.orange3: 2
         usage.scipy: 75
         usage.skimage: 27
         usage.sklearn: 29
@@ -131733,6 +135678,54 @@ class ndarray:
         ...
 
     @overload
+    def astype(self, _0: Type[object], /):
+        """
+        usage.dask: 5
+        usage.networkx: 1
+        usage.orange3: 4
+        usage.scipy: 8
+        usage.sklearn: 4
+        usage.xarray: 6
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Type[str], /):
+        """
+        usage.networkx: 1
+        usage.orange3: 5
+        usage.scipy: 1
+        usage.sklearn: 4
+        usage.statsmodels: 1
+        usage.xarray: 4
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Type[numpy.int32], /, *, copy: bool):
+        """
+        usage.orange3: 1
+        usage.scipy: 18
+        usage.sklearn: 4
+        """
+        ...
+
+    @overload
+    def astype(self, /, *, dtype: Type[int]):
+        """
+        usage.orange3: 4
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def astype(self, /, *, dtype: Type[numpy.float64]):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
     def astype(self, _0: Type[numpy.str_], /):
         """
         usage.xarray: 16
@@ -131773,17 +135766,6 @@ class ndarray:
         usage.dask: 1
         usage.scipy: 20
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def astype(self, _0: Type[str], /):
-        """
-        usage.networkx: 1
-        usage.scipy: 1
-        usage.sklearn: 4
-        usage.statsmodels: 1
-        usage.xarray: 4
         """
         ...
 
@@ -131840,17 +135822,6 @@ class ndarray:
         ...
 
     @overload
-    def astype(self, _0: Type[object], /):
-        """
-        usage.dask: 5
-        usage.networkx: 1
-        usage.scipy: 8
-        usage.sklearn: 4
-        usage.xarray: 6
-        """
-        ...
-
-    @overload
     def astype(self, _0: Literal["u1"], /):
         """
         usage.modin: 1
@@ -131895,13 +135866,6 @@ class ndarray:
         """
         usage.dask: 5
         usage.scipy: 1
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def astype(self, /, *, dtype: Type[int]):
-        """
         usage.xarray: 1
         """
         ...
@@ -132070,14 +136034,6 @@ class ndarray:
     def astype(self, _0: Type[numpy.float128], /):
         """
         usage.scipy: 19
-        """
-        ...
-
-    @overload
-    def astype(self, _0: Type[numpy.int32], /, *, copy: bool):
-        """
-        usage.scipy: 18
-        usage.sklearn: 4
         """
         ...
 
@@ -132677,6 +136633,7 @@ class ndarray:
         usage.matplotlib: 77
         usage.modin: 1
         usage.networkx: 13
+        usage.orange3: 65
         usage.pandas: 1453
         usage.prophet: 1
         usage.sample-usage: 1
@@ -132869,6 +136826,7 @@ class ndarray:
         usage.geopandas: 1
         usage.matplotlib: 21
         usage.networkx: 3
+        usage.orange3: 18
         usage.pandas: 284
         usage.scipy: 518
         usage.skimage: 138
@@ -132924,6 +136882,7 @@ class ndarray:
         usage.geopandas: 1
         usage.matplotlib: 21
         usage.networkx: 3
+        usage.orange3: 18
         usage.pandas: 284
         usage.scipy: 850
         usage.skimage: 138
@@ -133046,6 +137005,7 @@ class ndarray:
         """
         usage.dask: 7
         usage.matplotlib: 1
+        usage.orange3: 20
         usage.scipy: 665
         usage.seaborn: 4
         usage.skimage: 1
@@ -133116,6 +137076,7 @@ class ndarray:
         """
         usage.dask: 8
         usage.matplotlib: 1
+        usage.orange3: 20
         usage.scipy: 679
         usage.seaborn: 6
         usage.skimage: 1
@@ -133217,6 +137178,7 @@ class ndarray:
         usage.dask: 6
         usage.matplotlib: 29
         usage.networkx: 11
+        usage.orange3: 35
         usage.pandas: 1
         usage.scipy: 69
         usage.seaborn: 2
@@ -133246,6 +137208,7 @@ class ndarray:
         usage.dask: 6
         usage.matplotlib: 29
         usage.networkx: 11
+        usage.orange3: 35
         usage.pandas: 1
         usage.scipy: 74
         usage.seaborn: 2
@@ -133333,6 +137296,7 @@ class ndarray:
         usage.geopandas: 2
         usage.matplotlib: 57
         usage.networkx: 4
+        usage.orange3: 3
         usage.prophet: 3
         usage.scipy: 139
         usage.seaborn: 40
@@ -133388,6 +137352,7 @@ class ndarray:
         usage.geopandas: 2
         usage.matplotlib: 58
         usage.networkx: 6
+        usage.orange3: 3
         usage.pandas: 48
         usage.prophet: 3
         usage.scipy: 147
@@ -133419,6 +137384,7 @@ class ndarray:
         """
         usage.dask: 3
         usage.matplotlib: 8
+        usage.orange3: 1
         usage.scipy: 12
         usage.skimage: 17
         usage.sklearn: 115
@@ -133532,6 +137498,7 @@ class ndarray:
         usage.dask: 12
         usage.matplotlib: 16
         usage.networkx: 2
+        usage.orange3: 1
         usage.pandas: 11
         usage.sample-usage: 2
         usage.scipy: 110
@@ -133550,6 +137517,7 @@ class ndarray:
         usage.geopandas: 2
         usage.matplotlib: 50
         usage.networkx: 1
+        usage.orange3: 3
         usage.prophet: 2
         usage.scipy: 78
         usage.seaborn: 20
@@ -133613,6 +137581,7 @@ class ndarray:
         usage.geopandas: 2
         usage.matplotlib: 50
         usage.networkx: 3
+        usage.orange3: 3
         usage.pandas: 48
         usage.prophet: 2
         usage.scipy: 84
@@ -133651,6 +137620,7 @@ class ndarray:
         usage.dask: 1
         usage.matplotlib: 1
         usage.networkx: 6
+        usage.orange3: 1
         usage.pandas: 29
         usage.prophet: 1
         usage.scipy: 31
@@ -133744,6 +137714,7 @@ class ndarray:
         usage.dask: 12
         usage.matplotlib: 77
         usage.networkx: 3
+        usage.orange3: 21
         usage.scipy: 405
         usage.seaborn: 7
         usage.skimage: 194
@@ -133816,6 +137787,7 @@ class ndarray:
         usage.dask: 35
         usage.matplotlib: 77
         usage.networkx: 3
+        usage.orange3: 21
         usage.pandas: 171
         usage.scipy: 439
         usage.seaborn: 7
@@ -133898,6 +137870,7 @@ class ndarray:
         usage.dask: 100
         usage.matplotlib: 50
         usage.networkx: 2
+        usage.orange3: 58
         usage.prophet: 2
         usage.sample-usage: 1
         usage.scipy: 133
@@ -133915,6 +137888,7 @@ class ndarray:
         usage.dask: 18
         usage.matplotlib: 35
         usage.networkx: 10
+        usage.orange3: 34
         usage.sample-usage: 1
         usage.scipy: 325
         usage.seaborn: 4
@@ -133993,6 +137967,7 @@ class ndarray:
         """
         usage.dask: 19
         usage.matplotlib: 4
+        usage.orange3: 3
         usage.scipy: 78
         usage.skimage: 3
         usage.sklearn: 7
@@ -134017,6 +137992,7 @@ class ndarray:
     def reshape(self, _0: int, /):
         """
         usage.matplotlib: 3
+        usage.orange3: 28
         usage.prophet: 1
         usage.scipy: 47
         usage.skimage: 8
@@ -134219,7 +138195,7 @@ class ndarray:
             int,
             numpy.ndarray,
             numpy.int64,
-            Tuple[Union[int, numpy.int64, None], ...],
+            Tuple[Union[numpy.int64, int, None], ...],
             List[Union[numpy.int64, numpy.int32, int]],
         ],
         /,
@@ -134230,6 +138206,7 @@ class ndarray:
         usage.dask: 193
         usage.matplotlib: 116
         usage.networkx: 12
+        usage.orange3: 123
         usage.pandas: 373
         usage.prophet: 3
         usage.sample-usage: 2
@@ -134249,20 +138226,21 @@ class ndarray:
         ...
 
     @overload
-    def round(self, /):
+    def round(self, _0: int, /):
         """
-        usage.prophet: 1
-        usage.scipy: 2
-        usage.sklearn: 6
+        usage.dask: 2
+        usage.orange3: 1
+        usage.sklearn: 4
         usage.xarray: 2
         """
         ...
 
     @overload
-    def round(self, _0: int, /):
+    def round(self, /):
         """
-        usage.dask: 2
-        usage.sklearn: 4
+        usage.prophet: 1
+        usage.scipy: 2
+        usage.sklearn: 6
         usage.xarray: 2
         """
         ...
@@ -134298,6 +138276,7 @@ class ndarray:
     ):
         """
         usage.dask: 2
+        usage.orange3: 1
         usage.pandas: 13
         usage.prophet: 1
         usage.scipy: 2
@@ -134574,6 +138553,7 @@ class ndarray:
     @overload
     def sort(self, /, *, axis: int):
         """
+        usage.orange3: 2
         usage.sample-usage: 1
         usage.skimage: 1
         usage.sklearn: 2
@@ -134585,6 +138565,7 @@ class ndarray:
         """
         usage.dask: 3
         usage.matplotlib: 4
+        usage.orange3: 1
         usage.pandas: 3
         usage.prophet: 1
         usage.sample-usage: 1
@@ -134628,6 +138609,7 @@ class ndarray:
         """
         usage.dask: 4
         usage.matplotlib: 4
+        usage.orange3: 3
         usage.pandas: 3
         usage.prophet: 1
         usage.sample-usage: 2
@@ -134635,6 +138617,15 @@ class ndarray:
         usage.skimage: 9
         usage.sklearn: 7
         usage.statsmodels: 7
+        """
+        ...
+
+    @overload
+    def squeeze(self, /, *, axis: int):
+        """
+        usage.dask: 1
+        usage.orange3: 2
+        usage.sklearn: 4
         """
         ...
 
@@ -134666,14 +138657,6 @@ class ndarray:
         ...
 
     @overload
-    def squeeze(self, /, *, axis: int):
-        """
-        usage.dask: 1
-        usage.sklearn: 4
-        """
-        ...
-
-    @overload
     def squeeze(self, /, *, axis: Tuple[int, int]):
         """
         usage.dask: 1
@@ -134681,11 +138664,12 @@ class ndarray:
         ...
 
     def squeeze(
-        self, _0: int = ..., /, *, axis: Union[int, None, Tuple[int, int]] = ...
+        self, _0: int = ..., /, *, axis: Union[int, Tuple[int, int], None] = ...
     ):
         """
         usage.dask: 3
         usage.matplotlib: 6
+        usage.orange3: 2
         usage.pandas: 12
         usage.scipy: 40
         usage.seaborn: 11
@@ -134806,6 +138790,7 @@ class ndarray:
         usage.matplotlib: 14
         usage.modin: 1
         usage.networkx: 45
+        usage.orange3: 30
         usage.prophet: 4
         usage.scipy: 169
         usage.seaborn: 17
@@ -134821,6 +138806,7 @@ class ndarray:
         """
         usage.dask: 18
         usage.networkx: 8
+        usage.orange3: 17
         usage.scipy: 67
         usage.seaborn: 1
         usage.skimage: 15
@@ -134834,11 +138820,70 @@ class ndarray:
     def sum(self, _0: int, /):
         """
         usage.matplotlib: 2
+        usage.orange3: 2
         usage.scipy: 2
         usage.skimage: 17
         usage.sklearn: 39
         usage.statsmodels: 211
         usage.xarray: 4
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: None, dtype: None, keepdims: bool):
+        """
+        usage.orange3: 3
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, dtype: None):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: int, keepdims: bool):
+        """
+        usage.dask: 3
+        usage.orange3: 1
+        usage.sklearn: 4
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: int, dtype: None, keepdims: bool):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: None, dtype: Type[numpy.int32], keepdims: bool):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, axis: None, dtype: Type[numpy.float64], keepdims: bool):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, dtype: Type[numpy.int32]):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def sum(self, /, *, dtype: Type[numpy.float64]):
+        """
+        usage.orange3: 1
         """
         ...
 
@@ -134915,14 +138960,6 @@ class ndarray:
         ...
 
     @overload
-    def sum(self, /, *, axis: int, keepdims: bool):
-        """
-        usage.dask: 3
-        usage.sklearn: 4
-        """
-        ...
-
-    @overload
     def sum(self, /, *, axis: Tuple[int, int], dtype: Literal["f8"], keepdims: bool):
         """
         usage.dask: 4
@@ -134985,7 +139022,7 @@ class ndarray:
         /,
         *,
         axis: Union[int, Tuple[Union[int, None], ...], None] = ...,
-        dtype: Union[type, str, numpy.dtype] = ...,
+        dtype: Union[type, None, str, numpy.dtype] = ...,
         keepdims: bool = ...,
         out: numpy.ndarray = ...,
     ):
@@ -134994,6 +139031,7 @@ class ndarray:
         usage.matplotlib: 16
         usage.modin: 1
         usage.networkx: 53
+        usage.orange3: 61
         usage.pandas: 101
         usage.prophet: 4
         usage.scipy: 264
@@ -135154,6 +139192,7 @@ class ndarray:
         usage.geopandas: 7
         usage.matplotlib: 21
         usage.networkx: 3
+        usage.orange3: 6
         usage.pandas: 44
         usage.scipy: 43
         usage.seaborn: 5
@@ -135505,6 +139544,20 @@ class ndarray:
         ...
 
     @overload
+    def view(self, _0: Type[Orange.misc.distmatrix.DistMatrix], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
+    def view(self, _0: Type[numpy.int8], /):
+        """
+        usage.orange3: 2
+        """
+        ...
+
+    @overload
     def view(self, _0: Literal["S1"], /):
         """
         usage.xarray: 6
@@ -135846,6 +139899,7 @@ class ndarray:
         usage.dask: 35
         usage.matplotlib: 3
         usage.networkx: 1
+        usage.orange3: 4
         usage.pandas: 247
         usage.scipy: 42
         usage.skimage: 27
@@ -136627,8 +140681,37 @@ class str_:
         """
         ...
 
+    @overload
+    def __contains__(self, _0: Literal["2"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["ir"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["ea"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
     def __contains__(self, _0: Literal[" "], /):
         """
+        usage.xarray: 1
+        """
+        ...
+
+    def __contains__(self, _0: Literal[" ", "ea", "ir", "2"], /):
+        """
+        usage.orange3: 3
         usage.xarray: 1
         """
         ...
@@ -137089,6 +141172,12 @@ class str_:
         """
         ...
 
+    def endswith(self, _0: Literal["ion"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
     @overload
     def find(self, _0: numpy.str_, /):
         """
@@ -137143,8 +141232,30 @@ class str_:
         """
         ...
 
+    @overload
+    def startswith(self, _0: Literal["gi"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def startswith(self, _0: Literal["sea"], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
     def startswith(self, _0: str, /):
         """
+        usage.pandas: 9
+        """
+        ...
+
+    def startswith(self, _0: str, /):
+        """
+        usage.orange3: 2
         usage.pandas: 9
         """
         ...
@@ -137648,6 +141759,7 @@ class ufunc:
         usage.koalas: 1
         usage.matplotlib: 317
         usage.networkx: 25
+        usage.orange3: 148
         usage.prophet: 7
         usage.sample-usage: 2
         usage.scipy: 2544
@@ -137809,6 +141921,7 @@ class ufunc:
         usage.hvplot: 1
         usage.matplotlib: 58
         usage.networkx: 8
+        usage.orange3: 19
         usage.scipy: 585
         usage.seaborn: 10
         usage.skimage: 65
@@ -137823,6 +141936,7 @@ class ufunc:
         """
         usage.dask: 3
         usage.matplotlib: 6
+        usage.orange3: 2
         usage.scipy: 41
         usage.skimage: 3
         usage.sklearn: 7
@@ -137837,6 +141951,7 @@ class ufunc:
         usage.geopandas: 2
         usage.matplotlib: 167
         usage.networkx: 8
+        usage.orange3: 35
         usage.prophet: 3
         usage.scipy: 947
         usage.seaborn: 5
@@ -137899,6 +142014,7 @@ class ufunc:
         usage.dask: 330
         usage.matplotlib: 42
         usage.networkx: 3
+        usage.orange3: 4
         usage.prophet: 3
         usage.sample-usage: 1
         usage.scipy: 581
@@ -137919,6 +142035,7 @@ class ufunc:
     @overload
     def __call__(self, _0: numpy.ndarray, /, *, out: numpy.ndarray):
         """
+        usage.orange3: 7
         usage.scipy: 3
         usage.skimage: 7
         usage.sklearn: 19
@@ -137936,6 +142053,7 @@ class ufunc:
     def __call__(self, _0: numpy.ndarray, _1: int, /):
         """
         usage.dask: 175
+        usage.orange3: 3
         usage.scipy: 77
         usage.skimage: 9
         usage.sklearn: 43
@@ -137950,6 +142068,7 @@ class ufunc:
         usage.dask: 1
         usage.matplotlib: 17
         usage.networkx: 1
+        usage.orange3: 1
         usage.scipy: 31
         usage.skimage: 5
         usage.sklearn: 6
@@ -137984,6 +142103,7 @@ class ufunc:
         usage.geopandas: 6
         usage.matplotlib: 102
         usage.networkx: 9
+        usage.orange3: 19
         usage.prophet: 5
         usage.pyjanitor: 2
         usage.scipy: 943
@@ -138063,6 +142183,7 @@ class ufunc:
     def __call__(self, _0: numpy.ndarray, _1: int, /, *, out: numpy.ndarray):
         """
         usage.dask: 3
+        usage.orange3: 2
         usage.skimage: 1
         usage.sklearn: 2
         """
@@ -138224,6 +142345,7 @@ class ufunc:
     def __call__(self, _0: List[int], /):
         """
         usage.matplotlib: 6
+        usage.orange3: 2
         usage.scipy: 12
         usage.skimage: 3
         usage.statsmodels: 4
@@ -138234,6 +142356,120 @@ class ufunc:
     def __call__(self, _0: numpy.ndarray, _1: int, /, *, dtype: Type[numpy.float32]):
         """
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: memoryview, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.uint64, /):
+        """
+        usage.orange3: 1
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Orange.data.variable.Value, /):
+        """
+        usage.orange3: 6
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: float, _1: numpy.ndarray, /):
+        """
+        usage.dask: 12
+        usage.matplotlib: 3
+        usage.orange3: 1
+        usage.scipy: 42
+        usage.sklearn: 4
+        usage.statsmodels: 1
+        usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: scipy.sparse.csr.csr_matrix, /):
+        """
+        usage.orange3: 1
+        usage.scipy: 20
+        usage.sklearn: 4
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Orange.data.table.Table, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: List[Union[float, int]], /):
+        """
+        usage.matplotlib: 3
+        usage.orange3: 2
+        usage.scipy: 12
+        usage.statsmodels: 4
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Orange.statistics.contingency.Discrete, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: List[List[float]], /):
+        """
+        usage.orange3: 2
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: Literal[""], /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.ndarray, _1: float, /, *, out: numpy.ndarray):
+        """
+        usage.orange3: 1
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.matrix, /):
+        """
+        usage.orange3: 1
+        usage.scipy: 4
+        usage.sklearn: 3
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.ndarray, _1: numpy.float64, /, *, where: numpy.bool_):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.ndarray, /, *, out: None):
+        """
+        usage.orange3: 2
         """
         ...
 
@@ -138563,18 +142799,6 @@ class ufunc:
         /,
     ):
         """
-        usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __call__(self, _0: float, _1: numpy.ndarray, /):
-        """
-        usage.dask: 12
-        usage.matplotlib: 3
-        usage.scipy: 42
-        usage.sklearn: 4
-        usage.statsmodels: 1
         usage.xarray: 1
         """
         ...
@@ -139135,25 +143359,9 @@ class ufunc:
         ...
 
     @overload
-    def __call__(self, _0: List[Union[float, int]], /):
-        """
-        usage.matplotlib: 3
-        usage.scipy: 12
-        usage.statsmodels: 4
-        """
-        ...
-
-    @overload
     def __call__(self, _0: List[List[Union[int, float]]], /):
         """
         usage.statsmodels: 3
-        """
-        ...
-
-    @overload
-    def __call__(self, _0: List[List[float]], /):
-        """
-        usage.statsmodels: 1
         """
         ...
 
@@ -139328,14 +143536,6 @@ class ufunc:
         ...
 
     @overload
-    def __call__(self, _0: scipy.sparse.csr.csr_matrix, /):
-        """
-        usage.scipy: 20
-        usage.sklearn: 4
-        """
-        ...
-
-    @overload
     def __call__(self, _0: int, _1: int, _2: float, /):
         """
         usage.scipy: 41
@@ -139434,14 +143634,6 @@ class ufunc:
     def __call__(self, _0: numpy.float128, /):
         """
         usage.scipy: 5
-        """
-        ...
-
-    @overload
-    def __call__(self, _0: numpy.matrix, /):
-        """
-        usage.scipy: 4
-        usage.sklearn: 3
         """
         ...
 
@@ -140503,13 +144695,6 @@ class ufunc:
         ...
 
     @overload
-    def __call__(self, _0: numpy.uint64, /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def __call__(self, _0: numpy.float64, _1: float, _2: numpy.ma.core.MaskedArray, /):
         """
         usage.scipy: 2
@@ -141196,13 +145381,6 @@ class ufunc:
         ...
 
     @overload
-    def __call__(self, _0: numpy.ndarray, _1: float, /, *, out: numpy.ndarray):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def __call__(self, _0: int, _1: numpy.int64, _2: numpy.ndarray, /):
         """
         usage.sklearn: 2
@@ -141268,7 +145446,7 @@ class ufunc:
         dtype: Union[type, Literal["float64", "float32"], numpy.dtype] = ...,
         casting: Literal["no", "unsafe"] = ...,
         axis: int = ...,
-        where: Union[numpy.ndarray, bool] = ...,
+        where: Union[bool, numpy.ndarray, numpy.bool_] = ...,
         sig: str = ...,
         output_dtypes: Union[Tuple[Type[float], Type[float]], Type[float]] = ...,
     ):
@@ -141281,6 +145459,7 @@ class ufunc:
         usage.matplotlib: 781
         usage.modin: 1
         usage.networkx: 56
+        usage.orange3: 264
         usage.pandas: 1228
         usage.prophet: 25
         usage.pyjanitor: 4
@@ -141297,6 +145476,7 @@ class ufunc:
     @overload
     def accumulate(self, _0: numpy.ndarray, /):
         """
+        usage.orange3: 1
         usage.sklearn: 2
         usage.statsmodels: 6
         """
@@ -141311,6 +145491,7 @@ class ufunc:
 
     def accumulate(self, _0: Union[numpy.ndarray, pandas.core.series.Series], /):
         """
+        usage.orange3: 1
         usage.pandas: 4
         usage.sklearn: 2
         usage.statsmodels: 6
@@ -143185,6 +147366,13 @@ class uint64:
         ...
 
     @overload
+    def __mul__(self, _0: numpy.float64, /):
+        """
+        usage.orange3: 1
+        """
+        ...
+
+    @overload
     def __mul__(
         self,
         _0: Union[
@@ -143219,6 +147407,7 @@ class uint64:
     def __mul__(self, _0: object, /):
         """
         usage.dask: 1
+        usage.orange3: 1
         usage.pandas: 6
         usage.scipy: 4
         """
@@ -143501,6 +147690,14 @@ class uint64:
         ...
 
     @overload
+    def __rtruediv__(self, _0: numpy.float64, /):
+        """
+        usage.orange3: 1
+        usage.scipy: 1
+        """
+        ...
+
+    @overload
     def __rtruediv__(
         self,
         _0: Union[
@@ -143516,13 +147713,6 @@ class uint64:
         ...
 
     @overload
-    def __rtruediv__(self, _0: numpy.float64, /):
-        """
-        usage.scipy: 1
-        """
-        ...
-
-    @overload
     def __rtruediv__(self, _0: numpy.uint64, /):
         """
         usage.dask: 1
@@ -143532,6 +147722,7 @@ class uint64:
     def __rtruediv__(self, _0: object, /):
         """
         usage.dask: 1
+        usage.orange3: 1
         usage.pandas: 5
         usage.scipy: 1
         usage.skimage: 2
@@ -143583,6 +147774,7 @@ class uint64:
     @overload
     def __truediv__(self, _0: int, /):
         """
+        usage.orange3: 1
         usage.scipy: 2
         usage.skimage: 1
         """
@@ -143621,6 +147813,7 @@ class uint64:
     def __truediv__(self, _0: object, /):
         """
         usage.dask: 1
+        usage.orange3: 1
         usage.pandas: 4
         usage.scipy: 3
         usage.skimage: 1

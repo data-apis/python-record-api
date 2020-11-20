@@ -825,6 +825,7 @@ def assert_allclose(actual: numpy.ndarray, desired: numpy.ndarray, atol: float):
     """
     usage.matplotlib: 100
     usage.networkx: 2
+    usage.orange3: 1
     usage.scipy: 238
     usage.skimage: 31
     usage.sklearn: 27
@@ -902,6 +903,25 @@ def assert_allclose(
     usage.skimage: 1
     usage.sklearn: 15
     usage.statsmodels: 258
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[List[float]]):
+    """
+    usage.orange3: 1
+    usage.scipy: 2
+    usage.sklearn: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_allclose(actual: numpy.ndarray, desired: List[List[Union[float, int]]]):
+    """
+    usage.orange3: 1
     """
     ...
 
@@ -1525,16 +1545,6 @@ def assert_allclose(
 ):
     """
     usage.statsmodels: 1
-    """
-    ...
-
-
-@overload
-def assert_allclose(actual: numpy.ndarray, desired: List[List[float]]):
-    """
-    usage.scipy: 2
-    usage.sklearn: 2
-    usage.statsmodels: 2
     """
     ...
 
@@ -11778,6 +11788,7 @@ def assert_allclose(
     usage.geopandas: 12
     usage.matplotlib: 184
     usage.networkx: 19
+    usage.orange3: 3
     usage.scipy: 4709
     usage.skimage: 169
     usage.sklearn: 760
@@ -11803,6 +11814,7 @@ def assert_almost_equal(actual: numpy.float64, desired: int):
 def assert_almost_equal(actual: numpy.float64, desired: float):
     """
     usage.matplotlib: 8
+    usage.orange3: 1
     usage.scipy: 173
     usage.skimage: 47
     usage.sklearn: 189
@@ -11815,6 +11827,7 @@ def assert_almost_equal(actual: numpy.float64, desired: float):
 def assert_almost_equal(actual: numpy.ndarray, desired: numpy.ndarray):
     """
     usage.matplotlib: 23
+    usage.orange3: 134
     usage.scipy: 205
     usage.skimage: 125
     usage.sklearn: 127
@@ -11826,6 +11839,7 @@ def assert_almost_equal(actual: numpy.ndarray, desired: numpy.ndarray):
 @overload
 def assert_almost_equal(actual: numpy.ndarray, desired: numpy.ndarray, decimal: int):
     """
+    usage.orange3: 19
     usage.scipy: 43
     usage.skimage: 18
     usage.sklearn: 77
@@ -11918,6 +11932,7 @@ def assert_almost_equal(actual: numpy.float64, desired: int, decimal: int):
 @overload
 def assert_almost_equal(actual: numpy.ndarray, desired: List[float]):
     """
+    usage.orange3: 8
     usage.scipy: 19
     usage.skimage: 2
     usage.sklearn: 3
@@ -11929,6 +11944,7 @@ def assert_almost_equal(actual: numpy.ndarray, desired: List[float]):
 @overload
 def assert_almost_equal(actual: numpy.ndarray, desired: List[int]):
     """
+    usage.orange3: 16
     usage.scipy: 46
     usage.skimage: 1
     usage.sklearn: 6
@@ -11941,6 +11957,7 @@ def assert_almost_equal(actual: numpy.ndarray, desired: List[int]):
 def assert_almost_equal(actual: numpy.float64, desired: numpy.float64):
     """
     usage.matplotlib: 2
+    usage.orange3: 7
     usage.scipy: 67
     usage.skimage: 21
     usage.sklearn: 131
@@ -11964,6 +11981,7 @@ def assert_almost_equal(
 @overload
 def assert_almost_equal(actual: numpy.ndarray, desired: int):
     """
+    usage.orange3: 4
     usage.scipy: 6
     usage.skimage: 5
     usage.sklearn: 2
@@ -12048,6 +12066,7 @@ def assert_almost_equal(
 def assert_almost_equal(actual: float, desired: float):
     """
     usage.matplotlib: 1
+    usage.orange3: 2
     usage.scipy: 42
     usage.skimage: 16
     usage.sklearn: 33
@@ -12160,6 +12179,7 @@ def assert_almost_equal(actual: Tuple[float, float], desired: Tuple[float, float
 @overload
 def assert_almost_equal(actual: numpy.ndarray, desired: List[Union[int, float]]):
     """
+    usage.orange3: 4
     usage.scipy: 7
     usage.skimage: 2
     usage.sklearn: 1
@@ -12170,6 +12190,7 @@ def assert_almost_equal(actual: numpy.ndarray, desired: List[Union[int, float]])
 @overload
 def assert_almost_equal(actual: numpy.ndarray, desired: List[List[int]]):
     """
+    usage.orange3: 1
     usage.skimage: 4
     usage.sklearn: 1
     usage.statsmodels: 2
@@ -12178,10 +12199,163 @@ def assert_almost_equal(actual: numpy.ndarray, desired: List[List[int]]):
 
 
 @overload
+def assert_almost_equal(actual: numpy.ndarray, desired: List[List[Union[int, float]]]):
+    """
+    usage.orange3: 5
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.matrix, desired: numpy.ndarray):
+    """
+    usage.orange3: 4
+    usage.scipy: 7
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.ndarray, desired: numpy.ndarray, err_msg: str):
+    """
+    usage.orange3: 3
+    usage.sklearn: 3
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.ndarray, desired: List[List[Union[float, int]]]):
+    """
+    usage.orange3: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.ndarray, desired: List[numpy.float64]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: Orange.misc.distmatrix.DistMatrix, desired: numpy.ndarray
+):
+    """
+    usage.orange3: 140
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: int, desired: float):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
 def assert_almost_equal(actual: numpy.ndarray, desired: List[float], decimal: int):
     """
+    usage.orange3: 2
     usage.scipy: 21
     usage.statsmodels: 211
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: List[Union[int, float]], desired: numpy.ndarray):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.ndarray, desired: List[List[float]]):
+    """
+    usage.orange3: 5
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.ndarray, desired: List[Union[float, int]]):
+    """
+    usage.orange3: 1
+    usage.sklearn: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.ndarray, desired: float):
+    """
+    usage.matplotlib: 4
+    usage.orange3: 2
+    usage.scipy: 17
+    usage.sklearn: 5
+    usage.statsmodels: 6
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: List[numpy.float64], desired: List[float], decimal: int
+):
+    """
+    usage.orange3: 3
+    usage.scipy: 1
+    usage.statsmodels: 4
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray, desired: List[numpy.float64], decimal: int
+):
+    """
+    usage.orange3: 1
+    usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.float64, desired: numpy.ndarray):
+    """
+    usage.orange3: 3
+    usage.sklearn: 1
+    usage.statsmodels: 3
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(
+    actual: numpy.ndarray,
+    desired: numpy.ndarray,
+    err_msg: Literal["Weights don't match."],
+):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def assert_almost_equal(actual: numpy.int64, desired: numpy.ndarray):
+    """
+    usage.orange3: 2
+    usage.scipy: 4
+    usage.sklearn: 1
     """
     ...
 
@@ -12957,16 +13131,6 @@ def assert_almost_equal(
 
 @overload
 def assert_almost_equal(
-    actual: numpy.ndarray, desired: List[numpy.float64], decimal: int
-):
-    """
-    usage.statsmodels: 1
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(
     actual: numpy.ndarray, desired: List[numpy.ndarray], decimal: int
 ):
     """
@@ -13003,17 +13167,6 @@ def assert_almost_equal(
 ):
     """
     usage.statsmodels: 1
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(
-    actual: List[numpy.float64], desired: List[float], decimal: int
-):
-    """
-    usage.scipy: 1
-    usage.statsmodels: 4
     """
     ...
 
@@ -13635,26 +13788,6 @@ def assert_almost_equal(
 
 
 @overload
-def assert_almost_equal(actual: numpy.float64, desired: numpy.ndarray):
-    """
-    usage.sklearn: 1
-    usage.statsmodels: 3
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(actual: numpy.ndarray, desired: float):
-    """
-    usage.matplotlib: 4
-    usage.scipy: 17
-    usage.sklearn: 5
-    usage.statsmodels: 6
-    """
-    ...
-
-
-@overload
 def assert_almost_equal(
     actual: Tuple[
         Tuple[numpy.float64, numpy.float64, numpy.float64],
@@ -13840,15 +13973,6 @@ def assert_almost_equal(
 ):
     """
     usage.statsmodels: 1
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(actual: numpy.int64, desired: numpy.ndarray):
-    """
-    usage.scipy: 4
-    usage.sklearn: 1
     """
     ...
 
@@ -14067,14 +14191,6 @@ def assert_almost_equal(
 
 @overload
 def assert_almost_equal(actual: numpy.matrix, desired: numpy.matrix):
-    """
-    usage.scipy: 7
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(actual: numpy.matrix, desired: numpy.ndarray):
     """
     usage.scipy: 7
     """
@@ -15891,25 +16007,9 @@ def assert_almost_equal(actual: float, desired: float, err_msg: str):
 
 
 @overload
-def assert_almost_equal(actual: numpy.ndarray, desired: numpy.ndarray, err_msg: str):
-    """
-    usage.sklearn: 3
-    """
-    ...
-
-
-@overload
 def assert_almost_equal(actual: numpy.int64, desired: numpy.int64, err_msg: str):
     """
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def assert_almost_equal(actual: numpy.ndarray, desired: List[Union[float, int]]):
-    """
-    usage.sklearn: 4
     """
     ...
 
@@ -15948,6 +16048,7 @@ def assert_almost_equal(
     """
     usage.matplotlib: 50
     usage.networkx: 38
+    usage.orange3: 376
     usage.scipy: 1344
     usage.skimage: 345
     usage.sklearn: 965
@@ -16230,6 +16331,7 @@ def assert_approx_equal(
 def assert_array_almost_equal(x: numpy.ndarray, y: numpy.ndarray):
     """
     usage.matplotlib: 29
+    usage.orange3: 16
     usage.scipy: 2007
     usage.seaborn: 7
     usage.skimage: 64
@@ -16364,6 +16466,44 @@ def assert_array_almost_equal(
 ):
     """
     usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.int32, y: numpy.int32):
+    """
+    usage.orange3: 1
+    usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: Orange.misc.distmatrix.DistMatrix, y: numpy.ndarray):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.float64, y: numpy.float64):
+    """
+    usage.matplotlib: 3
+    usage.orange3: 1
+    usage.scipy: 12
+    usage.sklearn: 25
+    """
+    ...
+
+
+@overload
+def assert_array_almost_equal(x: numpy.ndarray, y: numpy.float64):
+    """
+    usage.matplotlib: 1
+    usage.orange3: 1
+    usage.scipy: 4
     """
     ...
 
@@ -17347,16 +17487,6 @@ def assert_array_almost_equal(x: numpy.ndarray, y: List[int], decimal: int):
 
 
 @overload
-def assert_array_almost_equal(x: numpy.float64, y: numpy.float64):
-    """
-    usage.matplotlib: 3
-    usage.scipy: 12
-    usage.sklearn: 25
-    """
-    ...
-
-
-@overload
 def assert_array_almost_equal(
     x: numpy.ndarray, y: Tuple[float, int, float], decimal: int
 ):
@@ -17563,15 +17693,6 @@ def assert_array_almost_equal(x: numpy.complex256, y: numpy.complex256, decimal:
 
 
 @overload
-def assert_array_almost_equal(x: numpy.ndarray, y: numpy.float64):
-    """
-    usage.matplotlib: 1
-    usage.scipy: 4
-    """
-    ...
-
-
-@overload
 def assert_array_almost_equal(x: numpy.ndarray, y: numpy.matrix):
     """
     usage.scipy: 12
@@ -17662,14 +17783,6 @@ def assert_array_almost_equal(x: numpy.float128, y: numpy.float128):
 
 @overload
 def assert_array_almost_equal(x: numpy.uint32, y: numpy.uint32):
-    """
-    usage.scipy: 2
-    """
-    ...
-
-
-@overload
-def assert_array_almost_equal(x: numpy.int32, y: numpy.int32):
     """
     usage.scipy: 2
     """
@@ -18582,6 +18695,7 @@ def assert_array_almost_equal(
     """
     usage.dask: 1
     usage.matplotlib: 86
+    usage.orange3: 21
     usage.scipy: 4018
     usage.seaborn: 12
     usage.skimage: 109
@@ -18704,6 +18818,15 @@ def assert_array_almost_equal_nulp(
     ...
 
 
+def assert_array_compare(
+    comparison: numpy.vectorize, x: numpy.ndarray, y: numpy.ndarray
+):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
 @overload
 def assert_array_equal(x: numpy.ndarray, y: numpy.ndarray):
     """
@@ -18711,6 +18834,7 @@ def assert_array_equal(x: numpy.ndarray, y: numpy.ndarray):
     usage.geopandas: 20
     usage.koalas: 2
     usage.matplotlib: 106
+    usage.orange3: 54
     usage.scipy: 668
     usage.seaborn: 63
     usage.skimage: 386
@@ -18736,6 +18860,7 @@ def assert_array_equal(x: List[int], y: List[int]):
 @overload
 def assert_array_equal(x: numpy.ndarray, y: int):
     """
+    usage.orange3: 2
     usage.scipy: 7
     usage.skimage: 13
     usage.sklearn: 10
@@ -18792,6 +18917,7 @@ def assert_array_equal(x: Tuple[int, int], y: Tuple[int, int]):
 def assert_array_equal(x: numpy.ndarray, y: List[int]):
     """
     usage.matplotlib: 10
+    usage.orange3: 4
     usage.scipy: 112
     usage.seaborn: 13
     usage.skimage: 11
@@ -18850,6 +18976,7 @@ def assert_array_equal(x: List[Tuple[int, int]], y: List[Tuple[int, int]]):
 def assert_array_equal(x: numpy.ndarray, y: List[List[int]]):
     """
     usage.matplotlib: 12
+    usage.orange3: 10
     usage.scipy: 56
     usage.seaborn: 1
     usage.skimage: 12
@@ -18863,6 +18990,7 @@ def assert_array_equal(x: numpy.ndarray, y: List[List[int]]):
 def assert_array_equal(x: numpy.ndarray, y: List[List[float]]):
     """
     usage.matplotlib: 1
+    usage.orange3: 2
     usage.scipy: 8
     usage.skimage: 6
     usage.sklearn: 14
@@ -18946,6 +19074,130 @@ def assert_array_equal(x: Tuple[int, int, int], y: Tuple[int, int, int]):
     usage.skimage: 1
     usage.sklearn: 2
     usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: List[List[Union[int, float]]]):
+    """
+    usage.orange3: 2
+    usage.scipy: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: int, y: numpy.float64):
+    """
+    usage.orange3: 2
+    usage.scipy: 2
+    usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: List[list]):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: List[List[Union[float, int]]]):
+    """
+    usage.orange3: 6
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: Orange.misc.distmatrix.DistMatrix, y: Orange.misc.distmatrix.DistMatrix
+):
+    """
+    usage.orange3: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: List[float]):
+    """
+    usage.matplotlib: 1
+    usage.orange3: 1
+    usage.scipy: 48
+    usage.seaborn: 10
+    usage.sklearn: 11
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: Orange.data.table.Table, y: Orange.data.table.Table):
+    """
+    usage.orange3: 10
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: Orange.data.table.Table):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.float64, y: numpy.float64):
+    """
+    usage.orange3: 10
+    usage.scipy: 3
+    usage.sklearn: 8
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: List[numpy.ndarray], y: numpy.ndarray):
+    """
+    usage.orange3: 1
+    usage.seaborn: 1
+    usage.sklearn: 1
+    """
+    ...
+
+
+@overload
+def assert_array_equal(
+    x: Tuple[numpy.ndarray, numpy.ndarray], y: Tuple[numpy.ndarray, numpy.ndarray]
+):
+    """
+    usage.orange3: 1
+    usage.scipy: 3
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: numpy.float64):
+    """
+    usage.orange3: 1
+    usage.scipy: 1
+    usage.sklearn: 5
+    usage.xarray: 2
+    """
+    ...
+
+
+@overload
+def assert_array_equal(x: numpy.ndarray, y: Literal["aardvark"]):
+    """
+    usage.orange3: 1
     """
     ...
 
@@ -19378,16 +19630,6 @@ def assert_array_equal(x: dask.array.core.Array, y: numpy.ndarray):
 
 
 @overload
-def assert_array_equal(x: numpy.ndarray, y: numpy.float64):
-    """
-    usage.scipy: 1
-    usage.sklearn: 5
-    usage.xarray: 2
-    """
-    ...
-
-
-@overload
 def assert_array_equal(x: None, y: None):
     """
     usage.xarray: 1
@@ -19468,16 +19710,6 @@ def assert_array_equal(x: Tuple[numpy.ndarray], y: List[numpy.ndarray]):
 
 
 @overload
-def assert_array_equal(x: numpy.float64, y: numpy.float64):
-    """
-    usage.scipy: 3
-    usage.sklearn: 8
-    usage.xarray: 2
-    """
-    ...
-
-
-@overload
 def assert_array_equal(x: bool, y: bool):
     """
     usage.scipy: 1
@@ -19499,15 +19731,6 @@ def assert_array_equal(
     x: pandas.core.indexes.datetimes.DatetimeIndex, y: numpy.ndarray
 ):
     """
-    usage.xarray: 1
-    """
-    ...
-
-
-@overload
-def assert_array_equal(x: int, y: numpy.float64):
-    """
-    usage.scipy: 2
     usage.xarray: 1
     """
     ...
@@ -19877,17 +20100,6 @@ def assert_array_equal(x: numpy.ndarray, y: List[Union[int, float]]):
 
 
 @overload
-def assert_array_equal(x: numpy.ndarray, y: List[float]):
-    """
-    usage.matplotlib: 1
-    usage.scipy: 48
-    usage.seaborn: 10
-    usage.sklearn: 11
-    """
-    ...
-
-
-@overload
 def assert_array_equal(x: Tuple[numpy.ndarray, numpy.ndarray], y: numpy.ndarray):
     """
     usage.scipy: 1
@@ -20072,24 +20284,6 @@ def assert_array_equal(x: float, y: float):
     """
     usage.scipy: 2
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def assert_array_equal(
-    x: Tuple[numpy.ndarray, numpy.ndarray], y: Tuple[numpy.ndarray, numpy.ndarray]
-):
-    """
-    usage.scipy: 3
-    """
-    ...
-
-
-@overload
-def assert_array_equal(x: numpy.ndarray, y: List[List[Union[int, float]]]):
-    """
-    usage.scipy: 2
     """
     ...
 
@@ -21269,15 +21463,6 @@ def assert_array_equal(
 
 
 @overload
-def assert_array_equal(x: List[numpy.ndarray], y: numpy.ndarray):
-    """
-    usage.seaborn: 1
-    usage.sklearn: 1
-    """
-    ...
-
-
-@overload
 def assert_array_equal(
     x: List[Literal["c", "b", "a"]], y: List[Literal["c", "b", "a"]]
 ):
@@ -22110,6 +22295,7 @@ def assert_array_equal(x: object, y: object, err_msg: str = ...):
     usage.geopandas: 33
     usage.koalas: 2
     usage.matplotlib: 186
+    usage.orange3: 111
     usage.scipy: 1833
     usage.seaborn: 206
     usage.skimage: 495
@@ -22358,6 +22544,7 @@ def assert_equal(actual: numpy.ndarray, desired: numpy.ndarray):
     usage.koalas: 2
     usage.matplotlib: 3
     usage.networkx: 17
+    usage.orange3: 116
     usage.scipy: 544
     usage.seaborn: 1
     usage.skimage: 264
@@ -22402,6 +22589,7 @@ def assert_equal(actual: numpy.float64, desired: numpy.float64):
 @overload
 def assert_equal(actual: numpy.int64, desired: int):
     """
+    usage.orange3: 3
     usage.scipy: 67
     usage.skimage: 19
     usage.statsmodels: 28
@@ -22454,6 +22642,7 @@ def assert_equal(actual: numpy.dtype, desired: numpy.dtype):
 def assert_equal(actual: numpy.ndarray, desired: List[int]):
     """
     usage.dask: 2
+    usage.orange3: 43
     usage.scipy: 107
     usage.skimage: 22
     usage.statsmodels: 87
@@ -22482,6 +22671,7 @@ def assert_equal(actual: numpy.uint8, desired: int):
 @overload
 def assert_equal(actual: numpy.ndarray, desired: float):
     """
+    usage.orange3: 1
     usage.scipy: 50
     usage.skimage: 3
     usage.statsmodels: 9
@@ -22532,6 +22722,7 @@ def assert_equal(
 @overload
 def assert_equal(actual: Tuple[int], desired: Tuple[int]):
     """
+    usage.orange3: 1
     usage.scipy: 61
     usage.skimage: 4
     usage.statsmodels: 31
@@ -22542,6 +22733,7 @@ def assert_equal(actual: Tuple[int], desired: Tuple[int]):
 @overload
 def assert_equal(actual: numpy.ndarray, desired: List[List[int]]):
     """
+    usage.orange3: 4
     usage.scipy: 41
     usage.skimage: 8
     usage.statsmodels: 4
@@ -22645,6 +22837,7 @@ def assert_equal(actual: int, desired: numpy.ndarray):
 @overload
 def assert_equal(actual: numpy.ndarray, desired: int):
     """
+    usage.orange3: 8
     usage.scipy: 30
     usage.skimage: 56
     usage.statsmodels: 19
@@ -22975,9 +23168,58 @@ def assert_equal(actual: numpy.ndarray, desired: List[List[List[List[int]]]]):
 
 
 @overload
-def assert_equal(actual: numpy.ndarray, desired: List[cftime._cftime.DatetimeNoLeap]):
+def assert_equal(actual: numpy.ndarray, desired: List[Union[float, int]]):
     """
-    usage.xarray: 3
+    usage.orange3: 2
+    usage.scipy: 2
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(
+    actual: Orange.misc.distmatrix.DistMatrix,
+    desired: Orange.misc.distmatrix.DistMatrix,
+):
+    """
+    usage.orange3: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: numpy.float64):
+    """
+    usage.orange3: 2
+    usage.scipy: 5
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: openTSNE.tsne.TSNEEmbedding):
+    """
+    usage.orange3: 3
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: List[List[Union[float, int]]]):
+    """
+    usage.orange3: 6
+    usage.scipy: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: List[Union[int, float]]):
+    """
+    usage.orange3: 2
+    usage.scipy: 5
     """
     ...
 
@@ -22985,9 +23227,38 @@ def assert_equal(actual: numpy.ndarray, desired: List[cftime._cftime.DatetimeNoL
 @overload
 def assert_equal(actual: numpy.ndarray, desired: list):
     """
+    usage.orange3: 1
     usage.scipy: 7
     usage.statsmodels: 1
     usage.xarray: 1
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: List[numpy.int64], desired: List[int]):
+    """
+    usage.orange3: 1
+    usage.statsmodels: 50
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: List[bool]):
+    """
+    usage.matplotlib: 2
+    usage.orange3: 1
+    usage.scipy: 5
+    usage.statsmodels: 2
+    """
+    ...
+
+
+@overload
+def assert_equal(actual: numpy.ndarray, desired: List[cftime._cftime.DatetimeNoLeap]):
+    """
+    usage.xarray: 3
     """
     ...
 
@@ -23292,16 +23563,6 @@ def assert_equal(actual: Literal["F"], desired: Literal["F"]):
 def assert_equal(actual: Literal["P>F"], desired: Literal["P>F"]):
     """
     usage.statsmodels: 1
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: numpy.ndarray, desired: List[bool]):
-    """
-    usage.matplotlib: 2
-    usage.scipy: 5
-    usage.statsmodels: 2
     """
     ...
 
@@ -23758,15 +24019,6 @@ def assert_equal(
 
 
 @overload
-def assert_equal(actual: numpy.ndarray, desired: numpy.float64):
-    """
-    usage.scipy: 5
-    usage.statsmodels: 2
-    """
-    ...
-
-
-@overload
 def assert_equal(actual: numpy.ndarray, desired: patsy.design_info.DesignMatrix):
     """
     usage.statsmodels: 2
@@ -23825,15 +24077,6 @@ def assert_equal(actual: Tuple[int, float], desired: List[Union[float, int]]):
 def assert_equal(actual: List[Union[float, int]], desired: List[Union[float, int]]):
     """
     usage.statsmodels: 3
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: numpy.ndarray, desired: List[Union[float, int]]):
-    """
-    usage.scipy: 2
-    usage.statsmodels: 2
     """
     ...
 
@@ -25106,14 +25349,6 @@ def assert_equal(
 def assert_equal(actual: Dict[Literal["b"], float], desired: Dict[Literal["b"], float]):
     """
     usage.statsmodels: 1
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: List[numpy.int64], desired: List[int]):
-    """
-    usage.statsmodels: 50
     """
     ...
 
@@ -29853,14 +30088,6 @@ def assert_equal(
 
 
 @overload
-def assert_equal(actual: numpy.ndarray, desired: List[List[Union[float, int]]]):
-    """
-    usage.scipy: 1
-    """
-    ...
-
-
-@overload
 def assert_equal(actual: Tuple[int, int], desired: Tuple[numpy.int32, numpy.int32]):
     """
     usage.scipy: 1
@@ -29888,14 +30115,6 @@ def assert_equal(actual: scipy.stats.stats.ModeResult, desired: Tuple[int, int])
 def assert_equal(actual: scipy.stats.mstats_basic.ModeResult, desired: Tuple[int, int]):
     """
     usage.scipy: 1
-    """
-    ...
-
-
-@overload
-def assert_equal(actual: numpy.ndarray, desired: List[Union[int, float]]):
-    """
-    usage.scipy: 5
     """
     ...
 
@@ -30408,6 +30627,7 @@ def assert_equal(
     usage.koalas: 2
     usage.matplotlib: 12
     usage.networkx: 74
+    usage.orange3: 196
     usage.scipy: 4653
     usage.seaborn: 9
     usage.skimage: 663
