@@ -17987,69 +17987,6 @@ def array(_0: List[List[int]], /, *, dtype: None):
 
 
 @overload
-def array(
-    _0: List[
-        List[modin.engines.ray.pandas_on_ray.frame.partition.PandasOnRayFramePartition]
-    ],
-    /,
-):
-    """
-    usage.modin: 30
-    """
-    ...
-
-
-@overload
-def array(_0: List[List[ray._raylet.ObjectRef]], /):
-    """
-    usage.modin: 3
-    """
-    ...
-
-
-@overload
-def array(_0: List[Literal["foo", "bar"]], /, *, dtype: Type[object]):
-    """
-    usage.modin: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[Literal["two", "one"]], /, *, dtype: Type[object]):
-    """
-    usage.modin: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[Literal["shiny", "dull"]], /, *, dtype: Type[object]):
-    """
-    usage.modin: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[numpy.int64], /, *, dtype: numpy.dtype):
-    """
-    usage.dask: 1
-    usage.modin: 1
-    """
-    ...
-
-
-@overload
-def array(_0: List[numpy.float32], /, *, dtype: numpy.dtype):
-    """
-    usage.dask: 1
-    usage.modin: 1
-    """
-    ...
-
-
-@overload
 def array(_0: Tuple[int, int, int, float], /, *, dtype: Type[float]):
     """
     usage.matplotlib: 1
@@ -20219,6 +20156,69 @@ def array(_0: Tuple[float, float, int, float], /):
 def array(_0: Tuple[int, float, float, float], /):
     """
     usage.matplotlib: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[
+        List[modin.engines.ray.pandas_on_ray.frame.partition.PandasOnRayFramePartition]
+    ],
+    /,
+):
+    """
+    usage.modin: 30
+    """
+    ...
+
+
+@overload
+def array(_0: List[List[ray._raylet.ObjectRef]], /):
+    """
+    usage.modin: 3
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["foo", "bar"]], /, *, dtype: Type[object]):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["two", "one"]], /, *, dtype: Type[object]):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["shiny", "dull"]], /, *, dtype: Type[object]):
+    """
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.int64], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    usage.modin: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[numpy.float32], /, *, dtype: numpy.dtype):
+    """
+    usage.dask: 1
+    usage.modin: 1
     """
     ...
 
@@ -139118,15 +139118,6 @@ class ufunc:
         ...
 
     @overload
-    def __call__(self, _0: numpy.ndarray, _1: numpy.int64, /):
-        """
-        usage.dask: 6
-        usage.modin: 1
-        usage.sklearn: 3
-        """
-        ...
-
-    @overload
     def __call__(self, _0: matplotlib.transforms.Bbox, /):
         """
         usage.matplotlib: 2
@@ -139181,6 +139172,15 @@ class ufunc:
     def __call__(self, _0: Tuple[int, int, float, float], /):
         """
         usage.matplotlib: 1
+        """
+        ...
+
+    @overload
+    def __call__(self, _0: numpy.ndarray, _1: numpy.int64, /):
+        """
+        usage.dask: 6
+        usage.modin: 1
+        usage.sklearn: 3
         """
         ...
 
