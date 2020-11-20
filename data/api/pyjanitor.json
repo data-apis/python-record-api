@@ -1,0 +1,5944 @@
+{
+  "modules": {
+    "pandas.core.frame": {
+      "classes": {
+        "DataFrame": {
+          "constructor_overloads": [
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "description",
+                      "pct_missing",
+                      "count",
+                      "type",
+                      "column_name"
+                    ]
+                  },
+                  "value": {
+                    "type": "list",
+                    "item": {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": "str"
+                        },
+                        {
+                          "type": {
+                            "module": "numpy",
+                            "name": "dtype"
+                          }
+                        },
+                        {
+                          "type": {
+                            "name": "int"
+                          }
+                        },
+                        {
+                          "type": {
+                            "name": "float"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 5
+              }
+            }
+          ],
+          "method_overloads": {
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "sequence_accession"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "cities"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 4
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 19
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "col1"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 4
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "decorated-elephant",
+                        "Bell__Chart",
+                        "a"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "b"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "c"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 3
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "index"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "decorated-elephant"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "hire_date"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "dates"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 3
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "list",
+                    "item": {
+                      "type": "str"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "bell_chart"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 5
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "names"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "animals@#$%^"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 3
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "2"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "Bell__Chart"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "cities",
+                        "animals@#$%^",
+                        "decorated_elephant",
+                        "a"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "cities",
+                        "animals@#$%^"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "bell_chart",
+                        "a"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "cities",
+                        "animals@#$%^",
+                        "decorated_elephant"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "cities",
+                        "Bell__Chart",
+                        "a"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "animals@#$%^",
+                        "a",
+                        "Bell__Chart"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "date1"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "another"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "column"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__setitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "sequence"
+                    ]
+                  },
+                  "_1": {
+                    "type": "list",
+                    "item": {
+                      "type": "str"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a_cm"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a_m"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a_kg"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a_m2"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a_m3"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a_USD"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a_2018"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 7
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a_2015"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "fortytwo"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "fortythousand"
+                    ]
+                  },
+                  "_1": {
+                    "type": "str",
+                    "options": [
+                      "test string"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "fortythree"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "fill_in_scalar"
+                    ]
+                  },
+                  "_1": {
+                    "type": "list",
+                    "item": {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "city_pop"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "city_pop"
+                    ]
+                  },
+                  "_1": {
+                    "type": "list",
+                    "item": {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "city_pop"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "x"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "name": "float"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a_bin"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "col1"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "d"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "index"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "hire_date"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.indexes.datetimes",
+                      "name": "DatetimeIndex"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "dates"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "names"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.arrays.categorical",
+                      "name": "Categorical"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "animals@#$%^"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.arrays.categorical",
+                      "name": "Categorical"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "cities"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.arrays.categorical",
+                      "name": "Categorical"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "2"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "c"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "null_flag"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "flag"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a_enc"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "c_enc"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "Bell__Chart"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "date1"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a_log10"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "another"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "column"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "another"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "column"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "another_log"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "column_log"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "hello"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "world"
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "copy": [
+              {
+                "metadata": {
+                  "usage.pyjanitor": 4
+                }
+              }
+            ],
+            "rename": [
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "function"
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 6
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "function",
+                    "name": {
+                      "module": "janitor.functions",
+                      "name": "_normalize_1"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "function",
+                    "name": {
+                      "module": "janitor.functions",
+                      "name": "_strip_accents"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "function",
+                    "name": {
+                      "module": "janitor.functions",
+                      "name": "_remove_special"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "dict",
+                    "key": {
+                      "type": "str",
+                      "options": [
+                        "a"
+                      ]
+                    },
+                    "value": {
+                      "type": "str",
+                      "options": [
+                        "snakesOnAPlane"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "dict",
+                    "key": {
+                      "type": "str",
+                      "options": [
+                        "Bell__Chart"
+                      ]
+                    },
+                    "value": {
+                      "type": "str",
+                      "options": [
+                        "SnakesOnAPlane2"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "dict",
+                    "key": {
+                      "type": "str",
+                      "options": [
+                        "decorated-elephant"
+                      ]
+                    },
+                    "value": {
+                      "type": "str",
+                      "options": [
+                        "snakes_on_a_plane3"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "function",
+                    "name": {
+                      "module": "janitor.functions",
+                      "name": "_camel2snake"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "dict",
+                    "key": {
+                      "type": "str",
+                      "options": [
+                        "a"
+                      ]
+                    },
+                    "value": {
+                      "type": "str",
+                      "options": [
+                        "index"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "dict",
+                    "key": {
+                      "type": "str",
+                      "options": [
+                        "bell_chart",
+                        "a"
+                      ]
+                    },
+                    "value": {
+                      "type": "str",
+                      "options": [
+                        "chart",
+                        "index"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__iter__": [
+              {
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "drop": [
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "c",
+                        "b",
+                        "a"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "str",
+                    "options": [
+                      "index"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "decorated-elephant",
+                        "a"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "a"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "Bell__Chart",
+                        "a"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "list",
+                    "item": {
+                      "type": "bottom"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "cities",
+                        "animals@#$%^",
+                        "decorated-elephant",
+                        "Bell__Chart",
+                        "a"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "list",
+                    "item": {
+                      "type": "tuple",
+                      "items": [
+                        {
+                          "type": "str",
+                          "options": [
+                            "bar",
+                            "baz"
+                          ]
+                        },
+                        {
+                          "type": "str",
+                          "options": [
+                            "one",
+                            "two"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "index": {
+                    "type": {
+                      "module": "pandas.core.indexes.numeric",
+                      "name": "Int64Index"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": {
+                      "module": "pandas.core.indexes.base",
+                      "name": "Index"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "labels": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "labels": {
+                    "type": {
+                      "module": "pandas.core.indexes.numeric",
+                      "name": "Int64Index"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "cities",
+                        "Bell__Chart",
+                        "a"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "animals@#$%^",
+                        "a",
+                        "Bell__Chart"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "count": [
+              {
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              }
+            ],
+            "set_index": [
+              {
+                "pos_or_kw_required": {
+                  "keys": {
+                    "type": "str",
+                    "options": [
+                      "column_name"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "join": [
+              {
+                "pos_or_kw_required": {
+                  "other": {
+                    "type": {
+                      "module": "pandas.core.frame",
+                      "name": "DataFrame"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "other": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "query": [
+              {
+                "pos_or_kw_required": {
+                  "expr": {
+                    "type": "str",
+                    "options": [
+                      "not a == 3"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "expr": {
+                    "type": "str",
+                    "options": [
+                      "a == 3"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "duplicated": [
+              {
+                "pos_or_kw_required": {
+                  "subset": {
+                    "type": "None"
+                  },
+                  "keep": {
+                    "type": {
+                      "name": "bool"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "groupby": [
+              {
+                "pos_or_kw_required": {
+                  "by": {
+                    "type": "str",
+                    "options": [
+                      "date"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "by": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "user_id",
+                        "date"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "assign": [
+              {
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "apply": [
+              {
+                "pos_or_kw_required": {
+                  "func": {
+                    "type": "function"
+                  },
+                  "axis": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "isnull": [
+              {
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              }
+            ],
+            "all": [
+              {
+                "pos_or_kw_required": {
+                  "axis": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              }
+            ],
+            "reset_index": [
+              {
+                "pos_or_kw_required": {
+                  "drop": {
+                    "type": {
+                      "name": "bool"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "inplace": {
+                    "type": {
+                      "name": "bool"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "drop": {
+                    "type": {
+                      "name": "bool"
+                    }
+                  },
+                  "inplace": {
+                    "type": {
+                      "name": "bool"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "reindex": [
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "cities",
+                        "animals@#$%^",
+                        "decorated-elephant",
+                        "Bell__Chart",
+                        "a"
+                      ]
+                    }
+                  },
+                  "copy": {
+                    "type": {
+                      "name": "bool"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "cities",
+                        "decorated-elephant",
+                        "a",
+                        "Bell__Chart",
+                        "animals@#$%^"
+                      ]
+                    }
+                  },
+                  "copy": {
+                    "type": {
+                      "name": "bool"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "sample": [
+              {
+                "pos_or_kw_required": {
+                  "frac": {
+                    "type": {
+                      "name": "int"
+                    }
+                  },
+                  "random_state": {
+                    "type": "None"
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "sort_values": [
+              {
+                "pos_or_kw_required": {
+                  "by": {
+                    "type": "str",
+                    "options": [
+                      "b"
+                    ]
+                  },
+                  "ascending": {
+                    "type": {
+                      "name": "bool"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "drop_duplicates": [
+              {
+                "pos_or_kw_required": {
+                  "subset": {
+                    "type": "str",
+                    "options": [
+                      "a"
+                    ]
+                  },
+                  "keep": {
+                    "type": "str",
+                    "options": [
+                      "first"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "str"
+                    },
+                    {
+                      "type": {
+                        "module": "pandas.core.series",
+                        "name": "Series"
+                      }
+                    },
+                    {
+                      "type": "list",
+                      "item": {
+                        "type": "str"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 67
+              }
+            },
+            "__setitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "str"
+                },
+                "_1": {
+                  "type": "object"
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 56
+              }
+            },
+            "copy": {
+              "metadata": {
+                "usage.pyjanitor": 4
+              }
+            },
+            "rename": {
+              "pos_or_kw_required": {
+                "columns": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "dict",
+                      "key": {
+                        "type": "str",
+                        "options": [
+                          "a",
+                          "Bell__Chart",
+                          "decorated-elephant",
+                          "bell_chart"
+                        ]
+                      },
+                      "value": {
+                        "type": "str",
+                        "options": [
+                          "snakesOnAPlane",
+                          "SnakesOnAPlane2",
+                          "snakes_on_a_plane3",
+                          "index",
+                          "chart"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "function"
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 15
+              }
+            },
+            "__iter__": {
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "drop": {
+              "pos_or_kw_optional": {
+                "index": {
+                  "type": {
+                    "module": "pandas.core.indexes.numeric",
+                    "name": "Int64Index"
+                  }
+                },
+                "columns": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "list",
+                      "item": {
+                        "type": "union",
+                        "options": [
+                          {
+                            "type": "tuple",
+                            "items": [
+                              {
+                                "type": "str",
+                                "options": [
+                                  "bar",
+                                  "baz"
+                                ]
+                              },
+                              {
+                                "type": "str",
+                                "options": [
+                                  "one",
+                                  "two"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "str"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "pandas.core.indexes.base",
+                        "name": "Index"
+                      }
+                    },
+                    {
+                      "type": "str",
+                      "options": [
+                        "index"
+                      ]
+                    }
+                  ]
+                },
+                "labels": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "pandas.core.indexes.numeric",
+                        "name": "Int64Index"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 14
+              }
+            },
+            "count": {
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            },
+            "set_index": {
+              "pos_or_kw_required": {
+                "keys": {
+                  "type": "str",
+                  "options": [
+                    "column_name"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "join": {
+              "pos_or_kw_required": {
+                "other": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "pandas.core.series",
+                        "name": "Series"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "pandas.core.frame",
+                        "name": "DataFrame"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            },
+            "query": {
+              "pos_or_kw_required": {
+                "expr": {
+                  "type": "str",
+                  "options": [
+                    "a == 3",
+                    "not a == 3"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            },
+            "duplicated": {
+              "pos_or_kw_required": {
+                "subset": {
+                  "type": "None"
+                },
+                "keep": {
+                  "type": {
+                    "name": "bool"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "groupby": {
+              "pos_or_kw_required": {
+                "by": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "list",
+                      "item": {
+                        "type": "str",
+                        "options": [
+                          "user_id",
+                          "date"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "str",
+                      "options": [
+                        "date"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            },
+            "assign": {
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "apply": {
+              "pos_or_kw_required": {
+                "func": {
+                  "type": "function"
+                },
+                "axis": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "isnull": {
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            },
+            "all": {
+              "pos_or_kw_required": {
+                "axis": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            },
+            "reset_index": {
+              "pos_or_kw_optional": {
+                "inplace": {
+                  "type": {
+                    "name": "bool"
+                  }
+                },
+                "drop": {
+                  "type": {
+                    "name": "bool"
+                  }
+                }
+              },
+              "pos_or_kw_optional_ordering": [
+                [
+                  "drop",
+                  "inplace"
+                ]
+              ],
+              "metadata": {
+                "usage.pyjanitor": 3
+              }
+            },
+            "reindex": {
+              "pos_or_kw_required": {
+                "columns": {
+                  "type": "list",
+                  "item": {
+                    "type": "str",
+                    "options": [
+                      "cities",
+                      "animals@#$%^",
+                      "decorated-elephant",
+                      "Bell__Chart",
+                      "a"
+                    ]
+                  }
+                },
+                "copy": {
+                  "type": {
+                    "name": "bool"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            },
+            "sample": {
+              "pos_or_kw_required": {
+                "frac": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "random_state": {
+                  "type": "None"
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "sort_values": {
+              "pos_or_kw_required": {
+                "by": {
+                  "type": "str",
+                  "options": [
+                    "b"
+                  ]
+                },
+                "ascending": {
+                  "type": {
+                    "name": "bool"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "drop_duplicates": {
+              "pos_or_kw_required": {
+                "subset": {
+                  "type": "str",
+                  "options": [
+                    "a"
+                  ]
+                },
+                "keep": {
+                  "type": "str",
+                  "options": [
+                    "first"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            }
+          },
+          "properties": {
+            "columns": [
+              {
+                "usage.pyjanitor": 42
+              },
+              {
+                "type": "union",
+                "options": [
+                  {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  },
+                  {
+                    "type": "list",
+                    "item": {
+                      "type": "str"
+                    }
+                  }
+                ]
+              }
+            ],
+            "shape": [
+              {
+                "usage.pyjanitor": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "add_column": [
+              {
+                "usage.pyjanitor": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "__dict__": [
+              {
+                "usage.pyjanitor": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "dtypes": [
+              {
+                "usage.pyjanitor": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "iloc": [
+              {
+                "usage.pyjanitor": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "loc": [
+              {
+                "usage.pyjanitor": 11
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "index": [
+              {
+                "usage.pyjanitor": 4
+              },
+              {
+                "type": "bottom"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "pandas.core.series": {
+      "classes": {
+        "Series": {
+          "constructor_overloads": [
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "list",
+                  "item": {
+                    "type": {
+                      "module": "datetime",
+                      "name": "timedelta"
+                    }
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            }
+          ],
+          "method_overloads": {
+            "__iter__": [
+              {
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              }
+            ],
+            "__mul__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "float"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 3
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "astype": [
+              {
+                "pos_or_kw_required": {
+                  "dtype": {
+                    "type": "type",
+                    "name": {
+                      "name": "float"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "dtype": {
+                    "type": "type",
+                    "name": {
+                      "name": "float"
+                    }
+                  },
+                  "errors": {
+                    "type": "str",
+                    "options": [
+                      "ignore"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "dtype": {
+                    "type": "type",
+                    "name": {
+                      "name": "str"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "dtype": {
+                    "type": "type",
+                    "name": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 3
+                }
+              }
+            ],
+            "apply": [
+              {
+                "pos_or_kw_required": {
+                  "func": {
+                    "type": "function"
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 5
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "func": {
+                    "type": "method",
+                    "name": "fromordinal",
+                    "self": {
+                      "type": "type",
+                      "name": {
+                        "module": "datetime",
+                        "name": "datetime"
+                      }
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "func": {
+                    "type": {
+                      "module": "functools",
+                      "name": "partial"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "func": {
+                    "type": "numpy.ufunc",
+                    "name": "log10"
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "combine_first": [
+              {
+                "pos_or_kw_required": {
+                  "other": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__add__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "-"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__radd__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              }
+            ],
+            "__sub__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "datetime",
+                      "name": "timedelta"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "int64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "tolist": [
+              {
+                "metadata": {
+                  "usage.pyjanitor": 3
+                }
+              }
+            ],
+            "__truediv__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "int64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__rsub__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "fillna": [
+              {
+                "pos_or_kw_required": {
+                  "value": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 3
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "value": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "float64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "isin": [
+              {
+                "pos_or_kw_required": {
+                  "values": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "Mary",
+                        "Mark"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "values": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "Ruth",
+                        "John"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "values": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "Esther",
+                        "Peter",
+                        "Eve",
+                        "Mary"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "values": {
+                    "type": "list",
+                    "item": {
+                      "type": "str",
+                      "options": [
+                        "Ruth",
+                        "Esther"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "values": {
+                    "type": "list",
+                    "item": {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "values": {
+                    "type": {
+                      "name": "range"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__ge__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas._libs.tslibs.timestamps",
+                      "name": "Timestamp"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__le__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas._libs.tslibs.timestamps",
+                      "name": "Timestamp"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__invert__": [
+              {
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__eq__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "bool"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "dropna": [
+              {
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "rename": [
+              {
+                "pos_or_kw_required": {
+                  "index": {
+                    "type": "str",
+                    "options": [
+                      "2a+b"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "min": [
+              {
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "max": [
+              {
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__iter__": {
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            },
+            "__mul__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "float"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 4
+              }
+            },
+            "astype": {
+              "pos_or_kw_required": {
+                "dtype": {
+                  "type": "type"
+                }
+              },
+              "pos_or_kw_optional": {
+                "errors": {
+                  "type": "str",
+                  "options": [
+                    "ignore"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 7
+              }
+            },
+            "apply": {
+              "pos_or_kw_required": {
+                "func": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "numpy.ufunc",
+                      "name": "log10"
+                    },
+                    {
+                      "type": "function"
+                    },
+                    {
+                      "type": "method",
+                      "name": "fromordinal",
+                      "self": {
+                        "type": "type",
+                        "name": {
+                          "module": "datetime",
+                          "name": "datetime"
+                        }
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "functools",
+                        "name": "partial"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 8
+              }
+            },
+            "combine_first": {
+              "pos_or_kw_required": {
+                "other": {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "__add__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "pandas.core.series",
+                        "name": "Series"
+                      }
+                    },
+                    {
+                      "type": "str",
+                      "options": [
+                        "-"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 4
+              }
+            },
+            "__radd__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            },
+            "__sub__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "datetime",
+                        "name": "timedelta"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            },
+            "tolist": {
+              "metadata": {
+                "usage.pyjanitor": 3
+              }
+            },
+            "__truediv__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            },
+            "__rsub__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "fillna": {
+              "pos_or_kw_required": {
+                "value": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "float64"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 4
+              }
+            },
+            "isin": {
+              "pos_or_kw_required": {
+                "values": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "range"
+                      }
+                    },
+                    {
+                      "type": "list",
+                      "item": {
+                        "type": "union",
+                        "options": [
+                          {
+                            "type": "str"
+                          },
+                          {
+                            "type": {
+                              "name": "int"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 7
+              }
+            },
+            "__ge__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "pandas._libs.tslibs.timestamps",
+                    "name": "Timestamp"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "__le__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "pandas._libs.tslibs.timestamps",
+                    "name": "Timestamp"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "__invert__": {
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "__eq__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "bool"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "dropna": {
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "rename": {
+              "pos_or_kw_required": {
+                "index": {
+                  "type": "str",
+                  "options": [
+                    "2a+b"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "min": {
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "max": {
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            }
+          },
+          "properties": {
+            "dtype": [
+              {
+                "usage.pyjanitor": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "values": [
+              {
+                "usage.pyjanitor": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "str": [
+              {
+                "usage.pyjanitor": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "numpy": {
+      "function_overloads": {
+        "issubdtype": [
+          {
+            "pos_or_kw_required": {
+              "arg1": {
+                "type": {
+                  "module": "numpy",
+                  "name": "dtype"
+                }
+              },
+              "arg2": {
+                "type": "type",
+                "name": {
+                  "module": "numpy",
+                  "name": "number"
+                }
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 2
+            }
+          }
+        ],
+        "array": [
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": {
+                  "module": "unyt.array",
+                  "name": "unyt_array"
+                }
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          }
+        ],
+        "zeros": [
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": {
+                  "name": "int"
+                }
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          }
+        ],
+        "mean": [
+          {
+            "pos_or_kw_required": {
+              "a": {
+                "type": {
+                  "module": "numpy",
+                  "name": "ndarray"
+                }
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          }
+        ],
+        "median": [
+          {
+            "pos_or_kw_required": {
+              "a": {
+                "type": {
+                  "module": "numpy",
+                  "name": "ndarray"
+                }
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          }
+        ],
+        "amin": [
+          {
+            "pos_or_kw_required": {
+              "a": {
+                "type": {
+                  "module": "numpy",
+                  "name": "ndarray"
+                }
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          }
+        ],
+        "amax": [
+          {
+            "pos_or_kw_required": {
+              "a": {
+                "type": {
+                  "module": "numpy",
+                  "name": "ndarray"
+                }
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          }
+        ]
+      },
+      "functions": {
+        "issubdtype": {
+          "pos_or_kw_required": {
+            "arg1": {
+              "type": {
+                "module": "numpy",
+                "name": "dtype"
+              }
+            },
+            "arg2": {
+              "type": "type",
+              "name": {
+                "module": "numpy",
+                "name": "number"
+              }
+            }
+          },
+          "metadata": {
+            "usage.pyjanitor": 2
+          }
+        },
+        "array": {
+          "pos_only_required": {
+            "_0": {
+              "type": {
+                "module": "unyt.array",
+                "name": "unyt_array"
+              }
+            }
+          },
+          "metadata": {
+            "usage.pyjanitor": 1
+          }
+        },
+        "zeros": {
+          "pos_only_required": {
+            "_0": {
+              "type": {
+                "name": "int"
+              }
+            }
+          },
+          "metadata": {
+            "usage.pyjanitor": 1
+          }
+        },
+        "mean": {
+          "pos_or_kw_required": {
+            "a": {
+              "type": {
+                "module": "numpy",
+                "name": "ndarray"
+              }
+            }
+          },
+          "metadata": {
+            "usage.pyjanitor": 1
+          }
+        },
+        "median": {
+          "pos_or_kw_required": {
+            "a": {
+              "type": {
+                "module": "numpy",
+                "name": "ndarray"
+              }
+            }
+          },
+          "metadata": {
+            "usage.pyjanitor": 1
+          }
+        },
+        "amin": {
+          "pos_or_kw_required": {
+            "a": {
+              "type": {
+                "module": "numpy",
+                "name": "ndarray"
+              }
+            }
+          },
+          "metadata": {
+            "usage.pyjanitor": 1
+          }
+        },
+        "amax": {
+          "pos_or_kw_required": {
+            "a": {
+              "type": {
+                "module": "numpy",
+                "name": "ndarray"
+              }
+            }
+          },
+          "metadata": {
+            "usage.pyjanitor": 1
+          }
+        }
+      },
+      "classes": {
+        "ndarray": {
+          "method_overloads": {
+            "__mul__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "unyt.unit_object",
+                      "name": "Unit"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              }
+            ],
+            "__iter__": [
+              {
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__mul__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "unyt.unit_object",
+                    "name": "Unit"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            },
+            "__iter__": {
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            }
+          }
+        },
+        "ufunc": {
+          "method_overloads": {
+            "__call__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "float"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__call__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "float"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "pandas.core.series",
+                        "name": "Series"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pos_only_optional": {
+                "_1": {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 4
+              }
+            }
+          }
+        },
+        "int64": {
+          "method_overloads": {
+            "__sub__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "int64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__rsub__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "int64"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__rtruediv__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__sub__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "int64"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "__rsub__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "pandas.core.series",
+                        "name": "Series"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "int64"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            },
+            "__rtruediv__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            }
+          }
+        }
+      },
+      "properties": {
+        "number": [
+          {
+            "usage.pyjanitor": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "ceil": [
+          {
+            "usage.pyjanitor": 1
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "ceil"
+          }
+        ],
+        "logical_and": [
+          {
+            "usage.pyjanitor": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "logical_or": [
+          {
+            "usage.pyjanitor": 2
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "logical_or"
+          }
+        ],
+        "min": [
+          {
+            "usage.pyjanitor": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "max": [
+          {
+            "usage.pyjanitor": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "inf": [
+          {
+            "usage.pyjanitor": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "isinf": [
+          {
+            "usage.pyjanitor": 1
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "isinf"
+          }
+        ]
+      }
+    },
+    "pandas.core.indexes.base": {
+      "classes": {
+        "Index": {
+          "method_overloads": {
+            "__contains__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 6
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "toomany"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "fortytwo"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "fortythousand"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "fortythree"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "fill_in_iterable"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "fill_in_scalar"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "city_pop"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "cities"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 4
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "x"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "y"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "Bell__Chart"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "decorated-elephant"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "index"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "names"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "aloha"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "animals@#$%^"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 3
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "2"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "null_flag"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "flag"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "c"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 3
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "bb"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "bell_chart"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "notpresent"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "another"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "column"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "b"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              }
+            ],
+            "__iter__": [
+              {
+                "metadata": {
+                  "usage.pyjanitor": 8
+                }
+              }
+            ],
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__eq__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.indexes.base",
+                      "name": "Index"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__contains__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "str"
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 44
+              }
+            },
+            "__iter__": {
+              "metadata": {
+                "usage.pyjanitor": 8
+              }
+            },
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "__eq__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "pandas.core.indexes.base",
+                    "name": "Index"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            }
+          },
+          "properties": {
+            "values": [
+              {
+                "usage.pyjanitor": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "name": [
+              {
+                "usage.pyjanitor": 1
+              },
+              {
+                "type": "None"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "pandas": {
+      "properties": {
+        "cut": [
+          {
+            "usage.pyjanitor": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "TimedeltaIndex": [
+          {
+            "usage.pyjanitor": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "concat": [
+          {
+            "usage.pyjanitor": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "to_datetime": [
+          {
+            "usage.pyjanitor": 4
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "isna": [
+          {
+            "usage.pyjanitor": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "Index": [
+          {
+            "usage.pyjanitor": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "read_csv": [
+          {
+            "usage.pyjanitor": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ]
+      }
+    },
+    "pandas.core.reshape.tile": {
+      "function_overloads": {
+        "cut": [
+          {
+            "pos_or_kw_required": {
+              "x": {
+                "type": {
+                  "module": "pandas.core.series",
+                  "name": "Series"
+                }
+              },
+              "bins": {
+                "type": {
+                  "name": "int"
+                }
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          }
+        ]
+      },
+      "functions": {
+        "cut": {
+          "pos_or_kw_required": {
+            "x": {
+              "type": {
+                "module": "pandas.core.series",
+                "name": "Series"
+              }
+            },
+            "bins": {
+              "type": {
+                "name": "int"
+              }
+            }
+          },
+          "metadata": {
+            "usage.pyjanitor": 1
+          }
+        }
+      }
+    },
+    "pandas.core.indexes.multi": {
+      "classes": {
+        "MultiIndex": {
+          "properties": {
+            "values": [
+              {
+                "usage.pyjanitor": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "pandas.core.indexes.timedeltas": {
+      "classes": {
+        "TimedeltaIndex": {
+          "constructor_overloads": [
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                },
+                "unit": {
+                  "type": "str",
+                  "options": [
+                    "d"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            }
+          ],
+          "method_overloads": {
+            "__add__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "1899-12-30T00:00:00"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__add__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "str",
+                  "options": [
+                    "1899-12-30T00:00:00"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "pandas.core.strings": {
+      "classes": {
+        "StringMethods": {
+          "method_overloads": {
+            "split": [
+              {
+                "pos_or_kw_required": {
+                  "pat": {
+                    "type": "str",
+                    "options": [
+                      "-"
+                    ]
+                  },
+                  "expand": {
+                    "type": {
+                      "name": "bool"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "get_dummies": [
+              {
+                "pos_or_kw_required": {
+                  "sep": {
+                    "type": "str",
+                    "options": [
+                      ", "
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "split": {
+              "pos_or_kw_required": {
+                "pat": {
+                  "type": "str",
+                  "options": [
+                    "-"
+                  ]
+                },
+                "expand": {
+                  "type": {
+                    "name": "bool"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "get_dummies": {
+              "pos_or_kw_required": {
+                "sep": {
+                  "type": "str",
+                  "options": [
+                    ", "
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "pandas.core.reshape.concat": {
+      "function_overloads": {
+        "concat": [
+          {
+            "pos_or_kw_required": {
+              "objs": {
+                "type": "list",
+                "item": {
+                  "type": {
+                    "module": "pandas.core.frame",
+                    "name": "DataFrame"
+                  }
+                }
+              },
+              "axis": {
+                "type": {
+                  "name": "int"
+                }
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "objs": {
+                "type": "list",
+                "item": {
+                  "type": {
+                    "module": "pandas.core.frame",
+                    "name": "DataFrame"
+                  }
+                }
+              },
+              "ignore_index": {
+                "type": {
+                  "name": "bool"
+                }
+              },
+              "sort": {
+                "type": {
+                  "name": "bool"
+                }
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 2
+            }
+          }
+        ]
+      },
+      "functions": {
+        "concat": {
+          "pos_or_kw_required": {
+            "objs": {
+              "type": "list",
+              "item": {
+                "type": {
+                  "module": "pandas.core.frame",
+                  "name": "DataFrame"
+                }
+              }
+            }
+          },
+          "pos_or_kw_optional": {
+            "ignore_index": {
+              "type": {
+                "name": "bool"
+              }
+            },
+            "sort": {
+              "type": {
+                "name": "bool"
+              }
+            },
+            "axis": {
+              "type": {
+                "name": "int"
+              }
+            }
+          },
+          "pos_or_kw_optional_ordering": [
+            [
+              "ignore_index",
+              "sort"
+            ]
+          ],
+          "metadata": {
+            "usage.pyjanitor": 3
+          }
+        }
+      }
+    },
+    "pandas.core.indexing": {
+      "classes": {
+        "_iLocIndexer": {
+          "method_overloads": {
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": "slice",
+                        "start": {
+                          "type": "None"
+                        },
+                        "stop": {
+                          "type": "None"
+                        },
+                        "step": {
+                          "type": "None"
+                        }
+                      },
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": {
+                            "name": "int"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": {
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": "slice",
+                        "start": {
+                          "type": "None"
+                        },
+                        "stop": {
+                          "type": "None"
+                        },
+                        "step": {
+                          "type": "None"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "tuple",
+                  "items": [
+                    {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": "slice",
+                          "start": {
+                            "type": "None"
+                          },
+                          "stop": {
+                            "type": "None"
+                          },
+                          "step": {
+                            "type": "None"
+                          }
+                        },
+                        {
+                          "type": {
+                            "name": "int"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": "list",
+                          "item": {
+                            "type": {
+                              "name": "int"
+                            }
+                          }
+                        },
+                        {
+                          "type": "slice",
+                          "start": {
+                            "type": "None"
+                          },
+                          "stop": {
+                            "type": "None"
+                          },
+                          "step": {
+                            "type": "None"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            }
+          }
+        },
+        "_LocIndexer": {
+          "method_overloads": {
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": "slice",
+                        "start": {
+                          "type": "None"
+                        },
+                        "stop": {
+                          "type": "None"
+                        },
+                        "step": {
+                          "type": "None"
+                        }
+                      },
+                      {
+                        "type": {
+                          "name": "int"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": "slice",
+                        "start": {
+                          "type": "None"
+                        },
+                        "stop": {
+                          "type": "None"
+                        },
+                        "step": {
+                          "type": "None"
+                        }
+                      },
+                      {
+                        "type": "str",
+                        "options": [
+                          "DATE"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 6
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": {
+                          "module": "pandas.core.series",
+                          "name": "Series"
+                        }
+                      },
+                      {
+                        "type": "slice",
+                        "start": {
+                          "type": "None"
+                        },
+                        "stop": {
+                          "type": "None"
+                        },
+                        "step": {
+                          "type": "None"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": {
+                            "name": "int"
+                          }
+                        }
+                      },
+                      {
+                        "type": "slice",
+                        "start": {
+                          "type": "None"
+                        },
+                        "stop": {
+                          "type": "None"
+                        },
+                        "step": {
+                          "type": "None"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": "str",
+                          "options": [
+                            "lion",
+                            "leopard",
+                            "rabbit"
+                          ]
+                        }
+                      },
+                      {
+                        "type": "slice",
+                        "start": {
+                          "type": "None"
+                        },
+                        "stop": {
+                          "type": "None"
+                        },
+                        "step": {
+                          "type": "None"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": "str",
+                          "options": [
+                            "leopard",
+                            "lion",
+                            "rabbit"
+                          ]
+                        }
+                      },
+                      {
+                        "type": "slice",
+                        "start": {
+                          "type": "None"
+                        },
+                        "stop": {
+                          "type": "None"
+                        },
+                        "step": {
+                          "type": "None"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": "slice",
+                        "start": {
+                          "type": "None"
+                        },
+                        "stop": {
+                          "type": "None"
+                        },
+                        "step": {
+                          "type": "None"
+                        }
+                      },
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": "str",
+                          "options": [
+                            "cities",
+                            "animals@#$%^",
+                            "Bell__Chart",
+                            "decorated-elephant",
+                            "a"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": "slice",
+                        "start": {
+                          "type": "None"
+                        },
+                        "stop": {
+                          "type": "None"
+                        },
+                        "step": {
+                          "type": "None"
+                        }
+                      },
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": "str",
+                          "options": [
+                            "cities",
+                            "Bell__Chart",
+                            "animals@#$%^",
+                            "decorated-elephant",
+                            "a"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__setitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": "slice",
+                        "start": {
+                          "type": "None"
+                        },
+                        "stop": {
+                          "type": "None"
+                        },
+                        "step": {
+                          "type": "None"
+                        }
+                      },
+                      {
+                        "type": "str",
+                        "options": [
+                          "DATE"
+                        ]
+                      }
+                    ]
+                  },
+                  "_1": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "tuple",
+                    "items": [
+                      {
+                        "type": {
+                          "module": "pandas.core.series",
+                          "name": "Series"
+                        }
+                      },
+                      {
+                        "type": "str",
+                        "options": [
+                          "cities"
+                        ]
+                      }
+                    ]
+                  },
+                  "_1": {
+                    "type": "str",
+                    "options": [
+                      "Durham"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "tuple",
+                  "items": [
+                    {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": {
+                            "module": "pandas.core.series",
+                            "name": "Series"
+                          }
+                        },
+                        {
+                          "type": "slice",
+                          "start": {
+                            "type": "None"
+                          },
+                          "stop": {
+                            "type": "None"
+                          },
+                          "step": {
+                            "type": "None"
+                          }
+                        },
+                        {
+                          "type": "list",
+                          "item": {
+                            "type": "union",
+                            "options": [
+                              {
+                                "type": "str",
+                                "options": [
+                                  "leopard",
+                                  "lion",
+                                  "rabbit"
+                                ]
+                              },
+                              {
+                                "type": {
+                                  "name": "int"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": "list",
+                          "item": {
+                            "type": "str",
+                            "options": [
+                              "cities",
+                              "Bell__Chart",
+                              "animals@#$%^",
+                              "decorated-elephant",
+                              "a"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "slice",
+                          "start": {
+                            "type": "None"
+                          },
+                          "stop": {
+                            "type": "None"
+                          },
+                          "step": {
+                            "type": "None"
+                          }
+                        },
+                        {
+                          "type": {
+                            "name": "int"
+                          }
+                        },
+                        {
+                          "type": "str",
+                          "options": [
+                            "DATE"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 13
+              }
+            },
+            "__setitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "tuple",
+                  "items": [
+                    {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": "slice",
+                          "start": {
+                            "type": "None"
+                          },
+                          "stop": {
+                            "type": "None"
+                          },
+                          "step": {
+                            "type": "None"
+                          }
+                        },
+                        {
+                          "type": {
+                            "module": "pandas.core.series",
+                            "name": "Series"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "str",
+                      "options": [
+                        "DATE",
+                        "cities"
+                      ]
+                    }
+                  ]
+                },
+                "_1": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "str",
+                      "options": [
+                        "Durham"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "module": "pandas.core.series",
+                        "name": "Series"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    "pandas.core.dtypes.missing": {
+      "function_overloads": {
+        "isna": [
+          {
+            "pos_or_kw_required": {
+              "obj": {
+                "type": {
+                  "module": "pandas.core.series",
+                  "name": "Series"
+                }
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 2
+            }
+          }
+        ]
+      },
+      "functions": {
+        "isna": {
+          "pos_or_kw_required": {
+            "obj": {
+              "type": {
+                "module": "pandas.core.series",
+                "name": "Series"
+              }
+            }
+          },
+          "metadata": {
+            "usage.pyjanitor": 2
+          }
+        }
+      }
+    },
+    "pandas.core.arrays.categorical": {
+      "classes": {
+        "Categorical": {
+          "constructor_overloads": [
+            {
+              "pos_or_kw_required": {
+                "values": {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            }
+          ],
+          "constructor": {
+            "pos_or_kw_required": {
+              "values": {
+                "type": {
+                  "module": "pandas.core.series",
+                  "name": "Series"
+                }
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 2
+            }
+          }
+        }
+      }
+    },
+    "pandas.core.tools.datetimes": {
+      "function_overloads": {
+        "to_datetime": [
+          {
+            "pos_or_kw_required": {
+              "arg": {
+                "type": {
+                  "module": "pandas.core.series",
+                  "name": "Series"
+                }
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "arg": {
+                "type": "str",
+                "options": [
+                  "02/01/19"
+                ]
+              },
+              "format": {
+                "type": "None"
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "arg": {
+                "type": "str",
+                "options": [
+                  "02/02/19"
+                ]
+              },
+              "format": {
+                "type": "None"
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "arg": {
+                "type": "str",
+                "options": [
+                  "01@@@@29@@@@19"
+                ]
+              },
+              "format": {
+                "type": "str",
+                "options": [
+                  "%m@@@@%d@@@@%y"
+                ]
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "arg": {
+                "type": {
+                  "module": "pandas.core.series",
+                  "name": "Series"
+                }
+              },
+              "dayfirst": {
+                "type": {
+                  "name": "bool"
+                }
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "arg": {
+                "type": "str",
+                "options": [
+                  "01/29/19"
+                ]
+              },
+              "format": {
+                "type": "None"
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "arg": {
+                "type": {
+                  "module": "pandas.core.series",
+                  "name": "Series"
+                }
+              },
+              "format": {
+                "type": "str",
+                "options": [
+                  "%Y%m%d"
+                ]
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 1
+            }
+          }
+        ]
+      },
+      "functions": {
+        "to_datetime": {
+          "pos_or_kw_required": {
+            "arg": {
+              "type": "union",
+              "options": [
+                {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                },
+                {
+                  "type": "str",
+                  "options": [
+                    "01/29/19",
+                    "01@@@@29@@@@19",
+                    "02/02/19",
+                    "02/01/19"
+                  ]
+                }
+              ]
+            }
+          },
+          "pos_or_kw_optional": {
+            "format": {
+              "type": "union",
+              "options": [
+                {
+                  "type": "str",
+                  "options": [
+                    "%Y%m%d",
+                    "%m@@@@%d@@@@%y"
+                  ]
+                },
+                {
+                  "type": "None"
+                }
+              ]
+            },
+            "dayfirst": {
+              "type": {
+                "name": "bool"
+              }
+            }
+          },
+          "metadata": {
+            "usage.pyjanitor": 7
+          }
+        }
+      }
+    },
+    "pandas._libs.tslibs.timestamps": {
+      "classes": {
+        "Timestamp": {
+          "method_overloads": {
+            "__le__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__ge__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__gt__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas._libs.tslibs.timestamps",
+                      "name": "Timestamp"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ],
+            "__lt__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas._libs.tslibs.timestamps",
+                      "name": "Timestamp"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__le__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "__ge__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "__gt__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "pandas._libs.tslibs.timestamps",
+                    "name": "Timestamp"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            },
+            "__lt__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "pandas._libs.tslibs.timestamps",
+                    "name": "Timestamp"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 1
+              }
+            }
+          },
+          "properties": {
+            "year": [
+              {
+                "usage.pyjanitor": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "month": [
+              {
+                "usage.pyjanitor": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "pandas.core.groupby.generic": {
+      "classes": {
+        "DataFrameGroupBy": {
+          "method_overloads": {
+            "transform": [
+              {
+                "pos_or_kw_required": {
+                  "func": {
+                    "type": "function",
+                    "name": {
+                      "module": "numpy",
+                      "name": "mean"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_or_kw_required": {
+                  "func": {
+                    "type": "function",
+                    "name": {
+                      "module": "numpy",
+                      "name": "count_nonzero"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "transform": {
+              "pos_or_kw_required": {
+                "func": {
+                  "type": "function"
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 2
+              }
+            }
+          }
+        }
+      }
+    },
+    "pandas.core.indexes.range": {
+      "classes": {
+        "RangeIndex": {
+          "method_overloads": {
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "range"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.pyjanitor": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "name": "range"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "pandas.core.series",
+                        "name": "Series"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.pyjanitor": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    "pandas.io.parsers": {
+      "function_overloads": {
+        "read_csv": [
+          {
+            "pos_or_kw_required": {
+              "filepath_or_buffer": {
+                "type": "str"
+              }
+            },
+            "metadata": {
+              "usage.pyjanitor": 2
+            }
+          }
+        ]
+      },
+      "functions": {
+        "read_csv": {
+          "pos_or_kw_required": {
+            "filepath_or_buffer": {
+              "type": "str"
+            }
+          },
+          "metadata": {
+            "usage.pyjanitor": 2
+          }
+        }
+      }
+    }
+  }
+}
