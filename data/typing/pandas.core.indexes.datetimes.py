@@ -167,6 +167,238 @@ def date_range(start: Literal["2013-3-11 21:45:00"], periods: int, freq: Literal
 
 
 @overload
+def date_range(start: Literal["2015-1-15"], end: Literal["2015-2-1"]):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2015-1-21"], end: Literal["2015-1-26"]):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: pandas._libs.tslibs.timestamps.Timestamp,
+    end: pandas._libs.tslibs.timestamps.Timestamp,
+    freq: pandas._libs.tslibs.offsets.CustomBusinessDay,
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2015-1-15"], end: Literal["2015-1-25"]):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2015-1-18"], end: Literal["2015-1-21"]):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2015-1-17"], end: Literal["2015-2-2"]):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2015-1-21"], end: Literal["2015-1-29"]):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1/1/1999"], periods: int, freq: Literal["1D"]):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1/1/1999"], periods: int, freq: Literal["1B"]):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["1/1/1999"],
+    periods: int,
+    freq: pandas._libs.tslibs.offsets.CustomBusinessDay,
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2015-1-1"], periods: int, freq: Literal["1B"]):
+    """
+    usage.alphalens: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2015-1-1"], periods: int, freq: Literal["1D"]):
+    """
+    usage.alphalens: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1/12/2000"], periods: int):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2015-1-11"], end: Literal["2015-1-14"]):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2015-1-11"], end: Literal["2015-1-13"]):
+    """
+    usage.alphalens: 2
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2015-1-1"], end: Literal["2015-1-3"]):
+    """
+    usage.alphalens: 3
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2014-12-29"], end: Literal["2015-1-3"]):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["2015-1-11"], end: Literal["2015-1-16"]):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2017-1-12"], end: Literal["2017-1-19"], freq: Literal["B"]
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2017-1-12"], end: Literal["2017-1-16"], freq: Literal["B"]
+):
+    """
+    usage.alphalens: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2017-1-12"], end: Literal["2017-1-17"], freq: Literal["B"]
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2017-1-12"], end: Literal["2017-1-23"], freq: Literal["B"]
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2017-1-12"], end: Literal["2017-1-18"], freq: Literal["B"]
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2017-1-12"], end: Literal["2017-2-13"], freq: Literal["B"]
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2017-1-12"], end: Literal["2017-2-10"], freq: Literal["B"]
+):
+    """
+    usage.alphalens: 2
+    """
+    ...
+
+
+@overload
+def date_range(
+    start: Literal["2017-1-12"], end: Literal["2017-2-15"], freq: Literal["B"]
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
 def date_range(start: Literal["2000-01-01"], periods: int):
     """
     usage.statsmodels: 1
@@ -2548,6 +2780,7 @@ def date_range(
     closed: Union[None, Literal["left"]] = ...,
 ):
     """
+    usage.alphalens: 33
     usage.dask: 97
     usage.geopandas: 1
     usage.hvplot: 2
@@ -2576,6 +2809,7 @@ class DatetimeIndex:
     # usage.dask: 1
     day: object
 
+    # usage.alphalens: 1
     # usage.statsmodels: 4
     # usage.xarray: 1
     dayofweek: object
@@ -2587,9 +2821,10 @@ class DatetimeIndex:
     # usage.xarray: 5
     dtype: object
 
+    # usage.alphalens: 5
     # usage.dask: 4
     # usage.statsmodels: 33
-    freq: None
+    freq: Union[None, pandas._libs.tslibs.offsets.CustomBusinessDay]
 
     # usage.statsmodels: 3
     freqstr: object
@@ -2618,11 +2853,12 @@ class DatetimeIndex:
     # usage.xarray: 1
     month: object
 
+    # usage.alphalens: 21
     # usage.dask: 17
     # usage.geopandas: 1
     # usage.prophet: 2
     # usage.xarray: 5
-    name: Union[None, Literal["timestamp", "index", "datetime"]]
+    name: Union[None, Literal["timestamp", "index", "datetime", "date"]]
 
     # usage.dask: 1
     # usage.geopandas: 2
@@ -2646,6 +2882,7 @@ class DatetimeIndex:
     # usage.xarray: 1
     time: object
 
+    # usage.alphalens: 1
     # usage.dask: 2
     tz: object
 
@@ -2653,6 +2890,13 @@ class DatetimeIndex:
     # usage.statsmodels: 7
     # usage.xarray: 16
     values: object
+
+    @overload
+    def __add__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.alphalens: 8
+        """
+        ...
 
     @overload
     def __add__(self, _0: pandas._libs.tslibs.offsets.Hour, /):
@@ -2720,6 +2964,7 @@ class DatetimeIndex:
 
     def __add__(self, _0: object, /):
         """
+        usage.alphalens: 8
         usage.dask: 8
         usage.pandas: 103
         usage.xarray: 2
@@ -2787,8 +3032,19 @@ class DatetimeIndex:
         ...
 
     @overload
+    def __getitem__(self, _0: numpy.ndarray, /):
+        """
+        usage.alphalens: 1
+        usage.prophet: 3
+        usage.statsmodels: 1
+        usage.xarray: 2
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.alphalens: 3
         usage.dask: 18
         usage.modin: 2
         usage.prophet: 2
@@ -2798,16 +3054,9 @@ class DatetimeIndex:
         ...
 
     @overload
-    def __getitem__(self, _0: slice[int, None, int], /):
-        """
-        usage.statsmodels: 12
-        usage.xarray: 2
-        """
-        ...
-
-    @overload
     def __getitem__(self, _0: slice[int, int, int], /):
         """
+        usage.alphalens: 1
         usage.dask: 2
         usage.statsmodels: 10
         usage.xarray: 1
@@ -2815,10 +3064,9 @@ class DatetimeIndex:
         ...
 
     @overload
-    def __getitem__(self, _0: numpy.ndarray, /):
+    def __getitem__(self, _0: slice[int, None, int], /):
         """
-        usage.prophet: 3
-        usage.statsmodels: 1
+        usage.statsmodels: 12
         usage.xarray: 2
         """
         ...
@@ -2903,6 +3151,7 @@ class DatetimeIndex:
 
     def __getitem__(self, _0: object, /):
         """
+        usage.alphalens: 5
         usage.dask: 21
         usage.koalas: 1
         usage.modin: 2
@@ -2957,6 +3206,7 @@ class DatetimeIndex:
 
     def __iter__(self, /):
         """
+        usage.alphalens: 2
         usage.modin: 2
         """
         ...

@@ -134,6 +134,7 @@ class Rolling:
 
     def mean(self, /):
         """
+        usage.alphalens: 2
         usage.dask: 12
         usage.koalas: 6
         usage.statsmodels: 3

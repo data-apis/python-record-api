@@ -516,6 +516,7 @@ class Int64Index:
     # usage.xarray: 5
     is_unique: object
 
+    # usage.alphalens: 1
     # usage.dask: 21
     # usage.hvplot: 1
     # usage.koalas: 14
@@ -648,8 +649,23 @@ class Int64Index:
         """
         ...
 
+    @overload
+    def __eq__(self, _0: int, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
     def __eq__(self, _0: Union[numpy.ndarray, numpy.int64], /):
         """
+        usage.pandas: 9
+        """
+        ...
+
+    def __eq__(self, _0: Union[numpy.int64, numpy.ndarray, int], /):
+        """
+        usage.alphalens: 1
         usage.pandas: 9
         """
         ...

@@ -2,6 +2,30 @@ from typing import *
 
 
 @overload
+def cut(x: pandas.core.series.Series, bins: int, labels: bool):
+    """
+    usage.alphalens: 3
+    """
+    ...
+
+
+@overload
+def cut(x: pandas.core.series.Series, bins: List[int], labels: bool):
+    """
+    usage.alphalens: 2
+    """
+    ...
+
+
+@overload
+def cut(x: pandas.core.series.Series, bins: List[float], labels: bool):
+    """
+    usage.alphalens: 2
+    """
+    ...
+
+
+@overload
 def cut(x: xarray.core.dataarray.DataArray, bins: List[Union[int, float]]):
     """
     usage.xarray: 1
@@ -152,15 +176,49 @@ def cut(x: pandas.core.series.Series, bins: int):
 def cut(
     x: object,
     bins: Union[
-        int, pandas.core.indexes.datetimes.DatetimeIndex, range, List[Union[int, float]]
+        int, range, pandas.core.indexes.datetimes.DatetimeIndex, List[Union[float, int]]
     ],
     right: bool = ...,
-    labels: None = ...,
+    labels: Union[None, bool] = ...,
     precision: int = ...,
     include_lowest: bool = ...,
 ):
     """
+    usage.alphalens: 7
     usage.pyjanitor: 1
     usage.xarray: 14
+    """
+    ...
+
+
+@overload
+def qcut(x: pandas.core.series.Series, q: int, labels: bool):
+    """
+    usage.alphalens: 3
+    """
+    ...
+
+
+@overload
+def qcut(x: pandas.core.series.Series, q: List[Union[float, int]], labels: bool):
+    """
+    usage.alphalens: 4
+    """
+    ...
+
+
+@overload
+def qcut(x: pandas.core.series.Series, q: List[float], labels: bool):
+    """
+    usage.alphalens: 2
+    """
+    ...
+
+
+def qcut(
+    x: pandas.core.series.Series, q: Union[List[Union[float, int]], int], labels: bool
+):
+    """
+    usage.alphalens: 9
     """
     ...

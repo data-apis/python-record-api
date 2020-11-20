@@ -192,6 +192,21 @@ class DataFrameGroupBy:
         ...
 
     @overload
+    def __getitem__(self, _0: Literal["factor"], /):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: pandas.core.indexes.base.Index, /):
+        """
+        usage.alphalens: 3
+        usage.dask: 3
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: Literal["rank"], /):
         """
         usage.statsmodels: 1
@@ -293,13 +308,6 @@ class DataFrameGroupBy:
     def __getitem__(self, _0: List[Literal["d"]], /):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def __getitem__(self, _0: pandas.core.indexes.base.Index, /):
-        """
-        usage.dask: 3
         """
         ...
 
@@ -585,6 +593,7 @@ class DataFrameGroupBy:
 
     def __getitem__(self, _0: object, /):
         """
+        usage.alphalens: 6
         usage.dask: 166
         usage.geopandas: 3
         usage.koalas: 137
@@ -594,6 +603,7 @@ class DataFrameGroupBy:
 
     def __iter__(self, /):
         """
+        usage.alphalens: 3
         usage.seaborn: 3
         usage.statsmodels: 1
         """
@@ -694,6 +704,20 @@ class DataFrameGroupBy:
     def aggregate(self, /, func: Dict[Literal["b"], Literal["nunique"]]):
         """
         usage.koalas: 2
+        """
+        ...
+
+    @overload
+    def aggregate(self, /, func: List[Literal["count", "std", "mean"]]):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
+    def aggregate(self, /, func: List[Literal["count", "std", "mean", "max", "min"]]):
+        """
+        usage.alphalens: 1
         """
         ...
 
@@ -851,19 +875,20 @@ class DataFrameGroupBy:
         self,
         /,
         func: Union[
-            List[Union[Callable, Literal["sum", "max", "min", "count", "mean"]]],
+            List[Union[Callable, str]],
             str,
             Dict[
                 Union[
-                    Tuple[Literal["X", "Y"], Literal["B", "C"]],
                     Literal["C", "B", "b", "c", "e"],
+                    Tuple[Literal["X", "Y"], Literal["B", "C"]],
                 ],
-                Union[List[Literal["sum", "mean", "max", "min"]], str],
+                Union[str, List[Literal["sum", "mean", "max", "min"]]],
             ],
             Callable,
         ] = ...,
     ):
         """
+        usage.alphalens: 3
         usage.dask: 22
         usage.geopandas: 3
         usage.koalas: 33
@@ -887,6 +912,7 @@ class DataFrameGroupBy:
     @overload
     def apply(self, /, func: Callable):
         """
+        usage.alphalens: 1
         usage.dask: 36
         usage.koalas: 14
         usage.statsmodels: 6
@@ -1002,6 +1028,7 @@ class DataFrameGroupBy:
         *args: Literal["v", "t"],
     ):
         """
+        usage.alphalens: 1
         usage.dask: 64
         usage.koalas: 24
         usage.statsmodels: 6
@@ -2131,6 +2158,7 @@ class DataFrameGroupBy:
 
     def mean(self, /):
         """
+        usage.alphalens: 2
         usage.dask: 15
         usage.koalas: 6
         usage.statsmodels: 2
@@ -2250,6 +2278,7 @@ class DataFrameGroupBy:
     @overload
     def sum(self, /):
         """
+        usage.alphalens: 1
         usage.dask: 26
         usage.geopandas: 1
         usage.koalas: 31
@@ -2265,6 +2294,7 @@ class DataFrameGroupBy:
 
     def sum(self, /, min_count: int = ...):
         """
+        usage.alphalens: 1
         usage.dask: 27
         usage.geopandas: 1
         usage.koalas: 31
@@ -2288,6 +2318,7 @@ class DataFrameGroupBy:
     @overload
     def transform(self, /, func: Callable):
         """
+        usage.alphalens: 1
         usage.dask: 13
         usage.koalas: 12
         """
@@ -2323,6 +2354,7 @@ class DataFrameGroupBy:
 
     def transform(self, /, func: Union[Literal["sum"], Callable]):
         """
+        usage.alphalens: 1
         usage.dask: 19
         usage.koalas: 14
         usage.pyjanitor: 2
@@ -2378,6 +2410,7 @@ class SeriesGroupBy:
 
     def __iter__(self, /):
         """
+        usage.alphalens: 1
         usage.dask: 2
         usage.geopandas: 1
         """
@@ -2478,6 +2511,7 @@ class SeriesGroupBy:
     @overload
     def apply(self, /, func: Callable, *args: Literal["v", "t"]):
         """
+        usage.alphalens: 19
         usage.koalas: 2
         """
         ...
@@ -2485,6 +2519,7 @@ class SeriesGroupBy:
     @overload
     def apply(self, /, func: Callable):
         """
+        usage.alphalens: 1
         usage.dask: 16
         usage.geopandas: 2
         usage.koalas: 8
@@ -2525,6 +2560,7 @@ class SeriesGroupBy:
         self, /, func: Union[Literal["sum"], Callable, int], *args: Literal["v", "t"]
     ):
         """
+        usage.alphalens: 20
         usage.dask: 20
         usage.geopandas: 2
         usage.koalas: 15
@@ -2540,6 +2576,7 @@ class SeriesGroupBy:
 
     def count(self, /):
         """
+        usage.alphalens: 1
         usage.dask: 15
         usage.koalas: 7
         """
@@ -2893,6 +2930,7 @@ class SeriesGroupBy:
 
     def rank(self, /):
         """
+        usage.alphalens: 1
         usage.koalas: 3
         """
         ...

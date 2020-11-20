@@ -16,6 +16,7 @@ CategoricalDtype: object
 # usage.xarray: 6
 CategoricalIndex: object
 
+# usage.alphalens: 3
 # usage.dask: 311
 # usage.geopandas: 19
 # usage.hvplot: 14
@@ -42,6 +43,7 @@ DatetimeIndex: object
 # usage.dask: 1
 Float64Index: object
 
+# usage.alphalens: 2
 # usage.dask: 2
 # usage.xarray: 1
 Grouper: object
@@ -75,6 +77,7 @@ Int8Dtype: object
 # usage.xarray: 6
 Interval: object
 
+# usage.alphalens: 2
 # usage.dask: 19
 # usage.hvplot: 1
 # usage.koalas: 202
@@ -110,6 +113,7 @@ PeriodIndex: object
 # usage.statsmodels: 34
 RangeIndex: object
 
+# usage.alphalens: 3
 # usage.dask: 106
 # usage.geopandas: 26
 # usage.hvplot: 5
@@ -124,6 +128,7 @@ Series: object
 # usage.geopandas: 1
 StringDtype: object
 
+# usage.alphalens: 2
 # usage.dask: 4
 # usage.prophet: 5
 # usage.statsmodels: 1
@@ -170,6 +175,7 @@ array: object
 # usage.statsmodels: 1
 bdate_range: object
 
+# usage.alphalens: 7
 # usage.dask: 31
 # usage.geopandas: 7
 # usage.koalas: 4
@@ -180,10 +186,12 @@ bdate_range: object
 # usage.statsmodels: 25
 concat: object
 
+# usage.alphalens: 3
 # usage.pyjanitor: 1
 # usage.xarray: 1
 cut: object
 
+# usage.alphalens: 1
 # usage.dask: 52
 # usage.geopandas: 1
 # usage.hvplot: 2
@@ -242,6 +250,9 @@ pivot_table: object
 
 # usage.xarray: 1
 plotting: object
+
+# usage.alphalens: 3
+qcut: object
 
 # usage.dask: 16
 # usage.koalas: 12

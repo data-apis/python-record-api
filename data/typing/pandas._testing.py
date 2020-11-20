@@ -72,6 +72,7 @@ def assert_frame_equal(
     left: pandas.core.frame.DataFrame, right: pandas.core.frame.DataFrame
 ):
     """
+    usage.alphalens: 17
     usage.dask: 20
     usage.geopandas: 8
     usage.networkx: 2
@@ -191,6 +192,7 @@ def assert_frame_equal(
     check_exact: bool = ...,
 ):
     """
+    usage.alphalens: 17
     usage.dask: 23
     usage.geopandas: 31
     usage.koalas: 4
@@ -473,9 +475,22 @@ def assert_series_equal(
 
 @overload
 def assert_series_equal(
+    left: pandas.core.series.Series,
+    right: pandas.core.series.Series,
+    check_less_precise: bool,
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def assert_series_equal(
     left: pandas.core.series.Series, right: pandas.core.series.Series
 ):
     """
+    usage.alphalens: 4
     usage.dask: 17
     usage.geopandas: 22
     usage.seaborn: 1
@@ -540,6 +555,7 @@ def assert_series_equal(
     check_exact: bool = ...,
 ):
     """
+    usage.alphalens: 5
     usage.dask: 19
     usage.geopandas: 28
     usage.koalas: 2

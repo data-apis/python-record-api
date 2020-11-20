@@ -18,6 +18,7 @@ class Timestamp:
     # usage.dask: 1
     freq: object
 
+    # usage.alphalens: 1
     # usage.pyjanitor: 1
     # usage.statsmodels: 5
     month: object
@@ -31,6 +32,7 @@ class Timestamp:
     # usage.xarray: 1
     value: object
 
+    # usage.alphalens: 1
     # usage.prophet: 1
     # usage.pyjanitor: 1
     # usage.statsmodels: 5
@@ -491,6 +493,14 @@ class Timestamp:
         ...
 
     @overload
+    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.alphalens: 2
+        usage.prophet: 4
+        """
+        ...
+
+    @overload
     def __rsub__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
         """
         usage.prophet: 1
@@ -505,15 +515,9 @@ class Timestamp:
         """
         ...
 
-    @overload
-    def __rsub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
-        """
-        usage.prophet: 4
-        """
-        ...
-
     def __rsub__(self, _0: object, /):
         """
+        usage.alphalens: 2
         usage.koalas: 2
         usage.pandas: 8
         usage.prophet: 7
@@ -536,16 +540,17 @@ class Timestamp:
         ...
 
     @overload
-    def __sub__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.int64], /):
+    def __sub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
-        usage.pandas: 14
+        usage.alphalens: 2
+        usage.prophet: 4
         """
         ...
 
     @overload
-    def __sub__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+    def __sub__(self, _0: Union[numpy.ndarray, numpy.timedelta64, numpy.int64], /):
         """
-        usage.prophet: 4
+        usage.pandas: 14
         """
         ...
 
@@ -594,6 +599,7 @@ class Timestamp:
 
     def __sub__(self, _0: object, /):
         """
+        usage.alphalens: 2
         usage.dask: 8
         usage.koalas: 2
         usage.pandas: 14
@@ -629,6 +635,7 @@ class Timestamp:
 
     def date(self, /):
         """
+        usage.alphalens: 1
         usage.modin: 2
         usage.prophet: 2
         """

@@ -69,6 +69,7 @@ class FrozenList:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.alphalens: 9
         usage.dask: 1
         usage.koalas: 4
         usage.statsmodels: 8
@@ -93,10 +94,11 @@ class FrozenList:
 
     def __getitem__(
         self,
-        _0: Union[int, slice[Union[None, int], Union[int, None], Union[None, int]]],
+        _0: Union[int, slice[Union[int, None], Union[None, int], Union[int, None]]],
         /,
     ):
         """
+        usage.alphalens: 9
         usage.dask: 1
         usage.koalas: 7
         usage.statsmodels: 8

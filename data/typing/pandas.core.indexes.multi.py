@@ -120,6 +120,16 @@ class MultiIndex:
 
     @overload
     @classmethod
+    def from_arrays(
+        cls, /, arrays: List[List[int]], names: List[Literal["month", "year"]]
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
     def from_arrays(cls, /, arrays: List[xarray.coding.cftimeindex.CFTimeIndex]):
         """
         usage.xarray: 1
@@ -338,10 +348,11 @@ class MultiIndex:
                 Literal["second", "color", "level_date"],
             ],
             None,
-            List[Union[None, str]],
+            List[Union[str, None]],
         ] = ...,
     ):
         """
+        usage.alphalens: 1
         usage.dask: 7
         usage.koalas: 15
         usage.modin: 2
@@ -380,6 +391,39 @@ class MultiIndex:
     ):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[
+                pandas.core.indexes.base.Index,
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+        names: List[Literal["asset", "date"]],
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_product(
+        cls,
+        /,
+        iterables: List[
+            Union[List[Literal["B", "A"]], pandas.core.indexes.datetimes.DatetimeIndex]
+        ],
+        names: List[Literal["asset", "date"]],
+    ):
+        """
+        usage.alphalens: 3
         """
         ...
 
@@ -2131,6 +2175,7 @@ class MultiIndex:
         ] = ...,
     ):
         """
+        usage.alphalens: 4
         usage.dask: 3
         usage.koalas: 4
         usage.statsmodels: 260
@@ -6165,6 +6210,19 @@ class MultiIndex:
     @overload
     @classmethod
     def from_tuples(
+        cls,
+        /,
+        tuples: List[Tuple[int, Literal["mean", "std"]]],
+        names: List[Union[None, Literal["factor_quantile"]]],
+    ):
+        """
+        usage.alphalens: 4
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_tuples(
         cls, /, tuples: List[List[int]], names: List[Literal["level1", "level0"]]
     ):
         """
@@ -6368,10 +6426,10 @@ class MultiIndex:
         cls,
         /,
         tuples: Union[
-            List[Union[List[int], tuple, None]],
-            Dict[Tuple[Literal["a"], Literal["x"], int], List[int]],
-            zip,
+            List[Union[List[int], None, tuple]],
             set,
+            zip,
+            Dict[Tuple[Literal["a"], Literal["x"], int], List[int]],
             Tuple[
                 Tuple[Literal["a", "b"], int],
                 Tuple[Literal["a", "b"], int],
@@ -6388,6 +6446,7 @@ class MultiIndex:
         ] = ...,
     ):
         """
+        usage.alphalens: 4
         usage.geopandas: 3
         usage.koalas: 568
         usage.modin: 9
@@ -6420,6 +6479,7 @@ class MultiIndex:
     # usage.xarray: 3
     is_unique: object
 
+    # usage.alphalens: 9
     # usage.dask: 9
     # usage.xarray: 18
     levels: object
@@ -6428,10 +6488,11 @@ class MultiIndex:
     # usage.statsmodels: 1
     levshape: object
 
+    # usage.alphalens: 1
     # usage.dask: 4
     # usage.modin: 2
     # usage.xarray: 3
-    name: Union[Literal["z"], None]
+    name: Union[Literal["z", "factor_quantile"], None]
 
     # usage.dask: 11
     # usage.geopandas: 6
@@ -7006,6 +7067,13 @@ class MultiIndex:
         ...
 
     @overload
+    def set_names(self, /, names: List[Literal["asset", "date"]], inplace: bool):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
     def set_names(self, /, names: List[Literal["level1", "level0"]]):
         """
         usage.xarray: 1
@@ -7061,6 +7129,7 @@ class MultiIndex:
         inplace: bool = ...,
     ):
         """
+        usage.alphalens: 1
         usage.dask: 2
         usage.koalas: 8
         usage.statsmodels: 3
