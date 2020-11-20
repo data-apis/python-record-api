@@ -73,6 +73,7 @@ def assert_frame_equal(
 ):
     """
     usage.dask: 20
+    usage.geopandas: 8
     usage.networkx: 2
     usage.seaborn: 5
     usage.statsmodels: 88
@@ -89,6 +90,69 @@ def assert_frame_equal(
     """
     usage.dask: 1
     usage.statsmodels: 1
+    """
+    ...
+
+
+@overload
+def assert_frame_equal(
+    left: geopandas.geodataframe.GeoDataFrame,
+    right: geopandas.geodataframe.GeoDataFrame,
+    check_dtype: bool,
+    check_index_type: Literal["equiv"],
+    check_column_type: Literal["equiv"],
+    obj: Literal["GeoDataFrame"],
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def assert_frame_equal(
+    left: geopandas.geodataframe.GeoDataFrame,
+    right: geopandas.geodataframe.GeoDataFrame,
+    check_dtype: bool,
+    check_index_type: Literal["equiv"],
+    check_column_type: bool,
+    obj: Literal["GeoDataFrame"],
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def assert_frame_equal(
+    left: geopandas.geodataframe.GeoDataFrame,
+    right: geopandas.geodataframe.GeoDataFrame,
+    check_column_type: bool,
+):
+    """
+    usage.geopandas: 4
+    """
+    ...
+
+
+@overload
+def assert_frame_equal(
+    left: geopandas.geodataframe.GeoDataFrame,
+    right: geopandas.geodataframe.GeoDataFrame,
+):
+    """
+    usage.geopandas: 13
+    """
+    ...
+
+
+@overload
+def assert_frame_equal(
+    left: geopandas.geodataframe.GeoDataFrame, right: pandas.core.frame.DataFrame
+):
+    """
+    usage.geopandas: 4
     """
     ...
 
@@ -118,14 +182,17 @@ def assert_frame_equal(
 
 
 def assert_frame_equal(
-    left: pandas.core.frame.DataFrame,
-    right: pandas.core.frame.DataFrame,
+    left: Union[pandas.core.frame.DataFrame, geopandas.geodataframe.GeoDataFrame],
+    right: Union[pandas.core.frame.DataFrame, geopandas.geodataframe.GeoDataFrame],
+    check_dtype: bool = ...,
     check_index_type: Union[Literal["equiv"], bool] = ...,
-    check_column_type: Union[bool, Literal["equiv"]] = ...,
+    check_column_type: Union[Literal["equiv"], bool] = ...,
+    obj: Literal["GeoDataFrame"] = ...,
     check_exact: bool = ...,
 ):
     """
     usage.dask: 23
+    usage.geopandas: 31
     usage.koalas: 4
     usage.networkx: 2
     usage.seaborn: 5
@@ -212,6 +279,7 @@ def assert_index_equal(
 ):
     """
     usage.dask: 36
+    usage.geopandas: 6
     usage.statsmodels: 12
     usage.xarray: 2
     """
@@ -238,6 +306,7 @@ def assert_index_equal(
 ):
     """
     usage.dask: 7
+    usage.geopandas: 2
     usage.statsmodels: 4
     """
     ...
@@ -275,6 +344,32 @@ def assert_index_equal(
     """
     usage.dask: 1
     usage.statsmodels: 7
+    """
+    ...
+
+
+@overload
+def assert_index_equal(
+    left: pandas.core.indexes.base.Index,
+    right: pandas.core.indexes.base.Index,
+    exact: Literal["equiv"],
+    obj: Literal["GeoDataFrame.columns"],
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def assert_index_equal(
+    left: pandas.core.indexes.base.Index,
+    right: pandas.core.indexes.base.Index,
+    exact: bool,
+    obj: Literal["GeoDataFrame.columns"],
+):
+    """
+    usage.geopandas: 1
     """
     ...
 
@@ -334,9 +429,15 @@ def assert_index_equal(
     ...
 
 
-def assert_index_equal(left: object, right: object, check_exact: bool = ...):
+def assert_index_equal(
+    left: object,
+    right: object,
+    exact: Union[bool, Literal["equiv"]] = ...,
+    obj: Literal["GeoDataFrame.columns"] = ...,
+):
     """
     usage.dask: 68
+    usage.geopandas: 10
     usage.koalas: 6
     usage.statsmodels: 39
     usage.xarray: 5
@@ -376,8 +477,32 @@ def assert_series_equal(
 ):
     """
     usage.dask: 17
+    usage.geopandas: 22
     usage.seaborn: 1
     usage.statsmodels: 48
+    """
+    ...
+
+
+@overload
+def assert_series_equal(
+    left: pandas.core.series.Series,
+    right: geopandas.geoseries.GeoSeries,
+    check_series_type: bool,
+    check_names: bool,
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def assert_series_equal(
+    left: geopandas.geoseries.GeoSeries, right: geopandas.geoseries.GeoSeries
+):
+    """
+    usage.geopandas: 5
     """
     ...
 
@@ -406,15 +531,17 @@ def assert_series_equal(
 
 
 def assert_series_equal(
-    left: pandas.core.series.Series,
-    right: pandas.core.series.Series,
+    left: Union[pandas.core.series.Series, geopandas.geoseries.GeoSeries],
+    right: Union[pandas.core.series.Series, geopandas.geoseries.GeoSeries],
     check_dtype: bool = ...,
+    check_series_type: bool = ...,
     check_names: bool = ...,
     check_index_type: Union[bool, Literal["equiv"]] = ...,
     check_exact: bool = ...,
 ):
     """
     usage.dask: 19
+    usage.geopandas: 28
     usage.koalas: 2
     usage.seaborn: 1
     usage.statsmodels: 48

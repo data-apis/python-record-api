@@ -171,18 +171,16 @@ class TimedeltaIndex:
         """
         ...
 
-    def __add__(
-        self,
-        _0: Union[
-            numpy.datetime64,
-            numpy.timedelta64,
-            numpy.ndarray,
-            pandas._libs.tslibs.timestamps.Timestamp,
-            xarray.coding.cftimeindex.CFTimeIndex,
-        ],
-        /,
-    ):
+    @overload
+    def __add__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
         """
+        usage.geopandas: 1
+        """
+        ...
+
+    def __add__(self, _0: object, /):
+        """
+        usage.geopandas: 1
         usage.pandas: 22
         usage.xarray: 2
         """

@@ -109,6 +109,7 @@ class _LocIndexer:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.geopandas: 1
         usage.koalas: 10
         usage.seaborn: 1
         usage.statsmodels: 3
@@ -127,6 +128,7 @@ class _LocIndexer:
     def __getitem__(self, _0: slice[None, int, None], /):
         """
         usage.dask: 4
+        usage.geopandas: 3
         usage.koalas: 6
         """
         ...
@@ -135,6 +137,7 @@ class _LocIndexer:
     def __getitem__(self, _0: slice[int, None, int], /):
         """
         usage.dask: 5
+        usage.geopandas: 8
         usage.koalas: 7
         """
         ...
@@ -143,6 +146,7 @@ class _LocIndexer:
     def __getitem__(self, _0: List[int], /):
         """
         usage.dask: 8
+        usage.geopandas: 3
         usage.koalas: 2
         """
         ...
@@ -167,6 +171,7 @@ class _LocIndexer:
     def __getitem__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 3
+        usage.geopandas: 1
         usage.koalas: 1
         usage.sklearn: 1
         usage.statsmodels: 7
@@ -630,6 +635,7 @@ class _LocIndexer:
     def __getitem__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 5
+        usage.geopandas: 1
         usage.koalas: 7
         usage.seaborn: 2
         usage.statsmodels: 4
@@ -3203,6 +3209,55 @@ class _LocIndexer:
         ...
 
     @overload
+    def __getitem__(self, _0: Literal["a"], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Literal["b"], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["A"]], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["Shape_Leng"]], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["geometry"]], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[List[int], Literal["geometry"]], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[numpy.ndarray, Literal["geometry"]], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: slice[Literal["E"], Literal["g"], Literal["E"]], /):
         """
         usage.dask: 1
@@ -4589,6 +4644,7 @@ class _LocIndexer:
     def __getitem__(self, _0: object, /):
         """
         usage.dask: 250
+        usage.geopandas: 28
         usage.koalas: 137
         usage.prophet: 1
         usage.seaborn: 14
@@ -6698,8 +6754,85 @@ class _LocIndexer:
         """
         ...
 
+    @overload
+    def __setitem__(
+        self, _0: Tuple[pandas.core.series.Series, Literal["Shape_Area"]], _1: float, /
+    ):
+        """
+        usage.geopandas: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[pandas.core.series.Series, Literal["Shape_Leng"]], _1: float, /
+    ):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["A"]], _1: int, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["BoroName"]], _1: float, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: shapely.geometry.point.Point, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[int, Literal["geometry"]], _1: shapely.geometry.point.Point, /
+    ):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["value1"]], _1: int, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["value1"]], _1: float, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["values"]], _1: float, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, Literal["col1"]], _1: int, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
     def __setitem__(self, _0: object, _1: object, /):
         """
+        usage.geopandas: 14
         usage.koalas: 33
         usage.prophet: 1
         usage.seaborn: 3
@@ -6735,6 +6868,7 @@ class _iLocIndexer:
     def __getitem__(self, _0: slice[None, int, None], /):
         """
         usage.dask: 17
+        usage.geopandas: 3
         usage.koalas: 11
         usage.prophet: 1
         usage.sklearn: 1
@@ -6746,6 +6880,7 @@ class _iLocIndexer:
     @overload
     def __getitem__(self, _0: Tuple[int, int], /):
         """
+        usage.geopandas: 1
         usage.koalas: 2
         usage.sklearn: 1
         usage.statsmodels: 28
@@ -6766,6 +6901,7 @@ class _iLocIndexer:
     def __getitem__(self, _0: int, /):
         """
         usage.dask: 9
+        usage.geopandas: 3
         usage.koalas: 6
         usage.prophet: 10
         usage.seaborn: 2
@@ -6882,6 +7018,7 @@ class _iLocIndexer:
     @overload
     def __getitem__(self, _0: List[int], /):
         """
+        usage.geopandas: 2
         usage.koalas: 9
         usage.sklearn: 1
         """
@@ -6890,6 +7027,7 @@ class _iLocIndexer:
     @overload
     def __getitem__(self, _0: Tuple[List[int], slice[None, None, None]], /):
         """
+        usage.geopandas: 1
         usage.koalas: 3
         """
         ...
@@ -6923,6 +7061,7 @@ class _iLocIndexer:
     def __getitem__(self, _0: slice[int, None, int], /):
         """
         usage.dask: 5
+        usage.geopandas: 6
         usage.koalas: 3
         usage.statsmodels: 67
         """
@@ -7080,6 +7219,13 @@ class _iLocIndexer:
         ...
 
     @overload
+    def __getitem__(self, _0: Tuple[List[int], int], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: slice[None, numpy.int64, None], /):
         """
         usage.dask: 2
@@ -7125,6 +7271,7 @@ class _iLocIndexer:
     def __getitem__(self, _0: object, /):
         """
         usage.dask: 71
+        usage.geopandas: 17
         usage.koalas: 98
         usage.modin: 3
         usage.prophet: 14
@@ -7417,6 +7564,7 @@ class _iLocIndexer:
     def __setitem__(self, _0: int, _1: float, /):
         """
         usage.dask: 2
+        usage.geopandas: 2
         usage.statsmodels: 20
         """
         ...
@@ -7490,6 +7638,27 @@ class _iLocIndexer:
         ...
 
     @overload
+    def __setitem__(self, _0: int, _1: shapely.geometry.point.Point, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[int, int], _1: shapely.geometry.point.Point, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: None, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
     def __setitem__(self, _0: Tuple[slice[None, int, None], int], _1: float, /):
         """
         usage.dask: 1
@@ -7510,20 +7679,20 @@ class _iLocIndexer:
         _0: Union[
             Tuple[
                 Union[
-                    slice[Union[None, int], Union[None, int], Union[None, int]],
-                    List[int],
-                    numpy.ndarray,
                     int,
+                    numpy.ndarray,
+                    List[int],
+                    slice[Union[None, int], Union[None, int], Union[None, int]],
                 ],
                 Union[
-                    slice[Union[int, None], Union[int, None], Union[int, None]],
-                    List[int],
                     int,
                     numpy.int32,
+                    List[int],
+                    slice[Union[None, int], Union[None, int], Union[None, int]],
                 ],
             ],
+            slice[Union[int, None], Union[None, int], Union[int, None]],
             List[int],
-            slice[Union[None, int], Union[int, None], Union[None, int]],
             int,
         ],
         _1: object,
@@ -7531,6 +7700,7 @@ class _iLocIndexer:
     ):
         """
         usage.dask: 5
+        usage.geopandas: 5
         usage.koalas: 28
         usage.seaborn: 3
         usage.sklearn: 5

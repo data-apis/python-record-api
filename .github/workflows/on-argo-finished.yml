@@ -14,7 +14,7 @@ jobs:
       - name: Create bin dir
         run: |
           mkdir -p /tmp/bin
-          echo "::add-path::/tmp/bin"
+          echo "/tmp/bin" >> $GITHUB_PATH
       - name: Install minio
         run: |
           curl https://dl.min.io/client/mc/release/linux-amd64/mc -L -o /tmp/bin/mc

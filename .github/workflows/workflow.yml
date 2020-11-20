@@ -21,7 +21,7 @@ jobs:
       - name: Create bin dir
         run: |
           mkdir -p /tmp/bin
-          echo "::add-path::/tmp/bin"
+          echo "/tmp/bin" >> $GITHUB_PATH
 
       - name: Install new jq version
         run: |

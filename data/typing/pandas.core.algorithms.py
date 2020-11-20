@@ -33,17 +33,83 @@ def factorize(values: pandas.core.indexes.datetimes.DatetimeIndex, sort: bool):
     ...
 
 
+@overload
+def factorize(values: geopandas.array.GeometryArray):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
 def factorize(
     values: Union[
-        pandas.core.indexes.datetimes.DatetimeIndex,
-        pandas.core.indexes.base.Index,
-        pandas.core.indexes.numeric.Int64Index,
+        geopandas.array.GeometryArray,
         pandas.core.indexes.numeric.Float64Index,
+        pandas.core.indexes.numeric.Int64Index,
+        pandas.core.indexes.base.Index,
+        pandas.core.indexes.datetimes.DatetimeIndex,
     ],
-    sort: bool,
+    sort: bool = ...,
 ):
     """
+    usage.geopandas: 1
     usage.xarray: 4
+    """
+    ...
+
+
+@overload
+def take(
+    arr: numpy.ndarray, indices: numpy.ndarray, allow_fill: bool, fill_value: None
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def take(arr: numpy.ndarray, indices: List[int], allow_fill: bool, fill_value: None):
+    """
+    usage.geopandas: 6
+    """
+    ...
+
+
+@overload
+def take(
+    arr: numpy.ndarray,
+    indices: List[int],
+    allow_fill: bool,
+    fill_value: shapely.geometry.point.Point,
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def take(
+    arr: numpy.ndarray,
+    indices: numpy.ndarray,
+    allow_fill: bool,
+    fill_value: shapely.geometry.point.Point,
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+def take(
+    arr: numpy.ndarray,
+    indices: Union[numpy.ndarray, List[int]],
+    allow_fill: bool,
+    fill_value: Union[shapely.geometry.point.Point, None],
+):
+    """
+    usage.geopandas: 9
     """
     ...
 

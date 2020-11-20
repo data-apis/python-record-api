@@ -4501,3 +4501,9 @@ def merge_asof(
     usage.dask: 41
     """
     ...
+
+
+class _MergeOperation:
+
+    # usage.geopandas: 1
+    left: object

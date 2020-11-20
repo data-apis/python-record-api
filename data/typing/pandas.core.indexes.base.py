@@ -107,6 +107,9 @@ class Index:
     # usage.koalas: 2
     hasnans: object
 
+    # usage.geopandas: 1
+    inferred_type: object
+
     # usage.dask: 1
     # usage.xarray: 2
     is_monotonic: object
@@ -116,6 +119,7 @@ class Index:
     is_unique: object
 
     # usage.dask: 16
+    # usage.geopandas: 1
     # usage.koalas: 4
     # usage.modin: 3
     # usage.seaborn: 2
@@ -124,14 +128,15 @@ class Index:
     name: Union[None, str, int]
 
     # usage.dask: 3
+    # usage.geopandas: 3
     # usage.koalas: 56
     # usage.statsmodels: 6
     names: Union[
         List[
             Union[
-                Tuple[Literal["b", "x", "a"], Literal["2", "group", "lkey", "aa"]],
-                None,
                 str,
+                None,
+                Tuple[Literal["b", "x", "a"], Literal["2", "group", "lkey", "aa"]],
             ]
         ],
         pandas.core.indexes.frozen.FrozenList,
@@ -207,6 +212,7 @@ class Index:
     @overload
     def __contains__(self, _0: Literal["level_1"], /):
         """
+        usage.geopandas: 1
         usage.koalas: 1
         """
         ...
@@ -607,6 +613,48 @@ class Index:
     def __contains__(self, _0: Literal["coverage"], /):
         """
         usage.prophet: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["geometry"], /):
+        """
+        usage.geopandas: 3
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["BoroCode"], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["BoroName"], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["Shape_Leng"], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["Shape_Area"], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["__level_1"], /):
+        """
+        usage.geopandas: 1
         """
         ...
 
@@ -1033,6 +1081,7 @@ class Index:
     def __contains__(self, _0: str, /):
         """
         usage.dask: 130
+        usage.geopandas: 9
         usage.koalas: 9
         usage.prophet: 1
         usage.statsmodels: 71
@@ -1066,6 +1115,29 @@ class Index:
     def __eq__(self, _0: numpy.ndarray, /):
         """
         usage.pandas: 4
+        """
+        ...
+
+    @overload
+    def __eq__(
+        self, _0: List[Literal["shape_area", "shape_leng", "boroname", "borocode"]], /
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: List[Literal["geometry", "Z", "A"]], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: List[Literal["a", "geometry"]], /):
+        """
+        usage.geopandas: 2
         """
         ...
 
@@ -1127,6 +1199,7 @@ class Index:
     ):
         """
         usage.dask: 14
+        usage.geopandas: 4
         usage.koalas: 6
         usage.pandas: 4
         usage.sklearn: 6
@@ -1138,6 +1211,7 @@ class Index:
     def __getitem__(self, _0: int, /):
         """
         usage.dask: 17
+        usage.geopandas: 2
         usage.koalas: 7
         usage.modin: 3
         usage.prophet: 1
@@ -1150,6 +1224,7 @@ class Index:
     def __getitem__(self, _0: slice[None, int, None], /):
         """
         usage.dask: 1
+        usage.geopandas: 1
         usage.koalas: 3
         usage.seaborn: 2
         usage.sklearn: 1
@@ -1235,6 +1310,13 @@ class Index:
         ...
 
     @overload
+    def __getitem__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: List[bool], /):
         """
         usage.dask: 1
@@ -1244,6 +1326,7 @@ class Index:
     def __getitem__(self, _0: object, /):
         """
         usage.dask: 27
+        usage.geopandas: 5
         usage.koalas: 11
         usage.modin: 3
         usage.prophet: 2
@@ -1257,6 +1340,7 @@ class Index:
     def __iter__(self, /):
         """
         usage.dask: 22
+        usage.geopandas: 4
         usage.koalas: 5
         usage.modin: 1
         usage.networkx: 1
@@ -1666,6 +1750,7 @@ class Index:
 
     def tolist(self, /):
         """
+        usage.geopandas: 1
         usage.seaborn: 4
         """
         ...

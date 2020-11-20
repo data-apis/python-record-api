@@ -284,6 +284,49 @@ def concat(
 
 
 @overload
+def concat(objs: List[geopandas.geodataframe.GeoDataFrame], ignore_index: bool):
+    """
+    usage.geopandas: 2
+    """
+    ...
+
+
+@overload
+def concat(objs: List[geopandas.geoseries.GeoSeries]):
+    """
+    usage.geopandas: 2
+    """
+    ...
+
+
+@overload
+def concat(objs: List[geopandas.geodataframe.GeoDataFrame]):
+    """
+    usage.geopandas: 3
+    """
+    ...
+
+
+@overload
+def concat(objs: List[geopandas.geodataframe.GeoDataFrame], axis: int):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def concat(
+    objs: List[Union[pandas.core.frame.DataFrame, geopandas.geodataframe.GeoDataFrame]],
+    axis: int,
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
 def concat(objs: List[pandas.core.frame.DataFrame], join: Literal["outer"], sort: bool):
     """
     usage.dask: 12
@@ -557,8 +600,15 @@ def concat(objs: List[pandas.core.frame.DataFrame], ignore_index: bool):
 
 def concat(
     objs: Union[
-        List[Union[pandas.core.frame.DataFrame, pandas.core.series.Series]],
-        Tuple[Union[None, pandas.core.frame.DataFrame, pandas.core.series.Series], ...],
+        List[
+            Union[
+                pandas.core.series.Series,
+                pandas.core.frame.DataFrame,
+                geopandas.geodataframe.GeoDataFrame,
+                geopandas.geoseries.GeoSeries,
+            ]
+        ],
+        Tuple[Union[pandas.core.series.Series, pandas.core.frame.DataFrame, None], ...],
         Dict[int, pandas.core.series.Series],
     ],
     axis: int = ...,
@@ -568,6 +618,7 @@ def concat(
 ):
     """
     usage.dask: 148
+    usage.geopandas: 9
     usage.koalas: 24
     usage.modin: 10
     usage.prophet: 15
@@ -575,3 +626,9 @@ def concat(
     usage.statsmodels: 37
     """
     ...
+
+
+class _Concatenator:
+
+    # usage.geopandas: 1
+    objs: object
