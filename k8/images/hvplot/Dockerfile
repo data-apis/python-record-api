@@ -17,4 +17,4 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 RUN python -c "import hvplot"
 
 ENV PYTHON_RECORD_API_FROM_MODULES=hvplot
-CMD [ "pytest", "hvplot/tests", "--verbose", "--suppress-tests-failed-exit-code"]
+CMD [ "pytest", "hvplot/tests/*", "--verbose", "--suppress-tests-failed-exit-code"]
