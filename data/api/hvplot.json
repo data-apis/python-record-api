@@ -1,0 +1,2420 @@
+{
+  "modules": {
+    "pandas": {
+      "properties": {
+        "DataFrame": [
+          {
+            "usage.hvplot": 14
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "Series": [
+          {
+            "usage.hvplot": 5
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "date_range": [
+          {
+            "usage.hvplot": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "MultiIndex": [
+          {
+            "usage.hvplot": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "__version__": [
+          {
+            "usage.hvplot": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "options": [
+          {
+            "usage.hvplot": 2
+          },
+          {
+            "type": "bottom"
+          }
+        ]
+      }
+    },
+    "pandas.core.frame": {
+      "classes": {
+        "DataFrame": {
+          "constructor_overloads": [
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "list",
+                  "item": {
+                    "type": "list",
+                    "item": {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  }
+                },
+                "columns": {
+                  "type": "list",
+                  "item": {
+                    "type": "str",
+                    "options": [
+                      "y",
+                      "x"
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 4
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "list",
+                  "item": {
+                    "type": "list",
+                    "item": {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": {
+                            "name": "int"
+                          }
+                        },
+                        {
+                          "type": "str",
+                          "options": [
+                            "A",
+                            "B",
+                            "C"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                },
+                "columns": {
+                  "type": "list",
+                  "item": {
+                    "type": "str",
+                    "options": [
+                      "category",
+                      "y",
+                      "x"
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "temp",
+                      "time"
+                    ]
+                  },
+                  "value": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "module": "numpy",
+                          "name": "ndarray"
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "pandas.core.indexes.datetimes",
+                          "name": "DatetimeIndex"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "list",
+                  "item": {
+                    "type": "list",
+                    "item": {
+                      "type": "str"
+                    }
+                  }
+                },
+                "columns": {
+                  "type": "list",
+                  "item": {
+                    "type": "str",
+                    "options": [
+                      "lower",
+                      "upper"
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "B",
+                      "A",
+                      "time"
+                    ]
+                  },
+                  "value": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": "list",
+                        "item": {
+                          "type": "union",
+                          "options": [
+                            {
+                              "type": {
+                                "name": "int"
+                              }
+                            },
+                            {
+                              "type": "str"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": {
+                          "module": "pandas.core.indexes.datetimes",
+                          "name": "DatetimeIndex"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "list",
+                  "item": {
+                    "type": "list",
+                    "item": {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": "str",
+                          "options": [
+                            "A",
+                            "B",
+                            "C"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "name": "int"
+                          }
+                        },
+                        {
+                          "type": {
+                            "name": "float"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "columns": {
+                  "type": "list",
+                  "item": {
+                    "type": "str",
+                    "options": [
+                      "number",
+                      "category",
+                      "y",
+                      "x"
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "list",
+                  "item": {
+                    "type": "list",
+                    "item": {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  }
+                },
+                "columns": {
+                  "type": "list",
+                  "item": {
+                    "type": "str",
+                    "options": [
+                      "number",
+                      "y",
+                      "x"
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str",
+                    "options": [
+                      "b",
+                      "a"
+                    ]
+                  },
+                  "value": {
+                    "type": "list",
+                    "item": {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "list",
+                  "item": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            }
+          ],
+          "method_overloads": {
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "x"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 4
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "time"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 5
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "y"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 6
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "category"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 3
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "upper"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "lower"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "_color"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 3
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "A"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "B"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "number"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "sepal_length"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "0"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ],
+            "reset_index": [
+              {
+                "metadata": {
+                  "usage.hvplot": 6
+                }
+              }
+            ],
+            "assign": [
+              {
+                "metadata": {
+                  "usage.hvplot": 4
+                }
+              }
+            ],
+            "set_index": [
+              {
+                "pos_or_kw_required": {
+                  "keys": {
+                    "type": "str",
+                    "options": [
+                      "time"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 4
+                }
+              }
+            ],
+            "sample": [
+              {
+                "pos_or_kw_required": {
+                  "frac": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 4
+                }
+              }
+            ],
+            "__eq__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.frame",
+                      "name": "DataFrame"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 4
+                }
+              }
+            ],
+            "all": [
+              {
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              }
+            ],
+            "sort_values": [
+              {
+                "pos_or_kw_required": {
+                  "by": {
+                    "type": "str",
+                    "options": [
+                      "time"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ],
+            "sort_index": [
+              {
+                "pos_or_kw_required": {
+                  "axis": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ],
+            "rename": [
+              {
+                "pos_or_kw_required": {
+                  "columns": {
+                    "type": "dict",
+                    "key": {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    "value": {
+                      "type": "str",
+                      "options": [
+                        "0"
+                      ]
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": "str"
+                    },
+                    {
+                      "type": {
+                        "module": "pandas.core.series",
+                        "name": "Series"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 32
+              }
+            },
+            "reset_index": {
+              "metadata": {
+                "usage.hvplot": 6
+              }
+            },
+            "assign": {
+              "metadata": {
+                "usage.hvplot": 4
+              }
+            },
+            "set_index": {
+              "pos_or_kw_required": {
+                "keys": {
+                  "type": "str",
+                  "options": [
+                    "time"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 4
+              }
+            },
+            "sample": {
+              "pos_or_kw_required": {
+                "frac": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 4
+              }
+            },
+            "__eq__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "pandas.core.frame",
+                    "name": "DataFrame"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 4
+              }
+            },
+            "all": {
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            },
+            "sort_values": {
+              "pos_or_kw_required": {
+                "by": {
+                  "type": "str",
+                  "options": [
+                    "time"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            },
+            "sort_index": {
+              "pos_or_kw_required": {
+                "axis": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            },
+            "rename": {
+              "pos_or_kw_required": {
+                "columns": {
+                  "type": "dict",
+                  "key": {
+                    "type": {
+                      "name": "int"
+                    }
+                  },
+                  "value": {
+                    "type": "str",
+                    "options": [
+                      "0"
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            }
+          },
+          "properties": {
+            "hvplot": [
+              {
+                "usage.hvplot": 82
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "__module__": [
+              {
+                "usage.hvplot": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "columns": [
+              {
+                "usage.hvplot": 17
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "index": [
+              {
+                "usage.hvplot": 8
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "values": [
+              {
+                "usage.hvplot": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "axes": [
+              {
+                "usage.hvplot": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "x": [
+              {
+                "usage.hvplot": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "time": [
+              {
+                "usage.hvplot": 5
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "plot": [
+              {
+                "usage.hvplot": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "pandas.core.indexes.datetimes": {
+      "function_overloads": {
+        "date_range": [
+          {
+            "pos_or_kw_required": {
+              "start": {
+                "type": "str",
+                "options": [
+                  "1/1/2000"
+                ]
+              },
+              "periods": {
+                "type": {
+                  "name": "int"
+                }
+              },
+              "freq": {
+                "type": "str",
+                "options": [
+                  "1H"
+                ]
+              },
+              "tz": {
+                "type": "str",
+                "options": [
+                  "UTC"
+                ]
+              }
+            },
+            "metadata": {
+              "usage.hvplot": 1
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "start": {
+                "type": "str",
+                "options": [
+                  "1/1/2000"
+                ]
+              },
+              "periods": {
+                "type": {
+                  "name": "int"
+                }
+              },
+              "tz": {
+                "type": "str",
+                "options": [
+                  "UTC"
+                ]
+              }
+            },
+            "metadata": {
+              "usage.hvplot": 1
+            }
+          }
+        ]
+      },
+      "functions": {
+        "date_range": {
+          "pos_or_kw_required": {
+            "start": {
+              "type": "str",
+              "options": [
+                "1/1/2000"
+              ]
+            },
+            "periods": {
+              "type": {
+                "name": "int"
+              }
+            },
+            "tz": {
+              "type": "str",
+              "options": [
+                "UTC"
+              ]
+            }
+          },
+          "pos_or_kw_optional": {
+            "freq": {
+              "type": "str",
+              "options": [
+                "1H"
+              ]
+            }
+          },
+          "metadata": {
+            "usage.hvplot": 2
+          }
+        }
+      },
+      "classes": {
+        "DatetimeIndex": {
+          "method_overloads": {
+            "__eq__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__eq__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            }
+          },
+          "properties": {
+            "names": [
+              {
+                "usage.hvplot": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "numpy": {
+      "function_overloads": {
+        "linspace": [
+          {
+            "pos_or_kw_required": {
+              "start": {
+                "type": {
+                  "name": "int"
+                }
+              },
+              "stop": {
+                "type": {
+                  "name": "float"
+                }
+              },
+              "num": {
+                "type": {
+                  "name": "int"
+                }
+              }
+            },
+            "metadata": {
+              "usage.hvplot": 1
+            }
+          }
+        ],
+        "nanquantile": [
+          {
+            "pos_or_kw_required": {
+              "a": {
+                "type": {
+                  "module": "pandas.core.series",
+                  "name": "Series"
+                }
+              },
+              "q": {
+                "type": {
+                  "name": "float"
+                }
+              }
+            },
+            "metadata": {
+              "usage.hvplot": 2
+            }
+          }
+        ],
+        "array": [
+          {
+            "pos_only_required": {
+              "_0": {
+                "type": "list",
+                "item": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              }
+            },
+            "metadata": {
+              "usage.hvplot": 1
+            }
+          }
+        ]
+      },
+      "functions": {
+        "linspace": {
+          "pos_or_kw_required": {
+            "start": {
+              "type": {
+                "name": "int"
+              }
+            },
+            "stop": {
+              "type": {
+                "name": "float"
+              }
+            },
+            "num": {
+              "type": {
+                "name": "int"
+              }
+            }
+          },
+          "metadata": {
+            "usage.hvplot": 1
+          }
+        },
+        "nanquantile": {
+          "pos_or_kw_required": {
+            "a": {
+              "type": {
+                "module": "pandas.core.series",
+                "name": "Series"
+              }
+            },
+            "q": {
+              "type": {
+                "name": "float"
+              }
+            }
+          },
+          "metadata": {
+            "usage.hvplot": 2
+          }
+        },
+        "array": {
+          "pos_only_required": {
+            "_0": {
+              "type": "list",
+              "item": {
+                "type": {
+                  "name": "int"
+                }
+              }
+            }
+          },
+          "metadata": {
+            "usage.hvplot": 1
+          }
+        }
+      },
+      "classes": {
+        "ufunc": {
+          "method_overloads": {
+            "__call__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.series",
+                      "name": "Series"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "holoviews.util.transform",
+                      "name": "dim"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__call__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "holoviews.util.transform",
+                        "name": "dim"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "numpy",
+                        "name": "ndarray"
+                      }
+                    },
+                    {
+                      "type": {
+                        "module": "pandas.core.series",
+                        "name": "Series"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 4
+              }
+            }
+          }
+        },
+        "ndarray": {
+          "method_overloads": {
+            "cumsum": [
+              {
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ],
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "slice",
+                    "start": {
+                      "type": "None"
+                    },
+                    "stop": {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    "step": {
+                      "type": "None"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "slice",
+                    "start": {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    "stop": {
+                      "type": "None"
+                    },
+                    "step": {
+                      "type": "None"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ],
+            "__iter__": [
+              {
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ],
+            "__eq__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "numpy",
+                      "name": "ndarray"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              }
+            ]
+          },
+          "methods": {
+            "cumsum": {
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            },
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "slice",
+                  "start": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": "None"
+                      },
+                      {
+                        "type": {
+                          "name": "int"
+                        }
+                      }
+                    ]
+                  },
+                  "stop": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": "None"
+                      }
+                    ]
+                  },
+                  "step": {
+                    "type": "None"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            },
+            "__iter__": {
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            },
+            "__eq__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            }
+          }
+        },
+        "dtype": {
+          "properties": {
+            "kind": [
+              {
+                "usage.hvplot": 3
+              },
+              {
+                "type": "bottom"
+              }
+            ]
+          }
+        },
+        "float64": {
+          "method_overloads": {
+            "__lt__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ],
+            "__gt__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__lt__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            },
+            "__gt__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            }
+          }
+        },
+        "bool_": {
+          "method_overloads": {
+            "__bool__": [
+              {
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              }
+            ],
+            "all": [
+              {
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__bool__": {
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            },
+            "all": {
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            }
+          }
+        }
+      },
+      "properties": {
+        "pi": [
+          {
+            "usage.hvplot": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "sin": [
+          {
+            "usage.hvplot": 1
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "sin"
+          }
+        ],
+        "sqrt": [
+          {
+            "usage.hvplot": 3
+          },
+          {
+            "type": "numpy.ufunc",
+            "name": "sqrt"
+          }
+        ]
+      }
+    },
+    "pandas.core.indexes.range": {
+      "classes": {
+        "RangeIndex": {
+          "method_overloads": {
+            "__iter__": [
+              {
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__iter__": {
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            }
+          },
+          "properties": {
+            "names": [
+              {
+                "usage.hvplot": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "name": [
+              {
+                "usage.hvplot": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "pandas.core.indexes.frozen": {
+      "classes": {
+        "FrozenList": {
+          "method_overloads": {
+            "__eq__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "list",
+                    "item": {
+                      "type": "None"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__eq__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "list",
+                  "item": {
+                    "type": "None"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "pandas.core.indexes.base": {
+      "classes": {
+        "Index": {
+          "method_overloads": {
+            "__iter__": [
+              {
+                "metadata": {
+                  "usage.hvplot": 4
+                }
+              }
+            ],
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "slice",
+                    "start": {
+                      "type": "None"
+                    },
+                    "stop": {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    "step": {
+                      "type": "None"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              }
+            ],
+            "__contains__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "index"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 5
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "time.hour"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "time"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "x"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "_size"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "index.day"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "time.day"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "sepal_length"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "str",
+                    "options": [
+                      "a"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "__iter__": {
+              "metadata": {
+                "usage.hvplot": 4
+              }
+            },
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "slice",
+                  "start": {
+                    "type": "None"
+                  },
+                  "stop": {
+                    "type": {
+                      "name": "int"
+                    }
+                  },
+                  "step": {
+                    "type": "None"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            },
+            "__contains__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "str"
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 14
+              }
+            }
+          }
+        }
+      }
+    },
+    "pandas.core.series": {
+      "classes": {
+        "Series": {
+          "constructor_overloads": [
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "list",
+                  "item": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            }
+          ],
+          "method_overloads": {
+            "min": [
+              {
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ],
+            "max": [
+              {
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ],
+            "__mul__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ],
+            "__eq__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 3
+                }
+              },
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "module": "pandas.core.indexes.datetimes",
+                      "name": "DatetimeIndex"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              }
+            ],
+            "all": [
+              {
+                "metadata": {
+                  "usage.hvplot": 8
+                }
+              }
+            ],
+            "diff": [
+              {
+                "metadata": {
+                  "usage.hvplot": 4
+                }
+              }
+            ],
+            "__getitem__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": "slice",
+                    "start": {
+                      "type": {
+                        "name": "int"
+                      }
+                    },
+                    "stop": {
+                      "type": "None"
+                    },
+                    "step": {
+                      "type": "None"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 4
+                }
+              }
+            ],
+            "astype": [
+              {
+                "pos_or_kw_required": {
+                  "dtype": {
+                    "type": "str",
+                    "options": [
+                      "int"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 4
+                }
+              }
+            ],
+            "__gt__": [
+              {
+                "pos_only_required": {
+                  "_0": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 4
+                }
+              }
+            ],
+            "to_frame": [
+              {
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "min": {
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            },
+            "max": {
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            },
+            "__mul__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            },
+            "__eq__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "union",
+                  "options": [
+                    {
+                      "type": {
+                        "module": "pandas.core.indexes.datetimes",
+                        "name": "DatetimeIndex"
+                      }
+                    },
+                    {
+                      "type": {
+                        "name": "int"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 5
+              }
+            },
+            "all": {
+              "metadata": {
+                "usage.hvplot": 8
+              }
+            },
+            "diff": {
+              "metadata": {
+                "usage.hvplot": 4
+              }
+            },
+            "__getitem__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": "slice",
+                  "start": {
+                    "type": {
+                      "name": "int"
+                    }
+                  },
+                  "stop": {
+                    "type": "None"
+                  },
+                  "step": {
+                    "type": "None"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 4
+              }
+            },
+            "astype": {
+              "pos_or_kw_required": {
+                "dtype": {
+                  "type": "str",
+                  "options": [
+                    "int"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 4
+              }
+            },
+            "__gt__": {
+              "pos_only_required": {
+                "_0": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 4
+              }
+            },
+            "to_frame": {
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            }
+          },
+          "properties": {
+            "dtype": [
+              {
+                "usage.hvplot": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "dt": [
+              {
+                "usage.hvplot": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "__module__": [
+              {
+                "usage.hvplot": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "hvplot": [
+              {
+                "usage.hvplot": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "plot": [
+              {
+                "usage.hvplot": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "pandas.core.dtypes.common": {
+      "function_overloads": {
+        "is_datetime64_any_dtype": [
+          {
+            "pos_or_kw_required": {
+              "arr_or_dtype": {
+                "type": {
+                  "module": "pandas.core.series",
+                  "name": "Series"
+                }
+              }
+            },
+            "metadata": {
+              "usage.hvplot": 2
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "arr_or_dtype": {
+                "type": {
+                  "module": "pandas.core.indexes.range",
+                  "name": "RangeIndex"
+                }
+              }
+            },
+            "metadata": {
+              "usage.hvplot": 1
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "arr_or_dtype": {
+                "type": {
+                  "module": "pandas.core.indexes.datetimes",
+                  "name": "DatetimeIndex"
+                }
+              }
+            },
+            "metadata": {
+              "usage.hvplot": 3
+            }
+          },
+          {
+            "pos_or_kw_required": {
+              "arr_or_dtype": {
+                "type": {
+                  "module": "pandas.core.indexes.numeric",
+                  "name": "Int64Index"
+                }
+              }
+            },
+            "metadata": {
+              "usage.hvplot": 1
+            }
+          }
+        ],
+        "is_numeric_dtype": [
+          {
+            "pos_or_kw_required": {
+              "arr_or_dtype": {
+                "type": {
+                  "module": "pandas.core.series",
+                  "name": "Series"
+                }
+              }
+            },
+            "metadata": {
+              "usage.hvplot": 1
+            }
+          }
+        ]
+      },
+      "functions": {
+        "is_datetime64_any_dtype": {
+          "pos_or_kw_required": {
+            "arr_or_dtype": {
+              "type": "union",
+              "options": [
+                {
+                  "type": {
+                    "module": "pandas.core.indexes.numeric",
+                    "name": "Int64Index"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "pandas.core.indexes.range",
+                    "name": "RangeIndex"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "pandas.core.series",
+                    "name": "Series"
+                  }
+                },
+                {
+                  "type": {
+                    "module": "pandas.core.indexes.datetimes",
+                    "name": "DatetimeIndex"
+                  }
+                }
+              ]
+            }
+          },
+          "metadata": {
+            "usage.hvplot": 7
+          }
+        },
+        "is_numeric_dtype": {
+          "pos_or_kw_required": {
+            "arr_or_dtype": {
+              "type": {
+                "module": "pandas.core.series",
+                "name": "Series"
+              }
+            }
+          },
+          "metadata": {
+            "usage.hvplot": 1
+          }
+        }
+      }
+    },
+    "pandas.core.indexes.numeric": {
+      "classes": {
+        "Int64Index": {
+          "properties": {
+            "names": [
+              {
+                "usage.hvplot": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "name": [
+              {
+                "usage.hvplot": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "pandas._config.config": {
+      "classes": {
+        "DictWrapper": {
+          "properties": {
+            "plotting": [
+              {
+                "usage.hvplot": 2
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "backend": [
+              {
+                "usage.hvplot": 2
+              },
+              {
+                "type": "str",
+                "options": [
+                  "hvplot",
+                  "holoviews"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "pandas.plotting._core": {
+      "classes": {
+        "PlotAccessor": {
+          "method_overloads": {
+            "pie": [
+              {
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ],
+            "line": [
+              {
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              }
+            ],
+            "hist": [
+              {
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              }
+            ],
+            "kde": [
+              {
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              }
+            ],
+            "area": [
+              {
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              }
+            ],
+            "box": [
+              {
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              }
+            ],
+            "bar": [
+              {
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              }
+            ],
+            "barh": [
+              {
+                "metadata": {
+                  "usage.hvplot": 2
+                }
+              }
+            ],
+            "scatter": [
+              {
+                "pos_or_kw_required": {
+                  "x": {
+                    "type": "str",
+                    "options": [
+                      "a"
+                    ]
+                  },
+                  "y": {
+                    "type": "str",
+                    "options": [
+                      "b"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ],
+            "hexbin": [
+              {
+                "pos_or_kw_required": {
+                  "x": {
+                    "type": "str",
+                    "options": [
+                      "a"
+                    ]
+                  },
+                  "y": {
+                    "type": "str",
+                    "options": [
+                      "b"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "usage.hvplot": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "pie": {
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            },
+            "line": {
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            },
+            "hist": {
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            },
+            "kde": {
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            },
+            "area": {
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            },
+            "box": {
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            },
+            "bar": {
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            },
+            "barh": {
+              "metadata": {
+                "usage.hvplot": 2
+              }
+            },
+            "scatter": {
+              "pos_or_kw_required": {
+                "x": {
+                  "type": "str",
+                  "options": [
+                    "a"
+                  ]
+                },
+                "y": {
+                  "type": "str",
+                  "options": [
+                    "b"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            },
+            "hexbin": {
+              "pos_or_kw_required": {
+                "x": {
+                  "type": "str",
+                  "options": [
+                    "a"
+                  ]
+                },
+                "y": {
+                  "type": "str",
+                  "options": [
+                    "b"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.hvplot": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
