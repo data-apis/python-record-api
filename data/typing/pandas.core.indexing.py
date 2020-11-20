@@ -678,6 +678,61 @@ class _LocIndexer:
         ...
 
     @overload
+    def __getitem__(
+        self, _0: Tuple[pandas.core.indexes.datetimes.DatetimeIndex, set], /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], pandas.core.indexes.base.Index], /
+    ):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["mean"]], /):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: Tuple[int, Literal["std"]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __getitem__(
+        self, _0: Tuple[slice[None, None, None], slice[None, None, None]], /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
     def __getitem__(self, _0: cftime._cftime.DatetimeNoLeap, /):
         """
         usage.xarray: 2
@@ -4723,6 +4778,7 @@ class _LocIndexer:
 
     def __getitem__(self, _0: object, /):
         """
+        usage.alphalens: 9
         usage.dask: 250
         usage.geopandas: 28
         usage.koalas: 137
@@ -4999,6 +5055,217 @@ class _LocIndexer:
     ):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["Ann. alpha"], Literal["1D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["beta"], Literal["1D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["Ann. alpha"], Literal["5D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["beta"], Literal["5D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["Ann. alpha"], Literal["10D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["beta"], Literal["10D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: str, _1: pandas.core.series.Series, /):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["Ann. alpha"], Literal["2D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["beta"], Literal["2D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["Ann. alpha"], Literal["4D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["beta"], Literal["4D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["Ann. alpha"], Literal["6D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["beta"], Literal["6D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["Ann. alpha"], Literal["8D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["beta"], Literal["8D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["Ann. alpha"], Literal["3D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["beta"], Literal["3D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["Ann. alpha"], Literal["7D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Tuple[Literal["beta"], Literal["7D"]], _1: numpy.float64, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[str, Literal["1D"]], _1: numpy.float64, /):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[str, Literal["5D"]], _1: numpy.float64, /):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[str, Literal["10D"]], _1: numpy.float64, /):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[str, Literal["2D"]], _1: numpy.float64, /):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[str, Literal["3D"]], _1: numpy.float64, /):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Tuple[str, Literal["7D"]], _1: numpy.float64, /):
+        """
+        usage.alphalens: 2
         """
         ...
 
@@ -6937,6 +7204,7 @@ class _LocIndexer:
 
     def __setitem__(self, _0: object, _1: object, /):
         """
+        usage.alphalens: 33
         usage.geopandas: 14
         usage.koalas: 33
         usage.prophet: 1
@@ -7006,6 +7274,7 @@ class _iLocIndexer:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.alphalens: 2
         usage.dask: 9
         usage.geopandas: 3
         usage.koalas: 6
@@ -7378,6 +7647,7 @@ class _iLocIndexer:
 
     def __getitem__(self, _0: object, /):
         """
+        usage.alphalens: 2
         usage.dask: 71
         usage.geopandas: 17
         usage.koalas: 98

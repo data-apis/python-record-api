@@ -870,6 +870,7 @@ i1e: numpy.ufunc
 # usage.xarray: 1
 inexact: object
 
+# usage.alphalens: 1
 # usage.dask: 6
 # usage.koalas: 8
 # usage.matplotlib: 38
@@ -950,6 +951,7 @@ inv_boxcox1p: numpy.ufunc
 # usage.sklearn: 1
 invert: numpy.ufunc
 
+# usage.alphalens: 1
 # usage.dask: 31
 # usage.koalas: 5
 # usage.matplotlib: 66
@@ -1345,6 +1347,7 @@ modstruve: numpy.ufunc
 # usage.xarray: 2
 multiply: numpy.ufunc
 
+# usage.alphalens: 4
 # usage.dask: 128
 # usage.geopandas: 40
 # usage.koalas: 193
@@ -1732,6 +1735,7 @@ spence: numpy.ufunc
 # usage.scipy: 17
 sph_harm: numpy.ufunc
 
+# usage.alphalens: 3
 # usage.dask: 68
 # usage.geopandas: 4
 # usage.hvplot: 3
@@ -9630,6 +9634,14 @@ def array(_0: List[int], _1: Type[numpy.uint8], /):
     """
     usage.scipy: 11
     usage.skimage: 1
+    """
+    ...
+
+
+@overload
+def array(_0: pandas._libs.tslibs.timestamps.Timestamp, /):
+    """
+    usage.alphalens: 2
     """
     ...
 
@@ -23286,6 +23298,7 @@ def array(
     subok: bool = ...,
 ):
     """
+    usage.alphalens: 2
     usage.dask: 529
     usage.geopandas: 158
     usage.hvplot: 1
@@ -39643,6 +39656,99 @@ def broadcast_to(
     ...
 
 
+@overload
+def busday_count(
+    _0: numpy.ndarray, _1: numpy.ndarray, _2: str, _3: Tuple[None, ...], /
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def busday_count(
+    _0: numpy.ndarray,
+    _1: numpy.ndarray,
+    _2: Literal["Mon Tue Wed Sun"],
+    _3: Tuple[None, ...],
+    /,
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def busday_count(
+    _0: numpy.ndarray,
+    _1: numpy.ndarray,
+    _2: Literal["Mon Tue Wed Thu Fri"],
+    _3: Tuple[None, ...],
+    /,
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def busday_count(
+    _0: numpy.ndarray,
+    _1: numpy.ndarray,
+    _2: Literal["Thu Fri Sat"],
+    _3: Tuple[None, ...],
+    /,
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def busday_count(
+    _0: numpy.ndarray,
+    _1: numpy.ndarray,
+    _2: Literal["Mon Tue Thu Fri"],
+    _3: Tuple[None, ...],
+    /,
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
+def busday_count(
+    _0: numpy.ndarray,
+    _1: numpy.ndarray,
+    _2: Literal["Mon Tue Wed Thu Fri"],
+    _3: Tuple[numpy.datetime64, numpy.datetime64, numpy.datetime64, numpy.datetime64],
+    /,
+):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+def busday_count(
+    _0: numpy.ndarray,
+    _1: numpy.ndarray,
+    _2: str,
+    _3: Tuple[Union[None, numpy.datetime64], ...],
+    /,
+):
+    """
+    usage.alphalens: 6
+    """
+    ...
+
+
 def busday_offset(
     _0: numpy.datetime64,
     _1: int,
@@ -41097,6 +41203,14 @@ def concatenate(_0: Tuple[numpy.ndarray, List[List[int]]], /, *, axis: int):
 
 
 @overload
+def concatenate(_0: numpy.ndarray, /):
+    """
+    usage.alphalens: 1
+    """
+    ...
+
+
+@overload
 def concatenate(_0: List[List[int]], /):
     """
     usage.matplotlib: 4
@@ -41953,6 +42067,7 @@ def concatenate(
     axis: Union[int, None] = ...,
 ):
     """
+    usage.alphalens: 1
     usage.dask: 117
     usage.geopandas: 2
     usage.matplotlib: 134
@@ -58780,6 +58895,7 @@ def linspace(start: int, stop: int):
 @overload
 def linspace(start: int, stop: int, num: int):
     """
+    usage.alphalens: 1
     usage.dask: 15
     usage.koalas: 2
     usage.matplotlib: 88
@@ -58882,6 +58998,7 @@ def linspace(start: int, stop: int, num: int, dtype: Type[numpy.int8]):
 @overload
 def linspace(start: numpy.float64, stop: numpy.float64, num: int):
     """
+    usage.alphalens: 1
     usage.matplotlib: 8
     usage.scipy: 21
     usage.seaborn: 5
@@ -59281,6 +59398,7 @@ def linspace(
     retstep: bool = ...,
 ):
     """
+    usage.alphalens: 2
     usage.dask: 26
     usage.hvplot: 1
     usage.koalas: 10
@@ -62549,6 +62667,14 @@ def nanmin(
 
 
 @overload
+def nanpercentile(a: numpy.ndarray, q: int):
+    """
+    usage.alphalens: 3
+    """
+    ...
+
+
+@overload
 def nanpercentile(a: numpy.ndarray, q: numpy.float64, axis: None):
     """
     usage.xarray: 2
@@ -62653,13 +62779,16 @@ def nanpercentile(
     q: Union[
         numpy.ndarray,
         numpy.float64,
+        int,
         Tuple[Union[int, float], Union[int, float]],
         List[int],
     ],
+    axis: Union[None, int, List[int]] = ...,
     interpolation: Literal["linear"] = ...,
     keepdims: bool = ...,
 ):
     """
+    usage.alphalens: 3
     usage.scipy: 2
     usage.sklearn: 6
     usage.xarray: 20
@@ -93463,6 +93592,7 @@ class float64:
     @overload
     def __mul__(self, _0: int, /):
         """
+        usage.alphalens: 2
         usage.dask: 5
         usage.matplotlib: 35
         usage.scipy: 109
@@ -93589,6 +93719,7 @@ class float64:
 
     def __mul__(self, _0: object, /):
         """
+        usage.alphalens: 2
         usage.dask: 8
         usage.geopandas: 2
         usage.matplotlib: 214
@@ -93606,6 +93737,7 @@ class float64:
 
     def __neg__(self, /):
         """
+        usage.alphalens: 1
         usage.matplotlib: 81
         usage.networkx: 1
         usage.pandas: 2
@@ -93641,6 +93773,7 @@ class float64:
     @overload
     def __pow__(self, _0: float, /):
         """
+        usage.alphalens: 1
         usage.dask: 2
         usage.matplotlib: 4
         usage.networkx: 1
@@ -93677,6 +93810,7 @@ class float64:
 
     def __pow__(self, _0: object, /):
         """
+        usage.alphalens: 1
         usage.dask: 3
         usage.matplotlib: 13
         usage.networkx: 4
@@ -93739,6 +93873,7 @@ class float64:
     @overload
     def __radd__(self, _0: int, /):
         """
+        usage.alphalens: 1
         usage.dask: 2
         usage.geopandas: 2
         usage.matplotlib: 29
@@ -93915,6 +94050,7 @@ class float64:
 
     def __radd__(self, _0: object, /):
         """
+        usage.alphalens: 1
         usage.dask: 26
         usage.geopandas: 2
         usage.koalas: 1
@@ -93976,6 +94112,13 @@ class float64:
         usage.pandas: 6
         usage.scipy: 1
         usage.skimage: 1
+        """
+        ...
+
+    @overload
+    def __rmod__(self, _0: Literal["Mean %.3f"], /):
+        """
+        usage.alphalens: 1
         """
         ...
 
@@ -94457,6 +94600,7 @@ class float64:
 
     def __rmod__(self, _0: object, /):
         """
+        usage.alphalens: 1
         usage.dask: 5
         usage.matplotlib: 27
         usage.networkx: 2
@@ -94799,6 +94943,16 @@ class float64:
         ...
 
     @overload
+    def __rsub__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.alphalens: 3
+        usage.dask: 9
+        usage.prophet: 1
+        usage.statsmodels: 10
+        """
+        ...
+
+    @overload
     def __rsub__(self, _0: numpy.int64, /):
         """
         usage.matplotlib: 5
@@ -94815,15 +94969,6 @@ class float64:
     def __rsub__(self, _0: xarray.core.dataarray.DataArray, /):
         """
         usage.xarray: 1
-        """
-        ...
-
-    @overload
-    def __rsub__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 9
-        usage.prophet: 1
-        usage.statsmodels: 10
         """
         ...
 
@@ -95029,6 +95174,7 @@ class float64:
 
     def __rsub__(self, _0: object, /):
         """
+        usage.alphalens: 3
         usage.dask: 13
         usage.koalas: 2
         usage.matplotlib: 314
@@ -95131,17 +95277,18 @@ class float64:
         ...
 
     @overload
-    def __rtruediv__(self, _0: xarray.core.dataarray.DataArray, /):
+    def __rtruediv__(self, _0: pandas.core.series.Series, /):
         """
-        usage.xarray: 1
+        usage.alphalens: 2
+        usage.prophet: 3
+        usage.statsmodels: 10
         """
         ...
 
     @overload
-    def __rtruediv__(self, _0: pandas.core.series.Series, /):
+    def __rtruediv__(self, _0: xarray.core.dataarray.DataArray, /):
         """
-        usage.prophet: 3
-        usage.statsmodels: 10
+        usage.xarray: 1
         """
         ...
 
@@ -95225,6 +95372,7 @@ class float64:
 
     def __rtruediv__(self, _0: object, /):
         """
+        usage.alphalens: 2
         usage.dask: 18
         usage.geopandas: 2
         usage.matplotlib: 175
@@ -95282,6 +95430,7 @@ class float64:
     @overload
     def __sub__(self, _0: int, /):
         """
+        usage.alphalens: 1
         usage.dask: 5
         usage.matplotlib: 29
         usage.networkx: 4
@@ -95384,6 +95533,7 @@ class float64:
 
     def __sub__(self, _0: object, /):
         """
+        usage.alphalens: 1
         usage.dask: 9
         usage.koalas: 3
         usage.matplotlib: 357
@@ -100063,6 +100213,7 @@ class int64:
     @overload
     def __rsub__(self, _0: int, /):
         """
+        usage.alphalens: 2
         usage.dask: 2
         usage.matplotlib: 2
         usage.prophet: 1
@@ -100202,6 +100353,7 @@ class int64:
 
     def __rsub__(self, _0: object, /):
         """
+        usage.alphalens: 2
         usage.dask: 4
         usage.matplotlib: 15
         usage.pandas: 32
@@ -100266,6 +100418,14 @@ class int64:
         ...
 
     @overload
+    def __rtruediv__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.alphalens: 1
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
     def __rtruediv__(self, _0: float, /):
         """
         usage.dask: 2
@@ -100322,13 +100482,6 @@ class int64:
         ...
 
     @overload
-    def __rtruediv__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.pyjanitor: 1
-        """
-        ...
-
-    @overload
     def __rtruediv__(self, _0: decimal.Decimal, /):
         """
         usage.dask: 1
@@ -100344,6 +100497,7 @@ class int64:
 
     def __rtruediv__(self, _0: object, /):
         """
+        usage.alphalens: 1
         usage.dask: 10
         usage.matplotlib: 7
         usage.networkx: 2
@@ -106598,6 +106752,16 @@ class ndarray:
         ...
 
     @overload
+    def __add__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.alphalens: 1
+        usage.dask: 2
+        usage.prophet: 2
+        usage.statsmodels: 2
+        """
+        ...
+
+    @overload
     def __add__(self, _0: datetime.timedelta, /):
         """
         usage.xarray: 1
@@ -106629,15 +106793,6 @@ class ndarray:
     def __add__(self, _0: xarray.core.dataset.Dataset, /):
         """
         usage.xarray: 2
-        """
-        ...
-
-    @overload
-    def __add__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 2
-        usage.prophet: 2
-        usage.statsmodels: 2
         """
         ...
 
@@ -106838,6 +106993,7 @@ class ndarray:
 
     def __add__(self, _0: object, /):
         """
+        usage.alphalens: 1
         usage.dask: 201
         usage.geopandas: 1
         usage.matplotlib: 404
@@ -108402,6 +108558,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.alphalens: 1
         usage.dask: 46
         usage.geopandas: 30
         usage.koalas: 20
@@ -116203,6 +116360,7 @@ class ndarray:
 
     def __getitem__(self, _0: object, /):
         """
+        usage.alphalens: 1
         usage.dask: 679
         usage.geopandas: 60
         usage.hvplot: 2
@@ -117218,6 +117376,7 @@ class ndarray:
 
     def __iter__(self, /):
         """
+        usage.alphalens: 3
         usage.dask: 6
         usage.geopandas: 27
         usage.hvplot: 1
@@ -130509,6 +130668,14 @@ class ndarray:
         ...
 
     @overload
+    def __sub__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.alphalens: 1
+        usage.statsmodels: 7
+        """
+        ...
+
+    @overload
     def __sub__(self, _0: List[cftime._cftime.DatetimeNoLeap], /):
         """
         usage.xarray: 1
@@ -130622,13 +130789,6 @@ class ndarray:
         ...
 
     @overload
-    def __sub__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.statsmodels: 7
-        """
-        ...
-
-    @overload
     def __sub__(self, _0: List[numpy.float64], /):
         """
         usage.matplotlib: 1
@@ -130728,6 +130888,7 @@ class ndarray:
 
     def __sub__(self, _0: object, /):
         """
+        usage.alphalens: 1
         usage.dask: 48
         usage.matplotlib: 216
         usage.networkx: 30
@@ -131048,6 +131209,7 @@ class ndarray:
     @overload
     def any(self, /):
         """
+        usage.alphalens: 1
         usage.dask: 14
         usage.geopandas: 2
         usage.matplotlib: 21
@@ -131081,6 +131243,7 @@ class ndarray:
 
     def any(self, _0: Union[None, int] = ..., /, *, axis: int = ...):
         """
+        usage.alphalens: 1
         usage.dask: 14
         usage.geopandas: 2
         usage.matplotlib: 22
@@ -131559,6 +131722,13 @@ class ndarray:
         """
         usage.scipy: 32
         usage.skimage: 5
+        """
+        ...
+
+    @overload
+    def astype(self, _0: Literal["datetime64[D]"], /):
+        """
+        usage.alphalens: 2
         """
         ...
 
@@ -132500,6 +132670,7 @@ class ndarray:
         order: Literal["C"] = ...,
     ):
         """
+        usage.alphalens: 2
         usage.dask: 185
         usage.geopandas: 5
         usage.koalas: 10
@@ -134978,6 +135149,7 @@ class ndarray:
 
     def tolist(self, /):
         """
+        usage.alphalens: 1
         usage.dask: 39
         usage.geopandas: 7
         usage.matplotlib: 21
@@ -137456,6 +137628,7 @@ class ufunc:
     @overload
     def __call__(self, _0: pandas.core.series.Series, /):
         """
+        usage.alphalens: 1
         usage.dask: 295
         usage.geopandas: 2
         usage.hvplot: 1
@@ -137503,6 +137676,7 @@ class ufunc:
     @overload
     def __call__(self, _0: pandas.core.frame.DataFrame, /):
         """
+        usage.alphalens: 2
         usage.dask: 290
         usage.koalas: 38
         usage.statsmodels: 19
@@ -137805,6 +137979,7 @@ class ufunc:
     @overload
     def __call__(self, _0: float, /):
         """
+        usage.alphalens: 1
         usage.dask: 35
         usage.geopandas: 6
         usage.matplotlib: 102
@@ -141098,6 +141273,7 @@ class ufunc:
         output_dtypes: Union[Tuple[Type[float], Type[float]], Type[float]] = ...,
     ):
         """
+        usage.alphalens: 4
         usage.dask: 4506
         usage.geopandas: 23
         usage.hvplot: 4

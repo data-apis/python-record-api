@@ -1960,6 +1960,7 @@ class DataFrame:
     @classmethod
     def __getitem__(cls, _0: int, /):
         """
+        usage.alphalens: 2
         usage.dask: 11
         usage.koalas: 2
         usage.modin: 2
@@ -2161,6 +2162,7 @@ class DataFrame:
     @classmethod
     def __getitem__(cls, _0: pandas.core.indexes.base.Index, /):
         """
+        usage.alphalens: 2
         usage.dask: 10
         usage.koalas: 1
         usage.networkx: 1
@@ -5632,6 +5634,233 @@ class DataFrame:
 
     @overload
     @classmethod
+    def __getitem__(cls, _0: List[Literal["2D", "1D", ""]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["factor_quantile"], /):
+        """
+        usage.alphalens: 12
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["3D", "2D", "1D", ""]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["1D"], /):
+        """
+        usage.alphalens: 5
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["factor"], /):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["1D"]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["10D", "5D", "1D"]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["group"], /):
+        """
+        usage.alphalens: 7
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["6D", "4D", "2D"]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["4D", "3D"]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["9D", "6D", "3D", "2D"]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["9D23h", "6D", "3D", "2D"]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["2D", "1D"]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["count"], /):
+        """
+        usage.alphalens: 2
+        usage.prophet: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["5D"], /):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["10D"], /):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["2D"], /):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["4D"], /):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["6D"], /):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["8D", "1D"]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["8D"], /):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["7D", "3D", "2D", "1D"]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["3D"], /):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["7D"], /):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["6D", "3D", "2D"]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: numpy.int64, /):
+        """
+        usage.alphalens: 2
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["3D", "2D", "1D"]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: List[Literal["1D", "3h", "1h"]], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
     def __getitem__(cls, _0: List[Literal["foo", "C"]], /):
         """
         usage.xarray: 1
@@ -7255,15 +7484,6 @@ class DataFrame:
     def __getitem__(cls, _0: List[Literal["realint", "infl"]], /):
         """
         usage.statsmodels: 2
-        """
-        ...
-
-    @overload
-    @classmethod
-    def __getitem__(cls, _0: Literal["count"], /):
-        """
-        usage.prophet: 1
-        usage.statsmodels: 1
         """
         ...
 
@@ -10010,14 +10230,6 @@ class DataFrame:
 
     @overload
     @classmethod
-    def __getitem__(cls, _0: numpy.int64, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
-    @classmethod
     def __getitem__(cls, _0: List[Literal["cint"]], /):
         """
         usage.dask: 1
@@ -12017,6 +12229,7 @@ class DataFrame:
     @classmethod
     def __getitem__(cls, _0: object, /):
         """
+        usage.alphalens: 73
         usage.dask: 471
         usage.geopandas: 21
         usage.hvplot: 32
@@ -12115,6 +12328,120 @@ class DataFrame:
 
     @overload
     @classmethod
+    def from_dict(cls, /, data: Dict[Literal["2D", "1D", ""], numpy.ndarray]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_dict(cls, /, data: Dict[Literal["3D", "2D", "1D", ""], numpy.ndarray]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_dict(cls, /, data: Dict[Literal["1D"], numpy.ndarray]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_dict(cls, /, data: Dict[Literal["10D", "5D", "1D"], numpy.ndarray]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_dict(cls, /, data: Dict[Literal["6D", "4D", "2D"], numpy.ndarray]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_dict(cls, /, data: Dict[Literal["4D", "3D"], numpy.ndarray]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_dict(cls, /, data: Dict[Literal["9D", "6D", "3D", "2D"], numpy.ndarray]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_dict(
+        cls, /, data: Dict[Literal["9D23h", "6D", "3D", "2D"], numpy.ndarray]
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_dict(cls, /, data: Dict[Literal["2D", "1D"], numpy.ndarray]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_dict(cls, /, data: Dict[Literal["8D", "1D"], numpy.ndarray]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_dict(cls, /, data: Dict[Literal["7D", "3D", "2D", "1D"], numpy.ndarray]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_dict(cls, /, data: Dict[Literal["6D", "3D", "2D"], numpy.ndarray]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_dict(cls, /, data: Dict[Literal["3D", "2D", "1D"], numpy.ndarray]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def from_dict(cls, /, data: Dict[Literal["1D", "3h", "1h"], numpy.ndarray]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    @classmethod
     def from_dict(cls, /, data: Dict[str, numpy.ndarray]):
         """
         usage.statsmodels: 1
@@ -12184,6 +12511,7 @@ class DataFrame:
         columns: None = ...,
     ):
         """
+        usage.alphalens: 14
         usage.dask: 1
         usage.geopandas: 1
         usage.modin: 1
@@ -12447,6 +12775,7 @@ class DataFrame:
     # usage.statsmodels: 14
     Status: object
 
+    # usage.alphalens: 6
     # usage.dask: 5
     # usage.koalas: 1
     # usage.seaborn: 4
@@ -12544,6 +12873,7 @@ class DataFrame:
     # usage.dask: 1
     col2: object
 
+    # usage.alphalens: 31
     # usage.dask: 142
     # usage.geopandas: 3
     # usage.hvplot: 17
@@ -12657,6 +12987,7 @@ class DataFrame:
     # usage.koalas: 1
     id: object
 
+    # usage.alphalens: 2
     # usage.dask: 46
     # usage.koalas: 23
     # usage.modin: 3
@@ -12668,6 +12999,7 @@ class DataFrame:
     # usage.xarray: 2
     iloc: object
 
+    # usage.alphalens: 44
     # usage.dask: 197
     # usage.hvplot: 8
     # usage.koalas: 57
@@ -12690,6 +13022,7 @@ class DataFrame:
     # usage.koalas: 2
     kurtosis: object
 
+    # usage.alphalens: 15
     # usage.dask: 71
     # usage.geopandas: 1
     # usage.koalas: 103
@@ -12713,6 +13046,7 @@ class DataFrame:
     # usage.statsmodels: 1
     mean_se: object
 
+    # usage.alphalens: 1
     # usage.statsmodels: 4
     multiply: object
 
@@ -12730,6 +13064,7 @@ class DataFrame:
     # usage.dask: 2
     path: object
 
+    # usage.alphalens: 3
     # usage.hvplot: 3
     # usage.koalas: 12
     plot: object
@@ -12806,6 +13141,7 @@ class DataFrame:
     # usage.dask: 2
     value: object
 
+    # usage.alphalens: 3
     # usage.dask: 33
     # usage.geopandas: 2
     # usage.hvplot: 2
@@ -12902,6 +13238,7 @@ class DataFrame:
     @overload
     def __add__(self, _0: pandas.core.frame.DataFrame, /):
         """
+        usage.alphalens: 1
         usage.dask: 1
         usage.koalas: 8
         usage.statsmodels: 4
@@ -12938,6 +13275,7 @@ class DataFrame:
 
     def __add__(self, _0: object, /):
         """
+        usage.alphalens: 1
         usage.dask: 24
         usage.koalas: 78
         usage.pandas: 37
@@ -12948,6 +13286,13 @@ class DataFrame:
     def __array_wrap__(self, /, result: numpy.ndarray):
         """
         usage.dask: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["1D"], /):
+        """
+        usage.alphalens: 1
         """
         ...
 
@@ -13270,6 +13615,7 @@ class DataFrame:
 
     def __contains__(self, _0: str, /):
         """
+        usage.alphalens: 1
         usage.geopandas: 1
         usage.prophet: 26
         usage.seaborn: 18
@@ -13371,6 +13717,14 @@ class DataFrame:
         ...
 
     @overload
+    def __gt__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.alphalens: 1
+        usage.dask: 1
+        """
+        ...
+
+    @overload
     def __gt__(self, _0: float, /):
         """
         usage.statsmodels: 1
@@ -13384,13 +13738,6 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def __gt__(self, _0: pandas.core.series.Series, /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __gt__(
         self,
         _0: Union[
@@ -13399,6 +13746,7 @@ class DataFrame:
         /,
     ):
         """
+        usage.alphalens: 1
         usage.dask: 1
         usage.koalas: 5
         usage.pandas: 4
@@ -13406,20 +13754,59 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def __iadd__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
     def __iadd__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
         """
         usage.pandas: 2
         """
         ...
 
+    def __iadd__(
+        self,
+        _0: Union[numpy.timedelta64, numpy.ndarray, pandas.core.frame.DataFrame],
+        /,
+    ):
+        """
+        usage.alphalens: 2
+        usage.pandas: 2
+        """
+        ...
+
+    @overload
+    def __isub__(self, _0: pandas.core.frame.DataFrame, /):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
     def __isub__(self, _0: Union[numpy.ndarray, numpy.timedelta64], /):
         """
         usage.pandas: 2
         """
         ...
 
+    def __isub__(
+        self,
+        _0: Union[numpy.timedelta64, numpy.ndarray, pandas.core.frame.DataFrame],
+        /,
+    ):
+        """
+        usage.alphalens: 2
+        usage.pandas: 2
+        """
+        ...
+
     def __iter__(self, /):
         """
+        usage.alphalens: 1
         usage.dask: 1
         usage.modin: 1
         usage.pyjanitor: 1
@@ -13511,6 +13898,14 @@ class DataFrame:
         ...
 
     @overload
+    def __mul__(self, _0: float, /):
+        """
+        usage.alphalens: 4
+        usage.sklearn: 2
+        """
+        ...
+
+    @overload
     def __mul__(self, _0: pandas.core.series.Series, /):
         """
         usage.statsmodels: 4
@@ -13539,15 +13934,9 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def __mul__(self, _0: float, /):
-        """
-        usage.sklearn: 2
-        """
-        ...
-
     def __mul__(self, _0: object, /):
         """
+        usage.alphalens: 4
         usage.pandas: 20
         usage.sklearn: 4
         usage.statsmodels: 9
@@ -13570,6 +13959,7 @@ class DataFrame:
     @overload
     def __pow__(self, _0: int, /):
         """
+        usage.alphalens: 1
         usage.dask: 2
         usage.statsmodels: 1
         """
@@ -13584,6 +13974,7 @@ class DataFrame:
 
     def __pow__(self, _0: Union[int, numpy.timedelta64], /):
         """
+        usage.alphalens: 1
         usage.dask: 2
         usage.pandas: 1
         usage.statsmodels: 1
@@ -13593,6 +13984,7 @@ class DataFrame:
     @overload
     def __radd__(self, _0: pandas.core.frame.DataFrame, /):
         """
+        usage.alphalens: 1
         usage.dask: 1
         usage.koalas: 8
         usage.statsmodels: 4
@@ -13624,6 +14016,7 @@ class DataFrame:
 
     def __radd__(self, _0: object, /):
         """
+        usage.alphalens: 1
         usage.dask: 2
         usage.koalas: 8
         usage.pandas: 30
@@ -13682,6 +14075,7 @@ class DataFrame:
     @overload
     def __rsub__(self, _0: pandas.core.frame.DataFrame, /):
         """
+        usage.alphalens: 1
         usage.dask: 1
         usage.koalas: 2
         usage.statsmodels: 6
@@ -13708,6 +14102,7 @@ class DataFrame:
         /,
     ):
         """
+        usage.alphalens: 1
         usage.dask: 1
         usage.koalas: 2
         usage.pandas: 26
@@ -13718,6 +14113,7 @@ class DataFrame:
     @overload
     def __rtruediv__(self, _0: pandas.core.frame.DataFrame, /):
         """
+        usage.alphalens: 1
         usage.dask: 1
         usage.statsmodels: 1
         """
@@ -13736,6 +14132,7 @@ class DataFrame:
         /,
     ):
         """
+        usage.alphalens: 1
         usage.dask: 1
         usage.pandas: 20
         usage.statsmodels: 1
@@ -15248,6 +15645,7 @@ class DataFrame:
     @overload
     def __setitem__(self, _0: Literal["group"], _1: pandas.core.series.Series, /):
         """
+        usage.alphalens: 8
         usage.koalas: 1
         """
         ...
@@ -15588,6 +15986,148 @@ class DataFrame:
         """
         usage.koalas: 1
         usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: pandas.core.frame.DataFrame, _1: float, /):
+        """
+        usage.alphalens: 1
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["factor"], _1: pandas.core.series.Series, /):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["factor_quantile"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["1D"], _1: List[int], /):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["factor"], _1: List[int], /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["1D"], _1: pandas.core.series.Series, /):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: pandas.core.indexes.base.Index, _1: pandas.core.frame.DataFrame, /
+    ):
+        """
+        usage.alphalens: 1
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["group"], _1: int, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["count %"], _1: pandas.core.series.Series, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["IC Mean"], _1: pandas.core.series.Series, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["IC Std."], _1: pandas.core.series.Series, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: Literal["Risk-Adjusted IC"], _1: pandas.core.series.Series, /
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["t-stat(IC)"], _1: numpy.ndarray, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["p-value(IC)"], _1: numpy.ndarray, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["IC Skew"], _1: numpy.ndarray, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["IC Kurtosis"], _1: numpy.ndarray, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: str, _1: pandas.core.series.Series, /):
+        """
+        usage.alphalens: 2
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["1D"], _1: List[float], /):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: Literal["2D"], _1: List[float], /):
+        """
+        usage.alphalens: 3
         """
         ...
 
@@ -18492,25 +19032,9 @@ class DataFrame:
         ...
 
     @overload
-    def __setitem__(
-        self, _0: pandas.core.indexes.base.Index, _1: pandas.core.frame.DataFrame, /
-    ):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def __setitem__(self, _0: pandas.core.frame.DataFrame, _1: int, /):
         """
         usage.dask: 2
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: pandas.core.frame.DataFrame, _1: float, /):
-        """
-        usage.dask: 1
         """
         ...
 
@@ -18862,13 +19386,6 @@ class DataFrame:
 
     @overload
     def __setitem__(self, _0: Literal["corr"], _1: pandas.core.series.Series, /):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
-    def __setitem__(self, _0: str, _1: pandas.core.series.Series, /):
         """
         usage.sklearn: 1
         """
@@ -19879,6 +20396,7 @@ class DataFrame:
 
     def __setitem__(self, _0: object, _1: object, /):
         """
+        usage.alphalens: 36
         usage.dask: 129
         usage.geopandas: 8
         usage.koalas: 266
@@ -19895,6 +20413,7 @@ class DataFrame:
     @overload
     def __sub__(self, _0: pandas.core.frame.DataFrame, /):
         """
+        usage.alphalens: 1
         usage.dask: 1
         usage.koalas: 2
         usage.statsmodels: 6
@@ -19904,6 +20423,7 @@ class DataFrame:
     @overload
     def __sub__(self, _0: pandas.core.series.Series, /):
         """
+        usage.alphalens: 2
         usage.dask: 5
         usage.seaborn: 2
         usage.statsmodels: 8
@@ -19933,6 +20453,7 @@ class DataFrame:
 
     def __sub__(self, _0: object, /):
         """
+        usage.alphalens: 3
         usage.dask: 8
         usage.koalas: 2
         usage.pandas: 30
@@ -19942,18 +20463,19 @@ class DataFrame:
         ...
 
     @overload
-    def __truediv__(self, _0: pandas.core.series.Series, /):
+    def __truediv__(self, _0: pandas.core.frame.DataFrame, /):
         """
-        usage.seaborn: 2
-        usage.statsmodels: 5
+        usage.alphalens: 1
+        usage.dask: 1
+        usage.statsmodels: 1
         """
         ...
 
     @overload
-    def __truediv__(self, _0: pandas.core.frame.DataFrame, /):
+    def __truediv__(self, _0: pandas.core.series.Series, /):
         """
-        usage.dask: 1
-        usage.statsmodels: 1
+        usage.seaborn: 2
+        usage.statsmodels: 5
         """
         ...
 
@@ -19983,6 +20505,7 @@ class DataFrame:
         /,
     ):
         """
+        usage.alphalens: 1
         usage.dask: 1
         usage.pandas: 22
         usage.seaborn: 2
@@ -20700,6 +21223,7 @@ class DataFrame:
     @overload
     def all(self, /):
         """
+        usage.alphalens: 1
         usage.dask: 5
         usage.hvplot: 2
         usage.koalas: 3
@@ -20726,6 +21250,7 @@ class DataFrame:
 
     def all(self, /, axis: int = ..., skipna: bool = ...):
         """
+        usage.alphalens: 1
         usage.dask: 11
         usage.hvplot: 2
         usage.koalas: 3
@@ -20773,6 +21298,7 @@ class DataFrame:
     @overload
     def append(self, /, other: pandas.core.frame.DataFrame):
         """
+        usage.alphalens: 1
         usage.dask: 3
         usage.koalas: 5
         usage.prophet: 2
@@ -20829,6 +21355,7 @@ class DataFrame:
         verify_integrity: bool = ...,
     ):
         """
+        usage.alphalens: 1
         usage.dask: 12
         usage.koalas: 11
         usage.prophet: 2
@@ -20853,6 +21380,7 @@ class DataFrame:
     @overload
     def apply(self, /, func: Callable):
         """
+        usage.alphalens: 5
         usage.koalas: 6
         usage.statsmodels: 1
         """
@@ -20880,6 +21408,27 @@ class DataFrame:
         usage.modin: 1
         usage.pyjanitor: 1
         usage.statsmodels: 5
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, axis: int):
+        """
+        usage.alphalens: 6
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable, axis: int):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
+    def apply(self, /, func: Callable):
+        """
+        usage.alphalens: 1
         """
         ...
 
@@ -20943,6 +21492,7 @@ class DataFrame:
         args: Tuple[Union[None, int], ...] = ...,
     ):
         """
+        usage.alphalens: 14
         usage.dask: 10
         usage.koalas: 19
         usage.modin: 1
@@ -21610,6 +22160,7 @@ class DataFrame:
     @overload
     def copy(self, /):
         """
+        usage.alphalens: 13
         usage.dask: 13
         usage.koalas: 21
         usage.modin: 4
@@ -21631,6 +22182,7 @@ class DataFrame:
 
     def copy(self, /, deep: bool = ...):
         """
+        usage.alphalens: 13
         usage.dask: 16
         usage.koalas: 21
         usage.modin: 4
@@ -21661,6 +22213,12 @@ class DataFrame:
         """
         usage.dask: 4
         usage.koalas: 3
+        """
+        ...
+
+    def corrwith(self, /, other: pandas.core.frame.DataFrame, axis: int):
+        """
+        usage.alphalens: 1
         """
         ...
 
@@ -23191,6 +23749,7 @@ class DataFrame:
     @overload
     def dropna(self, /):
         """
+        usage.alphalens: 2
         usage.dask: 1
         usage.koalas: 1
         usage.seaborn: 14
@@ -23307,6 +23866,7 @@ class DataFrame:
         ] = ...,
     ):
         """
+        usage.alphalens: 2
         usage.dask: 22
         usage.koalas: 25
         usage.seaborn: 14
@@ -23942,20 +24502,33 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def filter(self, /, items: pandas.core.indexes.base.Index):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
     def filter(
         self,
         /,
-        axis: Union[int, Literal["columns", "index"]],
         like: Literal["b", "c"] = ...,
-        items: List[
-            Union[
-                Tuple[Literal["x", "z", "aa", "bd"], Union[Literal["ba", "db"], int]],
-                Literal["aa", "ab", "db", "ba"],
-            ]
+        items: Union[
+            pandas.core.indexes.base.Index,
+            List[
+                Union[
+                    Literal["aa", "ab", "db", "ba"],
+                    Tuple[
+                        Literal["x", "z", "aa", "bd"], Union[int, Literal["ba", "db"]]
+                    ],
+                ]
+            ],
         ] = ...,
         regex: Literal["b.*"] = ...,
+        axis: Union[int, Literal["columns", "index"]] = ...,
     ):
         """
+        usage.alphalens: 1
         usage.koalas: 15
         """
         ...
@@ -24493,6 +25066,7 @@ class DataFrame:
     @overload
     def groupby(self, /, by: Literal["group"]):
         """
+        usage.alphalens: 2
         usage.dask: 12
         usage.koalas: 4
         """
@@ -24683,6 +25257,138 @@ class DataFrame:
     def groupby(self, /, by: List[Union[Literal["b"], pandas.core.series.Series]]):
         """
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[pandas.core.indexes.datetimes.DatetimeIndex]):
+        """
+        usage.alphalens: 4
+        """
+        ...
+
+    @overload
+    def groupby(self, /, level: Literal["date"]):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
+    def groupby(
+        self,
+        /,
+        by: List[Union[Literal["group"], pandas.core.indexes.datetimes.DatetimeIndex]],
+    ):
+        """
+        usage.alphalens: 4
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[pandas.core.resample.TimeGrouper]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[Literal["group"]]):
+        """
+        usage.alphalens: 1
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def groupby(
+        self, /, by: List[Union[Literal["group"], pandas.core.resample.TimeGrouper]]
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def groupby(
+        self,
+        /,
+        by: List[
+            Union[
+                pandas.core.indexes.datetimes.DatetimeIndex, Literal["factor_quantile"]
+            ]
+        ],
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: List[pandas.core.indexes.numeric.Int64Index]):
+        """
+        usage.alphalens: 1
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def groupby(
+        self,
+        /,
+        by: List[
+            Union[
+                Literal["group", "factor_quantile"],
+                pandas.core.indexes.datetimes.DatetimeIndex,
+            ]
+        ],
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def groupby(
+        self,
+        /,
+        by: List[
+            Union[
+                pandas.core.indexes.category.CategoricalIndex,
+                pandas.core.indexes.numeric.Int64Index,
+            ]
+        ],
+    ):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, level: Literal["factor_quantile"]):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
+    def groupby(self, /, level: Literal["group"]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: Literal["factor_quantile"]):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def groupby(self, /, by: pandas.core.indexes.datetimes.DatetimeIndex):
+        """
+        usage.alphalens: 1
         """
         ...
 
@@ -25043,13 +25749,6 @@ class DataFrame:
         ...
 
     @overload
-    def groupby(self, /, by: List[pandas.core.indexes.numeric.Int64Index]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def groupby(self, /, by: pandas.core.indexes.numeric.Int64Index):
         """
         usage.dask: 2
@@ -25386,13 +26085,6 @@ class DataFrame:
         ...
 
     @overload
-    def groupby(self, /, by: List[Literal["group"]]):
-        """
-        usage.dask: 1
-        """
-        ...
-
-    @overload
     def groupby(self, /, by: Literal["key"]):
         """
         usage.dask: 1
@@ -25600,7 +26292,7 @@ class DataFrame:
     def groupby(
         self,
         /,
-        level: Union[int, List[int]] = ...,
+        level: Union[int, List[int], Literal["group", "factor_quantile", "date"]] = ...,
         by: object = ...,
         group_keys: bool = ...,
         dropna: bool = ...,
@@ -25608,6 +26300,7 @@ class DataFrame:
         sort: bool = ...,
     ):
         """
+        usage.alphalens: 24
         usage.dask: 450
         usage.koalas: 352
         usage.modin: 10
@@ -25912,6 +26605,7 @@ class DataFrame:
 
     def isnull(self, /):
         """
+        usage.alphalens: 1
         usage.dask: 6
         usage.koalas: 1
         usage.pyjanitor: 2
@@ -25929,6 +26623,7 @@ class DataFrame:
 
     def iteritems(self, /):
         """
+        usage.alphalens: 7
         usage.dask: 2
         usage.koalas: 3
         usage.seaborn: 2
@@ -26353,6 +27048,7 @@ class DataFrame:
     @overload
     def max(self, /):
         """
+        usage.alphalens: 1
         usage.dask: 4
         usage.koalas: 3
         usage.prophet: 1
@@ -26393,6 +27089,7 @@ class DataFrame:
         self, /, axis: Union[int, Literal["columns", "index"]] = ..., skipna: bool = ...
     ):
         """
+        usage.alphalens: 1
         usage.dask: 12
         usage.koalas: 5
         usage.prophet: 1
@@ -26404,6 +27101,7 @@ class DataFrame:
     @overload
     def mean(self, /, axis: int):
         """
+        usage.alphalens: 4
         usage.dask: 1
         usage.koalas: 5
         usage.statsmodels: 2
@@ -26420,6 +27118,7 @@ class DataFrame:
     @overload
     def mean(self, /):
         """
+        usage.alphalens: 5
         usage.dask: 7
         usage.koalas: 3
         usage.seaborn: 1
@@ -26437,6 +27136,7 @@ class DataFrame:
     @overload
     def mean(self, /, axis: int, skipna: bool):
         """
+        usage.alphalens: 1
         usage.dask: 3
         """
         ...
@@ -26466,6 +27166,7 @@ class DataFrame:
         self, /, axis: Union[int, Literal["columns", "index"]] = ..., skipna: bool = ...
     ):
         """
+        usage.alphalens: 10
         usage.dask: 15
         usage.koalas: 10
         usage.seaborn: 1
@@ -29297,6 +29998,7 @@ class DataFrame:
     @overload
     def min(self, /):
         """
+        usage.alphalens: 1
         usage.dask: 4
         usage.koalas: 51
         usage.seaborn: 2
@@ -29349,6 +30051,7 @@ class DataFrame:
         numeric_only: None = ...,
     ):
         """
+        usage.alphalens: 1
         usage.dask: 12
         usage.koalas: 53
         usage.seaborn: 2
@@ -29431,6 +30134,21 @@ class DataFrame:
         ...
 
     @overload
+    def mul(self, /, other: pandas.core.series.Series, axis: int):
+        """
+        usage.alphalens: 1
+        usage.dask: 2
+        """
+        ...
+
+    @overload
+    def mul(self, /, other: int):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
     def mul(self, /, other: pandas.core.series.Series, axis: int, level: int):
         """
         usage.statsmodels: 3
@@ -29455,13 +30173,6 @@ class DataFrame:
     def mul(self, /, other: int, fill_value: int):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def mul(self, /, other: pandas.core.series.Series, axis: int):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -29516,6 +30227,7 @@ class DataFrame:
         fill_value: int = ...,
     ):
         """
+        usage.alphalens: 4
         usage.dask: 11
         usage.statsmodels: 4
         """
@@ -29616,9 +30328,37 @@ class DataFrame:
         """
         ...
 
+    @overload
     def pct_change(self, /, periods: int):
         """
+        usage.alphalens: 1
         usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def pct_change(self, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    def pct_change(self, /, periods: int = ...):
+        """
+        usage.alphalens: 2
+        usage.koalas: 1
+        """
+        ...
+
+    def pivot(
+        self,
+        /,
+        index: Literal["date"],
+        columns: Literal["asset"],
+        values: Literal["factor"],
+    ):
+        """
+        usage.alphalens: 1
         """
         ...
 
@@ -30426,8 +31166,17 @@ class DataFrame:
         ...
 
     @overload
+    def reindex(self, /, labels: pandas.core.indexes.datetimes.DatetimeIndex):
+        """
+        usage.alphalens: 1
+        usage.statsmodels: 1
+        """
+        ...
+
+    @overload
     def reindex(self, /, labels: pandas.core.indexes.multi.MultiIndex):
         """
+        usage.alphalens: 1
         usage.statsmodels: 1
         usage.xarray: 1
         """
@@ -30479,13 +31228,6 @@ class DataFrame:
 
     @overload
     def reindex(self, /, labels: pandas.core.indexes.period.PeriodIndex):
-        """
-        usage.statsmodels: 1
-        """
-        ...
-
-    @overload
-    def reindex(self, /, labels: pandas.core.indexes.datetimes.DatetimeIndex):
         """
         usage.statsmodels: 1
         """
@@ -30596,6 +31338,7 @@ class DataFrame:
         fill_value: Union[float, int] = ...,
     ):
         """
+        usage.alphalens: 2
         usage.dask: 12
         usage.koalas: 9
         usage.modin: 2
@@ -31296,6 +32039,13 @@ class DataFrame:
         ...
 
     @overload
+    def replace(self, /, to_replace: List[float], value: float, inplace: bool):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
     def replace(self, /, to_replace: Dict[bool, Literal["", "X"]]):
         """
         usage.statsmodels: 1
@@ -31330,25 +32080,28 @@ class DataFrame:
             int,
             Dict[
                 Union[
-                    Literal["B", "A", "X"],
+                    Tuple[Literal["X"], Literal["B", "A"]],
                     bool,
                     int,
-                    Tuple[Literal["X"], Literal["B", "A"]],
+                    Literal["B", "A", "X"],
                 ],
-                Union[Literal["", "X"], int, Dict[int, int]],
+                Union[Literal["", "X"], Dict[int, int], int],
             ],
+            List[Union[int, float, Literal["Captain America", "Ironman"]]],
             Literal["Ironman"],
-            List[Union[Literal["Captain America", "Ironman"], int]],
         ],
         value: Union[
             int,
+            float,
             None,
+            List[Union[Literal["Hawkeye", "Rescue"], int]],
             Literal["Spiderman"],
-            List[Union[int, Literal["Hawkeye", "Rescue"]]],
         ] = ...,
         regex: bool = ...,
+        inplace: bool = ...,
     ):
         """
+        usage.alphalens: 1
         usage.dask: 4
         usage.koalas: 15
         usage.statsmodels: 1
@@ -31864,6 +32617,7 @@ class DataFrame:
     @overload
     def reset_index(self, /):
         """
+        usage.alphalens: 1
         usage.dask: 3
         usage.hvplot: 6
         usage.koalas: 17
@@ -32010,6 +32764,7 @@ class DataFrame:
         col_fill: Literal["genus", "species"] = ...,
     ):
         """
+        usage.alphalens: 1
         usage.dask: 29
         usage.hvplot: 6
         usage.koalas: 66
@@ -33748,6 +34503,28 @@ class DataFrame:
         ...
 
     @overload
+    def set_index(self, /, keys: pandas.core.indexes.multi.MultiIndex, inplace: bool):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["date"]):
+        """
+        usage.alphalens: 1
+        usage.dask: 1
+        """
+        ...
+
+    @overload
+    def set_index(self, /, keys: Literal["group"], append: bool, inplace: bool):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
     def set_index(self, /, keys: pandas.core.indexes.multi.MultiIndex):
         """
         usage.xarray: 1
@@ -34170,17 +34947,11 @@ class DataFrame:
         """
         ...
 
-    @overload
-    def set_index(self, /, keys: Literal["date"]):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def set_index(
         self, /, keys: object, drop: bool = ..., append: bool = ..., inplace: bool = ...
     ):
         """
+        usage.alphalens: 3
         usage.dask: 119
         usage.geopandas: 2
         usage.hvplot: 4
@@ -34196,6 +34967,7 @@ class DataFrame:
     @overload
     def shift(self, /, periods: int):
         """
+        usage.alphalens: 2
         usage.dask: 6
         usage.koalas: 2
         """
@@ -34277,6 +35049,7 @@ class DataFrame:
         axis: int = ...,
     ):
         """
+        usage.alphalens: 2
         usage.dask: 29
         usage.koalas: 2
         usage.seaborn: 1
@@ -34313,6 +35086,7 @@ class DataFrame:
     @overload
     def sort_index(self, /):
         """
+        usage.alphalens: 2
         usage.dask: 7
         usage.koalas: 356
         usage.statsmodels: 13
@@ -34373,6 +35147,7 @@ class DataFrame:
         axis: int = ...,
     ):
         """
+        usage.alphalens: 2
         usage.dask: 8
         usage.hvplot: 1
         usage.koalas: 360
@@ -35973,10 +36748,18 @@ class DataFrame:
     @overload
     def stack(self, /):
         """
+        usage.alphalens: 18
         usage.koalas: 6
         usage.seaborn: 1
         usage.statsmodels: 6
         usage.xarray: 1
+        """
+        ...
+
+    @overload
+    def stack(self, /, level: int):
+        """
+        usage.alphalens: 1
         """
         ...
 
@@ -35994,8 +36777,9 @@ class DataFrame:
         """
         ...
 
-    def stack(self, /, level: List[int] = ..., dropna: bool = ...):
+    def stack(self, /, level: Union[List[int], int] = ..., dropna: bool = ...):
         """
+        usage.alphalens: 19
         usage.dask: 1
         usage.koalas: 6
         usage.seaborn: 1
@@ -36014,6 +36798,7 @@ class DataFrame:
     @overload
     def std(self, /, axis: int):
         """
+        usage.alphalens: 2
         usage.dask: 1
         usage.koalas: 1
         usage.statsmodels: 1
@@ -36023,6 +36808,7 @@ class DataFrame:
     @overload
     def std(self, /):
         """
+        usage.alphalens: 3
         usage.dask: 5
         usage.koalas: 3
         usage.seaborn: 1
@@ -36040,6 +36826,7 @@ class DataFrame:
     @overload
     def std(self, /, axis: int, skipna: bool):
         """
+        usage.alphalens: 1
         usage.dask: 2
         """
         ...
@@ -36115,10 +36902,19 @@ class DataFrame:
         ddof: int = ...,
     ):
         """
+        usage.alphalens: 6
         usage.dask: 20
         usage.koalas: 6
         usage.seaborn: 1
         usage.statsmodels: 6
+        """
+        ...
+
+    @overload
+    def sub(self, /, other: pandas.core.series.Series, axis: int):
+        """
+        usage.alphalens: 1
+        usage.dask: 2
         """
         ...
 
@@ -36133,13 +36929,6 @@ class DataFrame:
     def sub(self, /, other: int, fill_value: int):
         """
         usage.dask: 1
-        """
-        ...
-
-    @overload
-    def sub(self, /, other: pandas.core.series.Series, axis: int):
-        """
-        usage.dask: 2
         """
         ...
 
@@ -36181,11 +36970,12 @@ class DataFrame:
     def sub(
         self,
         /,
-        other: Union[pandas.core.series.Series, pandas.core.frame.DataFrame, int],
-        axis: Union[Literal["columns", "index"], int] = ...,
+        other: Union[int, pandas.core.frame.DataFrame, pandas.core.series.Series],
+        axis: Union[int, Literal["columns", "index"]] = ...,
         fill_value: int = ...,
     ):
         """
+        usage.alphalens: 1
         usage.dask: 9
         """
         ...
@@ -37272,12 +38062,14 @@ class DataFrame:
     @overload
     def unstack(self, /, level: int):
         """
+        usage.alphalens: 1
         usage.koalas: 1
         """
         ...
 
     def unstack(self, /, level: int = ...):
         """
+        usage.alphalens: 1
         usage.koalas: 2
         usage.statsmodels: 4
         """
@@ -37488,8 +38280,53 @@ class DataFrame:
         """
         ...
 
+    @overload
     def xs(self, /, key: Tuple[Literal["mammal"], Literal["dog"], Literal["walks"]]):
         """
+        usage.koalas: 1
+        """
+        ...
+
+    @overload
+    def xs(self, /, key: Literal["mean"], level: int):
+        """
+        usage.alphalens: 2
+        """
+        ...
+
+    @overload
+    def xs(self, /, key: Literal["std"], level: int):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def xs(self, /, key: Literal["count"], level: int):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
+    def xs(self, /, key: numpy.int64, level: Literal["factor_quantile"]):
+        """
+        usage.alphalens: 4
+        """
+        ...
+
+    def xs(
+        self,
+        /,
+        key: Union[
+            Literal["count", "std", "mean"],
+            numpy.int64,
+            Tuple[Literal["mammal"], Literal["dog"], Literal["walks"]],
+        ],
+        level: Union[Literal["factor_quantile"], int] = ...,
+    ):
+        """
+        usage.alphalens: 8
         usage.koalas: 1
         """
         ...

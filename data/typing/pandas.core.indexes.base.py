@@ -118,6 +118,7 @@ class Index:
     # usage.xarray: 6
     is_unique: object
 
+    # usage.alphalens: 1
     # usage.dask: 16
     # usage.geopandas: 1
     # usage.koalas: 4
@@ -159,6 +160,7 @@ class Index:
     # usage.statsmodels: 2
     str: object
 
+    # usage.alphalens: 1
     # usage.dask: 1
     # usage.modin: 1
     # usage.pyjanitor: 1
@@ -1414,6 +1416,7 @@ class Index:
     @overload
     def __getitem__(self, _0: int, /):
         """
+        usage.alphalens: 8
         usage.dask: 17
         usage.geopandas: 2
         usage.koalas: 7
@@ -1446,6 +1449,14 @@ class Index:
         usage.prophet: 1
         usage.sklearn: 2
         usage.xarray: 2
+        """
+        ...
+
+    @overload
+    def __getitem__(self, _0: List[bool], /):
+        """
+        usage.alphalens: 5
+        usage.dask: 1
         """
         ...
 
@@ -1522,15 +1533,9 @@ class Index:
         """
         ...
 
-    @overload
-    def __getitem__(self, _0: List[bool], /):
-        """
-        usage.dask: 1
-        """
-        ...
-
     def __getitem__(self, _0: object, /):
         """
+        usage.alphalens: 13
         usage.dask: 27
         usage.geopandas: 5
         usage.hvplot: 2
@@ -1547,6 +1552,7 @@ class Index:
 
     def __iter__(self, /):
         """
+        usage.alphalens: 2
         usage.dask: 22
         usage.geopandas: 4
         usage.hvplot: 4

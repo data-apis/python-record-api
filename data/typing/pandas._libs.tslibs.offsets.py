@@ -540,6 +540,12 @@ class BusinessMonthEnd:
         ...
 
 
+class CustomBusinessDay:
+
+    # usage.alphalens: 2
+    holidays: object
+
+
 class DateOffset:
     pass
 

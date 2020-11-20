@@ -9,6 +9,12 @@ class Timedelta:
     # usage.xarray: 1
     __name__: ClassVar[object]
 
+    # usage.alphalens: 4
+    components: object
+
+    # usage.alphalens: 2
+    days: object
+
     @overload
     def __add__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
@@ -127,6 +133,12 @@ class Timedelta:
         """
         ...
 
+    def __isub__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
     def __le__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
         """
         usage.dask: 3
@@ -179,6 +191,13 @@ class Timedelta:
         ...
 
     @overload
+    def __radd__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+        """
+        usage.alphalens: 8
+        """
+        ...
+
+    @overload
     def __radd__(self, _0: pandas._libs.tslibs.timestamps.Timestamp, /):
         """
         usage.dask: 1
@@ -206,6 +225,7 @@ class Timedelta:
 
     def __radd__(self, _0: object, /):
         """
+        usage.alphalens: 8
         usage.dask: 1
         usage.pandas: 8
         usage.prophet: 4
@@ -249,6 +269,13 @@ class Timedelta:
         ...
 
     @overload
+    def __rsub__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
     def __rsub__(
         self,
         _0: Union[
@@ -275,9 +302,17 @@ class Timedelta:
 
     def __rsub__(self, _0: object, /):
         """
+        usage.alphalens: 1
         usage.dask: 3
         usage.pandas: 10
         usage.prophet: 2
+        """
+        ...
+
+    @overload
+    def __rtruediv__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.alphalens: 3
         """
         ...
 
@@ -307,17 +342,27 @@ class Timedelta:
         _0: Union[
             pandas.core.series.Series,
             pandas.core.indexes.timedeltas.TimedeltaIndex,
-            numpy.ndarray,
+            pandas._libs.tslibs.timedeltas.Timedelta,
             numpy.timedelta64,
+            numpy.ndarray,
         ],
         /,
     ):
         """
+        usage.alphalens: 3
         usage.pandas: 3
         usage.prophet: 3
         """
         ...
 
+    @overload
+    def __sub__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
     def __sub__(
         self, _0: Union[numpy.ndarray, numpy.float64, numpy.timedelta64, numpy.int64], /
     ):
@@ -326,8 +371,47 @@ class Timedelta:
         """
         ...
 
+    def __sub__(
+        self,
+        _0: Union[
+            numpy.int64,
+            numpy.timedelta64,
+            numpy.float64,
+            numpy.ndarray,
+            pandas._libs.tslibs.timedeltas.Timedelta,
+        ],
+        /,
+    ):
+        """
+        usage.alphalens: 1
+        usage.pandas: 18
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: pandas._libs.tslibs.timedeltas.Timedelta, /):
+        """
+        usage.alphalens: 3
+        """
+        ...
+
+    @overload
+    def __truediv__(self, _0: int, /):
+        """
+        usage.alphalens: 1
+        """
+        ...
+
+    @overload
     def __truediv__(self, _0: object, /):
         """
+        usage.pandas: 33
+        """
+        ...
+
+    def __truediv__(self, _0: object, /):
+        """
+        usage.alphalens: 4
         usage.pandas: 33
         """
         ...
