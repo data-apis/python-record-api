@@ -13,10 +13,12 @@ RUN git clone \
     .
 
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install -e .[test]
+    pip install -e .[all]
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install \
+    unyt \
+    hypothesis \
     pytest-cov \
     pytest-custom_exit_code
 
