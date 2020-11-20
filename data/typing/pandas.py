@@ -18,6 +18,7 @@ CategoricalIndex: object
 
 # usage.dask: 311
 # usage.geopandas: 19
+# usage.hvplot: 14
 # usage.koalas: 270
 # usage.modin: 27
 # usage.networkx: 6
@@ -75,6 +76,7 @@ Int8Dtype: object
 Interval: object
 
 # usage.dask: 19
+# usage.hvplot: 1
 # usage.koalas: 202
 # usage.modin: 3
 # usage.seaborn: 3
@@ -110,6 +112,7 @@ RangeIndex: object
 
 # usage.dask: 106
 # usage.geopandas: 26
+# usage.hvplot: 5
 # usage.koalas: 171
 # usage.modin: 16
 # usage.seaborn: 22
@@ -154,6 +157,7 @@ UInt64Index: object
 UInt8Dtype: object
 
 # usage.geopandas: 1
+# usage.hvplot: 2
 # usage.koalas: 44
 # usage.sklearn: 3
 # usage.xarray: 6
@@ -182,6 +186,7 @@ cut: object
 
 # usage.dask: 52
 # usage.geopandas: 1
+# usage.hvplot: 2
 # usage.koalas: 45
 # usage.modin: 10
 # usage.prophet: 1
@@ -223,6 +228,9 @@ np: object
 
 # usage.dask: 1
 offsets: object
+
+# usage.hvplot: 2
+options: object
 
 # usage.dask: 5
 # usage.statsmodels: 43

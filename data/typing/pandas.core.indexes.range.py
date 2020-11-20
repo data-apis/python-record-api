@@ -31,6 +31,7 @@ class RangeIndex:
 
     # usage.dask: 16
     # usage.geopandas: 7
+    # usage.hvplot: 1
     # usage.koalas: 2
     # usage.prophet: 1
     # usage.seaborn: 2
@@ -40,6 +41,7 @@ class RangeIndex:
 
     # usage.dask: 1
     # usage.geopandas: 6
+    # usage.hvplot: 1
     # usage.koalas: 3
     names: List[Literal["__index_level_0__"]]
 
@@ -335,6 +337,7 @@ class RangeIndex:
 
     def __iter__(self, /):
         """
+        usage.hvplot: 1
         usage.koalas: 1
         usage.networkx: 1
         usage.statsmodels: 3

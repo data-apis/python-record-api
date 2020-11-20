@@ -451,6 +451,39 @@ def is_categorical_dtype(arr_or_dtype: object):
 
 
 @overload
+def is_datetime64_any_dtype(arr_or_dtype: pandas.core.series.Series):
+    """
+    usage.dask: 1
+    usage.hvplot: 2
+    """
+    ...
+
+
+@overload
+def is_datetime64_any_dtype(arr_or_dtype: pandas.core.indexes.range.RangeIndex):
+    """
+    usage.hvplot: 1
+    """
+    ...
+
+
+@overload
+def is_datetime64_any_dtype(arr_or_dtype: pandas.core.indexes.datetimes.DatetimeIndex):
+    """
+    usage.hvplot: 3
+    """
+    ...
+
+
+@overload
+def is_datetime64_any_dtype(arr_or_dtype: pandas.core.indexes.numeric.Int64Index):
+    """
+    usage.hvplot: 1
+    """
+    ...
+
+
+@overload
 def is_datetime64_any_dtype(arr_or_dtype: numpy.dtype):
     """
     usage.dask: 3
@@ -458,19 +491,18 @@ def is_datetime64_any_dtype(arr_or_dtype: numpy.dtype):
     ...
 
 
-@overload
-def is_datetime64_any_dtype(arr_or_dtype: pandas.core.series.Series):
-    """
-    usage.dask: 1
-    """
-    ...
-
-
 def is_datetime64_any_dtype(
-    arr_or_dtype: Union[pandas.core.series.Series, numpy.dtype]
+    arr_or_dtype: Union[
+        numpy.dtype,
+        pandas.core.series.Series,
+        pandas.core.indexes.datetimes.DatetimeIndex,
+        pandas.core.indexes.range.RangeIndex,
+        pandas.core.indexes.numeric.Int64Index,
+    ]
 ):
     """
     usage.dask: 4
+    usage.hvplot: 7
     """
     ...
 
@@ -795,6 +827,7 @@ def is_numeric_dtype(arr_or_dtype: numpy.ndarray):
 def is_numeric_dtype(arr_or_dtype: pandas.core.series.Series):
     """
     usage.dask: 1
+    usage.hvplot: 1
     usage.seaborn: 1
     """
     ...
@@ -883,6 +916,7 @@ def is_numeric_dtype(arr_or_dtype: List[Union[Literal["d", "a", "b", "c"], float
 def is_numeric_dtype(arr_or_dtype: object):
     """
     usage.dask: 1
+    usage.hvplot: 1
     usage.koalas: 1
     usage.seaborn: 18
     usage.statsmodels: 9

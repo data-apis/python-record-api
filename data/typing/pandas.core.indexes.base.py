@@ -177,6 +177,7 @@ class Index:
     def __contains__(self, _0: Literal["a"], /):
         """
         usage.dask: 8
+        usage.hvplot: 1
         usage.koalas: 2
         usage.pyjanitor: 6
         """
@@ -620,6 +621,66 @@ class Index:
         ...
 
     @overload
+    def __contains__(self, _0: Literal["index"], /):
+        """
+        usage.dask: 1
+        usage.hvplot: 5
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["time.hour"], /):
+        """
+        usage.hvplot: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["time"], /):
+        """
+        usage.hvplot: 2
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["x"], /):
+        """
+        usage.dask: 6
+        usage.hvplot: 1
+        usage.pyjanitor: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["_size"], /):
+        """
+        usage.hvplot: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["index.day"], /):
+        """
+        usage.hvplot: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["time.day"], /):
+        """
+        usage.hvplot: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["sepal_length"], /):
+        """
+        usage.hvplot: 1
+        """
+        ...
+
+    @overload
     def __contains__(self, _0: Literal["geometry"], /):
         """
         usage.geopandas: 3
@@ -718,14 +779,6 @@ class Index:
         ...
 
     @overload
-    def __contains__(self, _0: Literal["x"], /):
-        """
-        usage.dask: 6
-        usage.pyjanitor: 1
-        """
-        ...
-
-    @overload
     def __contains__(self, _0: Literal["y"], /):
         """
         usage.dask: 8
@@ -744,14 +797,6 @@ class Index:
     def __contains__(self, _0: Literal["decorated-elephant"], /):
         """
         usage.pyjanitor: 2
-        """
-        ...
-
-    @overload
-    def __contains__(self, _0: Literal["index"], /):
-        """
-        usage.dask: 1
-        usage.pyjanitor: 1
         """
         ...
 
@@ -1237,6 +1282,7 @@ class Index:
         """
         usage.dask: 130
         usage.geopandas: 9
+        usage.hvplot: 14
         usage.koalas: 9
         usage.prophet: 1
         usage.pyjanitor: 44
@@ -1383,6 +1429,7 @@ class Index:
         """
         usage.dask: 1
         usage.geopandas: 1
+        usage.hvplot: 2
         usage.koalas: 3
         usage.seaborn: 2
         usage.sklearn: 1
@@ -1486,6 +1533,7 @@ class Index:
         """
         usage.dask: 27
         usage.geopandas: 5
+        usage.hvplot: 2
         usage.koalas: 11
         usage.modin: 3
         usage.prophet: 2
@@ -1501,6 +1549,7 @@ class Index:
         """
         usage.dask: 22
         usage.geopandas: 4
+        usage.hvplot: 4
         usage.koalas: 5
         usage.modin: 1
         usage.networkx: 1
