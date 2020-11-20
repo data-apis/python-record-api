@@ -86,6 +86,7 @@ def read_parquet(
 @overload
 def read_parquet(path: str):
     """
+    usage.geopandas: 2
     usage.modin: 1
     """
     ...
@@ -97,6 +98,7 @@ def read_parquet(
     columns: Union[List[Literal["i64", "i32", "col1"]], None] = ...,
 ):
     """
+    usage.geopandas: 2
     usage.koalas: 4
     usage.modin: 10
     """

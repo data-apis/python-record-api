@@ -46,6 +46,7 @@ True_: object
 _NoValue: object
 
 # usage.dask: 2
+# usage.geopandas: 1
 # usage.skimage: 1
 # usage.sklearn: 4
 # usage.xarray: 1
@@ -422,6 +423,7 @@ conjugate: numpy.ufunc
 copysign: numpy.ufunc
 
 # usage.dask: 43
+# usage.geopandas: 2
 # usage.koalas: 5
 # usage.matplotlib: 86
 # usage.networkx: 5
@@ -672,6 +674,7 @@ fdtridfd: numpy.ufunc
 flexible: object
 
 # usage.dask: 1
+# usage.geopandas: 3
 # usage.koalas: 8
 # usage.matplotlib: 2
 # usage.networkx: 3
@@ -884,6 +887,7 @@ inf: object
 infty: object
 
 # usage.dask: 1
+# usage.geopandas: 1
 # usage.koalas: 10
 # usage.pandas: 5
 # usage.prophet: 1
@@ -917,6 +921,7 @@ intc: object
 integer: object
 
 # usage.dask: 21
+# usage.geopandas: 1
 # usage.pandas: 210
 # usage.scipy: 49
 # usage.seaborn: 3
@@ -936,6 +941,7 @@ inv_boxcox: numpy.ufunc
 inv_boxcox1p: numpy.ufunc
 
 # usage.dask: 8
+# usage.geopandas: 7
 # usage.koalas: 5
 # usage.scipy: 1
 # usage.skimage: 11
@@ -967,6 +973,7 @@ isfinite: numpy.ufunc
 isinf: numpy.ufunc
 
 # usage.dask: 168
+# usage.geopandas: 14
 # usage.koalas: 5
 # usage.matplotlib: 25
 # usage.networkx: 1
@@ -1205,6 +1212,9 @@ logical_xor: numpy.ufunc
 # usage.sklearn: 1
 logit: numpy.ufunc
 
+# usage.geopandas: 1
+long: object
+
 # usage.scipy: 3
 longcomplex: object
 
@@ -1329,6 +1339,7 @@ modstruve: numpy.ufunc
 multiply: numpy.ufunc
 
 # usage.dask: 128
+# usage.geopandas: 40
 # usage.koalas: 193
 # usage.matplotlib: 61
 # usage.modin: 21
@@ -1431,6 +1442,7 @@ nrdtrimn: numpy.ufunc
 nrdtrisd: numpy.ufunc
 
 # usage.dask: 6
+# usage.geopandas: 1
 # usage.pandas: 21
 # usage.scipy: 3
 # usage.sklearn: 3
@@ -1494,6 +1506,7 @@ pdtri: numpy.ufunc
 # usage.scipy: 9
 pdtrik: numpy.ufunc
 
+# usage.geopandas: 2
 # usage.matplotlib: 129
 # usage.networkx: 2
 # usage.pandas: 3
@@ -1710,6 +1723,7 @@ spence: numpy.ufunc
 sph_harm: numpy.ufunc
 
 # usage.dask: 68
+# usage.geopandas: 4
 # usage.koalas: 11
 # usage.matplotlib: 40
 # usage.networkx: 19
@@ -2040,6 +2054,7 @@ def all(a: List[numpy.bool_]):
 def all(a: pandas.core.series.Series):
     """
     usage.dask: 1
+    usage.geopandas: 13
     usage.sklearn: 10
     usage.statsmodels: 20
     """
@@ -2274,6 +2289,7 @@ def all(
 ):
     """
     usage.dask: 93
+    usage.geopandas: 13
     usage.matplotlib: 28
     usage.modin: 1
     usage.networkx: 4
@@ -3288,6 +3304,7 @@ def allclose(
 def alltrue(*args: Literal["v", "t"]):
     """
     usage.dask: 1
+    usage.geopandas: 3
     usage.skimage: 3
     usage.statsmodels: 3
     """
@@ -5010,6 +5027,7 @@ def any(a: object, axis: int):
 def any(a: pandas.core.series.Series):
     """
     usage.dask: 1
+    usage.geopandas: 1
     usage.statsmodels: 9
     """
     ...
@@ -5277,6 +5295,7 @@ def any(
 ):
     """
     usage.dask: 81
+    usage.geopandas: 1
     usage.matplotlib: 16
     usage.pandas: 46
     usage.scipy: 206
@@ -5767,6 +5786,7 @@ def arange(_0: float, _1: float, /, *, dtype: Literal["float64"]):
 def arange(_0: int, /):
     """
     usage.dask: 251
+    usage.geopandas: 18
     usage.koalas: 5
     usage.matplotlib: 188
     usage.modin: 11
@@ -5787,6 +5807,7 @@ def arange(_0: int, /):
 def arange(_0: int, /, *, dtype: Type[numpy.int32]):
     """
     usage.dask: 3
+    usage.geopandas: 1
     usage.koalas: 1
     usage.matplotlib: 15
     usage.scipy: 14
@@ -5802,6 +5823,7 @@ def arange(_0: int, /, *, dtype: Type[numpy.int32]):
 def arange(_0: int, /, *, dtype: Type[numpy.int64]):
     """
     usage.dask: 4
+    usage.geopandas: 1
     usage.koalas: 1
     usage.scipy: 9
     usage.skimage: 1
@@ -5827,6 +5849,7 @@ def arange(_0: int, /, *, dtype: Type[numpy.float64]):
 @overload
 def arange(_0: int, /, *, dtype: Type[numpy.uint8]):
     """
+    usage.geopandas: 1
     usage.scipy: 4
     usage.skimage: 3
     """
@@ -6018,6 +6041,7 @@ def arange(_0: float, _1: float, _2: float, /):
 @overload
 def arange(_0: int, /, *, dtype: Type[int]):
     """
+    usage.geopandas: 1
     usage.scipy: 7
     usage.skimage: 1
     usage.sklearn: 3
@@ -6100,6 +6124,7 @@ def arange(_0: int, _1: int, /, *, dtype: Type[float]):
 def arange(_0: float, /):
     """
     usage.dask: 4
+    usage.geopandas: 11
     usage.matplotlib: 1
     usage.prophet: 2
     usage.scipy: 66
@@ -6439,6 +6464,7 @@ def arange(_0: float, /, *, dtype: Type[numpy.complex128]):
 @overload
 def arange(_0: int, /, *, dtype: Type[numpy.int8]):
     """
+    usage.geopandas: 1
     usage.scipy: 3
     """
     ...
@@ -6447,6 +6473,7 @@ def arange(_0: int, /, *, dtype: Type[numpy.int8]):
 @overload
 def arange(_0: int, /, *, dtype: Type[numpy.int16]):
     """
+    usage.geopandas: 1
     usage.scipy: 3
     """
     ...
@@ -6455,6 +6482,7 @@ def arange(_0: int, /, *, dtype: Type[numpy.int16]):
 @overload
 def arange(_0: int, /, *, dtype: Type[numpy.uint16]):
     """
+    usage.geopandas: 1
     usage.scipy: 2
     """
     ...
@@ -6463,6 +6491,7 @@ def arange(_0: int, /, *, dtype: Type[numpy.uint16]):
 @overload
 def arange(_0: int, /, *, dtype: Type[numpy.uint32]):
     """
+    usage.geopandas: 1
     usage.scipy: 2
     usage.sklearn: 7
     """
@@ -6472,6 +6501,7 @@ def arange(_0: int, /, *, dtype: Type[numpy.uint32]):
 @overload
 def arange(_0: int, /, *, dtype: Type[numpy.uint64]):
     """
+    usage.geopandas: 1
     usage.scipy: 2
     """
     ...
@@ -7056,6 +7086,7 @@ def arange(
 ):
     """
     usage.dask: 357
+    usage.geopandas: 38
     usage.koalas: 26
     usage.matplotlib: 359
     usage.modin: 15
@@ -7814,6 +7845,7 @@ def array(_0: List[Literal["two", "one"]], /):
 def array(_0: List[int], /):
     """
     usage.dask: 142
+    usage.geopandas: 9
     usage.koalas: 6
     usage.matplotlib: 41
     usage.modin: 1
@@ -7895,6 +7927,7 @@ def array(_0: List[float], /, *, dtype: Literal["f4"]):
 def array(_0: List[float], /):
     """
     usage.dask: 18
+    usage.geopandas: 7
     usage.koalas: 1
     usage.matplotlib: 79
     usage.networkx: 6
@@ -7913,6 +7946,7 @@ def array(_0: List[float], /):
 def array(_0: List[bool], /):
     """
     usage.dask: 10
+    usage.geopandas: 6
     usage.koalas: 1
     usage.matplotlib: 2
     usage.scipy: 13
@@ -7947,6 +7981,7 @@ def array(_0: List[float], /, *, dtype: Literal["float32"]):
 @overload
 def array(_0: List[float], /, *, dtype: numpy.dtype):
     """
+    usage.geopandas: 2
     usage.scipy: 2
     usage.skimage: 5
     """
@@ -7957,6 +7992,7 @@ def array(_0: List[float], /, *, dtype: numpy.dtype):
 def array(_0: numpy.ndarray, /):
     """
     usage.dask: 8
+    usage.geopandas: 1
     usage.matplotlib: 23
     usage.networkx: 1
     usage.prophet: 1
@@ -8170,6 +8206,7 @@ def array(_0: List[Tuple[float, float, float]], /):
 @overload
 def array(_0: List[List[float]], /):
     """
+    usage.geopandas: 1
     usage.matplotlib: 33
     usage.networkx: 12
     usage.scipy: 324
@@ -8202,6 +8239,7 @@ def array(_0: List[List[int]], /):
 def array(_0: List[numpy.float64], /):
     """
     usage.dask: 4
+    usage.geopandas: 1
     usage.matplotlib: 32
     usage.networkx: 2
     usage.prophet: 1
@@ -9631,6 +9669,7 @@ def array(_0: List[float], /, *, dtype: Type[object]):
 @overload
 def array(_0: List[bytes], /, *, dtype: Type[object]):
     """
+    usage.geopandas: 7
     usage.matplotlib: 2
     usage.scipy: 5
     usage.xarray: 2
@@ -9879,6 +9918,7 @@ def array(
 @overload
 def array(_0: List[bool], /, *, dtype: Type[bool]):
     """
+    usage.geopandas: 13
     usage.matplotlib: 2
     usage.scipy: 7
     usage.xarray: 3
@@ -9899,6 +9939,7 @@ def array(_0: numpy.ndarray, /, *, copy: bool, dtype: numpy.dtype):
 @overload
 def array(_0: List[str], /, *, dtype: Type[object]):
     """
+    usage.geopandas: 6
     usage.matplotlib: 2
     usage.sklearn: 3
     usage.xarray: 1
@@ -10253,6 +10294,7 @@ def array(_0: List[Literal["abc"]], /, *, dtype: Type[object]):
 @overload
 def array(_0: list, /, *, dtype: Type[object]):
     """
+    usage.geopandas: 1
     usage.xarray: 1
     """
     ...
@@ -10787,6 +10829,7 @@ def array(_0: int, /, *, dtype: Type[numpy.int64]):
 @overload
 def array(_0: List[Union[int, numpy.float64]], /):
     """
+    usage.geopandas: 1
     usage.matplotlib: 2
     usage.networkx: 8
     usage.scipy: 5
@@ -11744,6 +11787,7 @@ def array(_0: Literal["SUNACTIVITY"], /, *, ndmin: int):
 def array(_0: Tuple[numpy.float64, numpy.float64, numpy.float64, numpy.float64], /):
     """
     usage.dask: 2
+    usage.geopandas: 1
     usage.matplotlib: 1
     usage.statsmodels: 5
     """
@@ -12111,6 +12155,7 @@ def array(
 @overload
 def array(_0: List[Union[float, numpy.float64]], /):
     """
+    usage.geopandas: 3
     usage.matplotlib: 4
     usage.scipy: 5
     usage.seaborn: 1
@@ -14826,6 +14871,7 @@ def array(_0: list, /, *, dtype: Type[float]):
 def array(_0: list, /, *, dtype: numpy.dtype):
     """
     usage.dask: 7
+    usage.geopandas: 1
     usage.scipy: 6
     """
     ...
@@ -18560,6 +18606,7 @@ def array(_0: List[Literal["0.8", "0.7", "0.6", "0.5"]], /):
 @overload
 def array(_0: List[Tuple[float, float, float, float]], /):
     """
+    usage.geopandas: 7
     usage.matplotlib: 7
     """
     ...
@@ -20379,6 +20426,442 @@ def array(_0: Literal["df"], /):
 
 
 @overload
+def array(_0: List[bool], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 9
+    """
+    ...
+
+
+@overload
+def array(_0: List[bool], /, *, dtype: Literal["bool"]):
+    """
+    usage.geopandas: 10
+    """
+    ...
+
+
+@overload
+def array(_0: geopandas.array.GeometryArray, /, *, copy: bool, dtype: Type[object]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["MultiPolygon", "Polygon"]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["MultiPolygon"]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 3
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.indexes.range.RangeIndex, /, *, copy: bool):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: geopandas.geoseries.GeoSeries, /, *, copy: bool):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[Literal["LineString"], None]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["Point"]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 5
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["Polygon"]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 3
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.indexes.numeric.Int64Index, /, *, copy: bool):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.indexes.multi.MultiIndex, /, *, copy: bool):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.indexes.numeric.Float64Index, /, *, copy: bool):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.indexes.base.Index, /, *, copy: bool):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: pandas.core.indexes.datetimes.DatetimeIndex, /, *, copy: bool):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["MultiPoint"]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["Point", "MultiPoint"]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["LineString"]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 5
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["MultiLineString"]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["LineString", "MultiLineString"]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["Polygon", "MultiPolygon"]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[Literal["Point"], None]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[None], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 2
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[
+        Literal["Point", "MultiPoint", "LineString", "MultiLineString", "MultiPolygon"]
+    ],
+    /,
+    *,
+    dtype: numpy.dtype,
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[str], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[bytes, None]], /, *, dtype: Type[object]):
+    """
+    usage.geopandas: 2
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[str, None]], /, *, dtype: Type[object]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[Literal["Point", "Polygon"], None]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[float], /, *, dtype: Type[float]):
+    """
+    usage.geopandas: 6
+    usage.networkx: 4
+    usage.sklearn: 3
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Union[Literal["FF0FFF212", "FF0FFFFF2"], None]], /, *, dtype: Type[object]
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["FF2FF10F2", "0F2FF1FF2"]], /, *, dtype: Type[object]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: geopandas.array.GeometryArray, /, *, copy: bool, dtype: numpy.dtype):
+    """
+    usage.geopandas: 2
+    """
+    ...
+
+
+@overload
+def array(_0: list, /, *, dtype: Literal["bool"]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[shapely.geometry.point.Point], /, *, dtype: Type[object]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[
+        Literal[
+            "POINT (4 4)", "POINT (3 3)", "POINT (2 2)", "POINT (1 1)", "POINT (0 0)"
+        ]
+    ],
+    /,
+    *,
+    dtype: Type[object],
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Union[List[shapely.geometry.point.Point], numpy.ndarray, range]],
+    /,
+    *,
+    dtype: Type[object],
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[
+        Union[
+            None,
+            Literal["FF0FFF212", "FF2F112F2", "2FFF1FFF2", "212FF1FF2", "212101212"],
+        ]
+    ],
+    /,
+    *,
+    dtype: Type[object],
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Union[None, Literal["FF0FFF212"]]], /, *, dtype: Type[object]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: list, /, *, dtype: Type[bool]):
+    """
+    usage.geopandas: 3
+    """
+    ...
+
+
+@overload
+def array(_0: List[shapely.geometry.base.BaseGeometry], /, *, dtype: Type[object]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: list, /, *, dtype: Literal["int64"]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Literal["POINT (2 2)", "POINT (1 1)", "POINT (0 0)"]],
+    /,
+    *,
+    dtype: Type[object],
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[None], /, *, dtype: Type[object]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: shapely.geometry.linestring.LineString, /):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["LinearRing"]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: shapely.geometry.polygon.LinearRing, /):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(_0: List[Literal["GeometryCollection"]], /, *, dtype: numpy.dtype):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Literal["Polygon", "Point", "MultiLineString"]], /, *, dtype: numpy.dtype
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def array(
+    _0: List[Literal["Point", "LineString", "Polygon"]], /, *, dtype: numpy.dtype
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
 def array(_0: List[Tuple[str, int]], /, *, dtype: Type[object]):
     """
     usage.dask: 4
@@ -21270,15 +21753,6 @@ def array(_0: List[Literal["B", "A"]], /, *, dtype: numpy.dtype):
 def array(_0: List[List[Dict[Literal["c", "b", "a"], int]]], /, *, dtype: Type[object]):
     """
     usage.sklearn: 2
-    """
-    ...
-
-
-@overload
-def array(_0: List[float], /, *, dtype: Type[float]):
-    """
-    usage.networkx: 4
-    usage.sklearn: 3
     """
     ...
 
@@ -22789,6 +23263,7 @@ def array(
 ):
     """
     usage.dask: 529
+    usage.geopandas: 158
     usage.koalas: 36
     usage.matplotlib: 812
     usage.modin: 47
@@ -23244,6 +23719,7 @@ def array_equal(a1: List[Union[float, int]], a2: numpy.ndarray):
 @overload
 def array_equal(a1: List[float], a2: numpy.ndarray):
     """
+    usage.geopandas: 1
     usage.scipy: 6
     """
     ...
@@ -23580,6 +24056,7 @@ def array_equal(a1: numpy.ndarray, a2: List[numpy.float32]):
 def array_equal(a1: object, a2: object):
     """
     usage.dask: 4
+    usage.geopandas: 1
     usage.matplotlib: 2
     usage.pandas: 142
     usage.prophet: 10
@@ -23710,6 +24187,7 @@ def array_str(a: numpy.ndarray):
 def asanyarray(a: numpy.ndarray):
     """
     usage.dask: 16
+    usage.geopandas: 1
     usage.matplotlib: 18
     usage.scipy: 86
     usage.skimage: 36
@@ -23746,6 +24224,7 @@ def asanyarray(a: List[Union[float, int]]):
 @overload
 def asanyarray(a: List[float]):
     """
+    usage.geopandas: 1
     usage.matplotlib: 5
     usage.scipy: 11
     usage.seaborn: 1
@@ -23835,6 +24314,7 @@ def asanyarray(a: numpy.ma.core.MaskedArray):
 def asanyarray(a: pandas.core.series.Series):
     """
     usage.dask: 2
+    usage.geopandas: 2
     usage.statsmodels: 2
     """
     ...
@@ -24088,6 +24568,7 @@ def asanyarray(a: numpy.int8):
 def asanyarray(a: List[bool]):
     """
     usage.dask: 10
+    usage.geopandas: 2
     usage.scipy: 1
     """
     ...
@@ -24643,6 +25124,7 @@ def asanyarray(
 ):
     """
     usage.dask: 52
+    usage.geopandas: 6
     usage.matplotlib: 135
     usage.pandas: 42
     usage.scipy: 190
@@ -24669,6 +25151,7 @@ def asarray(a: numpy.ndarray, dtype: None):
 def asarray(a: numpy.ndarray):
     """
     usage.dask: 12
+    usage.geopandas: 1
     usage.matplotlib: 96
     usage.networkx: 11
     usage.scipy: 1356
@@ -25068,6 +25551,7 @@ def asarray(a: numpy.float64):
 def asarray(a: range):
     """
     usage.dask: 1
+    usage.geopandas: 2
     usage.matplotlib: 6
     usage.skimage: 2
     usage.sklearn: 2
@@ -26094,6 +26578,7 @@ def asarray(a: xarray.core.variable.Variable):
 def asarray(a: pandas.core.series.Series):
     """
     usage.dask: 3
+    usage.geopandas: 9
     usage.seaborn: 26
     usage.sklearn: 7
     usage.statsmodels: 88
@@ -29827,6 +30312,7 @@ def asarray(a: bool, dtype: Type[bool]):
 def asarray(a: List[bool], dtype: Type[bool]):
     """
     usage.dask: 1
+    usage.geopandas: 4
     usage.matplotlib: 3
     usage.scipy: 3
     """
@@ -31490,6 +31976,7 @@ def asarray(a: List[list]):
 @overload
 def asarray(a: list, dtype: Type[bool]):
     """
+    usage.geopandas: 1
     usage.matplotlib: 1
     """
     ...
@@ -32101,6 +32588,46 @@ def asarray(a: List[List[float]], dtype: Type[object]):
 def asarray(a: List[Tuple[Union[int, float], int, int, Union[int, float]]]):
     """
     usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def asarray(a: numpy.ndarray, dtype: Literal["float64"]):
+    """
+    usage.geopandas: 5
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.series.Series, dtype: Literal["float64"]):
+    """
+    usage.geopandas: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: List[int], dtype: Literal["float64"]):
+    """
+    usage.geopandas: 3
+    """
+    ...
+
+
+@overload
+def asarray(a: geopandas.array.GeometryArray):
+    """
+    usage.geopandas: 2
+    """
+    ...
+
+
+@overload
+def asarray(a: pandas.core.series.Series, dtype: Literal["bool"]):
+    """
+    usage.geopandas: 1
     """
     ...
 
@@ -37399,6 +37926,7 @@ def asarray(
 ):
     """
     usage.dask: 126
+    usage.geopandas: 31
     usage.koalas: 2
     usage.matplotlib: 675
     usage.networkx: 40
@@ -40478,6 +41006,7 @@ def concatenate(_0: Tuple[numpy.ndarray], /):
 def concatenate(_0: List[numpy.ndarray], /):
     """
     usage.dask: 17
+    usage.geopandas: 2
     usage.matplotlib: 38
     usage.networkx: 2
     usage.scipy: 96
@@ -41399,6 +41928,7 @@ def concatenate(
 ):
     """
     usage.dask: 117
+    usage.geopandas: 2
     usage.matplotlib: 134
     usage.networkx: 2
     usage.pandas: 312
@@ -44249,6 +44779,7 @@ def empty(_0: Tuple[int], /, *, dtype: Type[numpy.float64]):
 @overload
 def empty(_0: int, /, *, dtype: Type[object]):
     """
+    usage.geopandas: 15
     usage.scipy: 1
     usage.skimage: 2
     usage.sklearn: 7
@@ -45472,6 +46003,14 @@ def empty(_0: int, _1: Type[object], /):
 
 
 @overload
+def empty(_0: Tuple[int, int], /, *, dtype: Literal["float64"]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
 def empty(_0: int, /, *, dtype: Literal["i1"]):
     """
     usage.dask: 1
@@ -45902,6 +46441,7 @@ def empty(
 ):
     """
     usage.dask: 154
+    usage.geopandas: 16
     usage.matplotlib: 30
     usage.networkx: 2
     usage.pandas: 423
@@ -51409,6 +51949,14 @@ def insert(arr: numpy.ndarray, obj: int, values: float, axis: int):
 
 
 @overload
+def insert(arr: numpy.ndarray, obj: numpy.int64, values: numpy.int8):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
 def insert(arr: numpy.ndarray, obj: int, values: int, axis: int):
     """
     usage.dask: 4
@@ -51458,12 +52006,13 @@ def insert(arr: numpy.ndarray, obj: int, values: float):
 
 def insert(
     arr: numpy.ndarray,
-    obj: Union[int, numpy.ndarray, List[int], slice[int, int, int]],
-    values: Union[numpy.int64, int, float, numpy.ndarray, None],
+    obj: Union[int, numpy.int64, numpy.ndarray, List[int], slice[int, int, int]],
+    values: object,
     axis: int = ...,
 ):
     """
     usage.dask: 11
+    usage.geopandas: 1
     usage.matplotlib: 2
     usage.pandas: 15
     usage.scipy: 145
@@ -59584,6 +60133,7 @@ def mean(a: numpy.ndarray, dtype: Type[numpy.float64]):
 @overload
 def mean(a: List[numpy.float64]):
     """
+    usage.geopandas: 2
     usage.skimage: 2
     usage.sklearn: 9
     """
@@ -60118,6 +60668,7 @@ def mean(
 ):
     """
     usage.dask: 81
+    usage.geopandas: 2
     usage.matplotlib: 12
     usage.networkx: 6
     usage.pandas: 26
@@ -61314,6 +61865,7 @@ def nanmax(a: numpy.ndarray, axis: Tuple[int]):
 def nanmax(a: numpy.ndarray):
     """
     usage.dask: 10
+    usage.geopandas: 4
     usage.matplotlib: 2
     usage.seaborn: 1
     usage.xarray: 4
@@ -61480,6 +62032,7 @@ def nanmax(
 ):
     """
     usage.dask: 62
+    usage.geopandas: 4
     usage.matplotlib: 2
     usage.networkx: 1
     usage.pandas: 7
@@ -61790,6 +62343,7 @@ def nanmin(a: numpy.ndarray, axis: int):
 def nanmin(a: numpy.ndarray):
     """
     usage.dask: 10
+    usage.geopandas: 4
     usage.matplotlib: 2
     usage.seaborn: 1
     usage.sklearn: 2
@@ -61949,6 +62503,7 @@ def nanmin(
 ):
     """
     usage.dask: 62
+    usage.geopandas: 4
     usage.matplotlib: 2
     usage.networkx: 1
     usage.pandas: 6
@@ -77127,6 +77682,7 @@ def take(a: numpy.ndarray, indices: List[int], axis: int):
 def take(a: numpy.ndarray, indices: numpy.ndarray, axis: int):
     """
     usage.dask: 1
+    usage.geopandas: 10
     usage.scipy: 21
     usage.sklearn: 1
     usage.statsmodels: 2
@@ -77267,6 +77823,58 @@ def take(a: numpy.ndarray, indices: numpy.int64, mode: Literal["clip"]):
 
 
 @overload
+def take(a: pandas.core.series.Series, indices: numpy.ndarray, axis: int):
+    """
+    usage.geopandas: 4
+    """
+    ...
+
+
+@overload
+def take(a: List[Literal["b", "r"]], indices: numpy.ndarray, axis: int):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def take(
+    a: List[Literal["dotted", "dashed", "solid", "dashdot"]],
+    indices: numpy.ndarray,
+    axis: int,
+):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def take(a: List[Union[int, float]], indices: numpy.ndarray, axis: int):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def take(a: List[Literal["b", "g", "r"]], indices: numpy.ndarray, axis: int):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def take(a: List[Tuple[float, float, float, float]], indices: numpy.ndarray, axis: int):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
 def take(a: List[Literal["three", "two", "one"]], indices: numpy.ndarray):
     """
     usage.sklearn: 1
@@ -77306,6 +77914,7 @@ def take(
 ):
     """
     usage.dask: 3
+    usage.geopandas: 19
     usage.matplotlib: 5
     usage.pandas: 52
     usage.scipy: 59
@@ -78636,6 +79245,7 @@ def unique(ar: numpy.ndarray, axis: int):
 def unique(ar: pandas.core.series.Series):
     """
     usage.dask: 3
+    usage.geopandas: 1
     usage.prophet: 4
     usage.seaborn: 4
     usage.sklearn: 1
@@ -78839,6 +79449,7 @@ def unique(
 ):
     """
     usage.dask: 29
+    usage.geopandas: 1
     usage.matplotlib: 8
     usage.pandas: 22
     usage.prophet: 4
@@ -79986,6 +80597,7 @@ def where(_0: numpy.bool_, _1: float, _2: numpy.float64, /):
 def where(_0: numpy.ndarray, /):
     """
     usage.dask: 2
+    usage.geopandas: 1
     usage.matplotlib: 1
     usage.networkx: 1
     usage.scipy: 12
@@ -80571,6 +81183,7 @@ def where(_0: numpy.ndarray, _1: Literal["two"], _2: Literal["one"], /):
 def where(_0: object, _1: object = ..., _2: object = ..., /):
     """
     usage.dask: 58
+    usage.geopandas: 1
     usage.matplotlib: 8
     usage.networkx: 8
     usage.pandas: 175
@@ -82071,6 +82684,7 @@ def zeros(
 @overload
 def zeros(_0: int, _1: numpy.dtype, /):
     """
+    usage.geopandas: 10
     usage.scipy: 109
     """
     ...
@@ -83580,6 +84194,7 @@ def zeros(
 ):
     """
     usage.dask: 52
+    usage.geopandas: 10
     usage.koalas: 1
     usage.matplotlib: 124
     usage.networkx: 26
@@ -84240,6 +84855,7 @@ class bool_:
     def __bool__(self, /):
         """
         usage.dask: 12
+        usage.geopandas: 2
         usage.matplotlib: 14
         usage.networkx: 3
         usage.pandas: 66
@@ -87410,6 +88026,7 @@ class dtype:
     metadata: object
 
     # usage.dask: 7
+    # usage.geopandas: 11
     # usage.koalas: 13
     # usage.pandas: 263
     # usage.scipy: 32
@@ -87448,6 +88065,7 @@ class dtype:
     def __eq__(self, _0: numpy.dtype, /):
         """
         usage.dask: 222
+        usage.geopandas: 8
         usage.koalas: 20
         usage.scipy: 140
         usage.skimage: 160
@@ -87461,6 +88079,7 @@ class dtype:
     def __eq__(self, _0: Type[bool], /):
         """
         usage.dask: 17
+        usage.geopandas: 2
         usage.scipy: 15
         usage.skimage: 59
         usage.sklearn: 8
@@ -87550,6 +88169,7 @@ class dtype:
     def __eq__(self, _0: Type[float], /):
         """
         usage.dask: 2
+        usage.geopandas: 1
         usage.scipy: 1
         usage.skimage: 6
         usage.sklearn: 8
@@ -87562,6 +88182,7 @@ class dtype:
     def __eq__(self, _0: Literal["float64"], /):
         """
         usage.dask: 5
+        usage.geopandas: 3
         usage.skimage: 4
         usage.sklearn: 2
         """
@@ -87674,6 +88295,7 @@ class dtype:
     def __eq__(self, _0: Type[object], /):
         """
         usage.dask: 22
+        usage.geopandas: 15
         usage.scipy: 4
         usage.sklearn: 56
         usage.statsmodels: 6
@@ -87839,6 +88461,7 @@ class dtype:
     def __eq__(self, _0: object, /):
         """
         usage.dask: 329
+        usage.geopandas: 29
         usage.koalas: 20
         usage.matplotlib: 9
         usage.networkx: 4
@@ -88011,6 +88634,7 @@ class dtype:
     def __ne__(self, _0: Type[object], /):
         """
         usage.dask: 3
+        usage.geopandas: 3
         usage.sklearn: 7
         usage.xarray: 13
         """
@@ -88286,6 +88910,7 @@ class dtype:
     def __ne__(self, _0: object, /):
         """
         usage.dask: 272
+        usage.geopandas: 3
         usage.matplotlib: 21
         usage.pandas: 457
         usage.scipy: 290
@@ -91486,6 +92111,7 @@ class float64:
     def __eq__(self, _0: float, /):
         """
         usage.dask: 7
+        usage.geopandas: 3
         usage.matplotlib: 30
         usage.networkx: 8
         usage.scipy: 51
@@ -91673,6 +92299,7 @@ class float64:
     def __eq__(self, _0: object, /):
         """
         usage.dask: 37
+        usage.geopandas: 3
         usage.koalas: 1
         usage.matplotlib: 187
         usage.networkx: 115
@@ -91734,6 +92361,7 @@ class float64:
     def __ge__(self, _0: int, /):
         """
         usage.dask: 4
+        usage.geopandas: 1
         usage.matplotlib: 16
         usage.scipy: 32
         usage.seaborn: 2
@@ -91854,6 +92482,7 @@ class float64:
     def __ge__(self, _0: object, /):
         """
         usage.dask: 13
+        usage.geopandas: 1
         usage.matplotlib: 55
         usage.networkx: 2
         usage.pandas: 8
@@ -92428,6 +93057,7 @@ class float64:
     def __le__(self, _0: int, /):
         """
         usage.dask: 5
+        usage.geopandas: 1
         usage.matplotlib: 29
         usage.scipy: 50
         usage.seaborn: 3
@@ -92515,6 +93145,7 @@ class float64:
     def __le__(self, _0: object, /):
         """
         usage.dask: 12
+        usage.geopandas: 1
         usage.matplotlib: 72
         usage.networkx: 2
         usage.pandas: 13
@@ -92791,6 +93422,7 @@ class float64:
     @overload
     def __mul__(self, _0: float, /):
         """
+        usage.geopandas: 2
         usage.matplotlib: 66
         usage.networkx: 8
         usage.prophet: 1
@@ -92903,6 +93535,7 @@ class float64:
     def __mul__(self, _0: object, /):
         """
         usage.dask: 8
+        usage.geopandas: 2
         usage.matplotlib: 214
         usage.networkx: 21
         usage.pandas: 71
@@ -93052,6 +93685,7 @@ class float64:
     def __radd__(self, _0: int, /):
         """
         usage.dask: 2
+        usage.geopandas: 2
         usage.matplotlib: 29
         usage.networkx: 11
         usage.prophet: 1
@@ -93227,6 +93861,7 @@ class float64:
     def __radd__(self, _0: object, /):
         """
         usage.dask: 26
+        usage.geopandas: 2
         usage.koalas: 1
         usage.matplotlib: 282
         usage.networkx: 34
@@ -94387,6 +95022,7 @@ class float64:
     def __rtruediv__(self, _0: int, /):
         """
         usage.dask: 3
+        usage.geopandas: 2
         usage.matplotlib: 9
         usage.networkx: 2
         usage.scipy: 102
@@ -94535,6 +95171,7 @@ class float64:
     def __rtruediv__(self, _0: object, /):
         """
         usage.dask: 18
+        usage.geopandas: 2
         usage.matplotlib: 175
         usage.networkx: 34
         usage.pandas: 61
@@ -94711,6 +95348,7 @@ class float64:
     def __truediv__(self, _0: int, /):
         """
         usage.dask: 12
+        usage.geopandas: 2
         usage.matplotlib: 40
         usage.networkx: 4
         usage.scipy: 206
@@ -94857,6 +95495,7 @@ class float64:
     def __truediv__(self, _0: object, /):
         """
         usage.dask: 23
+        usage.geopandas: 2
         usage.matplotlib: 206
         usage.networkx: 22
         usage.pandas: 61
@@ -97640,6 +98279,7 @@ class int64:
     def __eq__(self, _0: int, /):
         """
         usage.dask: 32
+        usage.geopandas: 2
         usage.matplotlib: 26
         usage.networkx: 14
         usage.scipy: 115
@@ -97809,6 +98449,7 @@ class int64:
     def __eq__(self, _0: object, /):
         """
         usage.dask: 78
+        usage.geopandas: 2
         usage.koalas: 1
         usage.matplotlib: 54
         usage.networkx: 14
@@ -105576,6 +106217,7 @@ class ndarray:
         ...
 
     # usage.dask: 28
+    # usage.geopandas: 1
     # usage.matplotlib: 93
     # usage.modin: 3
     # usage.networkx: 9
@@ -105624,9 +106266,13 @@ class ndarray:
     # usage.xarray: 4
     coords: object
 
+    # usage.geopandas: 1
+    crs: object
+
     # usage.scipy: 1
     ctypes: object
 
+    # usage.geopandas: 1
     # usage.scipy: 3
     # usage.sklearn: 6
     data: object
@@ -105635,6 +106281,7 @@ class ndarray:
     dims: object
 
     # usage.dask: 454
+    # usage.geopandas: 10
     # usage.matplotlib: 79
     # usage.modin: 1
     # usage.networkx: 15
@@ -105695,12 +106342,14 @@ class ndarray:
     name: object
 
     # usage.dask: 11
+    # usage.geopandas: 1
     # usage.pandas: 46
     # usage.scipy: 19
     # usage.sklearn: 3
     nbytes: object
 
     # usage.dask: 362
+    # usage.geopandas: 3
     # usage.matplotlib: 141
     # usage.pandas: 741
     # usage.sample-usage: 1
@@ -105722,6 +106371,7 @@ class ndarray:
     real: object
 
     # usage.dask: 454
+    # usage.geopandas: 2
     # usage.matplotlib: 323
     # usage.modin: 4
     # usage.networkx: 50
@@ -105734,9 +106384,10 @@ class ndarray:
     # usage.sklearn: 3313
     # usage.statsmodels: 1707
     # usage.xarray: 350
-    shape: Union[List[int], numpy.ndarray, Tuple[Union[int, None], ...]]
+    shape: Union[numpy.ndarray, List[int], Tuple[Union[None, int], ...]]
 
     # usage.dask: 21
+    # usage.geopandas: 1
     # usage.matplotlib: 84
     # usage.modin: 1
     # usage.pandas: 147
@@ -105793,6 +106444,7 @@ class ndarray:
     def __add__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 68
+        usage.geopandas: 1
         usage.matplotlib: 213
         usage.networkx: 25
         usage.prophet: 3
@@ -106113,6 +106765,7 @@ class ndarray:
     def __add__(self, _0: object, /):
         """
         usage.dask: 201
+        usage.geopandas: 1
         usage.matplotlib: 404
         usage.networkx: 29
         usage.pandas: 272
@@ -106131,6 +106784,7 @@ class ndarray:
     def __and__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 4
+        usage.geopandas: 8
         usage.matplotlib: 46
         usage.scipy: 230
         usage.seaborn: 3
@@ -106213,6 +106867,7 @@ class ndarray:
     def __and__(self, _0: object, /):
         """
         usage.dask: 5
+        usage.geopandas: 8
         usage.matplotlib: 48
         usage.pandas: 88
         usage.sample-usage: 1
@@ -106697,6 +107352,20 @@ class ndarray:
         ...
 
     @overload
+    def __contains__(self, _0: Literal["Brooklyn"], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __contains__(self, _0: Literal["Bronx"], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
     def __contains__(self, _0: Literal["spam"], /):
         """
         usage.sklearn: 2
@@ -106733,6 +107402,7 @@ class ndarray:
 
     def __contains__(self, _0: object, /):
         """
+        usage.geopandas: 2
         usage.koalas: 2
         usage.matplotlib: 3
         usage.networkx: 1
@@ -106896,6 +107566,7 @@ class ndarray:
     def __eq__(self, _0: List[int], /):
         """
         usage.dask: 2
+        usage.geopandas: 4
         usage.matplotlib: 1
         usage.scipy: 3
         usage.skimage: 4
@@ -107294,6 +107965,20 @@ class ndarray:
         ...
 
     @overload
+    def __eq__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.geopandas: 5
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["Point"], /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
     def __eq__(self, _0: scipy.sparse.csr.csr_matrix, /):
         """
         usage.dask: 1
@@ -107403,6 +108088,7 @@ class ndarray:
     def __eq__(self, _0: object, /):
         """
         usage.dask: 194
+        usage.geopandas: 11
         usage.matplotlib: 88
         usage.modin: 1
         usage.networkx: 8
@@ -107622,6 +108308,7 @@ class ndarray:
     def __getitem__(self, _0: slice[None, int, None], /):
         """
         usage.dask: 35
+        usage.geopandas: 1
         usage.koalas: 2
         usage.matplotlib: 53
         usage.modin: 3
@@ -107639,6 +108326,7 @@ class ndarray:
     def __getitem__(self, _0: int, /):
         """
         usage.dask: 46
+        usage.geopandas: 30
         usage.koalas: 20
         usage.matplotlib: 433
         usage.modin: 20
@@ -107658,6 +108346,7 @@ class ndarray:
     def __getitem__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 41
+        usage.geopandas: 13
         usage.matplotlib: 182
         usage.networkx: 5
         usage.prophet: 4
@@ -107675,6 +108364,7 @@ class ndarray:
     def __getitem__(self, _0: slice[int, None, int], /):
         """
         usage.dask: 19
+        usage.geopandas: 1
         usage.matplotlib: 45
         usage.modin: 1
         usage.networkx: 6
@@ -107692,6 +108382,7 @@ class ndarray:
     def __getitem__(self, _0: Tuple[slice[None, None, None], int], /):
         """
         usage.dask: 6
+        usage.geopandas: 8
         usage.matplotlib: 130
         usage.networkx: 21
         usage.scipy: 420
@@ -108048,6 +108739,7 @@ class ndarray:
     def __getitem__(self, _0: slice[int, int, int], /):
         """
         usage.dask: 6
+        usage.geopandas: 1
         usage.matplotlib: 44
         usage.networkx: 2
         usage.sample-usage: 1
@@ -108132,6 +108824,7 @@ class ndarray:
     def __getitem__(self, _0: slice[int, None, int], /):
         """
         usage.dask: 1
+        usage.geopandas: 1
         usage.matplotlib: 6
         usage.scipy: 38
         usage.skimage: 2
@@ -108231,6 +108924,7 @@ class ndarray:
     ):
         """
         usage.dask: 4
+        usage.geopandas: 1
         usage.matplotlib: 3
         usage.scipy: 129
         usage.seaborn: 5
@@ -108291,6 +108985,7 @@ class ndarray:
     def __getitem__(self, _0: slice[None, None, None], /):
         """
         usage.dask: 1
+        usage.geopandas: 1
         usage.matplotlib: 1
         usage.scipy: 14
         usage.skimage: 1
@@ -108341,6 +109036,7 @@ class ndarray:
     def __getitem__(self, _0: slice[None, None, None], /):
         """
         usage.dask: 16
+        usage.geopandas: 1
         usage.matplotlib: 43
         usage.networkx: 3
         usage.scipy: 333
@@ -108769,6 +109465,7 @@ class ndarray:
     def __getitem__(self, _0: slice[numpy.int64, numpy.int64, numpy.int64], /):
         """
         usage.dask: 5
+        usage.geopandas: 1
         usage.matplotlib: 5
         usage.modin: 1
         usage.scipy: 104
@@ -109886,6 +110583,7 @@ class ndarray:
     @overload
     def __getitem__(self, _0: slice[int, int, int], /):
         """
+        usage.geopandas: 1
         usage.matplotlib: 2
         usage.scipy: 24
         usage.seaborn: 1
@@ -115427,6 +116125,7 @@ class ndarray:
     def __getitem__(self, _0: object, /):
         """
         usage.dask: 679
+        usage.geopandas: 60
         usage.koalas: 22
         usage.matplotlib: 1402
         usage.modin: 26
@@ -115462,6 +116161,7 @@ class ndarray:
     def __gt__(self, _0: float, /):
         """
         usage.dask: 9
+        usage.geopandas: 1
         usage.matplotlib: 10
         usage.scipy: 118
         usage.seaborn: 1
@@ -115568,6 +116268,7 @@ class ndarray:
     def __gt__(self, _0: object, /):
         """
         usage.dask: 30
+        usage.geopandas: 1
         usage.matplotlib: 50
         usage.networkx: 1
         usage.pandas: 82
@@ -116116,6 +116817,7 @@ class ndarray:
     def __invert__(self, /):
         """
         usage.dask: 9
+        usage.geopandas: 8
         usage.matplotlib: 25
         usage.modin: 1
         usage.pandas: 122
@@ -116436,6 +117138,7 @@ class ndarray:
     def __iter__(self, /):
         """
         usage.dask: 6
+        usage.geopandas: 27
         usage.koalas: 4
         usage.matplotlib: 363
         usage.modin: 14
@@ -116989,6 +117692,7 @@ class ndarray:
     def __mod__(self, _0: int, /):
         """
         usage.dask: 11
+        usage.geopandas: 1
         usage.koalas: 2
         usage.matplotlib: 10
         usage.prophet: 1
@@ -117037,6 +117741,7 @@ class ndarray:
     def __mod__(self, _0: object, /):
         """
         usage.dask: 12
+        usage.geopandas: 1
         usage.koalas: 2
         usage.matplotlib: 12
         usage.pandas: 52
@@ -117055,6 +117760,7 @@ class ndarray:
     def __mul__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 27
+        usage.geopandas: 1
         usage.matplotlib: 154
         usage.networkx: 9
         usage.prophet: 11
@@ -117508,6 +118214,7 @@ class ndarray:
     def __mul__(self, _0: object, /):
         """
         usage.dask: 71
+        usage.geopandas: 1
         usage.matplotlib: 329
         usage.networkx: 23
         usage.pandas: 256
@@ -117621,6 +118328,7 @@ class ndarray:
     def __pow__(self, _0: int, /):
         """
         usage.dask: 13
+        usage.geopandas: 1
         usage.koalas: 20
         usage.matplotlib: 69
         usage.networkx: 12
@@ -117703,6 +118411,7 @@ class ndarray:
     def __pow__(self, _0: object, /):
         """
         usage.dask: 14
+        usage.geopandas: 1
         usage.koalas: 20
         usage.matplotlib: 85
         usage.networkx: 12
@@ -117751,6 +118460,7 @@ class ndarray:
     def __radd__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 68
+        usage.geopandas: 1
         usage.matplotlib: 213
         usage.networkx: 25
         usage.prophet: 3
@@ -117970,6 +118680,7 @@ class ndarray:
     def __radd__(self, _0: object, /):
         """
         usage.dask: 81
+        usage.geopandas: 1
         usage.koalas: 2
         usage.matplotlib: 256
         usage.networkx: 26
@@ -117989,6 +118700,7 @@ class ndarray:
     def __rand__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 4
+        usage.geopandas: 8
         usage.matplotlib: 46
         usage.scipy: 230
         usage.seaborn: 3
@@ -118071,6 +118783,7 @@ class ndarray:
     def __rand__(self, _0: object, /):
         """
         usage.dask: 5
+        usage.geopandas: 8
         usage.matplotlib: 48
         usage.pandas: 88
         usage.sample-usage: 1
@@ -118262,6 +118975,7 @@ class ndarray:
     def __rmul__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 27
+        usage.geopandas: 1
         usage.matplotlib: 154
         usage.networkx: 9
         usage.prophet: 11
@@ -118606,6 +119320,7 @@ class ndarray:
     def __rmul__(self, _0: object, /):
         """
         usage.dask: 77
+        usage.geopandas: 1
         usage.matplotlib: 451
         usage.networkx: 37
         usage.pandas: 243
@@ -119347,6 +120062,7 @@ class ndarray:
     def __setitem__(self, _0: numpy.ndarray, _1: numpy.ndarray, /):
         """
         usage.dask: 2
+        usage.geopandas: 5
         usage.matplotlib: 45
         usage.networkx: 2
         usage.prophet: 4
@@ -123448,6 +124164,7 @@ class ndarray:
     def __setitem__(self, _0: slice[None, int, None], _1: numpy.ndarray, /):
         """
         usage.dask: 3
+        usage.geopandas: 2
         usage.matplotlib: 4
         usage.scipy: 56
         usage.sklearn: 32
@@ -123531,6 +124248,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: slice[int, int, int], _1: numpy.ndarray, /):
         """
+        usage.geopandas: 1
         usage.matplotlib: 11
         usage.scipy: 121
         usage.sklearn: 10
@@ -124252,6 +124970,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: int, _1: None, /):
         """
+        usage.geopandas: 1
         usage.statsmodels: 1
         """
         ...
@@ -127917,6 +128636,7 @@ class ndarray:
     @overload
     def __setitem__(self, _0: slice[None, None, None], _1: list, /):
         """
+        usage.geopandas: 2
         usage.scipy: 1
         """
         ...
@@ -128452,6 +129172,457 @@ class ndarray:
     ):
         """
         usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[
+            Union[
+                shapely.geometry.multipolygon.MultiPolygon,
+                shapely.geometry.polygon.Polygon,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: slice[None, None, None], _1: List[shapely.geometry.point.Point], /
+    ):
+        """
+        usage.geopandas: 26
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[shapely.geometry.multipolygon.MultiPolygon],
+        /,
+    ):
+        """
+        usage.geopandas: 12
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: numpy.ndarray, _1: None, /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[Union[shapely.geometry.linestring.LineString, None]],
+        /,
+    ):
+        """
+        usage.geopandas: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self, _0: slice[None, None, None], _1: List[shapely.geometry.polygon.Polygon], /
+    ):
+        """
+        usage.geopandas: 22
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: shapely.geometry.polygon.Polygon, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, None, None], _1: list, /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[shapely.geometry.multipoint.MultiPoint],
+        /,
+    ):
+        """
+        usage.geopandas: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[
+            Union[shapely.geometry.point.Point, shapely.geometry.multipoint.MultiPoint]
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[shapely.geometry.linestring.LineString],
+        /,
+    ):
+        """
+        usage.geopandas: 7
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[shapely.geometry.multilinestring.MultiLineString],
+        /,
+    ):
+        """
+        usage.geopandas: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[
+            Union[
+                shapely.geometry.linestring.LineString,
+                shapely.geometry.multilinestring.MultiLineString,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[
+            Union[
+                shapely.geometry.polygon.Polygon,
+                shapely.geometry.multipolygon.MultiPolygon,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 5
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[Union[shapely.geometry.point.Point, None]],
+        /,
+    ):
+        """
+        usage.geopandas: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: slice[None, None, None], _1: List[None], /):
+        """
+        usage.geopandas: 6
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[
+            Union[
+                shapely.geometry.point.Point,
+                shapely.geometry.multipoint.MultiPoint,
+                shapely.geometry.linestring.LineString,
+                shapely.geometry.multilinestring.MultiLineString,
+                shapely.geometry.multipolygon.MultiPolygon,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[shapely.geometry.point.PointAdapter],
+        /,
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[Union[shapely.geometry.polygon.Polygon, None]],
+        /,
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[shapely.geometry.polygon.LinearRing],
+        /,
+    ):
+        """
+        usage.geopandas: 3
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[
+            Union[
+                shapely.geometry.polygon.Polygon,
+                shapely.geometry.multipolygon.MultiPolygon,
+                None,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[
+            Union[
+                shapely.geometry.multipolygon.MultiPolygon,
+                shapely.geometry.polygon.Polygon,
+                None,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[
+            Union[
+                shapely.geometry.polygon.Polygon,
+                shapely.geometry.collection.GeometryCollection,
+                None,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[shapely.geometry.collection.GeometryCollection],
+        /,
+    ):
+        """
+        usage.geopandas: 4
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[
+            Union[shapely.geometry.point.Point, shapely.geometry.polygon.Polygon, None]
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(self, _0: int, _1: shapely.geometry.point.Point, /):
+        """
+        usage.geopandas: 2
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[Union[None, shapely.geometry.point.Point]],
+        /,
+    ):
+        """
+        usage.geopandas: 6
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[
+            Union[
+                shapely.geometry.polygon.Polygon,
+                shapely.geometry.collection.GeometryCollection,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[List[shapely.geometry.polygon.LinearRing]],
+        /,
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[Union[None, shapely.geometry.polygon.Polygon]],
+        /,
+    ):
+        """
+        usage.geopandas: 7
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[
+            Union[
+                None,
+                shapely.geometry.collection.GeometryCollection,
+                shapely.geometry.polygon.Polygon,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[
+            Union[
+                shapely.geometry.polygon.Polygon,
+                shapely.geometry.base.BaseGeometry,
+                shapely.geometry.point.Point,
+                None,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[
+            Union[
+                shapely.geometry.point.Point,
+                shapely.geometry.collection.GeometryCollection,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __setitem__(
+        self,
+        _0: slice[None, None, None],
+        _1: List[
+            Union[
+                shapely.geometry.polygon.Polygon,
+                shapely.geometry.point.Point,
+                shapely.geometry.multilinestring.MultiLineString,
+            ]
+        ],
+        /,
+    ):
+        """
+        usage.geopandas: 1
         """
         ...
 
@@ -129078,6 +130249,7 @@ class ndarray:
     def __setitem__(self, _0: object, _1: object, /):
         """
         usage.dask: 139
+        usage.geopandas: 149
         usage.matplotlib: 542
         usage.networkx: 88
         usage.pandas: 5607
@@ -129528,6 +130700,7 @@ class ndarray:
     def __truediv__(self, _0: int, /):
         """
         usage.dask: 7
+        usage.geopandas: 10
         usage.matplotlib: 53
         usage.networkx: 1
         usage.prophet: 1
@@ -129666,6 +130839,7 @@ class ndarray:
     def __truediv__(self, _0: object, /):
         """
         usage.dask: 23
+        usage.geopandas: 10
         usage.matplotlib: 165
         usage.networkx: 30
         usage.pandas: 420
@@ -129713,6 +130887,7 @@ class ndarray:
     def all(self, /):
         """
         usage.dask: 89
+        usage.geopandas: 7
         usage.koalas: 6
         usage.matplotlib: 16
         usage.networkx: 3
@@ -129764,6 +130939,7 @@ class ndarray:
     ):
         """
         usage.dask: 90
+        usage.geopandas: 7
         usage.koalas: 6
         usage.matplotlib: 17
         usage.networkx: 3
@@ -129782,6 +130958,7 @@ class ndarray:
     def any(self, /):
         """
         usage.dask: 14
+        usage.geopandas: 2
         usage.matplotlib: 21
         usage.networkx: 3
         usage.prophet: 2
@@ -129814,6 +130991,7 @@ class ndarray:
     def any(self, _0: Union[None, int] = ..., /, *, axis: int = ...):
         """
         usage.dask: 14
+        usage.geopandas: 2
         usage.matplotlib: 22
         usage.networkx: 3
         usage.pandas: 175
@@ -130073,6 +131251,7 @@ class ndarray:
     def astype(self, _0: Type[float], /):
         """
         usage.dask: 18
+        usage.geopandas: 2
         usage.matplotlib: 13
         usage.networkx: 3
         usage.scipy: 83
@@ -130250,6 +131429,7 @@ class ndarray:
     def astype(self, _0: numpy.dtype, /, *, copy: bool):
         """
         usage.dask: 5
+        usage.geopandas: 2
         usage.scipy: 75
         usage.skimage: 27
         usage.sklearn: 29
@@ -131097,6 +132277,13 @@ class ndarray:
         ...
 
     @overload
+    def astype(self, _0: Type[str], /, *, copy: bool):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
     def astype(self, _0: Literal["i8"], /, *, copy: bool):
         """
         usage.dask: 1
@@ -131223,6 +132410,7 @@ class ndarray:
     ):
         """
         usage.dask: 185
+        usage.geopandas: 5
         usage.koalas: 10
         usage.matplotlib: 77
         usage.modin: 1
@@ -131416,6 +132604,7 @@ class ndarray:
     def copy(self, /):
         """
         usage.dask: 7
+        usage.geopandas: 1
         usage.matplotlib: 21
         usage.networkx: 3
         usage.pandas: 284
@@ -131470,6 +132659,7 @@ class ndarray:
     ):
         """
         usage.dask: 7
+        usage.geopandas: 1
         usage.matplotlib: 21
         usage.networkx: 3
         usage.pandas: 284
@@ -131812,6 +133002,7 @@ class ndarray:
     def item(self, /):
         """
         usage.dask: 21
+        usage.geopandas: 10
         usage.matplotlib: 1
         usage.pandas: 31
         usage.scipy: 43
@@ -131840,6 +133031,7 @@ class ndarray:
     def item(self, _0: int = ..., _1: int = ..., /):
         """
         usage.dask: 21
+        usage.geopandas: 10
         usage.matplotlib: 1
         usage.pandas: 31
         usage.scipy: 46
@@ -131874,6 +133066,7 @@ class ndarray:
     def max(self, /):
         """
         usage.dask: 10
+        usage.geopandas: 2
         usage.matplotlib: 57
         usage.networkx: 4
         usage.prophet: 3
@@ -131928,6 +133121,7 @@ class ndarray:
     ):
         """
         usage.dask: 12
+        usage.geopandas: 2
         usage.matplotlib: 58
         usage.networkx: 6
         usage.pandas: 48
@@ -132089,6 +133283,7 @@ class ndarray:
     def min(self, /):
         """
         usage.dask: 6
+        usage.geopandas: 2
         usage.matplotlib: 50
         usage.networkx: 1
         usage.prophet: 2
@@ -132151,6 +133346,7 @@ class ndarray:
     ):
         """
         usage.dask: 8
+        usage.geopandas: 2
         usage.matplotlib: 50
         usage.networkx: 3
         usage.pandas: 48
@@ -133690,6 +134886,7 @@ class ndarray:
     def tolist(self, /):
         """
         usage.dask: 39
+        usage.geopandas: 7
         usage.matplotlib: 21
         usage.networkx: 3
         usage.pandas: 44
@@ -135223,6 +136420,20 @@ class str_:
         ...
 
     @overload
+    def __eq__(self, _0: str, /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Literal["MULTIPOLYG"], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
     def __eq__(self, _0: numpy.str_, /):
         """
         usage.sklearn: 2
@@ -135238,6 +136449,7 @@ class str_:
 
     def __eq__(self, _0: object, /):
         """
+        usage.geopandas: 2
         usage.pandas: 33
         usage.sklearn: 26
         usage.statsmodels: 1
@@ -136152,6 +137364,7 @@ class ufunc:
     def __call__(self, _0: pandas.core.series.Series, /):
         """
         usage.dask: 295
+        usage.geopandas: 2
         usage.koalas: 39
         usage.prophet: 7
         usage.seaborn: 2
@@ -136163,6 +137376,7 @@ class ufunc:
     def __call__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 461
+        usage.geopandas: 9
         usage.koalas: 1
         usage.matplotlib: 317
         usage.networkx: 25
@@ -136321,6 +137535,7 @@ class ufunc:
     def __call__(self, _0: int, /):
         """
         usage.dask: 20
+        usage.geopandas: 4
         usage.matplotlib: 58
         usage.networkx: 8
         usage.scipy: 585
@@ -136348,6 +137563,7 @@ class ufunc:
     def __call__(self, _0: numpy.float64, /):
         """
         usage.dask: 12
+        usage.geopandas: 2
         usage.matplotlib: 167
         usage.networkx: 8
         usage.prophet: 3
@@ -136493,6 +137709,7 @@ class ufunc:
     def __call__(self, _0: float, /):
         """
         usage.dask: 35
+        usage.geopandas: 6
         usage.matplotlib: 102
         usage.networkx: 9
         usage.prophet: 5
@@ -139776,6 +140993,7 @@ class ufunc:
     ):
         """
         usage.dask: 4506
+        usage.geopandas: 23
         usage.koalas: 459
         usage.matplotlib: 781
         usage.modin: 1

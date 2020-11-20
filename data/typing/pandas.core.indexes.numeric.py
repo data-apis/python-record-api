@@ -25,15 +25,17 @@ class Float64Index:
     is_unique: object
 
     # usage.dask: 9
+    # usage.geopandas: 1
     # usage.koalas: 2
     # usage.modin: 1
     # usage.statsmodels: 1
     # usage.xarray: 1
-    name: Union[Literal["x", "c", "p", "a"], None]
+    name: Union[Literal["x", "centile", "c", "p", "a"], None]
 
     # usage.dask: 4
+    # usage.geopandas: 2
     # usage.koalas: 8
-    names: List[Union[None, str]]
+    names: List[Union[str, None]]
 
     # usage.xarray: 1
     nlevels: object
@@ -312,8 +314,16 @@ class Float64Index:
         """
         ...
 
-    def __truediv__(self, _0: Union[numpy.timedelta64, numpy.ndarray, float], /):
+    @overload
+    def __truediv__(self, _0: int, /):
         """
+        usage.geopandas: 1
+        """
+        ...
+
+    def __truediv__(self, _0: Union[int, float, numpy.ndarray, numpy.timedelta64], /):
+        """
+        usage.geopandas: 1
         usage.pandas: 5
         usage.statsmodels: 1
         """
@@ -514,13 +524,14 @@ class Int64Index:
     name: Union[None, str, Tuple[Literal["x"], Literal["a"]]]
 
     # usage.dask: 6
+    # usage.geopandas: 3
     # usage.koalas: 37
     names: Union[
         List[
             Union[
-                None,
-                str,
                 Tuple[Literal["x", "X", "z"], Literal["a", "b", "A", "c", "y"]],
+                str,
+                None,
             ]
         ],
         pandas.core.indexes.frozen.FrozenList,
@@ -587,6 +598,13 @@ class Int64Index:
         ...
 
     @overload
+    def __contains__(self, _0: Literal["geometry"], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    @overload
     def __contains__(self, _0: Literal["divisions"], /):
         """
         usage.dask: 1
@@ -621,9 +639,10 @@ class Int64Index:
         """
         ...
 
-    def __contains__(self, _0: Union[None, str, int], /):
+    def __contains__(self, _0: Union[int, str, None], /):
         """
         usage.dask: 8
+        usage.geopandas: 1
         """
         ...
 

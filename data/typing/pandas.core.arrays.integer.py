@@ -47,8 +47,26 @@ class Int64Dtype:
     # usage.dask: 1
     kind: object
 
+    # usage.geopandas: 1
+    name: object
+
+    @overload
     def __eq__(self, _0: Union[numpy.dtype, Type[numpy.object_]], /):
         """
+        usage.pandas: 9
+        """
+        ...
+
+    @overload
+    def __eq__(self, _0: Type[object], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
+    def __eq__(self, _0: Union[type, numpy.dtype], /):
+        """
+        usage.geopandas: 1
         usage.pandas: 9
         """
         ...

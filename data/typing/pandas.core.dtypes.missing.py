@@ -13,6 +13,7 @@ def isna(obj: Literal["dog"]):
 def isna(obj: float):
     """
     usage.dask: 2
+    usage.geopandas: 2
     usage.koalas: 1
     usage.statsmodels: 1
     """
@@ -23,6 +24,7 @@ def isna(obj: float):
 def isna(obj: numpy.ndarray):
     """
     usage.dask: 8
+    usage.geopandas: 1
     usage.koalas: 1
     usage.seaborn: 5
     usage.statsmodels: 5
@@ -169,6 +171,7 @@ def isna(obj: Literal["A"]):
 def isna(obj: pandas.core.series.Series):
     """
     usage.dask: 3
+    usage.geopandas: 1
     usage.seaborn: 1
     usage.statsmodels: 1
     """
@@ -179,6 +182,7 @@ def isna(obj: pandas.core.series.Series):
 def isna(obj: int):
     """
     usage.dask: 2
+    usage.geopandas: 1
     usage.statsmodels: 1
     """
     ...
@@ -187,6 +191,7 @@ def isna(obj: int):
 @overload
 def isna(obj: pandas.core.frame.DataFrame):
     """
+    usage.geopandas: 1
     usage.seaborn: 1
     """
     ...
@@ -272,6 +277,62 @@ def isna(obj: List[int]):
 def isna(obj: List[Union[Literal["d", "a", "b", "c"], float]]):
     """
     usage.seaborn: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: shapely.geometry.point.Point):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: Literal["Staten Island"]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: Literal["Queens"]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: Literal["Brooklyn"]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: Literal["Manhattan"]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: Literal["Bronx"]):
+    """
+    usage.geopandas: 1
+    """
+    ...
+
+
+@overload
+def isna(obj: shapely.geometry.polygon.Polygon):
+    """
+    usage.geopandas: 1
     """
     ...
 
@@ -543,6 +604,7 @@ def isna(obj: numpy.datetime64):
 def isna(obj: object):
     """
     usage.dask: 117
+    usage.geopandas: 13
     usage.koalas: 3
     usage.seaborn: 19
     usage.statsmodels: 11

@@ -10,4 +10,5 @@ class BlockManager:
 class SingleBlockManager:
 
     # usage.dask: 1
+    # usage.geopandas: 2
     blocks: object

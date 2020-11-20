@@ -2,6 +2,12 @@ from typing import *
 
 
 class FrozenList:
+    def __add__(self, _0: List[None], /):
+        """
+        usage.geopandas: 1
+        """
+        ...
+
     @overload
     def __contains__(self, _0: Literal["level_2"], /):
         """
@@ -92,6 +98,7 @@ class FrozenList:
     def __iter__(self, /):
         """
         usage.dask: 8
+        usage.geopandas: 1
         usage.koalas: 3
         usage.xarray: 22
         """
