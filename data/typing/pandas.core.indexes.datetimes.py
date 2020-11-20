@@ -1683,6 +1683,24 @@ def date_range(start: Literal["2010-01-01"], periods: int, freq: Literal["d"]):
 
 
 @overload
+def date_range(
+    start: Literal["1/1/2000"], periods: int, freq: Literal["1H"], tz: Literal["UTC"]
+):
+    """
+    usage.hvplot: 1
+    """
+    ...
+
+
+@overload
+def date_range(start: Literal["1/1/2000"], periods: int, tz: Literal["UTC"]):
+    """
+    usage.hvplot: 1
+    """
+    ...
+
+
+@overload
 def date_range(start: Literal["2012-01-01"], periods: int):
     """
     usage.geopandas: 1
@@ -2532,6 +2550,7 @@ def date_range(
     """
     usage.dask: 97
     usage.geopandas: 1
+    usage.hvplot: 2
     usage.koalas: 45
     usage.modin: 36
     usage.prophet: 4
@@ -2607,8 +2626,9 @@ class DatetimeIndex:
 
     # usage.dask: 1
     # usage.geopandas: 2
+    # usage.hvplot: 2
     # usage.koalas: 3
-    names: List[Union[Literal["__index_level_0__"], None]]
+    names: List[Union[None, Literal["__index_level_0__"]]]
 
     # usage.xarray: 1
     ndim: object
@@ -2726,14 +2746,25 @@ class DatetimeIndex:
         """
         ...
 
+    @overload
+    def __eq__(self, _0: pandas.core.series.Series, /):
+        """
+        usage.hvplot: 2
+        """
+        ...
+
     def __eq__(
         self,
         _0: Union[
-            pandas.core.indexes.datetimes.DatetimeIndex, numpy.datetime64, numpy.ndarray
+            pandas.core.series.Series,
+            numpy.ndarray,
+            numpy.datetime64,
+            pandas.core.indexes.datetimes.DatetimeIndex,
         ],
         /,
     ):
         """
+        usage.hvplot: 2
         usage.pandas: 32
         usage.prophet: 2
         """

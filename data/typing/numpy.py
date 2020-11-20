@@ -1515,6 +1515,7 @@ pdtri: numpy.ufunc
 pdtrik: numpy.ufunc
 
 # usage.geopandas: 2
+# usage.hvplot: 1
 # usage.matplotlib: 129
 # usage.networkx: 2
 # usage.pandas: 3
@@ -1685,6 +1686,7 @@ signbit: numpy.ufunc
 signedinteger: object
 
 # usage.dask: 58
+# usage.hvplot: 1
 # usage.koalas: 5
 # usage.matplotlib: 127
 # usage.networkx: 5
@@ -1732,6 +1734,7 @@ sph_harm: numpy.ufunc
 
 # usage.dask: 68
 # usage.geopandas: 4
+# usage.hvplot: 3
 # usage.koalas: 11
 # usage.matplotlib: 40
 # usage.networkx: 19
@@ -7858,6 +7861,7 @@ def array(_0: List[int], /):
     """
     usage.dask: 142
     usage.geopandas: 9
+    usage.hvplot: 1
     usage.koalas: 6
     usage.matplotlib: 41
     usage.modin: 1
@@ -23284,6 +23288,7 @@ def array(
     """
     usage.dask: 529
     usage.geopandas: 158
+    usage.hvplot: 1
     usage.koalas: 36
     usage.matplotlib: 812
     usage.modin: 47
@@ -58846,6 +58851,7 @@ def linspace(start: numpy.float64, stop: numpy.float64, num: int, endpoint: bool
 @overload
 def linspace(start: int, stop: float, num: int):
     """
+    usage.hvplot: 1
     usage.matplotlib: 17
     usage.scipy: 64
     usage.seaborn: 2
@@ -59276,6 +59282,7 @@ def linspace(
 ):
     """
     usage.dask: 26
+    usage.hvplot: 1
     usage.koalas: 10
     usage.matplotlib: 184
     usage.networkx: 7
@@ -62823,10 +62830,22 @@ def nanquantile(
     ...
 
 
+@overload
+def nanquantile(a: pandas.core.series.Series, q: float):
+    """
+    usage.hvplot: 2
+    """
+    ...
+
+
 def nanquantile(
-    a: object, q: numpy.ndarray, axis: numpy.ndarray, interpolation: Literal["linear"]
+    a: object,
+    q: Union[float, numpy.ndarray],
+    axis: numpy.ndarray = ...,
+    interpolation: Literal["linear"] = ...,
 ):
     """
+    usage.hvplot: 2
     usage.xarray: 4
     """
     ...
@@ -84885,6 +84904,7 @@ class bool_:
         """
         usage.dask: 12
         usage.geopandas: 2
+        usage.hvplot: 2
         usage.matplotlib: 14
         usage.networkx: 3
         usage.pandas: 66
@@ -85617,6 +85637,7 @@ class bool_:
     def all(self, /):
         """
         usage.dask: 1
+        usage.hvplot: 1
         usage.pandas: 4
         usage.scipy: 3
         usage.sklearn: 1
@@ -88042,6 +88063,7 @@ class dtype:
     itemsize: object
 
     # usage.dask: 75
+    # usage.hvplot: 3
     # usage.matplotlib: 42
     # usage.networkx: 11
     # usage.pandas: 643
@@ -92656,6 +92678,7 @@ class float64:
     def __gt__(self, _0: int, /):
         """
         usage.dask: 6
+        usage.hvplot: 1
         usage.matplotlib: 33
         usage.networkx: 5
         usage.prophet: 4
@@ -92759,6 +92782,7 @@ class float64:
     def __gt__(self, _0: object, /):
         """
         usage.dask: 28
+        usage.hvplot: 1
         usage.matplotlib: 174
         usage.networkx: 13
         usage.pandas: 15
@@ -93207,6 +93231,7 @@ class float64:
     def __lt__(self, _0: int, /):
         """
         usage.dask: 4
+        usage.hvplot: 1
         usage.matplotlib: 45
         usage.networkx: 2
         usage.prophet: 1
@@ -93347,6 +93372,7 @@ class float64:
     def __lt__(self, _0: object, /):
         """
         usage.dask: 23
+        usage.hvplot: 1
         usage.matplotlib: 213
         usage.networkx: 15
         usage.pandas: 5
@@ -107470,6 +107496,7 @@ class ndarray:
     def __eq__(self, _0: numpy.ndarray, /):
         """
         usage.dask: 136
+        usage.hvplot: 2
         usage.matplotlib: 46
         usage.networkx: 4
         usage.sample-usage: 2
@@ -108137,6 +108164,7 @@ class ndarray:
         """
         usage.dask: 194
         usage.geopandas: 11
+        usage.hvplot: 2
         usage.matplotlib: 88
         usage.modin: 1
         usage.networkx: 8
@@ -108357,6 +108385,7 @@ class ndarray:
         """
         usage.dask: 35
         usage.geopandas: 1
+        usage.hvplot: 1
         usage.koalas: 2
         usage.matplotlib: 53
         usage.modin: 3
@@ -108414,6 +108443,7 @@ class ndarray:
         """
         usage.dask: 19
         usage.geopandas: 1
+        usage.hvplot: 1
         usage.matplotlib: 45
         usage.modin: 1
         usage.networkx: 6
@@ -116175,6 +116205,7 @@ class ndarray:
         """
         usage.dask: 679
         usage.geopandas: 60
+        usage.hvplot: 2
         usage.koalas: 22
         usage.matplotlib: 1402
         usage.modin: 26
@@ -117189,6 +117220,7 @@ class ndarray:
         """
         usage.dask: 6
         usage.geopandas: 27
+        usage.hvplot: 1
         usage.koalas: 4
         usage.matplotlib: 363
         usage.modin: 14
@@ -132754,6 +132786,7 @@ class ndarray:
     def cumsum(self, /):
         """
         usage.dask: 3
+        usage.hvplot: 1
         usage.matplotlib: 2
         usage.modin: 2
         usage.scipy: 6
@@ -132801,6 +132834,7 @@ class ndarray:
     ):
         """
         usage.dask: 7
+        usage.hvplot: 1
         usage.matplotlib: 3
         usage.modin: 2
         usage.pandas: 6
@@ -137424,6 +137458,7 @@ class ufunc:
         """
         usage.dask: 295
         usage.geopandas: 2
+        usage.hvplot: 1
         usage.koalas: 39
         usage.prophet: 7
         usage.seaborn: 2
@@ -137436,6 +137471,7 @@ class ufunc:
         """
         usage.dask: 461
         usage.geopandas: 9
+        usage.hvplot: 1
         usage.koalas: 1
         usage.matplotlib: 317
         usage.networkx: 25
@@ -137596,6 +137632,7 @@ class ufunc:
         """
         usage.dask: 20
         usage.geopandas: 4
+        usage.hvplot: 1
         usage.matplotlib: 58
         usage.networkx: 8
         usage.scipy: 585
@@ -140463,6 +140500,13 @@ class ufunc:
         ...
 
     @overload
+    def __call__(self, _0: holoviews.util.transform.dim, /):
+        """
+        usage.hvplot: 1
+        """
+        ...
+
+    @overload
     def __call__(self, _0: numpy.ndarray, _1: pandas.core.series.Series, /):
         """
         usage.dask: 22
@@ -141056,6 +141100,7 @@ class ufunc:
         """
         usage.dask: 4506
         usage.geopandas: 23
+        usage.hvplot: 4
         usage.koalas: 459
         usage.matplotlib: 781
         usage.modin: 1

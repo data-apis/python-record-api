@@ -4,6 +4,7 @@ from typing import *
 class Series:
 
     # usage.dask: 4
+    # usage.hvplot: 1
     __module__: ClassVar[object]
 
     # usage.dask: 7
@@ -81,6 +82,7 @@ class Series:
     @classmethod
     def __getitem__(cls, _0: slice[int, None, int], /):
         """
+        usage.hvplot: 4
         usage.koalas: 2
         usage.statsmodels: 23
         """
@@ -868,6 +870,7 @@ class Series:
         """
         usage.dask: 72
         usage.geopandas: 16
+        usage.hvplot: 4
         usage.koalas: 47
         usage.modin: 12
         usage.prophet: 28
@@ -984,6 +987,7 @@ class Series:
     ds: object
 
     # usage.dask: 2
+    # usage.hvplot: 1
     # usage.koalas: 33
     # usage.prophet: 2
     # usage.xarray: 2
@@ -991,6 +995,7 @@ class Series:
 
     # usage.dask: 64
     # usage.geopandas: 7
+    # usage.hvplot: 1
     # usage.koalas: 7
     # usage.prophet: 1
     # usage.pyjanitor: 1
@@ -1011,6 +1016,9 @@ class Series:
 
     # usage.prophet: 3
     holiday: object
+
+    # usage.hvplot: 1
+    hvplot: object
 
     # usage.koalas: 1
     iat: object
@@ -1075,6 +1083,7 @@ class Series:
     # usage.statsmodels: 19
     ndim: object
 
+    # usage.hvplot: 1
     # usage.koalas: 13
     plot: object
 
@@ -1355,6 +1364,7 @@ class Series:
     def __eq__(self, _0: int, /):
         """
         usage.dask: 5
+        usage.hvplot: 3
         usage.koalas: 32
         usage.prophet: 1
         usage.seaborn: 3
@@ -1787,6 +1797,13 @@ class Series:
         ...
 
     @overload
+    def __eq__(self, _0: pandas.core.indexes.datetimes.DatetimeIndex, /):
+        """
+        usage.hvplot: 2
+        """
+        ...
+
+    @overload
     def __eq__(self, _0: Literal["geometry"], /):
         """
         usage.geopandas: 2
@@ -1951,6 +1968,7 @@ class Series:
         """
         usage.dask: 39
         usage.geopandas: 29
+        usage.hvplot: 5
         usage.koalas: 43
         usage.pandas: 52
         usage.prophet: 2
@@ -2116,6 +2134,7 @@ class Series:
         """
         usage.dask: 55
         usage.geopandas: 1
+        usage.hvplot: 4
         usage.koalas: 12
         usage.statsmodels: 4
         """
@@ -2197,6 +2216,7 @@ class Series:
         """
         usage.dask: 61
         usage.geopandas: 1
+        usage.hvplot: 4
         usage.koalas: 13
         usage.pandas: 5
         usage.prophet: 8
@@ -2589,6 +2609,7 @@ class Series:
     def __mul__(self, _0: int, /):
         """
         usage.dask: 2
+        usage.hvplot: 1
         usage.koalas: 5
         usage.pyjanitor: 1
         usage.seaborn: 2
@@ -2655,6 +2676,7 @@ class Series:
     def __mul__(self, _0: object, /):
         """
         usage.dask: 7
+        usage.hvplot: 1
         usage.koalas: 11
         usage.pandas: 29
         usage.prophet: 4
@@ -3753,6 +3775,7 @@ class Series:
         """
         usage.dask: 20
         usage.geopandas: 7
+        usage.hvplot: 8
         usage.koalas: 8
         usage.prophet: 5
         usage.seaborn: 13
@@ -3770,6 +3793,7 @@ class Series:
         """
         usage.dask: 22
         usage.geopandas: 7
+        usage.hvplot: 8
         usage.koalas: 8
         usage.prophet: 5
         usage.seaborn: 13
@@ -4093,6 +4117,14 @@ class Series:
         ...
 
     @overload
+    def astype(self, /, dtype: Literal["int"]):
+        """
+        usage.hvplot: 4
+        usage.sklearn: 1
+        """
+        ...
+
+    @overload
     def astype(self, /, dtype: Literal["int64"]):
         """
         usage.dask: 2
@@ -4186,13 +4218,6 @@ class Series:
         ...
 
     @overload
-    def astype(self, /, dtype: Literal["int"]):
-        """
-        usage.sklearn: 1
-        """
-        ...
-
-    @overload
     def astype(self, /, dtype: Type[numpy.float16]):
         """
         usage.sklearn: 2
@@ -4218,6 +4243,7 @@ class Series:
         """
         usage.dask: 53
         usage.geopandas: 5
+        usage.hvplot: 4
         usage.koalas: 6
         usage.prophet: 2
         usage.pyjanitor: 7
@@ -4682,6 +4708,7 @@ class Series:
     def diff(self, /):
         """
         usage.dask: 3
+        usage.hvplot: 4
         usage.prophet: 3
         usage.seaborn: 1
         usage.statsmodels: 33
@@ -4699,6 +4726,7 @@ class Series:
     def diff(self, /, periods: int = ...):
         """
         usage.dask: 7
+        usage.hvplot: 4
         usage.prophet: 3
         usage.seaborn: 1
         usage.statsmodels: 34
@@ -6061,6 +6089,7 @@ class Series:
         """
         usage.dask: 11
         usage.geopandas: 2
+        usage.hvplot: 1
         usage.koalas: 3
         usage.prophet: 11
         usage.pyjanitor: 1
@@ -6102,6 +6131,7 @@ class Series:
         """
         usage.dask: 19
         usage.geopandas: 2
+        usage.hvplot: 1
         usage.koalas: 3
         usage.prophet: 11
         usage.pyjanitor: 1
@@ -6196,6 +6226,7 @@ class Series:
         """
         usage.dask: 7
         usage.geopandas: 2
+        usage.hvplot: 1
         usage.koalas: 52
         usage.prophet: 12
         usage.pyjanitor: 1
@@ -6237,6 +6268,7 @@ class Series:
         """
         usage.dask: 14
         usage.geopandas: 2
+        usage.hvplot: 1
         usage.koalas: 52
         usage.prophet: 12
         usage.pyjanitor: 1
@@ -8710,6 +8742,7 @@ class Series:
     def to_frame(self, /):
         """
         usage.dask: 12
+        usage.hvplot: 1
         usage.koalas: 5
         usage.sklearn: 2
         usage.statsmodels: 6
@@ -8765,6 +8798,7 @@ class Series:
     ):
         """
         usage.dask: 27
+        usage.hvplot: 1
         usage.koalas: 7
         usage.sklearn: 2
         usage.statsmodels: 6

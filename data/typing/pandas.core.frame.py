@@ -4,6 +4,7 @@ from typing import *
 class DataFrame:
 
     # usage.dask: 4
+    # usage.hvplot: 1
     __module__: ClassVar[object]
 
     # usage.dask: 4
@@ -120,6 +121,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["B"], /):
         """
         usage.dask: 7
+        usage.hvplot: 1
         usage.koalas: 4
         usage.sklearn: 1
         usage.statsmodels: 2
@@ -140,6 +142,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["A"], /):
         """
         usage.dask: 27
+        usage.hvplot: 1
         usage.koalas: 11
         usage.sklearn: 1
         usage.statsmodels: 11
@@ -219,6 +222,7 @@ class DataFrame:
         """
         usage.dask: 13
         usage.geopandas: 3
+        usage.hvplot: 4
         usage.koalas: 9
         usage.prophet: 10
         usage.seaborn: 65
@@ -379,6 +383,7 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["0"], /):
         """
         usage.dask: 4
+        usage.hvplot: 1
         usage.koalas: 6
         usage.sklearn: 1
         usage.statsmodels: 1
@@ -1376,6 +1381,7 @@ class DataFrame:
         """
         usage.dask: 40
         usage.geopandas: 1
+        usage.hvplot: 1
         usage.koalas: 28
         usage.modin: 2
         usage.pyjanitor: 19
@@ -2018,6 +2024,7 @@ class DataFrame:
     def __getitem__(cls, _0: pandas.core.series.Series, /):
         """
         usage.dask: 13
+        usage.hvplot: 3
         usage.koalas: 9
         usage.prophet: 7
         usage.pyjanitor: 5
@@ -2529,6 +2536,7 @@ class DataFrame:
         """
         usage.dask: 13
         usage.geopandas: 3
+        usage.hvplot: 6
         usage.koalas: 1
         usage.prophet: 18
         usage.seaborn: 58
@@ -6165,6 +6173,7 @@ class DataFrame:
     @classmethod
     def __getitem__(cls, _0: Literal["time"], /):
         """
+        usage.hvplot: 5
         usage.seaborn: 4
         usage.statsmodels: 7
         """
@@ -8958,6 +8967,7 @@ class DataFrame:
     @classmethod
     def __getitem__(cls, _0: Literal["sepal_length"], /):
         """
+        usage.hvplot: 1
         usage.seaborn: 1
         """
         ...
@@ -9548,6 +9558,46 @@ class DataFrame:
     def __getitem__(cls, _0: Literal["month"], /):
         """
         usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["category"], /):
+        """
+        usage.hvplot: 3
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["upper"], /):
+        """
+        usage.hvplot: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["lower"], /):
+        """
+        usage.hvplot: 1
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["_color"], /):
+        """
+        usage.hvplot: 2
+        """
+        ...
+
+    @overload
+    @classmethod
+    def __getitem__(cls, _0: Literal["number"], /):
+        """
+        usage.hvplot: 2
         """
         ...
 
@@ -11969,6 +12019,7 @@ class DataFrame:
         """
         usage.dask: 471
         usage.geopandas: 21
+        usage.hvplot: 32
         usage.koalas: 1033
         usage.modin: 19
         usage.networkx: 22
@@ -12458,6 +12509,7 @@ class DataFrame:
     # usage.koalas: 11
     at: object
 
+    # usage.hvplot: 2
     # usage.koalas: 2
     # usage.modin: 3
     axes: object
@@ -12494,6 +12546,7 @@ class DataFrame:
 
     # usage.dask: 142
     # usage.geopandas: 3
+    # usage.hvplot: 17
     # usage.koalas: 676
     # usage.modin: 17
     # usage.networkx: 3
@@ -12591,6 +12644,9 @@ class DataFrame:
     # usage.prophet: 2
     holiday: object
 
+    # usage.hvplot: 82
+    hvplot: object
+
     # usage.dask: 2
     i32: object
 
@@ -12613,6 +12669,7 @@ class DataFrame:
     iloc: object
 
     # usage.dask: 197
+    # usage.hvplot: 8
     # usage.koalas: 57
     # usage.modin: 8
     # usage.networkx: 2
@@ -12673,6 +12730,7 @@ class DataFrame:
     # usage.dask: 2
     path: object
 
+    # usage.hvplot: 3
     # usage.koalas: 12
     plot: object
 
@@ -12733,6 +12791,9 @@ class DataFrame:
     # usage.statsmodels: 1
     t: object
 
+    # usage.hvplot: 5
+    time: object
+
     # usage.statsmodels: 7
     trend: object
 
@@ -12747,6 +12808,7 @@ class DataFrame:
 
     # usage.dask: 33
     # usage.geopandas: 2
+    # usage.hvplot: 2
     # usage.koalas: 2
     # usage.modin: 1
     # usage.networkx: 1
@@ -12764,6 +12826,7 @@ class DataFrame:
     w: pandas.core.series.Series
 
     # usage.dask: 82
+    # usage.hvplot: 3
     # usage.koalas: 25
     # usage.prophet: 1
     # usage.seaborn: 8
@@ -13226,6 +13289,7 @@ class DataFrame:
     def __eq__(self, _0: pandas.core.frame.DataFrame, /):
         """
         usage.dask: 8
+        usage.hvplot: 4
         usage.prophet: 2
         usage.statsmodels: 2
         """
@@ -13257,14 +13321,15 @@ class DataFrame:
         _0: Union[
             pandas.core.frame.DataFrame,
             int,
-            numpy.ndarray,
-            pandas.core.series.Series,
             numpy.float64,
+            pandas.core.series.Series,
+            numpy.ndarray,
         ],
         /,
     ):
         """
         usage.dask: 9
+        usage.hvplot: 4
         usage.pandas: 6
         usage.prophet: 2
         usage.statsmodels: 7
@@ -20636,6 +20701,7 @@ class DataFrame:
     def all(self, /):
         """
         usage.dask: 5
+        usage.hvplot: 2
         usage.koalas: 3
         usage.seaborn: 1
         usage.statsmodels: 1
@@ -20661,6 +20727,7 @@ class DataFrame:
     def all(self, /, axis: int = ..., skipna: bool = ...):
         """
         usage.dask: 11
+        usage.hvplot: 2
         usage.koalas: 3
         usage.pyjanitor: 2
         usage.seaborn: 1
@@ -20911,6 +20978,7 @@ class DataFrame:
     def assign(self, /):
         """
         usage.dask: 17
+        usage.hvplot: 4
         usage.koalas: 4
         usage.pyjanitor: 1
         """
@@ -30878,6 +30946,13 @@ class DataFrame:
         ...
 
     @overload
+    def rename(self, /, columns: Dict[int, Literal["0"]]):
+        """
+        usage.hvplot: 1
+        """
+        ...
+
+    @overload
     def rename(self, /, columns: Callable):
         """
         usage.pyjanitor: 1
@@ -31051,6 +31126,7 @@ class DataFrame:
     ):
         """
         usage.dask: 18
+        usage.hvplot: 1
         usage.koalas: 15
         usage.prophet: 1
         usage.pyjanitor: 15
@@ -31789,6 +31865,7 @@ class DataFrame:
     def reset_index(self, /):
         """
         usage.dask: 3
+        usage.hvplot: 6
         usage.koalas: 17
         usage.prophet: 1
         usage.statsmodels: 15
@@ -31934,6 +32011,7 @@ class DataFrame:
     ):
         """
         usage.dask: 29
+        usage.hvplot: 6
         usage.koalas: 66
         usage.prophet: 10
         usage.pyjanitor: 3
@@ -32760,6 +32838,13 @@ class DataFrame:
         ...
 
     @overload
+    def sample(self, /, frac: int):
+        """
+        usage.hvplot: 4
+        """
+        ...
+
+    @overload
     def sample(self, /, frac: int, random_state: None):
         """
         usage.pyjanitor: 1
@@ -32790,11 +32875,12 @@ class DataFrame:
         self,
         /,
         frac: Union[float, int],
-        random_state: Union[numpy.random.mtrand.RandomState, None],
+        random_state: Union[numpy.random.mtrand.RandomState, None] = ...,
         replace: bool = ...,
     ):
         """
         usage.dask: 2
+        usage.hvplot: 4
         usage.pyjanitor: 1
         """
         ...
@@ -33777,6 +33863,13 @@ class DataFrame:
         ...
 
     @overload
+    def set_index(self, /, keys: Literal["time"]):
+        """
+        usage.hvplot: 4
+        """
+        ...
+
+    @overload
     def set_index(self, /, keys: Literal["value2"]):
         """
         usage.geopandas: 2
@@ -34090,6 +34183,7 @@ class DataFrame:
         """
         usage.dask: 119
         usage.geopandas: 2
+        usage.hvplot: 4
         usage.koalas: 95
         usage.modin: 2
         usage.pyjanitor: 1
@@ -34262,6 +34356,13 @@ class DataFrame:
         """
         ...
 
+    @overload
+    def sort_index(self, /, axis: int):
+        """
+        usage.hvplot: 1
+        """
+        ...
+
     def sort_index(
         self,
         /,
@@ -34269,9 +34370,11 @@ class DataFrame:
         na_position: Literal["first"] = ...,
         inplace: bool = ...,
         level: Union[Literal["col"], List[int]] = ...,
+        axis: int = ...,
     ):
         """
         usage.dask: 8
+        usage.hvplot: 1
         usage.koalas: 360
         usage.prophet: 1
         usage.statsmodels: 14
@@ -34893,6 +34996,13 @@ class DataFrame:
     def sort_values(self, /, by: List[Literal["y", "x", "units"]]):
         """
         usage.seaborn: 1
+        """
+        ...
+
+    @overload
+    def sort_values(self, /, by: Literal["time"]):
+        """
+        usage.hvplot: 1
         """
         ...
 
@@ -35787,7 +35897,7 @@ class DataFrame:
         self,
         /,
         by: Union[
-            List[Union[int, float, str, Tuple[str, ...]]],
+            List[Union[Tuple[str, ...], str, int, float]],
             Tuple[Literal["X", "x", "y"], Literal["A", "a", "c"]],
             str,
         ],
@@ -35796,6 +35906,7 @@ class DataFrame:
     ):
         """
         usage.dask: 190
+        usage.hvplot: 1
         usage.koalas: 105
         usage.prophet: 4
         usage.pyjanitor: 1

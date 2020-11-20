@@ -517,6 +517,7 @@ class Int64Index:
     is_unique: object
 
     # usage.dask: 21
+    # usage.hvplot: 1
     # usage.koalas: 14
     # usage.prophet: 1
     # usage.seaborn: 3
@@ -525,13 +526,14 @@ class Int64Index:
 
     # usage.dask: 6
     # usage.geopandas: 3
+    # usage.hvplot: 1
     # usage.koalas: 37
     names: Union[
         List[
             Union[
-                Tuple[Literal["x", "X", "z"], Literal["a", "b", "A", "c", "y"]],
-                str,
                 None,
+                str,
+                Tuple[Literal["x", "X", "z"], Literal["a", "b", "A", "c", "y"]],
             ]
         ],
         pandas.core.indexes.frozen.FrozenList,

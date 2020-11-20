@@ -43,16 +43,25 @@ class FrozenList:
         """
         ...
 
+    @overload
+    def __eq__(self, _0: List[None], /):
+        """
+        usage.hvplot: 1
+        """
+        ...
+
     def __eq__(
         self,
         _0: Union[
             pandas.core.indexes.frozen.FrozenList,
             Tuple[Literal["x_level_0"], Literal["x_level_1"]],
+            List[None],
         ],
         /,
     ):
         """
         usage.dask: 6
+        usage.hvplot: 1
         usage.xarray: 3
         """
         ...
