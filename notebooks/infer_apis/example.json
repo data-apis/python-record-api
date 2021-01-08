@@ -1,0 +1,443 @@
+{
+  "modules": {
+    "pandas.core.series": {
+      "classes": {
+        "Series": {
+          "constructor_overloads": [
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "list",
+                  "item": {
+                    "type": "union",
+                    "options": [
+                      {
+                        "type": {
+                          "name": "int"
+                        }
+                      },
+                      {
+                        "type": {
+                          "name": "float"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hola": 1
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "index": {
+                  "type": "list",
+                  "item": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "dtype": {
+                  "type": "str",
+                  "options": [
+                    "float32"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.hola": 1
+              }
+            }
+          ],
+          "constructor": {
+            "pos_or_kw_required": {
+              "data": {
+                "type": "union",
+                "options": [
+                  {
+                    "type": {
+                      "name": "int"
+                    }
+                  },
+                  {
+                    "type": "list",
+                    "item": {
+                      "type": "union",
+                      "options": [
+                        {
+                          "type": {
+                            "name": "float"
+                          }
+                        },
+                        {
+                          "type": {
+                            "name": "int"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "pos_or_kw_optional": {
+              "index": {
+                "type": "list",
+                "item": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "dtype": {
+                "type": "str",
+                "options": [
+                  "float32"
+                ]
+              }
+            },
+            "pos_or_kw_optional_ordering": [
+              [
+                "index",
+                "dtype"
+              ]
+            ],
+            "metadata": {
+              "usage.hola": 2
+            }
+          }
+        }
+      }
+    },
+    "pandas": {
+      "properties": {
+        "date_range": [
+          {
+            "usage.hola": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "DataFrame": [
+          {
+            "usage.hola": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ],
+        "Series": [
+          {
+            "usage.hola": 1
+          },
+          {
+            "type": "bottom"
+          }
+        ]
+      }
+    },
+    "pandas.core.indexes.datetimes": {
+      "function_overloads": {
+        "date_range": [
+          {
+            "pos_or_kw_required": {
+              "start": {
+                "type": "str",
+                "options": [
+                  "20130101"
+                ]
+              },
+              "periods": {
+                "type": {
+                  "name": "int"
+                }
+              }
+            },
+            "metadata": {
+              "usage.hola": 1
+            }
+          }
+        ]
+      },
+      "functions": {
+        "date_range": {
+          "pos_or_kw_required": {
+            "start": {
+              "type": "str",
+              "options": [
+                "20130101"
+              ]
+            },
+            "periods": {
+              "type": {
+                "name": "int"
+              }
+            }
+          },
+          "metadata": {
+            "usage.hola": 1
+          }
+        }
+      }
+    },
+    "pandas.core.frame": {
+      "classes": {
+        "DataFrame": {
+          "constructor_overloads": [
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": {
+                    "module": "numpy",
+                    "name": "ndarray"
+                  }
+                },
+                "index": {
+                  "type": {
+                    "module": "pandas.core.indexes.datetimes",
+                    "name": "DatetimeIndex"
+                  }
+                },
+                "columns": {
+                  "type": "list",
+                  "item": {
+                    "type": "str",
+                    "options": [
+                      "D",
+                      "C",
+                      "B",
+                      "A"
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hola": 1
+              }
+            },
+            {
+              "pos_or_kw_required": {
+                "data": {
+                  "type": "dict",
+                  "key": {
+                    "type": "str"
+                  },
+                  "value": {
+                    "type": "object"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hola": 1
+              }
+            }
+          ],
+          "method_overloads": {
+            "head": [
+              {
+                "metadata": {
+                  "usage.hola": 1
+                }
+              }
+            ],
+            "tail": [
+              {
+                "pos_or_kw_required": {
+                  "n": {
+                    "type": {
+                      "name": "int"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hola": 1
+                }
+              }
+            ],
+            "to_numpy": [
+              {
+                "metadata": {
+                  "usage.hola": 1
+                }
+              }
+            ],
+            "describe": [
+              {
+                "metadata": {
+                  "usage.hola": 1
+                }
+              }
+            ],
+            "sort_index": [
+              {
+                "pos_or_kw_required": {
+                  "axis": {
+                    "type": {
+                      "name": "int"
+                    }
+                  },
+                  "ascending": {
+                    "type": {
+                      "name": "bool"
+                    }
+                  }
+                },
+                "metadata": {
+                  "usage.hola": 1
+                }
+              }
+            ]
+          },
+          "methods": {
+            "head": {
+              "metadata": {
+                "usage.hola": 1
+              }
+            },
+            "tail": {
+              "pos_or_kw_required": {
+                "n": {
+                  "type": {
+                    "name": "int"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hola": 1
+              }
+            },
+            "to_numpy": {
+              "metadata": {
+                "usage.hola": 1
+              }
+            },
+            "describe": {
+              "metadata": {
+                "usage.hola": 1
+              }
+            },
+            "sort_index": {
+              "pos_or_kw_required": {
+                "axis": {
+                  "type": {
+                    "name": "int"
+                  }
+                },
+                "ascending": {
+                  "type": {
+                    "name": "bool"
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hola": 1
+              }
+            }
+          },
+          "properties": {
+            "index": [
+              {
+                "usage.hola": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ],
+            "columns": [
+              {
+                "usage.hola": 1
+              },
+              {
+                "type": "bottom"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "pandas._libs.tslibs.timestamps": {
+      "classes": {
+        "Timestamp": {
+          "constructor_overloads": [
+            {
+              "pos_or_kw_required": {
+                "ts_input": {
+                  "type": "str",
+                  "options": [
+                    "20130102"
+                  ]
+                }
+              },
+              "metadata": {
+                "usage.hola": 1
+              }
+            }
+          ],
+          "constructor": {
+            "pos_or_kw_required": {
+              "ts_input": {
+                "type": "str",
+                "options": [
+                  "20130102"
+                ]
+              }
+            },
+            "metadata": {
+              "usage.hola": 1
+            }
+          }
+        }
+      }
+    },
+    "pandas.core.arrays.categorical": {
+      "classes": {
+        "Categorical": {
+          "constructor_overloads": [
+            {
+              "pos_or_kw_required": {
+                "values": {
+                  "type": "list",
+                  "item": {
+                    "type": "str",
+                    "options": [
+                      "train",
+                      "test"
+                    ]
+                  }
+                }
+              },
+              "metadata": {
+                "usage.hola": 1
+              }
+            }
+          ],
+          "constructor": {
+            "pos_or_kw_required": {
+              "values": {
+                "type": "list",
+                "item": {
+                  "type": "str",
+                  "options": [
+                    "train",
+                    "test"
+                  ]
+                }
+              }
+            },
+            "metadata": {
+              "usage.hola": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}
